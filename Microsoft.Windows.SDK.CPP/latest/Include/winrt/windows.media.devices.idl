@@ -108,6 +108,8 @@ namespace Windows
 
             typedef enum HdrVideoMode HdrVideoMode;
 
+            typedef enum InfraredTorchMode InfraredTorchMode;
+
             typedef enum IsoSpeedPreset IsoSpeedPreset;
 
             typedef enum ManualFocusDistance ManualFocusDistance;
@@ -158,6 +160,8 @@ namespace Windows
 
             interface IAdvancedVideoCaptureDeviceController6;
 
+            interface IAdvancedVideoCaptureDeviceController7;
+
             interface IAudioDeviceController;
 
             interface IAudioDeviceModule;
@@ -193,6 +197,8 @@ namespace Windows
             interface IFocusSettings;
 
             interface IHdrVideoControl;
+
+            interface IInfraredTorchControl;
 
             interface IIsoSpeedControl;
 
@@ -278,6 +284,8 @@ namespace Windows
 
             runtimeclass HdrVideoControl;
 
+            runtimeclass InfraredTorchControl;
+
             runtimeclass IsoSpeedControl;
 
             runtimeclass KeypadPressedEventArgs;
@@ -346,6 +354,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.HdrVideoMode>;
 
+                interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.InfraredTorchMode>;
+
                 interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.IsoSpeedPreset>;
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ManualFocusDistance>;
@@ -372,6 +382,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode>;
 
+                interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode>;
+
                 interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance>;
@@ -397,6 +409,8 @@ namespace Windows
                 interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset>;
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode>;
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset>;
 
@@ -537,6 +551,14 @@ namespace Windows
                 Off  = 0,
                 On   = 1,
                 Auto = 2
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            enum InfraredTorchMode
+            {
+                Off                          = 0,
+                On                           = 1,
+                AlternatingFrameIllumination = 2
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -788,6 +810,14 @@ namespace Windows
                 [propget] HRESULT VideoTemporalDenoisingControl([out] [retval] Windows.Media.Devices.VideoTemporalDenoisingControl** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Media.Devices.VideoDeviceController)]
+            [uuid(8D2927F0-A054-50E7-B7DF-7C04234D10F0)]
+            interface IAdvancedVideoCaptureDeviceController7 : IInspectable
+            {
+                [propget] HRESULT InfraredTorchControl([out] [retval] Windows.Media.Devices.InfraredTorchControl** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Media.Devices.AudioDeviceController)]
             [uuid(EDD4A388-79C7-4F7C-90E8-EF934B21580A)]
@@ -1021,6 +1051,22 @@ namespace Windows
                 [propget] HRESULT SupportedModes([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode>** value);
                 [propget] HRESULT Mode([out] [retval] Windows.Media.Devices.HdrVideoMode* value);
                 [propput] HRESULT Mode([in] Windows.Media.Devices.HdrVideoMode value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Media.Devices.InfraredTorchControl)]
+            [uuid(1CBA2C83-6CB6-5A04-A6FC-3BE7B33FF056)]
+            interface IInfraredTorchControl : IInspectable
+            {
+                [propget] HRESULT IsSupported([out] [retval] boolean* value);
+                [propget] HRESULT SupportedModes([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode>** value);
+                [propget] HRESULT CurrentMode([out] [retval] Windows.Media.Devices.InfraredTorchMode* value);
+                [propput] HRESULT CurrentMode([in] Windows.Media.Devices.InfraredTorchMode value);
+                [propget] HRESULT MinPower([out] [retval] INT32* value);
+                [propget] HRESULT MaxPower([out] [retval] INT32* value);
+                [propget] HRESULT PowerStep([out] [retval] INT32* value);
+                [propget] HRESULT Power([out] [retval] INT32* value);
+                [propput] HRESULT Power([in] INT32 value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1479,6 +1525,13 @@ namespace Windows
                 [default] interface Windows.Media.Devices.IHdrVideoControl;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass InfraredTorchControl
+            {
+                [default] interface Windows.Media.Devices.IInfraredTorchControl;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(standard)]
             [threading(mta)]
@@ -1613,6 +1666,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]

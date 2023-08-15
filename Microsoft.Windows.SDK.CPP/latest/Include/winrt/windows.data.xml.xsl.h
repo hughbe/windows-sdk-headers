@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.data.xml.xsl.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -276,10 +272,10 @@ namespace ABI {
             namespace Xml {
                 namespace Xsl {
                     interface IXsltProcessor;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Xsl */} /* ABI */
+                } /* Xsl */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor ABI::Windows::Data::Xml::Xsl::IXsltProcessor
 
 #endif // ____x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor_FWD_DEFINED__
@@ -292,10 +288,10 @@ namespace ABI {
             namespace Xml {
                 namespace Xsl {
                     interface IXsltProcessor2;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Xsl */} /* ABI */
+                } /* Xsl */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor2 ABI::Windows::Data::Xml::Xsl::IXsltProcessor2
 
 #endif // ____x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor2_FWD_DEFINED__
@@ -308,10 +304,10 @@ namespace ABI {
             namespace Xml {
                 namespace Xsl {
                     interface IXsltProcessorFactory;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Xsl */} /* ABI */
+                } /* Xsl */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessorFactory ABI::Windows::Data::Xml::Xsl::IXsltProcessorFactory
 
 #endif // ____x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessorFactory_FWD_DEFINED__
@@ -325,10 +321,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlNode;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlNode ABI::Windows::Data::Xml::Dom::IXmlNode
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlNode_FWD_DEFINED__
@@ -340,10 +336,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlDocument;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_FWD_DEFINED__
 #define ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_FWD_DEFINED__
@@ -353,10 +349,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocument;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument ABI::Windows::Data::Xml::Dom::IXmlDocument
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_FWD_DEFINED__
@@ -378,10 +374,10 @@ namespace ABI {
             namespace Xml {
                 namespace Xsl {
                     class XsltProcessor;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Xsl */} /* ABI */
+                } /* Xsl */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 
@@ -423,10 +419,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXsltProcessor=_uuidof(IXsltProcessor);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Xsl */} /* ABI */
+                } /* Xsl */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor_INTERFACE_DEFINED__) */
@@ -467,10 +463,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXsltProcessor2=_uuidof(IXsltProcessor2);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Xsl */} /* ABI */
+                } /* Xsl */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor2;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessor2_INTERFACE_DEFINED__) */
@@ -511,10 +507,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXsltProcessorFactory=_uuidof(IXsltProcessorFactory);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Xsl */} /* ABI */
+                } /* Xsl */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessorFactory;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CXsl_CIXsltProcessorFactory_INTERFACE_DEFINED__) */

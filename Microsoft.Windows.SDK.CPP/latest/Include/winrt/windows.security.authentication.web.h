@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.authentication.web.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,10 +141,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Web {
                     interface IWebAuthenticationBrokerStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics ABI::Windows::Security::Authentication::Web::IWebAuthenticationBrokerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics_FWD_DEFINED__
@@ -157,10 +157,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Web {
                     interface IWebAuthenticationBrokerStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics2 ABI::Windows::Security::Authentication::Web::IWebAuthenticationBrokerStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics2_FWD_DEFINED__
@@ -173,10 +173,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Web {
                     interface IWebAuthenticationResult;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult ABI::Windows::Security::Authentication::Web::IWebAuthenticationResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Web {
                     class WebAuthenticationResult;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -216,7 +216,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Web
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::WebAuthenticationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::IWebAuthenticationResult*>
@@ -248,7 +248,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Web::WebAuthenticationRe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Web::WebAuthenticationResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CWebAuthenticationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Web::IWebAuthenticationResult*>
@@ -279,7 +279,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -309,7 +309,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -339,7 +339,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -369,7 +369,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -399,7 +399,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -428,7 +428,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -458,7 +458,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -488,7 +488,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -505,9 +505,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -516,9 +516,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -532,8 +532,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -541,8 +541,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -558,10 +558,10 @@ namespace ABI {
                     
                     typedef enum TokenBindingKeyType : int TokenBindingKeyType;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -571,10 +571,10 @@ namespace ABI {
                     
                     typedef enum WebAuthenticationOptions : unsigned int WebAuthenticationOptions;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -584,10 +584,10 @@ namespace ABI {
                     
                     typedef enum WebAuthenticationStatus : int WebAuthenticationStatus;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -631,10 +631,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -665,10 +665,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(WebAuthenticationOptions)
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -695,10 +695,10 @@ namespace ABI {
                         WebAuthenticationStatus_ErrorHttp = 2,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -746,10 +746,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebAuthenticationBrokerStatics=_uuidof(IWebAuthenticationBrokerStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics_INTERFACE_DEFINED__) */
@@ -808,10 +808,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebAuthenticationBrokerStatics2=_uuidof(IWebAuthenticationBrokerStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationBrokerStatics2_INTERFACE_DEFINED__) */
@@ -857,10 +857,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebAuthenticationResult=_uuidof(IWebAuthenticationResult);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult_INTERFACE_DEFINED__) */

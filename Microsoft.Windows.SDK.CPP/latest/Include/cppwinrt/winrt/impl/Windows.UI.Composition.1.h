@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -369,6 +369,13 @@ struct WINRT_EBO ICompositionGraphicsDevice2 :
     ICompositionGraphicsDevice2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ICompositionGraphicsDevice3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionGraphicsDevice3>
+{
+    ICompositionGraphicsDevice3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ICompositionLight :
     Windows::Foundation::IInspectable,
     impl::consume_t<ICompositionLight>
@@ -416,6 +423,13 @@ struct WINRT_EBO ICompositionMaskBrush :
     impl::consume_t<ICompositionMaskBrush>
 {
     ICompositionMaskBrush(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionMipmapSurface :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionMipmapSurface>
+{
+    ICompositionMipmapSurface(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ICompositionNineGridBrush :
@@ -488,6 +502,48 @@ struct WINRT_EBO ICompositionPathGeometry :
     ICompositionPathGeometry(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ICompositionProjectedShadow :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionProjectedShadow>
+{
+    ICompositionProjectedShadow(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionProjectedShadowCaster :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionProjectedShadowCaster>
+{
+    ICompositionProjectedShadowCaster(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionProjectedShadowCasterCollection :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionProjectedShadowCasterCollection>
+{
+    ICompositionProjectedShadowCasterCollection(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionProjectedShadowCasterCollectionStatics :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionProjectedShadowCasterCollectionStatics>
+{
+    ICompositionProjectedShadowCasterCollectionStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionProjectedShadowReceiver :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionProjectedShadowReceiver>
+{
+    ICompositionProjectedShadowReceiver(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionProjectedShadowReceiverUnorderedCollection :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionProjectedShadowReceiverUnorderedCollection>
+{
+    ICompositionProjectedShadowReceiverUnorderedCollection(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ICompositionPropertySet :
     Windows::Foundation::IInspectable,
     impl::consume_t<ICompositionPropertySet>
@@ -500,6 +556,13 @@ struct WINRT_EBO ICompositionPropertySet2 :
     impl::consume_t<ICompositionPropertySet2>
 {
     ICompositionPropertySet2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionRadialGradientBrush :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionRadialGradientBrush>
+{
+    ICompositionRadialGradientBrush(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ICompositionRectangleGeometry :
@@ -579,6 +642,13 @@ struct WINRT_EBO ICompositionSurfaceBrush2 :
     ICompositionSurfaceBrush2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ICompositionSurfaceBrush3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionSurfaceBrush3>
+{
+    ICompositionSurfaceBrush3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ICompositionTarget :
     Windows::Foundation::IInspectable,
     impl::consume_t<ICompositionTarget>
@@ -591,6 +661,20 @@ struct WINRT_EBO ICompositionTargetFactory :
     impl::consume_t<ICompositionTargetFactory>
 {
     ICompositionTargetFactory(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionTransform :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionTransform>
+{
+    ICompositionTransform(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionTransformFactory :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionTransformFactory>
+{
+    ICompositionTransformFactory(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ICompositionViewBox :
@@ -612,6 +696,13 @@ struct WINRT_EBO ICompositionVirtualDrawingSurfaceFactory :
     impl::consume_t<ICompositionVirtualDrawingSurfaceFactory>
 {
     ICompositionVirtualDrawingSurfaceFactory(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositionVisualSurface :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositionVisualSurface>
+{
+    ICompositionVisualSurface(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ICompositor :
@@ -661,6 +752,27 @@ struct WINRT_EBO ICompositorStatics :
     impl::consume_t<ICompositorStatics>
 {
     ICompositorStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositorWithProjectedShadow :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositorWithProjectedShadow>
+{
+    ICompositorWithProjectedShadow(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositorWithRadialGradient :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositorWithRadialGradient>
+{
+    ICompositorWithRadialGradient(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICompositorWithVisualSurface :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICompositorWithVisualSurface>
+{
+    ICompositorWithVisualSurface(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IContainerVisual :
@@ -1006,6 +1118,13 @@ struct WINRT_EBO IVisualCollection :
     impl::require<IVisualCollection, Windows::Foundation::Collections::IIterable<Windows::UI::Composition::Visual>>
 {
     IVisualCollection(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IVisualElement :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IVisualElement>
+{
+    IVisualElement(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IVisualFactory :

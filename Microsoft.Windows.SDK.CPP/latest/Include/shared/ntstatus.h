@@ -139,6 +139,7 @@ Notes:
 #define FACILITY_SDBUS                   0x51
 #define FACILITY_SHARED_VHDX             0x5C
 #define FACILITY_SMB                     0x5D
+#define FACILITY_XVS                     0x5E
 #define FACILITY_INTERIX                 0x99
 #define FACILITY_SPACES                  0xE7
 #define FACILITY_SECURITY_CORE           0xE8
@@ -5940,6 +5941,15 @@ Notes:
 #define STATUS_IO_DEVICE_INVALID_DATA    ((NTSTATUS)0xC00001B0L)
 
 //
+// MessageId: STATUS_IO_UNALIGNED_WRITE
+//
+// MessageText:
+//
+// The device reported an unaligned write error.
+//
+#define STATUS_IO_UNALIGNED_WRITE        ((NTSTATUS)0xC00001B1L)
+
+//
 //  Available range of NTSTATUS codes
 //
 //
@@ -10111,6 +10121,51 @@ Notes:
 //
 #define STATUS_CASE_DIFFERING_NAMES_IN_DIR ((NTSTATUS)0xC00004B3L)
 
+//
+// MessageId: STATUS_FILE_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The file cannot be safely opened because it is not supported by this version of Windows.
+//
+#define STATUS_FILE_NOT_SUPPORTED        ((NTSTATUS)0xC00004B4L)
+
+//
+// MessageId: STATUS_NOT_SUPPORTED_WITH_BTT
+//
+// MessageText:
+//
+// This operation is not supported with BTT enabled.
+//
+#define STATUS_NOT_SUPPORTED_WITH_BTT    ((NTSTATUS)0xC00004B5L)
+
+//
+// MessageId: STATUS_ENCRYPTION_DISABLED
+//
+// MessageText:
+//
+// This operation cannot be performed because encryption is currently disabled.
+//
+#define STATUS_ENCRYPTION_DISABLED       ((NTSTATUS)0xC00004B6L)
+
+//
+// MessageId: STATUS_ENCRYPTING_METADATA_DISALLOWED
+//
+// MessageText:
+//
+// This encryption operation cannot be performed on filesystem metadata.
+//
+#define STATUS_ENCRYPTING_METADATA_DISALLOWED ((NTSTATUS)0xC00004B7L)
+
+//
+// MessageId: STATUS_CANT_CLEAR_ENCRYPTION_FLAG
+//
+// MessageText:
+//
+// Encryption cannot be cleared on this file/directory because it still has an encrypted attribute.
+//
+#define STATUS_CANT_CLEAR_ENCRYPTION_FLAG ((NTSTATUS)0xC00004B8L)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -10303,6 +10358,24 @@ Notes:
 // The volume must undergo garbage collection.
 //
 #define STATUS_SMR_GARBAGE_COLLECTION_REQUIRED ((NTSTATUS)0xC0000514L)
+
+//
+// MessageId: STATUS_INTERRUPTED
+//
+// MessageText:
+//
+// Execution of the thread was interrupted.
+//
+#define STATUS_INTERRUPTED               ((NTSTATUS)0xC0000515L)    // winnt
+
+//
+// MessageId: STATUS_THREAD_NOT_RUNNING
+//
+// MessageText:
+//
+// The target thread is not currently running.
+//
+#define STATUS_THREAD_NOT_RUNNING        ((NTSTATUS)0xC0000516L)    // winnt
 
 
 //     **** New SYSTEM error codes can be inserted here ****
@@ -10596,7 +10669,7 @@ Notes:
 //
 // The provided callback is already registered.
 //
-#define STATUS_ALREADY_REGISTERED        ((NTSTATUS)0xC0000718L)
+#define STATUS_ALREADY_REGISTERED        ((NTSTATUS)0xC0000718L)    //winnt
 
 //
 // MessageId: STATUS_CONTEXT_MISMATCH
@@ -11891,6 +11964,15 @@ Notes:
 // The file is not a cloud sync root.
 //
 #define STATUS_NOT_A_CLOUD_SYNC_ROOT     ((NTSTATUS)0xC000CF1EL)
+
+//
+// MessageId: STATUS_CLOUD_FILE_REQUEST_TIMEOUT
+//
+// MessageText:
+//
+// The cloud operation was not completed before the time-out period expired.
+//
+#define STATUS_CLOUD_FILE_REQUEST_TIMEOUT ((NTSTATUS)0xC000CF1FL)
 
 /*++
 
@@ -16147,6 +16229,24 @@ Notes:
 // Vail state has been changed
 //
 #define STATUS_GRAPHICS_VAIL_STATE_CHANGED ((NTSTATUS)0xC01E0011L)
+
+//
+// MessageId: STATUS_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
+//
+// MessageText:
+//
+// Notifying indirect display UMDF class driver to abandon current swapchain.
+//
+#define STATUS_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN ((NTSTATUS)0xC01E0012L)
+
+//
+// MessageId: STATUS_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
+//
+// MessageText:
+//
+// Notifying indirect display UMDF class driver that indirect display device has been stopped.
+//
+#define STATUS_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED ((NTSTATUS)0xC01E0013L)
 
 //
 //   Video Memory Manager (VidMM) specific status codes {0x0100..0x01ff}
@@ -24247,6 +24347,24 @@ Notes:
 #define STATUS_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED ((NTSTATUS)0xC0E90004L)
 
 //
+// MessageId: STATUS_SYSTEM_INTEGRITY_TOO_MANY_POLICIES
+//
+// MessageText:
+//
+// The number of System Integrity policies is out of limit.
+//
+#define STATUS_SYSTEM_INTEGRITY_TOO_MANY_POLICIES ((NTSTATUS)0xC0E90005L)
+
+//
+// MessageId: STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
+//
+// MessageText:
+//
+// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
+//
+#define STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED ((NTSTATUS)0xC0E90006L)
+
+//
 // Clip modern app and windows licensing error messages.
 //
 //
@@ -24680,6 +24798,15 @@ Notes:
 // The specified log entry is not valid.
 //
 #define STATUS_SPACES_ENTRY_INVALID      ((NTSTATUS)0xC0E7001FL)
+
+//
+// MessageId: STATUS_SPACES_MARK_DIRTY
+//
+// MessageText:
+//
+// A slab needs to be marked dirty.
+//
+#define STATUS_SPACES_MARK_DIRTY         ((NTSTATUS)0xC0E70020L)
 
 //
 // Volsnap status codes (volsnap.sys)

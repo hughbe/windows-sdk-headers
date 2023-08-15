@@ -427,7 +427,7 @@ HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT (T::*targetMethod)(T
 
 // The explicit overload is required here to support template argument deduction of the callback interface type.
 template<typename T, typename TDelegateInterface, typename ...TArgs>
-HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT(T::*targetMethod)(TArgs... args), _Outptr_result_nullonfailure_ ::Microsoft::WRL::Details::ComPtrRef< ::Microsoft::WRL::ComPtr<TDelegateInterface>> callback)
+HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT(T::*targetMethod)(TArgs... args), ::Microsoft::WRL::Details::ComPtrRef< ::Microsoft::WRL::ComPtr<TDelegateInterface>> callback)
 {
     return WeakReferenceCallback(targetObject, targetMethod, static_cast<TDelegateInterface**>(callback));
 }

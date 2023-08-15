@@ -202,7 +202,7 @@ public:
 
     // copy constructor that allows to instantiate class when U* is convertible to T*
     template<class U>
-    ComPtr(const ComPtr<U> &other, typename Details::EnableIf<__is_convertible_to(U*, T*), void *>::type * = 0) throw() :
+    ComPtr(const ComPtr<U> &other, typename Details::EnableIf<Details::IsConvertible<U*, T*>::value, void *>::type * = 0) throw() :
         ptr_(other.ptr_)
     {
         InternalAddRef();
@@ -218,7 +218,7 @@ public:
 
     // Move constructor that allows instantiation of a class when U* is convertible to T*
     template<class U>
-    ComPtr(_Inout_ ComPtr<U>&& other, typename Details::EnableIf<__is_convertible_to(U*, T*), void *>::type * = 0) throw() :
+    ComPtr(_Inout_ ComPtr<U>&& other, typename Details::EnableIf<Details::IsConvertible<U*, T*>::value, void *>::type * = 0) throw() :
         ptr_(other.ptr_)
     {
         other.ptr_ = nullptr;

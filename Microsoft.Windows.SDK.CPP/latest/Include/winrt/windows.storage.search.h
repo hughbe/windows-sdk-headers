@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.search.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IContentIndexer;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIContentIndexer ABI::Windows::Storage::Search::IContentIndexer
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIContentIndexer_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IContentIndexerQuery;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQuery ABI::Windows::Storage::Search::IContentIndexerQuery
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQuery_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IContentIndexerQueryOperations;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQueryOperations ABI::Windows::Storage::Search::IContentIndexerQueryOperations
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQueryOperations_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IContentIndexerStatics;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIContentIndexerStatics ABI::Windows::Storage::Search::IContentIndexerStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIContentIndexerStatics_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IIndexableContent;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIIndexableContent ABI::Windows::Storage::Search::IIndexableContent
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIIndexableContent_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IQueryOptions;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIQueryOptions ABI::Windows::Storage::Search::IQueryOptions
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIQueryOptions_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IQueryOptionsFactory;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsFactory ABI::Windows::Storage::Search::IQueryOptionsFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsFactory_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IQueryOptionsWithProviderFilter;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsWithProviderFilter ABI::Windows::Storage::Search::IQueryOptionsWithProviderFilter
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsWithProviderFilter_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageFileQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult ABI::Windows::Storage::Search::IStorageFileQueryResult
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageFileQueryResult2;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult2 ABI::Windows::Storage::Search::IStorageFileQueryResult2
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult2_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageFolderQueryOperations;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryOperations ABI::Windows::Storage::Search::IStorageFolderQueryOperations
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryOperations_FWD_DEFINED__
@@ -434,9 +430,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageFolderQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryResult ABI::Windows::Storage::Search::IStorageFolderQueryResult
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryResult_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageItemQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageItemQueryResult ABI::Windows::Storage::Search::IStorageItemQueryResult
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageItemQueryResult_FWD_DEFINED__
@@ -462,9 +458,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageLibraryChangeTrackerTriggerDetails;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryChangeTrackerTriggerDetails ABI::Windows::Storage::Search::IStorageLibraryChangeTrackerTriggerDetails
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryChangeTrackerTriggerDetails_FWD_DEFINED__
@@ -476,9 +472,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageLibraryContentChangedTriggerDetails;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryContentChangedTriggerDetails ABI::Windows::Storage::Search::IStorageLibraryContentChangedTriggerDetails
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryContentChangedTriggerDetails_FWD_DEFINED__
@@ -490,9 +486,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageQueryResultBase;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase ABI::Windows::Storage::Search::IStorageQueryResultBase
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase_FWD_DEFINED__
@@ -504,9 +500,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IValueAndLanguage;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIValueAndLanguage ABI::Windows::Storage::Search::IValueAndLanguage
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIValueAndLanguage_FWD_DEFINED__
@@ -535,7 +531,7 @@ IIterator<ABI::Windows::Storage::Search::IIndexableContent*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::Search::IIndexableContent*> __FIIterator_1_Windows__CStorage__CSearch__CIIndexableContent_t;
 #define __FIIterator_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CSearch__CIIndexableContent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Search::IIndexableContent*>
@@ -567,7 +563,7 @@ IIterable<ABI::Windows::Storage::Search::IIndexableContent*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::Search::IIndexableContent*> __FIIterable_1_Windows__CStorage__CSearch__CIIndexableContent_t;
 #define __FIIterable_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CSearch__CIIndexableContent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Search::IIndexableContent*>
@@ -584,9 +580,9 @@ namespace ABI {
             namespace Search {
                 struct SortEntry;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CStorage__CSearch__CSortEntry_USE
@@ -607,7 +603,7 @@ IIterator<struct ABI::Windows::Storage::Search::SortEntry> : IIterator_impl<stru
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Storage::Search::SortEntry> __FIIterator_1_Windows__CStorage__CSearch__CSortEntry_t;
 #define __FIIterator_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CSearch__CSortEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Search::SortEntry>
@@ -637,7 +633,7 @@ IIterable<struct ABI::Windows::Storage::Search::SortEntry> : IIterable_impl<stru
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Storage::Search::SortEntry> __FIIterable_1_Windows__CStorage__CSearch__CSortEntry_t;
 #define __FIIterable_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CSearch__CSortEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Search::SortEntry>
@@ -668,7 +664,7 @@ IVectorView<ABI::Windows::Storage::Search::IIndexableContent*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::Search::IIndexableContent*> __FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent_t;
 #define __FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Search::IIndexableContent*>
@@ -699,7 +695,7 @@ IVectorView<struct ABI::Windows::Storage::Search::SortEntry> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Storage::Search::SortEntry> __FIVectorView_1_Windows__CStorage__CSearch__CSortEntry_t;
 #define __FIVectorView_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CSearch__CSortEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Search::SortEntry>
@@ -729,7 +725,7 @@ IVector<struct ABI::Windows::Storage::Search::SortEntry> : IVector_impl<struct A
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::Storage::Search::SortEntry> __FIVector_1_Windows__CStorage__CSearch__CSortEntry_t;
 #define __FIVector_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CSearch__CSortEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CSearch__CSortEntry ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::Search::SortEntry>
@@ -760,7 +756,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CSearch__CII
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Search::IIndexableContent*>*>
@@ -792,7 +788,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CSearch__CIIndexableContent ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Search::IIndexableContent*>*>
@@ -808,9 +804,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 enum IndexedState : int;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CSearch__CIndexedState_USE
@@ -831,7 +827,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Storage::Search::IndexedState
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Storage::Search::IndexedState> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CSearch__CIndexedState_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CSearch__CIndexedState ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CSearch__CIndexedState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CSearch__CIndexedState ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Search::IndexedState>
@@ -861,7 +857,7 @@ IAsyncOperation<enum ABI::Windows::Storage::Search::IndexedState> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Storage::Search::IndexedState> __FIAsyncOperation_1_Windows__CStorage__CSearch__CIndexedState_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CSearch__CIndexedState ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CSearch__CIndexedState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CSearch__CIndexedState ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Search::IndexedState>
@@ -893,7 +889,7 @@ ITypedEventHandler<ABI::Windows::Storage::Search::IStorageQueryResultBase*,IInsp
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::Search::IStorageQueryResultBase*,IInspectable*> __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::Search::IStorageQueryResultBase*,IInspectable*>
@@ -923,7 +919,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -952,7 +948,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -982,7 +978,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1012,7 +1008,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1042,7 +1038,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1072,7 +1068,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1102,7 +1098,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_IInspectable*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -1132,7 +1128,7 @@ IAsyncOperation<__FIMapView_2_HSTRING_IInspectable*> : IAsyncOperation_impl<__FI
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -1161,7 +1157,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -1190,7 +1186,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -1220,7 +1216,7 @@ IIterator<__FIMapView_2_HSTRING_IInspectable*> : IIterator_impl<__FIMapView_2_HS
 // correct parameterized interface specialization.
 typedef IIterator<__FIMapView_2_HSTRING_IInspectable*> __FIIterator_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -1250,7 +1246,7 @@ IIterable<__FIMapView_2_HSTRING_IInspectable*> : IIterable_impl<__FIMapView_2_HS
 // correct parameterized interface specialization.
 typedef IIterable<__FIMapView_2_HSTRING_IInspectable*> __FIIterable_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -1280,7 +1276,7 @@ IVectorView<__FIMapView_2_HSTRING_IInspectable*> : IVectorView_impl<__FIMapView_
 // correct parameterized interface specialization.
 typedef IVectorView<__FIMapView_2_HSTRING_IInspectable*> __FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -1310,7 +1306,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1___FIMapView_2_HSTRING_IInspecta
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1___FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>*>
@@ -1340,7 +1336,7 @@ IAsyncOperation<__FIVectorView_1___FIMapView_2_HSTRING_IInspectable*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1___FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>*>
@@ -1370,7 +1366,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1399,7 +1395,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1428,7 +1424,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1442,8 +1438,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1451,8 +1447,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1478,7 +1474,7 @@ IIterator<ABI::Windows::Storage::StorageFile*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFile*> __FIIterator_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFile*>
@@ -1510,7 +1506,7 @@ IIterable<ABI::Windows::Storage::StorageFile*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFile*> __FIIterable_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFile*>
@@ -1542,7 +1538,7 @@ IVectorView<ABI::Windows::Storage::StorageFile*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFile*> __FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>
@@ -1574,7 +1570,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CStorageFile
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CStorageFile*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>*>
@@ -1606,7 +1602,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CStorageFile*> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CStorageFile*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>*>
@@ -1623,9 +1619,9 @@ namespace ABI {
             namespace Text {
                 struct TextSegment;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CData__CText__CTextSegment_USE
@@ -1646,7 +1642,7 @@ IIterator<struct ABI::Windows::Data::Text::TextSegment> : IIterator_impl<struct 
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Data::Text::TextSegment> __FIIterator_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterator_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Text::TextSegment>
@@ -1676,7 +1672,7 @@ IIterable<struct ABI::Windows::Data::Text::TextSegment> : IIterable_impl<struct 
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Data::Text::TextSegment> __FIIterable_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterable_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Text::TextSegment>
@@ -1706,7 +1702,7 @@ IVectorView<struct ABI::Windows::Data::Text::TextSegment> : IVectorView_impl<str
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Data::Text::TextSegment> __FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>
@@ -1736,7 +1732,7 @@ IKeyValuePair<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> : I
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>
@@ -1766,7 +1762,7 @@ IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTe
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>*>
@@ -1796,7 +1792,7 @@ IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTe
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>*>
@@ -1826,7 +1822,7 @@ IMapView<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> : IMapVi
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>
@@ -1856,7 +1852,7 @@ IMap<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> : IMap_impl<
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>
@@ -1870,8 +1866,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1879,8 +1875,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1906,7 +1902,7 @@ IIterator<ABI::Windows::Storage::StorageFolder*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFolder*> __FIIterator_1_Windows__CStorage__CStorageFolder_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFolder*>
@@ -1938,7 +1934,7 @@ IIterable<ABI::Windows::Storage::StorageFolder*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFolder*> __FIIterable_1_Windows__CStorage__CStorageFolder_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFolder*>
@@ -1970,7 +1966,7 @@ IVectorView<ABI::Windows::Storage::StorageFolder*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFolder*> __FIVectorView_1_Windows__CStorage__CStorageFolder_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFolder*>
@@ -2002,7 +1998,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CStorageFold
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CStorageFolder*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFolder*>*>
@@ -2034,7 +2030,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CStorageFolder*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CStorageFolder*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFolder*>*>
@@ -2051,8 +2047,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -2078,7 +2074,7 @@ IIterator<ABI::Windows::Storage::IStorageItem*> : IIterator_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::IStorageItem*> __FIIterator_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageItem*>
@@ -2110,7 +2106,7 @@ IIterable<ABI::Windows::Storage::IStorageItem*> : IIterable_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::IStorageItem*> __FIIterable_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageItem*>
@@ -2142,7 +2138,7 @@ IVectorView<ABI::Windows::Storage::IStorageItem*> : IVectorView_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::IStorageItem*> __FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>
@@ -2174,7 +2170,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CIStorageIte
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CIStorageItem*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>*>
@@ -2206,7 +2202,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CIStorageItem*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CIStorageItem*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>*>
@@ -2226,9 +2222,9 @@ namespace ABI {
                 
                 typedef struct TextSegment TextSegment;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2239,8 +2235,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2248,8 +2244,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2265,9 +2261,9 @@ namespace ABI {
                 
                 typedef enum PropertyPrefetchOptions : unsigned int PropertyPrefetchOptions;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2276,9 +2272,9 @@ namespace ABI {
                 
                 typedef enum ThumbnailMode : int ThumbnailMode;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2287,9 +2283,9 @@ namespace ABI {
                 
                 typedef enum ThumbnailOptions : unsigned int ThumbnailOptions;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2301,8 +2297,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageLibraryChangeTracker;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker_FWD_DEFINED__
@@ -2310,8 +2306,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageLibraryChangeTracker;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker ABI::Windows::Storage::IStorageLibraryChangeTracker
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker_FWD_DEFINED__
@@ -2326,9 +2322,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -2344,9 +2340,9 @@ namespace ABI {
                 
                 typedef enum CommonFileQuery : int CommonFileQuery;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2355,9 +2351,9 @@ namespace ABI {
                 
                 typedef enum CommonFolderQuery : int CommonFolderQuery;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2366,9 +2362,9 @@ namespace ABI {
                 
                 typedef enum DateStackOption : int DateStackOption;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2377,9 +2373,9 @@ namespace ABI {
                 
                 typedef enum FolderDepth : int FolderDepth;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2388,9 +2384,9 @@ namespace ABI {
                 
                 typedef enum IndexedState : int IndexedState;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2399,9 +2395,9 @@ namespace ABI {
                 
                 typedef enum IndexerOption : int IndexerOption;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2410,9 +2406,9 @@ namespace ABI {
                 
                 typedef struct SortEntry SortEntry;
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2436,9 +2432,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class ContentIndexer;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2446,9 +2442,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class ContentIndexerQuery;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2456,9 +2452,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class IndexableContent;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2466,9 +2462,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class QueryOptions;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2476,9 +2472,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class SortEntryVector;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2486,9 +2482,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class StorageFileQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2496,9 +2492,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class StorageFolderQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2506,9 +2502,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class StorageItemQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2516,9 +2512,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class StorageLibraryChangeTrackerTriggerDetails;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2526,9 +2522,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class StorageLibraryContentChangedTriggerDetails;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2536,9 +2532,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class ValueAndLanguage;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2574,9 +2570,9 @@ namespace ABI {
                     CommonFileQuery_OrderByDate = 5,
                 };
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2612,9 +2608,9 @@ namespace ABI {
                     CommonFolderQuery_GroupByType = 111,
                 };
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2640,9 +2636,9 @@ namespace ABI {
                     DateStackOption_Month = 2,
                 };
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2667,9 +2663,9 @@ namespace ABI {
                     FolderDepth_Deep = 1,
                 };
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2696,9 +2692,9 @@ namespace ABI {
                     IndexedState_FullyIndexed = 3,
                 };
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2729,9 +2725,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2753,12 +2749,12 @@ namespace ABI {
                 struct SortEntry
                 {
                     HSTRING PropertyName;
-                    boolean AscendingOrder;
+                    ::boolean AscendingOrder;
                 };
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2818,9 +2814,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentIndexer=_uuidof(IContentIndexer);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIContentIndexer;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIContentIndexer_INTERFACE_DEFINED__) */
@@ -2878,9 +2874,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentIndexerQuery=_uuidof(IContentIndexerQuery);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQuery;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQuery_INTERFACE_DEFINED__) */
@@ -2934,9 +2930,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentIndexerQueryOperations=_uuidof(IContentIndexerQueryOperations);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQueryOperations;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIContentIndexerQueryOperations_INTERFACE_DEFINED__) */
@@ -2979,9 +2975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentIndexerStatics=_uuidof(IContentIndexerStatics);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIContentIndexerStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIContentIndexerStatics_INTERFACE_DEFINED__) */
@@ -3035,9 +3031,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IIndexableContent=_uuidof(IIndexableContent);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIIndexableContent;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIIndexableContent_INTERFACE_DEFINED__) */
@@ -3130,9 +3126,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IQueryOptions=_uuidof(IQueryOptions);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIQueryOptions;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIQueryOptions_INTERFACE_DEFINED__) */
@@ -3177,9 +3173,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IQueryOptionsFactory=_uuidof(IQueryOptionsFactory);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsFactory_INTERFACE_DEFINED__) */
@@ -3218,9 +3214,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IQueryOptionsWithProviderFilter=_uuidof(IQueryOptionsWithProviderFilter);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsWithProviderFilter;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIQueryOptionsWithProviderFilter_INTERFACE_DEFINED__) */
@@ -3268,9 +3264,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageFileQueryResult=_uuidof(IStorageFileQueryResult);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_INTERFACE_DEFINED__) */
@@ -3314,9 +3310,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageFileQueryResult2=_uuidof(IStorageFileQueryResult2);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult2_INTERFACE_DEFINED__) */
@@ -3403,24 +3399,24 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE AreQueryOptionsSupported(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Search::IQueryOptions * queryOptions,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsCommonFolderQuerySupported(
                         /* [in] */ABI::Windows::Storage::Search::CommonFolderQuery query,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsCommonFileQuerySupported(
                         /* [in] */ABI::Windows::Storage::Search::CommonFileQuery query,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IStorageFolderQueryOperations=_uuidof(IStorageFolderQueryOperations);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryOperations;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryOperations_INTERFACE_DEFINED__) */
@@ -3468,9 +3464,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageFolderQueryResult=_uuidof(IStorageFolderQueryResult);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryResult;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryResult_INTERFACE_DEFINED__) */
@@ -3518,9 +3514,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageItemQueryResult=_uuidof(IStorageItemQueryResult);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageItemQueryResult;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageItemQueryResult_INTERFACE_DEFINED__) */
@@ -3562,9 +3558,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageLibraryChangeTrackerTriggerDetails=_uuidof(IStorageLibraryChangeTrackerTriggerDetails);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryChangeTrackerTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryChangeTrackerTriggerDetails_INTERFACE_DEFINED__) */
@@ -3607,9 +3603,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageLibraryContentChangedTriggerDetails=_uuidof(IStorageLibraryContentChangedTriggerDetails);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryContentChangedTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageLibraryContentChangedTriggerDetails_INTERFACE_DEFINED__) */
@@ -3672,9 +3668,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageQueryResultBase=_uuidof(IStorageQueryResultBase);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase_INTERFACE_DEFINED__) */
@@ -3722,9 +3718,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IValueAndLanguage=_uuidof(IValueAndLanguage);
                 
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CSearch_CIValueAndLanguage;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CSearch_CIValueAndLanguage_INTERFACE_DEFINED__) */
@@ -5019,7 +5015,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQuer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CSearch__CIStorageQueryResultBase_IInspectableVtbl;
 
@@ -5686,7 +5682,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 

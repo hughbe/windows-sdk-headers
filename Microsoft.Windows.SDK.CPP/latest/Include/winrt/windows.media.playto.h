@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.playto.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface ICurrentTimeChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CICurrentTimeChangeRequestedEventArgs ABI::Windows::Media::PlayTo::ICurrentTimeChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CICurrentTimeChangeRequestedEventArgs_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IMuteChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIMuteChangeRequestedEventArgs ABI::Windows::Media::PlayTo::IMuteChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIMuteChangeRequestedEventArgs_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToConnection;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection ABI::Windows::Media::PlayTo::IPlayToConnection
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToConnectionErrorEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionErrorEventArgs ABI::Windows::Media::PlayTo::IPlayToConnectionErrorEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionErrorEventArgs_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToConnectionStateChangedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionStateChangedEventArgs ABI::Windows::Media::PlayTo::IPlayToConnectionStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionStateChangedEventArgs_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToConnectionTransferredEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionTransferredEventArgs ABI::Windows::Media::PlayTo::IPlayToConnectionTransferredEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionTransferredEventArgs_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToManager;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager ABI::Windows::Media::PlayTo::IPlayToManager
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToManagerStatics;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManagerStatics ABI::Windows::Media::PlayTo::IPlayToManagerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManagerStatics_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToReceiver;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver ABI::Windows::Media::PlayTo::IPlayToReceiver
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToSource;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSource ABI::Windows::Media::PlayTo::IPlayToSource
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSource_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToSourceDeferral;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceDeferral ABI::Windows::Media::PlayTo::IPlayToSourceDeferral
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceDeferral_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToSourceRequest;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequest ABI::Windows::Media::PlayTo::IPlayToSourceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequest_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToSourceRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequestedEventArgs ABI::Windows::Media::PlayTo::IPlayToSourceRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequestedEventArgs_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToSourceSelectedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceSelectedEventArgs ABI::Windows::Media::PlayTo::IPlayToSourceSelectedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceSelectedEventArgs_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlayToSourceWithPreferredSourceUri;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceWithPreferredSourceUri ABI::Windows::Media::PlayTo::IPlayToSourceWithPreferredSourceUri
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceWithPreferredSourceUri_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IPlaybackRateChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIPlaybackRateChangeRequestedEventArgs ABI::Windows::Media::PlayTo::IPlaybackRateChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIPlaybackRateChangeRequestedEventArgs_FWD_DEFINED__
@@ -501,9 +497,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface ISourceChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CISourceChangeRequestedEventArgs ABI::Windows::Media::PlayTo::ISourceChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CISourceChangeRequestedEventArgs_FWD_DEFINED__
@@ -515,9 +511,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 interface IVolumeChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayTo_CIVolumeChangeRequestedEventArgs ABI::Windows::Media::PlayTo::IVolumeChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayTo_CIVolumeChangeRequestedEventArgs_FWD_DEFINED__
@@ -530,9 +526,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToConnection;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -540,9 +536,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToConnectionErrorEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -566,7 +562,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToConnection*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToConnection*,ABI::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToConnection*,ABI::Windows::Media::PlayTo::IPlayToConnectionErrorEventArgs*>
@@ -584,9 +580,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToConnectionStateChangedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -610,7 +606,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToConnection*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToConnection*,ABI::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToConnection*,ABI::Windows::Media::PlayTo::IPlayToConnectionStateChangedEventArgs*>
@@ -628,9 +624,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToConnectionTransferredEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -654,7 +650,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToConnection*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToConnection*,ABI::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToConnection*,ABI::Windows::Media::PlayTo::IPlayToConnectionTransferredEventArgs*>
@@ -671,9 +667,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToManager;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -681,9 +677,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToSourceRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -707,7 +703,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToManager*,ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToManager*,ABI::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToManager*,ABI::Windows::Media::PlayTo::IPlayToSourceRequestedEventArgs*>
@@ -725,9 +721,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToSourceSelectedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -751,7 +747,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToManager*,ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToManager*,ABI::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToManager*,ABI::Windows::Media::PlayTo::IPlayToSourceSelectedEventArgs*>
@@ -768,9 +764,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToReceiver;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -794,7 +790,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,IInspectable*> :
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToReceiver*,IInspectable*>
@@ -811,9 +807,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class CurrentTimeChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -837,7 +833,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Me
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToReceiver*,ABI::Windows::Media::PlayTo::ICurrentTimeChangeRequestedEventArgs*>
@@ -855,9 +851,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class MuteChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -881,7 +877,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Me
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Media::PlayTo::MuteChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToReceiver*,ABI::Windows::Media::PlayTo::IMuteChangeRequestedEventArgs*>
@@ -899,9 +895,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlaybackRateChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -925,7 +921,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Me
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToReceiver*,ABI::Windows::Media::PlayTo::IPlaybackRateChangeRequestedEventArgs*>
@@ -943,9 +939,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class SourceChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -969,7 +965,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Me
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Media::PlayTo::SourceChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToReceiver*,ABI::Windows::Media::PlayTo::ISourceChangeRequestedEventArgs*>
@@ -987,9 +983,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class VolumeChangeRequestedEventArgs;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1013,7 +1009,7 @@ ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Me
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::PlayTo::PlayToReceiver*,ABI::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::PlayTo::IPlayToReceiver*,ABI::Windows::Media::PlayTo::IVolumeChangeRequestedEventArgs*>
@@ -1030,8 +1026,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1052,7 +1048,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1081,7 +1077,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -1111,7 +1107,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1141,7 +1137,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1171,7 +1167,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1201,7 +1197,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1220,9 +1216,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1237,8 +1233,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1246,8 +1242,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1259,16 +1255,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1276,8 +1272,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1292,9 +1288,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -1307,9 +1303,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1325,9 +1321,9 @@ namespace ABI {
                 
                 typedef enum PlayToConnectionError : int PlayToConnectionError;
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1336,9 +1332,9 @@ namespace ABI {
                 
                 typedef enum PlayToConnectionState : int PlayToConnectionState;
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1371,9 +1367,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToSource;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1381,9 +1377,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToSourceDeferral;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1391,9 +1387,9 @@ namespace ABI {
         namespace Media {
             namespace PlayTo {
                 class PlayToSourceRequest;
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1441,9 +1437,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1473,9 +1469,9 @@ namespace ABI {
                     PlayToConnectionState_Rendering = 2,
                 };
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1511,9 +1507,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICurrentTimeChangeRequestedEventArgs=_uuidof(ICurrentTimeChangeRequestedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CICurrentTimeChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CICurrentTimeChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1545,16 +1541,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Mute(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMuteChangeRequestedEventArgs=_uuidof(IMuteChangeRequestedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIMuteChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIMuteChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1646,9 +1642,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToConnection=_uuidof(IPlayToConnection);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection_INTERFACE_DEFINED__) */
@@ -1702,9 +1698,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToConnectionErrorEventArgs=_uuidof(IPlayToConnectionErrorEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionErrorEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionErrorEventArgs_INTERFACE_DEFINED__) */
@@ -1758,9 +1754,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToConnectionStateChangedEventArgs=_uuidof(IPlayToConnectionStateChangedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -1814,9 +1810,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToConnectionTransferredEventArgs=_uuidof(IPlayToConnectionTransferredEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionTransferredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionTransferredEventArgs_INTERFACE_DEFINED__) */
@@ -1886,23 +1882,23 @@ namespace ABI {
                     DEPRECATED("PlayToManager may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_DefaultSourceSelection(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     DEPRECATED("PlayToManager may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_DefaultSourceSelection(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPlayToManager=_uuidof(IPlayToManager);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager_INTERFACE_DEFINED__) */
@@ -1954,9 +1950,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToManagerStatics=_uuidof(IPlayToManagerStatics);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManagerStatics_INTERFACE_DEFINED__) */
@@ -2052,7 +2048,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE NotifyVolumeChange(
                         /* [in] */DOUBLE volume,
-                        /* [in] */boolean mute
+                        /* [in] */::boolean mute
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE NotifyRateChange(
                         /* [in] */DOUBLE rate
@@ -2078,22 +2074,22 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SupportsImage(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsImage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SupportsAudio(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsAudio(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SupportsVideo(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsVideo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Properties(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
@@ -2109,9 +2105,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToReceiver=_uuidof(IPlayToReceiver);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver_INTERFACE_DEFINED__) */
@@ -2177,9 +2173,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToSource=_uuidof(IPlayToSource);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSource_INTERFACE_DEFINED__) */
@@ -2224,9 +2220,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToSourceDeferral=_uuidof(IPlayToSourceDeferral);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceDeferral;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceDeferral_INTERFACE_DEFINED__) */
@@ -2294,9 +2290,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToSourceRequest=_uuidof(IPlayToSourceRequest);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequest_INTERFACE_DEFINED__) */
@@ -2343,9 +2339,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToSourceRequestedEventArgs=_uuidof(IPlayToSourceRequestedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2399,30 +2395,30 @@ namespace ABI {
                     DEPRECATED("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SupportsImage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     DEPRECATED("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SupportsAudio(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     DEPRECATED("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SupportsVideo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPlayToSourceSelectedEventArgs=_uuidof(IPlayToSourceSelectedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceSelectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceSelectedEventArgs_INTERFACE_DEFINED__) */
@@ -2476,9 +2472,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlayToSourceWithPreferredSourceUri=_uuidof(IPlayToSourceWithPreferredSourceUri);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceWithPreferredSourceUri;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceWithPreferredSourceUri_INTERFACE_DEFINED__) */
@@ -2517,9 +2513,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaybackRateChangeRequestedEventArgs=_uuidof(IPlaybackRateChangeRequestedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIPlaybackRateChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIPlaybackRateChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2585,9 +2581,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISourceChangeRequestedEventArgs=_uuidof(ISourceChangeRequestedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CISourceChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CISourceChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2626,9 +2622,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVolumeChangeRequestedEventArgs=_uuidof(IVolumeChangeRequestedEventArgs);
                 
-            } /* Windows */
+            } /* PlayTo */
         } /* Media */
-    } /* PlayTo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayTo_CIVolumeChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayTo_CIVolumeChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3173,7 +3169,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnecti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionErrorEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionErrorEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionErrorEventArgsVtbl;
 
@@ -3226,7 +3222,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnecti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionStateChangedEventArgsVtbl;
 
@@ -3279,7 +3275,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnecti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionTransferredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToConnectionTransferredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToConnection_Windows__CMedia__CPlayTo__CPlayToConnectionTransferredEventArgsVtbl;
 
@@ -3332,7 +3328,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceRequestedEventArgsVtbl;
 
@@ -3385,7 +3381,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceSelectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToSourceSelectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToManager_Windows__CMedia__CPlayTo__CPlayToSourceSelectedEventArgsVtbl;
 
@@ -3437,7 +3433,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_IInspectableVtbl;
 
@@ -3489,7 +3485,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CICurrentTimeChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CICurrentTimeChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CCurrentTimeChangeRequestedEventArgsVtbl;
 
@@ -3542,7 +3538,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIMuteChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIMuteChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CMuteChangeRequestedEventArgsVtbl;
 
@@ -3595,7 +3591,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlaybackRateChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlaybackRateChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CPlaybackRateChangeRequestedEventArgsVtbl;
 
@@ -3648,7 +3644,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CISourceChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CISourceChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CSourceChangeRequestedEventArgsVtbl;
 
@@ -3701,7 +3697,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIVolumeChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIPlayToReceiver * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayTo_CIVolumeChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayTo__CPlayToReceiver_Windows__CMedia__CPlayTo__CVolumeChangeRequestedEventArgsVtbl;
 
@@ -3814,7 +3810,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

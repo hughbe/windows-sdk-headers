@@ -16,8 +16,8 @@ Module Name:
 #endif
 #include <winapifamily.h>
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #ifdef __cplusplus
 extern "C" {
@@ -477,7 +477,7 @@ typedef IP_INTERFACE_NAME_INFO_W2KSP1 *PIP_INTERFACE_NAME_INFO;
 }
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif

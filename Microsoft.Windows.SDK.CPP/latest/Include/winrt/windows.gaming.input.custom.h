@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.gaming.input.custom.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,10 +275,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface ICustomGameControllerFactory;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CICustomGameControllerFactory ABI::Windows::Gaming::Input::Custom::ICustomGameControllerFactory
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CICustomGameControllerFactory_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IGameControllerFactoryManagerStatics;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics ABI::Windows::Gaming::Input::Custom::IGameControllerFactoryManagerStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IGameControllerFactoryManagerStatics2;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics2 ABI::Windows::Gaming::Input::Custom::IGameControllerFactoryManagerStatics2
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics2_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IGameControllerInputSink;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerInputSink ABI::Windows::Gaming::Input::Custom::IGameControllerInputSink
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerInputSink_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IGameControllerProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerProvider ABI::Windows::Gaming::Input::Custom::IGameControllerProvider
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerProvider_FWD_DEFINED__
@@ -359,10 +355,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IGipFirmwareUpdateResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIGipFirmwareUpdateResult ABI::Windows::Gaming::Input::Custom::IGipFirmwareUpdateResult
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIGipFirmwareUpdateResult_FWD_DEFINED__
@@ -375,10 +371,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IGipGameControllerInputSink;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerInputSink ABI::Windows::Gaming::Input::Custom::IGipGameControllerInputSink
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerInputSink_FWD_DEFINED__
@@ -391,10 +387,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IGipGameControllerProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerProvider ABI::Windows::Gaming::Input::Custom::IGipGameControllerProvider
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerProvider_FWD_DEFINED__
@@ -407,10 +403,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IHidGameControllerInputSink;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerInputSink ABI::Windows::Gaming::Input::Custom::IHidGameControllerInputSink
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerInputSink_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IHidGameControllerProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerProvider ABI::Windows::Gaming::Input::Custom::IHidGameControllerProvider
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerProvider_FWD_DEFINED__
@@ -439,10 +435,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IXusbGameControllerInputSink;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerInputSink ABI::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerInputSink_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     interface IXusbGameControllerProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerProvider ABI::Windows::Gaming::Input::Custom::IXusbGameControllerProvider
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerProvider_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     class GipFirmwareUpdateResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -485,10 +481,10 @@ namespace ABI {
                 namespace Custom {
                     struct GipFirmwareUpdateProgress;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -510,7 +506,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Gaming::Input::Custom::GipFirmwareU
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult*,struct ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress> __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Gaming::Input::Custom::IGipFirmwareUpdateResult*,ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
@@ -543,7 +539,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Gaming::Input::Custom:
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult*,struct ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Gaming::Input::Custom::IGipFirmwareUpdateResult*,ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
@@ -576,7 +572,7 @@ IAsyncOperationWithProgress<ABI::Windows::Gaming::Input::Custom::GipFirmwareUpda
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult*,struct ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress> __FIAsyncOperationWithProgress_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Gaming::Input::Custom::IGipFirmwareUpdateResult*,ABI::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
@@ -599,9 +595,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGameController;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGameController ABI::Windows::Gaming::Input::IGameController
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGameController_FWD_DEFINED__
@@ -617,9 +613,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -636,10 +632,10 @@ namespace ABI {
                     
                     typedef enum GipFirmwareUpdateStatus : int GipFirmwareUpdateStatus;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -649,10 +645,10 @@ namespace ABI {
                     
                     typedef enum GipMessageClass : int GipMessageClass;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -662,10 +658,10 @@ namespace ABI {
                     
                     typedef enum XusbDeviceSubtype : int XusbDeviceSubtype;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -675,10 +671,10 @@ namespace ABI {
                     
                     typedef enum XusbDeviceType : int XusbDeviceType;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -688,10 +684,10 @@ namespace ABI {
                     
                     typedef struct GameControllerVersionInfo GameControllerVersionInfo;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -701,10 +697,10 @@ namespace ABI {
                     
                     typedef struct GipFirmwareUpdateProgress GipFirmwareUpdateProgress;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -726,10 +722,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     class GipGameControllerProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -738,10 +734,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     class HidGameControllerProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -750,10 +746,10 @@ namespace ABI {
             namespace Input {
                 namespace Custom {
                     class XusbGameControllerProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -789,10 +785,10 @@ namespace ABI {
                         GipFirmwareUpdateStatus_Failed = 2,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -819,10 +815,10 @@ namespace ABI {
                         GipMessageClass_StandardLatency = 2,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -857,10 +853,10 @@ namespace ABI {
                         XusbDeviceSubtype_DancePad = 10,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -886,10 +882,10 @@ namespace ABI {
                         XusbDeviceType_Gamepad = 1,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -917,10 +913,10 @@ namespace ABI {
                         UINT16 Revision;
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -946,10 +942,10 @@ namespace ABI {
                         UINT32 CurrentComponentId;
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -990,10 +986,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomGameControllerFactory=_uuidof(ICustomGameControllerFactory);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CICustomGameControllerFactory;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CICustomGameControllerFactory_INTERFACE_DEFINED__) */
@@ -1044,10 +1040,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameControllerFactoryManagerStatics=_uuidof(IGameControllerFactoryManagerStatics);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics_INTERFACE_DEFINED__) */
@@ -1093,10 +1089,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameControllerFactoryManagerStatics2=_uuidof(IGameControllerFactoryManagerStatics2);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerFactoryManagerStatics2_INTERFACE_DEFINED__) */
@@ -1136,10 +1132,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameControllerInputSink=_uuidof(IGameControllerInputSink);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerInputSink;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerInputSink_INTERFACE_DEFINED__) */
@@ -1181,17 +1177,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Gaming::Input::Custom::GameControllerVersionInfo * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsConnected(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGameControllerProvider=_uuidof(IGameControllerProvider);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerProvider;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIGameControllerProvider_INTERFACE_DEFINED__) */
@@ -1237,10 +1233,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGipFirmwareUpdateResult=_uuidof(IGipFirmwareUpdateResult);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIGipFirmwareUpdateResult;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIGipFirmwareUpdateResult_INTERFACE_DEFINED__) */
@@ -1276,7 +1272,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE OnKeyReceived(
                             /* [in] */UINT64 timestamp,
                             /* [in] */BYTE keyCode,
-                            /* [in] */boolean isPressed
+                            /* [in] */::boolean isPressed
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE OnMessageReceived(
                             /* [in] */UINT64 timestamp,
@@ -1291,10 +1287,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGipGameControllerInputSink=_uuidof(IGipGameControllerInputSink);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerInputSink;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerInputSink_INTERFACE_DEFINED__) */
@@ -1353,10 +1349,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGipGameControllerProvider=_uuidof(IGipGameControllerProvider);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerProvider;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIGipGameControllerProvider_INTERFACE_DEFINED__) */
@@ -1400,10 +1396,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHidGameControllerInputSink=_uuidof(IHidGameControllerInputSink);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerInputSink;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerInputSink_INTERFACE_DEFINED__) */
@@ -1465,10 +1461,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHidGameControllerProvider=_uuidof(IHidGameControllerProvider);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerProvider;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIHidGameControllerProvider_INTERFACE_DEFINED__) */
@@ -1512,10 +1508,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXusbGameControllerInputSink=_uuidof(IXusbGameControllerInputSink);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerInputSink;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerInputSink_INTERFACE_DEFINED__) */
@@ -1560,10 +1556,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXusbGameControllerProvider=_uuidof(IXusbGameControllerProvider);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerProvider;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CCustom_CIXusbGameControllerProvider_INTERFACE_DEFINED__) */
@@ -1798,7 +1794,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCu
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CGaming_CInput_CCustom_CGipFirmwareUpdateProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateResult_Windows__CGaming__CInput__CCustom__CGipFirmwareUpdateProgressVtbl;
 

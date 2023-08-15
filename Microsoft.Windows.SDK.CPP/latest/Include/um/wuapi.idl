@@ -456,10 +456,11 @@ typedef [public] enum tagUpdateOperation
 ]
 typedef [public] enum tagDeploymentAction
 {
-    [helpstring("None")]            daNone              = 0,
-    [helpstring("Installation")]    daInstallation      = 1,
-    [helpstring("Uninstallation")]  daUninstallation    = 2,
-    [helpstring("Detection")]       daDetection         = 3,
+    [helpstring("None")]                    daNone = 0,
+    [helpstring("Installation")]            daInstallation = 1,
+    [helpstring("Uninstallation")]          daUninstallation = 2,
+    [helpstring("Detection")]               daDetection = 3,
+    [helpstring("OptionalInstallation")]    daOptionalInstallation = 4,
 } DeploymentAction;
 
 [

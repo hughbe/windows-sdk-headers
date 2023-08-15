@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -236,6 +236,13 @@ struct WINRT_EBO ContentPrefetchTrigger :
     ContentPrefetchTrigger(std::nullptr_t) noexcept {}
     ContentPrefetchTrigger();
     ContentPrefetchTrigger(Windows::Foundation::TimeSpan const& waitInterval);
+};
+
+struct WINRT_EBO ConversationalAgentTrigger :
+    Windows::ApplicationModel::Background::IBackgroundTrigger
+{
+    ConversationalAgentTrigger(std::nullptr_t) noexcept {}
+    ConversationalAgentTrigger();
 };
 
 struct WINRT_EBO CustomSystemEventTrigger :

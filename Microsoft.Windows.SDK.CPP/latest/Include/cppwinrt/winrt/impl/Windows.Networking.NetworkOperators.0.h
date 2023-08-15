@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -71,6 +71,13 @@ enum class ESimAuthenticationPreference : int32_t
     OnEntry = 0,
     OnAction = 1,
     Never = 2,
+};
+
+enum class ESimDiscoverResultKind : int32_t
+{
+    None = 0,
+    Events = 1,
+    ProfileMetadata = 2,
 };
 
 enum class ESimOperationStatus : int32_t
@@ -350,7 +357,10 @@ enum class UssdResultCode : int32_t
 };
 
 struct IESim;
+struct IESim2;
 struct IESimAddedEventArgs;
+struct IESimDiscoverEvent;
+struct IESimDiscoverResult;
 struct IESimDownloadProfileMetadataResult;
 struct IESimManagerStatics;
 struct IESimOperationResult;
@@ -449,6 +459,8 @@ struct IUssdSession;
 struct IUssdSessionStatics;
 struct ESim;
 struct ESimAddedEventArgs;
+struct ESimDiscoverEvent;
+struct ESimDiscoverResult;
 struct ESimDownloadProfileMetadataResult;
 struct ESimManager;
 struct ESimOperationResult;
@@ -531,7 +543,10 @@ namespace winrt::impl {
 
 template<> struct is_enum_flag<Windows::Networking::NetworkOperators::DataClasses> : std::true_type {};
 template <> struct category<Windows::Networking::NetworkOperators::IESim>{ using type = interface_category; };
+template <> struct category<Windows::Networking::NetworkOperators::IESim2>{ using type = interface_category; };
 template <> struct category<Windows::Networking::NetworkOperators::IESimAddedEventArgs>{ using type = interface_category; };
+template <> struct category<Windows::Networking::NetworkOperators::IESimDiscoverEvent>{ using type = interface_category; };
+template <> struct category<Windows::Networking::NetworkOperators::IESimDiscoverResult>{ using type = interface_category; };
 template <> struct category<Windows::Networking::NetworkOperators::IESimDownloadProfileMetadataResult>{ using type = interface_category; };
 template <> struct category<Windows::Networking::NetworkOperators::IESimManagerStatics>{ using type = interface_category; };
 template <> struct category<Windows::Networking::NetworkOperators::IESimOperationResult>{ using type = interface_category; };
@@ -630,6 +645,8 @@ template <> struct category<Windows::Networking::NetworkOperators::IUssdSession>
 template <> struct category<Windows::Networking::NetworkOperators::IUssdSessionStatics>{ using type = interface_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESim>{ using type = class_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimAddedEventArgs>{ using type = class_category; };
+template <> struct category<Windows::Networking::NetworkOperators::ESimDiscoverEvent>{ using type = class_category; };
+template <> struct category<Windows::Networking::NetworkOperators::ESimDiscoverResult>{ using type = class_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>{ using type = class_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimManager>{ using type = class_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimOperationResult>{ using type = class_category; };
@@ -705,6 +722,7 @@ template <> struct category<Windows::Networking::NetworkOperators::UssdReply>{ u
 template <> struct category<Windows::Networking::NetworkOperators::UssdSession>{ using type = class_category; };
 template <> struct category<Windows::Networking::NetworkOperators::DataClasses>{ using type = enum_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimAuthenticationPreference>{ using type = enum_category; };
+template <> struct category<Windows::Networking::NetworkOperators::ESimDiscoverResultKind>{ using type = enum_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimOperationStatus>{ using type = enum_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimProfileClass>{ using type = enum_category; };
 template <> struct category<Windows::Networking::NetworkOperators::ESimProfileMetadataState>{ using type = enum_category; };
@@ -735,7 +753,10 @@ template <> struct category<Windows::Networking::NetworkOperators::UssdResultCod
 template <> struct category<Windows::Networking::NetworkOperators::ESimProfileInstallProgress>{ using type = struct_category<int32_t,int32_t>; };
 template <> struct category<Windows::Networking::NetworkOperators::ProfileUsage>{ using type = struct_category<uint32_t,Windows::Foundation::DateTime>; };
 template <> struct name<Windows::Networking::NetworkOperators::IESim>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESim" }; };
+template <> struct name<Windows::Networking::NetworkOperators::IESim2>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESim2" }; };
 template <> struct name<Windows::Networking::NetworkOperators::IESimAddedEventArgs>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESimAddedEventArgs" }; };
+template <> struct name<Windows::Networking::NetworkOperators::IESimDiscoverEvent>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESimDiscoverEvent" }; };
+template <> struct name<Windows::Networking::NetworkOperators::IESimDiscoverResult>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESimDiscoverResult" }; };
 template <> struct name<Windows::Networking::NetworkOperators::IESimDownloadProfileMetadataResult>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESimDownloadProfileMetadataResult" }; };
 template <> struct name<Windows::Networking::NetworkOperators::IESimManagerStatics>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESimManagerStatics" }; };
 template <> struct name<Windows::Networking::NetworkOperators::IESimOperationResult>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IESimOperationResult" }; };
@@ -834,6 +855,8 @@ template <> struct name<Windows::Networking::NetworkOperators::IUssdSession>{ st
 template <> struct name<Windows::Networking::NetworkOperators::IUssdSessionStatics>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.IUssdSessionStatics" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESim>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESim" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimAddedEventArgs>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimAddedEventArgs" }; };
+template <> struct name<Windows::Networking::NetworkOperators::ESimDiscoverEvent>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimDiscoverEvent" }; };
+template <> struct name<Windows::Networking::NetworkOperators::ESimDiscoverResult>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimDiscoverResult" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimManager>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimManager" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimOperationResult>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimOperationResult" }; };
@@ -909,6 +932,7 @@ template <> struct name<Windows::Networking::NetworkOperators::UssdReply>{ stati
 template <> struct name<Windows::Networking::NetworkOperators::UssdSession>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.UssdSession" }; };
 template <> struct name<Windows::Networking::NetworkOperators::DataClasses>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.DataClasses" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimAuthenticationPreference>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimAuthenticationPreference" }; };
+template <> struct name<Windows::Networking::NetworkOperators::ESimDiscoverResultKind>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimDiscoverResultKind" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimOperationStatus>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimOperationStatus" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimProfileClass>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimProfileClass" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ESimProfileMetadataState>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimProfileMetadataState" }; };
@@ -939,7 +963,10 @@ template <> struct name<Windows::Networking::NetworkOperators::UssdResultCode>{ 
 template <> struct name<Windows::Networking::NetworkOperators::ESimProfileInstallProgress>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ESimProfileInstallProgress" }; };
 template <> struct name<Windows::Networking::NetworkOperators::ProfileUsage>{ static constexpr auto & value{ L"Windows.Networking.NetworkOperators.ProfileUsage" }; };
 template <> struct guid_storage<Windows::Networking::NetworkOperators::IESim>{ static constexpr guid value{ 0x6F6E6E26,0xF123,0x437D,{ 0x8C,0xED,0xDC,0x1D,0x2B,0xC0,0xC3,0xA9 } }; };
+template <> struct guid_storage<Windows::Networking::NetworkOperators::IESim2>{ static constexpr guid value{ 0xBD4FD0A0,0xC68F,0x56EB,{ 0xB9,0x9B,0x8F,0x34,0xB8,0x10,0x02,0x99 } }; };
 template <> struct guid_storage<Windows::Networking::NetworkOperators::IESimAddedEventArgs>{ static constexpr guid value{ 0x38BD0A58,0x4D5A,0x4D08,{ 0x8D,0xA7,0xE7,0x3E,0xFF,0x36,0x9D,0xDD } }; };
+template <> struct guid_storage<Windows::Networking::NetworkOperators::IESimDiscoverEvent>{ static constexpr guid value{ 0xE59AC3E3,0x39BC,0x5F6F,{ 0x93,0x21,0x0D,0x4A,0x18,0x2D,0x26,0x1B } }; };
+template <> struct guid_storage<Windows::Networking::NetworkOperators::IESimDiscoverResult>{ static constexpr guid value{ 0x56B4BB5E,0xAB2F,0x5AC6,{ 0xB3,0x59,0xDD,0x5A,0x8E,0x23,0x79,0x26 } }; };
 template <> struct guid_storage<Windows::Networking::NetworkOperators::IESimDownloadProfileMetadataResult>{ static constexpr guid value{ 0xC4234D9E,0x5AD6,0x426D,{ 0x8D,0x00,0x44,0x34,0xF4,0x49,0xAF,0xEC } }; };
 template <> struct guid_storage<Windows::Networking::NetworkOperators::IESimManagerStatics>{ static constexpr guid value{ 0x0BFA2C0C,0xDF88,0x4631,{ 0xBF,0x04,0xC1,0x2E,0x28,0x1B,0x39,0x62 } }; };
 template <> struct guid_storage<Windows::Networking::NetworkOperators::IESimOperationResult>{ static constexpr guid value{ 0xA67B63B1,0x309B,0x4E77,{ 0x9E,0x7E,0xCD,0x93,0xF1,0xDD,0xC7,0xB9 } }; };
@@ -1038,6 +1065,8 @@ template <> struct guid_storage<Windows::Networking::NetworkOperators::IUssdSess
 template <> struct guid_storage<Windows::Networking::NetworkOperators::IUssdSessionStatics>{ static constexpr guid value{ 0x2F9ACF82,0x1001,0x4D5D,{ 0xBF,0x81,0x2A,0xBA,0x1B,0x4B,0xE4,0xA8 } }; };
 template <> struct default_interface<Windows::Networking::NetworkOperators::ESim>{ using type = Windows::Networking::NetworkOperators::IESim; };
 template <> struct default_interface<Windows::Networking::NetworkOperators::ESimAddedEventArgs>{ using type = Windows::Networking::NetworkOperators::IESimAddedEventArgs; };
+template <> struct default_interface<Windows::Networking::NetworkOperators::ESimDiscoverEvent>{ using type = Windows::Networking::NetworkOperators::IESimDiscoverEvent; };
+template <> struct default_interface<Windows::Networking::NetworkOperators::ESimDiscoverResult>{ using type = Windows::Networking::NetworkOperators::IESimDiscoverResult; };
 template <> struct default_interface<Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>{ using type = Windows::Networking::NetworkOperators::IESimDownloadProfileMetadataResult; };
 template <> struct default_interface<Windows::Networking::NetworkOperators::ESimOperationResult>{ using type = Windows::Networking::NetworkOperators::IESimOperationResult; };
 template <> struct default_interface<Windows::Networking::NetworkOperators::ESimPolicy>{ using type = Windows::Networking::NetworkOperators::IESimPolicy; };
@@ -1114,7 +1143,7 @@ template <> struct abi<Windows::Networking::NetworkOperators::IESim>{ struct typ
     virtual int32_t WINRT_CALL get_MobileBroadbandModemDeviceId(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_Policy(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_State(Windows::Networking::NetworkOperators::ESimState* value) noexcept = 0;
-    virtual int32_t WINRT_CALL GetProfiles(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetProfiles(void** result) noexcept = 0;
     virtual int32_t WINRT_CALL DeleteProfileAsync(void* profileId, void** operation) noexcept = 0;
     virtual int32_t WINRT_CALL DownloadProfileMetadataAsync(void* activationCode, void** operation) noexcept = 0;
     virtual int32_t WINRT_CALL ResetAsync(void** operation) noexcept = 0;
@@ -1122,9 +1151,31 @@ template <> struct abi<Windows::Networking::NetworkOperators::IESim>{ struct typ
     virtual int32_t WINRT_CALL remove_ProfileChanged(winrt::event_token token) noexcept = 0;
 };};
 
+template <> struct abi<Windows::Networking::NetworkOperators::IESim2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL Discover(void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL DiscoverWithServerAddressAndMatchingId(void* serverAddress, void* matchingId, void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL DiscoverAsync(void** operation) noexcept = 0;
+    virtual int32_t WINRT_CALL DiscoverWithServerAddressAndMatchingIdAsync(void* serverAddress, void* matchingId, void** operation) noexcept = 0;
+};};
+
 template <> struct abi<Windows::Networking::NetworkOperators::IESimAddedEventArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_ESim(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Networking::NetworkOperators::IESimDiscoverEvent>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_MatchingId(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_RspServerAddress(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Networking::NetworkOperators::IESimDiscoverResult>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Events(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Kind(Windows::Networking::NetworkOperators::ESimDiscoverResultKind* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_ProfileMetadata(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Result(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Networking::NetworkOperators::IESimDownloadProfileMetadataResult>{ struct type : IInspectable
@@ -1136,7 +1187,7 @@ template <> struct abi<Windows::Networking::NetworkOperators::IESimDownloadProfi
 template <> struct abi<Windows::Networking::NetworkOperators::IESimManagerStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_ServiceInfo(void** value) noexcept = 0;
-    virtual int32_t WINRT_CALL TryCreateESimWatcher(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL TryCreateESimWatcher(void** result) noexcept = 0;
     virtual int32_t WINRT_CALL add_ServiceInfoChanged(void* handler, winrt::event_token* token) noexcept = 0;
     virtual int32_t WINRT_CALL remove_ServiceInfoChanged(winrt::event_token token) noexcept = 0;
 };};
@@ -1208,7 +1259,7 @@ template <> struct abi<Windows::Networking::NetworkOperators::IESimUpdatedEventA
 
 template <> struct abi<Windows::Networking::NetworkOperators::IESimWatcher>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL get_Status(Windows::Networking::NetworkOperators::ESimWatcherStatus* status) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Status(Windows::Networking::NetworkOperators::ESimWatcherStatus* value) noexcept = 0;
     virtual int32_t WINRT_CALL Start() noexcept = 0;
     virtual int32_t WINRT_CALL Stop() noexcept = 0;
     virtual int32_t WINRT_CALL add_Added(void* handler, winrt::event_token* token) noexcept = 0;
@@ -1889,11 +1940,39 @@ struct consume_Windows_Networking_NetworkOperators_IESim
 template <> struct consume<Windows::Networking::NetworkOperators::IESim> { template <typename D> using type = consume_Windows_Networking_NetworkOperators_IESim<D>; };
 
 template <typename D>
+struct consume_Windows_Networking_NetworkOperators_IESim2
+{
+    Windows::Networking::NetworkOperators::ESimDiscoverResult Discover() const;
+    Windows::Networking::NetworkOperators::ESimDiscoverResult Discover(param::hstring const& serverAddress, param::hstring const& matchingId) const;
+    Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult> DiscoverAsync() const;
+    Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult> DiscoverAsync(param::hstring const& serverAddress, param::hstring const& matchingId) const;
+};
+template <> struct consume<Windows::Networking::NetworkOperators::IESim2> { template <typename D> using type = consume_Windows_Networking_NetworkOperators_IESim2<D>; };
+
+template <typename D>
 struct consume_Windows_Networking_NetworkOperators_IESimAddedEventArgs
 {
     Windows::Networking::NetworkOperators::ESim ESim() const;
 };
 template <> struct consume<Windows::Networking::NetworkOperators::IESimAddedEventArgs> { template <typename D> using type = consume_Windows_Networking_NetworkOperators_IESimAddedEventArgs<D>; };
+
+template <typename D>
+struct consume_Windows_Networking_NetworkOperators_IESimDiscoverEvent
+{
+    hstring MatchingId() const;
+    hstring RspServerAddress() const;
+};
+template <> struct consume<Windows::Networking::NetworkOperators::IESimDiscoverEvent> { template <typename D> using type = consume_Windows_Networking_NetworkOperators_IESimDiscoverEvent<D>; };
+
+template <typename D>
+struct consume_Windows_Networking_NetworkOperators_IESimDiscoverResult
+{
+    Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimDiscoverEvent> Events() const;
+    Windows::Networking::NetworkOperators::ESimDiscoverResultKind Kind() const;
+    Windows::Networking::NetworkOperators::ESimProfileMetadata ProfileMetadata() const;
+    Windows::Networking::NetworkOperators::ESimOperationResult Result() const;
+};
+template <> struct consume<Windows::Networking::NetworkOperators::IESimDiscoverResult> { template <typename D> using type = consume_Windows_Networking_NetworkOperators_IESimDiscoverResult<D>; };
 
 template <typename D>
 struct consume_Windows_Networking_NetworkOperators_IESimDownloadProfileMetadataResult

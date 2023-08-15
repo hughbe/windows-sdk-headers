@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -54,7 +54,7 @@ struct WINRT_EBO HttpBufferContent :
 
 struct WINRT_EBO HttpClient :
     Windows::Web::Http::IHttpClient,
-    impl::require<HttpClient, Windows::Foundation::IStringable>
+    impl::require<HttpClient, Windows::Foundation::IClosable, Windows::Foundation::IStringable, Windows::Web::Http::IHttpClient2>
 {
     HttpClient(std::nullptr_t) noexcept {}
     HttpClient();
@@ -87,6 +87,27 @@ struct WINRT_EBO HttpFormUrlEncodedContent :
 {
     HttpFormUrlEncodedContent(std::nullptr_t) noexcept {}
     HttpFormUrlEncodedContent(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& content);
+};
+
+struct WINRT_EBO HttpGetBufferResult :
+    Windows::Web::Http::IHttpGetBufferResult,
+    impl::require<HttpGetBufferResult, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
+{
+    HttpGetBufferResult(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO HttpGetInputStreamResult :
+    Windows::Web::Http::IHttpGetInputStreamResult,
+    impl::require<HttpGetInputStreamResult, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
+{
+    HttpGetInputStreamResult(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO HttpGetStringResult :
+    Windows::Web::Http::IHttpGetStringResult,
+    impl::require<HttpGetStringResult, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
+{
+    HttpGetStringResult(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO HttpMethod :
@@ -125,16 +146,23 @@ struct WINRT_EBO HttpMultipartFormDataContent :
 
 struct WINRT_EBO HttpRequestMessage :
     Windows::Web::Http::IHttpRequestMessage,
-    impl::require<HttpRequestMessage, Windows::Foundation::IStringable>
+    impl::require<HttpRequestMessage, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
 {
     HttpRequestMessage(std::nullptr_t) noexcept {}
     HttpRequestMessage();
     HttpRequestMessage(Windows::Web::Http::HttpMethod const& method, Windows::Foundation::Uri const& uri);
 };
 
+struct WINRT_EBO HttpRequestResult :
+    Windows::Web::Http::IHttpRequestResult,
+    impl::require<HttpRequestResult, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
+{
+    HttpRequestResult(std::nullptr_t) noexcept {}
+};
+
 struct WINRT_EBO HttpResponseMessage :
     Windows::Web::Http::IHttpResponseMessage,
-    impl::require<HttpResponseMessage, Windows::Foundation::IStringable>
+    impl::require<HttpResponseMessage, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
 {
     HttpResponseMessage(std::nullptr_t) noexcept {}
     HttpResponseMessage();

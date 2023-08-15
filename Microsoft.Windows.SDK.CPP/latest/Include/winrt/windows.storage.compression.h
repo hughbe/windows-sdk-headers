@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.compression.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Storage {
             namespace Compression {
                 interface ICompressor;
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CCompression_CICompressor ABI::Windows::Storage::Compression::ICompressor
 
 #endif // ____x_ABI_CWindows_CStorage_CCompression_CICompressor_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Storage {
             namespace Compression {
                 interface ICompressorFactory;
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CCompression_CICompressorFactory ABI::Windows::Storage::Compression::ICompressorFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CCompression_CICompressorFactory_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Storage {
             namespace Compression {
                 interface IDecompressor;
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CCompression_CIDecompressor ABI::Windows::Storage::Compression::IDecompressor
 
 #endif // ____x_ABI_CWindows_CStorage_CCompression_CIDecompressor_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Storage {
             namespace Compression {
                 interface IDecompressorFactory;
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CCompression_CIDecompressorFactory ABI::Windows::Storage::Compression::IDecompressorFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CCompression_CIDecompressorFactory_FWD_DEFINED__
@@ -348,7 +344,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -377,7 +373,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -395,8 +391,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -412,9 +408,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -427,9 +423,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
                 
                 typedef enum CompressAlgorithm : int CompressAlgorithm;
                 
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -458,9 +454,9 @@ namespace ABI {
         namespace Storage {
             namespace Compression {
                 class Compressor;
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -468,9 +464,9 @@ namespace ABI {
         namespace Storage {
             namespace Compression {
                 class Decompressor;
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -502,9 +498,9 @@ namespace ABI {
                     CompressAlgorithm_Lzms = 5,
                 };
                 
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -548,9 +544,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompressor=_uuidof(ICompressor);
                 
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CCompression_CICompressor;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CCompression_CICompressor_INTERFACE_DEFINED__) */
@@ -596,9 +592,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompressorFactory=_uuidof(ICompressorFactory);
                 
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CCompression_CICompressorFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CCompression_CICompressorFactory_INTERFACE_DEFINED__) */
@@ -642,9 +638,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDecompressor=_uuidof(IDecompressor);
                 
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CCompression_CIDecompressor;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CCompression_CIDecompressor_INTERFACE_DEFINED__) */
@@ -684,9 +680,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDecompressorFactory=_uuidof(IDecompressorFactory);
                 
-            } /* Windows */
+            } /* Compression */
         } /* Storage */
-    } /* Compression */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CCompression_CIDecompressorFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CCompression_CIDecompressorFactory_INTERFACE_DEFINED__) */

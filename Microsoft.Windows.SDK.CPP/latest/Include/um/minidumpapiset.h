@@ -16,8 +16,8 @@
 #include <apiset.h>
 #include <apisetcconv.h>
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 // HEXTRACT: hide_line begin_dbghelp begin_imagehlp
 
@@ -32,6 +32,12 @@
 #pragma warning(disable:4201)    /* Nameless struct/union */
 #endif
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #define MINIDUMP_SIGNATURE ('PMDM')
 #define MINIDUMP_VERSION   (42899)
@@ -91,6 +97,12 @@ typedef struct _MINIDUMP_STRING {
     WCHAR   Buffer [0];     // Variable size buffer
 } MINIDUMP_STRING, *PMINIDUMP_STRING;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 //
 // The MINIDUMP_DIRECTORY field StreamType may be one of the following types.
 // Types will be added in the future, so if a program reading the minidump
@@ -144,6 +156,12 @@ typedef enum _MINIDUMP_STREAM_TYPE {
     LastReservedStream          = 0xffff
 
 } MINIDUMP_STREAM_TYPE;
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // The minidump system information contains processor and
@@ -382,6 +400,12 @@ typedef struct _MINIDUMP_MEMORY64_LIST {
     MINIDUMP_MEMORY_DESCRIPTOR64 MemoryRanges [0];
 } MINIDUMP_MEMORY64_LIST, *PMINIDUMP_MEMORY64_LIST;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+
 //
 // Support for user supplied exception information.
 //
@@ -402,6 +426,12 @@ typedef struct _MINIDUMP_EXCEPTION_INFORMATION64 {
 //
 // Support for capturing system handle state at the time of the dump.
 //
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 // Per-handle object information varies according to
 // the OS, the OS version, the processor type and
@@ -648,6 +678,12 @@ typedef MINIDUMP_MISC_INFO_N* PMINIDUMP_MISC_INFO_N;
 // dump was created for.
 //
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+
 typedef struct _MINIDUMP_MEMORY_INFO {
     ULONG64 BaseAddress;
     ULONG64 AllocationBase;
@@ -659,6 +695,12 @@ typedef struct _MINIDUMP_MEMORY_INFO {
     ULONG32 Type;
     ULONG32 __alignment2;
 } MINIDUMP_MEMORY_INFO, *PMINIDUMP_MEMORY_INFO;
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 typedef struct _MINIDUMP_MEMORY_INFO_LIST {
     ULONG SizeOfHeader;
@@ -927,6 +969,12 @@ typedef struct _MINIDUMP_USER_RECORD {
     MINIDUMP_LOCATION_DESCRIPTOR Memory;
 } MINIDUMP_USER_RECORD, *PMINIDUMP_USER_RECORD;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+
 typedef struct _MINIDUMP_USER_STREAM {
     ULONG32 Type;
     ULONG BufferSize;
@@ -1024,6 +1072,12 @@ typedef struct _MINIDUMP_INCLUDE_MODULE_CALLBACK {
     ULONG64 BaseOfImage;
 } MINIDUMP_INCLUDE_MODULE_CALLBACK, *PMINIDUMP_INCLUDE_MODULE_CALLBACK;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
 typedef enum _MODULE_WRITE_FLAGS {
     ModuleWriteModule        = 0x0001,
     ModuleWriteDataSeg       = 0x0002,
@@ -1033,6 +1087,12 @@ typedef enum _MODULE_WRITE_FLAGS {
     ModuleWriteTlsData       = 0x0020,
     ModuleWriteCodeSegs      = 0x0040,
 } MODULE_WRITE_FLAGS;
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 typedef struct _MINIDUMP_IO_CALLBACK {
     HANDLE Handle;
@@ -1119,7 +1179,6 @@ typedef struct _MINIDUMP_CALLBACK_OUTPUT {
         HRESULT Status;
     };
 } MINIDUMP_CALLBACK_OUTPUT, *PMINIDUMP_CALLBACK_OUTPUT;
-
         
 //
 // A normal minidump contains just the information
@@ -1221,8 +1280,15 @@ typedef enum _MINIDUMP_TYPE {
     MiniDumpFilterTriage                   = 0x00100000,
     MiniDumpWithAvxXStateContext           = 0x00200000,
     MiniDumpWithIptTrace                   = 0x00400000,
-    MiniDumpValidTypeFlags                 = 0x007fffff,
+    MiniDumpScanInaccessiblePartialPages   = 0x00800000,
+    MiniDumpValidTypeFlags                 = 0x00ffffff,
 } MINIDUMP_TYPE;
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // In addition to the primary flags provided to
@@ -1240,6 +1306,12 @@ typedef enum _MINIDUMP_SECONDARY_FLAGS {
 
     MiniSecondaryValidFlags       = 0x00000001,
 } MINIDUMP_SECONDARY_FLAGS;
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 //
 // The minidump callback should modify the FieldsToWrite parameter to reflect
@@ -1300,6 +1372,12 @@ MiniDumpWriteDump(
     );
 
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
 BOOL
 WINAPI
 MiniDumpReadDumpStream(
@@ -1310,6 +1388,12 @@ MiniDumpReadDumpStream(
     _Out_opt_ ULONG* StreamSize
     );
 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 #if defined(_MSC_VER)
 #if _MSC_VER >= 800
@@ -1328,7 +1412,8 @@ MiniDumpReadDumpStream(
 }
 #endif
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
 
 #endif /* _MINIDUMP_H */
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.profile.systemmanufacturers.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -143,10 +143,10 @@ namespace ABI {
             namespace Profile {
                 namespace SystemManufacturers {
                     interface IOemSupportInfo;
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CIOemSupportInfo ABI::Windows::System::Profile::SystemManufacturers::IOemSupportInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CIOemSupportInfo_FWD_DEFINED__
@@ -159,10 +159,10 @@ namespace ABI {
             namespace Profile {
                 namespace SystemManufacturers {
                     interface ISmbiosInformationStatics;
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISmbiosInformationStatics ABI::Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISmbiosInformationStatics_FWD_DEFINED__
@@ -175,10 +175,10 @@ namespace ABI {
             namespace Profile {
                 namespace SystemManufacturers {
                     interface ISystemSupportDeviceInfo;
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportDeviceInfo ABI::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportDeviceInfo_FWD_DEFINED__
@@ -191,10 +191,10 @@ namespace ABI {
             namespace Profile {
                 namespace SystemManufacturers {
                     interface ISystemSupportInfoStatics;
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics ABI::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics_FWD_DEFINED__
@@ -207,10 +207,10 @@ namespace ABI {
             namespace Profile {
                 namespace SystemManufacturers {
                     interface ISystemSupportInfoStatics2;
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics2 ABI::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics2_FWD_DEFINED__
@@ -220,8 +220,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -229,8 +229,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -250,10 +250,10 @@ namespace ABI {
             namespace Profile {
                 namespace SystemManufacturers {
                     class OemSupportInfo;
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -263,10 +263,10 @@ namespace ABI {
             namespace Profile {
                 namespace SystemManufacturers {
                     class SystemSupportDeviceInfo;
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -315,10 +315,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOemSupportInfo=_uuidof(IOemSupportInfo);
                     
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CIOemSupportInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CIOemSupportInfo_INTERFACE_DEFINED__) */
@@ -358,10 +358,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISmbiosInformationStatics=_uuidof(ISmbiosInformationStatics);
                     
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISmbiosInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISmbiosInformationStatics_INTERFACE_DEFINED__) */
@@ -419,10 +419,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISystemSupportDeviceInfo=_uuidof(ISystemSupportDeviceInfo);
                     
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportDeviceInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportDeviceInfo_INTERFACE_DEFINED__) */
@@ -465,10 +465,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISystemSupportInfoStatics=_uuidof(ISystemSupportInfoStatics);
                     
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics_INTERFACE_DEFINED__) */
@@ -508,10 +508,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISystemSupportInfoStatics2=_uuidof(ISystemSupportInfoStatics2);
                     
-                } /* Windows */
-            } /* System */
-        } /* Profile */
-    } /* SystemManufacturers */} /* ABI */
+                } /* SystemManufacturers */
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CSystemManufacturers_CISystemSupportInfoStatics2_INTERFACE_DEFINED__) */

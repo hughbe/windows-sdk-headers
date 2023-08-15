@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.management.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -139,8 +139,8 @@ namespace ABI {
     namespace Windows {
         namespace Management {
             interface IMdmAlert;
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CIMdmAlert ABI::Windows::Management::IMdmAlert
 
 #endif // ____x_ABI_CWindows_CManagement_CIMdmAlert_FWD_DEFINED__
@@ -151,8 +151,8 @@ namespace ABI {
     namespace Windows {
         namespace Management {
             interface IMdmSession;
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CIMdmSession ABI::Windows::Management::IMdmSession
 
 #endif // ____x_ABI_CWindows_CManagement_CIMdmSession_FWD_DEFINED__
@@ -163,8 +163,8 @@ namespace ABI {
     namespace Windows {
         namespace Management {
             interface IMdmSessionManagerStatics;
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CIMdmSessionManagerStatics ABI::Windows::Management::IMdmSessionManagerStatics
 
 #endif // ____x_ABI_CWindows_CManagement_CIMdmSessionManagerStatics_FWD_DEFINED__
@@ -176,8 +176,8 @@ namespace ABI {
     namespace Windows {
         namespace Management {
             class MdmAlert;
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -200,7 +200,7 @@ IIterator<ABI::Windows::Management::MdmAlert*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Management::MdmAlert*> __FIIterator_1_Windows__CManagement__CMdmAlert_t;
 #define __FIIterator_1_Windows__CManagement__CMdmAlert ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CManagement__CMdmAlert_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CManagement__CMdmAlert ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Management::IMdmAlert*>
@@ -232,7 +232,7 @@ IIterable<ABI::Windows::Management::MdmAlert*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Management::MdmAlert*> __FIIterable_1_Windows__CManagement__CMdmAlert_t;
 #define __FIIterable_1_Windows__CManagement__CMdmAlert ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CManagement__CMdmAlert_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CManagement__CMdmAlert ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Management::IMdmAlert*>
@@ -264,7 +264,7 @@ IVectorView<ABI::Windows::Management::MdmAlert*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Management::MdmAlert*> __FIVectorView_1_Windows__CManagement__CMdmAlert_t;
 #define __FIVectorView_1_Windows__CManagement__CMdmAlert ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CManagement__CMdmAlert_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CManagement__CMdmAlert ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Management::IMdmAlert*>
@@ -294,7 +294,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -323,7 +323,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -352,7 +352,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -370,8 +370,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -386,8 +386,8 @@ namespace ABI {
             
             typedef enum MdmAlertDataType : int MdmAlertDataType;
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -395,8 +395,8 @@ namespace ABI {
             
             typedef enum MdmAlertMark : int MdmAlertMark;
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -404,8 +404,8 @@ namespace ABI {
             
             typedef enum MdmSessionState : int MdmSessionState;
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 
 
@@ -415,8 +415,8 @@ namespace ABI {
     namespace Windows {
         namespace Management {
             class MdmSession;
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 
 
@@ -448,8 +448,8 @@ namespace ABI {
                 MdmAlertDataType_Integer = 3,
             };
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -476,8 +476,8 @@ namespace ABI {
                 MdmAlertMark_Informational = 4,
             };
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -506,8 +506,8 @@ namespace ABI {
                 MdmSessionState_Completed = 6,
             };
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -578,8 +578,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMdmAlert=_uuidof(IMdmAlert);
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CIMdmAlert;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CIMdmAlert_INTERFACE_DEFINED__) */
@@ -637,8 +637,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMdmSession=_uuidof(IMdmSession);
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CIMdmSession;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CIMdmSession_INTERFACE_DEFINED__) */
@@ -686,8 +686,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMdmSessionManagerStatics=_uuidof(IMdmSessionManagerStatics);
             
-        } /* Windows */
-    } /* Management */} /* ABI */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CIMdmSessionManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CIMdmSessionManagerStatics_INTERFACE_DEFINED__) */

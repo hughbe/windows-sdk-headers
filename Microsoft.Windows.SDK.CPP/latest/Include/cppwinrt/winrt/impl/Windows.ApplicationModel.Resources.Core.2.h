@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,6 +7,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
+#include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Resources.Core.1.h"
 
@@ -47,7 +48,7 @@ struct WINRT_EBO NamedResource :
 
 struct WINRT_EBO ResourceCandidate :
     Windows::ApplicationModel::Resources::Core::IResourceCandidate,
-    impl::require<ResourceCandidate, Windows::ApplicationModel::Resources::Core::IResourceCandidate2>
+    impl::require<ResourceCandidate, Windows::ApplicationModel::Resources::Core::IResourceCandidate2, Windows::ApplicationModel::Resources::Core::IResourceCandidate3>
 {
     ResourceCandidate(std::nullptr_t) noexcept {}
 };
@@ -70,6 +71,7 @@ struct WINRT_EBO ResourceContext :
     static void ResetGlobalQualifierValues(param::iterable<hstring> const& qualifierNames);
     static Windows::ApplicationModel::Resources::Core::ResourceContext GetForViewIndependentUse();
     static void SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence);
+    static Windows::ApplicationModel::Resources::Core::ResourceContext GetForUIContext(Windows::UI::UIContext const& context);
 };
 
 struct WINRT_EBO ResourceContextLanguagesVectorView :

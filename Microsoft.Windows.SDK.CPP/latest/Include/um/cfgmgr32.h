@@ -1392,6 +1392,7 @@ CM_Add_Empty_Log_Conf(
     _In_  PRIORITY      Priority,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1411,6 +1412,7 @@ CM_Add_IDA(
     _In_  PSTR          pszID,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1419,6 +1421,7 @@ CM_Add_IDW(
     _In_  PWSTR         pszID,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1428,6 +1431,7 @@ CM_Add_ID_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1437,12 +1441,13 @@ CM_Add_ID_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Add_ID             CM_Add_IDW
-#define CM_Add_ID_Ex          CM_Add_ID_ExW
+#define CM_Add_ID                CM_Add_IDW
+#define CM_Add_ID_Ex             CM_Add_ID_ExW
 #else
-#define CM_Add_ID             CM_Add_IDA
-#define CM_Add_ID_Ex          CM_Add_ID_ExA
+#define CM_Add_ID                CM_Add_IDA
+#define CM_Add_ID_Ex             CM_Add_ID_ExA
 #endif // UNICODE
 
 CMAPI
@@ -1466,6 +1471,7 @@ CM_Add_Res_Des(
     _In_  ULONG         ResourceLen,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1486,6 +1492,7 @@ CM_Connect_MachineA(
     _In_opt_ PCSTR      UNCServerName,
     _Out_ PHMACHINE     phMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1508,6 +1515,7 @@ CM_Create_DevNodeA(
     _In_  DEVINST       dnParent,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1517,6 +1525,7 @@ CM_Create_DevNodeW(
     _In_  DEVINST       dnParent,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1527,6 +1536,7 @@ CM_Create_DevNode_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1537,6 +1547,7 @@ CM_Create_DevNode_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #define CM_Create_DevInstW       CM_Create_DevNodeW
 #define CM_Create_DevInstA       CM_Create_DevNodeA
 #define CM_Create_DevInst_ExW    CM_Create_DevNode_ExW
@@ -1605,6 +1616,8 @@ CM_Delete_DevNode_Key(
     _In_  ULONG         ulFlags
     );
 
+#define CM_Delete_DevInst_Key    CM_Delete_DevNode_Key
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -1620,8 +1633,8 @@ CM_Delete_DevNode_Key_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Delete_DevInst_Key       CM_Delete_DevNode_Key
-#define CM_Delete_DevInst_Key_Ex    CM_Delete_DevNode_Key_Ex
+
+#define CM_Delete_DevInst_Key_Ex CM_Delete_DevNode_Key_Ex
 
 CMAPI
 CONFIGRET
@@ -1645,6 +1658,7 @@ CM_Detect_Resource_Conflict(
     _Out_ PBOOL         pbConflictDetected,
     _In_  ULONG         ulFlags
     );
+
 __drv_preferredFunction("CM_Query_Resource_Conflict_List", "Obsolete")
 CMAPI
 CONFIGRET
@@ -1673,6 +1687,8 @@ CM_Disable_DevNode(
     _In_  ULONG         ulFlags
     );
 
+#define CM_Disable_DevInst       CM_Disable_DevNode
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -1687,7 +1703,7 @@ CM_Disable_DevNode_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Disable_DevInst       CM_Disable_DevNode
+
 #define CM_Disable_DevInst_Ex    CM_Disable_DevNode_Ex
 
 CMAPI
@@ -1720,6 +1736,8 @@ CM_Enable_DevNode(
     _In_  ULONG         ulFlags
     );
 
+#define CM_Enable_DevInst        CM_Enable_DevNode
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -1734,7 +1752,7 @@ CM_Enable_DevNode_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Enable_DevInst        CM_Enable_DevNode
+
 #define CM_Enable_DevInst_Ex     CM_Enable_DevNode_Ex
 
 CMAPI
@@ -1745,6 +1763,7 @@ CM_Enumerate_Classes(
     _Out_ LPGUID        ClassGuid,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1764,6 +1783,7 @@ CM_Enumerate_EnumeratorsA(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1773,6 +1793,7 @@ CM_Enumerate_EnumeratorsW(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1783,6 +1804,7 @@ CM_Enumerate_Enumerators_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1793,12 +1815,13 @@ CM_Enumerate_Enumerators_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Enumerate_Enumerators       CM_Enumerate_EnumeratorsW
-#define CM_Enumerate_Enumerators_Ex    CM_Enumerate_Enumerators_ExW
+#define CM_Enumerate_Enumerators    CM_Enumerate_EnumeratorsW
+#define CM_Enumerate_Enumerators_Ex CM_Enumerate_Enumerators_ExW
 #else
-#define CM_Enumerate_Enumerators       CM_Enumerate_EnumeratorsA
-#define CM_Enumerate_Enumerators_Ex    CM_Enumerate_Enumerators_ExA
+#define CM_Enumerate_Enumerators    CM_Enumerate_EnumeratorsA
+#define CM_Enumerate_Enumerators_Ex CM_Enumerate_Enumerators_ExA
 #endif // UNICODE
 
 CMAPI
@@ -1832,6 +1855,7 @@ CM_Free_Log_Conf(
     _In_  LOG_CONF      lcLogConfToBeFreed,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1864,6 +1888,7 @@ CM_Free_Res_Des(
     _In_  RES_DES       rdResDes,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1921,6 +1946,7 @@ CM_Get_Class_NameA(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1930,6 +1956,7 @@ CM_Get_Class_NameW(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1940,6 +1967,7 @@ CM_Get_Class_Name_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1950,6 +1978,7 @@ CM_Get_Class_Name_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Get_Class_Name        CM_Get_Class_NameW
 #define CM_Get_Class_Name_Ex     CM_Get_Class_Name_ExW
@@ -1967,6 +1996,7 @@ CM_Get_Class_Key_NameA(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1976,6 +2006,7 @@ CM_Get_Class_Key_NameW(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1986,6 +2017,7 @@ CM_Get_Class_Key_Name_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -1996,12 +2028,13 @@ CM_Get_Class_Key_Name_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Get_Class_Key_Name        CM_Get_Class_Key_NameW
-#define CM_Get_Class_Key_Name_Ex     CM_Get_Class_Key_Name_ExW
+#define CM_Get_Class_Key_Name    CM_Get_Class_Key_NameW
+#define CM_Get_Class_Key_Name_Ex CM_Get_Class_Key_Name_ExW
 #else
-#define CM_Get_Class_Key_Name        CM_Get_Class_Key_NameA
-#define CM_Get_Class_Key_Name_Ex     CM_Get_Class_Key_Name_ExA
+#define CM_Get_Class_Key_Name    CM_Get_Class_Key_NameA
+#define CM_Get_Class_Key_Name_Ex CM_Get_Class_Key_Name_ExA
 #endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -2035,6 +2068,12 @@ CM_Get_Depth_Ex(
     _In_opt_ HMACHINE   hMachine
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2045,12 +2084,6 @@ CM_Get_Device_IDA(
     _In_  ULONG         ulFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 CMAPI
 CONFIGRET
 WINAPI
@@ -2060,6 +2093,12 @@ CM_Get_Device_IDW(
     _In_  ULONG         BufferLen,
     _In_  ULONG         ulFlags
     );
+
+#ifdef UNICODE
+#define CM_Get_Device_ID         CM_Get_Device_IDW
+#else
+#define CM_Get_Device_ID         CM_Get_Device_IDA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -2077,6 +2116,7 @@ CM_Get_Device_ID_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2087,13 +2127,18 @@ CM_Get_Device_ID_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Get_Device_ID         CM_Get_Device_IDW
 #define CM_Get_Device_ID_Ex      CM_Get_Device_ID_ExW
 #else
-#define CM_Get_Device_ID         CM_Get_Device_IDA
 #define CM_Get_Device_ID_Ex      CM_Get_Device_ID_ExA
 #endif // UNICODE
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 CMAPI
 CONFIGRET
@@ -2105,12 +2150,6 @@ CM_Get_Device_ID_ListA(
     _In_  ULONG         ulFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 CMAPI
 CONFIGRET
 WINAPI
@@ -2120,6 +2159,12 @@ CM_Get_Device_ID_ListW(
     _In_  ULONG         BufferLen,
     _In_  ULONG         ulFlags
     );
+
+#ifdef UNICODE
+#define CM_Get_Device_ID_List    CM_Get_Device_ID_ListW
+#else
+#define CM_Get_Device_ID_List    CM_Get_Device_ID_ListA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -2150,21 +2195,10 @@ CM_Get_Device_ID_List_ExW(
     );
 
 #ifdef UNICODE
-#define CM_Get_Device_ID_List       CM_Get_Device_ID_ListW
-#define CM_Get_Device_ID_List_Ex    CM_Get_Device_ID_List_ExW
+#define CM_Get_Device_ID_List_Ex CM_Get_Device_ID_List_ExW
 #else
-#define CM_Get_Device_ID_List       CM_Get_Device_ID_ListA
-#define CM_Get_Device_ID_List_Ex    CM_Get_Device_ID_List_ExA
+#define CM_Get_Device_ID_List_Ex CM_Get_Device_ID_List_ExA
 #endif // UNICODE
-
-CMAPI
-CONFIGRET
-WINAPI
-CM_Get_Device_ID_List_SizeA(
-    _Out_ PULONG        pulLen,
-    _In_opt_ PCSTR      pszFilter,
-    _In_  ULONG         ulFlags
-    );
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
@@ -2175,11 +2209,26 @@ CM_Get_Device_ID_List_SizeA(
 CMAPI
 CONFIGRET
 WINAPI
+CM_Get_Device_ID_List_SizeA(
+    _Out_ PULONG        pulLen,
+    _In_opt_ PCSTR      pszFilter,
+    _In_  ULONG         ulFlags
+    );
+
+CMAPI
+CONFIGRET
+WINAPI
 CM_Get_Device_ID_List_SizeW(
     _Out_ PULONG        pulLen,
     _In_opt_ PCWSTR     pszFilter,
     _In_  ULONG         ulFlags
     );
+
+#ifdef UNICODE
+#define CM_Get_Device_ID_List_Size CM_Get_Device_ID_List_SizeW
+#else
+#define CM_Get_Device_ID_List_Size CM_Get_Device_ID_List_SizeA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -2196,6 +2245,7 @@ CM_Get_Device_ID_List_Size_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2205,11 +2255,10 @@ CM_Get_Device_ID_List_Size_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Get_Device_ID_List_Size    CM_Get_Device_ID_List_SizeW
 #define CM_Get_Device_ID_List_Size_Ex CM_Get_Device_ID_List_Size_ExW
 #else
-#define CM_Get_Device_ID_List_Size    CM_Get_Device_ID_List_SizeA
 #define CM_Get_Device_ID_List_Size_Ex CM_Get_Device_ID_List_Size_ExA
 #endif // UNICODE
 
@@ -2264,6 +2313,10 @@ CM_Get_DevNode_PropertyW(
     _In_  ULONG         ulFlags
     );
 
+#ifdef UNICODE
+#define CM_Get_DevNode_Property                  CM_Get_DevNode_PropertyW
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -2282,6 +2335,10 @@ CM_Get_DevNode_Property_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
+#ifdef UNICODE
+#define CM_Get_DevNode_Property_Ex CM_Get_DevNode_Property_ExW
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
@@ -2315,18 +2372,14 @@ CM_Get_DevNode_Property_Keys_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#ifdef UNICODE
-#define CM_Get_DevNode_Property                  CM_Get_DevNode_PropertyW
-#define CM_Get_DevNode_Property_Ex               CM_Get_DevNode_Property_ExW
-#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #endif // (WINVER >= _WIN32_WINNT_LONGHORN)
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 CMAPI
 CONFIGRET
@@ -2340,12 +2393,6 @@ CM_Get_DevNode_Registry_PropertyA(
     _In_  ULONG         ulFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 CMAPI
 CONFIGRET
 WINAPI
@@ -2357,6 +2404,16 @@ CM_Get_DevNode_Registry_PropertyW(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
+#define CM_Get_DevInst_Registry_PropertyW CM_Get_DevNode_Registry_PropertyW
+#define CM_Get_DevInst_Registry_PropertyA CM_Get_DevNode_Registry_PropertyA
+#ifdef UNICODE
+#define CM_Get_DevInst_Registry_Property  CM_Get_DevNode_Registry_PropertyW
+#define CM_Get_DevNode_Registry_Property  CM_Get_DevNode_Registry_PropertyW
+#else
+#define CM_Get_DevInst_Registry_Property  CM_Get_DevNode_Registry_PropertyA
+#define CM_Get_DevNode_Registry_Property  CM_Get_DevNode_Registry_PropertyA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -2376,6 +2433,7 @@ CM_Get_DevNode_Registry_Property_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2388,20 +2446,15 @@ CM_Get_DevNode_Registry_Property_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Get_DevInst_Registry_PropertyW     CM_Get_DevNode_Registry_PropertyW
-#define CM_Get_DevInst_Registry_PropertyA     CM_Get_DevNode_Registry_PropertyA
-#define CM_Get_DevInst_Registry_Property_ExW  CM_Get_DevNode_Registry_Property_ExW
-#define CM_Get_DevInst_Registry_Property_ExA  CM_Get_DevNode_Registry_Property_ExA
+
+#define CM_Get_DevInst_Registry_Property_ExW CM_Get_DevNode_Registry_Property_ExW
+#define CM_Get_DevInst_Registry_Property_ExA CM_Get_DevNode_Registry_Property_ExA
 #ifdef UNICODE
-#define CM_Get_DevInst_Registry_Property      CM_Get_DevNode_Registry_PropertyW
-#define CM_Get_DevInst_Registry_Property_Ex   CM_Get_DevNode_Registry_Property_ExW
-#define CM_Get_DevNode_Registry_Property      CM_Get_DevNode_Registry_PropertyW
-#define CM_Get_DevNode_Registry_Property_Ex   CM_Get_DevNode_Registry_Property_ExW
+#define CM_Get_DevInst_Registry_Property_Ex  CM_Get_DevNode_Registry_Property_ExW
+#define CM_Get_DevNode_Registry_Property_Ex  CM_Get_DevNode_Registry_Property_ExW
 #else
-#define CM_Get_DevInst_Registry_Property      CM_Get_DevNode_Registry_PropertyA
-#define CM_Get_DevInst_Registry_Property_Ex   CM_Get_DevNode_Registry_Property_ExA
-#define CM_Get_DevNode_Registry_Property      CM_Get_DevNode_Registry_PropertyA
-#define CM_Get_DevNode_Registry_Property_Ex   CM_Get_DevNode_Registry_Property_ExA
+#define CM_Get_DevInst_Registry_Property_Ex  CM_Get_DevNode_Registry_Property_ExA
+#define CM_Get_DevNode_Registry_Property_Ex  CM_Get_DevNode_Registry_Property_ExA
 #endif // UNICODE
 
 #if (WINVER >= _WIN32_WINNT_WINXP)
@@ -2416,6 +2469,7 @@ CM_Get_DevNode_Custom_PropertyA(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2427,6 +2481,7 @@ CM_Get_DevNode_Custom_PropertyW(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2439,6 +2494,7 @@ CM_Get_DevNode_Custom_Property_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2451,6 +2507,7 @@ CM_Get_DevNode_Custom_Property_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #define CM_Get_DevInst_Custom_PropertyW     CM_Get_DevNode_Custom_PropertyW
 #define CM_Get_DevInst_Custom_PropertyA     CM_Get_DevNode_Custom_PropertyA
 #define CM_Get_DevInst_Custom_Property_ExW  CM_Get_DevNode_Custom_Property_ExW
@@ -2484,6 +2541,8 @@ CM_Get_DevNode_Status(
     _In_  ULONG         ulFlags
     );
 
+#define CM_Get_DevInst_Status CM_Get_DevNode_Status
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -2500,7 +2559,7 @@ CM_Get_DevNode_Status_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Get_DevInst_Status    CM_Get_DevNode_Status
+
 #define CM_Get_DevInst_Status_Ex CM_Get_DevNode_Status_Ex
 
 CMAPI
@@ -2511,6 +2570,7 @@ CM_Get_First_Log_Conf(
     _In_  DEVINST       dnDevInst,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2528,6 +2588,7 @@ CM_Get_Global_State(
     _Out_ PULONG        pulState,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2554,6 +2615,7 @@ CM_Get_Hardware_Profile_InfoA(
     _Out_ PHWPROFILEINFO_A pHWProfileInfo,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2571,6 +2633,7 @@ CM_Get_Hardware_Profile_InfoW(
     _Out_ PHWPROFILEINFO_W pHWProfileInfo,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2580,6 +2643,7 @@ CM_Get_Hardware_Profile_Info_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Get_Hardware_Profile_Info      CM_Get_Hardware_Profile_InfoW
 #define CM_Get_Hardware_Profile_Info_Ex   CM_Get_Hardware_Profile_Info_ExW
@@ -2597,6 +2661,7 @@ CM_Get_HW_Prof_FlagsA(
     _Out_ PULONG        pulValue,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2606,6 +2671,7 @@ CM_Get_HW_Prof_FlagsW(
     _Out_ PULONG        pulValue,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2616,6 +2682,7 @@ CM_Get_HW_Prof_Flags_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2626,6 +2693,7 @@ CM_Get_HW_Prof_Flags_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Get_HW_Prof_Flags     CM_Get_HW_Prof_FlagsW
 #define CM_Get_HW_Prof_Flags_Ex  CM_Get_HW_Prof_Flags_ExW
@@ -2644,6 +2712,7 @@ CM_Get_Device_Interface_AliasA(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2654,6 +2723,7 @@ CM_Get_Device_Interface_AliasW(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2665,6 +2735,7 @@ CM_Get_Device_Interface_Alias_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2676,6 +2747,7 @@ CM_Get_Device_Interface_Alias_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Get_Device_Interface_Alias     CM_Get_Device_Interface_AliasW
 #define CM_Get_Device_Interface_Alias_Ex  CM_Get_Device_Interface_Alias_ExW
@@ -2686,7 +2758,6 @@ CM_Get_Device_Interface_Alias_ExW(
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-
 
 #pragma region Desktop Family, OneCore Family, or App Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP)
@@ -2701,6 +2772,7 @@ CM_Get_Device_Interface_ListA(
     _In_  ULONG         BufferLen,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2711,10 +2783,11 @@ CM_Get_Device_Interface_ListW(
     _In_  ULONG         BufferLen,
     _In_  ULONG         ulFlags
     );
+
 #ifdef UNICODE
-#define CM_Get_Device_Interface_List     CM_Get_Device_Interface_ListW
+#define CM_Get_Device_Interface_List CM_Get_Device_Interface_ListW
 #else
-#define CM_Get_Device_Interface_List     CM_Get_Device_Interface_ListA
+#define CM_Get_Device_Interface_List CM_Get_Device_Interface_ListA
 #endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP) */
@@ -2734,6 +2807,7 @@ CM_Get_Device_Interface_List_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2766,6 +2840,7 @@ CM_Get_Device_Interface_List_SizeA(
     _In_opt_ DEVINSTID_A pDeviceID,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2775,10 +2850,11 @@ CM_Get_Device_Interface_List_SizeW(
     _In_opt_ DEVINSTID_W pDeviceID,
     _In_  ULONG         ulFlags
     );
+
 #ifdef UNICODE
-#define CM_Get_Device_Interface_List_Size     CM_Get_Device_Interface_List_SizeW
+#define CM_Get_Device_Interface_List_Size CM_Get_Device_Interface_List_SizeW
 #else
-#define CM_Get_Device_Interface_List_Size     CM_Get_Device_Interface_List_SizeA
+#define CM_Get_Device_Interface_List_Size CM_Get_Device_Interface_List_SizeA
 #endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP) */
@@ -2797,6 +2873,7 @@ CM_Get_Device_Interface_List_Size_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2807,6 +2884,7 @@ CM_Get_Device_Interface_List_Size_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Get_Device_Interface_List_Size_Ex  CM_Get_Device_Interface_List_Size_ExW
 #else
@@ -2833,6 +2911,10 @@ CM_Get_Device_Interface_PropertyW(
     _In_  ULONG         ulFlags
     );
 
+#ifdef UNICODE
+#define CM_Get_Device_Interface_Property CM_Get_Device_Interface_PropertyW
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -2852,6 +2934,10 @@ CM_Get_Device_Interface_Property_ExW(
     _In_opt_ HMACHINE   hMachine
     );
 
+#ifdef UNICODE
+#define CM_Get_Device_Interface_Property_Ex CM_Get_Device_Interface_Property_ExW
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
@@ -2867,6 +2953,10 @@ CM_Get_Device_Interface_Property_KeysW(
     _Inout_ PULONG      PropertyKeyCount,
     _In_  ULONG         ulFlags
     );
+
+#ifdef UNICODE
+#define CM_Get_Device_Interface_Property_Keys CM_Get_Device_Interface_Property_KeysW
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -2884,10 +2974,8 @@ CM_Get_Device_Interface_Property_Keys_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Get_Device_Interface_Property         CM_Get_Device_Interface_PropertyW
-#define CM_Get_Device_Interface_Property_Ex      CM_Get_Device_Interface_Property_ExW
-#define CM_Get_Device_Interface_Property_Keys    CM_Get_Device_Interface_Property_KeysW
 #define CM_Get_Device_Interface_Property_Keys_Ex CM_Get_Device_Interface_Property_Keys_ExW
 #endif // UNICODE
 
@@ -2907,6 +2995,7 @@ CM_Get_Log_Conf_Priority(
     _Out_ PPRIORITY     pPriority,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2925,6 +3014,7 @@ CM_Get_Next_Log_Conf(
     _In_  LOG_CONF      lcLogConf,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2975,6 +3065,7 @@ CM_Get_Res_Des_Data(
     _In_  ULONG         BufferLen,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -2994,6 +3085,7 @@ CM_Get_Res_Des_Data_Size(
     _In_  RES_DES       rdResDes,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3041,6 +3133,7 @@ WINAPI
 CM_Get_Version(
     VOID
     );
+
 CMAPI
 WORD
 WINAPI
@@ -3055,6 +3148,7 @@ WINAPI
 CM_Is_Version_Available(
     _In_  WORD          wVersion
     );
+
 CMAPI
 BOOL
 WINAPI
@@ -3084,15 +3178,6 @@ CM_Invert_Range_List(
     _In_  ULONG         ulFlags
     );
 
-CMAPI
-CONFIGRET
-WINAPI
-CM_Locate_DevNodeA(
-    _Out_ PDEVINST      pdnDevInst,
-    _In_opt_ DEVINSTID_A pDeviceID,
-    _In_  ULONG         ulFlags
-    );
-
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
@@ -3102,11 +3187,30 @@ CM_Locate_DevNodeA(
 CMAPI
 CONFIGRET
 WINAPI
+CM_Locate_DevNodeA(
+    _Out_ PDEVINST      pdnDevInst,
+    _In_opt_ DEVINSTID_A pDeviceID,
+    _In_  ULONG         ulFlags
+    );
+
+CMAPI
+CONFIGRET
+WINAPI
 CM_Locate_DevNodeW(
     _Out_ PDEVINST      pdnDevInst,
     _In_opt_ DEVINSTID_W pDeviceID,
     _In_  ULONG         ulFlags
     );
+
+#define CM_Locate_DevInstA       CM_Locate_DevNodeA
+#define CM_Locate_DevInstW       CM_Locate_DevNodeW
+#ifdef UNICODE
+#define CM_Locate_DevNode        CM_Locate_DevNodeW
+#define CM_Locate_DevInst        CM_Locate_DevNodeW
+#else
+#define CM_Locate_DevNode        CM_Locate_DevNodeA
+#define CM_Locate_DevInst        CM_Locate_DevNodeA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -3132,18 +3236,13 @@ CM_Locate_DevNode_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Locate_DevInstA       CM_Locate_DevNodeA
-#define CM_Locate_DevInstW       CM_Locate_DevNodeW
+
 #define CM_Locate_DevInst_ExA    CM_Locate_DevNode_ExA
 #define CM_Locate_DevInst_ExW    CM_Locate_DevNode_ExW
 #ifdef UNICODE
-#define CM_Locate_DevNode        CM_Locate_DevNodeW
-#define CM_Locate_DevInst        CM_Locate_DevNodeW
 #define CM_Locate_DevNode_Ex     CM_Locate_DevNode_ExW
 #define CM_Locate_DevInst_Ex     CM_Locate_DevNode_ExW
 #else
-#define CM_Locate_DevNode        CM_Locate_DevNodeA
-#define CM_Locate_DevInst        CM_Locate_DevNodeA
 #define CM_Locate_DevNode_Ex     CM_Locate_DevNode_ExA
 #define CM_Locate_DevInst_Ex     CM_Locate_DevNode_ExA
 #endif // UNICODE
@@ -3169,6 +3268,7 @@ CM_Modify_Res_Des(
     _In_  ULONG         ResourceLen,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3190,6 +3290,7 @@ CM_Move_DevNode(
     _In_  DEVINST       dnToDevInst,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3199,6 +3300,7 @@ CM_Move_DevNode_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #define CM_Move_DevInst          CM_Move_DevNode
 #define CM_Move_DevInst_Ex       CM_Move_DevNode_Ex
 
@@ -3222,6 +3324,7 @@ CM_Get_Next_Res_Des(
     _Out_opt_ PRESOURCEID pResourceID,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3233,6 +3336,12 @@ CM_Get_Next_Res_Des_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 CMAPI
 CONFIGRET
@@ -3246,12 +3355,6 @@ CM_Open_Class_KeyA(
     _In_  ULONG         ulFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 CMAPI
 CONFIGRET
 WINAPI
@@ -3263,6 +3366,12 @@ CM_Open_Class_KeyW(
     _Out_ PHKEY         phkClass,
     _In_  ULONG         ulFlags
     );
+
+#ifdef UNICODE
+#define CM_Open_Class_Key        CM_Open_Class_KeyW
+#else
+#define CM_Open_Class_Key        CM_Open_Class_KeyA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -3282,6 +3391,7 @@ CM_Open_Class_Key_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3294,11 +3404,10 @@ CM_Open_Class_Key_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Open_Class_Key        CM_Open_Class_KeyW
 #define CM_Open_Class_Key_Ex     CM_Open_Class_Key_ExW
 #else
-#define CM_Open_Class_Key        CM_Open_Class_KeyA
 #define CM_Open_Class_Key_Ex     CM_Open_Class_Key_ExA
 #endif // UNICODE
 
@@ -3320,6 +3429,8 @@ CM_Open_DevNode_Key(
     _In_  ULONG         ulFlags
     );
 
+#define CM_Open_DevInst_Key      CM_Open_DevNode_Key
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -3338,7 +3449,7 @@ CM_Open_DevNode_Key_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Open_DevInst_Key      CM_Open_DevNode_Key
+
 #define CM_Open_DevInst_Key_Ex   CM_Open_DevNode_Key_Ex
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -3346,8 +3457,8 @@ CM_Open_DevNode_Key_Ex(
 
 #if (WINVER >= _WIN32_WINNT_LONGHORN)
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 CMAPI
 CONFIGRET
@@ -3360,12 +3471,6 @@ CM_Open_Device_Interface_KeyA(
     _In_  ULONG         ulFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 CMAPI
 CONFIGRET
 WINAPI
@@ -3376,6 +3481,12 @@ CM_Open_Device_Interface_KeyW(
     _Out_ PHKEY         phkDeviceInterface,
     _In_  ULONG         ulFlags
     );
+
+#ifdef UNICODE
+#define CM_Open_Device_Interface_Key CM_Open_Device_Interface_KeyW
+#else
+#define CM_Open_Device_Interface_Key CM_Open_Device_Interface_KeyA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -3394,6 +3505,7 @@ CM_Open_Device_Interface_Key_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3405,21 +3517,12 @@ CM_Open_Device_Interface_Key_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Open_Device_Interface_Key    CM_Open_Device_Interface_KeyW
 #define CM_Open_Device_Interface_Key_Ex CM_Open_Device_Interface_Key_ExW
 #else
-#define CM_Open_Device_Interface_Key    CM_Open_Device_Interface_KeyA
 #define CM_Open_Device_Interface_Key_Ex CM_Open_Device_Interface_Key_ExA
 #endif // UNICODE
-
-CMAPI
-CONFIGRET
-WINAPI
-CM_Delete_Device_Interface_KeyA(
-    _In_  LPCSTR        pszDeviceInterface,
-    _In_  ULONG         ulFlags
-    );
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
@@ -3430,10 +3533,24 @@ CM_Delete_Device_Interface_KeyA(
 CMAPI
 CONFIGRET
 WINAPI
+CM_Delete_Device_Interface_KeyA(
+    _In_  LPCSTR        pszDeviceInterface,
+    _In_  ULONG         ulFlags
+    );
+
+CMAPI
+CONFIGRET
+WINAPI
 CM_Delete_Device_Interface_KeyW(
     _In_  LPCWSTR       pszDeviceInterface,
     _In_  ULONG         ulFlags
     );
+
+#ifdef UNICODE
+#define CM_Delete_Device_Interface_Key CM_Delete_Device_Interface_KeyW
+#else
+#define CM_Delete_Device_Interface_Key CM_Delete_Device_Interface_KeyA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -3449,6 +3566,7 @@ CM_Delete_Device_Interface_Key_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3457,11 +3575,10 @@ CM_Delete_Device_Interface_Key_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Delete_Device_Interface_Key    CM_Delete_Device_Interface_KeyW
 #define CM_Delete_Device_Interface_Key_Ex CM_Delete_Device_Interface_Key_ExW
 #else
-#define CM_Delete_Device_Interface_Key    CM_Delete_Device_Interface_KeyA
 #define CM_Delete_Device_Interface_Key_Ex CM_Delete_Device_Interface_Key_ExA
 #endif // UNICODE
 
@@ -3483,6 +3600,7 @@ CM_Query_Arbitrator_Free_Data(
     _In_  RESOURCEID    ResourceID,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3504,6 +3622,7 @@ CM_Query_Arbitrator_Free_Size(
     _In_  RESOURCEID    ResourceID,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3522,33 +3641,12 @@ CM_Query_Remove_SubTree(
     _In_  DEVINST       dnAncestor,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
 CM_Query_Remove_SubTree_Ex(
     _In_  DEVINST       dnAncestor,
-    _In_  ULONG         ulFlags,
-    _In_opt_ HMACHINE   hMachine
-    );
-
-CMAPI
-CONFIGRET
-WINAPI
-CM_Query_And_Remove_SubTreeA(
-    _In_  DEVINST       dnAncestor,
-    _Out_opt_ PPNP_VETO_TYPE pVetoType,
-    _Out_writes_opt_(ulNameLength) LPSTR pszVetoName,
-    _In_  ULONG         ulNameLength,
-    _In_  ULONG         ulFlags
-    );
-CMAPI
-CONFIGRET
-WINAPI
-CM_Query_And_Remove_SubTree_ExA(
-    _In_  DEVINST       dnAncestor,
-    _Out_opt_ PPNP_VETO_TYPE pVetoType,
-    _Out_writes_opt_(ulNameLength) LPSTR pszVetoName,
-    _In_  ULONG         ulNameLength,
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
@@ -3562,6 +3660,17 @@ CM_Query_And_Remove_SubTree_ExA(
 CMAPI
 CONFIGRET
 WINAPI
+CM_Query_And_Remove_SubTreeA(
+    _In_  DEVINST       dnAncestor,
+    _Out_opt_ PPNP_VETO_TYPE pVetoType,
+    _Out_writes_opt_(ulNameLength) LPSTR pszVetoName,
+    _In_  ULONG         ulNameLength,
+    _In_  ULONG         ulFlags
+    );
+
+CMAPI
+CONFIGRET
+WINAPI
 CM_Query_And_Remove_SubTreeW(
     _In_  DEVINST       dnAncestor,
     _Out_opt_ PPNP_VETO_TYPE pVetoType,
@@ -3570,11 +3679,29 @@ CM_Query_And_Remove_SubTreeW(
     _In_  ULONG         ulFlags
     );
 
+#ifdef UNICODE
+#define CM_Query_And_Remove_SubTree CM_Query_And_Remove_SubTreeW
+#else
+#define CM_Query_And_Remove_SubTree CM_Query_And_Remove_SubTreeA
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
+CMAPI
+CONFIGRET
+WINAPI
+CM_Query_And_Remove_SubTree_ExA(
+    _In_  DEVINST       dnAncestor,
+    _Out_opt_ PPNP_VETO_TYPE pVetoType,
+    _Out_writes_opt_(ulNameLength) LPSTR pszVetoName,
+    _In_  ULONG         ulNameLength,
+    _In_  ULONG         ulFlags,
+    _In_opt_ HMACHINE   hMachine
+    );
 
 CMAPI
 CONFIGRET
@@ -3587,11 +3714,10 @@ CM_Query_And_Remove_SubTree_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Query_And_Remove_SubTree     CM_Query_And_Remove_SubTreeW
 #define CM_Query_And_Remove_SubTree_Ex  CM_Query_And_Remove_SubTree_ExW
 #else
-#define CM_Query_And_Remove_SubTree     CM_Query_And_Remove_SubTreeA
 #define CM_Query_And_Remove_SubTree_Ex  CM_Query_And_Remove_SubTree_ExA
 #endif // UNICODE
 
@@ -3605,6 +3731,7 @@ CM_Request_Device_EjectA(
     _In_  ULONG         ulNameLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3616,6 +3743,7 @@ CM_Request_Device_Eject_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3626,6 +3754,7 @@ CM_Request_Device_EjectW(
     _In_  ULONG         ulNameLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3637,12 +3766,13 @@ CM_Request_Device_Eject_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Request_Device_Eject         CM_Request_Device_EjectW
-#define CM_Request_Device_Eject_Ex      CM_Request_Device_Eject_ExW
+#define CM_Request_Device_Eject    CM_Request_Device_EjectW
+#define CM_Request_Device_Eject_Ex CM_Request_Device_Eject_ExW
 #else
-#define CM_Request_Device_Eject         CM_Request_Device_EjectA
-#define CM_Request_Device_Eject_Ex      CM_Request_Device_Eject_ExA
+#define CM_Request_Device_Eject    CM_Request_Device_EjectA
+#define CM_Request_Device_Eject_Ex CM_Request_Device_Eject_ExA
 #endif // UNICODE
 
 CMAPI
@@ -3652,6 +3782,7 @@ CM_Reenumerate_DevNode(
     _In_  DEVINST       dnDevInst,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3660,8 +3791,8 @@ CM_Reenumerate_DevNode_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Reenumerate_DevInst      CM_Reenumerate_DevNode
-#define CM_Reenumerate_DevInst_Ex   CM_Reenumerate_DevNode_Ex
+#define CM_Reenumerate_DevInst    CM_Reenumerate_DevNode
+#define CM_Reenumerate_DevInst_Ex CM_Reenumerate_DevNode_Ex
 
 CMAPI
 CONFIGRET
@@ -3674,6 +3805,7 @@ CM_Register_Device_InterfaceA(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3685,6 +3817,7 @@ CM_Register_Device_InterfaceW(
     _Inout_ PULONG      pulLength,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3697,6 +3830,7 @@ CM_Register_Device_Interface_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3709,6 +3843,7 @@ CM_Register_Device_Interface_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Register_Device_Interface    CM_Register_Device_InterfaceW
 #define CM_Register_Device_Interface_Ex CM_Register_Device_Interface_ExW
@@ -3726,6 +3861,7 @@ CM_Set_DevNode_Problem_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3734,8 +3870,9 @@ CM_Set_DevNode_Problem(
     _In_  ULONG         ulProblem,
     _In_  ULONG         ulFlags
     );
-#define CM_Set_DevInst_Problem      CM_Set_DevNode_Problem
-#define CM_Set_DevInst_Problem_Ex   CM_Set_DevNode_Problem_Ex
+
+#define CM_Set_DevInst_Problem    CM_Set_DevNode_Problem
+#define CM_Set_DevInst_Problem_Ex CM_Set_DevNode_Problem_Ex
 
 CMAPI
 CONFIGRET
@@ -3744,6 +3881,7 @@ CM_Unregister_Device_InterfaceA(
     _In_  LPCSTR        pszDeviceInterface,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3751,6 +3889,7 @@ CM_Unregister_Device_InterfaceW(
     _In_  LPCWSTR       pszDeviceInterface,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3759,6 +3898,7 @@ CM_Unregister_Device_Interface_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3767,6 +3907,7 @@ CM_Unregister_Device_Interface_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Unregister_Device_Interface    CM_Unregister_Device_InterfaceW
 #define CM_Unregister_Device_Interface_Ex CM_Unregister_Device_Interface_ExW
@@ -3782,6 +3923,7 @@ CM_Register_Device_Driver(
     _In_  DEVINST       dnDevInst,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3799,6 +3941,7 @@ CM_Remove_SubTree(
     _In_  DEVINST       dnAncestor,
     _In_  ULONG         ulFlags
     );
+
 __drv_preferredFunction("CM_Query_And_Remove_Subtree_Ex", "Obsolete")
 CMAPI
 CONFIGRET
@@ -3829,6 +3972,10 @@ CM_Set_DevNode_PropertyW(
     _In_  ULONG         ulFlags
     );
 
+#ifdef UNICODE
+#define CM_Set_DevNode_Property  CM_Set_DevNode_PropertyW
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -3847,9 +3994,9 @@ CM_Set_DevNode_Property_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Set_DevNode_Property                  CM_Set_DevNode_PropertyW
-#define CM_Set_DevNode_Property_Ex               CM_Set_DevNode_Property_ExW
+#define CM_Set_DevNode_Property_Ex CM_Set_DevNode_Property_ExW
 #endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -3857,9 +4004,8 @@ CM_Set_DevNode_Property_ExW(
 
 #endif // (WINVER >= _WIN32_WINNT_LONGHORN)
 
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 CMAPI
 CONFIGRET
@@ -3872,12 +4018,6 @@ CM_Set_DevNode_Registry_PropertyA(
     _In_  ULONG         ulFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 CMAPI
 CONFIGRET
 WINAPI
@@ -3888,6 +4028,16 @@ CM_Set_DevNode_Registry_PropertyW(
     _In_  ULONG         ulLength,
     _In_  ULONG         ulFlags
     );
+
+#define CM_Set_DevInst_Registry_PropertyW CM_Set_DevNode_Registry_PropertyW
+#define CM_Set_DevInst_Registry_PropertyA CM_Set_DevNode_Registry_PropertyA
+#ifdef UNICODE
+#define CM_Set_DevInst_Registry_Property  CM_Set_DevNode_Registry_PropertyW
+#define CM_Set_DevNode_Registry_Property  CM_Set_DevNode_Registry_PropertyW
+#else
+#define CM_Set_DevInst_Registry_Property  CM_Set_DevNode_Registry_PropertyA
+#define CM_Set_DevNode_Registry_Property  CM_Set_DevNode_Registry_PropertyA
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -3906,6 +4056,7 @@ CM_Set_DevNode_Registry_Property_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -3917,19 +4068,14 @@ CM_Set_DevNode_Registry_Property_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Set_DevInst_Registry_PropertyW     CM_Set_DevNode_Registry_PropertyW
-#define CM_Set_DevInst_Registry_PropertyA     CM_Set_DevNode_Registry_PropertyA
+
 #define CM_Set_DevInst_Registry_Property_ExW  CM_Set_DevNode_Registry_Property_ExW
 #define CM_Set_DevInst_Registry_Property_ExA  CM_Set_DevNode_Registry_Property_ExA
 #ifdef UNICODE
-#define CM_Set_DevInst_Registry_Property      CM_Set_DevNode_Registry_PropertyW
 #define CM_Set_DevInst_Registry_Property_Ex   CM_Set_DevNode_Registry_Property_ExW
-#define CM_Set_DevNode_Registry_Property      CM_Set_DevNode_Registry_PropertyW
 #define CM_Set_DevNode_Registry_Property_Ex   CM_Set_DevNode_Registry_Property_ExW
 #else
-#define CM_Set_DevInst_Registry_Property      CM_Set_DevNode_Registry_PropertyA
 #define CM_Set_DevInst_Registry_Property_Ex   CM_Set_DevNode_Registry_Property_ExA
-#define CM_Set_DevNode_Registry_Property      CM_Set_DevNode_Registry_PropertyA
 #define CM_Set_DevNode_Registry_Property_Ex   CM_Set_DevNode_Registry_Property_ExA
 #endif // UNICODE
 
@@ -3953,6 +4099,10 @@ CM_Set_Device_Interface_PropertyW(
     _In_  ULONG         ulFlags
     );
 
+#ifdef UNICODE
+#define CM_Set_Device_Interface_Property CM_Set_Device_Interface_PropertyW
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -3973,8 +4123,7 @@ CM_Set_Device_Interface_Property_ExW(
     );
 
 #ifdef UNICODE
-#define CM_Set_Device_Interface_Property         CM_Set_Device_Interface_PropertyW
-#define CM_Set_Device_Interface_Property_Ex      CM_Set_Device_Interface_Property_ExW
+#define CM_Set_Device_Interface_Property_Ex CM_Set_Device_Interface_Property_ExW
 #endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -3991,6 +4140,7 @@ WINAPI
 CM_Is_Dock_Station_Present(
     _Out_ PBOOL         pbPresent
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4005,6 +4155,7 @@ WINAPI
 CM_Request_Eject_PC(
     VOID
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4021,6 +4172,7 @@ CM_Set_HW_Prof_FlagsA(
     _In_  ULONG         ulValue,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4030,6 +4182,7 @@ CM_Set_HW_Prof_FlagsW(
     _In_  ULONG         ulValue,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4040,6 +4193,7 @@ CM_Set_HW_Prof_Flags_ExA(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4050,6 +4204,7 @@ CM_Set_HW_Prof_Flags_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
 #define CM_Set_HW_Prof_Flags     CM_Set_HW_Prof_FlagsW
 #define CM_Set_HW_Prof_Flags_Ex  CM_Set_HW_Prof_Flags_ExW
@@ -4072,6 +4227,8 @@ CM_Setup_DevNode(
     _In_  ULONG         ulFlags
     );
 
+#define CM_Setup_DevInst         CM_Setup_DevNode
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -4086,7 +4243,7 @@ CM_Setup_DevNode_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Setup_DevInst         CM_Setup_DevNode
+
 #define CM_Setup_DevInst_Ex      CM_Setup_DevNode_Ex
 
 CMAPI
@@ -4113,6 +4270,8 @@ CM_Uninstall_DevNode(
     _In_  ULONG         ulFlags
     );
 
+#define CM_Uninstall_DevInst     CM_Uninstall_DevNode
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -4127,7 +4286,7 @@ CM_Uninstall_DevNode_Ex(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
-#define CM_Uninstall_DevInst     CM_Uninstall_DevNode
+
 #define CM_Uninstall_DevInst_Ex  CM_Uninstall_DevNode_Ex
 
 CMAPI
@@ -4136,6 +4295,7 @@ WINAPI
 CM_Run_Detection(
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4161,7 +4321,6 @@ CM_Write_UserPowerKey(
     _In_ DWORD BufferSize,
     _Out_ PDWORD Error
     );
-
 
 CONFIGRET
 CM_Set_ActiveScheme(
@@ -4209,6 +4368,7 @@ CM_Set_HW_Prof(
     _In_  ULONG         ulHardwareProfile,
     _In_  ULONG         ulFlags
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4254,6 +4414,7 @@ CM_Get_Resource_Conflict_DetailsA(
     _In_  ULONG         ulIndex,
     _Inout_ PCONFLICT_DETAILS_A pConflictDetails
     );
+
 CMAPI
 CONFIGRET
 WINAPI
@@ -4262,6 +4423,7 @@ CM_Get_Resource_Conflict_DetailsW(
     _In_  ULONG         ulIndex,
     _Inout_ PCONFLICT_DETAILS_W pConflictDetails
     );
+
 #ifdef UNICODE
 #define CM_Get_Resource_Conflict_Details CM_Get_Resource_Conflict_DetailsW
 #else
@@ -4288,6 +4450,10 @@ CM_Get_Class_PropertyW(
     _In_  ULONG         ulFlags
     );
 
+#ifdef UNICODE
+#define CM_Get_Class_Property    CM_Get_Class_PropertyW
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -4306,6 +4472,10 @@ CM_Get_Class_Property_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
+#ifdef UNICODE
+#define CM_Get_Class_Property_Ex CM_Get_Class_Property_ExW
+#endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
@@ -4358,6 +4528,10 @@ CM_Set_Class_PropertyW(
     _In_  ULONG         ulFlags
     );
 
+#ifdef UNICODE
+#define CM_Set_Class_Property    CM_Set_Class_PropertyW
+#endif // UNICODE
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -4376,11 +4550,9 @@ CM_Set_Class_Property_ExW(
     _In_  ULONG         ulFlags,
     _In_opt_ HMACHINE   hMachine
     );
+
 #ifdef UNICODE
-#define CM_Get_Class_Property                    CM_Get_Class_PropertyW
-#define CM_Get_Class_Property_Ex                 CM_Get_Class_Property_ExW
-#define CM_Set_Class_Property                    CM_Set_Class_PropertyW
-#define CM_Set_Class_Property_Ex                 CM_Set_Class_Property_ExW
+#define CM_Set_Class_Property_Ex CM_Set_Class_Property_ExW
 #endif // UNICODE
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -4391,6 +4563,19 @@ CM_Set_Class_Property_ExW(
 
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
+CMAPI
+CONFIGRET
+WINAPI
+CM_Get_Class_Registry_PropertyA(
+    _In_  LPGUID        ClassGuid,
+    _In_  ULONG         ulProperty,
+    _Out_opt_ PULONG    pulRegDataType,
+    _Out_writes_bytes_opt_(*pulLength) PVOID Buffer,
+    _Inout_ PULONG      pulLength,
+    _In_  ULONG         ulFlags,
+    _In_opt_ HMACHINE   hMachine
+    );
 
 CMAPI
 CONFIGRET
@@ -4408,6 +4593,18 @@ CM_Get_Class_Registry_PropertyW(
 CMAPI
 CONFIGRET
 WINAPI
+CM_Set_Class_Registry_PropertyA(
+    _In_  LPGUID        ClassGuid,
+    _In_  ULONG         ulProperty,
+    _In_reads_bytes_opt_(ulLength) PCVOID Buffer,
+    _In_  ULONG         ulLength,
+    _In_  ULONG         ulFlags,
+    _In_opt_ HMACHINE   hMachine
+    );
+
+CMAPI
+CONFIGRET
+WINAPI
 CM_Set_Class_Registry_PropertyW(
     _In_  LPGUID        ClassGuid,
     _In_  ULONG         ulProperty,
@@ -4417,35 +4614,6 @@ CM_Set_Class_Registry_PropertyW(
     _In_opt_ HMACHINE   hMachine
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-
-CMAPI
-CONFIGRET
-WINAPI
-CM_Get_Class_Registry_PropertyA(
-    _In_  LPGUID        ClassGuid,
-    _In_  ULONG         ulProperty,
-    _Out_opt_ PULONG    pulRegDataType,
-    _Out_writes_bytes_opt_(*pulLength) PVOID Buffer,
-    _Inout_ PULONG      pulLength,
-    _In_  ULONG         ulFlags,
-    _In_opt_ HMACHINE   hMachine
-    );
-CMAPI
-CONFIGRET
-WINAPI
-CM_Set_Class_Registry_PropertyA(
-    _In_  LPGUID        ClassGuid,
-    _In_  ULONG         ulProperty,
-    _In_reads_bytes_opt_(ulLength) PCVOID Buffer,
-    _In_  ULONG         ulLength,
-    _In_  ULONG         ulFlags,
-    _In_opt_ HMACHINE   hMachine
-    );
 #ifdef UNICODE
 #define CM_Get_Class_Registry_Property CM_Get_Class_Registry_PropertyW
 #define CM_Set_Class_Registry_Property CM_Set_Class_Registry_PropertyW
@@ -4453,6 +4621,12 @@ CM_Set_Class_Registry_PropertyA(
 #define CM_Get_Class_Registry_Property CM_Get_Class_Registry_PropertyA
 #define CM_Set_Class_Registry_Property CM_Set_Class_Registry_PropertyA
 #endif // UNICODE
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #if (WINVER >= _WIN32_WINNT_WIN2K)
 #define CM_WaitNoPendingInstallEvents CMP_WaitNoPendingInstallEvents

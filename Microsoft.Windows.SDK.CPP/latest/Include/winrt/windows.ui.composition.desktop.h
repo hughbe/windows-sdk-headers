@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.composition.desktop.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -276,10 +272,10 @@ namespace ABI {
             namespace Composition {
                 namespace Desktop {
                     interface IDesktopWindowTarget;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Desktop */} /* ABI */
+                } /* Desktop */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CDesktop_CIDesktopWindowTarget ABI::Windows::UI::Composition::Desktop::IDesktopWindowTarget
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CDesktop_CIDesktopWindowTarget_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Composition {
                 namespace Desktop {
                     class DesktopWindowTarget;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Desktop */} /* ABI */
+                } /* Desktop */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -332,17 +328,17 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTopmost(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IDesktopWindowTarget=_uuidof(IDesktopWindowTarget);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Desktop */} /* ABI */
+                } /* Desktop */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CDesktop_CIDesktopWindowTarget;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CDesktop_CIDesktopWindowTarget_INTERFACE_DEFINED__) */

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.contacts.dataprovider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactDataProviderConnection;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactDataProviderConnection2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection2 ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection2_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactDataProviderTriggerDetails;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderTriggerDetails ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderTriggerDetails_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListCreateOrUpdateContactRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequest ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequest_FWD_DEFINED__
@@ -342,10 +338,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListCreateOrUpdateContactRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequestEventArgs ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequestEventArgs_FWD_DEFINED__
@@ -358,10 +354,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListDeleteContactRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequest ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequest_FWD_DEFINED__
@@ -374,10 +370,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListDeleteContactRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequestEventArgs ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequestEventArgs_FWD_DEFINED__
@@ -390,10 +386,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListServerSearchReadBatchRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequest ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequest_FWD_DEFINED__
@@ -406,10 +402,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListServerSearchReadBatchRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequestEventArgs ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequestEventArgs_FWD_DEFINED__
@@ -422,10 +418,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListSyncManagerSyncRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequest ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequest_FWD_DEFINED__
@@ -438,10 +434,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     interface IContactListSyncManagerSyncRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequestEventArgs ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequestEventArgs_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactDataProviderConnection;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -467,10 +463,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListCreateOrUpdateContactRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -494,7 +490,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::Conta
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs*>
@@ -513,10 +509,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListDeleteContactRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -540,7 +536,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::Conta
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs*>
@@ -559,10 +555,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListServerSearchReadBatchRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -586,7 +582,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::Conta
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs*>
@@ -605,10 +601,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListSyncManagerSyncRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -632,7 +628,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::Conta
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection*,ABI::Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs*>
@@ -651,9 +647,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class Contact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
@@ -662,9 +658,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContact ABI::Windows::ApplicationModel::Contacts::IContact
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
@@ -677,18 +673,18 @@ namespace ABI {
                 
                 typedef enum ContactBatchStatus : int ContactBatchStatus;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactQueryOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions_FWD_DEFINED__
@@ -697,9 +693,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactQueryOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions ABI::Windows::ApplicationModel::Contacts::IContactQueryOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions_FWD_DEFINED__
@@ -712,8 +708,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -721,8 +717,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -734,8 +730,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -762,10 +758,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactDataProviderTriggerDetails;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -774,10 +770,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListCreateOrUpdateContactRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -787,10 +783,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListDeleteContactRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -800,10 +796,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListServerSearchReadBatchRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -813,10 +809,10 @@ namespace ABI {
             namespace Contacts {
                 namespace DataProvider {
                     class ContactListSyncManagerSyncRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -875,10 +871,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactDataProviderConnection=_uuidof(IContactDataProviderConnection);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection_INTERFACE_DEFINED__) */
@@ -929,10 +925,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactDataProviderConnection2=_uuidof(IContactDataProviderConnection2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection2_INTERFACE_DEFINED__) */
@@ -972,10 +968,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactDataProviderTriggerDetails=_uuidof(IContactDataProviderTriggerDetails);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderTriggerDetails_INTERFACE_DEFINED__) */
@@ -1025,10 +1021,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListCreateOrUpdateContactRequest=_uuidof(IContactListCreateOrUpdateContactRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequest_INTERFACE_DEFINED__) */
@@ -1071,10 +1067,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListCreateOrUpdateContactRequestEventArgs=_uuidof(IContactListCreateOrUpdateContactRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequestEventArgs_INTERFACE_DEFINED__) */
@@ -1123,10 +1119,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListDeleteContactRequest=_uuidof(IContactListDeleteContactRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequest_INTERFACE_DEFINED__) */
@@ -1169,10 +1165,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListDeleteContactRequestEventArgs=_uuidof(IContactListDeleteContactRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequestEventArgs_INTERFACE_DEFINED__) */
@@ -1232,10 +1228,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListServerSearchReadBatchRequest=_uuidof(IContactListServerSearchReadBatchRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequest_INTERFACE_DEFINED__) */
@@ -1278,10 +1274,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListServerSearchReadBatchRequestEventArgs=_uuidof(IContactListServerSearchReadBatchRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequestEventArgs_INTERFACE_DEFINED__) */
@@ -1327,10 +1323,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListSyncManagerSyncRequest=_uuidof(IContactListSyncManagerSyncRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequest_INTERFACE_DEFINED__) */
@@ -1373,10 +1369,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactListSyncManagerSyncRequestEventArgs=_uuidof(IContactListSyncManagerSyncRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequestEventArgs_INTERFACE_DEFINED__) */
@@ -1720,7 +1716,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CD
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListCreateOrUpdateContactRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListCreateOrUpdateContactRequestEventArgsVtbl;
 
@@ -1773,7 +1769,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CD
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListDeleteContactRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListDeleteContactRequestEventArgsVtbl;
 
@@ -1826,7 +1822,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CD
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListServerSearchReadBatchRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListServerSearchReadBatchRequestEventArgsVtbl;
 
@@ -1879,7 +1875,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CD
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CDataProvider_CIContactListSyncManagerSyncRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CDataProvider__CContactDataProviderConnection_Windows__CApplicationModel__CContacts__CDataProvider__CContactListSyncManagerSyncRequestEventArgsVtbl;
 

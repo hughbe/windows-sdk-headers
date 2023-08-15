@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.capture.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Capture {
                 namespace Core {
                     interface IVariablePhotoCapturedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoCapturedEventArgs ABI::Windows::Media::Capture::Core::IVariablePhotoCapturedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoCapturedEventArgs_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Capture {
                 namespace Core {
                     interface IVariablePhotoSequenceCapture;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture ABI::Windows::Media::Capture::Core::IVariablePhotoSequenceCapture
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Capture {
                 namespace Core {
                     interface IVariablePhotoSequenceCapture2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture2 ABI::Windows::Media::Capture::Core::IVariablePhotoSequenceCapture2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture2_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Capture {
                 namespace Core {
                     class VariablePhotoSequenceCapture;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -353,7 +349,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Core::VariablePhot
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Core::VariablePhotoSequenceCapture*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Core::IVariablePhotoSequenceCapture*>
@@ -385,7 +381,7 @@ IAsyncOperation<ABI::Windows::Media::Capture::Core::VariablePhotoSequenceCapture
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Capture::Core::VariablePhotoSequenceCapture*> __FIAsyncOperation_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Core::IVariablePhotoSequenceCapture*>
@@ -418,7 +414,7 @@ ITypedEventHandler<ABI::Windows::Media::Capture::Core::VariablePhotoSequenceCapt
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Capture::Core::VariablePhotoSequenceCapture*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Capture::Core::IVariablePhotoSequenceCapture*,IInspectable*>
@@ -436,10 +432,10 @@ namespace ABI {
             namespace Capture {
                 namespace Core {
                     class VariablePhotoCapturedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -463,7 +459,7 @@ ITypedEventHandler<ABI::Windows::Media::Capture::Core::VariablePhotoSequenceCapt
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Capture::Core::VariablePhotoSequenceCapture*,ABI::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Capture::Core::IVariablePhotoSequenceCapture*,ABI::Windows::Media::Capture::Core::IVariablePhotoCapturedEventArgs*>
@@ -494,7 +490,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -512,8 +508,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -525,8 +521,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -536,9 +532,9 @@ namespace ABI {
         namespace Media {
             namespace Capture {
                 class CapturedFrame;
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCapture_CICapturedFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCapture_CICapturedFrame_FWD_DEFINED__
@@ -547,9 +543,9 @@ namespace ABI {
         namespace Media {
             namespace Capture {
                 interface ICapturedFrame;
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CICapturedFrame ABI::Windows::Media::Capture::ICapturedFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CICapturedFrame_FWD_DEFINED__
@@ -560,9 +556,9 @@ namespace ABI {
         namespace Media {
             namespace Capture {
                 class CapturedFrameControlValues;
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCapture_CICapturedFrameControlValues_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCapture_CICapturedFrameControlValues_FWD_DEFINED__
@@ -571,9 +567,9 @@ namespace ABI {
         namespace Media {
             namespace Capture {
                 interface ICapturedFrameControlValues;
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CICapturedFrameControlValues ABI::Windows::Media::Capture::ICapturedFrameControlValues
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CICapturedFrameControlValues_FWD_DEFINED__
@@ -639,10 +635,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVariablePhotoCapturedEventArgs=_uuidof(IVariablePhotoCapturedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoCapturedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoCapturedEventArgs_INTERFACE_DEFINED__) */
@@ -702,10 +698,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVariablePhotoSequenceCapture=_uuidof(IVariablePhotoSequenceCapture);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture_INTERFACE_DEFINED__) */
@@ -745,10 +741,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVariablePhotoSequenceCapture2=_uuidof(IVariablePhotoSequenceCapture2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture2_INTERFACE_DEFINED__) */
@@ -966,7 +962,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariab
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_IInspectableVtbl;
 
@@ -1018,7 +1014,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariab
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoCapturedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoSequenceCapture * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CCore_CIVariablePhotoCapturedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCapture__CCore__CVariablePhotoSequenceCapture_Windows__CMedia__CCapture__CCore__CVariablePhotoCapturedEventArgsVtbl;
 
@@ -1073,7 +1069,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

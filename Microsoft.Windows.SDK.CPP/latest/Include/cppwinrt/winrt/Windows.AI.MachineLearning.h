@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,6 +9,7 @@
 
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.Foundation.Collections.h"
+#include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Graphics.2.h"
 #include "winrt/impl/Windows.Graphics.DirectX.Direct3D11.2.h"
@@ -16,7 +17,6 @@
 #include "winrt/impl/Windows.Media.2.h"
 #include "winrt/impl/Windows.Storage.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
-#include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.AI.MachineLearning.2.h"
 
@@ -296,6 +296,25 @@ template <typename D> Windows::AI::MachineLearning::LearningModelSession consume
     return value;
 }
 
+template <typename D> Windows::AI::MachineLearning::LearningModelSession consume_Windows_AI_MachineLearning_ILearningModelSessionFactory2<D>::CreateFromModelOnDeviceWithSessionOptions(Windows::AI::MachineLearning::LearningModel const& model, Windows::AI::MachineLearning::LearningModelDevice const& deviceToRunOn, Windows::AI::MachineLearning::LearningModelSessionOptions const& learningModelSessionOptions) const
+{
+    Windows::AI::MachineLearning::LearningModelSession value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ILearningModelSessionFactory2)->CreateFromModelOnDeviceWithSessionOptions(get_abi(model), get_abi(deviceToRunOn), get_abi(learningModelSessionOptions), put_abi(value)));
+    return value;
+}
+
+template <typename D> uint32_t consume_Windows_AI_MachineLearning_ILearningModelSessionOptions<D>::BatchSizeOverride() const
+{
+    uint32_t value{};
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ILearningModelSessionOptions)->get_BatchSizeOverride(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_AI_MachineLearning_ILearningModelSessionOptions<D>::BatchSizeOverride(uint32_t value) const
+{
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ILearningModelSessionOptions)->put_BatchSizeOverride(value));
+}
+
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::AI::MachineLearning::LearningModel> consume_Windows_AI_MachineLearning_ILearningModelStatics<D>::LoadFromStorageFileAsync(Windows::Storage::IStorageFile const& modelFile) const
 {
     Windows::Foundation::IAsyncOperation<Windows::AI::MachineLearning::LearningModel> operation{ nullptr };
@@ -422,6 +441,20 @@ template <typename D> Windows::AI::MachineLearning::TensorBoolean consume_Window
     return result;
 }
 
+template <typename D> Windows::AI::MachineLearning::TensorBoolean consume_Windows_AI_MachineLearning_ITensorBooleanStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<bool const> data) const
+{
+    Windows::AI::MachineLearning::TensorBoolean result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorBooleanStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorBoolean consume_Windows_AI_MachineLearning_ITensorBooleanStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorBoolean result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorBooleanStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::Foundation::Collections::IVectorView<double> consume_Windows_AI_MachineLearning_ITensorDouble<D>::GetAsVectorView() const
 {
     Windows::Foundation::Collections::IVectorView<double> result{ nullptr };
@@ -454,6 +487,20 @@ template <typename D> Windows::AI::MachineLearning::TensorDouble consume_Windows
 {
     Windows::AI::MachineLearning::TensorDouble result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorDoubleStatics)->CreateFromIterable(get_abi(shape), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorDouble consume_Windows_AI_MachineLearning_ITensorDoubleStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<double const> data) const
+{
+    Windows::AI::MachineLearning::TensorDouble result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorDoubleStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorDouble consume_Windows_AI_MachineLearning_ITensorDoubleStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorDouble result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorDoubleStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
     return result;
 }
 
@@ -513,6 +560,20 @@ template <typename D> Windows::AI::MachineLearning::TensorFloat16Bit consume_Win
     return result;
 }
 
+template <typename D> Windows::AI::MachineLearning::TensorFloat16Bit consume_Windows_AI_MachineLearning_ITensorFloat16BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<float const> data) const
+{
+    Windows::AI::MachineLearning::TensorFloat16Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorFloat16BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorFloat16Bit consume_Windows_AI_MachineLearning_ITensorFloat16BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorFloat16Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorFloat16BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::AI::MachineLearning::TensorFloat consume_Windows_AI_MachineLearning_ITensorFloatStatics<D>::Create() const
 {
     Windows::AI::MachineLearning::TensorFloat result{ nullptr };
@@ -538,6 +599,20 @@ template <typename D> Windows::AI::MachineLearning::TensorFloat consume_Windows_
 {
     Windows::AI::MachineLearning::TensorFloat result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorFloatStatics)->CreateFromIterable(get_abi(shape), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorFloat consume_Windows_AI_MachineLearning_ITensorFloatStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<float const> data) const
+{
+    Windows::AI::MachineLearning::TensorFloat result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorFloatStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorFloat consume_Windows_AI_MachineLearning_ITensorFloatStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorFloat result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorFloatStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
     return result;
 }
 
@@ -576,6 +651,20 @@ template <typename D> Windows::AI::MachineLearning::TensorInt16Bit consume_Windo
     return result;
 }
 
+template <typename D> Windows::AI::MachineLearning::TensorInt16Bit consume_Windows_AI_MachineLearning_ITensorInt16BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<int16_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorInt16Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt16BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorInt16Bit consume_Windows_AI_MachineLearning_ITensorInt16BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorInt16Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt16BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::Foundation::Collections::IVectorView<int32_t> consume_Windows_AI_MachineLearning_ITensorInt32Bit<D>::GetAsVectorView() const
 {
     Windows::Foundation::Collections::IVectorView<int32_t> result{ nullptr };
@@ -608,6 +697,20 @@ template <typename D> Windows::AI::MachineLearning::TensorInt32Bit consume_Windo
 {
     Windows::AI::MachineLearning::TensorInt32Bit result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt32BitStatics)->CreateFromIterable(get_abi(shape), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorInt32Bit consume_Windows_AI_MachineLearning_ITensorInt32BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<int32_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorInt32Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt32BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorInt32Bit consume_Windows_AI_MachineLearning_ITensorInt32BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorInt32Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt32BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
     return result;
 }
 
@@ -646,6 +749,20 @@ template <typename D> Windows::AI::MachineLearning::TensorInt64Bit consume_Windo
     return result;
 }
 
+template <typename D> Windows::AI::MachineLearning::TensorInt64Bit consume_Windows_AI_MachineLearning_ITensorInt64BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<int64_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorInt64Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt64BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorInt64Bit consume_Windows_AI_MachineLearning_ITensorInt64BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorInt64Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt64BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::Foundation::Collections::IVectorView<uint8_t> consume_Windows_AI_MachineLearning_ITensorInt8Bit<D>::GetAsVectorView() const
 {
     Windows::Foundation::Collections::IVectorView<uint8_t> result{ nullptr };
@@ -678,6 +795,20 @@ template <typename D> Windows::AI::MachineLearning::TensorInt8Bit consume_Window
 {
     Windows::AI::MachineLearning::TensorInt8Bit result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt8BitStatics)->CreateFromIterable(get_abi(shape), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorInt8Bit consume_Windows_AI_MachineLearning_ITensorInt8BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint8_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorInt8Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt8BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorInt8Bit consume_Windows_AI_MachineLearning_ITensorInt8BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorInt8Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorInt8BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
     return result;
 }
 
@@ -716,6 +847,13 @@ template <typename D> Windows::AI::MachineLearning::TensorString consume_Windows
     return result;
 }
 
+template <typename D> Windows::AI::MachineLearning::TensorString consume_Windows_AI_MachineLearning_ITensorStringStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<hstring const> data) const
+{
+    Windows::AI::MachineLearning::TensorString result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorStringStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::Foundation::Collections::IVectorView<uint16_t> consume_Windows_AI_MachineLearning_ITensorUInt16Bit<D>::GetAsVectorView() const
 {
     Windows::Foundation::Collections::IVectorView<uint16_t> result{ nullptr };
@@ -748,6 +886,20 @@ template <typename D> Windows::AI::MachineLearning::TensorUInt16Bit consume_Wind
 {
     Windows::AI::MachineLearning::TensorUInt16Bit result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt16BitStatics)->CreateFromIterable(get_abi(shape), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorUInt16Bit consume_Windows_AI_MachineLearning_ITensorUInt16BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint16_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorUInt16Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt16BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorUInt16Bit consume_Windows_AI_MachineLearning_ITensorUInt16BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorUInt16Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt16BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
     return result;
 }
 
@@ -786,6 +938,20 @@ template <typename D> Windows::AI::MachineLearning::TensorUInt32Bit consume_Wind
     return result;
 }
 
+template <typename D> Windows::AI::MachineLearning::TensorUInt32Bit consume_Windows_AI_MachineLearning_ITensorUInt32BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint32_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorUInt32Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt32BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorUInt32Bit consume_Windows_AI_MachineLearning_ITensorUInt32BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorUInt32Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt32BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::Foundation::Collections::IVectorView<uint64_t> consume_Windows_AI_MachineLearning_ITensorUInt64Bit<D>::GetAsVectorView() const
 {
     Windows::Foundation::Collections::IVectorView<uint64_t> result{ nullptr };
@@ -821,6 +987,20 @@ template <typename D> Windows::AI::MachineLearning::TensorUInt64Bit consume_Wind
     return result;
 }
 
+template <typename D> Windows::AI::MachineLearning::TensorUInt64Bit consume_Windows_AI_MachineLearning_ITensorUInt64BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint64_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorUInt64Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt64BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorUInt64Bit consume_Windows_AI_MachineLearning_ITensorUInt64BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorUInt64Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt64BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::Foundation::Collections::IVectorView<uint8_t> consume_Windows_AI_MachineLearning_ITensorUInt8Bit<D>::GetAsVectorView() const
 {
     Windows::Foundation::Collections::IVectorView<uint8_t> result{ nullptr };
@@ -853,6 +1033,20 @@ template <typename D> Windows::AI::MachineLearning::TensorUInt8Bit consume_Windo
 {
     Windows::AI::MachineLearning::TensorUInt8Bit result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt8BitStatics)->CreateFromIterable(get_abi(shape), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorUInt8Bit consume_Windows_AI_MachineLearning_ITensorUInt8BitStatics2<D>::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint8_t const> data) const
+{
+    Windows::AI::MachineLearning::TensorUInt8Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt8BitStatics2)->CreateFromShapeArrayAndDataArray(shape.size(), get_abi(shape), data.size(), get_abi(data), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::AI::MachineLearning::TensorUInt8Bit consume_Windows_AI_MachineLearning_ITensorUInt8BitStatics2<D>::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer) const
+{
+    Windows::AI::MachineLearning::TensorUInt8Bit result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::AI::MachineLearning::ITensorUInt8BitStatics2)->CreateFromBuffer(shape.size(), get_abi(shape), get_abi(buffer), put_abi(result)));
     return result;
 }
 
@@ -1423,6 +1617,51 @@ struct produce<D, Windows::AI::MachineLearning::ILearningModelSessionFactory> : 
 };
 
 template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ILearningModelSessionFactory2> : produce_base<D, Windows::AI::MachineLearning::ILearningModelSessionFactory2>
+{
+    int32_t WINRT_CALL CreateFromModelOnDeviceWithSessionOptions(void* model, void* deviceToRunOn, void* learningModelSessionOptions, void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromModelOnDeviceWithSessionOptions, WINRT_WRAP(Windows::AI::MachineLearning::LearningModelSession), Windows::AI::MachineLearning::LearningModel const&, Windows::AI::MachineLearning::LearningModelDevice const&, Windows::AI::MachineLearning::LearningModelSessionOptions const&);
+            *value = detach_from<Windows::AI::MachineLearning::LearningModelSession>(this->shim().CreateFromModelOnDeviceWithSessionOptions(*reinterpret_cast<Windows::AI::MachineLearning::LearningModel const*>(&model), *reinterpret_cast<Windows::AI::MachineLearning::LearningModelDevice const*>(&deviceToRunOn), *reinterpret_cast<Windows::AI::MachineLearning::LearningModelSessionOptions const*>(&learningModelSessionOptions)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ILearningModelSessionOptions> : produce_base<D, Windows::AI::MachineLearning::ILearningModelSessionOptions>
+{
+    int32_t WINRT_CALL get_BatchSizeOverride(uint32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(BatchSizeOverride, WINRT_WRAP(uint32_t));
+            *value = detach_from<uint32_t>(this->shim().BatchSizeOverride());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_BatchSizeOverride(uint32_t value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(BatchSizeOverride, WINRT_WRAP(void), uint32_t);
+            this->shim().BatchSizeOverride(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::AI::MachineLearning::ILearningModelStatics> : produce_base<D, Windows::AI::MachineLearning::ILearningModelStatics>
 {
     int32_t WINRT_CALL LoadFromStorageFileAsync(void* modelFile, void** operation) noexcept final
@@ -1679,6 +1918,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorBooleanStatics> : produce
 };
 
 template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorBooleanStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorBooleanStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, bool* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorBoolean), array_view<int64_t const>, array_view<bool const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorBoolean>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<bool const>(reinterpret_cast<bool const *>(data), reinterpret_cast<bool const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorBoolean), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorBoolean>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::AI::MachineLearning::ITensorDouble> : produce_base<D, Windows::AI::MachineLearning::ITensorDouble>
 {
     int32_t WINRT_CALL GetAsVectorView(void** result) noexcept final
@@ -1745,6 +2014,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorDoubleStatics> : produce_
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromIterable, WINRT_WRAP(Windows::AI::MachineLearning::TensorDouble), Windows::Foundation::Collections::IIterable<int64_t> const&, Windows::Foundation::Collections::IIterable<double> const&);
             *result = detach_from<Windows::AI::MachineLearning::TensorDouble>(this->shim().CreateFromIterable(*reinterpret_cast<Windows::Foundation::Collections::IIterable<int64_t> const*>(&shape), *reinterpret_cast<Windows::Foundation::Collections::IIterable<double> const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorDoubleStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorDoubleStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, double* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorDouble), array_view<int64_t const>, array_view<double const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorDouble>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<double const>(reinterpret_cast<double const *>(data), reinterpret_cast<double const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorDouble), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorDouble>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1871,6 +2170,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorFloat16BitStatics> : prod
 };
 
 template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorFloat16BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorFloat16BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, float* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorFloat16Bit), array_view<int64_t const>, array_view<float const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorFloat16Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<float const>(reinterpret_cast<float const *>(data), reinterpret_cast<float const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorFloat16Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorFloat16Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::AI::MachineLearning::ITensorFloatStatics> : produce_base<D, Windows::AI::MachineLearning::ITensorFloatStatics>
 {
     int32_t WINRT_CALL Create(void** result) noexcept final
@@ -1920,6 +2249,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorFloatStatics> : produce_b
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromIterable, WINRT_WRAP(Windows::AI::MachineLearning::TensorFloat), Windows::Foundation::Collections::IIterable<int64_t> const&, Windows::Foundation::Collections::IIterable<float> const&);
             *result = detach_from<Windows::AI::MachineLearning::TensorFloat>(this->shim().CreateFromIterable(*reinterpret_cast<Windows::Foundation::Collections::IIterable<int64_t> const*>(&shape), *reinterpret_cast<Windows::Foundation::Collections::IIterable<float> const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorFloatStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorFloatStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, float* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorFloat), array_view<int64_t const>, array_view<float const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorFloat>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<float const>(reinterpret_cast<float const *>(data), reinterpret_cast<float const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorFloat), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorFloat>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2000,6 +2359,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorInt16BitStatics> : produc
 };
 
 template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorInt16BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorInt16BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, int16_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt16Bit), array_view<int64_t const>, array_view<int16_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt16Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<int16_t const>(reinterpret_cast<int16_t const *>(data), reinterpret_cast<int16_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt16Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt16Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::AI::MachineLearning::ITensorInt32Bit> : produce_base<D, Windows::AI::MachineLearning::ITensorInt32Bit>
 {
     int32_t WINRT_CALL GetAsVectorView(void** result) noexcept final
@@ -2066,6 +2455,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorInt32BitStatics> : produc
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromIterable, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt32Bit), Windows::Foundation::Collections::IIterable<int64_t> const&, Windows::Foundation::Collections::IIterable<int32_t> const&);
             *result = detach_from<Windows::AI::MachineLearning::TensorInt32Bit>(this->shim().CreateFromIterable(*reinterpret_cast<Windows::Foundation::Collections::IIterable<int64_t> const*>(&shape), *reinterpret_cast<Windows::Foundation::Collections::IIterable<int32_t> const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorInt32BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorInt32BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, int32_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt32Bit), array_view<int64_t const>, array_view<int32_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt32Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<int32_t const>(reinterpret_cast<int32_t const *>(data), reinterpret_cast<int32_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt32Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt32Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2146,6 +2565,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorInt64BitStatics> : produc
 };
 
 template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorInt64BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorInt64BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, int64_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt64Bit), array_view<int64_t const>, array_view<int64_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt64Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<int64_t const>(reinterpret_cast<int64_t const *>(data), reinterpret_cast<int64_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt64Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt64Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::AI::MachineLearning::ITensorInt8Bit> : produce_base<D, Windows::AI::MachineLearning::ITensorInt8Bit>
 {
     int32_t WINRT_CALL GetAsVectorView(void** result) noexcept final
@@ -2212,6 +2661,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorInt8BitStatics> : produce
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromIterable, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt8Bit), Windows::Foundation::Collections::IIterable<int64_t> const&, Windows::Foundation::Collections::IIterable<uint8_t> const&);
             *result = detach_from<Windows::AI::MachineLearning::TensorInt8Bit>(this->shim().CreateFromIterable(*reinterpret_cast<Windows::Foundation::Collections::IIterable<int64_t> const*>(&shape), *reinterpret_cast<Windows::Foundation::Collections::IIterable<uint8_t> const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorInt8BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorInt8BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, uint8_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt8Bit), array_view<int64_t const>, array_view<uint8_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt8Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(data), reinterpret_cast<uint8_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorInt8Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorInt8Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2292,6 +2771,23 @@ struct produce<D, Windows::AI::MachineLearning::ITensorStringStatics> : produce_
 };
 
 template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorStringStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorStringStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, void** data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorString), array_view<int64_t const>, array_view<hstring const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorString>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<hstring const>(reinterpret_cast<hstring const *>(data), reinterpret_cast<hstring const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::AI::MachineLearning::ITensorUInt16Bit> : produce_base<D, Windows::AI::MachineLearning::ITensorUInt16Bit>
 {
     int32_t WINRT_CALL GetAsVectorView(void** result) noexcept final
@@ -2358,6 +2854,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorUInt16BitStatics> : produ
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromIterable, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt16Bit), Windows::Foundation::Collections::IIterable<int64_t> const&, Windows::Foundation::Collections::IIterable<uint16_t> const&);
             *result = detach_from<Windows::AI::MachineLearning::TensorUInt16Bit>(this->shim().CreateFromIterable(*reinterpret_cast<Windows::Foundation::Collections::IIterable<int64_t> const*>(&shape), *reinterpret_cast<Windows::Foundation::Collections::IIterable<uint16_t> const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorUInt16BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorUInt16BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, uint16_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt16Bit), array_view<int64_t const>, array_view<uint16_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt16Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<uint16_t const>(reinterpret_cast<uint16_t const *>(data), reinterpret_cast<uint16_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt16Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt16Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2438,6 +2964,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorUInt32BitStatics> : produ
 };
 
 template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorUInt32BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorUInt32BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, uint32_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt32Bit), array_view<int64_t const>, array_view<uint32_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt32Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<uint32_t const>(reinterpret_cast<uint32_t const *>(data), reinterpret_cast<uint32_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt32Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt32Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::AI::MachineLearning::ITensorUInt64Bit> : produce_base<D, Windows::AI::MachineLearning::ITensorUInt64Bit>
 {
     int32_t WINRT_CALL GetAsVectorView(void** result) noexcept final
@@ -2504,6 +3060,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorUInt64BitStatics> : produ
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromIterable, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt64Bit), Windows::Foundation::Collections::IIterable<int64_t> const&, Windows::Foundation::Collections::IIterable<uint64_t> const&);
             *result = detach_from<Windows::AI::MachineLearning::TensorUInt64Bit>(this->shim().CreateFromIterable(*reinterpret_cast<Windows::Foundation::Collections::IIterable<int64_t> const*>(&shape), *reinterpret_cast<Windows::Foundation::Collections::IIterable<uint64_t> const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorUInt64BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorUInt64BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, uint64_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt64Bit), array_view<int64_t const>, array_view<uint64_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt64Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<uint64_t const>(reinterpret_cast<uint64_t const *>(data), reinterpret_cast<uint64_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt64Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt64Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2583,6 +3169,36 @@ struct produce<D, Windows::AI::MachineLearning::ITensorUInt8BitStatics> : produc
     }
 };
 
+template <typename D>
+struct produce<D, Windows::AI::MachineLearning::ITensorUInt8BitStatics2> : produce_base<D, Windows::AI::MachineLearning::ITensorUInt8BitStatics2>
+{
+    int32_t WINRT_CALL CreateFromShapeArrayAndDataArray(uint32_t __shapeSize, int64_t* shape, uint32_t __dataSize, uint8_t* data, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromShapeArrayAndDataArray, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt8Bit), array_view<int64_t const>, array_view<uint8_t const>);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt8Bit>(this->shim().CreateFromShapeArrayAndDataArray(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(data), reinterpret_cast<uint8_t const *>(data) + __dataSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromBuffer(uint32_t __shapeSize, int64_t* shape, void* buffer, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromBuffer, WINRT_WRAP(Windows::AI::MachineLearning::TensorUInt8Bit), array_view<int64_t const>, Windows::Storage::Streams::IBuffer const&);
+            *result = detach_from<Windows::AI::MachineLearning::TensorUInt8Bit>(this->shim().CreateFromBuffer(array_view<int64_t const>(reinterpret_cast<int64_t const *>(shape), reinterpret_cast<int64_t const *>(shape) + __shapeSize), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::AI::MachineLearning {
@@ -2653,6 +3269,14 @@ inline LearningModelSession::LearningModelSession(Windows::AI::MachineLearning::
     LearningModelSession(impl::call_factory<LearningModelSession, Windows::AI::MachineLearning::ILearningModelSessionFactory>([&](auto&& f) { return f.CreateFromModelOnDevice(model, deviceToRunOn); }))
 {}
 
+inline LearningModelSession::LearningModelSession(Windows::AI::MachineLearning::LearningModel const& model, Windows::AI::MachineLearning::LearningModelDevice const& deviceToRunOn, Windows::AI::MachineLearning::LearningModelSessionOptions const& learningModelSessionOptions) :
+    LearningModelSession(impl::call_factory<LearningModelSession, Windows::AI::MachineLearning::ILearningModelSessionFactory2>([&](auto&& f) { return f.CreateFromModelOnDeviceWithSessionOptions(model, deviceToRunOn, learningModelSessionOptions); }))
+{}
+
+inline LearningModelSessionOptions::LearningModelSessionOptions() :
+    LearningModelSessionOptions(impl::call_factory<LearningModelSessionOptions>([](auto&& f) { return f.template ActivateInstance<LearningModelSessionOptions>(); }))
+{}
+
 inline Windows::AI::MachineLearning::TensorBoolean TensorBoolean::Create()
 {
     return impl::call_factory<TensorBoolean, Windows::AI::MachineLearning::ITensorBooleanStatics>([&](auto&& f) { return f.Create(); });
@@ -2671,6 +3295,16 @@ inline Windows::AI::MachineLearning::TensorBoolean TensorBoolean::CreateFromArra
 inline Windows::AI::MachineLearning::TensorBoolean TensorBoolean::CreateFromIterable(param::iterable<int64_t> const& shape, param::iterable<bool> const& data)
 {
     return impl::call_factory<TensorBoolean, Windows::AI::MachineLearning::ITensorBooleanStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorBoolean TensorBoolean::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<bool const> data)
+{
+    return impl::call_factory<TensorBoolean, Windows::AI::MachineLearning::ITensorBooleanStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorBoolean TensorBoolean::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorBoolean, Windows::AI::MachineLearning::ITensorBooleanStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
 }
 
 inline Windows::AI::MachineLearning::TensorDouble TensorDouble::Create()
@@ -2693,6 +3327,16 @@ inline Windows::AI::MachineLearning::TensorDouble TensorDouble::CreateFromIterab
     return impl::call_factory<TensorDouble, Windows::AI::MachineLearning::ITensorDoubleStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
 }
 
+inline Windows::AI::MachineLearning::TensorDouble TensorDouble::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<double const> data)
+{
+    return impl::call_factory<TensorDouble, Windows::AI::MachineLearning::ITensorDoubleStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorDouble TensorDouble::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorDouble, Windows::AI::MachineLearning::ITensorDoubleStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
+}
+
 inline Windows::AI::MachineLearning::TensorFloat TensorFloat::Create()
 {
     return impl::call_factory<TensorFloat, Windows::AI::MachineLearning::ITensorFloatStatics>([&](auto&& f) { return f.Create(); });
@@ -2711,6 +3355,16 @@ inline Windows::AI::MachineLearning::TensorFloat TensorFloat::CreateFromArray(pa
 inline Windows::AI::MachineLearning::TensorFloat TensorFloat::CreateFromIterable(param::iterable<int64_t> const& shape, param::iterable<float> const& data)
 {
     return impl::call_factory<TensorFloat, Windows::AI::MachineLearning::ITensorFloatStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorFloat TensorFloat::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<float const> data)
+{
+    return impl::call_factory<TensorFloat, Windows::AI::MachineLearning::ITensorFloatStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorFloat TensorFloat::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorFloat, Windows::AI::MachineLearning::ITensorFloatStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
 }
 
 inline Windows::AI::MachineLearning::TensorFloat16Bit TensorFloat16Bit::Create()
@@ -2733,6 +3387,16 @@ inline Windows::AI::MachineLearning::TensorFloat16Bit TensorFloat16Bit::CreateFr
     return impl::call_factory<TensorFloat16Bit, Windows::AI::MachineLearning::ITensorFloat16BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
 }
 
+inline Windows::AI::MachineLearning::TensorFloat16Bit TensorFloat16Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<float const> data)
+{
+    return impl::call_factory<TensorFloat16Bit, Windows::AI::MachineLearning::ITensorFloat16BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorFloat16Bit TensorFloat16Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorFloat16Bit, Windows::AI::MachineLearning::ITensorFloat16BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
+}
+
 inline Windows::AI::MachineLearning::TensorInt16Bit TensorInt16Bit::Create()
 {
     return impl::call_factory<TensorInt16Bit, Windows::AI::MachineLearning::ITensorInt16BitStatics>([&](auto&& f) { return f.Create(); });
@@ -2751,6 +3415,16 @@ inline Windows::AI::MachineLearning::TensorInt16Bit TensorInt16Bit::CreateFromAr
 inline Windows::AI::MachineLearning::TensorInt16Bit TensorInt16Bit::CreateFromIterable(param::iterable<int64_t> const& shape, param::iterable<int16_t> const& data)
 {
     return impl::call_factory<TensorInt16Bit, Windows::AI::MachineLearning::ITensorInt16BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorInt16Bit TensorInt16Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<int16_t const> data)
+{
+    return impl::call_factory<TensorInt16Bit, Windows::AI::MachineLearning::ITensorInt16BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorInt16Bit TensorInt16Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorInt16Bit, Windows::AI::MachineLearning::ITensorInt16BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
 }
 
 inline Windows::AI::MachineLearning::TensorInt32Bit TensorInt32Bit::Create()
@@ -2773,6 +3447,16 @@ inline Windows::AI::MachineLearning::TensorInt32Bit TensorInt32Bit::CreateFromIt
     return impl::call_factory<TensorInt32Bit, Windows::AI::MachineLearning::ITensorInt32BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
 }
 
+inline Windows::AI::MachineLearning::TensorInt32Bit TensorInt32Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<int32_t const> data)
+{
+    return impl::call_factory<TensorInt32Bit, Windows::AI::MachineLearning::ITensorInt32BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorInt32Bit TensorInt32Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorInt32Bit, Windows::AI::MachineLearning::ITensorInt32BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
+}
+
 inline Windows::AI::MachineLearning::TensorInt64Bit TensorInt64Bit::Create()
 {
     return impl::call_factory<TensorInt64Bit, Windows::AI::MachineLearning::ITensorInt64BitStatics>([&](auto&& f) { return f.Create(); });
@@ -2791,6 +3475,16 @@ inline Windows::AI::MachineLearning::TensorInt64Bit TensorInt64Bit::CreateFromAr
 inline Windows::AI::MachineLearning::TensorInt64Bit TensorInt64Bit::CreateFromIterable(param::iterable<int64_t> const& shape, param::iterable<int64_t> const& data)
 {
     return impl::call_factory<TensorInt64Bit, Windows::AI::MachineLearning::ITensorInt64BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorInt64Bit TensorInt64Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<int64_t const> data)
+{
+    return impl::call_factory<TensorInt64Bit, Windows::AI::MachineLearning::ITensorInt64BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorInt64Bit TensorInt64Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorInt64Bit, Windows::AI::MachineLearning::ITensorInt64BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
 }
 
 inline Windows::AI::MachineLearning::TensorInt8Bit TensorInt8Bit::Create()
@@ -2813,6 +3507,16 @@ inline Windows::AI::MachineLearning::TensorInt8Bit TensorInt8Bit::CreateFromIter
     return impl::call_factory<TensorInt8Bit, Windows::AI::MachineLearning::ITensorInt8BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
 }
 
+inline Windows::AI::MachineLearning::TensorInt8Bit TensorInt8Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint8_t const> data)
+{
+    return impl::call_factory<TensorInt8Bit, Windows::AI::MachineLearning::ITensorInt8BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorInt8Bit TensorInt8Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorInt8Bit, Windows::AI::MachineLearning::ITensorInt8BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
+}
+
 inline Windows::AI::MachineLearning::TensorString TensorString::Create()
 {
     return impl::call_factory<TensorString, Windows::AI::MachineLearning::ITensorStringStatics>([&](auto&& f) { return f.Create(); });
@@ -2831,6 +3535,11 @@ inline Windows::AI::MachineLearning::TensorString TensorString::CreateFromArray(
 inline Windows::AI::MachineLearning::TensorString TensorString::CreateFromIterable(param::iterable<int64_t> const& shape, param::iterable<hstring> const& data)
 {
     return impl::call_factory<TensorString, Windows::AI::MachineLearning::ITensorStringStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorString TensorString::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<hstring const> data)
+{
+    return impl::call_factory<TensorString, Windows::AI::MachineLearning::ITensorStringStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
 }
 
 inline Windows::AI::MachineLearning::TensorUInt16Bit TensorUInt16Bit::Create()
@@ -2853,6 +3562,16 @@ inline Windows::AI::MachineLearning::TensorUInt16Bit TensorUInt16Bit::CreateFrom
     return impl::call_factory<TensorUInt16Bit, Windows::AI::MachineLearning::ITensorUInt16BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
 }
 
+inline Windows::AI::MachineLearning::TensorUInt16Bit TensorUInt16Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint16_t const> data)
+{
+    return impl::call_factory<TensorUInt16Bit, Windows::AI::MachineLearning::ITensorUInt16BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorUInt16Bit TensorUInt16Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorUInt16Bit, Windows::AI::MachineLearning::ITensorUInt16BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
+}
+
 inline Windows::AI::MachineLearning::TensorUInt32Bit TensorUInt32Bit::Create()
 {
     return impl::call_factory<TensorUInt32Bit, Windows::AI::MachineLearning::ITensorUInt32BitStatics>([&](auto&& f) { return f.Create(); });
@@ -2871,6 +3590,16 @@ inline Windows::AI::MachineLearning::TensorUInt32Bit TensorUInt32Bit::CreateFrom
 inline Windows::AI::MachineLearning::TensorUInt32Bit TensorUInt32Bit::CreateFromIterable(param::iterable<int64_t> const& shape, param::iterable<uint32_t> const& data)
 {
     return impl::call_factory<TensorUInt32Bit, Windows::AI::MachineLearning::ITensorUInt32BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorUInt32Bit TensorUInt32Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint32_t const> data)
+{
+    return impl::call_factory<TensorUInt32Bit, Windows::AI::MachineLearning::ITensorUInt32BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorUInt32Bit TensorUInt32Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorUInt32Bit, Windows::AI::MachineLearning::ITensorUInt32BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
 }
 
 inline Windows::AI::MachineLearning::TensorUInt64Bit TensorUInt64Bit::Create()
@@ -2893,6 +3622,16 @@ inline Windows::AI::MachineLearning::TensorUInt64Bit TensorUInt64Bit::CreateFrom
     return impl::call_factory<TensorUInt64Bit, Windows::AI::MachineLearning::ITensorUInt64BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
 }
 
+inline Windows::AI::MachineLearning::TensorUInt64Bit TensorUInt64Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint64_t const> data)
+{
+    return impl::call_factory<TensorUInt64Bit, Windows::AI::MachineLearning::ITensorUInt64BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorUInt64Bit TensorUInt64Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorUInt64Bit, Windows::AI::MachineLearning::ITensorUInt64BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
+}
+
 inline Windows::AI::MachineLearning::TensorUInt8Bit TensorUInt8Bit::Create()
 {
     return impl::call_factory<TensorUInt8Bit, Windows::AI::MachineLearning::ITensorUInt8BitStatics>([&](auto&& f) { return f.Create(); });
@@ -2911,6 +3650,16 @@ inline Windows::AI::MachineLearning::TensorUInt8Bit TensorUInt8Bit::CreateFromAr
 inline Windows::AI::MachineLearning::TensorUInt8Bit TensorUInt8Bit::CreateFromIterable(param::iterable<int64_t> const& shape, param::iterable<uint8_t> const& data)
 {
     return impl::call_factory<TensorUInt8Bit, Windows::AI::MachineLearning::ITensorUInt8BitStatics>([&](auto&& f) { return f.CreateFromIterable(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorUInt8Bit TensorUInt8Bit::CreateFromShapeArrayAndDataArray(array_view<int64_t const> shape, array_view<uint8_t const> data)
+{
+    return impl::call_factory<TensorUInt8Bit, Windows::AI::MachineLearning::ITensorUInt8BitStatics2>([&](auto&& f) { return f.CreateFromShapeArrayAndDataArray(shape, data); });
+}
+
+inline Windows::AI::MachineLearning::TensorUInt8Bit TensorUInt8Bit::CreateFromBuffer(array_view<int64_t const> shape, Windows::Storage::Streams::IBuffer const& buffer)
+{
+    return impl::call_factory<TensorUInt8Bit, Windows::AI::MachineLearning::ITensorUInt8BitStatics2>([&](auto&& f) { return f.CreateFromBuffer(shape, buffer); });
 }
 
 }
@@ -2932,37 +3681,52 @@ template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModelFeatur
 template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModelSession> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ILearningModelSession> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModelSessionFactory> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ILearningModelSessionFactory> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModelSessionFactory2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ILearningModelSessionFactory2> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModelSessionOptions> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ILearningModelSessionOptions> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModelStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ILearningModelStatics> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::IMapFeatureDescriptor> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::IMapFeatureDescriptor> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ISequenceFeatureDescriptor> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ISequenceFeatureDescriptor> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensor> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensor> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorBoolean> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorBoolean> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorBooleanStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorBooleanStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorBooleanStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorBooleanStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorDouble> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorDouble> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorDoubleStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorDoubleStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorDoubleStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorDoubleStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorFeatureDescriptor> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorFeatureDescriptor> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorFloat> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorFloat> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorFloat16Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorFloat16Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorFloat16BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorFloat16BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorFloat16BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorFloat16BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorFloatStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorFloatStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorFloatStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorFloatStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt16Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt16Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt16BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt16BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt16BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt16BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt32Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt32Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt32BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt32BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt32BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt32BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt64Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt64Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt64BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt64BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt64BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt64BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt8Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt8Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt8BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt8BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorInt8BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorInt8BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorString> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorString> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorStringStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorStringStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorStringStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorStringStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt16Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt16Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt16BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt16BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt16BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt16BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt32Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt32Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt32BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt32BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt32BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt32BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt64Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt64Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt64BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt64BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt64BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt64BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt8Bit> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt8Bit> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt8BitStatics> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt8BitStatics> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::ITensorUInt8BitStatics2> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ITensorUInt8BitStatics2> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::ImageFeatureValue> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::ImageFeatureValue> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::LearningModel> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::LearningModel> {};
@@ -2970,6 +3734,7 @@ template<> struct hash<winrt::Windows::AI::MachineLearning::LearningModelBinding
 template<> struct hash<winrt::Windows::AI::MachineLearning::LearningModelDevice> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::LearningModelDevice> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::LearningModelSession> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::LearningModelSession> {};
+template<> struct hash<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor> {};
 template<> struct hash<winrt::Windows::AI::MachineLearning::TensorBoolean> : winrt::impl::hash_base<winrt::Windows::AI::MachineLearning::TensorBoolean> {};

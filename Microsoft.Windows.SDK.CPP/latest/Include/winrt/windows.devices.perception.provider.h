@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.perception.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,10 +277,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionStartFaceAuthenticationHandler;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStartFaceAuthenticationHandler ABI::Windows::Devices::Perception::Provider::IPerceptionStartFaceAuthenticationHandler
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStartFaceAuthenticationHandler_FWD_DEFINED__
@@ -297,10 +293,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionStopFaceAuthenticationHandler;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStopFaceAuthenticationHandler ABI::Windows::Devices::Perception::Provider::IPerceptionStopFaceAuthenticationHandler
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStopFaceAuthenticationHandler_FWD_DEFINED__
@@ -313,10 +309,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IKnownPerceptionFrameKindStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIKnownPerceptionFrameKindStatics ABI::Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIKnownPerceptionFrameKindStatics_FWD_DEFINED__
@@ -329,10 +325,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionControlGroup;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroup ABI::Windows::Devices::Perception::Provider::IPerceptionControlGroup
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroup_FWD_DEFINED__
@@ -345,10 +341,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionControlGroupFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroupFactory ABI::Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroupFactory_FWD_DEFINED__
@@ -361,10 +357,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionCorrelation;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelation ABI::Windows::Devices::Perception::Provider::IPerceptionCorrelation
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelation_FWD_DEFINED__
@@ -377,10 +373,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionCorrelationFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationFactory ABI::Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationFactory_FWD_DEFINED__
@@ -393,10 +389,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionCorrelationGroup;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroup ABI::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroup_FWD_DEFINED__
@@ -409,10 +405,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionCorrelationGroupFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroupFactory ABI::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroupFactory_FWD_DEFINED__
@@ -425,10 +421,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionFaceAuthenticationGroup;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroup ABI::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroup_FWD_DEFINED__
@@ -441,10 +437,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionFaceAuthenticationGroupFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroupFactory ABI::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroupFactory_FWD_DEFINED__
@@ -457,10 +453,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionFrame;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrame ABI::Windows::Devices::Perception::Provider::IPerceptionFrame
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrame_FWD_DEFINED__
@@ -473,10 +469,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionFrameProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProvider ABI::Windows::Devices::Perception::Provider::IPerceptionFrameProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProvider_FWD_DEFINED__
@@ -489,10 +485,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionFrameProviderInfo;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderInfo ABI::Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderInfo_FWD_DEFINED__
@@ -505,10 +501,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionFrameProviderManager;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManager ABI::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManager_FWD_DEFINED__
@@ -521,10 +517,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionFrameProviderManagerServiceStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManagerServiceStatics ABI::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManagerServiceStatics_FWD_DEFINED__
@@ -537,10 +533,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionPropertyChangeRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionPropertyChangeRequest ABI::Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionPropertyChangeRequest_FWD_DEFINED__
@@ -553,10 +549,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionVideoFrameAllocator;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocator ABI::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocator_FWD_DEFINED__
@@ -569,10 +565,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     interface IPerceptionVideoFrameAllocatorFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocatorFactory ABI::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocatorFactory_FWD_DEFINED__
@@ -586,10 +582,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionCorrelation;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -612,7 +608,7 @@ IIterator<ABI::Windows::Devices::Perception::Provider::PerceptionCorrelation*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Perception::Provider::PerceptionCorrelation*> __FIIterator_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation_t;
 #define __FIIterator_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Perception::Provider::IPerceptionCorrelation*>
@@ -644,7 +640,7 @@ IIterable<ABI::Windows::Devices::Perception::Provider::PerceptionCorrelation*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Perception::Provider::PerceptionCorrelation*> __FIIterable_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation_t;
 #define __FIIterable_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Perception::Provider::IPerceptionCorrelation*>
@@ -676,7 +672,7 @@ IVectorView<ABI::Windows::Devices::Perception::Provider::PerceptionCorrelation*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Perception::Provider::PerceptionCorrelation*> __FIVectorView_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation_t;
 #define __FIVectorView_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CPerception__CProvider__CPerceptionCorrelation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::Provider::IPerceptionCorrelation*>
@@ -706,7 +702,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -735,7 +731,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -764,7 +760,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -794,7 +790,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -824,7 +820,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -854,7 +850,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -884,7 +880,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -914,7 +910,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -943,7 +939,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -973,7 +969,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -1003,7 +999,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -1022,9 +1018,9 @@ namespace ABI {
                 
                 typedef enum PerceptionFrameSourcePropertyChangeStatus : int PerceptionFrameSourcePropertyChangeStatus;
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1036,9 +1032,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1049,9 +1045,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1061,8 +1057,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1070,8 +1066,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1083,8 +1079,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1096,8 +1092,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IMemoryBuffer;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIMemoryBuffer ABI::Windows::Foundation::IMemoryBuffer
 
 #endif // ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
@@ -1112,9 +1108,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1123,9 +1119,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1136,8 +1132,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1145,8 +1141,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1158,9 +1154,9 @@ namespace ABI {
                 
                 typedef enum BitmapAlphaMode : int BitmapAlphaMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1169,9 +1165,9 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1180,8 +1176,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -1189,8 +1185,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -1224,10 +1220,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionControlGroup;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1237,10 +1233,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionCorrelationGroup;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1249,10 +1245,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionFaceAuthenticationGroup;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1261,10 +1257,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionFrame;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1273,10 +1269,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionFrameProviderInfo;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1286,10 +1282,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionPropertyChangeRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1298,10 +1294,10 @@ namespace ABI {
             namespace Perception {
                 namespace Provider {
                     class PerceptionVideoFrameAllocator;
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1341,17 +1337,17 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Invoke(
                             /* [in] */__RPC__in_opt ABI::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup * sender,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionStartFaceAuthenticationHandler=_uuidof(IPerceptionStartFaceAuthenticationHandler);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStartFaceAuthenticationHandler;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStartFaceAuthenticationHandler_INTERFACE_DEFINED__) */
@@ -1391,10 +1387,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionStopFaceAuthenticationHandler=_uuidof(IPerceptionStopFaceAuthenticationHandler);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStopFaceAuthenticationHandler;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionStopFaceAuthenticationHandler_INTERFACE_DEFINED__) */
@@ -1456,10 +1452,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKnownPerceptionFrameKindStatics=_uuidof(IKnownPerceptionFrameKindStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIKnownPerceptionFrameKindStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIKnownPerceptionFrameKindStatics_INTERFACE_DEFINED__) */
@@ -1507,10 +1503,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionControlGroup=_uuidof(IPerceptionControlGroup);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroup;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroup_INTERFACE_DEFINED__) */
@@ -1559,10 +1555,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionControlGroupFactory=_uuidof(IPerceptionControlGroupFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionControlGroupFactory_INTERFACE_DEFINED__) */
@@ -1624,10 +1620,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionCorrelation=_uuidof(IPerceptionCorrelation);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelation;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelation_INTERFACE_DEFINED__) */
@@ -1678,10 +1674,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionCorrelationFactory=_uuidof(IPerceptionCorrelationFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationFactory_INTERFACE_DEFINED__) */
@@ -1729,10 +1725,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionCorrelationGroup=_uuidof(IPerceptionCorrelationGroup);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroup;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroup_INTERFACE_DEFINED__) */
@@ -1781,10 +1777,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionCorrelationGroupFactory=_uuidof(IPerceptionCorrelationGroupFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionCorrelationGroupFactory_INTERFACE_DEFINED__) */
@@ -1832,10 +1828,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionFaceAuthenticationGroup=_uuidof(IPerceptionFaceAuthenticationGroup);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroup;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroup_INTERFACE_DEFINED__) */
@@ -1886,10 +1882,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionFaceAuthenticationGroupFactory=_uuidof(IPerceptionFaceAuthenticationGroupFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFaceAuthenticationGroupFactory_INTERFACE_DEFINED__) */
@@ -1958,10 +1954,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionFrame=_uuidof(IPerceptionFrame);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrame;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrame_INTERFACE_DEFINED__) */
@@ -2010,7 +2006,7 @@ namespace ABI {
                         DEPRECATED("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
                         #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Available(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                         #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2041,10 +2037,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionFrameProvider=_uuidof(IPerceptionFrameProvider);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProvider;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProvider_INTERFACE_DEFINED__) */
@@ -2141,24 +2137,24 @@ namespace ABI {
                         DEPRECATED("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
                         #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Hidden(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                         #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                         DEPRECATED("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
                         #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                         /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_Hidden(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionFrameProviderInfo=_uuidof(IPerceptionFrameProviderInfo);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderInfo;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderInfo_INTERFACE_DEFINED__) */
@@ -2208,10 +2204,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionFrameProviderManager=_uuidof(IPerceptionFrameProviderManager);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManager;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManager_INTERFACE_DEFINED__) */
@@ -2317,7 +2313,7 @@ namespace ABI {
                         #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                         /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE UpdateAvailabilityForProvider(
                             /* [in] */__RPC__in_opt ABI::Windows::Devices::Perception::Provider::IPerceptionFrameProvider * provider,
-                            /* [in] */boolean available
+                            /* [in] */::boolean available
                             ) = 0;
                         
                         #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2332,10 +2328,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionFrameProviderManagerServiceStatics=_uuidof(IPerceptionFrameProviderManagerServiceStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManagerServiceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionFrameProviderManagerServiceStatics_INTERFACE_DEFINED__) */
@@ -2411,10 +2407,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionPropertyChangeRequest=_uuidof(IPerceptionPropertyChangeRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionPropertyChangeRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionPropertyChangeRequest_INTERFACE_DEFINED__) */
@@ -2474,10 +2470,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionVideoFrameAllocator=_uuidof(IPerceptionVideoFrameAllocator);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocator;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocator_INTERFACE_DEFINED__) */
@@ -2529,10 +2525,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPerceptionVideoFrameAllocatorFactory=_uuidof(IPerceptionVideoFrameAllocatorFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Perception */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Perception */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocatorFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CProvider_CIPerceptionVideoFrameAllocatorFactory_INTERFACE_DEFINED__) */

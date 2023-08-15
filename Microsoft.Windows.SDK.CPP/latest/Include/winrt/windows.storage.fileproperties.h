@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.fileproperties.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IBasicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties ABI::Windows::Storage::FileProperties::IBasicProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IDocumentProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties ABI::Windows::Storage::FileProperties::IDocumentProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IGeotagHelperStatics;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIGeotagHelperStatics ABI::Windows::Storage::FileProperties::IGeotagHelperStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIGeotagHelperStatics_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IImageProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties ABI::Windows::Storage::FileProperties::IImageProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IMusicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties ABI::Windows::Storage::FileProperties::IMusicProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IStorageItemContentProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemContentProperties ABI::Windows::Storage::FileProperties::IStorageItemContentProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemContentProperties_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IStorageItemExtraProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemExtraProperties ABI::Windows::Storage::FileProperties::IStorageItemExtraProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemExtraProperties_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IThumbnailProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIThumbnailProperties ABI::Windows::Storage::FileProperties::IThumbnailProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIThumbnailProperties_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IVideoProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties ABI::Windows::Storage::FileProperties::IVideoProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class BasicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -431,7 +427,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::BasicProp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::BasicProperties*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CBasicProperties_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CBasicProperties ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CBasicProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CBasicProperties ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::IBasicProperties*>
@@ -463,7 +459,7 @@ IAsyncOperation<ABI::Windows::Storage::FileProperties::BasicProperties*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::FileProperties::BasicProperties*> __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CBasicProperties_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CBasicProperties ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CFileProperties__CBasicProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CBasicProperties ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::FileProperties::IBasicProperties*>
@@ -479,9 +475,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class DocumentProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -504,7 +500,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::DocumentP
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::DocumentProperties*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CDocumentProperties_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CDocumentProperties ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CDocumentProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CDocumentProperties ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::IDocumentProperties*>
@@ -536,7 +532,7 @@ IAsyncOperation<ABI::Windows::Storage::FileProperties::DocumentProperties*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::FileProperties::DocumentProperties*> __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CDocumentProperties_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CDocumentProperties ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CFileProperties__CDocumentProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CDocumentProperties ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::FileProperties::IDocumentProperties*>
@@ -552,9 +548,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class ImageProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -577,7 +573,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::ImageProp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::ImageProperties*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CImageProperties_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CImageProperties ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CImageProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CImageProperties ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::IImageProperties*>
@@ -609,7 +605,7 @@ IAsyncOperation<ABI::Windows::Storage::FileProperties::ImageProperties*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::FileProperties::ImageProperties*> __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CImageProperties_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CImageProperties ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CFileProperties__CImageProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CImageProperties ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::FileProperties::IImageProperties*>
@@ -625,9 +621,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class MusicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -650,7 +646,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::MusicProp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::MusicProperties*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CMusicProperties_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CMusicProperties ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CMusicProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CMusicProperties ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::IMusicProperties*>
@@ -682,7 +678,7 @@ IAsyncOperation<ABI::Windows::Storage::FileProperties::MusicProperties*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::FileProperties::MusicProperties*> __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CMusicProperties_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CMusicProperties ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CFileProperties__CMusicProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CMusicProperties ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::FileProperties::IMusicProperties*>
@@ -698,9 +694,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class StorageItemThumbnail;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -709,9 +705,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -737,7 +733,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::StorageIt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::StorageItemThumbnail*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -769,7 +765,7 @@ IAsyncOperation<ABI::Windows::Storage::FileProperties::StorageItemThumbnail*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::FileProperties::StorageItemThumbnail*> __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CStorageItemThumbnail ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -785,9 +781,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class VideoProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -810,7 +806,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::VideoProp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::VideoProperties*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CVideoProperties_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CVideoProperties ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CVideoProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CFileProperties__CVideoProperties ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::FileProperties::IVideoProperties*>
@@ -842,7 +838,7 @@ IAsyncOperation<ABI::Windows::Storage::FileProperties::VideoProperties*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::FileProperties::VideoProperties*> __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CVideoProperties_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CVideoProperties ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CFileProperties__CVideoProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CFileProperties__CVideoProperties ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::FileProperties::IVideoProperties*>
@@ -872,7 +868,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -901,7 +897,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -930,7 +926,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -959,7 +955,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -974,9 +970,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -985,9 +981,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint ABI::Windows::Devices::Geolocation::IGeopoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -1013,7 +1009,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geopoint*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geopoint*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -1045,7 +1041,7 @@ IAsyncOperation<ABI::Windows::Devices::Geolocation::Geopoint*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Geolocation::Geopoint*> __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -1075,7 +1071,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -1105,7 +1101,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1135,7 +1131,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1165,7 +1161,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1195,7 +1191,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1225,7 +1221,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1255,7 +1251,7 @@ IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_IInspectable*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_IInspectable*> __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>*>
@@ -1285,7 +1281,7 @@ IAsyncOperation<__FIMap_2_HSTRING_IInspectable*> : IAsyncOperation_impl<__FIMap_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMap_2_HSTRING_IInspectable*> __FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>*>
@@ -1302,9 +1298,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geolocator;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
@@ -1313,9 +1309,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeolocator;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator ABI::Windows::Devices::Geolocation::IGeolocator
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
@@ -1331,8 +1327,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1340,8 +1336,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1353,8 +1349,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1366,8 +1362,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1378,8 +1374,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1394,9 +1390,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IContentTypeProvider;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider ABI::Windows::Storage::Streams::IContentTypeProvider
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_FWD_DEFINED__
@@ -1409,9 +1405,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -1424,9 +1420,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -1439,9 +1435,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1458,9 +1454,9 @@ namespace ABI {
                 
                 typedef enum PhotoOrientation : int PhotoOrientation;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1469,9 +1465,9 @@ namespace ABI {
                 
                 typedef enum PropertyPrefetchOptions : unsigned int PropertyPrefetchOptions;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1480,9 +1476,9 @@ namespace ABI {
                 
                 typedef enum ThumbnailMode : int ThumbnailMode;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1491,9 +1487,9 @@ namespace ABI {
                 
                 typedef enum ThumbnailOptions : unsigned int ThumbnailOptions;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1502,9 +1498,9 @@ namespace ABI {
                 
                 typedef enum ThumbnailType : int ThumbnailType;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1513,9 +1509,9 @@ namespace ABI {
                 
                 typedef enum VideoOrientation : int VideoOrientation;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1536,9 +1532,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class StorageItemContentProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1579,9 +1575,9 @@ namespace ABI {
                     PhotoOrientation_Rotate90 = 8,
                 };
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1612,9 +1608,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PropertyPrefetchOptions)
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1643,9 +1639,9 @@ namespace ABI {
                     ThumbnailMode_SingleItem = 5,
                 };
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1674,9 +1670,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(ThumbnailOptions)
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1701,9 +1697,9 @@ namespace ABI {
                     ThumbnailType_Icon = 1,
                 };
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1730,9 +1726,9 @@ namespace ABI {
                     VideoOrientation_Rotate270 = 270,
                 };
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1774,9 +1770,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBasicProperties=_uuidof(IBasicProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties_INTERFACE_DEFINED__) */
@@ -1834,9 +1830,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDocumentProperties=_uuidof(IDocumentProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties_INTERFACE_DEFINED__) */
@@ -1886,9 +1882,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeotagHelperStatics=_uuidof(IGeotagHelperStatics);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIGeotagHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIGeotagHelperStatics_INTERFACE_DEFINED__) */
@@ -1979,9 +1975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageProperties=_uuidof(IImageProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties_INTERFACE_DEFINED__) */
@@ -2096,9 +2092,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMusicProperties=_uuidof(IMusicProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties_INTERFACE_DEFINED__) */
@@ -2150,9 +2146,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageItemContentProperties=_uuidof(IStorageItemContentProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemContentProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemContentProperties_INTERFACE_DEFINED__) */
@@ -2196,9 +2192,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageItemExtraProperties=_uuidof(IStorageItemExtraProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemExtraProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIStorageItemExtraProperties_INTERFACE_DEFINED__) */
@@ -2236,7 +2232,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ReturnedSmallerCachedSize(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Type(
                         /* [retval, out] */__RPC__out ABI::Windows::Storage::FileProperties::ThumbnailType * value
@@ -2246,9 +2242,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IThumbnailProperties=_uuidof(IThumbnailProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIThumbnailProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIThumbnailProperties_INTERFACE_DEFINED__) */
@@ -2351,9 +2347,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoProperties=_uuidof(IVideoProperties);
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties_INTERFACE_DEFINED__) */

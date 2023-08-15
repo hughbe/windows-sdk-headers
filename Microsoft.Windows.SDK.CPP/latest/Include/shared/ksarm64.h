@@ -207,7 +207,7 @@
 #define PS_MITIGATION_OPTION_MASK 0x3
 #define PS_MITIGATION_OPTION_RETURN_FLOW_GUARD 0x10
 #define PS_MITIGATION_OPTION_RESTRICT_SET_THREAD_CONTEXT 0x13
-#define PS_MITIGATION_OPTION_CET_SHADOW_STACKS 0x1f
+#define PS_MITIGATION_OPTION_CET_USER_SHADOW_STACKS 0x1f
 
 //
 // User Shared Data Structure Offset Definitions
@@ -331,6 +331,7 @@
 #define FAST_FAIL_INVALID_CONTROL_STACK 0x2f
 #define FAST_FAIL_SET_CONTEXT_DENIED 0x30
 #define FAST_FAIL_ENCLAVE_CALL_FAILURE 0x35
+#define FAST_FAIL_FLAGS_CORRUPTION 0x3b
 
 //
 // APC Object Structure Offset Definitions
@@ -446,14 +447,14 @@
 #define PrSwapListEntry 0x110
 #define PrActiveProcessors 0x118
 #define PrProcessFlags 0x1c0
-#define PrBasePriority 0x1c4
-#define PrQuantumReset 0x1c5
-#define PrCycleTime 0x258
-#define PrKernelTime 0x274
-#define PrUserTime 0x278
-#define PrInstrumentationCallback 0x280
-#define KernelProcessObjectLength 0x290
-#define ExecutiveProcessObjectLength 0x800
+#define PrBasePriority 0x1c8
+#define PrQuantumReset 0x1c9
+#define PrCycleTime 0x260
+#define PrKernelTime 0x27c
+#define PrUserTime 0x280
+#define PrInstrumentationCallback 0x288
+#define KernelProcessObjectLength 0x298
+#define ExecutiveProcessObjectLength 0x980
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -489,8 +490,8 @@
 // Thread Object Structure Offset Definitions
 //
 
-#define EtCid 0x658
-#define EtPicoContext 0x7b8
+#define EtCid 0x668
+#define EtPicoContext 0x7c8
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -538,7 +539,7 @@
 #define KTHREAD_SYSTEM_THREAD_BIT 0xa
 #define KTHREAD_QUEUE_DEFER_PREEMPTION_BIT 0xb
 #define KTHREAD_BAM_QOS_LEVEL_MASK 0x3
-#define KTHREAD_CET_SHADOW_STACK_BIT 0x14
+#define KTHREAD_CET_USER_SHADOW_STACK_BIT 0x14
 
 #define ThMiscFlags 0x6c
 #define ThThreadFlags 0x70
@@ -553,8 +554,8 @@
 #define ThWin32Thread 0x1c0
 #define ThStackBase 0x38
 #define ThLegoData 0x2f0
-#define KernelThreadObjectLength 0x610
-#define ExecutiveThreadObjectLength 0x828
+#define KernelThreadObjectLength 0x620
+#define ExecutiveThreadObjectLength 0x838
 
 
 //
@@ -797,6 +798,7 @@
 #define PCR_BTI_MITIGATION_TRAP_SMC_BIT 0x1
 #define PCR_BTI_MITIGATION_CSWAP_HVC_BIT 0x2
 #define PCR_BTI_MITIGATION_CSWAP_SMC_BIT 0x3
+#define ARM64_ASID_KVA_SHADOW 0x8000
 #define PSCI_FUNCTION_CODE_SMCCC_ARCH_WORKAROUND_1 0x80008000
 #define PcSelf 0x18
 #define PcLockArray 0x28
@@ -807,12 +809,14 @@
 #define PcPanicStorage 0x50
 #define PcHalReserved 0x88
 #define PcPrcb 0x980
+#define PcKvaUserModeTtbr1 0xf8
 #define PcIdleHalt 0x982
 #define PcCurrentThread 0x988
 #define PcNextThread 0x990
 #define PcIdleThread 0x998
 #define PcNestingLevel 0x9a0
 #define PcNumber 0x9a4
+#define PcGroup 0x10e8
 #define PcPrcbLock 0x9a8
 #define PcGroupSetMember 0x10e0
 #define PcFeatureBits 0x1214
@@ -1661,6 +1665,7 @@
 
 #define ARM64_ID_AA64MMFR0_EL1 0x4038
 #define ARM64_ID_AA64PFR0_EL1 0x4020
+#define PF_ARM_V81_ATOMIC_INSTRUCTIONS_AVAILABLE 0x22
 
 //
 // Processor State Frame Offset Definitions
@@ -1703,8 +1708,8 @@
 // EPROCESS
 //
 
-#define EpDebugPort 0x3d0
-#define EpSecurityDomain 0x7e0
+#define EpDebugPort 0x3d8
+#define EpSecurityDomain 0x920
 
 //
 // KeFeatureBits defines

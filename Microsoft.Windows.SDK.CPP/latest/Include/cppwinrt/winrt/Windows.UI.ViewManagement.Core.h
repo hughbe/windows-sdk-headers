@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,6 +9,7 @@
 
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.Foundation.Collections.h"
+#include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.UI.ViewManagement.Core.2.h"
 #include "winrt/Windows.UI.ViewManagement.h"
 
@@ -151,6 +152,13 @@ template <typename D> Windows::UI::ViewManagement::Core::CoreInputView consume_W
 {
     Windows::UI::ViewManagement::Core::CoreInputView result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewStatics)->GetForCurrentView(put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::UI::ViewManagement::Core::CoreInputView consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics2<D>::GetForUIContext(Windows::UI::UIContext const& context) const
+{
+    Windows::UI::ViewManagement::Core::CoreInputView result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewStatics2)->GetForUIContext(get_abi(context), put_abi(result)));
     return result;
 }
 
@@ -436,6 +444,23 @@ struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewStatics> : pr
 };
 
 template <typename D>
+struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>
+{
+    int32_t WINRT_CALL GetForUIContext(void* context, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetForUIContext, WINRT_WRAP(Windows::UI::ViewManagement::Core::CoreInputView), Windows::UI::UIContext const&);
+            *result = detach_from<Windows::UI::ViewManagement::Core::CoreInputView>(this->shim().GetForUIContext(*reinterpret_cast<Windows::UI::UIContext const*>(&context)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs>
 {
     int32_t WINRT_CALL get_Origin(Windows::Foundation::Rect* value) noexcept final
@@ -520,6 +545,11 @@ inline Windows::UI::ViewManagement::Core::CoreInputView CoreInputView::GetForCur
     return impl::call_factory<CoreInputView, Windows::UI::ViewManagement::Core::ICoreInputViewStatics>([&](auto&& f) { return f.GetForCurrentView(); });
 }
 
+inline Windows::UI::ViewManagement::Core::CoreInputView CoreInputView::GetForUIContext(Windows::UI::UIContext const& context)
+{
+    return impl::call_factory<CoreInputView, Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>([&](auto&& f) { return f.GetForUIContext(context); });
+}
+
 }
 
 WINRT_EXPORT namespace std {
@@ -530,6 +560,7 @@ template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView3
 template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputView> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputView> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion> {};

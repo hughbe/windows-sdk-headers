@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.inventory.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace System {
             namespace Inventory {
                 interface IInstalledDesktopApp;
-            } /* Windows */
+            } /* Inventory */
         } /* System */
-    } /* Inventory */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopApp ABI::Windows::System::Inventory::IInstalledDesktopApp
 
 #endif // ____x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopApp_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace System {
             namespace Inventory {
                 interface IInstalledDesktopAppStatics;
-            } /* Windows */
+            } /* Inventory */
         } /* System */
-    } /* Inventory */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopAppStatics ABI::Windows::System::Inventory::IInstalledDesktopAppStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopAppStatics_FWD_DEFINED__
@@ -169,9 +169,9 @@ namespace ABI {
         namespace System {
             namespace Inventory {
                 class InstalledDesktopApp;
-            } /* Windows */
+            } /* Inventory */
         } /* System */
-    } /* Inventory */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -194,7 +194,7 @@ IIterator<ABI::Windows::System::Inventory::InstalledDesktopApp*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::Inventory::InstalledDesktopApp*> __FIIterator_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t;
 #define __FIIterator_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::Inventory::IInstalledDesktopApp*>
@@ -226,7 +226,7 @@ IIterable<ABI::Windows::System::Inventory::InstalledDesktopApp*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::Inventory::InstalledDesktopApp*> __FIIterable_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t;
 #define __FIIterable_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::Inventory::IInstalledDesktopApp*>
@@ -258,7 +258,7 @@ IVectorView<ABI::Windows::System::Inventory::InstalledDesktopApp*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::Inventory::InstalledDesktopApp*> __FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t;
 #define __FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Inventory::IInstalledDesktopApp*>
@@ -290,7 +290,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSystem__CInventory__C
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Inventory::IInstalledDesktopApp*>*>
@@ -322,7 +322,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktop
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp*> __FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CInventory__CInstalledDesktopApp ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Inventory::IInstalledDesktopApp*>*>
@@ -341,8 +341,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -403,9 +403,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInstalledDesktopApp=_uuidof(IInstalledDesktopApp);
                 
-            } /* Windows */
+            } /* Inventory */
         } /* System */
-    } /* Inventory */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopApp;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopApp_INTERFACE_DEFINED__) */
@@ -444,9 +444,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInstalledDesktopAppStatics=_uuidof(IInstalledDesktopAppStatics);
                 
-            } /* Windows */
+            } /* Inventory */
         } /* System */
-    } /* Inventory */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopAppStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CInventory_CIInstalledDesktopAppStatics_INTERFACE_DEFINED__) */

@@ -1259,8 +1259,8 @@ cpp_quote("#define CFSTR_ENTERPRISE_ID (TEXT(\"EnterpriseDataProtectionId\"))")
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
+#pragma region Application Family or OneCore Family or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -1310,7 +1310,7 @@ interface IEnumOLEVERB : IUnknown
         [out] IEnumOLEVERB **ppenum);
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#if _MSC_VER >= 1200")

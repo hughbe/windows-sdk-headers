@@ -14,7 +14,7 @@ import "ocidl.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 const UINT DXGI_DEBUG_BINARY_VERSION = 1;
 
@@ -438,7 +438,7 @@ interface IDXGIDebug1
     BOOL IsLeakTrackingEnabledForThread();
 };
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family

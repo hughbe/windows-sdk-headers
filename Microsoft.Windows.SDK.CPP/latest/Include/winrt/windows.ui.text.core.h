@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.text.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextCompositionCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionCompletedEventArgs ABI::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionCompletedEventArgs_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextCompositionSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionSegment ABI::Windows::UI::Text::Core::ICoreTextCompositionSegment
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionSegment_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextCompositionStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionStartedEventArgs ABI::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionStartedEventArgs_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextEditContext;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext ABI::Windows::UI::Text::Core::ICoreTextEditContext
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextEditContext2;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext2 ABI::Windows::UI::Text::Core::ICoreTextEditContext2
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext2_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextFormatUpdatingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextFormatUpdatingEventArgs ABI::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextFormatUpdatingEventArgs_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextLayoutBounds;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutBounds ABI::Windows::UI::Text::Core::ICoreTextLayoutBounds
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutBounds_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextLayoutRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest ABI::Windows::UI::Text::Core::ICoreTextLayoutRequest
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextLayoutRequest2;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest2 ABI::Windows::UI::Text::Core::ICoreTextLayoutRequest2
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest2_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextLayoutRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequestedEventArgs ABI::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequestedEventArgs_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextSelectionRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequest ABI::Windows::UI::Text::Core::ICoreTextSelectionRequest
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequest_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextSelectionRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequestedEventArgs ABI::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequestedEventArgs_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextSelectionUpdatingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionUpdatingEventArgs ABI::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionUpdatingEventArgs_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextServicesManager;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManager ABI::Windows::UI::Text::Core::ICoreTextServicesManager
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManager_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextServicesManagerStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManagerStatics ABI::Windows::UI::Text::Core::ICoreTextServicesManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManagerStatics_FWD_DEFINED__
@@ -520,10 +516,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextServicesStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesStatics ABI::Windows::UI::Text::Core::ICoreTextServicesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesStatics_FWD_DEFINED__
@@ -536,10 +532,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextTextRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequest ABI::Windows::UI::Text::Core::ICoreTextTextRequest
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequest_FWD_DEFINED__
@@ -552,10 +548,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextTextRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequestedEventArgs ABI::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequestedEventArgs_FWD_DEFINED__
@@ -568,10 +564,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     interface ICoreTextTextUpdatingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextUpdatingEventArgs ABI::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextUpdatingEventArgs_FWD_DEFINED__
@@ -585,10 +581,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextCompositionSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -611,7 +607,7 @@ IIterator<ABI::Windows::UI::Text::Core::CoreTextCompositionSegment*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Text::Core::CoreTextCompositionSegment*> __FIIterator_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment_t;
 #define __FIIterator_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Text::Core::ICoreTextCompositionSegment*>
@@ -643,7 +639,7 @@ IIterable<ABI::Windows::UI::Text::Core::CoreTextCompositionSegment*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Text::Core::CoreTextCompositionSegment*> __FIIterable_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment_t;
 #define __FIIterable_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Text::Core::ICoreTextCompositionSegment*>
@@ -675,7 +671,7 @@ IVectorView<ABI::Windows::UI::Text::Core::CoreTextCompositionSegment*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Text::Core::CoreTextCompositionSegment*> __FIVectorView_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment_t;
 #define __FIVectorView_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Text::Core::ICoreTextCompositionSegment*>
@@ -692,10 +688,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextEditContext;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -719,7 +715,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,IInspectable*>
@@ -737,10 +733,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextCompositionCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -764,7 +760,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs*>
@@ -783,10 +779,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextCompositionStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -810,7 +806,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs*>
@@ -829,10 +825,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextFormatUpdatingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -856,7 +852,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs*>
@@ -875,10 +871,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextLayoutRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -902,7 +898,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs*>
@@ -921,10 +917,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextSelectionRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -948,7 +944,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs*>
@@ -967,10 +963,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextSelectionUpdatingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -994,7 +990,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs*>
@@ -1013,10 +1009,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextTextRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1040,7 +1036,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs*>
@@ -1059,10 +1055,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextTextUpdatingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1086,7 +1082,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextEditContext*,ABI::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextEditContext*,ABI::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs*>
@@ -1104,10 +1100,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextServicesManager;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1131,7 +1127,7 @@ ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextServicesManager*,IInspe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Text::Core::CoreTextServicesManager*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Text::Core::ICoreTextServicesManager*,IInspectable*>
@@ -1147,9 +1143,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 enum UIElementType : int;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CViewManagement__CUIElementType_USE
@@ -1170,7 +1166,7 @@ IReference<enum ABI::Windows::UI::ViewManagement::UIElementType> : IReference_im
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::UI::ViewManagement::UIElementType> __FIReference_1_Windows__CUI__CViewManagement__CUIElementType_t;
 #define __FIReference_1_Windows__CUI__CViewManagement__CUIElementType ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CViewManagement__CUIElementType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CViewManagement__CUIElementType ABI::Windows::Foundation::IReference<ABI::Windows::UI::ViewManagement::UIElementType>
@@ -1185,9 +1181,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 enum UnderlineType : int;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CText__CUnderlineType_USE
@@ -1208,7 +1204,7 @@ IReference<enum ABI::Windows::UI::Text::UnderlineType> : IReference_impl<enum AB
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::UI::Text::UnderlineType> __FIReference_1_Windows__CUI__CText__CUnderlineType_t;
 #define __FIReference_1_Windows__CUI__CText__CUnderlineType ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CText__CUnderlineType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CText__CUnderlineType ABI::Windows::Foundation::IReference<ABI::Windows::UI::Text::UnderlineType>
@@ -1224,8 +1220,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1233,8 +1229,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1246,8 +1242,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1256,8 +1252,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Language;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -1265,8 +1261,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage ABI::Windows::Globalization::ILanguage
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -1281,9 +1277,9 @@ namespace ABI {
                 
                 typedef enum UnderlineType : int UnderlineType;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1295,9 +1291,9 @@ namespace ABI {
                 
                 typedef enum UIElementType : int UIElementType;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1310,10 +1306,10 @@ namespace ABI {
                     
                     typedef enum CoreTextFormatUpdatingReason : int CoreTextFormatUpdatingReason;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1323,10 +1319,10 @@ namespace ABI {
                     
                     typedef enum CoreTextFormatUpdatingResult : int CoreTextFormatUpdatingResult;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1336,10 +1332,10 @@ namespace ABI {
                     
                     typedef enum CoreTextInputPaneDisplayPolicy : int CoreTextInputPaneDisplayPolicy;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1349,10 +1345,10 @@ namespace ABI {
                     
                     typedef enum CoreTextInputScope : int CoreTextInputScope;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1362,10 +1358,10 @@ namespace ABI {
                     
                     typedef enum CoreTextSelectionUpdatingResult : int CoreTextSelectionUpdatingResult;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1375,10 +1371,10 @@ namespace ABI {
                     
                     typedef enum CoreTextTextUpdatingResult : int CoreTextTextUpdatingResult;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1388,10 +1384,10 @@ namespace ABI {
                     
                     typedef struct CoreTextRange CoreTextRange;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1423,10 +1419,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextLayoutBounds;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1435,10 +1431,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextLayoutRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1448,10 +1444,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextSelectionRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1464,10 +1460,10 @@ namespace ABI {
             namespace Text {
                 namespace Core {
                     class CoreTextTextRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1507,10 +1503,10 @@ namespace ABI {
                         CoreTextFormatUpdatingReason_CompositionTargetConverted = 4,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1536,10 +1532,10 @@ namespace ABI {
                         CoreTextFormatUpdatingResult_Failed = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1565,10 +1561,10 @@ namespace ABI {
                         CoreTextInputPaneDisplayPolicy_Manual = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1675,10 +1671,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1704,10 +1700,10 @@ namespace ABI {
                         CoreTextSelectionUpdatingResult_Failed = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1733,10 +1729,10 @@ namespace ABI {
                         CoreTextTextUpdatingResult_Failed = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1762,10 +1758,10 @@ namespace ABI {
                         INT32 EndCaretPosition;
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1795,7 +1791,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CompositionSegments(
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CText__CCore__CCoreTextCompositionSegment * * value
@@ -1808,10 +1804,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextCompositionCompletedEventArgs=_uuidof(ICoreTextCompositionCompletedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -1854,10 +1850,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextCompositionSegment=_uuidof(ICoreTextCompositionSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionSegment_INTERFACE_DEFINED__) */
@@ -1890,7 +1886,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -1900,10 +1896,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextCompositionStartedEventArgs=_uuidof(ICoreTextCompositionStartedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionStartedEventArgs_INTERFACE_DEFINED__) */
@@ -1948,10 +1944,10 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Text::Core::CoreTextInputScope value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadOnly(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsReadOnly(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InputPaneDisplayPolicy(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy * value
@@ -2038,10 +2034,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextEditContext=_uuidof(ICoreTextEditContext);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext_INTERFACE_DEFINED__) */
@@ -2085,10 +2081,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextEditContext2=_uuidof(ICoreTextEditContext2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext2_INTERFACE_DEFINED__) */
@@ -2145,7 +2141,7 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Text::Core::CoreTextFormatUpdatingResult value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -2155,10 +2151,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextFormatUpdatingEventArgs=_uuidof(ICoreTextFormatUpdatingEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextFormatUpdatingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextFormatUpdatingEventArgs_INTERFACE_DEFINED__) */
@@ -2207,10 +2203,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextLayoutBounds=_uuidof(ICoreTextLayoutBounds);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutBounds;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutBounds_INTERFACE_DEFINED__) */
@@ -2249,7 +2245,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Text::Core::ICoreTextLayoutBounds * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -2259,10 +2255,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextLayoutRequest=_uuidof(ICoreTextLayoutRequest);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest_INTERFACE_DEFINED__) */
@@ -2302,10 +2298,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextLayoutRequest2=_uuidof(ICoreTextLayoutRequest2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequest2_INTERFACE_DEFINED__) */
@@ -2345,10 +2341,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextLayoutRequestedEventArgs=_uuidof(ICoreTextLayoutRequestedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2387,7 +2383,7 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Text::Core::CoreTextRange value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -2397,10 +2393,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextSelectionRequest=_uuidof(ICoreTextSelectionRequest);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequest_INTERFACE_DEFINED__) */
@@ -2440,10 +2436,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextSelectionRequestedEventArgs=_uuidof(ICoreTextSelectionRequestedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2485,7 +2481,7 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -2495,10 +2491,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextSelectionUpdatingEventArgs=_uuidof(ICoreTextSelectionUpdatingEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionUpdatingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionUpdatingEventArgs_INTERFACE_DEFINED__) */
@@ -2548,10 +2544,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextServicesManager=_uuidof(ICoreTextServicesManager);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManager_INTERFACE_DEFINED__) */
@@ -2591,10 +2587,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextServicesManagerStatics=_uuidof(ICoreTextServicesManagerStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManagerStatics_INTERFACE_DEFINED__) */
@@ -2634,10 +2630,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextServicesStatics=_uuidof(ICoreTextServicesStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesStatics_INTERFACE_DEFINED__) */
@@ -2679,7 +2675,7 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -2689,10 +2685,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextTextRequest=_uuidof(ICoreTextTextRequest);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequest_INTERFACE_DEFINED__) */
@@ -2732,10 +2728,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextTextRequestedEventArgs=_uuidof(ICoreTextTextRequestedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2786,7 +2782,7 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Text::Core::CoreTextTextUpdatingResult value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -2796,10 +2792,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextTextUpdatingEventArgs=_uuidof(ICoreTextTextUpdatingEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextUpdatingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextUpdatingEventArgs_INTERFACE_DEFINED__) */
@@ -3578,7 +3574,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_IInspectableVtbl;
 
@@ -3630,7 +3626,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionCompletedEventArgsVtbl;
 
@@ -3683,7 +3679,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextCompositionStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextCompositionStartedEventArgsVtbl;
 
@@ -3736,7 +3732,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextFormatUpdatingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextFormatUpdatingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextFormatUpdatingEventArgsVtbl;
 
@@ -3789,7 +3785,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextLayoutRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextLayoutRequestedEventArgsVtbl;
 
@@ -3842,7 +3838,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionRequestedEventArgsVtbl;
 
@@ -3895,7 +3891,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionUpdatingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextSelectionUpdatingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextSelectionUpdatingEventArgsVtbl;
 
@@ -3948,7 +3944,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextRequestedEventArgsVtbl;
 
@@ -4001,7 +3997,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextUpdatingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextEditContext * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextTextUpdatingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextEditContext_Windows__CUI__CText__CCore__CCoreTextTextUpdatingEventArgsVtbl;
 
@@ -4053,7 +4049,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServ
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManager * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CText_CCore_CICoreTextServicesManager * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CText__CCore__CCoreTextServicesManager_IInspectableVtbl;
 

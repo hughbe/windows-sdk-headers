@@ -33,6 +33,8 @@ namespace Windows
     namespace Foundation
     {
         interface IClosable;
+
+        interface IMemoryBuffer;
     }
 }
 namespace Windows
@@ -87,6 +89,8 @@ namespace Windows
     {
         namespace Streams
         {
+            interface IBuffer;
+
             interface IRandomAccessStreamReference;
         }
     }
@@ -135,6 +139,10 @@ namespace Windows
 
             interface ILearningModelSessionFactory;
 
+            interface ILearningModelSessionFactory2;
+
+            interface ILearningModelSessionOptions;
+
             interface ILearningModelStatics;
 
             interface IMapFeatureDescriptor;
@@ -147,9 +155,13 @@ namespace Windows
 
             interface ITensorBooleanStatics;
 
+            interface ITensorBooleanStatics2;
+
             interface ITensorDouble;
 
             interface ITensorDoubleStatics;
+
+            interface ITensorDoubleStatics2;
 
             interface ITensorFeatureDescriptor;
 
@@ -159,43 +171,65 @@ namespace Windows
 
             interface ITensorFloat16BitStatics;
 
+            interface ITensorFloat16BitStatics2;
+
             interface ITensorFloatStatics;
+
+            interface ITensorFloatStatics2;
 
             interface ITensorInt16Bit;
 
             interface ITensorInt16BitStatics;
 
+            interface ITensorInt16BitStatics2;
+
             interface ITensorInt32Bit;
 
             interface ITensorInt32BitStatics;
+
+            interface ITensorInt32BitStatics2;
 
             interface ITensorInt64Bit;
 
             interface ITensorInt64BitStatics;
 
+            interface ITensorInt64BitStatics2;
+
             interface ITensorInt8Bit;
 
             interface ITensorInt8BitStatics;
+
+            interface ITensorInt8BitStatics2;
 
             interface ITensorString;
 
             interface ITensorStringStatics;
 
+            interface ITensorStringStatics2;
+
             interface ITensorUInt16Bit;
 
             interface ITensorUInt16BitStatics;
+
+            interface ITensorUInt16BitStatics2;
 
             interface ITensorUInt32Bit;
 
             interface ITensorUInt32BitStatics;
 
+            interface ITensorUInt32BitStatics2;
+
             interface ITensorUInt64Bit;
 
             interface ITensorUInt64BitStatics;
 
+            interface ITensorUInt64BitStatics2;
+
             interface ITensorUInt8Bit;
 
             interface ITensorUInt8BitStatics;
+
+            interface ITensorUInt8BitStatics2;
 
             runtimeclass ImageFeatureDescriptor;
 
@@ -210,6 +244,8 @@ namespace Windows
             runtimeclass LearningModelEvaluationResult;
 
             runtimeclass LearningModelSession;
+
+            runtimeclass LearningModelSessionOptions;
 
             runtimeclass MapFeatureDescriptor;
 
@@ -276,7 +312,7 @@ namespace Windows
     {
         namespace MachineLearning
         {
-            [contractversion(1.0)]
+            [contractversion(2.0)]
             apicontract MachineLearningContract
             {
             }
@@ -463,6 +499,23 @@ namespace Windows
                 HRESULT CreateFromModelOnDevice([in] Windows.AI.MachineLearning.LearningModel* model, [in] Windows.AI.MachineLearning.LearningModelDevice* deviceToRunOn, [out] [retval] Windows.AI.MachineLearning.LearningModelSession** value);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.LearningModelSession)]
+            [uuid(4E5C88BF-0A1F-5FEC-ADE0-2FD91E4EF29B)]
+            interface ILearningModelSessionFactory2 : IInspectable
+            {
+                HRESULT CreateFromModelOnDeviceWithSessionOptions([in] Windows.AI.MachineLearning.LearningModel* model, [in] Windows.AI.MachineLearning.LearningModelDevice* deviceToRunOn, [in] Windows.AI.MachineLearning.LearningModelSessionOptions* learningModelSessionOptions, [out] [retval] Windows.AI.MachineLearning.LearningModelSession** value);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.LearningModelSessionOptions)]
+            [uuid(B8F63FA1-134D-5133-8CFF-3A5C3C263BEB)]
+            interface ILearningModelSessionOptions : IInspectable
+            {
+                [propget] HRESULT BatchSizeOverride([out] [retval] UINT32* value);
+                [propput] HRESULT BatchSizeOverride([in] UINT32 value);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.LearningModel)]
             [uuid(E3B977E8-6952-4E47-8EF4-1F7F07897C6D)]
@@ -524,6 +577,15 @@ namespace Windows
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<boolean>* data, [out] [retval] Windows.AI.MachineLearning.TensorBoolean** result);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorBoolean)]
+            [uuid(A3A4A501-6A2D-52D7-B04B-C435BAEE0115)]
+            interface ITensorBooleanStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] boolean* data, [out] [retval] Windows.AI.MachineLearning.TensorBoolean** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorBoolean** result);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.TensorDouble)]
             [uuid(91E41252-7A8F-4F0E-A28F-9637FFC8A3D0)]
@@ -541,6 +603,15 @@ namespace Windows
                 [overload("Create")] HRESULT Create2([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [out] [retval] Windows.AI.MachineLearning.TensorDouble** result);
                 HRESULT CreateFromArray([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] DOUBLE* data, [out] [retval] Windows.AI.MachineLearning.TensorDouble** result);
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<DOUBLE>* data, [out] [retval] Windows.AI.MachineLearning.TensorDouble** result);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorDouble)]
+            [uuid(93A570DE-5E9A-5094-85C8-592C655E68AC)]
+            interface ITensorDoubleStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] DOUBLE* data, [out] [retval] Windows.AI.MachineLearning.TensorDouble** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorDouble** result);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -579,6 +650,15 @@ namespace Windows
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<FLOAT>* data, [out] [retval] Windows.AI.MachineLearning.TensorFloat16Bit** result);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorFloat16Bit)]
+            [uuid(68545726-2DC7-51BF-B470-0B344CC2A1BC)]
+            interface ITensorFloat16BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] FLOAT* data, [out] [retval] Windows.AI.MachineLearning.TensorFloat16Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorFloat16Bit** result);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.TensorFloat)]
             [uuid(DBCD395B-3BA3-452F-B10D-3C135E573FA9)]
@@ -588,6 +668,15 @@ namespace Windows
                 [overload("Create")] HRESULT Create2([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [out] [retval] Windows.AI.MachineLearning.TensorFloat** result);
                 HRESULT CreateFromArray([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] FLOAT* data, [out] [retval] Windows.AI.MachineLearning.TensorFloat** result);
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<FLOAT>* data, [out] [retval] Windows.AI.MachineLearning.TensorFloat** result);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorFloat)]
+            [uuid(24610BC1-5E44-5713-B281-8F4AD4D555E8)]
+            interface ITensorFloatStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] FLOAT* data, [out] [retval] Windows.AI.MachineLearning.TensorFloat** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorFloat** result);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -609,6 +698,15 @@ namespace Windows
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<INT16>* data, [out] [retval] Windows.AI.MachineLearning.TensorInt16Bit** result);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorInt16Bit)]
+            [uuid(0CD70CF4-696C-5E5F-95D8-5EBF9670148B)]
+            interface ITensorInt16BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] INT16* data, [out] [retval] Windows.AI.MachineLearning.TensorInt16Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorInt16Bit** result);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.TensorInt32Bit)]
             [uuid(2C0C28D3-207C-4486-A7D2-884522C5E589)]
@@ -626,6 +724,15 @@ namespace Windows
                 [overload("Create")] HRESULT Create2([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [out] [retval] Windows.AI.MachineLearning.TensorInt32Bit** result);
                 HRESULT CreateFromArray([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] INT32* data, [out] [retval] Windows.AI.MachineLearning.TensorInt32Bit** result);
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<INT32>* data, [out] [retval] Windows.AI.MachineLearning.TensorInt32Bit** result);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorInt32Bit)]
+            [uuid(7C4B079A-E956-5CE0-A3BD-157D9D79B5EC)]
+            interface ITensorInt32BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] INT32* data, [out] [retval] Windows.AI.MachineLearning.TensorInt32Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorInt32Bit** result);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -647,6 +754,15 @@ namespace Windows
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<INT64>* data, [out] [retval] Windows.AI.MachineLearning.TensorInt64Bit** result);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorInt64Bit)]
+            [uuid(6D3D9DCB-FF40-5EC2-89FE-084E2B6BC6DB)]
+            interface ITensorInt64BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] INT64* data, [out] [retval] Windows.AI.MachineLearning.TensorInt64Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorInt64Bit** result);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.TensorInt8Bit)]
             [uuid(CDDD97C5-FFD8-4FEF-AEFB-30E1A485B2EE)]
@@ -664,6 +780,15 @@ namespace Windows
                 [overload("Create")] HRESULT Create2([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [out] [retval] Windows.AI.MachineLearning.TensorInt8Bit** result);
                 HRESULT CreateFromArray([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] BYTE* data, [out] [retval] Windows.AI.MachineLearning.TensorInt8Bit** result);
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<BYTE>* data, [out] [retval] Windows.AI.MachineLearning.TensorInt8Bit** result);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorInt8Bit)]
+            [uuid(C0D59637-C468-56FB-9535-C052BDB93DC0)]
+            interface ITensorInt8BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] BYTE* data, [out] [retval] Windows.AI.MachineLearning.TensorInt8Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorInt8Bit** result);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -685,6 +810,14 @@ namespace Windows
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<HSTRING>* data, [out] [retval] Windows.AI.MachineLearning.TensorString** result);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorString)]
+            [uuid(9E355ED0-C8E2-5254-9137-0193A3668FD8)]
+            interface ITensorStringStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] HSTRING* data, [out] [retval] Windows.AI.MachineLearning.TensorString** result);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.TensorUInt16Bit)]
             [uuid(68140F4B-23C0-42F3-81F6-A891C011BC3F)]
@@ -702,6 +835,15 @@ namespace Windows
                 [overload("Create")] HRESULT Create2([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [out] [retval] Windows.AI.MachineLearning.TensorUInt16Bit** result);
                 HRESULT CreateFromArray([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] UINT16* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt16Bit** result);
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<UINT16>* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt16Bit** result);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorUInt16Bit)]
+            [uuid(8AF40C64-D69F-5315-9348-490877BBD642)]
+            interface ITensorUInt16BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] UINT16* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt16Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorUInt16Bit** result);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -723,6 +865,15 @@ namespace Windows
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<UINT32>* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt32Bit** result);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorUInt32Bit)]
+            [uuid(EF1A1F1C-314E-569D-B496-5C8447D20CD2)]
+            interface ITensorUInt32BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] UINT32* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt32Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorUInt32Bit** result);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.TensorUInt64Bit)]
             [uuid(2E70FFAD-04BF-4825-839A-82BAEF8C7886)]
@@ -742,6 +893,15 @@ namespace Windows
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<UINT64>* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt64Bit** result);
             }
 
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorUInt64Bit)]
+            [uuid(085A687D-67E1-5B1E-B232-4FABE9CA20B3)]
+            interface ITensorUInt64BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] UINT64* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt64Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorUInt64Bit** result);
+            }
+
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [exclusiveto(Windows.AI.MachineLearning.TensorUInt8Bit)]
             [uuid(58E1AE27-622B-48E3-BE22-D867AED1DAAC)]
@@ -759,6 +919,15 @@ namespace Windows
                 [overload("Create")] HRESULT Create2([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [out] [retval] Windows.AI.MachineLearning.TensorUInt8Bit** result);
                 HRESULT CreateFromArray([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] BYTE* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt8Bit** result);
                 HRESULT CreateFromIterable([in] Windows.Foundation.Collections.IIterable<INT64>* shape, [in] Windows.Foundation.Collections.IIterable<BYTE>* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt8Bit** result);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [exclusiveto(Windows.AI.MachineLearning.TensorUInt8Bit)]
+            [uuid(2BA042D6-373E-5A3A-A2FC-A6C41BD52789)]
+            interface ITensorUInt8BitStatics2 : IInspectable
+            {
+                HRESULT CreateFromShapeArrayAndDataArray([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] UINT32 __dataSize, [in] [size_is(__dataSize)] BYTE* data, [out] [retval] Windows.AI.MachineLearning.TensorUInt8Bit** result);
+                HRESULT CreateFromBuffer([in] UINT32 __shapeSize, [in] [size_is(__shapeSize)] INT64* shape, [in] Windows.Storage.Streams.IBuffer* buffer, [out] [retval] Windows.AI.MachineLearning.TensorUInt8Bit** result);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -818,6 +987,7 @@ namespace Windows
             }
 
             [activatable(Windows.AI.MachineLearning.ILearningModelSessionFactory, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [activatable(Windows.AI.MachineLearning.ILearningModelSessionFactory2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
@@ -825,6 +995,15 @@ namespace Windows
             {
                 [default] interface Windows.AI.MachineLearning.ILearningModelSession;
                 interface Windows.Foundation.IClosable;
+            }
+
+            [activatable(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass LearningModelSessionOptions
+            {
+                [default] interface Windows.AI.MachineLearning.ILearningModelSessionOptions;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -846,23 +1025,29 @@ namespace Windows
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorBooleanStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorBooleanStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorBoolean
             {
                 [default] interface Windows.AI.MachineLearning.ITensorBoolean;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorDoubleStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorDoubleStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorDouble
             {
                 [default] interface Windows.AI.MachineLearning.ITensorDouble;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -876,122 +1061,155 @@ namespace Windows
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorFloatStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorFloatStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorFloat
             {
                 [default] interface Windows.AI.MachineLearning.ITensorFloat;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorFloat16BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorFloat16BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorFloat16Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorFloat16Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorInt16BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorInt16BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorInt16Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorInt16Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorInt32BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorInt32BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorInt32Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorInt32Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorInt64BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorInt64BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorInt64Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorInt64Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorInt8BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorInt8BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorInt8Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorInt8Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorStringStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorStringStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorString
             {
                 [default] interface Windows.AI.MachineLearning.ITensorString;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorUInt16BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorUInt16BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorUInt16Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorUInt16Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorUInt32BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorUInt32BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorUInt32Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorUInt32Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorUInt64BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorUInt64BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorUInt64Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorUInt64Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.AI.MachineLearning.ITensorUInt8BitStatics, Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
+            [static(Windows.AI.MachineLearning.ITensorUInt8BitStatics2, Windows.AI.MachineLearning.MachineLearningContract, 2.0)]
             [threading(both)]
             runtimeclass TensorUInt8Bit
             {
                 [default] interface Windows.AI.MachineLearning.ITensorUInt8Bit;
                 interface Windows.AI.MachineLearning.ITensor;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureValue;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IMemoryBuffer;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 2.0)] interface Windows.Foundation.IClosable;
             }
         }
     }

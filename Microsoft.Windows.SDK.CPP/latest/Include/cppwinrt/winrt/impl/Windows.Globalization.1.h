@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -70,6 +70,20 @@ struct WINRT_EBO IClockIdentifiersStatics :
     impl::consume_t<IClockIdentifiersStatics>
 {
     IClockIdentifiersStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICurrencyAmount :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICurrencyAmount>
+{
+    ICurrencyAmount(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICurrencyAmountFactory :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICurrencyAmountFactory>
+{
+    ICurrencyAmountFactory(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ICurrencyIdentifiersStatics :

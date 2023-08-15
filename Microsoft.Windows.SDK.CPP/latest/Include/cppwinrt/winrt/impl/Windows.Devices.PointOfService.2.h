@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,6 +11,22 @@
 #include "winrt/impl/Windows.Devices.PointOfService.1.h"
 
 WINRT_EXPORT namespace winrt::Windows::Devices::PointOfService {
+
+struct SizeUInt32
+{
+    uint32_t Width;
+    uint32_t Height;
+};
+
+inline bool operator==(SizeUInt32 const& left, SizeUInt32 const& right) noexcept
+{
+    return left.Width == right.Width && left.Height == right.Height;
+}
+
+inline bool operator!=(SizeUInt32 const& left, SizeUInt32 const& right) noexcept
+{
+    return !(left == right);
+}
 
 }
 
@@ -230,7 +246,7 @@ struct WINRT_EBO CashDrawerStatusUpdatedEventArgs :
 
 struct WINRT_EBO ClaimedBarcodeScanner :
     Windows::Devices::PointOfService::IClaimedBarcodeScanner,
-    impl::require<ClaimedBarcodeScanner, Windows::Devices::PointOfService::IClaimedBarcodeScanner1, Windows::Devices::PointOfService::IClaimedBarcodeScanner2, Windows::Devices::PointOfService::IClaimedBarcodeScanner3, Windows::Devices::PointOfService::IClaimedBarcodeScanner4>
+    impl::require<ClaimedBarcodeScanner, Windows::Devices::PointOfService::IClaimedBarcodeScanner1, Windows::Devices::PointOfService::IClaimedBarcodeScanner2, Windows::Devices::PointOfService::IClaimedBarcodeScanner3, Windows::Devices::PointOfService::IClaimedBarcodeScanner4, Windows::Foundation::IClosable>
 {
     ClaimedBarcodeScanner(std::nullptr_t) noexcept {}
 };
@@ -243,7 +259,7 @@ struct WINRT_EBO ClaimedBarcodeScannerClosedEventArgs :
 
 struct WINRT_EBO ClaimedCashDrawer :
     Windows::Devices::PointOfService::IClaimedCashDrawer,
-    impl::require<ClaimedCashDrawer, Windows::Devices::PointOfService::IClaimedCashDrawer2>
+    impl::require<ClaimedCashDrawer, Windows::Devices::PointOfService::IClaimedCashDrawer2, Windows::Foundation::IClosable>
 {
     ClaimedCashDrawer(std::nullptr_t) noexcept {}
 };
@@ -255,14 +271,15 @@ struct WINRT_EBO ClaimedCashDrawerClosedEventArgs :
 };
 
 struct WINRT_EBO ClaimedJournalPrinter :
-    Windows::Devices::PointOfService::IClaimedJournalPrinter
+    Windows::Devices::PointOfService::IClaimedJournalPrinter,
+    impl::require<ClaimedJournalPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
 {
     ClaimedJournalPrinter(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO ClaimedLineDisplay :
     Windows::Devices::PointOfService::IClaimedLineDisplay,
-    impl::require<ClaimedLineDisplay, Windows::Devices::PointOfService::IClaimedLineDisplay2, Windows::Devices::PointOfService::IClaimedLineDisplay3>
+    impl::require<ClaimedLineDisplay, Windows::Devices::PointOfService::IClaimedLineDisplay2, Windows::Devices::PointOfService::IClaimedLineDisplay3, Windows::Foundation::IClosable>
 {
     ClaimedLineDisplay(std::nullptr_t) noexcept {}
     static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedLineDisplay> FromIdAsync(param::hstring const& deviceId);
@@ -278,7 +295,7 @@ struct WINRT_EBO ClaimedLineDisplayClosedEventArgs :
 
 struct WINRT_EBO ClaimedMagneticStripeReader :
     Windows::Devices::PointOfService::IClaimedMagneticStripeReader,
-    impl::require<ClaimedMagneticStripeReader, Windows::Devices::PointOfService::IClaimedMagneticStripeReader2>
+    impl::require<ClaimedMagneticStripeReader, Windows::Devices::PointOfService::IClaimedMagneticStripeReader2, Windows::Foundation::IClosable>
 {
     ClaimedMagneticStripeReader(std::nullptr_t) noexcept {}
 };
@@ -291,7 +308,7 @@ struct WINRT_EBO ClaimedMagneticStripeReaderClosedEventArgs :
 
 struct WINRT_EBO ClaimedPosPrinter :
     Windows::Devices::PointOfService::IClaimedPosPrinter,
-    impl::require<ClaimedPosPrinter, Windows::Devices::PointOfService::IClaimedPosPrinter2>
+    impl::require<ClaimedPosPrinter, Windows::Devices::PointOfService::IClaimedPosPrinter2, Windows::Foundation::IClosable>
 {
     ClaimedPosPrinter(std::nullptr_t) noexcept {}
 };
@@ -303,32 +320,38 @@ struct WINRT_EBO ClaimedPosPrinterClosedEventArgs :
 };
 
 struct WINRT_EBO ClaimedReceiptPrinter :
-    Windows::Devices::PointOfService::IClaimedReceiptPrinter
+    Windows::Devices::PointOfService::IClaimedReceiptPrinter,
+    impl::require<ClaimedReceiptPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
 {
     ClaimedReceiptPrinter(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO ClaimedSlipPrinter :
-    Windows::Devices::PointOfService::IClaimedSlipPrinter
+    Windows::Devices::PointOfService::IClaimedSlipPrinter,
+    impl::require<ClaimedSlipPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
 {
     ClaimedSlipPrinter(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO JournalPrintJob :
-    Windows::Devices::PointOfService::IPosPrinterJob
+    Windows::Devices::PointOfService::IPosPrinterJob,
+    impl::require<JournalPrintJob, Windows::Devices::PointOfService::IJournalPrintJob>
 {
     JournalPrintJob(std::nullptr_t) noexcept {}
+    using impl::consume_t<JournalPrintJob, Windows::Devices::PointOfService::IJournalPrintJob>::Print;
+    using Windows::Devices::PointOfService::IPosPrinterJob::Print;
 };
 
 struct WINRT_EBO JournalPrinterCapabilities :
-    Windows::Devices::PointOfService::IJournalPrinterCapabilities
+    Windows::Devices::PointOfService::IJournalPrinterCapabilities,
+    impl::require<JournalPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::IJournalPrinterCapabilities2>
 {
     JournalPrinterCapabilities(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO LineDisplay :
     Windows::Devices::PointOfService::ILineDisplay,
-    impl::require<LineDisplay, Windows::Devices::PointOfService::ILineDisplay2>
+    impl::require<LineDisplay, Windows::Devices::PointOfService::ILineDisplay2, Windows::Foundation::IClosable>
 {
     LineDisplay(std::nullptr_t) noexcept {}
     static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay> FromIdAsync(param::hstring const& deviceId);
@@ -394,7 +417,7 @@ struct WINRT_EBO LineDisplayStoredBitmap :
 
 struct WINRT_EBO LineDisplayWindow :
     Windows::Devices::PointOfService::ILineDisplayWindow,
-    impl::require<LineDisplayWindow, Windows::Devices::PointOfService::ILineDisplayWindow2>
+    impl::require<LineDisplayWindow, Windows::Devices::PointOfService::ILineDisplayWindow2, Windows::Foundation::IClosable>
 {
     LineDisplayWindow(std::nullptr_t) noexcept {}
 };
@@ -477,7 +500,7 @@ struct WINRT_EBO MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs :
 
 struct WINRT_EBO PosPrinter :
     Windows::Devices::PointOfService::IPosPrinter,
-    impl::require<PosPrinter, Windows::Foundation::IClosable>
+    impl::require<PosPrinter, Windows::Devices::PointOfService::IPosPrinter2, Windows::Foundation::IClosable>
 {
     PosPrinter(std::nullptr_t) noexcept {}
     static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter> GetDefaultAsync();
@@ -500,6 +523,19 @@ struct PosPrinterCharacterSetIds
     static uint32_t Ansi();
 };
 
+struct WINRT_EBO PosPrinterFontProperty :
+    Windows::Devices::PointOfService::IPosPrinterFontProperty
+{
+    PosPrinterFontProperty(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO PosPrinterPrintOptions :
+    Windows::Devices::PointOfService::IPosPrinterPrintOptions
+{
+    PosPrinterPrintOptions(std::nullptr_t) noexcept {}
+    PosPrinterPrintOptions();
+};
+
 struct WINRT_EBO PosPrinterReleaseDeviceRequestedEventArgs :
     Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs
 {
@@ -519,25 +555,33 @@ struct WINRT_EBO PosPrinterStatusUpdatedEventArgs :
 };
 
 struct WINRT_EBO ReceiptPrintJob :
-    Windows::Devices::PointOfService::IReceiptPrintJob
+    Windows::Devices::PointOfService::IReceiptPrintJob,
+    impl::require<ReceiptPrintJob, Windows::Devices::PointOfService::IPosPrinterJob, Windows::Devices::PointOfService::IReceiptOrSlipJob, Windows::Devices::PointOfService::IReceiptPrintJob2>
 {
     ReceiptPrintJob(std::nullptr_t) noexcept {}
+    using impl::consume_t<ReceiptPrintJob, Windows::Devices::PointOfService::IPosPrinterJob>::Print;
+    using impl::consume_t<ReceiptPrintJob, Windows::Devices::PointOfService::IReceiptPrintJob2>::Print;
 };
 
 struct WINRT_EBO ReceiptPrinterCapabilities :
-    Windows::Devices::PointOfService::IReceiptPrinterCapabilities
+    Windows::Devices::PointOfService::IReceiptPrinterCapabilities,
+    impl::require<ReceiptPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities, Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>
 {
     ReceiptPrinterCapabilities(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO SlipPrintJob :
-    Windows::Devices::PointOfService::IReceiptOrSlipJob
+    Windows::Devices::PointOfService::IReceiptOrSlipJob,
+    impl::require<SlipPrintJob, Windows::Devices::PointOfService::ISlipPrintJob>
 {
     SlipPrintJob(std::nullptr_t) noexcept {}
+    using impl::consume_t<SlipPrintJob, Windows::Devices::PointOfService::ISlipPrintJob>::Print;
+    using Windows::Devices::PointOfService::IReceiptOrSlipJob::Print;
 };
 
 struct WINRT_EBO SlipPrinterCapabilities :
-    Windows::Devices::PointOfService::ISlipPrinterCapabilities
+    Windows::Devices::PointOfService::ISlipPrinterCapabilities,
+    impl::require<SlipPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities, Windows::Devices::PointOfService::ISlipPrinterCapabilities2>
 {
     SlipPrinterCapabilities(std::nullptr_t) noexcept {}
 };

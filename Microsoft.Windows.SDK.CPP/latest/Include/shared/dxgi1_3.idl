@@ -5,7 +5,7 @@ import "dxgi1_2.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 cpp_quote( "#define DXGI_CREATE_FACTORY_DEBUG 0x1")
 cpp_quote( "HRESULT WINAPI CreateDXGIFactory2(UINT Flags, REFIID riid, _COM_Outptr_ void **ppFactory);" )
@@ -95,7 +95,7 @@ interface IDXGIFactory3 :
     UINT GetCreationFlags();
 };
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region App Family
@@ -231,7 +231,7 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 //--------------------------------------------------------------------------------------------------------
 // IDXGIOutput3 interface
 //--------------------------------------------------------------------------------------------------------
@@ -247,7 +247,7 @@ interface IDXGIOutput3 :
     HRESULT CheckOverlaySupport( [in, annotation("_In_")] DXGI_FORMAT EnumFormat, [out, annotation("_In_")] IUnknown *pConcernedDevice, [out, annotation("_Out_")] UINT *pFlags );
 };
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote( "DEFINE_GUID(IID_IDXGIDevice3,0x6007896c,0x3244,0x4afd,0xbf,0x18,0xa6,0xd3,0xbe,0xda,0x50,0x23);" )

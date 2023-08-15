@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.perception.spatial.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchor;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor ABI::Windows::Perception::Spatial::ISpatialAnchor
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchor2;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor2 ABI::Windows::Perception::Spatial::ISpatialAnchor2
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor2_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorExportSufficiency;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExportSufficiency ABI::Windows::Perception::Spatial::ISpatialAnchorExportSufficiency
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExportSufficiency_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorExporter;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporter ABI::Windows::Perception::Spatial::ISpatialAnchorExporter
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporter_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorExporterStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporterStatics ABI::Windows::Perception::Spatial::ISpatialAnchorExporterStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporterStatics_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorManagerStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorManagerStatics ABI::Windows::Perception::Spatial::ISpatialAnchorManagerStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorManagerStatics_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorRawCoordinateSystemAdjustedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorRawCoordinateSystemAdjustedEventArgs ABI::Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorRawCoordinateSystemAdjustedEventArgs_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStatics ABI::Windows::Perception::Spatial::ISpatialAnchorStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStatics_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorStore;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStore ABI::Windows::Perception::Spatial::ISpatialAnchorStore
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStore_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialAnchorTransferManagerStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorTransferManagerStatics ABI::Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorTransferManagerStatics_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialBoundingVolume;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume ABI::Windows::Perception::Spatial::ISpatialBoundingVolume
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume_FWD_DEFINED__
@@ -434,9 +430,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialBoundingVolumeStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolumeStatics ABI::Windows::Perception::Spatial::ISpatialBoundingVolumeStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolumeStatics_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -462,9 +458,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntity;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntity ABI::Windows::Perception::Spatial::ISpatialEntity
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntity_FWD_DEFINED__
@@ -476,9 +472,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntityAddedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityAddedEventArgs ABI::Windows::Perception::Spatial::ISpatialEntityAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityAddedEventArgs_FWD_DEFINED__
@@ -490,9 +486,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntityFactory;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityFactory ABI::Windows::Perception::Spatial::ISpatialEntityFactory
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityFactory_FWD_DEFINED__
@@ -504,9 +500,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntityRemovedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityRemovedEventArgs ABI::Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityRemovedEventArgs_FWD_DEFINED__
@@ -518,9 +514,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntityStore;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStore ABI::Windows::Perception::Spatial::ISpatialEntityStore
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStore_FWD_DEFINED__
@@ -532,9 +528,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntityStoreStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStoreStatics ABI::Windows::Perception::Spatial::ISpatialEntityStoreStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStoreStatics_FWD_DEFINED__
@@ -546,9 +542,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntityUpdatedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityUpdatedEventArgs ABI::Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityUpdatedEventArgs_FWD_DEFINED__
@@ -560,9 +556,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialEntityWatcher;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher ABI::Windows::Perception::Spatial::ISpatialEntityWatcher
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher_FWD_DEFINED__
@@ -574,9 +570,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocation;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation ABI::Windows::Perception::Spatial::ISpatialLocation
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation_FWD_DEFINED__
@@ -588,9 +584,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocation2;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation2 ABI::Windows::Perception::Spatial::ISpatialLocation2
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation2_FWD_DEFINED__
@@ -602,9 +598,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocator;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator ABI::Windows::Perception::Spatial::ISpatialLocator
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_FWD_DEFINED__
@@ -616,9 +612,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocatorAttachedFrameOfReference;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorAttachedFrameOfReference ABI::Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorAttachedFrameOfReference_FWD_DEFINED__
@@ -630,9 +626,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocatorPositionalTrackingDeactivatingEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorPositionalTrackingDeactivatingEventArgs ABI::Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorPositionalTrackingDeactivatingEventArgs_FWD_DEFINED__
@@ -644,9 +640,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocatorStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorStatics ABI::Windows::Perception::Spatial::ISpatialLocatorStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorStatics_FWD_DEFINED__
@@ -658,9 +654,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialStageFrameOfReference;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReference ABI::Windows::Perception::Spatial::ISpatialStageFrameOfReference
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReference_FWD_DEFINED__
@@ -672,9 +668,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialStageFrameOfReferenceStatics;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReferenceStatics ABI::Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReferenceStatics_FWD_DEFINED__
@@ -686,9 +682,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialStationaryFrameOfReference;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialStationaryFrameOfReference ABI::Windows::Perception::Spatial::ISpatialStationaryFrameOfReference
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialStationaryFrameOfReference_FWD_DEFINED__
@@ -701,9 +697,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialAnchor;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -726,7 +722,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Perception::Spatial::SpatialAnchor*> : IKeyV
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Perception::Spatial::SpatialAnchor*> __FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Perception::Spatial::ISpatialAnchor*>
@@ -758,7 +754,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnc
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Perception::Spatial::ISpatialAnchor*>*>
@@ -790,7 +786,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnc
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Perception::Spatial::ISpatialAnchor*>*>
@@ -806,9 +802,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialBoundingVolume;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -831,7 +827,7 @@ IIterator<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> __FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t;
 #define __FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Perception::Spatial::ISpatialBoundingVolume*>
@@ -863,7 +859,7 @@ IIterable<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> __FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t;
 #define __FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Perception::Spatial::ISpatialBoundingVolume*>
@@ -895,7 +891,7 @@ IMapView<HSTRING,ABI::Windows::Perception::Spatial::SpatialAnchor*> : IMapView_i
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Perception::Spatial::SpatialAnchor*> __FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t;
 #define __FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Perception::Spatial::ISpatialAnchor*>
@@ -927,7 +923,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_Windows__CPerception__CSpa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Perception::Spatial::ISpatialAnchor*>*>
@@ -959,7 +955,7 @@ IAsyncOperation<__FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor*> __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t;
 #define __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CPerception__CSpatial__CSpatialAnchor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Perception::Spatial::ISpatialAnchor*>*>
@@ -975,9 +971,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialAnchorExportSufficiency;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1000,7 +996,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialAnchor
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialAnchorExportSufficiency*> __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::ISpatialAnchorExportSufficiency*>
@@ -1032,7 +1028,7 @@ IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialAnchorExportSufficienc
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialAnchorExportSufficiency*> __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency_t;
 #define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorExportSufficiency ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::Spatial::ISpatialAnchorExportSufficiency*>
@@ -1048,9 +1044,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialAnchorStore;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1073,7 +1069,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialAnchor
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialAnchorStore*> __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialAnchorStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::ISpatialAnchorStore*>
@@ -1105,7 +1101,7 @@ IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialAnchorStore*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialAnchorStore*> __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorStore_t;
 #define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialAnchorStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::Spatial::ISpatialAnchorStore*>
@@ -1121,9 +1117,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 enum SpatialPerceptionAccessStatus : int;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_USE
@@ -1144,7 +1140,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Perception::Spatial::SpatialP
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>
@@ -1174,7 +1170,7 @@ IAsyncOperation<enum ABI::Windows::Perception::Spatial::SpatialPerceptionAccessS
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus> __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>
@@ -1189,9 +1185,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialStageFrameOfReference;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1214,7 +1210,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialStageF
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialStageFrameOfReference*> __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::ISpatialStageFrameOfReference*>
@@ -1246,7 +1242,7 @@ IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialStageFrameOfReference*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialStageFrameOfReference*> __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference_t;
 #define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialStageFrameOfReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::Spatial::ISpatialStageFrameOfReference*>
@@ -1263,9 +1259,9 @@ namespace ABI {
             namespace Spatial {
                 struct SpatialBoundingBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox_USE
@@ -1286,7 +1282,7 @@ IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingBox> : IRefe
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingBox> __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox_t;
 #define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox ABI::Windows::Foundation::__FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialBoundingBox>
@@ -1302,9 +1298,9 @@ namespace ABI {
             namespace Spatial {
                 struct SpatialBoundingFrustum;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum_USE
@@ -1325,7 +1321,7 @@ IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingFrustum> : I
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingFrustum> __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum_t;
 #define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum ABI::Windows::Foundation::__FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialBoundingFrustum>
@@ -1341,9 +1337,9 @@ namespace ABI {
             namespace Spatial {
                 struct SpatialBoundingOrientedBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox_USE
@@ -1364,7 +1360,7 @@ IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingOrientedBox> __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox_t;
 #define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox ABI::Windows::Foundation::__FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
@@ -1374,15 +1370,54 @@ typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingOrie
 
 
 
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                struct SpatialRay;
+                
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+
+
+#ifndef DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_USE
+#define DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("44dd686b-c7d8-582c-91c2-d98e604dcfd4"))
+IReference<struct ABI::Windows::Perception::Spatial::SpatialRay> : IReference_impl<struct ABI::Windows::Perception::Spatial::SpatialRay> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IReference`1<Windows.Perception.Spatial.SpatialRay>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialRay> __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_t;
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay ABI::Windows::Foundation::__FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialRay>
+//#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_t ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialRay>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_USE */
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Perception {
             namespace Spatial {
                 class SpatialAnchorRawCoordinateSystemAdjustedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1406,7 +1441,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialAnchor*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialAnchor*,ABI::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::ISpatialAnchor*,ABI::Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs*>
@@ -1423,9 +1458,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialEntityWatcher;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1449,7 +1484,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,IIns
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::ISpatialEntityWatcher*,IInspectable*>
@@ -1466,9 +1501,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialEntityAddedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1492,7 +1527,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,ABI::Windows::Perception::Spatial::SpatialEntityAddedEventArgs*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::ISpatialEntityWatcher*,ABI::Windows::Perception::Spatial::ISpatialEntityAddedEventArgs*>
@@ -1510,9 +1545,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialEntityRemovedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1536,7 +1571,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,ABI::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::ISpatialEntityWatcher*,ABI::Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs*>
@@ -1554,9 +1589,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialEntityUpdatedEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1580,7 +1615,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialEntityWatcher*,ABI::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::ISpatialEntityWatcher*,ABI::Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs*>
@@ -1597,9 +1632,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialLocator;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1623,7 +1658,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialLocator*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialLocator*,IInspectable*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::ISpatialLocator*,IInspectable*>
@@ -1640,9 +1675,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialLocatorPositionalTrackingDeactivatingEventArgs;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1666,7 +1701,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialLocator*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::SpatialLocator*,ABI::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::ISpatialLocator*,ABI::Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs*>
@@ -1697,7 +1732,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1726,7 +1761,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1742,9 +1777,9 @@ namespace ABI {
             namespace Numerics {
                 struct Matrix4x4;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CNumerics__CMatrix4x4_USE
@@ -1765,7 +1800,7 @@ IReference<struct ABI::Windows::Foundation::Numerics::Matrix4x4> : IReference_im
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Numerics::Matrix4x4> __FIReference_1_Windows__CFoundation__CNumerics__CMatrix4x4_t;
 #define __FIReference_1_Windows__CFoundation__CNumerics__CMatrix4x4 ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CNumerics__CMatrix4x4_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CNumerics__CMatrix4x4 ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Numerics::Matrix4x4>
@@ -1795,7 +1830,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1825,7 +1860,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1855,7 +1890,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1885,7 +1920,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1915,7 +1950,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1944,7 +1979,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -1974,7 +2009,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -2004,7 +2039,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -2033,7 +2068,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -2063,7 +2098,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -2080,9 +2115,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2091,9 +2126,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2108,8 +2143,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2124,9 +2159,9 @@ namespace ABI {
                 
                 typedef struct Matrix4x4 Matrix4x4;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2135,9 +2170,9 @@ namespace ABI {
                 
                 typedef struct Plane Plane;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2146,9 +2181,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2157,9 +2192,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2171,8 +2206,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             class PerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
@@ -2180,8 +2215,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             interface IPerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CIPerceptionTimestamp ABI::Windows::Perception::IPerceptionTimestamp
 
 #endif // ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
@@ -2196,9 +2231,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -2211,9 +2246,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -2227,9 +2262,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSession;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession_FWD_DEFINED__
@@ -2238,9 +2273,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSession;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession ABI::Windows::System::RemoteSystems::IRemoteSystemSession
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession_FWD_DEFINED__
@@ -2256,9 +2291,9 @@ namespace ABI {
                 
                 typedef enum SpatialAnchorExportPurpose : int SpatialAnchorExportPurpose;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2267,9 +2302,9 @@ namespace ABI {
                 
                 typedef enum SpatialEntityWatcherStatus : int SpatialEntityWatcherStatus;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2278,9 +2313,9 @@ namespace ABI {
                 
                 typedef enum SpatialLocatability : int SpatialLocatability;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2289,9 +2324,9 @@ namespace ABI {
                 
                 typedef enum SpatialLookDirectionRange : int SpatialLookDirectionRange;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2300,9 +2335,9 @@ namespace ABI {
                 
                 typedef enum SpatialMovementRange : int SpatialMovementRange;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2311,9 +2346,9 @@ namespace ABI {
                 
                 typedef enum SpatialPerceptionAccessStatus : int SpatialPerceptionAccessStatus;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2322,9 +2357,9 @@ namespace ABI {
                 
                 typedef struct SpatialBoundingBox SpatialBoundingBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2333,9 +2368,9 @@ namespace ABI {
                 
                 typedef struct SpatialBoundingFrustum SpatialBoundingFrustum;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2344,9 +2379,9 @@ namespace ABI {
                 
                 typedef struct SpatialBoundingOrientedBox SpatialBoundingOrientedBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2355,9 +2390,20 @@ namespace ABI {
                 
                 typedef struct SpatialBoundingSphere SpatialBoundingSphere;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                
+                typedef struct SpatialRay SpatialRay;
+                
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2396,9 +2442,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialAnchorExporter;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2411,9 +2457,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2421,9 +2467,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialEntity;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2433,9 +2479,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialEntityStore;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2445,9 +2491,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialLocation;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2456,9 +2502,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialLocatorAttachedFrameOfReference;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2468,9 +2514,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialStationaryFrameOfReference;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2502,9 +2548,9 @@ namespace ABI {
                     SpatialAnchorExportPurpose_Sharing = 1,
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -2533,9 +2579,9 @@ namespace ABI {
                     SpatialEntityWatcherStatus_Aborted = 5,
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2563,9 +2609,9 @@ namespace ABI {
                     SpatialLocatability_PositionalTrackingInhibited = 4,
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2590,9 +2636,9 @@ namespace ABI {
                     SpatialLookDirectionRange_Omnidirectional = 1,
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2617,9 +2663,9 @@ namespace ABI {
                     SpatialMovementRange_Bounded = 1,
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2646,9 +2692,9 @@ namespace ABI {
                     SpatialPerceptionAccessStatus_DeniedBySystem = 3,
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2673,9 +2719,9 @@ namespace ABI {
                     ABI::Windows::Foundation::Numerics::Vector3 Extents;
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2704,9 +2750,9 @@ namespace ABI {
                     ABI::Windows::Foundation::Numerics::Plane Bottom;
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2732,9 +2778,9 @@ namespace ABI {
                     ABI::Windows::Foundation::Numerics::Quaternion Orientation;
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2759,10 +2805,37 @@ namespace ABI {
                     FLOAT Radius;
                 };
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Struct Windows.Perception.Spatial.SpatialRay
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                /* [contract] */
+                struct SpatialRay
+                {
+                    ABI::Windows::Foundation::Numerics::Vector3 Origin;
+                    ABI::Windows::Foundation::Numerics::Vector3 Direction;
+                };
+                
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2807,9 +2880,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchor=_uuidof(ISpatialAnchor);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor_INTERFACE_DEFINED__) */
@@ -2841,16 +2914,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RemovedByUser(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchor2=_uuidof(ISpatialAnchor2);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor2;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor2_INTERFACE_DEFINED__) */
@@ -2882,7 +2955,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMinimallySufficient(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SufficiencyLevel(
                         /* [retval, out] */__RPC__out DOUBLE * value
@@ -2895,9 +2968,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorExportSufficiency=_uuidof(ISpatialAnchorExportSufficiency);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExportSufficiency;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExportSufficiency_INTERFACE_DEFINED__) */
@@ -2944,9 +3017,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorExporter=_uuidof(ISpatialAnchorExporter);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporter;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporter_INTERFACE_DEFINED__) */
@@ -2988,9 +3061,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorExporterStatics=_uuidof(ISpatialAnchorExporterStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporterStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorExporterStatics_INTERFACE_DEFINED__) */
@@ -3029,9 +3102,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorManagerStatics=_uuidof(ISpatialAnchorManagerStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorManagerStatics_INTERFACE_DEFINED__) */
@@ -3070,9 +3143,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorRawCoordinateSystemAdjustedEventArgs=_uuidof(ISpatialAnchorRawCoordinateSystemAdjustedEventArgs);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorRawCoordinateSystemAdjustedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorRawCoordinateSystemAdjustedEventArgs_INTERFACE_DEFINED__) */
@@ -3123,9 +3196,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorStatics=_uuidof(ISpatialAnchorStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStatics_INTERFACE_DEFINED__) */
@@ -3162,7 +3235,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TrySave(
                         /* [in] */__RPC__in HSTRING id,
                         /* [in] */__RPC__in_opt ABI::Windows::Perception::Spatial::ISpatialAnchor * anchor,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Remove(
                         /* [in] */__RPC__in HSTRING id
@@ -3173,9 +3246,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorStore=_uuidof(ISpatialAnchorStore);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStore;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorStore_INTERFACE_DEFINED__) */
@@ -3239,9 +3312,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAnchorTransferManagerStatics=_uuidof(ISpatialAnchorTransferManagerStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorTransferManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorTransferManagerStatics_INTERFACE_DEFINED__) */
@@ -3277,9 +3350,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialBoundingVolume=_uuidof(ISpatialBoundingVolume);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume_INTERFACE_DEFINED__) */
@@ -3335,9 +3408,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialBoundingVolumeStatics=_uuidof(ISpatialBoundingVolumeStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolumeStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolumeStatics_INTERFACE_DEFINED__) */
@@ -3377,9 +3450,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialCoordinateSystem=_uuidof(ISpatialCoordinateSystem);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_INTERFACE_DEFINED__) */
@@ -3424,9 +3497,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntity=_uuidof(ISpatialEntity);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntity;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntity_INTERFACE_DEFINED__) */
@@ -3465,9 +3538,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntityAddedEventArgs=_uuidof(ISpatialEntityAddedEventArgs);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityAddedEventArgs_INTERFACE_DEFINED__) */
@@ -3512,9 +3585,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntityFactory=_uuidof(ISpatialEntityFactory);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityFactory;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityFactory_INTERFACE_DEFINED__) */
@@ -3553,9 +3626,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntityRemovedEventArgs=_uuidof(ISpatialEntityRemovedEventArgs);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -3602,9 +3675,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntityStore=_uuidof(ISpatialEntityStore);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStore;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStore_INTERFACE_DEFINED__) */
@@ -3636,7 +3709,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryGetForRemoteSystemSession(
                         /* [in] */__RPC__in_opt ABI::Windows::System::RemoteSystems::IRemoteSystemSession * session,
@@ -3647,9 +3720,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntityStoreStatics=_uuidof(ISpatialEntityStoreStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStoreStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityStoreStatics_INTERFACE_DEFINED__) */
@@ -3688,9 +3761,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntityUpdatedEventArgs=_uuidof(ISpatialEntityUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -3759,9 +3832,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialEntityWatcher=_uuidof(ISpatialEntityWatcher);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher_INTERFACE_DEFINED__) */
@@ -3823,9 +3896,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialLocation=_uuidof(ISpatialLocation);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation_INTERFACE_DEFINED__) */
@@ -3867,9 +3940,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialLocation2=_uuidof(ISpatialLocation2);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation2;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocation2_INTERFACE_DEFINED__) */
@@ -3963,9 +4036,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialLocator=_uuidof(ISpatialLocator);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_INTERFACE_DEFINED__) */
@@ -4024,9 +4097,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialLocatorAttachedFrameOfReference=_uuidof(ISpatialLocatorAttachedFrameOfReference);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorAttachedFrameOfReference;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorAttachedFrameOfReference_INTERFACE_DEFINED__) */
@@ -4058,19 +4131,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Canceled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Canceled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISpatialLocatorPositionalTrackingDeactivatingEventArgs=_uuidof(ISpatialLocatorPositionalTrackingDeactivatingEventArgs);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorPositionalTrackingDeactivatingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorPositionalTrackingDeactivatingEventArgs_INTERFACE_DEFINED__) */
@@ -4109,9 +4182,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialLocatorStatics=_uuidof(ISpatialLocatorStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorStatics_INTERFACE_DEFINED__) */
@@ -4165,9 +4238,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialStageFrameOfReference=_uuidof(ISpatialStageFrameOfReference);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReference;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReference_INTERFACE_DEFINED__) */
@@ -4216,9 +4289,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialStageFrameOfReferenceStatics=_uuidof(ISpatialStageFrameOfReferenceStatics);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReferenceStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialStageFrameOfReferenceStatics_INTERFACE_DEFINED__) */
@@ -4257,9 +4330,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialStationaryFrameOfReference=_uuidof(ISpatialStationaryFrameOfReference);
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CISpatialStationaryFrameOfReference;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CISpatialStationaryFrameOfReference_INTERFACE_DEFINED__) */
@@ -6194,6 +6267,64 @@ interface __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrient
 #endif // ____FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox_INTERFACE_DEFINED__
 
 
+struct __x_ABI_CWindows_CPerception_CSpatial_CSpatialRay;
+
+#if !defined(____FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_INTERFACE_DEFINED__)
+#define ____FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_INTERFACE_DEFINED__
+
+typedef interface __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIReference_1_Windows__CPerception__CSpatial__CSpatialRay;
+
+typedef struct __FIReference_1_Windows__CPerception__CSpatial__CSpatialRayVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay * This );
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay * This, 
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay * This, /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CPerception_CSpatial_CSpatialRay *value);
+    END_INTERFACE
+} __FIReference_1_Windows__CPerception__CSpatial__CSpatialRayVtbl;
+
+interface __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay
+{
+    CONST_VTBL struct __FIReference_1_Windows__CPerception__CSpatial__CSpatialRayVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_get_Value(This,value)	\
+    ( (This)->lpVtbl -> get_Value(This,value) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIReference_1_Windows__CPerception__CSpatial__CSpatialRay_INTERFACE_DEFINED__
+
+
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -6216,7 +6347,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorRawCoordinateSystemAdjustedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialAnchorRawCoordinateSystemAdjustedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialAnchor_Windows__CPerception__CSpatial__CSpatialAnchorRawCoordinateSystemAdjustedEventArgsVtbl;
 
@@ -6268,7 +6399,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialE
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_IInspectableVtbl;
 
@@ -6320,7 +6451,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialE
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityAddedEventArgsVtbl;
 
@@ -6373,7 +6504,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialE
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityRemovedEventArgsVtbl;
 
@@ -6426,7 +6557,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialE
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialEntityUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialEntityWatcher_Windows__CPerception__CSpatial__CSpatialEntityUpdatedEventArgsVtbl;
 
@@ -6478,7 +6609,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialL
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_IInspectableVtbl;
 
@@ -6530,7 +6661,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialL
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorPositionalTrackingDeactivatingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocatorPositionalTrackingDeactivatingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSpatialLocator_Windows__CPerception__CSpatial__CSpatialLocatorPositionalTrackingDeactivatingEventArgsVtbl;
 
@@ -7499,6 +7630,9 @@ typedef struct __x_ABI_CWindows_CPerception_CSpatial_CSpatialBoundingOrientedBox
 typedef struct __x_ABI_CWindows_CPerception_CSpatial_CSpatialBoundingSphere __x_ABI_CWindows_CPerception_CSpatial_CSpatialBoundingSphere;
 
 
+typedef struct __x_ABI_CWindows_CPerception_CSpatial_CSpatialRay __x_ABI_CWindows_CPerception_CSpatial_CSpatialRay;
+
+
 
 
 
@@ -7759,6 +7893,25 @@ struct __x_ABI_CWindows_CPerception_CSpatial_CSpatialBoundingSphere
     FLOAT Radius;
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Struct Windows.Perception.Spatial.SpatialRay
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+/* [contract] */
+struct __x_ABI_CWindows_CPerception_CSpatial_CSpatialRay
+{
+    __x_ABI_CWindows_CFoundation_CNumerics_CVector3 Origin;
+    __x_ABI_CWindows_CFoundation_CNumerics_CVector3 Direction;
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*

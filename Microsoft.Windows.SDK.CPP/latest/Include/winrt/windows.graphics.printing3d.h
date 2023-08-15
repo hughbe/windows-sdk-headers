@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.printing3d.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,9 +279,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DTaskSourceRequestedHandler;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedHandler ABI::Windows::Graphics::Printing3D::IPrint3DTaskSourceRequestedHandler
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedHandler_FWD_DEFINED__
@@ -297,9 +293,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DManager;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManager ABI::Windows::Graphics::Printing3D::IPrint3DManager
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManager_FWD_DEFINED__
@@ -311,9 +307,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DManagerStatics;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManagerStatics ABI::Windows::Graphics::Printing3D::IPrint3DManagerStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManagerStatics_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DTask;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask ABI::Windows::Graphics::Printing3D::IPrint3DTask
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask_FWD_DEFINED__
@@ -339,9 +335,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DTaskCompletedEventArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskCompletedEventArgs ABI::Windows::Graphics::Printing3D::IPrint3DTaskCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskCompletedEventArgs_FWD_DEFINED__
@@ -353,9 +349,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DTaskRequest;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequest ABI::Windows::Graphics::Printing3D::IPrint3DTaskRequest
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequest_FWD_DEFINED__
@@ -367,9 +363,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DTaskRequestedEventArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequestedEventArgs ABI::Windows::Graphics::Printing3D::IPrint3DTaskRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequestedEventArgs_FWD_DEFINED__
@@ -381,9 +377,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DTaskSourceChangedEventArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceChangedEventArgs ABI::Windows::Graphics::Printing3D::IPrint3DTaskSourceChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceChangedEventArgs_FWD_DEFINED__
@@ -395,9 +391,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrint3DTaskSourceRequestedArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedArgs ABI::Windows::Graphics::Printing3D::IPrint3DTaskSourceRequestedArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedArgs_FWD_DEFINED__
@@ -409,9 +405,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3D3MFPackage;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage ABI::Windows::Graphics::Printing3D::IPrinting3D3MFPackage
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage_FWD_DEFINED__
@@ -423,9 +419,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3D3MFPackage2;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage2 ABI::Windows::Graphics::Printing3D::IPrinting3D3MFPackage2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage2_FWD_DEFINED__
@@ -437,9 +433,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3D3MFPackageStatics;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackageStatics ABI::Windows::Graphics::Printing3D::IPrinting3D3MFPackageStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackageStatics_FWD_DEFINED__
@@ -451,9 +447,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DBaseMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterial ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterial
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterial_FWD_DEFINED__
@@ -465,9 +461,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DBaseMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroup ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroup
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroup_FWD_DEFINED__
@@ -479,9 +475,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DBaseMaterialGroupFactory;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroupFactory ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroupFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroupFactory_FWD_DEFINED__
@@ -493,9 +489,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DBaseMaterialStatics;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialStatics ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialStatics_FWD_DEFINED__
@@ -507,9 +503,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DColorMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterial
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial_FWD_DEFINED__
@@ -521,9 +517,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DColorMaterial2;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial2 ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterial2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial2_FWD_DEFINED__
@@ -535,9 +531,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DColorMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroup ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterialGroup
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroup_FWD_DEFINED__
@@ -549,9 +545,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DColorMaterialGroupFactory;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroupFactory ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterialGroupFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroupFactory_FWD_DEFINED__
@@ -563,9 +559,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DComponent;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponent ABI::Windows::Graphics::Printing3D::IPrinting3DComponent
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponent_FWD_DEFINED__
@@ -577,9 +573,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DComponentWithMatrix;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponentWithMatrix ABI::Windows::Graphics::Printing3D::IPrinting3DComponentWithMatrix
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponentWithMatrix_FWD_DEFINED__
@@ -591,9 +587,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DCompositeMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterial ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterial
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterial_FWD_DEFINED__
@@ -605,9 +601,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DCompositeMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroup
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup_FWD_DEFINED__
@@ -619,9 +615,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DCompositeMaterialGroup2;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup2 ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroup2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup2_FWD_DEFINED__
@@ -633,9 +629,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DCompositeMaterialGroupFactory;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroupFactory ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroupFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroupFactory_FWD_DEFINED__
@@ -647,9 +643,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DFaceReductionOptions;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DFaceReductionOptions ABI::Windows::Graphics::Printing3D::IPrinting3DFaceReductionOptions
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DFaceReductionOptions_FWD_DEFINED__
@@ -661,9 +657,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMaterial ABI::Windows::Graphics::Printing3D::IPrinting3DMaterial
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMaterial_FWD_DEFINED__
@@ -675,9 +671,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DMesh;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMesh ABI::Windows::Graphics::Printing3D::IPrinting3DMesh
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMesh_FWD_DEFINED__
@@ -689,9 +685,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DMeshVerificationResult;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMeshVerificationResult ABI::Windows::Graphics::Printing3D::IPrinting3DMeshVerificationResult
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMeshVerificationResult_FWD_DEFINED__
@@ -703,9 +699,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DModel;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel ABI::Windows::Graphics::Printing3D::IPrinting3DModel
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel_FWD_DEFINED__
@@ -717,9 +713,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DModel2;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel2 ABI::Windows::Graphics::Printing3D::IPrinting3DModel2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel2_FWD_DEFINED__
@@ -731,9 +727,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DModelTexture;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModelTexture ABI::Windows::Graphics::Printing3D::IPrinting3DModelTexture
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModelTexture_FWD_DEFINED__
@@ -745,9 +741,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DMultiplePropertyMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterial ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterial
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterial_FWD_DEFINED__
@@ -759,9 +755,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DMultiplePropertyMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterialGroup
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroup_FWD_DEFINED__
@@ -773,9 +769,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DMultiplePropertyMaterialGroupFactory;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroupFactory ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterialGroupFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroupFactory_FWD_DEFINED__
@@ -787,9 +783,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DTexture2CoordMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterial ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterial
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterial_FWD_DEFINED__
@@ -801,9 +797,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DTexture2CoordMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroup
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup_FWD_DEFINED__
@@ -815,9 +811,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DTexture2CoordMaterialGroup2;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup2 ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroup2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup2_FWD_DEFINED__
@@ -829,9 +825,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DTexture2CoordMaterialGroupFactory;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroupFactory ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroupFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroupFactory_FWD_DEFINED__
@@ -843,9 +839,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 interface IPrinting3DTextureResource;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTextureResource ABI::Windows::Graphics::Printing3D::IPrinting3DTextureResource
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTextureResource_FWD_DEFINED__
@@ -858,9 +854,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DBaseMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -883,7 +879,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterial*>
@@ -915,7 +911,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterial*>
@@ -931,9 +927,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DBaseMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -956,7 +952,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroup*>
@@ -988,7 +984,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroup*>
@@ -1004,9 +1000,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DColorMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1029,7 +1025,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterial*>
@@ -1061,7 +1057,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterial*>
@@ -1077,9 +1073,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DColorMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1102,7 +1098,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> : I
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterialGroup*>
@@ -1134,7 +1130,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> : I
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterialGroup*>
@@ -1150,9 +1146,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DComponent;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1175,7 +1171,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DComponent*>
@@ -1207,7 +1203,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DComponent*>
@@ -1223,9 +1219,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DComponentWithMatrix;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1248,7 +1244,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DComponentWithMatrix*>
@@ -1280,7 +1276,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DComponentWithMatrix*>
@@ -1296,9 +1292,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DCompositeMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1321,7 +1317,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterial*>
@@ -1353,7 +1349,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterial*>
@@ -1369,9 +1365,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DCompositeMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1394,7 +1390,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup*>
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroup*>
@@ -1426,7 +1422,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup*>
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroup*>
@@ -1442,9 +1438,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DMesh;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1467,7 +1463,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DMesh*>
@@ -1499,7 +1495,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DMesh*>
@@ -1515,9 +1511,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DModelTexture;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1540,7 +1536,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DModelTexture*>
@@ -1572,7 +1568,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DModelTexture*>
@@ -1588,9 +1584,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DMultiplePropertyMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1613,7 +1609,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterial*>
@@ -1645,7 +1641,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterial*>
@@ -1661,9 +1657,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DMultiplePropertyMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1686,7 +1682,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterialGroup*>
@@ -1718,7 +1714,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterialGroup*>
@@ -1734,9 +1730,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DTexture2CoordMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1759,7 +1755,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*> 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterial*>
@@ -1791,7 +1787,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*> 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterial*>
@@ -1807,9 +1803,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DTexture2CoordMaterialGroup;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1832,7 +1828,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGro
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroup*>
@@ -1864,7 +1860,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGro
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroup*>
@@ -1880,9 +1876,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DTextureResource;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -1905,7 +1901,7 @@ IIterator<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing3D::IPrinting3DTextureResource*>
@@ -1937,7 +1933,7 @@ IIterable<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing3D::IPrinting3DTextureResource*>
@@ -1969,7 +1965,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterial*>
@@ -2001,7 +1997,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroup*>
@@ -2033,7 +2029,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterial*>
@@ -2065,7 +2061,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> :
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterialGroup*>
@@ -2097,7 +2093,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DComponent*>
@@ -2129,7 +2125,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DComponentWithMatrix*>
@@ -2161,7 +2157,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterial*>
@@ -2193,7 +2189,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroup*>
@@ -2225,7 +2221,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DMesh*>
@@ -2257,7 +2253,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DModelTexture*>
@@ -2289,7 +2285,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMateri
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterial*>
@@ -2321,7 +2317,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMateri
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterialGroup*>
@@ -2353,7 +2349,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterial*>
@@ -2385,7 +2381,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialG
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroup*>
@@ -2417,7 +2413,7 @@ IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing3D::IPrinting3DTextureResource*>
@@ -2449,7 +2445,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> : IVector_i
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterial*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterial ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterial*>
@@ -2481,7 +2477,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> : IVec
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DBaseMaterialGroup ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroup*>
@@ -2513,7 +2509,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> : IVector_
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterial*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterial ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterial*>
@@ -2545,7 +2541,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> : IVe
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DColorMaterialGroup ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DColorMaterialGroup*>
@@ -2577,7 +2573,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> : IVector_impl
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DComponent*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponent ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DComponent*>
@@ -2609,7 +2605,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> : IV
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DComponentWithMatrix ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DComponentWithMatrix*>
@@ -2641,7 +2637,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> : IVec
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterial*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterial ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterial*>
@@ -2673,7 +2669,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup*> :
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DCompositeMaterialGroup ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroup*>
@@ -2705,7 +2701,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> : IVector_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DMesh*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMesh ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DMesh*>
@@ -2737,7 +2733,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> : IVector_i
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DModelTexture*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DModelTexture ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DModelTexture*>
@@ -2769,7 +2765,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial*>
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterial ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterial*>
@@ -2801,7 +2797,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGr
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DMultiplePropertyMaterialGroup ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterialGroup*>
@@ -2833,7 +2829,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*> : 
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterial ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterial*>
@@ -2865,7 +2861,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTexture2CoordMaterialGroup ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroup*>
@@ -2897,7 +2893,7 @@ IVector<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> : IVecto
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing3D::Printing3DTextureResource*> __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting3D__CPrinting3DTextureResource ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing3D::IPrinting3DTextureResource*>
@@ -2913,9 +2909,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3D3MFPackage;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -2938,7 +2934,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::Printing3D3M
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::Printing3D3MFPackage*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::IPrinting3D3MFPackage*>
@@ -2970,7 +2966,7 @@ IAsyncOperation<ABI::Windows::Graphics::Printing3D::Printing3D3MFPackage*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Printing3D::Printing3D3MFPackage*> __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3D3MFPackage ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Printing3D::IPrinting3D3MFPackage*>
@@ -2986,9 +2982,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DMeshVerificationResult;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -3011,7 +3007,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::Printing3DMe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::IPrinting3DMeshVerificationResult*>
@@ -3043,7 +3039,7 @@ IAsyncOperation<ABI::Windows::Graphics::Printing3D::Printing3DMeshVerificationRe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult*> __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DMeshVerificationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Printing3D::IPrinting3DMeshVerificationResult*>
@@ -3059,9 +3055,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DModel;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -3084,7 +3080,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::Printing3DMo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::Printing3DModel*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing3D::IPrinting3DModel*>
@@ -3116,7 +3112,7 @@ IAsyncOperation<ABI::Windows::Graphics::Printing3D::Printing3DModel*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Printing3D::Printing3DModel*> __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CPrinting3D__CPrinting3DModel ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Printing3D::IPrinting3DModel*>
@@ -3132,9 +3128,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Print3DManager;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3142,9 +3138,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Print3DTaskRequestedEventArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -3168,7 +3164,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DManager*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DManager*,ABI::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing3D::IPrint3DManager*,ABI::Windows::Graphics::Printing3D::IPrint3DTaskRequestedEventArgs*>
@@ -3185,9 +3181,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Print3DTask;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3211,7 +3207,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DTask*,IInspectable
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DTask*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing3D::IPrint3DTask*,IInspectable*>
@@ -3228,9 +3224,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Print3DTaskCompletedEventArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -3254,7 +3250,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DTask*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DTask*,ABI::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing3D::IPrint3DTask*,ABI::Windows::Graphics::Printing3D::IPrint3DTaskCompletedEventArgs*>
@@ -3272,9 +3268,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Print3DTaskSourceChangedEventArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
@@ -3298,7 +3294,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DTask*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing3D::Print3DTask*,ABI::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing3D::IPrint3DTask*,ABI::Windows::Graphics::Printing3D::IPrint3DTaskSourceChangedEventArgs*>
@@ -3329,7 +3325,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -3358,7 +3354,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -3375,9 +3371,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -3403,7 +3399,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -3435,7 +3431,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -3465,7 +3461,7 @@ IIterator<double> : IIterator_impl<double>
 // correct parameterized interface specialization.
 typedef IIterator<double> __FIIterator_1_double_t;
 #define __FIIterator_1_double ABI::Windows::Foundation::Collections::__FIIterator_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_double ABI::Windows::Foundation::Collections::IIterator<DOUBLE>
@@ -3494,7 +3490,7 @@ IIterable<double> : IIterable_impl<double>
 // correct parameterized interface specialization.
 typedef IIterable<double> __FIIterable_1_double_t;
 #define __FIIterable_1_double ABI::Windows::Foundation::Collections::__FIIterable_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_double ABI::Windows::Foundation::Collections::IIterable<DOUBLE>
@@ -3523,7 +3519,7 @@ IVectorView<double> : IVectorView_impl<double>
 // correct parameterized interface specialization.
 typedef IVectorView<double> __FIVectorView_1_double_t;
 #define __FIVectorView_1_double ABI::Windows::Foundation::Collections::__FIVectorView_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_double ABI::Windows::Foundation::Collections::IVectorView<DOUBLE>
@@ -3552,7 +3548,7 @@ IVector<double> : IVector_impl<double>
 // correct parameterized interface specialization.
 typedef IVector<double> __FIVector_1_double_t;
 #define __FIVector_1_double ABI::Windows::Foundation::Collections::__FIVector_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_double ABI::Windows::Foundation::Collections::IVector<DOUBLE>
@@ -3581,7 +3577,7 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
@@ -3610,7 +3606,7 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
@@ -3639,7 +3635,7 @@ IVectorView<UINT32> : IVectorView_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
 #define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
@@ -3668,7 +3664,7 @@ IVector<UINT32> : IVector_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVector<UINT32> __FIVector_1_UINT32_t;
 #define __FIVector_1_UINT32 ABI::Windows::Foundation::Collections::__FIVector_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_UINT32 ABI::Windows::Foundation::Collections::IVector<UINT32>
@@ -3697,7 +3693,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -3726,7 +3722,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -3755,7 +3751,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -3784,7 +3780,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -3813,7 +3809,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -3843,7 +3839,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -3873,7 +3869,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -3902,7 +3898,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -3931,7 +3927,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -3960,7 +3956,7 @@ IAsyncOperationProgressHandler<bool,double> : IAsyncOperationProgressHandler_imp
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<bool,double> __FIAsyncOperationProgressHandler_2_boolean_double_t;
 #define __FIAsyncOperationProgressHandler_2_boolean_double ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_boolean_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_boolean_double ABI::Windows::Foundation::IAsyncOperationProgressHandler<boolean,DOUBLE>
@@ -3989,7 +3985,7 @@ IAsyncOperationWithProgressCompletedHandler<bool,double> : IAsyncOperationWithPr
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<bool,double> __FIAsyncOperationWithProgressCompletedHandler_2_boolean_double_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_boolean_double ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_boolean_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_boolean_double ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<boolean,DOUBLE>
@@ -4018,7 +4014,7 @@ IAsyncOperationWithProgress<bool,double> : IAsyncOperationWithProgress_impl<ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<bool,double> __FIAsyncOperationWithProgress_2_boolean_double_t;
 #define __FIAsyncOperationWithProgress_2_boolean_double ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_boolean_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_boolean_double ABI::Windows::Foundation::IAsyncOperationWithProgress<boolean,DOUBLE>
@@ -4037,9 +4033,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -4054,8 +4050,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -4070,9 +4066,9 @@ namespace ABI {
                 
                 typedef struct Matrix4x4 Matrix4x4;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4083,8 +4079,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4095,9 +4091,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -4111,9 +4107,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -4128,8 +4124,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4141,9 +4137,9 @@ namespace ABI {
                 
                 typedef enum Print3DTaskCompletion : int Print3DTaskCompletion;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4152,9 +4148,9 @@ namespace ABI {
                 
                 typedef enum Print3DTaskDetail : int Print3DTaskDetail;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4163,9 +4159,9 @@ namespace ABI {
                 
                 typedef enum Printing3DBufferFormat : int Printing3DBufferFormat;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4174,9 +4170,9 @@ namespace ABI {
                 
                 typedef enum Printing3DMeshVerificationMode : int Printing3DMeshVerificationMode;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4185,9 +4181,9 @@ namespace ABI {
                 
                 typedef enum Printing3DModelUnit : int Printing3DModelUnit;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4196,9 +4192,9 @@ namespace ABI {
                 
                 typedef enum Printing3DObjectType : int Printing3DObjectType;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4207,9 +4203,9 @@ namespace ABI {
                 
                 typedef enum Printing3DPackageCompression : int Printing3DPackageCompression;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4218,9 +4214,9 @@ namespace ABI {
                 
                 typedef enum Printing3DTextureEdgeBehavior : int Printing3DTextureEdgeBehavior;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4229,9 +4225,9 @@ namespace ABI {
                 
                 typedef struct Printing3DBufferDescription Printing3DBufferDescription;
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4282,9 +4278,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Print3DTaskRequest;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4294,9 +4290,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Print3DTaskSourceRequestedArgs;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4313,9 +4309,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DFaceReductionOptions;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4323,9 +4319,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing3D {
                 class Printing3DMaterial;
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4370,9 +4366,9 @@ namespace ABI {
                     Print3DTaskCompletion_Submitted = 4,
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4402,9 +4398,9 @@ namespace ABI {
                     Print3DTaskDetail_InvalidPrintTicket = 6,
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4442,9 +4438,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4469,9 +4465,9 @@ namespace ABI {
                     Printing3DMeshVerificationMode_FindAllErrors = 1,
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4500,9 +4496,9 @@ namespace ABI {
                     Printing3DModelUnit_Foot = 5,
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4528,9 +4524,9 @@ namespace ABI {
                     Printing3DObjectType_Others = 2,
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4556,9 +4552,9 @@ namespace ABI {
                     Printing3DPackageCompression_High = 2,
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x40000
 
 
@@ -4585,9 +4581,9 @@ namespace ABI {
                     Printing3DTextureEdgeBehavior_Clamp = 3,
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4612,9 +4608,9 @@ namespace ABI {
                     UINT32 Stride;
                 };
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GRAPHICS_PRINTING3D_PRINTING3DCONTRACT_VERSION >= 0x10000
 
 
@@ -4646,9 +4642,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DTaskSourceRequestedHandler=_uuidof(IPrint3DTaskSourceRequestedHandler);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedHandler;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedHandler_INTERFACE_DEFINED__) */
@@ -4691,9 +4687,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DManager=_uuidof(IPrint3DManager);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManager;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManager_INTERFACE_DEFINED__) */
@@ -4735,9 +4731,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DManagerStatics=_uuidof(IPrint3DManagerStatics);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManagerStatics_INTERFACE_DEFINED__) */
@@ -4797,9 +4793,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DTask=_uuidof(IPrint3DTask);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask_INTERFACE_DEFINED__) */
@@ -4841,9 +4837,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DTaskCompletedEventArgs=_uuidof(IPrint3DTaskCompletedEventArgs);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -4885,9 +4881,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DTaskRequest=_uuidof(IPrint3DTaskRequest);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequest;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequest_INTERFACE_DEFINED__) */
@@ -4926,9 +4922,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DTaskRequestedEventArgs=_uuidof(IPrint3DTaskRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -4967,9 +4963,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DTaskSourceChangedEventArgs=_uuidof(IPrint3DTaskSourceChangedEventArgs);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5008,9 +5004,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DTaskSourceRequestedArgs=_uuidof(IPrint3DTaskSourceRequestedArgs);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceRequestedArgs_INTERFACE_DEFINED__) */
@@ -5078,9 +5074,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3D3MFPackage=_uuidof(IPrinting3D3MFPackage);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage_INTERFACE_DEFINED__) */
@@ -5122,9 +5118,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3D3MFPackage2=_uuidof(IPrinting3D3MFPackage2);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackage2_INTERFACE_DEFINED__) */
@@ -5164,9 +5160,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3D3MFPackageStatics=_uuidof(IPrinting3D3MFPackageStatics);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackageStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3D3MFPackageStatics_INTERFACE_DEFINED__) */
@@ -5214,9 +5210,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DBaseMaterial=_uuidof(IPrinting3DBaseMaterial);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterial;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterial_INTERFACE_DEFINED__) */
@@ -5258,9 +5254,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DBaseMaterialGroup=_uuidof(IPrinting3DBaseMaterialGroup);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroup;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroup_INTERFACE_DEFINED__) */
@@ -5300,9 +5296,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DBaseMaterialGroupFactory=_uuidof(IPrinting3DBaseMaterialGroupFactory);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialGroupFactory_INTERFACE_DEFINED__) */
@@ -5344,9 +5340,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DBaseMaterialStatics=_uuidof(IPrinting3DBaseMaterialStatics);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DBaseMaterialStatics_INTERFACE_DEFINED__) */
@@ -5388,9 +5384,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DColorMaterial=_uuidof(IPrinting3DColorMaterial);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial_INTERFACE_DEFINED__) */
@@ -5432,9 +5428,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DColorMaterial2=_uuidof(IPrinting3DColorMaterial2);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterial2_INTERFACE_DEFINED__) */
@@ -5476,9 +5472,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DColorMaterialGroup=_uuidof(IPrinting3DColorMaterialGroup);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroup;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroup_INTERFACE_DEFINED__) */
@@ -5518,9 +5514,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DColorMaterialGroupFactory=_uuidof(IPrinting3DColorMaterialGroupFactory);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DColorMaterialGroupFactory_INTERFACE_DEFINED__) */
@@ -5589,9 +5585,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DComponent=_uuidof(IPrinting3DComponent);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponent;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponent_INTERFACE_DEFINED__) */
@@ -5639,9 +5635,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DComponentWithMatrix=_uuidof(IPrinting3DComponentWithMatrix);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponentWithMatrix;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DComponentWithMatrix_INTERFACE_DEFINED__) */
@@ -5680,9 +5676,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DCompositeMaterial=_uuidof(IPrinting3DCompositeMaterial);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterial;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterial_INTERFACE_DEFINED__) */
@@ -5727,9 +5723,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DCompositeMaterialGroup=_uuidof(IPrinting3DCompositeMaterialGroup);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup_INTERFACE_DEFINED__) */
@@ -5771,9 +5767,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DCompositeMaterialGroup2=_uuidof(IPrinting3DCompositeMaterialGroup2);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroup2_INTERFACE_DEFINED__) */
@@ -5813,9 +5809,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DCompositeMaterialGroupFactory=_uuidof(IPrinting3DCompositeMaterialGroupFactory);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DCompositeMaterialGroupFactory_INTERFACE_DEFINED__) */
@@ -5869,9 +5865,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DFaceReductionOptions=_uuidof(IPrinting3DFaceReductionOptions);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DFaceReductionOptions;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DFaceReductionOptions_INTERFACE_DEFINED__) */
@@ -5922,9 +5918,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DMaterial=_uuidof(IPrinting3DMaterial);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMaterial;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMaterial_INTERFACE_DEFINED__) */
@@ -6030,9 +6026,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DMesh=_uuidof(IPrinting3DMesh);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMesh;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMesh_INTERFACE_DEFINED__) */
@@ -6064,7 +6060,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsValid(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NonmanifoldTriangles(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_UINT32 * * value
@@ -6077,9 +6073,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DMeshVerificationResult=_uuidof(IPrinting3DMeshVerificationResult);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMeshVerificationResult;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMeshVerificationResult_INTERFACE_DEFINED__) */
@@ -6160,9 +6156,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DModel=_uuidof(IPrinting3DModel);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel_INTERFACE_DEFINED__) */
@@ -6220,9 +6216,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DModel2=_uuidof(IPrinting3DModel2);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModel2_INTERFACE_DEFINED__) */
@@ -6276,9 +6272,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DModelTexture=_uuidof(IPrinting3DModelTexture);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModelTexture;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DModelTexture_INTERFACE_DEFINED__) */
@@ -6317,9 +6313,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DMultiplePropertyMaterial=_uuidof(IPrinting3DMultiplePropertyMaterial);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterial;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterial_INTERFACE_DEFINED__) */
@@ -6364,9 +6360,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DMultiplePropertyMaterialGroup=_uuidof(IPrinting3DMultiplePropertyMaterialGroup);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroup;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroup_INTERFACE_DEFINED__) */
@@ -6406,9 +6402,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DMultiplePropertyMaterialGroupFactory=_uuidof(IPrinting3DMultiplePropertyMaterialGroupFactory);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DMultiplePropertyMaterialGroupFactory_INTERFACE_DEFINED__) */
@@ -6462,9 +6458,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DTexture2CoordMaterial=_uuidof(IPrinting3DTexture2CoordMaterial);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterial;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterial_INTERFACE_DEFINED__) */
@@ -6506,9 +6502,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DTexture2CoordMaterialGroup=_uuidof(IPrinting3DTexture2CoordMaterialGroup);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup_INTERFACE_DEFINED__) */
@@ -6550,9 +6546,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DTexture2CoordMaterialGroup2=_uuidof(IPrinting3DTexture2CoordMaterialGroup2);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroup2_INTERFACE_DEFINED__) */
@@ -6592,9 +6588,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DTexture2CoordMaterialGroupFactory=_uuidof(IPrinting3DTexture2CoordMaterialGroupFactory);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTexture2CoordMaterialGroupFactory_INTERFACE_DEFINED__) */
@@ -6642,9 +6638,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrinting3DTextureResource=_uuidof(IPrinting3DTextureResource);
                 
-            } /* Windows */
+            } /* Printing3D */
         } /* Graphics */
-    } /* Printing3D */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTextureResource;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting3D_CIPrinting3DTextureResource_INTERFACE_DEFINED__) */
@@ -14228,7 +14224,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3D
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DManager_Windows__CGraphics__CPrinting3D__CPrint3DTaskRequestedEventArgsVtbl;
 
@@ -14280,7 +14276,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3D
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_IInspectableVtbl;
 
@@ -14332,7 +14328,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3D
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskCompletedEventArgsVtbl;
 
@@ -14385,7 +14381,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3D
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting3D_CIPrint3DTaskSourceChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting3D__CPrint3DTask_Windows__CGraphics__CPrinting3D__CPrint3DTaskSourceChangedEventArgsVtbl;
 
@@ -15076,12 +15072,12 @@ typedef struct __FIIterator_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out int *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -15243,7 +15239,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT32 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out int *item);
+                                         /* [retval][out] */ __RPC__out unsigned int *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT32 * This,
@@ -15251,7 +15247,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ int item,
+            /* [in] */ unsigned int item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -15259,7 +15255,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
                                                __RPC__in __FIVectorView_1_UINT32 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -15338,12 +15334,12 @@ typedef struct __FIVector_1_UINT32Vtbl
         /* [out] */ __RPC__out ULONG *iidCount,
         /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
 
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt int *className);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt unsigned int *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
     HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [retval][out] */ __RPC__deref_out_opt int *item);
+        /* [retval][out] */ __RPC__deref_out_opt unsigned int *item);
 
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
         __RPC__in __FIVector_1_UINT32 * This,
@@ -15352,31 +15348,31 @@ typedef struct __FIVector_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_UINT32 **view);
 
     HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_UINT32 * This,
-        /* [in] */ __RPC__in int item,
+        /* [in] */ __RPC__in unsigned int item,
         /* [out] */ __RPC__out unsigned int *index,
         /* [retval][out] */ __RPC__out boolean *found);
 
     HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in int item);
+        /* [in] */ __RPC__in unsigned int item);
 
     HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in int item);
+        /* [in] */ __RPC__in unsigned int item);
 
     HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ unsigned int index);
-    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ __RPC__in int item);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ __RPC__in unsigned int item);
     HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_UINT32 * This);
     HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_UINT32 * This);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int startIndex,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int count,
-        /* [size_is][in] */ __RPC__in_ecount_full(count) int *value);
+        /* [size_is][in] */ __RPC__in_ecount_full(count) unsigned int *value);
 
     END_INTERFACE
 } __FIVector_1_UINT32Vtbl;
@@ -16266,7 +16262,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_boolean_doubleVtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_boolean_double *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_boolean_double *asyncInfo, /* [in] */ double progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_boolean_doubleVtbl;
 

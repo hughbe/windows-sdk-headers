@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.globalization.collation.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace Globalization {
             namespace Collation {
                 interface ICharacterGrouping;
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CCollation_CICharacterGrouping ABI::Windows::Globalization::Collation::ICharacterGrouping
 
 #endif // ____x_ABI_CWindows_CGlobalization_CCollation_CICharacterGrouping_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace Globalization {
             namespace Collation {
                 interface ICharacterGroupings;
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupings ABI::Windows::Globalization::Collation::ICharacterGroupings
 
 #endif // ____x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupings_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace Globalization {
             namespace Collation {
                 interface ICharacterGroupingsFactory;
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupingsFactory ABI::Windows::Globalization::Collation::ICharacterGroupingsFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupingsFactory_FWD_DEFINED__
@@ -183,9 +183,9 @@ namespace ABI {
         namespace Globalization {
             namespace Collation {
                 class CharacterGrouping;
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -208,7 +208,7 @@ IIterator<ABI::Windows::Globalization::Collation::CharacterGrouping*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Globalization::Collation::CharacterGrouping*> __FIIterator_1_Windows__CGlobalization__CCollation__CCharacterGrouping_t;
 #define __FIIterator_1_Windows__CGlobalization__CCollation__CCharacterGrouping ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGlobalization__CCollation__CCharacterGrouping_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGlobalization__CCollation__CCharacterGrouping ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Globalization::Collation::ICharacterGrouping*>
@@ -240,7 +240,7 @@ IIterable<ABI::Windows::Globalization::Collation::CharacterGrouping*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Globalization::Collation::CharacterGrouping*> __FIIterable_1_Windows__CGlobalization__CCollation__CCharacterGrouping_t;
 #define __FIIterable_1_Windows__CGlobalization__CCollation__CCharacterGrouping ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGlobalization__CCollation__CCharacterGrouping_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGlobalization__CCollation__CCharacterGrouping ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Globalization::Collation::ICharacterGrouping*>
@@ -272,7 +272,7 @@ IVectorView<ABI::Windows::Globalization::Collation::CharacterGrouping*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Globalization::Collation::CharacterGrouping*> __FIVectorView_1_Windows__CGlobalization__CCollation__CCharacterGrouping_t;
 #define __FIVectorView_1_Windows__CGlobalization__CCollation__CCharacterGrouping ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGlobalization__CCollation__CCharacterGrouping_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGlobalization__CCollation__CCharacterGrouping ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Globalization::Collation::ICharacterGrouping*>
@@ -297,9 +297,9 @@ namespace ABI {
         namespace Globalization {
             namespace Collation {
                 class CharacterGroupings;
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -345,9 +345,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICharacterGrouping=_uuidof(ICharacterGrouping);
                 
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CCollation_CICharacterGrouping;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CCollation_CICharacterGrouping_INTERFACE_DEFINED__) */
@@ -392,9 +392,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICharacterGroupings=_uuidof(ICharacterGroupings);
                 
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupings;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupings_INTERFACE_DEFINED__) */
@@ -434,9 +434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICharacterGroupingsFactory=_uuidof(ICharacterGroupingsFactory);
                 
-            } /* Windows */
+            } /* Collation */
         } /* Globalization */
-    } /* Collation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupingsFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CCollation_CICharacterGroupingsFactory_INTERFACE_DEFINED__) */

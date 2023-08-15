@@ -135,7 +135,7 @@ namespace Windows
             {
                 namespace Direct
                 {
-                    [contractversion(1.0)]
+                    [contractversion(2.0)]
                     apicontract XamlDirectContract
                     {
                     }
@@ -1792,6 +1792,8 @@ namespace Windows
                         FontIconSource_MirroredWhenRightToLeft                                = 2121,
                         PathIconSource_Data                                                   = 2122,
                         SymbolIconSource_Symbol                                               = 2123,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        UIElement_Shadow                                                      = 2130,
                         IconSourceElement_IconSource                                          = 2131,
                         PasswordBox_CanPasteClipboardContent                                  = 2137,
                         TextBox_CanPasteClipboardContent                                      = 2138,
@@ -1863,6 +1865,8 @@ namespace Windows
                         FlyoutBase_IsOpen                                                     = 2267,
                         StandardUICommand_Kind                                                = 2275,
                         UIElement_CanBeScrollAnchor                                           = 2276,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        ThemeShadow_Receivers                                                 = 2279,
                         ScrollContentPresenter_SizesContentToTemplatedParent                  = 2280,
                         ComboBox_TextBoxStyle                                                 = 2281,
                         Frame_IsNavigationStackEnabled                                        = 2282,
@@ -1883,7 +1887,31 @@ namespace Windows
                         XamlUICommand_KeyboardAccelerators                                    = 2351,
                         XamlUICommand_Label                                                   = 2352,
                         DatePicker_SelectedDate                                               = 2355,
-                        TimePicker_SelectedTime                                               = 2356
+                        TimePicker_SelectedTime                                               = 2356,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        AppBarTemplateSettings_NegativeCompactVerticalDelta                   = 2367,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        AppBarTemplateSettings_NegativeHiddenVerticalDelta                    = 2368,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        AppBarTemplateSettings_NegativeMinimalVerticalDelta                   = 2369,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        FlyoutBase_ShouldConstrainToRootBounds                                = 2378,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        Popup_ShouldConstrainToRootBounds                                     = 2379,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        FlyoutPresenter_IsDefaultShadowEnabled                                = 2380,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        MenuFlyoutPresenter_IsDefaultShadowEnabled                            = 2381,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        UIElement_ActualOffset                                                = 2382,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        UIElement_ActualSize                                                  = 2383,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        CommandBarTemplateSettings_OverflowContentCompactYTranslation         = 2384,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        CommandBarTemplateSettings_OverflowContentHiddenYTranslation          = 2385,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        CommandBarTemplateSettings_OverflowContentMinimalYTranslation         = 2386
                     };
 
                     [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 1.0)]
@@ -2137,6 +2165,8 @@ namespace Windows
                         AppBarElementContainer                  = 945,
                         ColorPaletteResources                   = 952,
                         StandardUICommand                       = 961,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
+                        ThemeShadow                             = 964,
                         XamlUICommand                           = 969
                     };
 

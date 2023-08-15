@@ -1165,7 +1165,6 @@ typedef PNOTIFYICONDATAA PNOTIFYICONDATA;
 #endif // (NTDDI_VERSION >= NTDDI_WIN7)
 
 
-
 typedef struct _NOTIFYICONIDENTIFIER {
     DWORD cbSize;
     HWND hWnd;

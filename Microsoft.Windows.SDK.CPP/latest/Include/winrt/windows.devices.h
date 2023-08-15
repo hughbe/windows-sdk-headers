@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -146,8 +146,8 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             interface ILowLevelDevicesAggregateProvider;
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProvider ABI::Windows::Devices::ILowLevelDevicesAggregateProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProvider_FWD_DEFINED__
@@ -158,8 +158,8 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             interface ILowLevelDevicesAggregateProviderFactory;
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProviderFactory ABI::Windows::Devices::ILowLevelDevicesAggregateProviderFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProviderFactory_FWD_DEFINED__
@@ -170,8 +170,8 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             interface ILowLevelDevicesController;
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CILowLevelDevicesController ABI::Windows::Devices::ILowLevelDevicesController
 
 #endif // ____x_ABI_CWindows_CDevices_CILowLevelDevicesController_FWD_DEFINED__
@@ -182,8 +182,8 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             interface ILowLevelDevicesControllerStatics;
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CILowLevelDevicesControllerStatics ABI::Windows::Devices::ILowLevelDevicesControllerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CILowLevelDevicesControllerStatics_FWD_DEFINED__
@@ -197,10 +197,10 @@ namespace ABI {
             namespace Adc {
                 namespace Provider {
                     interface IAdcControllerProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Adc */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Adc */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAdc_CProvider_CIAdcControllerProvider ABI::Windows::Devices::Adc::Provider::IAdcControllerProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CAdc_CProvider_CIAdcControllerProvider_FWD_DEFINED__
@@ -218,10 +218,10 @@ namespace ABI {
             namespace Gpio {
                 namespace Provider {
                     interface IGpioControllerProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Gpio */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Gpio */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CProvider_CIGpioControllerProvider ABI::Windows::Devices::Gpio::Provider::IGpioControllerProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CProvider_CIGpioControllerProvider_FWD_DEFINED__
@@ -239,10 +239,10 @@ namespace ABI {
             namespace I2c {
                 namespace Provider {
                     interface II2cControllerProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* I2c */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* I2c */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CProvider_CII2cControllerProvider ABI::Windows::Devices::I2c::Provider::II2cControllerProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CProvider_CII2cControllerProvider_FWD_DEFINED__
@@ -260,10 +260,10 @@ namespace ABI {
             namespace Pwm {
                 namespace Provider {
                     interface IPwmControllerProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Pwm */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pwm */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmControllerProvider ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmControllerProvider_FWD_DEFINED__
@@ -281,10 +281,10 @@ namespace ABI {
             namespace Spi {
                 namespace Provider {
                     interface ISpiControllerProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Spi */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Spi */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CProvider_CISpiControllerProvider ABI::Windows::Devices::Spi::Provider::ISpiControllerProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CProvider_CISpiControllerProvider_FWD_DEFINED__
@@ -303,16 +303,16 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             class LowLevelDevicesAggregateProvider;
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             class LowLevelDevicesController;
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -359,8 +359,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILowLevelDevicesAggregateProvider=_uuidof(ILowLevelDevicesAggregateProvider);
             
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProvider;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProvider_INTERFACE_DEFINED__) */
@@ -403,8 +403,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILowLevelDevicesAggregateProviderFactory=_uuidof(ILowLevelDevicesAggregateProviderFactory);
             
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProviderFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CILowLevelDevicesAggregateProviderFactory_INTERFACE_DEFINED__) */
@@ -439,8 +439,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILowLevelDevicesController=_uuidof(ILowLevelDevicesController);
             
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CILowLevelDevicesController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CILowLevelDevicesController_INTERFACE_DEFINED__) */
@@ -481,8 +481,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILowLevelDevicesControllerStatics=_uuidof(ILowLevelDevicesControllerStatics);
             
-        } /* Windows */
-    } /* Devices */} /* ABI */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CILowLevelDevicesControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CILowLevelDevicesControllerStatics_INTERFACE_DEFINED__) */

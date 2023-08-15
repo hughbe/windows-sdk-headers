@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.display.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayPropertiesEventHandler;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesEventHandler ABI::Windows::Graphics::Display::IDisplayPropertiesEventHandler
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesEventHandler_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IAdvancedColorInfo;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIAdvancedColorInfo ABI::Windows::Graphics::Display::IAdvancedColorInfo
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIAdvancedColorInfo_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IBrightnessOverride;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverride ABI::Windows::Graphics::Display::IBrightnessOverride
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverride_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IBrightnessOverrideSettings;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettings ABI::Windows::Graphics::Display::IBrightnessOverrideSettings
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettings_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IBrightnessOverrideSettingsStatics;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettingsStatics ABI::Windows::Graphics::Display::IBrightnessOverrideSettingsStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettingsStatics_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IBrightnessOverrideStatics;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideStatics ABI::Windows::Graphics::Display::IBrightnessOverrideStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideStatics_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IColorOverrideSettings;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettings ABI::Windows::Graphics::Display::IColorOverrideSettings
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettings_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IColorOverrideSettingsStatics;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettingsStatics ABI::Windows::Graphics::Display::IColorOverrideSettingsStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettingsStatics_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayEnhancementOverride;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride ABI::Windows::Graphics::Display::IDisplayEnhancementOverride
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayEnhancementOverrideCapabilities;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilities ABI::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilities_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayEnhancementOverrideCapabilitiesChangedEventArgs;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilitiesChangedEventArgs ABI::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilitiesChangedEventArgs_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayEnhancementOverrideStatics;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideStatics ABI::Windows::Graphics::Display::IDisplayEnhancementOverrideStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideStatics_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayInformation;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation ABI::Windows::Graphics::Display::IDisplayInformation
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayInformation2;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation2 ABI::Windows::Graphics::Display::IDisplayInformation2
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation2_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayInformation3;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation3 ABI::Windows::Graphics::Display::IDisplayInformation3
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation3_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayInformation4;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation4 ABI::Windows::Graphics::Display::IDisplayInformation4
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation4_FWD_DEFINED__
@@ -501,9 +497,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayInformation5;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation5 ABI::Windows::Graphics::Display::IDisplayInformation5
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation5_FWD_DEFINED__
@@ -515,9 +511,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayInformationStatics;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformationStatics ABI::Windows::Graphics::Display::IDisplayInformationStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformationStatics_FWD_DEFINED__
@@ -529,9 +525,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 interface IDisplayPropertiesStatics;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesStatics ABI::Windows::Graphics::Display::IDisplayPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesStatics_FWD_DEFINED__
@@ -545,9 +541,9 @@ namespace ABI {
             namespace Display {
                 struct NitRange;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CGraphics__CDisplay__CNitRange_USE
@@ -568,7 +564,7 @@ IIterator<struct ABI::Windows::Graphics::Display::NitRange> : IIterator_impl<str
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Graphics::Display::NitRange> __FIIterator_1_Windows__CGraphics__CDisplay__CNitRange_t;
 #define __FIIterator_1_Windows__CGraphics__CDisplay__CNitRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CDisplay__CNitRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CDisplay__CNitRange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Display::NitRange>
@@ -598,7 +594,7 @@ IIterable<struct ABI::Windows::Graphics::Display::NitRange> : IIterable_impl<str
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Graphics::Display::NitRange> __FIIterable_1_Windows__CGraphics__CDisplay__CNitRange_t;
 #define __FIIterable_1_Windows__CGraphics__CDisplay__CNitRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CDisplay__CNitRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CDisplay__CNitRange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Display::NitRange>
@@ -628,7 +624,7 @@ IVectorView<struct ABI::Windows::Graphics::Display::NitRange> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Graphics::Display::NitRange> __FIVectorView_1_Windows__CGraphics__CDisplay__CNitRange_t;
 #define __FIVectorView_1_Windows__CGraphics__CDisplay__CNitRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CDisplay__CNitRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CDisplay__CNitRange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Display::NitRange>
@@ -643,9 +639,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class BrightnessOverride;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -669,7 +665,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Display::BrightnessOverride*,IInspect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Display::BrightnessOverride*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Display::IBrightnessOverride*,IInspectable*>
@@ -685,9 +681,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class DisplayEnhancementOverride;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -711,7 +707,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Display::DisplayEnhancementOverride*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Display::DisplayEnhancementOverride*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Display::IDisplayEnhancementOverride*,IInspectable*>
@@ -728,9 +724,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class DisplayEnhancementOverrideCapabilitiesChangedEventArgs;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -754,7 +750,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Display::DisplayEnhancementOverride*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Display::DisplayEnhancementOverride*,ABI::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Display::IDisplayEnhancementOverride*,ABI::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs*>
@@ -771,9 +767,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class DisplayInformation;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -797,7 +793,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Display::DisplayInformation*,IInspect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Display::DisplayInformation*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Display::IDisplayInformation*,IInspectable*>
@@ -827,7 +823,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -856,7 +852,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -873,9 +869,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -901,7 +897,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -933,7 +929,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -963,7 +959,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -981,8 +977,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -998,9 +994,9 @@ namespace ABI {
                 
                 typedef enum AdvancedColorKind : int AdvancedColorKind;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1009,9 +1005,9 @@ namespace ABI {
                 
                 typedef enum DisplayBrightnessOverrideOptions : unsigned int DisplayBrightnessOverrideOptions;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1020,9 +1016,9 @@ namespace ABI {
                 
                 typedef enum DisplayBrightnessOverrideScenario : int DisplayBrightnessOverrideScenario;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1031,9 +1027,9 @@ namespace ABI {
                 
                 typedef enum DisplayBrightnessScenario : int DisplayBrightnessScenario;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1042,9 +1038,9 @@ namespace ABI {
                 
                 typedef enum DisplayColorOverrideScenario : int DisplayColorOverrideScenario;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1053,9 +1049,9 @@ namespace ABI {
                 
                 typedef enum DisplayOrientations : unsigned int DisplayOrientations;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1064,9 +1060,9 @@ namespace ABI {
                 
                 typedef enum HdrMetadataFormat : int HdrMetadataFormat;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1075,9 +1071,9 @@ namespace ABI {
                 
                 typedef enum ResolutionScale : int ResolutionScale;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1086,9 +1082,9 @@ namespace ABI {
                 
                 typedef struct NitRange NitRange;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1114,9 +1110,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class AdvancedColorInfo;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1125,9 +1121,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class BrightnessOverrideSettings;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1135,9 +1131,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class ColorOverrideSettings;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1146,9 +1142,9 @@ namespace ABI {
         namespace Graphics {
             namespace Display {
                 class DisplayEnhancementOverrideCapabilities;
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1184,9 +1180,9 @@ namespace ABI {
                     AdvancedColorKind_HighDynamicRange = 2,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1213,9 +1209,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(DisplayBrightnessOverrideOptions)
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1241,9 +1237,9 @@ namespace ABI {
                     DisplayBrightnessOverrideScenario_FullBrightness = 2,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1270,9 +1266,9 @@ namespace ABI {
                     DisplayBrightnessScenario_FullBrightness = 3,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1296,9 +1292,9 @@ namespace ABI {
                     DisplayColorOverrideScenario_Accurate = 0,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1328,9 +1324,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(DisplayOrientations)
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1355,9 +1351,9 @@ namespace ABI {
                     HdrMetadataFormat_Hdr10Plus = 1,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1449,9 +1445,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1477,9 +1473,9 @@ namespace ABI {
                     FLOAT StepSizeNits;
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1515,9 +1511,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayPropertiesEventHandler=_uuidof(IDisplayPropertiesEventHandler);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesEventHandler_INTERFACE_DEFINED__) */
@@ -1577,20 +1573,20 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsHdrMetadataFormatCurrentlySupported(
                         /* [in] */ABI::Windows::Graphics::Display::HdrMetadataFormat format,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsAdvancedColorKindAvailable(
                         /* [in] */ABI::Windows::Graphics::Display::AdvancedColorKind kind,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedColorInfo=_uuidof(IAdvancedColorInfo);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIAdvancedColorInfo;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIAdvancedColorInfo_INTERFACE_DEFINED__) */
@@ -1622,10 +1618,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOverrideActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BrightnessLevel(
                         /* [retval, out] */__RPC__out DOUBLE * level
@@ -1670,9 +1666,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBrightnessOverride=_uuidof(IBrightnessOverride);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverride;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverride_INTERFACE_DEFINED__) */
@@ -1714,9 +1710,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBrightnessOverrideSettings=_uuidof(IBrightnessOverrideSettings);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettings;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettings_INTERFACE_DEFINED__) */
@@ -1764,9 +1760,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBrightnessOverrideSettingsStatics=_uuidof(IBrightnessOverrideSettingsStatics);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideSettingsStatics_INTERFACE_DEFINED__) */
@@ -1812,9 +1808,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBrightnessOverrideStatics=_uuidof(IBrightnessOverrideStatics);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverrideStatics_INTERFACE_DEFINED__) */
@@ -1853,9 +1849,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IColorOverrideSettings=_uuidof(IColorOverrideSettings);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettings;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettings_INTERFACE_DEFINED__) */
@@ -1895,9 +1891,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IColorOverrideSettingsStatics=_uuidof(IColorOverrideSettingsStatics);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIColorOverrideSettingsStatics_INTERFACE_DEFINED__) */
@@ -1941,10 +1937,10 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::Graphics::Display::IBrightnessOverrideSettings * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanOverride(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOverrideActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetCurrentDisplayEnhancementOverrideCapabilities(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities * * value
@@ -1977,9 +1973,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayEnhancementOverride=_uuidof(IDisplayEnhancementOverride);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride_INTERFACE_DEFINED__) */
@@ -2011,10 +2007,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBrightnessControlSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBrightnessNitsControlSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetSupportedNitRanges(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGraphics__CDisplay__CNitRange * * result
@@ -2024,9 +2020,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayEnhancementOverrideCapabilities=_uuidof(IDisplayEnhancementOverrideCapabilities);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilities_INTERFACE_DEFINED__) */
@@ -2065,9 +2061,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayEnhancementOverrideCapabilitiesChangedEventArgs=_uuidof(IDisplayEnhancementOverrideCapabilitiesChangedEventArgs);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilitiesChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilitiesChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2106,9 +2102,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayEnhancementOverrideStatics=_uuidof(IDisplayEnhancementOverrideStatics);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideStatics_INTERFACE_DEFINED__) */
@@ -2172,7 +2168,7 @@ namespace ABI {
                         /* [in] */EventRegistrationToken token
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StereoEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_StereoEnabledChanged(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable * handler,
@@ -2196,9 +2192,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayInformation=_uuidof(IDisplayInformation);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation_INTERFACE_DEFINED__) */
@@ -2241,9 +2237,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayInformation2=_uuidof(IDisplayInformation2);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation2_INTERFACE_DEFINED__) */
@@ -2282,9 +2278,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayInformation3=_uuidof(IDisplayInformation3);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation3_INTERFACE_DEFINED__) */
@@ -2326,9 +2322,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayInformation4=_uuidof(IDisplayInformation4);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation4;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation4_INTERFACE_DEFINED__) */
@@ -2374,9 +2370,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayInformation5=_uuidof(IDisplayInformation5);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation5;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation5_INTERFACE_DEFINED__) */
@@ -2428,9 +2424,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayInformationStatics=_uuidof(IDisplayInformationStatics);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformationStatics_INTERFACE_DEFINED__) */
@@ -2542,7 +2538,7 @@ namespace ABI {
                     DEPRECATED("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_StereoEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2601,9 +2597,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayPropertiesStatics=_uuidof(IDisplayPropertiesStatics);
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CIDisplayPropertiesStatics_INTERFACE_DEFINED__) */
@@ -3254,7 +3250,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightness
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverride * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIBrightnessOverride * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CBrightnessOverride_IInspectableVtbl;
 
@@ -3305,7 +3301,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnh
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_IInspectableVtbl;
 
@@ -3357,7 +3353,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnh
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilitiesChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverride * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayEnhancementOverrideCapabilitiesChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayEnhancementOverride_Windows__CGraphics__CDisplay__CDisplayEnhancementOverrideCapabilitiesChangedEventArgsVtbl;
 
@@ -3409,7 +3405,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInf
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CIDisplayInformation * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CDisplayInformation_IInspectableVtbl;
 

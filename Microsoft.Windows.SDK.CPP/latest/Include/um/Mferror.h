@@ -846,6 +846,24 @@ Notes:
 //
 #define MF_E_DURATION_TOO_LONG           _HRESULT_TYPEDEF_(0xC00D3707L)
 
+//
+// MessageId: MF_E_OPERATION_UNSUPPORTED_AT_D3D_FEATURE_LEVEL
+//
+// MessageText:
+//
+// The attempted call or command is not supported with the DirectX version used by the component.%0
+//
+#define MF_E_OPERATION_UNSUPPORTED_AT_D3D_FEATURE_LEVEL _HRESULT_TYPEDEF_(0xC00D3708L)
+
+//
+// MessageId: MF_E_UNSUPPORTED_MEDIATYPE_AT_D3D_FEATURE_LEVEL
+//
+// MessageText:
+//
+// The specified media type is not supported with the DirectX version used by the component.%0
+//
+#define MF_E_UNSUPPORTED_MEDIATYPE_AT_D3D_FEATURE_LEVEL _HRESULT_TYPEDEF_(0xC00D3709L)
+
 
 /////////////////////////////////////////////////////////////////////////
 //
@@ -1944,6 +1962,24 @@ Notes:
 //
 #define MF_E_AUDIO_SERVICE_NOT_RUNNING   _HRESULT_TYPEDEF_(0xC00D4E87L)
 
+//
+// MessageId: MF_E_AUDIO_BUFFER_SIZE_ERROR
+//
+// MessageText:
+//
+// The audio renderer encountered an error trying to set the render buffer size.%0
+//
+#define MF_E_AUDIO_BUFFER_SIZE_ERROR     _HRESULT_TYPEDEF_(0xC00D4E88L)
+
+//
+// MessageId: MF_E_AUDIO_CLIENT_WRAPPER_SPOOF_ERROR
+//
+// MessageText:
+//
+// The audio renderer encountered an error trying spoof the invalidated audio client.%0
+//
+#define MF_E_AUDIO_CLIENT_WRAPPER_SPOOF_ERROR _HRESULT_TYPEDEF_(0xC00D4E89L)
+
 
 /////////////////////////////////////////////////////////////////////////
 //
@@ -2977,6 +3013,33 @@ Notes:
 // Timer::SetTimer returns this success code if called happened while timer is stopped. Timer is not going to be dispatched until clock is running.%0
 //
 #define MF_S_CLOCK_STOPPED               _HRESULT_TYPEDEF_(0x000D9C44L)
+
+//
+// MessageId: MF_E_CLOCK_AUDIO_DEVICE_POSITION_UNEXPECTED
+//
+// MessageText:
+//
+// The clock can't return a valid time because the audio position returned from the audio playback device is unexpected.%0
+//
+#define MF_E_CLOCK_AUDIO_DEVICE_POSITION_UNEXPECTED _HRESULT_TYPEDEF_(0x000D9C45L)
+
+//
+// MessageId: MF_E_CLOCK_AUDIO_RENDER_POSITION_UNEXPECTED
+//
+// MessageText:
+//
+// The clock can't return a valid render time because the audio position specified to the clock is unexpected.%0
+//
+#define MF_E_CLOCK_AUDIO_RENDER_POSITION_UNEXPECTED _HRESULT_TYPEDEF_(0x000D9C46L)
+
+//
+// MessageId: MF_E_CLOCK_AUDIO_RENDER_TIME_UNEXPECTED
+//
+// MessageText:
+//
+// The clock can't return a valid render position because the timestamp specified to the clock is unexpected.%0
+//
+#define MF_E_CLOCK_AUDIO_RENDER_TIME_UNEXPECTED _HRESULT_TYPEDEF_(0x000D9C47L)
 
 
 //////////////////////////////////////////////////////////////////////////////

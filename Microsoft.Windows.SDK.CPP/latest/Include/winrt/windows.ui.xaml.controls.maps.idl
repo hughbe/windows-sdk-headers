@@ -203,6 +203,8 @@ namespace Windows
 
                     interface IMapControl7;
 
+                    interface IMapControl8;
+
                     interface IMapControlBusinessLandmarkClickEventArgs;
 
                     interface IMapControlBusinessLandmarkPointerEnteredEventArgs;
@@ -230,6 +232,8 @@ namespace Windows
                     interface IMapControlStatics6;
 
                     interface IMapControlStatics7;
+
+                    interface IMapControlStatics8;
 
                     interface IMapControlTransitFeatureClickEventArgs;
 
@@ -668,10 +672,12 @@ namespace Windows
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                     enum MapLoadingStatus
                     {
-                        Loading         = 0,
-                        Loaded          = 1,
+                        Loading                          = 0,
+                        Loaded                           = 1,
                         [contract(Windows.Foundation.UniversalApiContract, 2.0)]
-                        DataUnavailable = 2
+                        DataUnavailable                  = 2,
+                        [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                        DownloadedMapsManagerUnavailable = 3
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 5.0)]
@@ -1099,6 +1105,17 @@ namespace Windows
                         [propput] HRESULT Region([in] HSTRING value);
                     }
 
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Maps.MapControl)]
+                    [uuid(009E9C46-724D-53CA-9421-7A48FC731523)]
+                    interface IMapControl8 : IInspectable
+                    {
+                        [propget] HRESULT CanTiltDown([out] [retval] boolean* value);
+                        [propget] HRESULT CanTiltUp([out] [retval] boolean* value);
+                        [propget] HRESULT CanZoomIn([out] [retval] boolean* value);
+                        [propget] HRESULT CanZoomOut([out] [retval] boolean* value);
+                    }
+
                     [contract(Windows.Services.Maps.LocalSearchContract, 2.0)]
                     [exclusiveto(Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs)]
                     [uuid(5E464922-4A1A-4797-BEB7-5CF7754CB867)]
@@ -1257,6 +1274,17 @@ namespace Windows
                     interface IMapControlStatics7 : IInspectable
                     {
                         [propget] HRESULT RegionProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    }
+
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Maps.MapControl)]
+                    [uuid(ADB7A7B0-0605-592C-BF9D-D10BDC2BE47B)]
+                    interface IMapControlStatics8 : IInspectable
+                    {
+                        [propget] HRESULT CanTiltDownProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                        [propget] HRESULT CanTiltUpProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                        [propget] HRESULT CanZoomInProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                        [propget] HRESULT CanZoomOutProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     }
 
                     [contract(Windows.Services.Maps.LocalSearchContract, 2.0)]
@@ -2199,6 +2227,7 @@ namespace Windows
                     [static(Windows.UI.Xaml.Controls.Maps.IMapControlStatics5, Windows.Foundation.UniversalApiContract, 4.0)]
                     [static(Windows.UI.Xaml.Controls.Maps.IMapControlStatics6, Windows.Foundation.UniversalApiContract, 5.0)]
                     [static(Windows.UI.Xaml.Controls.Maps.IMapControlStatics7, Windows.Foundation.UniversalApiContract, 6.0)]
+                    [static(Windows.UI.Xaml.Controls.Maps.IMapControlStatics8, Windows.Foundation.UniversalApiContract, 8.0)]
                     [threading(both)]
                     runtimeclass MapControl : Windows.UI.Xaml.Controls.Control
                     {
@@ -2209,6 +2238,7 @@ namespace Windows
                         [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Xaml.Controls.Maps.IMapControl5;
                         [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Xaml.Controls.Maps.IMapControl6;
                         [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.UI.Xaml.Controls.Maps.IMapControl7;
+                        [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.Maps.IMapControl8;
                     }
 
                     [activatable(Windows.Services.Maps.LocalSearchContract, 2.0)]

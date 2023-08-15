@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.closedcaptioning.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -139,9 +139,9 @@ namespace ABI {
         namespace Media {
             namespace ClosedCaptioning {
                 interface IClosedCaptionPropertiesStatics;
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics ABI::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics_FWD_DEFINED__
@@ -156,8 +156,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -168,9 +168,9 @@ namespace ABI {
                 
                 typedef enum ClosedCaptionColor : int ClosedCaptionColor;
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -179,9 +179,9 @@ namespace ABI {
                 
                 typedef enum ClosedCaptionEdgeEffect : int ClosedCaptionEdgeEffect;
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -190,9 +190,9 @@ namespace ABI {
                 
                 typedef enum ClosedCaptionOpacity : int ClosedCaptionOpacity;
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -201,9 +201,9 @@ namespace ABI {
                 
                 typedef enum ClosedCaptionSize : int ClosedCaptionSize;
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -212,9 +212,9 @@ namespace ABI {
                 
                 typedef enum ClosedCaptionStyle : int ClosedCaptionStyle;
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -250,9 +250,9 @@ namespace ABI {
                     ClosedCaptionColor_Cyan = 8,
                 };
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -281,9 +281,9 @@ namespace ABI {
                     ClosedCaptionEdgeEffect_DropShadow = 5,
                 };
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -311,9 +311,9 @@ namespace ABI {
                     ClosedCaptionOpacity_ZeroPercent = 4,
                 };
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -341,9 +341,9 @@ namespace ABI {
                     ClosedCaptionSize_TwoHundredPercent = 4,
                 };
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -374,9 +374,9 @@ namespace ABI {
                     ClosedCaptionStyle_SmallCapitals = 7,
                 };
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -445,9 +445,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClosedCaptionPropertiesStatics=_uuidof(IClosedCaptionPropertiesStatics);
                 
-            } /* Windows */
+            } /* ClosedCaptioning */
         } /* Media */
-    } /* ClosedCaptioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics_INTERFACE_DEFINED__) */

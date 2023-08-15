@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.notifications.management.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Notifications {
                 namespace Management {
                     interface IUserNotificationListener;
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener ABI::Windows::UI::Notifications::Management::IUserNotificationListener
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Notifications {
                 namespace Management {
                     interface IUserNotificationListenerStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListenerStatics ABI::Windows::UI::Notifications::Management::IUserNotificationListenerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListenerStatics_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Notifications {
                 namespace Management {
                     enum UserNotificationListenerAccessStatus : int;
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus_USE
@@ -335,7 +331,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::UI::Notifications::Management
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus>
@@ -365,7 +361,7 @@ IAsyncOperation<enum ABI::Windows::UI::Notifications::Management::UserNotificati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus> __FIAsyncOperation_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CNotifications__CManagement__CUserNotificationListenerAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus>
@@ -381,10 +377,10 @@ namespace ABI {
             namespace Notifications {
                 namespace Management {
                     class UserNotificationListener;
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -392,9 +388,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class UserNotificationChangedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IUserNotificationChangedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs ABI::Windows::UI::Notifications::IUserNotificationChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs_FWD_DEFINED__
@@ -432,7 +428,7 @@ ITypedEventHandler<ABI::Windows::UI::Notifications::Management::UserNotification
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Notifications::Management::UserNotificationListener*,ABI::Windows::UI::Notifications::UserNotificationChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Notifications::Management::IUserNotificationListener*,ABI::Windows::UI::Notifications::IUserNotificationChangedEventArgs*>
@@ -449,9 +445,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class UserNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIUserNotification_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIUserNotification_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IUserNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIUserNotification ABI::Windows::UI::Notifications::IUserNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIUserNotification_FWD_DEFINED__
@@ -488,7 +484,7 @@ IIterator<ABI::Windows::UI::Notifications::UserNotification*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::UserNotification*> __FIIterator_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IUserNotification*>
@@ -520,7 +516,7 @@ IIterable<ABI::Windows::UI::Notifications::UserNotification*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::UserNotification*> __FIIterable_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IUserNotification*>
@@ -552,7 +548,7 @@ IVectorView<ABI::Windows::UI::Notifications::UserNotification*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::UserNotification*> __FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IUserNotification*>
@@ -584,7 +580,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CNotifications__C
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IUserNotification*>*>
@@ -616,7 +612,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification*> __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IUserNotification*>*>
@@ -639,9 +635,9 @@ namespace ABI {
                 
                 typedef enum NotificationKinds : unsigned int NotificationKinds;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -656,10 +652,10 @@ namespace ABI {
                     
                     typedef enum UserNotificationListenerAccessStatus : int UserNotificationListenerAccessStatus;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -697,10 +693,10 @@ namespace ABI {
                         UserNotificationListenerAccessStatus_Denied = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -759,10 +755,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserNotificationListener=_uuidof(IUserNotificationListener);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener_INTERFACE_DEFINED__) */
@@ -802,10 +798,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserNotificationListenerStatics=_uuidof(IUserNotificationListenerStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListenerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListenerStatics_INTERFACE_DEFINED__) */
@@ -998,7 +994,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgsVtbl;
 

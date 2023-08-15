@@ -1,10 +1,11 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
 #include "winrt/impl/Windows.ApplicationModel.Contacts.0.h"
+#include "winrt/impl/Windows.Devices.Enumeration.0.h"
 #include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.System.0.h"
 #include "winrt/impl/Windows.UI.0.h"
@@ -180,6 +181,13 @@ struct WINRT_EBO IPhoneLine :
     IPhoneLine(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IPhoneLine2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPhoneLine2>
+{
+    IPhoneLine2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IPhoneLineCellularDetails :
     Windows::Foundation::IInspectable,
     impl::consume_t<IPhoneLineCellularDetails>
@@ -199,6 +207,20 @@ struct WINRT_EBO IPhoneLineStatics :
     impl::consume_t<IPhoneLineStatics>
 {
     IPhoneLineStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPhoneLineTransportDevice :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPhoneLineTransportDevice>
+{
+    IPhoneLineTransportDevice(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPhoneLineTransportDeviceStatics :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPhoneLineTransportDeviceStatics>
+{
+    IPhoneLineTransportDeviceStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IPhoneLineWatcher :

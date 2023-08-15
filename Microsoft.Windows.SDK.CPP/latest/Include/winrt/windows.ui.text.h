@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.text.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface IContentLinkInfo;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CIContentLinkInfo ABI::Windows::UI::Text::IContentLinkInfo
 
 #endif // ____x_ABI_CWindows_CUI_CText_CIContentLinkInfo_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface IFontWeights;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CIFontWeights ABI::Windows::UI::Text::IFontWeights
 
 #endif // ____x_ABI_CWindows_CUI_CText_CIFontWeights_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface IFontWeightsStatics;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CIFontWeightsStatics ABI::Windows::UI::Text::IFontWeightsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CText_CIFontWeightsStatics_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface IRichEditTextRange;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CIRichEditTextRange ABI::Windows::UI::Text::IRichEditTextRange
 
 #endif // ____x_ABI_CWindows_CUI_CText_CIRichEditTextRange_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextCharacterFormat;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextCharacterFormat ABI::Windows::UI::Text::ITextCharacterFormat
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextCharacterFormat_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextConstantsStatics;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextConstantsStatics ABI::Windows::UI::Text::ITextConstantsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextConstantsStatics_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextDocument;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextDocument ABI::Windows::UI::Text::ITextDocument
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextDocument_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextDocument2;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextDocument2 ABI::Windows::UI::Text::ITextDocument2
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextDocument2_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextDocument3;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextDocument3 ABI::Windows::UI::Text::ITextDocument3
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextDocument3_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextParagraphFormat;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextParagraphFormat ABI::Windows::UI::Text::ITextParagraphFormat
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextParagraphFormat_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextRange;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextRange ABI::Windows::UI::Text::ITextRange
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextRange_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface ITextSelection;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CITextSelection ABI::Windows::UI::Text::ITextSelection
 
 #endif // ____x_ABI_CWindows_CUI_CText_CITextSelection_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 enum UnderlineType : int;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CText__CUnderlineType_USE
@@ -470,7 +466,7 @@ IReference<enum ABI::Windows::UI::Text::UnderlineType> : IReference_impl<enum AB
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::UI::Text::UnderlineType> __FIReference_1_Windows__CUI__CText__CUnderlineType_t;
 #define __FIReference_1_Windows__CUI__CText__CUnderlineType ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CText__CUnderlineType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CText__CUnderlineType ABI::Windows::Foundation::IReference<ABI::Windows::UI::Text::UnderlineType>
@@ -488,8 +484,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -497,16 +493,16 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -514,8 +510,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -530,9 +526,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -547,8 +543,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -559,9 +555,9 @@ namespace ABI {
                 
                 typedef enum CaretType : int CaretType;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -570,9 +566,9 @@ namespace ABI {
                 
                 typedef enum FindOptions : unsigned int FindOptions;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -581,9 +577,9 @@ namespace ABI {
                 
                 typedef enum FontStretch : int FontStretch;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -592,9 +588,9 @@ namespace ABI {
                 
                 typedef enum FontStyle : int FontStyle;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -603,9 +599,9 @@ namespace ABI {
                 
                 typedef enum FormatEffect : int FormatEffect;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -614,9 +610,9 @@ namespace ABI {
                 
                 typedef enum HorizontalCharacterAlignment : int HorizontalCharacterAlignment;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -625,9 +621,9 @@ namespace ABI {
                 
                 typedef enum LetterCase : int LetterCase;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -636,9 +632,9 @@ namespace ABI {
                 
                 typedef enum LineSpacingRule : int LineSpacingRule;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -647,9 +643,9 @@ namespace ABI {
                 
                 typedef enum LinkType : int LinkType;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -658,9 +654,9 @@ namespace ABI {
                 
                 typedef enum MarkerAlignment : int MarkerAlignment;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -669,9 +665,9 @@ namespace ABI {
                 
                 typedef enum MarkerStyle : int MarkerStyle;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -680,9 +676,9 @@ namespace ABI {
                 
                 typedef enum MarkerType : int MarkerType;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -691,9 +687,9 @@ namespace ABI {
                 
                 typedef enum ParagraphAlignment : int ParagraphAlignment;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -702,9 +698,9 @@ namespace ABI {
                 
                 typedef enum ParagraphStyle : int ParagraphStyle;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -713,9 +709,9 @@ namespace ABI {
                 
                 typedef enum PointOptions : unsigned int PointOptions;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -724,9 +720,9 @@ namespace ABI {
                 
                 typedef enum RangeGravity : int RangeGravity;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -735,9 +731,9 @@ namespace ABI {
                 
                 typedef enum SelectionOptions : unsigned int SelectionOptions;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -746,9 +742,9 @@ namespace ABI {
                 
                 typedef enum SelectionType : int SelectionType;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -757,9 +753,9 @@ namespace ABI {
                 
                 typedef enum TabAlignment : int TabAlignment;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -768,9 +764,9 @@ namespace ABI {
                 
                 typedef enum TabLeader : int TabLeader;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -779,9 +775,9 @@ namespace ABI {
                 
                 typedef enum TextDecorations : unsigned int TextDecorations;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -790,9 +786,9 @@ namespace ABI {
                 
                 typedef enum TextGetOptions : unsigned int TextGetOptions;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -801,9 +797,9 @@ namespace ABI {
                 
                 typedef enum TextRangeUnit : int TextRangeUnit;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -812,9 +808,9 @@ namespace ABI {
                 
                 typedef enum TextScript : int TextScript;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -823,9 +819,9 @@ namespace ABI {
                 
                 typedef enum TextSetOptions : unsigned int TextSetOptions;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -834,9 +830,9 @@ namespace ABI {
                 
                 typedef enum UnderlineType : int UnderlineType;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -845,9 +841,9 @@ namespace ABI {
                 
                 typedef enum VerticalCharacterAlignment : int VerticalCharacterAlignment;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -856,9 +852,9 @@ namespace ABI {
                 
                 typedef struct FontWeight FontWeight;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -877,9 +873,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 class ContentLinkInfo;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -887,9 +883,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 class FontWeights;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -897,9 +893,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 class RichEditTextDocument;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -907,9 +903,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 class RichEditTextRange;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -942,9 +938,9 @@ namespace ABI {
                     CaretType_Null = 1,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -972,9 +968,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(FindOptions)
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1007,9 +1003,9 @@ namespace ABI {
                     FontStretch_UltraExpanded = 9,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1035,9 +1031,9 @@ namespace ABI {
                     FontStyle_Italic = 2,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1064,9 +1060,9 @@ namespace ABI {
                     FormatEffect_Undefined = 3,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1092,9 +1088,9 @@ namespace ABI {
                     HorizontalCharacterAlignment_Center = 2,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1119,9 +1115,9 @@ namespace ABI {
                     LetterCase_Upper = 1,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1152,9 +1148,9 @@ namespace ABI {
                     LineSpacingRule_Percent = 7,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1186,9 +1182,9 @@ namespace ABI {
                     LinkType_AutoLinkPath = 8,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1215,9 +1211,9 @@ namespace ABI {
                     MarkerAlignment_Right = 3,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1247,9 +1243,9 @@ namespace ABI {
                     MarkerStyle_NoNumber = 6,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1297,9 +1293,9 @@ namespace ABI {
                     MarkerType_DevanagariNumeric = 24,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1327,9 +1323,9 @@ namespace ABI {
                     ParagraphAlignment_Justify = 4,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1364,9 +1360,9 @@ namespace ABI {
                     ParagraphStyle_Heading9 = 11,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1399,9 +1395,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PointOptions)
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1429,9 +1425,9 @@ namespace ABI {
                     RangeGravity_Outward = 4,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1461,9 +1457,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(SelectionOptions)
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1491,9 +1487,9 @@ namespace ABI {
                     SelectionType_Shape = 8,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1521,9 +1517,9 @@ namespace ABI {
                     TabAlignment_Bar = 4,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1552,9 +1548,9 @@ namespace ABI {
                     TabLeader_Equals = 5,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1582,9 +1578,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(TextDecorations)
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1622,9 +1618,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(TextGetOptions)
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1684,9 +1680,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1773,9 +1769,9 @@ namespace ABI {
                     TextScript_Tifinagh = 63,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1807,9 +1803,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(TextSetOptions)
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1852,9 +1848,9 @@ namespace ABI {
                     UnderlineType_ThickLongDash = 19,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1880,9 +1876,9 @@ namespace ABI {
                     VerticalCharacterAlignment_Bottom = 2,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1906,9 +1902,9 @@ namespace ABI {
                     UINT16 Weight;
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1971,9 +1967,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentLinkInfo=_uuidof(IContentLinkInfo);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CIContentLinkInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CIContentLinkInfo_INTERFACE_DEFINED__) */
@@ -2009,9 +2005,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFontWeights=_uuidof(IFontWeights);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CIFontWeights;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CIFontWeights_INTERFACE_DEFINED__) */
@@ -2080,9 +2076,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFontWeightsStatics=_uuidof(IFontWeightsStatics);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CIFontWeightsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CIFontWeightsStatics_INTERFACE_DEFINED__) */
@@ -2124,9 +2120,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRichEditTextRange=_uuidof(IRichEditTextRange);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CIRichEditTextRange;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CIRichEditTextRange_INTERFACE_DEFINED__) */
@@ -2303,16 +2299,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsEqual(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Text::ITextCharacterFormat * format,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ITextCharacterFormat=_uuidof(ITextCharacterFormat);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextCharacterFormat;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextCharacterFormat_INTERFACE_DEFINED__) */
@@ -2372,9 +2368,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextConstantsStatics=_uuidof(ITextConstantsStatics);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextConstantsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextConstantsStatics_INTERFACE_DEFINED__) */
@@ -2424,16 +2420,16 @@ namespace ABI {
                         /* [in] */UINT32 value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CanCopy(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CanPaste(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CanRedo(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CanUndo(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ApplyDisplayUpdates(
                         /* [retval, out] */__RPC__out INT32 * result
@@ -2488,9 +2484,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextDocument=_uuidof(ITextDocument);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextDocument;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextDocument_INTERFACE_DEFINED__) */
@@ -2522,25 +2518,25 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlignmentIncludesTrailingWhitespace(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlignmentIncludesTrailingWhitespace(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IgnoreTrailingCharacterSpacing(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IgnoreTrailingCharacterSpacing(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ITextDocument2=_uuidof(ITextDocument2);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextDocument2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextDocument2_INTERFACE_DEFINED__) */
@@ -2577,9 +2573,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextDocument3=_uuidof(ITextDocument3);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextDocument3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextDocument3_INTERFACE_DEFINED__) */
@@ -2744,7 +2740,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsEqual(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Text::ITextParagraphFormat * format,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetClone(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Text::ITextParagraphFormat * format
@@ -2763,9 +2759,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextParagraphFormat=_uuidof(ITextParagraphFormat);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextParagraphFormat;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextParagraphFormat_INTERFACE_DEFINED__) */
@@ -2855,13 +2851,13 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CanPaste(
                         /* [in] */INT32 format,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ChangeCase(
                         /* [in] */ABI::Windows::UI::Text::LetterCase value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Collapse(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Copy(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Cut(void) = 0;
@@ -2872,7 +2868,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EndOf(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Expand(
@@ -2917,7 +2913,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE InRange(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Text::ITextRange * range,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE InsertImage(
                         /* [in] */INT32 width,
@@ -2929,11 +2925,11 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE InStory(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Text::ITextRange * range,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsEqual(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Text::ITextRange * range,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Move(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
@@ -2960,12 +2956,12 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE SetIndex(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
                         /* [in] */INT32 index,
-                        /* [in] */boolean extend
+                        /* [in] */::boolean extend
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetPoint(
                         /* [in] */ABI::Windows::Foundation::Point point,
                         /* [in] */ABI::Windows::UI::Text::PointOptions options,
-                        /* [in] */boolean extend
+                        /* [in] */::boolean extend
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetRange(
                         /* [in] */INT32 startPosition,
@@ -2981,7 +2977,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE StartOf(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     
@@ -2989,9 +2985,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextRange=_uuidof(ITextRange);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextRange;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextRange_INTERFACE_DEFINED__) */
@@ -3034,36 +3030,36 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EndKey(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE HomeKey(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE MoveDown(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
                         /* [in] */INT32 count,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE MoveLeft(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
                         /* [in] */INT32 count,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE MoveRight(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
                         /* [in] */INT32 count,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE MoveUp(
                         /* [in] */ABI::Windows::UI::Text::TextRangeUnit unit,
                         /* [in] */INT32 count,
-                        /* [in] */boolean extend,
+                        /* [in] */::boolean extend,
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TypeText(
@@ -3074,9 +3070,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextSelection=_uuidof(ITextSelection);
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CText_CITextSelection;
 #endif /* !defined(____x_ABI_CWindows_CUI_CText_CITextSelection_INTERFACE_DEFINED__) */

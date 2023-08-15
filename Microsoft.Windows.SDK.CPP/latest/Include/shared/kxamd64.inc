@@ -368,7 +368,7 @@ endif ; _CAPKERN
 ;   Never returns.
 ;
 
-CAPRETPOLJMP macro Callee
+CAPRETPOLJMP macro Callee, Alignment
 
         LOCAL Jump
 
@@ -425,6 +425,13 @@ endif ; _CAPKERN
 
         call Jump
         int  3
+
+ifnb <Alignment>
+        ALIGN Alignment
+else
+        ALIGN 16
+endif
+
 Jump:
         mov [rsp], Callee
         ret
@@ -1221,6 +1228,37 @@ ifb <SkipSetCtxState>
 
 ifb <NmiFlag>
 
+ifdef NT_DOMAIN_CHANGE_TRACING
+
+        ;
+        ; Log an ETW event indicating that a domain change was performed
+        ; if the events are enabled.
+        ;
+
+        test    PerfGlobalGroupMask + PERF_DOMAIN_CHANGE_OFFSET, PERF_DOMAIN_CHANGE_FLAG ; check if the event is enabled
+        jz      short repeatfirst ; if z, event not enabled
+
+        mov     rcx, gs:[PcCurrentThread] ; get current thread
+        mov     rcx, ThProcess[rcx]     ; get owning process
+        mov     rcx, EpSecurityDomain[rcx] ; get security domain
+        mov     rdx, PerfInfoDomainChangeEventUserRestore  ; set reason
+
+ifidn <State>, <Service>
+
+        mov     TrRax[rbp], rax         ; save service status
+
+endif ; ifidn <State>, <Service>
+
+        CAPCALL EtwTraceDomainChange    ; log domain change
+
+ifidn <State>, <Service>
+
+        mov     rax, TrRax[rbp]         ; restore service status
+
+endif ; ifidn <State>, <Service>
+
+endif ; ifdef NT_DOMAIN_CHANGE_TRACING
+
 repeatfirst:
         mov     rcx, gs:[PcCurrentThread] ; get current thread address
         test    byte ptr ThApcState + AsUserApcPendingAll[rcx], KAPC_STATE_ANY_USER_APC_PENDING_MASK ; APC pending?
@@ -1415,6 +1453,8 @@ if DBG
 ; NULL.
 ;
 
+ifndef XBOX_SYSTEMOS
+
 ifidn <State>, <Service>
 
         mov     TrRax[rbp], rax         ; save service status
@@ -1428,7 +1468,7 @@ endif
         shl     rdx, 32                 ; shift high bits
         or      rax, rdx                ; merge value to form full SSP value
         mov     rcx, gs:[PcCurrentThread] ; get current thread address
-        bt      dword ptr ThMiscFlags[rcx], KTHREAD_CET_SHADOW_STACK_BIT ; check current thread shadow stack bit
+        bt      dword ptr ThMiscFlags[rcx], KTHREAD_CET_USER_SHADOW_STACK_BIT ; check current thread shadow stack bit
         jnc     short @f                ; if nc, shadow stacks are not enabled for thread
         test    rax, rax                ; shadow stacks are enabled for thread, check SSP
         jne     short finishsspcheck    ; if ne, SSP not zero, done
@@ -1450,6 +1490,8 @@ ifidn <State>, <Service>
         mov     rax, TrRax[rbp]         ; restore service status
 
 endif
+
+endif ; ifndef XBOX_SYSTEMOS
 
 endif
 
@@ -1891,7 +1933,7 @@ endif
 
 SAVE_TRAP_STATE macro Service, SaveGSSwap, NmiFlag, LBranch, PrepareUms
 
-        local   first, second, third, fourth, fifth
+        local   first, second, third, fourth, fifth, sixth
 
         mov     TrRax[rbp], rax         ; save volatile integer registers
         mov     TrRcx[rbp], rcx         ;
@@ -2078,6 +2120,28 @@ first:  cld                             ; clear direction flag
         movaps  TrXmm3[rbp], xmm3       ;
         movaps  TrXmm4[rbp], xmm4       ;
         movaps  TrXmm5[rbp], xmm5       ;
+
+ifdef NT_DOMAIN_CHANGE_TRACING
+ifb <NmiFlag>
+
+        ;
+        ; Log an ETW event indicating that a domain change was performed
+        ; if the events are enabled.
+        ;
+
+        test    PerfGlobalGroupMask + PERF_DOMAIN_CHANGE_OFFSET, PERF_DOMAIN_CHANGE_FLAG ; check if the event is enabled
+        jz      short sixth                                                   ; if z, event not enabled 
+        test    byte ptr TrSegCs[rbp], MODE_MASK ; test if previous mode user
+        jz      sixth                  ; if z, previous mode kernel
+
+        mov     rax, PS_KERNEL_SECURITY_DOMAIN      ; set domain
+        mov     rdx, PerfInfoDomainChangeEventEnterTrap  ; set reason
+        CAPCALL EtwTraceDomainChange                ; log domain change
+
+endif ; ifb <NmiFlag>
+endif ; ifdef NT_DOMAIN_CHANGE_TRACING
+
+sixth:
 
         endm
 
@@ -2346,6 +2410,48 @@ ifdif <CycleCount>, <NoEntropy>
 endif
 endif
 
+;
+; Ensure that the SMAP disposition is consistent.
+;
+
+ifb <NmiFlag>
+if DBG
+ifndef XBOX_SYSTEMOS
+
+        test    byte ptr gs:[PcFeatureBits+4], KF_SMAP SHR 32 ; is SMAP enabled?
+        jz      short @f                ; if z, no SMAP
+
+        test    byte ptr TrSegCs[rbp], MODE_MASK ; was previous mode user?
+        jnz     short @f                ; if z, previous mode user
+
+        cmp     byte ptr TrPreviousIrql[rbp], DISPATCH_LEVEL ; was previous IRQL >= DISPATCH_LEVEL?
+        jae     short @f                ; if ae, previous IRQL >= DISPATCH_LEVEL
+
+        test    dword ptr TrEflags[rbp], EFLAGS_AC_MASK ; get RFLAGS.AC disposition
+        jnz     short @f                ; if nz, user VA access is allowed
+
+        test    dword ptr gs:[PcDpcRequestSummary], KI_DPC_THREAD_ACTIVE ; is executing threaded DPC?
+        jnz     short @f                ; if nz, executing threaded DPC
+
+if DBG
+
+        int     3                       ; assertion failure - user VA access inconsistent
+
+else ; if DBG
+
+        push    rcx                     ; save register
+        mov     rcx, FAST_FAIL_FLAGS_CORRUPTION ; set fast fail code
+        int     29h                     ; fast fail
+        pop     rcx                     ;
+
+endif ; if DBG
+
+@@:
+
+endif ; ifndef XBOX_SYSTEMOS
+endif ; if DBG
+endif ; ifb <NmiFlag>
+
         endm
 
 ;
@@ -2540,6 +2646,8 @@ endif
         mov     byte ptr TrExceptionActive[rbp], 1 ; set exception active
 
         SAVE_TRAP_STATE <>, <SaveGSSwap>, <>, <>, <PrepareUms> ; save trap state
+
+        ENABLE_USER_VA_ACCESS          ; enable user VA access
 
 ifnb <ErrorCode>
 

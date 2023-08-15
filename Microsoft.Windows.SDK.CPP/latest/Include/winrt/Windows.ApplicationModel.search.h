@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.search.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ILocalContentSuggestionSettings;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings ABI::Windows::ApplicationModel::Search::ILocalContentSuggestionSettings
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPane;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane ABI::Windows::ApplicationModel::Search::ISearchPane
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQueryChangedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQueryLinguisticDetails;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails ABI::Windows::ApplicationModel::Search::ISearchPaneQueryLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQuerySubmittedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneResultSuggestionChosenEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneResultSuggestionChosenEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneStatics;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics ABI::Windows::ApplicationModel::Search::ISearchPaneStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneStaticsWithHideThisApplication;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication ABI::Windows::ApplicationModel::Search::ISearchPaneStaticsWithHideThisApplication
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneSuggestionsRequest;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneSuggestionsRequestDeferral;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneSuggestionsRequestedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneVisibilityChangedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneVisibilityChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchQueryLinguisticDetails;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails ABI::Windows::ApplicationModel::Search::ISearchQueryLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchQueryLinguisticDetailsFactory;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory ABI::Windows::ApplicationModel::Search::ISearchQueryLinguisticDetailsFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchSuggestionCollection;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection ABI::Windows::ApplicationModel::Search::ISearchSuggestionCollection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchSuggestionsRequest;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest ABI::Windows::ApplicationModel::Search::ISearchSuggestionsRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchSuggestionsRequestDeferral;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral ABI::Windows::ApplicationModel::Search::ISearchSuggestionsRequestDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPane;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -541,9 +537,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneQueryChangedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -567,7 +563,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs*>
@@ -585,9 +581,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneQuerySubmittedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -611,7 +607,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgs*>
@@ -629,9 +625,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneResultSuggestionChosenEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -655,7 +651,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneResultSuggestionChosenEventArgs*>
@@ -673,9 +669,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneSuggestionsRequestedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -699,7 +695,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestedEventArgs*>
@@ -717,9 +713,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneVisibilityChangedEventArgs;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -743,7 +739,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneVisibilityChangedEventArgs*>
@@ -759,8 +755,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -768,8 +764,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -795,7 +791,7 @@ IIterator<ABI::Windows::Storage::StorageFolder*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFolder*> __FIIterator_1_Windows__CStorage__CStorageFolder_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFolder*>
@@ -827,7 +823,7 @@ IIterable<ABI::Windows::Storage::StorageFolder*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFolder*> __FIIterable_1_Windows__CStorage__CStorageFolder_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFolder*>
@@ -859,7 +855,7 @@ IVectorView<ABI::Windows::Storage::StorageFolder*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFolder*> __FIVectorView_1_Windows__CStorage__CStorageFolder_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFolder*>
@@ -891,7 +887,7 @@ IVector<ABI::Windows::Storage::StorageFolder*> : IVector_impl<ABI::Windows::Foun
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::StorageFolder*> __FIVector_1_Windows__CStorage__CStorageFolder_t;
 #define __FIVector_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::IStorageFolder*>
@@ -921,7 +917,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -950,7 +946,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -979,7 +975,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1008,7 +1004,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1033,9 +1029,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -1068,9 +1064,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class LocalContentSuggestionSettings;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1080,9 +1076,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneQueryLinguisticDetails;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1092,9 +1088,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneSuggestionsRequest;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1102,9 +1098,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneSuggestionsRequestDeferral;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1114,9 +1110,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchQueryLinguisticDetails;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1124,9 +1120,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchSuggestionCollection;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1134,9 +1130,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchSuggestionsRequest;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1144,9 +1140,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchSuggestionsRequestDeferral;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1183,10 +1179,10 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Enabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Locations(
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CStorage__CStorageFolder * * value
@@ -1205,9 +1201,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILocalContentSuggestionSettings=_uuidof(ILocalContentSuggestionSettings);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_INTERFACE_DEFINED__) */
@@ -1247,14 +1243,14 @@ namespace ABI {
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_SearchHistoryEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SearchHistoryEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1303,7 +1299,7 @@ namespace ABI {
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1404,14 +1400,14 @@ namespace ABI {
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_ShowOnKeyboardInput(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_ShowOnKeyboardInput(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1419,16 +1415,16 @@ namespace ABI {
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE TrySetQueryText(
                         /* [in] */__RPC__in HSTRING query,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISearchPane=_uuidof(ISearchPane);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_INTERFACE_DEFINED__) */
@@ -1486,9 +1482,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneQueryChangedEventArgs=_uuidof(ISearchPaneQueryChangedEventArgs);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__) */
@@ -1533,9 +1529,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneQueryLinguisticDetails=_uuidof(ISearchPaneQueryLinguisticDetails);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_INTERFACE_DEFINED__) */
@@ -1589,9 +1585,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneQuerySubmittedEventArgs=_uuidof(ISearchPaneQuerySubmittedEventArgs);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__) */
@@ -1638,9 +1634,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails=_uuidof(ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_INTERFACE_DEFINED__) */
@@ -1687,9 +1683,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneResultSuggestionChosenEventArgs=_uuidof(ISearchPaneResultSuggestionChosenEventArgs);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__) */
@@ -1736,9 +1732,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneStatics=_uuidof(ISearchPaneStatics);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_INTERFACE_DEFINED__) */
@@ -1783,9 +1779,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneStaticsWithHideThisApplication=_uuidof(ISearchPaneStaticsWithHideThisApplication);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_INTERFACE_DEFINED__) */
@@ -1825,7 +1821,7 @@ namespace ABI {
                     DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1846,9 +1842,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneSuggestionsRequest=_uuidof(ISearchPaneSuggestionsRequest);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_INTERFACE_DEFINED__) */
@@ -1893,9 +1889,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneSuggestionsRequestDeferral=_uuidof(ISearchPaneSuggestionsRequestDeferral);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_INTERFACE_DEFINED__) */
@@ -1946,9 +1942,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneSuggestionsRequestedEventArgs=_uuidof(ISearchPaneSuggestionsRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1988,16 +1984,16 @@ namespace ABI {
                     DEPRECATED("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
                     #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISearchPaneVisibilityChangedEventArgs=_uuidof(ISearchPaneVisibilityChangedEventArgs);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2042,9 +2038,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchQueryLinguisticDetails=_uuidof(ISearchQueryLinguisticDetails);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_INTERFACE_DEFINED__) */
@@ -2086,9 +2082,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchQueryLinguisticDetailsFactory=_uuidof(ISearchQueryLinguisticDetailsFactory);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_INTERFACE_DEFINED__) */
@@ -2143,9 +2139,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchSuggestionCollection=_uuidof(ISearchSuggestionCollection);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_INTERFACE_DEFINED__) */
@@ -2177,7 +2173,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SearchSuggestionCollection(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchSuggestionCollection * * collection
@@ -2190,9 +2186,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchSuggestionsRequest=_uuidof(ISearchSuggestionsRequest);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_INTERFACE_DEFINED__) */
@@ -2229,9 +2225,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchSuggestionsRequestDeferral=_uuidof(ISearchSuggestionsRequestDeferral);
                 
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_INTERFACE_DEFINED__) */
@@ -2727,7 +2723,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSea
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgsVtbl;
 
@@ -2780,7 +2776,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSea
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgsVtbl;
 
@@ -2833,7 +2829,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSea
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgsVtbl;
 
@@ -2886,7 +2882,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSea
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgsVtbl;
 
@@ -2939,7 +2935,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSea
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgsVtbl;
 

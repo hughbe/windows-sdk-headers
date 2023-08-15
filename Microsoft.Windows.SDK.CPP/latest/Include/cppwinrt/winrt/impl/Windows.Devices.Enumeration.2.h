@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #pragma once
 #include "winrt/impl/Windows.ApplicationModel.Background.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
+#include "winrt/impl/Windows.Security.Credentials.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.UI.Popups.1.h"
@@ -101,7 +102,8 @@ struct WINRT_EBO DeviceInformationUpdate :
 };
 
 struct WINRT_EBO DevicePairingRequestedEventArgs :
-    Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs
+    Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs,
+    impl::require<DevicePairingRequestedEventArgs, Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2>
 {
     DevicePairingRequestedEventArgs(std::nullptr_t) noexcept {}
 };

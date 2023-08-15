@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.lights.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 interface ILamp;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CILamp ABI::Windows::Devices::Lights::ILamp
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CILamp_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 interface ILampArray;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CILampArray ABI::Windows::Devices::Lights::ILampArray
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CILampArray_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 interface ILampArrayStatics;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CILampArrayStatics ABI::Windows::Devices::Lights::ILampArrayStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CILampArrayStatics_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 interface ILampAvailabilityChangedEventArgs;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CILampAvailabilityChangedEventArgs ABI::Windows::Devices::Lights::ILampAvailabilityChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CILampAvailabilityChangedEventArgs_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 interface ILampInfo;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CILampInfo ABI::Windows::Devices::Lights::ILampInfo
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CILampInfo_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 interface ILampStatics;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CILampStatics ABI::Windows::Devices::Lights::ILampStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CILampStatics_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 class Lamp;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -390,7 +386,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Lights::Lamp*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Lights::Lamp*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLamp_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLamp ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLamp_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLamp ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Lights::ILamp*>
@@ -422,7 +418,7 @@ IAsyncOperation<ABI::Windows::Devices::Lights::Lamp*> : IAsyncOperation_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Lights::Lamp*> __FIAsyncOperation_1_Windows__CDevices__CLights__CLamp_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CLights__CLamp ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CLights__CLamp_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CLights__CLamp ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Lights::ILamp*>
@@ -438,9 +434,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 class LampArray;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -463,7 +459,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Lights::LampArray*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Lights::LampArray*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLampArray_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLampArray ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLampArray_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CLights__CLampArray ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Lights::ILampArray*>
@@ -495,7 +491,7 @@ IAsyncOperation<ABI::Windows::Devices::Lights::LampArray*> : IAsyncOperation_imp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Lights::LampArray*> __FIAsyncOperation_1_Windows__CDevices__CLights__CLampArray_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CLights__CLampArray ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CLights__CLampArray_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CLights__CLampArray ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Lights::ILampArray*>
@@ -512,9 +508,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 class LampAvailabilityChangedEventArgs;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -538,7 +534,7 @@ ITypedEventHandler<ABI::Windows::Devices::Lights::Lamp*,ABI::Windows::Devices::L
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Lights::Lamp*,ABI::Windows::Devices::Lights::LampAvailabilityChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Lights::ILamp*,ABI::Windows::Devices::Lights::ILampAvailabilityChangedEventArgs*>
@@ -557,9 +553,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -585,7 +581,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -617,7 +613,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -633,8 +629,8 @@ namespace ABI {
         namespace UI {
             struct Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CColor_USE
@@ -655,7 +651,7 @@ IReference<struct ABI::Windows::UI::Color> : IReference_impl<struct ABI::Windows
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::UI::Color> __FIReference_1_Windows__CUI__CColor_t;
 #define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CColor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::IReference<ABI::Windows::UI::Color>
@@ -673,8 +669,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -686,8 +682,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -702,9 +698,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -715,8 +711,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -731,8 +727,8 @@ namespace ABI {
             
             typedef enum VirtualKey : int VirtualKey;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -742,8 +738,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -754,9 +750,9 @@ namespace ABI {
                 
                 typedef enum LampArrayKind : int LampArrayKind;
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -765,9 +761,9 @@ namespace ABI {
                 
                 typedef enum LampPurposes : unsigned int LampPurposes;
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -783,9 +779,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 class LampInfo;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -826,9 +822,9 @@ namespace ABI {
                     LampArrayKind_Art = 10,
                 };
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -860,9 +856,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(LampPurposes)
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -898,10 +894,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BrightnessLevel(
                         /* [retval, out] */__RPC__out FLOAT * value
@@ -910,7 +906,7 @@ namespace ABI {
                         /* [in] */FLOAT value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsColorSettable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Color(
                         /* [retval, out] */__RPC__out ABI::Windows::UI::Color * value
@@ -930,9 +926,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILamp=_uuidof(ILamp);
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILamp;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILamp_INTERFACE_DEFINED__) */
@@ -988,10 +984,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Numerics::Vector3 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BrightnessLevel(
                         /* [retval, out] */__RPC__out DOUBLE * value
@@ -1000,10 +996,10 @@ namespace ABI {
                         /* [in] */DOUBLE value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsConnected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsVirtualKeys(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetLampInfo(
                         /* [in] */INT32 lampIndex,
@@ -1065,9 +1061,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILampArray=_uuidof(ILampArray);
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampArray;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILampArray_INTERFACE_DEFINED__) */
@@ -1110,9 +1106,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILampArrayStatics=_uuidof(ILampArrayStatics);
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampArrayStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILampArrayStatics_INTERFACE_DEFINED__) */
@@ -1144,16 +1140,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ILampAvailabilityChangedEventArgs=_uuidof(ILampAvailabilityChangedEventArgs);
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampAvailabilityChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILampAvailabilityChangedEventArgs_INTERFACE_DEFINED__) */
@@ -1220,9 +1216,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILampInfo=_uuidof(ILampInfo);
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampInfo;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILampInfo_INTERFACE_DEFINED__) */
@@ -1268,9 +1264,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILampStatics=_uuidof(ILampStatics);
                 
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILampStatics_INTERFACE_DEFINED__) */
@@ -1673,7 +1669,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CILamp * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CILampAvailabilityChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CILamp * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CILampAvailabilityChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CLights__CLamp_Windows__CDevices__CLights__CLampAvailabilityChangedEventArgsVtbl;
 

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -85,6 +85,20 @@ template <typename D> Windows::Devices::Input::MouseDelta consume_Windows_Device
     Windows::Devices::Input::MouseDelta value{};
     check_hresult(WINRT_SHIM(Windows::Devices::Input::IMouseEventArgs)->get_MouseDelta(put_abi(value)));
     return value;
+}
+
+template <typename D> winrt::guid consume_Windows_Devices_Input_IPenDevice<D>::PenId() const
+{
+    winrt::guid value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::Input::IPenDevice)->get_PenId(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Devices::Input::PenDevice consume_Windows_Devices_Input_IPenDeviceStatics<D>::GetFromPointerId(uint32_t pointerId) const
+{
+    Windows::Devices::Input::PenDevice result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Devices::Input::IPenDeviceStatics)->GetFromPointerId(pointerId, put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Devices::Input::PointerDeviceType consume_Windows_Devices_Input_IPointerDevice<D>::PointerDeviceType() const
@@ -302,6 +316,39 @@ struct produce<D, Windows::Devices::Input::IMouseEventArgs> : produce_base<D, Wi
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::Input::IPenDevice> : produce_base<D, Windows::Devices::Input::IPenDevice>
+{
+    int32_t WINRT_CALL get_PenId(winrt::guid* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(PenId, WINRT_WRAP(winrt::guid));
+            *value = detach_from<winrt::guid>(this->shim().PenId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Devices::Input::IPenDeviceStatics> : produce_base<D, Windows::Devices::Input::IPenDeviceStatics>
+{
+    int32_t WINRT_CALL GetFromPointerId(uint32_t pointerId, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetFromPointerId, WINRT_WRAP(Windows::Devices::Input::PenDevice), uint32_t);
+            *result = detach_from<Windows::Devices::Input::PenDevice>(this->shim().GetFromPointerId(pointerId));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::Input::IPointerDevice> : produce_base<D, Windows::Devices::Input::IPointerDevice>
 {
     int32_t WINRT_CALL get_PointerDeviceType(Windows::Devices::Input::PointerDeviceType* value) noexcept final
@@ -469,6 +516,11 @@ inline Windows::Devices::Input::MouseDevice MouseDevice::GetForCurrentView()
     return impl::call_factory<MouseDevice, Windows::Devices::Input::IMouseDeviceStatics>([&](auto&& f) { return f.GetForCurrentView(); });
 }
 
+inline Windows::Devices::Input::PenDevice PenDevice::GetFromPointerId(uint32_t pointerId)
+{
+    return impl::call_factory<PenDevice, Windows::Devices::Input::IPenDeviceStatics>([&](auto&& f) { return f.GetFromPointerId(pointerId); });
+}
+
 inline Windows::Devices::Input::PointerDevice PointerDevice::GetPointerDevice(uint32_t pointerId)
 {
     return impl::call_factory<PointerDevice, Windows::Devices::Input::IPointerDeviceStatics>([&](auto&& f) { return f.GetPointerDevice(pointerId); });
@@ -492,6 +544,8 @@ template<> struct hash<winrt::Windows::Devices::Input::IMouseCapabilities> : win
 template<> struct hash<winrt::Windows::Devices::Input::IMouseDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IMouseDevice> {};
 template<> struct hash<winrt::Windows::Devices::Input::IMouseDeviceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IMouseDeviceStatics> {};
 template<> struct hash<winrt::Windows::Devices::Input::IMouseEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IMouseEventArgs> {};
+template<> struct hash<winrt::Windows::Devices::Input::IPenDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IPenDevice> {};
+template<> struct hash<winrt::Windows::Devices::Input::IPenDeviceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IPenDeviceStatics> {};
 template<> struct hash<winrt::Windows::Devices::Input::IPointerDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IPointerDevice> {};
 template<> struct hash<winrt::Windows::Devices::Input::IPointerDevice2> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IPointerDevice2> {};
 template<> struct hash<winrt::Windows::Devices::Input::IPointerDeviceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Input::IPointerDeviceStatics> {};
@@ -500,6 +554,7 @@ template<> struct hash<winrt::Windows::Devices::Input::KeyboardCapabilities> : w
 template<> struct hash<winrt::Windows::Devices::Input::MouseCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::Input::MouseCapabilities> {};
 template<> struct hash<winrt::Windows::Devices::Input::MouseDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Input::MouseDevice> {};
 template<> struct hash<winrt::Windows::Devices::Input::MouseEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Input::MouseEventArgs> {};
+template<> struct hash<winrt::Windows::Devices::Input::PenDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Input::PenDevice> {};
 template<> struct hash<winrt::Windows::Devices::Input::PointerDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Input::PointerDevice> {};
 template<> struct hash<winrt::Windows::Devices::Input::TouchCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::Input::TouchCapabilities> {};
 

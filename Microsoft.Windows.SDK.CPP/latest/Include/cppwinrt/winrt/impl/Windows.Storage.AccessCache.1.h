@@ -1,10 +1,11 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
 #include "winrt/impl/Windows.Storage.0.h"
+#include "winrt/impl/Windows.System.0.h"
 #include "winrt/impl/Windows.Storage.AccessCache.0.h"
 
 WINRT_EXPORT namespace winrt::Windows::Storage::AccessCache {
@@ -21,6 +22,13 @@ struct WINRT_EBO IStorageApplicationPermissionsStatics :
     impl::consume_t<IStorageApplicationPermissionsStatics>
 {
     IStorageApplicationPermissionsStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IStorageApplicationPermissionsStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IStorageApplicationPermissionsStatics2>
+{
+    IStorageApplicationPermissionsStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IStorageItemAccessList :

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.appextensions.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtension;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtension ABI::Windows::ApplicationModel::AppExtensions::IAppExtension
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtension_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtensionCatalog;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtensionCatalogStatics;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalogStatics ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalogStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalogStatics_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtensionPackageInstalledEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageInstalledEventArgs ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageInstalledEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageInstalledEventArgs_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtensionPackageStatusChangedEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageStatusChangedEventArgs ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageStatusChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageStatusChangedEventArgs_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtensionPackageUninstallingEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUninstallingEventArgs ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageUninstallingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUninstallingEventArgs_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtensionPackageUpdatedEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatedEventArgs ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatedEventArgs_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 interface IAppExtensionPackageUpdatingEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatingEventArgs ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageUpdatingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatingEventArgs_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 class AppExtension;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -416,7 +412,7 @@ IIterator<ABI::Windows::ApplicationModel::AppExtensions::AppExtension*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::AppExtensions::AppExtension*> __FIIterator_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::AppExtensions::IAppExtension*>
@@ -448,7 +444,7 @@ IIterable<ABI::Windows::ApplicationModel::AppExtensions::AppExtension*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::AppExtensions::AppExtension*> __FIIterable_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::AppExtensions::IAppExtension*>
@@ -480,7 +476,7 @@ IVectorView<ABI::Windows::ApplicationModel::AppExtensions::AppExtension*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::AppExtensions::AppExtension*> __FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::AppExtensions::IAppExtension*>
@@ -512,7 +508,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::AppExtensions::IAppExtension*>*>
@@ -544,7 +540,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppExtensions__CAppExtension ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::AppExtensions::IAppExtension*>*>
@@ -560,9 +556,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 class AppExtensionCatalog;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -570,9 +566,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 class AppExtensionPackageInstalledEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -596,7 +592,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageInstalledEventArgs*>
@@ -614,9 +610,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 class AppExtensionPackageStatusChangedEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -640,7 +636,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageStatusChangedEventArgs*>
@@ -658,9 +654,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 class AppExtensionPackageUninstallingEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -684,7 +680,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageUninstallingEventArgs*>
@@ -702,9 +698,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 class AppExtensionPackageUpdatedEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -728,7 +724,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageUpdatedEventArgs*>
@@ -746,9 +742,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppExtensions {
                 class AppExtensionPackageUpdatingEventArgs;
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -772,7 +768,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog*,ABI::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageUpdatingEventArgs*>
@@ -791,9 +787,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -819,7 +815,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IProperty
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IPropertySet*> __FIAsyncOperationCompletedHandler_1___F__CIPropertySet_t;
 #define __FIAsyncOperationCompletedHandler_1___F__CIPropertySet ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___F__CIPropertySet ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IPropertySet*>
@@ -851,7 +847,7 @@ IAsyncOperation<ABI::Windows::Foundation::Collections::IPropertySet*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Foundation::Collections::IPropertySet*> __FIAsyncOperation_1___F__CIPropertySet_t;
 #define __FIAsyncOperation_1___F__CIPropertySet ABI::Windows::Foundation::__FIAsyncOperation_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___F__CIPropertySet ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IPropertySet*>
@@ -866,8 +862,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -875,8 +871,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -902,7 +898,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFolder*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFolder*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFolder*>
@@ -934,7 +930,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFolder*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFolder*> __FIAsyncOperation_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFolder*>
@@ -964,7 +960,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -993,7 +989,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1009,8 +1005,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -1018,8 +1014,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInfo ABI::Windows::ApplicationModel::IAppInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -1029,8 +1025,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class Package;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
@@ -1038,8 +1034,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage ABI::Windows::ApplicationModel::IPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
@@ -1130,9 +1126,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtension=_uuidof(IAppExtension);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtension;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtension_INTERFACE_DEFINED__) */
@@ -1210,9 +1206,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtensionCatalog=_uuidof(IAppExtensionCatalog);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog_INTERFACE_DEFINED__) */
@@ -1252,9 +1248,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtensionCatalogStatics=_uuidof(IAppExtensionCatalogStatics);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalogStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalogStatics_INTERFACE_DEFINED__) */
@@ -1299,9 +1295,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtensionPackageInstalledEventArgs=_uuidof(IAppExtensionPackageInstalledEventArgs);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageInstalledEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageInstalledEventArgs_INTERFACE_DEFINED__) */
@@ -1343,9 +1339,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtensionPackageStatusChangedEventArgs=_uuidof(IAppExtensionPackageStatusChangedEventArgs);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageStatusChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageStatusChangedEventArgs_INTERFACE_DEFINED__) */
@@ -1387,9 +1383,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtensionPackageUninstallingEventArgs=_uuidof(IAppExtensionPackageUninstallingEventArgs);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUninstallingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUninstallingEventArgs_INTERFACE_DEFINED__) */
@@ -1434,9 +1430,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtensionPackageUpdatedEventArgs=_uuidof(IAppExtensionPackageUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -1478,9 +1474,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppExtensionPackageUpdatingEventArgs=_uuidof(IAppExtensionPackageUpdatingEventArgs);
                 
-            } /* Windows */
+            } /* AppExtensions */
         } /* ApplicationModel */
-    } /* AppExtensions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatingEventArgs_INTERFACE_DEFINED__) */
@@ -2119,7 +2115,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtension
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageInstalledEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageInstalledEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageInstalledEventArgsVtbl;
 
@@ -2172,7 +2168,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtension
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageStatusChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageStatusChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageStatusChangedEventArgsVtbl;
 
@@ -2225,7 +2221,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtension
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUninstallingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUninstallingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUninstallingEventArgsVtbl;
 
@@ -2278,7 +2274,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtension
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatedEventArgsVtbl;
 
@@ -2331,7 +2327,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtension
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppExtensions_CIAppExtensionPackageUpdatingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppExtensions__CAppExtensionCatalog_Windows__CApplicationModel__CAppExtensions__CAppExtensionPackageUpdatingEventArgsVtbl;
 

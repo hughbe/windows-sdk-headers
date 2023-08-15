@@ -1850,6 +1850,37 @@ interface IFolderViewSettings : IUnknown
     HRESULT GetGroupSubsetCount([out] UINT *pcVisibleRows);
 }
 
+[
+    object,
+    uuid(6e0f9881-42a8-4f2a-97f8-8af4e026d92d),
+    pointer_default(unique)
+]
+interface IInitializeNetworkFolder : IUnknown
+{
+    HRESULT Initialize(
+        [in, unique] PCIDLIST_ABSOLUTE pidl,
+        [in, unique] PCIDLIST_ABSOLUTE pidlTarget,
+        [in] UINT uDisplayType,                     // RESOURCEDISPLAYTYPE_ values
+        [in, unique, string] LPCWSTR pszResName,    // server or server share name
+        [in, unique, string] LPCWSTR pszProvider);  // network provider name
+}
+
+[
+    object,
+    uuid(CEB38218-C971-47BB-A703-F0BC99CCDB81),
+    pointer_default(unique)
+]
+interface INetworkFolderInternal : IUnknown
+{
+    HRESULT GetResourceDisplayType([out] UINT* displayType);
+    HRESULT GetIDList([out] PIDLIST_ABSOLUTE* idList);
+    HRESULT GetProvider(
+        [in] UINT itemIdCount,
+        [in, size_is(itemIdCount), unique] PCUITEMID_CHILD_ARRAY itemIds,
+        [in] UINT providerMaxLength,
+        [out, size_is(providerMaxLength)] LPWSTR provider);
+}
+
 cpp_quote("#endif  // NTDDI_VISTA")
 
 cpp_quote("#endif  // (_WIN32_IE >= _WIN32_IE_IE70)")
@@ -8370,6 +8401,19 @@ interface IAssocHandlerInvoker : IUnknown
 
     HRESULT Invoke();
 }
+
+typedef [v1_enum] enum AHTYPE
+{
+    AHTYPE_UNDEFINED            = 0x0000,   // default
+    AHTYPE_USER_APPLICATION     = 0x0008,   // user created association (e.g. "Find on this PC" via Open With)
+    AHTYPE_ANY_APPLICATION      = 0x0010,   // applications found under HKCR\Applications
+    AHTYPE_MACHINEDEFAULT       = 0x0020,   // association founder under HKCR\.ext
+    AHTYPE_PROGID               = 0x0040,   // association with a registered progId
+    AHTYPE_APPLICATION          = 0x0080,   // application found under HKCR\.ext\OpenWithList
+    AHTYPE_CLASS_APPLICATION    = 0X0100,
+} AHTYPE;
+
+cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(AHTYPE)")
 
 // Association handlers
 //

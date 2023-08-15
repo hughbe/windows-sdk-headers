@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -69,7 +69,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media {
 struct WINRT_EBO AcrylicBrush :
     Windows::UI::Xaml::Media::IAcrylicBrush,
     impl::base<AcrylicBrush, Windows::UI::Xaml::Media::XamlCompositionBrushBase, Windows::UI::Xaml::Media::Brush, Windows::UI::Xaml::DependencyObject>,
-    impl::require<AcrylicBrush, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Media::IBrush, Windows::UI::Xaml::Media::IBrushOverrides2, Windows::UI::Xaml::Media::IXamlCompositionBrushBase, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>
+    impl::require<AcrylicBrush, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Media::IAcrylicBrush2, Windows::UI::Xaml::Media::IBrush, Windows::UI::Xaml::Media::IBrushOverrides2, Windows::UI::Xaml::Media::IXamlCompositionBrushBase, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>
 {
     AcrylicBrush(std::nullptr_t) noexcept {}
     AcrylicBrush();
@@ -78,6 +78,7 @@ struct WINRT_EBO AcrylicBrush :
     static Windows::UI::Xaml::DependencyProperty TintOpacityProperty();
     static Windows::UI::Xaml::DependencyProperty TintTransitionDurationProperty();
     static Windows::UI::Xaml::DependencyProperty AlwaysUseFallbackProperty();
+    static Windows::UI::Xaml::DependencyProperty TintLuminosityOpacityProperty();
 };
 
 struct WINRT_EBO ArcSegment :
@@ -595,6 +596,14 @@ struct WINRT_EBO ScaleTransform :
     static Windows::UI::Xaml::DependencyProperty ScaleYProperty();
 };
 
+struct WINRT_EBO Shadow :
+    Windows::UI::Xaml::Media::IShadow,
+    impl::base<Shadow, Windows::UI::Xaml::DependencyObject>,
+    impl::require<Shadow, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+{
+    Shadow(std::nullptr_t) noexcept {}
+};
+
 struct WINRT_EBO SkewTransform :
     Windows::UI::Xaml::Media::ISkewTransform,
     impl::base<SkewTransform, Windows::UI::Xaml::Media::Transform, Windows::UI::Xaml::Media::GeneralTransform, Windows::UI::Xaml::DependencyObject>,
@@ -617,6 +626,15 @@ struct WINRT_EBO SolidColorBrush :
     SolidColorBrush();
     SolidColorBrush(Windows::UI::Color const& color);
     static Windows::UI::Xaml::DependencyProperty ColorProperty();
+};
+
+struct WINRT_EBO ThemeShadow :
+    Windows::UI::Xaml::Media::IThemeShadow,
+    impl::base<ThemeShadow, Windows::UI::Xaml::Media::Shadow, Windows::UI::Xaml::DependencyObject>,
+    impl::require<ThemeShadow, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Media::IShadow>
+{
+    ThemeShadow(std::nullptr_t) noexcept {}
+    ThemeShadow();
 };
 
 struct WINRT_EBO TileBrush :
@@ -707,6 +725,7 @@ struct WINRT_EBO VisualTreeHelper :
     static Windows::UI::Xaml::DependencyObject GetParent(Windows::UI::Xaml::DependencyObject const& reference);
     static void DisconnectChildrenRecursive(Windows::UI::Xaml::UIElement const& element);
     static Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> GetOpenPopups(Windows::UI::Xaml::Window const& window);
+    static Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> GetOpenPopupsForXamlRoot(Windows::UI::Xaml::XamlRoot const& xamlRoot);
 };
 
 struct WINRT_EBO XamlCompositionBrushBase :

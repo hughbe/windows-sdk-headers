@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #pragma once
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Security.Credentials.1.h"
+#include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.UI.Shell.1.h"
 #include "winrt/impl/Windows.ApplicationModel.UserActivities.1.h"
@@ -47,6 +48,7 @@ struct WINRT_EBO UserActivityChannel :
     static Windows::ApplicationModel::UserActivities::UserActivityChannel GetDefault();
     static void DisableAutoSessionCreation();
     static Windows::ApplicationModel::UserActivities::UserActivityChannel TryGetForWebAccount(Windows::Security::Credentials::WebAccount const& account);
+    static Windows::ApplicationModel::UserActivities::UserActivityChannel GetForUser(Windows::System::User const& user);
 };
 
 struct WINRT_EBO UserActivityContentInfo :

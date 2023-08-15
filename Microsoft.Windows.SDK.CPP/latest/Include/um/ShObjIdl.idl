@@ -1259,21 +1259,6 @@ cpp_quote("#endif  // NTDDI_VISTA")
 
 [
     object,
-    uuid(6e0f9881-42a8-4f2a-97f8-8af4e026d92d),
-    pointer_default(unique)
-]
-interface IInitializeNetworkFolder : IUnknown
-{
-    HRESULT Initialize(
-        [in, unique] PCIDLIST_ABSOLUTE pidl,
-        [in, unique] PCIDLIST_ABSOLUTE pidlTarget,
-        [in] UINT uDisplayType,                     // RESOURCEDISPLAYTYPE_ values
-        [in, unique, string] LPCWSTR pszResName,    // server or server share name
-        [in, unique, string] LPCWSTR pszProvider);  // network provider name
-}
-
-[
-    object,
     uuid(0DF60D92-6818-46d6-B358-D66170DDE466),
     pointer_default(unique)
 ]

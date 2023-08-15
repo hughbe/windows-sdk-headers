@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.extendedexecution.foreground.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,10 +141,10 @@ namespace ABI {
             namespace ExtendedExecution {
                 namespace Foreground {
                     interface IExtendedExecutionForegroundRevokedEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundRevokedEventArgs ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundRevokedEventArgs_FWD_DEFINED__
@@ -157,10 +157,10 @@ namespace ABI {
             namespace ExtendedExecution {
                 namespace Foreground {
                     interface IExtendedExecutionForegroundSession;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundSession ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundSession_FWD_DEFINED__
@@ -174,10 +174,10 @@ namespace ABI {
             namespace ExtendedExecution {
                 namespace Foreground {
                     enum ExtendedExecutionForegroundResult : int;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult_USE
@@ -198,7 +198,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::ExtendedExe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>
@@ -228,7 +228,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::ExtendedExecution::Foregrou
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult> __FIAsyncOperation_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>
@@ -245,10 +245,10 @@ namespace ABI {
             namespace ExtendedExecution {
                 namespace Foreground {
                     class ExtendedExecutionForegroundRevokedEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -271,7 +271,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::ApplicationModel::ExtendedExecuti
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs*>
@@ -290,8 +290,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -308,10 +308,10 @@ namespace ABI {
                     
                     typedef enum ExtendedExecutionForegroundReason : int ExtendedExecutionForegroundReason;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -321,10 +321,10 @@ namespace ABI {
                     
                     typedef enum ExtendedExecutionForegroundResult : int ExtendedExecutionForegroundResult;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -334,10 +334,10 @@ namespace ABI {
                     
                     typedef enum ExtendedExecutionForegroundRevokedReason : int ExtendedExecutionForegroundRevokedReason;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -348,10 +348,10 @@ namespace ABI {
             namespace ExtendedExecution {
                 namespace Foreground {
                     class ExtendedExecutionForegroundSession;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -388,10 +388,10 @@ namespace ABI {
                         ExtendedExecutionForegroundReason_Unconstrained = 3,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -417,10 +417,10 @@ namespace ABI {
                         ExtendedExecutionForegroundResult_Denied = 1,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -446,10 +446,10 @@ namespace ABI {
                         ExtendedExecutionForegroundRevokedReason_SystemPolicy = 1,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -486,10 +486,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IExtendedExecutionForegroundRevokedEventArgs=_uuidof(IExtendedExecutionForegroundRevokedEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundRevokedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundRevokedEventArgs_INTERFACE_DEFINED__) */
@@ -552,10 +552,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IExtendedExecutionForegroundSession=_uuidof(IExtendedExecutionForegroundSession);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* ExtendedExecution */
-    } /* Foreground */} /* ABI */
+                } /* Foreground */
+            } /* ExtendedExecution */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundSession;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundSession_INTERFACE_DEFINED__) */
@@ -766,7 +766,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundRevokedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CExtendedExecution_CForeground_CIExtendedExecutionForegroundRevokedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CApplicationModel__CExtendedExecution__CForeground__CExtendedExecutionForegroundRevokedEventArgsVtbl;
 

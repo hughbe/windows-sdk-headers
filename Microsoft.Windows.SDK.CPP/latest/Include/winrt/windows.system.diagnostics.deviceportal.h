@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.diagnostics.deviceportal.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     interface IDevicePortalConnection;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnection
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     interface IDevicePortalConnectionClosedEventArgs;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionClosedEventArgs ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnectionClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionClosedEventArgs_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     interface IDevicePortalConnectionRequestReceivedEventArgs;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionRequestReceivedEventArgs ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnectionRequestReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionRequestReceivedEventArgs_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     interface IDevicePortalConnectionStatics;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionStatics ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnectionStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionStatics_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     interface IDevicePortalWebSocketConnection;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnection ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnection
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnection_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     interface IDevicePortalWebSocketConnectionRequestReceivedEventArgs;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnectionRequestReceivedEventArgs ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnectionRequestReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnectionRequestReceivedEventArgs_FWD_DEFINED__
@@ -377,10 +373,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     class DevicePortalConnection;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -389,10 +385,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     class DevicePortalConnectionClosedEventArgs;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -416,7 +412,7 @@ ITypedEventHandler<ABI::Windows::System::Diagnostics::DevicePortal::DevicePortal
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection*,ABI::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnection*,ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnectionClosedEventArgs*>
@@ -435,10 +431,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace DevicePortal {
                     class DevicePortalConnectionRequestReceivedEventArgs;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -462,7 +458,7 @@ ITypedEventHandler<ABI::Windows::System::Diagnostics::DevicePortal::DevicePortal
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection*,ABI::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnection*,ABI::Windows::System::Diagnostics::DevicePortal::IDevicePortalConnectionRequestReceivedEventArgs*>
@@ -493,7 +489,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -522,7 +518,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -551,7 +547,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -568,9 +564,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceConnection;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
@@ -579,9 +575,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceConnection;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection ABI::Windows::ApplicationModel::AppService::IAppServiceConnection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
@@ -594,8 +590,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -603,8 +599,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -620,18 +616,18 @@ namespace ABI {
                 
                 typedef enum MessageWebSocketReceiveMode : int MessageWebSocketReceiveMode;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace Sockets {
                 class ServerMessageWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket_FWD_DEFINED__
@@ -640,9 +636,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IServerMessageWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket ABI::Windows::Networking::Sockets::IServerMessageWebSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket_FWD_DEFINED__
@@ -653,9 +649,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class ServerStreamWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket_FWD_DEFINED__
@@ -664,9 +660,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IServerStreamWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket ABI::Windows::Networking::Sockets::IServerStreamWebSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket_FWD_DEFINED__
@@ -679,9 +675,9 @@ namespace ABI {
                 
                 typedef enum SocketMessageType : int SocketMessageType;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -691,9 +687,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
@@ -702,9 +698,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage ABI::Windows::Web::Http::IHttpRequestMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
@@ -715,9 +711,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -726,9 +722,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage ABI::Windows::Web::Http::IHttpResponseMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -745,10 +741,10 @@ namespace ABI {
                     
                     typedef enum DevicePortalConnectionClosedReason : int DevicePortalConnectionClosedReason;
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -795,10 +791,10 @@ namespace ABI {
                         DevicePortalConnectionClosedReason_ServiceTerminated = 5,
                     };
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -846,10 +842,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDevicePortalConnection=_uuidof(IDevicePortalConnection);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection_INTERFACE_DEFINED__) */
@@ -889,10 +885,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDevicePortalConnectionClosedEventArgs=_uuidof(IDevicePortalConnectionClosedEventArgs);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionClosedEventArgs_INTERFACE_DEFINED__) */
@@ -935,10 +931,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDevicePortalConnectionRequestReceivedEventArgs=_uuidof(IDevicePortalConnectionRequestReceivedEventArgs);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionRequestReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionRequestReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -979,10 +975,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDevicePortalConnectionStatics=_uuidof(IDevicePortalConnectionStatics);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionStatics_INTERFACE_DEFINED__) */
@@ -1041,7 +1037,7 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpRequestMessage * request,
                             /* [in] */__RPC__in HSTRING protocol,
                             /* [in] */UINT32 outboundBufferSizeInBytes,
-                            /* [in] */boolean noDelay,
+                            /* [in] */::boolean noDelay,
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::Sockets::IServerStreamWebSocket * * result
                             ) = 0;
                         
@@ -1049,10 +1045,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDevicePortalWebSocketConnection=_uuidof(IDevicePortalWebSocketConnection);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnection;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnection_INTERFACE_DEFINED__) */
@@ -1085,7 +1081,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsWebSocketUpgradeRequest(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WebSocketProtocolsRequested(
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
@@ -1098,10 +1094,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDevicePortalWebSocketConnectionRequestReceivedEventArgs=_uuidof(IDevicePortalWebSocketConnectionRequestReceivedEventArgs);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* DevicePortal */} /* ABI */
+                } /* DevicePortal */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnectionRequestReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalWebSocketConnectionRequestReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -1251,7 +1247,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionClosedEventArgsVtbl;
 
@@ -1304,7 +1300,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionRequestReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CDiagnostics_CDevicePortal_CIDevicePortalConnectionRequestReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnection_Windows__CSystem__CDiagnostics__CDevicePortal__CDevicePortalConnectionRequestReceivedEventArgsVtbl;
 

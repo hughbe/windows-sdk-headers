@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -450,7 +450,7 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderVal
     virtual int32_t WINRT_CALL get_SharedMaxAge(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL put_SharedMaxAge(void* value) noexcept = 0;
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpChallengeHeaderValue>{ struct type : IInspectable
@@ -463,18 +463,18 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpChallengeHeaderValue>{ 
 template <> struct abi<Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromScheme(void* scheme, void** challengeHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** challengeHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromScheme(void* scheme, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** challengeHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** challengeHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -486,17 +486,17 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpConnectionOptionHeaderV
 template <> struct abi<Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Create(void* token, void** connectionOptionHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Create(void* token, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** connectionOptionHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** connectionOptionHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -508,17 +508,17 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingHeaderValu
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Create(void* contentCoding, void** contentCodingHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Create(void* contentCoding, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** contentCodingHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** contentCodingHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -531,18 +531,18 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingWithQualit
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromValue(void* contentCoding, void** contentCodingWithQualityHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromValueWithQuality(void* contentCoding, double quality, void** contentCodingWithQualityHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromValue(void* contentCoding, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromValueWithQuality(void* contentCoding, double quality, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** contentCodingWithQualityHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** contentCodingWithQualityHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -563,12 +563,12 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpContentDispositionHeade
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Create(void* dispositionType, void** contentDispositionHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Create(void* dispositionType, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** contentDispositionHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** contentDispositionHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -593,7 +593,7 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpContentHeaderCollection
     virtual int32_t WINRT_CALL get_LastModified(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL put_LastModified(void* value) noexcept = 0;
     virtual int32_t WINRT_CALL Append(void* name, void* value) noexcept = 0;
-    virtual int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentRangeHeaderValue>{ struct type : IInspectable
@@ -607,14 +607,14 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpContentRangeHeaderValue
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromLength(uint64_t length, void** contentRangeHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromRange(uint64_t from, uint64_t to, void** contentRangeHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromRangeWithLength(uint64_t from, uint64_t to, uint64_t length, void** contentRangeHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromLength(uint64_t length, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromRange(uint64_t from, uint64_t to, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromRangeWithLength(uint64_t from, uint64_t to, uint64_t length, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpContentRangeHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** contentRangeHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** contentRangeHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -628,18 +628,18 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpCookiePairHeaderValue>{
 template <> struct abi<Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromName(void* name, void** cookiePairHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromName(void* name, void** value) noexcept = 0;
     virtual int32_t WINRT_CALL CreateFromNameWithValue(void* name, void* value, void** cookiePairHeaderValue) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpCookiePairHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** cookiePairHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** cookiePairHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -652,13 +652,13 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpCredentialsHeaderValue>
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromScheme(void* scheme, void** credentialsHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** credentialsHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromScheme(void* scheme, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpCredentialsHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** credentialsHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** credentialsHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -670,7 +670,7 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValue>
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** dateOrDeltaHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** dateOrDeltaHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -685,48 +685,48 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpExpectationHeaderValue>
 template <> struct abi<Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromName(void* name, void** expectationHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromName(void* name, void** value) noexcept = 0;
     virtual int32_t WINRT_CALL CreateFromNameWithValue(void* name, void* value, void** expectationHeaderValue) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpExpectationHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** expectationHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** expectationHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL get_LanguageRange(void** languageRange) noexcept = 0;
+    virtual int32_t WINRT_CALL get_LanguageRange(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_Quality(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromLanguageRange(void* languageRange, void** languageRangeWithQualityHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromLanguageRangeWithQuality(void* languageRange, double quality, void** languageRangeWithQualityHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromLanguageRange(void* languageRange, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromLanguageRangeWithQuality(void* languageRange, double quality, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** languageRangeWithQualityHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** languageRangeWithQualityHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -741,12 +741,12 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue>{ 
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Create(void* mediaType, void** mediaTypeHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Create(void* mediaType, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** mediaTypeHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** mediaTypeHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -764,25 +764,25 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHea
 template <> struct abi<Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromMediaType(void* mediaType, void** mediaTypeWithQualityHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromMediaTypeWithQuality(void* mediaType, double quality, void** mediaTypeWithQualityHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromMediaType(void* mediaType, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromMediaTypeWithQuality(void* mediaType, double quality, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** mediaTypeWithQualityHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** mediaTypeWithQualityHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpMethodHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpNameValueHeaderValue>{ struct type : IInspectable
@@ -794,13 +794,13 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpNameValueHeaderValue>{ 
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromName(void* name, void** nameValueHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromName(void* name, void** value) noexcept = 0;
     virtual int32_t WINRT_CALL CreateFromNameWithValue(void* name, void* value, void** nameValueHeaderValue) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpNameValueHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** nameValueHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** nameValueHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -812,13 +812,13 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpProductHeaderValue>{ st
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpProductHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromName(void* productName, void** productHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** productHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromName(void* productName, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpProductHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** productHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** productHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -831,18 +831,18 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpProductInfoHeaderValue>
 template <> struct abi<Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateFromComment(void* productComment, void** productInfoHeaderValue) noexcept = 0;
-    virtual int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** productInfoHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromComment(void* productComment, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpProductInfoHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** productInfoHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** productInfoHeaderValue, bool* succeeded) noexcept = 0;
 };};
 
@@ -876,7 +876,7 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpRequestHeaderCollection
     virtual int32_t WINRT_CALL get_TransferEncoding(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_UserAgent(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL Append(void* name, void* value) noexcept = 0;
-    virtual int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpResponseHeaderCollection>{ struct type : IInspectable
@@ -896,7 +896,7 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpResponseHeaderCollectio
     virtual int32_t WINRT_CALL get_TransferEncoding(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_WwwAuthenticate(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL Append(void* name, void* value) noexcept = 0;
-    virtual int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue>{ struct type : IInspectable
@@ -908,17 +908,17 @@ template <> struct abi<Windows::Web::Http::Headers::IHttpTransferCodingHeaderVal
 template <> struct abi<Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL ParseAdd(void* input) noexcept = 0;
-    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept = 0;
+    virtual int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Create(void* input, void** transferCodingHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Create(void* input, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Parse(void* input, void** transferCodingHeaderValue) noexcept = 0;
+    virtual int32_t WINRT_CALL Parse(void* input, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL TryParse(void* input, void** transferCodingHeaderValue, bool* succeeded) noexcept = 0;
 };};
 

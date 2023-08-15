@@ -49,6 +49,7 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_PAGE_UNICODE                          ((USAGE) 0x10)
 #define HID_USAGE_PAGE_ALPHANUMERIC                     ((USAGE) 0x14)
 #define HID_USAGE_PAGE_SENSOR                           ((USAGE) 0x20)
+#define HID_USAGE_PAGE_LIGHTING_ILLUMINATION            ((USAGE) 0x59)
 #define HID_USAGE_PAGE_BARCODE_SCANNER                  ((USAGE) 0x8C)
 #define HID_USAGE_PAGE_WEIGHING_DEVICE                  ((USAGE) 0x8D)
 #define HID_USAGE_PAGE_MAGNETIC_STRIPE_READER           ((USAGE) 0x8E)
@@ -597,6 +598,9 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_DIGITIZER_BARREL_SWITCH           ((USAGE) 0x44)
 #define HID_USAGE_DIGITIZER_ERASER                  ((USAGE) 0x45)
 #define HID_USAGE_DIGITIZER_TABLET_PICK             ((USAGE) 0x46)
+#define HID_USAGE_DIGITIZER_TRANSDUCER_SERIAL       ((USAGE) 0x5B)
+#define HID_USAGE_DIGITIZER_TRANSDUCER_VENDOR       ((USAGE) 0x92)
+#define HID_USAGE_DIGITIZER_TRANSDUCER_CONNECTED    ((USAGE) 0xA2)
 
 //
 // Simple Haptic Controller Page (0x0E)
@@ -716,10 +720,6 @@ typedef USHORT USAGE, *PUSAGE;
 //
 // LampArray Page (0x59)
 //
-#define HID_USAGE_PAGE_LIGHTING_ILLUMINATION ((USAGE) 0x59)
-
-// 0x00 - Undefined
-
 #define HID_USAGE_LAMPARRAY                                             ((USAGE) 0x01)
 #define HID_USAGE_LAMPARRAY_ATTRBIUTES_REPORT                           ((USAGE) 0x02)
 #define HID_USAGE_LAMPARRAY_LAMP_COUNT                                  ((USAGE) 0x03)

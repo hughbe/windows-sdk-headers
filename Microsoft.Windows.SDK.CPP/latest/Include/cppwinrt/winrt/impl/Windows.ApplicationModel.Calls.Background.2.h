@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -26,6 +26,12 @@ struct WINRT_EBO PhoneCallOriginDataRequestTriggerDetails :
     Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails
 {
     PhoneCallOriginDataRequestTriggerDetails(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO PhoneIncomingCallDismissedTriggerDetails :
+    Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails
+{
+    PhoneIncomingCallDismissedTriggerDetails(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO PhoneLineChangedTriggerDetails :

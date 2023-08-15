@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.proximity.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IDeviceArrivedEventHandler;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIDeviceArrivedEventHandler ABI::Windows::Networking::Proximity::IDeviceArrivedEventHandler
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIDeviceArrivedEventHandler_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IDeviceDepartedEventHandler;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIDeviceDepartedEventHandler ABI::Windows::Networking::Proximity::IDeviceDepartedEventHandler
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIDeviceDepartedEventHandler_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IMessageReceivedHandler;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIMessageReceivedHandler ABI::Windows::Networking::Proximity::IMessageReceivedHandler
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIMessageReceivedHandler_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IMessageTransmittedHandler;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIMessageTransmittedHandler ABI::Windows::Networking::Proximity::IMessageTransmittedHandler
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIMessageTransmittedHandler_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IConnectionRequestedEventArgs;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs ABI::Windows::Networking::Proximity::IConnectionRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IPeerFinderStatics;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics ABI::Windows::Networking::Proximity::IPeerFinderStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IPeerFinderStatics2;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics2 ABI::Windows::Networking::Proximity::IPeerFinderStatics2
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics2_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IPeerInformation;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation ABI::Windows::Networking::Proximity::IPeerInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IPeerInformation3;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation3 ABI::Windows::Networking::Proximity::IPeerInformation3
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation3_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IPeerInformationWithHostAndService;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIPeerInformationWithHostAndService ABI::Windows::Networking::Proximity::IPeerInformationWithHostAndService
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIPeerInformationWithHostAndService_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IPeerWatcher;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher ABI::Windows::Networking::Proximity::IPeerWatcher
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IProximityDevice;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIProximityDevice ABI::Windows::Networking::Proximity::IProximityDevice
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIProximityDevice_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IProximityDeviceStatics;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIProximityDeviceStatics ABI::Windows::Networking::Proximity::IProximityDeviceStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIProximityDeviceStatics_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface IProximityMessage;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CIProximityMessage ABI::Windows::Networking::Proximity::IProximityMessage
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CIProximityMessage_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 interface ITriggeredConnectionStateChangedEventArgs;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs ABI::Windows::Networking::Proximity::ITriggeredConnectionStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs_FWD_DEFINED__
@@ -490,9 +486,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 class PeerInformation;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -515,7 +511,7 @@ IIterator<ABI::Windows::Networking::Proximity::PeerInformation*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Proximity::PeerInformation*> __FIIterator_1_Windows__CNetworking__CProximity__CPeerInformation_t;
 #define __FIIterator_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CProximity__CPeerInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Proximity::IPeerInformation*>
@@ -547,7 +543,7 @@ IIterable<ABI::Windows::Networking::Proximity::PeerInformation*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Proximity::PeerInformation*> __FIIterable_1_Windows__CNetworking__CProximity__CPeerInformation_t;
 #define __FIIterable_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CProximity__CPeerInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Proximity::IPeerInformation*>
@@ -579,7 +575,7 @@ IVectorView<ABI::Windows::Networking::Proximity::PeerInformation*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Proximity::PeerInformation*> __FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation_t;
 #define __FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Proximity::IPeerInformation*>
@@ -611,7 +607,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CProximit
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Proximity::IPeerInformation*>*>
@@ -643,7 +639,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Proximity::IPeerInformation*>*>
@@ -660,9 +656,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 class ConnectionRequestedEventArgs;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -685,7 +681,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::Networking::Proximity::Connection
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::Networking::Proximity::ConnectionRequestedEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::Networking::Proximity::IConnectionRequestedEventArgs*>
@@ -702,9 +698,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 class TriggeredConnectionStateChangedEventArgs;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -727,7 +723,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::Networking::Proximity::TriggeredC
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::Networking::Proximity::ITriggeredConnectionStateChangedEventArgs*>
@@ -743,9 +739,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 class PeerWatcher;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -769,7 +765,7 @@ ITypedEventHandler<ABI::Windows::Networking::Proximity::PeerWatcher*,IInspectabl
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Proximity::PeerWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Proximity::IPeerWatcher*,IInspectable*>
@@ -803,7 +799,7 @@ ITypedEventHandler<ABI::Windows::Networking::Proximity::PeerWatcher*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Proximity::PeerWatcher*,ABI::Windows::Networking::Proximity::PeerInformation*> __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Proximity::IPeerWatcher*,ABI::Windows::Networking::Proximity::IPeerInformation*>
@@ -834,7 +830,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -864,7 +860,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -894,7 +890,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -923,7 +919,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -952,7 +948,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -967,9 +963,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket_FWD_DEFINED__
@@ -978,9 +974,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket ABI::Windows::Networking::Sockets::IStreamSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket_FWD_DEFINED__
@@ -1006,7 +1002,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::Sockets::StreamSocket*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::Sockets::StreamSocket*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::Sockets::IStreamSocket*>
@@ -1038,7 +1034,7 @@ IAsyncOperation<ABI::Windows::Networking::Sockets::StreamSocket*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::Sockets::StreamSocket*> __FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::Sockets::IStreamSocket*>
@@ -1056,8 +1052,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1065,8 +1061,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1078,8 +1074,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1087,8 +1083,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1107,9 +1103,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1125,9 +1121,9 @@ namespace ABI {
                 
                 typedef enum PeerDiscoveryTypes : unsigned int PeerDiscoveryTypes;
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1136,9 +1132,9 @@ namespace ABI {
                 
                 typedef enum PeerRole : int PeerRole;
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1147,9 +1143,9 @@ namespace ABI {
                 
                 typedef enum PeerWatcherStatus : int PeerWatcherStatus;
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1158,9 +1154,9 @@ namespace ABI {
                 
                 typedef enum TriggeredConnectState : int TriggeredConnectState;
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1186,9 +1182,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 class ProximityDevice;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1196,9 +1192,9 @@ namespace ABI {
         namespace Networking {
             namespace Proximity {
                 class ProximityMessage;
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1234,9 +1230,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PeerDiscoveryTypes)
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1262,9 +1258,9 @@ namespace ABI {
                     PeerRole_Client = 2,
                 };
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1293,9 +1289,9 @@ namespace ABI {
                     PeerWatcherStatus_Aborted = 5,
                 };
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1324,9 +1320,9 @@ namespace ABI {
                     TriggeredConnectState_Failed = 5,
                 };
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1358,9 +1354,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceArrivedEventHandler=_uuidof(IDeviceArrivedEventHandler);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIDeviceArrivedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIDeviceArrivedEventHandler_INTERFACE_DEFINED__) */
@@ -1395,9 +1391,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceDepartedEventHandler=_uuidof(IDeviceDepartedEventHandler);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIDeviceDepartedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIDeviceDepartedEventHandler_INTERFACE_DEFINED__) */
@@ -1433,9 +1429,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageReceivedHandler=_uuidof(IMessageReceivedHandler);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIMessageReceivedHandler;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIMessageReceivedHandler_INTERFACE_DEFINED__) */
@@ -1471,9 +1467,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageTransmittedHandler=_uuidof(IMessageTransmittedHandler);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIMessageTransmittedHandler;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIMessageTransmittedHandler_INTERFACE_DEFINED__) */
@@ -1512,9 +1508,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IConnectionRequestedEventArgs=_uuidof(IConnectionRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1546,22 +1542,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowBluetooth(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowBluetooth(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowInfrastructure(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowInfrastructure(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowWiFiDirect(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowWiFiDirect(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplayName(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1606,9 +1602,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPeerFinderStatics=_uuidof(IPeerFinderStatics);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics_INTERFACE_DEFINED__) */
@@ -1659,9 +1655,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPeerFinderStatics2=_uuidof(IPeerFinderStatics2);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIPeerFinderStatics2_INTERFACE_DEFINED__) */
@@ -1700,9 +1696,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPeerInformation=_uuidof(IPeerInformation);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation_INTERFACE_DEFINED__) */
@@ -1744,9 +1740,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPeerInformation3=_uuidof(IPeerInformation3);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation3_INTERFACE_DEFINED__) */
@@ -1788,9 +1784,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPeerInformationWithHostAndService=_uuidof(IPeerInformationWithHostAndService);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIPeerInformationWithHostAndService;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIPeerInformationWithHostAndService_INTERFACE_DEFINED__) */
@@ -1866,9 +1862,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPeerWatcher=_uuidof(IPeerWatcher);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher_INTERFACE_DEFINED__) */
@@ -1969,9 +1965,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximityDevice=_uuidof(IProximityDevice);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIProximityDevice;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIProximityDevice_INTERFACE_DEFINED__) */
@@ -2017,9 +2013,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximityDeviceStatics=_uuidof(IProximityDeviceStatics);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIProximityDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIProximityDeviceStatics_INTERFACE_DEFINED__) */
@@ -2067,9 +2063,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximityMessage=_uuidof(IProximityMessage);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CIProximityMessage;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CIProximityMessage_INTERFACE_DEFINED__) */
@@ -2114,9 +2110,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITriggeredConnectionStateChangedEventArgs=_uuidof(ITriggeredConnectionStateChangedEventArgs);
                 
-            } /* Windows */
+            } /* Proximity */
         } /* Networking */
-    } /* Proximity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2794,7 +2790,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProxi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CConnectionRequestedEventArgsVtbl;
 
@@ -2845,7 +2841,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProxi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CNetworking__CProximity__CTriggeredConnectionStateChangedEventArgsVtbl;
 
@@ -2896,7 +2892,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_IInspectableVtbl;
 
@@ -2948,7 +2944,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformation * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIPeerWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CProximity_CIPeerInformation * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CProximity__CPeerWatcher_Windows__CNetworking__CProximity__CPeerInformationVtbl;
 

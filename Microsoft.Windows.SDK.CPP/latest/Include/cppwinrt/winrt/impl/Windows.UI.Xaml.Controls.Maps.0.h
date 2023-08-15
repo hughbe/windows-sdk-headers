@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -99,6 +99,7 @@ enum class MapLoadingStatus : int32_t
     Loading = 0,
     Loaded = 1,
     DataUnavailable = 2,
+    DownloadedMapsManagerUnavailable = 3,
 };
 
 enum class MapModel3DShadingOption : int32_t
@@ -183,6 +184,7 @@ struct IMapControl4;
 struct IMapControl5;
 struct IMapControl6;
 struct IMapControl7;
+struct IMapControl8;
 struct IMapControlBusinessLandmarkClickEventArgs;
 struct IMapControlBusinessLandmarkPointerEnteredEventArgs;
 struct IMapControlBusinessLandmarkPointerExitedEventArgs;
@@ -197,6 +199,7 @@ struct IMapControlStatics4;
 struct IMapControlStatics5;
 struct IMapControlStatics6;
 struct IMapControlStatics7;
+struct IMapControlStatics8;
 struct IMapControlTransitFeatureClickEventArgs;
 struct IMapControlTransitFeaturePointerEnteredEventArgs;
 struct IMapControlTransitFeaturePointerExitedEventArgs;
@@ -355,6 +358,7 @@ template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControl4>{ us
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControl5>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControl6>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControl7>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControl8>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerEnteredEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerExitedEventArgs>{ using type = interface_category; };
@@ -369,6 +373,7 @@ template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlStatic
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlStatics5>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlStatics6>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlStatics7>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerEnteredEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerExitedEventArgs>{ using type = interface_category; };
@@ -536,6 +541,7 @@ template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControl4>{ static
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControl5>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControl5" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControl6>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControl6" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControl7>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControl7" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControl8>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControl8" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkClickEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerEnteredEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkPointerEnteredEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerExitedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkPointerExitedEventArgs" }; };
@@ -550,6 +556,7 @@ template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlStatics4>{
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlStatics5>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlStatics5" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlStatics6>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlStatics6" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlStatics7>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlStatics7" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlStatics8" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlTransitFeatureClickEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerEnteredEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlTransitFeaturePointerEnteredEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerExitedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Maps.IMapControlTransitFeaturePointerExitedEventArgs" }; };
@@ -717,6 +724,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControl4>
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControl5>{ static constexpr guid value{ 0xDD9B0FFD,0x7823,0x46A2,{ 0x82,0xC9,0x65,0xDD,0xAC,0x4F,0x36,0x5F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControl6>{ static constexpr guid value{ 0xB0DA89A2,0x1041,0x4BEA,{ 0xB8,0x8A,0x12,0xAC,0x9A,0x82,0xE0,0xE2 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControl7>{ static constexpr guid value{ 0x0D86E453,0x0C1F,0x4F7E,{ 0xAE,0x66,0x4A,0xD0,0xB4,0x98,0x78,0x57 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControl8>{ static constexpr guid value{ 0x009E9C46,0x724D,0x53CA,{ 0x94,0x21,0x7A,0x48,0xFC,0x73,0x15,0x23 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs>{ static constexpr guid value{ 0x5E464922,0x4A1A,0x4797,{ 0xBE,0xB7,0x5C,0xF7,0x75,0x4C,0xB8,0x67 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerEnteredEventArgs>{ static constexpr guid value{ 0x5E4081A6,0xEA98,0x4F95,{ 0x8C,0xAF,0x5B,0x42,0x69,0x6F,0xF5,0x04 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerExitedEventArgs>{ static constexpr guid value{ 0x2BB52CAF,0xF24A,0x46D0,{ 0xB4,0x63,0x65,0xF7,0x19,0x73,0x10,0x57 } }; };
@@ -731,6 +739,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlSt
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlStatics5>{ static constexpr guid value{ 0x09626F00,0xB7DD,0x4189,{ 0xA7,0xF7,0x83,0x0C,0x41,0x2D,0xEE,0xA3 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlStatics6>{ static constexpr guid value{ 0x3CCFDD7F,0x24D1,0x40A2,{ 0x83,0x51,0xB3,0x06,0x3A,0x8C,0x95,0xA4 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlStatics7>{ static constexpr guid value{ 0x55F1AC4D,0x72C2,0x46B2,{ 0xB7,0xAE,0x79,0x02,0x60,0xBE,0x64,0x1B } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>{ static constexpr guid value{ 0xADB7A7B0,0x0605,0x592C,{ 0xBF,0x9D,0xD1,0x0B,0xDC,0x2B,0xE4,0x7B } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs>{ static constexpr guid value{ 0x76179969,0xB765,0x4622,{ 0xB0,0x8A,0x30,0x72,0x74,0x5A,0x45,0x41 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerEnteredEventArgs>{ static constexpr guid value{ 0x73911A4E,0xEC4F,0x479E,{ 0x94,0xA1,0x36,0xE0,0x81,0xD0,0xD8,0x97 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerExitedEventArgs>{ static constexpr guid value{ 0x6A11258D,0x448D,0x44E7,{ 0xBC,0x69,0xD1,0x3D,0x49,0x71,0x54,0xE9 } }; };
@@ -1138,6 +1147,14 @@ template <> struct abi<Windows::UI::Xaml::Controls::Maps::IMapControl7>{ struct 
     virtual int32_t WINRT_CALL put_Region(void* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::Maps::IMapControl8>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_CanTiltDown(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CanTiltUp(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CanZoomIn(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CanZoomOut(bool* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_LocalLocations(void** value) noexcept = 0;
@@ -1254,6 +1271,14 @@ template <> struct abi<Windows::UI::Xaml::Controls::Maps::IMapControlStatics6>{ 
 template <> struct abi<Windows::UI::Xaml::Controls::Maps::IMapControlStatics7>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_RegionProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_CanTiltDownProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CanTiltUpProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CanZoomInProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CanZoomOutProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs>{ struct type : IInspectable
@@ -2255,6 +2280,16 @@ struct consume_Windows_UI_Xaml_Controls_Maps_IMapControl7
 template <> struct consume<Windows::UI::Xaml::Controls::Maps::IMapControl7> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Maps_IMapControl7<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Maps_IMapControl8
+{
+    bool CanTiltDown() const;
+    bool CanTiltUp() const;
+    bool CanZoomIn() const;
+    bool CanZoomOut() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Maps::IMapControl8> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Maps_IMapControl8<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Maps_IMapControlBusinessLandmarkClickEventArgs
 {
     Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::LocalSearch::LocalLocation> LocalLocations() const;
@@ -2415,6 +2450,16 @@ struct consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics7
     Windows::UI::Xaml::DependencyProperty RegionProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::Controls::Maps::IMapControlStatics7> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics7<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8
+{
+    Windows::UI::Xaml::DependencyProperty CanTiltDownProperty() const;
+    Windows::UI::Xaml::DependencyProperty CanTiltUpProperty() const;
+    Windows::UI::Xaml::DependencyProperty CanZoomInProperty() const;
+    Windows::UI::Xaml::DependencyProperty CanZoomOutProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Maps::IMapControlStatics8> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Maps_IMapControlTransitFeatureClickEventArgs

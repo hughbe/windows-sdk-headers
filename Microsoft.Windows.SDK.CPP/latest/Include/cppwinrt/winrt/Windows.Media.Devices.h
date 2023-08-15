@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -257,6 +257,13 @@ template <typename D> Windows::Media::Devices::VideoTemporalDenoisingControl con
 {
     Windows::Media::Devices::VideoTemporalDenoisingControl value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6)->get_VideoTemporalDenoisingControl(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Media::Devices::InfraredTorchControl consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController7<D>::InfraredTorchControl() const
+{
+    Windows::Media::Devices::InfraredTorchControl value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7)->get_InfraredTorchControl(put_abi(value)));
     return value;
 }
 
@@ -997,6 +1004,65 @@ template <typename D> Windows::Media::Devices::HdrVideoMode consume_Windows_Medi
 template <typename D> void consume_Windows_Media_Devices_IHdrVideoControl<D>::Mode(Windows::Media::Devices::HdrVideoMode const& value) const
 {
     check_hresult(WINRT_SHIM(Windows::Media::Devices::IHdrVideoControl)->put_Mode(get_abi(value)));
+}
+
+template <typename D> bool consume_Windows_Media_Devices_IInfraredTorchControl<D>::IsSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_IsSupported(&value));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::InfraredTorchMode> consume_Windows_Media_Devices_IInfraredTorchControl<D>::SupportedModes() const
+{
+    Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::InfraredTorchMode> value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_SupportedModes(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Media::Devices::InfraredTorchMode consume_Windows_Media_Devices_IInfraredTorchControl<D>::CurrentMode() const
+{
+    Windows::Media::Devices::InfraredTorchMode value{};
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_CurrentMode(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_Media_Devices_IInfraredTorchControl<D>::CurrentMode(Windows::Media::Devices::InfraredTorchMode const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->put_CurrentMode(get_abi(value)));
+}
+
+template <typename D> int32_t consume_Windows_Media_Devices_IInfraredTorchControl<D>::MinPower() const
+{
+    int32_t value{};
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_MinPower(&value));
+    return value;
+}
+
+template <typename D> int32_t consume_Windows_Media_Devices_IInfraredTorchControl<D>::MaxPower() const
+{
+    int32_t value{};
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_MaxPower(&value));
+    return value;
+}
+
+template <typename D> int32_t consume_Windows_Media_Devices_IInfraredTorchControl<D>::PowerStep() const
+{
+    int32_t value{};
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_PowerStep(&value));
+    return value;
+}
+
+template <typename D> int32_t consume_Windows_Media_Devices_IInfraredTorchControl<D>::Power() const
+{
+    int32_t value{};
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_Power(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Media_Devices_IInfraredTorchControl<D>::Power(int32_t value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Media::Devices::IInfraredTorchControl)->put_Power(value));
 }
 
 template <typename D> bool consume_Windows_Media_Devices_IIsoSpeedControl<D>::Supported() const
@@ -2524,6 +2590,23 @@ struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController
 };
 
 template <typename D>
+struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7>
+{
+    int32_t WINRT_CALL get_InfraredTorchControl(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(InfraredTorchControl, WINRT_WRAP(Windows::Media::Devices::InfraredTorchControl));
+            *value = detach_from<Windows::Media::Devices::InfraredTorchControl>(this->shim().InfraredTorchControl());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Media::Devices::IAudioDeviceController> : produce_base<D, Windows::Media::Devices::IAudioDeviceController>
 {
     int32_t WINRT_CALL put_Muted(bool value) noexcept final
@@ -3885,6 +3968,119 @@ struct produce<D, Windows::Media::Devices::IHdrVideoControl> : produce_base<D, W
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Mode, WINRT_WRAP(void), Windows::Media::Devices::HdrVideoMode const&);
             this->shim().Mode(*reinterpret_cast<Windows::Media::Devices::HdrVideoMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Media::Devices::IInfraredTorchControl> : produce_base<D, Windows::Media::Devices::IInfraredTorchControl>
+{
+    int32_t WINRT_CALL get_IsSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_SupportedModes(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SupportedModes, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::InfraredTorchMode>));
+            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::InfraredTorchMode>>(this->shim().SupportedModes());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CurrentMode(Windows::Media::Devices::InfraredTorchMode* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CurrentMode, WINRT_WRAP(Windows::Media::Devices::InfraredTorchMode));
+            *value = detach_from<Windows::Media::Devices::InfraredTorchMode>(this->shim().CurrentMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_CurrentMode(Windows::Media::Devices::InfraredTorchMode value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CurrentMode, WINRT_WRAP(void), Windows::Media::Devices::InfraredTorchMode const&);
+            this->shim().CurrentMode(*reinterpret_cast<Windows::Media::Devices::InfraredTorchMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_MinPower(int32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MinPower, WINRT_WRAP(int32_t));
+            *value = detach_from<int32_t>(this->shim().MinPower());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_MaxPower(int32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MaxPower, WINRT_WRAP(int32_t));
+            *value = detach_from<int32_t>(this->shim().MaxPower());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_PowerStep(int32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(PowerStep, WINRT_WRAP(int32_t));
+            *value = detach_from<int32_t>(this->shim().PowerStep());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Power(int32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Power, WINRT_WRAP(int32_t));
+            *value = detach_from<int32_t>(this->shim().Power());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Power(int32_t value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Power, WINRT_WRAP(void), int32_t);
+            this->shim().Power(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5930,6 +6126,7 @@ template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDevi
 template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> {};
 template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5> {};
 template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6> {};
+template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> {};
 template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceController> {};
 template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModule> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceModule> {};
 template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs> {};
@@ -5948,6 +6145,7 @@ template<> struct hash<winrt::Windows::Media::Devices::IFocusControl> : winrt::i
 template<> struct hash<winrt::Windows::Media::Devices::IFocusControl2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IFocusControl2> {};
 template<> struct hash<winrt::Windows::Media::Devices::IFocusSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IFocusSettings> {};
 template<> struct hash<winrt::Windows::Media::Devices::IHdrVideoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IHdrVideoControl> {};
+template<> struct hash<winrt::Windows::Media::Devices::IInfraredTorchControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IInfraredTorchControl> {};
 template<> struct hash<winrt::Windows::Media::Devices::IIsoSpeedControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IIsoSpeedControl> {};
 template<> struct hash<winrt::Windows::Media::Devices::IIsoSpeedControl2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IIsoSpeedControl2> {};
 template<> struct hash<winrt::Windows::Media::Devices::IKeypadPressedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IKeypadPressedEventArgs> {};
@@ -5990,6 +6188,7 @@ template<> struct hash<winrt::Windows::Media::Devices::FlashControl> : winrt::im
 template<> struct hash<winrt::Windows::Media::Devices::FocusControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::FocusControl> {};
 template<> struct hash<winrt::Windows::Media::Devices::FocusSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::FocusSettings> {};
 template<> struct hash<winrt::Windows::Media::Devices::HdrVideoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::HdrVideoControl> {};
+template<> struct hash<winrt::Windows::Media::Devices::InfraredTorchControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::InfraredTorchControl> {};
 template<> struct hash<winrt::Windows::Media::Devices::IsoSpeedControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IsoSpeedControl> {};
 template<> struct hash<winrt::Windows::Media::Devices::KeypadPressedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::KeypadPressedEventArgs> {};
 template<> struct hash<winrt::Windows::Media::Devices::LowLagPhotoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::LowLagPhotoControl> {};

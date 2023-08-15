@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.services.cortana.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 interface ICortanaActionableInsights;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsights ABI::Windows::Services::Cortana::ICortanaActionableInsights
 
 #endif // ____x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsights_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 interface ICortanaActionableInsightsOptions;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsOptions ABI::Windows::Services::Cortana::ICortanaActionableInsightsOptions
 
 #endif // ____x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsOptions_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 interface ICortanaActionableInsightsStatics;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsStatics ABI::Windows::Services::Cortana::ICortanaActionableInsightsStatics
 
 #endif // ____x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsStatics_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 interface ICortanaPermissionsManager;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManager ABI::Windows::Services::Cortana::ICortanaPermissionsManager
 
 #endif // ____x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManager_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 interface ICortanaPermissionsManagerStatics;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManagerStatics ABI::Windows::Services::Cortana::ICortanaPermissionsManagerStatics
 
 #endif // ____x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManagerStatics_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 interface ICortanaSettings;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CCortana_CICortanaSettings ABI::Windows::Services::Cortana::ICortanaSettings
 
 #endif // ____x_ABI_CWindows_CServices_CCortana_CICortanaSettings_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 interface ICortanaSettingsStatics;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CCortana_CICortanaSettingsStatics ABI::Windows::Services::Cortana::ICortanaSettingsStatics
 
 #endif // ____x_ABI_CWindows_CServices_CCortana_CICortanaSettingsStatics_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 enum CortanaPermission : int;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CServices__CCortana__CCortanaPermission_USE
@@ -401,7 +397,7 @@ IIterator<enum ABI::Windows::Services::Cortana::CortanaPermission> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Services::Cortana::CortanaPermission> __FIIterator_1_Windows__CServices__CCortana__CCortanaPermission_t;
 #define __FIIterator_1_Windows__CServices__CCortana__CCortanaPermission ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CCortana__CCortanaPermission_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CCortana__CCortanaPermission ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Cortana::CortanaPermission>
@@ -431,7 +427,7 @@ IIterable<enum ABI::Windows::Services::Cortana::CortanaPermission> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Services::Cortana::CortanaPermission> __FIIterable_1_Windows__CServices__CCortana__CCortanaPermission_t;
 #define __FIIterable_1_Windows__CServices__CCortana__CCortanaPermission ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CCortana__CCortanaPermission_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CCortana__CCortanaPermission ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Cortana::CortanaPermission>
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 enum CortanaPermissionsChangeResult : int;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult_USE
@@ -469,7 +465,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Services::Cortana::CortanaPer
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Services::Cortana::CortanaPermissionsChangeResult> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Cortana::CortanaPermissionsChangeResult>
@@ -499,7 +495,7 @@ IAsyncOperation<enum ABI::Windows::Services::Cortana::CortanaPermissionsChangeRe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Services::Cortana::CortanaPermissionsChangeResult> __FIAsyncOperation_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CCortana__CCortanaPermissionsChangeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Cortana::CortanaPermissionsChangeResult>
@@ -528,7 +524,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -557,7 +553,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -574,9 +570,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackage;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_FWD_DEFINED__
@@ -585,9 +581,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackage;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage ABI::Windows::ApplicationModel::DataTransfer::IDataPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_FWD_DEFINED__
@@ -602,8 +598,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -614,8 +610,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -623,8 +619,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -639,9 +635,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -655,8 +651,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -664,8 +660,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -680,9 +676,9 @@ namespace ABI {
                 
                 typedef enum CortanaPermission : int CortanaPermission;
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -691,9 +687,9 @@ namespace ABI {
                 
                 typedef enum CortanaPermissionsChangeResult : int CortanaPermissionsChangeResult;
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -707,9 +703,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 class CortanaActionableInsights;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -717,9 +713,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 class CortanaActionableInsightsOptions;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -727,9 +723,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 class CortanaPermissionsManager;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -737,9 +733,9 @@ namespace ABI {
         namespace Services {
             namespace Cortana {
                 class CortanaSettings;
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -780,9 +776,9 @@ namespace ABI {
                     CortanaPermission_PhoneCall = 10,
                 };
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -808,9 +804,9 @@ namespace ABI {
                     CortanaPermissionsChangeResult_DisabledByPolicy = 2,
                 };
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -876,9 +872,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICortanaActionableInsights=_uuidof(ICortanaActionableInsights);
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsights;
 #endif /* !defined(____x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsights_INTERFACE_DEFINED__) */
@@ -926,9 +922,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICortanaActionableInsightsOptions=_uuidof(ICortanaActionableInsightsOptions);
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsOptions;
 #endif /* !defined(____x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsOptions_INTERFACE_DEFINED__) */
@@ -971,9 +967,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICortanaActionableInsightsStatics=_uuidof(ICortanaActionableInsightsStatics);
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CCortana_CICortanaActionableInsightsStatics_INTERFACE_DEFINED__) */
@@ -1005,7 +1001,7 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ArePermissionsGrantedAsync(
                         /* [in] */__RPC__in_opt __FIIterable_1_Windows__CServices__CCortana__CCortanaPermission * permissions,
@@ -1024,9 +1020,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICortanaPermissionsManager=_uuidof(ICortanaPermissionsManager);
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManager;
 #endif /* !defined(____x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManager_INTERFACE_DEFINED__) */
@@ -1065,9 +1061,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICortanaPermissionsManagerStatics=_uuidof(ICortanaPermissionsManagerStatics);
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CCortana_CICortanaPermissionsManagerStatics_INTERFACE_DEFINED__) */
@@ -1099,22 +1095,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasUserConsentToVoiceActivation(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVoiceActivationEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsVoiceActivationEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ICortanaSettings=_uuidof(ICortanaSettings);
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CCortana_CICortanaSettings;
 #endif /* !defined(____x_ABI_CWindows_CServices_CCortana_CICortanaSettings_INTERFACE_DEFINED__) */
@@ -1146,7 +1142,7 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDefault(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Services::Cortana::ICortanaSettings * * result
@@ -1156,9 +1152,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICortanaSettingsStatics=_uuidof(ICortanaSettingsStatics);
                 
-            } /* Windows */
+            } /* Cortana */
         } /* Services */
-    } /* Cortana */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CCortana_CICortanaSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CCortana_CICortanaSettingsStatics_INTERFACE_DEFINED__) */

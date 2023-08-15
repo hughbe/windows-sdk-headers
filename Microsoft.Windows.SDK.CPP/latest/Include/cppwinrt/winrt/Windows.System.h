@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -653,6 +653,13 @@ template <typename D> void consume_Windows_System_IDispatcherQueue<D>::ShutdownC
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::System::IDispatcherQueue)->remove_ShutdownCompleted(get_abi(token)));
 }
 
+template <typename D> bool consume_Windows_System_IDispatcherQueue2<D>::HasThreadAccess() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::System::IDispatcherQueue2)->get_HasThreadAccess(&value));
+    return value;
+}
+
 template <typename D> Windows::System::DispatcherQueue consume_Windows_System_IDispatcherQueueController<D>::DispatcherQueue() const
 {
     Windows::System::DispatcherQueue value{ nullptr };
@@ -676,9 +683,9 @@ template <typename D> Windows::System::DispatcherQueueController consume_Windows
 
 template <typename D> Windows::Foundation::Deferral consume_Windows_System_IDispatcherQueueShutdownStartingEventArgs<D>::GetDeferral() const
 {
-    Windows::Foundation::Deferral value{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::System::IDispatcherQueueShutdownStartingEventArgs)->GetDeferral(put_abi(value)));
-    return value;
+    Windows::Foundation::Deferral result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::IDispatcherQueueShutdownStartingEventArgs)->GetDeferral(put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::System::DispatcherQueue consume_Windows_System_IDispatcherQueueStatics<D>::GetForCurrentThread() const
@@ -1538,9 +1545,9 @@ template <typename D> void consume_Windows_System_IUserAuthenticationStatusChang
 
 template <typename D> Windows::System::UserAuthenticationStatusChangeDeferral consume_Windows_System_IUserAuthenticationStatusChangingEventArgs<D>::GetDeferral() const
 {
-    Windows::System::UserAuthenticationStatusChangeDeferral deferral{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::System::IUserAuthenticationStatusChangingEventArgs)->GetDeferral(put_abi(deferral)));
-    return deferral;
+    Windows::System::UserAuthenticationStatusChangeDeferral result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::IUserAuthenticationStatusChangingEventArgs)->GetDeferral(put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::System::User consume_Windows_System_IUserAuthenticationStatusChangingEventArgs<D>::User() const
@@ -1642,23 +1649,23 @@ template <typename D> void consume_Windows_System_IUserPicker<D>::SuggestedSelec
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::System::User> consume_Windows_System_IUserPicker<D>::PickSingleUserAsync() const
 {
-    Windows::Foundation::IAsyncOperation<Windows::System::User> pickSingleUserOperation{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::System::IUserPicker)->PickSingleUserAsync(put_abi(pickSingleUserOperation)));
-    return pickSingleUserOperation;
+    Windows::Foundation::IAsyncOperation<Windows::System::User> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::IUserPicker)->PickSingleUserAsync(put_abi(operation)));
+    return operation;
 }
 
 template <typename D> bool consume_Windows_System_IUserPickerStatics<D>::IsSupported() const
 {
-    bool value{};
-    check_hresult(WINRT_SHIM(Windows::System::IUserPickerStatics)->IsSupported(&value));
-    return value;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::System::IUserPickerStatics)->IsSupported(&result));
+    return result;
 }
 
 template <typename D> Windows::System::UserWatcher consume_Windows_System_IUserStatics<D>::CreateWatcher() const
 {
-    Windows::System::UserWatcher watcher{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::System::IUserStatics)->CreateWatcher(put_abi(watcher)));
-    return watcher;
+    Windows::System::UserWatcher result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::IUserStatics)->CreateWatcher(put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::System::User>> consume_Windows_System_IUserStatics<D>::FindAllAsync() const
@@ -1684,9 +1691,9 @@ template <typename D> Windows::Foundation::IAsyncOperation<Windows::Foundation::
 
 template <typename D> Windows::System::User consume_Windows_System_IUserStatics<D>::GetFromId(param::hstring const& nonRoamableId) const
 {
-    Windows::System::User value{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::System::IUserStatics)->GetFromId(get_abi(nonRoamableId), put_abi(value)));
-    return value;
+    Windows::System::User result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::IUserStatics)->GetFromId(get_abi(nonRoamableId), put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::System::UserWatcherStatus consume_Windows_System_IUserWatcher<D>::Status() const
@@ -2993,6 +3000,22 @@ struct produce<D, Windows::System::IDispatcherQueue> : produce_base<D, Windows::
 };
 
 template <typename D>
+struct produce<D, Windows::System::IDispatcherQueue2> : produce_base<D, Windows::System::IDispatcherQueue2>
+{
+    int32_t WINRT_CALL get_HasThreadAccess(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(HasThreadAccess, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().HasThreadAccess());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::System::IDispatcherQueueController> : produce_base<D, Windows::System::IDispatcherQueueController>
 {
     int32_t WINRT_CALL get_DispatcherQueue(void** value) noexcept final
@@ -3042,14 +3065,14 @@ struct produce<D, Windows::System::IDispatcherQueueControllerStatics> : produce_
 template <typename D>
 struct produce<D, Windows::System::IDispatcherQueueShutdownStartingEventArgs> : produce_base<D, Windows::System::IDispatcherQueueShutdownStartingEventArgs>
 {
-    int32_t WINRT_CALL GetDeferral(void** value) noexcept final
+    int32_t WINRT_CALL GetDeferral(void** result) noexcept final
     {
         try
         {
-            *value = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetDeferral, WINRT_WRAP(Windows::Foundation::Deferral));
-            *value = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *result = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4792,14 +4815,14 @@ struct produce<D, Windows::System::IUserAuthenticationStatusChangeDeferral> : pr
 template <typename D>
 struct produce<D, Windows::System::IUserAuthenticationStatusChangingEventArgs> : produce_base<D, Windows::System::IUserAuthenticationStatusChangingEventArgs>
 {
-    int32_t WINRT_CALL GetDeferral(void** deferral) noexcept final
+    int32_t WINRT_CALL GetDeferral(void** result) noexcept final
     {
         try
         {
-            *deferral = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetDeferral, WINRT_WRAP(Windows::System::UserAuthenticationStatusChangeDeferral));
-            *deferral = detach_from<Windows::System::UserAuthenticationStatusChangeDeferral>(this->shim().GetDeferral());
+            *result = detach_from<Windows::System::UserAuthenticationStatusChangeDeferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4992,14 +5015,14 @@ struct produce<D, Windows::System::IUserPicker> : produce_base<D, Windows::Syste
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL PickSingleUserAsync(void** pickSingleUserOperation) noexcept final
+    int32_t WINRT_CALL PickSingleUserAsync(void** operation) noexcept final
     {
         try
         {
-            *pickSingleUserOperation = nullptr;
+            *operation = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(PickSingleUserAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::System::User>));
-            *pickSingleUserOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::System::User>>(this->shim().PickSingleUserAsync());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::System::User>>(this->shim().PickSingleUserAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5009,13 +5032,13 @@ struct produce<D, Windows::System::IUserPicker> : produce_base<D, Windows::Syste
 template <typename D>
 struct produce<D, Windows::System::IUserPickerStatics> : produce_base<D, Windows::System::IUserPickerStatics>
 {
-    int32_t WINRT_CALL IsSupported(bool* value) noexcept final
+    int32_t WINRT_CALL IsSupported(bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(IsSupported, WINRT_WRAP(bool));
-            *value = detach_from<bool>(this->shim().IsSupported());
+            *result = detach_from<bool>(this->shim().IsSupported());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5025,14 +5048,14 @@ struct produce<D, Windows::System::IUserPickerStatics> : produce_base<D, Windows
 template <typename D>
 struct produce<D, Windows::System::IUserStatics> : produce_base<D, Windows::System::IUserStatics>
 {
-    int32_t WINRT_CALL CreateWatcher(void** watcher) noexcept final
+    int32_t WINRT_CALL CreateWatcher(void** result) noexcept final
     {
         try
         {
-            *watcher = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateWatcher, WINRT_WRAP(Windows::System::UserWatcher));
-            *watcher = detach_from<Windows::System::UserWatcher>(this->shim().CreateWatcher());
+            *result = detach_from<Windows::System::UserWatcher>(this->shim().CreateWatcher());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5077,14 +5100,14 @@ struct produce<D, Windows::System::IUserStatics> : produce_base<D, Windows::Syst
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL GetFromId(void* nonRoamableId, void** value) noexcept final
+    int32_t WINRT_CALL GetFromId(void* nonRoamableId, void** result) noexcept final
     {
         try
         {
-            *value = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetFromId, WINRT_WRAP(Windows::System::User), hstring const&);
-            *value = detach_from<Windows::System::User>(this->shim().GetFromId(*reinterpret_cast<hstring const*>(&nonRoamableId)));
+            *result = detach_from<Windows::System::User>(this->shim().GetFromId(*reinterpret_cast<hstring const*>(&nonRoamableId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5808,6 +5831,7 @@ template<> struct hash<winrt::Windows::System::IAppUriHandlerRegistrationManager
 template<> struct hash<winrt::Windows::System::IAppUriHandlerRegistrationManagerStatics> : winrt::impl::hash_base<winrt::Windows::System::IAppUriHandlerRegistrationManagerStatics> {};
 template<> struct hash<winrt::Windows::System::IDateTimeSettingsStatics> : winrt::impl::hash_base<winrt::Windows::System::IDateTimeSettingsStatics> {};
 template<> struct hash<winrt::Windows::System::IDispatcherQueue> : winrt::impl::hash_base<winrt::Windows::System::IDispatcherQueue> {};
+template<> struct hash<winrt::Windows::System::IDispatcherQueue2> : winrt::impl::hash_base<winrt::Windows::System::IDispatcherQueue2> {};
 template<> struct hash<winrt::Windows::System::IDispatcherQueueController> : winrt::impl::hash_base<winrt::Windows::System::IDispatcherQueueController> {};
 template<> struct hash<winrt::Windows::System::IDispatcherQueueControllerStatics> : winrt::impl::hash_base<winrt::Windows::System::IDispatcherQueueControllerStatics> {};
 template<> struct hash<winrt::Windows::System::IDispatcherQueueShutdownStartingEventArgs> : winrt::impl::hash_base<winrt::Windows::System::IDispatcherQueueShutdownStartingEventArgs> {};

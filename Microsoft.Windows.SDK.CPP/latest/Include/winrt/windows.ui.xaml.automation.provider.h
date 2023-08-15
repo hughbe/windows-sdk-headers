@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.automation.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,11 +277,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IAnnotationProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIAnnotationProvider ABI::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIAnnotationProvider_FWD_DEFINED__
@@ -299,11 +295,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ICustomNavigationProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CICustomNavigationProvider ABI::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CICustomNavigationProvider_FWD_DEFINED__
@@ -317,11 +313,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IDockProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDockProvider ABI::Windows::UI::Xaml::Automation::Provider::IDockProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDockProvider_FWD_DEFINED__
@@ -335,11 +331,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IDragProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDragProvider ABI::Windows::UI::Xaml::Automation::Provider::IDragProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDragProvider_FWD_DEFINED__
@@ -353,11 +349,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IDropTargetProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDropTargetProvider ABI::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDropTargetProvider_FWD_DEFINED__
@@ -371,11 +367,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IExpandCollapseProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIExpandCollapseProvider ABI::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIExpandCollapseProvider_FWD_DEFINED__
@@ -389,11 +385,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IGridItemProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridItemProvider ABI::Windows::UI::Xaml::Automation::Provider::IGridItemProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridItemProvider_FWD_DEFINED__
@@ -407,11 +403,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IGridProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridProvider ABI::Windows::UI::Xaml::Automation::Provider::IGridProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridProvider_FWD_DEFINED__
@@ -425,11 +421,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IIRawElementProviderSimple;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIIRawElementProviderSimple ABI::Windows::UI::Xaml::Automation::Provider::IIRawElementProviderSimple
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIIRawElementProviderSimple_FWD_DEFINED__
@@ -443,11 +439,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IInvokeProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIInvokeProvider ABI::Windows::UI::Xaml::Automation::Provider::IInvokeProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIInvokeProvider_FWD_DEFINED__
@@ -461,11 +457,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IItemContainerProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIItemContainerProvider ABI::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIItemContainerProvider_FWD_DEFINED__
@@ -479,11 +475,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IMultipleViewProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIMultipleViewProvider ABI::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIMultipleViewProvider_FWD_DEFINED__
@@ -497,11 +493,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IObjectModelProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIObjectModelProvider ABI::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIObjectModelProvider_FWD_DEFINED__
@@ -515,11 +511,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IRangeValueProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIRangeValueProvider ABI::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIRangeValueProvider_FWD_DEFINED__
@@ -533,11 +529,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IScrollItemProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollItemProvider ABI::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollItemProvider_FWD_DEFINED__
@@ -551,11 +547,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IScrollProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollProvider ABI::Windows::UI::Xaml::Automation::Provider::IScrollProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollProvider_FWD_DEFINED__
@@ -569,11 +565,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ISelectionItemProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionItemProvider ABI::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionItemProvider_FWD_DEFINED__
@@ -587,11 +583,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ISelectionProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionProvider ABI::Windows::UI::Xaml::Automation::Provider::ISelectionProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionProvider_FWD_DEFINED__
@@ -605,11 +601,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ISpreadsheetItemProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetItemProvider ABI::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetItemProvider_FWD_DEFINED__
@@ -623,11 +619,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ISpreadsheetProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetProvider ABI::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetProvider_FWD_DEFINED__
@@ -641,11 +637,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IStylesProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIStylesProvider ABI::Windows::UI::Xaml::Automation::Provider::IStylesProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIStylesProvider_FWD_DEFINED__
@@ -659,11 +655,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ISynchronizedInputProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISynchronizedInputProvider ABI::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISynchronizedInputProvider_FWD_DEFINED__
@@ -677,11 +673,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITableItemProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableItemProvider ABI::Windows::UI::Xaml::Automation::Provider::ITableItemProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableItemProvider_FWD_DEFINED__
@@ -695,11 +691,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITableProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableProvider ABI::Windows::UI::Xaml::Automation::Provider::ITableProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableProvider_FWD_DEFINED__
@@ -713,11 +709,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITextChildProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextChildProvider ABI::Windows::UI::Xaml::Automation::Provider::ITextChildProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextChildProvider_FWD_DEFINED__
@@ -731,11 +727,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITextEditProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextEditProvider ABI::Windows::UI::Xaml::Automation::Provider::ITextEditProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextEditProvider_FWD_DEFINED__
@@ -749,11 +745,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITextProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider ABI::Windows::UI::Xaml::Automation::Provider::ITextProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider_FWD_DEFINED__
@@ -767,11 +763,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITextProvider2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider2 ABI::Windows::UI::Xaml::Automation::Provider::ITextProvider2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider2_FWD_DEFINED__
@@ -785,11 +781,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITextRangeProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider ABI::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider_FWD_DEFINED__
@@ -803,11 +799,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITextRangeProvider2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider2 ABI::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider2_FWD_DEFINED__
@@ -821,11 +817,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IToggleProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIToggleProvider ABI::Windows::UI::Xaml::Automation::Provider::IToggleProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIToggleProvider_FWD_DEFINED__
@@ -839,11 +835,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITransformProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider ABI::Windows::UI::Xaml::Automation::Provider::ITransformProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider_FWD_DEFINED__
@@ -857,11 +853,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface ITransformProvider2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider2 ABI::Windows::UI::Xaml::Automation::Provider::ITransformProvider2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider2_FWD_DEFINED__
@@ -875,11 +871,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IValueProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIValueProvider ABI::Windows::UI::Xaml::Automation::Provider::IValueProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIValueProvider_FWD_DEFINED__
@@ -893,11 +889,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IVirtualizedItemProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIVirtualizedItemProvider ABI::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIVirtualizedItemProvider_FWD_DEFINED__
@@ -911,11 +907,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         interface IWindowProvider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIWindowProvider ABI::Windows::UI::Xaml::Automation::Provider::IWindowProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIWindowProvider_FWD_DEFINED__
@@ -927,8 +923,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -939,8 +935,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -952,10 +948,10 @@ namespace ABI {
                     
                     typedef enum AnnotationType : int AnnotationType;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -963,10 +959,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Automation {
                     class AutomationProperty;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CAutomation_CIAutomationProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CAutomation_CIAutomationProperty_FWD_DEFINED__
@@ -976,10 +972,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Automation {
                     interface IAutomationProperty;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CAutomation_CIAutomationProperty ABI::Windows::UI::Xaml::Automation::IAutomationProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CAutomation_CIAutomationProperty_FWD_DEFINED__
@@ -993,10 +989,10 @@ namespace ABI {
                     
                     typedef enum DockPosition : int DockPosition;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1006,10 +1002,10 @@ namespace ABI {
                     
                     typedef enum ExpandCollapseState : int ExpandCollapseState;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1024,11 +1020,11 @@ namespace ABI {
                         
                         typedef enum AutomationNavigationDirection : int AutomationNavigationDirection;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Peers */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Peers */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1043,10 +1039,10 @@ namespace ABI {
                     
                     typedef enum RowOrColumnMajor : int RowOrColumnMajor;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1056,10 +1052,10 @@ namespace ABI {
                     
                     typedef enum ScrollAmount : int ScrollAmount;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1069,10 +1065,10 @@ namespace ABI {
                     
                     typedef enum SupportedTextSelection : int SupportedTextSelection;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1082,10 +1078,10 @@ namespace ABI {
                     
                     typedef enum SynchronizedInputType : int SynchronizedInputType;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1100,11 +1096,11 @@ namespace ABI {
                         
                         typedef enum TextPatternRangeEndpoint : int TextPatternRangeEndpoint;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Text */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Text */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1115,11 +1111,11 @@ namespace ABI {
                         
                         typedef enum TextUnit : int TextUnit;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Text */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Text */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1134,10 +1130,10 @@ namespace ABI {
                     
                     typedef enum ToggleState : int ToggleState;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1147,10 +1143,10 @@ namespace ABI {
                     
                     typedef enum WindowInteractionState : int WindowInteractionState;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1160,10 +1156,10 @@ namespace ABI {
                     
                     typedef enum WindowVisualState : int WindowVisualState;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1173,10 +1169,10 @@ namespace ABI {
                     
                     typedef enum ZoomUnit : int ZoomUnit;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Automation */} /* ABI */
+                } /* Automation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1225,11 +1221,11 @@ namespace ABI {
                 namespace Automation {
                     namespace Provider {
                         class IRawElementProviderSimple;
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1281,11 +1277,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IAnnotationProvider=_uuidof(IAnnotationProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIAnnotationProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIAnnotationProvider_INTERFACE_DEFINED__) */
@@ -1324,11 +1320,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICustomNavigationProvider=_uuidof(ICustomNavigationProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CICustomNavigationProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CICustomNavigationProvider_INTERFACE_DEFINED__) */
@@ -1369,11 +1365,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDockProvider=_uuidof(IDockProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDockProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDockProvider_INTERFACE_DEFINED__) */
@@ -1404,7 +1400,7 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGrabbed(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DropEffect(
                                 /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1422,11 +1418,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragProvider=_uuidof(IDragProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDragProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDragProvider_INTERFACE_DEFINED__) */
@@ -1468,11 +1464,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDropTargetProvider=_uuidof(IDropTargetProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDropTargetProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIDropTargetProvider_INTERFACE_DEFINED__) */
@@ -1512,11 +1508,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IExpandCollapseProvider=_uuidof(IExpandCollapseProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIExpandCollapseProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIExpandCollapseProvider_INTERFACE_DEFINED__) */
@@ -1566,11 +1562,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGridItemProvider=_uuidof(IGridItemProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridItemProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridItemProvider_INTERFACE_DEFINED__) */
@@ -1616,11 +1612,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGridProvider=_uuidof(IGridProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIGridProvider_INTERFACE_DEFINED__) */
@@ -1658,11 +1654,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IIRawElementProviderSimple=_uuidof(IIRawElementProviderSimple);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIIRawElementProviderSimple;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIIRawElementProviderSimple_INTERFACE_DEFINED__) */
@@ -1698,11 +1694,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInvokeProvider=_uuidof(IInvokeProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIInvokeProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIInvokeProvider_INTERFACE_DEFINED__) */
@@ -1743,11 +1739,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IItemContainerProvider=_uuidof(IItemContainerProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIItemContainerProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIItemContainerProvider_INTERFACE_DEFINED__) */
@@ -1796,11 +1792,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMultipleViewProvider=_uuidof(IMultipleViewProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIMultipleViewProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIMultipleViewProvider_INTERFACE_DEFINED__) */
@@ -1838,11 +1834,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IObjectModelProvider=_uuidof(IObjectModelProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIObjectModelProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIObjectModelProvider_INTERFACE_DEFINED__) */
@@ -1873,7 +1869,7 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadOnly(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LargeChange(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -1898,11 +1894,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRangeValueProvider=_uuidof(IRangeValueProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIRangeValueProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIRangeValueProvider_INTERFACE_DEFINED__) */
@@ -1938,11 +1934,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IScrollItemProvider=_uuidof(IScrollItemProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollItemProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollItemProvider_INTERFACE_DEFINED__) */
@@ -1973,7 +1969,7 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HorizontallyScrollable(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HorizontalScrollPercent(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -1982,7 +1978,7 @@ namespace ABI {
                                 /* [retval, out] */__RPC__out DOUBLE * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_VerticallyScrollable(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_VerticalScrollPercent(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -2003,11 +1999,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IScrollProvider=_uuidof(IScrollProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIScrollProvider_INTERFACE_DEFINED__) */
@@ -2038,7 +2034,7 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSelected(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SelectionContainer(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Automation::Provider::IIRawElementProviderSimple * * value
@@ -2051,11 +2047,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISelectionItemProvider=_uuidof(ISelectionItemProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionItemProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionItemProvider_INTERFACE_DEFINED__) */
@@ -2086,10 +2082,10 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanSelectMultiple(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSelectionRequired(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetSelection(
                                 /* [out] */__RPC__out UINT32 * __resultSize,
@@ -2100,11 +2096,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISelectionProvider=_uuidof(ISelectionProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISelectionProvider_INTERFACE_DEFINED__) */
@@ -2150,11 +2146,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISpreadsheetItemProvider=_uuidof(ISpreadsheetItemProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetItemProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetItemProvider_INTERFACE_DEFINED__) */
@@ -2193,11 +2189,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISpreadsheetProvider=_uuidof(ISpreadsheetProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISpreadsheetProvider_INTERFACE_DEFINED__) */
@@ -2253,11 +2249,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IStylesProvider=_uuidof(IStylesProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIStylesProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIStylesProvider_INTERFACE_DEFINED__) */
@@ -2296,11 +2292,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISynchronizedInputProvider=_uuidof(ISynchronizedInputProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISynchronizedInputProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CISynchronizedInputProvider_INTERFACE_DEFINED__) */
@@ -2343,11 +2339,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITableItemProvider=_uuidof(ITableItemProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableItemProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableItemProvider_INTERFACE_DEFINED__) */
@@ -2393,11 +2389,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITableProvider=_uuidof(ITableProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITableProvider_INTERFACE_DEFINED__) */
@@ -2438,11 +2434,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITextChildProvider=_uuidof(ITextChildProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextChildProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextChildProvider_INTERFACE_DEFINED__) */
@@ -2487,11 +2483,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITextEditProvider=_uuidof(ITextEditProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextEditProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextEditProvider_INTERFACE_DEFINED__) */
@@ -2548,11 +2544,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITextProvider=_uuidof(ITextProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider_INTERFACE_DEFINED__) */
@@ -2591,7 +2587,7 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider * * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetCaretRange(
-                                /* [out] */__RPC__out boolean * isActive,
+                                /* [out] */__RPC__out ::boolean * isActive,
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider * * returnValue
                                 ) = 0;
                             
@@ -2599,11 +2595,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITextProvider2=_uuidof(ITextProvider2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextProvider2_INTERFACE_DEFINED__) */
@@ -2638,7 +2634,7 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Compare(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider * textRangeProvider,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE CompareEndpoints(
                                 /* [in] */ABI::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint endpoint,
@@ -2652,13 +2648,13 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE FindAttribute(
                                 /* [in] */INT32 attributeId,
                                 /* [in] */__RPC__in_opt IInspectable * value,
-                                /* [in] */boolean backward,
+                                /* [in] */::boolean backward,
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider * * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE FindText(
                                 /* [in] */__RPC__in HSTRING text,
-                                /* [in] */boolean backward,
-                                /* [in] */boolean ignoreCase,
+                                /* [in] */::boolean backward,
+                                /* [in] */::boolean ignoreCase,
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider * * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetAttributeValue(
@@ -2696,7 +2692,7 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE AddToSelection(void) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveFromSelection(void) = 0;
                             virtual HRESULT STDMETHODCALLTYPE ScrollIntoView(
-                                /* [in] */boolean alignToTop
+                                /* [in] */::boolean alignToTop
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetChildren(
                                 /* [out] */__RPC__out UINT32 * __resultSize,
@@ -2707,11 +2703,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITextRangeProvider=_uuidof(ITextRangeProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider_INTERFACE_DEFINED__) */
@@ -2751,11 +2747,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITextRangeProvider2=_uuidof(ITextRangeProvider2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITextRangeProvider2_INTERFACE_DEFINED__) */
@@ -2794,11 +2790,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IToggleProvider=_uuidof(IToggleProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIToggleProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIToggleProvider_INTERFACE_DEFINED__) */
@@ -2829,13 +2825,13 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanMove(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanResize(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRotate(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Move(
                                 /* [in] */DOUBLE x,
@@ -2853,11 +2849,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITransformProvider=_uuidof(ITransformProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider_INTERFACE_DEFINED__) */
@@ -2892,7 +2888,7 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanZoom(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ZoomLevel(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -2914,11 +2910,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITransformProvider2=_uuidof(ITransformProvider2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CITransformProvider2_INTERFACE_DEFINED__) */
@@ -2949,7 +2945,7 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadOnly(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
                                 /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2962,11 +2958,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IValueProvider=_uuidof(IValueProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIValueProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIValueProvider_INTERFACE_DEFINED__) */
@@ -3002,11 +2998,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IVirtualizedItemProvider=_uuidof(IVirtualizedItemProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIVirtualizedItemProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIVirtualizedItemProvider_INTERFACE_DEFINED__) */
@@ -3037,16 +3033,16 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsModal(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTopmost(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Maximizable(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Minimizable(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InteractionState(
                                 /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Automation::WindowInteractionState * value
@@ -3060,18 +3056,18 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE WaitForInputIdle(
                                 /* [in] */INT32 milliseconds,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IWindowProvider=_uuidof(IWindowProvider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Provider */
+                } /* Automation */
             } /* Xaml */
-        } /* Automation */
-    } /* Provider */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIWindowProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CAutomation_CProvider_CIWindowProvider_INTERFACE_DEFINED__) */

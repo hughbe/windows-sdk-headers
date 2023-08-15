@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -535,6 +535,37 @@ template <typename D> Windows::UI::Input::HoldingState consume_Windows_UI_Input_
 {
     Windows::UI::Input::HoldingState value{};
     check_hresult(WINRT_SHIM(Windows::UI::Input::IHoldingEventArgs)->get_HoldingState(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Input::InputActivationState consume_Windows_UI_Input_IInputActivationListener<D>::State() const
+{
+    Windows::UI::Input::InputActivationState value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Input::IInputActivationListener)->get_State(put_abi(value)));
+    return value;
+}
+
+template <typename D> winrt::event_token consume_Windows_UI_Input_IInputActivationListener<D>::InputActivationChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const
+{
+    winrt::event_token token{};
+    check_hresult(WINRT_SHIM(Windows::UI::Input::IInputActivationListener)->add_InputActivationChanged(get_abi(handler), put_abi(token)));
+    return token;
+}
+
+template <typename D> typename consume_Windows_UI_Input_IInputActivationListener<D>::InputActivationChanged_revoker consume_Windows_UI_Input_IInputActivationListener<D>::InputActivationChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const
+{
+    return impl::make_event_revoker<D, InputActivationChanged_revoker>(this, InputActivationChanged(handler));
+}
+
+template <typename D> void consume_Windows_UI_Input_IInputActivationListener<D>::InputActivationChanged(winrt::event_token const& token) const noexcept
+{
+    WINRT_VERIFY_(0, WINRT_SHIM(Windows::UI::Input::IInputActivationListener)->remove_InputActivationChanged(get_abi(token)));
+}
+
+template <typename D> Windows::UI::Input::InputActivationState consume_Windows_UI_Input_IInputActivationListenerActivationChangedEventArgs<D>::State() const
+{
+    Windows::UI::Input::InputActivationState value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs)->get_State(put_abi(value)));
     return value;
 }
 
@@ -1669,6 +1700,14 @@ template <typename D> uint32_t consume_Windows_UI_Input_ITappedEventArgs<D>::Tap
 }
 
 template <typename D>
+struct produce<D, Windows::UI::Input::IAttachableInputObject> : produce_base<D, Windows::UI::Input::IAttachableInputObject>
+{};
+
+template <typename D>
+struct produce<D, Windows::UI::Input::IAttachableInputObjectFactory> : produce_base<D, Windows::UI::Input::IAttachableInputObjectFactory>
+{};
+
+template <typename D>
 struct produce<D, Windows::UI::Input::ICrossSlidingEventArgs> : produce_base<D, Windows::UI::Input::ICrossSlidingEventArgs>
 {
     int32_t WINRT_CALL get_PointerDeviceType(Windows::Devices::Input::PointerDeviceType* value) noexcept final
@@ -2544,6 +2583,58 @@ struct produce<D, Windows::UI::Input::IHoldingEventArgs> : produce_base<D, Windo
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(HoldingState, WINRT_WRAP(Windows::UI::Input::HoldingState));
             *value = detach_from<Windows::UI::Input::HoldingState>(this->shim().HoldingState());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Input::IInputActivationListener> : produce_base<D, Windows::UI::Input::IInputActivationListener>
+{
+    int32_t WINRT_CALL get_State(Windows::UI::Input::InputActivationState* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(State, WINRT_WRAP(Windows::UI::Input::InputActivationState));
+            *value = detach_from<Windows::UI::Input::InputActivationState>(this->shim().State());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL add_InputActivationChanged(void* handler, winrt::event_token* token) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(InputActivationChanged, WINRT_WRAP(winrt::event_token), Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const&);
+            *token = detach_from<winrt::event_token>(this->shim().InputActivationChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL remove_InputActivationChanged(winrt::event_token token) noexcept final
+    {
+        typename D::abi_guard guard(this->shim());
+        WINRT_ASSERT_DECLARATION(InputActivationChanged, WINRT_WRAP(void), winrt::event_token const&);
+        this->shim().InputActivationChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+        return 0;
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs> : produce_base<D, Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>
+{
+    int32_t WINRT_CALL get_State(Windows::UI::Input::InputActivationState* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(State, WINRT_WRAP(Windows::UI::Input::InputActivationState));
+            *value = detach_from<Windows::UI::Input::InputActivationState>(this->shim().State());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4740,6 +4831,8 @@ inline Windows::UI::Input::RadialControllerMenuItem RadialControllerMenuItem::Cr
 
 WINRT_EXPORT namespace std {
 
+template<> struct hash<winrt::Windows::UI::Input::IAttachableInputObject> : winrt::impl::hash_base<winrt::Windows::UI::Input::IAttachableInputObject> {};
+template<> struct hash<winrt::Windows::UI::Input::IAttachableInputObjectFactory> : winrt::impl::hash_base<winrt::Windows::UI::Input::IAttachableInputObjectFactory> {};
 template<> struct hash<winrt::Windows::UI::Input::ICrossSlidingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::ICrossSlidingEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::IDraggingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::IDraggingEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::IEdgeGesture> : winrt::impl::hash_base<winrt::Windows::UI::Input::IEdgeGesture> {};
@@ -4747,6 +4840,8 @@ template<> struct hash<winrt::Windows::UI::Input::IEdgeGestureEventArgs> : winrt
 template<> struct hash<winrt::Windows::UI::Input::IEdgeGestureStatics> : winrt::impl::hash_base<winrt::Windows::UI::Input::IEdgeGestureStatics> {};
 template<> struct hash<winrt::Windows::UI::Input::IGestureRecognizer> : winrt::impl::hash_base<winrt::Windows::UI::Input::IGestureRecognizer> {};
 template<> struct hash<winrt::Windows::UI::Input::IHoldingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::IHoldingEventArgs> {};
+template<> struct hash<winrt::Windows::UI::Input::IInputActivationListener> : winrt::impl::hash_base<winrt::Windows::UI::Input::IInputActivationListener> {};
+template<> struct hash<winrt::Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptor> : winrt::impl::hash_base<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptor> {};
 template<> struct hash<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptorStatics> : winrt::impl::hash_base<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptorStatics> {};
 template<> struct hash<winrt::Windows::UI::Input::IManipulationCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::IManipulationCompletedEventArgs> {};
@@ -4789,12 +4884,15 @@ template<> struct hash<winrt::Windows::UI::Input::IRadialControllerScreenContact
 template<> struct hash<winrt::Windows::UI::Input::IRadialControllerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Input::IRadialControllerStatics> {};
 template<> struct hash<winrt::Windows::UI::Input::IRightTappedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::IRightTappedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::ITappedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::ITappedEventArgs> {};
+template<> struct hash<winrt::Windows::UI::Input::AttachableInputObject> : winrt::impl::hash_base<winrt::Windows::UI::Input::AttachableInputObject> {};
 template<> struct hash<winrt::Windows::UI::Input::CrossSlidingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::CrossSlidingEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::DraggingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::DraggingEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::EdgeGesture> : winrt::impl::hash_base<winrt::Windows::UI::Input::EdgeGesture> {};
 template<> struct hash<winrt::Windows::UI::Input::EdgeGestureEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::EdgeGestureEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::GestureRecognizer> : winrt::impl::hash_base<winrt::Windows::UI::Input::GestureRecognizer> {};
 template<> struct hash<winrt::Windows::UI::Input::HoldingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::HoldingEventArgs> {};
+template<> struct hash<winrt::Windows::UI::Input::InputActivationListener> : winrt::impl::hash_base<winrt::Windows::UI::Input::InputActivationListener> {};
+template<> struct hash<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor> : winrt::impl::hash_base<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor> {};
 template<> struct hash<winrt::Windows::UI::Input::ManipulationCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::ManipulationCompletedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs> {};

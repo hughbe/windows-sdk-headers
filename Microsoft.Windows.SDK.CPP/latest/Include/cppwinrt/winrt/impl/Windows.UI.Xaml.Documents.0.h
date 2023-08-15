@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -47,6 +47,7 @@ struct FrameworkElement;
 struct RoutedEventHandler;
 struct Thickness;
 struct UIElement;
+struct XamlRoot;
 
 }
 
@@ -126,6 +127,7 @@ struct ITextElement;
 struct ITextElement2;
 struct ITextElement3;
 struct ITextElement4;
+struct ITextElement5;
 struct ITextElementFactory;
 struct ITextElementOverrides;
 struct ITextElementStatics;
@@ -217,6 +219,7 @@ template <> struct category<Windows::UI::Xaml::Documents::ITextElement>{ using t
 template <> struct category<Windows::UI::Xaml::Documents::ITextElement2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Documents::ITextElement3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Documents::ITextElement4>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Documents::ITextElement5>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Documents::ITextElementFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Documents::ITextElementOverrides>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics>{ using type = interface_category; };
@@ -305,6 +308,7 @@ template <> struct name<Windows::UI::Xaml::Documents::ITextElement>{ static cons
 template <> struct name<Windows::UI::Xaml::Documents::ITextElement2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement2" }; };
 template <> struct name<Windows::UI::Xaml::Documents::ITextElement3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement3" }; };
 template <> struct name<Windows::UI::Xaml::Documents::ITextElement4>{ static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement4" }; };
+template <> struct name<Windows::UI::Xaml::Documents::ITextElement5>{ static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement5" }; };
 template <> struct name<Windows::UI::Xaml::Documents::ITextElementFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementFactory" }; };
 template <> struct name<Windows::UI::Xaml::Documents::ITextElementOverrides>{ static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementOverrides" }; };
 template <> struct name<Windows::UI::Xaml::Documents::ITextElementStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementStatics" }; };
@@ -393,6 +397,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement>{ sta
 template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement2>{ static constexpr guid value{ 0xA8076AA8,0xF892,0x49F6,{ 0x8C,0xD2,0x89,0xAD,0xDA,0xF0,0x6D,0x2D } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement3>{ static constexpr guid value{ 0xD1DB340F,0x1BC4,0x4CA8,{ 0xBC,0xF7,0x77,0x0B,0xFF,0x9B,0x27,0xAB } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement4>{ static constexpr guid value{ 0xB196E222,0xCA0E,0x48A9,{ 0x83,0xBC,0x36,0xCE,0x50,0x56,0x6A,0xC7 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement5>{ static constexpr guid value{ 0xBD9552F3,0x540D,0x58BF,{ 0xB6,0xA8,0x07,0x55,0x6A,0xED,0xA2,0xEA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementFactory>{ static constexpr guid value{ 0x35007285,0xCF47,0x4BFE,{ 0xB1,0xBC,0x39,0xC9,0x3A,0xF4,0xAE,0x80 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementOverrides>{ static constexpr guid value{ 0x0CE21EE7,0x4F76,0x4DD9,{ 0xBF,0x91,0x16,0x3B,0xEC,0xCF,0x84,0xBC } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementStatics>{ static constexpr guid value{ 0x0A2F9B98,0x6C03,0x4470,{ 0xA7,0x9B,0x32,0x98,0xA1,0x04,0x82,0xCE } }; };
@@ -820,6 +825,12 @@ template <> struct abi<Windows::UI::Xaml::Documents::ITextElement4>{ struct type
     virtual int32_t WINRT_CALL remove_AccessKeyDisplayDismissed(winrt::event_token token) noexcept = 0;
     virtual int32_t WINRT_CALL add_AccessKeyInvoked(void* handler, winrt::event_token* token) noexcept = 0;
     virtual int32_t WINRT_CALL remove_AccessKeyInvoked(winrt::event_token token) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Documents::ITextElement5>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_XamlRoot(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_XamlRoot(void* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Documents::ITextElementFactory>{ struct type : IInspectable
@@ -1536,6 +1547,14 @@ struct consume_Windows_UI_Xaml_Documents_ITextElement4
     void AccessKeyInvoked(winrt::event_token const& token) const noexcept;
 };
 template <> struct consume<Windows::UI::Xaml::Documents::ITextElement4> { template <typename D> using type = consume_Windows_UI_Xaml_Documents_ITextElement4<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Documents_ITextElement5
+{
+    Windows::UI::Xaml::XamlRoot XamlRoot() const;
+    void XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Documents::ITextElement5> { template <typename D> using type = consume_Windows_UI_Xaml_Documents_ITextElement5<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Documents_ITextElementFactory

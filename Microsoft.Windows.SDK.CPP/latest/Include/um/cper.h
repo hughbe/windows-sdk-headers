@@ -230,7 +230,8 @@ typedef union _WHEA_ERROR_RECORD_HEADER_FLAGS {
         ULONG Recovered:1;
         ULONG PreviousError:1;
         ULONG Simulated:1;
-        ULONG Reserved:29;
+        ULONG DeviceDriver:1;
+        ULONG Reserved:28;
     } DUMMYSTRUCTNAME;
     ULONG AsULONG;
 } WHEA_ERROR_RECORD_HEADER_FLAGS, *PWHEA_ERROR_RECORD_HEADER_FLAGS;
@@ -238,6 +239,7 @@ typedef union _WHEA_ERROR_RECORD_HEADER_FLAGS {
 #define WHEA_ERROR_RECORD_FLAGS_RECOVERED            0x00000001
 #define WHEA_ERROR_RECORD_FLAGS_PREVIOUSERROR        0x00000002
 #define WHEA_ERROR_RECORD_FLAGS_SIMULATED            0x00000004
+#define WHEA_ERROR_RECORD_FLAGS_DEVICE_DRIVER        0x00000008
 
 typedef struct _WHEA_ERROR_RECORD_HEADER {
     ULONG Signature;
@@ -1049,6 +1051,43 @@ CPER_FIELD_CHECK(WHEA_MEMORY_ERROR_SECTION, ResponderId,         56, 8);
 CPER_FIELD_CHECK(WHEA_MEMORY_ERROR_SECTION, TargetId,            64, 8);
 CPER_FIELD_CHECK(WHEA_MEMORY_ERROR_SECTION, ErrorType,           72, 1);
 
+//----------------------------------------------------- WHEA_PMEM_ERROR_SECTION
+
+#define WHEA_PMEM_ERROR_SECTION_LOCATION_INFO_SIZE 64
+#define WHEA_PMEM_ERROR_SECTION_MAX_PAGES 50
+
+typedef union _WHEA_PMEM_ERROR_SECTION_VALIDBITS {
+    struct {
+        ULONGLONG ErrorStatus:1;
+        ULONGLONG NFITHandle:1;
+        ULONGLONG LocationInfo:1;
+        ULONGLONG Reserved:61;
+    } DUMMYSTRUCTNAME;
+    ULONGLONG ValidBits;
+} WHEA_PMEM_ERROR_SECTION_VALIDBITS,
+  *PWHEA_PMEM_ERROR_SECTION_VALIDBITS;
+
+typedef struct _WHEA_PMEM_PAGE_RANGE {
+    ULONG64 StartingPfn;
+    ULONG64 PageCount;
+    ULONG64 MarkedBadBitmap;
+} WHEA_PMEM_PAGE_RANGE, *PWHEA_PMEM_PAGE_RANGE;
+
+typedef struct _WHEA_PMEM_ERROR_SECTION {
+    WHEA_PMEM_ERROR_SECTION_VALIDBITS ValidBits;
+    UCHAR LocationInfo[WHEA_PMEM_ERROR_SECTION_LOCATION_INFO_SIZE];
+    WHEA_ERROR_STATUS ErrorStatus;
+    ULONG NFITHandle;
+    ULONG PageRangeCount;
+    WHEA_PMEM_PAGE_RANGE PageRange[ANYSIZE_ARRAY];
+} WHEA_PMEM_ERROR_SECTION, *PWHEA_PMEM_ERROR_SECTION;
+
+CPER_FIELD_CHECK(WHEA_PMEM_ERROR_SECTION, ValidBits,            0, 8);
+CPER_FIELD_CHECK(WHEA_PMEM_ERROR_SECTION, LocationInfo,         8, 64);
+CPER_FIELD_CHECK(WHEA_PMEM_ERROR_SECTION, ErrorStatus,         72, 8);
+CPER_FIELD_CHECK(WHEA_PMEM_ERROR_SECTION, NFITHandle,          80, 4);
+CPER_FIELD_CHECK(WHEA_PMEM_ERROR_SECTION, PageRangeCount,      84, 4);
+
 //----------------------------------------------- WHEA_PCIEXPRESS_ERROR_SECTION
 
 typedef union _WHEA_PCIEXPRESS_ERROR_SECTION_VALIDBITS {
@@ -1328,6 +1367,30 @@ CPER_FIELD_CHECK(WHEA_FIRMWARE_ERROR_RECORD_REFERENCE, FirmwareRecordId, 8,  8);
 
 //------------------------------------------------------------- XPF_MCA_SECTION
 
+//
+// The IA32_MCG_CAP register provides information about the machine-check
+// architecture of the processor.
+// From: Intel 64 and IA-32 Architectures SDM
+//       Volume 3B; December 2017; Chapter 15.3.1.1
+//
+
+typedef union _MCG_CAP {
+    struct {
+        ULONG64 CountField: 8;
+        ULONG64 ControlMsrPresent: 1;
+        ULONG64 ExtendedMsrsPresent: 1;
+        ULONG64 SignalingExtensionPresent: 1;
+        ULONG64 ThresholdErrorStatusPresent: 1;
+        ULONG64 Reserved: 4;
+        ULONG64 ExtendedRegisterCount: 8;
+        ULONG64 SoftwareErrorRecoverySupported: 1;
+        ULONG64 EnhancedMachineCheckCapability: 1;
+        ULONG64 ExtendedErrorLogging: 1;
+        ULONG64 LocalMachineCheckException: 1;
+    } DUMMYSTRUCTNAME;
+    ULONG64 QuadPart;
+} MCG_CAP, *PMCG_CAP;
+
 typedef union _MCG_STATUS {
     struct {
         ULONG RestartIpValid:1;
@@ -1340,21 +1403,69 @@ typedef union _MCG_STATUS {
     ULONGLONG QuadPart;
 } MCG_STATUS, *PMCG_STATUS;
 
+typedef struct _MCI_STATUS_BITS_COMMON {
+        ULONG64 McaErrorCode : 16;
+        ULONG64 ModelErrorCode : 16;
+        ULONG64 Reserved : 25;
+        ULONG64 ContextCorrupt : 1;
+        ULONG64 AddressValid : 1;
+        ULONG64 MiscValid : 1;
+        ULONG64 ErrorEnabled : 1;
+        ULONG64 UncorrectedError : 1;
+        ULONG64 StatusOverFlow : 1;
+        ULONG64 Valid : 1;
+} MCI_STATUS_BITS_COMMON, *PMCI_STATUS_BITS_COMMON;
+
+//
+// WHEA specific implementations of MCI_STATUS register
+// Allows for more machine specific granularity
+// From: AMD64 Archtecture Programmer's Manual
+//       Volume 2; Revision 3.29; Chapter 13
+//
+
+typedef struct _MCI_STATUS_AMD_BITS {
+        ULONG64 McaErrorCode : 16;
+        ULONG64 ModelErrorCode : 16;
+        ULONG64 ImplementationSpecific2 : 11;
+        ULONG64 Poison : 1;
+        ULONG64 Deferred : 1;
+        ULONG64 ImplementationSpecific1 : 12;
+        ULONG64 ContextCorrupt : 1;
+        ULONG64 AddressValid : 1;
+        ULONG64 MiscValid : 1;
+        ULONG64 ErrorEnabled : 1;
+        ULONG64 UncorrectedError : 1;
+        ULONG64 StatusOverFlow : 1;
+        ULONG64 Valid : 1;
+} MCI_STATUS_AMD_BITS, *PMCI_STATUS_AMD_BITS;
+
+//
+// From: Intel 64 and IA-32 Architectures SDM
+//       Volume 3B; December 2017; Chapter 15
+//
+
+typedef struct _MCI_STATUS_INTEL_BITS {
+        ULONG64 McaErrorCode : 16;
+        ULONG64 ModelErrorCode : 16;
+        ULONG64 OtherInfo : 5;
+        ULONG64 FirmwareUpdateError : 1;
+        ULONG64 CorrectedErrorCount : 15;
+        ULONG64 ThresholdErrorStatus : 2;
+        ULONG64 ActionRequired : 1;
+        ULONG64 Signalling : 1;
+        ULONG64 ContextCorrupt : 1;
+        ULONG64 AddressValid : 1;
+        ULONG64 MiscValid : 1;
+        ULONG64 ErrorEnabled : 1;
+        ULONG64 UncorrectedError : 1;
+        ULONG64 StatusOverFlow : 1;
+        ULONG64 Valid : 1;
+} MCI_STATUS_INTEL_BITS, *PMCI_STATUS_INTEL_BITS;
+
 typedef union _MCI_STATUS {
-    struct {
-        USHORT McaErrorCode;
-        USHORT ModelErrorCode;
-        ULONG OtherInformation : 23;
-        ULONG ActionRequired : 1;
-        ULONG Signalling : 1;
-        ULONG ContextCorrupt : 1;
-        ULONG AddressValid : 1;
-        ULONG MiscValid : 1;
-        ULONG ErrorEnabled : 1;
-        ULONG UncorrectedError : 1;
-        ULONG StatusOverFlow : 1;
-        ULONG Valid : 1;
-    } DUMMYSTRUCTNAME;
+    MCI_STATUS_BITS_COMMON CommonBits;
+    MCI_STATUS_AMD_BITS AmdBits;
+    MCI_STATUS_INTEL_BITS IntelBits;
     ULONG64 QuadPart;
 } MCI_STATUS, *PMCI_STATUS;
 
@@ -1367,21 +1478,45 @@ typedef enum _WHEA_CPU_VENDOR {
 #define WHEA_XPF_MCA_EXTREG_MAX_COUNT            24
 #define WHEA_XPF_MCA_SECTION_VERSION_2           2
 #define WHEA_XPF_MCA_SECTION_VERSION             WHEA_XPF_MCA_SECTION_VERSION_2
+#define WHEA_AMD_EXT_REG_NUM                     10
+
+//
+// NOTE: You must update WHEA_AMD_EXT_REG_NUM if you add additional registers
+// to this struct to keep the size the same.
+//
+
+typedef struct _WHEA_AMD_EXTENDED_REGISTERS {
+    ULONGLONG IPID;
+    ULONGLONG SYND;
+    ULONGLONG CONFIG;
+    ULONGLONG DESTAT;
+    ULONGLONG DEADDR;
+    ULONGLONG MISC1;
+    ULONGLONG MISC2;
+    ULONGLONG MISC3;
+    ULONGLONG MISC4;   
+    ULONGLONG RasCap;       
+    ULONGLONG Reserved[WHEA_XPF_MCA_EXTREG_MAX_COUNT - WHEA_AMD_EXT_REG_NUM];
+} WHEA_AMD_EXTENDED_REGISTERS, *PWHEA_AMD_EXTENDED_REGISTERS;
 
 typedef struct _WHEA_XPF_MCA_SECTION {
-    ULONG               VersionNumber;
-    WHEA_CPU_VENDOR     CpuVendor;
-    LARGE_INTEGER       Timestamp;
-    ULONG               ProcessorNumber;
-    MCG_STATUS          GlobalStatus;
-    ULONGLONG           InstructionPointer;
-    ULONG               BankNumber;
-    MCI_STATUS          Status;
-    ULONGLONG           Address;
-    ULONGLONG           Misc;
-    ULONG               ExtendedRegisterCount;
-    ULONG               ApicId;
-    ULONGLONG           ExtendedRegisters[WHEA_XPF_MCA_EXTREG_MAX_COUNT];
+    ULONG VersionNumber;
+    WHEA_CPU_VENDOR CpuVendor;
+    LARGE_INTEGER Timestamp;
+    ULONG ProcessorNumber;
+    MCG_STATUS GlobalStatus;
+    ULONGLONG InstructionPointer;
+    ULONG BankNumber;
+    MCI_STATUS Status;
+    ULONGLONG Address;
+    ULONGLONG Misc;
+    ULONG ExtendedRegisterCount;
+    ULONG ApicId;
+    union {
+        ULONGLONG ExtendedRegisters[WHEA_XPF_MCA_EXTREG_MAX_COUNT];
+        WHEA_AMD_EXTENDED_REGISTERS AMDExtendedRegisters;
+    };
+    MCG_CAP             GlobalCapability;
 } WHEA_XPF_MCA_SECTION, *PWHEA_XPF_MCA_SECTION;
 
 //------------------------------------------------------ WHEA_NMI_ERROR_SECTION

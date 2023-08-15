@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.pickers.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -265,6 +261,7 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.Storage.h"
+#include "Windows.System.h"
 // Importing Collections header
 #include <windows.foundation.collections.h>
 
@@ -277,9 +274,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFileOpenPicker;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker ABI::Windows::Storage::Pickers::IFileOpenPicker
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker_FWD_DEFINED__
@@ -291,12 +288,26 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFileOpenPicker2;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker2 ABI::Windows::Storage::Pickers::IFileOpenPicker2
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                interface IFileOpenPicker3;
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 ABI::Windows::Storage::Pickers::IFileOpenPicker3
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_FWD_DEFINED__
@@ -305,12 +316,26 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFileOpenPickerStatics;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics ABI::Windows::Storage::Pickers::IFileOpenPickerStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                interface IFileOpenPickerStatics2;
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 ABI::Windows::Storage::Pickers::IFileOpenPickerStatics2
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_FWD_DEFINED__
@@ -319,9 +344,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFileOpenPickerWithOperationId;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId ABI::Windows::Storage::Pickers::IFileOpenPickerWithOperationId
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_FWD_DEFINED__
@@ -333,9 +358,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFileSavePicker;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker ABI::Windows::Storage::Pickers::IFileSavePicker
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker_FWD_DEFINED__
@@ -347,9 +372,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFileSavePicker2;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker2 ABI::Windows::Storage::Pickers::IFileSavePicker2
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker2_FWD_DEFINED__
@@ -361,12 +386,40 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFileSavePicker3;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3 ABI::Windows::Storage::Pickers::IFileSavePicker3
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                interface IFileSavePicker4;
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 ABI::Windows::Storage::Pickers::IFileSavePicker4
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                interface IFileSavePickerStatics;
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics ABI::Windows::Storage::Pickers::IFileSavePickerStatics
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_FWD_DEFINED__
@@ -375,9 +428,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFolderPicker;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker ABI::Windows::Storage::Pickers::IFolderPicker
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_FWD_DEFINED__
@@ -389,12 +442,40 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 interface IFolderPicker2;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2 ABI::Windows::Storage::Pickers::IFolderPicker2
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                interface IFolderPicker3;
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 ABI::Windows::Storage::Pickers::IFolderPicker3
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                interface IFolderPickerStatics;
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics ABI::Windows::Storage::Pickers::IFolderPickerStatics
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -418,7 +499,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -447,7 +528,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -476,7 +557,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -505,7 +586,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -519,8 +600,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -528,8 +609,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -555,7 +636,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFile*>
@@ -587,7 +668,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFile*> : IAsyncOperation_impl<ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFile*> __FIAsyncOperation_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFile*>
@@ -619,7 +700,7 @@ IIterator<ABI::Windows::Storage::StorageFile*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFile*> __FIIterator_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFile*>
@@ -651,7 +732,7 @@ IIterable<ABI::Windows::Storage::StorageFile*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFile*> __FIIterable_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFile*>
@@ -683,7 +764,7 @@ IVectorView<ABI::Windows::Storage::StorageFile*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFile*> __FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>
@@ -715,7 +796,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CStorageFile
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CStorageFile*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>*>
@@ -747,7 +828,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CStorageFile*> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CStorageFile*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>*>
@@ -778,7 +859,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -808,7 +889,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -838,7 +919,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -868,7 +949,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -898,7 +979,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -927,7 +1008,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -957,7 +1038,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -987,7 +1068,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -1017,7 +1098,7 @@ IKeyValuePair<HSTRING,__FIVector_1_HSTRING*> : IKeyValuePair_impl<HSTRING,__FIVe
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,__FIVector_1_HSTRING*> __FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -1047,7 +1128,7 @@ IIterator<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> : IIterator_impl<__F
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>*>
@@ -1077,7 +1158,7 @@ IIterable<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> : IIterable_impl<__F
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>*>
@@ -1107,7 +1188,7 @@ IMapView<HSTRING,__FIVector_1_HSTRING*> : IMapView_impl<HSTRING,__FIVector_1_HST
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,__FIVector_1_HSTRING*> __FIMapView_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIMapView_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -1137,7 +1218,7 @@ IMap<HSTRING,__FIVector_1_HSTRING*> : IMap_impl<HSTRING,__FIVector_1_HSTRING*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,__FIVector_1_HSTRING*> __FIMap_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIMap_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -1151,8 +1232,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1160,8 +1241,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1187,7 +1268,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFolder*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFolder*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFolder*>
@@ -1219,7 +1300,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFolder*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFolder*> __FIAsyncOperation_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFolder*>
@@ -1237,9 +1318,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1248,9 +1329,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1268,14 +1349,36 @@ namespace ABI {
 
 namespace ABI {
     namespace Windows {
+        namespace System {
+            class User;
+        } /* System */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            interface IUser;
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+
+
+
+
+namespace ABI {
+    namespace Windows {
         namespace Storage {
             namespace Pickers {
                 
                 typedef enum PickerLocationId : int PickerLocationId;
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1284,9 +1387,15 @@ namespace ABI {
                 
                 typedef enum PickerViewMode : int PickerViewMode;
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
 
 
 
@@ -1302,9 +1411,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 class FileExtensionVector;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1312,9 +1421,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 class FileOpenPicker;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1322,9 +1431,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 class FilePickerFileTypesOrderedMap;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1332,9 +1441,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 class FilePickerSelectedFilesArray;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1342,9 +1451,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 class FileSavePicker;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1352,9 +1461,9 @@ namespace ABI {
         namespace Storage {
             namespace Pickers {
                 class FolderPicker;
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1386,21 +1495,13 @@ namespace ABI {
                     PickerLocationId_MusicLibrary = 5,
                     PickerLocationId_PicturesLibrary = 6,
                     PickerLocationId_VideosLibrary = 7,
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-                    
                     PickerLocationId_Objects3D = 8,
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-                    
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-                    
                     PickerLocationId_Unspecified = 9,
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-                    
                 };
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1425,9 +1526,9 @@ namespace ABI {
                     PickerViewMode_Thumbnail = 1,
                 };
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1483,19 +1584,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE PickSingleFileAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSingleFileOperation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE PickMultipleFilesAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile * * pickMultipleFilesOperation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile * * operation
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFileOpenPicker=_uuidof(IFileOpenPicker);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker_INTERFACE_DEFINED__) */
@@ -1510,10 +1611,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker;
  *
  *
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FileOpenPicker
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFileOpenPicker
  *
  *
  */
@@ -1552,13 +1649,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileOpenPicker2=_uuidof(IFileOpenPicker2);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFileOpenPicker3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileOpenPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileOpenPicker3[] = L"Windows.Storage.Pickers.IFileOpenPicker3";
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                /* [object, uuid("D9A5C5B3-C5DC-5B98-BD80-A8D0CA0584D8"), exclusiveto, contract] */
+                MIDL_INTERFACE("D9A5C5B3-C5DC-5B98-BD80-A8D0CA0584D8")
+                IFileOpenPicker3 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IFileOpenPicker3=_uuidof(IFileOpenPicker3);
+                
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1590,20 +1728,62 @@ namespace ABI {
                     DEPRECATED("Instead, use PickSingleFileAsync")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE ResumePickSingleFileAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSingleFileOperation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFileOpenPickerStatics=_uuidof(IFileOpenPickerStatics);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFileOpenPickerStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileOpenPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileOpenPickerStatics2[] = L"Windows.Storage.Pickers.IFileOpenPickerStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                /* [object, uuid("E8917415-EDDD-5C98-B6F3-366FDFCAD392"), exclusiveto, contract] */
+                MIDL_INTERFACE("E8917415-EDDD-5C98-B6F3-366FDFCAD392")
+                IFileOpenPickerStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Pickers::IFileOpenPicker * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IFileOpenPickerStatics2=_uuidof(IFileOpenPickerStatics2);
+                
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1632,16 +1812,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE PickSingleFileAsync(
                         /* [in] */__RPC__in HSTRING pickerOperationId,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSingleFileOperation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFileOpenPickerWithOperationId=_uuidof(IFileOpenPickerWithOperationId);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_INTERFACE_DEFINED__) */
@@ -1712,16 +1892,16 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE PickSaveFileAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSaveFileOperation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFileSavePicker=_uuidof(IFileSavePicker);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker_INTERFACE_DEFINED__) */
@@ -1736,10 +1916,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker;
  *
  *
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFileSavePicker
  *
  *
  */
@@ -1769,9 +1945,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileSavePicker2=_uuidof(IFileSavePicker2);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker2_INTERFACE_DEFINED__) */
@@ -1786,10 +1962,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker2;
  *
  *
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFileSavePicker
  *
  *
  */
@@ -1817,13 +1989,96 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileSavePicker3=_uuidof(IFileSavePicker3);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFileSavePicker4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileSavePicker4[] = L"Windows.Storage.Pickers.IFileSavePicker4";
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                /* [object, uuid("E7D83A5A-DDFA-5DE0-8B70-C842C21988EC"), exclusiveto, contract] */
+                MIDL_INTERFACE("E7D83A5A-DDFA-5DE0-8B70-C842C21988EC")
+                IFileSavePicker4 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IFileSavePicker4=_uuidof(IFileSavePicker4);
+                
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFileSavePickerStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileSavePickerStatics[] = L"Windows.Storage.Pickers.IFileSavePickerStatics";
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                /* [object, uuid("28E3CF9E-961C-5E2C-AED7-E64737F4CE37"), exclusiveto, contract] */
+                MIDL_INTERFACE("28E3CF9E-961C-5E2C-AED7-E64737F4CE37")
+                IFileSavePickerStatics : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Pickers::IFileSavePicker * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IFileSavePickerStatics=_uuidof(IFileSavePickerStatics);
+                
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1878,16 +2133,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE PickSingleFolderAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFolder * * pickSingleFolderOperation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFolder * * operation
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFolderPicker=_uuidof(IFolderPicker);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_INTERFACE_DEFINED__) */
@@ -1902,10 +2157,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker;
  *
  *
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FolderPicker
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFolderPicker
  *
  *
  */
@@ -1935,13 +2186,96 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFolderPicker2=_uuidof(IFolderPicker2);
                 
-            } /* Windows */
+            } /* Pickers */
         } /* Storage */
-    } /* Pickers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFolderPicker3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FolderPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFolderPicker3[] = L"Windows.Storage.Pickers.IFolderPicker3";
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                /* [object, uuid("673B1E29-D326-53C0-BD24-A25C714CEE36"), exclusiveto, contract] */
+                MIDL_INTERFACE("673B1E29-D326-53C0-BD24-A25C714CEE36")
+                IFolderPicker3 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IFolderPicker3=_uuidof(IFolderPicker3);
+                
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFolderPickerStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FolderPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFolderPickerStatics[] = L"Windows.Storage.Pickers.IFolderPickerStatics";
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Pickers {
+                /* [object, uuid("9BE34740-7CA1-5942-A3C8-46F2551ECFF3"), exclusiveto, contract] */
+                MIDL_INTERFACE("9BE34740-7CA1-5942-A3C8-46F2551ECFF3")
+                IFolderPickerStatics : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Pickers::IFolderPicker * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IFolderPickerStatics=_uuidof(IFolderPickerStatics);
+                
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1954,6 +2288,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2;
  * Class implements the following interfaces:
  *    Windows.Foundation.Collections.IVector_1_HSTRING ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1_HSTRING
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1976,12 +2312,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.Pickers.IFileOpenPickerStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Storage.Pickers.IFileOpenPickerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
- *    Windows.Storage.Pickers.IFileOpenPicker ** Default Interface **
- *    Windows.Storage.Pickers.IFileOpenPickerWithOperationId
  *    Windows.Storage.Pickers.IFileOpenPicker2
+ *    Windows.Storage.Pickers.IFileOpenPickerWithOperationId
+ *    Windows.Storage.Pickers.IFileOpenPicker ** Default Interface **
+ *    Windows.Storage.Pickers.IFileOpenPicker3
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2004,6 +2346,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IMap_2_HSTRING,__FIVector_1_HSTRING ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -2025,6 +2369,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVectorView_1_Windows.Storage.StorageFile ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1_Windows.Storage.StorageFile
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -2045,10 +2391,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.Pickers.IFileSavePickerStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
- *    Windows.Storage.Pickers.IFileSavePicker ** Default Interface **
  *    Windows.Storage.Pickers.IFileSavePicker2
  *    Windows.Storage.Pickers.IFileSavePicker3
+ *    Windows.Storage.Pickers.IFileSavePicker ** Default Interface **
+ *    Windows.Storage.Pickers.IFileSavePicker4
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2070,9 +2424,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.Pickers.IFolderPickerStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
- *    Windows.Storage.Pickers.IFolderPicker ** Default Interface **
  *    Windows.Storage.Pickers.IFolderPicker2
+ *    Windows.Storage.Pickers.IFolderPicker ** Default Interface **
+ *    Windows.Storage.Pickers.IFolderPicker3
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2100,11 +2462,23 @@ typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker2 __x_ABI_C
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3;
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics;
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2;
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_FWD_DEFINED__
@@ -2130,6 +2504,18 @@ typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3 __x_ABI_C
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4;
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics;
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker;
@@ -2141,6 +2527,18 @@ typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker __x_ABI_CWin
 typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2 __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2;
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3;
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics;
+
+#endif // ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -4153,11 +4551,26 @@ typedef interface __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet __x_AB
 
 
 
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CIUser __x_ABI_CWindows_CSystem_CIUser;
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+
+
+
+
 
 typedef enum __x_ABI_CWindows_CStorage_CPickers_CPickerLocationId __x_ABI_CWindows_CStorage_CPickers_CPickerLocationId;
 
 
 typedef enum __x_ABI_CWindows_CStorage_CPickers_CPickerViewMode __x_ABI_CWindows_CStorage_CPickers_CPickerViewMode;
+
+
+
+
+
+
 
 
 
@@ -4199,16 +4612,8 @@ enum __x_ABI_CWindows_CStorage_CPickers_CPickerLocationId
     PickerLocationId_MusicLibrary = 5,
     PickerLocationId_PicturesLibrary = 6,
     PickerLocationId_VideosLibrary = 7,
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-    
     PickerLocationId_Objects3D = 8,
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-    
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-    
     PickerLocationId_Unspecified = 9,
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-    
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -4319,11 +4724,11 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         );
     HRESULT ( STDMETHODCALLTYPE *PickSingleFileAsync )(
         __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSingleFileOperation
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
         );
     HRESULT ( STDMETHODCALLTYPE *PickMultipleFilesAsync )(
         __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile * * pickMultipleFilesOperation
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CStorageFile * * operation
         );
     END_INTERFACE
     
@@ -4380,11 +4785,11 @@ interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker_get_FileTypeFilter(This,value) \
     ( (This)->lpVtbl->get_FileTypeFilter(This,value) )
 
-#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker_PickSingleFileAsync(This,pickSingleFileOperation) \
-    ( (This)->lpVtbl->PickSingleFileAsync(This,pickSingleFileOperation) )
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker_PickSingleFileAsync(This,operation) \
+    ( (This)->lpVtbl->PickSingleFileAsync(This,operation) )
 
-#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker_PickMultipleFilesAsync(This,pickMultipleFilesOperation) \
-    ( (This)->lpVtbl->PickMultipleFilesAsync(This,pickMultipleFilesOperation) )
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker_PickMultipleFilesAsync(This,operation) \
+    ( (This)->lpVtbl->PickMultipleFilesAsync(This,operation) )
 
 
 #endif /* COBJMACROS */
@@ -4403,10 +4808,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker;
  *
  *
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FileOpenPicker
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFileOpenPicker
  *
  *
  */
@@ -4530,6 +4931,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker2;
 
 /*
  *
+ * Interface Windows.Storage.Pickers.IFileOpenPicker3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileOpenPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileOpenPicker3[] = L"Windows.Storage.Pickers.IFileOpenPicker3";
+/* [object, uuid("D9A5C5B3-C5DC-5B98-BD80-A8D0CA0584D8"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
+        __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3Vtbl;
+
+interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_get_User(This,value) \
+    ( (This)->lpVtbl->get_User(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Storage.Pickers.IFileOpenPickerStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -4583,7 +5077,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
     /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *ResumePickSingleFileAsync )(
         __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSingleFileOperation
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
         );
     END_INTERFACE
     
@@ -4617,8 +5111,8 @@ interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 DEPRECATED("Instead, use PickSingleFileAsync")
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_ResumePickSingleFileAsync(This,pickSingleFileOperation) \
-    ( (This)->lpVtbl->ResumePickSingleFileAsync(This,pickSingleFileOperation) )
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_ResumePickSingleFileAsync(This,operation) \
+    ( (This)->lpVtbl->ResumePickSingleFileAsync(This,operation) )
 
 
 #endif /* COBJMACROS */
@@ -4627,6 +5121,100 @@ DEPRECATED("Instead, use PickSingleFileAsync")
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFileOpenPickerStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileOpenPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileOpenPickerStatics2[] = L"Windows.Storage.Pickers.IFileOpenPickerStatics2";
+/* [object, uuid("E8917415-EDDD-5C98-B6F3-366FDFCAD392"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateForUser )(
+        __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPicker * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2Vtbl;
+
+interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_CreateForUser(This,user,result) \
+    ( (This)->lpVtbl->CreateForUser(This,user,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4681,7 +5269,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *PickSingleFileAsync )(
         __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId * This,
         /* [in] */__RPC__in HSTRING pickerOperationId,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSingleFileOperation
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
         );
     END_INTERFACE
     
@@ -4711,8 +5299,8 @@ interface __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_PickSingleFileAsync(This,pickerOperationId,pickSingleFileOperation) \
-    ( (This)->lpVtbl->PickSingleFileAsync(This,pickerOperationId,pickSingleFileOperation) )
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileOpenPickerWithOperationId_PickSingleFileAsync(This,pickerOperationId,operation) \
+    ( (This)->lpVtbl->PickSingleFileAsync(This,pickerOperationId,operation) )
 
 
 #endif /* COBJMACROS */
@@ -4826,7 +5414,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         );
     HRESULT ( STDMETHODCALLTYPE *PickSaveFileAsync )(
         __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * pickSaveFileOperation
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFile * * operation
         );
     END_INTERFACE
     
@@ -4895,8 +5483,8 @@ interface __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker
 #define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker_put_SuggestedFileName(This,value) \
     ( (This)->lpVtbl->put_SuggestedFileName(This,value) )
 
-#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker_PickSaveFileAsync(This,pickSaveFileOperation) \
-    ( (This)->lpVtbl->PickSaveFileAsync(This,pickSaveFileOperation) )
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker_PickSaveFileAsync(This,operation) \
+    ( (This)->lpVtbl->PickSaveFileAsync(This,operation) )
 
 
 #endif /* COBJMACROS */
@@ -4915,10 +5503,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker;
  *
  *
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFileSavePicker
  *
  *
  */
@@ -5028,10 +5612,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker2;
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFileSavePicker
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3_INTERFACE_DEFINED__)
@@ -5124,6 +5704,193 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker3;
 
 /*
  *
+ * Interface Windows.Storage.Pickers.IFileSavePicker4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileSavePicker4[] = L"Windows.Storage.Pickers.IFileSavePicker4";
+/* [object, uuid("E7D83A5A-DDFA-5DE0-8B70-C842C21988EC"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
+        __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4Vtbl;
+
+interface __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4
+{
+    CONST_VTBL struct __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_get_User(This,value) \
+    ( (This)->lpVtbl->get_User(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFileSavePickerStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FileSavePicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFileSavePickerStatics[] = L"Windows.Storage.Pickers.IFileSavePickerStatics";
+/* [object, uuid("28E3CF9E-961C-5E2C-AED7-E64737F4CE37"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateForUser )(
+        __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CPickers_CIFileSavePicker * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStaticsVtbl;
+
+interface __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStaticsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_CreateForUser(This,user,result) \
+    ( (This)->lpVtbl->CreateForUser(This,user,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFileSavePickerStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Storage.Pickers.IFolderPicker
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -5209,7 +5976,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         );
     HRESULT ( STDMETHODCALLTYPE *PickSingleFolderAsync )(
         __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFolder * * pickSingleFolderOperation
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStorageFolder * * operation
         );
     END_INTERFACE
     
@@ -5266,8 +6033,8 @@ interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker
 #define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_get_FileTypeFilter(This,value) \
     ( (This)->lpVtbl->get_FileTypeFilter(This,value) )
 
-#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_PickSingleFolderAsync(This,pickSingleFolderOperation) \
-    ( (This)->lpVtbl->PickSingleFolderAsync(This,pickSingleFolderOperation) )
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker_PickSingleFolderAsync(This,operation) \
+    ( (This)->lpVtbl->PickSingleFolderAsync(This,operation) )
 
 
 #endif /* COBJMACROS */
@@ -5286,10 +6053,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker;
  *
  *
  * Interface is a part of the implementation of type Windows.Storage.Pickers.FolderPicker
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Storage.Pickers.IFolderPicker
  *
  *
  */
@@ -5391,6 +6154,193 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2;
 
 /*
  *
+ * Interface Windows.Storage.Pickers.IFolderPicker3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FolderPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFolderPicker3[] = L"Windows.Storage.Pickers.IFolderPicker3";
+/* [object, uuid("673B1E29-D326-53C0-BD24-A25C714CEE36"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
+        __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3Vtbl;
+
+interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_get_User(This,value) \
+    ( (This)->lpVtbl->get_User(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Storage.Pickers.IFolderPickerStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.Pickers.FolderPicker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_Pickers_IFolderPickerStatics[] = L"Windows.Storage.Pickers.IFolderPickerStatics";
+/* [object, uuid("9BE34740-7CA1-5942-A3C8-46F2551ECFF3"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateForUser )(
+        __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStaticsVtbl;
+
+interface __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStaticsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_CreateForUser(This,user,result) \
+    ( (This)->lpVtbl->CreateForUser(This,user,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CIFolderPickerStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.Storage.Pickers.FileExtensionVector
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -5399,6 +6349,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CIFolderPicker2;
  * Class implements the following interfaces:
  *    Windows.Foundation.Collections.IVector_1_HSTRING ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1_HSTRING
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -5421,12 +6373,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.Pickers.IFileOpenPickerStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Storage.Pickers.IFileOpenPickerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
- *    Windows.Storage.Pickers.IFileOpenPicker ** Default Interface **
- *    Windows.Storage.Pickers.IFileOpenPickerWithOperationId
  *    Windows.Storage.Pickers.IFileOpenPicker2
+ *    Windows.Storage.Pickers.IFileOpenPickerWithOperationId
+ *    Windows.Storage.Pickers.IFileOpenPicker ** Default Interface **
+ *    Windows.Storage.Pickers.IFileOpenPicker3
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -5449,6 +6407,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IMap_2_HSTRING,__FIVector_1_HSTRING ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -5470,6 +6430,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVectorView_1_Windows.Storage.StorageFile ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1_Windows.Storage.StorageFile
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -5490,10 +6452,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.Pickers.IFileSavePickerStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
- *    Windows.Storage.Pickers.IFileSavePicker ** Default Interface **
  *    Windows.Storage.Pickers.IFileSavePicker2
  *    Windows.Storage.Pickers.IFileSavePicker3
+ *    Windows.Storage.Pickers.IFileSavePicker ** Default Interface **
+ *    Windows.Storage.Pickers.IFileSavePicker4
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -5515,9 +6485,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.Pickers.IFolderPickerStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
- *    Windows.Storage.Pickers.IFolderPicker ** Default Interface **
  *    Windows.Storage.Pickers.IFolderPicker2
+ *    Windows.Storage.Pickers.IFolderPicker ** Default Interface **
+ *    Windows.Storage.Pickers.IFolderPicker3
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000

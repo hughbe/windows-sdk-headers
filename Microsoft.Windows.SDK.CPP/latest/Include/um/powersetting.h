@@ -144,17 +144,19 @@ typedef enum EFFECTIVE_POWER_MODE {
     EffectivePowerModeBalanced,
     EffectivePowerModeHighPerformance,
     EffectivePowerModeMaxPerformance, // v1 last supported
-    EffectivePowerModeInvalid
+    EffectivePowerModeGameMode,
+    EffectivePowerModeMixedReality, // v2 last supported
 } EFFECTIVE_POWER_MODE;
 
 #define EFFECTIVE_POWER_MODE_V1 (0x00000001)
+#define EFFECTIVE_POWER_MODE_V2 (0x00000002)
 
 typedef _Function_class_(EFFECTIVE_POWER_MODE_CALLBACK)
 VOID
 WINAPI
 EFFECTIVE_POWER_MODE_CALLBACK (
     _In_ EFFECTIVE_POWER_MODE Mode,
-    _In_ VOID *Context
+    _In_opt_ VOID *Context
     );
 
 #endif

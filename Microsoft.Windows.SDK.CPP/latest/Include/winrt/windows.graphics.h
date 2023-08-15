@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -139,8 +139,8 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             interface IGeometrySource2D;
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CIGeometrySource2D ABI::Windows::Graphics::IGeometrySource2D
 
 #endif // ____x_ABI_CWindows_CGraphics_CIGeometrySource2D_FWD_DEFINED__
@@ -153,8 +153,8 @@ namespace ABI {
         namespace Graphics {
             struct SizeInt32;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CGraphics__CSizeInt32_USE
@@ -175,7 +175,7 @@ IReference<struct ABI::Windows::Graphics::SizeInt32> : IReference_impl<struct AB
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Graphics::SizeInt32> __FIReference_1_Windows__CGraphics__CSizeInt32_t;
 #define __FIReference_1_Windows__CGraphics__CSizeInt32 ABI::Windows::Foundation::__FIReference_1_Windows__CGraphics__CSizeInt32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CGraphics__CSizeInt32 ABI::Windows::Foundation::IReference<ABI::Windows::Graphics::SizeInt32>
@@ -196,8 +196,8 @@ namespace ABI {
             
             typedef struct DisplayAdapterId DisplayAdapterId;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -205,8 +205,8 @@ namespace ABI {
             
             typedef struct PointInt32 PointInt32;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -214,8 +214,8 @@ namespace ABI {
             
             typedef struct RectInt32 RectInt32;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -223,8 +223,8 @@ namespace ABI {
             
             typedef struct SizeInt32 SizeInt32;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -253,8 +253,8 @@ namespace ABI {
                 INT32 HighPart;
             };
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -278,8 +278,8 @@ namespace ABI {
                 INT32 Y;
             };
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -305,8 +305,8 @@ namespace ABI {
                 INT32 Height;
             };
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -330,8 +330,8 @@ namespace ABI {
                 INT32 Height;
             };
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -360,8 +360,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IGeometrySource2D=_uuidof(IGeometrySource2D);
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CIGeometrySource2D;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CIGeometrySource2D_INTERFACE_DEFINED__) */

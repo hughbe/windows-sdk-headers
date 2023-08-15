@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.serialcommunication.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Devices {
             namespace SerialCommunication {
                 interface IErrorReceivedEventArgs;
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSerialCommunication_CIErrorReceivedEventArgs ABI::Windows::Devices::SerialCommunication::IErrorReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSerialCommunication_CIErrorReceivedEventArgs_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Devices {
             namespace SerialCommunication {
                 interface IPinChangedEventArgs;
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSerialCommunication_CIPinChangedEventArgs ABI::Windows::Devices::SerialCommunication::IPinChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSerialCommunication_CIPinChangedEventArgs_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Devices {
             namespace SerialCommunication {
                 interface ISerialDevice;
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice ABI::Windows::Devices::SerialCommunication::ISerialDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Devices {
             namespace SerialCommunication {
                 interface ISerialDeviceStatics;
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDeviceStatics ABI::Windows::Devices::SerialCommunication::ISerialDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDeviceStatics_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Devices {
             namespace SerialCommunication {
                 class SerialDevice;
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -359,7 +355,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SerialCommunication::Seri
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SerialCommunication::SerialDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSerialCommunication__CSerialDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSerialCommunication__CSerialDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSerialCommunication__CSerialDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSerialCommunication__CSerialDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SerialCommunication::ISerialDevice*>
@@ -391,7 +387,7 @@ IAsyncOperation<ABI::Windows::Devices::SerialCommunication::SerialDevice*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SerialCommunication::SerialDevice*> __FIAsyncOperation_1_Windows__CDevices__CSerialCommunication__CSerialDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSerialCommunication__CSerialDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSerialCommunication__CSerialDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSerialCommunication__CSerialDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SerialCommunication::ISerialDevice*>
@@ -408,9 +404,9 @@ namespace ABI {
         namespace Devices {
             namespace SerialCommunication {
                 class ErrorReceivedEventArgs;
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -434,7 +430,7 @@ ITypedEventHandler<ABI::Windows::Devices::SerialCommunication::SerialDevice*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::SerialCommunication::SerialDevice*,ABI::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::SerialCommunication::ISerialDevice*,ABI::Windows::Devices::SerialCommunication::IErrorReceivedEventArgs*>
@@ -452,9 +448,9 @@ namespace ABI {
         namespace Devices {
             namespace SerialCommunication {
                 class PinChangedEventArgs;
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -478,7 +474,7 @@ ITypedEventHandler<ABI::Windows::Devices::SerialCommunication::SerialDevice*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::SerialCommunication::SerialDevice*,ABI::Windows::Devices::SerialCommunication::PinChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::SerialCommunication::ISerialDevice*,ABI::Windows::Devices::SerialCommunication::IPinChangedEventArgs*>
@@ -498,8 +494,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -511,8 +507,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -524,9 +520,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -539,9 +535,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -557,9 +553,9 @@ namespace ABI {
                 
                 typedef enum SerialError : int SerialError;
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -568,9 +564,9 @@ namespace ABI {
                 
                 typedef enum SerialHandshake : int SerialHandshake;
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -579,9 +575,9 @@ namespace ABI {
                 
                 typedef enum SerialParity : int SerialParity;
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -590,9 +586,9 @@ namespace ABI {
                 
                 typedef enum SerialPinChange : int SerialPinChange;
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -601,9 +597,9 @@ namespace ABI {
                 
                 typedef enum SerialStopBitCount : int SerialStopBitCount;
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -644,9 +640,9 @@ namespace ABI {
                     SerialError_TransmitFull = 4,
                 };
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -673,9 +669,9 @@ namespace ABI {
                     SerialHandshake_RequestToSendXOnXOff = 3,
                 };
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -703,9 +699,9 @@ namespace ABI {
                     SerialParity_Space = 4,
                 };
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -733,9 +729,9 @@ namespace ABI {
                     SerialPinChange_RingIndicator = 4,
                 };
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -761,9 +757,9 @@ namespace ABI {
                     SerialStopBitCount_Two = 2,
                 };
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -799,9 +795,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IErrorReceivedEventArgs=_uuidof(IErrorReceivedEventArgs);
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSerialCommunication_CIErrorReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSerialCommunication_CIErrorReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -840,9 +836,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPinChangedEventArgs=_uuidof(IPinChangedEventArgs);
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSerialCommunication_CIPinChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSerialCommunication_CIPinChangedEventArgs_INTERFACE_DEFINED__) */
@@ -884,19 +880,19 @@ namespace ABI {
                         /* [in] */UINT32 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BreakSignalState(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_BreakSignalState(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BytesReceived(
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CarrierDetectState(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ClearToSendState(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DataBits(
                         /* [retval, out] */__RPC__out UINT16 * value
@@ -905,7 +901,7 @@ namespace ABI {
                         /* [in] */UINT16 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DataSetReadyState(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handshake(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::SerialCommunication::SerialHandshake * value
@@ -914,16 +910,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::Devices::SerialCommunication::SerialHandshake value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDataTerminalReadyEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDataTerminalReadyEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRequestToSendEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRequestToSendEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Parity(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::SerialCommunication::SerialParity * value
@@ -983,9 +979,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISerialDevice=_uuidof(ISerialDevice);
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice_INTERFACE_DEFINED__) */
@@ -1037,9 +1033,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISerialDeviceStatics=_uuidof(ISerialDeviceStatics);
                 
-            } /* Windows */
+            } /* SerialCommunication */
         } /* Devices */
-    } /* SerialCommunication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDeviceStatics_INTERFACE_DEFINED__) */
@@ -1284,7 +1280,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CIErrorReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CIErrorReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CErrorReceivedEventArgsVtbl;
 
@@ -1337,7 +1333,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CIPinChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CISerialDevice * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSerialCommunication_CIPinChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSerialCommunication__CSerialDevice_Windows__CDevices__CSerialCommunication__CPinChangedEventArgsVtbl;
 

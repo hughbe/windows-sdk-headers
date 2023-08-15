@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -322,6 +322,13 @@ struct WINRT_EBO ITextElement4 :
     impl::consume_t<ITextElement4>
 {
     ITextElement4(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITextElement5 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITextElement5>
+{
+    ITextElement5(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ITextElementFactory :

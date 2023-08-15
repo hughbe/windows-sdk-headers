@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -136,7 +136,7 @@ template <> struct abi<Windows::Networking::PushNotifications::IPushNotification
 
 template <> struct abi<Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL GetDefault(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDefault(void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs>{ struct type : IInspectable

@@ -5,7 +5,7 @@ import "dxgi1_4.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 typedef enum DXGI_OUTDUPL_FLAG {
     DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY = 1,
@@ -148,7 +148,7 @@ interface IDXGIFactory5 :
 
 //--------------------------------------------------------------------------------------------------------
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote( "DEFINE_GUID(IID_IDXGIOutput5,0x80A07424,0xAB52,0x42EB,0x83,0x3C,0x0C,0x42,0xFD,0x28,0x2D,0x98);" )

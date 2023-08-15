@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -24,10 +24,16 @@ struct WINRT_EBO IHttpBufferContentFactory :
 
 struct WINRT_EBO IHttpClient :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpClient>,
-    impl::require<IHttpClient, Windows::Foundation::IClosable>
+    impl::consume_t<IHttpClient>
 {
     IHttpClient(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IHttpClient2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHttpClient2>
+{
+    IHttpClient2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IHttpClientFactory :
@@ -73,6 +79,27 @@ struct WINRT_EBO IHttpFormUrlEncodedContentFactory :
     IHttpFormUrlEncodedContentFactory(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IHttpGetBufferResult :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHttpGetBufferResult>
+{
+    IHttpGetBufferResult(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IHttpGetInputStreamResult :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHttpGetInputStreamResult>
+{
+    IHttpGetInputStreamResult(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IHttpGetStringResult :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHttpGetStringResult>
+{
+    IHttpGetStringResult(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IHttpMethod :
     Windows::Foundation::IInspectable,
     impl::consume_t<IHttpMethod>
@@ -96,8 +123,7 @@ struct WINRT_EBO IHttpMethodStatics :
 
 struct WINRT_EBO IHttpMultipartContent :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpMultipartContent>,
-    impl::require<IHttpMultipartContent, Windows::Foundation::Collections::IIterable<Windows::Web::Http::IHttpContent>>
+    impl::consume_t<IHttpMultipartContent>
 {
     IHttpMultipartContent(std::nullptr_t = nullptr) noexcept {}
 };
@@ -111,8 +137,7 @@ struct WINRT_EBO IHttpMultipartContentFactory :
 
 struct WINRT_EBO IHttpMultipartFormDataContent :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpMultipartFormDataContent>,
-    impl::require<IHttpMultipartFormDataContent, Windows::Foundation::Collections::IIterable<Windows::Web::Http::IHttpContent>>
+    impl::consume_t<IHttpMultipartFormDataContent>
 {
     IHttpMultipartFormDataContent(std::nullptr_t = nullptr) noexcept {}
 };
@@ -126,8 +151,7 @@ struct WINRT_EBO IHttpMultipartFormDataContentFactory :
 
 struct WINRT_EBO IHttpRequestMessage :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpRequestMessage>,
-    impl::require<IHttpRequestMessage, Windows::Foundation::IClosable>
+    impl::consume_t<IHttpRequestMessage>
 {
     IHttpRequestMessage(std::nullptr_t = nullptr) noexcept {}
 };
@@ -139,10 +163,16 @@ struct WINRT_EBO IHttpRequestMessageFactory :
     IHttpRequestMessageFactory(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IHttpRequestResult :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHttpRequestResult>
+{
+    IHttpRequestResult(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IHttpResponseMessage :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpResponseMessage>,
-    impl::require<IHttpResponseMessage, Windows::Foundation::IClosable>
+    impl::consume_t<IHttpResponseMessage>
 {
     IHttpResponseMessage(std::nullptr_t = nullptr) noexcept {}
 };

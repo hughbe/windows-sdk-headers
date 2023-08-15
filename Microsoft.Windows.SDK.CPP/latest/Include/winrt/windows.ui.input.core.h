@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.input.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,10 +275,10 @@ namespace ABI {
             namespace Input {
                 namespace Core {
                     interface IRadialControllerIndependentInputSource;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource ABI::Windows::UI::Input::Core::IRadialControllerIndependentInputSource
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Input {
                 namespace Core {
                     interface IRadialControllerIndependentInputSource2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource2 ABI::Windows::UI::Input::Core::IRadialControllerIndependentInputSource2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource2_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Input {
                 namespace Core {
                     interface IRadialControllerIndependentInputSourceStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSourceStatics ABI::Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSourceStatics_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 class CoreApplicationView;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 interface ICoreApplicationView;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView ABI::Windows::ApplicationModel::Core::ICoreApplicationView
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView_FWD_DEFINED__
@@ -354,8 +350,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class DispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
@@ -363,8 +359,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueue ABI::Windows::System::IDispatcherQueue
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreDispatcher;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CCore_CICoreDispatcher_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CICoreDispatcher_FWD_DEFINED__
@@ -388,9 +384,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreDispatcher;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreDispatcher ABI::Windows::UI::Core::ICoreDispatcher
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreDispatcher_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialController;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CIRadialController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CIRadialController_FWD_DEFINED__
@@ -415,9 +411,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialController;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialController ABI::Windows::UI::Input::IRadialController
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialController_FWD_DEFINED__
@@ -435,10 +431,10 @@ namespace ABI {
             namespace Input {
                 namespace Core {
                     class RadialControllerIndependentInputSource;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -482,10 +478,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRadialControllerIndependentInputSource=_uuidof(IRadialControllerIndependentInputSource);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource_INTERFACE_DEFINED__) */
@@ -525,10 +521,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRadialControllerIndependentInputSource2=_uuidof(IRadialControllerIndependentInputSource2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSource2_INTERFACE_DEFINED__) */
@@ -569,10 +565,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRadialControllerIndependentInputSourceStatics=_uuidof(IRadialControllerIndependentInputSourceStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CCore_CIRadialControllerIndependentInputSourceStatics_INTERFACE_DEFINED__) */

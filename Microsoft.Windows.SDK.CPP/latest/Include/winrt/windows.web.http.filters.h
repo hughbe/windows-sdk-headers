@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.web.http.filters.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -267,6 +263,7 @@
 #include "Windows.Networking.Sockets.h"
 #include "Windows.Security.Credentials.h"
 #include "Windows.Security.Cryptography.Certificates.h"
+#include "Windows.System.h"
 #include "Windows.Web.Http.h"
 // Importing Collections header
 #include <windows.foundation.collections.h>
@@ -281,10 +278,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpBaseProtocolFilter;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilter
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter_FWD_DEFINED__
@@ -297,10 +294,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpBaseProtocolFilter2;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter2 ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilter2
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter2_FWD_DEFINED__
@@ -313,10 +310,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpBaseProtocolFilter3;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter3 ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilter3
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter3_FWD_DEFINED__
@@ -329,13 +326,45 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpBaseProtocolFilter4;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4 ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilter4
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                namespace Filters {
+                    interface IHttpBaseProtocolFilter5;
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilter5
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                namespace Filters {
+                    interface IHttpBaseProtocolFilterStatics;
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl_FWD_DEFINED__
@@ -345,10 +374,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpCacheControl;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl ABI::Windows::Web::Http::Filters::IHttpCacheControl
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl_FWD_DEFINED__
@@ -361,10 +390,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpFilter;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpFilter ABI::Windows::Web::Http::Filters::IHttpFilter
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpFilter_FWD_DEFINED__
@@ -377,10 +406,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpServerCustomValidationRequestedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs ABI::Windows::Web::Http::Filters::IHttpServerCustomValidationRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs_FWD_DEFINED__
@@ -407,7 +436,7 @@ IReference<UINT64> : IReference_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IReference<UINT64> __FIReference_1_UINT64_t;
 #define __FIReference_1_UINT64 ABI::Windows::Foundation::__FIReference_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT64 ABI::Windows::Foundation::IReference<UINT64>
@@ -423,10 +452,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     class HttpBaseProtocolFilter;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -435,10 +464,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     class HttpServerCustomValidationRequestedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -462,7 +491,7 @@ ITypedEventHandler<ABI::Windows::Web::Http::Filters::HttpBaseProtocolFilter*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::Http::Filters::HttpBaseProtocolFilter*,ABI::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs*> __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilter*,ABI::Windows::Web::Http::Filters::IHttpServerCustomValidationRequestedEventArgs*>
@@ -480,10 +509,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     enum ChainValidationResult : int;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_USE
@@ -504,7 +533,7 @@ IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -534,7 +563,7 @@ IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -564,7 +593,7 @@ IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValida
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -594,7 +623,7 @@ IVector<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidation
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -609,9 +638,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -620,9 +649,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage ABI::Windows::Web::Http::IHttpResponseMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -634,9 +663,9 @@ namespace ABI {
             namespace Http {
                 struct HttpProgress;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -658,7 +687,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpResponseMessage*,str
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpResponseMessage*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpResponseMessage*,ABI::Windows::Web::Http::HttpProgress>
@@ -691,7 +720,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpRespons
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpResponseMessage*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpResponseMessage*,ABI::Windows::Web::Http::HttpProgress>
@@ -724,7 +753,7 @@ IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpResponseMessage*,struct
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpResponseMessage*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpResponseMessage*,ABI::Windows::Web::Http::HttpProgress>
@@ -741,10 +770,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -754,10 +783,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -783,7 +812,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -815,7 +844,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -847,7 +876,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -864,8 +893,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -873,8 +902,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -886,8 +915,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -903,9 +932,9 @@ namespace ABI {
                 
                 typedef enum SocketSslErrorSeverity : int SocketSslErrorSeverity;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -915,9 +944,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -926,9 +955,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -946,11 +975,33 @@ namespace ABI {
                     
                     typedef enum ChainValidationResult : int ChainValidationResult;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            class User;
+        } /* System */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            interface IUser;
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 
 
 
@@ -960,9 +1011,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpCookieManager;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_FWD_DEFINED__
@@ -971,9 +1022,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpCookieManager;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager ABI::Windows::Web::Http::IHttpCookieManager
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_FWD_DEFINED__
@@ -986,18 +1037,18 @@ namespace ABI {
                 
                 typedef struct HttpProgress HttpProgress;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Web {
             namespace Http {
                 class HttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
@@ -1006,9 +1057,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage ABI::Windows::Web::Http::IHttpRequestMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
@@ -1022,9 +1073,9 @@ namespace ABI {
                 
                 typedef enum HttpVersion : int HttpVersion;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1037,10 +1088,10 @@ namespace ABI {
                     
                     typedef enum HttpCacheReadBehavior : int HttpCacheReadBehavior;
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1050,10 +1101,10 @@ namespace ABI {
                     
                     typedef enum HttpCacheWriteBehavior : int HttpCacheWriteBehavior;
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1063,10 +1114,12 @@ namespace ABI {
                     
                     typedef enum HttpCookieUsageBehavior : int HttpCookieUsageBehavior;
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+
 
 
 
@@ -1082,10 +1135,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     class HttpCacheControl;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1127,10 +1180,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1156,10 +1209,10 @@ namespace ABI {
                         HttpCacheWriteBehavior_NoCache = 1,
                     };
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1185,10 +1238,10 @@ namespace ABI {
                         HttpCookieUsageBehavior_NoCookies = 1,
                     };
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -1200,11 +1253,6 @@ namespace ABI {
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -1223,22 +1271,22 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowAutoRedirect(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowAutoRedirect(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowUI(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowUI(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutomaticDecompression(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutomaticDecompression(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CacheControl(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Filters::IHttpCacheControl * * value
@@ -1274,20 +1322,20 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::Security::Credentials::IPasswordCredential * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UseProxy(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_UseProxy(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpBaseProtocolFilter=_uuidof(IHttpBaseProtocolFilter);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter_INTERFACE_DEFINED__) */
@@ -1302,11 +1350,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFi
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -1335,10 +1378,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpBaseProtocolFilter2=_uuidof(IHttpBaseProtocolFilter2);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter2;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter2_INTERFACE_DEFINED__) */
@@ -1353,11 +1396,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFi
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -1386,10 +1424,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpBaseProtocolFilter3=_uuidof(IHttpBaseProtocolFilter3);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter3;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter3_INTERFACE_DEFINED__) */
@@ -1404,11 +1442,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFi
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -1427,11 +1460,11 @@ namespace ABI {
                     {
                     public:
                         /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ServerCustomValidationRequested(
-                            /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * eventHandler,
-                            /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+                            /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * handler,
+                            /* [retval, out] */__RPC__out EventRegistrationToken * token
                             ) = 0;
                         /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_ServerCustomValidationRequested(
-                            /* [in] */EventRegistrationToken eventCookie
+                            /* [in] */EventRegistrationToken token
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ClearAuthenticationCache(void) = 0;
                         
@@ -1439,14 +1472,101 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpBaseProtocolFilter4=_uuidof(IHttpBaseProtocolFilter4);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.Filters.IHttpBaseProtocolFilter5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_Filters_IHttpBaseProtocolFilter5[] = L"Windows.Web.Http.Filters.IHttpBaseProtocolFilter5";
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                namespace Filters {
+                    /* [object, uuid("416E4993-31E3-4816-BF09-E018EE8DC1F5"), exclusiveto, contract] */
+                    MIDL_INTERFACE("416E4993-31E3-4816-BF09-E018EE8DC1F5")
+                    IHttpBaseProtocolFilter5 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IHttpBaseProtocolFilter5=_uuidof(IHttpBaseProtocolFilter5);
+                    
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_Filters_IHttpBaseProtocolFilterStatics[] = L"Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics";
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                namespace Filters {
+                    /* [object, uuid("6D4DEE0C-E908-494E-B5A3-1263C9B8242A"), exclusiveto, contract] */
+                    MIDL_INTERFACE("6D4DEE0C-E908-494E-B5A3-1263C9B8242A")
+                    IHttpBaseProtocolFilterStatics : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE CreateForUser(
+                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Filters::IHttpBaseProtocolFilter * * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IHttpBaseProtocolFilterStatics=_uuidof(IHttpBaseProtocolFilterStatics);
+                    
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1491,10 +1611,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpCacheControl=_uuidof(IHttpCacheControl);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl_INTERFACE_DEFINED__) */
@@ -1536,10 +1656,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpFilter=_uuidof(IHttpFilter);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpFilter;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpFilter_INTERFACE_DEFINED__) */
@@ -1595,10 +1715,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpServerCustomValidationRequestedEventArgs=_uuidof(IHttpServerCustomValidationRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1615,13 +1735,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomVa
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter ** Default Interface **
- *    Windows.Web.Http.Filters.IHttpFilter
- *    Windows.Foundation.IClosable
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter2
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter3
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter4
+ *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter5
+ *    Windows.Web.Http.Filters.IHttpFilter
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -1646,8 +1770,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Web.Http.Filters.IHttpCacheControl ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -1712,6 +1834,18 @@ typedef interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5;
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics;
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl;
@@ -1757,7 +1891,7 @@ typedef struct __FIReference_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *value);
     END_INTERFACE
 } __FIReference_1_UINT64Vtbl;
 
@@ -1811,7 +1945,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBase
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgsVtbl;
 
@@ -2281,7 +2415,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgressVtbl;
 
@@ -2754,6 +2888,15 @@ typedef enum __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CChainValida
 
 
 
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CIUser __x_ABI_CWindows_CSystem_CIUser;
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+
+
+
+
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager;
@@ -2786,6 +2929,8 @@ typedef enum __x_ABI_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior __x_AB
 
 
 typedef enum __x_ABI_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior __x_ABI_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior;
+
+
 
 
 
@@ -2878,11 +3023,6 @@ enum __x_ABI_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -3104,11 +3244,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFi
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter2_INTERFACE_DEFINED__)
@@ -3207,11 +3342,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFi
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -3314,11 +3444,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFi
  * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Web.Http.Filters.IHttpFilter
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_INTERFACE_DEFINED__)
@@ -3360,12 +3485,12 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_ServerCustomValidationRequested )(
         __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4 * This,
-        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * eventHandler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CWeb__CHttp__CFilters__CHttpBaseProtocolFilter_Windows__CWeb__CHttp__CFilters__CHttpServerCustomValidationRequestedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
         );
     /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_ServerCustomValidationRequested )(
         __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4 * This,
-        /* [in] */EventRegistrationToken eventCookie
+        /* [in] */EventRegistrationToken token
         );
     HRESULT ( STDMETHODCALLTYPE *ClearAuthenticationCache )(
         __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4 * This
@@ -3398,11 +3523,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_add_ServerCustomValidationRequested(This,eventHandler,eventCookie) \
-    ( (This)->lpVtbl->add_ServerCustomValidationRequested(This,eventHandler,eventCookie) )
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_add_ServerCustomValidationRequested(This,handler,token) \
+    ( (This)->lpVtbl->add_ServerCustomValidationRequested(This,handler,token) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_remove_ServerCustomValidationRequested(This,eventCookie) \
-    ( (This)->lpVtbl->remove_ServerCustomValidationRequested(This,eventCookie) )
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_remove_ServerCustomValidationRequested(This,token) \
+    ( (This)->lpVtbl->remove_ServerCustomValidationRequested(This,token) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_ClearAuthenticationCache(This) \
     ( (This)->lpVtbl->ClearAuthenticationCache(This) )
@@ -3414,6 +3539,193 @@ interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.Filters.IHttpBaseProtocolFilter5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_Filters_IHttpBaseProtocolFilter5[] = L"Windows.Web.Http.Filters.IHttpBaseProtocolFilter5";
+/* [object, uuid("416E4993-31E3-4816-BF09-E018EE8DC1F5"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
+        __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5Vtbl;
+
+interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5
+{
+    CONST_VTBL struct __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_get_User(This,value) \
+    ( (This)->lpVtbl->get_User(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.Filters.HttpBaseProtocolFilter
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_Filters_IHttpBaseProtocolFilterStatics[] = L"Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics";
+/* [object, uuid("6D4DEE0C-E908-494E-B5A3-1263C9B8242A"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateForUser )(
+        __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStaticsVtbl;
+
+interface __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStaticsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_CreateForUser(This,user,result) \
+    ( (This)->lpVtbl->CreateForUser(This,user,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3769,13 +4081,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomVa
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter ** Default Interface **
- *    Windows.Web.Http.Filters.IHttpFilter
- *    Windows.Foundation.IClosable
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter2
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter3
  *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter4
+ *    Windows.Web.Http.Filters.IHttpBaseProtocolFilter5
+ *    Windows.Web.Http.Filters.IHttpFilter
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -3800,8 +4116,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Web.Http.Filters.IHttpCacheControl ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

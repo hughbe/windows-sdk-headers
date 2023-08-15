@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.userdatatasks.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTask;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTask ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTask
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTask_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskBatch;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskBatch ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskBatch
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskBatch_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskList;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskListLimitedWriteOperations;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListLimitedWriteOperations ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskListLimitedWriteOperations
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListLimitedWriteOperations_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskListSyncManager;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListSyncManager ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskListSyncManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListSyncManager_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskManager;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManager ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManager_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskManagerStatics;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManagerStatics ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManagerStatics_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskQueryOptions;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskQueryOptions ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskQueryOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskQueryOptions_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskReader;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskReader ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskReader_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskRecurrenceProperties;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRecurrenceProperties ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskRecurrenceProperties
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRecurrenceProperties_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskRegenerationProperties;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRegenerationProperties ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskRegenerationProperties
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRegenerationProperties_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskStore;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskStore ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskStore_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTask;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -471,7 +467,7 @@ IIterator<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTask*>
@@ -503,7 +499,7 @@ IIterable<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTask*>
@@ -519,9 +515,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskList;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -544,7 +540,7 @@ IIterator<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -576,7 +572,7 @@ IIterable<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -608,7 +604,7 @@ IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTask*>
@@ -640,7 +636,7 @@ IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -672,7 +668,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTask*>
@@ -704,7 +700,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTask*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTask ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTask*>
@@ -720,9 +716,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskBatch;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -745,7 +741,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskBatch*>
@@ -777,7 +773,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskBatch ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskBatch*>
@@ -809,7 +805,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -841,7 +837,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -857,9 +853,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskStore;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -882,7 +878,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskStore*>
@@ -914,7 +910,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskStore*>
@@ -946,7 +942,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CUs
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>*>
@@ -978,7 +974,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>*>
@@ -994,9 +990,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 enum UserDataTaskDaysOfWeek : unsigned int;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskDaysOfWeek_USE
@@ -1017,7 +1013,7 @@ IReference<enum ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysO
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek> __FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskDaysOfWeek_t;
 #define __FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskDaysOfWeek ABI::Windows::Foundation::__FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskDaysOfWeek_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskDaysOfWeek ABI::Windows::Foundation::IReference<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek>
@@ -1032,9 +1028,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 enum UserDataTaskWeekOfMonth : int;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskWeekOfMonth_USE
@@ -1055,7 +1051,7 @@ IReference<enum ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekO
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth> __FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskWeekOfMonth_t;
 #define __FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskWeekOfMonth ABI::Windows::Foundation::__FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskWeekOfMonth_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskWeekOfMonth ABI::Windows::Foundation::IReference<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth>
@@ -1070,9 +1066,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskListSyncManager;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1096,7 +1092,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskLi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskListSyncManager*,IInspectable*>
@@ -1112,8 +1108,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1134,7 +1130,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1163,7 +1159,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -1192,7 +1188,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -1221,7 +1217,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1250,7 +1246,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1279,7 +1275,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -1297,8 +1293,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1306,8 +1302,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1320,8 +1316,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1329,8 +1325,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1345,9 +1341,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskDaysOfWeek : unsigned int UserDataTaskDaysOfWeek;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1356,9 +1352,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskDetailsKind : int UserDataTaskDetailsKind;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1367,9 +1363,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskKind : int UserDataTaskKind;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1378,9 +1374,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskListOtherAppReadAccess : int UserDataTaskListOtherAppReadAccess;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1389,9 +1385,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskListOtherAppWriteAccess : int UserDataTaskListOtherAppWriteAccess;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1400,9 +1396,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskListSyncStatus : int UserDataTaskListSyncStatus;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1411,9 +1407,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskPriority : int UserDataTaskPriority;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1422,9 +1418,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskQueryKind : int UserDataTaskQueryKind;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1433,9 +1429,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskQuerySortProperty : int UserDataTaskQuerySortProperty;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1444,9 +1440,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskRecurrenceUnit : int UserDataTaskRecurrenceUnit;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1455,9 +1451,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskRegenerationUnit : int UserDataTaskRegenerationUnit;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1466,9 +1462,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskSensitivity : int UserDataTaskSensitivity;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1477,9 +1473,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskStoreAccessType : int UserDataTaskStoreAccessType;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1488,9 +1484,9 @@ namespace ABI {
                 
                 typedef enum UserDataTaskWeekOfMonth : int UserDataTaskWeekOfMonth;
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1512,9 +1508,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskListLimitedWriteOperations;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1523,9 +1519,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskManager;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1533,9 +1529,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskQueryOptions;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1543,9 +1539,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskReader;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1553,9 +1549,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskRecurrenceProperties;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1563,9 +1559,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskRegenerationProperties;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1606,9 +1602,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(UserDataTaskDaysOfWeek)
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1633,9 +1629,9 @@ namespace ABI {
                     UserDataTaskDetailsKind_Html = 1,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1661,9 +1657,9 @@ namespace ABI {
                     UserDataTaskKind_Regenerating = 2,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1689,9 +1685,9 @@ namespace ABI {
                     UserDataTaskListOtherAppReadAccess_None = 2,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1716,9 +1712,9 @@ namespace ABI {
                     UserDataTaskListOtherAppWriteAccess_None = 1,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1747,9 +1743,9 @@ namespace ABI {
                     UserDataTaskListSyncStatus_UnknownError = 5,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1775,9 +1771,9 @@ namespace ABI {
                     UserDataTaskPriority_High = 1,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1803,9 +1799,9 @@ namespace ABI {
                     UserDataTaskQueryKind_Complete = 2,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1829,9 +1825,9 @@ namespace ABI {
                     UserDataTaskQuerySortProperty_DueDate = 0,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1860,9 +1856,9 @@ namespace ABI {
                     UserDataTaskRecurrenceUnit_YearlyOnDay = 5,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1889,9 +1885,9 @@ namespace ABI {
                     UserDataTaskRegenerationUnit_Yearly = 4,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1916,9 +1912,9 @@ namespace ABI {
                     UserDataTaskSensitivity_Private = 1,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1943,9 +1939,9 @@ namespace ABI {
                     UserDataTaskStoreAccessType_AllTasksLimitedReadWrite = 1,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1973,9 +1969,9 @@ namespace ABI {
                     UserDataTaskWeekOfMonth_Last = 4,
                 };
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2089,9 +2085,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTask=_uuidof(IUserDataTask);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTask;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTask_INTERFACE_DEFINED__) */
@@ -2130,9 +2126,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskBatch=_uuidof(IUserDataTaskBatch);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskBatch;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskBatch_INTERFACE_DEFINED__) */
@@ -2229,9 +2225,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskList=_uuidof(IUserDataTaskList);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList_INTERFACE_DEFINED__) */
@@ -2283,9 +2279,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskListLimitedWriteOperations=_uuidof(IUserDataTaskListLimitedWriteOperations);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListLimitedWriteOperations;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListLimitedWriteOperations_INTERFACE_DEFINED__) */
@@ -2349,9 +2345,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskListSyncManager=_uuidof(IUserDataTaskListSyncManager);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListSyncManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListSyncManager_INTERFACE_DEFINED__) */
@@ -2394,9 +2390,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskManager=_uuidof(IUserDataTaskManager);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManager_INTERFACE_DEFINED__) */
@@ -2439,9 +2435,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskManagerStatics=_uuidof(IUserDataTaskManagerStatics);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskManagerStatics_INTERFACE_DEFINED__) */
@@ -2489,9 +2485,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskQueryOptions=_uuidof(IUserDataTaskQueryOptions);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskQueryOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskQueryOptions_INTERFACE_DEFINED__) */
@@ -2530,9 +2526,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskReader=_uuidof(IUserDataTaskReader);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskReader_INTERFACE_DEFINED__) */
@@ -2616,9 +2612,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskRecurrenceProperties=_uuidof(IUserDataTaskRecurrenceProperties);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRecurrenceProperties;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRecurrenceProperties_INTERFACE_DEFINED__) */
@@ -2678,9 +2674,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskRegenerationProperties=_uuidof(IUserDataTaskRegenerationProperties);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRegenerationProperties;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskRegenerationProperties_INTERFACE_DEFINED__) */
@@ -2732,9 +2728,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataTaskStore=_uuidof(IUserDataTaskStore);
                 
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskStore_INTERFACE_DEFINED__) */
@@ -4355,7 +4351,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTask
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskListSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskListSyncManager_IInspectableVtbl;
 

@@ -20,6 +20,8 @@ namespace Windows
     {
         namespace Numerics
         {
+            typedef struct Matrix4x4 Matrix4x4;
+
             typedef struct Quaternion Quaternion;
 
             typedef struct Vector3 Vector3;
@@ -53,7 +55,13 @@ namespace Windows
         {
             namespace Preview
             {
+                interface ISpatialGraphInteropFrameOfReferencePreview;
+
                 interface ISpatialGraphInteropPreviewStatics;
+
+                interface ISpatialGraphInteropPreviewStatics2;
+
+                runtimeclass SpatialGraphInteropFrameOfReferencePreview;
 
                 runtimeclass SpatialGraphInteropPreview;
             }
@@ -72,6 +80,16 @@ namespace Windows
         {
             namespace Preview
             {
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview)]
+                [uuid(A8271B23-735F-5729-A98E-E64ED189ABC5)]
+                interface ISpatialGraphInteropFrameOfReferencePreview : IInspectable
+                {
+                    [propget] HRESULT CoordinateSystem([out] [retval] Windows.Perception.Spatial.SpatialCoordinateSystem** value);
+                    [propget] HRESULT NodeId([out] [retval] GUID* value);
+                    [propget] HRESULT CoordinateSystemToNodeTransform([out] [retval] Windows.Foundation.Numerics.Matrix4x4* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [exclusiveto(Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview)]
                 [uuid(C042644C-20D8-4ED0-AEF7-6805B8E53F55)]
@@ -83,9 +101,27 @@ namespace Windows
                     HRESULT CreateLocatorForNode([in] GUID nodeId, [out] [retval] Windows.Perception.Spatial.SpatialLocator** result);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview)]
+                [uuid(2490B15F-6CBD-4B1E-B765-31E462A32DF2)]
+                interface ISpatialGraphInteropPreviewStatics2 : IInspectable
+                {
+                    [overload("TryCreateFrameOfReference")] HRESULT TryCreateFrameOfReference([in] Windows.Perception.Spatial.SpatialCoordinateSystem* coordinateSystem, [out] [retval] Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview** result);
+                    [overload("TryCreateFrameOfReference")] HRESULT TryCreateFrameOfReferenceWithPosition([in] Windows.Perception.Spatial.SpatialCoordinateSystem* coordinateSystem, [in] Windows.Foundation.Numerics.Vector3 relativePosition, [out] [retval] Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview** result);
+                    [overload("TryCreateFrameOfReference")] HRESULT TryCreateFrameOfReferenceWithPositionAndOrientation([in] Windows.Perception.Spatial.SpatialCoordinateSystem* coordinateSystem, [in] Windows.Foundation.Numerics.Vector3 relativePosition, [in] Windows.Foundation.Numerics.Quaternion relativeOrientation, [out] [retval] Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview** result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [marshaling_behavior(agile)]
+                runtimeclass SpatialGraphInteropFrameOfReferencePreview
+                {
+                    [default] interface Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview;
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics, Windows.Foundation.UniversalApiContract, 7.0)]
+                [static(Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass SpatialGraphInteropPreview
                 {

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -132,6 +132,7 @@ struct SpatialBoundingBox;
 struct SpatialBoundingFrustum;
 struct SpatialBoundingOrientedBox;
 struct SpatialBoundingSphere;
+struct SpatialRay;
 
 }
 
@@ -198,6 +199,7 @@ template <> struct category<Windows::Perception::Spatial::SpatialBoundingBox>{ u
 template <> struct category<Windows::Perception::Spatial::SpatialBoundingFrustum>{ using type = struct_category<Windows::Foundation::Numerics::plane,Windows::Foundation::Numerics::plane,Windows::Foundation::Numerics::plane,Windows::Foundation::Numerics::plane,Windows::Foundation::Numerics::plane,Windows::Foundation::Numerics::plane>; };
 template <> struct category<Windows::Perception::Spatial::SpatialBoundingOrientedBox>{ using type = struct_category<Windows::Foundation::Numerics::float3,Windows::Foundation::Numerics::float3,Windows::Foundation::Numerics::quaternion>; };
 template <> struct category<Windows::Perception::Spatial::SpatialBoundingSphere>{ using type = struct_category<Windows::Foundation::Numerics::float3,float>; };
+template <> struct category<Windows::Perception::Spatial::SpatialRay>{ using type = struct_category<Windows::Foundation::Numerics::float3,Windows::Foundation::Numerics::float3>; };
 template <> struct name<Windows::Perception::Spatial::ISpatialAnchor>{ static constexpr auto & value{ L"Windows.Perception.Spatial.ISpatialAnchor" }; };
 template <> struct name<Windows::Perception::Spatial::ISpatialAnchor2>{ static constexpr auto & value{ L"Windows.Perception.Spatial.ISpatialAnchor2" }; };
 template <> struct name<Windows::Perception::Spatial::ISpatialAnchorExportSufficiency>{ static constexpr auto & value{ L"Windows.Perception.Spatial.ISpatialAnchorExportSufficiency" }; };
@@ -259,6 +261,7 @@ template <> struct name<Windows::Perception::Spatial::SpatialBoundingBox>{ stati
 template <> struct name<Windows::Perception::Spatial::SpatialBoundingFrustum>{ static constexpr auto & value{ L"Windows.Perception.Spatial.SpatialBoundingFrustum" }; };
 template <> struct name<Windows::Perception::Spatial::SpatialBoundingOrientedBox>{ static constexpr auto & value{ L"Windows.Perception.Spatial.SpatialBoundingOrientedBox" }; };
 template <> struct name<Windows::Perception::Spatial::SpatialBoundingSphere>{ static constexpr auto & value{ L"Windows.Perception.Spatial.SpatialBoundingSphere" }; };
+template <> struct name<Windows::Perception::Spatial::SpatialRay>{ static constexpr auto & value{ L"Windows.Perception.Spatial.SpatialRay" }; };
 template <> struct guid_storage<Windows::Perception::Spatial::ISpatialAnchor>{ static constexpr guid value{ 0x0529E5CE,0x1D34,0x3702,{ 0xBC,0xEC,0xEA,0xBF,0xF5,0x78,0xA8,0x69 } }; };
 template <> struct guid_storage<Windows::Perception::Spatial::ISpatialAnchor2>{ static constexpr guid value{ 0xED17C908,0xA695,0x4CF6,{ 0x92,0xFD,0x97,0x26,0x3B,0xA7,0x10,0x47 } }; };
 template <> struct guid_storage<Windows::Perception::Spatial::ISpatialAnchorExportSufficiency>{ static constexpr guid value{ 0x77C25B2B,0x3409,0x4088,{ 0xB9,0x1B,0xFD,0xFD,0x05,0xD1,0x64,0x8F } }; };
@@ -850,6 +853,14 @@ struct struct_Windows_Perception_Spatial_SpatialBoundingSphere
     float Radius;
 };
 template <> struct abi<Windows::Perception::Spatial::SpatialBoundingSphere>{ using type = struct_Windows_Perception_Spatial_SpatialBoundingSphere; };
+
+
+struct struct_Windows_Perception_Spatial_SpatialRay
+{
+    Windows::Foundation::Numerics::float3 Origin;
+    Windows::Foundation::Numerics::float3 Direction;
+};
+template <> struct abi<Windows::Perception::Spatial::SpatialRay>{ using type = struct_Windows_Perception_Spatial_SpatialRay; };
 
 
 }

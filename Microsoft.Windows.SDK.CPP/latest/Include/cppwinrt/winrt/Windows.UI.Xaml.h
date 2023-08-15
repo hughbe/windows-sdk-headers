@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -3606,6 +3606,51 @@ template <typename D> void consume_Windows_UI_Xaml_IUIElement<D>::UpdateLayout()
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement)->UpdateLayout());
 }
 
+template <typename D> Windows::Foundation::Numerics::float3 consume_Windows_UI_Xaml_IUIElement10<D>::ActualOffset() const
+{
+    Windows::Foundation::Numerics::float3 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement10)->get_ActualOffset(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Numerics::float2 consume_Windows_UI_Xaml_IUIElement10<D>::ActualSize() const
+{
+    Windows::Foundation::Numerics::float2 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement10)->get_ActualSize(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::XamlRoot consume_Windows_UI_Xaml_IUIElement10<D>::XamlRoot() const
+{
+    Windows::UI::Xaml::XamlRoot value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement10)->get_XamlRoot(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_IUIElement10<D>::XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement10)->put_XamlRoot(get_abi(value)));
+}
+
+template <typename D> Windows::UI::UIContext consume_Windows_UI_Xaml_IUIElement10<D>::UIContext() const
+{
+    Windows::UI::UIContext value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement10)->get_UIContext(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::Media::Shadow consume_Windows_UI_Xaml_IUIElement10<D>::Shadow() const
+{
+    Windows::UI::Xaml::Media::Shadow value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement10)->get_Shadow(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_IUIElement10<D>::Shadow(Windows::UI::Xaml::Media::Shadow const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElement10)->put_Shadow(get_abi(value)));
+}
+
 template <typename D> Windows::UI::Xaml::Media::ElementCompositeMode consume_Windows_UI_Xaml_IUIElement2<D>::CompositeMode() const
 {
     Windows::UI::Xaml::Media::ElementCompositeMode value{};
@@ -4624,6 +4669,13 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
     return value;
 }
 
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_IUIElementStatics10<D>::ShadowProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElementStatics10)->get_ShadowProperty(put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_IUIElementStatics2<D>::CompositeModeProperty() const
 {
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
@@ -4850,6 +4902,13 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
 {
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElementStatics9)->get_CanBeScrollAnchorProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::UIElementWeakCollection consume_Windows_UI_Xaml_IUIElementWeakCollectionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+{
+    Windows::UI::Xaml::UIElementWeakCollection value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IUIElementWeakCollectionFactory)->CreateInstance(get_abi(baseInterface), put_abi(innerInterface), put_abi(value)));
     return value;
 }
 
@@ -5295,6 +5354,13 @@ template <typename D> Windows::UI::Composition::Compositor consume_Windows_UI_Xa
     return value;
 }
 
+template <typename D> Windows::UI::UIContext consume_Windows_UI_Xaml_IWindow4<D>::UIContext() const
+{
+    Windows::UI::UIContext value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IWindow4)->get_UIContext(put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::UI::Xaml::Window consume_Windows_UI_Xaml_IWindowCreatedEventArgs<D>::Window() const
 {
     Windows::UI::Xaml::Window value{ nullptr };
@@ -5307,6 +5373,58 @@ template <typename D> Windows::UI::Xaml::Window consume_Windows_UI_Xaml_IWindowS
     Windows::UI::Xaml::Window value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::IWindowStatics)->get_Current(put_abi(value)));
     return value;
+}
+
+template <typename D> Windows::UI::Xaml::UIElement consume_Windows_UI_Xaml_IXamlRoot<D>::Content() const
+{
+    Windows::UI::Xaml::UIElement value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IXamlRoot)->get_Content(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Size consume_Windows_UI_Xaml_IXamlRoot<D>::Size() const
+{
+    Windows::Foundation::Size value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IXamlRoot)->get_Size(put_abi(value)));
+    return value;
+}
+
+template <typename D> double consume_Windows_UI_Xaml_IXamlRoot<D>::RasterizationScale() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IXamlRoot)->get_RasterizationScale(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_UI_Xaml_IXamlRoot<D>::IsHostVisible() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IXamlRoot)->get_IsHostVisible(&value));
+    return value;
+}
+
+template <typename D> Windows::UI::UIContext consume_Windows_UI_Xaml_IXamlRoot<D>::UIContext() const
+{
+    Windows::UI::UIContext value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IXamlRoot)->get_UIContext(put_abi(value)));
+    return value;
+}
+
+template <typename D> winrt::event_token consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const& handler) const
+{
+    winrt::event_token token{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::IXamlRoot)->add_Changed(get_abi(handler), put_abi(token)));
+    return token;
+}
+
+template <typename D> typename consume_Windows_UI_Xaml_IXamlRoot<D>::Changed_revoker consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const& handler) const
+{
+    return impl::make_event_revoker<D, Changed_revoker>(this, Changed(handler));
+}
+
+template <typename D> void consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(winrt::event_token const& token) const noexcept
+{
+    WINRT_VERIFY_(0, WINRT_SHIM(Windows::UI::Xaml::IXamlRoot)->remove_Changed(get_abi(token)));
 }
 
 template <> struct delegate<Windows::UI::Xaml::ApplicationInitializationCallback>
@@ -12798,6 +12916,97 @@ struct produce<D, Windows::UI::Xaml::IUIElement> : produce_base<D, Windows::UI::
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::IUIElement10> : produce_base<D, Windows::UI::Xaml::IUIElement10>
+{
+    int32_t WINRT_CALL get_ActualOffset(Windows::Foundation::Numerics::float3* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ActualOffset, WINRT_WRAP(Windows::Foundation::Numerics::float3));
+            *value = detach_from<Windows::Foundation::Numerics::float3>(this->shim().ActualOffset());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_ActualSize(Windows::Foundation::Numerics::float2* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ActualSize, WINRT_WRAP(Windows::Foundation::Numerics::float2));
+            *value = detach_from<Windows::Foundation::Numerics::float2>(this->shim().ActualSize());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_XamlRoot(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(XamlRoot, WINRT_WRAP(Windows::UI::Xaml::XamlRoot));
+            *value = detach_from<Windows::UI::Xaml::XamlRoot>(this->shim().XamlRoot());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_XamlRoot(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(XamlRoot, WINRT_WRAP(void), Windows::UI::Xaml::XamlRoot const&);
+            this->shim().XamlRoot(*reinterpret_cast<Windows::UI::Xaml::XamlRoot const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_UIContext(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UIContext, WINRT_WRAP(Windows::UI::UIContext));
+            *value = detach_from<Windows::UI::UIContext>(this->shim().UIContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Shadow(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Shadow, WINRT_WRAP(Windows::UI::Xaml::Media::Shadow));
+            *value = detach_from<Windows::UI::Xaml::Media::Shadow>(this->shim().Shadow());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Shadow(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Shadow, WINRT_WRAP(void), Windows::UI::Xaml::Media::Shadow const&);
+            this->shim().Shadow(*reinterpret_cast<Windows::UI::Xaml::Media::Shadow const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::IUIElement2> : produce_base<D, Windows::UI::Xaml::IUIElement2>
 {
     int32_t WINRT_CALL get_CompositeMode(Windows::UI::Xaml::Media::ElementCompositeMode* value) noexcept final
@@ -14658,6 +14867,23 @@ struct produce<D, Windows::UI::Xaml::IUIElementStatics> : produce_base<D, Window
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::IUIElementStatics10> : produce_base<D, Windows::UI::Xaml::IUIElementStatics10>
+{
+    int32_t WINRT_CALL get_ShadowProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ShadowProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().ShadowProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::IUIElementStatics2> : produce_base<D, Windows::UI::Xaml::IUIElementStatics2>
 {
     int32_t WINRT_CALL get_CompositeModeProperty(void** value) noexcept final
@@ -15110,6 +15336,30 @@ struct produce<D, Windows::UI::Xaml::IUIElementStatics9> : produce_base<D, Windo
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CanBeScrollAnchorProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CanBeScrollAnchorProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::IUIElementWeakCollection> : produce_base<D, Windows::UI::Xaml::IUIElementWeakCollection>
+{};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::IUIElementWeakCollectionFactory> : produce_base<D, Windows::UI::Xaml::IUIElementWeakCollectionFactory>
+{
+    int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final
+    {
+        try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            Windows::Foundation::IInspectable __local_innerInterface;
+            WINRT_ASSERT_DECLARATION(CreateInstance, WINRT_WRAP(Windows::UI::Xaml::UIElementWeakCollection), Windows::Foundation::IInspectable const&, Windows::Foundation::IInspectable&);
+            *value = detach_from<Windows::UI::Xaml::UIElementWeakCollection>(this->shim().CreateInstance(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&baseInterface), __local_innerInterface));
+            if (innerInterface) *innerInterface = detach_abi(__local_innerInterface);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -15988,6 +16238,23 @@ struct produce<D, Windows::UI::Xaml::IWindow3> : produce_base<D, Windows::UI::Xa
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::IWindow4> : produce_base<D, Windows::UI::Xaml::IWindow4>
+{
+    int32_t WINRT_CALL get_UIContext(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UIContext, WINRT_WRAP(Windows::UI::UIContext));
+            *value = detach_from<Windows::UI::UIContext>(this->shim().UIContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::IWindowCreatedEventArgs> : produce_base<D, Windows::UI::Xaml::IWindowCreatedEventArgs>
 {
     int32_t WINRT_CALL get_Window(void** value) noexcept final
@@ -16020,6 +16287,96 @@ struct produce<D, Windows::UI::Xaml::IWindowStatics> : produce_base<D, Windows::
         catch (...) { return to_hresult(); }
     }
 };
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::IXamlRoot> : produce_base<D, Windows::UI::Xaml::IXamlRoot>
+{
+    int32_t WINRT_CALL get_Content(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Content, WINRT_WRAP(Windows::UI::Xaml::UIElement));
+            *value = detach_from<Windows::UI::Xaml::UIElement>(this->shim().Content());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Size(Windows::Foundation::Size* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Size, WINRT_WRAP(Windows::Foundation::Size));
+            *value = detach_from<Windows::Foundation::Size>(this->shim().Size());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_RasterizationScale(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RasterizationScale, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().RasterizationScale());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsHostVisible(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsHostVisible, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsHostVisible());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_UIContext(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UIContext, WINRT_WRAP(Windows::UI::UIContext));
+            *value = detach_from<Windows::UI::UIContext>(this->shim().UIContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL add_Changed(void* handler, winrt::event_token* token) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Changed, WINRT_WRAP(winrt::event_token), Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const&);
+            *token = detach_from<winrt::event_token>(this->shim().Changed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL remove_Changed(winrt::event_token token) noexcept final
+    {
+        typename D::abi_guard guard(this->shim());
+        WINRT_ASSERT_DECLARATION(Changed, WINRT_WRAP(void), winrt::event_token const&);
+        this->shim().Changed(*reinterpret_cast<winrt::event_token const*>(&token));
+        return 0;
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::IXamlRootChangedEventArgs> : produce_base<D, Windows::UI::Xaml::IXamlRootChangedEventArgs>
+{};
 
 template <typename T, typename D>
 struct WINRT_EBO produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IApplicationOverrides>
@@ -17074,6 +17431,11 @@ inline Windows::UI::Xaml::DependencyProperty UIElement::PointerCapturesProperty(
     return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerCapturesProperty(); });
 }
 
+inline Windows::UI::Xaml::DependencyProperty UIElement::ShadowProperty()
+{
+    return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics10>([&](auto&& f) { return f.ShadowProperty(); });
+}
+
 inline Windows::UI::Xaml::DependencyProperty UIElement::CompositeModeProperty()
 {
     return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics2>([&](auto&& f) { return f.CompositeModeProperty(); });
@@ -17237,6 +17599,12 @@ inline void UIElement::RegisterAsScrollPort(Windows::UI::Xaml::UIElement const& 
 inline Windows::UI::Xaml::DependencyProperty UIElement::CanBeScrollAnchorProperty()
 {
     return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics9>([&](auto&& f) { return f.CanBeScrollAnchorProperty(); });
+}
+
+inline UIElementWeakCollection::UIElementWeakCollection()
+{
+    Windows::Foundation::IInspectable baseInterface, innerInterface;
+    *this = impl::call_factory<UIElementWeakCollection, Windows::UI::Xaml::IUIElementWeakCollectionFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
 }
 
 inline Vector3Transition::Vector3Transition()
@@ -18064,7 +18432,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct FrameworkElementT :
     implements<D, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -18168,6 +18536,21 @@ protected:
     StateTriggerBaseT()
     {
         impl::call_factory<Windows::UI::Xaml::StateTriggerBase, Windows::UI::Xaml::IStateTriggerBaseFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+    }
+};
+
+template <typename D, typename... Interfaces>
+struct UIElementWeakCollectionT :
+    implements<D, Windows::Foundation::IInspectable, composing, Interfaces...>,
+    impl::require<D, Windows::UI::Xaml::IUIElementWeakCollection, Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::UIElement>, Windows::Foundation::Collections::IVector<Windows::UI::Xaml::UIElement>>,
+    impl::base<D, Windows::UI::Xaml::UIElementWeakCollection>
+{
+    using composable = UIElementWeakCollection;
+
+protected:
+    UIElementWeakCollectionT()
+    {
+        impl::call_factory<Windows::UI::Xaml::UIElementWeakCollection, Windows::UI::Xaml::IUIElementWeakCollectionFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
     }
 };
 
@@ -18348,6 +18731,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::ITriggerActionFactory> : winrt:
 template<> struct hash<winrt::Windows::UI::Xaml::ITriggerBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITriggerBase> {};
 template<> struct hash<winrt::Windows::UI::Xaml::ITriggerBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITriggerBaseFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement> {};
+template<> struct hash<winrt::Windows::UI::Xaml::IUIElement10> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement10> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElement2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElement3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElement4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement4> {};
@@ -18361,6 +18745,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides7> : winrt::
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides8> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementOverrides8> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides9> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementOverrides9> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics> {};
+template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics10> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics10> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics4> {};
@@ -18369,6 +18754,8 @@ template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics6> : winrt::im
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics7> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics8> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics8> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics9> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics9> {};
+template<> struct hash<winrt::Windows::UI::Xaml::IUIElementWeakCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementWeakCollection> {};
+template<> struct hash<winrt::Windows::UI::Xaml::IUIElementWeakCollectionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementWeakCollectionFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IUnhandledExceptionEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUnhandledExceptionEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IVector3Transition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVector3Transition> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IVector3TransitionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVector3TransitionFactory> {};
@@ -18386,8 +18773,11 @@ template<> struct hash<winrt::Windows::UI::Xaml::IVisualTransitionFactory> : win
 template<> struct hash<winrt::Windows::UI::Xaml::IWindow> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IWindow2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IWindow3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow3> {};
+template<> struct hash<winrt::Windows::UI::Xaml::IWindow4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow4> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IWindowCreatedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindowCreatedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::IWindowStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindowStatics> {};
+template<> struct hash<winrt::Windows::UI::Xaml::IXamlRoot> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IXamlRoot> {};
+template<> struct hash<winrt::Windows::UI::Xaml::IXamlRootChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IXamlRootChangedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::AdaptiveTrigger> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::AdaptiveTrigger> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Application> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Application> {};
 template<> struct hash<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams> {};
@@ -18448,6 +18838,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::TriggerActionCollection> : winr
 template<> struct hash<winrt::Windows::UI::Xaml::TriggerBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::TriggerBase> {};
 template<> struct hash<winrt::Windows::UI::Xaml::TriggerCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::TriggerCollection> {};
 template<> struct hash<winrt::Windows::UI::Xaml::UIElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::UIElement> {};
+template<> struct hash<winrt::Windows::UI::Xaml::UIElementWeakCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::UIElementWeakCollection> {};
 template<> struct hash<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Vector3Transition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Vector3Transition> {};
 template<> struct hash<winrt::Windows::UI::Xaml::VisualState> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::VisualState> {};
@@ -18457,5 +18848,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::VisualStateManager> : winrt::im
 template<> struct hash<winrt::Windows::UI::Xaml::VisualTransition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::VisualTransition> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Window> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Window> {};
 template<> struct hash<winrt::Windows::UI::Xaml::WindowCreatedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::WindowCreatedEventArgs> {};
+template<> struct hash<winrt::Windows::UI::Xaml::XamlRoot> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::XamlRoot> {};
+template<> struct hash<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs> {};
 
 }

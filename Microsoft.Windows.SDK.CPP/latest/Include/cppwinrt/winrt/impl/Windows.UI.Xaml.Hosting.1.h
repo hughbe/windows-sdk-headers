@@ -1,10 +1,11 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
 #include "winrt/impl/Windows.UI.Composition.0.h"
+#include "winrt/impl/Windows.UI.WindowManagement.0.h"
 #include "winrt/impl/Windows.UI.Xaml.0.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.0.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.0.h"
@@ -88,6 +89,13 @@ struct WINRT_EBO IElementCompositionPreviewStatics2 :
     impl::consume_t<IElementCompositionPreviewStatics2>
 {
     IElementCompositionPreviewStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IElementCompositionPreviewStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IElementCompositionPreviewStatics3>
+{
+    IElementCompositionPreviewStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IWindowsXamlManager :

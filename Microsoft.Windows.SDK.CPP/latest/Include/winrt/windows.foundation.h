@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.foundation.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -139,8 +139,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncActionCompletedHandler;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncActionCompletedHandler ABI::Windows::Foundation::IAsyncActionCompletedHandler
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncActionCompletedHandler_FWD_DEFINED__
@@ -151,8 +151,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferralCompletedHandler;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferralCompletedHandler ABI::Windows::Foundation::IDeferralCompletedHandler
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferralCompletedHandler_FWD_DEFINED__
@@ -164,9 +164,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -177,8 +177,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -189,8 +189,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -201,8 +201,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -213,8 +213,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferralFactory;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferralFactory ABI::Windows::Foundation::IDeferralFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferralFactory_FWD_DEFINED__
@@ -225,8 +225,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IGetActivationFactory;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIGetActivationFactory ABI::Windows::Foundation::IGetActivationFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CIGetActivationFactory_FWD_DEFINED__
@@ -237,8 +237,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IGuidHelperStatics;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIGuidHelperStatics ABI::Windows::Foundation::IGuidHelperStatics
 
 #endif // ____x_ABI_CWindows_CFoundation_CIGuidHelperStatics_FWD_DEFINED__
@@ -249,8 +249,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IMemoryBuffer;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIMemoryBuffer ABI::Windows::Foundation::IMemoryBuffer
 
 #endif // ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
@@ -261,8 +261,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IMemoryBufferFactory;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIMemoryBufferFactory ABI::Windows::Foundation::IMemoryBufferFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CIMemoryBufferFactory_FWD_DEFINED__
@@ -273,8 +273,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IMemoryBufferReference;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIMemoryBufferReference ABI::Windows::Foundation::IMemoryBufferReference
 
 #endif // ____x_ABI_CWindows_CFoundation_CIMemoryBufferReference_FWD_DEFINED__
@@ -285,8 +285,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IPropertyValue;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIPropertyValue ABI::Windows::Foundation::IPropertyValue
 
 #endif // ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
@@ -297,8 +297,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IPropertyValueStatics;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIPropertyValueStatics ABI::Windows::Foundation::IPropertyValueStatics
 
 #endif // ____x_ABI_CWindows_CFoundation_CIPropertyValueStatics_FWD_DEFINED__
@@ -309,8 +309,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -321,8 +321,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriEscapeStatics;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriEscapeStatics ABI::Windows::Foundation::IUriEscapeStatics
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriEscapeStatics_FWD_DEFINED__
@@ -333,8 +333,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -345,8 +345,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClassFactory;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClassFactory ABI::Windows::Foundation::IUriRuntimeClassFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClassFactory_FWD_DEFINED__
@@ -357,8 +357,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClassWithAbsoluteCanonicalUri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri ABI::Windows::Foundation::IUriRuntimeClassWithAbsoluteCanonicalUri
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri_FWD_DEFINED__
@@ -369,8 +369,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IWwwFormUrlDecoderEntry;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderEntry ABI::Windows::Foundation::IWwwFormUrlDecoderEntry
 
 #endif // ____x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderEntry_FWD_DEFINED__
@@ -381,8 +381,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IWwwFormUrlDecoderRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass ABI::Windows::Foundation::IWwwFormUrlDecoderRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass_FWD_DEFINED__
@@ -393,8 +393,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IWwwFormUrlDecoderRuntimeClassFactory;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory ABI::Windows::Foundation::IWwwFormUrlDecoderRuntimeClassFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory_FWD_DEFINED__
@@ -409,7 +409,7 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("40556131-a2a1-5fab-aaee-5f35268ca26b"))
-IIterator<byte> : IIterator_impl<byte> 
+IIterator<::byte> : IIterator_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -419,9 +419,9 @@ IIterator<byte> : IIterator_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterator<byte> __FIIterator_1_byte_t;
+typedef IIterator<::byte> __FIIterator_1_byte_t;
 #define __FIIterator_1_byte ABI::Windows::Foundation::Collections::__FIIterator_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_byte ABI::Windows::Foundation::Collections::IIterator<BYTE>
@@ -438,7 +438,7 @@ typedef IIterator<byte> __FIIterator_1_byte_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("88318266-f3fd-50fc-8f08-b823a41b60c1"))
-IIterable<byte> : IIterable_impl<byte> 
+IIterable<::byte> : IIterable_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -448,9 +448,9 @@ IIterable<byte> : IIterable_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterable<byte> __FIIterable_1_byte_t;
+typedef IIterable<::byte> __FIIterable_1_byte_t;
 #define __FIIterable_1_byte ABI::Windows::Foundation::Collections::__FIIterable_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_byte ABI::Windows::Foundation::Collections::IIterable<BYTE>
@@ -479,7 +479,7 @@ IIterator<double> : IIterator_impl<double>
 // correct parameterized interface specialization.
 typedef IIterator<double> __FIIterator_1_double_t;
 #define __FIIterator_1_double ABI::Windows::Foundation::Collections::__FIIterator_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_double ABI::Windows::Foundation::Collections::IIterator<DOUBLE>
@@ -508,7 +508,7 @@ IIterable<double> : IIterable_impl<double>
 // correct parameterized interface specialization.
 typedef IIterable<double> __FIIterable_1_double_t;
 #define __FIIterable_1_double ABI::Windows::Foundation::Collections::__FIIterable_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_double ABI::Windows::Foundation::Collections::IIterable<DOUBLE>
@@ -537,7 +537,7 @@ IIterator<float> : IIterator_impl<float>
 // correct parameterized interface specialization.
 typedef IIterator<float> __FIIterator_1_float_t;
 #define __FIIterator_1_float ABI::Windows::Foundation::Collections::__FIIterator_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_float ABI::Windows::Foundation::Collections::IIterator<FLOAT>
@@ -566,7 +566,7 @@ IIterable<float> : IIterable_impl<float>
 // correct parameterized interface specialization.
 typedef IIterable<float> __FIIterable_1_float_t;
 #define __FIIterable_1_float ABI::Windows::Foundation::Collections::__FIIterable_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_float ABI::Windows::Foundation::Collections::IIterable<FLOAT>
@@ -595,7 +595,7 @@ IIterator<GUID> : IIterator_impl<GUID>
 // correct parameterized interface specialization.
 typedef IIterator<GUID> __FIIterator_1_GUID_t;
 #define __FIIterator_1_GUID ABI::Windows::Foundation::Collections::__FIIterator_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_GUID ABI::Windows::Foundation::Collections::IIterator<GUID>
@@ -624,7 +624,7 @@ IIterable<GUID> : IIterable_impl<GUID>
 // correct parameterized interface specialization.
 typedef IIterable<GUID> __FIIterable_1_GUID_t;
 #define __FIIterable_1_GUID ABI::Windows::Foundation::Collections::__FIIterable_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_GUID ABI::Windows::Foundation::Collections::IIterable<GUID>
@@ -653,7 +653,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -682,7 +682,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -712,7 +712,7 @@ IIterator<IInspectable*> : IIterator_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IIterator<IInspectable*> __FIIterator_1_IInspectable_t;
 #define __FIIterator_1_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_IInspectable ABI::Windows::Foundation::Collections::IIterator<IInspectable*>
@@ -742,7 +742,7 @@ IIterable<IInspectable*> : IIterable_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IIterable<IInspectable*> __FIIterable_1_IInspectable_t;
 #define __FIIterable_1_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_IInspectable ABI::Windows::Foundation::Collections::IIterable<IInspectable*>
@@ -771,7 +771,7 @@ IIterator<short> : IIterator_impl<short>
 // correct parameterized interface specialization.
 typedef IIterator<short> __FIIterator_1_short_t;
 #define __FIIterator_1_short ABI::Windows::Foundation::Collections::__FIIterator_1_short_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_short ABI::Windows::Foundation::Collections::IIterator<INT16>
@@ -800,7 +800,7 @@ IIterable<short> : IIterable_impl<short>
 // correct parameterized interface specialization.
 typedef IIterable<short> __FIIterable_1_short_t;
 #define __FIIterable_1_short ABI::Windows::Foundation::Collections::__FIIterable_1_short_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_short ABI::Windows::Foundation::Collections::IIterable<INT16>
@@ -829,7 +829,7 @@ IIterator<int> : IIterator_impl<int>
 // correct parameterized interface specialization.
 typedef IIterator<int> __FIIterator_1_int_t;
 #define __FIIterator_1_int ABI::Windows::Foundation::Collections::__FIIterator_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_int ABI::Windows::Foundation::Collections::IIterator<INT32>
@@ -858,7 +858,7 @@ IIterable<int> : IIterable_impl<int>
 // correct parameterized interface specialization.
 typedef IIterable<int> __FIIterable_1_int_t;
 #define __FIIterable_1_int ABI::Windows::Foundation::Collections::__FIIterable_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_int ABI::Windows::Foundation::Collections::IIterable<INT32>
@@ -887,7 +887,7 @@ IIterator<__int64> : IIterator_impl<__int64>
 // correct parameterized interface specialization.
 typedef IIterator<__int64> __FIIterator_1___z__zint64_t;
 #define __FIIterator_1___z__zint64 ABI::Windows::Foundation::Collections::__FIIterator_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___z__zint64 ABI::Windows::Foundation::Collections::IIterator<INT64>
@@ -916,7 +916,7 @@ IIterable<__int64> : IIterable_impl<__int64>
 // correct parameterized interface specialization.
 typedef IIterable<__int64> __FIIterable_1___z__zint64_t;
 #define __FIIterable_1___z__zint64 ABI::Windows::Foundation::Collections::__FIIterable_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___z__zint64 ABI::Windows::Foundation::Collections::IIterable<INT64>
@@ -945,7 +945,7 @@ IIterator<UINT16> : IIterator_impl<UINT16>
 // correct parameterized interface specialization.
 typedef IIterator<UINT16> __FIIterator_1_UINT16_t;
 #define __FIIterator_1_UINT16 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT16_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT16 ABI::Windows::Foundation::Collections::IIterator<UINT16>
@@ -974,7 +974,7 @@ IIterable<UINT16> : IIterable_impl<UINT16>
 // correct parameterized interface specialization.
 typedef IIterable<UINT16> __FIIterable_1_UINT16_t;
 #define __FIIterable_1_UINT16 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT16_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT16 ABI::Windows::Foundation::Collections::IIterable<UINT16>
@@ -1003,7 +1003,7 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
@@ -1032,7 +1032,7 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
@@ -1061,7 +1061,7 @@ IIterator<UINT64> : IIterator_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IIterator<UINT64> __FIIterator_1_UINT64_t;
 #define __FIIterator_1_UINT64 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT64 ABI::Windows::Foundation::Collections::IIterator<UINT64>
@@ -1090,7 +1090,7 @@ IIterable<UINT64> : IIterable_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IIterable<UINT64> __FIIterable_1_UINT64_t;
 #define __FIIterable_1_UINT64 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT64 ABI::Windows::Foundation::Collections::IIterable<UINT64>
@@ -1105,8 +1105,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
@@ -1127,7 +1127,7 @@ IIterator<struct ABI::Windows::Foundation::Point> : IIterator_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::Point> __FIIterator_1_Windows__CFoundation__CPoint_t;
 #define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Point>
@@ -1157,7 +1157,7 @@ IIterable<struct ABI::Windows::Foundation::Point> : IIterable_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::Point> __FIIterable_1_Windows__CFoundation__CPoint_t;
 #define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>
@@ -1187,7 +1187,7 @@ IIterator<__FIIterable_1_Windows__CFoundation__CPoint*> : IIterator_impl<__FIIte
 // correct parameterized interface specialization.
 typedef IIterator<__FIIterable_1_Windows__CFoundation__CPoint*> __FIIterator_1___FIIterable_1_Windows__CFoundation__CPoint_t;
 #define __FIIterator_1___FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterator_1___FIIterable_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>*>
@@ -1217,7 +1217,7 @@ IIterable<__FIIterable_1_Windows__CFoundation__CPoint*> : IIterable_impl<__FIIte
 // correct parameterized interface specialization.
 typedef IIterable<__FIIterable_1_Windows__CFoundation__CPoint*> __FIIterable_1___FIIterable_1_Windows__CFoundation__CPoint_t;
 #define __FIIterable_1___FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterable_1___FIIterable_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>*>
@@ -1247,7 +1247,7 @@ IKeyValuePair<GUID,IInspectable*> : IKeyValuePair_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<GUID,IInspectable*> __FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>
@@ -1277,7 +1277,7 @@ IIterator<__FIKeyValuePair_2_GUID_IInspectable*> : IIterator_impl<__FIKeyValuePa
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_GUID_IInspectable*> __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>*>
@@ -1307,7 +1307,7 @@ IIterable<__FIKeyValuePair_2_GUID_IInspectable*> : IIterable_impl<__FIKeyValuePa
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_GUID_IInspectable*> __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>*>
@@ -1336,7 +1336,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1366,7 +1366,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1396,7 +1396,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1426,7 +1426,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1456,7 +1456,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1486,7 +1486,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1515,7 +1515,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1545,7 +1545,7 @@ IKeyValuePair<HSTRING,__FIVectorView_1_HSTRING*> : IKeyValuePair_impl<HSTRING,__
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,__FIVectorView_1_HSTRING*> __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -1575,7 +1575,7 @@ IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>*>
@@ -1605,7 +1605,7 @@ IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>*>
@@ -1634,7 +1634,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1664,7 +1664,7 @@ IKeyValuePair<HSTRING,__FIVector_1_HSTRING*> : IKeyValuePair_impl<HSTRING,__FIVe
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,__FIVector_1_HSTRING*> __FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -1694,7 +1694,7 @@ IIterator<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> : IIterator_impl<__F
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>*>
@@ -1724,7 +1724,7 @@ IIterable<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> : IIterable_impl<__F
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>*>
@@ -1755,7 +1755,7 @@ IKeyValuePair<IInspectable*,IInspectable*> : IKeyValuePair_impl<IInspectable*,II
 // correct parameterized interface specialization.
 typedef IKeyValuePair<IInspectable*,IInspectable*> __FIKeyValuePair_2_IInspectable_IInspectable_t;
 #define __FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<IInspectable*,IInspectable*>
@@ -1785,7 +1785,7 @@ IIterator<__FIKeyValuePair_2_IInspectable_IInspectable*> : IIterator_impl<__FIKe
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_IInspectable_IInspectable*> __FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<IInspectable*,IInspectable*>*>
@@ -1815,7 +1815,7 @@ IIterable<__FIKeyValuePair_2_IInspectable_IInspectable*> : IIterable_impl<__FIKe
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_IInspectable_IInspectable*> __FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<IInspectable*,IInspectable*>*>
@@ -1845,7 +1845,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1875,7 +1875,7 @@ IIterator<__FIMapView_2_HSTRING_IInspectable*> : IIterator_impl<__FIMapView_2_HS
 // correct parameterized interface specialization.
 typedef IIterator<__FIMapView_2_HSTRING_IInspectable*> __FIIterator_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -1905,7 +1905,7 @@ IIterable<__FIMapView_2_HSTRING_IInspectable*> : IIterable_impl<__FIMapView_2_HS
 // correct parameterized interface specialization.
 typedef IIterable<__FIMapView_2_HSTRING_IInspectable*> __FIIterable_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -1920,8 +1920,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CDateTime_USE
@@ -1942,7 +1942,7 @@ IIterator<struct ABI::Windows::Foundation::DateTime> : IIterator_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::DateTime> __FIIterator_1_Windows__CFoundation__CDateTime_t;
 #define __FIIterator_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::DateTime>
@@ -1972,7 +1972,7 @@ IIterable<struct ABI::Windows::Foundation::DateTime> : IIterable_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::DateTime> __FIIterable_1_Windows__CFoundation__CDateTime_t;
 #define __FIIterable_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::DateTime>
@@ -2003,7 +2003,7 @@ IIterator<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*> __FIIterator_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry_t;
 #define __FIIterator_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*>
@@ -2035,7 +2035,7 @@ IIterable<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*> __FIIterable_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry_t;
 #define __FIIterable_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*>
@@ -2051,8 +2051,8 @@ namespace ABI {
         namespace Foundation {
             struct Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CSize_USE
@@ -2073,7 +2073,7 @@ IIterator<struct ABI::Windows::Foundation::Size> : IIterator_impl<struct ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::Size> __FIIterator_1_Windows__CFoundation__CSize_t;
 #define __FIIterator_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Size>
@@ -2103,7 +2103,7 @@ IIterable<struct ABI::Windows::Foundation::Size> : IIterable_impl<struct ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::Size> __FIIterable_1_Windows__CFoundation__CSize_t;
 #define __FIIterable_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Size>
@@ -2118,8 +2118,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CTimeSpan_USE
@@ -2140,7 +2140,7 @@ IIterator<struct ABI::Windows::Foundation::TimeSpan> : IIterator_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::TimeSpan> __FIIterator_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIIterator_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::TimeSpan>
@@ -2170,7 +2170,7 @@ IIterable<struct ABI::Windows::Foundation::TimeSpan> : IIterable_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::TimeSpan> __FIIterable_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIIterable_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::TimeSpan>
@@ -2184,8 +2184,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2208,7 +2208,7 @@ IIterator<ABI::Windows::Foundation::Uri*> : IIterator_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::Uri*> __FIIterator_1_Windows__CFoundation__CUri_t;
 #define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2240,7 +2240,7 @@ IIterable<ABI::Windows::Foundation::Uri*> : IIterable_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::Uri*> __FIIterable_1_Windows__CFoundation__CUri_t;
 #define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2270,7 +2270,7 @@ IIterator<bool> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateTy
 // correct parameterized interface specialization.
 typedef IIterator<bool> __FIIterator_1_boolean_t;
 #define __FIIterator_1_boolean ABI::Windows::Foundation::Collections::__FIIterator_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_boolean ABI::Windows::Foundation::Collections::IIterator<boolean>
@@ -2299,7 +2299,7 @@ IIterable<bool> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateTy
 // correct parameterized interface specialization.
 typedef IIterable<bool> __FIIterable_1_boolean_t;
 #define __FIIterable_1_boolean ABI::Windows::Foundation::Collections::__FIIterable_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_boolean ABI::Windows::Foundation::Collections::IIterable<boolean>
@@ -2328,7 +2328,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -2358,7 +2358,7 @@ IMapView<GUID,IInspectable*> : IMapView_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<GUID,IInspectable*> __FIMapView_2_GUID_IInspectable_t;
 #define __FIMapView_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IMapView<GUID,IInspectable*>
@@ -2387,7 +2387,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -2417,7 +2417,7 @@ IMapView<HSTRING,__FIVectorView_1_HSTRING*> : IMapView_impl<HSTRING,__FIVectorVi
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,__FIVectorView_1_HSTRING*> __FIMapView_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIMapView_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -2447,7 +2447,7 @@ IMapView<HSTRING,__FIVector_1_HSTRING*> : IMapView_impl<HSTRING,__FIVector_1_HST
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,__FIVector_1_HSTRING*> __FIMapView_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIMapView_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -2478,7 +2478,7 @@ IMapView<IInspectable*,IInspectable*> : IMapView_impl<IInspectable*,IInspectable
 // correct parameterized interface specialization.
 typedef IMapView<IInspectable*,IInspectable*> __FIMapView_2_IInspectable_IInspectable_t;
 #define __FIMapView_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IMapView<IInspectable*,IInspectable*>
@@ -2508,7 +2508,7 @@ IMap<GUID,IInspectable*> : IMap_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<GUID,IInspectable*> __FIMap_2_GUID_IInspectable_t;
 #define __FIMap_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IMap<GUID,IInspectable*>
@@ -2537,7 +2537,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -2567,7 +2567,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -2597,7 +2597,7 @@ IMap<HSTRING,__FIVector_1_HSTRING*> : IMap_impl<HSTRING,__FIVector_1_HSTRING*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,__FIVector_1_HSTRING*> __FIMap_2_HSTRING___FIVector_1_HSTRING_t;
 #define __FIMap_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING___FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -2628,7 +2628,7 @@ IMap<IInspectable*,IInspectable*> : IMap_impl<IInspectable*,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<IInspectable*,IInspectable*> __FIMap_2_IInspectable_IInspectable_t;
 #define __FIMap_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IMap<IInspectable*,IInspectable*>
@@ -2657,7 +2657,7 @@ MapChangedEventHandler<HSTRING,HSTRING> : MapChangedEventHandler_impl<HSTRING,HS
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,HSTRING> __FMapChangedEventHandler_2_HSTRING_HSTRING_t;
 #define __FMapChangedEventHandler_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,HSTRING>
@@ -2686,7 +2686,7 @@ IObservableMap<HSTRING,HSTRING> : IObservableMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,HSTRING> __FIObservableMap_2_HSTRING_HSTRING_t;
 #define __FIObservableMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,HSTRING>
@@ -2716,7 +2716,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -2746,7 +2746,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -2776,7 +2776,7 @@ IVectorView<IInspectable*> : IVectorView_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IVectorView<IInspectable*> __FIVectorView_1_IInspectable_t;
 #define __FIVectorView_1_IInspectable ABI::Windows::Foundation::Collections::__FIVectorView_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_IInspectable ABI::Windows::Foundation::Collections::IVectorView<IInspectable*>
@@ -2806,7 +2806,7 @@ IVector<IInspectable*> : IVector_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IVector<IInspectable*> __FIVector_1_IInspectable_t;
 #define __FIVector_1_IInspectable ABI::Windows::Foundation::Collections::__FIVector_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_IInspectable ABI::Windows::Foundation::Collections::IVector<IInspectable*>
@@ -2836,7 +2836,7 @@ VectorChangedEventHandler<IInspectable*> : VectorChangedEventHandler_impl<IInspe
 // correct parameterized interface specialization.
 typedef VectorChangedEventHandler<IInspectable*> __FVectorChangedEventHandler_1_IInspectable_t;
 #define __FVectorChangedEventHandler_1_IInspectable ABI::Windows::Foundation::Collections::__FVectorChangedEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FVectorChangedEventHandler_1_IInspectable ABI::Windows::Foundation::Collections::VectorChangedEventHandler<IInspectable*>
@@ -2866,7 +2866,7 @@ IObservableVector<IInspectable*> : IObservableVector_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IObservableVector<IInspectable*> __FIObservableVector_1_IInspectable_t;
 #define __FIObservableVector_1_IInspectable ABI::Windows::Foundation::Collections::__FIObservableVector_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableVector_1_IInspectable ABI::Windows::Foundation::Collections::IObservableVector<IInspectable*>
@@ -2883,7 +2883,7 @@ typedef IObservableVector<IInspectable*> __FIObservableVector_1_IInspectable_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("6d05fb29-7885-544e-9382-a1ad391a3fa4"))
-IVectorView<byte> : IVectorView_impl<byte> 
+IVectorView<::byte> : IVectorView_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -2893,9 +2893,9 @@ IVectorView<byte> : IVectorView_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IVectorView<byte> __FIVectorView_1_byte_t;
+typedef IVectorView<::byte> __FIVectorView_1_byte_t;
 #define __FIVectorView_1_byte ABI::Windows::Foundation::Collections::__FIVectorView_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_byte ABI::Windows::Foundation::Collections::IVectorView<BYTE>
@@ -2924,7 +2924,7 @@ IVectorView<double> : IVectorView_impl<double>
 // correct parameterized interface specialization.
 typedef IVectorView<double> __FIVectorView_1_double_t;
 #define __FIVectorView_1_double ABI::Windows::Foundation::Collections::__FIVectorView_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_double ABI::Windows::Foundation::Collections::IVectorView<DOUBLE>
@@ -2953,7 +2953,7 @@ IVectorView<float> : IVectorView_impl<float>
 // correct parameterized interface specialization.
 typedef IVectorView<float> __FIVectorView_1_float_t;
 #define __FIVectorView_1_float ABI::Windows::Foundation::Collections::__FIVectorView_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_float ABI::Windows::Foundation::Collections::IVectorView<FLOAT>
@@ -2982,7 +2982,7 @@ IVectorView<GUID> : IVectorView_impl<GUID>
 // correct parameterized interface specialization.
 typedef IVectorView<GUID> __FIVectorView_1_GUID_t;
 #define __FIVectorView_1_GUID ABI::Windows::Foundation::Collections::__FIVectorView_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_GUID ABI::Windows::Foundation::Collections::IVectorView<GUID>
@@ -3011,7 +3011,7 @@ IVectorView<short> : IVectorView_impl<short>
 // correct parameterized interface specialization.
 typedef IVectorView<short> __FIVectorView_1_short_t;
 #define __FIVectorView_1_short ABI::Windows::Foundation::Collections::__FIVectorView_1_short_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_short ABI::Windows::Foundation::Collections::IVectorView<INT16>
@@ -3040,7 +3040,7 @@ IVectorView<int> : IVectorView_impl<int>
 // correct parameterized interface specialization.
 typedef IVectorView<int> __FIVectorView_1_int_t;
 #define __FIVectorView_1_int ABI::Windows::Foundation::Collections::__FIVectorView_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_int ABI::Windows::Foundation::Collections::IVectorView<INT32>
@@ -3069,7 +3069,7 @@ IVectorView<__int64> : IVectorView_impl<__int64>
 // correct parameterized interface specialization.
 typedef IVectorView<__int64> __FIVectorView_1___z__zint64_t;
 #define __FIVectorView_1___z__zint64 ABI::Windows::Foundation::Collections::__FIVectorView_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1___z__zint64 ABI::Windows::Foundation::Collections::IVectorView<INT64>
@@ -3098,7 +3098,7 @@ IVectorView<UINT16> : IVectorView_impl<UINT16>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT16> __FIVectorView_1_UINT16_t;
 #define __FIVectorView_1_UINT16 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT16_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT16 ABI::Windows::Foundation::Collections::IVectorView<UINT16>
@@ -3127,7 +3127,7 @@ IVectorView<UINT32> : IVectorView_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
 #define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
@@ -3156,7 +3156,7 @@ IVectorView<UINT64> : IVectorView_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT64> __FIVectorView_1_UINT64_t;
 #define __FIVectorView_1_UINT64 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT64 ABI::Windows::Foundation::Collections::IVectorView<UINT64>
@@ -3186,7 +3186,7 @@ IVectorView<__FIMapView_2_HSTRING_IInspectable*> : IVectorView_impl<__FIMapView_
 // correct parameterized interface specialization.
 typedef IVectorView<__FIMapView_2_HSTRING_IInspectable*> __FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -3216,7 +3216,7 @@ IVectorView<struct ABI::Windows::Foundation::DateTime> : IVectorView_impl<struct
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Foundation::DateTime> __FIVectorView_1_Windows__CFoundation__CDateTime_t;
 #define __FIVectorView_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::DateTime>
@@ -3247,7 +3247,7 @@ IVectorView<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*> __FIVectorView_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry_t;
 #define __FIVectorView_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CIWwwFormUrlDecoderEntry ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::IWwwFormUrlDecoderEntry*>
@@ -3278,7 +3278,7 @@ IVectorView<struct ABI::Windows::Foundation::Point> : IVectorView_impl<struct AB
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Foundation::Point> __FIVectorView_1_Windows__CFoundation__CPoint_t;
 #define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Point>
@@ -3308,7 +3308,7 @@ IVectorView<struct ABI::Windows::Foundation::Size> : IVectorView_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Foundation::Size> __FIVectorView_1_Windows__CFoundation__CSize_t;
 #define __FIVectorView_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Size>
@@ -3339,7 +3339,7 @@ IVectorView<ABI::Windows::Foundation::Uri*> : IVectorView_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Foundation::Uri*> __FIVectorView_1_Windows__CFoundation__CUri_t;
 #define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -3369,7 +3369,7 @@ IVectorView<bool> : IVectorView_impl<ABI::Windows::Foundation::Internal::Aggrega
 // correct parameterized interface specialization.
 typedef IVectorView<bool> __FIVectorView_1_boolean_t;
 #define __FIVectorView_1_boolean ABI::Windows::Foundation::Collections::__FIVectorView_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_boolean ABI::Windows::Foundation::Collections::IVectorView<boolean>
@@ -3398,7 +3398,7 @@ IVector<double> : IVector_impl<double>
 // correct parameterized interface specialization.
 typedef IVector<double> __FIVector_1_double_t;
 #define __FIVector_1_double ABI::Windows::Foundation::Collections::__FIVector_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_double ABI::Windows::Foundation::Collections::IVector<DOUBLE>
@@ -3427,7 +3427,7 @@ IVector<float> : IVector_impl<float>
 // correct parameterized interface specialization.
 typedef IVector<float> __FIVector_1_float_t;
 #define __FIVector_1_float ABI::Windows::Foundation::Collections::__FIVector_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_float ABI::Windows::Foundation::Collections::IVector<FLOAT>
@@ -3456,7 +3456,7 @@ IVector<GUID> : IVector_impl<GUID>
 // correct parameterized interface specialization.
 typedef IVector<GUID> __FIVector_1_GUID_t;
 #define __FIVector_1_GUID ABI::Windows::Foundation::Collections::__FIVector_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_GUID ABI::Windows::Foundation::Collections::IVector<GUID>
@@ -3485,7 +3485,7 @@ IVector<int> : IVector_impl<int>
 // correct parameterized interface specialization.
 typedef IVector<int> __FIVector_1_int_t;
 #define __FIVector_1_int ABI::Windows::Foundation::Collections::__FIVector_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_int ABI::Windows::Foundation::Collections::IVector<INT32>
@@ -3514,7 +3514,7 @@ IVector<UINT32> : IVector_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVector<UINT32> __FIVector_1_UINT32_t;
 #define __FIVector_1_UINT32 ABI::Windows::Foundation::Collections::__FIVector_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_UINT32 ABI::Windows::Foundation::Collections::IVector<UINT32>
@@ -3544,7 +3544,7 @@ IVector<struct ABI::Windows::Foundation::DateTime> : IVector_impl<struct ABI::Wi
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::Foundation::DateTime> __FIVector_1_Windows__CFoundation__CDateTime_t;
 #define __FIVector_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Foundation::DateTime>
@@ -3574,7 +3574,7 @@ IVector<struct ABI::Windows::Foundation::Point> : IVector_impl<struct ABI::Windo
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::Foundation::Point> __FIVector_1_Windows__CFoundation__CPoint_t;
 #define __FIVector_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Foundation::Point>
@@ -3605,7 +3605,7 @@ IVector<ABI::Windows::Foundation::Uri*> : IVector_impl<ABI::Windows::Foundation:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Foundation::Uri*> __FIVector_1_Windows__CFoundation__CUri_t;
 #define __FIVector_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -3636,7 +3636,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -3665,7 +3665,7 @@ IAsyncActionProgressHandler<double> : IAsyncActionProgressHandler_impl<double>
 // correct parameterized interface specialization.
 typedef IAsyncActionProgressHandler<double> __FIAsyncActionProgressHandler_1_double_t;
 #define __FIAsyncActionProgressHandler_1_double ABI::Windows::Foundation::__FIAsyncActionProgressHandler_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionProgressHandler_1_double ABI::Windows::Foundation::IAsyncActionProgressHandler<DOUBLE>
@@ -3694,7 +3694,7 @@ IAsyncActionWithProgressCompletedHandler<double> : IAsyncActionWithProgressCompl
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgressCompletedHandler<double> __FIAsyncActionWithProgressCompletedHandler_1_double_t;
 #define __FIAsyncActionWithProgressCompletedHandler_1_double ABI::Windows::Foundation::__FIAsyncActionWithProgressCompletedHandler_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgressCompletedHandler_1_double ABI::Windows::Foundation::IAsyncActionWithProgressCompletedHandler<DOUBLE>
@@ -3723,7 +3723,7 @@ IAsyncActionWithProgress<double> : IAsyncActionWithProgress_impl<double>
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgress<double> __FIAsyncActionWithProgress_1_double_t;
 #define __FIAsyncActionWithProgress_1_double ABI::Windows::Foundation::__FIAsyncActionWithProgress_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgress_1_double ABI::Windows::Foundation::IAsyncActionWithProgress<DOUBLE>
@@ -3752,7 +3752,7 @@ IAsyncActionProgressHandler<UINT64> : IAsyncActionProgressHandler_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IAsyncActionProgressHandler<UINT64> __FIAsyncActionProgressHandler_1_UINT64_t;
 #define __FIAsyncActionProgressHandler_1_UINT64 ABI::Windows::Foundation::__FIAsyncActionProgressHandler_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionProgressHandler_1_UINT64 ABI::Windows::Foundation::IAsyncActionProgressHandler<UINT64>
@@ -3781,7 +3781,7 @@ IAsyncActionWithProgressCompletedHandler<UINT64> : IAsyncActionWithProgressCompl
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgressCompletedHandler<UINT64> __FIAsyncActionWithProgressCompletedHandler_1_UINT64_t;
 #define __FIAsyncActionWithProgressCompletedHandler_1_UINT64 ABI::Windows::Foundation::__FIAsyncActionWithProgressCompletedHandler_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgressCompletedHandler_1_UINT64 ABI::Windows::Foundation::IAsyncActionWithProgressCompletedHandler<UINT64>
@@ -3810,7 +3810,7 @@ IAsyncActionWithProgress<UINT64> : IAsyncActionWithProgress_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgress<UINT64> __FIAsyncActionWithProgress_1_UINT64_t;
 #define __FIAsyncActionWithProgress_1_UINT64 ABI::Windows::Foundation::__FIAsyncActionWithProgress_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgress_1_UINT64 ABI::Windows::Foundation::IAsyncActionWithProgress<UINT64>
@@ -3839,7 +3839,7 @@ IAsyncOperationProgressHandler<HSTRING,UINT64> : IAsyncOperationProgressHandler_
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<HSTRING,UINT64> __FIAsyncOperationProgressHandler_2_HSTRING_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_HSTRING_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<HSTRING,UINT64>
@@ -3868,7 +3868,7 @@ IAsyncOperationWithProgressCompletedHandler<HSTRING,UINT64> : IAsyncOperationWit
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<HSTRING,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<HSTRING,UINT64>
@@ -3897,7 +3897,7 @@ IAsyncOperationWithProgress<HSTRING,UINT64> : IAsyncOperationWithProgress_impl<H
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<HSTRING,UINT64> __FIAsyncOperationWithProgress_2_HSTRING_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_HSTRING_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_HSTRING_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_HSTRING_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<HSTRING,UINT64>
@@ -3926,7 +3926,7 @@ IAsyncOperationProgressHandler<UINT32,UINT32> : IAsyncOperationProgressHandler_i
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<UINT32,UINT32> __FIAsyncOperationProgressHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<UINT32,UINT32>
@@ -3955,7 +3955,7 @@ IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> : IAsyncOperationWith
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32>
@@ -3984,7 +3984,7 @@ IAsyncOperationWithProgress<UINT32,UINT32> : IAsyncOperationWithProgress_impl<UI
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<UINT32,UINT32> __FIAsyncOperationWithProgress_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<UINT32,UINT32>
@@ -4013,7 +4013,7 @@ IAsyncOperationProgressHandler<UINT64,UINT64> : IAsyncOperationProgressHandler_i
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<UINT64,UINT64> __FIAsyncOperationProgressHandler_2_UINT64_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<UINT64,UINT64>
@@ -4042,7 +4042,7 @@ IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64> : IAsyncOperationWith
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64>
@@ -4071,7 +4071,7 @@ IAsyncOperationWithProgress<UINT64,UINT64> : IAsyncOperationWithProgress_impl<UI
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<UINT64,UINT64> __FIAsyncOperationWithProgress_2_UINT64_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<UINT64,UINT64>
@@ -4100,7 +4100,7 @@ IAsyncOperationProgressHandler<bool,double> : IAsyncOperationProgressHandler_imp
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<bool,double> __FIAsyncOperationProgressHandler_2_boolean_double_t;
 #define __FIAsyncOperationProgressHandler_2_boolean_double ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_boolean_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_boolean_double ABI::Windows::Foundation::IAsyncOperationProgressHandler<boolean,DOUBLE>
@@ -4129,7 +4129,7 @@ IAsyncOperationWithProgressCompletedHandler<bool,double> : IAsyncOperationWithPr
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<bool,double> __FIAsyncOperationWithProgressCompletedHandler_2_boolean_double_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_boolean_double ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_boolean_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_boolean_double ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<boolean,DOUBLE>
@@ -4158,7 +4158,7 @@ IAsyncOperationWithProgress<bool,double> : IAsyncOperationWithProgress_impl<ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<bool,double> __FIAsyncOperationWithProgress_2_boolean_double_t;
 #define __FIAsyncOperationWithProgress_2_boolean_double ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_boolean_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_boolean_double ABI::Windows::Foundation::IAsyncOperationWithProgress<boolean,DOUBLE>
@@ -4187,7 +4187,7 @@ IAsyncOperationCompletedHandler<GUID> : IAsyncOperationCompletedHandler_impl<GUI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<GUID> __FIAsyncOperationCompletedHandler_1_GUID_t;
 #define __FIAsyncOperationCompletedHandler_1_GUID ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_GUID ABI::Windows::Foundation::IAsyncOperationCompletedHandler<GUID>
@@ -4216,7 +4216,7 @@ IAsyncOperation<GUID> : IAsyncOperation_impl<GUID>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<GUID> __FIAsyncOperation_1_GUID_t;
 #define __FIAsyncOperation_1_GUID ABI::Windows::Foundation::__FIAsyncOperation_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_GUID ABI::Windows::Foundation::IAsyncOperation<GUID>
@@ -4245,7 +4245,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -4274,7 +4274,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -4304,7 +4304,7 @@ IAsyncOperationCompletedHandler<IInspectable*> : IAsyncOperationCompletedHandler
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<IInspectable*> __FIAsyncOperationCompletedHandler_1_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<IInspectable*>
@@ -4334,7 +4334,7 @@ IAsyncOperation<IInspectable*> : IAsyncOperation_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<IInspectable*> __FIAsyncOperation_1_IInspectable_t;
 #define __FIAsyncOperation_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_IInspectable ABI::Windows::Foundation::IAsyncOperation<IInspectable*>
@@ -4363,7 +4363,7 @@ IAsyncOperationCompletedHandler<int> : IAsyncOperationCompletedHandler_impl<int>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<int> __FIAsyncOperationCompletedHandler_1_int_t;
 #define __FIAsyncOperationCompletedHandler_1_int ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_int ABI::Windows::Foundation::IAsyncOperationCompletedHandler<INT32>
@@ -4392,7 +4392,7 @@ IAsyncOperation<int> : IAsyncOperation_impl<int>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<int> __FIAsyncOperation_1_int_t;
 #define __FIAsyncOperation_1_int ABI::Windows::Foundation::__FIAsyncOperation_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_int ABI::Windows::Foundation::IAsyncOperation<INT32>
@@ -4421,7 +4421,7 @@ IAsyncOperationCompletedHandler<__int64> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__int64> __FIAsyncOperationCompletedHandler_1___z__zint64_t;
 #define __FIAsyncOperationCompletedHandler_1___z__zint64 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___z__zint64 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<INT64>
@@ -4450,7 +4450,7 @@ IAsyncOperation<__int64> : IAsyncOperation_impl<__int64>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__int64> __FIAsyncOperation_1___z__zint64_t;
 #define __FIAsyncOperation_1___z__zint64 ABI::Windows::Foundation::__FIAsyncOperation_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___z__zint64 ABI::Windows::Foundation::IAsyncOperation<INT64>
@@ -4479,7 +4479,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -4508,7 +4508,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -4537,7 +4537,7 @@ IAsyncOperationCompletedHandler<UINT64> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT64> __FIAsyncOperationCompletedHandler_1_UINT64_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT64 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT64 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT64>
@@ -4566,7 +4566,7 @@ IAsyncOperation<UINT64> : IAsyncOperation_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT64> __FIAsyncOperation_1_UINT64_t;
 #define __FIAsyncOperation_1_UINT64 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT64 ABI::Windows::Foundation::IAsyncOperation<UINT64>
@@ -4596,7 +4596,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_HSTRING*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>*>
@@ -4626,7 +4626,7 @@ IAsyncOperation<__FIMapView_2_HSTRING_HSTRING*> : IAsyncOperation_impl<__FIMapVi
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_HSTRING_HSTRING*> __FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>*>
@@ -4656,7 +4656,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_IInspectable*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -4686,7 +4686,7 @@ IAsyncOperation<__FIMapView_2_HSTRING_IInspectable*> : IAsyncOperation_impl<__FI
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>
@@ -4716,7 +4716,7 @@ IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_HSTRING*> : IAsyncOperationCom
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>*>
@@ -4746,7 +4746,7 @@ IAsyncOperation<__FIMap_2_HSTRING_HSTRING*> : IAsyncOperation_impl<__FIMap_2_HST
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMap_2_HSTRING_HSTRING*> __FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>*>
@@ -4776,7 +4776,7 @@ IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_IInspectable*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_IInspectable*> __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>*>
@@ -4806,7 +4806,7 @@ IAsyncOperation<__FIMap_2_HSTRING_IInspectable*> : IAsyncOperation_impl<__FIMap_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMap_2_HSTRING_IInspectable*> __FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>*>
@@ -4836,7 +4836,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> : IAsyncOperationComp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -4866,7 +4866,7 @@ IAsyncOperation<__FIVectorView_1_HSTRING*> : IAsyncOperation_impl<__FIVectorView
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_HSTRING*> __FIAsyncOperation_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -4896,7 +4896,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_IInspectable*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_IInspectable*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<IInspectable*>*>
@@ -4926,7 +4926,7 @@ IAsyncOperation<__FIVectorView_1_IInspectable*> : IAsyncOperation_impl<__FIVecto
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_IInspectable*> __FIAsyncOperation_1___FIVectorView_1_IInspectable_t;
 #define __FIAsyncOperation_1___FIVectorView_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_IInspectable ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<IInspectable*>*>
@@ -4956,7 +4956,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_UINT32*> : IAsyncOperationCompl
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_UINT32*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<UINT32>*>
@@ -4986,7 +4986,7 @@ IAsyncOperation<__FIVectorView_1_UINT32*> : IAsyncOperation_impl<__FIVectorView_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_UINT32*> __FIAsyncOperation_1___FIVectorView_1_UINT32_t;
 #define __FIAsyncOperation_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<UINT32>*>
@@ -5016,7 +5016,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1___FIMapView_2_HSTRING_IInspecta
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1___FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>*>
@@ -5046,7 +5046,7 @@ IAsyncOperation<__FIVectorView_1___FIMapView_2_HSTRING_IInspectable*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1___FIMapView_2_HSTRING_IInspectable*> __FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t;
 #define __FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1___FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>*>*>
@@ -5076,7 +5076,7 @@ IAsyncOperationCompletedHandler<__FIVector_1_HSTRING*> : IAsyncOperationComplete
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVector_1_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIVector_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVector_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVector_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -5106,7 +5106,7 @@ IAsyncOperation<__FIVector_1_HSTRING*> : IAsyncOperation_impl<__FIVector_1_HSTRI
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_HSTRING*> __FIAsyncOperation_1___FIVector_1_HSTRING_t;
 #define __FIAsyncOperation_1___FIVector_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVector_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<HSTRING>*>
@@ -5136,7 +5136,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -5166,7 +5166,7 @@ IAsyncOperationCompletedHandler<__FIReference_1_Windows__CFoundation__CDateTime*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIReference_1_Windows__CFoundation__CDateTime*> __FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>*>
@@ -5196,7 +5196,7 @@ IAsyncOperation<__FIReference_1_Windows__CFoundation__CDateTime*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIReference_1_Windows__CFoundation__CDateTime*> __FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>*>
@@ -5226,7 +5226,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -5256,7 +5256,7 @@ IAsyncOperationCompletedHandler<__FIReference_1_Windows__CFoundation__CTimeSpan*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIReference_1_Windows__CFoundation__CTimeSpan*> __FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>*>
@@ -5286,7 +5286,7 @@ IAsyncOperation<__FIReference_1_Windows__CFoundation__CTimeSpan*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIReference_1_Windows__CFoundation__CTimeSpan*> __FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>*>
@@ -5317,7 +5317,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -5349,7 +5349,7 @@ IAsyncOperation<ABI::Windows::Foundation::Uri*> : IAsyncOperation_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Foundation::Uri*> __FIAsyncOperation_1_Windows__CFoundation__CUri_t;
 #define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -5379,7 +5379,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -5408,7 +5408,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -5425,7 +5425,7 @@ typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("e5198cc8-2873-55f5-b0a1-84ff9e4aad62"))
-IReference<byte> : IReference_impl<byte> 
+IReference<::byte> : IReference_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -5435,9 +5435,9 @@ IReference<byte> : IReference_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IReference<byte> __FIReference_1_byte_t;
+typedef IReference<::byte> __FIReference_1_byte_t;
 #define __FIReference_1_byte ABI::Windows::Foundation::__FIReference_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_byte ABI::Windows::Foundation::IReference<BYTE>
@@ -5466,7 +5466,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -5495,7 +5495,7 @@ IReference<float> : IReference_impl<float>
 // correct parameterized interface specialization.
 typedef IReference<float> __FIReference_1_float_t;
 #define __FIReference_1_float ABI::Windows::Foundation::__FIReference_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_float ABI::Windows::Foundation::IReference<FLOAT>
@@ -5524,7 +5524,7 @@ IReference<GUID> : IReference_impl<GUID>
 // correct parameterized interface specialization.
 typedef IReference<GUID> __FIReference_1_GUID_t;
 #define __FIReference_1_GUID ABI::Windows::Foundation::__FIReference_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_GUID ABI::Windows::Foundation::IReference<GUID>
@@ -5553,7 +5553,7 @@ IReference<short> : IReference_impl<short>
 // correct parameterized interface specialization.
 typedef IReference<short> __FIReference_1_short_t;
 #define __FIReference_1_short ABI::Windows::Foundation::__FIReference_1_short_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_short ABI::Windows::Foundation::IReference<INT16>
@@ -5582,7 +5582,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -5611,7 +5611,7 @@ IReference<__int64> : IReference_impl<__int64>
 // correct parameterized interface specialization.
 typedef IReference<__int64> __FIReference_1___z__zint64_t;
 #define __FIReference_1___z__zint64 ABI::Windows::Foundation::__FIReference_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1___z__zint64 ABI::Windows::Foundation::IReference<INT64>
@@ -5640,7 +5640,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -5669,7 +5669,7 @@ IReference<UINT64> : IReference_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IReference<UINT64> __FIReference_1_UINT64_t;
 #define __FIReference_1_UINT64 ABI::Windows::Foundation::__FIReference_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT64 ABI::Windows::Foundation::IReference<UINT64>
@@ -5699,7 +5699,7 @@ IReference<struct ABI::Windows::Foundation::Point> : IReference_impl<struct ABI:
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Point> __FIReference_1_Windows__CFoundation__CPoint_t;
 #define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Point>
@@ -5714,8 +5714,8 @@ namespace ABI {
         namespace Foundation {
             struct Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CRect_USE
@@ -5736,7 +5736,7 @@ IReference<struct ABI::Windows::Foundation::Rect> : IReference_impl<struct ABI::
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Rect> __FIReference_1_Windows__CFoundation__CRect_t;
 #define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CRect_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Rect>
@@ -5766,7 +5766,7 @@ IReference<struct ABI::Windows::Foundation::Size> : IReference_impl<struct ABI::
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Size> __FIReference_1_Windows__CFoundation__CSize_t;
 #define __FIReference_1_Windows__CFoundation__CSize ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CSize ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Size>
@@ -5795,7 +5795,7 @@ IReference<bool> : IReference_impl<ABI::Windows::Foundation::Internal::Aggregate
 // correct parameterized interface specialization.
 typedef IReference<bool> __FIReference_1_boolean_t;
 #define __FIReference_1_boolean ABI::Windows::Foundation::__FIReference_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_boolean ABI::Windows::Foundation::IReference<boolean>
@@ -5826,7 +5826,7 @@ ITypedEventHandler<IInspectable*,IInspectable*> : ITypedEventHandler_impl<IInspe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,IInspectable*> __FITypedEventHandler_2_IInspectable_IInspectable_t;
 #define __FITypedEventHandler_2_IInspectable_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_IInspectable ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,IInspectable*>
@@ -5858,7 +5858,7 @@ ITypedEventHandler<ABI::Windows::Foundation::IMemoryBufferReference*,IInspectabl
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Foundation::IMemoryBufferReference*,IInspectable*> __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Foundation::IMemoryBufferReference*,IInspectable*>
@@ -5882,8 +5882,8 @@ namespace ABI {
             
             typedef enum PropertyType : int PropertyType;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5891,8 +5891,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5900,8 +5900,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5909,8 +5909,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5918,8 +5918,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5927,8 +5927,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5958,9 +5958,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class PropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5969,9 +5969,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class StringMap;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5980,9 +5980,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5990,8 +5990,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5999,8 +5999,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class MemoryBuffer;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6009,16 +6009,16 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class WwwFormUrlDecoder;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class WwwFormUrlDecoderEntry;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6086,8 +6086,8 @@ namespace ABI {
                 PropertyType_OtherTypeArray = 1044,
             };
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -6110,8 +6110,8 @@ namespace ABI {
                 INT64 UniversalTime;
             };
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -6135,8 +6135,8 @@ namespace ABI {
                 FLOAT Y;
             };
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -6162,8 +6162,8 @@ namespace ABI {
                 FLOAT Height;
             };
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -6187,8 +6187,8 @@ namespace ABI {
                 FLOAT Height;
             };
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -6211,8 +6211,8 @@ namespace ABI {
                 INT64 Duration;
             };
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -6244,8 +6244,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAsyncActionCompletedHandler=_uuidof(IAsyncActionCompletedHandler);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIAsyncActionCompletedHandler;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIAsyncActionCompletedHandler_INTERFACE_DEFINED__) */
@@ -6277,8 +6277,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDeferralCompletedHandler=_uuidof(IDeferralCompletedHandler);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIDeferralCompletedHandler;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIDeferralCompletedHandler_INTERFACE_DEFINED__) */
@@ -6317,9 +6317,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPropertySet=_uuidof(IPropertySet);
                 
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CCollections_CIPropertySet;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_INTERFACE_DEFINED__) */
@@ -6363,8 +6363,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAsyncAction=_uuidof(IAsyncAction);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIAsyncAction;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIAsyncAction_INTERFACE_DEFINED__) */
@@ -6397,8 +6397,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IClosable=_uuidof(IClosable);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIClosable;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIClosable_INTERFACE_DEFINED__) */
@@ -6438,8 +6438,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDeferral=_uuidof(IDeferral);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIDeferral;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIDeferral_INTERFACE_DEFINED__) */
@@ -6478,8 +6478,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDeferralFactory=_uuidof(IDeferralFactory);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIDeferralFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIDeferralFactory_INTERFACE_DEFINED__) */
@@ -6515,8 +6515,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IGetActivationFactory=_uuidof(IGetActivationFactory);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIGetActivationFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIGetActivationFactory_INTERFACE_DEFINED__) */
@@ -6555,15 +6555,15 @@ namespace ABI {
                 virtual HRESULT STDMETHODCALLTYPE Equals(
                     /* [in] */__RPC__in const GUID * target,
                     /* [in] */__RPC__in const GUID * value,
-                    /* [retval, out] */__RPC__out boolean * result
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IGuidHelperStatics=_uuidof(IGuidHelperStatics);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIGuidHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIGuidHelperStatics_INTERFACE_DEFINED__) */
@@ -6602,8 +6602,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMemoryBuffer=_uuidof(IMemoryBuffer);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIMemoryBuffer;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIMemoryBuffer_INTERFACE_DEFINED__) */
@@ -6642,8 +6642,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMemoryBufferFactory=_uuidof(IMemoryBufferFactory);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIMemoryBufferFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIMemoryBufferFactory_INTERFACE_DEFINED__) */
@@ -6689,8 +6689,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMemoryBufferReference=_uuidof(IMemoryBufferReference);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIMemoryBufferReference;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIMemoryBufferReference_INTERFACE_DEFINED__) */
@@ -6721,7 +6721,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out ABI::Windows::Foundation::PropertyType * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNumericScalar(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE GetUInt8(
                     /* [retval, out] */__RPC__out BYTE * value
@@ -6754,7 +6754,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out WCHAR * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE GetBoolean(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE GetString(
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -6819,7 +6819,7 @@ namespace ABI {
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE GetBooleanArray(
                     /* [out] */__RPC__out UINT32 * __valueSize,
-                    /* [size_is(, *(__valueSize)), out] */__RPC__deref_out_ecount_full_opt(*(__valueSize)) boolean * * value
+                    /* [size_is(, *(__valueSize)), out] */__RPC__deref_out_ecount_full_opt(*(__valueSize)) ::boolean * * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE GetStringArray(
                     /* [out] */__RPC__out UINT32 * __valueSize,
@@ -6858,8 +6858,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPropertyValue=_uuidof(IPropertyValue);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIPropertyValue;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIPropertyValue_INTERFACE_DEFINED__) */
@@ -6933,7 +6933,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt IInspectable * * propertyValue
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE CreateBoolean(
-                    /* [in] */boolean value,
+                    /* [in] */::boolean value,
                     /* [retval, out] */__RPC__deref_out_opt IInspectable * * propertyValue
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE CreateString(
@@ -7020,7 +7020,7 @@ namespace ABI {
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE CreateBooleanArray(
                     /* [in] */UINT32 __valueSize,
-                    /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) boolean * value,
+                    /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) ::boolean * value,
                     /* [retval, out] */__RPC__deref_out_opt IInspectable * * propertyValue
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE CreateStringArray(
@@ -7068,8 +7068,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPropertyValueStatics=_uuidof(IPropertyValueStatics);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIPropertyValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIPropertyValueStatics_INTERFACE_DEFINED__) */
@@ -7104,8 +7104,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IStringable=_uuidof(IStringable);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIStringable;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIStringable_INTERFACE_DEFINED__) */
@@ -7148,8 +7148,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUriEscapeStatics=_uuidof(IUriEscapeStatics);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIUriEscapeStatics;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIUriEscapeStatics_INTERFACE_DEFINED__) */
@@ -7222,11 +7222,11 @@ namespace ABI {
                     /* [retval, out] */__RPC__out INT32 * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Suspicious(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE Equals(
                     /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * pUri,
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE CombineUri(
                     /* [in] */__RPC__in HSTRING relativeUri,
@@ -7237,8 +7237,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUriRuntimeClass=_uuidof(IUriRuntimeClass);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIUriRuntimeClass;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_INTERFACE_DEFINED__) */
@@ -7282,8 +7282,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUriRuntimeClassFactory=_uuidof(IUriRuntimeClassFactory);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIUriRuntimeClassFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIUriRuntimeClassFactory_INTERFACE_DEFINED__) */
@@ -7324,8 +7324,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUriRuntimeClassWithAbsoluteCanonicalUri=_uuidof(IUriRuntimeClassWithAbsoluteCanonicalUri);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri_INTERFACE_DEFINED__) */
@@ -7363,8 +7363,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IWwwFormUrlDecoderEntry=_uuidof(IWwwFormUrlDecoderEntry);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderEntry;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderEntry_INTERFACE_DEFINED__) */
@@ -7408,8 +7408,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IWwwFormUrlDecoderRuntimeClass=_uuidof(IWwwFormUrlDecoderRuntimeClass);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass_INTERFACE_DEFINED__) */
@@ -7448,8 +7448,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IWwwFormUrlDecoderRuntimeClassFactory=_uuidof(IWwwFormUrlDecoderRuntimeClassFactory);
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory_INTERFACE_DEFINED__) */
@@ -9303,12 +9303,12 @@ typedef struct __FIIterator_1_UINT16Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT16 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT16 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out short *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out unsigned short *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT16 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) short *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned short *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -9459,12 +9459,12 @@ typedef struct __FIIterator_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out int *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -9615,12 +9615,12 @@ typedef struct __FIIterator_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT64 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __int64 *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned __int64 *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -15117,7 +15117,7 @@ typedef struct __FIVectorView_1_UINT16Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT16 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out short *item);
+                                         /* [retval][out] */ __RPC__out unsigned short *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT16 * This,
@@ -15125,7 +15125,7 @@ typedef struct __FIVectorView_1_UINT16Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT16 * This,
-            /* [in] */ short item,
+            /* [in] */ unsigned short item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -15133,7 +15133,7 @@ typedef struct __FIVectorView_1_UINT16Vtbl
                                                __RPC__in __FIVectorView_1_UINT16 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) short *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned short *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -15225,7 +15225,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT32 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out int *item);
+                                         /* [retval][out] */ __RPC__out unsigned int *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT32 * This,
@@ -15233,7 +15233,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ int item,
+            /* [in] */ unsigned int item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -15241,7 +15241,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
                                                __RPC__in __FIVectorView_1_UINT32 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -15333,7 +15333,7 @@ typedef struct __FIVectorView_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT64 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __int64 *item);
+                                         /* [retval][out] */ __RPC__out unsigned __int64 *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT64 * This,
@@ -15341,7 +15341,7 @@ typedef struct __FIVectorView_1_UINT64Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT64 * This,
-            /* [in] */ __int64 item,
+            /* [in] */ unsigned __int64 item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -15349,7 +15349,7 @@ typedef struct __FIVectorView_1_UINT64Vtbl
                                                __RPC__in __FIVectorView_1_UINT64 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __int64 *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned __int64 *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -16754,12 +16754,12 @@ typedef struct __FIVector_1_UINT32Vtbl
         /* [out] */ __RPC__out ULONG *iidCount,
         /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
 
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt int *className);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt unsigned int *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
     HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [retval][out] */ __RPC__deref_out_opt int *item);
+        /* [retval][out] */ __RPC__deref_out_opt unsigned int *item);
 
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
         __RPC__in __FIVector_1_UINT32 * This,
@@ -16768,31 +16768,31 @@ typedef struct __FIVector_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_UINT32 **view);
 
     HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_UINT32 * This,
-        /* [in] */ __RPC__in int item,
+        /* [in] */ __RPC__in unsigned int item,
         /* [out] */ __RPC__out unsigned int *index,
         /* [retval][out] */ __RPC__out boolean *found);
 
     HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in int item);
+        /* [in] */ __RPC__in unsigned int item);
 
     HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in int item);
+        /* [in] */ __RPC__in unsigned int item);
 
     HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ unsigned int index);
-    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ __RPC__in int item);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ __RPC__in unsigned int item);
     HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_UINT32 * This);
     HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_UINT32 * This);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int startIndex,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int count,
-        /* [size_is][in] */ __RPC__in_ecount_full(count) int *value);
+        /* [size_is][in] */ __RPC__in_ecount_full(count) unsigned int *value);
 
     END_INTERFACE
 } __FIVector_1_UINT32Vtbl;
@@ -17676,7 +17676,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_HSTRING_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_HSTRING_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl;
 
@@ -17840,7 +17840,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl;
 
@@ -17942,7 +17942,7 @@ typedef struct __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_UINT32_UINT32 **handler);
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl;
 
@@ -18004,7 +18004,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_UINT64_UINT64Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT64_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT64_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_UINT64_UINT64Vtbl;
 
@@ -18106,7 +18106,7 @@ typedef struct __FIAsyncOperationWithProgress_2_UINT64_UINT64Vtbl
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_UINT64_UINT64 **handler);
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __int64 *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt unsigned __int64 *results);
     END_INTERFACE
 } __FIAsyncOperationWithProgress_2_UINT64_UINT64Vtbl;
 
@@ -18168,7 +18168,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_boolean_doubleVtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_boolean_double *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_boolean_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_boolean_double *asyncInfo, /* [in] */ double progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_boolean_doubleVtbl;
 
@@ -18931,7 +18931,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 
@@ -19040,7 +19040,7 @@ typedef struct __FIAsyncOperation_1_UINT64Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT64 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT64 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT64Vtbl;
 
@@ -21051,7 +21051,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 
@@ -21107,7 +21107,7 @@ typedef struct __FIReference_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *value);
     END_INTERFACE
 } __FIReference_1_UINT64Vtbl;
 
@@ -21387,7 +21387,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_IInspectableVtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_IInspectable * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_IInspectable * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_IInspectableVtbl;
 
@@ -21437,7 +21437,7 @@ typedef struct __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferRefer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CIMemoryBufferReference * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CIMemoryBufferReference * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CFoundation__CIMemoryBufferReference_IInspectableVtbl;
 

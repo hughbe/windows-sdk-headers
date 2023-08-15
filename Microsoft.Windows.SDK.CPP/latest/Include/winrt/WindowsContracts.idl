@@ -7,7 +7,7 @@ namespace Windows
         [contractversion(3)]
         apicontract FoundationContract{};
 
-        [contractversion(7)]
+        [contractversion(8)]
         apicontract UniversalApiContract{};
     }
 
@@ -18,7 +18,7 @@ namespace Windows
     }
     namespace ApplicationModel.Calls
     {
-        [contractversion(4)]
+        [contractversion(5)]
         apicontract CallsPhoneContract{};
     }
 

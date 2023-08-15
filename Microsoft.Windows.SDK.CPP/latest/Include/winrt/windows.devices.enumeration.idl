@@ -11,6 +11,7 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.ApplicationModel.Background.idl";
+import "Windows.Security.Credentials.idl";
 import "Windows.Storage.Streams.idl";
 import "Windows.UI.idl";
 import "Windows.UI.Popups.idl";
@@ -37,6 +38,16 @@ namespace Windows
         typedef struct Rect Rect;
 
         apicontract UniversalApiContract;
+    }
+}
+namespace Windows
+{
+    namespace Security
+    {
+        namespace Credentials
+        {
+            runtimeclass PasswordCredential;
+        }
     }
 }
 namespace Windows
@@ -137,6 +148,8 @@ namespace Windows
             interface IDeviceInformationUpdate2;
 
             interface IDevicePairingRequestedEventArgs;
+
+            interface IDevicePairingRequestedEventArgs2;
 
             interface IDevicePairingResult;
 
@@ -323,11 +336,13 @@ namespace Windows
             [flags]
             enum DevicePairingKinds
             {
-                None            = 0x0,
-                ConfirmOnly     = 0x1,
-                DisplayPin      = 0x2,
-                ProvidePin      = 0x4,
-                ConfirmPinMatch = 0x8
+                None                      = 0x0,
+                ConfirmOnly               = 0x1,
+                DisplayPin                = 0x2,
+                ProvidePin                = 0x4,
+                ConfirmPinMatch           = 0x8,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                ProvidePasswordCredential = 0x10
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -608,6 +623,14 @@ namespace Windows
                 HRESULT GetDeferral([out] [retval] Windows.Foundation.Deferral** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.Enumeration.DevicePairingRequestedEventArgs)]
+            [uuid(C83752D9-E4D3-4DB0-A360-A105E437DBDC)]
+            interface IDevicePairingRequestedEventArgs2 : IInspectable
+            {
+                HRESULT AcceptWithPasswordCredential([in] Windows.Security.Credentials.PasswordCredential* passwordCredential);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Enumeration.DevicePairingResult)]
             [uuid(072B02BF-DD95-4025-9B37-DE51ADBA37B7)]
@@ -842,6 +865,7 @@ namespace Windows
             runtimeclass DevicePairingRequestedEventArgs
             {
                 [default] interface Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

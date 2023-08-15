@@ -657,19 +657,34 @@ typedef enum {
     NVME_IDENTIFY_CNS_SPECIFIC_NAMESPACE            = 0,
     NVME_IDENTIFY_CNS_CONTROLLER                    = 1,
     NVME_IDENTIFY_CNS_ACTIVE_NAMESPACES             = 2,       // A list of up to 1024 active namespace IDs is returned to the host containing active namespaces with a namespace identifier greater than the value specified in the Namespace Identifier (CDW1.NSID) field.
+    NVME_IDENTIFY_CNS_DESCRIPTOR_NAMESPACE          = 3,
+    NVME_IDENTIFY_CNS_NVM_SET                       = 4,
 
 } NVME_IDENTIFY_CNS_CODES;
 
 typedef union {
 
     struct {
-        ULONG   CNS      : 2;        // Controller or Namespace Structure (CNS)
-        ULONG   Reserved : 30;
+        UCHAR   CNS;            // Controller or Namespace Structure (CNS)
+        UCHAR   Reserved;
+        USHORT  CNTID;          // Controller Identifier (CNTID)
     } DUMMYSTRUCTNAME;
 
     ULONG AsUlong;
 
 } NVME_CDW10_IDENTIFY, *PNVME_CDW10_IDENTIFY;
+
+typedef union {
+
+    struct {
+        USHORT  NVMSETID;       // NVM Set Identifier
+        USHORT  Reserved;
+    } DUMMYSTRUCTNAME;
+
+    ULONG AsUlong;
+
+} NVME_CDW11_IDENTIFY, *PNVME_CDW11_IDENTIFY;
+
 
 typedef struct {
     USHORT  MP;                 // bit 0:15.    Maximum  Power (MP)
@@ -714,6 +729,32 @@ typedef struct {
 } NVME_POWER_STATE_DESC, *PNVME_POWER_STATE_DESC;
 
 typedef struct {
+
+    USHORT      Identifier;
+    USHORT      ENDGID;
+
+    ULONG       Reserved1;
+
+    ULONG       Random4KBReadTypical;
+    ULONG       OptimalWriteSize;
+    UCHAR       TotalCapacity[16];
+    UCHAR       UnallocatedCapacity[16];
+
+    UCHAR       Reserved2[80];
+} NVME_SET_ATTRIBUTES_ENTRY, *PNVME_SET_ATTRIBUTES_ENTRY;
+
+
+typedef struct {
+
+    UCHAR       IdentifierCount;
+
+    UCHAR       Reserved[127];
+
+    NVME_SET_ATTRIBUTES_ENTRY       Entry[ANYSIZE_ARRAY];
+
+} NVM_SET_LIST, *PNVM_SET_LIST;
+
+typedef struct {
     //
     // byte 0 : 255, Controller Capabilities and Features
     //
@@ -745,7 +786,16 @@ typedef struct {
         ULONG   Reserved1                   : 22;
     } OAES;                     // byte 92:95.   M - Optional Asynchronous Events Supported (OAES)
 
-    UCHAR   Reserved0[144];     // byte 96:239.
+   struct {
+        ULONG   HostIdentifier128Bit        : 1;
+        ULONG   NOPSPMode                   : 1;
+        ULONG   NVMSets                     : 1;
+        ULONG   ReadRecoveryLevels          : 1;
+        ULONG   EnduranceGroups             : 1;
+        ULONG   Reserved0                   : 27;
+    } CTRATT;                   // byte 96:99.   M - Controller Attributes (CTRATT)
+
+    UCHAR   Reserved0[140];     // byte 100:239.
     UCHAR   ReservedForManagement[16];     // byte 240:255.  Refer to the NVMe Management Interface Specification for definition.
 
     //
@@ -828,7 +878,9 @@ typedef struct {
         ULONG   Reserved                : 29;
     } SANICAP;                  // byte 328:331  O - Sanitize Capabilities (SANICAP)
 
-    UCHAR   Reserved1[180];     // byte 332:511.
+    USHORT  NSETIDMAX;          // byte 332:333  O - NVM Set Identifier Maximum
+
+    UCHAR   Reserved1[178];     // byte 334:511.
 
     //
     // byte 512 : 703, NVM Command Set Attributes
@@ -1046,7 +1098,11 @@ typedef struct {
 
     UCHAR           NVMCAP[16];         // byte 48:63 O - NVM Capacity (NVMCAP)
 
-    UCHAR           Reserved2[40];      // byte 64:103
+    UCHAR           Reserved2[36];      // byte 64:99
+
+    USHORT          NVMSETID;           // byte 100:101 O - Associated NVM Set Identifier
+
+    USHORT          ENDGID;             // byte 102:103 O - Associated Endurance Group Identier
 
     UCHAR           NGUID[16];          // byte 104:119 O - NAmespace Globally Unique Identifier (NGUID)
 
@@ -1512,6 +1568,7 @@ typedef enum {
     NVME_LOG_PAGE_DEVICE_SELF_TEST              = 0x06,
     NVME_LOG_PAGE_TELEMETRY_HOST_INITIATED      = 0x07,
     NVME_LOG_PAGE_TELEMETRY_CTLR_INITIATED      = 0x08,
+    NVME_LOG_PAGE_ENDURANCE_GROUP_INFORMATION   = 0x09,
 
     NVME_LOG_PAGE_RESERVATION_NOTIFICATION      = 0x80,
     NVME_LOG_PAGE_SANITIZE_STATUS               = 0x81,
@@ -1554,8 +1611,8 @@ typedef union {
 typedef union {
 
     struct {
-        ULONG   NUMDU       : 16;       // Number of Upper Dwords (NUMDU)
-        ULONG   Reserved1   : 16;
+        ULONG   NUMDU                   : 16;       // Number of Upper Dwords (NUMDU)
+        ULONG   LogSpecificIdentifier   : 16;       // Log Specific Identifier
     } DUMMYSTRUCTNAME;
 
     ULONG   AsUlong;
@@ -1801,6 +1858,29 @@ typedef struct {
      NVME_DEVICE_SELF_TEST_RESULT_DATA       ResultData[20];    // Last 20 Self-Test Result Data, latest to oldest available in sorted order
 
 } NVME_DEVICE_SELF_TEST_LOG, *PNVME_DEVICE_SELF_TEST_LOG;
+
+//
+// Information of log: NVME_LOG_PAGE_ENDURANCE_GROUP_INFORMATION. Size: 512 bytes
+//
+typedef struct {
+
+    ULONG       Reserved0;
+    UCHAR       AvailableSpareThreshold;    // Available spare indicated as normalized percentage (0-100)
+    UCHAR       PercentageUsed;             // Vendor specific estimate of percentage of life used for the NVM set(s) of Endurance Group (Billion Unit)
+
+    UCHAR       Reserved1[26];
+    UCHAR       EnduranceEstimate[16];      // Estimate of total number of data bytes written to NVM set(s) of Endurance Group (Billion Unit)
+    UCHAR       DataUnitsRead[16];          // Total number of data bytes read from NVM set(s) of Endurance Group (Billion Unit)
+    UCHAR       DataUnitsWritten[16];       // Total number of data bytes written to NVM sets(s) of Endurance Group (Billion Unit)
+                                            // Includes only host writes
+
+    UCHAR       MediaUnitsWritten[16];      // Total number of data bytes written to NVM sets(s) of Endurance Group (Billion Unit)
+                                            // Includes both host and controller writes.
+
+    UCHAR       Reserved2[416];
+
+} NVME_ENDURANCE_GROUP_LOG, *PNVME_ENDURANCE_GROUP_LOG;
+
 #pragma pack(pop)
 
 //
@@ -2331,7 +2411,7 @@ typedef struct {
         //
         struct {
             NVME_CDW10_IDENTIFY CDW10;
-            ULONG   CDW11;
+            NVME_CDW11_IDENTIFY CDW11;
             ULONG   CDW12;
             ULONG   CDW13;
             ULONG   CDW14;

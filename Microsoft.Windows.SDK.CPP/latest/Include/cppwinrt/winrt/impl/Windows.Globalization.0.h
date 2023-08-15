@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -41,6 +41,8 @@ struct ICalendarIdentifiersStatics;
 struct ICalendarIdentifiersStatics2;
 struct ICalendarIdentifiersStatics3;
 struct IClockIdentifiersStatics;
+struct ICurrencyAmount;
+struct ICurrencyAmountFactory;
 struct ICurrencyIdentifiersStatics;
 struct ICurrencyIdentifiersStatics2;
 struct ICurrencyIdentifiersStatics3;
@@ -62,6 +64,7 @@ struct ApplicationLanguages;
 struct Calendar;
 struct CalendarIdentifiers;
 struct ClockIdentifiers;
+struct CurrencyAmount;
 struct CurrencyIdentifiers;
 struct GeographicRegion;
 struct JapanesePhoneme;
@@ -82,6 +85,8 @@ template <> struct category<Windows::Globalization::ICalendarIdentifiersStatics>
 template <> struct category<Windows::Globalization::ICalendarIdentifiersStatics2>{ using type = interface_category; };
 template <> struct category<Windows::Globalization::ICalendarIdentifiersStatics3>{ using type = interface_category; };
 template <> struct category<Windows::Globalization::IClockIdentifiersStatics>{ using type = interface_category; };
+template <> struct category<Windows::Globalization::ICurrencyAmount>{ using type = interface_category; };
+template <> struct category<Windows::Globalization::ICurrencyAmountFactory>{ using type = interface_category; };
 template <> struct category<Windows::Globalization::ICurrencyIdentifiersStatics>{ using type = interface_category; };
 template <> struct category<Windows::Globalization::ICurrencyIdentifiersStatics2>{ using type = interface_category; };
 template <> struct category<Windows::Globalization::ICurrencyIdentifiersStatics3>{ using type = interface_category; };
@@ -103,6 +108,7 @@ template <> struct category<Windows::Globalization::ApplicationLanguages>{ using
 template <> struct category<Windows::Globalization::Calendar>{ using type = class_category; };
 template <> struct category<Windows::Globalization::CalendarIdentifiers>{ using type = class_category; };
 template <> struct category<Windows::Globalization::ClockIdentifiers>{ using type = class_category; };
+template <> struct category<Windows::Globalization::CurrencyAmount>{ using type = class_category; };
 template <> struct category<Windows::Globalization::CurrencyIdentifiers>{ using type = class_category; };
 template <> struct category<Windows::Globalization::GeographicRegion>{ using type = class_category; };
 template <> struct category<Windows::Globalization::JapanesePhoneme>{ using type = class_category; };
@@ -120,6 +126,8 @@ template <> struct name<Windows::Globalization::ICalendarIdentifiersStatics>{ st
 template <> struct name<Windows::Globalization::ICalendarIdentifiersStatics2>{ static constexpr auto & value{ L"Windows.Globalization.ICalendarIdentifiersStatics2" }; };
 template <> struct name<Windows::Globalization::ICalendarIdentifiersStatics3>{ static constexpr auto & value{ L"Windows.Globalization.ICalendarIdentifiersStatics3" }; };
 template <> struct name<Windows::Globalization::IClockIdentifiersStatics>{ static constexpr auto & value{ L"Windows.Globalization.IClockIdentifiersStatics" }; };
+template <> struct name<Windows::Globalization::ICurrencyAmount>{ static constexpr auto & value{ L"Windows.Globalization.ICurrencyAmount" }; };
+template <> struct name<Windows::Globalization::ICurrencyAmountFactory>{ static constexpr auto & value{ L"Windows.Globalization.ICurrencyAmountFactory" }; };
 template <> struct name<Windows::Globalization::ICurrencyIdentifiersStatics>{ static constexpr auto & value{ L"Windows.Globalization.ICurrencyIdentifiersStatics" }; };
 template <> struct name<Windows::Globalization::ICurrencyIdentifiersStatics2>{ static constexpr auto & value{ L"Windows.Globalization.ICurrencyIdentifiersStatics2" }; };
 template <> struct name<Windows::Globalization::ICurrencyIdentifiersStatics3>{ static constexpr auto & value{ L"Windows.Globalization.ICurrencyIdentifiersStatics3" }; };
@@ -141,6 +149,7 @@ template <> struct name<Windows::Globalization::ApplicationLanguages>{ static co
 template <> struct name<Windows::Globalization::Calendar>{ static constexpr auto & value{ L"Windows.Globalization.Calendar" }; };
 template <> struct name<Windows::Globalization::CalendarIdentifiers>{ static constexpr auto & value{ L"Windows.Globalization.CalendarIdentifiers" }; };
 template <> struct name<Windows::Globalization::ClockIdentifiers>{ static constexpr auto & value{ L"Windows.Globalization.ClockIdentifiers" }; };
+template <> struct name<Windows::Globalization::CurrencyAmount>{ static constexpr auto & value{ L"Windows.Globalization.CurrencyAmount" }; };
 template <> struct name<Windows::Globalization::CurrencyIdentifiers>{ static constexpr auto & value{ L"Windows.Globalization.CurrencyIdentifiers" }; };
 template <> struct name<Windows::Globalization::GeographicRegion>{ static constexpr auto & value{ L"Windows.Globalization.GeographicRegion" }; };
 template <> struct name<Windows::Globalization::JapanesePhoneme>{ static constexpr auto & value{ L"Windows.Globalization.JapanesePhoneme" }; };
@@ -158,6 +167,8 @@ template <> struct guid_storage<Windows::Globalization::ICalendarIdentifiersStat
 template <> struct guid_storage<Windows::Globalization::ICalendarIdentifiersStatics2>{ static constexpr guid value{ 0x7DF4D488,0x5FD0,0x42A7,{ 0x95,0xB5,0x7D,0x98,0xD8,0x23,0x07,0x5F } }; };
 template <> struct guid_storage<Windows::Globalization::ICalendarIdentifiersStatics3>{ static constexpr guid value{ 0x2C225423,0x1FAD,0x40C0,{ 0x93,0x34,0xA8,0xEB,0x90,0xDB,0x04,0xF5 } }; };
 template <> struct guid_storage<Windows::Globalization::IClockIdentifiersStatics>{ static constexpr guid value{ 0x523805BB,0x12EC,0x4F83,{ 0xBC,0x31,0xB1,0xB4,0x37,0x6B,0x08,0x08 } }; };
+template <> struct guid_storage<Windows::Globalization::ICurrencyAmount>{ static constexpr guid value{ 0x74B49942,0xEB75,0x443A,{ 0x95,0xB3,0x7D,0x72,0x3F,0x56,0xF9,0x3C } }; };
+template <> struct guid_storage<Windows::Globalization::ICurrencyAmountFactory>{ static constexpr guid value{ 0x48D7168F,0xEF3B,0x4AEE,{ 0xA6,0xA1,0x4B,0x03,0x6F,0xE0,0x3F,0xF0 } }; };
 template <> struct guid_storage<Windows::Globalization::ICurrencyIdentifiersStatics>{ static constexpr guid value{ 0x9F1D091B,0xD586,0x4913,{ 0x9B,0x6A,0xA9,0xBD,0x2D,0xC1,0x28,0x74 } }; };
 template <> struct guid_storage<Windows::Globalization::ICurrencyIdentifiersStatics2>{ static constexpr guid value{ 0x1814797F,0xC3B2,0x4C33,{ 0x95,0x91,0x98,0x00,0x11,0x95,0x0D,0x37 } }; };
 template <> struct guid_storage<Windows::Globalization::ICurrencyIdentifiersStatics3>{ static constexpr guid value{ 0x4FB23BFA,0xED25,0x4F4D,{ 0x85,0x7F,0x23,0x7F,0x17,0x48,0xC2,0x1C } }; };
@@ -176,6 +187,7 @@ template <> struct guid_storage<Windows::Globalization::INumeralSystemIdentifier
 template <> struct guid_storage<Windows::Globalization::INumeralSystemIdentifiersStatics2>{ static constexpr guid value{ 0x7F003228,0x9DDB,0x4A34,{ 0x91,0x04,0x02,0x60,0xC0,0x91,0xA7,0xC7 } }; };
 template <> struct guid_storage<Windows::Globalization::ITimeZoneOnCalendar>{ static constexpr guid value{ 0xBB3C25E5,0x46CF,0x4317,{ 0xA3,0xF5,0x02,0x62,0x1A,0xD5,0x44,0x78 } }; };
 template <> struct default_interface<Windows::Globalization::Calendar>{ using type = Windows::Globalization::ICalendar; };
+template <> struct default_interface<Windows::Globalization::CurrencyAmount>{ using type = Windows::Globalization::ICurrencyAmount; };
 template <> struct default_interface<Windows::Globalization::GeographicRegion>{ using type = Windows::Globalization::IGeographicRegion; };
 template <> struct default_interface<Windows::Globalization::JapanesePhoneme>{ using type = Windows::Globalization::IJapanesePhoneme; };
 template <> struct default_interface<Windows::Globalization::Language>{ using type = Windows::Globalization::ILanguage; };
@@ -337,6 +349,17 @@ template <> struct abi<Windows::Globalization::IClockIdentifiersStatics>{ struct
 {
     virtual int32_t WINRT_CALL get_TwelveHour(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_TwentyFourHour(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Globalization::ICurrencyAmount>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Amount(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Currency(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Globalization::ICurrencyAmountFactory>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL Create(void* amount, void* currency, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Globalization::ICurrencyIdentifiersStatics>{ struct type : IInspectable
@@ -821,6 +844,21 @@ struct consume_Windows_Globalization_IClockIdentifiersStatics
     hstring TwentyFourHour() const;
 };
 template <> struct consume<Windows::Globalization::IClockIdentifiersStatics> { template <typename D> using type = consume_Windows_Globalization_IClockIdentifiersStatics<D>; };
+
+template <typename D>
+struct consume_Windows_Globalization_ICurrencyAmount
+{
+    hstring Amount() const;
+    hstring Currency() const;
+};
+template <> struct consume<Windows::Globalization::ICurrencyAmount> { template <typename D> using type = consume_Windows_Globalization_ICurrencyAmount<D>; };
+
+template <typename D>
+struct consume_Windows_Globalization_ICurrencyAmountFactory
+{
+    Windows::Globalization::CurrencyAmount Create(param::hstring const& amount, param::hstring const& currency) const;
+};
+template <> struct consume<Windows::Globalization::ICurrencyAmountFactory> { template <typename D> using type = consume_Windows_Globalization_ICurrencyAmountFactory<D>; };
 
 template <typename D>
 struct consume_Windows_Globalization_ICurrencyIdentifiersStatics

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -573,6 +573,13 @@ template <typename D> Windows::UI::Input::Spatial::SpatialInteractionManager con
     return value;
 }
 
+template <typename D> bool consume_Windows_UI_Input_Spatial_ISpatialInteractionManagerStatics2<D>::IsSourceKindSupported(Windows::UI::Input::Spatial::SpatialInteractionSourceKind const& kind) const
+{
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2)->IsSourceKindSupported(get_abi(kind), &result));
+    return result;
+}
+
 template <typename D> uint32_t consume_Windows_UI_Input_Spatial_ISpatialInteractionSource<D>::Id() const
 {
     uint32_t value{};
@@ -627,6 +634,20 @@ template <typename D> Windows::UI::Input::Spatial::SpatialInteractionSourceHande
     Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness value{};
     check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialInteractionSource3)->get_Handedness(put_abi(value)));
     return value;
+}
+
+template <typename D> Windows::Perception::People::HandMeshObserver consume_Windows_UI_Input_Spatial_ISpatialInteractionSource4<D>::TryCreateHandMeshObserver() const
+{
+    Windows::Perception::People::HandMeshObserver result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialInteractionSource4)->TryCreateHandMeshObserver(put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::Foundation::IAsyncOperation<Windows::Perception::People::HandMeshObserver> consume_Windows_UI_Input_Spatial_ISpatialInteractionSource4<D>::TryCreateHandMeshObserverAsync() const
+{
+    Windows::Foundation::IAsyncOperation<Windows::Perception::People::HandMeshObserver> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialInteractionSource4)->TryCreateHandMeshObserverAsync(put_abi(operation)));
+    return operation;
 }
 
 template <typename D> Windows::UI::Input::Spatial::SpatialInteractionSourceState consume_Windows_UI_Input_Spatial_ISpatialInteractionSourceEventArgs<D>::State() const
@@ -773,6 +794,13 @@ template <typename D> Windows::UI::Input::Spatial::SpatialInteractionControllerP
 {
     Windows::UI::Input::Spatial::SpatialInteractionControllerProperties value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialInteractionSourceState2)->get_ControllerProperties(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Perception::People::HandPose consume_Windows_UI_Input_Spatial_ISpatialInteractionSourceState3<D>::TryGetHandPose() const
+{
+    Windows::Perception::People::HandPose value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialInteractionSourceState3)->TryGetHandPose(put_abi(value)));
     return value;
 }
 
@@ -955,6 +983,20 @@ template <typename D> Windows::UI::Input::Spatial::SpatialPointerInteractionSour
 {
     Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialPointerPose2)->TryGetInteractionSourcePose(get_abi(source), put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Perception::People::EyesPose consume_Windows_UI_Input_Spatial_ISpatialPointerPose3<D>::Eyes() const
+{
+    Windows::Perception::People::EyesPose value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialPointerPose3)->get_Eyes(put_abi(value)));
+    return value;
+}
+
+template <typename D> bool consume_Windows_UI_Input_Spatial_ISpatialPointerPose3<D>::IsHeadCapturedBySystem() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Input::Spatial::ISpatialPointerPose3)->get_IsHeadCapturedBySystem(&value));
     return value;
 }
 
@@ -1854,6 +1896,22 @@ struct produce<D, Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2> : produce_base<D, Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2>
+{
+    int32_t WINRT_CALL IsSourceKindSupported(Windows::UI::Input::Spatial::SpatialInteractionSourceKind kind, bool* result) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSourceKindSupported, WINRT_WRAP(bool), Windows::UI::Input::Spatial::SpatialInteractionSourceKind const&);
+            *result = detach_from<bool>(this->shim().IsSourceKindSupported(*reinterpret_cast<Windows::UI::Input::Spatial::SpatialInteractionSourceKind const*>(&kind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Input::Spatial::ISpatialInteractionSource> : produce_base<D, Windows::UI::Input::Spatial::ISpatialInteractionSource>
 {
     int32_t WINRT_CALL get_Id(uint32_t* value) noexcept final
@@ -1957,6 +2015,36 @@ struct produce<D, Windows::UI::Input::Spatial::ISpatialInteractionSource3> : pro
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Handedness, WINRT_WRAP(Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness));
             *value = detach_from<Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness>(this->shim().Handedness());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Input::Spatial::ISpatialInteractionSource4> : produce_base<D, Windows::UI::Input::Spatial::ISpatialInteractionSource4>
+{
+    int32_t WINRT_CALL TryCreateHandMeshObserver(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TryCreateHandMeshObserver, WINRT_WRAP(Windows::Perception::People::HandMeshObserver));
+            *result = detach_from<Windows::Perception::People::HandMeshObserver>(this->shim().TryCreateHandMeshObserver());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL TryCreateHandMeshObserverAsync(void** operation) noexcept final
+    {
+        try
+        {
+            *operation = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TryCreateHandMeshObserverAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Perception::People::HandMeshObserver>));
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Perception::People::HandMeshObserver>>(this->shim().TryCreateHandMeshObserverAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2254,6 +2342,23 @@ struct produce<D, Windows::UI::Input::Spatial::ISpatialInteractionSourceState2> 
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(ControllerProperties, WINRT_WRAP(Windows::UI::Input::Spatial::SpatialInteractionControllerProperties));
             *value = detach_from<Windows::UI::Input::Spatial::SpatialInteractionControllerProperties>(this->shim().ControllerProperties());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Input::Spatial::ISpatialInteractionSourceState3> : produce_base<D, Windows::UI::Input::Spatial::ISpatialInteractionSourceState3>
+{
+    int32_t WINRT_CALL TryGetHandPose(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TryGetHandPose, WINRT_WRAP(Windows::Perception::People::HandPose));
+            *value = detach_from<Windows::Perception::People::HandPose>(this->shim().TryGetHandPose());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2632,6 +2737,35 @@ struct produce<D, Windows::UI::Input::Spatial::ISpatialPointerPose2> : produce_b
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Input::Spatial::ISpatialPointerPose3> : produce_base<D, Windows::UI::Input::Spatial::ISpatialPointerPose3>
+{
+    int32_t WINRT_CALL get_Eyes(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Eyes, WINRT_WRAP(Windows::Perception::People::EyesPose));
+            *value = detach_from<Windows::Perception::People::EyesPose>(this->shim().Eyes());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsHeadCapturedBySystem(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsHeadCapturedBySystem, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsHeadCapturedBySystem());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Input::Spatial::ISpatialPointerPoseStatics> : produce_base<D, Windows::UI::Input::Spatial::ISpatialPointerPoseStatics>
 {
     int32_t WINRT_CALL TryGetAtTimestamp(void* coordinateSystem, void* timestamp, void** value) noexcept final
@@ -2759,6 +2893,11 @@ inline Windows::UI::Input::Spatial::SpatialInteractionManager SpatialInteraction
     return impl::call_factory<SpatialInteractionManager, Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics>([&](auto&& f) { return f.GetForCurrentView(); });
 }
 
+inline bool SpatialInteractionManager::IsSourceKindSupported(Windows::UI::Input::Spatial::SpatialInteractionSourceKind const& kind)
+{
+    return impl::call_factory<SpatialInteractionManager, Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2>([&](auto&& f) { return f.IsSourceKindSupported(kind); });
+}
+
 inline Windows::UI::Input::Spatial::SpatialPointerPose SpatialPointerPose::TryGetAtTimestamp(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::PerceptionTimestamp const& timestamp)
 {
     return impl::call_factory<SpatialPointerPose, Windows::UI::Input::Spatial::ISpatialPointerPoseStatics>([&](auto&& f) { return f.TryGetAtTimestamp(coordinateSystem, timestamp); });
@@ -2782,9 +2921,11 @@ template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionDe
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs2> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics> {};
+template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource2> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource3> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource3> {};
+template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource4> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource4> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs2> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation> {};
@@ -2793,6 +2934,7 @@ template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSo
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceProperties> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceProperties> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceState> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceState> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceState2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceState2> {};
+template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceState3> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceState3> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialManipulationCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialManipulationCompletedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialManipulationDelta> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialManipulationDelta> {};
@@ -2806,6 +2948,7 @@ template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialPointerIntera
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialPointerInteractionSourcePose2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialPointerInteractionSourcePose2> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialPointerPose> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialPointerPose> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialPointerPose2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialPointerPose2> {};
+template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialPointerPose3> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialPointerPose3> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialPointerPoseStatics> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialPointerPoseStatics> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialRecognitionEndedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialRecognitionEndedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Input::Spatial::ISpatialRecognitionStartedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Input::Spatial::ISpatialRecognitionStartedEventArgs> {};

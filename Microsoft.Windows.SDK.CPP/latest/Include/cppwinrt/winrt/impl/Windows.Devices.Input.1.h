@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -41,6 +41,20 @@ struct WINRT_EBO IMouseEventArgs :
     impl::consume_t<IMouseEventArgs>
 {
     IMouseEventArgs(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPenDevice :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPenDevice>
+{
+    IPenDevice(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPenDeviceStatics :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPenDeviceStatics>
+{
+    IPenDeviceStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IPointerDevice :

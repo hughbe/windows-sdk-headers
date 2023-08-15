@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.protection.playready.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDClient;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient ABI::Windows::Media::Protection::PlayReady::INDClient
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDClientFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClientFactory ABI::Windows::Media::Protection::PlayReady::INDClientFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClientFactory_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDClosedCaptionDataReceivedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClosedCaptionDataReceivedEventArgs ABI::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClosedCaptionDataReceivedEventArgs_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDCustomData;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomData ABI::Windows::Media::Protection::PlayReady::INDCustomData
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomData_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDCustomDataFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomDataFactory ABI::Windows::Media::Protection::PlayReady::INDCustomDataFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomDataFactory_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDDownloadEngine;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngine ABI::Windows::Media::Protection::PlayReady::INDDownloadEngine
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngine_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDDownloadEngineNotifier;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngineNotifier ABI::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngineNotifier_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDLicenseFetchCompletedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchCompletedEventArgs ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchCompletedEventArgs_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDLicenseFetchDescriptor;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptor ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptor_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDLicenseFetchDescriptorFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptorFactory ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptorFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptorFactory_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDLicenseFetchResult;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchResult ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchResult
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchResult_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDMessenger;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDMessenger ABI::Windows::Media::Protection::PlayReady::INDMessenger
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDMessenger_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDProximityDetectionCompletedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDProximityDetectionCompletedEventArgs ABI::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDProximityDetectionCompletedEventArgs_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDRegistrationCompletedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDRegistrationCompletedEventArgs ABI::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDRegistrationCompletedEventArgs_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDSendResult;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDSendResult ABI::Windows::Media::Protection::PlayReady::INDSendResult
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDSendResult_FWD_DEFINED__
@@ -520,10 +516,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDStartResult;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStartResult ABI::Windows::Media::Protection::PlayReady::INDStartResult
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStartResult_FWD_DEFINED__
@@ -536,10 +532,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDStorageFileHelper;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStorageFileHelper ABI::Windows::Media::Protection::PlayReady::INDStorageFileHelper
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStorageFileHelper_FWD_DEFINED__
@@ -552,10 +548,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDStreamParser;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParser ABI::Windows::Media::Protection::PlayReady::INDStreamParser
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParser_FWD_DEFINED__
@@ -568,10 +564,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDStreamParserNotifier;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParserNotifier ABI::Windows::Media::Protection::PlayReady::INDStreamParserNotifier
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParserNotifier_FWD_DEFINED__
@@ -584,10 +580,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDTCPMessengerFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTCPMessengerFactory ABI::Windows::Media::Protection::PlayReady::INDTCPMessengerFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTCPMessengerFactory_FWD_DEFINED__
@@ -600,10 +596,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface INDTransmitterProperties;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTransmitterProperties ABI::Windows::Media::Protection::PlayReady::INDTransmitterProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTransmitterProperties_FWD_DEFINED__
@@ -616,10 +612,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyContentHeader;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentHeader
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader_FWD_DEFINED__
@@ -632,10 +628,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyContentHeader2;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader2 ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentHeader2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader2_FWD_DEFINED__
@@ -648,10 +644,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyContentHeaderFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentHeaderFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory_FWD_DEFINED__
@@ -664,10 +660,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyContentHeaderFactory2;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory2 ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentHeaderFactory2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory2_FWD_DEFINED__
@@ -680,10 +676,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyContentResolver;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentResolver ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentResolver
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentResolver_FWD_DEFINED__
@@ -696,10 +692,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyDomain;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomain ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomain
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomain_FWD_DEFINED__
@@ -712,10 +708,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyDomainIterableFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainIterableFactory ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomainIterableFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainIterableFactory_FWD_DEFINED__
@@ -728,10 +724,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyDomainJoinServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainJoinServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomainJoinServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainJoinServiceRequest_FWD_DEFINED__
@@ -744,10 +740,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyDomainLeaveServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainLeaveServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomainLeaveServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainLeaveServiceRequest_FWD_DEFINED__
@@ -760,10 +756,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyITADataGenerator;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyITADataGenerator ABI::Windows::Media::Protection::PlayReady::IPlayReadyITADataGenerator
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyITADataGenerator_FWD_DEFINED__
@@ -776,10 +772,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyIndividualizationServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyIndividualizationServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadyIndividualizationServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyIndividualizationServiceRequest_FWD_DEFINED__
@@ -792,10 +788,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicense;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense_FWD_DEFINED__
@@ -808,10 +804,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicense2;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense2 ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense2_FWD_DEFINED__
@@ -824,10 +820,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseAcquisitionServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest_FWD_DEFINED__
@@ -840,10 +836,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseAcquisitionServiceRequest2;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest2 ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest2_FWD_DEFINED__
@@ -856,10 +852,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseAcquisitionServiceRequest3;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest3 ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest3
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest3_FWD_DEFINED__
@@ -872,10 +868,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseIterableFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseIterableFactory ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseIterableFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseIterableFactory_FWD_DEFINED__
@@ -888,10 +884,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseManagement;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseManagement ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseManagement
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseManagement_FWD_DEFINED__
@@ -904,10 +900,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseSession;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession_FWD_DEFINED__
@@ -920,10 +916,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseSession2;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession2 ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession2_FWD_DEFINED__
@@ -936,10 +932,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyLicenseSessionFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSessionFactory ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSessionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSessionFactory_FWD_DEFINED__
@@ -952,10 +948,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyMeteringReportServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyMeteringReportServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadyMeteringReportServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyMeteringReportServiceRequest_FWD_DEFINED__
@@ -968,10 +964,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyRevocationServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyRevocationServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadyRevocationServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyRevocationServiceRequest_FWD_DEFINED__
@@ -984,10 +980,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadySecureStopIterableFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopIterableFactory ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopIterableFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopIterableFactory_FWD_DEFINED__
@@ -1000,10 +996,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadySecureStopServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequest_FWD_DEFINED__
@@ -1016,10 +1012,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadySecureStopServiceRequestFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequestFactory ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequestFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequestFactory_FWD_DEFINED__
@@ -1032,10 +1028,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyServiceRequest ABI::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyServiceRequest_FWD_DEFINED__
@@ -1048,10 +1044,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadySoapMessage;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySoapMessage ABI::Windows::Media::Protection::PlayReady::IPlayReadySoapMessage
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySoapMessage_FWD_DEFINED__
@@ -1064,10 +1060,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyStatics;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics ABI::Windows::Media::Protection::PlayReady::IPlayReadyStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics_FWD_DEFINED__
@@ -1080,10 +1076,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyStatics2;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics2 ABI::Windows::Media::Protection::PlayReady::IPlayReadyStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics2_FWD_DEFINED__
@@ -1096,10 +1092,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyStatics3;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics3 ABI::Windows::Media::Protection::PlayReady::IPlayReadyStatics3
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics3_FWD_DEFINED__
@@ -1112,10 +1108,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyStatics4;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics4 ABI::Windows::Media::Protection::PlayReady::IPlayReadyStatics4
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics4_FWD_DEFINED__
@@ -1128,10 +1124,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     interface IPlayReadyStatics5;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics5 ABI::Windows::Media::Protection::PlayReady::IPlayReadyStatics5
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics5_FWD_DEFINED__
@@ -1160,7 +1156,7 @@ IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomain*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomain*> __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain_t;
 #define __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomain*>
@@ -1192,7 +1188,7 @@ IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomain*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomain*> __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain_t;
 #define __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyDomain ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadyDomain*>
@@ -1224,7 +1220,7 @@ IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense*> __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense_t;
 #define __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense*>
@@ -1256,7 +1252,7 @@ IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense*> __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense_t;
 #define __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadyLicense*>
@@ -1288,7 +1284,7 @@ IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServic
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest*> __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest_t;
 #define __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest*>
@@ -1320,7 +1316,7 @@ IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServic
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest*> __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest_t;
 #define __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadySecureStopServiceRequest ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest*>
@@ -1352,7 +1348,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDL
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchResult*>
@@ -1384,7 +1380,7 @@ IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchResul
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchResult*> __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchResult*>
@@ -1416,7 +1412,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDSendResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDSendResult*>
@@ -1448,7 +1444,7 @@ IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDSendResult*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDSendResult*> __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDSendResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDSendResult*>
@@ -1480,7 +1476,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDStartResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::PlayReady::INDStartResult*>
@@ -1512,7 +1508,7 @@ IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDStartResult*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDStartResult*> __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CPlayReady__CINDStartResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Protection::PlayReady::INDStartResult*>
@@ -1529,10 +1525,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class NDClient;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1556,7 +1552,7 @@ ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,IInspec
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::INDClient*,IInspectable*>
@@ -1590,7 +1586,7 @@ ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::INDClient*,ABI::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs*>
@@ -1625,7 +1621,7 @@ ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::INDClient*,ABI::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs*>
@@ -1660,7 +1656,7 @@ ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::INDClient*,ABI::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs*>
@@ -1695,7 +1691,7 @@ ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::NDClient*,ABI::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::PlayReady::INDClient*,ABI::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs*>
@@ -1726,7 +1722,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1755,7 +1751,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1784,7 +1780,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1813,7 +1809,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1828,9 +1824,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class AudioStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor_FWD_DEFINED__
@@ -1839,9 +1835,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IAudioStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor ABI::Windows::Media::Core::IAudioStreamDescriptor
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor_FWD_DEFINED__
@@ -1867,7 +1863,7 @@ IIterator<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1899,7 +1895,7 @@ IIterable<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1931,7 +1927,7 @@ IVectorView<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1963,7 +1959,7 @@ IVector<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1979,9 +1975,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class VideoStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor_FWD_DEFINED__
@@ -1990,9 +1986,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IVideoStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor ABI::Windows::Media::Core::IVideoStreamDescriptor
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor_FWD_DEFINED__
@@ -2018,7 +2014,7 @@ IIterator<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -2050,7 +2046,7 @@ IIterable<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -2082,7 +2078,7 @@ IVectorView<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -2114,7 +2110,7 @@ IVector<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -2130,8 +2126,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -2152,7 +2148,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -2171,9 +2167,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2188,8 +2184,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2197,8 +2193,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2210,16 +2206,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2227,8 +2223,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2244,9 +2240,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaStreamDescriptor ABI::Windows::Media::Core::IMediaStreamDescriptor
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamDescriptor_FWD_DEFINED__
@@ -2257,9 +2253,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class MediaStreamSample;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSample_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSample_FWD_DEFINED__
@@ -2268,9 +2264,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaStreamSample;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaStreamSample ABI::Windows::Media::Core::IMediaStreamSample
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSample_FWD_DEFINED__
@@ -2281,9 +2277,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class MediaStreamSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource_FWD_DEFINED__
@@ -2292,9 +2288,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaStreamSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource ABI::Windows::Media::Core::IMediaStreamSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource_FWD_DEFINED__
@@ -2311,9 +2307,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionServiceRequest;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest ABI::Windows::Media::Protection::IMediaProtectionServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_FWD_DEFINED__
@@ -2324,9 +2320,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class MediaProtectionManager;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
@@ -2335,9 +2331,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionManager;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager ABI::Windows::Media::Protection::IMediaProtectionManager
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
@@ -2352,8 +2348,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2369,10 +2365,10 @@ namespace ABI {
                     
                     typedef enum NDCertificateFeature : int NDCertificateFeature;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2382,10 +2378,10 @@ namespace ABI {
                     
                     typedef enum NDCertificatePlatformID : int NDCertificatePlatformID;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2395,10 +2391,10 @@ namespace ABI {
                     
                     typedef enum NDCertificateType : int NDCertificateType;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2408,10 +2404,10 @@ namespace ABI {
                     
                     typedef enum NDClosedCaptionFormat : int NDClosedCaptionFormat;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2421,10 +2417,10 @@ namespace ABI {
                     
                     typedef enum NDContentIDType : int NDContentIDType;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2434,10 +2430,10 @@ namespace ABI {
                     
                     typedef enum NDMediaStreamType : int NDMediaStreamType;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2447,10 +2443,10 @@ namespace ABI {
                     
                     typedef enum NDProximityDetectionType : int NDProximityDetectionType;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2460,10 +2456,10 @@ namespace ABI {
                     
                     typedef enum NDStartAsyncOptions : int NDStartAsyncOptions;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2473,10 +2469,10 @@ namespace ABI {
                     
                     typedef enum PlayReadyDecryptorSetup : int PlayReadyDecryptorSetup;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2486,10 +2482,10 @@ namespace ABI {
                     
                     typedef enum PlayReadyEncryptionAlgorithm : int PlayReadyEncryptionAlgorithm;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2499,10 +2495,10 @@ namespace ABI {
                     
                     typedef enum PlayReadyHardwareDRMFeatures : int PlayReadyHardwareDRMFeatures;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2512,10 +2508,10 @@ namespace ABI {
                     
                     typedef enum PlayReadyITADataFormat : int PlayReadyITADataFormat;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2578,10 +2574,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class NDCustomData;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2590,10 +2586,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class NDDownloadEngineNotifier;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2602,10 +2598,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class NDLicenseFetchDescriptor;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2614,10 +2610,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class NDStorageFileHelper;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2626,10 +2622,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class NDStreamParserNotifier;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2638,10 +2634,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class NDTCPMessenger;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2650,10 +2646,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyContentHeader;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2663,10 +2659,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyDomain;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2675,10 +2671,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyDomainIterable;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2687,10 +2683,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyDomainIterator;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2699,10 +2695,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyDomainJoinServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2711,10 +2707,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyDomainLeaveServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2723,10 +2719,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyITADataGenerator;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2735,10 +2731,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyIndividualizationServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2747,10 +2743,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyLicense;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2759,10 +2755,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyLicenseAcquisitionServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2771,10 +2767,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyLicenseIterable;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2783,10 +2779,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyLicenseIterator;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2796,10 +2792,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyLicenseSession;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2808,10 +2804,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyMeteringReportServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2820,10 +2816,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadyRevocationServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2832,10 +2828,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadySecureStopIterable;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2844,10 +2840,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadySecureStopIterator;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2856,10 +2852,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadySecureStopServiceRequest;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2868,10 +2864,10 @@ namespace ABI {
             namespace Protection {
                 namespace PlayReady {
                     class PlayReadySoapMessage;
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2916,10 +2912,10 @@ namespace ABI {
                         NDCertificateFeature_PlayReady3Features = 13,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2959,10 +2955,10 @@ namespace ABI {
                         NDCertificatePlatformID_WindowsPhone81OnX86 = 13,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3003,10 +2999,10 @@ namespace ABI {
                         NDCertificateType_LicenseSigner = 12,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3037,10 +3033,10 @@ namespace ABI {
                         NDClosedCaptionFormat_Unknown = 2,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3071,10 +3067,10 @@ namespace ABI {
                         NDContentIDType_Custom = 3,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3104,10 +3100,10 @@ namespace ABI {
                         NDMediaStreamType_Video = 2,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3138,10 +3134,10 @@ namespace ABI {
                         NDProximityDetectionType_TransportAgnostic = 4,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3171,10 +3167,10 @@ namespace ABI {
                         NDStartAsyncOptions_WaitForLicenseDescriptor = 2,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3200,10 +3196,10 @@ namespace ABI {
                         PlayReadyDecryptorSetup_OnDemand = 1,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3241,10 +3237,10 @@ namespace ABI {
                         PlayReadyEncryptionAlgorithm_Uninitialized = 2147483647,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3275,10 +3271,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3304,10 +3300,10 @@ namespace ABI {
                         PlayReadyITADataFormat_SerializedProperties_WithContentProtectionWrapper = 1,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3452,10 +3448,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDClient=_uuidof(INDClient);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient_INTERFACE_DEFINED__) */
@@ -3506,10 +3502,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDClientFactory=_uuidof(INDClientFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClientFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClientFactory_INTERFACE_DEFINED__) */
@@ -3569,10 +3565,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDClosedCaptionDataReceivedEventArgs=_uuidof(INDClosedCaptionDataReceivedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClosedCaptionDataReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClosedCaptionDataReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -3626,10 +3622,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDCustomData=_uuidof(INDCustomData);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomData;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomData_INTERFACE_DEFINED__) */
@@ -3681,10 +3677,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDCustomDataFactory=_uuidof(INDCustomDataFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomDataFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDCustomDataFactory_INTERFACE_DEFINED__) */
@@ -3753,7 +3749,7 @@ namespace ABI {
                         DEPRECATED("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
                         #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_CanSeek(
-                            /* [retval, out] */__RPC__out boolean * canSeek
+                            /* [retval, out] */__RPC__out ::boolean * canSeek
                             ) = 0;
                         
                         #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -3781,10 +3777,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDDownloadEngine=_uuidof(INDDownloadEngine);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngine;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngine_INTERFACE_DEFINED__) */
@@ -3861,10 +3857,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDDownloadEngineNotifier=_uuidof(INDDownloadEngineNotifier);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngineNotifier;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDDownloadEngineNotifier_INTERFACE_DEFINED__) */
@@ -3909,10 +3905,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDLicenseFetchCompletedEventArgs=_uuidof(INDLicenseFetchCompletedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -3979,10 +3975,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDLicenseFetchDescriptor=_uuidof(INDLicenseFetchDescriptor);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptor_INTERFACE_DEFINED__) */
@@ -4034,10 +4030,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDLicenseFetchDescriptorFactory=_uuidof(INDLicenseFetchDescriptorFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptorFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchDescriptorFactory_INTERFACE_DEFINED__) */
@@ -4082,10 +4078,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDLicenseFetchResult=_uuidof(INDLicenseFetchResult);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchResult_INTERFACE_DEFINED__) */
@@ -4173,10 +4169,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDMessenger=_uuidof(INDMessenger);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDMessenger;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDMessenger_INTERFACE_DEFINED__) */
@@ -4221,10 +4217,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDProximityDetectionCompletedEventArgs=_uuidof(INDProximityDetectionCompletedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDProximityDetectionCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDProximityDetectionCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -4276,24 +4272,24 @@ namespace ABI {
                         DEPRECATED("INDRegistrationCompletedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
                         #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_TransmitterCertificateAccepted(
-                            /* [retval, out] */__RPC__out boolean * acceptpt
+                            /* [retval, out] */__RPC__out ::boolean * acceptpt
                             ) = 0;
                         
                         #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                         DEPRECATED("INDRegistrationCompletedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
                         #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                         /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_TransmitterCertificateAccepted(
-                            /* [in] */boolean accept
+                            /* [in] */::boolean accept
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_INDRegistrationCompletedEventArgs=_uuidof(INDRegistrationCompletedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDRegistrationCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDRegistrationCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -4339,10 +4335,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDSendResult=_uuidof(INDSendResult);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDSendResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDSendResult_INTERFACE_DEFINED__) */
@@ -4387,10 +4383,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDStartResult=_uuidof(INDStartResult);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStartResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStartResult_INTERFACE_DEFINED__) */
@@ -4436,10 +4432,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDStorageFileHelper=_uuidof(INDStorageFileHelper);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStorageFileHelper;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStorageFileHelper_INTERFACE_DEFINED__) */
@@ -4511,10 +4507,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDStreamParser=_uuidof(INDStreamParser);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParser;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParser_INTERFACE_DEFINED__) */
@@ -4590,10 +4586,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDStreamParserNotifier=_uuidof(INDStreamParserNotifier);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParserNotifier;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDStreamParserNotifier_INTERFACE_DEFINED__) */
@@ -4643,10 +4639,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDTCPMessengerFactory=_uuidof(INDTCPMessengerFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTCPMessengerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTCPMessengerFactory_INTERFACE_DEFINED__) */
@@ -4764,10 +4760,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INDTransmitterProperties=_uuidof(INDTransmitterProperties);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTransmitterProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDTransmitterProperties_INTERFACE_DEFINED__) */
@@ -4835,10 +4831,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyContentHeader=_uuidof(IPlayReadyContentHeader);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader_INTERFACE_DEFINED__) */
@@ -4887,10 +4883,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyContentHeader2=_uuidof(IPlayReadyContentHeader2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeader2_INTERFACE_DEFINED__) */
@@ -4951,10 +4947,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyContentHeaderFactory=_uuidof(IPlayReadyContentHeaderFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory_INTERFACE_DEFINED__) */
@@ -5004,10 +5000,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyContentHeaderFactory2=_uuidof(IPlayReadyContentHeaderFactory2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentHeaderFactory2_INTERFACE_DEFINED__) */
@@ -5048,10 +5044,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyContentResolver=_uuidof(IPlayReadyContentResolver);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentResolver;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyContentResolver_INTERFACE_DEFINED__) */
@@ -5100,10 +5096,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyDomain=_uuidof(IPlayReadyDomain);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomain;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomain_INTERFACE_DEFINED__) */
@@ -5144,10 +5140,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyDomainIterableFactory=_uuidof(IPlayReadyDomainIterableFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainIterableFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainIterableFactory_INTERFACE_DEFINED__) */
@@ -5207,10 +5203,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyDomainJoinServiceRequest=_uuidof(IPlayReadyDomainJoinServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainJoinServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainJoinServiceRequest_INTERFACE_DEFINED__) */
@@ -5264,10 +5260,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyDomainLeaveServiceRequest=_uuidof(IPlayReadyDomainLeaveServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainLeaveServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyDomainLeaveServiceRequest_INTERFACE_DEFINED__) */
@@ -5312,10 +5308,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyITADataGenerator=_uuidof(IPlayReadyITADataGenerator);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyITADataGenerator;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyITADataGenerator_INTERFACE_DEFINED__) */
@@ -5357,10 +5353,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyIndividualizationServiceRequest=_uuidof(IPlayReadyIndividualizationServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyIndividualizationServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyIndividualizationServiceRequest_INTERFACE_DEFINED__) */
@@ -5390,10 +5386,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FullyEvaluated(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UsableForPlay(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpirationDate(
                             /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CDateTime * * value
@@ -5416,10 +5412,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicense=_uuidof(IPlayReadyLicense);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense_INTERFACE_DEFINED__) */
@@ -5462,20 +5458,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__out UINT32 * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InMemoryOnly(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpiresInRealTime(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicense2=_uuidof(IPlayReadyLicense2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicense2_INTERFACE_DEFINED__) */
@@ -5526,10 +5522,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseAcquisitionServiceRequest=_uuidof(IPlayReadyLicenseAcquisitionServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest_INTERFACE_DEFINED__) */
@@ -5575,10 +5571,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseAcquisitionServiceRequest2=_uuidof(IPlayReadyLicenseAcquisitionServiceRequest2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest2_INTERFACE_DEFINED__) */
@@ -5619,7 +5615,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateLicenseIterable(
                             /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentHeader * contentHeader,
-                            /* [in] */boolean fullyEvaluated,
+                            /* [in] */::boolean fullyEvaluated,
                             /* [retval, out] */__RPC__deref_out_opt __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense * * result
                             ) = 0;
                         
@@ -5627,10 +5623,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseAcquisitionServiceRequest3=_uuidof(IPlayReadyLicenseAcquisitionServiceRequest3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseAcquisitionServiceRequest3_INTERFACE_DEFINED__) */
@@ -5664,7 +5660,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateInstance(
                             /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentHeader * contentHeader,
-                            /* [in] */boolean fullyEvaluated,
+                            /* [in] */::boolean fullyEvaluated,
                             /* [retval, out] */__RPC__deref_out_opt __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense * * instance
                             ) = 0;
                         
@@ -5672,10 +5668,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseIterableFactory=_uuidof(IPlayReadyLicenseIterableFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseIterableFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseIterableFactory_INTERFACE_DEFINED__) */
@@ -5716,10 +5712,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseManagement=_uuidof(IPlayReadyLicenseManagement);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseManagement;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseManagement_INTERFACE_DEFINED__) */
@@ -5759,10 +5755,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseSession=_uuidof(IPlayReadyLicenseSession);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession_INTERFACE_DEFINED__) */
@@ -5797,7 +5793,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateLicenseIterable(
                             /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::PlayReady::IPlayReadyContentHeader * contentHeader,
-                            /* [in] */boolean fullyEvaluated,
+                            /* [in] */::boolean fullyEvaluated,
                             /* [retval, out] */__RPC__deref_out_opt __FIIterable_1_Windows__CMedia__CProtection__CPlayReady__CIPlayReadyLicense * * licenseIterable
                             ) = 0;
                         
@@ -5805,10 +5801,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseSession2=_uuidof(IPlayReadyLicenseSession2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSession2_INTERFACE_DEFINED__) */
@@ -5849,10 +5845,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyLicenseSessionFactory=_uuidof(IPlayReadyLicenseSessionFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSessionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyLicenseSessionFactory_INTERFACE_DEFINED__) */
@@ -5902,10 +5898,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyMeteringReportServiceRequest=_uuidof(IPlayReadyMeteringReportServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyMeteringReportServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyMeteringReportServiceRequest_INTERFACE_DEFINED__) */
@@ -5947,10 +5943,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyRevocationServiceRequest=_uuidof(IPlayReadyRevocationServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyRevocationServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyRevocationServiceRequest_INTERFACE_DEFINED__) */
@@ -5992,10 +5988,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadySecureStopIterableFactory=_uuidof(IPlayReadySecureStopIterableFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopIterableFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopIterableFactory_INTERFACE_DEFINED__) */
@@ -6039,7 +6035,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Stopped(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PublisherCertificate(
                             /* [out] */__RPC__out UINT32 * __publisherCertBytesSize,
@@ -6050,10 +6046,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadySecureStopServiceRequest=_uuidof(IPlayReadySecureStopServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequest_INTERFACE_DEFINED__) */
@@ -6101,10 +6097,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadySecureStopServiceRequestFactory=_uuidof(IPlayReadySecureStopServiceRequestFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequestFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySecureStopServiceRequestFactory_INTERFACE_DEFINED__) */
@@ -6171,10 +6167,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyServiceRequest=_uuidof(IPlayReadyServiceRequest);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyServiceRequest_INTERFACE_DEFINED__) */
@@ -6221,10 +6217,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadySoapMessage=_uuidof(IPlayReadySoapMessage);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySoapMessage;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadySoapMessage_INTERFACE_DEFINED__) */
@@ -6285,10 +6281,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyStatics=_uuidof(IPlayReadyStatics);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics_INTERFACE_DEFINED__) */
@@ -6332,10 +6328,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyStatics2=_uuidof(IPlayReadyStatics2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics2_INTERFACE_DEFINED__) */
@@ -6377,17 +6373,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CheckSupportedHardware(
                             /* [in] */ABI::Windows::Media::Protection::PlayReady::PlayReadyHardwareDRMFeatures hwdrmFeature,
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyStatics3=_uuidof(IPlayReadyStatics3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics3_INTERFACE_DEFINED__) */
@@ -6436,10 +6432,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyStatics4=_uuidof(IPlayReadyStatics4);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics4;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics4_INTERFACE_DEFINED__) */
@@ -6490,10 +6486,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlayReadyStatics5=_uuidof(IPlayReadyStatics5);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Protection */
-    } /* PlayReady */} /* ABI */
+                } /* PlayReady */
+            } /* Protection */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics5;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CPlayReady_CIPlayReadyStatics5_INTERFACE_DEFINED__) */
@@ -8374,7 +8370,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_IInspectableVtbl;
 
@@ -8426,7 +8422,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClosedCaptionDataReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClosedCaptionDataReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDClosedCaptionDataReceivedEventArgsVtbl;
 
@@ -8479,7 +8475,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDLicenseFetchCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDLicenseFetchCompletedEventArgsVtbl;
 
@@ -8532,7 +8528,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDProximityDetectionCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDProximityDetectionCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDProximityDetectionCompletedEventArgsVtbl;
 
@@ -8585,7 +8581,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDRegistrationCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDClient * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CPlayReady_CINDRegistrationCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CProtection__CPlayReady__CNDClient_Windows__CMedia__CProtection__CPlayReady__CINDRegistrationCompletedEventArgsVtbl;
 

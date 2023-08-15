@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -30,6 +30,12 @@ struct WINRT_EBO AnalyticsVersionInfo :
     Windows::System::Profile::IAnalyticsVersionInfo
 {
     AnalyticsVersionInfo(std::nullptr_t) noexcept {}
+};
+
+struct AppApplicability
+{
+    AppApplicability() = delete;
+    static Windows::Foundation::Collections::IVectorView<Windows::System::Profile::UnsupportedAppRequirement> GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities);
 };
 
 struct EducationSettings
@@ -123,6 +129,12 @@ struct SystemSetupInfo
     using OutOfBoxExperienceStateChanged_revoker = impl::factory_event_revoker<Windows::System::Profile::ISystemSetupInfoStatics, &impl::abi_t<Windows::System::Profile::ISystemSetupInfoStatics>::remove_OutOfBoxExperienceStateChanged>;
     static OutOfBoxExperienceStateChanged_revoker OutOfBoxExperienceStateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
     static void OutOfBoxExperienceStateChanged(winrt::event_token const& token);
+};
+
+struct WINRT_EBO UnsupportedAppRequirement :
+    Windows::System::Profile::IUnsupportedAppRequirement
+{
+    UnsupportedAppRequirement(std::nullptr_t) noexcept {}
 };
 
 struct WindowsIntegrityPolicy

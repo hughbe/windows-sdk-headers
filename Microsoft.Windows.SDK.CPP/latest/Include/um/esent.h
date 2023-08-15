@@ -2098,6 +2098,7 @@ typedef enum
 #define JET_paramMaxValueInvalid                212 //  This is not a valid parameter. It can change from release to release!
 
 
+
 //  Session parameters
 //
 //      JET_sesparamBase                    4096    //  All JET_sesparams designed to be distinct from system / JET_params and JET_dbparams for code defense.
@@ -2107,7 +2108,7 @@ typedef enum
 #define JET_sesparamTransactionLevel        4099    //  Retrieves (read-only, no set) the current number of nested levels of transactions begun.  0 = not in a transaction.
 #define JET_sesparamOperationContext        4100    //  a client context that the engine uses to track and trace operations (such as IOs)
 #define JET_sesparamCorrelationID           4101    //  an ID that is logged in traces and can be used by clients to correlate ESE actions with their activity
-#define JET_sesparamMaxValueInvalid         4107    //  This is not a valid session parameter. It can change from release to release!
+#define JET_sesparamMaxValueInvalid         4109    //  This is not a valid session parameter. It can change from release to release!
 
 typedef struct
 {
@@ -2486,7 +2487,7 @@ typedef struct
     /*  Space Hint Flags / JET_SPACEHINTS   */
 
 //  Generic 
-#define JET_bitSpaceHintsUtilizeParentSpace         0x00000001  //  This changes the internal allocation policy to get space heirarchically from a B-Tree's immediate parent.
+#define JET_bitSpaceHintsUtilizeParentSpace         0x00000001  //  This changes the internal allocation policy to get space hierarchically from a B-Tree's immediate parent.
 //  Create
 #define JET_bitCreateHintAppendSequential           0x00000002  //  This bit will enable Append split behavior to grow according to the growth dynamics of the table (set by cbMinExtent, ulGrowth, cbMaxExtent).
 #define JET_bitCreateHintHotpointSequential         0x00000004  //  This bit will enable Hotpoint split behavior to grow according to the growth dynamics of the table (set by cbMinExtent, ulGrowth, cbMaxExtent).
@@ -2991,7 +2992,7 @@ typedef struct
 #define JET_sntFail             3   /* callback for failure during progress */
 
 
-    /* Exception action */
+    /* Exception action / JET_paramExceptionAction */
 
 #define JET_ExceptionMsgBox     0x0001      /* Display message box on exception */
 #define JET_ExceptionNone       0x0002      /* Do nothing on exceptions */
@@ -3108,12 +3109,12 @@ typedef struct
 #define JET_errInvalidLoggedOperation       -500  /* Logged operation cannot be redone */
 #define JET_errLogFileCorrupt               -501  /* Log file is corrupt */
 #define JET_errNoBackupDirectory            -503  /* No backup directory given */
-#define JET_errBackupDirectoryNotEmpty      -504  /* The backup directory is not emtpy */
+#define JET_errBackupDirectoryNotEmpty      -504  /* The backup directory is not empty */
 #define JET_errBackupInProgress             -505  /* Backup is active already */
 #define JET_errRestoreInProgress            -506  /* Restore in progress */
 #define JET_errMissingPreviousLogFile       -509  /* Missing the log file for check point */
 #define JET_errLogWriteFail                 -510  /* Failure writing to log file */
-#define JET_errLogDisabledDueToRecoveryFailure  -511 /* Try to log something after recovery faild */
+#define JET_errLogDisabledDueToRecoveryFailure  -511 /* Try to log something after recovery failed */
 #define JET_errCannotLogDuringRecoveryRedo      -512    /* Try to log something during recovery redo */
 #define JET_errLogGenerationMismatch        -513  /* Name of logfile does not match internal generation number */
 #define JET_errBadLogVersion                -514  /* Version of log file is not compatible with Jet version */
@@ -3273,7 +3274,7 @@ typedef struct
 #define JET_errNotInTransaction             -1054 /* Operation must be within a transaction */
 #define JET_wrnNoErrorInfo                   1055 /* No extended error information */
 #define JET_errMustRollback                 -1057 /* Transaction must rollback because failure of unversioned update */
-#define JET_wrnNoIdleActivity                1058 /* No idle activity occured */
+#define JET_wrnNoIdleActivity                1058 /* No idle activity occurred */
 #define JET_errTooManyActiveUsers           -1059 /* Too many active database users */
 #define JET_errInvalidCountry               -1061 /* Invalid or unknown country/region code */
 #define JET_errInvalidLanguageId            -1062 /* Invalid or unknown language id */
@@ -3320,7 +3321,7 @@ typedef struct
 #define JET_errInTransaction                -1108 /* Operation not allowed within a transaction */
 #define JET_errRollbackRequired             -1109 /* Must rollback current transaction -- cannot commit or begin a new one */
 #define JET_errTransReadOnly                -1110 /* Read-only transaction tried to modify the database */
-#define JET_errSessionWriteConflict         -1111 /* Attempt to replace the same record by two diffrerent cursors in the same session */
+#define JET_errSessionWriteConflict         -1111 /* Attempt to replace the same record by two different cursors in the same session */
 
 #define JET_errRecordTooBigForBackwardCompatibility             -1112 /* record would be too big if represented in a database format from a previous version of Jet */
 #define JET_errCannotMaterializeForwardOnlySort                 -1113 /* The temp table could not be created due to parameters that conflict with JET_bitTTForwardOnly */
@@ -3522,7 +3523,7 @@ typedef struct
 #define JET_errSessionSharingViolation      -1910 /* Multiple threads are using the same session */
 #define JET_errEntryPointNotFound           -1911 /* An entry point in a DLL we require could not be found */
 #define JET_errSessionContextAlreadySet     -1912 /* Specified session already has a session context set */
-#define JET_errSessionContextNotSetByThisThread -1913 /* Tried to reset session context, but current thread did not orignally set the session context */
+#define JET_errSessionContextNotSetByThisThread -1913 /* Tried to reset session context, but current thread did not originally set the session context */
 #define JET_errSessionInUse                 -1914 /* Tried to terminate session in use */
 #define JET_errRecordFormatConversionFailed -1915 /* Internal error during dynamic record format conversion */
 #define JET_errOneDatabasePerSession        -1916 /* Just one open user database per session is allowed (JET_paramOneDatabasePerSession) */
@@ -3537,7 +3538,7 @@ typedef struct
 #define JET_errDatabaseAlreadyRunningMaintenance -2004  /* The operation did not complete successfully because the database is already running maintenance on specified database */
 
 
-#define JET_wrnCallbackNotRegistered         2100 /* Unregistered a non-existant callback function */
+#define JET_wrnCallbackNotRegistered         2100 /* Unregistered a non-existent callback function */
 #define JET_errCallbackFailed               -2101 /* A callback failed */
 #define JET_errCallbackNotResolved          -2102 /* A callback function could not be found */
 
@@ -7463,6 +7464,8 @@ JetOSSnapshotEnd(
 //  dump includes pages that contain valid data
 #define JET_bitDumpCacheIncludeCorruptedPages   0x00000040
 //  dump includes pages that are corrupted (expensive to compute)
+#define JET_bitDumpCacheNoDecommit	            0x00000080
+//  do not decommit any pages not intending to include in crash dump
 
 
 

@@ -15,8 +15,8 @@ Environment:
 #ifndef s6_addr
 #pragma once
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // IPv6 Internet address (RFC 2553)
@@ -44,7 +44,7 @@ typedef struct in6_addr {
 #define s6_bytes    u.Byte
 #define s6_words    u.Word
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif

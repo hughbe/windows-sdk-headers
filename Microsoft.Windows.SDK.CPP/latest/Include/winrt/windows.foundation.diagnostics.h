@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.foundation.diagnostics.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface IAsyncCausalityTracerStatics;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CIAsyncCausalityTracerStatics ABI::Windows::Foundation::Diagnostics::IAsyncCausalityTracerStatics
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CIAsyncCausalityTracerStatics_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface IErrorDetails;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetails ABI::Windows::Foundation::Diagnostics::IErrorDetails
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetails_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface IErrorDetailsStatics;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetailsStatics ABI::Windows::Foundation::Diagnostics::IErrorDetailsStatics
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetailsStatics_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface IErrorReportingSettings;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorReportingSettings ABI::Windows::Foundation::Diagnostics::IErrorReportingSettings
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorReportingSettings_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface IFileLoggingSession;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSession ABI::Windows::Foundation::Diagnostics::IFileLoggingSession
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSession_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface IFileLoggingSessionFactory;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSessionFactory ABI::Windows::Foundation::Diagnostics::IFileLoggingSessionFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSessionFactory_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILogFileGeneratedEventArgs;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILogFileGeneratedEventArgs ABI::Windows::Foundation::Diagnostics::ILogFileGeneratedEventArgs
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILogFileGeneratedEventArgs_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingActivity;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity ABI::Windows::Foundation::Diagnostics::ILoggingActivity
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingActivity2;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity2 ABI::Windows::Foundation::Diagnostics::ILoggingActivity2
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity2_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingActivityFactory;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivityFactory ABI::Windows::Foundation::Diagnostics::ILoggingActivityFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivityFactory_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingChannel;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel ABI::Windows::Foundation::Diagnostics::ILoggingChannel
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingChannel2;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel2 ABI::Windows::Foundation::Diagnostics::ILoggingChannel2
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel2_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingChannelFactory;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory ABI::Windows::Foundation::Diagnostics::ILoggingChannelFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingChannelFactory2;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory2 ABI::Windows::Foundation::Diagnostics::ILoggingChannelFactory2
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory2_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingChannelOptions;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptions ABI::Windows::Foundation::Diagnostics::ILoggingChannelOptions
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptions_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingChannelOptionsFactory;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptionsFactory ABI::Windows::Foundation::Diagnostics::ILoggingChannelOptionsFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptionsFactory_FWD_DEFINED__
@@ -501,9 +497,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingFields;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingFields ABI::Windows::Foundation::Diagnostics::ILoggingFields
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingFields_FWD_DEFINED__
@@ -515,9 +511,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingOptions;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptions ABI::Windows::Foundation::Diagnostics::ILoggingOptions
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptions_FWD_DEFINED__
@@ -529,9 +525,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingOptionsFactory;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptionsFactory ABI::Windows::Foundation::Diagnostics::ILoggingOptionsFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptionsFactory_FWD_DEFINED__
@@ -543,9 +539,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingSession;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSession ABI::Windows::Foundation::Diagnostics::ILoggingSession
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSession_FWD_DEFINED__
@@ -557,9 +553,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingSessionFactory;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSessionFactory ABI::Windows::Foundation::Diagnostics::ILoggingSessionFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSessionFactory_FWD_DEFINED__
@@ -571,9 +567,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ILoggingTarget;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingTarget ABI::Windows::Foundation::Diagnostics::ILoggingTarget
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingTarget_FWD_DEFINED__
@@ -585,9 +581,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 interface ITracingStatusChangedEventArgs;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CDiagnostics_CITracingStatusChangedEventArgs ABI::Windows::Foundation::Diagnostics::ITracingStatusChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CFoundation_CDiagnostics_CITracingStatusChangedEventArgs_FWD_DEFINED__
@@ -600,9 +596,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class TracingStatusChangedEventArgs;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -625,7 +621,7 @@ IEventHandler<ABI::Windows::Foundation::Diagnostics::TracingStatusChangedEventAr
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs*> __FIEventHandler_1_Windows__CFoundation__CDiagnostics__CTracingStatusChangedEventArgs_t;
 #define __FIEventHandler_1_Windows__CFoundation__CDiagnostics__CTracingStatusChangedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CFoundation__CDiagnostics__CTracingStatusChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CFoundation__CDiagnostics__CTracingStatusChangedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::Foundation::Diagnostics::ITracingStatusChangedEventArgs*>
@@ -641,9 +637,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class ErrorDetails;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -666,7 +662,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Diagnostics::ErrorDeta
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Diagnostics::ErrorDetails*> __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CDiagnostics__CErrorDetails_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CDiagnostics__CErrorDetails ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CDiagnostics__CErrorDetails_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CDiagnostics__CErrorDetails ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Diagnostics::IErrorDetails*>
@@ -698,7 +694,7 @@ IAsyncOperation<ABI::Windows::Foundation::Diagnostics::ErrorDetails*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Foundation::Diagnostics::ErrorDetails*> __FIAsyncOperation_1_Windows__CFoundation__CDiagnostics__CErrorDetails_t;
 #define __FIAsyncOperation_1_Windows__CFoundation__CDiagnostics__CErrorDetails ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CFoundation__CDiagnostics__CErrorDetails_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CFoundation__CDiagnostics__CErrorDetails ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Diagnostics::IErrorDetails*>
@@ -715,9 +711,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class LogFileGeneratedEventArgs;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -741,7 +737,7 @@ ITypedEventHandler<ABI::Windows::Foundation::Diagnostics::IFileLoggingSession*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Foundation::Diagnostics::IFileLoggingSession*,ABI::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs*> __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Foundation::Diagnostics::IFileLoggingSession*,ABI::Windows::Foundation::Diagnostics::ILogFileGeneratedEventArgs*>
@@ -775,7 +771,7 @@ ITypedEventHandler<ABI::Windows::Foundation::Diagnostics::ILoggingChannel*,IInsp
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Foundation::Diagnostics::ILoggingChannel*,IInspectable*> __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Foundation::Diagnostics::ILoggingChannel*,IInspectable*>
@@ -790,8 +786,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -799,8 +795,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -826,7 +822,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFile*>
@@ -858,7 +854,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFile*> : IAsyncOperation_impl<ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFile*> __FIAsyncOperation_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFile*>
@@ -877,8 +873,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -886,8 +882,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -899,8 +895,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -908,8 +904,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -917,8 +913,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -926,16 +922,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -943,8 +939,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -958,8 +954,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -975,9 +971,9 @@ namespace ABI {
                 
                 typedef enum CausalityRelation : int CausalityRelation;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -986,9 +982,9 @@ namespace ABI {
                 
                 typedef enum CausalitySource : int CausalitySource;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -997,9 +993,9 @@ namespace ABI {
                 
                 typedef enum CausalitySynchronousWork : int CausalitySynchronousWork;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1008,9 +1004,9 @@ namespace ABI {
                 
                 typedef enum CausalityTraceLevel : int CausalityTraceLevel;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1019,9 +1015,9 @@ namespace ABI {
                 
                 typedef enum ErrorOptions : unsigned int ErrorOptions;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1030,9 +1026,9 @@ namespace ABI {
                 
                 typedef enum LoggingFieldFormat : int LoggingFieldFormat;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1041,9 +1037,9 @@ namespace ABI {
                 
                 typedef enum LoggingLevel : int LoggingLevel;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1052,9 +1048,9 @@ namespace ABI {
                 
                 typedef enum LoggingOpcode : int LoggingOpcode;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1086,9 +1082,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class FileLoggingSession;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1097,9 +1093,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class LoggingActivity;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1107,9 +1103,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class LoggingChannel;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1117,9 +1113,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class LoggingChannelOptions;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1127,9 +1123,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class LoggingFields;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1137,9 +1133,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class LoggingOptions;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1147,9 +1143,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class LoggingSession;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1157,9 +1153,9 @@ namespace ABI {
         namespace Foundation {
             namespace Diagnostics {
                 class RuntimeBrokerErrorSettings;
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1195,9 +1191,9 @@ namespace ABI {
                     CausalityRelation_Error = 4,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1223,9 +1219,9 @@ namespace ABI {
                     CausalitySource_System = 2,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1251,9 +1247,9 @@ namespace ABI {
                     CausalitySynchronousWork_Execution = 2,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1279,9 +1275,9 @@ namespace ABI {
                     CausalityTraceLevel_Verbose = 2,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1311,9 +1307,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(ErrorOptions)
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1355,9 +1351,9 @@ namespace ABI {
                     LoggingFieldFormat_Unsigned = 18,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1385,9 +1381,9 @@ namespace ABI {
                     LoggingLevel_Critical = 4,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1417,9 +1413,9 @@ namespace ABI {
                     LoggingOpcode_Send = 9,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1493,9 +1489,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAsyncCausalityTracerStatics=_uuidof(IAsyncCausalityTracerStatics);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CIAsyncCausalityTracerStatics;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CIAsyncCausalityTracerStatics_INTERFACE_DEFINED__) */
@@ -1540,9 +1536,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IErrorDetails=_uuidof(IErrorDetails);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetails;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetails_INTERFACE_DEFINED__) */
@@ -1582,9 +1578,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IErrorDetailsStatics=_uuidof(IErrorDetailsStatics);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetailsStatics;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorDetailsStatics_INTERFACE_DEFINED__) */
@@ -1623,9 +1619,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IErrorReportingSettings=_uuidof(IErrorReportingSettings);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorReportingSettings;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CIErrorReportingSettings_INTERFACE_DEFINED__) */
@@ -1685,9 +1681,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileLoggingSession=_uuidof(IFileLoggingSession);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSession;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSession_INTERFACE_DEFINED__) */
@@ -1727,9 +1723,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileLoggingSessionFactory=_uuidof(IFileLoggingSessionFactory);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSessionFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSessionFactory_INTERFACE_DEFINED__) */
@@ -1768,9 +1764,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILogFileGeneratedEventArgs=_uuidof(ILogFileGeneratedEventArgs);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILogFileGeneratedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILogFileGeneratedEventArgs_INTERFACE_DEFINED__) */
@@ -1816,9 +1812,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingActivity=_uuidof(ILoggingActivity);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity_INTERFACE_DEFINED__) */
@@ -1875,9 +1871,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingActivity2=_uuidof(ILoggingActivity2);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity2;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivity2_INTERFACE_DEFINED__) */
@@ -1924,9 +1920,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingActivityFactory=_uuidof(ILoggingActivityFactory);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivityFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingActivityFactory_INTERFACE_DEFINED__) */
@@ -1962,7 +1958,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Level(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Diagnostics::LoggingLevel * value
@@ -1995,9 +1991,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingChannel=_uuidof(ILoggingChannel);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel_INTERFACE_DEFINED__) */
@@ -2042,9 +2038,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingChannel2=_uuidof(ILoggingChannel2);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel2;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel2_INTERFACE_DEFINED__) */
@@ -2088,9 +2084,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingChannelFactory=_uuidof(ILoggingChannelFactory);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory_INTERFACE_DEFINED__) */
@@ -2137,9 +2133,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingChannelFactory2=_uuidof(ILoggingChannelFactory2);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory2;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelFactory2_INTERFACE_DEFINED__) */
@@ -2181,9 +2177,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingChannelOptions=_uuidof(ILoggingChannelOptions);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptions;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptions_INTERFACE_DEFINED__) */
@@ -2223,9 +2219,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingChannelOptionsFactory=_uuidof(ILoggingChannelOptionsFactory);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannelOptionsFactory_INTERFACE_DEFINED__) */
@@ -2609,34 +2605,34 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddBoolean(
                         /* [in] */__RPC__in HSTRING name,
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddBooleanWithFormat(
                         /* [in] */__RPC__in HSTRING name,
-                        /* [in] */boolean value,
+                        /* [in] */::boolean value,
                         /* [in] */ABI::Windows::Foundation::Diagnostics::LoggingFieldFormat format
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddBooleanWithFormatAndTags(
                         /* [in] */__RPC__in HSTRING name,
-                        /* [in] */boolean value,
+                        /* [in] */::boolean value,
                         /* [in] */ABI::Windows::Foundation::Diagnostics::LoggingFieldFormat format,
                         /* [in] */INT32 tags
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddBooleanArray(
                         /* [in] */__RPC__in HSTRING name,
                         /* [in] */UINT32 __valueSize,
-                        /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) boolean * value
+                        /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddBooleanArrayWithFormat(
                         /* [in] */__RPC__in HSTRING name,
                         /* [in] */UINT32 __valueSize,
-                        /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) boolean * value,
+                        /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) ::boolean * value,
                         /* [in] */ABI::Windows::Foundation::Diagnostics::LoggingFieldFormat format
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddBooleanArrayWithFormatAndTags(
                         /* [in] */__RPC__in HSTRING name,
                         /* [in] */UINT32 __valueSize,
-                        /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) boolean * value,
+                        /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) ::boolean * value,
                         /* [in] */ABI::Windows::Foundation::Diagnostics::LoggingFieldFormat format,
                         /* [in] */INT32 tags
                         ) = 0;
@@ -2876,9 +2872,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingFields=_uuidof(ILoggingFields);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingFields;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingFields_INTERFACE_DEFINED__) */
@@ -2950,9 +2946,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingOptions=_uuidof(ILoggingOptions);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptions;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptions_INTERFACE_DEFINED__) */
@@ -2992,9 +2988,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingOptionsFactory=_uuidof(ILoggingOptionsFactory);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingOptionsFactory_INTERFACE_DEFINED__) */
@@ -3049,9 +3045,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingSession=_uuidof(ILoggingSession);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSession;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSession_INTERFACE_DEFINED__) */
@@ -3091,9 +3087,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingSessionFactory=_uuidof(ILoggingSessionFactory);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSessionFactory;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingSessionFactory_INTERFACE_DEFINED__) */
@@ -3122,16 +3118,16 @@ namespace ABI {
                 {
                 public:
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE IsEnabledWithLevel(
                         /* [in] */ABI::Windows::Foundation::Diagnostics::LoggingLevel level,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE IsEnabledWithLevelAndKeywords(
                         /* [in] */ABI::Windows::Foundation::Diagnostics::LoggingLevel level,
                         /* [in] */INT64 keywords,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE LogEvent(
                         /* [in] */__RPC__in HSTRING eventName
@@ -3178,9 +3174,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILoggingTarget=_uuidof(ILoggingTarget);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingTarget;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingTarget_INTERFACE_DEFINED__) */
@@ -3212,7 +3208,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        /* [retval, out] */__RPC__out boolean * enabled
+                        /* [retval, out] */__RPC__out ::boolean * enabled
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TraceLevel(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Diagnostics::CausalityTraceLevel * value
@@ -3222,9 +3218,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITracingStatusChangedEventArgs=_uuidof(ITracingStatusChangedEventArgs);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* Foundation */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CDiagnostics_CITracingStatusChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CDiagnostics_CITracingStatusChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3880,7 +3876,7 @@ typedef struct __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFil
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CDiagnostics_CILogFileGeneratedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CDiagnostics_CIFileLoggingSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CDiagnostics_CILogFileGeneratedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CIFileLoggingSession_Windows__CFoundation__CDiagnostics__CLogFileGeneratedEventArgsVtbl;
 
@@ -3932,7 +3928,7 @@ typedef struct __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILog
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CDiagnostics_CILoggingChannel * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CFoundation__CDiagnostics__CILoggingChannel_IInspectableVtbl;
 

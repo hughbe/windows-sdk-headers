@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.appbroadcasting.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 interface IAppBroadcastingMonitor;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingMonitor ABI::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor
 
 #endif // ____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingMonitor_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 interface IAppBroadcastingStatus;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatus ABI::Windows::Media::AppBroadcasting::IAppBroadcastingStatus
 
 #endif // ____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatus_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 interface IAppBroadcastingStatusDetails;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatusDetails ABI::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails
 
 #endif // ____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatusDetails_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 interface IAppBroadcastingUI;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUI ABI::Windows::Media::AppBroadcasting::IAppBroadcastingUI
 
 #endif // ____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUI_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 interface IAppBroadcastingUIStatics;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUIStatics ABI::Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUIStatics_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 class AppBroadcastingMonitor;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -378,7 +374,7 @@ ITypedEventHandler<ABI::Windows::Media::AppBroadcasting::AppBroadcastingMonitor*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::AppBroadcasting::AppBroadcastingMonitor*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor*,IInspectable*>
@@ -395,8 +391,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -404,8 +400,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -425,9 +421,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 class AppBroadcastingStatus;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -435,9 +431,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 class AppBroadcastingStatusDetails;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Media {
             namespace AppBroadcasting {
                 class AppBroadcastingUI;
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -484,7 +480,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCurrentAppBroadcasting(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_IsCurrentAppBroadcastingChanged(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable * handler,
@@ -498,9 +494,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastingMonitor=_uuidof(IAppBroadcastingMonitor);
                 
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingMonitor;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingMonitor_INTERFACE_DEFINED__) */
@@ -532,7 +528,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanStartBroadcast(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Details(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails * * value
@@ -542,9 +538,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastingStatus=_uuidof(IAppBroadcastingStatus);
                 
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatus;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatus_INTERFACE_DEFINED__) */
@@ -576,37 +572,37 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAnyAppBroadcasting(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCaptureResourceUnavailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGameStreamInProgress(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGpuConstrained(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAppInactive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBlockedForApp(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledByUser(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledBySystem(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastingStatusDetails=_uuidof(IAppBroadcastingStatusDetails);
                 
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatusDetails;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingStatusDetails_INTERFACE_DEFINED__) */
@@ -646,9 +642,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastingUI=_uuidof(IAppBroadcastingUI);
                 
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUI;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUI_INTERFACE_DEFINED__) */
@@ -691,9 +687,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastingUIStatics=_uuidof(IAppBroadcastingUIStatics);
                 
-            } /* Windows */
+            } /* AppBroadcasting */
         } /* Media */
-    } /* AppBroadcasting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUIStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingUIStatics_INTERFACE_DEFINED__) */
@@ -860,7 +856,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBr
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAppBroadcasting_CIAppBroadcastingMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAppBroadcasting__CAppBroadcastingMonitor_IInspectableVtbl;
 

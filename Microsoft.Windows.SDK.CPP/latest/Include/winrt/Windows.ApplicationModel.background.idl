@@ -537,6 +537,8 @@ namespace Windows
 
             runtimeclass ContentPrefetchTrigger;
 
+            runtimeclass ConversationalAgentTrigger;
+
             runtimeclass CustomSystemEventTrigger;
 
             runtimeclass DeviceConnectionChangeTrigger;
@@ -1549,7 +1551,7 @@ namespace Windows
             [uuid(6DD8ED1B-458E-4FC2-BC2E-D5664F77ED19)]
             interface IPushNotificationTriggerFactory : IInspectable
             {
-                HRESULT Create([in] HSTRING applicationId, [out] [retval] Windows.ApplicationModel.Background.PushNotificationTrigger** trigger);
+                HRESULT Create([in] HSTRING applicationId, [out] [retval] Windows.ApplicationModel.Background.PushNotificationTrigger** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1965,6 +1967,13 @@ namespace Windows
                 interface Windows.ApplicationModel.Background.IBackgroundTrigger;
             }
 
+            [activatable(Windows.Foundation.UniversalApiContract, 8.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            runtimeclass ConversationalAgentTrigger
+            {
+                [default] interface Windows.ApplicationModel.Background.IBackgroundTrigger;
+            }
+
             [activatable(Windows.ApplicationModel.Background.ICustomSystemEventTriggerFactory, Windows.Foundation.UniversalApiContract, 6.0)]
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(standard)]
@@ -2202,6 +2211,7 @@ namespace Windows
             [activatable(Windows.ApplicationModel.Background.IPushNotificationTriggerFactory, Windows.Foundation.UniversalApiContract, 1.0)]
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [marshaling_behavior(agile)]
             [threading(mta)]
             runtimeclass PushNotificationTrigger
             {

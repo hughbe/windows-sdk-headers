@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.speechrecognition.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechContinuousRecognitionCompletedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionCompletedEventArgs ABI::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionCompletedEventArgs_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechContinuousRecognitionResultGeneratedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionResultGeneratedEventArgs ABI::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionResultGeneratedEventArgs_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechContinuousRecognitionSession;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession ABI::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionCompilationResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionCompilationResult ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionCompilationResult_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionConstraint ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionConstraint_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionGrammarFileConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraint ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraint
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraint_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionGrammarFileConstraintFactory;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraintFactory ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraintFactory_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionHypothesis;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesis ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesis
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesis_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionHypothesisGeneratedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesisGeneratedEventArgs ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesisGeneratedEventArgs_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionListConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraint ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraint
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraint_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionListConstraintFactory;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraintFactory ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraintFactory_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionQualityDegradingEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionQualityDegradingEventArgs ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionQualityDegradingEventArgs_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionResult2;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult2 ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult2_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionSemanticInterpretation;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionSemanticInterpretation ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionSemanticInterpretation
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionSemanticInterpretation_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionTopicConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraint ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraint_FWD_DEFINED__
@@ -503,9 +499,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionTopicConstraintFactory;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraintFactory ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraintFactory_FWD_DEFINED__
@@ -517,9 +513,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionVoiceCommandDefinitionConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionVoiceCommandDefinitionConstraint ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionVoiceCommandDefinitionConstraint
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionVoiceCommandDefinitionConstraint_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizer;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer ABI::Windows::Media::SpeechRecognition::ISpeechRecognizer
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer_FWD_DEFINED__
@@ -545,9 +541,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizer2;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer2 ABI::Windows::Media::SpeechRecognition::ISpeechRecognizer2
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer2_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizerFactory;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerFactory ABI::Windows::Media::SpeechRecognition::ISpeechRecognizerFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerFactory_FWD_DEFINED__
@@ -573,9 +569,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizerStateChangedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStateChangedEventArgs ABI::Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStateChangedEventArgs_FWD_DEFINED__
@@ -587,9 +583,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizerStatics;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics ABI::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics_FWD_DEFINED__
@@ -601,9 +597,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizerStatics2;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics2 ABI::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics2_FWD_DEFINED__
@@ -615,9 +611,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizerTimeouts;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerTimeouts ABI::Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerTimeouts_FWD_DEFINED__
@@ -629,9 +625,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognizerUIOptions;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerUIOptions ABI::Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerUIOptions_FWD_DEFINED__
@@ -643,9 +639,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface IVoiceCommandManager;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandManager ABI::Windows::Media::SpeechRecognition::IVoiceCommandManager
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandManager_FWD_DEFINED__
@@ -657,9 +653,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface IVoiceCommandSet;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandSet ABI::Windows::Media::SpeechRecognition::IVoiceCommandSet
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandSet_FWD_DEFINED__
@@ -672,9 +668,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class VoiceCommandSet;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_PHONE_PHONECONTRACT_VERSION >= 0x10000
@@ -697,7 +693,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Media::SpeechRecognition::VoiceCommandSet*> 
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Media::SpeechRecognition::VoiceCommandSet*> __FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Media::SpeechRecognition::IVoiceCommandSet*>
@@ -729,7 +725,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoice
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Media::SpeechRecognition::IVoiceCommandSet*>*>
@@ -761,7 +757,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoice
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Media::SpeechRecognition::IVoiceCommandSet*>*>
@@ -793,7 +789,7 @@ IIterator<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*>
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*> __FIIterator_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t;
 #define __FIIterator_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*>
@@ -825,7 +821,7 @@ IIterable<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*>
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*> __FIIterable_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t;
 #define __FIIterable_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*>
@@ -841,9 +837,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -866,7 +862,7 @@ IIterator<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> __FIIterator_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t;
 #define __FIIterator_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult*>
@@ -898,7 +894,7 @@ IIterable<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> __FIIterable_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t;
 #define __FIIterable_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult*>
@@ -930,7 +926,7 @@ IMapView<HSTRING,ABI::Windows::Media::SpeechRecognition::VoiceCommandSet*> : IMa
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Media::SpeechRecognition::VoiceCommandSet*> __FIMapView_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t;
 #define __FIMapView_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CMedia__CSpeechRecognition__CVoiceCommandSet ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Media::SpeechRecognition::IVoiceCommandSet*>
@@ -962,7 +958,7 @@ IVectorView<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*> __FIVectorView_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t;
 #define __FIVectorView_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*>
@@ -994,7 +990,7 @@ IVectorView<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> __FIVectorView_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t;
 #define __FIVectorView_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult*>
@@ -1026,7 +1022,7 @@ IVector<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*> :
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*> __FIVector_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t;
 #define __FIVector_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CSpeechRecognition__CISpeechRecognitionConstraint ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint*>
@@ -1042,9 +1038,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionCompilationResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1067,7 +1063,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechRecognition::SpeechRe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult*>
@@ -1099,7 +1095,7 @@ IAsyncOperation<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionCompila
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult*> __FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionCompilationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult*>
@@ -1131,7 +1127,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechRecognition::SpeechRe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult*>
@@ -1163,7 +1159,7 @@ IAsyncOperation<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::SpeechRecognition::SpeechRecognitionResult*> __FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult*>
@@ -1179,9 +1175,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechContinuousRecognitionSession;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1189,9 +1185,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechContinuousRecognitionCompletedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1215,7 +1211,7 @@ ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechContinuousRecog
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession*,ABI::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession*,ABI::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs*>
@@ -1233,9 +1229,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechContinuousRecognitionResultGeneratedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1259,7 +1255,7 @@ ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechContinuousRecog
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession*,ABI::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession*,ABI::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs*>
@@ -1276,9 +1272,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognizer;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1286,9 +1282,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionHypothesisGeneratedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1312,7 +1308,7 @@ ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognizer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognizer*,ABI::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::ISpeechRecognizer*,ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs*>
@@ -1330,9 +1326,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionQualityDegradingEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1356,7 +1352,7 @@ ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognizer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognizer*,ABI::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::ISpeechRecognizer*,ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs*>
@@ -1374,9 +1370,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognizerStateChangedEventArgs;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1400,7 +1396,7 @@ ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognizer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::SpeechRecognizer*,ABI::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::SpeechRecognition::ISpeechRecognizer*,ABI::Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs*>
@@ -1431,7 +1427,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1460,7 +1456,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1489,7 +1485,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1518,7 +1514,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1548,7 +1544,7 @@ IKeyValuePair<HSTRING,__FIVectorView_1_HSTRING*> : IKeyValuePair_impl<HSTRING,__
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,__FIVectorView_1_HSTRING*> __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -1578,7 +1574,7 @@ IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>*>
@@ -1608,7 +1604,7 @@ IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>*>
@@ -1638,7 +1634,7 @@ IMapView<HSTRING,__FIVectorView_1_HSTRING*> : IMapView_impl<HSTRING,__FIVectorVi
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,__FIVectorView_1_HSTRING*> __FIMapView_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIMapView_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -1652,8 +1648,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Language;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -1661,8 +1657,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage ABI::Windows::Globalization::ILanguage
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -1688,7 +1684,7 @@ IIterator<ABI::Windows::Globalization::Language*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Globalization::Language*> __FIIterator_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Globalization::ILanguage*>
@@ -1720,7 +1716,7 @@ IIterable<ABI::Windows::Globalization::Language*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Globalization::Language*> __FIIterable_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Globalization::ILanguage*>
@@ -1752,7 +1748,7 @@ IVectorView<ABI::Windows::Globalization::Language*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Globalization::Language*> __FIVectorView_1_Windows__CGlobalization__CLanguage_t;
 #define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Globalization::ILanguage*>
@@ -1782,7 +1778,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1811,7 +1807,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1829,8 +1825,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1838,8 +1834,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1851,8 +1847,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1864,8 +1860,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1880,8 +1876,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1889,8 +1885,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1905,9 +1901,9 @@ namespace ABI {
                 
                 typedef enum SpeechContinuousRecognitionMode : int SpeechContinuousRecognitionMode;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1916,9 +1912,9 @@ namespace ABI {
                 
                 typedef enum SpeechRecognitionAudioProblem : int SpeechRecognitionAudioProblem;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1927,9 +1923,9 @@ namespace ABI {
                 
                 typedef enum SpeechRecognitionConfidence : int SpeechRecognitionConfidence;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1938,9 +1934,9 @@ namespace ABI {
                 
                 typedef enum SpeechRecognitionConstraintProbability : int SpeechRecognitionConstraintProbability;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1949,9 +1945,9 @@ namespace ABI {
                 
                 typedef enum SpeechRecognitionConstraintType : int SpeechRecognitionConstraintType;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1960,9 +1956,9 @@ namespace ABI {
                 
                 typedef enum SpeechRecognitionResultStatus : int SpeechRecognitionResultStatus;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1971,9 +1967,9 @@ namespace ABI {
                 
                 typedef enum SpeechRecognitionScenario : int SpeechRecognitionScenario;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1982,9 +1978,9 @@ namespace ABI {
                 
                 typedef enum SpeechRecognizerState : int SpeechRecognizerState;
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2023,9 +2019,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionGrammarFileConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2033,9 +2029,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionHypothesis;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2044,9 +2040,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionListConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2056,9 +2052,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionSemanticInterpretation;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2066,9 +2062,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionTopicConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2076,9 +2072,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionVoiceCommandDefinitionConstraint;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2088,9 +2084,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognizerTimeouts;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2098,9 +2094,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognizerUIOptions;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2134,9 +2130,9 @@ namespace ABI {
                     SpeechContinuousRecognitionMode_PauseOnRecognition = 1,
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2166,9 +2162,9 @@ namespace ABI {
                     SpeechRecognitionAudioProblem_TooSlow = 6,
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2195,9 +2191,9 @@ namespace ABI {
                     SpeechRecognitionConfidence_Rejected = 3,
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2223,9 +2219,9 @@ namespace ABI {
                     SpeechRecognitionConstraintProbability_Max = 2,
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2252,9 +2248,9 @@ namespace ABI {
                     SpeechRecognitionConstraintType_VoiceCommandDefinition = 3,
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2304,9 +2300,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2336,9 +2332,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2376,9 +2372,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2414,9 +2410,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechContinuousRecognitionCompletedEventArgs=_uuidof(ISpeechContinuousRecognitionCompletedEventArgs);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -2455,9 +2451,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechContinuousRecognitionResultGeneratedEventArgs=_uuidof(ISpeechContinuousRecognitionResultGeneratedEventArgs);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionResultGeneratedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionResultGeneratedEventArgs_INTERFACE_DEFINED__) */
@@ -2530,9 +2526,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechContinuousRecognitionSession=_uuidof(ISpeechContinuousRecognitionSession);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession_INTERFACE_DEFINED__) */
@@ -2571,9 +2567,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionCompilationResult=_uuidof(ISpeechRecognitionCompilationResult);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionCompilationResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionCompilationResult_INTERFACE_DEFINED__) */
@@ -2602,10 +2598,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Tag(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2627,9 +2623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionConstraint=_uuidof(ISpeechRecognitionConstraint);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionConstraint;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionConstraint_INTERFACE_DEFINED__) */
@@ -2672,9 +2668,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionGrammarFileConstraint=_uuidof(ISpeechRecognitionGrammarFileConstraint);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraint;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraint_INTERFACE_DEFINED__) */
@@ -2719,9 +2715,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionGrammarFileConstraintFactory=_uuidof(ISpeechRecognitionGrammarFileConstraintFactory);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraintFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionGrammarFileConstraintFactory_INTERFACE_DEFINED__) */
@@ -2760,9 +2756,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionHypothesis=_uuidof(ISpeechRecognitionHypothesis);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesis;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesis_INTERFACE_DEFINED__) */
@@ -2801,9 +2797,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionHypothesisGeneratedEventArgs=_uuidof(ISpeechRecognitionHypothesisGeneratedEventArgs);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesisGeneratedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesisGeneratedEventArgs_INTERFACE_DEFINED__) */
@@ -2846,9 +2842,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionListConstraint=_uuidof(ISpeechRecognitionListConstraint);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraint;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraint_INTERFACE_DEFINED__) */
@@ -2893,9 +2889,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionListConstraintFactory=_uuidof(ISpeechRecognitionListConstraintFactory);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraintFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionListConstraintFactory_INTERFACE_DEFINED__) */
@@ -2934,9 +2930,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionQualityDegradingEventArgs=_uuidof(ISpeechRecognitionQualityDegradingEventArgs);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionQualityDegradingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionQualityDegradingEventArgs_INTERFACE_DEFINED__) */
@@ -2997,9 +2993,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionResult=_uuidof(ISpeechRecognitionResult);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_INTERFACE_DEFINED__) */
@@ -3041,9 +3037,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionResult2=_uuidof(ISpeechRecognitionResult2);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult2_INTERFACE_DEFINED__) */
@@ -3082,9 +3078,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionSemanticInterpretation=_uuidof(ISpeechRecognitionSemanticInterpretation);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionSemanticInterpretation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionSemanticInterpretation_INTERFACE_DEFINED__) */
@@ -3130,9 +3126,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionTopicConstraint=_uuidof(ISpeechRecognitionTopicConstraint);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraint;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraint_INTERFACE_DEFINED__) */
@@ -3179,9 +3175,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionTopicConstraintFactory=_uuidof(ISpeechRecognitionTopicConstraintFactory);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraintFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionTopicConstraintFactory_INTERFACE_DEFINED__) */
@@ -3221,9 +3217,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognitionVoiceCommandDefinitionConstraint=_uuidof(ISpeechRecognitionVoiceCommandDefinitionConstraint);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionVoiceCommandDefinitionConstraint;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionVoiceCommandDefinitionConstraint_INTERFACE_DEFINED__) */
@@ -3298,9 +3294,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizer=_uuidof(ISpeechRecognizer);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer_INTERFACE_DEFINED__) */
@@ -3352,9 +3348,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizer2=_uuidof(ISpeechRecognizer2);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer2_INTERFACE_DEFINED__) */
@@ -3394,9 +3390,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizerFactory=_uuidof(ISpeechRecognizerFactory);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerFactory_INTERFACE_DEFINED__) */
@@ -3435,9 +3431,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizerStateChangedEventArgs=_uuidof(ISpeechRecognizerStateChangedEventArgs);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3482,9 +3478,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizerStatics=_uuidof(ISpeechRecognizerStatics);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics_INTERFACE_DEFINED__) */
@@ -3524,9 +3520,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizerStatics2=_uuidof(ISpeechRecognizerStatics2);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStatics2_INTERFACE_DEFINED__) */
@@ -3580,9 +3576,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizerTimeouts=_uuidof(ISpeechRecognizerTimeouts);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerTimeouts;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerTimeouts_INTERFACE_DEFINED__) */
@@ -3626,25 +3622,25 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadBackEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsReadBackEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowConfirmation(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowConfirmation(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISpeechRecognizerUIOptions=_uuidof(ISpeechRecognizerUIOptions);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerUIOptions;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerUIOptions_INTERFACE_DEFINED__) */
@@ -3699,9 +3695,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandManager=_uuidof(IVoiceCommandManager);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandManager_INTERFACE_DEFINED__) */
@@ -3764,9 +3760,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandSet=_uuidof(IVoiceCommandSet);
                 
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandSet;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechRecognition_CIVoiceCommandSet_INTERFACE_DEFINED__) */
@@ -5653,7 +5649,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionCompletedEventArgsVtbl;
 
@@ -5706,7 +5702,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionResultGeneratedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechContinuousRecognitionResultGeneratedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionSession_Windows__CMedia__CSpeechRecognition__CSpeechContinuousRecognitionResultGeneratedEventArgsVtbl;
 
@@ -5759,7 +5755,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesisGeneratedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionHypothesisGeneratedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionHypothesisGeneratedEventArgsVtbl;
 
@@ -5812,7 +5808,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionQualityDegradingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionQualityDegradingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognitionQualityDegradingEventArgsVtbl;
 
@@ -5865,7 +5861,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognizerStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSpeechRecognition__CSpeechRecognizer_Windows__CMedia__CSpeechRecognition__CSpeechRecognizerStateChangedEventArgsVtbl;
 

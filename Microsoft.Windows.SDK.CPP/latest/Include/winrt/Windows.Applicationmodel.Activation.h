@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.activation.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -299,9 +295,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs_FWD_DEFINED__
@@ -313,9 +309,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IActivatedEventArgsWithUser;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsWithUser ABI::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsWithUser_FWD_DEFINED__
@@ -327,9 +323,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IApplicationViewActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIApplicationViewActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIApplicationViewActivatedEventArgs_FWD_DEFINED__
@@ -341,9 +337,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IAppointmentsProviderActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderActivatedEventArgs_FWD_DEFINED__
@@ -355,9 +351,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IAppointmentsProviderAddAppointmentActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderAddAppointmentActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderAddAppointmentActivatedEventArgs_FWD_DEFINED__
@@ -369,9 +365,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IAppointmentsProviderRemoveAppointmentActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderRemoveAppointmentActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderRemoveAppointmentActivatedEventArgs_FWD_DEFINED__
@@ -383,9 +379,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IAppointmentsProviderReplaceAppointmentActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderReplaceAppointmentActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderReplaceAppointmentActivatedEventArgs_FWD_DEFINED__
@@ -397,9 +393,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_FWD_DEFINED__
@@ -411,9 +407,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IAppointmentsProviderShowTimeFrameActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowTimeFrameActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowTimeFrameActivatedEventArgs_FWD_DEFINED__
@@ -425,9 +421,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IBackgroundActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs_FWD_DEFINED__
@@ -439,9 +435,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IBarcodeScannerPreviewActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIBarcodeScannerPreviewActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIBarcodeScannerPreviewActivatedEventArgs_FWD_DEFINED__
@@ -453,9 +449,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ICachedFileUpdaterActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs ABI::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs_FWD_DEFINED__
@@ -467,9 +463,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ICameraSettingsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CICameraSettingsActivatedEventArgs ABI::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CICameraSettingsActivatedEventArgs_FWD_DEFINED__
@@ -481,9 +477,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ICommandLineActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivatedEventArgs ABI::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivatedEventArgs_FWD_DEFINED__
@@ -495,9 +491,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ICommandLineActivationOperation;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivationOperation ABI::Windows::ApplicationModel::Activation::ICommandLineActivationOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivationOperation_FWD_DEFINED__
@@ -509,9 +505,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactActivatedEventArgs_FWD_DEFINED__
@@ -523,9 +519,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactCallActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactCallActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactCallActivatedEventArgs_FWD_DEFINED__
@@ -537,9 +533,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactMapActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactMapActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactMapActivatedEventArgs_FWD_DEFINED__
@@ -551,9 +547,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactMessageActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactMessageActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactMessageActivatedEventArgs_FWD_DEFINED__
@@ -565,9 +561,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactPanelActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactPanelActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactPanelActivatedEventArgs_FWD_DEFINED__
@@ -579,9 +575,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactPickerActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactPickerActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactPickerActivatedEventArgs_FWD_DEFINED__
@@ -593,9 +589,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactPostActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactPostActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactPostActivatedEventArgs_FWD_DEFINED__
@@ -607,9 +603,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactVideoCallActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactVideoCallActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactVideoCallActivatedEventArgs_FWD_DEFINED__
@@ -621,9 +617,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContactsProviderActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContactsProviderActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContactsProviderActivatedEventArgs_FWD_DEFINED__
@@ -635,9 +631,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IContinuationActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIContinuationActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIContinuationActivatedEventArgs_FWD_DEFINED__
@@ -649,9 +645,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IDeviceActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIDeviceActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIDeviceActivatedEventArgs_FWD_DEFINED__
@@ -663,9 +659,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IDevicePairingActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIDevicePairingActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIDevicePairingActivatedEventArgs_FWD_DEFINED__
@@ -677,9 +673,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IDialReceiverActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIDialReceiverActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIDialReceiverActivatedEventArgs_FWD_DEFINED__
@@ -691,9 +687,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IFileActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs_FWD_DEFINED__
@@ -705,9 +701,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileActivatedEventArgsWithCallerPackageFamilyName;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithCallerPackageFamilyName ABI::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithCallerPackageFamilyName_FWD_DEFINED__
@@ -719,9 +715,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileActivatedEventArgsWithNeighboringFiles;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithNeighboringFiles ABI::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithNeighboringFiles_FWD_DEFINED__
@@ -733,9 +729,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileOpenPickerActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs_FWD_DEFINED__
@@ -747,9 +743,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileOpenPickerActivatedEventArgs2;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs2 ABI::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs2_FWD_DEFINED__
@@ -761,9 +757,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileOpenPickerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerContinuationEventArgs ABI::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerContinuationEventArgs_FWD_DEFINED__
@@ -775,9 +771,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileSavePickerActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs_FWD_DEFINED__
@@ -789,9 +785,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileSavePickerActivatedEventArgs2;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs2 ABI::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs2_FWD_DEFINED__
@@ -803,9 +799,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFileSavePickerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerContinuationEventArgs ABI::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerContinuationEventArgs_FWD_DEFINED__
@@ -817,9 +813,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IFolderPickerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIFolderPickerContinuationEventArgs ABI::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIFolderPickerContinuationEventArgs_FWD_DEFINED__
@@ -831,9 +827,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ILaunchActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs ABI::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs_FWD_DEFINED__
@@ -845,9 +841,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ILaunchActivatedEventArgs2;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs2 ABI::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs2_FWD_DEFINED__
@@ -859,9 +855,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ILockScreenActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenActivatedEventArgs ABI::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenActivatedEventArgs_FWD_DEFINED__
@@ -873,9 +869,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ILockScreenCallActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenCallActivatedEventArgs ABI::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenCallActivatedEventArgs_FWD_DEFINED__
@@ -887,9 +883,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IPickerReturnedActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIPickerReturnedActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIPickerReturnedActivatedEventArgs_FWD_DEFINED__
@@ -901,9 +897,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IPrelaunchActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIPrelaunchActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIPrelaunchActivatedEventArgs_FWD_DEFINED__
@@ -915,9 +911,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IPrint3DWorkflowActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIPrint3DWorkflowActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIPrint3DWorkflowActivatedEventArgs_FWD_DEFINED__
@@ -929,9 +925,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IPrintTaskSettingsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIPrintTaskSettingsActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIPrintTaskSettingsActivatedEventArgs_FWD_DEFINED__
@@ -943,9 +939,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IProtocolActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgs_FWD_DEFINED__
@@ -957,9 +953,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData ABI::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_FWD_DEFINED__
@@ -971,9 +967,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IProtocolForResultsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolForResultsActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolForResultsActivatedEventArgs_FWD_DEFINED__
@@ -985,9 +981,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IRestrictedLaunchActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIRestrictedLaunchActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIRestrictedLaunchActivatedEventArgs_FWD_DEFINED__
@@ -999,9 +995,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ISearchActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs ABI::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs_FWD_DEFINED__
@@ -1013,9 +1009,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ISearchActivatedEventArgsWithLinguisticDetails;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgsWithLinguisticDetails ABI::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgsWithLinguisticDetails_FWD_DEFINED__
@@ -1027,9 +1023,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IShareTargetActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs_FWD_DEFINED__
@@ -1041,9 +1037,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ISplashScreen;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CISplashScreen ABI::Windows::ApplicationModel::Activation::ISplashScreen
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CISplashScreen_FWD_DEFINED__
@@ -1055,9 +1051,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IStartupTaskActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIStartupTaskActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIStartupTaskActivatedEventArgs_FWD_DEFINED__
@@ -1069,9 +1065,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface ITileActivatedInfo;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CITileActivatedInfo ABI::Windows::ApplicationModel::Activation::ITileActivatedInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CITileActivatedInfo_FWD_DEFINED__
@@ -1083,9 +1079,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IToastNotificationActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIToastNotificationActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIToastNotificationActivatedEventArgs_FWD_DEFINED__
@@ -1097,9 +1093,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IUserDataAccountProviderActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIUserDataAccountProviderActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIUserDataAccountProviderActivatedEventArgs_FWD_DEFINED__
@@ -1111,9 +1107,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IViewSwitcherProvider;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIViewSwitcherProvider ABI::Windows::ApplicationModel::Activation::IViewSwitcherProvider
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIViewSwitcherProvider_FWD_DEFINED__
@@ -1125,9 +1121,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IVoiceCommandActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIVoiceCommandActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIVoiceCommandActivatedEventArgs_FWD_DEFINED__
@@ -1139,9 +1135,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IWalletActionActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIWalletActionActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIWalletActionActivatedEventArgs_FWD_DEFINED__
@@ -1153,9 +1149,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IWebAccountProviderActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIWebAccountProviderActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIWebAccountProviderActivatedEventArgs_FWD_DEFINED__
@@ -1167,9 +1163,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IWebAuthenticationBrokerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIWebAuthenticationBrokerContinuationEventArgs ABI::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIWebAuthenticationBrokerContinuationEventArgs_FWD_DEFINED__
@@ -1182,9 +1178,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class BackgroundActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1207,7 +1203,7 @@ IEventHandler<ABI::Windows::ApplicationModel::Activation::BackgroundActivatedEve
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs*> __FIEventHandler_1_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs_t;
 #define __FIEventHandler_1_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs*>
@@ -1223,9 +1219,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class SplashScreen;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1249,7 +1245,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Activation::SplashScreen*,IIn
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Activation::SplashScreen*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Activation::ISplashScreen*,IInspectable*>
@@ -1265,9 +1261,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BackgroundTaskRegistrationGroup;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup_FWD_DEFINED__
@@ -1276,9 +1272,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistrationGroup;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup_FWD_DEFINED__
@@ -1306,7 +1302,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Background::BackgroundTaskReg
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup*,ABI::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup*,ABI::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs*>
@@ -1323,9 +1319,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 class CoreApplicationView;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView_FWD_DEFINED__
@@ -1334,9 +1330,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 interface ICoreApplicationView;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView ABI::Windows::ApplicationModel::Core::ICoreApplicationView
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView_FWD_DEFINED__
@@ -1364,7 +1360,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Core::CoreApplicationView*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Core::CoreApplicationView*,ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Core::ICoreApplicationView*,ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs*>
@@ -1381,9 +1377,9 @@ namespace ABI {
         namespace UI {
             namespace WebUI {
                 class WebUIView;
-            } /* Windows */
+            } /* WebUI */
         } /* UI */
-    } /* WebUI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CWebUI_CIWebUIView_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CWebUI_CIWebUIView_FWD_DEFINED__
@@ -1392,9 +1388,9 @@ namespace ABI {
         namespace UI {
             namespace WebUI {
                 interface IWebUIView;
-            } /* Windows */
+            } /* WebUI */
         } /* UI */
-    } /* WebUI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CWebUI_CIWebUIView ABI::Windows::UI::WebUI::IWebUIView
 
 #endif // ____x_ABI_CWindows_CUI_CWebUI_CIWebUIView_FWD_DEFINED__
@@ -1422,7 +1418,7 @@ ITypedEventHandler<ABI::Windows::UI::WebUI::WebUIView*,ABI::Windows::Application
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::WebUI::WebUIView*,ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::WebUI::IWebUIView*,ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs*>
@@ -1439,8 +1435,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1461,7 +1457,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1491,7 +1487,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1521,7 +1517,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1551,7 +1547,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1581,7 +1577,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1611,7 +1607,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1640,7 +1636,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -1670,7 +1666,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -1700,7 +1696,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -1716,8 +1712,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -1743,7 +1739,7 @@ IIterator<ABI::Windows::Storage::IStorageItem*> : IIterator_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::IStorageItem*> __FIIterator_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageItem*>
@@ -1775,7 +1771,7 @@ IIterable<ABI::Windows::Storage::IStorageItem*> : IIterable_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::IStorageItem*> __FIIterable_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageItem*>
@@ -1807,7 +1803,7 @@ IVectorView<ABI::Windows::Storage::IStorageItem*> : IVectorView_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::IStorageItem*> __FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>
@@ -1822,8 +1818,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1831,8 +1827,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1858,7 +1854,7 @@ IIterator<ABI::Windows::Storage::StorageFile*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFile*> __FIIterator_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFile*>
@@ -1890,7 +1886,7 @@ IIterable<ABI::Windows::Storage::StorageFile*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFile*> __FIIterable_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFile*>
@@ -1922,7 +1918,7 @@ IVectorView<ABI::Windows::Storage::StorageFile*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFile*> __FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>
@@ -1938,9 +1934,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ShownTileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification_FWD_DEFINED__
@@ -1949,9 +1945,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IShownTileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification ABI::Windows::UI::Notifications::IShownTileNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification_FWD_DEFINED__
@@ -1977,7 +1973,7 @@ IIterator<ABI::Windows::UI::Notifications::ShownTileNotification*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::ShownTileNotification*> __FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IShownTileNotification*>
@@ -2009,7 +2005,7 @@ IIterable<ABI::Windows::UI::Notifications::ShownTileNotification*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::ShownTileNotification*> __FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IShownTileNotification*>
@@ -2041,7 +2037,7 @@ IVectorView<ABI::Windows::UI::Notifications::ShownTileNotification*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::ShownTileNotification*> __FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IShownTileNotification*>
@@ -2060,10 +2056,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     class AddAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation_FWD_DEFINED__
@@ -2073,10 +2069,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IAddAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAddAppointmentOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation_FWD_DEFINED__
@@ -2088,10 +2084,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     class RemoveAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation_FWD_DEFINED__
@@ -2101,10 +2097,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IRemoveAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IRemoveAppointmentOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation_FWD_DEFINED__
@@ -2116,10 +2112,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     class ReplaceAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation_FWD_DEFINED__
@@ -2129,10 +2125,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IReplaceAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IReplaceAppointmentOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation_FWD_DEFINED__
@@ -2150,9 +2146,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskInstance;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance ABI::Windows::ApplicationModel::Background::IBackgroundTaskInstance
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance_FWD_DEFINED__
@@ -2166,9 +2162,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Calls {
                 class LockScreenCallUI;
-            } /* Windows */
+            } /* Calls */
         } /* ApplicationModel */
-    } /* Calls */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCalls_CILockScreenCallUI_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCalls_CILockScreenCallUI_FWD_DEFINED__
@@ -2177,9 +2173,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Calls {
                 interface ILockScreenCallUI;
-            } /* Windows */
+            } /* Calls */
         } /* ApplicationModel */
-    } /* Calls */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCalls_CILockScreenCallUI ABI::Windows::ApplicationModel::Calls::ILockScreenCallUI
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCalls_CILockScreenCallUI_FWD_DEFINED__
@@ -2193,9 +2189,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class Contact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
@@ -2204,9 +2200,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContact ABI::Windows::ApplicationModel::Contacts::IContact
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
@@ -2217,9 +2213,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactAddress;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress_FWD_DEFINED__
@@ -2228,9 +2224,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAddress;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress ABI::Windows::ApplicationModel::Contacts::IContactAddress
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress_FWD_DEFINED__
@@ -2241,9 +2237,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactPanel;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel_FWD_DEFINED__
@@ -2252,9 +2248,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPanel;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel ABI::Windows::ApplicationModel::Contacts::IContactPanel
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel_FWD_DEFINED__
@@ -2269,10 +2265,10 @@ namespace ABI {
             namespace Contacts {
                 namespace Provider {
                     class ContactPickerUI;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI_FWD_DEFINED__
@@ -2282,10 +2278,10 @@ namespace ABI {
             namespace Contacts {
                 namespace Provider {
                     interface IContactPickerUI;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI ABI::Windows::ApplicationModel::Contacts::Provider::IContactPickerUI
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI_FWD_DEFINED__
@@ -2305,10 +2301,10 @@ namespace ABI {
             namespace DataTransfer {
                 namespace ShareTarget {
                     class ShareOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* DataTransfer */
-    } /* ShareTarget */} /* ABI */
+                } /* ShareTarget */
+            } /* DataTransfer */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CShareTarget_CIShareOperation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CShareTarget_CIShareOperation_FWD_DEFINED__
@@ -2318,10 +2314,10 @@ namespace ABI {
             namespace DataTransfer {
                 namespace ShareTarget {
                     interface IShareOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* DataTransfer */
-    } /* ShareTarget */} /* ABI */
+                } /* ShareTarget */
+            } /* DataTransfer */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CShareTarget_CIShareOperation ABI::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CShareTarget_CIShareOperation_FWD_DEFINED__
@@ -2336,9 +2332,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneQueryLinguisticDetails;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_FWD_DEFINED__
@@ -2347,9 +2343,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQueryLinguisticDetails;
-            } /* Windows */
+            } /* Search */
         } /* ApplicationModel */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails ABI::Windows::ApplicationModel::Search::ISearchPaneQueryLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_FWD_DEFINED__
@@ -2366,10 +2362,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     interface IUserDataAccountProviderOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderOperation ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderOperation_FWD_DEFINED__
@@ -2386,9 +2382,9 @@ namespace ABI {
                 
                 typedef enum WalletActionKind : int WalletActionKind;
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2399,9 +2395,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -2410,9 +2406,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -2427,10 +2423,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class Print3DWorkflow;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow_FWD_DEFINED__
@@ -2440,10 +2436,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrint3DWorkflow;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflow
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow_FWD_DEFINED__
@@ -2455,10 +2451,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class PrintTaskConfiguration;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration_FWD_DEFINED__
@@ -2468,10 +2464,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrintTaskConfiguration;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration ABI::Windows::Devices::Printers::Extensions::IPrintTaskConfiguration
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration_FWD_DEFINED__
@@ -2486,9 +2482,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2497,9 +2493,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2514,15 +2510,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2530,8 +2526,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2543,8 +2539,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2552,16 +2548,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2569,8 +2565,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2583,9 +2579,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_FWD_DEFINED__
@@ -2594,9 +2590,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_FWD_DEFINED__
@@ -2614,11 +2610,11 @@ namespace ABI {
                 namespace Web {
                     namespace Provider {
                         interface IWebAccountProviderOperation;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CProvider_CIWebAccountProviderOperation ABI::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CProvider_CIWebAccountProviderOperation_FWD_DEFINED__
@@ -2635,10 +2631,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Web {
                     class WebAuthenticationResult;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult_FWD_DEFINED__
@@ -2648,10 +2644,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Web {
                     interface IWebAuthenticationResult;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Web */} /* ABI */
+                } /* Web */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult ABI::Windows::Security::Authentication::Web::IWebAuthenticationResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CIWebAuthenticationResult_FWD_DEFINED__
@@ -2670,10 +2666,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class FileOpenPickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI_FWD_DEFINED__
@@ -2683,10 +2679,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IFileOpenPickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI ABI::Windows::Storage::Pickers::Provider::IFileOpenPickerUI
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI_FWD_DEFINED__
@@ -2698,10 +2694,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class FileSavePickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI_FWD_DEFINED__
@@ -2711,10 +2707,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IFileSavePickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI ABI::Windows::Storage::Pickers::Provider::IFileSavePickerUI
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI_FWD_DEFINED__
@@ -2729,9 +2725,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class CachedFileUpdaterUI;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI_FWD_DEFINED__
@@ -2740,9 +2736,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface ICachedFileUpdaterUI;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI ABI::Windows::Storage::Provider::ICachedFileUpdaterUI
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI_FWD_DEFINED__
@@ -2756,9 +2752,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class StorageFileQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_FWD_DEFINED__
@@ -2767,9 +2763,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageFileQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult ABI::Windows::Storage::Search::IStorageFileQueryResult
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_FWD_DEFINED__
@@ -2783,8 +2779,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -2792,8 +2788,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -2805,8 +2801,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class ProtocolForResultsOperation;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIProtocolForResultsOperation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIProtocolForResultsOperation_FWD_DEFINED__
@@ -2814,8 +2810,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IProtocolForResultsOperation;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIProtocolForResultsOperation ABI::Windows::System::IProtocolForResultsOperation
 
 #endif // ____x_ABI_CWindows_CSystem_CIProtocolForResultsOperation_FWD_DEFINED__
@@ -2825,8 +2821,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2834,8 +2830,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2852,9 +2848,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ActivationViewSwitcher;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher_FWD_DEFINED__
@@ -2863,9 +2859,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IActivationViewSwitcher;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher ABI::Windows::UI::ViewManagement::IActivationViewSwitcher
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher_FWD_DEFINED__
@@ -2889,9 +2885,9 @@ namespace ABI {
                 
                 typedef enum ActivationKind : int ActivationKind;
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2900,9 +2896,9 @@ namespace ABI {
                 
                 typedef enum ApplicationExecutionState : int ApplicationExecutionState;
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2972,9 +2968,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class AppointmentsProviderAddAppointmentActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2982,9 +2978,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class AppointmentsProviderRemoveAppointmentActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2992,9 +2988,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class AppointmentsProviderReplaceAppointmentActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3002,9 +2998,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3012,9 +3008,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class AppointmentsProviderShowTimeFrameActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3023,9 +3019,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class BarcodeScannerPreviewActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3033,9 +3029,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class CachedFileUpdaterActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3043,9 +3039,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class CameraSettingsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3053,9 +3049,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class CommandLineActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3063,9 +3059,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class CommandLineActivationOperation;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3073,9 +3069,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ContactCallActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3083,9 +3079,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ContactMapActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3093,9 +3089,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ContactMessageActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3103,9 +3099,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ContactPanelActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3113,9 +3109,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ContactPickerActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3123,9 +3119,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ContactPostActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3133,9 +3129,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ContactVideoCallActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3143,9 +3139,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class DeviceActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3153,9 +3149,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class DevicePairingActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3163,9 +3159,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class DialReceiverActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3173,9 +3169,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class FileActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3183,9 +3179,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class FileOpenPickerActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3193,9 +3189,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class FileOpenPickerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3203,9 +3199,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class FileSavePickerActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3213,9 +3209,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class FileSavePickerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3223,9 +3219,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class FolderPickerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3233,9 +3229,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class LaunchActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3243,9 +3239,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class LockScreenActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3253,9 +3249,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class LockScreenCallActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3263,9 +3259,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class LockScreenComponentActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3273,9 +3269,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class PickerReturnedActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3283,9 +3279,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class Print3DWorkflowActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3293,9 +3289,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class PrintTaskSettingsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3303,9 +3299,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ProtocolActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3313,9 +3309,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ProtocolForResultsActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3323,9 +3319,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class RestrictedLaunchActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3333,9 +3329,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class SearchActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3343,9 +3339,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ShareTargetActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3354,9 +3350,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class StartupTaskActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3364,9 +3360,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class TileActivatedInfo;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3374,9 +3370,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class ToastNotificationActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3384,9 +3380,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class UserDataAccountProviderActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3394,9 +3390,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class VoiceCommandActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3404,9 +3400,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class WalletActionActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3414,9 +3410,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class WebAccountProviderActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3424,9 +3420,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class WebAuthenticationBrokerContinuationEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3612,9 +3608,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3642,9 +3638,9 @@ namespace ABI {
                     ApplicationExecutionState_ClosedByUser = 4,
                 };
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3683,9 +3679,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivatedEventArgs=_uuidof(IActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -3725,9 +3721,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivatedEventArgsWithUser=_uuidof(IActivatedEventArgsWithUser);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsWithUser;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsWithUser_INTERFACE_DEFINED__) */
@@ -3767,9 +3763,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewActivatedEventArgs=_uuidof(IApplicationViewActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIApplicationViewActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIApplicationViewActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -3809,9 +3805,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentsProviderActivatedEventArgs=_uuidof(IAppointmentsProviderActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -3852,9 +3848,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentsProviderAddAppointmentActivatedEventArgs=_uuidof(IAppointmentsProviderAddAppointmentActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderAddAppointmentActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderAddAppointmentActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -3895,9 +3891,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentsProviderRemoveAppointmentActivatedEventArgs=_uuidof(IAppointmentsProviderRemoveAppointmentActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderRemoveAppointmentActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderRemoveAppointmentActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -3938,9 +3934,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentsProviderReplaceAppointmentActivatedEventArgs=_uuidof(IAppointmentsProviderReplaceAppointmentActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderReplaceAppointmentActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderReplaceAppointmentActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -3987,9 +3983,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs=_uuidof(IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4033,9 +4029,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentsProviderShowTimeFrameActivatedEventArgs=_uuidof(IAppointmentsProviderShowTimeFrameActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowTimeFrameActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIAppointmentsProviderShowTimeFrameActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4071,9 +4067,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundActivatedEventArgs=_uuidof(IBackgroundActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4113,9 +4109,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerPreviewActivatedEventArgs=_uuidof(IBarcodeScannerPreviewActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIBarcodeScannerPreviewActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIBarcodeScannerPreviewActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4155,9 +4151,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICachedFileUpdaterActivatedEventArgs=_uuidof(ICachedFileUpdaterActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4200,9 +4196,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICameraSettingsActivatedEventArgs=_uuidof(ICameraSettingsActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CICameraSettingsActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CICameraSettingsActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4242,9 +4238,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommandLineActivatedEventArgs=_uuidof(ICommandLineActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4295,9 +4291,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommandLineActivationOperation=_uuidof(ICommandLineActivationOperation);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivationOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CICommandLineActivationOperation_INTERFACE_DEFINED__) */
@@ -4337,9 +4333,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactActivatedEventArgs=_uuidof(IContactActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4386,9 +4382,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactCallActivatedEventArgs=_uuidof(IContactCallActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactCallActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactCallActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4432,9 +4428,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactMapActivatedEventArgs=_uuidof(IContactMapActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactMapActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactMapActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4481,9 +4477,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactMessageActivatedEventArgs=_uuidof(IContactMessageActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactMessageActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactMessageActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4522,9 +4518,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPanelActivatedEventArgs=_uuidof(IContactPanelActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactPanelActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactPanelActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4564,9 +4560,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPickerActivatedEventArgs=_uuidof(IContactPickerActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactPickerActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactPickerActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4613,9 +4609,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPostActivatedEventArgs=_uuidof(IContactPostActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactPostActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactPostActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4662,9 +4658,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactVideoCallActivatedEventArgs=_uuidof(IContactVideoCallActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactVideoCallActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactVideoCallActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4704,9 +4700,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactsProviderActivatedEventArgs=_uuidof(IContactsProviderActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContactsProviderActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContactsProviderActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4746,9 +4742,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContinuationActivatedEventArgs=_uuidof(IContinuationActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIContinuationActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIContinuationActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4791,9 +4787,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceActivatedEventArgs=_uuidof(IDeviceActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIDeviceActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIDeviceActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4833,9 +4829,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePairingActivatedEventArgs=_uuidof(IDevicePairingActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIDevicePairingActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIDevicePairingActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4876,9 +4872,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialReceiverActivatedEventArgs=_uuidof(IDialReceiverActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIDialReceiverActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIDialReceiverActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4921,9 +4917,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileActivatedEventArgs=_uuidof(IFileActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -4963,9 +4959,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileActivatedEventArgsWithCallerPackageFamilyName=_uuidof(IFileActivatedEventArgsWithCallerPackageFamilyName);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithCallerPackageFamilyName;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithCallerPackageFamilyName_INTERFACE_DEFINED__) */
@@ -5006,9 +5002,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileActivatedEventArgsWithNeighboringFiles=_uuidof(IFileActivatedEventArgsWithNeighboringFiles);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithNeighboringFiles;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsWithNeighboringFiles_INTERFACE_DEFINED__) */
@@ -5048,9 +5044,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileOpenPickerActivatedEventArgs=_uuidof(IFileOpenPickerActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5086,9 +5082,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileOpenPickerActivatedEventArgs2=_uuidof(IFileOpenPickerActivatedEventArgs2);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs2_INTERFACE_DEFINED__) */
@@ -5129,9 +5125,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileOpenPickerContinuationEventArgs=_uuidof(IFileOpenPickerContinuationEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerContinuationEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileOpenPickerContinuationEventArgs_INTERFACE_DEFINED__) */
@@ -5171,9 +5167,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileSavePickerActivatedEventArgs=_uuidof(IFileSavePickerActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5212,9 +5208,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileSavePickerActivatedEventArgs2=_uuidof(IFileSavePickerActivatedEventArgs2);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs2_INTERFACE_DEFINED__) */
@@ -5255,9 +5251,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileSavePickerContinuationEventArgs=_uuidof(IFileSavePickerContinuationEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerContinuationEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFileSavePickerContinuationEventArgs_INTERFACE_DEFINED__) */
@@ -5298,9 +5294,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFolderPickerContinuationEventArgs=_uuidof(IFolderPickerContinuationEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIFolderPickerContinuationEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIFolderPickerContinuationEventArgs_INTERFACE_DEFINED__) */
@@ -5343,9 +5339,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILaunchActivatedEventArgs=_uuidof(ILaunchActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5386,9 +5382,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILaunchActivatedEventArgs2=_uuidof(ILaunchActivatedEventArgs2);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs2_INTERFACE_DEFINED__) */
@@ -5428,9 +5424,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenActivatedEventArgs=_uuidof(ILockScreenActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5471,9 +5467,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenCallActivatedEventArgs=_uuidof(ILockScreenCallActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenCallActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CILockScreenCallActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5513,9 +5509,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPickerReturnedActivatedEventArgs=_uuidof(IPickerReturnedActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIPickerReturnedActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIPickerReturnedActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5548,16 +5544,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PrelaunchActivated(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPrelaunchActivatedEventArgs=_uuidof(IPrelaunchActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIPrelaunchActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIPrelaunchActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5597,9 +5593,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DWorkflowActivatedEventArgs=_uuidof(IPrint3DWorkflowActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIPrint3DWorkflowActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIPrint3DWorkflowActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5639,9 +5635,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskSettingsActivatedEventArgs=_uuidof(IPrintTaskSettingsActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIPrintTaskSettingsActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIPrintTaskSettingsActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5681,9 +5677,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtocolActivatedEventArgs=_uuidof(IProtocolActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5726,9 +5722,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData=_uuidof(IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_INTERFACE_DEFINED__) */
@@ -5768,9 +5764,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtocolForResultsActivatedEventArgs=_uuidof(IProtocolForResultsActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolForResultsActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIProtocolForResultsActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5810,9 +5806,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRestrictedLaunchActivatedEventArgs=_uuidof(IRestrictedLaunchActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIRestrictedLaunchActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIRestrictedLaunchActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5855,9 +5851,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchActivatedEventArgs=_uuidof(ISearchActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5893,9 +5889,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISearchActivatedEventArgsWithLinguisticDetails=_uuidof(ISearchActivatedEventArgsWithLinguisticDetails);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgsWithLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgsWithLinguisticDetails_INTERFACE_DEFINED__) */
@@ -5935,9 +5931,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareTargetActivatedEventArgs=_uuidof(IShareTargetActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -5983,9 +5979,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISplashScreen=_uuidof(ISplashScreen);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CISplashScreen;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CISplashScreen_INTERFACE_DEFINED__) */
@@ -6025,9 +6021,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStartupTaskActivatedEventArgs=_uuidof(IStartupTaskActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIStartupTaskActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIStartupTaskActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -6066,9 +6062,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileActivatedInfo=_uuidof(ITileActivatedInfo);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CITileActivatedInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CITileActivatedInfo_INTERFACE_DEFINED__) */
@@ -6111,9 +6107,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationActivatedEventArgs=_uuidof(IToastNotificationActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIToastNotificationActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIToastNotificationActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -6153,9 +6149,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountProviderActivatedEventArgs=_uuidof(IUserDataAccountProviderActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIUserDataAccountProviderActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIUserDataAccountProviderActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -6195,9 +6191,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IViewSwitcherProvider=_uuidof(IViewSwitcherProvider);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIViewSwitcherProvider;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIViewSwitcherProvider_INTERFACE_DEFINED__) */
@@ -6237,9 +6233,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandActivatedEventArgs=_uuidof(IVoiceCommandActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIVoiceCommandActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIVoiceCommandActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -6285,9 +6281,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletActionActivatedEventArgs=_uuidof(IWalletActionActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIWalletActionActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIWalletActionActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -6327,9 +6323,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProviderActivatedEventArgs=_uuidof(IWebAccountProviderActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIWebAccountProviderActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIWebAccountProviderActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -6370,9 +6366,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAuthenticationBrokerContinuationEventArgs=_uuidof(IWebAuthenticationBrokerContinuationEventArgs);
                 
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CActivation_CIWebAuthenticationBrokerContinuationEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CActivation_CIWebAuthenticationBrokerContinuationEventArgs_INTERFACE_DEFINED__) */
@@ -7395,6 +7391,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Activation.ITileActivatedInfo ** Default Interface **
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -8000,7 +7998,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CISplashScreen * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CISplashScreen * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CActivation__CSplashScreen_IInspectableVtbl;
 
@@ -8058,7 +8056,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgsVtbl;
 
@@ -8117,7 +8115,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CCore_CICoreApplicationView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CCore__CCoreApplicationView_Windows__CApplicationModel__CActivation__CIActivatedEventArgsVtbl;
 
@@ -8176,7 +8174,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CWebUI_CIWebUIView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CWebUI_CIWebUIView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CWebUI__CWebUIView_Windows__CApplicationModel__CActivation__CIActivatedEventArgsVtbl;
 
@@ -17445,6 +17443,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Activation.ITileActivatedInfo ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000

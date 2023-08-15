@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.authentication.identity.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,10 +141,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     interface IEnterpriseKeyCredentialRegistrationInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationInfo_FWD_DEFINED__
@@ -157,10 +157,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     interface IEnterpriseKeyCredentialRegistrationManager;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManager ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationManager
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManager_FWD_DEFINED__
@@ -173,10 +173,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     interface IEnterpriseKeyCredentialRegistrationManagerStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManagerStatics ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManagerStatics_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     class EnterpriseKeyCredentialRegistrationInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -216,7 +216,7 @@ IIterator<ABI::Windows::Security::Authentication::Identity::EnterpriseKeyCredent
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo*> __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t;
 #define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationInfo*>
@@ -248,7 +248,7 @@ IIterable<ABI::Windows::Security::Authentication::Identity::EnterpriseKeyCredent
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo*> __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t;
 #define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationInfo*>
@@ -280,7 +280,7 @@ IVectorView<ABI::Windows::Security::Authentication::Identity::EnterpriseKeyCrede
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo*> __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t;
 #define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationInfo*>
@@ -312,7 +312,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CAuthentica
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationInfo*>*>
@@ -344,7 +344,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo*> __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CEnterpriseKeyCredentialRegistrationInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationInfo*>*>
@@ -370,10 +370,10 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     class EnterpriseKeyCredentialRegistrationManager;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -431,10 +431,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEnterpriseKeyCredentialRegistrationInfo=_uuidof(IEnterpriseKeyCredentialRegistrationInfo);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationInfo_INTERFACE_DEFINED__) */
@@ -474,10 +474,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEnterpriseKeyCredentialRegistrationManager=_uuidof(IEnterpriseKeyCredentialRegistrationManager);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManager;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManager_INTERFACE_DEFINED__) */
@@ -517,10 +517,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEnterpriseKeyCredentialRegistrationManagerStatics=_uuidof(IEnterpriseKeyCredentialRegistrationManagerStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* Identity */} /* ABI */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CIEnterpriseKeyCredentialRegistrationManagerStatics_INTERFACE_DEFINED__) */

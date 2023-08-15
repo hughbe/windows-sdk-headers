@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.adc.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -146,9 +146,9 @@ namespace ABI {
         namespace Devices {
             namespace Adc {
                 interface IAdcChannel;
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAdc_CIAdcChannel ABI::Windows::Devices::Adc::IAdcChannel
 
 #endif // ____x_ABI_CWindows_CDevices_CAdc_CIAdcChannel_FWD_DEFINED__
@@ -160,9 +160,9 @@ namespace ABI {
         namespace Devices {
             namespace Adc {
                 interface IAdcController;
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAdc_CIAdcController ABI::Windows::Devices::Adc::IAdcController
 
 #endif // ____x_ABI_CWindows_CDevices_CAdc_CIAdcController_FWD_DEFINED__
@@ -174,9 +174,9 @@ namespace ABI {
         namespace Devices {
             namespace Adc {
                 interface IAdcControllerStatics;
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics ABI::Windows::Devices::Adc::IAdcControllerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics_FWD_DEFINED__
@@ -188,9 +188,9 @@ namespace ABI {
         namespace Devices {
             namespace Adc {
                 interface IAdcControllerStatics2;
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics2 ABI::Windows::Devices::Adc::IAdcControllerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics2_FWD_DEFINED__
@@ -203,9 +203,9 @@ namespace ABI {
         namespace Devices {
             namespace Adc {
                 class AdcController;
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
@@ -228,7 +228,7 @@ IIterator<ABI::Windows::Devices::Adc::AdcController*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Adc::AdcController*> __FIIterator_1_Windows__CDevices__CAdc__CAdcController_t;
 #define __FIIterator_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CAdc__CAdcController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Adc::IAdcController*>
@@ -260,7 +260,7 @@ IIterable<ABI::Windows::Devices::Adc::AdcController*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Adc::AdcController*> __FIIterable_1_Windows__CDevices__CAdc__CAdcController_t;
 #define __FIIterable_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CAdc__CAdcController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Adc::IAdcController*>
@@ -292,7 +292,7 @@ IVectorView<ABI::Windows::Devices::Adc::AdcController*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Adc::AdcController*> __FIVectorView_1_Windows__CDevices__CAdc__CAdcController_t;
 #define __FIVectorView_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CAdc__CAdcController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Adc::IAdcController*>
@@ -324,7 +324,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Adc::AdcController*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Adc::AdcController*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAdc__CAdcController_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAdc__CAdcController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Adc::IAdcController*>
@@ -356,7 +356,7 @@ IAsyncOperation<ABI::Windows::Devices::Adc::AdcController*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Adc::AdcController*> __FIAsyncOperation_1_Windows__CDevices__CAdc__CAdcController_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CAdc__CAdcController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Adc::IAdcController*>
@@ -388,7 +388,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CAdc__CAdcCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CAdc__CAdcController*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Adc::IAdcController*>*>
@@ -420,7 +420,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CAdc__CAdcController*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CAdc__CAdcController*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CAdc__CAdcController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Adc::IAdcController*>*>
@@ -441,10 +441,10 @@ namespace ABI {
             namespace Adc {
                 namespace Provider {
                     interface IAdcProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Adc */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Adc */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAdc_CProvider_CIAdcProvider ABI::Windows::Devices::Adc::Provider::IAdcProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CAdc_CProvider_CIAdcProvider_FWD_DEFINED__
@@ -463,8 +463,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -479,9 +479,9 @@ namespace ABI {
                 
                 typedef enum AdcChannelMode : int AdcChannelMode;
                 
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -492,9 +492,9 @@ namespace ABI {
         namespace Devices {
             namespace Adc {
                 class AdcChannel;
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -527,9 +527,9 @@ namespace ABI {
                     AdcChannelMode_Differential = 1,
                 };
                 
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -575,9 +575,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdcChannel=_uuidof(IAdcChannel);
                 
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAdc_CIAdcChannel;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAdc_CIAdcChannel_INTERFACE_DEFINED__) */
@@ -628,7 +628,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsChannelModeSupported(
                         /* [in] */ABI::Windows::Devices::Adc::AdcChannelMode channelMode,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE OpenChannel(
                         /* [in] */INT32 channelNumber,
@@ -639,9 +639,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdcController=_uuidof(IAdcController);
                 
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAdc_CIAdcController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAdc_CIAdcController_INTERFACE_DEFINED__) */
@@ -681,9 +681,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdcControllerStatics=_uuidof(IAdcControllerStatics);
                 
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics_INTERFACE_DEFINED__) */
@@ -722,9 +722,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdcControllerStatics2=_uuidof(IAdcControllerStatics2);
                 
-            } /* Windows */
+            } /* Adc */
         } /* Devices */
-    } /* Adc */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAdc_CIAdcControllerStatics2_INTERFACE_DEFINED__) */

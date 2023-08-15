@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -945,9 +945,9 @@ template <typename D> Windows::ApplicationModel::Background::PhoneTrigger consum
 
 template <typename D> Windows::ApplicationModel::Background::PushNotificationTrigger consume_Windows_ApplicationModel_Background_IPushNotificationTriggerFactory<D>::Create(param::hstring const& applicationId) const
 {
-    Windows::ApplicationModel::Background::PushNotificationTrigger trigger{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Background::IPushNotificationTriggerFactory)->Create(get_abi(applicationId), put_abi(trigger)));
-    return trigger;
+    Windows::ApplicationModel::Background::PushNotificationTrigger value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Background::IPushNotificationTriggerFactory)->Create(get_abi(applicationId), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation consume_Windows_ApplicationModel_Background_IRfcommConnectionTrigger<D>::InboundConnection() const
@@ -3161,14 +3161,14 @@ struct produce<D, Windows::ApplicationModel::Background::IPhoneTriggerFactory> :
 template <typename D>
 struct produce<D, Windows::ApplicationModel::Background::IPushNotificationTriggerFactory> : produce_base<D, Windows::ApplicationModel::Background::IPushNotificationTriggerFactory>
 {
-    int32_t WINRT_CALL Create(void* applicationId, void** trigger) noexcept final
+    int32_t WINRT_CALL Create(void* applicationId, void** value) noexcept final
     {
         try
         {
-            *trigger = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Create, WINRT_WRAP(Windows::ApplicationModel::Background::PushNotificationTrigger), hstring const&);
-            *trigger = detach_from<Windows::ApplicationModel::Background::PushNotificationTrigger>(this->shim().Create(*reinterpret_cast<hstring const*>(&applicationId)));
+            *value = detach_from<Windows::ApplicationModel::Background::PushNotificationTrigger>(this->shim().Create(*reinterpret_cast<hstring const*>(&applicationId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3731,6 +3731,10 @@ inline ContentPrefetchTrigger::ContentPrefetchTrigger(Windows::Foundation::TimeS
     ContentPrefetchTrigger(impl::call_factory<ContentPrefetchTrigger, Windows::ApplicationModel::Background::IContentPrefetchTriggerFactory>([&](auto&& f) { return f.Create(waitInterval); }))
 {}
 
+inline ConversationalAgentTrigger::ConversationalAgentTrigger() :
+    ConversationalAgentTrigger(impl::call_factory<ConversationalAgentTrigger>([](auto&& f) { return f.template ActivateInstance<ConversationalAgentTrigger>(); }))
+{}
+
 inline CustomSystemEventTrigger::CustomSystemEventTrigger(param::hstring const& triggerId, Windows::ApplicationModel::Background::CustomSystemEventTriggerRecurrence const& recurrence) :
     CustomSystemEventTrigger(impl::call_factory<CustomSystemEventTrigger, Windows::ApplicationModel::Background::ICustomSystemEventTriggerFactory>([&](auto&& f) { return f.Create(triggerId, recurrence); }))
 {}
@@ -4106,6 +4110,7 @@ template<> struct hash<winrt::Windows::ApplicationModel::Background::ChatMessage
 template<> struct hash<winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger> {};

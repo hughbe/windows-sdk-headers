@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.threading.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,10 +140,10 @@ namespace ABI {
             namespace Threading {
                 namespace Core {
                     interface ISignalHandler;
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CThreading_CCore_CISignalHandler ABI::Windows::System::Threading::Core::ISignalHandler
 
 #endif // ____x_ABI_CWindows_CSystem_CThreading_CCore_CISignalHandler_FWD_DEFINED__
@@ -156,10 +156,10 @@ namespace ABI {
             namespace Threading {
                 namespace Core {
                     interface IPreallocatedWorkItem;
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItem ABI::Windows::System::Threading::Core::IPreallocatedWorkItem
 
 #endif // ____x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItem_FWD_DEFINED__
@@ -172,10 +172,10 @@ namespace ABI {
             namespace Threading {
                 namespace Core {
                     interface IPreallocatedWorkItemFactory;
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItemFactory ABI::Windows::System::Threading::Core::IPreallocatedWorkItemFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItemFactory_FWD_DEFINED__
@@ -188,10 +188,10 @@ namespace ABI {
             namespace Threading {
                 namespace Core {
                     interface ISignalNotifier;
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifier ABI::Windows::System::Threading::Core::ISignalNotifier
 
 #endif // ____x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifier_FWD_DEFINED__
@@ -204,10 +204,10 @@ namespace ABI {
             namespace Threading {
                 namespace Core {
                     interface ISignalNotifierStatics;
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifierStatics ABI::Windows::System::Threading::Core::ISignalNotifierStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifierStatics_FWD_DEFINED__
@@ -219,8 +219,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -232,8 +232,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -245,9 +245,9 @@ namespace ABI {
         namespace System {
             namespace Threading {
                 interface IWorkItemHandler;
-            } /* Windows */
+            } /* Threading */
         } /* System */
-    } /* Threading */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CThreading_CIWorkItemHandler ABI::Windows::System::Threading::IWorkItemHandler
 
 #endif // ____x_ABI_CWindows_CSystem_CThreading_CIWorkItemHandler_FWD_DEFINED__
@@ -260,9 +260,9 @@ namespace ABI {
                 
                 typedef enum WorkItemOptions : unsigned int WorkItemOptions;
                 
-            } /* Windows */
+            } /* Threading */
         } /* System */
-    } /* Threading */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -271,9 +271,9 @@ namespace ABI {
                 
                 typedef enum WorkItemPriority : int WorkItemPriority;
                 
-            } /* Windows */
+            } /* Threading */
         } /* System */
-    } /* Threading */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -289,10 +289,10 @@ namespace ABI {
             namespace Threading {
                 namespace Core {
                     class PreallocatedWorkItem;
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -301,10 +301,10 @@ namespace ABI {
             namespace Threading {
                 namespace Core {
                     class SignalNotifier;
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -335,17 +335,17 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Invoke(
                             /* [in] */__RPC__in_opt ABI::Windows::System::Threading::Core::ISignalNotifier * signalNotifier,
-                            /* [in] */boolean timedOut
+                            /* [in] */::boolean timedOut
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ISignalHandler=_uuidof(ISignalHandler);
                     
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CThreading_CCore_CISignalHandler;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CThreading_CCore_CISignalHandler_INTERFACE_DEFINED__) */
@@ -385,10 +385,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPreallocatedWorkItem=_uuidof(IPreallocatedWorkItem);
                     
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItem;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItem_INTERFACE_DEFINED__) */
@@ -440,10 +440,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPreallocatedWorkItemFactory=_uuidof(IPreallocatedWorkItemFactory);
                     
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItemFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CThreading_CCore_CIPreallocatedWorkItemFactory_INTERFACE_DEFINED__) */
@@ -482,10 +482,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISignalNotifier=_uuidof(ISignalNotifier);
                     
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifier;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifier_INTERFACE_DEFINED__) */
@@ -544,10 +544,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISignalNotifierStatics=_uuidof(ISignalNotifierStatics);
                     
-                } /* Windows */
-            } /* System */
-        } /* Threading */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Threading */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifierStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CThreading_CCore_CISignalNotifierStatics_INTERFACE_DEFINED__) */

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.casting.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingConnection;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingConnection ABI::Windows::Media::Casting::ICastingConnection
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingConnection_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingConnectionErrorOccurredEventArgs;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingConnectionErrorOccurredEventArgs ABI::Windows::Media::Casting::ICastingConnectionErrorOccurredEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingConnectionErrorOccurredEventArgs_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingDevice;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingDevice ABI::Windows::Media::Casting::ICastingDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingDevice_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingDevicePicker;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker ABI::Windows::Media::Casting::ICastingDevicePicker
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingDevicePickerFilter;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingDevicePickerFilter ABI::Windows::Media::Casting::ICastingDevicePickerFilter
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingDevicePickerFilter_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingDeviceSelectedEventArgs;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingDeviceSelectedEventArgs ABI::Windows::Media::Casting::ICastingDeviceSelectedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingDeviceSelectedEventArgs_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingDeviceStatics;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingDeviceStatics ABI::Windows::Media::Casting::ICastingDeviceStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingDeviceStatics_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingSource;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingSource ABI::Windows::Media::Casting::ICastingSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingSource_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingSource;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -417,7 +413,7 @@ IIterator<ABI::Windows::Media::Casting::CastingSource*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Casting::CastingSource*> __FIIterator_1_Windows__CMedia__CCasting__CCastingSource_t;
 #define __FIIterator_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCasting__CCastingSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Casting::ICastingSource*>
@@ -449,7 +445,7 @@ IIterable<ABI::Windows::Media::Casting::CastingSource*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Casting::CastingSource*> __FIIterable_1_Windows__CMedia__CCasting__CCastingSource_t;
 #define __FIIterable_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCasting__CCastingSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Casting::ICastingSource*>
@@ -481,7 +477,7 @@ IVectorView<ABI::Windows::Media::Casting::CastingSource*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Casting::CastingSource*> __FIVectorView_1_Windows__CMedia__CCasting__CCastingSource_t;
 #define __FIVectorView_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCasting__CCastingSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Casting::ICastingSource*>
@@ -513,7 +509,7 @@ IVector<ABI::Windows::Media::Casting::CastingSource*> : IVector_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Casting::CastingSource*> __FIVector_1_Windows__CMedia__CCasting__CCastingSource_t;
 #define __FIVector_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CCasting__CCastingSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CCasting__CCastingSource ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Casting::ICastingSource*>
@@ -529,9 +525,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 enum CastingConnectionErrorStatus : int;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus_USE
@@ -552,7 +548,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Casting::CastingConnec
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Casting::CastingConnectionErrorStatus> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Casting::CastingConnectionErrorStatus>
@@ -582,7 +578,7 @@ IAsyncOperation<enum ABI::Windows::Media::Casting::CastingConnectionErrorStatus>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Casting::CastingConnectionErrorStatus> __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingConnectionErrorStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Casting::CastingConnectionErrorStatus>
@@ -597,9 +593,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingDevice;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -622,7 +618,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Casting::CastingDevice*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Casting::CastingDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Casting::ICastingDevice*>
@@ -654,7 +650,7 @@ IAsyncOperation<ABI::Windows::Media::Casting::CastingDevice*> : IAsyncOperation_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Casting::CastingDevice*> __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingDevice_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Casting::ICastingDevice*>
@@ -670,9 +666,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 enum CastingPlaybackTypes : unsigned int;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingPlaybackTypes_USE
@@ -693,7 +689,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Casting::CastingPlayba
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Casting::CastingPlaybackTypes> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingPlaybackTypes_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingPlaybackTypes ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingPlaybackTypes_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCasting__CCastingPlaybackTypes ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Casting::CastingPlaybackTypes>
@@ -723,7 +719,7 @@ IAsyncOperation<enum ABI::Windows::Media::Casting::CastingPlaybackTypes> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Casting::CastingPlaybackTypes> __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingPlaybackTypes_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingPlaybackTypes ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingPlaybackTypes_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCasting__CCastingPlaybackTypes ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Casting::CastingPlaybackTypes>
@@ -738,9 +734,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingConnection;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -764,7 +760,7 @@ ITypedEventHandler<ABI::Windows::Media::Casting::CastingConnection*,IInspectable
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Casting::CastingConnection*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Casting::ICastingConnection*,IInspectable*>
@@ -781,9 +777,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingConnectionErrorOccurredEventArgs;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -807,7 +803,7 @@ ITypedEventHandler<ABI::Windows::Media::Casting::CastingConnection*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Casting::CastingConnection*,ABI::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Casting::ICastingConnection*,ABI::Windows::Media::Casting::ICastingConnectionErrorOccurredEventArgs*>
@@ -824,9 +820,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingDevicePicker;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -850,7 +846,7 @@ ITypedEventHandler<ABI::Windows::Media::Casting::CastingDevicePicker*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Casting::CastingDevicePicker*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Casting::ICastingDevicePicker*,IInspectable*>
@@ -867,9 +863,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingDeviceSelectedEventArgs;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -893,7 +889,7 @@ ITypedEventHandler<ABI::Windows::Media::Casting::CastingDevicePicker*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Casting::CastingDevicePicker*,ABI::Windows::Media::Casting::CastingDeviceSelectedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Casting::ICastingDevicePicker*,ABI::Windows::Media::Casting::ICastingDeviceSelectedEventArgs*>
@@ -924,7 +920,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -953,7 +949,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -982,7 +978,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1011,7 +1007,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1028,9 +1024,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1039,9 +1035,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1052,9 +1048,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DevicePickerAppearance;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_FWD_DEFINED__
@@ -1063,9 +1059,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePickerAppearance;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance ABI::Windows::Devices::Enumeration::IDevicePickerAppearance
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_FWD_DEFINED__
@@ -1080,8 +1076,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1093,16 +1089,16 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1110,8 +1106,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1126,9 +1122,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1144,9 +1140,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1158,9 +1154,9 @@ namespace ABI {
                 
                 typedef enum CastingConnectionErrorStatus : int CastingConnectionErrorStatus;
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1169,9 +1165,9 @@ namespace ABI {
                 
                 typedef enum CastingConnectionState : int CastingConnectionState;
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1180,9 +1176,9 @@ namespace ABI {
                 
                 typedef enum CastingPlaybackTypes : unsigned int CastingPlaybackTypes;
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1201,9 +1197,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingDevicePickerFilter;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1242,9 +1238,9 @@ namespace ABI {
                     CastingConnectionErrorStatus_Unknown = 6,
                 };
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1272,9 +1268,9 @@ namespace ABI {
                     CastingConnectionState_Connecting = 4,
                 };
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1303,9 +1299,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(CastingPlaybackTypes)
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1375,9 +1371,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingConnection=_uuidof(ICastingConnection);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingConnection;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingConnection_INTERFACE_DEFINED__) */
@@ -1419,9 +1415,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingConnectionErrorOccurredEventArgs=_uuidof(ICastingConnectionErrorOccurredEventArgs);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingConnectionErrorOccurredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingConnectionErrorOccurredEventArgs_INTERFACE_DEFINED__) */
@@ -1472,9 +1468,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingDevice=_uuidof(ICastingDevice);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingDevice;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingDevice_INTERFACE_DEFINED__) */
@@ -1538,9 +1534,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingDevicePicker=_uuidof(ICastingDevicePicker);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker_INTERFACE_DEFINED__) */
@@ -1572,22 +1568,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsAudio(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SupportsAudio(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsVideo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SupportsVideo(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsPictures(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SupportsPictures(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedCastingSources(
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CMedia__CCasting__CCastingSource * * value
@@ -1597,9 +1593,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingDevicePickerFilter=_uuidof(ICastingDevicePickerFilter);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingDevicePickerFilter;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingDevicePickerFilter_INTERFACE_DEFINED__) */
@@ -1638,9 +1634,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingDeviceSelectedEventArgs=_uuidof(ICastingDeviceSelectedEventArgs);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingDeviceSelectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingDeviceSelectedEventArgs_INTERFACE_DEFINED__) */
@@ -1692,9 +1688,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingDeviceStatics=_uuidof(ICastingDeviceStatics);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingDeviceStatics_INTERFACE_DEFINED__) */
@@ -1736,9 +1732,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICastingSource=_uuidof(ICastingSource);
                 
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCasting_CICastingSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCasting_CICastingSource_INTERFACE_DEFINED__) */
@@ -2749,7 +2745,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnec
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingConnection * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingConnection * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_IInspectableVtbl;
 
@@ -2801,7 +2797,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnec
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingConnectionErrorOccurredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingConnectionErrorOccurredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingConnection_Windows__CMedia__CCasting__CCastingConnectionErrorOccurredEventArgsVtbl;
 
@@ -2853,7 +2849,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevice
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_IInspectableVtbl;
 
@@ -2905,7 +2901,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevice
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingDeviceSelectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCasting_CICastingDeviceSelectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCasting__CCastingDevicePicker_Windows__CMedia__CCasting__CCastingDeviceSelectedEventArgsVtbl;
 

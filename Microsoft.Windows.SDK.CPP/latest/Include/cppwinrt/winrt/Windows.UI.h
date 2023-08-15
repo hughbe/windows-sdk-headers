@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -1011,6 +1011,13 @@ template <typename D> Windows::UI::Color consume_Windows_UI_IColorsStatics<D>::Y
 {
     Windows::UI::Color value{};
     check_hresult(WINRT_SHIM(Windows::UI::IColorsStatics)->get_YellowGreen(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::UIContext consume_Windows_UI_IUIContentRoot<D>::UIContext() const
+{
+    Windows::UI::UIContext value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::IUIContentRoot)->get_UIContext(put_abi(value)));
     return value;
 }
 
@@ -2751,6 +2758,27 @@ struct produce<D, Windows::UI::IColorsStatics> : produce_base<D, Windows::UI::IC
     }
 };
 
+template <typename D>
+struct produce<D, Windows::UI::IUIContentRoot> : produce_base<D, Windows::UI::IUIContentRoot>
+{
+    int32_t WINRT_CALL get_UIContext(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UIContext, WINRT_WRAP(Windows::UI::UIContext));
+            *value = detach_from<Windows::UI::UIContext>(this->shim().UIContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::IUIContext> : produce_base<D, Windows::UI::IUIContext>
+{};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::UI {
@@ -3479,7 +3507,11 @@ template<> struct hash<winrt::Windows::UI::IColorHelperStatics> : winrt::impl::h
 template<> struct hash<winrt::Windows::UI::IColorHelperStatics2> : winrt::impl::hash_base<winrt::Windows::UI::IColorHelperStatics2> {};
 template<> struct hash<winrt::Windows::UI::IColors> : winrt::impl::hash_base<winrt::Windows::UI::IColors> {};
 template<> struct hash<winrt::Windows::UI::IColorsStatics> : winrt::impl::hash_base<winrt::Windows::UI::IColorsStatics> {};
+template<> struct hash<winrt::Windows::UI::IUIContentRoot> : winrt::impl::hash_base<winrt::Windows::UI::IUIContentRoot> {};
+template<> struct hash<winrt::Windows::UI::IUIContext> : winrt::impl::hash_base<winrt::Windows::UI::IUIContext> {};
 template<> struct hash<winrt::Windows::UI::ColorHelper> : winrt::impl::hash_base<winrt::Windows::UI::ColorHelper> {};
 template<> struct hash<winrt::Windows::UI::Colors> : winrt::impl::hash_base<winrt::Windows::UI::Colors> {};
+template<> struct hash<winrt::Windows::UI::UIContentRoot> : winrt::impl::hash_base<winrt::Windows::UI::UIContentRoot> {};
+template<> struct hash<winrt::Windows::UI::UIContext> : winrt::impl::hash_base<winrt::Windows::UI::UIContext> {};
 
 }

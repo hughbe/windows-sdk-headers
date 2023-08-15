@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -389,7 +389,9 @@ struct IClaimedSlipPrinter;
 struct ICommonClaimedPosPrinterStation;
 struct ICommonPosPrintStationCapabilities;
 struct ICommonReceiptSlipCapabilities;
+struct IJournalPrintJob;
 struct IJournalPrinterCapabilities;
+struct IJournalPrinterCapabilities2;
 struct ILineDisplay;
 struct ILineDisplay2;
 struct ILineDisplayAttributes;
@@ -419,9 +421,12 @@ struct IMagneticStripeReaderStatusUpdatedEventArgs;
 struct IMagneticStripeReaderTrackData;
 struct IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;
 struct IPosPrinter;
+struct IPosPrinter2;
 struct IPosPrinterCapabilities;
 struct IPosPrinterCharacterSetIdsStatics;
+struct IPosPrinterFontProperty;
 struct IPosPrinterJob;
+struct IPosPrinterPrintOptions;
 struct IPosPrinterReleaseDeviceRequestedEventArgs;
 struct IPosPrinterStatics;
 struct IPosPrinterStatics2;
@@ -429,8 +434,12 @@ struct IPosPrinterStatus;
 struct IPosPrinterStatusUpdatedEventArgs;
 struct IReceiptOrSlipJob;
 struct IReceiptPrintJob;
+struct IReceiptPrintJob2;
 struct IReceiptPrinterCapabilities;
+struct IReceiptPrinterCapabilities2;
+struct ISlipPrintJob;
 struct ISlipPrinterCapabilities;
+struct ISlipPrinterCapabilities2;
 struct IUnifiedPosErrorData;
 struct IUnifiedPosErrorDataFactory;
 struct BarcodeScanner;
@@ -490,6 +499,8 @@ struct MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;
 struct PosPrinter;
 struct PosPrinterCapabilities;
 struct PosPrinterCharacterSetIds;
+struct PosPrinterFontProperty;
+struct PosPrinterPrintOptions;
 struct PosPrinterReleaseDeviceRequestedEventArgs;
 struct PosPrinterStatus;
 struct PosPrinterStatusUpdatedEventArgs;
@@ -498,6 +509,7 @@ struct ReceiptPrinterCapabilities;
 struct SlipPrintJob;
 struct SlipPrinterCapabilities;
 struct UnifiedPosErrorData;
+struct SizeUInt32;
 
 }
 
@@ -559,7 +571,9 @@ template <> struct category<Windows::Devices::PointOfService::IClaimedSlipPrinte
 template <> struct category<Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::IJournalPrintJob>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IJournalPrinterCapabilities>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::IJournalPrinterCapabilities2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::ILineDisplay>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::ILineDisplay2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::ILineDisplayAttributes>{ using type = interface_category; };
@@ -589,9 +603,12 @@ template <> struct category<Windows::Devices::PointOfService::IMagneticStripeRea
 template <> struct category<Windows::Devices::PointOfService::IMagneticStripeReaderTrackData>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IPosPrinter>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::IPosPrinter2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IPosPrinterCapabilities>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::IPosPrinterFontProperty>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IPosPrinterJob>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::IPosPrinterPrintOptions>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IPosPrinterStatics>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IPosPrinterStatics2>{ using type = interface_category; };
@@ -599,8 +616,12 @@ template <> struct category<Windows::Devices::PointOfService::IPosPrinterStatus>
 template <> struct category<Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IReceiptOrSlipJob>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IReceiptPrintJob>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::IReceiptPrintJob2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IReceiptPrinterCapabilities>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::ISlipPrintJob>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::ISlipPrinterCapabilities>{ using type = interface_category; };
+template <> struct category<Windows::Devices::PointOfService::ISlipPrinterCapabilities2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IUnifiedPosErrorData>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory>{ using type = interface_category; };
 template <> struct category<Windows::Devices::PointOfService::BarcodeScanner>{ using type = class_category; };
@@ -660,6 +681,8 @@ template <> struct category<Windows::Devices::PointOfService::MagneticStripeRead
 template <> struct category<Windows::Devices::PointOfService::PosPrinter>{ using type = class_category; };
 template <> struct category<Windows::Devices::PointOfService::PosPrinterCapabilities>{ using type = class_category; };
 template <> struct category<Windows::Devices::PointOfService::PosPrinterCharacterSetIds>{ using type = class_category; };
+template <> struct category<Windows::Devices::PointOfService::PosPrinterFontProperty>{ using type = class_category; };
+template <> struct category<Windows::Devices::PointOfService::PosPrinterPrintOptions>{ using type = class_category; };
 template <> struct category<Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>{ using type = class_category; };
 template <> struct category<Windows::Devices::PointOfService::PosPrinterStatus>{ using type = class_category; };
 template <> struct category<Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>{ using type = class_category; };
@@ -705,6 +728,7 @@ template <> struct category<Windows::Devices::PointOfService::UnifiedPosErrorRea
 template <> struct category<Windows::Devices::PointOfService::UnifiedPosErrorSeverity>{ using type = enum_category; };
 template <> struct category<Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel>{ using type = enum_category; };
 template <> struct category<Windows::Devices::PointOfService::UnifiedPosPowerReportingType>{ using type = enum_category; };
+template <> struct category<Windows::Devices::PointOfService::SizeUInt32>{ using type = struct_category<uint32_t,uint32_t>; };
 template <> struct name<Windows::Devices::PointOfService::IBarcodeScanner>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IBarcodeScanner" }; };
 template <> struct name<Windows::Devices::PointOfService::IBarcodeScanner2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IBarcodeScanner2" }; };
 template <> struct name<Windows::Devices::PointOfService::IBarcodeScannerCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IBarcodeScannerCapabilities" }; };
@@ -756,7 +780,9 @@ template <> struct name<Windows::Devices::PointOfService::IClaimedSlipPrinter>{ 
 template <> struct name<Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation" }; };
 template <> struct name<Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities" }; };
 template <> struct name<Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities" }; };
+template <> struct name<Windows::Devices::PointOfService::IJournalPrintJob>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IJournalPrintJob" }; };
 template <> struct name<Windows::Devices::PointOfService::IJournalPrinterCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IJournalPrinterCapabilities" }; };
+template <> struct name<Windows::Devices::PointOfService::IJournalPrinterCapabilities2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IJournalPrinterCapabilities2" }; };
 template <> struct name<Windows::Devices::PointOfService::ILineDisplay>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ILineDisplay" }; };
 template <> struct name<Windows::Devices::PointOfService::ILineDisplay2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ILineDisplay2" }; };
 template <> struct name<Windows::Devices::PointOfService::ILineDisplayAttributes>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ILineDisplayAttributes" }; };
@@ -786,9 +812,12 @@ template <> struct name<Windows::Devices::PointOfService::IMagneticStripeReaderS
 template <> struct name<Windows::Devices::PointOfService::IMagneticStripeReaderTrackData>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IMagneticStripeReaderTrackData" }; };
 template <> struct name<Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs" }; };
 template <> struct name<Windows::Devices::PointOfService::IPosPrinter>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinter" }; };
+template <> struct name<Windows::Devices::PointOfService::IPosPrinter2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinter2" }; };
 template <> struct name<Windows::Devices::PointOfService::IPosPrinterCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterCapabilities" }; };
 template <> struct name<Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics" }; };
+template <> struct name<Windows::Devices::PointOfService::IPosPrinterFontProperty>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterFontProperty" }; };
 template <> struct name<Windows::Devices::PointOfService::IPosPrinterJob>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterJob" }; };
+template <> struct name<Windows::Devices::PointOfService::IPosPrinterPrintOptions>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterPrintOptions" }; };
 template <> struct name<Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterReleaseDeviceRequestedEventArgs" }; };
 template <> struct name<Windows::Devices::PointOfService::IPosPrinterStatics>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterStatics" }; };
 template <> struct name<Windows::Devices::PointOfService::IPosPrinterStatics2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterStatics2" }; };
@@ -796,8 +825,12 @@ template <> struct name<Windows::Devices::PointOfService::IPosPrinterStatus>{ st
 template <> struct name<Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IPosPrinterStatusUpdatedEventArgs" }; };
 template <> struct name<Windows::Devices::PointOfService::IReceiptOrSlipJob>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IReceiptOrSlipJob" }; };
 template <> struct name<Windows::Devices::PointOfService::IReceiptPrintJob>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IReceiptPrintJob" }; };
+template <> struct name<Windows::Devices::PointOfService::IReceiptPrintJob2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IReceiptPrintJob2" }; };
 template <> struct name<Windows::Devices::PointOfService::IReceiptPrinterCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IReceiptPrinterCapabilities" }; };
+template <> struct name<Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IReceiptPrinterCapabilities2" }; };
+template <> struct name<Windows::Devices::PointOfService::ISlipPrintJob>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ISlipPrintJob" }; };
 template <> struct name<Windows::Devices::PointOfService::ISlipPrinterCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ISlipPrinterCapabilities" }; };
+template <> struct name<Windows::Devices::PointOfService::ISlipPrinterCapabilities2>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.ISlipPrinterCapabilities2" }; };
 template <> struct name<Windows::Devices::PointOfService::IUnifiedPosErrorData>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IUnifiedPosErrorData" }; };
 template <> struct name<Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.IUnifiedPosErrorDataFactory" }; };
 template <> struct name<Windows::Devices::PointOfService::BarcodeScanner>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.BarcodeScanner" }; };
@@ -857,6 +890,8 @@ template <> struct name<Windows::Devices::PointOfService::MagneticStripeReaderVe
 template <> struct name<Windows::Devices::PointOfService::PosPrinter>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinter" }; };
 template <> struct name<Windows::Devices::PointOfService::PosPrinterCapabilities>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinterCapabilities" }; };
 template <> struct name<Windows::Devices::PointOfService::PosPrinterCharacterSetIds>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinterCharacterSetIds" }; };
+template <> struct name<Windows::Devices::PointOfService::PosPrinterFontProperty>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinterFontProperty" }; };
+template <> struct name<Windows::Devices::PointOfService::PosPrinterPrintOptions>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinterPrintOptions" }; };
 template <> struct name<Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs" }; };
 template <> struct name<Windows::Devices::PointOfService::PosPrinterStatus>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinterStatus" }; };
 template <> struct name<Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs" }; };
@@ -902,6 +937,7 @@ template <> struct name<Windows::Devices::PointOfService::UnifiedPosErrorReason>
 template <> struct name<Windows::Devices::PointOfService::UnifiedPosErrorSeverity>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.UnifiedPosErrorSeverity" }; };
 template <> struct name<Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel" }; };
 template <> struct name<Windows::Devices::PointOfService::UnifiedPosPowerReportingType>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.UnifiedPosPowerReportingType" }; };
+template <> struct name<Windows::Devices::PointOfService::SizeUInt32>{ static constexpr auto & value{ L"Windows.Devices.PointOfService.SizeUInt32" }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IBarcodeScanner>{ static constexpr guid value{ 0xBEA33E06,0xB264,0x4F03,{ 0xA9,0xC1,0x45,0xB2,0x0F,0x01,0x13,0x4F } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IBarcodeScanner2>{ static constexpr guid value{ 0x89215167,0x8CEE,0x436D,{ 0x89,0xAB,0x8D,0xFB,0x43,0xBB,0x42,0x86 } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IBarcodeScannerCapabilities>{ static constexpr guid value{ 0xC60691E4,0xF2C8,0x4420,{ 0xA3,0x07,0xB1,0x2E,0xF6,0x62,0x28,0x57 } }; };
@@ -953,7 +989,9 @@ template <> struct guid_storage<Windows::Devices::PointOfService::IClaimedSlipPr
 template <> struct guid_storage<Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>{ static constexpr guid value{ 0xB7EB66A8,0xFE8A,0x4CFB,{ 0x8B,0x42,0xE3,0x5B,0x28,0x0C,0xB2,0x7C } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>{ static constexpr guid value{ 0xDE5B52CA,0xE02E,0x40E9,{ 0x9E,0x5E,0x1B,0x48,0x8E,0x6A,0xAC,0xFC } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>{ static constexpr guid value{ 0x09286B8B,0x9873,0x4D05,{ 0xBF,0xBE,0x47,0x27,0xA6,0x03,0x8F,0x69 } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::IJournalPrintJob>{ static constexpr guid value{ 0x9F4F2864,0xF3F0,0x55D0,{ 0x8C,0x39,0x74,0xCC,0x91,0x78,0x3E,0xED } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IJournalPrinterCapabilities>{ static constexpr guid value{ 0x3B5CCC43,0xE047,0x4463,{ 0xBB,0x58,0x17,0xB5,0xBA,0x1D,0x80,0x56 } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::IJournalPrinterCapabilities2>{ static constexpr guid value{ 0x03B0B645,0x33B8,0x533B,{ 0xBA,0xAA,0xA4,0x38,0x92,0x83,0xAB,0x0A } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::ILineDisplay>{ static constexpr guid value{ 0x24F5DF4E,0x3C99,0x44E2,{ 0xB7,0x3F,0xE5,0x1B,0xE3,0x63,0x7A,0x8C } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::ILineDisplay2>{ static constexpr guid value{ 0xC296A628,0xEF44,0x40F3,{ 0xBD,0x1C,0xB0,0x4C,0x6A,0x5C,0xDC,0x7D } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::ILineDisplayAttributes>{ static constexpr guid value{ 0xC17DE99C,0x229A,0x4C14,{ 0xA6,0xF1,0xB4,0xE4,0xB1,0xFE,0xAD,0x92 } }; };
@@ -983,9 +1021,12 @@ template <> struct guid_storage<Windows::Devices::PointOfService::IMagneticStrip
 template <> struct guid_storage<Windows::Devices::PointOfService::IMagneticStripeReaderTrackData>{ static constexpr guid value{ 0x104CF671,0x4A9D,0x446E,{ 0xAB,0xC5,0x20,0x40,0x23,0x07,0xBA,0x36 } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>{ static constexpr guid value{ 0xAF0A5514,0x59CC,0x4A60,{ 0x99,0xE8,0x99,0xA5,0x3D,0xAC,0xE5,0xAA } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinter>{ static constexpr guid value{ 0x2A03C10E,0x9A19,0x4A01,{ 0x99,0x4F,0x12,0xDF,0xAD,0x6A,0xDC,0xBF } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinter2>{ static constexpr guid value{ 0x248475E8,0x8B98,0x5517,{ 0x8E,0x48,0x76,0x0E,0x86,0xF6,0x89,0x87 } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterCapabilities>{ static constexpr guid value{ 0xCDE95721,0x4380,0x4985,{ 0xAD,0xC5,0x39,0xDB,0x30,0xCD,0x93,0xBC } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>{ static constexpr guid value{ 0x5C709EFF,0x709A,0x4FE7,{ 0xB2,0x15,0x06,0xA7,0x48,0xA3,0x8B,0x39 } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterFontProperty>{ static constexpr guid value{ 0xA7F4E93A,0xF8AC,0x5F04,{ 0x84,0xD2,0x29,0xB1,0x6D,0x8A,0x63,0x3C } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterJob>{ static constexpr guid value{ 0x9A94005C,0x0615,0x4591,{ 0xA5,0x8F,0x30,0xF8,0x7E,0xDF,0xE2,0xE4 } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterPrintOptions>{ static constexpr guid value{ 0x0A2E16FD,0x1D02,0x5A58,{ 0x9D,0x59,0xBF,0xCD,0xE7,0x6F,0xDE,0x86 } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs>{ static constexpr guid value{ 0x2BCBA359,0x1CEF,0x40B2,{ 0x9E,0xCB,0xF9,0x27,0xF8,0x56,0xAE,0x3C } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterStatics>{ static constexpr guid value{ 0x8CE0D4EA,0x132F,0x4CDF,{ 0xA6,0x4A,0x2D,0x0D,0x7C,0x96,0xA8,0x5B } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterStatics2>{ static constexpr guid value{ 0xEECD2C1C,0xB0D0,0x42E7,{ 0xB1,0x37,0xB8,0x9B,0x16,0x24,0x4D,0x41 } }; };
@@ -993,8 +1034,12 @@ template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterSta
 template <> struct guid_storage<Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs>{ static constexpr guid value{ 0x2EDB87DF,0x13A6,0x428D,{ 0xBA,0x81,0xB0,0xE7,0xC3,0xE5,0xA3,0xCD } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IReceiptOrSlipJob>{ static constexpr guid value{ 0x532199BE,0xC8C3,0x4DC2,{ 0x89,0xE9,0x5C,0x4A,0x37,0xB3,0x4D,0xDC } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IReceiptPrintJob>{ static constexpr guid value{ 0xAA96066E,0xACAD,0x4B79,{ 0x9D,0x0F,0xC0,0xCF,0xC0,0x8D,0xC7,0x7B } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::IReceiptPrintJob2>{ static constexpr guid value{ 0x0CBC12E3,0x9E29,0x5179,{ 0xBC,0xD8,0x18,0x11,0xD3,0xB9,0xA1,0x0E } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IReceiptPrinterCapabilities>{ static constexpr guid value{ 0xB8F0B58F,0x51A8,0x43FC,{ 0x9B,0xD5,0x8D,0xE2,0x72,0xA6,0x41,0x5B } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>{ static constexpr guid value{ 0x20030638,0x8A2C,0x55AC,{ 0x9A,0x7B,0x75,0x76,0xD8,0x86,0x9E,0x99 } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::ISlipPrintJob>{ static constexpr guid value{ 0x5D88F95D,0x6131,0x5A4B,{ 0xB7,0xD5,0x8E,0xF2,0xDA,0x7B,0x41,0x65 } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::ISlipPrinterCapabilities>{ static constexpr guid value{ 0x99B16399,0x488C,0x4157,{ 0x8A,0xC2,0x9F,0x57,0xF7,0x08,0xD3,0xDB } }; };
+template <> struct guid_storage<Windows::Devices::PointOfService::ISlipPrinterCapabilities2>{ static constexpr guid value{ 0x6FF89671,0x2D1A,0x5000,{ 0x87,0xC2,0xB0,0x85,0x1B,0xFD,0xF0,0x7E } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IUnifiedPosErrorData>{ static constexpr guid value{ 0x2B998C3A,0x555C,0x4889,{ 0x8E,0xD8,0xC5,0x99,0xBB,0x3A,0x71,0x2A } }; };
 template <> struct guid_storage<Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory>{ static constexpr guid value{ 0x4B982551,0x1FFE,0x451B,{ 0xA3,0x68,0x63,0xE0,0xCE,0x46,0x5F,0x5A } }; };
 template <> struct default_interface<Windows::Devices::PointOfService::BarcodeScanner>{ using type = Windows::Devices::PointOfService::IBarcodeScanner; };
@@ -1050,6 +1095,8 @@ template <> struct default_interface<Windows::Devices::PointOfService::MagneticS
 template <> struct default_interface<Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>{ using type = Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs; };
 template <> struct default_interface<Windows::Devices::PointOfService::PosPrinter>{ using type = Windows::Devices::PointOfService::IPosPrinter; };
 template <> struct default_interface<Windows::Devices::PointOfService::PosPrinterCapabilities>{ using type = Windows::Devices::PointOfService::IPosPrinterCapabilities; };
+template <> struct default_interface<Windows::Devices::PointOfService::PosPrinterFontProperty>{ using type = Windows::Devices::PointOfService::IPosPrinterFontProperty; };
+template <> struct default_interface<Windows::Devices::PointOfService::PosPrinterPrintOptions>{ using type = Windows::Devices::PointOfService::IPosPrinterPrintOptions; };
 template <> struct default_interface<Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>{ using type = Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs; };
 template <> struct default_interface<Windows::Devices::PointOfService::PosPrinterStatus>{ using type = Windows::Devices::PointOfService::IPosPrinterStatus; };
 template <> struct default_interface<Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>{ using type = Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs; };
@@ -1111,7 +1158,7 @@ template <> struct abi<Windows::Devices::PointOfService::IBarcodeScannerErrorOcc
 
 template <> struct abi<Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL get_Preview(void** preview) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Preview(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::PointOfService::IBarcodeScannerReport>{ struct type : IInspectable
@@ -1313,7 +1360,7 @@ template <> struct abi<Windows::Devices::PointOfService::ICashDrawerEventSource>
 
 template <> struct abi<Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL get_CashDrawer(void** drawer) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CashDrawer(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::PointOfService::ICashDrawerStatics>{ struct type : IInspectable
@@ -1642,8 +1689,25 @@ template <> struct abi<Windows::Devices::PointOfService::ICommonReceiptSlipCapab
     virtual int32_t WINRT_CALL get_SupportedBitmapRotations(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::Devices::PointOfService::IJournalPrintJob>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL Print(void* data, void* printOptions) noexcept = 0;
+    virtual int32_t WINRT_CALL FeedPaperByLine(int32_t lineCount) noexcept = 0;
+    virtual int32_t WINRT_CALL FeedPaperByMapModeUnit(int32_t distance) noexcept = 0;
+};};
+
 template <> struct abi<Windows::Devices::PointOfService::IJournalPrinterCapabilities>{ struct type : IInspectable
 {
+};};
+
+template <> struct abi<Windows::Devices::PointOfService::IJournalPrinterCapabilities2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsReverseVideoSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsStrikethroughSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsSuperscriptSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsSubscriptSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsReversePaperFeedByLineSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsReversePaperFeedByMapModeUnitSupported(bool* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::PointOfService::ILineDisplay>{ struct type : IInspectable
@@ -1774,7 +1838,7 @@ template <> struct abi<Windows::Devices::PointOfService::ILineDisplayStatusUpdat
 
 template <> struct abi<Windows::Devices::PointOfService::ILineDisplayStoredBitmap>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL get_EscapeSequence(void** escapeSequence) noexcept = 0;
+    virtual int32_t WINRT_CALL get_EscapeSequence(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL TryDeleteAsync(void** operation) noexcept = 0;
 };};
 
@@ -1951,6 +2015,12 @@ template <> struct abi<Windows::Devices::PointOfService::IPosPrinter>{ struct ty
     virtual int32_t WINRT_CALL remove_StatusUpdated(winrt::event_token token) noexcept = 0;
 };};
 
+template <> struct abi<Windows::Devices::PointOfService::IPosPrinter2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_SupportedBarcodeSymbologies(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetFontProperty(void* typeface, void** result) noexcept = 0;
+};};
+
 template <> struct abi<Windows::Devices::PointOfService::IPosPrinterCapabilities>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_PowerReportingType(Windows::Devices::PointOfService::UnifiedPosPowerReportingType* value) noexcept = 0;
@@ -1972,12 +2042,49 @@ template <> struct abi<Windows::Devices::PointOfService::IPosPrinterCharacterSet
     virtual int32_t WINRT_CALL get_Ansi(uint32_t* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::Devices::PointOfService::IPosPrinterFontProperty>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_TypeFace(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsScalableToAnySize(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CharacterSizes(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::Devices::PointOfService::IPosPrinterJob>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL Print(void* data) noexcept = 0;
     virtual int32_t WINRT_CALL PrintLine(void* data) noexcept = 0;
     virtual int32_t WINRT_CALL PrintNewline() noexcept = 0;
     virtual int32_t WINRT_CALL ExecuteAsync(void** operation) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Devices::PointOfService::IPosPrinterPrintOptions>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_TypeFace(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_TypeFace(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CharacterHeight(uint32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_CharacterHeight(uint32_t value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Bold(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Bold(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Italic(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Italic(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Underline(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Underline(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_ReverseVideo(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_ReverseVideo(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Strikethrough(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Strikethrough(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Superscript(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Superscript(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Subscript(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Subscript(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_DoubleWide(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_DoubleWide(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_DoubleHigh(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_DoubleHigh(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Alignment(Windows::Devices::PointOfService::PosPrinterAlignment* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Alignment(Windows::Devices::PointOfService::PosPrinterAlignment value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CharacterSet(uint32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_CharacterSet(uint32_t value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs>{ struct type : IInspectable
@@ -2033,6 +2140,14 @@ template <> struct abi<Windows::Devices::PointOfService::IReceiptPrintJob>{ stru
     virtual int32_t WINRT_CALL CutPaperDefault() noexcept = 0;
 };};
 
+template <> struct abi<Windows::Devices::PointOfService::IReceiptPrintJob2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL StampPaper() noexcept = 0;
+    virtual int32_t WINRT_CALL Print(void* data, void* printOptions) noexcept = 0;
+    virtual int32_t WINRT_CALL FeedPaperByLine(int32_t lineCount) noexcept = 0;
+    virtual int32_t WINRT_CALL FeedPaperByMapModeUnit(int32_t distance) noexcept = 0;
+};};
+
 template <> struct abi<Windows::Devices::PointOfService::IReceiptPrinterCapabilities>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_CanCutPaper(bool* value) noexcept = 0;
@@ -2040,10 +2155,37 @@ template <> struct abi<Windows::Devices::PointOfService::IReceiptPrinterCapabili
     virtual int32_t WINRT_CALL get_MarkFeedCapabilities(Windows::Devices::PointOfService::PosPrinterMarkFeedCapabilities* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsReverseVideoSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsStrikethroughSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsSuperscriptSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsSubscriptSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsReversePaperFeedByLineSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsReversePaperFeedByMapModeUnitSupported(bool* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Devices::PointOfService::ISlipPrintJob>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL Print(void* data, void* printOptions) noexcept = 0;
+    virtual int32_t WINRT_CALL FeedPaperByLine(int32_t lineCount) noexcept = 0;
+    virtual int32_t WINRT_CALL FeedPaperByMapModeUnit(int32_t distance) noexcept = 0;
+};};
+
 template <> struct abi<Windows::Devices::PointOfService::ISlipPrinterCapabilities>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_IsFullLengthSupported(bool* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_IsBothSidesPrintingSupported(bool* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Devices::PointOfService::ISlipPrinterCapabilities2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsReverseVideoSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsStrikethroughSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsSuperscriptSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsSubscriptSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsReversePaperFeedByLineSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsReversePaperFeedByMapModeUnitSupported(bool* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::PointOfService::IUnifiedPosErrorData>{ struct type : IInspectable
@@ -2795,10 +2937,31 @@ struct consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities
 template <> struct consume<Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities> { template <typename D> using type = consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>; };
 
 template <typename D>
+struct consume_Windows_Devices_PointOfService_IJournalPrintJob
+{
+    void Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const;
+    void FeedPaperByLine(int32_t lineCount) const;
+    void FeedPaperByMapModeUnit(int32_t distance) const;
+};
+template <> struct consume<Windows::Devices::PointOfService::IJournalPrintJob> { template <typename D> using type = consume_Windows_Devices_PointOfService_IJournalPrintJob<D>; };
+
+template <typename D>
 struct consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities
 {
 };
 template <> struct consume<Windows::Devices::PointOfService::IJournalPrinterCapabilities> { template <typename D> using type = consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities<D>; };
+
+template <typename D>
+struct consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2
+{
+    bool IsReverseVideoSupported() const;
+    bool IsStrikethroughSupported() const;
+    bool IsSuperscriptSupported() const;
+    bool IsSubscriptSupported() const;
+    bool IsReversePaperFeedByLineSupported() const;
+    bool IsReversePaperFeedByMapModeUnitSupported() const;
+};
+template <> struct consume<Windows::Devices::PointOfService::IJournalPrinterCapabilities2> { template <typename D> using type = consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>; };
 
 template <typename D>
 struct consume_Windows_Devices_PointOfService_ILineDisplay
@@ -3168,6 +3331,14 @@ struct consume_Windows_Devices_PointOfService_IPosPrinter
 template <> struct consume<Windows::Devices::PointOfService::IPosPrinter> { template <typename D> using type = consume_Windows_Devices_PointOfService_IPosPrinter<D>; };
 
 template <typename D>
+struct consume_Windows_Devices_PointOfService_IPosPrinter2
+{
+    Windows::Foundation::Collections::IVectorView<uint32_t> SupportedBarcodeSymbologies() const;
+    Windows::Devices::PointOfService::PosPrinterFontProperty GetFontProperty(param::hstring const& typeface) const;
+};
+template <> struct consume<Windows::Devices::PointOfService::IPosPrinter2> { template <typename D> using type = consume_Windows_Devices_PointOfService_IPosPrinter2<D>; };
+
+template <typename D>
 struct consume_Windows_Devices_PointOfService_IPosPrinterCapabilities
 {
     Windows::Devices::PointOfService::UnifiedPosPowerReportingType PowerReportingType() const;
@@ -3193,6 +3364,15 @@ struct consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics
 template <> struct consume<Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics> { template <typename D> using type = consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics<D>; };
 
 template <typename D>
+struct consume_Windows_Devices_PointOfService_IPosPrinterFontProperty
+{
+    hstring TypeFace() const;
+    bool IsScalableToAnySize() const;
+    Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::SizeUInt32> CharacterSizes() const;
+};
+template <> struct consume<Windows::Devices::PointOfService::IPosPrinterFontProperty> { template <typename D> using type = consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>; };
+
+template <typename D>
 struct consume_Windows_Devices_PointOfService_IPosPrinterJob
 {
     void Print(param::hstring const& data) const;
@@ -3201,6 +3381,38 @@ struct consume_Windows_Devices_PointOfService_IPosPrinterJob
     Windows::Foundation::IAsyncOperation<bool> ExecuteAsync() const;
 };
 template <> struct consume<Windows::Devices::PointOfService::IPosPrinterJob> { template <typename D> using type = consume_Windows_Devices_PointOfService_IPosPrinterJob<D>; };
+
+template <typename D>
+struct consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions
+{
+    hstring TypeFace() const;
+    void TypeFace(param::hstring const& value) const;
+    uint32_t CharacterHeight() const;
+    void CharacterHeight(uint32_t value) const;
+    bool Bold() const;
+    void Bold(bool value) const;
+    bool Italic() const;
+    void Italic(bool value) const;
+    bool Underline() const;
+    void Underline(bool value) const;
+    bool ReverseVideo() const;
+    void ReverseVideo(bool value) const;
+    bool Strikethrough() const;
+    void Strikethrough(bool value) const;
+    bool Superscript() const;
+    void Superscript(bool value) const;
+    bool Subscript() const;
+    void Subscript(bool value) const;
+    bool DoubleWide() const;
+    void DoubleWide(bool value) const;
+    bool DoubleHigh() const;
+    void DoubleHigh(bool value) const;
+    Windows::Devices::PointOfService::PosPrinterAlignment Alignment() const;
+    void Alignment(Windows::Devices::PointOfService::PosPrinterAlignment const& value) const;
+    uint32_t CharacterSet() const;
+    void CharacterSet(uint32_t value) const;
+};
+template <> struct consume<Windows::Devices::PointOfService::IPosPrinterPrintOptions> { template <typename D> using type = consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>; };
 
 template <typename D>
 struct consume_Windows_Devices_PointOfService_IPosPrinterReleaseDeviceRequestedEventArgs
@@ -3270,6 +3482,16 @@ struct consume_Windows_Devices_PointOfService_IReceiptPrintJob
 template <> struct consume<Windows::Devices::PointOfService::IReceiptPrintJob> { template <typename D> using type = consume_Windows_Devices_PointOfService_IReceiptPrintJob<D>; };
 
 template <typename D>
+struct consume_Windows_Devices_PointOfService_IReceiptPrintJob2
+{
+    void StampPaper() const;
+    void Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const;
+    void FeedPaperByLine(int32_t lineCount) const;
+    void FeedPaperByMapModeUnit(int32_t distance) const;
+};
+template <> struct consume<Windows::Devices::PointOfService::IReceiptPrintJob2> { template <typename D> using type = consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>; };
+
+template <typename D>
 struct consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities
 {
     bool CanCutPaper() const;
@@ -3279,12 +3501,45 @@ struct consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities
 template <> struct consume<Windows::Devices::PointOfService::IReceiptPrinterCapabilities> { template <typename D> using type = consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>; };
 
 template <typename D>
+struct consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2
+{
+    bool IsReverseVideoSupported() const;
+    bool IsStrikethroughSupported() const;
+    bool IsSuperscriptSupported() const;
+    bool IsSubscriptSupported() const;
+    bool IsReversePaperFeedByLineSupported() const;
+    bool IsReversePaperFeedByMapModeUnitSupported() const;
+};
+template <> struct consume<Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> { template <typename D> using type = consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>; };
+
+template <typename D>
+struct consume_Windows_Devices_PointOfService_ISlipPrintJob
+{
+    void Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const;
+    void FeedPaperByLine(int32_t lineCount) const;
+    void FeedPaperByMapModeUnit(int32_t distance) const;
+};
+template <> struct consume<Windows::Devices::PointOfService::ISlipPrintJob> { template <typename D> using type = consume_Windows_Devices_PointOfService_ISlipPrintJob<D>; };
+
+template <typename D>
 struct consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities
 {
     bool IsFullLengthSupported() const;
     bool IsBothSidesPrintingSupported() const;
 };
 template <> struct consume<Windows::Devices::PointOfService::ISlipPrinterCapabilities> { template <typename D> using type = consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities<D>; };
+
+template <typename D>
+struct consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2
+{
+    bool IsReverseVideoSupported() const;
+    bool IsStrikethroughSupported() const;
+    bool IsSuperscriptSupported() const;
+    bool IsSubscriptSupported() const;
+    bool IsReversePaperFeedByLineSupported() const;
+    bool IsReversePaperFeedByMapModeUnitSupported() const;
+};
+template <> struct consume<Windows::Devices::PointOfService::ISlipPrinterCapabilities2> { template <typename D> using type = consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>; };
 
 template <typename D>
 struct consume_Windows_Devices_PointOfService_IUnifiedPosErrorData
@@ -3302,5 +3557,13 @@ struct consume_Windows_Devices_PointOfService_IUnifiedPosErrorDataFactory
     Windows::Devices::PointOfService::UnifiedPosErrorData CreateInstance(param::hstring const& message, Windows::Devices::PointOfService::UnifiedPosErrorSeverity const& severity, Windows::Devices::PointOfService::UnifiedPosErrorReason const& reason, uint32_t extendedReason) const;
 };
 template <> struct consume<Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory> { template <typename D> using type = consume_Windows_Devices_PointOfService_IUnifiedPosErrorDataFactory<D>; };
+
+struct struct_Windows_Devices_PointOfService_SizeUInt32
+{
+    uint32_t Width;
+    uint32_t Height;
+};
+template <> struct abi<Windows::Devices::PointOfService::SizeUInt32>{ using type = struct_Windows_Devices_PointOfService_SizeUInt32; };
+
 
 }

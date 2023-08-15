@@ -253,6 +253,18 @@ extern "C" {
                                             0x0013)
 
 //
+// Describes the SMT (simultaneous multithreading or HyperThreading) status.
+// The potential values are as follows:
+//
+// 0 - SMT is disabled in firmware, or not supported by the platform.
+// 1 - SMT is enabled.
+// 2 - SMT is enabled in firmware, but disabled in software.
+//
+
+#define SIPAEVENT_SMT_STATUS               (SIPAEVENTTYPE_OSPARAMETER + \
+                                           0x0014)
+
+//
 // Describes the VSM/SMART identity decryption public key.
 //
 #define SIPAEVENT_VSM_IDK_INFO             (SIPAEVENTTYPE_OSPARAMETER + \
@@ -487,6 +499,9 @@ typedef UINT16 WBCL_DIGEST_ALG_ID;
 #define WBCL_DIGEST_ALG_ID_SHA_2_384        0x000C
 #define WBCL_DIGEST_ALG_ID_SHA_2_512        0x000D
 #define WBCL_DIGEST_ALG_ID_SM3_256          0x0012
+#define WBCL_DIGEST_ALG_ID_SHA3_256         0x0027
+#define WBCL_DIGEST_ALG_ID_SHA3_384         0x0028
+#define WBCL_DIGEST_ALG_ID_SHA3_512         0x0029
 
 //
 // These values are aligned with the TPM 2.0 algorithm bitmap
@@ -496,6 +511,9 @@ typedef UINT16 WBCL_DIGEST_ALG_ID;
 #define WBCL_DIGEST_ALG_BITMAP_SHA_2_384    0x00000004
 #define WBCL_DIGEST_ALG_BITMAP_SHA_2_512    0x00000008
 #define WBCL_DIGEST_ALG_BITMAP_SM3_256      0x00000010
+#define WBCL_DIGEST_ALG_BITMAP_SHA3_256     0x00000020
+#define WBCL_DIGEST_ALG_BITMAP_SHA3_384     0x00000040
+#define WBCL_DIGEST_ALG_BITMAP_SHA3_512     0x00000080
 
 //
 // An iterator object for WBCL log.

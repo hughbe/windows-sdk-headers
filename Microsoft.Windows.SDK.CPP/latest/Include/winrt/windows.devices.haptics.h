@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.haptics.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface IKnownSimpleHapticsControllerWaveformsStatics;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics ABI::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface ISimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController ABI::Windows::Devices::Haptics::ISimpleHapticsController
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface ISimpleHapticsControllerFeedback;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_FWD_DEFINED__
@@ -182,9 +182,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface IVibrationDevice;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice ABI::Windows::Devices::Haptics::IVibrationDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_FWD_DEFINED__
@@ -196,9 +196,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface IVibrationDeviceStatics;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics ABI::Windows::Devices::Haptics::IVibrationDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_FWD_DEFINED__
@@ -211,9 +211,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 class SimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -236,7 +236,7 @@ IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
 #define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
@@ -268,7 +268,7 @@ IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
 #define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
@@ -284,9 +284,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 class SimpleHapticsControllerFeedback;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -309,7 +309,7 @@ IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t;
 #define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
@@ -341,7 +341,7 @@ IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t;
 #define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
@@ -357,9 +357,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 class VibrationDevice;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -382,7 +382,7 @@ IIterator<ABI::Windows::Devices::Haptics::VibrationDevice*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
 #define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::IVibrationDevice*>
@@ -414,7 +414,7 @@ IIterable<ABI::Windows::Devices::Haptics::VibrationDevice*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
 #define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::IVibrationDevice*>
@@ -446,7 +446,7 @@ IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
 #define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
@@ -478,7 +478,7 @@ IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t;
 #define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
@@ -510,7 +510,7 @@ IVectorView<ABI::Windows::Devices::Haptics::VibrationDevice*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
 #define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>
@@ -526,9 +526,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 enum VibrationAccessStatus : int;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
@@ -549,7 +549,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Haptics::VibrationAc
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationAccessStatus>
@@ -579,7 +579,7 @@ IAsyncOperation<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationAccessStatus>
@@ -610,7 +610,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationDevice*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::IVibrationDevice*>
@@ -642,7 +642,7 @@ IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationDevice*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Haptics::IVibrationDevice*>
@@ -674,7 +674,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CHaptics__CV
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>*>
@@ -706,7 +706,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>*>
@@ -725,8 +725,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -738,9 +738,9 @@ namespace ABI {
                 
                 typedef enum VibrationAccessStatus : int VibrationAccessStatus;
                 
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -782,9 +782,9 @@ namespace ABI {
                     VibrationAccessStatus_DeniedByEnergySaver = 3,
                 };
                 
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -832,9 +832,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownSimpleHapticsControllerWaveformsStatics=_uuidof(IKnownSimpleHapticsControllerWaveformsStatics);
                 
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_INTERFACE_DEFINED__) */
@@ -872,16 +872,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIntensitySupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlayCountSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlayDurationSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReplayPauseIntervalSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE StopFeedback(void) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SendHapticFeedback(
@@ -907,9 +907,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleHapticsController=_uuidof(ISimpleHapticsController);
                 
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_INTERFACE_DEFINED__) */
@@ -951,9 +951,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleHapticsControllerFeedback=_uuidof(ISimpleHapticsControllerFeedback);
                 
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_INTERFACE_DEFINED__) */
@@ -995,9 +995,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVibrationDevice=_uuidof(IVibrationDevice);
                 
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_INTERFACE_DEFINED__) */
@@ -1049,9 +1049,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVibrationDeviceStatics=_uuidof(IVibrationDeviceStatics);
                 
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_INTERFACE_DEFINED__) */

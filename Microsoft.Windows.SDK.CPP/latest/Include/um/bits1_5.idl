@@ -54,14 +54,14 @@ interface IBackgroundCopyJob2 : IBackgroundCopyJob
     //
     // Security controls.
     //
-    typedef enum
+    typedef enum BG_AUTH_TARGET
     {
             BG_AUTH_TARGET_SERVER = 1,
             BG_AUTH_TARGET_PROXY
 
     } BG_AUTH_TARGET;
 
-    typedef enum
+    typedef enum BG_AUTH_SCHEME
     {
             BG_AUTH_SCHEME_BASIC = 1,
             BG_AUTH_SCHEME_DIGEST,
@@ -69,7 +69,7 @@ interface IBackgroundCopyJob2 : IBackgroundCopyJob
             BG_AUTH_SCHEME_NEGOTIATE,
             BG_AUTH_SCHEME_PASSPORT
 
-    }  BG_AUTH_SCHEME;
+    } BG_AUTH_SCHEME;
 
     typedef struct
     {

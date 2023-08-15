@@ -58,6 +58,12 @@ namespace Details {
         ::RaiseException(static_cast<DWORD>(hr), dwExceptionFlags, 0, NULL);
     }
 
+    template <class From, class To>
+    struct IsConvertible
+    {
+        static const bool value = __is_convertible_to(From, To);
+    };
+
     template <bool b, typename T = void>
     struct EnableIf
     {

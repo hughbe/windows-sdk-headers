@@ -728,13 +728,6 @@ typedef BSTR * LPBSTR;
 
 cpp_quote("/* 0 == FALSE, -1 == TRUE */")
 typedef short VARIANT_BOOL;
-cpp_quote("#if !__STDC__ && (_MSC_VER <= 1000)")
-cpp_quote("/* For backward compatibility */")
-typedef VARIANT_BOOL _VARIANT_BOOL;
-cpp_quote("#else")
-cpp_quote("/* ANSI C/C++ reserve bool as keyword */")
-cpp_quote("#define _VARIANT_BOOL    /##/")
-cpp_quote("#endif")
 
 cpp_quote("/* The BSTRBLOB structure is used by some implementations */")
 cpp_quote("/* of the IPropertyStorage interface when marshaling BSTRs */")

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.streams.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBufferFactory;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBufferFactory ABI::Windows::Storage::Streams::IBufferFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBufferFactory_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBufferStatics;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBufferStatics ABI::Windows::Storage::Streams::IBufferStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBufferStatics_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IContentTypeProvider;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider ABI::Windows::Storage::Streams::IContentTypeProvider
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IDataReader;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIDataReader ABI::Windows::Storage::Streams::IDataReader
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIDataReader_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IDataReaderFactory;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIDataReaderFactory ABI::Windows::Storage::Streams::IDataReaderFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIDataReaderFactory_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IDataReaderStatics;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIDataReaderStatics ABI::Windows::Storage::Streams::IDataReaderStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIDataReaderStatics_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IDataWriter;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIDataWriter ABI::Windows::Storage::Streams::IDataWriter
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIDataWriter_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IDataWriterFactory;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIDataWriterFactory ABI::Windows::Storage::Streams::IDataWriterFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIDataWriterFactory_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IFileRandomAccessStreamStatics;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics ABI::Windows::Storage::Streams::IFileRandomAccessStreamStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStreamReference ABI::Windows::Storage::Streams::IInputStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStreamReference_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReferenceStatics;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReferenceStatics ABI::Windows::Storage::Streams::IRandomAccessStreamReferenceStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReferenceStatics_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamStatics;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamStatics ABI::Windows::Storage::Streams::IRandomAccessStreamStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamStatics_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -547,7 +543,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> : IKeyValuePair_
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>
@@ -579,7 +575,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> : I
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -611,7 +607,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> : I
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -627,9 +623,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -652,7 +648,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReferenc
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -684,7 +680,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessS
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -716,7 +712,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessS
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -748,7 +744,7 @@ IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*> : IKeyValuePair_i
 // correct parameterized interface specialization.
 typedef IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*> __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*>
@@ -780,7 +776,7 @@ IIterator<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> : II
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -812,7 +808,7 @@ IIterable<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> : II
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -844,7 +840,7 @@ IIterator<ABI::Windows::Storage::Streams::IBuffer*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::Streams::IBuffer*> __FIIterator_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterator_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Streams::IBuffer*>
@@ -876,7 +872,7 @@ IIterable<ABI::Windows::Storage::Streams::IBuffer*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::Streams::IBuffer*> __FIIterable_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterable_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Streams::IBuffer*>
@@ -908,7 +904,7 @@ IIterator<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIIterator_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIIterator_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -940,7 +936,7 @@ IIterable<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIIterable_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIIterable_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -972,7 +968,7 @@ IMapView<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> : IMapView_impl<HSTRI
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>
@@ -1004,7 +1000,7 @@ IMapView<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> :
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -1036,7 +1032,7 @@ IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*> : IMapView_impl<UINT32
 // correct parameterized interface specialization.
 typedef IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*> __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*>
@@ -1068,7 +1064,7 @@ IMap<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> : IMa
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -1100,7 +1096,7 @@ IMap<UINT32,ABI::Windows::Storage::Streams::IBuffer*> : IMap_impl<UINT32,ABI::Wi
 // correct parameterized interface specialization.
 typedef IMap<UINT32,ABI::Windows::Storage::Streams::IBuffer*> __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IMap<UINT32,ABI::Windows::Storage::Streams::IBuffer*>
@@ -1132,7 +1128,7 @@ IVectorView<ABI::Windows::Storage::Streams::IBuffer*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::Streams::IBuffer*> __FIVectorView_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIVectorView_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1164,7 +1160,7 @@ IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIVectorView_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIVectorView_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -1196,7 +1192,7 @@ IVector<ABI::Windows::Storage::Streams::IBuffer*> : IVector_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::Streams::IBuffer*> __FIVector_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIVector_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1228,7 +1224,7 @@ IVector<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IVector_impl<ABI
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIVector_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIVector_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -1260,7 +1256,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT32> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT32> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT32>
@@ -1292,7 +1288,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuf
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT32>
@@ -1324,7 +1320,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT32> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT32> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT32>
@@ -1356,7 +1352,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64>
@@ -1388,7 +1384,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuf
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64>
@@ -1420,7 +1416,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT64> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT64> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT64>
@@ -1452,7 +1448,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,UIN
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64>
@@ -1484,7 +1480,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInp
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64>
@@ -1516,7 +1512,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,UINT64
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,UINT64> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,UINT64>
@@ -1548,7 +1544,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_Windows__CStorage__CStream
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -1580,7 +1576,7 @@ IAsyncOperation<__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccess
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -1612,7 +1608,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_UINT32_Windows__CStorage__CStreams
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -1644,7 +1640,7 @@ IAsyncOperation<__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -1676,7 +1672,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1708,7 +1704,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1740,7 +1736,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*>
@@ -1772,7 +1768,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IInputStream*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IInputStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IInputStream*>
@@ -1804,7 +1800,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IOutputStream*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IOutputStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IOutputStream*>
@@ -1836,7 +1832,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IOutputStream*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IOutputStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IOutputStream*>
@@ -1868,7 +1864,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -1900,7 +1896,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -1932,7 +1928,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -1964,7 +1960,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -1996,7 +1992,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -2028,7 +2024,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentTy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -2060,7 +2056,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::RandomAccessStre
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -2092,7 +2088,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -2122,7 +2118,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -2151,7 +2147,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -2180,7 +2176,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -2209,7 +2205,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -2223,8 +2219,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageStreamTransaction;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageStreamTransaction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageStreamTransaction_FWD_DEFINED__
@@ -2232,8 +2228,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageStreamTransaction;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageStreamTransaction ABI::Windows::Storage::IStorageStreamTransaction
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageStreamTransaction_FWD_DEFINED__
@@ -2259,7 +2255,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageStreamTransaction*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageStreamTransaction*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageStreamTransaction_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageStreamTransaction ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageStreamTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageStreamTransaction ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageStreamTransaction*>
@@ -2291,7 +2287,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageStreamTransaction*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageStreamTransaction*> __FIAsyncOperation_1_Windows__CStorage__CStorageStreamTransaction_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageStreamTransaction ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageStreamTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageStreamTransaction ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageStreamTransaction*>
@@ -2321,7 +2317,7 @@ IAsyncOperationProgressHandler<UINT32,UINT32> : IAsyncOperationProgressHandler_i
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<UINT32,UINT32> __FIAsyncOperationProgressHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<UINT32,UINT32>
@@ -2350,7 +2346,7 @@ IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> : IAsyncOperationWith
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32>
@@ -2379,7 +2375,7 @@ IAsyncOperationWithProgress<UINT32,UINT32> : IAsyncOperationWithProgress_impl<UI
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<UINT32,UINT32> __FIAsyncOperationWithProgress_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<UINT32,UINT32>
@@ -2408,7 +2404,7 @@ IAsyncOperationProgressHandler<UINT64,UINT64> : IAsyncOperationProgressHandler_i
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<UINT64,UINT64> __FIAsyncOperationProgressHandler_2_UINT64_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<UINT64,UINT64>
@@ -2437,7 +2433,7 @@ IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64> : IAsyncOperationWith
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64>
@@ -2466,7 +2462,7 @@ IAsyncOperationWithProgress<UINT64,UINT64> : IAsyncOperationWithProgress_impl<UI
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<UINT64,UINT64> __FIAsyncOperationWithProgress_2_UINT64_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<UINT64,UINT64>
@@ -2484,8 +2480,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2493,8 +2489,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2506,8 +2502,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IMemoryBuffer;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIMemoryBuffer ABI::Windows::Foundation::IMemoryBuffer
 
 #endif // ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
@@ -2517,8 +2513,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class MemoryBuffer;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2527,16 +2523,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2544,8 +2540,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2559,8 +2555,8 @@ namespace ABI {
             
             typedef enum FileAccessMode : int FileAccessMode;
             
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2568,8 +2564,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2581,8 +2577,8 @@ namespace ABI {
             
             typedef enum StorageOpenOptions : unsigned int StorageOpenOptions;
             
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2591,8 +2587,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2600,8 +2596,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2616,9 +2612,9 @@ namespace ABI {
                 
                 typedef enum ByteOrder : int ByteOrder;
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2627,9 +2623,9 @@ namespace ABI {
                 
                 typedef enum FileOpenDisposition : int FileOpenDisposition;
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2638,9 +2634,9 @@ namespace ABI {
                 
                 typedef enum InputStreamOptions : unsigned int InputStreamOptions;
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2649,9 +2645,9 @@ namespace ABI {
                 
                 typedef enum UnicodeEncoding : int UnicodeEncoding;
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2676,9 +2672,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class Buffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2686,9 +2682,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class DataReader;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2696,9 +2692,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class DataReaderLoadOperation;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2706,9 +2702,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class DataWriter;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2716,9 +2712,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class DataWriterStoreOperation;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2726,9 +2722,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class FileInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2736,9 +2732,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class FileOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2746,9 +2742,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class FileRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2756,9 +2752,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class InMemoryRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2766,9 +2762,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class InputStreamOverStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2776,9 +2772,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class OutputStreamOverStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2787,9 +2783,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamOverStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2822,9 +2818,9 @@ namespace ABI {
                     ByteOrder_BigEndian = 1,
                 };
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2852,9 +2848,9 @@ namespace ABI {
                     FileOpenDisposition_TruncateExisting = 4,
                 };
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -2882,9 +2878,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(InputStreamOptions)
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2910,9 +2906,9 @@ namespace ABI {
                     UnicodeEncoding_Utf16BE = 2,
                 };
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2951,9 +2947,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBuffer=_uuidof(IBuffer);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIBuffer;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIBuffer_INTERFACE_DEFINED__) */
@@ -2993,9 +2989,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBufferFactory=_uuidof(IBufferFactory);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIBufferFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIBufferFactory_INTERFACE_DEFINED__) */
@@ -3039,9 +3035,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBufferStatics=_uuidof(IBufferStatics);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIBufferStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIBufferStatics_INTERFACE_DEFINED__) */
@@ -3077,9 +3073,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentTypeProvider=_uuidof(IContentTypeProvider);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_INTERFACE_DEFINED__) */
@@ -3140,7 +3136,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * buffer
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ReadBoolean(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ReadGuid(
                         /* [retval, out] */__RPC__out GUID * value
@@ -3194,9 +3190,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataReader=_uuidof(IDataReader);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIDataReader;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIDataReader_INTERFACE_DEFINED__) */
@@ -3236,9 +3232,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataReaderFactory=_uuidof(IDataReaderFactory);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIDataReaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIDataReaderFactory_INTERFACE_DEFINED__) */
@@ -3278,9 +3274,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataReaderStatics=_uuidof(IDataReaderStatics);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIDataReaderStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIDataReaderStatics_INTERFACE_DEFINED__) */
@@ -3339,7 +3335,7 @@ namespace ABI {
                         /* [in] */UINT32 count
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE WriteBoolean(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE WriteGuid(
                         /* [in] */GUID value
@@ -3399,9 +3395,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataWriter=_uuidof(IDataWriter);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIDataWriter;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIDataWriter_INTERFACE_DEFINED__) */
@@ -3441,9 +3437,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataWriterFactory=_uuidof(IDataWriterFactory);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIDataWriterFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIDataWriterFactory_INTERFACE_DEFINED__) */
@@ -3527,9 +3523,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileRandomAccessStreamStatics=_uuidof(IFileRandomAccessStreamStatics);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics_INTERFACE_DEFINED__) */
@@ -3572,9 +3568,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInputStream=_uuidof(IInputStream);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIInputStream;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIInputStream_INTERFACE_DEFINED__) */
@@ -3610,9 +3606,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInputStreamReference=_uuidof(IInputStreamReference);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIInputStreamReference;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIInputStreamReference_INTERFACE_DEFINED__) */
@@ -3656,9 +3652,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOutputStream=_uuidof(IOutputStream);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIOutputStream;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_INTERFACE_DEFINED__) */
@@ -3716,19 +3712,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStream * * stream
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRead(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanWrite(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRandomAccessStream=_uuidof(IRandomAccessStream);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_INTERFACE_DEFINED__) */
@@ -3764,9 +3760,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRandomAccessStreamReference=_uuidof(IRandomAccessStreamReference);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_INTERFACE_DEFINED__) */
@@ -3814,9 +3810,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRandomAccessStreamReferenceStatics=_uuidof(IRandomAccessStreamReferenceStatics);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReferenceStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReferenceStatics_INTERFACE_DEFINED__) */
@@ -3868,9 +3864,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRandomAccessStreamStatics=_uuidof(IRandomAccessStreamStatics);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamStatics_INTERFACE_DEFINED__) */
@@ -3911,9 +3907,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRandomAccessStreamWithContentType=_uuidof(IRandomAccessStreamWithContentType);
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_INTERFACE_DEFINED__) */
@@ -4876,7 +4872,7 @@ typedef struct __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBufferVt
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out int *key);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out unsigned int *key);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * *value);
     END_INTERFACE
 } __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl;
@@ -5583,10 +5579,10 @@ typedef struct __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
 
     HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,
-        /* [in] */ __RPC__in int key,
+        /* [in] */ __RPC__in unsigned int key,
         /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * *value);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ __RPC__in int key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ __RPC__in unsigned int key, /* [retval][out] */ __RPC__out boolean *found);
     HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer **firstPartition,
         /* [out] */ __RPC__deref_out_opt __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer **secondPartition);
     END_INTERFACE
@@ -5749,16 +5745,16 @@ typedef struct __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
     HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,
-        /* [in] */ int key,
+        /* [in] */ unsigned int key,
         /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * **value);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ int key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ unsigned int key, /* [retval][out] */ __RPC__out boolean *found);
     HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__deref_out_opt __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer **view);
     HRESULT ( STDMETHODCALLTYPE *Insert )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,
-        /* [in] */ int key,
+        /* [in] */ unsigned int key,
         /* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * *value,
         /* [retval][out] */ __RPC__out boolean *replaced);
-    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [in] */ int key);
+    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [in] */ unsigned int key);
     HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This);
     END_INTERFACE
 } __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl;
@@ -6348,7 +6344,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT32Vtbl;
 
@@ -6521,7 +6517,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64Vtbl;
 
@@ -6694,7 +6690,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64Vtbl;
 
@@ -7952,7 +7948,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 
@@ -8239,7 +8235,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl;
 
@@ -8341,7 +8337,7 @@ typedef struct __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_UINT32_UINT32 **handler);
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl;
 
@@ -8403,7 +8399,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_UINT64_UINT64Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT64_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT64_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_UINT64_UINT64Vtbl;
 
@@ -8505,7 +8501,7 @@ typedef struct __FIAsyncOperationWithProgress_2_UINT64_UINT64Vtbl
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_UINT64_UINT64 **handler);
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __int64 *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt unsigned __int64 *results);
     END_INTERFACE
 } __FIAsyncOperationWithProgress_2_UINT64_UINT64Vtbl;
 

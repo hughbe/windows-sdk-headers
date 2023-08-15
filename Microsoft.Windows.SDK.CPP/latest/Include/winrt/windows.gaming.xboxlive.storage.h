@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.gaming.xboxlive.storage.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -284,10 +280,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveBlobGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobGetResult ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobGetResult
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobGetResult_FWD_DEFINED__
@@ -300,10 +296,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveBlobInfo;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfo ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfo
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfo_FWD_DEFINED__
@@ -316,10 +312,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveBlobInfoGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoGetResult ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfoGetResult
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoGetResult_FWD_DEFINED__
@@ -332,10 +328,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveBlobInfoQuery;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoQuery ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfoQuery
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoQuery_FWD_DEFINED__
@@ -348,10 +344,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveContainer;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainer ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainer
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainer_FWD_DEFINED__
@@ -364,10 +360,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveContainerInfo;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfo ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfo
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfo_FWD_DEFINED__
@@ -380,10 +376,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveContainerInfoGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoGetResult ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfoGetResult
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoGetResult_FWD_DEFINED__
@@ -396,10 +392,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveContainerInfoQuery;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoQuery ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfoQuery
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoQuery_FWD_DEFINED__
@@ -412,10 +408,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveOperationResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveOperationResult ABI::Windows::Gaming::XboxLive::Storage::IGameSaveOperationResult
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveOperationResult_FWD_DEFINED__
@@ -428,10 +424,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProvider ABI::Windows::Gaming::XboxLive::Storage::IGameSaveProvider
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProvider_FWD_DEFINED__
@@ -444,10 +440,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveProviderGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderGetResult ABI::Windows::Gaming::XboxLive::Storage::IGameSaveProviderGetResult
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderGetResult_FWD_DEFINED__
@@ -460,10 +456,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     interface IGameSaveProviderStatics;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderStatics ABI::Windows::Gaming::XboxLive::Storage::IGameSaveProviderStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderStatics_FWD_DEFINED__
@@ -477,10 +473,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveBlobInfo;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
@@ -503,7 +499,7 @@ IIterator<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo*> __FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo_t;
 #define __FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfo*>
@@ -535,7 +531,7 @@ IIterable<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo*> __FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo_t;
 #define __FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfo*>
@@ -552,10 +548,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveContainerInfo;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
@@ -578,7 +574,7 @@ IIterator<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo*> __FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo_t;
 #define __FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfo*>
@@ -610,7 +606,7 @@ IIterable<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo*> __FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo_t;
 #define __FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfo*>
@@ -642,7 +638,7 @@ IVectorView<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo*> __FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo_t;
 #define __FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfo*>
@@ -674,7 +670,7 @@ IVectorView<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo*> __FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo_t;
 #define __FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfo*>
@@ -691,10 +687,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveBlobGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
@@ -717,7 +713,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSav
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult*> __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobGetResult*>
@@ -749,7 +745,7 @@ IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult*> __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult_t;
 #define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobGetResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobGetResult*>
@@ -766,10 +762,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveBlobInfoGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
@@ -792,7 +788,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSav
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult*> __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfoGetResult*>
@@ -824,7 +820,7 @@ IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResu
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult*> __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult_t;
 #define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveBlobInfoGetResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfoGetResult*>
@@ -841,10 +837,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveContainerInfoGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
@@ -867,7 +863,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSav
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult*> __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfoGetResult*>
@@ -899,7 +895,7 @@ IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult*> __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult_t;
 #define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveContainerInfoGetResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveContainerInfoGetResult*>
@@ -916,10 +912,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveOperationResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
@@ -942,7 +938,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSav
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveOperationResult*>
@@ -974,7 +970,7 @@ IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult*> __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult_t;
 #define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveOperationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveOperationResult*>
@@ -991,10 +987,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveProviderGetResult;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
@@ -1017,7 +1013,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSav
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult*> __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveProviderGetResult*>
@@ -1049,7 +1045,7 @@ IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResu
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult*> __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult_t;
 #define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGaming__CXboxLive__CStorage__CGameSaveProviderGetResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Gaming::XboxLive::Storage::IGameSaveProviderGetResult*>
@@ -1067,9 +1063,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1095,7 +1091,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> : IKeyValuePair_
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>
@@ -1127,7 +1123,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> : I
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -1159,7 +1155,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> : I
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -1191,7 +1187,7 @@ IMapView<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> : IMapView_impl<HSTRI
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Storage::Streams::IBuffer*> __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IBuffer*>
@@ -1221,7 +1217,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -1250,7 +1246,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -1279,7 +1275,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1308,7 +1304,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1337,7 +1333,7 @@ IAsyncOperationCompletedHandler<__int64> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__int64> __FIAsyncOperationCompletedHandler_1___z__zint64_t;
 #define __FIAsyncOperationCompletedHandler_1___z__zint64 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___z__zint64 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<INT64>
@@ -1366,7 +1362,7 @@ IAsyncOperation<__int64> : IAsyncOperation_impl<__int64>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__int64> __FIAsyncOperation_1___z__zint64_t;
 #define __FIAsyncOperation_1___z__zint64 ABI::Windows::Foundation::__FIAsyncOperation_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___z__zint64 ABI::Windows::Foundation::IAsyncOperation<INT64>
@@ -1395,7 +1391,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1414,9 +1410,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1431,8 +1427,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1448,8 +1444,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1457,8 +1453,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1474,10 +1470,10 @@ namespace ABI {
                     
                     typedef enum GameSaveErrorStatus : int GameSaveErrorStatus;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1500,10 +1496,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveBlobInfoQuery;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1512,10 +1508,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveContainer;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1526,10 +1522,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveContainerInfoQuery;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1539,10 +1535,10 @@ namespace ABI {
             namespace XboxLive {
                 namespace Storage {
                     class GameSaveProvider;
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1591,10 +1587,10 @@ namespace ABI {
                         GameSaveErrorStatus_ObjectExpired = -2138898419,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GAMING_XBOXLIVE_STORAGEAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1634,10 +1630,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveBlobGetResult=_uuidof(IGameSaveBlobGetResult);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobGetResult;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobGetResult_INTERFACE_DEFINED__) */
@@ -1680,10 +1676,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveBlobInfo=_uuidof(IGameSaveBlobInfo);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfo;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfo_INTERFACE_DEFINED__) */
@@ -1726,10 +1722,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveBlobInfoGetResult=_uuidof(IGameSaveBlobInfoGetResult);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoGetResult;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoGetResult_INTERFACE_DEFINED__) */
@@ -1777,10 +1773,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveBlobInfoQuery=_uuidof(IGameSaveBlobInfoQuery);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoQuery;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveBlobInfoQuery_INTERFACE_DEFINED__) */
@@ -1847,10 +1843,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveContainer=_uuidof(IGameSaveContainer);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainer;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainer_INTERFACE_DEFINED__) */
@@ -1895,17 +1891,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NeedsSync(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveContainerInfo=_uuidof(IGameSaveContainerInfo);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfo;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfo_INTERFACE_DEFINED__) */
@@ -1948,10 +1944,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveContainerInfoGetResult=_uuidof(IGameSaveContainerInfoGetResult);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoGetResult;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoGetResult_INTERFACE_DEFINED__) */
@@ -1999,10 +1995,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveContainerInfoQuery=_uuidof(IGameSaveContainerInfoQuery);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoQuery;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveContainerInfoQuery_INTERFACE_DEFINED__) */
@@ -2042,10 +2038,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveOperationResult=_uuidof(IGameSaveOperationResult);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveOperationResult;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveOperationResult_INTERFACE_DEFINED__) */
@@ -2106,10 +2102,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveProvider=_uuidof(IGameSaveProvider);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProvider;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProvider_INTERFACE_DEFINED__) */
@@ -2152,10 +2148,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveProviderGetResult=_uuidof(IGameSaveProviderGetResult);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderGetResult;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderGetResult_INTERFACE_DEFINED__) */
@@ -2202,10 +2198,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameSaveProviderStatics=_uuidof(IGameSaveProviderStatics);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* XboxLive */
-    } /* Storage */} /* ABI */
+                } /* Storage */
+            } /* XboxLive */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CXboxLive_CStorage_CIGameSaveProviderStatics_INTERFACE_DEFINED__) */
@@ -4042,7 +4038,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 

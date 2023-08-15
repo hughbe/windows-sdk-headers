@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -76,6 +76,27 @@ template <typename D> Windows::UI::Xaml::Thickness consume_Windows_UI_Xaml_Contr
 {
     Windows::UI::Xaml::Thickness value{};
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings)->get_HiddenRootMargin(put_abi(value)));
+    return value;
+}
+
+template <typename D> double consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2<D>::NegativeCompactVerticalDelta() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2)->get_NegativeCompactVerticalDelta(&value));
+    return value;
+}
+
+template <typename D> double consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2<D>::NegativeMinimalVerticalDelta() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2)->get_NegativeMinimalVerticalDelta(&value));
+    return value;
+}
+
+template <typename D> double consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2<D>::NegativeHiddenVerticalDelta() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2)->get_NegativeHiddenVerticalDelta(&value));
     return value;
 }
 
@@ -954,6 +975,27 @@ template <typename D> Windows::UI::Xaml::Visibility consume_Windows_UI_Xaml_Cont
     return value;
 }
 
+template <typename D> double consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4<D>::OverflowContentCompactYTranslation() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4)->get_OverflowContentCompactYTranslation(&value));
+    return value;
+}
+
+template <typename D> double consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4<D>::OverflowContentMinimalYTranslation() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4)->get_OverflowContentMinimalYTranslation(&value));
+    return value;
+}
+
+template <typename D> double consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4<D>::OverflowContentHiddenYTranslation() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4)->get_OverflowContentHiddenYTranslation(&value));
+    return value;
+}
+
 template <typename D> double consume_Windows_UI_Xaml_Controls_Primitives_IDragCompletedEventArgs<D>::HorizontalChange() const
 {
     double value{};
@@ -1229,6 +1271,37 @@ template <typename D> void consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBa
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5)->ShowAt(get_abi(placementTarget), get_abi(showOptions)));
 }
 
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6<D>::ShouldConstrainToRootBounds() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6)->get_ShouldConstrainToRootBounds(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6<D>::ShouldConstrainToRootBounds(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6)->put_ShouldConstrainToRootBounds(value));
+}
+
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6<D>::IsConstrainedToRootBounds() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6)->get_IsConstrainedToRootBounds(&value));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::XamlRoot consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6<D>::XamlRoot() const
+{
+    Windows::UI::Xaml::XamlRoot value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6)->get_XamlRoot(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6<D>::XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6)->put_XamlRoot(get_abi(value)));
+}
+
 template <typename D> bool consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseClosingEventArgs<D>::Cancel() const
 {
     bool value{};
@@ -1358,6 +1431,13 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
 {
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5)->get_IsOpenProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics6<D>::ShouldConstrainToRootBoundsProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6)->get_ShouldConstrainToRootBoundsProperty(put_abi(value)));
     return value;
 }
 
@@ -3117,6 +3197,25 @@ template <typename D> void consume_Windows_UI_Xaml_Controls_Primitives_IPopup2<D
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup2)->put_LightDismissOverlayMode(get_abi(value)));
 }
 
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Primitives_IPopup3<D>::ShouldConstrainToRootBounds() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup3)->get_ShouldConstrainToRootBounds(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Controls_Primitives_IPopup3<D>::ShouldConstrainToRootBounds(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup3)->put_ShouldConstrainToRootBounds(value));
+}
+
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Primitives_IPopup3<D>::IsConstrainedToRootBounds() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup3)->get_IsConstrainedToRootBounds(&value));
+    return value;
+}
+
 template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics<D>::ChildProperty() const
 {
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
@@ -3163,6 +3262,13 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
 {
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopupStatics2)->get_LightDismissOverlayModeProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics3<D>::ShouldConstrainToRootBoundsProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopupStatics3)->get_ShouldConstrainToRootBoundsProperty(put_abi(value)));
     return value;
 }
 
@@ -4291,6 +4397,46 @@ struct produce<D, Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettin
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(HiddenRootMargin, WINRT_WRAP(Windows::UI::Xaml::Thickness));
             *value = detach_from<Windows::UI::Xaml::Thickness>(this->shim().HiddenRootMargin());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2>
+{
+    int32_t WINRT_CALL get_NegativeCompactVerticalDelta(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(NegativeCompactVerticalDelta, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().NegativeCompactVerticalDelta());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_NegativeMinimalVerticalDelta(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(NegativeMinimalVerticalDelta, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().NegativeMinimalVerticalDelta());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_NegativeHiddenVerticalDelta(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(NegativeHiddenVerticalDelta, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().NegativeHiddenVerticalDelta());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6022,6 +6168,46 @@ struct produce<D, Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSe
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4>
+{
+    int32_t WINRT_CALL get_OverflowContentCompactYTranslation(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(OverflowContentCompactYTranslation, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().OverflowContentCompactYTranslation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_OverflowContentMinimalYTranslation(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(OverflowContentMinimalYTranslation, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().OverflowContentMinimalYTranslation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_OverflowContentHiddenYTranslation(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(OverflowContentHiddenYTranslation, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().OverflowContentHiddenYTranslation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>
 {
     int32_t WINRT_CALL get_HorizontalChange(double* value) noexcept final
@@ -6556,6 +6742,71 @@ struct produce<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5> : produ
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6>
+{
+    int32_t WINRT_CALL get_ShouldConstrainToRootBounds(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ShouldConstrainToRootBounds, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().ShouldConstrainToRootBounds());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_ShouldConstrainToRootBounds(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ShouldConstrainToRootBounds, WINRT_WRAP(void), bool);
+            this->shim().ShouldConstrainToRootBounds(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsConstrainedToRootBounds(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsConstrainedToRootBounds, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsConstrainedToRootBounds());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_XamlRoot(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(XamlRoot, WINRT_WRAP(Windows::UI::Xaml::XamlRoot));
+            *value = detach_from<Windows::UI::Xaml::XamlRoot>(this->shim().XamlRoot());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_XamlRoot(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(XamlRoot, WINRT_WRAP(void), Windows::UI::Xaml::XamlRoot const&);
+            this->shim().XamlRoot(*reinterpret_cast<Windows::UI::Xaml::XamlRoot const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs>
 {
     int32_t WINRT_CALL get_Cancel(bool* value) noexcept final
@@ -6839,6 +7090,23 @@ struct produce<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5> 
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(IsOpenProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().IsOpenProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6>
+{
+    int32_t WINRT_CALL get_ShouldConstrainToRootBoundsProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ShouldConstrainToRootBoundsProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().ShouldConstrainToRootBoundsProperty());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -10475,6 +10743,46 @@ struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopup2> : produce_ba
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopup3> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IPopup3>
+{
+    int32_t WINRT_CALL get_ShouldConstrainToRootBounds(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ShouldConstrainToRootBounds, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().ShouldConstrainToRootBounds());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_ShouldConstrainToRootBounds(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ShouldConstrainToRootBounds, WINRT_WRAP(void), bool);
+            this->shim().ShouldConstrainToRootBounds(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsConstrainedToRootBounds(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsConstrainedToRootBounds, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsConstrainedToRootBounds());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics>
 {
     int32_t WINRT_CALL get_ChildProperty(void** value) noexcept final
@@ -10567,6 +10875,23 @@ struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics2> : pro
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(LightDismissOverlayModeProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().LightDismissOverlayModeProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics3> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>
+{
+    int32_t WINRT_CALL get_ShouldConstrainToRootBoundsProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ShouldConstrainToRootBoundsProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().ShouldConstrainToRootBoundsProperty());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -12559,6 +12884,11 @@ inline Windows::UI::Xaml::DependencyProperty FlyoutBase::IsOpenProperty()
     return impl::call_factory<FlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5>([&](auto&& f) { return f.IsOpenProperty(); });
 }
 
+inline Windows::UI::Xaml::DependencyProperty FlyoutBase::ShouldConstrainToRootBoundsProperty()
+{
+    return impl::call_factory<FlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6>([&](auto&& f) { return f.ShouldConstrainToRootBoundsProperty(); });
+}
+
 inline FlyoutShowOptions::FlyoutShowOptions()
 {
     Windows::Foundation::IInspectable baseInterface, innerInterface;
@@ -13009,6 +13339,11 @@ inline Windows::UI::Xaml::DependencyProperty Popup::LightDismissOverlayModePrope
     return impl::call_factory<Popup, Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>([&](auto&& f) { return f.LightDismissOverlayModeProperty(); });
 }
 
+inline Windows::UI::Xaml::DependencyProperty Popup::ShouldConstrainToRootBoundsProperty()
+{
+    return impl::call_factory<Popup, Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>([&](auto&& f) { return f.ShouldConstrainToRootBoundsProperty(); });
+}
+
 inline Windows::UI::Xaml::DependencyProperty RangeBase::MinimumProperty()
 {
     return impl::call_factory<RangeBase, Windows::UI::Xaml::Controls::Primitives::IRangeBaseStatics>([&](auto&& f) { return f.MinimumProperty(); });
@@ -13333,7 +13668,7 @@ template <typename D> void IToggleButtonOverridesT<D>::OnToggle() const
 template <typename D, typename... Interfaces>
 struct ButtonBaseT :
     implements<D, Windows::UI::Xaml::Controls::IContentControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IButtonBase, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IButtonBase, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::ButtonBase, Windows::UI::Xaml::Controls::ContentControl, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IContentControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13349,7 +13684,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct CarouselPanelT :
     implements<D, Windows::UI::Xaml::Controls::IVirtualizingPanelOverrides, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::ICarouselPanel, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IPanel, Windows::UI::Xaml::Controls::IPanel2, Windows::UI::Xaml::Controls::IVirtualizingPanel, Windows::UI::Xaml::Controls::IVirtualizingPanelProtected, Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::ICarouselPanel, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IPanel, Windows::UI::Xaml::Controls::IPanel2, Windows::UI::Xaml::Controls::IVirtualizingPanel, Windows::UI::Xaml::Controls::IVirtualizingPanelProtected, Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::CarouselPanel, Windows::UI::Xaml::Controls::VirtualizingPanel, Windows::UI::Xaml::Controls::Panel, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IVirtualizingPanelOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13365,7 +13700,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct ColorPickerSliderT :
     implements<D, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IColorPickerSlider, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::ISlider, Windows::UI::Xaml::Controls::ISlider2, Windows::UI::Xaml::Controls::Primitives::IRangeBase, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IColorPickerSlider, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::ISlider, Windows::UI::Xaml::Controls::ISlider2, Windows::UI::Xaml::Controls::Primitives::IRangeBase, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider, Windows::UI::Xaml::Controls::Slider, Windows::UI::Xaml::Controls::Primitives::RangeBase, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13381,7 +13716,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct ColorSpectrumT :
     implements<D, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IColorSpectrum, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IColorSpectrum, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::ColorSpectrum, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13397,7 +13732,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct CommandBarFlyoutCommandBarT :
     implements<D, Windows::UI::Xaml::Controls::IAppBarOverrides, Windows::UI::Xaml::Controls::IAppBarOverrides3, Windows::UI::Xaml::Controls::IContentControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBar, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IAppBar, Windows::UI::Xaml::Controls::IAppBar2, Windows::UI::Xaml::Controls::IAppBar3, Windows::UI::Xaml::Controls::IAppBar4, Windows::UI::Xaml::Controls::ICommandBar, Windows::UI::Xaml::Controls::ICommandBar2, Windows::UI::Xaml::Controls::ICommandBar3, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBar, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IAppBar, Windows::UI::Xaml::Controls::IAppBar2, Windows::UI::Xaml::Controls::IAppBar3, Windows::UI::Xaml::Controls::IAppBar4, Windows::UI::Xaml::Controls::ICommandBar, Windows::UI::Xaml::Controls::ICommandBar2, Windows::UI::Xaml::Controls::ICommandBar3, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar, Windows::UI::Xaml::Controls::CommandBar, Windows::UI::Xaml::Controls::AppBar, Windows::UI::Xaml::Controls::ContentControl, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IAppBarOverridesT<D>, Windows::UI::Xaml::Controls::IAppBarOverrides3T<D>, Windows::UI::Xaml::Controls::IContentControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13458,7 +13793,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct FlyoutBaseT :
     implements<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::FlyoutBase, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverridesT<D>, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4T<D>
 {
@@ -13489,7 +13824,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct GridViewItemPresenterT :
     implements<D, Windows::UI::Xaml::Controls::IContentPresenterOverrides, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenter, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenter, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter, Windows::UI::Xaml::Controls::ContentPresenter, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IContentPresenterOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13505,7 +13840,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct ListViewItemPresenterT :
     implements<D, Windows::UI::Xaml::Controls::IContentPresenterOverrides, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter, Windows::UI::Xaml::Controls::ContentPresenter, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IContentPresenterOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13521,7 +13856,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct NavigationViewItemPresenterT :
     implements<D, Windows::UI::Xaml::Controls::IContentControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter, Windows::UI::Xaml::Controls::ContentControl, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IContentControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13537,7 +13872,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct PickerFlyoutBaseT :
     implements<D, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4, Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5, Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase, Windows::UI::Xaml::Controls::Primitives::FlyoutBase, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverridesT<D>, Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4T<D>, Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverridesT<D>
 {
@@ -13553,7 +13888,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct PivotHeaderItemT :
     implements<D, Windows::UI::Xaml::Controls::IContentControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IPivotHeaderItem, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IPivotHeaderItem, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem, Windows::UI::Xaml::Controls::ContentControl, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IContentControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13569,7 +13904,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct RangeBaseT :
     implements<D, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IRangeBase, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IRangeBase, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::RangeBase, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13585,7 +13920,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct SelectorItemT :
     implements<D, Windows::UI::Xaml::Controls::IContentControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::ISelectorItem, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::ISelectorItem, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::SelectorItem, Windows::UI::Xaml::Controls::ContentControl, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IContentControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13601,7 +13936,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct ToggleButtonT :
     implements<D, Windows::UI::Xaml::Controls::IContentControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::Controls::Primitives::IToggleButtonOverrides, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IToggleButton, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::Primitives::IButtonBase, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
+    impl::require<D, Windows::UI::Xaml::Controls::Primitives::IToggleButton, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IContentControl, Windows::UI::Xaml::Controls::IContentControl2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::Primitives::IButtonBase, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9>,
     impl::base<D, Windows::UI::Xaml::Controls::Primitives::ToggleButton, Windows::UI::Xaml::Controls::Primitives::ButtonBase, Windows::UI::Xaml::Controls::ContentControl, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Controls::IContentControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverridesT<D>, Windows::UI::Xaml::Controls::IControlOverrides6T<D>, Windows::UI::Xaml::Controls::Primitives::IToggleButtonOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
 {
@@ -13620,6 +13955,7 @@ WINRT_EXPORT namespace std {
 
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarButtonTemplateSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarButtonTemplateSettings> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBaseFactory> {};
@@ -13642,6 +13978,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandB
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs> {};
@@ -13653,6 +13990,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBa
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides> {};
@@ -13661,6 +13999,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBa
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptionsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptionsFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelper> {};
@@ -13706,8 +14045,10 @@ template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPivotHea
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPivotPanel> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IPivotPanel> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup2> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics2> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBase> {};

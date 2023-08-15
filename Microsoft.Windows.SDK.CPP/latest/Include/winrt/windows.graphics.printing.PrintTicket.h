@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.printing.printticket.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IPrintTicketCapabilities;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketCapabilities ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketCapabilities_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IPrintTicketFeature;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketFeature ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketFeature_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IPrintTicketOption;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketOption ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketOption
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketOption_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IPrintTicketParameterDefinition;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterDefinition ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterDefinition_FWD_DEFINED__
@@ -342,10 +338,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IPrintTicketParameterInitializer;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterInitializer ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterInitializer_FWD_DEFINED__
@@ -358,10 +354,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IPrintTicketValue;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketValue ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketValue
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketValue_FWD_DEFINED__
@@ -374,10 +370,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IWorkflowPrintTicket;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket_FWD_DEFINED__
@@ -390,10 +386,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IWorkflowPrintTicketValidationResult;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicketValidationResult ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicketValidationResult_FWD_DEFINED__
@@ -407,10 +403,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class PrintTicketOption;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -433,7 +429,7 @@ IIterator<ABI::Windows::Graphics::Printing::PrintTicket::PrintTicketOption*> : I
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing::PrintTicket::PrintTicketOption*> __FIIterator_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketOption*>
@@ -465,7 +461,7 @@ IIterable<ABI::Windows::Graphics::Printing::PrintTicket::PrintTicketOption*> : I
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing::PrintTicket::PrintTicketOption*> __FIIterable_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketOption*>
@@ -497,7 +493,7 @@ IVectorView<ABI::Windows::Graphics::Printing::PrintTicket::PrintTicketOption*> :
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing::PrintTicket::PrintTicketOption*> __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintTicket__CPrintTicketOption ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing::PrintTicket::IPrintTicketOption*>
@@ -514,10 +510,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class WorkflowPrintTicket;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -540,7 +536,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::W
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket*>
@@ -572,7 +568,7 @@ IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTick
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket*> __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket*>
@@ -589,10 +585,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class WorkflowPrintTicketValidationResult;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -615,7 +611,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::W
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult*>
@@ -647,7 +643,7 @@ IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTick
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult*> __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicketValidationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult*>
@@ -668,10 +664,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlNode;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlNode ABI::Windows::Data::Xml::Dom::IXmlNode
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlNode_FWD_DEFINED__
@@ -687,8 +683,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -705,10 +701,10 @@ namespace ABI {
                     
                     typedef enum PrintTicketFeatureSelectionType : int PrintTicketFeatureSelectionType;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -718,10 +714,10 @@ namespace ABI {
                     
                     typedef enum PrintTicketParameterDataType : int PrintTicketParameterDataType;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -731,10 +727,10 @@ namespace ABI {
                     
                     typedef enum PrintTicketValueType : int PrintTicketValueType;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -750,10 +746,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class PrintTicketCapabilities;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -762,10 +758,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class PrintTicketFeature;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -775,10 +771,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class PrintTicketParameterDefinition;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -787,10 +783,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class PrintTicketParameterInitializer;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -799,10 +795,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class PrintTicketValue;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -839,10 +835,10 @@ namespace ABI {
                         PrintTicketFeatureSelectionType_PickMany = 1,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -869,10 +865,10 @@ namespace ABI {
                         PrintTicketParameterDataType_String = 2,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -899,10 +895,10 @@ namespace ABI {
                         PrintTicketValueType_Unknown = 2,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1000,10 +996,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTicketCapabilities=_uuidof(IPrintTicketCapabilities);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketCapabilities_INTERFACE_DEFINED__) */
@@ -1069,10 +1065,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTicketFeature=_uuidof(IPrintTicketFeature);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketFeature;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketFeature_INTERFACE_DEFINED__) */
@@ -1141,10 +1137,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTicketOption=_uuidof(IPrintTicketOption);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketOption;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketOption_INTERFACE_DEFINED__) */
@@ -1202,10 +1198,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTicketParameterDefinition=_uuidof(IPrintTicketParameterDefinition);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterDefinition;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterDefinition_INTERFACE_DEFINED__) */
@@ -1257,10 +1253,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTicketParameterInitializer=_uuidof(IPrintTicketParameterInitializer);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterInitializer;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketParameterInitializer_INTERFACE_DEFINED__) */
@@ -1306,10 +1302,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTicketValue=_uuidof(IPrintTicketValue);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketValue;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIPrintTicketValue_INTERFACE_DEFINED__) */
@@ -1435,10 +1431,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWorkflowPrintTicket=_uuidof(IWorkflowPrintTicket);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket_INTERFACE_DEFINED__) */
@@ -1471,7 +1467,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Validated(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
                             /* [retval, out] */__RPC__out HRESULT * value
@@ -1481,10 +1477,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWorkflowPrintTicketValidationResult=_uuidof(IWorkflowPrintTicketValidationResult);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicketValidationResult;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicketValidationResult_INTERFACE_DEFINED__) */

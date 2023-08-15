@@ -139,7 +139,7 @@ namespace Windows
                 [propget] HRESULT MaxLuminanceInNits([out] [retval] FLOAT* value);
                 [propget] HRESULT MinLuminanceInNits([out] [retval] FLOAT* value);
                 [propget] HRESULT MaxAverageFullFrameLuminanceInNits([out] [retval] FLOAT* value);
-                HRESULT GetDescriptor([in] Windows.Devices.Display.DisplayMonitorDescriptorKind descriptorKind, [out] UINT32* __valueSize, [out] [retval] [size_is(, *__valueSize)] BYTE** value);
+                HRESULT GetDescriptor([in] Windows.Devices.Display.DisplayMonitorDescriptorKind descriptorKind, [out] UINT32* __resultSize, [out] [retval] [size_is(, *__resultSize)] BYTE** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -147,7 +147,7 @@ namespace Windows
             [uuid(6EAE698F-A228-4C05-821D-B695D667DE8E)]
             interface IDisplayMonitorStatics : IInspectable
             {
-                HRESULT GetDeviceSelector([out] [retval] HSTRING* value);
+                HRESULT GetDeviceSelector([out] [retval] HSTRING* result);
                 HRESULT FromIdAsync([in] HSTRING deviceId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Display.DisplayMonitor*>** operation);
                 HRESULT FromInterfaceIdAsync([in] HSTRING deviceInterfaceId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Display.DisplayMonitor*>** operation);
             }

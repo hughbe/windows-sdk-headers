@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.socialinfo.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,10 +278,10 @@ namespace ABI {
             namespace SocialInfo {
                 namespace Provider {
                     interface ISocialDashboardItemUpdater;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialDashboardItemUpdater ABI::Windows::ApplicationModel::SocialInfo::Provider::ISocialDashboardItemUpdater
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialDashboardItemUpdater_FWD_DEFINED__
@@ -298,10 +294,10 @@ namespace ABI {
             namespace SocialInfo {
                 namespace Provider {
                     interface ISocialFeedUpdater;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialFeedUpdater ABI::Windows::ApplicationModel::SocialInfo::Provider::ISocialFeedUpdater
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialFeedUpdater_FWD_DEFINED__
@@ -314,10 +310,10 @@ namespace ABI {
             namespace SocialInfo {
                 namespace Provider {
                     interface ISocialInfoProviderManagerStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialInfoProviderManagerStatics ABI::Windows::ApplicationModel::SocialInfo::Provider::ISocialInfoProviderManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialInfoProviderManagerStatics_FWD_DEFINED__
@@ -331,10 +327,10 @@ namespace ABI {
             namespace SocialInfo {
                 namespace Provider {
                     class SocialDashboardItemUpdater;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
@@ -357,7 +353,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::SocialInfo::Prov
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::SocialInfo::Provider::ISocialDashboardItemUpdater*>
@@ -389,7 +385,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::SocialInfo::Provider::SocialDash
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater*> __FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialDashboardItemUpdater ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::SocialInfo::Provider::ISocialDashboardItemUpdater*>
@@ -406,10 +402,10 @@ namespace ABI {
             namespace SocialInfo {
                 namespace Provider {
                     class SocialFeedUpdater;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
@@ -432,7 +428,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::SocialInfo::Prov
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::SocialInfo::Provider::ISocialFeedUpdater*>
@@ -464,7 +460,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::SocialInfo::Provider::SocialFeed
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater*> __FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CSocialInfo__CProvider__CSocialFeedUpdater ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::SocialInfo::Provider::ISocialFeedUpdater*>
@@ -480,9 +476,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialFeedItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem_FWD_DEFINED__
@@ -491,9 +487,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialFeedItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem_FWD_DEFINED__
@@ -519,7 +515,7 @@ IIterator<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -551,7 +547,7 @@ IIterable<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -583,7 +579,7 @@ IVectorView<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -615,7 +611,7 @@ IVector<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IVector_i
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -645,7 +641,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -674,7 +670,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -691,9 +687,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialFeedContent;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent_FWD_DEFINED__
@@ -702,9 +698,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialFeedContent;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedContent
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent_FWD_DEFINED__
@@ -718,9 +714,9 @@ namespace ABI {
                 
                 typedef enum SocialFeedKind : int SocialFeedKind;
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -729,9 +725,9 @@ namespace ABI {
                 
                 typedef enum SocialFeedUpdateMode : int SocialFeedUpdateMode;
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -739,9 +735,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialItemThumbnail;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail_FWD_DEFINED__
@@ -750,9 +746,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialItemThumbnail;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail ABI::Windows::ApplicationModel::SocialInfo::ISocialItemThumbnail
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail_FWD_DEFINED__
@@ -767,8 +763,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -776,8 +772,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -787,8 +783,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -796,8 +792,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -918,10 +914,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISocialDashboardItemUpdater=_uuidof(ISocialDashboardItemUpdater);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialDashboardItemUpdater;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialDashboardItemUpdater_INTERFACE_DEFINED__) */
@@ -990,10 +986,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISocialFeedUpdater=_uuidof(ISocialFeedUpdater);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialFeedUpdater;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialFeedUpdater_INTERFACE_DEFINED__) */
@@ -1082,10 +1078,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISocialInfoProviderManagerStatics=_uuidof(ISocialInfoProviderManagerStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* SocialInfo */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* SocialInfo */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialInfoProviderManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CProvider_CISocialInfoProviderManagerStatics_INTERFACE_DEFINED__) */

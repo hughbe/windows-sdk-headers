@@ -19,7 +19,7 @@ typedef ULONGLONG QWORD;
 #endif  // __QWORD_DEFINED
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1595,11 +1595,11 @@ cpp_quote( "#define MF_MEDIATYPE_EQUAL_FORMAT_USER_DATA  0x00000008" )
 cpp_quote( "" )
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -1669,7 +1669,7 @@ cpp_quote("")
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 //
@@ -1677,7 +1677,7 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 //
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 typedef struct 
 {
@@ -1685,7 +1685,7 @@ typedef struct
     GUID    guidSubtype;
 } MFT_REGISTER_TYPE_INFO;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1700,7 +1700,7 @@ cpp_quote( "#if !defined( _MFVIDEOFORMAT_ )" )
 cpp_quote( "#define _MFVIDEOFORMAT_" )
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 typedef enum _MFVideoInterlaceMode
 {
@@ -1857,11 +1857,11 @@ typedef enum _MFNominalRange
     MFNominalRange_ForceDWORD            = 0x7FFFFFFF
 } MFNominalRange;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 typedef enum _MFVideoFlags {
     // static flags
@@ -1898,11 +1898,11 @@ typedef enum _MFVideoFlags {
     MFVideoFlags_ForceQWORD         = 0x7FFFFFFF
 } MFVideoFlags;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 typedef struct _MFRatio
 {
@@ -1923,7 +1923,7 @@ typedef struct _MFVideoArea
     SIZE                    Area;
 } MFVideoArea;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#if defined(_MSC_VER) && (_MSC_VER >= 1600)")
@@ -1932,7 +1932,7 @@ cpp_quote("#pragma warning(disable:4820) // Disable C4820: padding after data me
 cpp_quote("#endif")
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 typedef struct _MFVideoInfo
 {
@@ -1954,7 +1954,7 @@ typedef struct _MFVideoInfo
     unsigned __int64        VideoFlags;
 } MFVideoInfo;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#if defined(_MSC_VER) && (_MSC_VER >= 1600)")
@@ -1962,7 +1962,7 @@ cpp_quote("#pragma warning(pop)")
 cpp_quote("#endif")
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 typedef struct __MFAYUVSample {
     BYTE bCrValue;
@@ -1986,7 +1986,7 @@ typedef union _MFPaletteEntry {
 
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#if defined(_MSC_VER) && (_MSC_VER >= 1600)")
@@ -1995,7 +1995,7 @@ cpp_quote("#pragma warning(disable:4820) // Disable C4820: padding after data me
 cpp_quote("#endif")
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 typedef struct _MFVideoSurfaceInfo
 {
@@ -2045,14 +2045,14 @@ typedef enum _MFStandardVideoFormat
     MFStdVideoFormat_ATSC_HD720p,
 } MFStandardVideoFormat;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote( "#endif" )
 cpp_quote( "" )
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -2088,11 +2088,11 @@ interface IMFVideoMediaType : IMFMediaType
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -2208,11 +2208,11 @@ interface IMFAsyncCallback : IUnknown
         );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -2229,11 +2229,11 @@ interface IMFAsyncCallbackLogging : IMFAsyncCallback
     DWORD   GetObjectTag();
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 //
 // Async callback flags
@@ -3698,11 +3698,11 @@ interface IMFMediaEventGenerator : IUnknown
         );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 
 [
@@ -3724,11 +3724,11 @@ interface IMFRemoteAsyncCallback : IUnknown
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 typedef enum _MFBYTESTREAM_SEEK_ORIGIN
 {
@@ -4053,11 +4053,11 @@ cpp_quote( "EXTERN_GUID( MF_BYTESTREAM_TRANSCODED, 0xb6c5c282, 0x4dc9, 0x4db9, 0
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 /////////////////////////////////////////////////////////////////////////////
 // CLSID_MFByteStreamProxyClassFactory
@@ -4116,11 +4116,11 @@ typedef enum
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -4359,7 +4359,7 @@ interface IMFActivate : IMFAttributes
     HRESULT DetachObject();
 };
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -4367,7 +4367,7 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN7) ")
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 //
 //  List IDs for IMFPluginControl
@@ -4536,11 +4536,11 @@ interface IMFPluginControl2 : IMFPluginControl
         );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -4592,13 +4592,13 @@ typedef enum _MF_STREAM_STATE
     MF_STREAM_STATE_RUNNING
 } MF_STREAM_STATE;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)")
 
 [
@@ -4686,6 +4686,6 @@ interface IMFMuxStreamSampleManager : IUnknown
     ULONGLONG GetStreamConfiguration();
 }
 
-cpp_quote("#endif // (WINVER >=_WIN32_WINNT_WIN10_RS2)")    
-cpp_quote("#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2)")    
+cpp_quote("#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 #pragma endregion

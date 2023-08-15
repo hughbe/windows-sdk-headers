@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.humaninterfacedevice.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidBooleanControl;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControl ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControl
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControl_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidBooleanControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidBooleanControlDescription2;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription2 ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription2
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription2_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidCollection;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidCollection ABI::Windows::Devices::HumanInterfaceDevice::IHidCollection
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidCollection_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidDevice;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDevice ABI::Windows::Devices::HumanInterfaceDevice::IHidDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDevice_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidDeviceStatics;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDeviceStatics ABI::Windows::Devices::HumanInterfaceDevice::IHidDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDeviceStatics_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidFeatureReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidFeatureReport ABI::Windows::Devices::HumanInterfaceDevice::IHidFeatureReport
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidFeatureReport_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidInputReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport ABI::Windows::Devices::HumanInterfaceDevice::IHidInputReport
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidInputReportReceivedEventArgs;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReportReceivedEventArgs ABI::Windows::Devices::HumanInterfaceDevice::IHidInputReportReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReportReceivedEventArgs_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidNumericControl;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControl ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControl
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControl_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidNumericControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidOutputReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidOutputReport ABI::Windows::Devices::HumanInterfaceDevice::IHidOutputReport
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidOutputReport_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidBooleanControl;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -472,7 +468,7 @@ IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControl*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControl*> __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl_t;
 #define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControl*>
@@ -504,7 +500,7 @@ IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControl*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControl*> __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl_t;
 #define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControl*>
@@ -520,9 +516,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidBooleanControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -545,7 +541,7 @@ IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescript
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription*> __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t;
 #define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription*>
@@ -577,7 +573,7 @@ IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescript
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription*> __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t;
 #define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription*>
@@ -593,9 +589,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidCollection;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -618,7 +614,7 @@ IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidCollection*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidCollection*> __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection_t;
 #define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::HumanInterfaceDevice::IHidCollection*>
@@ -650,7 +646,7 @@ IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidCollection*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidCollection*> __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection_t;
 #define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::HumanInterfaceDevice::IHidCollection*>
@@ -666,9 +662,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidNumericControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -691,7 +687,7 @@ IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescript
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription*> __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t;
 #define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription*>
@@ -723,7 +719,7 @@ IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescript
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription*> __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t;
 #define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription*>
@@ -755,7 +751,7 @@ IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControl*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControl*> __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl_t;
 #define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControl ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControl*>
@@ -787,7 +783,7 @@ IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescri
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription*> __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t;
 #define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription*>
@@ -819,7 +815,7 @@ IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidCollection*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidCollection*> __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection_t;
 #define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::IHidCollection*>
@@ -851,7 +847,7 @@ IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescri
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription*> __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t;
 #define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription*>
@@ -867,9 +863,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidDevice;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -892,7 +888,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::Hid
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::HidDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::IHidDevice*>
@@ -924,7 +920,7 @@ IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::HidDevice*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::HidDevice*> __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::IHidDevice*>
@@ -940,9 +936,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidFeatureReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -965,7 +961,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::Hid
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::HidFeatureReport*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::IHidFeatureReport*>
@@ -997,7 +993,7 @@ IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::HidFeatureReport*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::HidFeatureReport*> __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidFeatureReport ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::IHidFeatureReport*>
@@ -1013,9 +1009,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidInputReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1038,7 +1034,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::Hid
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::HidInputReport*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::HumanInterfaceDevice::IHidInputReport*>
@@ -1070,7 +1066,7 @@ IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::HidInputReport*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::HidInputReport*> __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CHumanInterfaceDevice__CHidInputReport ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::HumanInterfaceDevice::IHidInputReport*>
@@ -1087,9 +1083,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidInputReportReceivedEventArgs;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1113,7 +1109,7 @@ ITypedEventHandler<ABI::Windows::Devices::HumanInterfaceDevice::HidDevice*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::HumanInterfaceDevice::HidDevice*,ABI::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::HumanInterfaceDevice::IHidDevice*,ABI::Windows::Devices::HumanInterfaceDevice::IHidInputReportReceivedEventArgs*>
@@ -1144,7 +1140,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -1173,7 +1169,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -1191,8 +1187,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1207,8 +1203,8 @@ namespace ABI {
             
             typedef enum FileAccessMode : int FileAccessMode;
             
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1219,9 +1215,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1237,9 +1233,9 @@ namespace ABI {
                 
                 typedef enum HidCollectionType : int HidCollectionType;
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1248,9 +1244,9 @@ namespace ABI {
                 
                 typedef enum HidReportType : int HidReportType;
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1276,9 +1272,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidNumericControl;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1287,9 +1283,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidOutputReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1327,9 +1323,9 @@ namespace ABI {
                     HidCollectionType_Other = 7,
                 };
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1355,9 +1351,9 @@ namespace ABI {
                     HidReportType_Feature = 2,
                 };
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1395,10 +1391,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT16 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsActive(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ControlDescription(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription * * value
@@ -1408,9 +1404,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidBooleanControl=_uuidof(IHidBooleanControl);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControl;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControl_INTERFACE_DEFINED__) */
@@ -1464,9 +1460,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidBooleanControlDescription=_uuidof(IHidBooleanControlDescription);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription_INTERFACE_DEFINED__) */
@@ -1498,16 +1494,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAbsolute(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHidBooleanControlDescription2=_uuidof(IHidBooleanControlDescription2);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription2_INTERFACE_DEFINED__) */
@@ -1555,9 +1551,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidCollection=_uuidof(IHidCollection);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidCollection;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidCollection_INTERFACE_DEFINED__) */
@@ -1667,9 +1663,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidDevice=_uuidof(IHidDevice);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDevice_INTERFACE_DEFINED__) */
@@ -1722,9 +1718,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidDeviceStatics=_uuidof(IHidDeviceStatics);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDeviceStatics_INTERFACE_DEFINED__) */
@@ -1787,9 +1783,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidFeatureReport=_uuidof(IHidFeatureReport);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidFeatureReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidFeatureReport_INTERFACE_DEFINED__) */
@@ -1855,9 +1851,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidInputReport=_uuidof(IHidInputReport);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport_INTERFACE_DEFINED__) */
@@ -1896,9 +1892,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidInputReportReceivedEventArgs=_uuidof(IHidInputReportReceivedEventArgs);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReportReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReportReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -1933,7 +1929,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGrouped(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UsagePage(
                         /* [retval, out] */__RPC__out UINT16 * value
@@ -1961,9 +1957,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidNumericControl=_uuidof(IHidNumericControl);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControl;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControl_INTERFACE_DEFINED__) */
@@ -2034,10 +2030,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAbsolute(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasNull(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ParentCollections(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidCollection * * value
@@ -2047,9 +2043,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidNumericControlDescription=_uuidof(IHidNumericControlDescription);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription_INTERFACE_DEFINED__) */
@@ -2112,9 +2108,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHidOutputReport=_uuidof(IHidOutputReport);
                 
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidOutputReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidOutputReport_INTERFACE_DEFINED__) */
@@ -3884,7 +3880,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDevice * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReportReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidDevice * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReportReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CHumanInterfaceDevice__CHidDevice_Windows__CDevices__CHumanInterfaceDevice__CHidInputReportReceivedEventArgsVtbl;
 
@@ -3988,7 +3984,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 

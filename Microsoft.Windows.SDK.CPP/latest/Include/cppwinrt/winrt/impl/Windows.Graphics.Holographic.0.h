@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -72,11 +72,18 @@ enum class HolographicSpaceUserPresence : int32_t
     PresentActive = 2,
 };
 
+enum class HolographicViewConfigurationKind : int32_t
+{
+    Display = 0,
+    PhotoVideoCamera = 1,
+};
+
 struct IHolographicCamera;
 struct IHolographicCamera2;
 struct IHolographicCamera3;
 struct IHolographicCamera4;
 struct IHolographicCamera5;
+struct IHolographicCamera6;
 struct IHolographicCameraPose;
 struct IHolographicCameraPose2;
 struct IHolographicCameraRenderingParameters;
@@ -85,6 +92,7 @@ struct IHolographicCameraRenderingParameters3;
 struct IHolographicCameraViewportParameters;
 struct IHolographicDisplay;
 struct IHolographicDisplay2;
+struct IHolographicDisplay3;
 struct IHolographicDisplayStatics;
 struct IHolographicFrame;
 struct IHolographicFrame2;
@@ -102,6 +110,7 @@ struct IHolographicSpaceCameraRemovedEventArgs;
 struct IHolographicSpaceStatics;
 struct IHolographicSpaceStatics2;
 struct IHolographicSpaceStatics3;
+struct IHolographicViewConfiguration;
 struct HolographicCamera;
 struct HolographicCameraPose;
 struct HolographicCameraRenderingParameters;
@@ -116,6 +125,7 @@ struct HolographicQuadLayerUpdateParameters;
 struct HolographicSpace;
 struct HolographicSpaceCameraAddedEventArgs;
 struct HolographicSpaceCameraRemovedEventArgs;
+struct HolographicViewConfiguration;
 struct HolographicAdapterId;
 struct HolographicStereoTransform;
 
@@ -128,6 +138,7 @@ template <> struct category<Windows::Graphics::Holographic::IHolographicCamera2>
 template <> struct category<Windows::Graphics::Holographic::IHolographicCamera3>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicCamera4>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicCamera5>{ using type = interface_category; };
+template <> struct category<Windows::Graphics::Holographic::IHolographicCamera6>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicCameraPose>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicCameraPose2>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicCameraRenderingParameters>{ using type = interface_category; };
@@ -136,6 +147,7 @@ template <> struct category<Windows::Graphics::Holographic::IHolographicCameraRe
 template <> struct category<Windows::Graphics::Holographic::IHolographicCameraViewportParameters>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicDisplay>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicDisplay2>{ using type = interface_category; };
+template <> struct category<Windows::Graphics::Holographic::IHolographicDisplay3>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicDisplayStatics>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicFrame>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicFrame2>{ using type = interface_category; };
@@ -153,6 +165,7 @@ template <> struct category<Windows::Graphics::Holographic::IHolographicSpaceCam
 template <> struct category<Windows::Graphics::Holographic::IHolographicSpaceStatics>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicSpaceStatics2>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::IHolographicSpaceStatics3>{ using type = interface_category; };
+template <> struct category<Windows::Graphics::Holographic::IHolographicViewConfiguration>{ using type = interface_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicCamera>{ using type = class_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicCameraPose>{ using type = class_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicCameraRenderingParameters>{ using type = class_category; };
@@ -167,10 +180,12 @@ template <> struct category<Windows::Graphics::Holographic::HolographicQuadLayer
 template <> struct category<Windows::Graphics::Holographic::HolographicSpace>{ using type = class_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>{ using type = class_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>{ using type = class_category; };
+template <> struct category<Windows::Graphics::Holographic::HolographicViewConfiguration>{ using type = class_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicFramePresentResult>{ using type = enum_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicFramePresentWaitBehavior>{ using type = enum_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicReprojectionMode>{ using type = enum_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicSpaceUserPresence>{ using type = enum_category; };
+template <> struct category<Windows::Graphics::Holographic::HolographicViewConfigurationKind>{ using type = enum_category; };
 template <> struct category<Windows::Graphics::Holographic::HolographicAdapterId>{ using type = struct_category<uint32_t,int32_t>; };
 template <> struct category<Windows::Graphics::Holographic::HolographicStereoTransform>{ using type = struct_category<Windows::Foundation::Numerics::float4x4,Windows::Foundation::Numerics::float4x4>; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicCamera>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCamera" }; };
@@ -178,6 +193,7 @@ template <> struct name<Windows::Graphics::Holographic::IHolographicCamera2>{ st
 template <> struct name<Windows::Graphics::Holographic::IHolographicCamera3>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCamera3" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicCamera4>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCamera4" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicCamera5>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCamera5" }; };
+template <> struct name<Windows::Graphics::Holographic::IHolographicCamera6>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCamera6" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicCameraPose>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCameraPose" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicCameraPose2>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCameraPose2" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicCameraRenderingParameters>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCameraRenderingParameters" }; };
@@ -186,6 +202,7 @@ template <> struct name<Windows::Graphics::Holographic::IHolographicCameraRender
 template <> struct name<Windows::Graphics::Holographic::IHolographicCameraViewportParameters>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicCameraViewportParameters" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicDisplay>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicDisplay" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicDisplay2>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicDisplay2" }; };
+template <> struct name<Windows::Graphics::Holographic::IHolographicDisplay3>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicDisplay3" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicDisplayStatics>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicDisplayStatics" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicFrame>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicFrame" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicFrame2>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicFrame2" }; };
@@ -203,6 +220,7 @@ template <> struct name<Windows::Graphics::Holographic::IHolographicSpaceCameraR
 template <> struct name<Windows::Graphics::Holographic::IHolographicSpaceStatics>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicSpaceStatics" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicSpaceStatics2>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicSpaceStatics2" }; };
 template <> struct name<Windows::Graphics::Holographic::IHolographicSpaceStatics3>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicSpaceStatics3" }; };
+template <> struct name<Windows::Graphics::Holographic::IHolographicViewConfiguration>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.IHolographicViewConfiguration" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicCamera>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicCamera" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicCameraPose>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicCameraPose" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicCameraRenderingParameters>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters" }; };
@@ -217,10 +235,12 @@ template <> struct name<Windows::Graphics::Holographic::HolographicQuadLayerUpda
 template <> struct name<Windows::Graphics::Holographic::HolographicSpace>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicSpace" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs" }; };
+template <> struct name<Windows::Graphics::Holographic::HolographicViewConfiguration>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicViewConfiguration" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicFramePresentResult>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicFramePresentResult" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicFramePresentWaitBehavior>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicReprojectionMode>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicReprojectionMode" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicSpaceUserPresence>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicSpaceUserPresence" }; };
+template <> struct name<Windows::Graphics::Holographic::HolographicViewConfigurationKind>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicViewConfigurationKind" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicAdapterId>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicAdapterId" }; };
 template <> struct name<Windows::Graphics::Holographic::HolographicStereoTransform>{ static constexpr auto & value{ L"Windows.Graphics.Holographic.HolographicStereoTransform" }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCamera>{ static constexpr guid value{ 0xE4E98445,0x9BED,0x4980,{ 0x9B,0xA0,0xE8,0x76,0x80,0xD1,0xCB,0x74 } }; };
@@ -228,6 +248,7 @@ template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCame
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCamera3>{ static constexpr guid value{ 0x45AA4FB3,0x7B59,0x524E,{ 0x4A,0x3F,0x4A,0x6A,0xD6,0x65,0x04,0x77 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCamera4>{ static constexpr guid value{ 0x9A2531D6,0x4723,0x4F39,{ 0xA9,0xA5,0x9D,0x05,0x18,0x1D,0x9B,0x44 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCamera5>{ static constexpr guid value{ 0x229706F2,0x628D,0x4EF5,{ 0x9C,0x08,0xA6,0x3F,0xDD,0x77,0x87,0xC6 } }; };
+template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCamera6>{ static constexpr guid value{ 0x0209194F,0x632D,0x5154,{ 0xAB,0x52,0x0B,0x5D,0x15,0xB1,0x25,0x05 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCameraPose>{ static constexpr guid value{ 0x0D7D7E30,0x12DE,0x45BD,{ 0x91,0x2B,0xC7,0xF6,0x56,0x15,0x99,0xD1 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCameraPose2>{ static constexpr guid value{ 0x232BE073,0x5D2D,0x4560,{ 0x81,0x4E,0x26,0x97,0xC4,0xFC,0xE1,0x6B } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCameraRenderingParameters>{ static constexpr guid value{ 0x8EAC2ED1,0x5BF4,0x4E16,{ 0x82,0x36,0xAE,0x08,0x00,0xC1,0x1D,0x0D } }; };
@@ -236,6 +257,7 @@ template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCame
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicCameraViewportParameters>{ static constexpr guid value{ 0x80CDF3F7,0x842A,0x41E1,{ 0x93,0xED,0x56,0x92,0xAB,0x1F,0xBB,0x10 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicDisplay>{ static constexpr guid value{ 0x9ACEA414,0x1D9F,0x4090,{ 0xA3,0x88,0x90,0xC0,0x6F,0x6E,0xAE,0x9C } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicDisplay2>{ static constexpr guid value{ 0x75AC3F82,0xE755,0x436C,{ 0x8D,0x96,0x4D,0x32,0xD1,0x31,0x47,0x3E } }; };
+template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicDisplay3>{ static constexpr guid value{ 0xFC4C6AC6,0x6480,0x5008,{ 0xB2,0x9E,0x15,0x7D,0x77,0xC8,0x43,0xF7 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicDisplayStatics>{ static constexpr guid value{ 0xCB374983,0xE7B0,0x4841,{ 0x83,0x55,0x3A,0xE5,0xB5,0x36,0xE9,0xA4 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicFrame>{ static constexpr guid value{ 0xC6988EB6,0xA8B9,0x3054,{ 0xA6,0xEB,0xD6,0x24,0xB6,0x53,0x63,0x75 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicFrame2>{ static constexpr guid value{ 0x283F37BF,0x3BF2,0x5E91,{ 0x66,0x33,0x87,0x05,0x74,0xE6,0xF2,0x17 } }; };
@@ -253,6 +275,7 @@ template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicSpac
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicSpaceStatics>{ static constexpr guid value{ 0x364E6064,0xC8F2,0x3BA1,{ 0x83,0x91,0x66,0xB8,0x48,0x9E,0x67,0xFD } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicSpaceStatics2>{ static constexpr guid value{ 0x0E777088,0x75FC,0x48AF,{ 0x87,0x58,0x06,0x52,0xF6,0xF0,0x7C,0x59 } }; };
 template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicSpaceStatics3>{ static constexpr guid value{ 0x3B00DE3D,0xB1A3,0x4DFE,{ 0x8E,0x79,0xFE,0xC5,0x90,0x9E,0x6D,0xF8 } }; };
+template <> struct guid_storage<Windows::Graphics::Holographic::IHolographicViewConfiguration>{ static constexpr guid value{ 0x5C1DE6E6,0x67E9,0x5004,{ 0xB0,0x2C,0x67,0xA3,0xA1,0x22,0xB5,0x76 } }; };
 template <> struct default_interface<Windows::Graphics::Holographic::HolographicCamera>{ using type = Windows::Graphics::Holographic::IHolographicCamera; };
 template <> struct default_interface<Windows::Graphics::Holographic::HolographicCameraPose>{ using type = Windows::Graphics::Holographic::IHolographicCameraPose; };
 template <> struct default_interface<Windows::Graphics::Holographic::HolographicCameraRenderingParameters>{ using type = Windows::Graphics::Holographic::IHolographicCameraRenderingParameters; };
@@ -267,6 +290,7 @@ template <> struct default_interface<Windows::Graphics::Holographic::Holographic
 template <> struct default_interface<Windows::Graphics::Holographic::HolographicSpace>{ using type = Windows::Graphics::Holographic::IHolographicSpace; };
 template <> struct default_interface<Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>{ using type = Windows::Graphics::Holographic::IHolographicSpaceCameraAddedEventArgs; };
 template <> struct default_interface<Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>{ using type = Windows::Graphics::Holographic::IHolographicSpaceCameraRemovedEventArgs; };
+template <> struct default_interface<Windows::Graphics::Holographic::HolographicViewConfiguration>{ using type = Windows::Graphics::Holographic::IHolographicViewConfiguration; };
 
 template <> struct abi<Windows::Graphics::Holographic::IHolographicCamera>{ struct type : IInspectable
 {
@@ -304,6 +328,11 @@ template <> struct abi<Windows::Graphics::Holographic::IHolographicCamera5>{ str
     virtual int32_t WINRT_CALL get_IsHardwareContentProtectionSupported(bool* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_IsHardwareContentProtectionEnabled(bool* value) noexcept = 0;
     virtual int32_t WINRT_CALL put_IsHardwareContentProtectionEnabled(bool value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Graphics::Holographic::IHolographicCamera6>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ViewConfiguration(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Graphics::Holographic::IHolographicCameraPose>{ struct type : IInspectable
@@ -366,6 +395,11 @@ template <> struct abi<Windows::Graphics::Holographic::IHolographicDisplay>{ str
 template <> struct abi<Windows::Graphics::Holographic::IHolographicDisplay2>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_RefreshRate(double* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Graphics::Holographic::IHolographicDisplay3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL TryGetViewConfiguration(Windows::Graphics::Holographic::HolographicViewConfigurationKind kind, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Graphics::Holographic::IHolographicDisplayStatics>{ struct type : IInspectable
@@ -489,6 +523,22 @@ template <> struct abi<Windows::Graphics::Holographic::IHolographicSpaceStatics3
     virtual int32_t WINRT_CALL get_IsConfigured(bool* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::Graphics::Holographic::IHolographicViewConfiguration>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_NativeRenderTargetSize(Windows::Foundation::Size* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_RenderTargetSize(Windows::Foundation::Size* value) noexcept = 0;
+    virtual int32_t WINRT_CALL RequestRenderTargetSize(Windows::Foundation::Size size, Windows::Foundation::Size* result) noexcept = 0;
+    virtual int32_t WINRT_CALL get_SupportedPixelFormats(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsStereo(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_RefreshRate(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Kind(Windows::Graphics::Holographic::HolographicViewConfigurationKind* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Display(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsEnabled(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_IsEnabled(bool value) noexcept = 0;
+};};
+
 template <typename D>
 struct consume_Windows_Graphics_Holographic_IHolographicCamera
 {
@@ -536,6 +586,13 @@ struct consume_Windows_Graphics_Holographic_IHolographicCamera5
     void IsHardwareContentProtectionEnabled(bool value) const;
 };
 template <> struct consume<Windows::Graphics::Holographic::IHolographicCamera5> { template <typename D> using type = consume_Windows_Graphics_Holographic_IHolographicCamera5<D>; };
+
+template <typename D>
+struct consume_Windows_Graphics_Holographic_IHolographicCamera6
+{
+    Windows::Graphics::Holographic::HolographicViewConfiguration ViewConfiguration() const;
+};
+template <> struct consume<Windows::Graphics::Holographic::IHolographicCamera6> { template <typename D> using type = consume_Windows_Graphics_Holographic_IHolographicCamera6<D>; };
 
 template <typename D>
 struct consume_Windows_Graphics_Holographic_IHolographicCameraPose
@@ -614,6 +671,13 @@ struct consume_Windows_Graphics_Holographic_IHolographicDisplay2
     double RefreshRate() const;
 };
 template <> struct consume<Windows::Graphics::Holographic::IHolographicDisplay2> { template <typename D> using type = consume_Windows_Graphics_Holographic_IHolographicDisplay2<D>; };
+
+template <typename D>
+struct consume_Windows_Graphics_Holographic_IHolographicDisplay3
+{
+    Windows::Graphics::Holographic::HolographicViewConfiguration TryGetViewConfiguration(Windows::Graphics::Holographic::HolographicViewConfigurationKind const& kind) const;
+};
+template <> struct consume<Windows::Graphics::Holographic::IHolographicDisplay3> { template <typename D> using type = consume_Windows_Graphics_Holographic_IHolographicDisplay3<D>; };
 
 template <typename D>
 struct consume_Windows_Graphics_Holographic_IHolographicDisplayStatics
@@ -777,6 +841,24 @@ struct consume_Windows_Graphics_Holographic_IHolographicSpaceStatics3
     bool IsConfigured() const;
 };
 template <> struct consume<Windows::Graphics::Holographic::IHolographicSpaceStatics3> { template <typename D> using type = consume_Windows_Graphics_Holographic_IHolographicSpaceStatics3<D>; };
+
+template <typename D>
+struct consume_Windows_Graphics_Holographic_IHolographicViewConfiguration
+{
+    Windows::Foundation::Size NativeRenderTargetSize() const;
+    Windows::Foundation::Size RenderTargetSize() const;
+    Windows::Foundation::Size RequestRenderTargetSize(Windows::Foundation::Size const& size) const;
+    Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat> SupportedPixelFormats() const;
+    Windows::Graphics::DirectX::DirectXPixelFormat PixelFormat() const;
+    void PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat const& value) const;
+    bool IsStereo() const;
+    double RefreshRate() const;
+    Windows::Graphics::Holographic::HolographicViewConfigurationKind Kind() const;
+    Windows::Graphics::Holographic::HolographicDisplay Display() const;
+    bool IsEnabled() const;
+    void IsEnabled(bool value) const;
+};
+template <> struct consume<Windows::Graphics::Holographic::IHolographicViewConfiguration> { template <typename D> using type = consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>; };
 
 struct struct_Windows_Graphics_Holographic_HolographicAdapterId
 {

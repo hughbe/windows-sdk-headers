@@ -11,6 +11,7 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.UI.Composition.idl";
+import "Windows.UI.WindowManagement.idl";
 import "Windows.UI.Xaml.idl";
 import "Windows.UI.Xaml.Controls.idl";
 import "Windows.UI.Xaml.Controls.Primitives.idl";
@@ -42,6 +43,16 @@ namespace Windows
             interface ICompositionAnimationBase;
 
             runtimeclass Visual;
+        }
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
+        namespace WindowManagement
+        {
+            runtimeclass AppWindow;
         }
     }
 }
@@ -123,6 +134,8 @@ namespace Windows
                 interface IElementCompositionPreviewStatics;
 
                 interface IElementCompositionPreviewStatics2;
+
+                interface IElementCompositionPreviewStatics3;
 
                 interface IWindowsXamlManager;
 
@@ -207,7 +220,7 @@ namespace Windows
         {
             namespace Hosting
             {
-                [contractversion(3.0)]
+                [contractversion(4.0)]
                 apicontract HostingContract
                 {
                 }
@@ -338,6 +351,15 @@ namespace Windows
                     HRESULT SetImplicitHideAnimation([in] Windows.UI.Xaml.UIElement* element, [in] Windows.UI.Composition.ICompositionAnimationBase* animation);
                     HRESULT SetIsTranslationEnabled([in] Windows.UI.Xaml.UIElement* element, [in] boolean value);
                     HRESULT GetPointerPositionPropertySet([in] Windows.UI.Xaml.UIElement* targetElement, [out] [retval] Windows.UI.Composition.CompositionPropertySet** result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Hosting.ElementCompositionPreview)]
+                [uuid(843BC4C3-C105-59FE-A3D1-373C1D3E6FBC)]
+                interface IElementCompositionPreviewStatics3 : IInspectable
+                {
+                    HRESULT SetAppWindowContent([in] Windows.UI.WindowManagement.AppWindow* appWindow, [in] Windows.UI.Xaml.UIElement* xamlContent);
+                    HRESULT GetAppWindowContent([in] Windows.UI.WindowManagement.AppWindow* appWindow, [out] [retval] Windows.UI.Xaml.UIElement** result);
                 }
 
                 [contract(Windows.UI.Xaml.Hosting.HostingContract, 3.0)]
@@ -501,6 +523,7 @@ namespace Windows
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics, Windows.Foundation.UniversalApiContract, 2.0)]
                 [static(Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2, Windows.Foundation.UniversalApiContract, 4.0)]
+                [static(Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass ElementCompositionPreview
                 {

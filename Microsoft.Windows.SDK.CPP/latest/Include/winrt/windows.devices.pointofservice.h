@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.pointofservice.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScanner;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner ABI::Windows::Devices::PointOfService::IBarcodeScanner
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScanner2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner2 ABI::Windows::Devices::PointOfService::IBarcodeScanner2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner2_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities ABI::Windows::Devices::PointOfService::IBarcodeScannerCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerCapabilities1;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities1 ABI::Windows::Devices::PointOfService::IBarcodeScannerCapabilities1
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities1_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerCapabilities2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities2 ABI::Windows::Devices::PointOfService::IBarcodeScannerCapabilities2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities2_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerDataReceivedEventArgs ABI::Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerDataReceivedEventArgs_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerErrorOccurredEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerErrorOccurredEventArgs ABI::Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerErrorOccurredEventArgs_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerImagePreviewReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs ABI::Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerReport;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport ABI::Windows::Devices::PointOfService::IBarcodeScannerReport
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerReportFactory;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReportFactory ABI::Windows::Devices::PointOfService::IBarcodeScannerReportFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReportFactory_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics ABI::Windows::Devices::PointOfService::IBarcodeScannerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerStatics2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics2 ABI::Windows::Devices::PointOfService::IBarcodeScannerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics2_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatusUpdatedEventArgs ABI::Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatusUpdatedEventArgs_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeSymbologiesStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics ABI::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeSymbologiesStatics2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics2 ABI::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics2_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeSymbologyAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes ABI::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes_FWD_DEFINED__
@@ -503,9 +499,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawer;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer ABI::Windows::Devices::PointOfService::ICashDrawer
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer_FWD_DEFINED__
@@ -517,9 +513,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCapabilities ABI::Windows::Devices::PointOfService::ICashDrawerCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCapabilities_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerCloseAlarm;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCloseAlarm ABI::Windows::Devices::PointOfService::ICashDrawerCloseAlarm
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCloseAlarm_FWD_DEFINED__
@@ -545,9 +541,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerEventSource;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource ABI::Windows::Devices::PointOfService::ICashDrawerEventSource
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerEventSourceEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs ABI::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs_FWD_DEFINED__
@@ -573,9 +569,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics ABI::Windows::Devices::PointOfService::ICashDrawerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics_FWD_DEFINED__
@@ -587,9 +583,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerStatics2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics2 ABI::Windows::Devices::PointOfService::ICashDrawerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics2_FWD_DEFINED__
@@ -601,9 +597,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerStatus;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatus ABI::Windows::Devices::PointOfService::ICashDrawerStatus
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatus_FWD_DEFINED__
@@ -615,9 +611,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICashDrawerStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatusUpdatedEventArgs ABI::Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatusUpdatedEventArgs_FWD_DEFINED__
@@ -629,9 +625,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedBarcodeScanner;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner_FWD_DEFINED__
@@ -643,9 +639,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedBarcodeScanner1;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner1 ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner1
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner1_FWD_DEFINED__
@@ -657,9 +653,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedBarcodeScanner2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner2 ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner2_FWD_DEFINED__
@@ -671,9 +667,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedBarcodeScanner3;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner3 ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner3
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner3_FWD_DEFINED__
@@ -685,9 +681,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedBarcodeScanner4;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner4 ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner4
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner4_FWD_DEFINED__
@@ -699,9 +695,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedBarcodeScannerClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScannerClosedEventArgs ABI::Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScannerClosedEventArgs_FWD_DEFINED__
@@ -713,9 +709,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedCashDrawer;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer ABI::Windows::Devices::PointOfService::IClaimedCashDrawer
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer_FWD_DEFINED__
@@ -727,9 +723,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedCashDrawer2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer2 ABI::Windows::Devices::PointOfService::IClaimedCashDrawer2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer2_FWD_DEFINED__
@@ -741,9 +737,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedCashDrawerClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawerClosedEventArgs ABI::Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawerClosedEventArgs_FWD_DEFINED__
@@ -755,9 +751,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedJournalPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedJournalPrinter ABI::Windows::Devices::PointOfService::IClaimedJournalPrinter
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedJournalPrinter_FWD_DEFINED__
@@ -769,9 +765,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedLineDisplay;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay ABI::Windows::Devices::PointOfService::IClaimedLineDisplay
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay_FWD_DEFINED__
@@ -783,9 +779,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedLineDisplay2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay2 ABI::Windows::Devices::PointOfService::IClaimedLineDisplay2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay2_FWD_DEFINED__
@@ -797,9 +793,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedLineDisplay3;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay3 ABI::Windows::Devices::PointOfService::IClaimedLineDisplay3
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay3_FWD_DEFINED__
@@ -811,9 +807,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedLineDisplayClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayClosedEventArgs ABI::Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayClosedEventArgs_FWD_DEFINED__
@@ -825,9 +821,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedLineDisplayStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayStatics ABI::Windows::Devices::PointOfService::IClaimedLineDisplayStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayStatics_FWD_DEFINED__
@@ -839,9 +835,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedMagneticStripeReader;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader_FWD_DEFINED__
@@ -853,9 +849,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedMagneticStripeReader2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader2 ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader2_FWD_DEFINED__
@@ -867,9 +863,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedMagneticStripeReaderClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReaderClosedEventArgs ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReaderClosedEventArgs_FWD_DEFINED__
@@ -881,9 +877,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedPosPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter ABI::Windows::Devices::PointOfService::IClaimedPosPrinter
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter_FWD_DEFINED__
@@ -895,9 +891,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedPosPrinter2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter2 ABI::Windows::Devices::PointOfService::IClaimedPosPrinter2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter2_FWD_DEFINED__
@@ -909,9 +905,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedPosPrinterClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinterClosedEventArgs ABI::Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinterClosedEventArgs_FWD_DEFINED__
@@ -923,9 +919,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedReceiptPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedReceiptPrinter ABI::Windows::Devices::PointOfService::IClaimedReceiptPrinter
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedReceiptPrinter_FWD_DEFINED__
@@ -937,9 +933,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IClaimedSlipPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedSlipPrinter ABI::Windows::Devices::PointOfService::IClaimedSlipPrinter
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedSlipPrinter_FWD_DEFINED__
@@ -951,9 +947,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICommonClaimedPosPrinterStation;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICommonClaimedPosPrinterStation ABI::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICommonClaimedPosPrinterStation_FWD_DEFINED__
@@ -965,9 +961,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICommonPosPrintStationCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICommonPosPrintStationCapabilities ABI::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICommonPosPrintStationCapabilities_FWD_DEFINED__
@@ -979,12 +975,26 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ICommonReceiptSlipCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICommonReceiptSlipCapabilities ABI::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICommonReceiptSlipCapabilities_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface IJournalPrintJob;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob ABI::Windows::Devices::PointOfService::IJournalPrintJob
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities_FWD_DEFINED__
@@ -993,12 +1003,26 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IJournalPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities ABI::Windows::Devices::PointOfService::IJournalPrinterCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface IJournalPrinterCapabilities2;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 ABI::Windows::Devices::PointOfService::IJournalPrinterCapabilities2
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay_FWD_DEFINED__
@@ -1007,9 +1031,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplay;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay ABI::Windows::Devices::PointOfService::ILineDisplay
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay_FWD_DEFINED__
@@ -1021,9 +1045,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplay2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay2 ABI::Windows::Devices::PointOfService::ILineDisplay2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay2_FWD_DEFINED__
@@ -1035,9 +1059,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayAttributes ABI::Windows::Devices::PointOfService::ILineDisplayAttributes
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayAttributes_FWD_DEFINED__
@@ -1049,9 +1073,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCapabilities ABI::Windows::Devices::PointOfService::ILineDisplayCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCapabilities_FWD_DEFINED__
@@ -1063,9 +1087,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayCursor;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursor ABI::Windows::Devices::PointOfService::ILineDisplayCursor
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursor_FWD_DEFINED__
@@ -1077,9 +1101,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayCursorAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursorAttributes ABI::Windows::Devices::PointOfService::ILineDisplayCursorAttributes
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursorAttributes_FWD_DEFINED__
@@ -1091,9 +1115,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayCustomGlyphs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCustomGlyphs ABI::Windows::Devices::PointOfService::ILineDisplayCustomGlyphs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCustomGlyphs_FWD_DEFINED__
@@ -1105,9 +1129,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayMarquee;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayMarquee ABI::Windows::Devices::PointOfService::ILineDisplayMarquee
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayMarquee_FWD_DEFINED__
@@ -1119,9 +1143,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics ABI::Windows::Devices::PointOfService::ILineDisplayStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics_FWD_DEFINED__
@@ -1133,9 +1157,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayStatics2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics2 ABI::Windows::Devices::PointOfService::ILineDisplayStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics2_FWD_DEFINED__
@@ -1147,9 +1171,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayStatisticsCategorySelector;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatisticsCategorySelector ABI::Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatisticsCategorySelector_FWD_DEFINED__
@@ -1161,9 +1185,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatusUpdatedEventArgs ABI::Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatusUpdatedEventArgs_FWD_DEFINED__
@@ -1175,9 +1199,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayStoredBitmap;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap ABI::Windows::Devices::PointOfService::ILineDisplayStoredBitmap
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap_FWD_DEFINED__
@@ -1189,9 +1213,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayWindow;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow ABI::Windows::Devices::PointOfService::ILineDisplayWindow
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow_FWD_DEFINED__
@@ -1203,9 +1227,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ILineDisplayWindow2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow2 ABI::Windows::Devices::PointOfService::ILineDisplayWindow2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow2_FWD_DEFINED__
@@ -1217,9 +1241,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReader;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReader ABI::Windows::Devices::PointOfService::IMagneticStripeReader
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReader_FWD_DEFINED__
@@ -1231,9 +1255,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderAamvaCardDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderAamvaCardDataReceivedEventArgs ABI::Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderAamvaCardDataReceivedEventArgs_FWD_DEFINED__
@@ -1245,9 +1269,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderBankCardDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderBankCardDataReceivedEventArgs ABI::Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderBankCardDataReceivedEventArgs_FWD_DEFINED__
@@ -1259,9 +1283,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCapabilities ABI::Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCapabilities_FWD_DEFINED__
@@ -1273,9 +1297,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderCardTypesStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCardTypesStatics ABI::Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCardTypesStatics_FWD_DEFINED__
@@ -1287,9 +1311,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderEncryptionAlgorithmsStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderEncryptionAlgorithmsStatics ABI::Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderEncryptionAlgorithmsStatics_FWD_DEFINED__
@@ -1301,9 +1325,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderErrorOccurredEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderErrorOccurredEventArgs ABI::Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderErrorOccurredEventArgs_FWD_DEFINED__
@@ -1315,9 +1339,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderReport;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderReport ABI::Windows::Devices::PointOfService::IMagneticStripeReaderReport
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderReport_FWD_DEFINED__
@@ -1329,9 +1353,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics ABI::Windows::Devices::PointOfService::IMagneticStripeReaderStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics_FWD_DEFINED__
@@ -1343,9 +1367,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderStatics2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics2 ABI::Windows::Devices::PointOfService::IMagneticStripeReaderStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics2_FWD_DEFINED__
@@ -1357,9 +1381,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatusUpdatedEventArgs ABI::Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatusUpdatedEventArgs_FWD_DEFINED__
@@ -1371,9 +1395,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderTrackData;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderTrackData ABI::Windows::Devices::PointOfService::IMagneticStripeReaderTrackData
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderTrackData_FWD_DEFINED__
@@ -1385,9 +1409,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs ABI::Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_FWD_DEFINED__
@@ -1399,12 +1423,26 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter ABI::Windows::Devices::PointOfService::IPosPrinter
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface IPosPrinter2;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 ABI::Windows::Devices::PointOfService::IPosPrinter2
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities_FWD_DEFINED__
@@ -1413,9 +1451,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities ABI::Windows::Devices::PointOfService::IPosPrinterCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities_FWD_DEFINED__
@@ -1427,12 +1465,26 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterCharacterSetIdsStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCharacterSetIdsStatics ABI::Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCharacterSetIdsStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface IPosPrinterFontProperty;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty ABI::Windows::Devices::PointOfService::IPosPrinterFontProperty
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_FWD_DEFINED__
@@ -1441,12 +1493,26 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterJob;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob ABI::Windows::Devices::PointOfService::IPosPrinterJob
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface IPosPrinterPrintOptions;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions ABI::Windows::Devices::PointOfService::IPosPrinterPrintOptions
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs_FWD_DEFINED__
@@ -1455,9 +1521,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterReleaseDeviceRequestedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs ABI::Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs_FWD_DEFINED__
@@ -1469,9 +1535,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterStatics;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics ABI::Windows::Devices::PointOfService::IPosPrinterStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics_FWD_DEFINED__
@@ -1483,9 +1549,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterStatics2;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics2 ABI::Windows::Devices::PointOfService::IPosPrinterStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics2_FWD_DEFINED__
@@ -1497,9 +1563,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterStatus;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatus ABI::Windows::Devices::PointOfService::IPosPrinterStatus
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatus_FWD_DEFINED__
@@ -1511,9 +1577,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IPosPrinterStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatusUpdatedEventArgs ABI::Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatusUpdatedEventArgs_FWD_DEFINED__
@@ -1525,9 +1591,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IReceiptOrSlipJob;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptOrSlipJob ABI::Windows::Devices::PointOfService::IReceiptOrSlipJob
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptOrSlipJob_FWD_DEFINED__
@@ -1539,12 +1605,26 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IReceiptPrintJob;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob ABI::Windows::Devices::PointOfService::IReceiptPrintJob
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface IReceiptPrintJob2;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 ABI::Windows::Devices::PointOfService::IReceiptPrintJob2
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities_FWD_DEFINED__
@@ -1553,12 +1633,40 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IReceiptPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities ABI::Windows::Devices::PointOfService::IReceiptPrinterCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface IReceiptPrinterCapabilities2;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 ABI::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface ISlipPrintJob;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob ABI::Windows::Devices::PointOfService::ISlipPrintJob
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_FWD_DEFINED__
@@ -1567,12 +1675,26 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface ISlipPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities ABI::Windows::Devices::PointOfService::ISlipPrinterCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                interface ISlipPrinterCapabilities2;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 ABI::Windows::Devices::PointOfService::ISlipPrinterCapabilities2
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
@@ -1581,9 +1703,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IUnifiedPosErrorData;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData ABI::Windows::Devices::PointOfService::IUnifiedPosErrorData
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
@@ -1595,9 +1717,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IUnifiedPosErrorDataFactory;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorDataFactory ABI::Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorDataFactory_FWD_DEFINED__
@@ -1610,9 +1732,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 enum PosPrinterRotation : int;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_USE
@@ -1633,7 +1755,7 @@ IIterator<enum ABI::Windows::Devices::PointOfService::PosPrinterRotation> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::PointOfService::PosPrinterRotation> __FIIterator_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_t;
 #define __FIIterator_1_Windows__CDevices__CPointOfService__CPosPrinterRotation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CPointOfService__CPosPrinterRotation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::PointOfService::PosPrinterRotation>
@@ -1663,13 +1785,82 @@ IIterable<enum ABI::Windows::Devices::PointOfService::PosPrinterRotation> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::PointOfService::PosPrinterRotation> __FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_t;
 #define __FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::PointOfService::PosPrinterRotation>
 //#define __FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::PointOfService::PosPrinterRotation>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_USE */
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                struct SizeUInt32;
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+
+#ifndef DEF___FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE
+#define DEF___FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("29da18c1-80de-5bc5-8b82-28d63ca01e46"))
+IIterator<struct ABI::Windows::Devices::PointOfService::SizeUInt32> : IIterator_impl<struct ABI::Windows::Devices::PointOfService::SizeUInt32> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.PointOfService.SizeUInt32>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<struct ABI::Windows::Devices::PointOfService::SizeUInt32> __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_t;
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::PointOfService::SizeUInt32>
+//#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::PointOfService::SizeUInt32>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE */
+
+
+
+
+
+#ifndef DEF___FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE
+#define DEF___FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("14f5a281-66ef-5299-aed1-96a1dc1e8416"))
+IIterable<struct ABI::Windows::Devices::PointOfService::SizeUInt32> : IIterable_impl<struct ABI::Windows::Devices::PointOfService::SizeUInt32> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.PointOfService.SizeUInt32>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<struct ABI::Windows::Devices::PointOfService::SizeUInt32> __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_t;
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::PointOfService::SizeUInt32>
+//#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::PointOfService::SizeUInt32>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE */
 
 
 
@@ -1693,7 +1884,7 @@ IVectorView<enum ABI::Windows::Devices::PointOfService::PosPrinterRotation> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::PointOfService::PosPrinterRotation> __FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_t;
 #define __FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::PointOfService::PosPrinterRotation>
@@ -1703,14 +1894,44 @@ typedef IVectorView<enum ABI::Windows::Devices::PointOfService::PosPrinterRotati
 
 
 
+
+
+#ifndef DEF___FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE
+#define DEF___FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("88668930-ae66-5dc9-b9a5-ccaba0735111"))
+IVectorView<struct ABI::Windows::Devices::PointOfService::SizeUInt32> : IVectorView_impl<struct ABI::Windows::Devices::PointOfService::SizeUInt32> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.PointOfService.SizeUInt32>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<struct ABI::Windows::Devices::PointOfService::SizeUInt32> __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_t;
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::PointOfService::SizeUInt32>
+//#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::PointOfService::SizeUInt32>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_USE */
+
+
+
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedBarcodeScanner;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1733,7 +1954,7 @@ IEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*> : I
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*> __FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_t;
 #define __FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner ABI::Windows::Foundation::__FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner ABI::Windows::Foundation::IEventHandler<ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner*>
@@ -1749,9 +1970,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedMagneticStripeReader;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1774,7 +1995,7 @@ IEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*> __FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_t;
 #define __FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader ABI::Windows::Foundation::__FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader ABI::Windows::Foundation::IEventHandler<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*>
@@ -1790,9 +2011,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScanner;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1815,7 +2036,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::BarcodeSc
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::BarcodeScanner*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeScanner_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeScanner ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeScanner_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeScanner ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IBarcodeScanner*>
@@ -1847,7 +2068,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::BarcodeScanner*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::BarcodeScanner*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeScanner_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeScanner ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeScanner_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeScanner ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IBarcodeScanner*>
@@ -1863,9 +2084,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeSymbologyAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1888,7 +2109,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::BarcodeSy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::BarcodeSymbologyAttributes*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes*>
@@ -1920,7 +2141,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::BarcodeSymbologyAttribute
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::BarcodeSymbologyAttributes*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CBarcodeSymbologyAttributes ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes*>
@@ -1936,9 +2157,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawer;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1961,7 +2182,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::CashDrawe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::CashDrawer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CCashDrawer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CCashDrawer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CCashDrawer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CCashDrawer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ICashDrawer*>
@@ -1993,7 +2214,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::CashDrawer*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::CashDrawer*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CCashDrawer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CCashDrawer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CCashDrawer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CCashDrawer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::ICashDrawer*>
@@ -2025,7 +2246,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedBa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner*>
@@ -2057,7 +2278,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner*>
@@ -2073,9 +2294,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedCashDrawer;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2098,7 +2319,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedCa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedCashDrawer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IClaimedCashDrawer*>
@@ -2130,7 +2351,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedCashDrawer*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedCashDrawer*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedCashDrawer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IClaimedCashDrawer*>
@@ -2146,9 +2367,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedLineDisplay;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2171,7 +2392,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedLi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IClaimedLineDisplay*>
@@ -2203,7 +2424,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedLineDisplay ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IClaimedLineDisplay*>
@@ -2235,7 +2456,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedMa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*>
@@ -2267,7 +2488,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeRead
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*>
@@ -2283,9 +2504,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedPosPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2308,7 +2529,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedPo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ClaimedPosPrinter*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IClaimedPosPrinter*>
@@ -2340,7 +2561,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedPosPrinter*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::ClaimedPosPrinter*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CClaimedPosPrinter ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IClaimedPosPrinter*>
@@ -2356,9 +2577,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplay;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2381,7 +2602,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::LineDispl
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::LineDisplay*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplay_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplay ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplay_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplay ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ILineDisplay*>
@@ -2413,7 +2634,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::LineDisplay*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::LineDisplay*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplay_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplay ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplay_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplay ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::ILineDisplay*>
@@ -2429,9 +2650,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 enum LineDisplayPowerStatus : int;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus_USE
@@ -2452,7 +2673,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::PointOfService::Line
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::PointOfService::LineDisplayPowerStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::LineDisplayPowerStatus>
@@ -2482,7 +2703,7 @@ IAsyncOperation<enum ABI::Windows::Devices::PointOfService::LineDisplayPowerStat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::PointOfService::LineDisplayPowerStatus> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayPowerStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::LineDisplayPowerStatus>
@@ -2497,9 +2718,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayStoredBitmap;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -2522,7 +2743,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::LineDispl
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::LineDisplayStoredBitmap*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ILineDisplayStoredBitmap*>
@@ -2554,7 +2775,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::LineDisplayStoredBitmap*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::LineDisplayStoredBitmap*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayStoredBitmap ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::ILineDisplayStoredBitmap*>
@@ -2570,9 +2791,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayWindow;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2595,7 +2816,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::LineDispl
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::LineDisplayWindow*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayWindow_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayWindow ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayWindow_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CLineDisplayWindow ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::ILineDisplayWindow*>
@@ -2627,7 +2848,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::LineDisplayWindow*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::LineDisplayWindow*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayWindow_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayWindow ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayWindow_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CLineDisplayWindow ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::ILineDisplayWindow*>
@@ -2643,9 +2864,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReader;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2668,7 +2889,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::MagneticS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::MagneticStripeReader*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CMagneticStripeReader_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CMagneticStripeReader ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CMagneticStripeReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CMagneticStripeReader ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IMagneticStripeReader*>
@@ -2700,7 +2921,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::MagneticStripeReader*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::MagneticStripeReader*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CMagneticStripeReader_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CMagneticStripeReader ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CMagneticStripeReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CMagneticStripeReader ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IMagneticStripeReader*>
@@ -2716,9 +2937,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class PosPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2741,7 +2962,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::PosPrinte
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::PosPrinter*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CPosPrinter_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CPosPrinter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CPosPrinter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CPosPrinter ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::IPosPrinter*>
@@ -2773,7 +2994,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::PosPrinter*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::PosPrinter*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CPosPrinter_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CPosPrinter ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CPosPrinter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CPosPrinter ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::IPosPrinter*>
@@ -2790,9 +3011,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScannerStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2816,7 +3037,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::BarcodeScanner*,ABI::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::BarcodeScanner*,ABI::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IBarcodeScanner*,ABI::Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs*>
@@ -2834,9 +3055,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawerStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2860,7 +3081,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawer*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawer*,ABI::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::ICashDrawer*,ABI::Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs*>
@@ -2877,9 +3098,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawerCloseAlarm;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2903,7 +3124,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawerCloseAlarm*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawerCloseAlarm*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::ICashDrawerCloseAlarm*,IInspectable*>
@@ -2919,9 +3140,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawerEventSource;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2929,9 +3150,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawerClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2955,7 +3176,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawerEventSource*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawerEventSource*,ABI::Windows::Devices::PointOfService::CashDrawerClosedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::ICashDrawerEventSource*,ABI::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs*>
@@ -2973,9 +3194,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawerOpenedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2999,7 +3220,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawerEventSource*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::CashDrawerEventSource*,ABI::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::ICashDrawerEventSource*,ABI::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs*>
@@ -3017,9 +3238,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScannerDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3043,7 +3264,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs*>
@@ -3061,9 +3282,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScannerErrorOccurredEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3087,7 +3308,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs*>
@@ -3105,9 +3326,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScannerImagePreviewReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3131,7 +3352,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs*>
@@ -3149,9 +3370,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedBarcodeScannerClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3175,7 +3396,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedBarcodeScanner*,ABI::Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs*>
@@ -3209,7 +3430,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedCashDrawer*,IIn
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedCashDrawer*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedCashDrawer*,IInspectable*>
@@ -3226,9 +3447,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedCashDrawerClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3252,7 +3473,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedCashDrawer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedCashDrawer*,ABI::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedCashDrawer*,ABI::Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs*>
@@ -3286,7 +3507,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*,II
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedLineDisplay*,IInspectable*>
@@ -3303,9 +3524,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedLineDisplayClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -3329,7 +3550,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*,ABI::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedLineDisplay*,ABI::Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs*>
@@ -3347,9 +3568,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -3373,7 +3594,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedLineDisplay*,ABI::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedLineDisplay*,ABI::Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs*>
@@ -3391,9 +3612,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedMagneticStripeReaderClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3417,7 +3638,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeR
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs*>
@@ -3435,9 +3656,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderAamvaCardDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3461,7 +3682,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeR
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs*>
@@ -3479,9 +3700,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderBankCardDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3505,7 +3726,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeR
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs*>
@@ -3523,9 +3744,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderErrorOccurredEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3549,7 +3770,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeR
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs*>
@@ -3567,9 +3788,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3593,7 +3814,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeR
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedMagneticStripeReader*,ABI::Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs*>
@@ -3611,9 +3832,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedPosPrinterClosedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3637,7 +3858,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedPosPrinter*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedPosPrinter*,ABI::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedPosPrinter*,ABI::Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs*>
@@ -3655,9 +3876,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class PosPrinterReleaseDeviceRequestedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3681,7 +3902,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedPosPrinter*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::ClaimedPosPrinter*,ABI::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IClaimedPosPrinter*,ABI::Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs*>
@@ -3699,9 +3920,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3725,7 +3946,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::MagneticStripeReader*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::MagneticStripeReader*,ABI::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IMagneticStripeReader*,ABI::Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs*>
@@ -3743,9 +3964,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class PosPrinterStatusUpdatedEventArgs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3769,7 +3990,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::PosPrinter*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::PosPrinter*,ABI::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::IPosPrinter*,ABI::Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs*>
@@ -3800,7 +4021,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -3829,7 +4050,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -3858,7 +4079,7 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
@@ -3887,7 +4108,7 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
@@ -3916,7 +4137,7 @@ IVectorView<UINT32> : IVectorView_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
 #define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
@@ -3946,7 +4167,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_UINT32*> : IAsyncOperationCompl
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_UINT32*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<UINT32>*>
@@ -3976,7 +4197,7 @@ IAsyncOperation<__FIVectorView_1_UINT32*> : IAsyncOperation_impl<__FIVectorView_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_UINT32*> __FIAsyncOperation_1___FIVectorView_1_UINT32_t;
 #define __FIAsyncOperation_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<UINT32>*>
@@ -4005,7 +4226,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -4034,7 +4255,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -4063,7 +4284,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -4092,7 +4313,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -4109,9 +4330,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -4137,7 +4358,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -4169,7 +4390,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -4199,7 +4420,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -4228,7 +4449,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -4258,7 +4479,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -4288,7 +4509,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -4303,8 +4524,8 @@ namespace ABI {
         namespace Foundation {
             struct Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CSize_USE
@@ -4325,7 +4546,7 @@ IIterator<struct ABI::Windows::Foundation::Size> : IIterator_impl<struct ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::Size> __FIIterator_1_Windows__CFoundation__CSize_t;
 #define __FIIterator_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Size>
@@ -4355,7 +4576,7 @@ IIterable<struct ABI::Windows::Foundation::Size> : IIterable_impl<struct ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::Size> __FIIterable_1_Windows__CFoundation__CSize_t;
 #define __FIIterable_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Size>
@@ -4385,7 +4606,7 @@ IVectorView<struct ABI::Windows::Foundation::Size> : IVectorView_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Foundation::Size> __FIVectorView_1_Windows__CFoundation__CSize_t;
 #define __FIVectorView_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CSize ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Size>
@@ -4414,7 +4635,7 @@ IIterator<int> : IIterator_impl<int>
 // correct parameterized interface specialization.
 typedef IIterator<int> __FIIterator_1_int_t;
 #define __FIIterator_1_int ABI::Windows::Foundation::Collections::__FIIterator_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_int ABI::Windows::Foundation::Collections::IIterator<INT32>
@@ -4443,7 +4664,7 @@ IIterable<int> : IIterable_impl<int>
 // correct parameterized interface specialization.
 typedef IIterable<int> __FIIterable_1_int_t;
 #define __FIIterable_1_int ABI::Windows::Foundation::Collections::__FIIterable_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_int ABI::Windows::Foundation::Collections::IIterable<INT32>
@@ -4472,7 +4693,7 @@ IVectorView<int> : IVectorView_impl<int>
 // correct parameterized interface specialization.
 typedef IVectorView<int> __FIVectorView_1_int_t;
 #define __FIVectorView_1_int ABI::Windows::Foundation::Collections::__FIVectorView_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_int ABI::Windows::Foundation::Collections::IVectorView<INT32>
@@ -4501,7 +4722,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -4530,7 +4751,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -4559,7 +4780,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -4577,8 +4798,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -4590,8 +4811,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -4603,8 +4824,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4612,8 +4833,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4621,8 +4842,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4630,8 +4851,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4641,9 +4862,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapFrame;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame_FWD_DEFINED__
@@ -4652,9 +4873,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapFrame;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame ABI::Windows::Graphics::Imaging::IBitmapFrame
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame_FWD_DEFINED__
@@ -4667,8 +4888,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -4676,8 +4897,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -4693,9 +4914,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -4711,9 +4932,9 @@ namespace ABI {
                 
                 typedef enum BarcodeScannerStatus : int BarcodeScannerStatus;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4722,9 +4943,9 @@ namespace ABI {
                 
                 typedef enum BarcodeSymbologyDecodeLengthKind : int BarcodeSymbologyDecodeLengthKind;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4733,9 +4954,9 @@ namespace ABI {
                 
                 typedef enum CashDrawerStatusKind : int CashDrawerStatusKind;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4744,9 +4965,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayCursorType : int LineDisplayCursorType;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4755,9 +4976,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayDescriptorState : int LineDisplayDescriptorState;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4766,9 +4987,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayHorizontalAlignment : int LineDisplayHorizontalAlignment;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4777,9 +4998,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayMarqueeFormat : int LineDisplayMarqueeFormat;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4788,9 +5009,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayPowerStatus : int LineDisplayPowerStatus;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4799,9 +5020,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayScrollDirection : int LineDisplayScrollDirection;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4810,9 +5031,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayTextAttribute : int LineDisplayTextAttribute;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4821,9 +5042,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayTextAttributeGranularity : int LineDisplayTextAttributeGranularity;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4832,9 +5053,9 @@ namespace ABI {
                 
                 typedef enum LineDisplayVerticalAlignment : int LineDisplayVerticalAlignment;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4843,9 +5064,9 @@ namespace ABI {
                 
                 typedef enum MagneticStripeReaderAuthenticationLevel : int MagneticStripeReaderAuthenticationLevel;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4854,9 +5075,9 @@ namespace ABI {
                 
                 typedef enum MagneticStripeReaderAuthenticationProtocol : int MagneticStripeReaderAuthenticationProtocol;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4865,9 +5086,9 @@ namespace ABI {
                 
                 typedef enum MagneticStripeReaderErrorReportingType : int MagneticStripeReaderErrorReportingType;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4876,9 +5097,9 @@ namespace ABI {
                 
                 typedef enum MagneticStripeReaderStatus : int MagneticStripeReaderStatus;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4887,9 +5108,9 @@ namespace ABI {
                 
                 typedef enum MagneticStripeReaderTrackErrorType : int MagneticStripeReaderTrackErrorType;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4898,9 +5119,9 @@ namespace ABI {
                 
                 typedef enum MagneticStripeReaderTrackIds : int MagneticStripeReaderTrackIds;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4909,9 +5130,9 @@ namespace ABI {
                 
                 typedef enum PosConnectionTypes : unsigned int PosConnectionTypes;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4920,9 +5141,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterAlignment : int PosPrinterAlignment;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4931,9 +5152,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterBarcodeTextPosition : int PosPrinterBarcodeTextPosition;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4942,9 +5163,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterCartridgeSensors : unsigned int PosPrinterCartridgeSensors;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4953,9 +5174,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterColorCapabilities : unsigned int PosPrinterColorCapabilities;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4964,9 +5185,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterColorCartridge : int PosPrinterColorCartridge;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4975,9 +5196,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterLineDirection : int PosPrinterLineDirection;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4986,9 +5207,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterLineStyle : int PosPrinterLineStyle;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4997,9 +5218,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterMapMode : int PosPrinterMapMode;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5008,9 +5229,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterMarkFeedCapabilities : unsigned int PosPrinterMarkFeedCapabilities;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5019,9 +5240,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterMarkFeedKind : int PosPrinterMarkFeedKind;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5030,9 +5251,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterPrintSide : int PosPrinterPrintSide;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5041,9 +5262,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterRotation : int PosPrinterRotation;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5052,9 +5273,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterRuledLineCapabilities : unsigned int PosPrinterRuledLineCapabilities;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5063,9 +5284,9 @@ namespace ABI {
                 
                 typedef enum PosPrinterStatusKind : int PosPrinterStatusKind;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5074,9 +5295,9 @@ namespace ABI {
                 
                 typedef enum UnifiedPosErrorReason : int UnifiedPosErrorReason;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5085,9 +5306,9 @@ namespace ABI {
                 
                 typedef enum UnifiedPosErrorSeverity : int UnifiedPosErrorSeverity;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5096,9 +5317,9 @@ namespace ABI {
                 
                 typedef enum UnifiedPosHealthCheckLevel : int UnifiedPosHealthCheckLevel;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5107,9 +5328,29 @@ namespace ABI {
                 
                 typedef enum UnifiedPosPowerReportingType : int UnifiedPosPowerReportingType;
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                
+                typedef struct SizeUInt32 SizeUInt32;
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5212,9 +5453,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScannerCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5225,9 +5466,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScannerReport;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5239,9 +5480,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawerCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5253,9 +5494,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class CashDrawerStatus;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5268,9 +5509,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedJournalPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5284,9 +5525,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedReceiptPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5294,9 +5535,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ClaimedSlipPrinter;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5304,9 +5545,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class JournalPrintJob;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5314,9 +5555,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class JournalPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5325,9 +5566,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5335,9 +5576,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5345,9 +5586,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayCursor;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5355,9 +5596,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayCursorAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5365,9 +5606,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayCustomGlyphs;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5375,9 +5616,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayMarquee;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5385,9 +5626,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class LineDisplayStatisticsCategorySelector;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5401,9 +5642,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5414,9 +5655,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderReport;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5425,9 +5666,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class MagneticStripeReaderTrackData;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5437,10 +5678,30 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class PosPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                class PosPrinterFontProperty;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                class PosPrinterPrintOptions;
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5449,9 +5710,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class PosPrinterStatus;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5460,9 +5721,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ReceiptPrintJob;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5470,9 +5731,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class ReceiptPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5480,9 +5741,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class SlipPrintJob;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5490,9 +5751,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class SlipPrinterCapabilities;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5500,9 +5761,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class UnifiedPosErrorData;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5537,9 +5798,9 @@ namespace ABI {
                     BarcodeScannerStatus_Extended = 4,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5565,9 +5826,9 @@ namespace ABI {
                     BarcodeSymbologyDecodeLengthKind_Range = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -5595,9 +5856,9 @@ namespace ABI {
                     CashDrawerStatusKind_Extended = 4,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5626,9 +5887,9 @@ namespace ABI {
                     LineDisplayCursorType_Other = 5,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5654,9 +5915,9 @@ namespace ABI {
                     LineDisplayDescriptorState_Blink = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5682,9 +5943,9 @@ namespace ABI {
                     LineDisplayHorizontalAlignment_Right = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5710,9 +5971,9 @@ namespace ABI {
                     LineDisplayMarqueeFormat_Place = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5740,9 +6001,9 @@ namespace ABI {
                     LineDisplayPowerStatus_OffOrOffline = 4,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5769,9 +6030,9 @@ namespace ABI {
                     LineDisplayScrollDirection_Right = 3,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -5798,9 +6059,9 @@ namespace ABI {
                     LineDisplayTextAttribute_ReverseBlink = 3,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -5826,9 +6087,9 @@ namespace ABI {
                     LineDisplayTextAttributeGranularity_PerCharacter = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -5854,9 +6115,9 @@ namespace ABI {
                     LineDisplayVerticalAlignment_Bottom = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5882,9 +6143,9 @@ namespace ABI {
                     MagneticStripeReaderAuthenticationLevel_Required = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5909,9 +6170,9 @@ namespace ABI {
                     MagneticStripeReaderAuthenticationProtocol_ChallengeResponse = 1,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5936,9 +6197,9 @@ namespace ABI {
                     MagneticStripeReaderErrorReportingType_TrackLevel = 1,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5964,9 +6225,9 @@ namespace ABI {
                     MagneticStripeReaderStatus_Extended = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5995,9 +6256,9 @@ namespace ABI {
                     MagneticStripeReaderTrackErrorType_Unknown = -1,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6025,9 +6286,9 @@ namespace ABI {
                     MagneticStripeReaderTrackIds_Track4 = 8,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6056,9 +6317,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PosConnectionTypes)
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -6084,9 +6345,9 @@ namespace ABI {
                     PosPrinterAlignment_Right = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6112,9 +6373,9 @@ namespace ABI {
                     PosPrinterBarcodeTextPosition_Below = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6144,9 +6405,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PosPrinterCartridgeSensors)
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6183,9 +6444,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PosPrinterColorCapabilities)
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6219,9 +6480,9 @@ namespace ABI {
                     PosPrinterColorCartridge_Yellow = 10,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6246,9 +6507,9 @@ namespace ABI {
                     PosPrinterLineDirection_Vertical = 1,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6275,9 +6536,9 @@ namespace ABI {
                     PosPrinterLineStyle_Chain = 3,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6304,9 +6565,9 @@ namespace ABI {
                     PosPrinterMapMode_Metric = 3,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6336,9 +6597,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PosPrinterMarkFeedCapabilities)
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6365,9 +6626,9 @@ namespace ABI {
                     PosPrinterMarkFeedKind_ToNextTopOfForm = 3,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6393,9 +6654,9 @@ namespace ABI {
                     PosPrinterPrintSide_Side2 = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6422,9 +6683,9 @@ namespace ABI {
                     PosPrinterRotation_Rotate180 = 3,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6452,9 +6713,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PosPrinterRuledLineCapabilities)
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6482,9 +6743,9 @@ namespace ABI {
                     PosPrinterStatusKind_Extended = 4,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6518,9 +6779,9 @@ namespace ABI {
                     UnifiedPosErrorReason_Extended = 10,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6549,9 +6810,9 @@ namespace ABI {
                     UnifiedPosErrorSeverity_Fatal = 5,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6578,9 +6839,9 @@ namespace ABI {
                     UnifiedPosHealthCheckLevel_Interactive = 3,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6606,10 +6867,37 @@ namespace ABI {
                     UnifiedPosPowerReportingType_Advanced = 2,
                 };
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.Devices.PointOfService.SizeUInt32
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [contract] */
+                struct SizeUInt32
+                {
+                    UINT32 Width;
+                    UINT32 Height;
+                };
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6665,7 +6953,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsProfileSupported(
                         /* [in] */__RPC__in HSTRING profile,
-                        /* [retval, out] */__RPC__out boolean * isSupported
+                        /* [retval, out] */__RPC__out ::boolean * isSupported
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_StatusUpdated(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs * handler,
@@ -6679,9 +6967,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScanner=_uuidof(IBarcodeScanner);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner_INTERFACE_DEFINED__) */
@@ -6720,9 +7008,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScanner2=_uuidof(IBarcodeScanner2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner2_INTERFACE_DEFINED__) */
@@ -6757,22 +7045,22 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::UnifiedPosPowerReportingType * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsReportingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsUpdatingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsImagePreviewSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerCapabilities=_uuidof(IBarcodeScannerCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities_INTERFACE_DEFINED__) */
@@ -6804,16 +7092,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSoftwareTriggerSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerCapabilities1=_uuidof(IBarcodeScannerCapabilities1);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities1;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities1_INTERFACE_DEFINED__) */
@@ -6845,16 +7133,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVideoPreviewSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerCapabilities2=_uuidof(IBarcodeScannerCapabilities2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerCapabilities2_INTERFACE_DEFINED__) */
@@ -6893,9 +7181,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerDataReceivedEventArgs=_uuidof(IBarcodeScannerDataReceivedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerDataReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerDataReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6930,7 +7218,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::IBarcodeScannerReport * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRetriable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ErrorData(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::IUnifiedPosErrorData * * value
@@ -6940,9 +7228,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerErrorOccurredEventArgs=_uuidof(IBarcodeScannerErrorOccurredEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerErrorOccurredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerErrorOccurredEventArgs_INTERFACE_DEFINED__) */
@@ -6974,16 +7262,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Preview(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType * * preview
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerImagePreviewReceivedEventArgs=_uuidof(IBarcodeScannerImagePreviewReceivedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -7028,9 +7316,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerReport=_uuidof(IBarcodeScannerReport);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport_INTERFACE_DEFINED__) */
@@ -7072,9 +7360,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerReportFactory=_uuidof(IBarcodeScannerReportFactory);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReportFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReportFactory_INTERFACE_DEFINED__) */
@@ -7120,9 +7408,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerStatics=_uuidof(IBarcodeScannerStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics_INTERFACE_DEFINED__) */
@@ -7162,9 +7450,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerStatics2=_uuidof(IBarcodeScannerStatics2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatics2_INTERFACE_DEFINED__) */
@@ -7206,9 +7494,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeScannerStatusUpdatedEventArgs=_uuidof(IBarcodeScannerStatusUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatusUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatusUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -7527,9 +7815,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeSymbologiesStatics=_uuidof(IBarcodeSymbologiesStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics_INTERFACE_DEFINED__) */
@@ -7568,9 +7856,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeSymbologiesStatics2=_uuidof(IBarcodeSymbologiesStatics2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologiesStatics2_INTERFACE_DEFINED__) */
@@ -7602,22 +7890,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCheckDigitValidationEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCheckDigitValidationEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCheckDigitValidationSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCheckDigitTransmissionEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCheckDigitTransmissionEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCheckDigitTransmissionSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DecodeLength1(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -7638,16 +7926,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::Devices::PointOfService::BarcodeSymbologyDecodeLengthKind value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDecodeLengthSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBarcodeSymbologyAttributes=_uuidof(IBarcodeSymbologyAttributes);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes_INTERFACE_DEFINED__) */
@@ -7688,7 +7976,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::ICashDrawerStatus * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDrawerOpen(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DrawerEventSource(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::ICashDrawerEventSource * * value
@@ -7716,9 +8004,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawer=_uuidof(ICashDrawer);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer_INTERFACE_DEFINED__) */
@@ -7753,28 +8041,28 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::UnifiedPosPowerReportingType * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsReportingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsUpdatingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatusReportingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatusMultiDrawerDetectSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDrawerOpenSensorAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerCapabilities=_uuidof(ICashDrawerCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCapabilities_INTERFACE_DEFINED__) */
@@ -7844,9 +8132,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerCloseAlarm=_uuidof(ICashDrawerCloseAlarm);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCloseAlarm;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCloseAlarm_INTERFACE_DEFINED__) */
@@ -7896,9 +8184,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerEventSource=_uuidof(ICashDrawerEventSource);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource_INTERFACE_DEFINED__) */
@@ -7927,16 +8215,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CashDrawer(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::ICashDrawer * * drawer
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::ICashDrawer * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerEventSourceEventArgs=_uuidof(ICashDrawerEventSourceEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs_INTERFACE_DEFINED__) */
@@ -7982,9 +8270,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerStatics=_uuidof(ICashDrawerStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics_INTERFACE_DEFINED__) */
@@ -8024,9 +8312,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerStatics2=_uuidof(ICashDrawerStatics2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatics2_INTERFACE_DEFINED__) */
@@ -8068,9 +8356,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerStatus=_uuidof(ICashDrawerStatus);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatus;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatus_INTERFACE_DEFINED__) */
@@ -8109,9 +8397,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICashDrawerStatusUpdatedEventArgs=_uuidof(ICashDrawerStatusUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatusUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatusUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -8126,10 +8414,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerSta
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedBarcodeScanner
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -8150,19 +8434,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDisabledOnDataReceived(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledOnDataReceived(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDecodeDataEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDecodeDataEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EnableAsync(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
@@ -8234,9 +8518,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedBarcodeScanner=_uuidof(IClaimedBarcodeScanner);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner_INTERFACE_DEFINED__) */
@@ -8251,10 +8535,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcod
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedBarcodeScanner
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -8282,9 +8562,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedBarcodeScanner1=_uuidof(IClaimedBarcodeScanner1);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner1;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner1_INTERFACE_DEFINED__) */
@@ -8299,10 +8579,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcod
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedBarcodeScanner
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -8333,9 +8609,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedBarcodeScanner2=_uuidof(IClaimedBarcodeScanner2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner2_INTERFACE_DEFINED__) */
@@ -8371,19 +8647,19 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE HideVideoPreview(void) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsVideoPreviewShownOnEnable(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVideoPreviewShownOnEnable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IClaimedBarcodeScanner3=_uuidof(IClaimedBarcodeScanner3);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner3_INTERFACE_DEFINED__) */
@@ -8426,9 +8702,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedBarcodeScanner4=_uuidof(IClaimedBarcodeScanner4);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner4;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner4_INTERFACE_DEFINED__) */
@@ -8464,9 +8740,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedBarcodeScannerClosedEventArgs=_uuidof(IClaimedBarcodeScannerClosedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScannerClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScannerClosedEventArgs_INTERFACE_DEFINED__) */
@@ -8481,10 +8757,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcod
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedCashDrawer
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -8505,10 +8777,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDrawerOpen(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CloseAlarm(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::ICashDrawerCloseAlarm * * value
@@ -8545,9 +8817,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedCashDrawer=_uuidof(IClaimedCashDrawer);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer_INTERFACE_DEFINED__) */
@@ -8590,9 +8862,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedCashDrawer2=_uuidof(IClaimedCashDrawer2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer2_INTERFACE_DEFINED__) */
@@ -8628,9 +8900,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedCashDrawerClosedEventArgs=_uuidof(IClaimedCashDrawerClosedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawerClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawerClosedEventArgs_INTERFACE_DEFINED__) */
@@ -8645,10 +8917,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDr
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedJournalPrinter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
  *
  */
@@ -8673,9 +8941,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedJournalPrinter=_uuidof(IClaimedJournalPrinter);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedJournalPrinter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedJournalPrinter_INTERFACE_DEFINED__) */
@@ -8690,10 +8958,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedJourna
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedLineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -8747,9 +9011,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedLineDisplay=_uuidof(IClaimedLineDisplay);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay_INTERFACE_DEFINED__) */
@@ -8764,10 +9028,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDi
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedLineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -8856,9 +9116,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedLineDisplay2=_uuidof(IClaimedLineDisplay2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay2_INTERFACE_DEFINED__) */
@@ -8901,9 +9161,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedLineDisplay3=_uuidof(IClaimedLineDisplay3);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay3_INTERFACE_DEFINED__) */
@@ -8939,9 +9199,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedLineDisplayClosedEventArgs=_uuidof(IClaimedLineDisplayClosedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayClosedEventArgs_INTERFACE_DEFINED__) */
@@ -8988,9 +9248,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedLineDisplayStatics=_uuidof(IClaimedLineDisplayStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayStatics_INTERFACE_DEFINED__) */
@@ -9005,10 +9265,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDi
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedMagneticStripeReader
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -9029,22 +9285,22 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDisabledOnDataReceived(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledOnDataReceived(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDecodeDataEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDecodeDataEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDeviceAuthenticated(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DataEncryptionAlgorithm(
                         /* [in] */UINT32 value
@@ -9059,10 +9315,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::MagneticStripeReaderTrackIds * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsTransmitSentinelsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTransmitSentinelsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EnableAsync(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
@@ -9140,9 +9396,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedMagneticStripeReader=_uuidof(IClaimedMagneticStripeReader);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader_INTERFACE_DEFINED__) */
@@ -9185,9 +9441,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedMagneticStripeReader2=_uuidof(IClaimedMagneticStripeReader2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader2_INTERFACE_DEFINED__) */
@@ -9223,9 +9479,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedMagneticStripeReaderClosedEventArgs=_uuidof(IClaimedMagneticStripeReaderClosedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReaderClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReaderClosedEventArgs_INTERFACE_DEFINED__) */
@@ -9240,10 +9496,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagnet
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedPosPrinter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -9264,7 +9516,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CharacterSet(
                         /* [in] */UINT32 value
@@ -9273,13 +9525,13 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCoverOpen(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCharacterSetMappingEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCharacterSetMappingEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MapMode(
                         /* [in] */ABI::Windows::Devices::PointOfService::PosPrinterMapMode value
@@ -9325,9 +9577,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedPosPrinter=_uuidof(IClaimedPosPrinter);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter_INTERFACE_DEFINED__) */
@@ -9370,9 +9622,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedPosPrinter2=_uuidof(IClaimedPosPrinter2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter2_INTERFACE_DEFINED__) */
@@ -9408,9 +9660,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedPosPrinterClosedEventArgs=_uuidof(IClaimedPosPrinterClosedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinterClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinterClosedEventArgs_INTERFACE_DEFINED__) */
@@ -9425,10 +9677,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPri
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedReceiptPrinter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
  *
  */
@@ -9468,9 +9716,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedReceiptPrinter=_uuidof(IClaimedReceiptPrinter);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedReceiptPrinter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedReceiptPrinter_INTERFACE_DEFINED__) */
@@ -9485,10 +9733,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedReceip
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedSlipPrinter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
  *
  */
@@ -9547,9 +9791,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClaimedSlipPrinter=_uuidof(IClaimedSlipPrinter);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedSlipPrinter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedSlipPrinter_INTERFACE_DEFINED__) */
@@ -9599,13 +9843,13 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsLetterQuality(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLetterQuality(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPaperNearEnd(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ColorCartridge(
                         /* [in] */ABI::Windows::Devices::PointOfService::PosPrinterColorCartridge value
@@ -9614,35 +9858,35 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::PosPrinterColorCartridge * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCoverOpen(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCartridgeRemoved(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCartridgeEmpty(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHeadCleaning(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPaperEmpty(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadyToPrint(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ValidateData(
                         /* [in] */__RPC__in HSTRING data,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ICommonClaimedPosPrinterStation=_uuidof(ICommonClaimedPosPrinterStation);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICommonClaimedPosPrinterStation;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICommonClaimedPosPrinterStation_INTERFACE_DEFINED__) */
@@ -9671,10 +9915,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrinterPresent(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDualColorSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ColorCartridgeCapabilities(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::PosPrinterColorCapabilities * value
@@ -9683,28 +9927,28 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::PosPrinterCartridgeSensors * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBoldSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsItalicSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsUnderlineSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDoubleHighPrintSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDoubleWidePrintSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDoubleHighDoubleWidePrintSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPaperEmptySensorSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPaperNearEndSensorSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedCharactersPerLine(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_UINT32 * * value
@@ -9714,9 +9958,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommonPosPrintStationCapabilities=_uuidof(ICommonPosPrintStationCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICommonPosPrintStationCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICommonPosPrintStationCapabilities_INTERFACE_DEFINED__) */
@@ -9749,22 +9993,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBarcodeSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBitmapSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLeft90RotationSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRight90RotationSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Is180RotationSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrintAreaSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RuledLineCapabilities(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::PosPrinterRuledLineCapabilities * value
@@ -9780,13 +10024,61 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommonReceiptSlipCapabilities=_uuidof(ICommonReceiptSlipCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICommonReceiptSlipCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CICommonReceiptSlipCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IJournalPrintJob
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.JournalPrintJob
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IJournalPrintJob[] = L"Windows.Devices.PointOfService.IJournalPrintJob";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("9F4F2864-F3F0-55D0-8C39-74CC91783EED"), exclusiveto, contract] */
+                MIDL_INTERFACE("9F4F2864-F3F0-55D0-8C39-74CC91783EED")
+                IJournalPrintJob : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE Print(
+                        /* [in] */__RPC__in HSTRING data,
+                        /* [in] */__RPC__in_opt ABI::Windows::Devices::PointOfService::IPosPrinterPrintOptions * printOptions
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FeedPaperByLine(
+                        /* [in] */INT32 lineCount
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FeedPaperByMapModeUnit(
+                        /* [in] */INT32 distance
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IJournalPrintJob=_uuidof(IJournalPrintJob);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9797,10 +10089,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICommonReceipt
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.JournalPrinterCapabilities
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
  *
  *
  */
@@ -9822,13 +10110,69 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJournalPrinterCapabilities=_uuidof(IJournalPrinterCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IJournalPrinterCapabilities2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.JournalPrinterCapabilities
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IJournalPrinterCapabilities2[] = L"Windows.Devices.PointOfService.IJournalPrinterCapabilities2";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("03B0B645-33B8-533B-BAAA-A4389283AB0A"), exclusiveto, contract] */
+                MIDL_INTERFACE("03B0B645-33B8-533B-BAAA-A4389283AB0A")
+                IJournalPrinterCapabilities2 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReverseVideoSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStrikethroughSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSuperscriptSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSubscriptSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReversePaperFeedByLineSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReversePaperFeedByMapModeUnitSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IJournalPrinterCapabilities2=_uuidof(IJournalPrinterCapabilities2);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9839,10 +10183,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinte
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -9888,9 +10228,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplay=_uuidof(ILineDisplay);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay_INTERFACE_DEFINED__) */
@@ -9905,10 +10245,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay;
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -9933,9 +10269,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplay2=_uuidof(ILineDisplay2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay2_INTERFACE_DEFINED__) */
@@ -9967,10 +10303,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPowerNotifyEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPowerNotifyEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Brightness(
                         /* [retval, out] */__RPC__out INT32 * value
@@ -9997,10 +10333,10 @@ namespace ABI {
                         /* [in] */INT32 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCharacterSetMappingEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCharacterSetMappingEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentWindow(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::ILineDisplayWindow * * value
@@ -10013,9 +10349,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayAttributes=_uuidof(ILineDisplayAttributes);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayAttributes;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayAttributes_INTERFACE_DEFINED__) */
@@ -10047,28 +10383,28 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsReportingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsUpdatingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerReportingType(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::UnifiedPosPowerReportingType * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanChangeScreenSize(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanDisplayBitmaps(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanReadCharacterAtCursor(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanMapCharacterSets(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanDisplayCustomGlyphs(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanReverse(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity * value
@@ -10077,22 +10413,22 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanChangeBlinkRate(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBrightnessSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCursorSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHorizontalMarqueeSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVerticalMarqueeSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInterCharacterWaitSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedDescriptors(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -10105,9 +10441,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayCapabilities=_uuidof(ILineDisplayCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCapabilities_INTERFACE_DEFINED__) */
@@ -10139,25 +10475,25 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanCustomize(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBlinkSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBlockSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHalfBlockSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsUnderlineSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReverseSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOtherSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetAttributes(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::ILineDisplayCursorAttributes * * result
@@ -10171,9 +10507,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayCursor=_uuidof(ILineDisplayCursor);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursor_INTERFACE_DEFINED__) */
@@ -10205,10 +10541,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBlinkEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsBlinkEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CursorType(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::LineDisplayCursorType * value
@@ -10217,10 +10553,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::Devices::PointOfService::LineDisplayCursorType value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAutoAdvanceEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAutoAdvanceEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Position(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Point * value
@@ -10233,9 +10569,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayCursorAttributes=_uuidof(ILineDisplayCursorAttributes);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursorAttributes;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCursorAttributes_INTERFACE_DEFINED__) */
@@ -10282,9 +10618,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayCustomGlyphs=_uuidof(ILineDisplayCustomGlyphs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCustomGlyphs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayCustomGlyphs_INTERFACE_DEFINED__) */
@@ -10345,9 +10681,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayMarquee=_uuidof(ILineDisplayMarquee);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayMarquee;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayMarquee_INTERFACE_DEFINED__) */
@@ -10397,9 +10733,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayStatics=_uuidof(ILineDisplayStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics_INTERFACE_DEFINED__) */
@@ -10438,9 +10774,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayStatics2=_uuidof(ILineDisplayStatics2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatics2_INTERFACE_DEFINED__) */
@@ -10485,9 +10821,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayStatisticsCategorySelector=_uuidof(ILineDisplayStatisticsCategorySelector);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatisticsCategorySelector;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatisticsCategorySelector_INTERFACE_DEFINED__) */
@@ -10526,9 +10862,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayStatusUpdatedEventArgs=_uuidof(ILineDisplayStatusUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatusUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatusUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -10560,7 +10896,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EscapeSequence(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * escapeSequence
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryDeleteAsync(
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
@@ -10570,9 +10906,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayStoredBitmap=_uuidof(ILineDisplayStoredBitmap);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap_INTERFACE_DEFINED__) */
@@ -10587,10 +10923,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplaySt
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplayWindow
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -10647,9 +10979,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayWindow=_uuidof(ILineDisplayWindow);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow_INTERFACE_DEFINED__) */
@@ -10664,10 +10996,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWi
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplayWindow
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -10730,9 +11058,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILineDisplayWindow2=_uuidof(ILineDisplayWindow2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWindow2_INTERFACE_DEFINED__) */
@@ -10802,9 +11130,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReader=_uuidof(IMagneticStripeReader);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReader_INTERFACE_DEFINED__) */
@@ -10897,9 +11225,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderAamvaCardDataReceivedEventArgs=_uuidof(IMagneticStripeReaderAamvaCardDataReceivedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderAamvaCardDataReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderAamvaCardDataReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -10962,9 +11290,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderBankCardDataReceivedEventArgs=_uuidof(IMagneticStripeReaderBankCardDataReceivedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderBankCardDataReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderBankCardDataReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -11005,37 +11333,37 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::MagneticStripeReaderAuthenticationLevel * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIsoSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsJisOneSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsJisTwoSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerReportingType(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::UnifiedPosPowerReportingType * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsReportingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsUpdatingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTrackDataMaskingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTransmitSentinelsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderCapabilities=_uuidof(IMagneticStripeReaderCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCapabilities_INTERFACE_DEFINED__) */
@@ -11083,9 +11411,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderCardTypesStatics=_uuidof(IMagneticStripeReaderCardTypesStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCardTypesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderCardTypesStatics_INTERFACE_DEFINED__) */
@@ -11130,9 +11458,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderEncryptionAlgorithmsStatics=_uuidof(IMagneticStripeReaderEncryptionAlgorithmsStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderEncryptionAlgorithmsStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderEncryptionAlgorithmsStatics_INTERFACE_DEFINED__) */
@@ -11186,9 +11514,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderErrorOccurredEventArgs=_uuidof(IMagneticStripeReaderErrorOccurredEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderErrorOccurredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderErrorOccurredEventArgs_INTERFACE_DEFINED__) */
@@ -11251,9 +11579,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderReport=_uuidof(IMagneticStripeReaderReport);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderReport_INTERFACE_DEFINED__) */
@@ -11299,9 +11627,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderStatics=_uuidof(IMagneticStripeReaderStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics_INTERFACE_DEFINED__) */
@@ -11341,9 +11669,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderStatics2=_uuidof(IMagneticStripeReaderStatics2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatics2_INTERFACE_DEFINED__) */
@@ -11385,9 +11713,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderStatusUpdatedEventArgs=_uuidof(IMagneticStripeReaderStatusUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatusUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatusUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -11432,9 +11760,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderTrackData=_uuidof(IMagneticStripeReaderTrackData);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderTrackData;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderTrackData_INTERFACE_DEFINED__) */
@@ -11473,9 +11801,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs=_uuidof(IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -11544,13 +11872,58 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinter=_uuidof(IPosPrinter);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IPosPrinter2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.PosPrinter
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IPosPrinter2[] = L"Windows.Devices.PointOfService.IPosPrinter2";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("248475E8-8B98-5517-8E48-760E86F68987"), exclusiveto, contract] */
+                MIDL_INTERFACE("248475E8-8B98-5517-8E48-760E86F68987")
+                IPosPrinter2 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedBarcodeSymbologies(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_UINT32 * * value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE GetFontProperty(
+                        /* [in] */__RPC__in HSTRING typeface,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::IPosPrinterFontProperty * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IPosPrinter2=_uuidof(IPosPrinter2);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11581,22 +11954,22 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::UnifiedPosPowerReportingType * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsReportingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStatisticsUpdatingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DefaultCharacterSet(
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasCoverSensor(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanMapCharacterSet(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTransactionSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Receipt(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::IReceiptPrinterCapabilities * * value
@@ -11612,9 +11985,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterCapabilities=_uuidof(IPosPrinterCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities_INTERFACE_DEFINED__) */
@@ -11659,13 +12032,60 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterCharacterSetIdsStatics=_uuidof(IPosPrinterCharacterSetIdsStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCharacterSetIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCharacterSetIdsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IPosPrinterFontProperty
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.PosPrinterFontProperty
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IPosPrinterFontProperty[] = L"Windows.Devices.PointOfService.IPosPrinterFontProperty";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("A7F4E93A-F8AC-5F04-84D2-29B16D8A633C"), exclusiveto, contract] */
+                MIDL_INTERFACE("A7F4E93A-F8AC-5F04-84D2-29B16D8A633C")
+                IPosPrinterFontProperty : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TypeFace(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsScalableToAnySize(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CharacterSizes(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IPosPrinterFontProperty=_uuidof(IPosPrinterFontProperty);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11704,13 +12124,129 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterJob=_uuidof(IPosPrinterJob);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IPosPrinterPrintOptions
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.PosPrinterPrintOptions
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IPosPrinterPrintOptions[] = L"Windows.Devices.PointOfService.IPosPrinterPrintOptions";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("0A2E16FD-1D02-5A58-9D59-BFCDE76FDE86"), exclusiveto, contract] */
+                MIDL_INTERFACE("0A2E16FD-1D02-5A58-9D59-BFCDE76FDE86")
+                IPosPrinterPrintOptions : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TypeFace(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TypeFace(
+                        /* [in] */__RPC__in HSTRING value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CharacterHeight(
+                        /* [retval, out] */__RPC__out UINT32 * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CharacterHeight(
+                        /* [in] */UINT32 value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Bold(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Bold(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Italic(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Italic(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Underline(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Underline(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ReverseVideo(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ReverseVideo(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Strikethrough(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Strikethrough(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Superscript(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Superscript(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Subscript(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Subscript(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DoubleWide(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DoubleWide(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DoubleHigh(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DoubleHigh(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Alignment(
+                        /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::PosPrinterAlignment * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Alignment(
+                        /* [in] */ABI::Windows::Devices::PointOfService::PosPrinterAlignment value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CharacterSet(
+                        /* [retval, out] */__RPC__out UINT32 * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CharacterSet(
+                        /* [in] */UINT32 value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IPosPrinterPrintOptions=_uuidof(IPosPrinterPrintOptions);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11742,9 +12278,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterReleaseDeviceRequestedEventArgs=_uuidof(IPosPrinterReleaseDeviceRequestedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -11790,9 +12326,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterStatics=_uuidof(IPosPrinterStatics);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics_INTERFACE_DEFINED__) */
@@ -11832,9 +12368,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterStatics2=_uuidof(IPosPrinterStatics2);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatics2_INTERFACE_DEFINED__) */
@@ -11876,9 +12412,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterStatus=_uuidof(IPosPrinterStatus);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatus;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatus_INTERFACE_DEFINED__) */
@@ -11917,9 +12453,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPosPrinterStatusUpdatedEventArgs=_uuidof(IPosPrinterStatusUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatusUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatusUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -11956,7 +12492,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetPrintRotation(
                         /* [in] */ABI::Windows::Devices::PointOfService::PosPrinterRotation value,
-                        /* [in] */boolean includeBitmaps
+                        /* [in] */::boolean includeBitmaps
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetPrintArea(
                         /* [in] */ABI::Windows::Foundation::Rect value
@@ -12032,9 +12568,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IReceiptOrSlipJob=_uuidof(IReceiptOrSlipJob);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptOrSlipJob;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptOrSlipJob_INTERFACE_DEFINED__) */
@@ -12049,11 +12585,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptOrSlip
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrintJob
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.IReceiptOrSlipJob
- *     Windows.Devices.PointOfService.IPosPrinterJob
  *
  *
  */
@@ -12082,13 +12613,62 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IReceiptPrintJob=_uuidof(IReceiptPrintJob);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IReceiptPrintJob2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrintJob
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IReceiptPrintJob2[] = L"Windows.Devices.PointOfService.IReceiptPrintJob2";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("0CBC12E3-9E29-5179-BCD8-1811D3B9A10E"), exclusiveto, contract] */
+                MIDL_INTERFACE("0CBC12E3-9E29-5179-BCD8-1811D3B9A10E")
+                IReceiptPrintJob2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE StampPaper(void) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE Print(
+                        /* [in] */__RPC__in HSTRING data,
+                        /* [in] */__RPC__in_opt ABI::Windows::Devices::PointOfService::IPosPrinterPrintOptions * printOptions
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FeedPaperByLine(
+                        /* [in] */INT32 lineCount
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FeedPaperByMapModeUnit(
+                        /* [in] */INT32 distance
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IReceiptPrintJob2=_uuidof(IReceiptPrintJob2);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -12099,11 +12679,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJ
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrinterCapabilities
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
- *     Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
  *
  *
  */
@@ -12121,10 +12696,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanCutPaper(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStampSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MarkFeedCapabilities(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::PointOfService::PosPrinterMarkFeedCapabilities * value
@@ -12134,13 +12709,117 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IReceiptPrinterCapabilities=_uuidof(IReceiptPrinterCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IReceiptPrinterCapabilities2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrinterCapabilities
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2[] = L"Windows.Devices.PointOfService.IReceiptPrinterCapabilities2";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("20030638-8A2C-55AC-9A7B-7576D8869E99"), exclusiveto, contract] */
+                MIDL_INTERFACE("20030638-8A2C-55AC-9A7B-7576D8869E99")
+                IReceiptPrinterCapabilities2 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReverseVideoSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStrikethroughSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSuperscriptSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSubscriptSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReversePaperFeedByLineSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReversePaperFeedByMapModeUnitSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IReceiptPrinterCapabilities2=_uuidof(IReceiptPrinterCapabilities2);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.ISlipPrintJob
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.SlipPrintJob
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_ISlipPrintJob[] = L"Windows.Devices.PointOfService.ISlipPrintJob";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("5D88F95D-6131-5A4B-B7D5-8EF2DA7B4165"), exclusiveto, contract] */
+                MIDL_INTERFACE("5D88F95D-6131-5A4B-B7D5-8EF2DA7B4165")
+                ISlipPrintJob : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE Print(
+                        /* [in] */__RPC__in HSTRING data,
+                        /* [in] */__RPC__in_opt ABI::Windows::Devices::PointOfService::IPosPrinterPrintOptions * printOptions
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FeedPaperByLine(
+                        /* [in] */INT32 lineCount
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FeedPaperByMapModeUnit(
+                        /* [in] */INT32 distance
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ISlipPrintJob=_uuidof(ISlipPrintJob);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -12151,11 +12830,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinte
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.SlipPrinterCapabilities
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
- *     Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
  *
  *
  */
@@ -12173,23 +12847,79 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFullLengthSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBothSidesPrintingSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISlipPrinterCapabilities=_uuidof(ISlipPrinterCapabilities);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.ISlipPrinterCapabilities2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.SlipPrinterCapabilities
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_ISlipPrinterCapabilities2[] = L"Windows.Devices.PointOfService.ISlipPrinterCapabilities2";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace PointOfService {
+                /* [object, uuid("6FF89671-2D1A-5000-87C2-B0851BFDF07E"), exclusiveto, contract] */
+                MIDL_INTERFACE("6FF89671-2D1A-5000-87C2-B0851BFDF07E")
+                ISlipPrinterCapabilities2 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReverseVideoSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStrikethroughSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSuperscriptSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSubscriptSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReversePaperFeedByLineSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReversePaperFeedByMapModeUnitSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ISlipPrinterCapabilities2=_uuidof(ISlipPrinterCapabilities2);
+                
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -12233,9 +12963,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUnifiedPosErrorData=_uuidof(IUnifiedPosErrorData);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_INTERFACE_DEFINED__) */
@@ -12278,9 +13008,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUnifiedPosErrorDataFactory=_uuidof(IUnifiedPosErrorDataFactory);
                 
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorDataFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorDataFactory_INTERFACE_DEFINED__) */
@@ -12420,6 +13150,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IBarcodeScannerReport ** Default Interface **
  *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12488,8 +13220,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IBarcodeSymbologyAttributes ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12541,8 +13271,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerCapabilities ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12564,8 +13292,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerCloseAlarm ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12589,8 +13315,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12612,8 +13336,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerEventSource ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12637,8 +13359,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12660,8 +13380,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerStatus ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12685,8 +13403,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerStatusUpdatedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12708,13 +13424,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner1
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner2
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner3
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner4
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12738,8 +13452,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedBarcodeScannerClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12761,10 +13473,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedCashDrawer ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedCashDrawer2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12788,8 +13498,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedCashDrawerClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12812,8 +13520,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedJournalPrinter ** Default Interface **
  *    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12839,9 +13545,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedLineDisplay ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedLineDisplay2
  *    Windows.Devices.PointOfService.IClaimedLineDisplay3
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -12867,8 +13573,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedLineDisplayClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12890,10 +13594,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedMagneticStripeReader ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedMagneticStripeReader2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12917,8 +13619,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedMagneticStripeReaderClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -12940,10 +13640,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedPosPrinter ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedPosPrinter2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12966,8 +13664,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedPosPrinterClosedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12992,8 +13688,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.IClaimedReceiptPrinter ** Default Interface **
  *    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -13017,8 +13711,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.IClaimedSlipPrinter ** Default Interface **
  *    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -13039,9 +13731,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.IJournalPrintJob
  *    Windows.Devices.PointOfService.IPosPrinterJob ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13064,9 +13755,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IJournalPrinterCapabilities ** Default Interface **
+ *    Windows.Devices.PointOfService.IJournalPrinterCapabilities2
  *    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13093,8 +13783,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplay ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.ILineDisplay2
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -13120,8 +13810,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayAttributes ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -13143,8 +13831,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCapabilities ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13168,8 +13854,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCursor ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -13191,8 +13875,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCursorAttributes ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13216,8 +13898,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCustomGlyphs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -13239,8 +13919,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayMarquee ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13264,8 +13942,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayStatisticsCategorySelector ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -13287,8 +13963,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayStatusUpdatedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13312,8 +13986,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayStoredBitmap ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -13335,10 +14007,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayWindow ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.ILineDisplayWindow2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13616,6 +14286,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IPosPrinter ** Default Interface **
+ *    Windows.Devices.PointOfService.IPosPrinter2
  *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -13675,6 +14346,55 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_PointOfService_PosPrinterCharacterSetIds[] = L"Windows.Devices.PointOfService.PosPrinterCharacterSetIds";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Devices.PointOfService.PosPrinterFontProperty
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.IPosPrinterFontProperty ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterFontProperty_DEFINED
+#define RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterFontProperty_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_PointOfService_PosPrinterFontProperty[] = L"Windows.Devices.PointOfService.PosPrinterFontProperty";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Devices.PointOfService.PosPrinterPrintOptions
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.IPosPrinterPrintOptions ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterPrintOptions_DEFINED
+#define RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterPrintOptions_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_PointOfService_PosPrinterPrintOptions[] = L"Windows.Devices.PointOfService.PosPrinterPrintOptions";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -13752,10 +14472,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IReceiptPrintJob ** Default Interface **
+ *    Windows.Devices.PointOfService.IReceiptPrintJob2
  *    Windows.Devices.PointOfService.IReceiptOrSlipJob
  *    Windows.Devices.PointOfService.IPosPrinterJob
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13778,10 +14497,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IReceiptPrinterCapabilities ** Default Interface **
+ *    Windows.Devices.PointOfService.IReceiptPrinterCapabilities2
  *    Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
  *    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13803,10 +14521,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.ISlipPrintJob
  *    Windows.Devices.PointOfService.IReceiptOrSlipJob ** Default Interface **
  *    Windows.Devices.PointOfService.IPosPrinterJob
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13829,10 +14546,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ISlipPrinterCapabilities ** Default Interface **
+ *    Windows.Devices.PointOfService.ISlipPrinterCapabilities2
  *    Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
  *    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13858,6 +14574,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IUnifiedPosErrorData ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -14181,11 +14899,23 @@ typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CICommonReceiptSlipC
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CICommonReceiptSlipCapabilities_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities;
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay_FWD_DEFINED__
@@ -14361,6 +15091,12 @@ typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter __x_ABI
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCapabilities;
@@ -14373,11 +15109,23 @@ typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCharacte
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCharacterSetIdsStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob;
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs_FWD_DEFINED__
@@ -14421,17 +15169,41 @@ typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob __
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities;
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities;
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2;
+
+#endif // ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
@@ -14606,6 +15378,165 @@ interface __FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation
 #endif // ____FIIterable_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_INTERFACE_DEFINED__
 
 
+struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32;
+
+#if !defined(____FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32;
+
+typedef struct __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32 *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32 *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl;
+
+interface __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32;
+
+typedef  struct __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CPointOfService__CSizeUInt32 **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl;
+
+interface __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__
+
+
 
 #if !defined(____FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_INTERFACE_DEFINED__
@@ -14713,6 +15644,115 @@ interface __FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotati
 
 
 #endif // ____FIVectorView_1_Windows__CDevices__CPointOfService__CPosPrinterRotation_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32;
+
+typedef struct __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32 *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+            /* [in] */ struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32 item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32 *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl;
+
+interface __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32Vtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32_INTERFACE_DEFINED__
 
 
 
@@ -16435,7 +17475,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarc
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatusUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerStatusUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerStatusUpdatedEventArgsVtbl;
 
@@ -16488,7 +17528,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCash
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatusUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerStatusUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawer_Windows__CDevices__CPointOfService__CCashDrawerStatusUpdatedEventArgsVtbl;
 
@@ -16540,7 +17580,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCash
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCloseAlarm * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerCloseAlarm * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerCloseAlarm_IInspectableVtbl;
 
@@ -16592,7 +17632,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCash
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerClosedEventArgsVtbl;
 
@@ -16645,7 +17685,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCash
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CCashDrawerEventSource_Windows__CDevices__CPointOfService__CCashDrawerOpenedEventArgsVtbl;
 
@@ -16698,7 +17738,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerDataReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerDataReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerDataReceivedEventArgsVtbl;
 
@@ -16751,7 +17791,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerErrorOccurredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerErrorOccurredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerErrorOccurredEventArgsVtbl;
 
@@ -16804,7 +17844,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CBarcodeScannerImagePreviewReceivedEventArgsVtbl;
 
@@ -16857,7 +17897,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScannerClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScannerClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedBarcodeScanner_Windows__CDevices__CPointOfService__CClaimedBarcodeScannerClosedEventArgsVtbl;
 
@@ -16909,7 +17949,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_IInspectableVtbl;
 
@@ -16961,7 +18001,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawerClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawerClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedCashDrawer_Windows__CDevices__CPointOfService__CClaimedCashDrawerClosedEventArgsVtbl;
 
@@ -17013,7 +18053,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_IInspectableVtbl;
 
@@ -17065,7 +18105,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplayClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CClaimedLineDisplayClosedEventArgsVtbl;
 
@@ -17118,7 +18158,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatusUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDisplay * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStatusUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedLineDisplay_Windows__CDevices__CPointOfService__CLineDisplayStatusUpdatedEventArgsVtbl;
 
@@ -17171,7 +18211,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReaderClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReaderClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReaderClosedEventArgsVtbl;
 
@@ -17224,7 +18264,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderAamvaCardDataReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderAamvaCardDataReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderAamvaCardDataReceivedEventArgsVtbl;
 
@@ -17277,7 +18317,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderBankCardDataReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderBankCardDataReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderBankCardDataReceivedEventArgsVtbl;
 
@@ -17330,7 +18370,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderErrorOccurredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderErrorOccurredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderErrorOccurredEventArgsVtbl;
 
@@ -17383,7 +18423,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderVendorSpecificCardDataReceivedEventArgsVtbl;
 
@@ -17436,7 +18476,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinterClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinterClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CClaimedPosPrinterClosedEventArgsVtbl;
 
@@ -17489,7 +18529,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterReleaseDeviceRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CClaimedPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterReleaseDeviceRequestedEventArgsVtbl;
 
@@ -17542,7 +18582,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagn
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatusUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIMagneticStripeReaderStatusUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CMagneticStripeReader_Windows__CDevices__CPointOfService__CMagneticStripeReaderStatusUpdatedEventArgsVtbl;
 
@@ -17595,7 +18635,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatusUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterStatusUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CPosPrinter_Windows__CDevices__CPointOfService__CPosPrinterStatusUpdatedEventArgsVtbl;
 
@@ -17761,12 +18801,12 @@ typedef struct __FIIterator_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out int *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -17928,7 +18968,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT32 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out int *item);
+                                         /* [retval][out] */ __RPC__out unsigned int *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT32 * This,
@@ -17936,7 +18976,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ int item,
+            /* [in] */ unsigned int item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -17944,7 +18984,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
                                                __RPC__in __FIVectorView_1_UINT32 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -19433,7 +20473,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 
@@ -19710,6 +20750,20 @@ typedef enum __x_ABI_CWindows_CDevices_CPointOfService_CUnifiedPosHealthCheckLev
 
 
 typedef enum __x_ABI_CWindows_CDevices_CPointOfService_CUnifiedPosPowerReportingType __x_ABI_CWindows_CDevices_CPointOfService_CUnifiedPosPowerReportingType;
+
+
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32 __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20674,6 +21728,25 @@ enum __x_ABI_CWindows_CDevices_CPointOfService_CUnifiedPosPowerReportingType
 
 /*
  *
+ * Struct Windows.Devices.PointOfService.SizeUInt32
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+/* [contract] */
+struct __x_ABI_CWindows_CDevices_CPointOfService_CSizeUInt32
+{
+    UINT32 Width;
+    UINT32 Height;
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.PointOfService.IBarcodeScanner
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -21484,7 +22557,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Preview )(
         __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType * * preview
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType * * value
         );
     END_INTERFACE
     
@@ -21514,8 +22587,8 @@ interface __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreview
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs_get_Preview(This,preview) \
-    ( (This)->lpVtbl->get_Preview(This,preview) )
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerImagePreviewReceivedEventArgs_get_Preview(This,value) \
+    ( (This)->lpVtbl->get_Preview(This,value) )
 
 
 #endif /* COBJMACROS */
@@ -23661,7 +24734,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CashDrawer )(
         __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer * * drawer
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawer * * value
         );
     END_INTERFACE
     
@@ -23691,8 +24764,8 @@ interface __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEvent
 #define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs_get_CashDrawer(This,drawer) \
-    ( (This)->lpVtbl->get_CashDrawer(This,drawer) )
+#define __x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerEventSourceEventArgs_get_CashDrawer(This,value) \
+    ( (This)->lpVtbl->get_CashDrawer(This,value) )
 
 
 #endif /* COBJMACROS */
@@ -24108,10 +25181,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICashDrawerSta
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedBarcodeScanner
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner_INTERFACE_DEFINED__)
@@ -24382,10 +25451,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcod
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedBarcodeScanner
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcodeScanner1_INTERFACE_DEFINED__)
@@ -24484,10 +25549,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcod
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedBarcodeScanner
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -24893,10 +25954,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedBarcod
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedCashDrawer
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDrawer_INTERFACE_DEFINED__)
@@ -25257,10 +26314,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedCashDr
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedJournalPrinter
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedJournalPrinter_INTERFACE_DEFINED__)
@@ -25352,10 +26405,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedJourna
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedLineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -25519,10 +26568,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDi
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedLineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -26042,10 +27087,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedLineDi
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedMagneticStripeReader
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagneticStripeReader_INTERFACE_DEFINED__)
@@ -26562,10 +27603,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedMagnet
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedPosPrinter
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPrinter_INTERFACE_DEFINED__)
@@ -26975,10 +28012,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedPosPri
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedReceiptPrinter
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIClaimedReceiptPrinter_INTERFACE_DEFINED__)
@@ -27105,10 +28138,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIClaimedReceip
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ClaimedSlipPrinter
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
  *
  */
@@ -27821,16 +28850,120 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CICommonReceipt
 
 /*
  *
+ * Interface Windows.Devices.PointOfService.IJournalPrintJob
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.JournalPrintJob
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IJournalPrintJob[] = L"Windows.Devices.PointOfService.IJournalPrintJob";
+/* [object, uuid("9F4F2864-F3F0-55D0-8C39-74CC91783EED"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJobVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *Print )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This,
+        /* [in] */__RPC__in HSTRING data,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * printOptions
+        );
+    HRESULT ( STDMETHODCALLTYPE *FeedPaperByLine )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This,
+        /* [in] */INT32 lineCount
+        );
+    HRESULT ( STDMETHODCALLTYPE *FeedPaperByMapModeUnit )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob * This,
+        /* [in] */INT32 distance
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJobVtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJobVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_Print(This,data,printOptions) \
+    ( (This)->lpVtbl->Print(This,data,printOptions) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FeedPaperByLine(This,lineCount) \
+    ( (This)->lpVtbl->FeedPaperByLine(This,lineCount) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_FeedPaperByMapModeUnit(This,distance) \
+    ( (This)->lpVtbl->FeedPaperByMapModeUnit(This,distance) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrintJob_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.PointOfService.IJournalPrinterCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.JournalPrinterCapabilities
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
  *
  *
  */
@@ -27911,16 +29044,140 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinte
 
 /*
  *
+ * Interface Windows.Devices.PointOfService.IJournalPrinterCapabilities2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.JournalPrinterCapabilities
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IJournalPrinterCapabilities2[] = L"Windows.Devices.PointOfService.IJournalPrinterCapabilities2";
+/* [object, uuid("03B0B645-33B8-533B-BAAA-A4389283AB0A"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReverseVideoSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsStrikethroughSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSuperscriptSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSubscriptSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReversePaperFeedByLineSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReversePaperFeedByMapModeUnitSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2Vtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_get_IsReverseVideoSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReverseVideoSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_get_IsStrikethroughSupported(This,value) \
+    ( (This)->lpVtbl->get_IsStrikethroughSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_get_IsSuperscriptSupported(This,value) \
+    ( (This)->lpVtbl->get_IsSuperscriptSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_get_IsSubscriptSupported(This,value) \
+    ( (This)->lpVtbl->get_IsSubscriptSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_get_IsReversePaperFeedByLineSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReversePaperFeedByLineSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_get_IsReversePaperFeedByMapModeUnitSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReversePaperFeedByMapModeUnitSupported(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIJournalPrinterCapabilities2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.PointOfService.ILineDisplay
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -28063,10 +29320,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplay;
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplay
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -29552,7 +30805,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_EscapeSequence )(
         __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * escapeSequence
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
         );
     HRESULT ( STDMETHODCALLTYPE *TryDeleteAsync )(
         __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap * This,
@@ -29586,8 +30839,8 @@ interface __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap_get_EscapeSequence(This,escapeSequence) \
-    ( (This)->lpVtbl->get_EscapeSequence(This,escapeSequence) )
+#define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap_get_EscapeSequence(This,value) \
+    ( (This)->lpVtbl->get_EscapeSequence(This,value) )
 
 #define __x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayStoredBitmap_TryDeleteAsync(This,operation) \
     ( (This)->lpVtbl->TryDeleteAsync(This,operation) )
@@ -29609,10 +30862,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplaySt
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplayWindow
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -29770,10 +31019,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CILineDisplayWi
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.LineDisplayWindow
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -31781,6 +33026,107 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter;
 
 /*
  *
+ * Interface Windows.Devices.PointOfService.IPosPrinter2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.PosPrinter
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IPosPrinter2[] = L"Windows.Devices.PointOfService.IPosPrinter2";
+/* [object, uuid("248475E8-8B98-5517-8E48-760E86F68987"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SupportedBarcodeSymbologies )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_UINT32 * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetFontProperty )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2 * This,
+        /* [in] */__RPC__in HSTRING typeface,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2Vtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_get_SupportedBarcodeSymbologies(This,value) \
+    ( (This)->lpVtbl->get_SupportedBarcodeSymbologies(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_GetFontProperty(This,typeface,result) \
+    ( (This)->lpVtbl->GetFontProperty(This,typeface,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinter2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.PointOfService.IPosPrinterCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -32044,6 +33390,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterCha
 
 /*
  *
+ * Interface Windows.Devices.PointOfService.IPosPrinterFontProperty
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.PosPrinterFontProperty
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IPosPrinterFontProperty[] = L"Windows.Devices.PointOfService.IPosPrinterFontProperty";
+/* [object, uuid("A7F4E93A-F8AC-5F04-84D2-29B16D8A633C"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontPropertyVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TypeFace )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsScalableToAnySize )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CharacterSizes )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CPointOfService__CSizeUInt32 * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontPropertyVtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontPropertyVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_get_TypeFace(This,value) \
+    ( (This)->lpVtbl->get_TypeFace(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_get_IsScalableToAnySize(This,value) \
+    ( (This)->lpVtbl->get_IsScalableToAnySize(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_get_CharacterSizes(This,value) \
+    ( (This)->lpVtbl->get_CharacterSizes(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterFontProperty_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.PointOfService.IPosPrinterJob
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -32150,6 +33603,274 @@ interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterJob_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.IPosPrinterPrintOptions
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.PosPrinterPrintOptions
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IPosPrinterPrintOptions[] = L"Windows.Devices.PointOfService.IPosPrinterPrintOptions";
+/* [object, uuid("0A2E16FD-1D02-5A58-9D59-BFCDE76FDE86"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptionsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TypeFace )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_TypeFace )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */__RPC__in HSTRING value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CharacterHeight )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_CharacterHeight )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */UINT32 value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Bold )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Bold )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Italic )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Italic )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Underline )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Underline )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ReverseVideo )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_ReverseVideo )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Strikethrough )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Strikethrough )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Superscript )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Superscript )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Subscript )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Subscript )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DoubleWide )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_DoubleWide )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DoubleHigh )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_DoubleHigh )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Alignment )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CDevices_CPointOfService_CPosPrinterAlignment * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Alignment )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */__x_ABI_CWindows_CDevices_CPointOfService_CPosPrinterAlignment value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CharacterSet )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_CharacterSet )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * This,
+        /* [in] */UINT32 value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptionsVtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptionsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_TypeFace(This,value) \
+    ( (This)->lpVtbl->get_TypeFace(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_TypeFace(This,value) \
+    ( (This)->lpVtbl->put_TypeFace(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_CharacterHeight(This,value) \
+    ( (This)->lpVtbl->get_CharacterHeight(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_CharacterHeight(This,value) \
+    ( (This)->lpVtbl->put_CharacterHeight(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_Bold(This,value) \
+    ( (This)->lpVtbl->get_Bold(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_Bold(This,value) \
+    ( (This)->lpVtbl->put_Bold(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_Italic(This,value) \
+    ( (This)->lpVtbl->get_Italic(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_Italic(This,value) \
+    ( (This)->lpVtbl->put_Italic(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_Underline(This,value) \
+    ( (This)->lpVtbl->get_Underline(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_Underline(This,value) \
+    ( (This)->lpVtbl->put_Underline(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_ReverseVideo(This,value) \
+    ( (This)->lpVtbl->get_ReverseVideo(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_ReverseVideo(This,value) \
+    ( (This)->lpVtbl->put_ReverseVideo(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_Strikethrough(This,value) \
+    ( (This)->lpVtbl->get_Strikethrough(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_Strikethrough(This,value) \
+    ( (This)->lpVtbl->put_Strikethrough(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_Superscript(This,value) \
+    ( (This)->lpVtbl->get_Superscript(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_Superscript(This,value) \
+    ( (This)->lpVtbl->put_Superscript(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_Subscript(This,value) \
+    ( (This)->lpVtbl->get_Subscript(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_Subscript(This,value) \
+    ( (This)->lpVtbl->put_Subscript(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_DoubleWide(This,value) \
+    ( (This)->lpVtbl->get_DoubleWide(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_DoubleWide(This,value) \
+    ( (This)->lpVtbl->put_DoubleWide(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_DoubleHigh(This,value) \
+    ( (This)->lpVtbl->get_DoubleHigh(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_DoubleHigh(This,value) \
+    ( (This)->lpVtbl->put_DoubleHigh(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_Alignment(This,value) \
+    ( (This)->lpVtbl->get_Alignment(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_Alignment(This,value) \
+    ( (This)->lpVtbl->put_Alignment(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_get_CharacterSet(This,value) \
+    ( (This)->lpVtbl->get_CharacterSet(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_put_CharacterSet(This,value) \
+    ( (This)->lpVtbl->put_CharacterSet(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -32866,11 +34587,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptOrSlip
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrintJob
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.IReceiptOrSlipJob
- *     Windows.Devices.PointOfService.IPosPrinterJob
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob_INTERFACE_DEFINED__)
@@ -32969,17 +34685,126 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJ
 
 /*
  *
+ * Interface Windows.Devices.PointOfService.IReceiptPrintJob2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrintJob
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IReceiptPrintJob2[] = L"Windows.Devices.PointOfService.IReceiptPrintJob2";
+/* [object, uuid("0CBC12E3-9E29-5179-BCD8-1811D3B9A10E"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *StampPaper )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This
+        );
+    HRESULT ( STDMETHODCALLTYPE *Print )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This,
+        /* [in] */__RPC__in HSTRING data,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * printOptions
+        );
+    HRESULT ( STDMETHODCALLTYPE *FeedPaperByLine )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This,
+        /* [in] */INT32 lineCount
+        );
+    HRESULT ( STDMETHODCALLTYPE *FeedPaperByMapModeUnit )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2 * This,
+        /* [in] */INT32 distance
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2Vtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_StampPaper(This) \
+    ( (This)->lpVtbl->StampPaper(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_Print(This,data,printOptions) \
+    ( (This)->lpVtbl->Print(This,data,printOptions) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FeedPaperByLine(This,lineCount) \
+    ( (This)->lpVtbl->FeedPaperByLine(This,lineCount) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_FeedPaperByMapModeUnit(This,distance) \
+    ( (This)->lpVtbl->FeedPaperByMapModeUnit(This,distance) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrintJob2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.PointOfService.IReceiptPrinterCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrinterCapabilities
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
- *     Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
  *
  *
  */
@@ -33081,17 +34906,248 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinte
 
 /*
  *
+ * Interface Windows.Devices.PointOfService.IReceiptPrinterCapabilities2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.ReceiptPrinterCapabilities
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2[] = L"Windows.Devices.PointOfService.IReceiptPrinterCapabilities2";
+/* [object, uuid("20030638-8A2C-55AC-9A7B-7576D8869E99"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReverseVideoSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsStrikethroughSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSuperscriptSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSubscriptSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReversePaperFeedByLineSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReversePaperFeedByMapModeUnitSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2Vtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_get_IsReverseVideoSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReverseVideoSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_get_IsStrikethroughSupported(This,value) \
+    ( (This)->lpVtbl->get_IsStrikethroughSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_get_IsSuperscriptSupported(This,value) \
+    ( (This)->lpVtbl->get_IsSuperscriptSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_get_IsSubscriptSupported(This,value) \
+    ( (This)->lpVtbl->get_IsSubscriptSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_get_IsReversePaperFeedByLineSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReversePaperFeedByLineSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_get_IsReversePaperFeedByMapModeUnitSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReversePaperFeedByMapModeUnitSupported(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CIReceiptPrinterCapabilities2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.ISlipPrintJob
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.SlipPrintJob
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_ISlipPrintJob[] = L"Windows.Devices.PointOfService.ISlipPrintJob";
+/* [object, uuid("5D88F95D-6131-5A4B-B7D5-8EF2DA7B4165"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJobVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *Print )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This,
+        /* [in] */__RPC__in HSTRING data,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CIPosPrinterPrintOptions * printOptions
+        );
+    HRESULT ( STDMETHODCALLTYPE *FeedPaperByLine )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This,
+        /* [in] */INT32 lineCount
+        );
+    HRESULT ( STDMETHODCALLTYPE *FeedPaperByMapModeUnit )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob * This,
+        /* [in] */INT32 distance
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJobVtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJobVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_Print(This,data,printOptions) \
+    ( (This)->lpVtbl->Print(This,data,printOptions) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FeedPaperByLine(This,lineCount) \
+    ( (This)->lpVtbl->FeedPaperByLine(This,lineCount) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_FeedPaperByMapModeUnit(This,distance) \
+    ( (This)->lpVtbl->FeedPaperByMapModeUnit(This,distance) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrintJob_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.PointOfService.ISlipPrinterCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.SlipPrinterCapabilities
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
- *     Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
  *
  *
  */
@@ -33182,6 +35238,134 @@ interface __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Devices.PointOfService.ISlipPrinterCapabilities2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.PointOfService.SlipPrinterCapabilities
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_PointOfService_ISlipPrinterCapabilities2[] = L"Windows.Devices.PointOfService.ISlipPrinterCapabilities2";
+/* [object, uuid("6FF89671-2D1A-5000-87C2-B0851BFDF07E"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReverseVideoSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsStrikethroughSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSuperscriptSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSubscriptSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReversePaperFeedByLineSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReversePaperFeedByMapModeUnitSupported )(
+        __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2Vtbl;
+
+interface __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_get_IsReverseVideoSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReverseVideoSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_get_IsStrikethroughSupported(This,value) \
+    ( (This)->lpVtbl->get_IsStrikethroughSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_get_IsSuperscriptSupported(This,value) \
+    ( (This)->lpVtbl->get_IsSuperscriptSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_get_IsSubscriptSupported(This,value) \
+    ( (This)->lpVtbl->get_IsSubscriptSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_get_IsReversePaperFeedByLineSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReversePaperFeedByLineSupported(This,value) )
+
+#define __x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_get_IsReversePaperFeedByMapModeUnitSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReversePaperFeedByMapModeUnitSupported(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CISlipPrinterCapabilities2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -33528,6 +35712,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IBarcodeScannerReport ** Default Interface **
  *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33596,8 +35782,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IBarcodeSymbologyAttributes ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33649,8 +35833,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerCapabilities ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33672,8 +35854,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerCloseAlarm ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33697,8 +35877,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33720,8 +35898,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerEventSource ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33745,8 +35921,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33768,8 +35942,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerStatus ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33793,8 +35965,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ICashDrawerStatusUpdatedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33816,13 +35986,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner1
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner2
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner3
  *    Windows.Devices.PointOfService.IClaimedBarcodeScanner4
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33846,8 +36014,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedBarcodeScannerClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33869,10 +36035,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedCashDrawer ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedCashDrawer2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33896,8 +36060,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedCashDrawerClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33920,8 +36082,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedJournalPrinter ** Default Interface **
  *    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33947,9 +36107,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedLineDisplay ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedLineDisplay2
  *    Windows.Devices.PointOfService.IClaimedLineDisplay3
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -33975,8 +36135,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedLineDisplayClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -33998,10 +36156,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedMagneticStripeReader ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedMagneticStripeReader2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34025,8 +36181,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedMagneticStripeReaderClosedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34048,10 +36202,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedPosPrinter ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.IClaimedPosPrinter2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34074,8 +36226,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IClaimedPosPrinterClosedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34100,8 +36250,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.IClaimedReceiptPrinter ** Default Interface **
  *    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34125,8 +36273,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.IClaimedSlipPrinter ** Default Interface **
  *    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34147,9 +36293,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.IJournalPrintJob
  *    Windows.Devices.PointOfService.IPosPrinterJob ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34172,9 +36317,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IJournalPrinterCapabilities ** Default Interface **
+ *    Windows.Devices.PointOfService.IJournalPrinterCapabilities2
  *    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34201,8 +36345,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplay ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.ILineDisplay2
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -34228,8 +36372,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayAttributes ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34251,8 +36393,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCapabilities ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34276,8 +36416,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCursor ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34299,8 +36437,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCursorAttributes ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34324,8 +36460,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayCustomGlyphs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34347,8 +36481,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayMarquee ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34372,8 +36504,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayStatisticsCategorySelector ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34395,8 +36525,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayStatusUpdatedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34420,8 +36548,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayStoredBitmap ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -34443,10 +36569,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ILineDisplayWindow ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.ILineDisplayWindow2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34724,6 +36848,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IPosPrinter ** Default Interface **
+ *    Windows.Devices.PointOfService.IPosPrinter2
  *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -34783,6 +36908,55 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_PointOfService_PosPrinterCharacterSetIds[] = L"Windows.Devices.PointOfService.PosPrinterCharacterSetIds";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Devices.PointOfService.PosPrinterFontProperty
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.IPosPrinterFontProperty ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterFontProperty_DEFINED
+#define RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterFontProperty_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_PointOfService_PosPrinterFontProperty[] = L"Windows.Devices.PointOfService.PosPrinterFontProperty";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Devices.PointOfService.PosPrinterPrintOptions
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.IPosPrinterPrintOptions ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterPrintOptions_DEFINED
+#define RUNTIMECLASS_Windows_Devices_PointOfService_PosPrinterPrintOptions_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_PointOfService_PosPrinterPrintOptions[] = L"Windows.Devices.PointOfService.PosPrinterPrintOptions";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -34860,10 +37034,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IReceiptPrintJob ** Default Interface **
+ *    Windows.Devices.PointOfService.IReceiptPrintJob2
  *    Windows.Devices.PointOfService.IReceiptOrSlipJob
  *    Windows.Devices.PointOfService.IPosPrinterJob
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34886,10 +37059,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IReceiptPrinterCapabilities ** Default Interface **
+ *    Windows.Devices.PointOfService.IReceiptPrinterCapabilities2
  *    Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
  *    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34911,10 +37083,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * Class implements the following interfaces:
+ *    Windows.Devices.PointOfService.ISlipPrintJob
  *    Windows.Devices.PointOfService.IReceiptOrSlipJob ** Default Interface **
  *    Windows.Devices.PointOfService.IPosPrinterJob
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34937,10 +37108,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.ISlipPrinterCapabilities ** Default Interface **
+ *    Windows.Devices.PointOfService.ISlipPrinterCapabilities2
  *    Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities
  *    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34966,6 +37136,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.IUnifiedPosErrorData ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

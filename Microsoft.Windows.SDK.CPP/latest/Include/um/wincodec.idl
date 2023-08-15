@@ -90,6 +90,7 @@ cpp_quote("DEFINE_GUID(CLSID_WICHeifDecoder,  0xe9A4A80a, 0x44fe, 0x4DE4, 0x89, 
 cpp_quote("DEFINE_GUID(CLSID_WICHeifEncoder,  0x0dbecec1, 0x9eb3, 0x4860, 0x9c, 0x6f, 0xdd, 0xbe, 0x86, 0x63, 0x45, 0x75);")
 
 cpp_quote("DEFINE_GUID(CLSID_WICWebpDecoder,  0x7693E886, 0x51C9, 0x4070, 0x84, 0x19, 0x9F, 0x70, 0X73, 0X8E, 0XC8, 0XFA);")
+cpp_quote("DEFINE_GUID(CLSID_WICRAWDecoder,   0x41945702, 0x8302, 0x44A6, 0x94, 0x45, 0xAC, 0x98, 0xE8, 0xAF, 0xA0, 0x86);")
 
 /*=========================================================================*\
     GUID Identifiers for the image container formats
@@ -106,6 +107,7 @@ cpp_quote("DEFINE_GUID(GUID_ContainerFormatDds,  0x9967cb95, 0x2e85, 0x4ac8, 0x8
 cpp_quote("DEFINE_GUID(GUID_ContainerFormatAdng, 0xf3ff6d0d, 0x38c0, 0x41c4, 0xb1, 0xfe, 0x1f, 0x38, 0x24, 0xf1, 0x7b, 0x84);")
 cpp_quote("DEFINE_GUID(GUID_ContainerFormatHeif, 0xe1e62521, 0x6787, 0x405b, 0xa3, 0x39, 0x50, 0x07, 0x15, 0xb5, 0x76, 0x3f);")
 cpp_quote("DEFINE_GUID(GUID_ContainerFormatWebp, 0xe094b0e2, 0x67f2, 0x45b3, 0xb0, 0xea, 0x11, 0x53, 0x37, 0xca, 0x7c, 0xf3);")
+cpp_quote("DEFINE_GUID(GUID_ContainerFormatRaw,  0xfe99ce60, 0xf19c, 0x433c, 0xa3, 0xae, 0x00, 0xac, 0xef, 0xa9, 0xca, 0x21);")
 
 /*=========================================================================*\
     Category Identifiers
@@ -961,6 +963,20 @@ typedef [public] enum WICHeifProperties
     WICHeifOrientation                  = 0x00000001,
     WICHeifProperties_FORCE_DWORD = CODEC_FORCE_DWORD
 } WICHeifProperties;
+
+
+/*=========================================================================*\
+    WICHeifHdrProperties
+\*=========================================================================*/
+typedef [public] enum WICHeifHdrProperties
+{
+    WICHeifHdrMaximumLuminanceLevel                 = 0x00000001,
+    WICHeifHdrMaximumFrameAverageLuminanceLevel     = 0x00000002,
+    WICHeifHdrMinimumMasteringDisplayLuminanceLevel = 0x00000003,
+    WICHeifHdrMaximumMasteringDisplayLuminanceLevel = 0x00000004,
+    WICHeifHdrCustomVideoPrimaries                  = 0x00000005,
+    WICHeifHdrProperties_FORCE_DWORD                = CODEC_FORCE_DWORD
+} WICHeifHdrProperties;
 
 
 /*=========================================================================*\

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -432,6 +432,13 @@ template <typename D> typename consume_Windows_UI_Xaml_Input_IFocusManagerStatic
 template <typename D> void consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::LosingFocus(winrt::event_token const& token) const noexcept
 {
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_LosingFocus(get_abi(token)));
+}
+
+template <typename D> Windows::Foundation::IInspectable consume_Windows_UI_Xaml_Input_IFocusManagerStatics7<D>::GetFocusedElement(Windows::UI::Xaml::XamlRoot const& xamlRoot) const
+{
+    Windows::Foundation::IInspectable result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Input::IFocusManagerStatics7)->GetFocusedElement(get_abi(xamlRoot), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_UI_Xaml_Input_IFocusMovementResult<D>::Succeeded() const
@@ -1400,6 +1407,11 @@ template <typename D> Windows::UI::Xaml::Input::StandardUICommandKind consume_Wi
     Windows::UI::Xaml::Input::StandardUICommandKind value{};
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Input::IStandardUICommand)->get_Kind(put_abi(value)));
     return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Input_IStandardUICommand2<D>::Kind(Windows::UI::Xaml::Input::StandardUICommandKind const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Input::IStandardUICommand2)->put_Kind(get_abi(value)));
 }
 
 template <typename D> Windows::UI::Xaml::Input::StandardUICommand consume_Windows_UI_Xaml_Input_IStandardUICommandFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
@@ -2643,6 +2655,23 @@ struct produce<D, Windows::UI::Xaml::Input::IFocusManagerStatics6> : produce_bas
         WINRT_ASSERT_DECLARATION(LosingFocus, WINRT_WRAP(void), winrt::event_token const&);
         this->shim().LosingFocus(*reinterpret_cast<winrt::event_token const*>(&token));
         return 0;
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Input::IFocusManagerStatics7> : produce_base<D, Windows::UI::Xaml::Input::IFocusManagerStatics7>
+{
+    int32_t WINRT_CALL GetFocusedElement(void* xamlRoot, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetFocusedElement, WINRT_WRAP(Windows::Foundation::IInspectable), Windows::UI::Xaml::XamlRoot const&);
+            *result = detach_from<Windows::Foundation::IInspectable>(this->shim().GetFocusedElement(*reinterpret_cast<Windows::UI::Xaml::XamlRoot const*>(&xamlRoot)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     }
 };
 
@@ -4614,6 +4643,22 @@ struct produce<D, Windows::UI::Xaml::Input::IStandardUICommand> : produce_base<D
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Input::IStandardUICommand2> : produce_base<D, Windows::UI::Xaml::Input::IStandardUICommand2>
+{
+    int32_t WINRT_CALL put_Kind(Windows::UI::Xaml::Input::StandardUICommandKind value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Kind, WINRT_WRAP(void), Windows::UI::Xaml::Input::StandardUICommandKind const&);
+            this->shim().Kind(*reinterpret_cast<Windows::UI::Xaml::Input::StandardUICommandKind const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Input::IStandardUICommandFactory> : produce_base<D, Windows::UI::Xaml::Input::IStandardUICommandFactory>
 {
     int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final
@@ -5202,6 +5247,11 @@ inline void FocusManager::LosingFocus(winrt::event_token const& token)
     impl::call_factory<FocusManager, Windows::UI::Xaml::Input::IFocusManagerStatics6>([&](auto&& f) { return f.LosingFocus(token); });
 }
 
+inline Windows::Foundation::IInspectable FocusManager::GetFocusedElement(Windows::UI::Xaml::XamlRoot const& xamlRoot)
+{
+    return impl::call_factory<FocusManager, Windows::UI::Xaml::Input::IFocusManagerStatics7>([&](auto&& f) { return f.GetFocusedElement(xamlRoot); });
+}
+
 inline HoldingRoutedEventArgs::HoldingRoutedEventArgs() :
     HoldingRoutedEventArgs(impl::call_factory<HoldingRoutedEventArgs>([](auto&& f) { return f.template ActivateInstance<HoldingRoutedEventArgs>(); }))
 {}
@@ -5643,7 +5693,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct StandardUICommandT :
     implements<D, Windows::Foundation::IInspectable, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Input::IStandardUICommand, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Input::ICommand, Windows::UI::Xaml::Input::IXamlUICommand>,
+    impl::require<D, Windows::UI::Xaml::Input::IStandardUICommand, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Input::ICommand, Windows::UI::Xaml::Input::IStandardUICommand2, Windows::UI::Xaml::Input::IXamlUICommand>,
     impl::base<D, Windows::UI::Xaml::Input::StandardUICommand, Windows::UI::Xaml::Input::XamlUICommand, Windows::UI::Xaml::DependencyObject>
 {
     using composable = StandardUICommand;
@@ -5700,6 +5750,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics3> :
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics4> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics5> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IFocusManagerStatics7> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IFocusMovementResult> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IFocusMovementResult> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IGettingFocusEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IGettingFocusEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IGettingFocusEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IGettingFocusEventArgs2> {};
@@ -5737,6 +5788,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Input::IPointerRoutedEventArgs2
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IProcessKeyboardAcceleratorEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IProcessKeyboardAcceleratorEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IRightTappedRoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IRightTappedRoutedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IStandardUICommand> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IStandardUICommand> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Input::IStandardUICommand2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IStandardUICommand2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IStandardUICommandFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IStandardUICommandFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::IStandardUICommandStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::IStandardUICommandStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Input::ITappedRoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Input::ITappedRoutedEventArgs> {};

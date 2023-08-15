@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.devices.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface ICallControlEventHandler;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CICallControlEventHandler ABI::Windows::Media::Devices::ICallControlEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CICallControlEventHandler_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IDialRequestedEventHandler;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventHandler ABI::Windows::Media::Devices::IDialRequestedEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventHandler_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IKeypadPressedEventHandler;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventHandler ABI::Windows::Media::Devices::IKeypadPressedEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventHandler_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IRedialRequestedEventHandler;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventHandler ABI::Windows::Media::Devices::IRedialRequestedEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventHandler_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedPhotoCaptureSettings;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoCaptureSettings ABI::Windows::Media::Devices::IAdvancedPhotoCaptureSettings
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoCaptureSettings_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedPhotoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoControl ABI::Windows::Media::Devices::IAdvancedPhotoControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoControl_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedVideoCaptureDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedVideoCaptureDeviceController2;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedVideoCaptureDeviceController3;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController3 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController3_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedVideoCaptureDeviceController4;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController4 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController4_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedVideoCaptureDeviceController5;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController5 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController5_FWD_DEFINED__
@@ -434,12 +430,26 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAdvancedVideoCaptureDeviceController6;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController6 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController6_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface IAdvancedVideoCaptureDeviceController7;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
@@ -448,9 +458,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAudioDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController ABI::Windows::Media::Devices::IAudioDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
@@ -462,9 +472,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAudioDeviceModule;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModule ABI::Windows::Media::Devices::IAudioDeviceModule
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModule_FWD_DEFINED__
@@ -476,9 +486,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAudioDeviceModuleNotificationEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModuleNotificationEventArgs ABI::Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModuleNotificationEventArgs_FWD_DEFINED__
@@ -490,9 +500,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAudioDeviceModulesManager;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManager ABI::Windows::Media::Devices::IAudioDeviceModulesManager
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManager_FWD_DEFINED__
@@ -504,9 +514,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAudioDeviceModulesManagerFactory;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManagerFactory ABI::Windows::Media::Devices::IAudioDeviceModulesManagerFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManagerFactory_FWD_DEFINED__
@@ -518,9 +528,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface ICallControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CICallControl ABI::Windows::Media::Devices::ICallControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CICallControl_FWD_DEFINED__
@@ -532,9 +542,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface ICallControlStatics;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CICallControlStatics ABI::Windows::Media::Devices::ICallControlStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CICallControlStatics_FWD_DEFINED__
@@ -546,9 +556,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IDefaultAudioDeviceChangedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs ABI::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs_FWD_DEFINED__
@@ -560,9 +570,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IDialRequestedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs ABI::Windows::Media::Devices::IDialRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs_FWD_DEFINED__
@@ -574,9 +584,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IExposureCompensationControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl ABI::Windows::Media::Devices::IExposureCompensationControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl_FWD_DEFINED__
@@ -588,9 +598,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IExposureControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIExposureControl ABI::Windows::Media::Devices::IExposureControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIExposureControl_FWD_DEFINED__
@@ -602,9 +612,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IExposurePriorityVideoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIExposurePriorityVideoControl ABI::Windows::Media::Devices::IExposurePriorityVideoControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIExposurePriorityVideoControl_FWD_DEFINED__
@@ -616,9 +626,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IFlashControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIFlashControl ABI::Windows::Media::Devices::IFlashControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIFlashControl_FWD_DEFINED__
@@ -630,9 +640,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IFlashControl2;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIFlashControl2 ABI::Windows::Media::Devices::IFlashControl2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIFlashControl2_FWD_DEFINED__
@@ -644,9 +654,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IFocusControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIFocusControl ABI::Windows::Media::Devices::IFocusControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIFocusControl_FWD_DEFINED__
@@ -658,9 +668,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IFocusControl2;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIFocusControl2 ABI::Windows::Media::Devices::IFocusControl2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIFocusControl2_FWD_DEFINED__
@@ -672,9 +682,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IFocusSettings;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIFocusSettings ABI::Windows::Media::Devices::IFocusSettings
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIFocusSettings_FWD_DEFINED__
@@ -686,12 +696,26 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IHdrVideoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl ABI::Windows::Media::Devices::IHdrVideoControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface IInfraredTorchControl;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl ABI::Windows::Media::Devices::IInfraredTorchControl
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl_FWD_DEFINED__
@@ -700,9 +724,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IIsoSpeedControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl ABI::Windows::Media::Devices::IIsoSpeedControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl_FWD_DEFINED__
@@ -714,9 +738,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IIsoSpeedControl2;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl2 ABI::Windows::Media::Devices::IIsoSpeedControl2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl2_FWD_DEFINED__
@@ -728,9 +752,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IKeypadPressedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventArgs ABI::Windows::Media::Devices::IKeypadPressedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventArgs_FWD_DEFINED__
@@ -742,9 +766,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface ILowLagPhotoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoControl ABI::Windows::Media::Devices::ILowLagPhotoControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoControl_FWD_DEFINED__
@@ -756,9 +780,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface ILowLagPhotoSequenceControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoSequenceControl ABI::Windows::Media::Devices::ILowLagPhotoSequenceControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoSequenceControl_FWD_DEFINED__
@@ -770,9 +794,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IMediaDeviceControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControl ABI::Windows::Media::Devices::IMediaDeviceControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControl_FWD_DEFINED__
@@ -784,9 +808,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IMediaDeviceControlCapabilities;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControlCapabilities ABI::Windows::Media::Devices::IMediaDeviceControlCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControlCapabilities_FWD_DEFINED__
@@ -798,9 +822,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IMediaDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceController ABI::Windows::Media::Devices::IMediaDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceController_FWD_DEFINED__
@@ -812,9 +836,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IMediaDeviceStatics;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceStatics ABI::Windows::Media::Devices::IMediaDeviceStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceStatics_FWD_DEFINED__
@@ -826,9 +850,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IModuleCommandResult;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIModuleCommandResult ABI::Windows::Media::Devices::IModuleCommandResult
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIModuleCommandResult_FWD_DEFINED__
@@ -840,9 +864,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IOpticalImageStabilizationControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIOpticalImageStabilizationControl ABI::Windows::Media::Devices::IOpticalImageStabilizationControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIOpticalImageStabilizationControl_FWD_DEFINED__
@@ -854,9 +878,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IPhotoConfirmationControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIPhotoConfirmationControl ABI::Windows::Media::Devices::IPhotoConfirmationControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIPhotoConfirmationControl_FWD_DEFINED__
@@ -868,9 +892,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IRedialRequestedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventArgs ABI::Windows::Media::Devices::IRedialRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventArgs_FWD_DEFINED__
@@ -882,9 +906,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IRegionOfInterest;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest ABI::Windows::Media::Devices::IRegionOfInterest
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest_FWD_DEFINED__
@@ -896,9 +920,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IRegionOfInterest2;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest2 ABI::Windows::Media::Devices::IRegionOfInterest2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest2_FWD_DEFINED__
@@ -910,9 +934,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IRegionsOfInterestControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIRegionsOfInterestControl ABI::Windows::Media::Devices::IRegionsOfInterestControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIRegionsOfInterestControl_FWD_DEFINED__
@@ -924,9 +948,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface ISceneModeControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CISceneModeControl ABI::Windows::Media::Devices::ISceneModeControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CISceneModeControl_FWD_DEFINED__
@@ -938,9 +962,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface ITorchControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CITorchControl ABI::Windows::Media::Devices::ITorchControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CITorchControl_FWD_DEFINED__
@@ -952,9 +976,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IVideoDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController ABI::Windows::Media::Devices::IVideoDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController_FWD_DEFINED__
@@ -966,9 +990,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IVideoDeviceControllerGetDevicePropertyResult;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceControllerGetDevicePropertyResult ABI::Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceControllerGetDevicePropertyResult_FWD_DEFINED__
@@ -980,9 +1004,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IVideoTemporalDenoisingControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIVideoTemporalDenoisingControl ABI::Windows::Media::Devices::IVideoTemporalDenoisingControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIVideoTemporalDenoisingControl_FWD_DEFINED__
@@ -994,9 +1018,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IWhiteBalanceControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIWhiteBalanceControl ABI::Windows::Media::Devices::IWhiteBalanceControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIWhiteBalanceControl_FWD_DEFINED__
@@ -1008,9 +1032,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IZoomControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIZoomControl ABI::Windows::Media::Devices::IZoomControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIZoomControl_FWD_DEFINED__
@@ -1022,9 +1046,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IZoomControl2;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIZoomControl2 ABI::Windows::Media::Devices::IZoomControl2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIZoomControl2_FWD_DEFINED__
@@ -1036,9 +1060,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IZoomSettings;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIZoomSettings ABI::Windows::Media::Devices::IZoomSettings
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIZoomSettings_FWD_DEFINED__
@@ -1051,9 +1075,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum AdvancedPhotoMode : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CAdvancedPhotoMode_USE
@@ -1074,7 +1098,7 @@ IIterator<enum ABI::Windows::Media::Devices::AdvancedPhotoMode> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::AdvancedPhotoMode> __FIIterator_1_Windows__CMedia__CDevices__CAdvancedPhotoMode_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CAdvancedPhotoMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CAdvancedPhotoMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CAdvancedPhotoMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::AdvancedPhotoMode>
@@ -1104,7 +1128,7 @@ IIterable<enum ABI::Windows::Media::Devices::AdvancedPhotoMode> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::AdvancedPhotoMode> __FIIterable_1_Windows__CMedia__CDevices__CAdvancedPhotoMode_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CAdvancedPhotoMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CAdvancedPhotoMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CAdvancedPhotoMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::AdvancedPhotoMode>
@@ -1119,9 +1143,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class AudioDeviceModule;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1144,7 +1168,7 @@ IIterator<ABI::Windows::Media::Devices::AudioDeviceModule*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Devices::AudioDeviceModule*> __FIIterator_1_Windows__CMedia__CDevices__CAudioDeviceModule_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CAudioDeviceModule ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CAudioDeviceModule_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CAudioDeviceModule ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::IAudioDeviceModule*>
@@ -1176,7 +1200,7 @@ IIterable<ABI::Windows::Media::Devices::AudioDeviceModule*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Devices::AudioDeviceModule*> __FIIterable_1_Windows__CMedia__CDevices__CAudioDeviceModule_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CAudioDeviceModule ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CAudioDeviceModule_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CAudioDeviceModule ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::IAudioDeviceModule*>
@@ -1192,9 +1216,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum AutoFocusRange : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CAutoFocusRange_USE
@@ -1215,7 +1239,7 @@ IIterator<enum ABI::Windows::Media::Devices::AutoFocusRange> : IIterator_impl<en
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::AutoFocusRange> __FIIterator_1_Windows__CMedia__CDevices__CAutoFocusRange_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CAutoFocusRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CAutoFocusRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CAutoFocusRange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::AutoFocusRange>
@@ -1245,7 +1269,7 @@ IIterable<enum ABI::Windows::Media::Devices::AutoFocusRange> : IIterable_impl<en
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::AutoFocusRange> __FIIterable_1_Windows__CMedia__CDevices__CAutoFocusRange_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CAutoFocusRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CAutoFocusRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CAutoFocusRange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::AutoFocusRange>
@@ -1260,9 +1284,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum CaptureSceneMode : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CCaptureSceneMode_USE
@@ -1283,7 +1307,7 @@ IIterator<enum ABI::Windows::Media::Devices::CaptureSceneMode> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::CaptureSceneMode> __FIIterator_1_Windows__CMedia__CDevices__CCaptureSceneMode_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CCaptureSceneMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::CaptureSceneMode>
@@ -1313,7 +1337,7 @@ IIterable<enum ABI::Windows::Media::Devices::CaptureSceneMode> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::CaptureSceneMode> __FIIterable_1_Windows__CMedia__CDevices__CCaptureSceneMode_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CCaptureSceneMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::CaptureSceneMode>
@@ -1328,9 +1352,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum FocusMode : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CFocusMode_USE
@@ -1351,7 +1375,7 @@ IIterator<enum ABI::Windows::Media::Devices::FocusMode> : IIterator_impl<enum AB
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::FocusMode> __FIIterator_1_Windows__CMedia__CDevices__CFocusMode_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CFocusMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CFocusMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CFocusMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::FocusMode>
@@ -1381,7 +1405,7 @@ IIterable<enum ABI::Windows::Media::Devices::FocusMode> : IIterable_impl<enum AB
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::FocusMode> __FIIterable_1_Windows__CMedia__CDevices__CFocusMode_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CFocusMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CFocusMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CFocusMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::FocusMode>
@@ -1396,9 +1420,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum FocusPreset : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CFocusPreset_USE
@@ -1419,7 +1443,7 @@ IIterator<enum ABI::Windows::Media::Devices::FocusPreset> : IIterator_impl<enum 
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::FocusPreset> __FIIterator_1_Windows__CMedia__CDevices__CFocusPreset_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CFocusPreset ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CFocusPreset_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CFocusPreset ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::FocusPreset>
@@ -1449,7 +1473,7 @@ IIterable<enum ABI::Windows::Media::Devices::FocusPreset> : IIterable_impl<enum 
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::FocusPreset> __FIIterable_1_Windows__CMedia__CDevices__CFocusPreset_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CFocusPreset ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CFocusPreset_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CFocusPreset ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::FocusPreset>
@@ -1464,9 +1488,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum HdrVideoMode : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CHdrVideoMode_USE
@@ -1487,7 +1511,7 @@ IIterator<enum ABI::Windows::Media::Devices::HdrVideoMode> : IIterator_impl<enum
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::HdrVideoMode> __FIIterator_1_Windows__CMedia__CDevices__CHdrVideoMode_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CHdrVideoMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CHdrVideoMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CHdrVideoMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::HdrVideoMode>
@@ -1517,7 +1541,7 @@ IIterable<enum ABI::Windows::Media::Devices::HdrVideoMode> : IIterable_impl<enum
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::HdrVideoMode> __FIIterable_1_Windows__CMedia__CDevices__CHdrVideoMode_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CHdrVideoMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CHdrVideoMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CHdrVideoMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::HdrVideoMode>
@@ -1531,10 +1555,78 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Devices {
-                enum IsoSpeedPreset : int;
-            } /* Windows */
+                enum InfraredTorchMode : int;
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+#ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE
+#define DEF___FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("42a9e83e-1786-57f4-906e-2f9b6f9f849a"))
+IIterator<enum ABI::Windows::Media::Devices::InfraredTorchMode> : IIterator_impl<enum ABI::Windows::Media::Devices::InfraredTorchMode> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.Devices.InfraredTorchMode>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<enum ABI::Windows::Media::Devices::InfraredTorchMode> __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_t;
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::InfraredTorchMode>
+//#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::InfraredTorchMode>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE */
+
+
+
+
+
+#ifndef DEF___FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE
+#define DEF___FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("58a4b7b6-36c3-5541-b383-3690d7293c10"))
+IIterable<enum ABI::Windows::Media::Devices::InfraredTorchMode> : IIterable_impl<enum ABI::Windows::Media::Devices::InfraredTorchMode> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.Devices.InfraredTorchMode>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<enum ABI::Windows::Media::Devices::InfraredTorchMode> __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_t;
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::InfraredTorchMode>
+//#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::InfraredTorchMode>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE */
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                enum IsoSpeedPreset : int;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CIsoSpeedPreset_USE
@@ -1555,7 +1647,7 @@ IIterator<enum ABI::Windows::Media::Devices::IsoSpeedPreset> : IIterator_impl<en
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::IsoSpeedPreset> __FIIterator_1_Windows__CMedia__CDevices__CIsoSpeedPreset_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CIsoSpeedPreset ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CIsoSpeedPreset_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CIsoSpeedPreset ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::IsoSpeedPreset>
@@ -1585,7 +1677,7 @@ IIterable<enum ABI::Windows::Media::Devices::IsoSpeedPreset> : IIterable_impl<en
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::IsoSpeedPreset> __FIIterable_1_Windows__CMedia__CDevices__CIsoSpeedPreset_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CIsoSpeedPreset ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CIsoSpeedPreset_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CIsoSpeedPreset ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::IsoSpeedPreset>
@@ -1600,9 +1692,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum ManualFocusDistance : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CManualFocusDistance_USE
@@ -1623,7 +1715,7 @@ IIterator<enum ABI::Windows::Media::Devices::ManualFocusDistance> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::ManualFocusDistance> __FIIterator_1_Windows__CMedia__CDevices__CManualFocusDistance_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CManualFocusDistance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::ManualFocusDistance>
@@ -1653,7 +1745,7 @@ IIterable<enum ABI::Windows::Media::Devices::ManualFocusDistance> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::ManualFocusDistance> __FIIterable_1_Windows__CMedia__CDevices__CManualFocusDistance_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CManualFocusDistance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::ManualFocusDistance>
@@ -1668,9 +1760,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum OpticalImageStabilizationMode : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode_USE
@@ -1691,7 +1783,7 @@ IIterator<enum ABI::Windows::Media::Devices::OpticalImageStabilizationMode> : II
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::OpticalImageStabilizationMode> __FIIterator_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::OpticalImageStabilizationMode>
@@ -1721,7 +1813,7 @@ IIterable<enum ABI::Windows::Media::Devices::OpticalImageStabilizationMode> : II
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::OpticalImageStabilizationMode> __FIIterable_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::OpticalImageStabilizationMode>
@@ -1736,9 +1828,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class RegionOfInterest;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1761,7 +1853,7 @@ IIterator<ABI::Windows::Media::Devices::RegionOfInterest*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Devices::RegionOfInterest*> __FIIterator_1_Windows__CMedia__CDevices__CRegionOfInterest_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CRegionOfInterest ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CRegionOfInterest_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CRegionOfInterest ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::IRegionOfInterest*>
@@ -1793,7 +1885,7 @@ IIterable<ABI::Windows::Media::Devices::RegionOfInterest*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Devices::RegionOfInterest*> __FIIterable_1_Windows__CMedia__CDevices__CRegionOfInterest_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CRegionOfInterest ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CRegionOfInterest_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CRegionOfInterest ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::IRegionOfInterest*>
@@ -1809,9 +1901,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum VideoTemporalDenoisingMode : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode_USE
@@ -1832,7 +1924,7 @@ IIterator<enum ABI::Windows::Media::Devices::VideoTemporalDenoisingMode> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::VideoTemporalDenoisingMode> __FIIterator_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::VideoTemporalDenoisingMode>
@@ -1862,7 +1954,7 @@ IIterable<enum ABI::Windows::Media::Devices::VideoTemporalDenoisingMode> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::VideoTemporalDenoisingMode> __FIIterable_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::VideoTemporalDenoisingMode>
@@ -1877,9 +1969,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum ZoomTransitionMode : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CZoomTransitionMode_USE
@@ -1900,7 +1992,7 @@ IIterator<enum ABI::Windows::Media::Devices::ZoomTransitionMode> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Media::Devices::ZoomTransitionMode> __FIIterator_1_Windows__CMedia__CDevices__CZoomTransitionMode_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CZoomTransitionMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CZoomTransitionMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CZoomTransitionMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::ZoomTransitionMode>
@@ -1930,7 +2022,7 @@ IIterable<enum ABI::Windows::Media::Devices::ZoomTransitionMode> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Media::Devices::ZoomTransitionMode> __FIIterable_1_Windows__CMedia__CDevices__CZoomTransitionMode_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CZoomTransitionMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CZoomTransitionMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CZoomTransitionMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::ZoomTransitionMode>
@@ -1960,7 +2052,7 @@ IVectorView<enum ABI::Windows::Media::Devices::AdvancedPhotoMode> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::AdvancedPhotoMode> __FIVectorView_1_Windows__CMedia__CDevices__CAdvancedPhotoMode_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CAdvancedPhotoMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CAdvancedPhotoMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CAdvancedPhotoMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::AdvancedPhotoMode>
@@ -1991,7 +2083,7 @@ IVectorView<ABI::Windows::Media::Devices::AudioDeviceModule*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Devices::AudioDeviceModule*> __FIVectorView_1_Windows__CMedia__CDevices__CAudioDeviceModule_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CAudioDeviceModule ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CAudioDeviceModule_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CAudioDeviceModule ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::IAudioDeviceModule*>
@@ -2022,7 +2114,7 @@ IVectorView<enum ABI::Windows::Media::Devices::AutoFocusRange> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::AutoFocusRange> __FIVectorView_1_Windows__CMedia__CDevices__CAutoFocusRange_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CAutoFocusRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CAutoFocusRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CAutoFocusRange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::AutoFocusRange>
@@ -2052,7 +2144,7 @@ IVectorView<enum ABI::Windows::Media::Devices::CaptureSceneMode> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::CaptureSceneMode> __FIVectorView_1_Windows__CMedia__CDevices__CCaptureSceneMode_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CCaptureSceneMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::CaptureSceneMode>
@@ -2082,7 +2174,7 @@ IVectorView<enum ABI::Windows::Media::Devices::FocusMode> : IVectorView_impl<enu
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::FocusMode> __FIVectorView_1_Windows__CMedia__CDevices__CFocusMode_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CFocusMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CFocusMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CFocusMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::FocusMode>
@@ -2112,7 +2204,7 @@ IVectorView<enum ABI::Windows::Media::Devices::FocusPreset> : IVectorView_impl<e
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::FocusPreset> __FIVectorView_1_Windows__CMedia__CDevices__CFocusPreset_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CFocusPreset ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CFocusPreset_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CFocusPreset ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::FocusPreset>
@@ -2142,13 +2234,43 @@ IVectorView<enum ABI::Windows::Media::Devices::HdrVideoMode> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::HdrVideoMode> __FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::HdrVideoMode>
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::HdrVideoMode>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode_USE */
+
+
+
+
+
+#ifndef DEF___FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE
+#define DEF___FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("b5af65de-bdf4-5155-b2b6-3139978e9c24"))
+IVectorView<enum ABI::Windows::Media::Devices::InfraredTorchMode> : IVectorView_impl<enum ABI::Windows::Media::Devices::InfraredTorchMode> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.Devices.InfraredTorchMode>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<enum ABI::Windows::Media::Devices::InfraredTorchMode> __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_t;
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::InfraredTorchMode>
+//#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::InfraredTorchMode>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_USE */
 
 
 
@@ -2172,7 +2294,7 @@ IVectorView<enum ABI::Windows::Media::Devices::IsoSpeedPreset> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::IsoSpeedPreset> __FIVectorView_1_Windows__CMedia__CDevices__CIsoSpeedPreset_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CIsoSpeedPreset ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CIsoSpeedPreset_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CIsoSpeedPreset ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::IsoSpeedPreset>
@@ -2202,7 +2324,7 @@ IVectorView<enum ABI::Windows::Media::Devices::ManualFocusDistance> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::ManualFocusDistance> __FIVectorView_1_Windows__CMedia__CDevices__CManualFocusDistance_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CManualFocusDistance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::ManualFocusDistance>
@@ -2232,7 +2354,7 @@ IVectorView<enum ABI::Windows::Media::Devices::OpticalImageStabilizationMode> : 
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::OpticalImageStabilizationMode> __FIVectorView_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::OpticalImageStabilizationMode>
@@ -2262,7 +2384,7 @@ IVectorView<enum ABI::Windows::Media::Devices::VideoTemporalDenoisingMode> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::VideoTemporalDenoisingMode> __FIVectorView_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::VideoTemporalDenoisingMode>
@@ -2292,7 +2414,7 @@ IVectorView<enum ABI::Windows::Media::Devices::ZoomTransitionMode> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Media::Devices::ZoomTransitionMode> __FIVectorView_1_Windows__CMedia__CDevices__CZoomTransitionMode_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CZoomTransitionMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CZoomTransitionMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CZoomTransitionMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::ZoomTransitionMode>
@@ -2307,9 +2429,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class ModuleCommandResult;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2332,7 +2454,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Devices::ModuleCommandResul
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Devices::ModuleCommandResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDevices__CModuleCommandResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDevices__CModuleCommandResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDevices__CModuleCommandResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDevices__CModuleCommandResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Devices::IModuleCommandResult*>
@@ -2364,7 +2486,7 @@ IAsyncOperation<ABI::Windows::Media::Devices::ModuleCommandResult*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Devices::ModuleCommandResult*> __FIAsyncOperation_1_Windows__CMedia__CDevices__CModuleCommandResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CDevices__CModuleCommandResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CDevices__CModuleCommandResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CDevices__CModuleCommandResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Devices::IModuleCommandResult*>
@@ -2395,7 +2517,7 @@ IReference<enum ABI::Windows::Media::Devices::CaptureSceneMode> : IReference_imp
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::Devices::CaptureSceneMode> __FIReference_1_Windows__CMedia__CDevices__CCaptureSceneMode_t;
 #define __FIReference_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CDevices__CCaptureSceneMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CMedia__CDevices__CCaptureSceneMode ABI::Windows::Foundation::IReference<ABI::Windows::Media::Devices::CaptureSceneMode>
@@ -2425,7 +2547,7 @@ IReference<enum ABI::Windows::Media::Devices::ManualFocusDistance> : IReference_
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::Devices::ManualFocusDistance> __FIReference_1_Windows__CMedia__CDevices__CManualFocusDistance_t;
 #define __FIReference_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CDevices__CManualFocusDistance_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CMedia__CDevices__CManualFocusDistance ABI::Windows::Foundation::IReference<ABI::Windows::Media::Devices::ManualFocusDistance>
@@ -2440,9 +2562,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 enum MediaCaptureFocusState : int;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CMedia__CDevices__CMediaCaptureFocusState_USE
@@ -2463,7 +2585,7 @@ IReference<enum ABI::Windows::Media::Devices::MediaCaptureFocusState> : IReferen
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::Devices::MediaCaptureFocusState> __FIReference_1_Windows__CMedia__CDevices__CMediaCaptureFocusState_t;
 #define __FIReference_1_Windows__CMedia__CDevices__CMediaCaptureFocusState ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CDevices__CMediaCaptureFocusState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CMedia__CDevices__CMediaCaptureFocusState ABI::Windows::Foundation::IReference<ABI::Windows::Media::Devices::MediaCaptureFocusState>
@@ -2479,9 +2601,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class DefaultAudioCaptureDeviceChangedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2504,7 +2626,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::Media::Devices::DefaultAudioCaptu
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs*>
@@ -2521,9 +2643,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class DefaultAudioRenderDeviceChangedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2546,7 +2668,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::Media::Devices::DefaultAudioRende
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs*>
@@ -2562,9 +2684,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class AudioDeviceModulesManager;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2572,9 +2694,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class AudioDeviceModuleNotificationEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2598,7 +2720,7 @@ ITypedEventHandler<ABI::Windows::Media::Devices::AudioDeviceModulesManager*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Devices::AudioDeviceModulesManager*,ABI::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Devices::IAudioDeviceModulesManager*,ABI::Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs*>
@@ -2629,7 +2751,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -2646,9 +2768,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties ABI::Windows::Media::MediaProperties::IMediaEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_FWD_DEFINED__
@@ -2674,7 +2796,7 @@ IIterator<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> __FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t;
 #define __FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*>
@@ -2706,7 +2828,7 @@ IIterable<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> __FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t;
 #define __FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*>
@@ -2738,7 +2860,7 @@ IVectorView<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> __FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*>
@@ -2757,8 +2879,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2770,8 +2892,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2779,8 +2901,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2792,9 +2914,9 @@ namespace ABI {
                 
                 typedef enum MediaStreamType : int MediaStreamType;
                 
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2803,9 +2925,9 @@ namespace ABI {
                 
                 typedef enum PowerlineFrequency : int PowerlineFrequency;
                 
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2816,10 +2938,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class VariablePhotoSequenceController;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController_FWD_DEFINED__
@@ -2829,10 +2951,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IVariablePhotoSequenceController;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController ABI::Windows::Media::Devices::Core::IVariablePhotoSequenceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController_FWD_DEFINED__
@@ -2850,18 +2972,18 @@ namespace ABI {
                 
                 typedef enum MediaPixelFormat : int MediaPixelFormat;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace MediaProperties {
                 class MediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -2870,9 +2992,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio ABI::Windows::Media::MediaProperties::IMediaRatio
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -2885,9 +3007,9 @@ namespace ABI {
                 
                 typedef enum MediaThumbnailFormat : int MediaThumbnailFormat;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2899,9 +3021,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -2918,9 +3040,9 @@ namespace ABI {
                 
                 typedef enum AdvancedPhotoMode : int AdvancedPhotoMode;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2929,9 +3051,9 @@ namespace ABI {
                 
                 typedef enum AudioDeviceRole : int AudioDeviceRole;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2940,9 +3062,9 @@ namespace ABI {
                 
                 typedef enum AutoFocusRange : int AutoFocusRange;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2951,9 +3073,9 @@ namespace ABI {
                 
                 typedef enum CameraStreamState : int CameraStreamState;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2962,9 +3084,9 @@ namespace ABI {
                 
                 typedef enum CaptureSceneMode : int CaptureSceneMode;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2973,9 +3095,9 @@ namespace ABI {
                 
                 typedef enum CaptureUse : int CaptureUse;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2984,9 +3106,9 @@ namespace ABI {
                 
                 typedef enum ColorTemperaturePreset : int ColorTemperaturePreset;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2995,9 +3117,9 @@ namespace ABI {
                 
                 typedef enum FocusMode : int FocusMode;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3006,9 +3128,9 @@ namespace ABI {
                 
                 typedef enum FocusPreset : int FocusPreset;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3017,9 +3139,20 @@ namespace ABI {
                 
                 typedef enum HdrVideoMode : int HdrVideoMode;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                
+                typedef enum InfraredTorchMode : int InfraredTorchMode;
+                
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3028,9 +3161,9 @@ namespace ABI {
                 
                 typedef enum IsoSpeedPreset : int IsoSpeedPreset;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3039,9 +3172,9 @@ namespace ABI {
                 
                 typedef enum ManualFocusDistance : int ManualFocusDistance;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3050,9 +3183,9 @@ namespace ABI {
                 
                 typedef enum MediaCaptureFocusState : int MediaCaptureFocusState;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3061,9 +3194,9 @@ namespace ABI {
                 
                 typedef enum MediaCaptureOptimization : int MediaCaptureOptimization;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3072,9 +3205,9 @@ namespace ABI {
                 
                 typedef enum MediaCapturePauseBehavior : int MediaCapturePauseBehavior;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3083,9 +3216,9 @@ namespace ABI {
                 
                 typedef enum OpticalImageStabilizationMode : int OpticalImageStabilizationMode;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3094,9 +3227,9 @@ namespace ABI {
                 
                 typedef enum RegionOfInterestType : int RegionOfInterestType;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3105,9 +3238,9 @@ namespace ABI {
                 
                 typedef enum SendCommandStatus : int SendCommandStatus;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3116,9 +3249,9 @@ namespace ABI {
                 
                 typedef enum TelephonyKey : int TelephonyKey;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3127,9 +3260,9 @@ namespace ABI {
                 
                 typedef enum VideoDeviceControllerGetDevicePropertyStatus : int VideoDeviceControllerGetDevicePropertyStatus;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3138,9 +3271,9 @@ namespace ABI {
                 
                 typedef enum VideoDeviceControllerSetDevicePropertyStatus : int VideoDeviceControllerSetDevicePropertyStatus;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3149,9 +3282,9 @@ namespace ABI {
                 
                 typedef enum VideoTemporalDenoisingMode : int VideoTemporalDenoisingMode;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3160,9 +3293,11 @@ namespace ABI {
                 
                 typedef enum ZoomTransitionMode : int ZoomTransitionMode;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
 
 
 
@@ -3224,9 +3359,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class AdvancedPhotoCaptureSettings;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3234,9 +3369,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class AdvancedPhotoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3244,9 +3379,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class AudioDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3257,9 +3392,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class CallControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3269,9 +3404,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class DialRequestedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3279,9 +3414,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class ExposureCompensationControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3289,9 +3424,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class ExposureControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3299,9 +3434,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class ExposurePriorityVideoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3309,9 +3444,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class FlashControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3319,9 +3454,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class FocusControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3329,9 +3464,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class FocusSettings;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3339,9 +3474,19 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class HdrVideoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                class InfraredTorchControl;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3349,9 +3494,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class IsoSpeedControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3359,9 +3504,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class KeypadPressedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3369,9 +3514,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class LowLagPhotoControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3379,9 +3524,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class LowLagPhotoSequenceControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3390,9 +3535,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class MediaDeviceControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3400,9 +3545,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class MediaDeviceControlCapabilities;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3411,9 +3556,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class OpticalImageStabilizationControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3421,9 +3566,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class PhotoConfirmationControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3431,9 +3576,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class RedialRequestedEventArgs;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3442,9 +3587,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class RegionsOfInterestControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3452,9 +3597,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class SceneModeControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3462,9 +3607,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class TorchControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3472,9 +3617,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class VideoDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3482,9 +3627,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class VideoDeviceControllerGetDevicePropertyResult;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3492,9 +3637,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class VideoTemporalDenoisingControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3502,9 +3647,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class WhiteBalanceControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3512,9 +3657,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class ZoomControl;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3522,9 +3667,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class ZoomSettings;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3563,9 +3708,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3590,9 +3735,9 @@ namespace ABI {
                     AudioDeviceRole_Communications = 1,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3618,9 +3763,9 @@ namespace ABI {
                     AutoFocusRange_Normal = 2,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3647,9 +3792,9 @@ namespace ABI {
                     CameraStreamState_Shutdown = 3,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3685,9 +3830,9 @@ namespace ABI {
                     CaptureSceneMode_Backlit = 12,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3713,9 +3858,9 @@ namespace ABI {
                     CaptureUse_Video = 2,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3746,9 +3891,9 @@ namespace ABI {
                     ColorTemperaturePreset_Candlelight = 7,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3775,9 +3920,9 @@ namespace ABI {
                     FocusMode_Manual = 3,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3806,9 +3951,9 @@ namespace ABI {
                     FocusPreset_AutoHyperfocal = 5,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3834,10 +3979,38 @@ namespace ABI {
                     HdrVideoMode_Auto = 2,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.Media.Devices.InfraredTorchMode
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                /* [v1_enum, contract] */
+                enum InfraredTorchMode : int
+                {
+                    InfraredTorchMode_Off = 0,
+                    InfraredTorchMode_On = 1,
+                    InfraredTorchMode_AlternatingFrameIllumination = 2,
+                };
+                
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3875,9 +4048,9 @@ namespace ABI {
                     IsoSpeedPreset_Iso25600 = 11,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3903,9 +4076,9 @@ namespace ABI {
                     ManualFocusDistance_Nearest = 2,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3933,9 +4106,9 @@ namespace ABI {
                     MediaCaptureFocusState_Failed = 4,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3965,9 +4138,9 @@ namespace ABI {
                     MediaCaptureOptimization_PowerAndQuality = 6,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3992,9 +4165,9 @@ namespace ABI {
                     MediaCapturePauseBehavior_ReleaseHardwareResources = 1,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4020,9 +4193,9 @@ namespace ABI {
                     OpticalImageStabilizationMode_Auto = 2,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4047,9 +4220,9 @@ namespace ABI {
                     RegionOfInterestType_Face = 1,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4074,9 +4247,9 @@ namespace ABI {
                     SendCommandStatus_DeviceNotAvailable = 1,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -4115,9 +4288,9 @@ namespace ABI {
                     TelephonyKey_D = 15,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION >= 0x10000
 
 
@@ -4147,9 +4320,9 @@ namespace ABI {
                     VideoDeviceControllerGetDevicePropertyStatus_MaxPropertyValueSizeRequired = 6,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -4178,9 +4351,9 @@ namespace ABI {
                     VideoDeviceControllerSetDevicePropertyStatus_NotInControl = 5,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -4206,9 +4379,9 @@ namespace ABI {
                     VideoTemporalDenoisingMode_Auto = 2,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -4234,9 +4407,9 @@ namespace ABI {
                     ZoomTransitionMode_Smooth = 2,
                 };
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4268,9 +4441,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICallControlEventHandler=_uuidof(ICallControlEventHandler);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICallControlEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICallControlEventHandler_INTERFACE_DEFINED__) */
@@ -4306,9 +4479,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialRequestedEventHandler=_uuidof(IDialRequestedEventHandler);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventHandler_INTERFACE_DEFINED__) */
@@ -4344,9 +4517,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeypadPressedEventHandler=_uuidof(IKeypadPressedEventHandler);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventHandler_INTERFACE_DEFINED__) */
@@ -4382,9 +4555,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRedialRequestedEventHandler=_uuidof(IRedialRequestedEventHandler);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventHandler_INTERFACE_DEFINED__) */
@@ -4426,9 +4599,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedPhotoCaptureSettings=_uuidof(IAdvancedPhotoCaptureSettings);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoCaptureSettings;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoCaptureSettings_INTERFACE_DEFINED__) */
@@ -4460,7 +4633,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedModes(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__CAdvancedPhotoMode * * value
@@ -4476,9 +4649,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedPhotoControl=_uuidof(IAdvancedPhotoControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedPhotoControl_INTERFACE_DEFINED__) */
@@ -4522,9 +4695,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedVideoCaptureDeviceController=_uuidof(IAdvancedVideoCaptureDeviceController);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController_INTERFACE_DEFINED__) */
@@ -4599,9 +4772,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedVideoCaptureDeviceController2=_uuidof(IAdvancedVideoCaptureDeviceController2);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2_INTERFACE_DEFINED__) */
@@ -4646,9 +4819,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedVideoCaptureDeviceController3=_uuidof(IAdvancedVideoCaptureDeviceController3);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController3_INTERFACE_DEFINED__) */
@@ -4702,9 +4875,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedVideoCaptureDeviceController4=_uuidof(IAdvancedVideoCaptureDeviceController4);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController4;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController4_INTERFACE_DEFINED__) */
@@ -4766,9 +4939,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedVideoCaptureDeviceController5=_uuidof(IAdvancedVideoCaptureDeviceController5);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController5;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController5_INTERFACE_DEFINED__) */
@@ -4807,13 +4980,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvancedVideoCaptureDeviceController6=_uuidof(IAdvancedVideoCaptureDeviceController6);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController6;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController6_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.VideoDeviceController
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController7[] = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                /* [object, uuid("8D2927F0-A054-50E7-B7DF-7C04234D10F0"), exclusiveto, contract] */
+                MIDL_INTERFACE("8D2927F0-A054-50E7-B7DF-7C04234D10F0")
+                IAdvancedVideoCaptureDeviceController7 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InfraredTorchControl(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Devices::IInfraredTorchControl * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IAdvancedVideoCaptureDeviceController7=_uuidof(IAdvancedVideoCaptureDeviceController7);
+                
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4845,10 +5059,10 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Muted(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Muted(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_VolumePercent(
                         /* [in] */FLOAT value
@@ -4861,9 +5075,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioDeviceController=_uuidof(IAudioDeviceController);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_INTERFACE_DEFINED__) */
@@ -4918,9 +5132,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioDeviceModule=_uuidof(IAudioDeviceModule);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModule;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModule_INTERFACE_DEFINED__) */
@@ -4962,9 +5176,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioDeviceModuleNotificationEventArgs=_uuidof(IAudioDeviceModuleNotificationEventArgs);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModuleNotificationEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModuleNotificationEventArgs_INTERFACE_DEFINED__) */
@@ -5014,9 +5228,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioDeviceModulesManager=_uuidof(IAudioDeviceModulesManager);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManager_INTERFACE_DEFINED__) */
@@ -5056,9 +5270,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioDeviceModulesManagerFactory=_uuidof(IAudioDeviceModulesManagerFactory);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManagerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManagerFactory_INTERFACE_DEFINED__) */
@@ -5090,7 +5304,7 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IndicateNewIncomingCall(
-                        /* [in] */boolean enableRinger,
+                        /* [in] */::boolean enableRinger,
                         /* [in] */__RPC__in HSTRING callerId,
                         /* [retval, out] */__RPC__out UINT64 * callToken
                         ) = 0;
@@ -5104,7 +5318,7 @@ namespace ABI {
                         /* [in] */UINT64 callToken
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasRinger(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_AnswerRequested(
                         /* [in] */__RPC__in_opt ABI::Windows::Media::Devices::ICallControlEventHandler  * handler,
@@ -5153,9 +5367,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICallControl=_uuidof(ICallControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICallControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICallControl_INTERFACE_DEFINED__) */
@@ -5198,9 +5412,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICallControlStatics=_uuidof(ICallControlStatics);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICallControlStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICallControlStatics_INTERFACE_DEFINED__) */
@@ -5239,9 +5453,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDefaultAudioDeviceChangedEventArgs=_uuidof(IDefaultAudioDeviceChangedEventArgs);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5281,9 +5495,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialRequestedEventArgs=_uuidof(IDialRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -5315,7 +5529,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
                         /* [retval, out] */__RPC__out FLOAT * value
@@ -5338,9 +5552,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IExposureCompensationControl=_uuidof(IExposureCompensationControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl_INTERFACE_DEFINED__) */
@@ -5372,13 +5586,13 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Auto(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetAutoAsync(
-                        /* [in] */boolean value,
+                        /* [in] */::boolean value,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * asyncInfo
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
@@ -5402,9 +5616,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IExposureControl=_uuidof(IExposureControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIExposureControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIExposureControl_INTERFACE_DEFINED__) */
@@ -5436,22 +5650,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Enabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IExposurePriorityVideoControl=_uuidof(IExposurePriorityVideoControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIExposurePriorityVideoControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIExposurePriorityVideoControl_INTERFACE_DEFINED__) */
@@ -5483,31 +5697,31 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RedEyeReductionSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Enabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Auto(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Auto(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RedEyeReduction(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RedEyeReduction(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerPercent(
                         /* [retval, out] */__RPC__out FLOAT * value
@@ -5520,9 +5734,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFlashControl=_uuidof(IFlashControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIFlashControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIFlashControl_INTERFACE_DEFINED__) */
@@ -5554,22 +5768,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AssistantLightSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AssistantLightEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AssistantLightEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFlashControl2=_uuidof(IFlashControl2);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIFlashControl2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIFlashControl2_INTERFACE_DEFINED__) */
@@ -5601,7 +5815,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedPresets(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__CFocusPreset * * value
@@ -5615,7 +5829,7 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SetPresetWithCompletionOptionAsync(
                         /* [in] */ABI::Windows::Media::Devices::FocusPreset preset,
-                        /* [in] */boolean completeBeforeFocus,
+                        /* [in] */::boolean completeBeforeFocus,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * asyncInfo
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
@@ -5642,9 +5856,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFocusControl=_uuidof(IFocusControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIFocusControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIFocusControl_INTERFACE_DEFINED__) */
@@ -5676,10 +5890,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FocusChangedSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WaitForFocusSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedFocusModes(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__CFocusMode * * value
@@ -5710,9 +5924,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFocusControl2=_uuidof(IFocusControl2);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIFocusControl2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIFocusControl2_INTERFACE_DEFINED__) */
@@ -5768,25 +5982,25 @@ namespace ABI {
                         /* [in] */__RPC__in_opt __FIReference_1_Windows__CMedia__CDevices__CManualFocusDistance * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WaitForFocus(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_WaitForFocus(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisableDriverFallback(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DisableDriverFallback(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFocusSettings=_uuidof(IFocusSettings);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIFocusSettings;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIFocusSettings_INTERFACE_DEFINED__) */
@@ -5818,7 +6032,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedModes(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode * * value
@@ -5834,13 +6048,78 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHdrVideoControl=_uuidof(IHdrVideoControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Media.Devices.IInfraredTorchControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.InfraredTorchControl
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IInfraredTorchControl[] = L"Windows.Media.Devices.IInfraredTorchControl";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                /* [object, uuid("1CBA2C83-6CB6-5A04-A6FC-3BE7B33FF056"), exclusiveto, contract] */
+                MIDL_INTERFACE("1CBA2C83-6CB6-5A04-A6FC-3BE7B33FF056")
+                IInfraredTorchControl : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedModes(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentMode(
+                        /* [retval, out] */__RPC__out ABI::Windows::Media::Devices::InfraredTorchMode * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CurrentMode(
+                        /* [in] */ABI::Windows::Media::Devices::InfraredTorchMode value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinPower(
+                        /* [retval, out] */__RPC__out INT32 * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxPower(
+                        /* [retval, out] */__RPC__out INT32 * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerStep(
+                        /* [retval, out] */__RPC__out INT32 * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Power(
+                        /* [retval, out] */__RPC__out INT32 * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Power(
+                        /* [in] */INT32 value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IInfraredTorchControl=_uuidof(IInfraredTorchControl);
+                
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -5868,7 +6147,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -5897,9 +6176,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IIsoSpeedControl=_uuidof(IIsoSpeedControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl_INTERFACE_DEFINED__) */
@@ -5947,7 +6226,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * asyncInfo
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Auto(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetAutoAsync(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * asyncInfo
@@ -5957,9 +6236,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IIsoSpeedControl2=_uuidof(IIsoSpeedControl2);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl2_INTERFACE_DEFINED__) */
@@ -5998,9 +6277,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeypadPressedEventArgs=_uuidof(IKeypadPressedEventArgs);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIKeypadPressedEventArgs_INTERFACE_DEFINED__) */
@@ -6039,10 +6318,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::MediaProperties::IMediaRatio * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ThumbnailEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ThumbnailEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ThumbnailFormat(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::MediaProperties::MediaThumbnailFormat * value
@@ -6064,9 +6343,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILowLagPhotoControl=_uuidof(ILowLagPhotoControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoControl_INTERFACE_DEFINED__) */
@@ -6098,7 +6377,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxPastPhotos(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -6126,10 +6405,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::MediaProperties::IMediaRatio * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ThumbnailEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ThumbnailEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ThumbnailFormat(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::MediaProperties::MediaThumbnailFormat * value
@@ -6151,9 +6430,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILowLagPhotoSequenceControl=_uuidof(ILowLagPhotoSequenceControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoSequenceControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CILowLagPhotoSequenceControl_INTERFACE_DEFINED__) */
@@ -6189,28 +6468,28 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryGetValue(
                         /* [out] */__RPC__out DOUBLE * value,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetValue(
                         /* [in] */DOUBLE value,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryGetAuto(
-                        /* [out] */__RPC__out boolean * value,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [out] */__RPC__out ::boolean * value,
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetAuto(
-                        /* [in] */boolean value,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [in] */::boolean value,
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaDeviceControl=_uuidof(IMediaDeviceControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControl_INTERFACE_DEFINED__) */
@@ -6242,7 +6521,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
                         /* [retval, out] */__RPC__out DOUBLE * value
@@ -6257,16 +6536,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out DOUBLE * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoModeSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaDeviceControlCapabilities=_uuidof(IMediaDeviceControlCapabilities);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControlCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceControlCapabilities_INTERFACE_DEFINED__) */
@@ -6312,9 +6591,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaDeviceController=_uuidof(IMediaDeviceController);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceController_INTERFACE_DEFINED__) */
@@ -6381,9 +6660,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaDeviceStatics=_uuidof(IMediaDeviceStatics);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIMediaDeviceStatics_INTERFACE_DEFINED__) */
@@ -6425,9 +6704,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IModuleCommandResult=_uuidof(IModuleCommandResult);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIModuleCommandResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIModuleCommandResult_INTERFACE_DEFINED__) */
@@ -6459,7 +6738,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedModes(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__COpticalImageStabilizationMode * * value
@@ -6475,9 +6754,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOpticalImageStabilizationControl=_uuidof(IOpticalImageStabilizationControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIOpticalImageStabilizationControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIOpticalImageStabilizationControl_INTERFACE_DEFINED__) */
@@ -6509,13 +6788,13 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * pbSupported
+                        /* [retval, out] */__RPC__out ::boolean * pbSupported
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Enabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PixelFormat(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::MediaProperties::MediaPixelFormat * format
@@ -6528,9 +6807,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoConfirmationControl=_uuidof(IPhotoConfirmationControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIPhotoConfirmationControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIPhotoConfirmationControl_INTERFACE_DEFINED__) */
@@ -6567,9 +6846,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRedialRequestedEventArgs=_uuidof(IRedialRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIRedialRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -6601,22 +6880,22 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoFocusEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoFocusEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoWhiteBalanceEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoWhiteBalanceEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoExposureEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoExposureEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Bounds(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
@@ -6629,9 +6908,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRegionOfInterest=_uuidof(IRegionOfInterest);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest_INTERFACE_DEFINED__) */
@@ -6669,10 +6948,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::Media::Devices::RegionOfInterestType value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BoundsNormalized(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_BoundsNormalized(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Weight(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -6685,9 +6964,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRegionOfInterest2=_uuidof(IRegionOfInterest2);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIRegionOfInterest2_INTERFACE_DEFINED__) */
@@ -6727,29 +7006,29 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SetRegionsWithLockAsync(
                         /* [in] */__RPC__in_opt __FIIterable_1_Windows__CMedia__CDevices__CRegionOfInterest * regions,
-                        /* [in] */boolean lockValues,
+                        /* [in] */::boolean lockValues,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * asyncInfo
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ClearRegionsAsync(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * asyncInfo
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoFocusSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoWhiteBalanceSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoExposureSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRegionsOfInterestControl=_uuidof(IRegionsOfInterestControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIRegionsOfInterestControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIRegionsOfInterestControl_INTERFACE_DEFINED__) */
@@ -6795,9 +7074,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISceneModeControl=_uuidof(ISceneModeControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CISceneModeControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CISceneModeControl_INTERFACE_DEFINED__) */
@@ -6829,16 +7108,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Enabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerPercent(
                         /* [retval, out] */__RPC__out FLOAT * value
@@ -6851,9 +7130,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITorchControl=_uuidof(ITorchControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CITorchControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CITorchControl_INTERFACE_DEFINED__) */
@@ -6923,20 +7202,20 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetPowerlineFrequency(
                         /* [in] */ABI::Windows::Media::Capture::PowerlineFrequency value,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryGetPowerlineFrequency(
                         /* [out] */__RPC__out ABI::Windows::Media::Capture::PowerlineFrequency * value,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVideoDeviceController=_uuidof(IVideoDeviceController);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController_INTERFACE_DEFINED__) */
@@ -6978,9 +7257,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoDeviceControllerGetDevicePropertyResult=_uuidof(IVideoDeviceControllerGetDevicePropertyResult);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceControllerGetDevicePropertyResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceControllerGetDevicePropertyResult_INTERFACE_DEFINED__) */
@@ -7012,7 +7291,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedModes(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__CVideoTemporalDenoisingMode * * value
@@ -7028,9 +7307,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoTemporalDenoisingControl=_uuidof(IVideoTemporalDenoisingControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIVideoTemporalDenoisingControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIVideoTemporalDenoisingControl_INTERFACE_DEFINED__) */
@@ -7062,7 +7341,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Preset(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Devices::ColorTemperaturePreset * value
@@ -7092,9 +7371,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWhiteBalanceControl=_uuidof(IWhiteBalanceControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIWhiteBalanceControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIWhiteBalanceControl_INTERFACE_DEFINED__) */
@@ -7126,7 +7405,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
                         /* [retval, out] */__RPC__out FLOAT * value
@@ -7148,9 +7427,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IZoomControl=_uuidof(IZoomControl);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIZoomControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIZoomControl_INTERFACE_DEFINED__) */
@@ -7195,9 +7474,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IZoomControl2=_uuidof(IZoomControl2);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIZoomControl2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIZoomControl2_INTERFACE_DEFINED__) */
@@ -7245,9 +7524,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IZoomSettings=_uuidof(IZoomSettings);
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIZoomSettings;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIZoomSettings_INTERFACE_DEFINED__) */
@@ -7669,6 +7948,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Media.Devices.InfraredTorchControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IInfraredTorchControl ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Media_Devices_InfraredTorchControl_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_InfraredTorchControl_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_InfraredTorchControl[] = L"Windows.Media.Devices.InfraredTorchControl";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.Media.Devices.IsoSpeedControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -8043,6 +8344,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6
+ *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -8258,6 +8560,12 @@ typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceC
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController6_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController;
@@ -8365,6 +8673,12 @@ typedef interface __x_ABI_CWindows_CMedia_CDevices_CIFocusSettings __x_ABI_CWind
 typedef interface __x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl __x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl;
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIIsoSpeedControl_FWD_DEFINED__
@@ -9627,6 +9941,164 @@ interface __FIIterable_1_Windows__CMedia__CDevices__CHdrVideoMode
 
 
 #endif // ____FIIterable_1_Windows__CMedia__CDevices__CHdrVideoMode_INTERFACE_DEFINED__
+
+
+enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode;
+#if !defined(____FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode;
+
+typedef struct __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl;
+
+interface __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode;
+
+typedef  struct __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CMedia__CDevices__CInfraredTorchMode **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl;
+
+interface __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__
 
 
 enum __x_ABI_CWindows_CMedia_CDevices_CIsoSpeedPreset;
@@ -11347,6 +11819,115 @@ interface __FIVectorView_1_Windows__CMedia__CDevices__CHdrVideoMode
 
 
 
+#if !defined(____FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode;
+
+typedef struct __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+            /* [in] */ enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl;
+
+interface __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchModeVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode_INTERFACE_DEFINED__
+
+
+
 #if !defined(____FIVectorView_1_Windows__CMedia__CDevices__CIsoSpeedPreset_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CMedia__CDevices__CIsoSpeedPreset_INTERFACE_DEFINED__
 
@@ -12198,7 +12779,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioCaptureDeviceChangedEventArgsVtbl;
 
@@ -12249,7 +12830,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CMedia__CDevices__CDefaultAudioRenderDeviceChangedEventArgsVtbl;
 
@@ -12301,7 +12882,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceMo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModuleNotificationEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModulesManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceModuleNotificationEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModulesManager_Windows__CMedia__CDevices__CAudioDeviceModuleNotificationEventArgsVtbl;
 
@@ -12356,7 +12937,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 
@@ -12763,6 +13344,9 @@ typedef enum __x_ABI_CWindows_CMedia_CDevices_CFocusPreset __x_ABI_CWindows_CMed
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CHdrVideoMode __x_ABI_CWindows_CMedia_CDevices_CHdrVideoMode;
 
 
+typedef enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode;
+
+
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CIsoSpeedPreset __x_ABI_CWindows_CMedia_CDevices_CIsoSpeedPreset;
 
 
@@ -12800,6 +13384,9 @@ typedef enum __x_ABI_CWindows_CMedia_CDevices_CVideoTemporalDenoisingMode __x_AB
 
 
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CZoomTransitionMode __x_ABI_CWindows_CMedia_CDevices_CZoomTransitionMode;
+
+
+
 
 
 
@@ -13125,6 +13712,26 @@ enum __x_ABI_CWindows_CMedia_CDevices_CHdrVideoMode
     HdrVideoMode_Auto = 2,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.Media.Devices.InfraredTorchMode
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, contract] */
+enum __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode
+{
+    InfraredTorchMode_Off = 0,
+    InfraredTorchMode_On = 1,
+    InfraredTorchMode_AlternatingFrameIllumination = 2,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -14621,6 +15228,99 @@ interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceControlle
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController6;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController6_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.VideoDeviceController
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController7[] = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7";
+/* [object, uuid("8D2927F0-A054-50E7-B7DF-7C04234D10F0"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_InfraredTorchControl )(
+        __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7Vtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_get_InfraredTorchControl(This,value) \
+    ( (This)->lpVtbl->get_InfraredTorchControl(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController7_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -16945,6 +17645,155 @@ interface __x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIHdrVideoControl_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Media.Devices.IInfraredTorchControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.InfraredTorchControl
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IInfraredTorchControl[] = L"Windows.Media.Devices.IInfraredTorchControl";
+/* [object, uuid("1CBA2C83-6CB6-5A04-A6FC-3BE7B33FF056"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControlVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSupported )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SupportedModes )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CDevices__CInfraredTorchMode * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CurrentMode )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_CurrentMode )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [in] */__x_ABI_CWindows_CMedia_CDevices_CInfraredTorchMode value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MinPower )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxPower )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PowerStep )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Power )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Power )(
+        __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl * This,
+        /* [in] */INT32 value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControlVtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControlVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_get_IsSupported(This,value) \
+    ( (This)->lpVtbl->get_IsSupported(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_get_SupportedModes(This,value) \
+    ( (This)->lpVtbl->get_SupportedModes(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_get_CurrentMode(This,value) \
+    ( (This)->lpVtbl->get_CurrentMode(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_put_CurrentMode(This,value) \
+    ( (This)->lpVtbl->put_CurrentMode(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_get_MinPower(This,value) \
+    ( (This)->lpVtbl->get_MinPower(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_get_MaxPower(This,value) \
+    ( (This)->lpVtbl->get_MaxPower(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_get_PowerStep(This,value) \
+    ( (This)->lpVtbl->get_PowerStep(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_get_Power(This,value) \
+    ( (This)->lpVtbl->get_Power(This,value) )
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_put_Power(This,value) \
+    ( (This)->lpVtbl->put_Power(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIInfraredTorchControl_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -20554,6 +21403,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Media.Devices.InfraredTorchControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IInfraredTorchControl ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Media_Devices_InfraredTorchControl_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_InfraredTorchControl_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_InfraredTorchControl[] = L"Windows.Media.Devices.InfraredTorchControl";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.Media.Devices.IsoSpeedControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -20928,6 +21799,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6
+ *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
  *
  * Class Threading Model:  Multi Threaded Apartment
  *

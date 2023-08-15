@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.scanners.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,9 +279,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 interface IImageScanner;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CScanners_CIImageScanner ABI::Windows::Devices::Scanners::IImageScanner
 
 #endif // ____x_ABI_CWindows_CDevices_CScanners_CIImageScanner_FWD_DEFINED__
@@ -297,9 +293,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 interface IImageScannerFeederConfiguration;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CScanners_CIImageScannerFeederConfiguration ABI::Windows::Devices::Scanners::IImageScannerFeederConfiguration
 
 #endif // ____x_ABI_CWindows_CDevices_CScanners_CIImageScannerFeederConfiguration_FWD_DEFINED__
@@ -311,9 +307,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 interface IImageScannerFormatConfiguration;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CScanners_CIImageScannerFormatConfiguration ABI::Windows::Devices::Scanners::IImageScannerFormatConfiguration
 
 #endif // ____x_ABI_CWindows_CDevices_CScanners_CIImageScannerFormatConfiguration_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 interface IImageScannerPreviewResult;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CScanners_CIImageScannerPreviewResult ABI::Windows::Devices::Scanners::IImageScannerPreviewResult
 
 #endif // ____x_ABI_CWindows_CDevices_CScanners_CIImageScannerPreviewResult_FWD_DEFINED__
@@ -339,9 +335,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 interface IImageScannerScanResult;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CScanners_CIImageScannerScanResult ABI::Windows::Devices::Scanners::IImageScannerScanResult
 
 #endif // ____x_ABI_CWindows_CDevices_CScanners_CIImageScannerScanResult_FWD_DEFINED__
@@ -353,9 +349,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 interface IImageScannerSourceConfiguration;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CScanners_CIImageScannerSourceConfiguration ABI::Windows::Devices::Scanners::IImageScannerSourceConfiguration
 
 #endif // ____x_ABI_CWindows_CDevices_CScanners_CIImageScannerSourceConfiguration_FWD_DEFINED__
@@ -367,9 +363,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 interface IImageScannerStatics;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CScanners_CIImageScannerStatics ABI::Windows::Devices::Scanners::IImageScannerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CScanners_CIImageScannerStatics_FWD_DEFINED__
@@ -382,9 +378,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 class ImageScannerScanResult;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
@@ -407,7 +403,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Devices::Scanners::ImageScannerScan
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Devices::Scanners::ImageScannerScanResult*,UINT32> __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Devices::Scanners::IImageScannerScanResult*,UINT32>
@@ -439,7 +435,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Devices::Scanners::Ima
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Devices::Scanners::ImageScannerScanResult*,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Devices::Scanners::IImageScannerScanResult*,UINT32>
@@ -471,7 +467,7 @@ IAsyncOperationWithProgress<ABI::Windows::Devices::Scanners::ImageScannerScanRes
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Devices::Scanners::ImageScannerScanResult*,UINT32> __FIAsyncOperationWithProgress_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Devices::Scanners::IImageScannerScanResult*,UINT32>
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 class ImageScanner;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
@@ -512,7 +508,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Scanners::ImageScanner*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Scanners::ImageScanner*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScanner_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScanner ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScanner_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScanner ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Scanners::IImageScanner*>
@@ -544,7 +540,7 @@ IAsyncOperation<ABI::Windows::Devices::Scanners::ImageScanner*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Scanners::ImageScanner*> __FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScanner_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScanner ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScanner_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScanner ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Scanners::IImageScanner*>
@@ -560,9 +556,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 class ImageScannerPreviewResult;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
@@ -585,7 +581,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Scanners::ImageScannerPre
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Scanners::ImageScannerPreviewResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScannerPreviewResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScannerPreviewResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScannerPreviewResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CScanners__CImageScannerPreviewResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Scanners::IImageScannerPreviewResult*>
@@ -617,7 +613,7 @@ IAsyncOperation<ABI::Windows::Devices::Scanners::ImageScannerPreviewResult*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Scanners::ImageScannerPreviewResult*> __FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScannerPreviewResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScannerPreviewResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScannerPreviewResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CScanners__CImageScannerPreviewResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Scanners::IImageScannerPreviewResult*>
@@ -632,8 +628,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -641,8 +637,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -668,7 +664,7 @@ IIterator<ABI::Windows::Storage::StorageFile*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFile*> __FIIterator_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFile*>
@@ -700,7 +696,7 @@ IIterable<ABI::Windows::Storage::StorageFile*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFile*> __FIIterable_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFile*>
@@ -732,7 +728,7 @@ IVectorView<ABI::Windows::Storage::StorageFile*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFile*> __FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>
@@ -751,8 +747,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -760,8 +756,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -772,9 +768,9 @@ namespace ABI {
                 
                 typedef enum PrintMediaSize : int PrintMediaSize;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -783,9 +779,9 @@ namespace ABI {
                 
                 typedef enum PrintOrientation : int PrintOrientation;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -795,8 +791,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -804,8 +800,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -820,9 +816,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -839,9 +835,9 @@ namespace ABI {
                 
                 typedef enum ImageScannerAutoCroppingMode : int ImageScannerAutoCroppingMode;
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -850,9 +846,9 @@ namespace ABI {
                 
                 typedef enum ImageScannerColorMode : int ImageScannerColorMode;
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -861,9 +857,9 @@ namespace ABI {
                 
                 typedef enum ImageScannerFormat : int ImageScannerFormat;
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -872,9 +868,9 @@ namespace ABI {
                 
                 typedef enum ImageScannerScanSource : int ImageScannerScanSource;
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -883,9 +879,9 @@ namespace ABI {
                 
                 typedef struct ImageScannerResolution ImageScannerResolution;
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -900,9 +896,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 class ImageScannerAutoConfiguration;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -910,9 +906,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 class ImageScannerFeederConfiguration;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -920,9 +916,9 @@ namespace ABI {
         namespace Devices {
             namespace Scanners {
                 class ImageScannerFlatbedConfiguration;
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -958,9 +954,9 @@ namespace ABI {
                     ImageScannerAutoCroppingMode_MultipleRegion = 2,
                 };
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -987,9 +983,9 @@ namespace ABI {
                     ImageScannerColorMode_AutoColor = 3,
                 };
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -1019,9 +1015,9 @@ namespace ABI {
                     ImageScannerFormat_Pdf = 6,
                 };
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -1048,9 +1044,9 @@ namespace ABI {
                     ImageScannerScanSource_AutoConfigured = 3,
                 };
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -1075,9 +1071,9 @@ namespace ABI {
                     FLOAT DpiY;
                 };
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SCANNERS_SCANNERDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -1113,7 +1109,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsScanSourceSupported(
                         /* [in] */ABI::Windows::Devices::Scanners::ImageScannerScanSource value,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FlatbedConfiguration(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Scanners::IImageScannerFormatConfiguration * * value
@@ -1126,7 +1122,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsPreviewSupported(
                         /* [in] */ABI::Windows::Devices::Scanners::ImageScannerScanSource scanSource,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ScanPreviewToStreamAsync(
                         /* [in] */ABI::Windows::Devices::Scanners::ImageScannerScanSource scanSource,
@@ -1143,9 +1139,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageScanner=_uuidof(IImageScanner);
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CScanners_CIImageScanner;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CScanners_CIImageScanner_INTERFACE_DEFINED__) */
@@ -1182,13 +1178,13 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanAutoDetectPageSize(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoDetectPageSize(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoDetectPageSize(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PageSize(
                         /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintMediaSize * value
@@ -1208,7 +1204,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE IsPageSizeSupported(
                         /* [in] */ABI::Windows::Graphics::Printing::PrintMediaSize pageSize,
                         /* [in] */ABI::Windows::Graphics::Printing::PrintOrientation pageOrientation,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxNumberOfPages(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -1217,31 +1213,31 @@ namespace ABI {
                         /* [in] */UINT32 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanScanDuplex(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Duplex(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Duplex(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanScanAhead(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ScanAhead(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ScanAhead(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IImageScannerFeederConfiguration=_uuidof(IImageScannerFeederConfiguration);
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CScanners_CIImageScannerFeederConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CScanners_CIImageScannerFeederConfiguration_INTERFACE_DEFINED__) */
@@ -1280,16 +1276,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsFormatSupported(
                         /* [in] */ABI::Windows::Devices::Scanners::ImageScannerFormat value,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IImageScannerFormatConfiguration=_uuidof(IImageScannerFormatConfiguration);
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CScanners_CIImageScannerFormatConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CScanners_CIImageScannerFormatConfiguration_INTERFACE_DEFINED__) */
@@ -1321,7 +1317,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Format(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Scanners::ImageScannerFormat * value
@@ -1331,9 +1327,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageScannerPreviewResult=_uuidof(IImageScannerPreviewResult);
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CScanners_CIImageScannerPreviewResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CScanners_CIImageScannerPreviewResult_INTERFACE_DEFINED__) */
@@ -1372,9 +1368,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageScannerScanResult=_uuidof(IImageScannerScanResult);
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CScanners_CIImageScannerScanResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CScanners_CIImageScannerScanResult_INTERFACE_DEFINED__) */
@@ -1426,7 +1422,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsAutoCroppingModeSupported(
                         /* [in] */ABI::Windows::Devices::Scanners::ImageScannerAutoCroppingMode value,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinResolution(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Scanners::ImageScannerResolution * value
@@ -1457,7 +1453,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsColorModeSupported(
                         /* [in] */ABI::Windows::Devices::Scanners::ImageScannerColorMode value,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinBrightness(
                         /* [retval, out] */__RPC__out INT32 * value
@@ -1500,9 +1496,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageScannerSourceConfiguration=_uuidof(IImageScannerSourceConfiguration);
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CScanners_CIImageScannerSourceConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CScanners_CIImageScannerSourceConfiguration_INTERFACE_DEFINED__) */
@@ -1545,9 +1541,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageScannerStatics=_uuidof(IImageScannerStatics);
                 
-            } /* Windows */
+            } /* Scanners */
         } /* Devices */
-    } /* Scanners */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CScanners_CIImageScannerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CScanners_CIImageScannerStatics_INTERFACE_DEFINED__) */
@@ -1776,7 +1772,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CDevices__CScanners__CImageScannerScanResult_UINT32Vtbl;
 

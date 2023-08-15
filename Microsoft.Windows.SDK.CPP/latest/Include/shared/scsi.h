@@ -3074,7 +3074,7 @@ typedef struct _VPD_BLOCK_LIMITS_PAGE {
     UCHAR DeviceType : 5;
     UCHAR DeviceTypeQualifier : 3;
     UCHAR PageCode;                 // 0xB0
-    UCHAR PageLength[2];            // 0x3C if device supports logical block provisioning, otherwise the value may be 0x10.
+    UCHAR PageLength[2];            // 0x3C
 
     union {
         struct {

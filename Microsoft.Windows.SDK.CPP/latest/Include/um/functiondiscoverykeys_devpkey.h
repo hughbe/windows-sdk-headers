@@ -34,8 +34,8 @@ Revision History:
 
 #include <winapifamily.h>
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop and Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 
 //#include <devpropdef.h>
@@ -219,6 +219,6 @@ DEFINE_PROPERTYKEY(PKEY_DeviceInterfaceClass_DefaultInterface,  0x14c83a99, 0x0b
 
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 

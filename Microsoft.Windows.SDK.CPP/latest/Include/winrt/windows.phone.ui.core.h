@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.phone.ui.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,10 +142,10 @@ namespace ABI {
             namespace UI {
                 namespace Core {
                     interface ICoreSelectionChangedEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CUI_CCore_CICoreSelectionChangedEventArgs ABI::Windows::Phone::UI::Core::ICoreSelectionChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CPhone_CUI_CCore_CICoreSelectionChangedEventArgs_FWD_DEFINED__
@@ -158,10 +158,10 @@ namespace ABI {
             namespace UI {
                 namespace Core {
                     interface ICoreTextChangedEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CUI_CCore_CICoreTextChangedEventArgs ABI::Windows::Phone::UI::Core::ICoreTextChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CPhone_CUI_CCore_CICoreTextChangedEventArgs_FWD_DEFINED__
@@ -174,10 +174,10 @@ namespace ABI {
             namespace UI {
                 namespace Core {
                     interface ICoreWindowKeyboardInput;
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CUI_CCore_CICoreWindowKeyboardInput ABI::Windows::Phone::UI::Core::ICoreWindowKeyboardInput
 
 #endif // ____x_ABI_CWindows_CPhone_CUI_CCore_CICoreWindowKeyboardInput_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace UI {
                 namespace Core {
                     interface IKeyboardInputBuffer;
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer ABI::Windows::Phone::UI::Core::IKeyboardInputBuffer
 
 #endif // ____x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer_FWD_DEFINED__
@@ -207,10 +207,10 @@ namespace ABI {
             namespace UI {
                 namespace Core {
                     class KeyboardInputBuffer;
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -219,10 +219,10 @@ namespace ABI {
             namespace UI {
                 namespace Core {
                     class CoreSelectionChangedEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
@@ -246,7 +246,7 @@ ITypedEventHandler<ABI::Windows::Phone::UI::Core::KeyboardInputBuffer*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Phone::UI::Core::KeyboardInputBuffer*,ABI::Windows::Phone::UI::Core::CoreSelectionChangedEventArgs*> __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Phone::UI::Core::IKeyboardInputBuffer*,ABI::Windows::Phone::UI::Core::ICoreSelectionChangedEventArgs*>
@@ -265,10 +265,10 @@ namespace ABI {
             namespace UI {
                 namespace Core {
                     class CoreTextChangedEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
@@ -292,7 +292,7 @@ ITypedEventHandler<ABI::Windows::Phone::UI::Core::KeyboardInputBuffer*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Phone::UI::Core::KeyboardInputBuffer*,ABI::Windows::Phone::UI::Core::CoreTextChangedEventArgs*> __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Phone::UI::Core::IKeyboardInputBuffer*,ABI::Windows::Phone::UI::Core::ICoreTextChangedEventArgs*>
@@ -317,10 +317,10 @@ namespace ABI {
                     
                     typedef enum CoreInputScope : int CoreInputScope;
                     
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 
@@ -366,10 +366,10 @@ namespace ABI {
                         CoreInputScope_Search = 51,
                     };
                     
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 
@@ -409,10 +409,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreSelectionChangedEventArgs=_uuidof(ICoreSelectionChangedEventArgs);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CUI_CCore_CICoreSelectionChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CUI_CCore_CICoreSelectionChangedEventArgs_INTERFACE_DEFINED__) */
@@ -458,10 +458,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreTextChangedEventArgs=_uuidof(ICoreTextChangedEventArgs);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CUI_CCore_CICoreTextChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CUI_CCore_CICoreTextChangedEventArgs_INTERFACE_DEFINED__) */
@@ -491,10 +491,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsKeyboardInputEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsKeyboardInputEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeyboardInputBuffer(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Phone::UI::Core::IKeyboardInputBuffer * * value
@@ -507,10 +507,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreWindowKeyboardInput=_uuidof(ICoreWindowKeyboardInput);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CUI_CCore_CICoreWindowKeyboardInput;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CUI_CCore_CICoreWindowKeyboardInput_INTERFACE_DEFINED__) */
@@ -586,10 +586,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyboardInputBuffer=_uuidof(IKeyboardInputBuffer);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* UI */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* UI */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer_INTERFACE_DEFINED__) */
@@ -719,7 +719,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInp
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CICoreSelectionChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CICoreSelectionChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreSelectionChangedEventArgsVtbl;
 
@@ -772,7 +772,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInp
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CICoreTextChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CIKeyboardInputBuffer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CUI_CCore_CICoreTextChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPhone__CUI__CCore__CKeyboardInputBuffer_Windows__CPhone__CUI__CCore__CCoreTextChangedEventArgsVtbl;
 

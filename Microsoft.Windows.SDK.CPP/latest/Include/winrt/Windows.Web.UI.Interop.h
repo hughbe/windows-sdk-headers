@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.web.ui.interop.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     interface IWebViewControlAcceleratorKeyPressedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlAcceleratorKeyPressedEventArgs ABI::Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlAcceleratorKeyPressedEventArgs_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     interface IWebViewControlMoveFocusRequestedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlMoveFocusRequestedEventArgs ABI::Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlMoveFocusRequestedEventArgs_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     interface IWebViewControlProcess;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcess ABI::Windows::Web::UI::Interop::IWebViewControlProcess
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcess_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     interface IWebViewControlProcessFactory;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessFactory ABI::Windows::Web::UI::Interop::IWebViewControlProcessFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessFactory_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     interface IWebViewControlProcessOptions;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessOptions ABI::Windows::Web::UI::Interop::IWebViewControlProcessOptions
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessOptions_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     interface IWebViewControlSite;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite ABI::Windows::Web::UI::Interop::IWebViewControlSite
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     interface IWebViewControlSite2;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite2 ABI::Windows::Web::UI::Interop::IWebViewControlSite2
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite2_FWD_DEFINED__
@@ -393,10 +389,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     class WebViewControl;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CUI_CIWebViewControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CUI_CIWebViewControl_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Web {
             namespace UI {
                 interface IWebViewControl;
-            } /* Windows */
+            } /* UI */
         } /* Web */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CIWebViewControl ABI::Windows::Web::UI::IWebViewControl
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CIWebViewControl_FWD_DEFINED__
@@ -433,7 +429,7 @@ IIterator<ABI::Windows::Web::UI::Interop::WebViewControl*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::UI::Interop::WebViewControl*> __FIIterator_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t;
 #define __FIIterator_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::UI::IWebViewControl*>
@@ -465,7 +461,7 @@ IIterable<ABI::Windows::Web::UI::Interop::WebViewControl*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::UI::Interop::WebViewControl*> __FIIterable_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t;
 #define __FIIterable_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::UI::IWebViewControl*>
@@ -497,7 +493,7 @@ IVectorView<ABI::Windows::Web::UI::Interop::WebViewControl*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::UI::Interop::WebViewControl*> __FIVectorView_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t;
 #define __FIVectorView_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::UI::IWebViewControl*>
@@ -529,7 +525,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Web::UI::Interop::WebViewControl*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Web::UI::Interop::WebViewControl*> __FIAsyncOperationCompletedHandler_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Web::UI::IWebViewControl*>
@@ -561,7 +557,7 @@ IAsyncOperation<ABI::Windows::Web::UI::Interop::WebViewControl*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Web::UI::Interop::WebViewControl*> __FIAsyncOperation_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t;
 #define __FIAsyncOperation_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CWeb__CUI__CInterop__CWebViewControl_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CWeb__CUI__CInterop__CWebViewControl ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Web::UI::IWebViewControl*>
@@ -594,7 +590,7 @@ ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControl*,IInspectable*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControl*,IInspectable*> __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::UI::IWebViewControl*,IInspectable*>
@@ -612,10 +608,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     class WebViewControlAcceleratorKeyPressedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -639,7 +635,7 @@ ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControl*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControl*,ABI::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs*> __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::UI::IWebViewControl*,ABI::Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs*>
@@ -658,10 +654,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     class WebViewControlMoveFocusRequestedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -685,7 +681,7 @@ ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControl*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControl*,ABI::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs*> __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::UI::IWebViewControl*,ABI::Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs*>
@@ -703,10 +699,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     class WebViewControlProcess;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -730,7 +726,7 @@ ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControlProcess*,IInspe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::UI::Interop::WebViewControlProcess*,IInspectable*> __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::UI::Interop::IWebViewControlProcess*,IInspectable*>
@@ -749,8 +745,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -761,8 +757,8 @@ namespace ABI {
             
             typedef enum VirtualKey : int VirtualKey;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -773,9 +769,9 @@ namespace ABI {
                 
                 typedef enum CoreAcceleratorKeyEventType : int CoreAcceleratorKeyEventType;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -784,9 +780,9 @@ namespace ABI {
                 
                 typedef struct CorePhysicalKeyStatus CorePhysicalKeyStatus;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -799,9 +795,9 @@ namespace ABI {
         namespace Web {
             namespace UI {
                 interface IWebViewControl2;
-            } /* Windows */
+            } /* UI */
         } /* Web */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CUI_CIWebViewControl2 ABI::Windows::Web::UI::IWebViewControl2
 
 #endif // ____x_ABI_CWindows_CWeb_CUI_CIWebViewControl2_FWD_DEFINED__
@@ -818,10 +814,10 @@ namespace ABI {
                     
                     typedef enum WebViewControlAcceleratorKeyRoutingStage : int WebViewControlAcceleratorKeyRoutingStage;
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -831,10 +827,10 @@ namespace ABI {
                     
                     typedef enum WebViewControlMoveFocusReason : int WebViewControlMoveFocusReason;
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -844,10 +840,10 @@ namespace ABI {
                     
                     typedef enum WebViewControlProcessCapabilityState : int WebViewControlProcessCapabilityState;
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -866,10 +862,10 @@ namespace ABI {
             namespace UI {
                 namespace Interop {
                     class WebViewControlProcessOptions;
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -904,10 +900,10 @@ namespace ABI {
                         WebViewControlAcceleratorKeyRoutingStage_Bubbling = 1,
                     };
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -934,10 +930,10 @@ namespace ABI {
                         WebViewControlMoveFocusReason_Previous = 2,
                     };
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -964,10 +960,10 @@ namespace ABI {
                         WebViewControlProcessCapabilityState_Enabled = 2,
                     };
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1009,20 +1005,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IWebViewControlAcceleratorKeyPressedEventArgs=_uuidof(IWebViewControlAcceleratorKeyPressedEventArgs);
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlAcceleratorKeyPressedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlAcceleratorKeyPressedEventArgs_INTERFACE_DEFINED__) */
@@ -1062,10 +1058,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebViewControlMoveFocusRequestedEventArgs=_uuidof(IWebViewControlMoveFocusRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlMoveFocusRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlMoveFocusRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1104,7 +1100,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrivateNetworkClientServerCapabilityEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateWebViewControlAsync(
                             /* [in] */INT64 hostWindowHandle,
@@ -1127,10 +1123,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebViewControlProcess=_uuidof(IWebViewControlProcess);
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcess;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcess_INTERFACE_DEFINED__) */
@@ -1171,10 +1167,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebViewControlProcessFactory=_uuidof(IWebViewControlProcessFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessFactory_INTERFACE_DEFINED__) */
@@ -1223,10 +1219,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebViewControlProcessOptions=_uuidof(IWebViewControlProcessOptions);
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessOptions;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcessOptions_INTERFACE_DEFINED__) */
@@ -1274,10 +1270,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE Close(void) = 0;
                         virtual HRESULT STDMETHODCALLTYPE MoveFocus(
@@ -1302,10 +1298,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebViewControlSite=_uuidof(IWebViewControlSite);
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite_INTERFACE_DEFINED__) */
@@ -1356,10 +1352,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWebViewControlSite2=_uuidof(IWebViewControlSite2);
                     
-                } /* Windows */
-            } /* Web */
-        } /* UI */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* UI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite2;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlSite2_INTERFACE_DEFINED__) */
@@ -1951,7 +1947,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CIWebViewControl * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CIWebViewControl * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_IInspectableVtbl;
 
@@ -2003,7 +1999,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CIWebViewControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlAcceleratorKeyPressedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CIWebViewControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlAcceleratorKeyPressedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlAcceleratorKeyPressedEventArgsVtbl;
 
@@ -2056,7 +2052,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CIWebViewControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlMoveFocusRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CIWebViewControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlMoveFocusRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControl_Windows__CWeb__CUI__CInterop__CWebViewControlMoveFocusRequestedEventArgsVtbl;
 
@@ -2108,7 +2104,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcess * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CUI_CInterop_CIWebViewControlProcess * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CUI__CInterop__CWebViewControlProcess_IInspectableVtbl;
 

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -564,6 +564,13 @@ struct WINRT_EBO IGravityConnectedAnimationConfiguration :
     impl::consume_t<IGravityConnectedAnimationConfiguration>
 {
     IGravityConnectedAnimationConfiguration(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IGravityConnectedAnimationConfiguration2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IGravityConnectedAnimationConfiguration2>
+{
+    IGravityConnectedAnimationConfiguration2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IGravityConnectedAnimationConfigurationFactory :

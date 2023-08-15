@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.web.http.diagnostics.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,10 +279,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     interface IHttpDiagnosticProvider;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProvider
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider_FWD_DEFINED__
@@ -299,10 +295,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     interface IHttpDiagnosticProviderRequestResponseCompletedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseCompletedEventArgs ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderRequestResponseCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseCompletedEventArgs_FWD_DEFINED__
@@ -315,10 +311,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     interface IHttpDiagnosticProviderRequestResponseTimestamps;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseTimestamps ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderRequestResponseTimestamps
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseTimestamps_FWD_DEFINED__
@@ -331,10 +327,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     interface IHttpDiagnosticProviderRequestSentEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestSentEventArgs ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderRequestSentEventArgs
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestSentEventArgs_FWD_DEFINED__
@@ -347,10 +343,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     interface IHttpDiagnosticProviderResponseReceivedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderResponseReceivedEventArgs ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderResponseReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderResponseReceivedEventArgs_FWD_DEFINED__
@@ -363,10 +359,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     interface IHttpDiagnosticProviderStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderStatics ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderStatics_FWD_DEFINED__
@@ -379,10 +375,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     interface IHttpDiagnosticSourceLocation;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticSourceLocation ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticSourceLocation
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticSourceLocation_FWD_DEFINED__
@@ -396,10 +392,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     class HttpDiagnosticSourceLocation;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_WEB_HTTP_DIAGNOSTICS_HTTPDIAGNOSTICSCONTRACT_VERSION >= 0x10000
@@ -422,7 +418,7 @@ IIterator<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation*> __FIIterator_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticSourceLocation*>
@@ -454,7 +450,7 @@ IIterable<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation*> __FIIterable_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticSourceLocation*>
@@ -486,7 +482,7 @@ IVectorView<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation*> __FIVectorView_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticSourceLocation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticSourceLocation*>
@@ -503,10 +499,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     class HttpDiagnosticProvider;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -515,10 +511,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     class HttpDiagnosticProviderRequestResponseCompletedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_WEB_HTTP_DIAGNOSTICS_HTTPDIAGNOSTICSCONTRACT_VERSION >= 0x10000
@@ -542,7 +538,7 @@ ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider*,ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs*> __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProvider*,ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderRequestResponseCompletedEventArgs*>
@@ -561,10 +557,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     class HttpDiagnosticProviderRequestSentEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_WEB_HTTP_DIAGNOSTICS_HTTPDIAGNOSTICSCONTRACT_VERSION >= 0x10000
@@ -588,7 +584,7 @@ ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider*,ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs*> __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProvider*,ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderRequestSentEventArgs*>
@@ -607,10 +603,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     class HttpDiagnosticProviderResponseReceivedEventArgs;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_WEB_HTTP_DIAGNOSTICS_HTTPDIAGNOSTICSCONTRACT_VERSION >= 0x10000
@@ -634,7 +630,7 @@ ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider*,ABI::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs*> __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProvider*,ABI::Windows::Web::Http::Diagnostics::IHttpDiagnosticProviderResponseReceivedEventArgs*>
@@ -651,8 +647,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -673,7 +669,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -691,15 +687,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -707,8 +703,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -721,9 +717,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_FWD_DEFINED__
@@ -732,9 +728,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_FWD_DEFINED__
@@ -748,9 +744,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
@@ -759,9 +755,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage ABI::Windows::Web::Http::IHttpRequestMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
@@ -772,9 +768,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -783,9 +779,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage ABI::Windows::Web::Http::IHttpResponseMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -803,10 +799,10 @@ namespace ABI {
                     
                     typedef enum HttpDiagnosticRequestInitiator : int HttpDiagnosticRequestInitiator;
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -823,10 +819,10 @@ namespace ABI {
             namespace Http {
                 namespace Diagnostics {
                     class HttpDiagnosticProviderRequestResponseTimestamps;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -888,10 +884,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_WEB_HTTP_DIAGNOSTICS_HTTPDIAGNOSTICSCONTRACT_VERSION >= 0x10000
 
 
@@ -948,10 +944,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDiagnosticProvider=_uuidof(IHttpDiagnosticProvider);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider_INTERFACE_DEFINED__) */
@@ -1009,10 +1005,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDiagnosticProviderRequestResponseCompletedEventArgs=_uuidof(IHttpDiagnosticProviderRequestResponseCompletedEventArgs);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -1076,10 +1072,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDiagnosticProviderRequestResponseTimestamps=_uuidof(IHttpDiagnosticProviderRequestResponseTimestamps);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseTimestamps;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseTimestamps_INTERFACE_DEFINED__) */
@@ -1137,10 +1133,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDiagnosticProviderRequestSentEventArgs=_uuidof(IHttpDiagnosticProviderRequestSentEventArgs);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestSentEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestSentEventArgs_INTERFACE_DEFINED__) */
@@ -1186,10 +1182,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDiagnosticProviderResponseReceivedEventArgs=_uuidof(IHttpDiagnosticProviderResponseReceivedEventArgs);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderResponseReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderResponseReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -1230,10 +1226,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDiagnosticProviderStatics=_uuidof(IHttpDiagnosticProviderStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderStatics_INTERFACE_DEFINED__) */
@@ -1279,10 +1275,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDiagnosticSourceLocation=_uuidof(IHttpDiagnosticSourceLocation);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticSourceLocation;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticSourceLocation_INTERFACE_DEFINED__) */
@@ -1781,7 +1777,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttp
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestResponseCompletedEventArgsVtbl;
 
@@ -1834,7 +1830,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttp
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestSentEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestSentEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderRequestSentEventArgsVtbl;
 
@@ -1887,7 +1883,7 @@ typedef struct __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttp
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderResponseReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderResponseReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProvider_Windows__CWeb__CHttp__CDiagnostics__CHttpDiagnosticProviderResponseReceivedEventArgsVtbl;
 

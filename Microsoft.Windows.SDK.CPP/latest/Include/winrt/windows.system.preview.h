@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.preview.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace System {
             namespace Preview {
                 interface ITwoPanelHingedDevicePosturePreview;
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreview ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreview
 
 #endif // ____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreview_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace System {
             namespace Preview {
                 interface ITwoPanelHingedDevicePosturePreviewReading;
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReading ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreviewReading
 
 #endif // ____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReading_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace System {
             namespace Preview {
                 interface ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs;
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace System {
             namespace Preview {
                 interface ITwoPanelHingedDevicePosturePreviewStatics;
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewStatics ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreviewStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewStatics_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace System {
             namespace Preview {
                 class TwoPanelHingedDevicePosturePreview;
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -359,7 +355,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::Preview::TwoPanelHingedDev
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePreview*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreview*>
@@ -391,7 +387,7 @@ IAsyncOperation<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePrevie
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePreview*> __FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreview*>
@@ -407,9 +403,9 @@ namespace ABI {
         namespace System {
             namespace Preview {
                 class TwoPanelHingedDevicePosturePreviewReading;
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -432,7 +428,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::Preview::TwoPanelHingedDev
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreviewReading*>
@@ -464,7 +460,7 @@ IAsyncOperation<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePrevie
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading*> __FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReading ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreviewReading*>
@@ -481,9 +477,9 @@ namespace ABI {
         namespace System {
             namespace Preview {
                 class TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs;
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -507,7 +503,7 @@ ITypedEventHandler<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePre
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePreview*,ABI::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreview*,ABI::Windows::System::Preview::ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs*>
@@ -528,9 +524,9 @@ namespace ABI {
                 
                 typedef enum SimpleOrientation : int SimpleOrientation;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -541,8 +537,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -554,9 +550,9 @@ namespace ABI {
                 
                 typedef enum HingeState : int HingeState;
                 
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -598,9 +594,9 @@ namespace ABI {
                     HingeState_Full = 5,
                 };
                 
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -643,9 +639,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITwoPanelHingedDevicePosturePreview=_uuidof(ITwoPanelHingedDevicePosturePreview);
                 
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreview;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreview_INTERFACE_DEFINED__) */
@@ -699,9 +695,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITwoPanelHingedDevicePosturePreviewReading=_uuidof(ITwoPanelHingedDevicePosturePreviewReading);
                 
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReading;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReading_INTERFACE_DEFINED__) */
@@ -740,9 +736,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs=_uuidof(ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -781,9 +777,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITwoPanelHingedDevicePosturePreviewStatics=_uuidof(ITwoPanelHingedDevicePosturePreviewStatics);
                 
-            } /* Windows */
+            } /* Preview */
         } /* System */
-    } /* Preview */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewStatics_INTERFACE_DEFINED__) */
@@ -1148,7 +1144,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHing
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CPreview_CITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreview_Windows__CSystem__CPreview__CTwoPanelHingedDevicePosturePreviewReadingChangedEventArgsVtbl;
 

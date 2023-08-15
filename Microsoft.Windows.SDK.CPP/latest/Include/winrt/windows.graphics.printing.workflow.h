@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.printing.workflow.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowBackgroundSession;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowBackgroundSession
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowBackgroundSetupRequestedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSetupRequestedEventArgs ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowBackgroundSetupRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSetupRequestedEventArgs_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowConfiguration;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowConfiguration ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowConfiguration
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowConfiguration_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowForegroundSession;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSession
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowForegroundSetupRequestedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSetupRequestedEventArgs ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSetupRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSetupRequestedEventArgs_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowObjectModelSourceFileContent;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelSourceFileContent ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContent
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelSourceFileContent_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowObjectModelTargetPackage;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelTargetPackage ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelTargetPackage
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelTargetPackage_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowSourceContent;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSourceContent ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowSourceContent
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSourceContent_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowSpoolStreamContent;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSpoolStreamContent ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowSpoolStreamContent
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSpoolStreamContent_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowStreamTarget;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowStreamTarget ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowStreamTarget
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowStreamTarget_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowSubmittedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedEventArgs ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowSubmittedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedEventArgs_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowSubmittedOperation;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedOperation ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowSubmittedOperation
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedOperation_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowTarget;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTarget ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowTarget
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTarget_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowTriggerDetails;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTriggerDetails ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowTriggerDetails
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTriggerDetails_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowUIActivatedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowUIActivatedEventArgs ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowUIActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowUIActivatedEventArgs_FWD_DEFINED__
@@ -520,10 +516,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     interface IPrintWorkflowXpsDataAvailableEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowXpsDataAvailableEventArgs ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowXpsDataAvailableEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowXpsDataAvailableEventArgs_FWD_DEFINED__
@@ -537,10 +533,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowBackgroundSession;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -549,10 +545,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowBackgroundSetupRequestedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -576,7 +572,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowBack
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession*,ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowBackgroundSession*,ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowBackgroundSetupRequestedEventArgs*>
@@ -595,10 +591,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowSubmittedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -622,7 +618,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowBack
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession*,ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowBackgroundSession*,ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowSubmittedEventArgs*>
@@ -640,10 +636,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowForegroundSession;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -652,10 +648,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowForegroundSetupRequestedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -679,7 +675,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowFore
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession*,ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSession*,ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSetupRequestedEventArgs*>
@@ -698,10 +694,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowXpsDataAvailableEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -725,7 +721,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowFore
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession*,ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSession*,ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowXpsDataAvailableEventArgs*>
@@ -743,10 +739,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     class WorkflowPrintTicket;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket_FWD_DEFINED__
@@ -756,10 +752,10 @@ namespace ABI {
             namespace Printing {
                 namespace PrintTicket {
                     interface IWorkflowPrintTicket;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* PrintTicket */} /* ABI */
+                } /* PrintTicket */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CPrintTicket_CIWorkflowPrintTicket_FWD_DEFINED__
@@ -785,7 +781,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::W
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket*>
@@ -817,7 +813,7 @@ IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTick
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket*> __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CPrinting__CPrintTicket__CWorkflowPrintTicket ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket*>
@@ -837,9 +833,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs_FWD_DEFINED__
@@ -852,9 +848,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IActivatedEventArgsWithUser;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsWithUser ABI::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsWithUser_FWD_DEFINED__
@@ -867,8 +863,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -876,8 +872,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -898,9 +894,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -913,9 +909,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -932,10 +928,10 @@ namespace ABI {
                     
                     typedef enum PrintWorkflowSessionStatus : int PrintWorkflowSessionStatus;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -945,10 +941,10 @@ namespace ABI {
                     
                     typedef enum PrintWorkflowSubmittedStatus : int PrintWorkflowSubmittedStatus;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -974,10 +970,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowConfiguration;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -988,10 +984,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowObjectModelSourceFileContent;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1000,10 +996,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowObjectModelTargetPackage;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1012,10 +1008,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowSourceContent;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1024,10 +1020,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowSpoolStreamContent;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1036,10 +1032,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowStreamTarget;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1049,10 +1045,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowSubmittedOperation;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1061,10 +1057,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowTarget;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1073,10 +1069,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowTriggerDetails;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1085,10 +1081,10 @@ namespace ABI {
             namespace Printing {
                 namespace Workflow {
                     class PrintWorkflowUIActivatedEventArgs;
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1126,10 +1122,10 @@ namespace ABI {
                         PrintWorkflowSessionStatus_Closed = 3,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1156,10 +1152,10 @@ namespace ABI {
                         PrintWorkflowSubmittedStatus_Failed = 2,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1211,10 +1207,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowBackgroundSession=_uuidof(IPrintWorkflowBackgroundSession);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession_INTERFACE_DEFINED__) */
@@ -1261,10 +1257,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowBackgroundSetupRequestedEventArgs=_uuidof(IPrintWorkflowBackgroundSetupRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSetupRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSetupRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1310,10 +1306,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowConfiguration=_uuidof(IPrintWorkflowConfiguration);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowConfiguration_INTERFACE_DEFINED__) */
@@ -1368,10 +1364,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowForegroundSession=_uuidof(IPrintWorkflowForegroundSession);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession_INTERFACE_DEFINED__) */
@@ -1417,10 +1413,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowForegroundSetupRequestedEventArgs=_uuidof(IPrintWorkflowForegroundSetupRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSetupRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSetupRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1457,10 +1453,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowObjectModelSourceFileContent=_uuidof(IPrintWorkflowObjectModelSourceFileContent);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelSourceFileContent;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelSourceFileContent_INTERFACE_DEFINED__) */
@@ -1497,10 +1493,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowObjectModelTargetPackage=_uuidof(IPrintWorkflowObjectModelTargetPackage);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelTargetPackage;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowObjectModelTargetPackage_INTERFACE_DEFINED__) */
@@ -1546,10 +1542,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowSourceContent=_uuidof(IPrintWorkflowSourceContent);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSourceContent;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSourceContent_INTERFACE_DEFINED__) */
@@ -1589,10 +1585,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowSpoolStreamContent=_uuidof(IPrintWorkflowSpoolStreamContent);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSpoolStreamContent;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSpoolStreamContent_INTERFACE_DEFINED__) */
@@ -1632,10 +1628,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowStreamTarget=_uuidof(IPrintWorkflowStreamTarget);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowStreamTarget;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowStreamTarget_INTERFACE_DEFINED__) */
@@ -1682,10 +1678,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowSubmittedEventArgs=_uuidof(IPrintWorkflowSubmittedEventArgs);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedEventArgs_INTERFACE_DEFINED__) */
@@ -1731,10 +1727,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowSubmittedOperation=_uuidof(IPrintWorkflowSubmittedOperation);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedOperation;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedOperation_INTERFACE_DEFINED__) */
@@ -1777,10 +1773,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowTarget=_uuidof(IPrintWorkflowTarget);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTarget;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTarget_INTERFACE_DEFINED__) */
@@ -1820,10 +1816,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowTriggerDetails=_uuidof(IPrintWorkflowTriggerDetails);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowTriggerDetails_INTERFACE_DEFINED__) */
@@ -1868,10 +1864,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowUIActivatedEventArgs=_uuidof(IPrintWorkflowUIActivatedEventArgs);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowUIActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowUIActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -1914,10 +1910,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintWorkflowXpsDataAvailableEventArgs=_uuidof(IPrintWorkflowXpsDataAvailableEventArgs);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Printing */
-    } /* Workflow */} /* ABI */
+                } /* Workflow */
+            } /* Printing */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowXpsDataAvailableEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowXpsDataAvailableEventArgs_INTERFACE_DEFINED__) */
@@ -2436,7 +2432,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSetupRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSetupRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSetupRequestedEventArgsVtbl;
 
@@ -2489,7 +2485,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowBackgroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowSubmittedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowBackgroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowSubmittedEventArgsVtbl;
 
@@ -2542,7 +2538,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSetupRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSetupRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSetupRequestedEventArgsVtbl;
 
@@ -2595,7 +2591,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowXpsDataAvailableEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowForegroundSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowXpsDataAvailableEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowForegroundSession_Windows__CGraphics__CPrinting__CWorkflow__CPrintWorkflowXpsDataAvailableEventArgsVtbl;
 

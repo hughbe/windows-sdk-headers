@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.userprofile.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -288,9 +284,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IAdvertisingManagerForUser;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser ABI::Windows::System::UserProfile::IAdvertisingManagerForUser
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_FWD_DEFINED__
@@ -302,9 +298,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IAdvertisingManagerStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics ABI::Windows::System::UserProfile::IAdvertisingManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_FWD_DEFINED__
@@ -316,9 +312,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IAdvertisingManagerStatics2;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 ABI::Windows::System::UserProfile::IAdvertisingManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_FWD_DEFINED__
@@ -330,9 +326,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IAssignedAccessSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings ABI::Windows::System::UserProfile::IAssignedAccessSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_FWD_DEFINED__
@@ -344,9 +340,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IAssignedAccessSettingsStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics ABI::Windows::System::UserProfile::IAssignedAccessSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_FWD_DEFINED__
@@ -358,9 +354,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IDiagnosticsSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings ABI::Windows::System::UserProfile::IDiagnosticsSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_FWD_DEFINED__
@@ -372,9 +368,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IDiagnosticsSettingsStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics ABI::Windows::System::UserProfile::IDiagnosticsSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_FWD_DEFINED__
@@ -386,9 +382,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IFirstSignInSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings ABI::Windows::System::UserProfile::IFirstSignInSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_FWD_DEFINED__
@@ -400,9 +396,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IFirstSignInSettingsStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics ABI::Windows::System::UserProfile::IFirstSignInSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_FWD_DEFINED__
@@ -414,9 +410,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IGlobalizationPreferencesForUser;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser ABI::Windows::System::UserProfile::IGlobalizationPreferencesForUser
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_FWD_DEFINED__
@@ -428,9 +424,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IGlobalizationPreferencesStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics ABI::Windows::System::UserProfile::IGlobalizationPreferencesStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_FWD_DEFINED__
@@ -442,9 +438,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IGlobalizationPreferencesStatics2;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 ABI::Windows::System::UserProfile::IGlobalizationPreferencesStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_FWD_DEFINED__
@@ -456,9 +452,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IGlobalizationPreferencesStatics3;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 ABI::Windows::System::UserProfile::IGlobalizationPreferencesStatics3
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_FWD_DEFINED__
@@ -470,9 +466,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface ILockScreenImageFeedStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics ABI::Windows::System::UserProfile::ILockScreenImageFeedStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_FWD_DEFINED__
@@ -484,9 +480,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface ILockScreenStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics ABI::Windows::System::UserProfile::ILockScreenStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_FWD_DEFINED__
@@ -498,9 +494,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IUserInformationStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics ABI::Windows::System::UserProfile::IUserInformationStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_FWD_DEFINED__
@@ -512,9 +508,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IUserProfilePersonalizationSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings ABI::Windows::System::UserProfile::IUserProfilePersonalizationSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_FWD_DEFINED__
@@ -526,9 +522,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 interface IUserProfilePersonalizationSettingsStatics;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics ABI::Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_FWD_DEFINED__
@@ -541,9 +537,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 enum SetAccountPictureResult : int;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
@@ -564,7 +560,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetAccou
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::UserProfile::SetAccountPictureResult>
@@ -594,7 +590,7 @@ IAsyncOperation<enum ABI::Windows::System::UserProfile::SetAccountPictureResult>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::UserProfile::SetAccountPictureResult>
@@ -609,9 +605,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 enum SetImageFeedResult : int;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
@@ -632,7 +628,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetImage
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetImageFeedResult> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::UserProfile::SetImageFeedResult>
@@ -662,7 +658,7 @@ IAsyncOperation<enum ABI::Windows::System::UserProfile::SetImageFeedResult> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::UserProfile::SetImageFeedResult> __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::UserProfile::SetImageFeedResult>
@@ -692,7 +688,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -722,7 +718,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -752,7 +748,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -782,7 +778,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -811,7 +807,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -840,7 +836,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -869,7 +865,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -899,7 +895,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -928,7 +924,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -957,7 +953,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -971,8 +967,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -980,8 +976,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1007,7 +1003,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1039,7 +1035,7 @@ IAsyncOperation<ABI::Windows::Foundation::Uri*> : IAsyncOperation_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Foundation::Uri*> __FIAsyncOperation_1_Windows__CFoundation__CUri_t;
 #define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1069,7 +1065,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1098,7 +1094,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1116,8 +1112,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1133,8 +1129,8 @@ namespace ABI {
             
             typedef enum DayOfWeek : int DayOfWeek;
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1144,8 +1140,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1155,8 +1151,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1168,9 +1164,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1183,8 +1179,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1192,8 +1188,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1210,9 +1206,9 @@ namespace ABI {
                 
                 typedef enum AccountPictureKind : int AccountPictureKind;
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1221,9 +1217,9 @@ namespace ABI {
                 
                 typedef enum SetAccountPictureResult : int SetAccountPictureResult;
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1232,9 +1228,9 @@ namespace ABI {
                 
                 typedef enum SetImageFeedResult : int SetImageFeedResult;
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1260,9 +1256,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 class AdvertisingManagerForUser;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1270,9 +1266,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 class AssignedAccessSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1280,9 +1276,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 class DiagnosticsSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1290,9 +1286,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 class FirstSignInSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1301,9 +1297,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 class GlobalizationPreferencesForUser;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1313,9 +1309,9 @@ namespace ABI {
         namespace System {
             namespace UserProfile {
                 class UserProfilePersonalizationSettings;
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1354,9 +1350,9 @@ namespace ABI {
                     AccountPictureKind_Video = 2,
                 };
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
 
@@ -1389,9 +1385,9 @@ namespace ABI {
                     SetAccountPictureResult_Failure = 5,
                 };
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
 
@@ -1417,9 +1413,9 @@ namespace ABI {
                     SetImageFeedResult_UserCanceled = 2,
                 };
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
 
@@ -1458,9 +1454,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvertisingManagerForUser=_uuidof(IAdvertisingManagerForUser);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_INTERFACE_DEFINED__) */
@@ -1499,9 +1495,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvertisingManagerStatics=_uuidof(IAdvertisingManagerStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_INTERFACE_DEFINED__) */
@@ -1541,9 +1537,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdvertisingManagerStatics2=_uuidof(IAdvertisingManagerStatics2);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_INTERFACE_DEFINED__) */
@@ -1575,10 +1571,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSingleAppKioskMode(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
@@ -1588,9 +1584,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAssignedAccessSettings=_uuidof(IAssignedAccessSettings);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_INTERFACE_DEFINED__) */
@@ -1633,9 +1629,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAssignedAccessSettingsStatics=_uuidof(IAssignedAccessSettingsStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_INTERFACE_DEFINED__) */
@@ -1667,7 +1663,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanUseDiagnosticsToTailorExperiences(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
@@ -1677,9 +1673,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDiagnosticsSettings=_uuidof(IDiagnosticsSettings);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_INTERFACE_DEFINED__) */
@@ -1722,9 +1718,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDiagnosticsSettingsStatics=_uuidof(IDiagnosticsSettingsStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_INTERFACE_DEFINED__) */
@@ -1765,9 +1761,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFirstSignInSettings=_uuidof(IFirstSignInSettings);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_INTERFACE_DEFINED__) */
@@ -1806,9 +1802,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFirstSignInSettingsStatics=_uuidof(IFirstSignInSettingsStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_INTERFACE_DEFINED__) */
@@ -1865,9 +1861,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesForUser=_uuidof(IGlobalizationPreferencesForUser);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_INTERFACE_DEFINED__) */
@@ -1921,9 +1917,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesStatics=_uuidof(IGlobalizationPreferencesStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_INTERFACE_DEFINED__) */
@@ -1956,20 +1952,20 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE TrySetHomeGeographicRegion(
                         /* [in] */__RPC__in HSTRING region,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetLanguages(
                         /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * languageTags,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesStatics2=_uuidof(IGlobalizationPreferencesStatics2);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_INTERFACE_DEFINED__) */
@@ -2009,9 +2005,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesStatics3=_uuidof(IGlobalizationPreferencesStatics3);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_INTERFACE_DEFINED__) */
@@ -2047,16 +2043,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryRemoveImageFeed(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenImageFeedStatics=_uuidof(ILockScreenImageFeedStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_INTERFACE_DEFINED__) */
@@ -2106,9 +2102,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenStatics=_uuidof(ILockScreenStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_INTERFACE_DEFINED__) */
@@ -2148,14 +2144,14 @@ namespace ABI {
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
                     #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_AccountPictureChangeEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
                     #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_NameAccessAllowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
@@ -2263,9 +2259,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserInformationStatics=_uuidof(IUserInformationStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_INTERFACE_DEFINED__) */
@@ -2309,9 +2305,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserProfilePersonalizationSettings=_uuidof(IUserProfilePersonalizationSettings);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_INTERFACE_DEFINED__) */
@@ -2346,16 +2342,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IUserProfilePersonalizationSettings * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IUserProfilePersonalizationSettingsStatics=_uuidof(IUserProfilePersonalizationSettingsStatics);
                 
-            } /* Windows */
+            } /* UserProfile */
         } /* System */
-    } /* UserProfile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_INTERFACE_DEFINED__) */

@@ -148,8 +148,8 @@ typedef /* [hidden][restricted] */ LONGLONG REFERENCE_TIME;
 #include <ksmedia.h>
 #endif
 #endif
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application and Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 enum _AUDCLNT_BUFFERFLAGS
     {
@@ -1310,6 +1310,15 @@ EXTERN_C const IID IID_IAudioClock;
 #endif 	/* __IAudioClock_INTERFACE_DEFINED__ */
 
 
+/* interface __MIDL_itf_audioclient_0000_0006 */
+/* [local] */ 
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0006_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0006_v0_0_s_ifspec;
+
 #ifndef __IAudioClock2_INTERFACE_DEFINED__
 #define __IAudioClock2_INTERFACE_DEFINED__
 
@@ -1396,6 +1405,15 @@ EXTERN_C const IID IID_IAudioClock2;
 #endif 	/* __IAudioClock2_INTERFACE_DEFINED__ */
 
 
+/* interface __MIDL_itf_audioclient_0000_0007 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0007_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0007_v0_0_s_ifspec;
+
 #ifndef __IAudioClockAdjustment_INTERFACE_DEFINED__
 #define __IAudioClockAdjustment_INTERFACE_DEFINED__
 
@@ -1477,6 +1495,15 @@ EXTERN_C const IID IID_IAudioClockAdjustment;
 
 #endif 	/* __IAudioClockAdjustment_INTERFACE_DEFINED__ */
 
+
+/* interface __MIDL_itf_audioclient_0000_0008 */
+/* [local] */ 
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0008_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0008_v0_0_s_ifspec;
 
 #ifndef __ISimpleAudioVolume_INTERFACE_DEFINED__
 #define __ISimpleAudioVolume_INTERFACE_DEFINED__
@@ -1599,6 +1626,15 @@ EXTERN_C const IID IID_ISimpleAudioVolume;
 
 #endif 	/* __ISimpleAudioVolume_INTERFACE_DEFINED__ */
 
+
+/* interface __MIDL_itf_audioclient_0000_0009 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0009_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0009_v0_0_s_ifspec;
 
 #ifndef __IAudioStreamVolume_INTERFACE_DEFINED__
 #define __IAudioStreamVolume_INTERFACE_DEFINED__
@@ -1749,6 +1785,10 @@ EXTERN_C const IID IID_IAudioStreamVolume;
 /* interface __MIDL_itf_audioclient_0000_0010 */
 /* [local] */ 
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef 
 enum AMBISONICS_TYPE
     {
@@ -2083,8 +2123,8 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application and Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 #define AUDCLNT_ERR(n) MAKE_HRESULT(SEVERITY_ERROR, FACILITY_AUDCLNT, n)
 #define AUDCLNT_SUCCESS(n) MAKE_SCODE(SEVERITY_SUCCESS, FACILITY_AUDCLNT, n)
 #define AUDCLNT_E_NOT_INITIALIZED              AUDCLNT_ERR(0x001)
@@ -2126,7 +2166,7 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #define AUDCLNT_S_BUFFER_EMPTY                 AUDCLNT_SUCCESS(0x001)
 #define AUDCLNT_S_THREAD_ALREADY_REGISTERED    AUDCLNT_SUCCESS(0x002)
 #define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 

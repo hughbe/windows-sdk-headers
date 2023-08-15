@@ -5,8 +5,8 @@
 //**@@@*@@@****************************************************
 cpp_quote("#include <winapifamily.h>")
 
-#pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+#pragma region Desktop or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 import "unknwn.idl";
 import "propsys.idl";
@@ -120,6 +120,7 @@ cpp_quote("DEFINE_PROPERTYKEY(PKEY_AudioEndpointSettings_LaunchContract, 0x14242
 
 // PKEY_AudioEngine_* index 7 is in endpointkeys.h
 
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 // ----------------------------------------------------------------------
 // Public Structures
 // ----------------------------------------------------------------------
@@ -129,6 +130,7 @@ typedef struct tagDIRECTX_AUDIO_ACTIVATION_PARAMS
     GUID    guidAudioSession;
     DWORD   dwAudioStreamFlags;
 } DIRECTX_AUDIO_ACTIVATION_PARAMS, *PDIRECTX_AUDIO_ACTIVATION_PARAMS;
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 
 // ----------------------------------------------------------------------
 // Types
@@ -168,7 +170,7 @@ typedef enum
 
 cpp_quote("#define HDMI     DigitalAudioDisplayDevice")
 cpp_quote("")
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
@@ -190,8 +192,8 @@ cpp_quote("#endif")
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
-#pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+#pragma region Desktop and Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 // ----------------------------------------------------------------------
 // Interfaces
@@ -561,8 +563,11 @@ interface IMMDeviceEnumerator : IUnknown
     [id(5), helpstring("method UnregisterEndpointNotificationCallback")]
     HRESULT UnregisterEndpointNotificationCallback([in, annotation("_In_")] IMMNotificationClient* pClient);
 };
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
+#pragma endregion
 
-
+#pragma region Desktop Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 // ----------------------------------------------------------------------
 // IMMDeviceActivator 
 //
@@ -601,7 +606,6 @@ interface IMMDeviceActivator : IUnknown
     HRESULT Activate([in, annotation("_In_")] REFIID iid, [in, annotation("_In_")] IMMDevice* pDevice, [in, annotation("_In_opt_")] PROPVARIANT* pActivationParams, [out,iid_is(iid), annotation("_Out_")] void** ppInterface);
 };
 cpp_quote("/* IMMDeviceActivator is reserved for system use */")
-
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
@@ -673,7 +677,11 @@ typedef struct
     IMMDevice*  pPnpInterface;
     IMMDevice*  pPnpDevnode;
 } AudioExtensionParams;
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+#pragma endregion
 
+#pragma region Desktop and Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 // ----------------------------------------------------------------------
 // 
 [
@@ -695,5 +703,5 @@ library MMDeviceAPILib
 };
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion

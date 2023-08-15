@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -873,6 +873,18 @@ template <typename D> Windows::UI::Composition::CompositionVirtualDrawingSurface
     return result;
 }
 
+template <typename D> Windows::UI::Composition::CompositionMipmapSurface consume_Windows_UI_Composition_ICompositionGraphicsDevice3<D>::CreateMipmapSurface(Windows::Graphics::SizeInt32 const& sizePixels, Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const
+{
+    Windows::UI::Composition::CompositionMipmapSurface result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionGraphicsDevice3)->CreateMipmapSurface(get_abi(sizePixels), get_abi(pixelFormat), get_abi(alphaMode), put_abi(result)));
+    return result;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionGraphicsDevice3<D>::Trim() const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionGraphicsDevice3)->Trim());
+}
+
 template <typename D> Windows::UI::Composition::VisualUnorderedCollection consume_Windows_UI_Composition_ICompositionLight<D>::Targets() const
 {
     Windows::UI::Composition::VisualUnorderedCollection value{ nullptr };
@@ -969,6 +981,41 @@ template <typename D> Windows::UI::Composition::CompositionBrush consume_Windows
 template <typename D> void consume_Windows_UI_Composition_ICompositionMaskBrush<D>::Source(Windows::UI::Composition::CompositionBrush const& value) const
 {
     check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionMaskBrush)->put_Source(get_abi(value)));
+}
+
+template <typename D> uint32_t consume_Windows_UI_Composition_ICompositionMipmapSurface<D>::LevelCount() const
+{
+    uint32_t value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionMipmapSurface)->get_LevelCount(&value));
+    return value;
+}
+
+template <typename D> Windows::Graphics::DirectX::DirectXAlphaMode consume_Windows_UI_Composition_ICompositionMipmapSurface<D>::AlphaMode() const
+{
+    Windows::Graphics::DirectX::DirectXAlphaMode value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionMipmapSurface)->get_AlphaMode(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Graphics::DirectX::DirectXPixelFormat consume_Windows_UI_Composition_ICompositionMipmapSurface<D>::PixelFormat() const
+{
+    Windows::Graphics::DirectX::DirectXPixelFormat value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionMipmapSurface)->get_PixelFormat(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Graphics::SizeInt32 consume_Windows_UI_Composition_ICompositionMipmapSurface<D>::SizeInt32() const
+{
+    Windows::Graphics::SizeInt32 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionMipmapSurface)->get_SizeInt32(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Composition::CompositionDrawingSurface consume_Windows_UI_Composition_ICompositionMipmapSurface<D>::GetDrawingSurfaceForLevel(uint32_t level) const
+{
+    Windows::UI::Composition::CompositionDrawingSurface result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionMipmapSurface)->GetDrawingSurfaceForLevel(level, put_abi(result)));
+    return result;
 }
 
 template <typename D> float consume_Windows_UI_Composition_ICompositionNineGridBrush<D>::BottomInset() const
@@ -1219,6 +1266,170 @@ template <typename D> void consume_Windows_UI_Composition_ICompositionPathGeomet
     check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionPathGeometry)->put_Path(get_abi(value)));
 }
 
+template <typename D> float consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::BlurRadiusMultiplier() const
+{
+    float value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->get_BlurRadiusMultiplier(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::BlurRadiusMultiplier(float value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->put_BlurRadiusMultiplier(value));
+}
+
+template <typename D> Windows::UI::Composition::CompositionProjectedShadowCasterCollection consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::Casters() const
+{
+    Windows::UI::Composition::CompositionProjectedShadowCasterCollection value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->get_Casters(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Composition::CompositionLight consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::LightSource() const
+{
+    Windows::UI::Composition::CompositionLight value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->get_LightSource(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::LightSource(Windows::UI::Composition::CompositionLight const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->put_LightSource(get_abi(value)));
+}
+
+template <typename D> float consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::MaxBlurRadius() const
+{
+    float value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->get_MaxBlurRadius(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::MaxBlurRadius(float value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->put_MaxBlurRadius(value));
+}
+
+template <typename D> float consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::MinBlurRadius() const
+{
+    float value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->get_MinBlurRadius(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::MinBlurRadius(float value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->put_MinBlurRadius(value));
+}
+
+template <typename D> Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection consume_Windows_UI_Composition_ICompositionProjectedShadow<D>::Receivers() const
+{
+    Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadow)->get_Receivers(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Composition::CompositionBrush consume_Windows_UI_Composition_ICompositionProjectedShadowCaster<D>::Brush() const
+{
+    Windows::UI::Composition::CompositionBrush value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCaster)->get_Brush(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCaster<D>::Brush(Windows::UI::Composition::CompositionBrush const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCaster)->put_Brush(get_abi(value)));
+}
+
+template <typename D> Windows::UI::Composition::Visual consume_Windows_UI_Composition_ICompositionProjectedShadowCaster<D>::CastingVisual() const
+{
+    Windows::UI::Composition::Visual value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCaster)->get_CastingVisual(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCaster<D>::CastingVisual(Windows::UI::Composition::Visual const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCaster)->put_CastingVisual(get_abi(value)));
+}
+
+template <typename D> int32_t consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>::Count() const
+{
+    int32_t value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollection)->get_Count(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>::InsertAbove(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollection)->InsertAbove(get_abi(newCaster), get_abi(reference)));
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>::InsertAtBottom(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollection)->InsertAtBottom(get_abi(newCaster)));
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>::InsertAtTop(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollection)->InsertAtTop(get_abi(newCaster)));
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>::InsertBelow(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollection)->InsertBelow(get_abi(newCaster), get_abi(reference)));
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>::Remove(Windows::UI::Composition::CompositionProjectedShadowCaster const& caster) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollection)->Remove(get_abi(caster)));
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>::RemoveAll() const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollection)->RemoveAll());
+}
+
+template <typename D> int32_t consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollectionStatics<D>::MaxRespectedCasters() const
+{
+    int32_t value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics)->get_MaxRespectedCasters(&value));
+    return value;
+}
+
+template <typename D> Windows::UI::Composition::Visual consume_Windows_UI_Composition_ICompositionProjectedShadowReceiver<D>::ReceivingVisual() const
+{
+    Windows::UI::Composition::Visual value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowReceiver)->get_ReceivingVisual(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowReceiver<D>::ReceivingVisual(Windows::UI::Composition::Visual const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowReceiver)->put_ReceivingVisual(get_abi(value)));
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowReceiverUnorderedCollection<D>::Add(Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection)->Add(get_abi(value)));
+}
+
+template <typename D> int32_t consume_Windows_UI_Composition_ICompositionProjectedShadowReceiverUnorderedCollection<D>::Count() const
+{
+    int32_t value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection)->get_Count(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowReceiverUnorderedCollection<D>::Remove(Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection)->Remove(get_abi(value)));
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionProjectedShadowReceiverUnorderedCollection<D>::RemoveAll() const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection)->RemoveAll());
+}
+
 template <typename D> void consume_Windows_UI_Composition_ICompositionPropertySet<D>::InsertColor(param::hstring const& propertyName, Windows::UI::Color const& value) const
 {
     check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionPropertySet)->InsertColor(get_abi(propertyName), get_abi(value)));
@@ -1325,6 +1536,42 @@ template <typename D> Windows::UI::Composition::CompositionGetValueStatus consum
     Windows::UI::Composition::CompositionGetValueStatus result{};
     check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionPropertySet2)->TryGetBoolean(get_abi(propertyName), &value, put_abi(result)));
     return result;
+}
+
+template <typename D> Windows::Foundation::Numerics::float2 consume_Windows_UI_Composition_ICompositionRadialGradientBrush<D>::EllipseCenter() const
+{
+    Windows::Foundation::Numerics::float2 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionRadialGradientBrush)->get_EllipseCenter(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionRadialGradientBrush<D>::EllipseCenter(Windows::Foundation::Numerics::float2 const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionRadialGradientBrush)->put_EllipseCenter(get_abi(value)));
+}
+
+template <typename D> Windows::Foundation::Numerics::float2 consume_Windows_UI_Composition_ICompositionRadialGradientBrush<D>::EllipseRadius() const
+{
+    Windows::Foundation::Numerics::float2 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionRadialGradientBrush)->get_EllipseRadius(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionRadialGradientBrush<D>::EllipseRadius(Windows::Foundation::Numerics::float2 const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionRadialGradientBrush)->put_EllipseRadius(get_abi(value)));
+}
+
+template <typename D> Windows::Foundation::Numerics::float2 consume_Windows_UI_Composition_ICompositionRadialGradientBrush<D>::GradientOriginOffset() const
+{
+    Windows::Foundation::Numerics::float2 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionRadialGradientBrush)->get_GradientOriginOffset(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionRadialGradientBrush<D>::GradientOriginOffset(Windows::Foundation::Numerics::float2 const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionRadialGradientBrush)->put_GradientOriginOffset(get_abi(value)));
 }
 
 template <typename D> Windows::Foundation::Numerics::float2 consume_Windows_UI_Composition_ICompositionRectangleGeometry<D>::Offset() const
@@ -1788,6 +2035,18 @@ template <typename D> void consume_Windows_UI_Composition_ICompositionSurfaceBru
     check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionSurfaceBrush2)->put_TransformMatrix(get_abi(value)));
 }
 
+template <typename D> bool consume_Windows_UI_Composition_ICompositionSurfaceBrush3<D>::SnapToPixels() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionSurfaceBrush3)->get_SnapToPixels(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionSurfaceBrush3<D>::SnapToPixels(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionSurfaceBrush3)->put_SnapToPixels(value));
+}
+
 template <typename D> Windows::UI::Composition::Visual consume_Windows_UI_Composition_ICompositionTarget<D>::Root() const
 {
     Windows::UI::Composition::Visual value{ nullptr };
@@ -1863,6 +2122,42 @@ template <typename D> void consume_Windows_UI_Composition_ICompositionViewBox<D>
 template <typename D> void consume_Windows_UI_Composition_ICompositionVirtualDrawingSurface<D>::Trim(array_view<Windows::Graphics::RectInt32 const> rects) const
 {
     check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionVirtualDrawingSurface)->Trim(rects.size(), get_abi(rects)));
+}
+
+template <typename D> Windows::UI::Composition::Visual consume_Windows_UI_Composition_ICompositionVisualSurface<D>::SourceVisual() const
+{
+    Windows::UI::Composition::Visual value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionVisualSurface)->get_SourceVisual(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionVisualSurface<D>::SourceVisual(Windows::UI::Composition::Visual const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionVisualSurface)->put_SourceVisual(get_abi(value)));
+}
+
+template <typename D> Windows::Foundation::Numerics::float2 consume_Windows_UI_Composition_ICompositionVisualSurface<D>::SourceOffset() const
+{
+    Windows::Foundation::Numerics::float2 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionVisualSurface)->get_SourceOffset(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionVisualSurface<D>::SourceOffset(Windows::Foundation::Numerics::float2 const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionVisualSurface)->put_SourceOffset(get_abi(value)));
+}
+
+template <typename D> Windows::Foundation::Numerics::float2 consume_Windows_UI_Composition_ICompositionVisualSurface<D>::SourceSize() const
+{
+    Windows::Foundation::Numerics::float2 value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionVisualSurface)->get_SourceSize(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Composition_ICompositionVisualSurface<D>::SourceSize(Windows::Foundation::Numerics::float2 const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositionVisualSurface)->put_SourceSize(get_abi(value)));
 }
 
 template <typename D> Windows::UI::Composition::ColorKeyFrameAnimation consume_Windows_UI_Composition_ICompositor<D>::CreateColorKeyFrameAnimation() const
@@ -2356,6 +2651,41 @@ template <typename D> float consume_Windows_UI_Composition_ICompositorStatics<D>
     float value{};
     check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositorStatics)->get_MinGlobalPlaybackRate(&value));
     return value;
+}
+
+template <typename D> Windows::UI::Composition::CompositionProjectedShadowCaster consume_Windows_UI_Composition_ICompositorWithProjectedShadow<D>::CreateProjectedShadowCaster() const
+{
+    Windows::UI::Composition::CompositionProjectedShadowCaster result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositorWithProjectedShadow)->CreateProjectedShadowCaster(put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::UI::Composition::CompositionProjectedShadow consume_Windows_UI_Composition_ICompositorWithProjectedShadow<D>::CreateProjectedShadow() const
+{
+    Windows::UI::Composition::CompositionProjectedShadow result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositorWithProjectedShadow)->CreateProjectedShadow(put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::UI::Composition::CompositionProjectedShadowReceiver consume_Windows_UI_Composition_ICompositorWithProjectedShadow<D>::CreateProjectedShadowReceiver() const
+{
+    Windows::UI::Composition::CompositionProjectedShadowReceiver result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositorWithProjectedShadow)->CreateProjectedShadowReceiver(put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::UI::Composition::CompositionRadialGradientBrush consume_Windows_UI_Composition_ICompositorWithRadialGradient<D>::CreateRadialGradientBrush() const
+{
+    Windows::UI::Composition::CompositionRadialGradientBrush result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositorWithRadialGradient)->CreateRadialGradientBrush(put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::UI::Composition::CompositionVisualSurface consume_Windows_UI_Composition_ICompositorWithVisualSurface<D>::CreateVisualSurface() const
+{
+    Windows::UI::Composition::CompositionVisualSurface result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::ICompositorWithVisualSurface)->CreateVisualSurface(put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::UI::Composition::VisualCollection consume_Windows_UI_Composition_IContainerVisual<D>::Children() const
@@ -5559,6 +5889,35 @@ struct produce<D, Windows::UI::Composition::ICompositionGraphicsDevice2> : produ
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionGraphicsDevice3> : produce_base<D, Windows::UI::Composition::ICompositionGraphicsDevice3>
+{
+    int32_t WINRT_CALL CreateMipmapSurface(struct struct_Windows_Graphics_SizeInt32 sizePixels, Windows::Graphics::DirectX::DirectXPixelFormat pixelFormat, Windows::Graphics::DirectX::DirectXAlphaMode alphaMode, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateMipmapSurface, WINRT_WRAP(Windows::UI::Composition::CompositionMipmapSurface), Windows::Graphics::SizeInt32 const&, Windows::Graphics::DirectX::DirectXPixelFormat const&, Windows::Graphics::DirectX::DirectXAlphaMode const&);
+            *result = detach_from<Windows::UI::Composition::CompositionMipmapSurface>(this->shim().CreateMipmapSurface(*reinterpret_cast<Windows::Graphics::SizeInt32 const*>(&sizePixels), *reinterpret_cast<Windows::Graphics::DirectX::DirectXPixelFormat const*>(&pixelFormat), *reinterpret_cast<Windows::Graphics::DirectX::DirectXAlphaMode const*>(&alphaMode)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL Trim() noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Trim, WINRT_WRAP(void));
+            this->shim().Trim();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Composition::ICompositionLight> : produce_base<D, Windows::UI::Composition::ICompositionLight>
 {
     int32_t WINRT_CALL get_Targets(void** value) noexcept final
@@ -5776,6 +6135,71 @@ struct produce<D, Windows::UI::Composition::ICompositionMaskBrush> : produce_bas
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Source, WINRT_WRAP(void), Windows::UI::Composition::CompositionBrush const&);
             this->shim().Source(*reinterpret_cast<Windows::UI::Composition::CompositionBrush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionMipmapSurface> : produce_base<D, Windows::UI::Composition::ICompositionMipmapSurface>
+{
+    int32_t WINRT_CALL get_LevelCount(uint32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(LevelCount, WINRT_WRAP(uint32_t));
+            *value = detach_from<uint32_t>(this->shim().LevelCount());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_AlphaMode(Windows::Graphics::DirectX::DirectXAlphaMode* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(AlphaMode, WINRT_WRAP(Windows::Graphics::DirectX::DirectXAlphaMode));
+            *value = detach_from<Windows::Graphics::DirectX::DirectXAlphaMode>(this->shim().AlphaMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(PixelFormat, WINRT_WRAP(Windows::Graphics::DirectX::DirectXPixelFormat));
+            *value = detach_from<Windows::Graphics::DirectX::DirectXPixelFormat>(this->shim().PixelFormat());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_SizeInt32(struct struct_Windows_Graphics_SizeInt32* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SizeInt32, WINRT_WRAP(Windows::Graphics::SizeInt32));
+            *value = detach_from<Windows::Graphics::SizeInt32>(this->shim().SizeInt32());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetDrawingSurfaceForLevel(uint32_t level, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetDrawingSurfaceForLevel, WINRT_WRAP(Windows::UI::Composition::CompositionDrawingSurface), uint32_t);
+            *result = detach_from<Windows::UI::Composition::CompositionDrawingSurface>(this->shim().GetDrawingSurfaceForLevel(level));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6337,6 +6761,372 @@ struct produce<D, Windows::UI::Composition::ICompositionPathGeometry> : produce_
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionProjectedShadow> : produce_base<D, Windows::UI::Composition::ICompositionProjectedShadow>
+{
+    int32_t WINRT_CALL get_BlurRadiusMultiplier(float* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(BlurRadiusMultiplier, WINRT_WRAP(float));
+            *value = detach_from<float>(this->shim().BlurRadiusMultiplier());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_BlurRadiusMultiplier(float value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(BlurRadiusMultiplier, WINRT_WRAP(void), float);
+            this->shim().BlurRadiusMultiplier(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Casters(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Casters, WINRT_WRAP(Windows::UI::Composition::CompositionProjectedShadowCasterCollection));
+            *value = detach_from<Windows::UI::Composition::CompositionProjectedShadowCasterCollection>(this->shim().Casters());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_LightSource(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(LightSource, WINRT_WRAP(Windows::UI::Composition::CompositionLight));
+            *value = detach_from<Windows::UI::Composition::CompositionLight>(this->shim().LightSource());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_LightSource(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(LightSource, WINRT_WRAP(void), Windows::UI::Composition::CompositionLight const&);
+            this->shim().LightSource(*reinterpret_cast<Windows::UI::Composition::CompositionLight const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_MaxBlurRadius(float* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MaxBlurRadius, WINRT_WRAP(float));
+            *value = detach_from<float>(this->shim().MaxBlurRadius());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_MaxBlurRadius(float value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MaxBlurRadius, WINRT_WRAP(void), float);
+            this->shim().MaxBlurRadius(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_MinBlurRadius(float* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MinBlurRadius, WINRT_WRAP(float));
+            *value = detach_from<float>(this->shim().MinBlurRadius());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_MinBlurRadius(float value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MinBlurRadius, WINRT_WRAP(void), float);
+            this->shim().MinBlurRadius(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Receivers(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Receivers, WINRT_WRAP(Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection));
+            *value = detach_from<Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>(this->shim().Receivers());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionProjectedShadowCaster> : produce_base<D, Windows::UI::Composition::ICompositionProjectedShadowCaster>
+{
+    int32_t WINRT_CALL get_Brush(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Brush, WINRT_WRAP(Windows::UI::Composition::CompositionBrush));
+            *value = detach_from<Windows::UI::Composition::CompositionBrush>(this->shim().Brush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Brush(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Brush, WINRT_WRAP(void), Windows::UI::Composition::CompositionBrush const&);
+            this->shim().Brush(*reinterpret_cast<Windows::UI::Composition::CompositionBrush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CastingVisual(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CastingVisual, WINRT_WRAP(Windows::UI::Composition::Visual));
+            *value = detach_from<Windows::UI::Composition::Visual>(this->shim().CastingVisual());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_CastingVisual(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CastingVisual, WINRT_WRAP(void), Windows::UI::Composition::Visual const&);
+            this->shim().CastingVisual(*reinterpret_cast<Windows::UI::Composition::Visual const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionProjectedShadowCasterCollection> : produce_base<D, Windows::UI::Composition::ICompositionProjectedShadowCasterCollection>
+{
+    int32_t WINRT_CALL get_Count(int32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Count, WINRT_WRAP(int32_t));
+            *value = detach_from<int32_t>(this->shim().Count());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL InsertAbove(void* newCaster, void* reference) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(InsertAbove, WINRT_WRAP(void), Windows::UI::Composition::CompositionProjectedShadowCaster const&, Windows::UI::Composition::CompositionProjectedShadowCaster const&);
+            this->shim().InsertAbove(*reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowCaster const*>(&newCaster), *reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowCaster const*>(&reference));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL InsertAtBottom(void* newCaster) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(InsertAtBottom, WINRT_WRAP(void), Windows::UI::Composition::CompositionProjectedShadowCaster const&);
+            this->shim().InsertAtBottom(*reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowCaster const*>(&newCaster));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL InsertAtTop(void* newCaster) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(InsertAtTop, WINRT_WRAP(void), Windows::UI::Composition::CompositionProjectedShadowCaster const&);
+            this->shim().InsertAtTop(*reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowCaster const*>(&newCaster));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL InsertBelow(void* newCaster, void* reference) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(InsertBelow, WINRT_WRAP(void), Windows::UI::Composition::CompositionProjectedShadowCaster const&, Windows::UI::Composition::CompositionProjectedShadowCaster const&);
+            this->shim().InsertBelow(*reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowCaster const*>(&newCaster), *reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowCaster const*>(&reference));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL Remove(void* caster) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Remove, WINRT_WRAP(void), Windows::UI::Composition::CompositionProjectedShadowCaster const&);
+            this->shim().Remove(*reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowCaster const*>(&caster));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL RemoveAll() noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RemoveAll, WINRT_WRAP(void));
+            this->shim().RemoveAll();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics> : produce_base<D, Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics>
+{
+    int32_t WINRT_CALL get_MaxRespectedCasters(int32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MaxRespectedCasters, WINRT_WRAP(int32_t));
+            *value = detach_from<int32_t>(this->shim().MaxRespectedCasters());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionProjectedShadowReceiver> : produce_base<D, Windows::UI::Composition::ICompositionProjectedShadowReceiver>
+{
+    int32_t WINRT_CALL get_ReceivingVisual(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ReceivingVisual, WINRT_WRAP(Windows::UI::Composition::Visual));
+            *value = detach_from<Windows::UI::Composition::Visual>(this->shim().ReceivingVisual());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_ReceivingVisual(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ReceivingVisual, WINRT_WRAP(void), Windows::UI::Composition::Visual const&);
+            this->shim().ReceivingVisual(*reinterpret_cast<Windows::UI::Composition::Visual const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection> : produce_base<D, Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection>
+{
+    int32_t WINRT_CALL Add(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Add, WINRT_WRAP(void), Windows::UI::Composition::CompositionProjectedShadowReceiver const&);
+            this->shim().Add(*reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowReceiver const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Count(int32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Count, WINRT_WRAP(int32_t));
+            *value = detach_from<int32_t>(this->shim().Count());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL Remove(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Remove, WINRT_WRAP(void), Windows::UI::Composition::CompositionProjectedShadowReceiver const&);
+            this->shim().Remove(*reinterpret_cast<Windows::UI::Composition::CompositionProjectedShadowReceiver const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL RemoveAll() noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RemoveAll, WINRT_WRAP(void));
+            this->shim().RemoveAll();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Composition::ICompositionPropertySet> : produce_base<D, Windows::UI::Composition::ICompositionPropertySet>
 {
     int32_t WINRT_CALL InsertColor(void* propertyName, struct struct_Windows_UI_Color value) noexcept final
@@ -6554,6 +7344,82 @@ struct produce<D, Windows::UI::Composition::ICompositionPropertySet2> : produce_
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryGetBoolean, WINRT_WRAP(Windows::UI::Composition::CompositionGetValueStatus), hstring const&, bool&);
             *result = detach_from<Windows::UI::Composition::CompositionGetValueStatus>(this->shim().TryGetBoolean(*reinterpret_cast<hstring const*>(&propertyName), *value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionRadialGradientBrush> : produce_base<D, Windows::UI::Composition::ICompositionRadialGradientBrush>
+{
+    int32_t WINRT_CALL get_EllipseCenter(Windows::Foundation::Numerics::float2* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(EllipseCenter, WINRT_WRAP(Windows::Foundation::Numerics::float2));
+            *value = detach_from<Windows::Foundation::Numerics::float2>(this->shim().EllipseCenter());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_EllipseCenter(Windows::Foundation::Numerics::float2 value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(EllipseCenter, WINRT_WRAP(void), Windows::Foundation::Numerics::float2 const&);
+            this->shim().EllipseCenter(*reinterpret_cast<Windows::Foundation::Numerics::float2 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_EllipseRadius(Windows::Foundation::Numerics::float2* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(EllipseRadius, WINRT_WRAP(Windows::Foundation::Numerics::float2));
+            *value = detach_from<Windows::Foundation::Numerics::float2>(this->shim().EllipseRadius());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_EllipseRadius(Windows::Foundation::Numerics::float2 value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(EllipseRadius, WINRT_WRAP(void), Windows::Foundation::Numerics::float2 const&);
+            this->shim().EllipseRadius(*reinterpret_cast<Windows::Foundation::Numerics::float2 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_GradientOriginOffset(Windows::Foundation::Numerics::float2* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GradientOriginOffset, WINRT_WRAP(Windows::Foundation::Numerics::float2));
+            *value = detach_from<Windows::Foundation::Numerics::float2>(this->shim().GradientOriginOffset());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_GradientOriginOffset(Windows::Foundation::Numerics::float2 value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GradientOriginOffset, WINRT_WRAP(void), Windows::Foundation::Numerics::float2 const&);
+            this->shim().GradientOriginOffset(*reinterpret_cast<Windows::Foundation::Numerics::float2 const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7518,6 +8384,34 @@ struct produce<D, Windows::UI::Composition::ICompositionSurfaceBrush2> : produce
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionSurfaceBrush3> : produce_base<D, Windows::UI::Composition::ICompositionSurfaceBrush3>
+{
+    int32_t WINRT_CALL get_SnapToPixels(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SnapToPixels, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().SnapToPixels());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_SnapToPixels(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SnapToPixels, WINRT_WRAP(void), bool);
+            this->shim().SnapToPixels(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Composition::ICompositionTarget> : produce_base<D, Windows::UI::Composition::ICompositionTarget>
 {
     int32_t WINRT_CALL get_Root(void** value) noexcept final
@@ -7548,6 +8442,14 @@ struct produce<D, Windows::UI::Composition::ICompositionTarget> : produce_base<D
 
 template <typename D>
 struct produce<D, Windows::UI::Composition::ICompositionTargetFactory> : produce_base<D, Windows::UI::Composition::ICompositionTargetFactory>
+{};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionTransform> : produce_base<D, Windows::UI::Composition::ICompositionTransform>
+{};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionTransformFactory> : produce_base<D, Windows::UI::Composition::ICompositionTransformFactory>
 {};
 
 template <typename D>
@@ -7693,6 +8595,83 @@ struct produce<D, Windows::UI::Composition::ICompositionVirtualDrawingSurface> :
 template <typename D>
 struct produce<D, Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory> : produce_base<D, Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory>
 {};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositionVisualSurface> : produce_base<D, Windows::UI::Composition::ICompositionVisualSurface>
+{
+    int32_t WINRT_CALL get_SourceVisual(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SourceVisual, WINRT_WRAP(Windows::UI::Composition::Visual));
+            *value = detach_from<Windows::UI::Composition::Visual>(this->shim().SourceVisual());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_SourceVisual(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SourceVisual, WINRT_WRAP(void), Windows::UI::Composition::Visual const&);
+            this->shim().SourceVisual(*reinterpret_cast<Windows::UI::Composition::Visual const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_SourceOffset(Windows::Foundation::Numerics::float2* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SourceOffset, WINRT_WRAP(Windows::Foundation::Numerics::float2));
+            *value = detach_from<Windows::Foundation::Numerics::float2>(this->shim().SourceOffset());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_SourceOffset(Windows::Foundation::Numerics::float2 value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SourceOffset, WINRT_WRAP(void), Windows::Foundation::Numerics::float2 const&);
+            this->shim().SourceOffset(*reinterpret_cast<Windows::Foundation::Numerics::float2 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_SourceSize(Windows::Foundation::Numerics::float2* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SourceSize, WINRT_WRAP(Windows::Foundation::Numerics::float2));
+            *value = detach_from<Windows::Foundation::Numerics::float2>(this->shim().SourceSize());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_SourceSize(Windows::Foundation::Numerics::float2 value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SourceSize, WINRT_WRAP(void), Windows::Foundation::Numerics::float2 const&);
+            this->shim().SourceSize(*reinterpret_cast<Windows::Foundation::Numerics::float2 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
 
 template <typename D>
 struct produce<D, Windows::UI::Composition::ICompositor> : produce_base<D, Windows::UI::Composition::ICompositor>
@@ -8634,6 +9613,83 @@ struct produce<D, Windows::UI::Composition::ICompositorStatics> : produce_base<D
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(MinGlobalPlaybackRate, WINRT_WRAP(float));
             *value = detach_from<float>(this->shim().MinGlobalPlaybackRate());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositorWithProjectedShadow> : produce_base<D, Windows::UI::Composition::ICompositorWithProjectedShadow>
+{
+    int32_t WINRT_CALL CreateProjectedShadowCaster(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateProjectedShadowCaster, WINRT_WRAP(Windows::UI::Composition::CompositionProjectedShadowCaster));
+            *result = detach_from<Windows::UI::Composition::CompositionProjectedShadowCaster>(this->shim().CreateProjectedShadowCaster());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateProjectedShadow(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateProjectedShadow, WINRT_WRAP(Windows::UI::Composition::CompositionProjectedShadow));
+            *result = detach_from<Windows::UI::Composition::CompositionProjectedShadow>(this->shim().CreateProjectedShadow());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateProjectedShadowReceiver(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateProjectedShadowReceiver, WINRT_WRAP(Windows::UI::Composition::CompositionProjectedShadowReceiver));
+            *result = detach_from<Windows::UI::Composition::CompositionProjectedShadowReceiver>(this->shim().CreateProjectedShadowReceiver());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositorWithRadialGradient> : produce_base<D, Windows::UI::Composition::ICompositorWithRadialGradient>
+{
+    int32_t WINRT_CALL CreateRadialGradientBrush(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateRadialGradientBrush, WINRT_WRAP(Windows::UI::Composition::CompositionRadialGradientBrush));
+            *result = detach_from<Windows::UI::Composition::CompositionRadialGradientBrush>(this->shim().CreateRadialGradientBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::ICompositorWithVisualSurface> : produce_base<D, Windows::UI::Composition::ICompositorWithVisualSurface>
+{
+    int32_t WINRT_CALL CreateVisualSurface(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateVisualSurface, WINRT_WRAP(Windows::UI::Composition::CompositionVisualSurface));
+            *result = detach_from<Windows::UI::Composition::CompositionVisualSurface>(this->shim().CreateVisualSurface());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -11476,6 +12532,10 @@ struct produce<D, Windows::UI::Composition::IVisualCollection> : produce_base<D,
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Composition::IVisualElement> : produce_base<D, Windows::UI::Composition::IVisualElement>
+{};
+
+template <typename D>
 struct produce<D, Windows::UI::Composition::IVisualFactory> : produce_base<D, Windows::UI::Composition::IVisualFactory>
 {};
 
@@ -11568,6 +12628,11 @@ inline CompositionPath::CompositionPath(Windows::Graphics::IGeometrySource2D con
     CompositionPath(impl::call_factory<CompositionPath, Windows::UI::Composition::ICompositionPathFactory>([&](auto&& f) { return f.Create(source); }))
 {}
 
+inline int32_t CompositionProjectedShadowCasterCollection::MaxRespectedCasters()
+{
+    return impl::call_factory<CompositionProjectedShadowCasterCollection, Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics>([&](auto&& f) { return f.MaxRespectedCasters(); });
+}
+
 inline Compositor::Compositor() :
     Compositor(impl::call_factory<Compositor>([](auto&& f) { return f.template ActivateInstance<Compositor>(); }))
 {}
@@ -11636,6 +12701,7 @@ template<> struct hash<winrt::Windows::UI::Composition::ICompositionGradientBrus
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionGradientBrushFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionGradientBrushFactory> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionGraphicsDevice> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionGraphicsDevice> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionGraphicsDevice2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionGraphicsDevice2> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionGraphicsDevice3> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionGraphicsDevice3> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionLight> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionLight> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionLight2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionLight2> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionLight3> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionLight3> {};
@@ -11643,6 +12709,7 @@ template<> struct hash<winrt::Windows::UI::Composition::ICompositionLightFactory
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionLineGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionLineGeometry> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionLinearGradientBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionLinearGradientBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionMaskBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionMaskBrush> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionMipmapSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionMipmapSurface> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionNineGridBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionNineGridBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionObject> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionObject> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionObject2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionObject2> {};
@@ -11653,8 +12720,15 @@ template<> struct hash<winrt::Windows::UI::Composition::ICompositionObjectStatic
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionPath> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionPath> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionPathFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionPathFactory> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionPathGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionPathGeometry> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionProjectedShadow> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionProjectedShadow> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionProjectedShadowCaster> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionProjectedShadowCaster> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionProjectedShadowCasterCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionProjectedShadowCasterCollection> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionProjectedShadowReceiver> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionProjectedShadowReceiver> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionPropertySet> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionPropertySet> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionPropertySet2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionPropertySet2> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionRadialGradientBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionRadialGradientBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionRectangleGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionRectangleGeometry> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionRoundedRectangleGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionRoundedRectangleGeometry> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionScopedBatch> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionScopedBatch> {};
@@ -11666,11 +12740,15 @@ template<> struct hash<winrt::Windows::UI::Composition::ICompositionSpriteShape>
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionSurface> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionSurfaceBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionSurfaceBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionSurfaceBrush2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionSurfaceBrush2> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionSurfaceBrush3> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionSurfaceBrush3> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionTarget> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionTarget> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionTargetFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionTargetFactory> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionTransform> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionTransform> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionTransformFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionTransformFactory> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionViewBox> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionViewBox> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionVirtualDrawingSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionVirtualDrawingSurface> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositionVisualSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositionVisualSurface> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositor> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositor> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositor2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositor2> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositor3> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositor3> {};
@@ -11678,6 +12756,9 @@ template<> struct hash<winrt::Windows::UI::Composition::ICompositor4> : winrt::i
 template<> struct hash<winrt::Windows::UI::Composition::ICompositor5> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositor5> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositor6> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositor6> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICompositorStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositorStatics> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithProjectedShadow> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositorWithProjectedShadow> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithRadialGradient> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositorWithRadialGradient> {};
+template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithVisualSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICompositorWithVisualSurface> {};
 template<> struct hash<winrt::Windows::UI::Composition::IContainerVisual> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IContainerVisual> {};
 template<> struct hash<winrt::Windows::UI::Composition::IContainerVisualFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IContainerVisualFactory> {};
 template<> struct hash<winrt::Windows::UI::Composition::ICubicBezierEasingFunction> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ICubicBezierEasingFunction> {};
@@ -11727,6 +12808,7 @@ template<> struct hash<winrt::Windows::UI::Composition::IVector4KeyFrameAnimatio
 template<> struct hash<winrt::Windows::UI::Composition::IVisual> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IVisual> {};
 template<> struct hash<winrt::Windows::UI::Composition::IVisual2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IVisual2> {};
 template<> struct hash<winrt::Windows::UI::Composition::IVisualCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IVisualCollection> {};
+template<> struct hash<winrt::Windows::UI::Composition::IVisualElement> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IVisualElement> {};
 template<> struct hash<winrt::Windows::UI::Composition::IVisualFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IVisualFactory> {};
 template<> struct hash<winrt::Windows::UI::Composition::IVisualUnorderedCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::IVisualUnorderedCollection> {};
 template<> struct hash<winrt::Windows::UI::Composition::AmbientLight> : winrt::impl::hash_base<winrt::Windows::UI::Composition::AmbientLight> {};
@@ -11763,11 +12845,18 @@ template<> struct hash<winrt::Windows::UI::Composition::CompositionLight> : winr
 template<> struct hash<winrt::Windows::UI::Composition::CompositionLineGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionLineGeometry> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionLinearGradientBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionLinearGradientBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionMaskBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionMaskBrush> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionMipmapSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionMipmapSurface> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionNineGridBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionNineGridBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionObject> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionObject> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionPath> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionPath> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionPathGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionPathGeometry> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionProjectedShadow> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionProjectedShadow> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionPropertySet> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionPropertySet> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionRadialGradientBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionRadialGradientBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionRectangleGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionRectangleGeometry> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionScopedBatch> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionScopedBatch> {};
@@ -11778,8 +12867,10 @@ template<> struct hash<winrt::Windows::UI::Composition::CompositionSpriteShape> 
 template<> struct hash<winrt::Windows::UI::Composition::CompositionStrokeDashArray> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionStrokeDashArray> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionSurfaceBrush> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionSurfaceBrush> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionTarget> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionTarget> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionTransform> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionTransform> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionViewBox> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionViewBox> {};
 template<> struct hash<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface> {};
+template<> struct hash<winrt::Windows::UI::Composition::CompositionVisualSurface> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CompositionVisualSurface> {};
 template<> struct hash<winrt::Windows::UI::Composition::Compositor> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Compositor> {};
 template<> struct hash<winrt::Windows::UI::Composition::ContainerVisual> : winrt::impl::hash_base<winrt::Windows::UI::Composition::ContainerVisual> {};
 template<> struct hash<winrt::Windows::UI::Composition::CubicBezierEasingFunction> : winrt::impl::hash_base<winrt::Windows::UI::Composition::CubicBezierEasingFunction> {};

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -33,7 +33,7 @@ struct KnownRemoteSystemCapabilities
 
 struct WINRT_EBO RemoteSystem :
     Windows::System::RemoteSystems::IRemoteSystem,
-    impl::require<RemoteSystem, Windows::System::RemoteSystems::IRemoteSystem2, Windows::System::RemoteSystems::IRemoteSystem3, Windows::System::RemoteSystems::IRemoteSystem4, Windows::System::RemoteSystems::IRemoteSystem5>
+    impl::require<RemoteSystem, Windows::System::RemoteSystems::IRemoteSystem2, Windows::System::RemoteSystems::IRemoteSystem3, Windows::System::RemoteSystems::IRemoteSystem4, Windows::System::RemoteSystems::IRemoteSystem5, Windows::System::RemoteSystems::IRemoteSystem6>
 {
     RemoteSystem(std::nullptr_t) noexcept {}
     static Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystem> FindByHostNameAsync(Windows::Networking::HostName const& hostName);
@@ -41,6 +41,8 @@ struct WINRT_EBO RemoteSystem :
     static Windows::System::RemoteSystems::RemoteSystemWatcher CreateWatcher(param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters);
     static Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemAccessStatus> RequestAccessAsync();
     static bool IsAuthorizationKindEnabled(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& kind);
+    static Windows::System::RemoteSystems::RemoteSystemWatcher CreateWatcherForUser(Windows::System::User const& user);
+    static Windows::System::RemoteSystems::RemoteSystemWatcher CreateWatcherForUser(Windows::System::User const& user, param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters);
 };
 
 struct WINRT_EBO RemoteSystemAddedEventArgs :
@@ -50,7 +52,8 @@ struct WINRT_EBO RemoteSystemAddedEventArgs :
 };
 
 struct WINRT_EBO RemoteSystemApp :
-    Windows::System::RemoteSystems::IRemoteSystemApp
+    Windows::System::RemoteSystems::IRemoteSystemApp,
+    impl::require<RemoteSystemApp, Windows::System::RemoteSystems::IRemoteSystemApp2>
 {
     RemoteSystemApp(std::nullptr_t) noexcept {}
 };
@@ -80,11 +83,13 @@ struct WINRT_EBO RemoteSystemConnectionInfo :
 
 struct WINRT_EBO RemoteSystemConnectionRequest :
     Windows::System::RemoteSystems::IRemoteSystemConnectionRequest,
-    impl::require<RemoteSystemConnectionRequest, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2>
+    impl::require<RemoteSystemConnectionRequest, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3>
 {
     RemoteSystemConnectionRequest(std::nullptr_t) noexcept {}
     RemoteSystemConnectionRequest(Windows::System::RemoteSystems::RemoteSystem const& remoteSystem);
     static Windows::System::RemoteSystems::RemoteSystemConnectionRequest CreateForApp(Windows::System::RemoteSystems::RemoteSystemApp const& remoteSystemApp);
+    static Windows::System::RemoteSystems::RemoteSystemConnectionRequest CreateFromConnectionToken(param::hstring const& connectionToken);
+    static Windows::System::RemoteSystems::RemoteSystemConnectionRequest CreateFromConnectionTokenForUser(Windows::System::User const& user, param::hstring const& connectionToken);
 };
 
 struct WINRT_EBO RemoteSystemDiscoveryTypeFilter :
@@ -284,7 +289,7 @@ struct WINRT_EBO RemoteSystemUpdatedEventArgs :
 
 struct WINRT_EBO RemoteSystemWatcher :
     Windows::System::RemoteSystems::IRemoteSystemWatcher,
-    impl::require<RemoteSystemWatcher, Windows::System::RemoteSystems::IRemoteSystemWatcher2>
+    impl::require<RemoteSystemWatcher, Windows::System::RemoteSystems::IRemoteSystemWatcher2, Windows::System::RemoteSystems::IRemoteSystemWatcher3>
 {
     RemoteSystemWatcher(std::nullptr_t) noexcept {}
 };

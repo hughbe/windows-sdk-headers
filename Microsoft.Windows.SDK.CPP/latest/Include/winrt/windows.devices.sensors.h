@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.sensors.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer ABI::Windows::Devices::Sensors::IAccelerometer
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometer2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer2 ABI::Windows::Devices::Sensors::IAccelerometer2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer2_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometer3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer3 ABI::Windows::Devices::Sensors::IAccelerometer3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer3_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometer4;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer4 ABI::Windows::Devices::Sensors::IAccelerometer4
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer4_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerDeviceId ABI::Windows::Devices::Sensors::IAccelerometerDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerDeviceId_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading ABI::Windows::Devices::Sensors::IAccelerometerReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading2 ABI::Windows::Devices::Sensors::IAccelerometerReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading2_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReadingChangedEventArgs ABI::Windows::Devices::Sensors::IAccelerometerReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReadingChangedEventArgs_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerShakenEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerShakenEventArgs ABI::Windows::Devices::Sensors::IAccelerometerShakenEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerShakenEventArgs_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics ABI::Windows::Devices::Sensors::IAccelerometerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics2 ABI::Windows::Devices::Sensors::IAccelerometerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics2_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAccelerometerStatics3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics3 ABI::Windows::Devices::Sensors::IAccelerometerStatics3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics3_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IActivitySensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIActivitySensor ABI::Windows::Devices::Sensors::IActivitySensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensor_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IActivitySensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReading ABI::Windows::Devices::Sensors::IActivitySensorReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReading_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IActivitySensorReadingChangeReport;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangeReport ABI::Windows::Devices::Sensors::IActivitySensorReadingChangeReport
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangeReport_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IActivitySensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::IActivitySensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangedEventArgs_FWD_DEFINED__
@@ -501,9 +497,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IActivitySensorStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorStatics ABI::Windows::Devices::Sensors::IActivitySensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorStatics_FWD_DEFINED__
@@ -515,9 +511,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IActivitySensorTriggerDetails;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails ABI::Windows::Devices::Sensors::IActivitySensorTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails_FWD_DEFINED__
@@ -529,9 +525,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAltimeter;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAltimeter ABI::Windows::Devices::Sensors::IAltimeter
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAltimeter_FWD_DEFINED__
@@ -543,9 +539,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAltimeter2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAltimeter2 ABI::Windows::Devices::Sensors::IAltimeter2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAltimeter2_FWD_DEFINED__
@@ -557,9 +553,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAltimeterReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading ABI::Windows::Devices::Sensors::IAltimeterReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading_FWD_DEFINED__
@@ -571,9 +567,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAltimeterReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading2 ABI::Windows::Devices::Sensors::IAltimeterReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading2_FWD_DEFINED__
@@ -585,9 +581,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAltimeterReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAltimeterReadingChangedEventArgs ABI::Windows::Devices::Sensors::IAltimeterReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAltimeterReadingChangedEventArgs_FWD_DEFINED__
@@ -599,9 +595,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IAltimeterStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIAltimeterStatics ABI::Windows::Devices::Sensors::IAltimeterStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIAltimeterStatics_FWD_DEFINED__
@@ -613,9 +609,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IBarometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIBarometer ABI::Windows::Devices::Sensors::IBarometer
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIBarometer_FWD_DEFINED__
@@ -627,9 +623,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IBarometer2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIBarometer2 ABI::Windows::Devices::Sensors::IBarometer2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIBarometer2_FWD_DEFINED__
@@ -641,9 +637,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IBarometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIBarometerReading ABI::Windows::Devices::Sensors::IBarometerReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIBarometerReading_FWD_DEFINED__
@@ -655,9 +651,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IBarometerReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIBarometerReading2 ABI::Windows::Devices::Sensors::IBarometerReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIBarometerReading2_FWD_DEFINED__
@@ -669,9 +665,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IBarometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIBarometerReadingChangedEventArgs ABI::Windows::Devices::Sensors::IBarometerReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIBarometerReadingChangedEventArgs_FWD_DEFINED__
@@ -683,9 +679,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IBarometerStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics ABI::Windows::Devices::Sensors::IBarometerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics_FWD_DEFINED__
@@ -697,9 +693,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IBarometerStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics2 ABI::Windows::Devices::Sensors::IBarometerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics2_FWD_DEFINED__
@@ -711,9 +707,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompass;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompass ABI::Windows::Devices::Sensors::ICompass
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompass_FWD_DEFINED__
@@ -725,9 +721,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompass2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompass2 ABI::Windows::Devices::Sensors::ICompass2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompass2_FWD_DEFINED__
@@ -739,9 +735,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompass3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompass3 ABI::Windows::Devices::Sensors::ICompass3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompass3_FWD_DEFINED__
@@ -753,9 +749,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompassDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompassDeviceId ABI::Windows::Devices::Sensors::ICompassDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompassDeviceId_FWD_DEFINED__
@@ -767,9 +763,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompassReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompassReading ABI::Windows::Devices::Sensors::ICompassReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompassReading_FWD_DEFINED__
@@ -781,9 +777,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompassReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompassReading2 ABI::Windows::Devices::Sensors::ICompassReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompassReading2_FWD_DEFINED__
@@ -795,9 +791,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompassReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompassReadingChangedEventArgs ABI::Windows::Devices::Sensors::ICompassReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompassReadingChangedEventArgs_FWD_DEFINED__
@@ -809,9 +805,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompassReadingHeadingAccuracy;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompassReadingHeadingAccuracy ABI::Windows::Devices::Sensors::ICompassReadingHeadingAccuracy
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompassReadingHeadingAccuracy_FWD_DEFINED__
@@ -823,9 +819,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompassStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompassStatics ABI::Windows::Devices::Sensors::ICompassStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompassStatics_FWD_DEFINED__
@@ -837,9 +833,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ICompassStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CICompassStatics2 ABI::Windows::Devices::Sensors::ICompassStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CICompassStatics2_FWD_DEFINED__
@@ -851,9 +847,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometer ABI::Windows::Devices::Sensors::IGyrometer
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometer_FWD_DEFINED__
@@ -865,9 +861,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometer2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometer2 ABI::Windows::Devices::Sensors::IGyrometer2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometer2_FWD_DEFINED__
@@ -879,9 +875,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometer3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometer3 ABI::Windows::Devices::Sensors::IGyrometer3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometer3_FWD_DEFINED__
@@ -893,9 +889,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometerDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometerDeviceId ABI::Windows::Devices::Sensors::IGyrometerDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometerDeviceId_FWD_DEFINED__
@@ -907,9 +903,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading ABI::Windows::Devices::Sensors::IGyrometerReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading_FWD_DEFINED__
@@ -921,9 +917,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometerReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading2 ABI::Windows::Devices::Sensors::IGyrometerReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading2_FWD_DEFINED__
@@ -935,9 +931,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometerReadingChangedEventArgs ABI::Windows::Devices::Sensors::IGyrometerReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometerReadingChangedEventArgs_FWD_DEFINED__
@@ -949,9 +945,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometerStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics ABI::Windows::Devices::Sensors::IGyrometerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics_FWD_DEFINED__
@@ -963,9 +959,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IGyrometerStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics2 ABI::Windows::Devices::Sensors::IGyrometerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics2_FWD_DEFINED__
@@ -977,9 +973,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IHingeAngleReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleReading ABI::Windows::Devices::Sensors::IHingeAngleReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleReading_FWD_DEFINED__
@@ -991,9 +987,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IHingeAngleSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensor ABI::Windows::Devices::Sensors::IHingeAngleSensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensor_FWD_DEFINED__
@@ -1005,9 +1001,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IHingeAngleSensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::IHingeAngleSensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorReadingChangedEventArgs_FWD_DEFINED__
@@ -1019,9 +1015,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IHingeAngleSensorStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorStatics ABI::Windows::Devices::Sensors::IHingeAngleSensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorStatics_FWD_DEFINED__
@@ -1033,9 +1029,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometer ABI::Windows::Devices::Sensors::IInclinometer
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometer_FWD_DEFINED__
@@ -1047,9 +1043,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometer2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometer2 ABI::Windows::Devices::Sensors::IInclinometer2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometer2_FWD_DEFINED__
@@ -1061,9 +1057,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometer3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometer3 ABI::Windows::Devices::Sensors::IInclinometer3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometer3_FWD_DEFINED__
@@ -1075,9 +1071,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerDeviceId ABI::Windows::Devices::Sensors::IInclinometerDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerDeviceId_FWD_DEFINED__
@@ -1089,9 +1085,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading ABI::Windows::Devices::Sensors::IInclinometerReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading_FWD_DEFINED__
@@ -1103,9 +1099,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading2 ABI::Windows::Devices::Sensors::IInclinometerReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading2_FWD_DEFINED__
@@ -1117,9 +1113,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingChangedEventArgs ABI::Windows::Devices::Sensors::IInclinometerReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingChangedEventArgs_FWD_DEFINED__
@@ -1131,9 +1127,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerReadingYawAccuracy;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingYawAccuracy ABI::Windows::Devices::Sensors::IInclinometerReadingYawAccuracy
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingYawAccuracy_FWD_DEFINED__
@@ -1145,9 +1141,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics ABI::Windows::Devices::Sensors::IInclinometerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics_FWD_DEFINED__
@@ -1159,9 +1155,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics2 ABI::Windows::Devices::Sensors::IInclinometerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics2_FWD_DEFINED__
@@ -1173,9 +1169,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerStatics3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics3 ABI::Windows::Devices::Sensors::IInclinometerStatics3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics3_FWD_DEFINED__
@@ -1187,9 +1183,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IInclinometerStatics4;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics4 ABI::Windows::Devices::Sensors::IInclinometerStatics4
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics4_FWD_DEFINED__
@@ -1201,9 +1197,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensor ABI::Windows::Devices::Sensors::ILightSensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensor_FWD_DEFINED__
@@ -1215,9 +1211,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensor2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensor2 ABI::Windows::Devices::Sensors::ILightSensor2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensor2_FWD_DEFINED__
@@ -1229,9 +1225,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensorDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensorDeviceId ABI::Windows::Devices::Sensors::ILightSensorDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorDeviceId_FWD_DEFINED__
@@ -1243,9 +1239,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensorReading ABI::Windows::Devices::Sensors::ILightSensorReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorReading_FWD_DEFINED__
@@ -1257,9 +1253,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensorReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensorReading2 ABI::Windows::Devices::Sensors::ILightSensorReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorReading2_FWD_DEFINED__
@@ -1271,9 +1267,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorReadingChangedEventArgs_FWD_DEFINED__
@@ -1285,9 +1281,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensorStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics ABI::Windows::Devices::Sensors::ILightSensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics_FWD_DEFINED__
@@ -1299,9 +1295,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ILightSensorStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2 ABI::Windows::Devices::Sensors::ILightSensorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2_FWD_DEFINED__
@@ -1313,9 +1309,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometer ABI::Windows::Devices::Sensors::IMagnetometer
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer_FWD_DEFINED__
@@ -1327,9 +1323,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometer2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometer2 ABI::Windows::Devices::Sensors::IMagnetometer2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer2_FWD_DEFINED__
@@ -1341,9 +1337,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometer3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometer3 ABI::Windows::Devices::Sensors::IMagnetometer3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer3_FWD_DEFINED__
@@ -1355,9 +1351,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometerDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerDeviceId ABI::Windows::Devices::Sensors::IMagnetometerDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerDeviceId_FWD_DEFINED__
@@ -1369,9 +1365,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading ABI::Windows::Devices::Sensors::IMagnetometerReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading_FWD_DEFINED__
@@ -1383,9 +1379,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometerReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading2 ABI::Windows::Devices::Sensors::IMagnetometerReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading2_FWD_DEFINED__
@@ -1397,9 +1393,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReadingChangedEventArgs ABI::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReadingChangedEventArgs_FWD_DEFINED__
@@ -1411,9 +1407,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometerStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics ABI::Windows::Devices::Sensors::IMagnetometerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics_FWD_DEFINED__
@@ -1425,9 +1421,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IMagnetometerStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics2 ABI::Windows::Devices::Sensors::IMagnetometerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics2_FWD_DEFINED__
@@ -1439,9 +1435,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor ABI::Windows::Devices::Sensors::IOrientationSensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor_FWD_DEFINED__
@@ -1453,9 +1449,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensor2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor2 ABI::Windows::Devices::Sensors::IOrientationSensor2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor2_FWD_DEFINED__
@@ -1467,9 +1463,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensor3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor3 ABI::Windows::Devices::Sensors::IOrientationSensor3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor3_FWD_DEFINED__
@@ -1481,9 +1477,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorDeviceId ABI::Windows::Devices::Sensors::IOrientationSensorDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorDeviceId_FWD_DEFINED__
@@ -1495,9 +1491,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading ABI::Windows::Devices::Sensors::IOrientationSensorReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading_FWD_DEFINED__
@@ -1509,9 +1505,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorReading2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading2 ABI::Windows::Devices::Sensors::IOrientationSensorReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading2_FWD_DEFINED__
@@ -1523,9 +1519,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::IOrientationSensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingChangedEventArgs_FWD_DEFINED__
@@ -1537,9 +1533,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorReadingYawAccuracy;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingYawAccuracy ABI::Windows::Devices::Sensors::IOrientationSensorReadingYawAccuracy
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingYawAccuracy_FWD_DEFINED__
@@ -1551,9 +1547,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics ABI::Windows::Devices::Sensors::IOrientationSensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics_FWD_DEFINED__
@@ -1565,9 +1561,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics2 ABI::Windows::Devices::Sensors::IOrientationSensorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics2_FWD_DEFINED__
@@ -1579,9 +1575,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorStatics3;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics3 ABI::Windows::Devices::Sensors::IOrientationSensorStatics3
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics3_FWD_DEFINED__
@@ -1593,9 +1589,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IOrientationSensorStatics4;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics4 ABI::Windows::Devices::Sensors::IOrientationSensorStatics4
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics4_FWD_DEFINED__
@@ -1607,9 +1603,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IPedometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIPedometer ABI::Windows::Devices::Sensors::IPedometer
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIPedometer_FWD_DEFINED__
@@ -1621,9 +1617,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IPedometer2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIPedometer2 ABI::Windows::Devices::Sensors::IPedometer2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIPedometer2_FWD_DEFINED__
@@ -1635,9 +1631,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IPedometerDataThresholdFactory;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIPedometerDataThresholdFactory ABI::Windows::Devices::Sensors::IPedometerDataThresholdFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIPedometerDataThresholdFactory_FWD_DEFINED__
@@ -1649,9 +1645,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IPedometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIPedometerReading ABI::Windows::Devices::Sensors::IPedometerReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIPedometerReading_FWD_DEFINED__
@@ -1663,9 +1659,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IPedometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIPedometerReadingChangedEventArgs ABI::Windows::Devices::Sensors::IPedometerReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIPedometerReadingChangedEventArgs_FWD_DEFINED__
@@ -1677,9 +1673,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IPedometerStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics ABI::Windows::Devices::Sensors::IPedometerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics_FWD_DEFINED__
@@ -1691,9 +1687,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IPedometerStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics2 ABI::Windows::Devices::Sensors::IPedometerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics2_FWD_DEFINED__
@@ -1705,9 +1701,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IProximitySensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIProximitySensor ABI::Windows::Devices::Sensors::IProximitySensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIProximitySensor_FWD_DEFINED__
@@ -1719,9 +1715,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IProximitySensorDataThresholdFactory;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIProximitySensorDataThresholdFactory ABI::Windows::Devices::Sensors::IProximitySensorDataThresholdFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorDataThresholdFactory_FWD_DEFINED__
@@ -1733,9 +1729,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IProximitySensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReading ABI::Windows::Devices::Sensors::IProximitySensorReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReading_FWD_DEFINED__
@@ -1747,9 +1743,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IProximitySensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::IProximitySensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReadingChangedEventArgs_FWD_DEFINED__
@@ -1761,9 +1757,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IProximitySensorStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics ABI::Windows::Devices::Sensors::IProximitySensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics_FWD_DEFINED__
@@ -1775,9 +1771,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface IProximitySensorStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics2 ABI::Windows::Devices::Sensors::IProximitySensorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics2_FWD_DEFINED__
@@ -1789,9 +1785,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISensorDataThreshold;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold ABI::Windows::Devices::Sensors::ISensorDataThreshold
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold_FWD_DEFINED__
@@ -1803,9 +1799,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISensorDataThresholdTriggerDetails;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISensorDataThresholdTriggerDetails ABI::Windows::Devices::Sensors::ISensorDataThresholdTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISensorDataThresholdTriggerDetails_FWD_DEFINED__
@@ -1817,9 +1813,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISensorQuaternion;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISensorQuaternion ABI::Windows::Devices::Sensors::ISensorQuaternion
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISensorQuaternion_FWD_DEFINED__
@@ -1831,9 +1827,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISensorRotationMatrix;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISensorRotationMatrix ABI::Windows::Devices::Sensors::ISensorRotationMatrix
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISensorRotationMatrix_FWD_DEFINED__
@@ -1845,9 +1841,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISimpleOrientationSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor ABI::Windows::Devices::Sensors::ISimpleOrientationSensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor_FWD_DEFINED__
@@ -1859,9 +1855,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISimpleOrientationSensor2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor2 ABI::Windows::Devices::Sensors::ISimpleOrientationSensor2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor2_FWD_DEFINED__
@@ -1873,9 +1869,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISimpleOrientationSensorDeviceId;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorDeviceId ABI::Windows::Devices::Sensors::ISimpleOrientationSensorDeviceId
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorDeviceId_FWD_DEFINED__
@@ -1887,9 +1883,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISimpleOrientationSensorOrientationChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorOrientationChangedEventArgs ABI::Windows::Devices::Sensors::ISimpleOrientationSensorOrientationChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorOrientationChangedEventArgs_FWD_DEFINED__
@@ -1901,9 +1897,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISimpleOrientationSensorStatics;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics ABI::Windows::Devices::Sensors::ISimpleOrientationSensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics_FWD_DEFINED__
@@ -1915,9 +1911,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISimpleOrientationSensorStatics2;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2 ABI::Windows::Devices::Sensors::ISimpleOrientationSensorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2_FWD_DEFINED__
@@ -1930,9 +1926,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ActivitySensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1955,7 +1951,7 @@ IIterator<ABI::Windows::Devices::Sensors::ActivitySensorReading*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sensors::ActivitySensorReading*> __FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReading_t;
 #define __FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sensors::IActivitySensorReading*>
@@ -1987,7 +1983,7 @@ IIterable<ABI::Windows::Devices::Sensors::ActivitySensorReading*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sensors::ActivitySensorReading*> __FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReading_t;
 #define __FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sensors::IActivitySensorReading*>
@@ -2003,9 +1999,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ActivitySensorReadingChangeReport;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2028,7 +2024,7 @@ IIterator<ABI::Windows::Devices::Sensors::ActivitySensorReadingChangeReport*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sensors::ActivitySensorReadingChangeReport*> __FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport_t;
 #define __FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sensors::IActivitySensorReadingChangeReport*>
@@ -2060,7 +2056,7 @@ IIterable<ABI::Windows::Devices::Sensors::ActivitySensorReadingChangeReport*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sensors::ActivitySensorReadingChangeReport*> __FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport_t;
 #define __FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sensors::IActivitySensorReadingChangeReport*>
@@ -2076,9 +2072,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 enum ActivityType : int;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSensors__CActivityType_USE
@@ -2099,7 +2095,7 @@ IIterator<enum ABI::Windows::Devices::Sensors::ActivityType> : IIterator_impl<en
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::Sensors::ActivityType> __FIIterator_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIIterator_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2129,7 +2125,7 @@ IIterable<enum ABI::Windows::Devices::Sensors::ActivityType> : IIterable_impl<en
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::Sensors::ActivityType> __FIIterable_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIIterable_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2144,9 +2140,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class PedometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2169,7 +2165,7 @@ IIterator<ABI::Windows::Devices::Sensors::PedometerReading*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sensors::PedometerReading*> __FIIterator_1_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIIterator_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sensors::IPedometerReading*>
@@ -2201,7 +2197,7 @@ IIterable<ABI::Windows::Devices::Sensors::PedometerReading*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sensors::PedometerReading*> __FIIterable_1_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIIterable_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sensors::IPedometerReading*>
@@ -2217,9 +2213,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ProximitySensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2242,7 +2238,7 @@ IIterator<ABI::Windows::Devices::Sensors::ProximitySensorReading*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sensors::ProximitySensorReading*> __FIIterator_1_Windows__CDevices__CSensors__CProximitySensorReading_t;
 #define __FIIterator_1_Windows__CDevices__CSensors__CProximitySensorReading ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSensors__CProximitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSensors__CProximitySensorReading ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sensors::IProximitySensorReading*>
@@ -2274,7 +2270,7 @@ IIterable<ABI::Windows::Devices::Sensors::ProximitySensorReading*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sensors::ProximitySensorReading*> __FIIterable_1_Windows__CDevices__CSensors__CProximitySensorReading_t;
 #define __FIIterable_1_Windows__CDevices__CSensors__CProximitySensorReading ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSensors__CProximitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSensors__CProximitySensorReading ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sensors::IProximitySensorReading*>
@@ -2290,9 +2286,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 enum PedometerStepKind : int;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2315,7 +2311,7 @@ IKeyValuePair<enum ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Window
 // correct parameterized interface specialization.
 typedef IKeyValuePair<enum ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Windows::Devices::Sensors::PedometerReading*> __FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::IKeyValuePair<ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Windows::Devices::Sensors::IPedometerReading*>
@@ -2347,7 +2343,7 @@ IIterator<__FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Win
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading*> __FIIterator_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIIterator_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Windows::Devices::Sensors::IPedometerReading*>*>
@@ -2379,7 +2375,7 @@ IIterable<__FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Win
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading*> __FIIterable_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIIterable_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Windows::Devices::Sensors::IPedometerReading*>*>
@@ -2412,7 +2408,7 @@ IMapView<enum ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Windows::De
 // correct parameterized interface specialization.
 typedef IMapView<enum ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Windows::Devices::Sensors::PedometerReading*> __FIMapView_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIMapView_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::__FIMapView_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_Windows__CDevices__CSensors__CPedometerStepKind_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::IMapView<ABI::Windows::Devices::Sensors::PedometerStepKind,ABI::Windows::Devices::Sensors::IPedometerReading*>
@@ -2444,7 +2440,7 @@ IVectorView<ABI::Windows::Devices::Sensors::ActivitySensorReading*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sensors::ActivitySensorReading*> __FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading_t;
 #define __FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IActivitySensorReading*>
@@ -2476,7 +2472,7 @@ IVectorView<ABI::Windows::Devices::Sensors::ActivitySensorReadingChangeReport*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sensors::ActivitySensorReadingChangeReport*> __FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport_t;
 #define __FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReadingChangeReport ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IActivitySensorReadingChangeReport*>
@@ -2507,7 +2503,7 @@ IVectorView<enum ABI::Windows::Devices::Sensors::ActivityType> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::Sensors::ActivityType> __FIVectorView_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIVectorView_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2538,7 +2534,7 @@ IVectorView<ABI::Windows::Devices::Sensors::PedometerReading*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sensors::PedometerReading*> __FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IPedometerReading*>
@@ -2570,7 +2566,7 @@ IVectorView<ABI::Windows::Devices::Sensors::ProximitySensorReading*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sensors::ProximitySensorReading*> __FIVectorView_1_Windows__CDevices__CSensors__CProximitySensorReading_t;
 #define __FIVectorView_1_Windows__CDevices__CSensors__CProximitySensorReading ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSensors__CProximitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSensors__CProximitySensorReading ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IProximitySensorReading*>
@@ -2601,7 +2597,7 @@ IVector<enum ABI::Windows::Devices::Sensors::ActivityType> : IVector_impl<enum A
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Devices::Sensors::ActivityType> __FIVector_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIVector_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2616,9 +2612,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Accelerometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2641,7 +2637,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Accelerometer*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Accelerometer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CAccelerometer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CAccelerometer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CAccelerometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CAccelerometer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IAccelerometer*>
@@ -2673,7 +2669,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Accelerometer*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Accelerometer*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CAccelerometer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CAccelerometer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CAccelerometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CAccelerometer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IAccelerometer*>
@@ -2689,9 +2685,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ActivitySensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2714,7 +2710,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::ActivitySensor*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::ActivitySensor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IActivitySensor*>
@@ -2746,7 +2742,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::ActivitySensor*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::ActivitySensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensor_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IActivitySensor*>
@@ -2778,7 +2774,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::ActivitySensorRe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::ActivitySensorReading*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensorReading_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IActivitySensorReading*>
@@ -2810,7 +2806,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::ActivitySensorReading*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::ActivitySensorReading*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensorReading_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IActivitySensorReading*>
@@ -2826,9 +2822,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Barometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2851,7 +2847,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Barometer*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Barometer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CBarometer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CBarometer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CBarometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CBarometer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IBarometer*>
@@ -2883,7 +2879,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Barometer*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Barometer*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CBarometer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CBarometer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CBarometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CBarometer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IBarometer*>
@@ -2899,9 +2895,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Compass;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2924,7 +2920,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Compass*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Compass*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCompass_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCompass ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCompass_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCompass ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::ICompass*>
@@ -2956,7 +2952,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Compass*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Compass*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CCompass_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCompass ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CCompass_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCompass ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::ICompass*>
@@ -2972,9 +2968,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Gyrometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2997,7 +2993,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Gyrometer*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Gyrometer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CGyrometer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CGyrometer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CGyrometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CGyrometer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IGyrometer*>
@@ -3029,7 +3025,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Gyrometer*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Gyrometer*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CGyrometer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CGyrometer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CGyrometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CGyrometer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IGyrometer*>
@@ -3045,9 +3041,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class HingeAngleReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -3070,7 +3066,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::HingeAngleReadin
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::HingeAngleReading*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleReading_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleReading ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleReading ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IHingeAngleReading*>
@@ -3102,7 +3098,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::HingeAngleReading*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::HingeAngleReading*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleReading_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleReading ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleReading ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IHingeAngleReading*>
@@ -3118,9 +3114,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class HingeAngleSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -3143,7 +3139,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::HingeAngleSensor
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::HingeAngleSensor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleSensor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleSensor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CHingeAngleSensor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IHingeAngleSensor*>
@@ -3175,7 +3171,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::HingeAngleSensor*> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::HingeAngleSensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleSensor_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleSensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CHingeAngleSensor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IHingeAngleSensor*>
@@ -3191,9 +3187,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Inclinometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3216,7 +3212,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Inclinometer*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Inclinometer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CInclinometer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CInclinometer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CInclinometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CInclinometer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IInclinometer*>
@@ -3248,7 +3244,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Inclinometer*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Inclinometer*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CInclinometer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CInclinometer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CInclinometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CInclinometer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IInclinometer*>
@@ -3264,9 +3260,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class LightSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3289,7 +3285,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::LightSensor*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::LightSensor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CLightSensor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CLightSensor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CLightSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CLightSensor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::ILightSensor*>
@@ -3321,7 +3317,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::LightSensor*> : IAsyncOperation_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::LightSensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CLightSensor_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CLightSensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CLightSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CLightSensor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::ILightSensor*>
@@ -3337,9 +3333,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Magnetometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3362,7 +3358,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Magnetometer*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Magnetometer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CMagnetometer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CMagnetometer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CMagnetometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CMagnetometer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IMagnetometer*>
@@ -3394,7 +3390,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Magnetometer*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Magnetometer*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CMagnetometer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CMagnetometer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CMagnetometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CMagnetometer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IMagnetometer*>
@@ -3410,9 +3406,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class OrientationSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3435,7 +3431,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::OrientationSenso
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::OrientationSensor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__COrientationSensor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__COrientationSensor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__COrientationSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__COrientationSensor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IOrientationSensor*>
@@ -3467,7 +3463,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::OrientationSensor*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::OrientationSensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__COrientationSensor_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__COrientationSensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__COrientationSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__COrientationSensor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IOrientationSensor*>
@@ -3483,9 +3479,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Pedometer;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3508,7 +3504,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Pedometer*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Pedometer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CPedometer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CPedometer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CPedometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CPedometer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::IPedometer*>
@@ -3540,7 +3536,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Pedometer*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Pedometer*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CPedometer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CPedometer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CPedometer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CPedometer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::IPedometer*>
@@ -3556,9 +3552,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class SimpleOrientationSensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3581,7 +3577,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::SimpleOrientatio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::SimpleOrientationSensor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CSimpleOrientationSensor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CSimpleOrientationSensor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CSimpleOrientationSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CSimpleOrientationSensor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::ISimpleOrientationSensor*>
@@ -3613,7 +3609,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::SimpleOrientationSensor*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::SimpleOrientationSensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CSimpleOrientationSensor_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CSimpleOrientationSensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CSimpleOrientationSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CSimpleOrientationSensor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::ISimpleOrientationSensor*>
@@ -3645,7 +3641,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSensors__CA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IActivitySensorReading*>*>
@@ -3677,7 +3673,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorRea
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CActivitySensorReading ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IActivitySensorReading*>*>
@@ -3709,7 +3705,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSensors__CP
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IPedometerReading*>*>
@@ -3741,7 +3737,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSensors__CPedometerReading ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::IPedometerReading*>*>
@@ -3758,9 +3754,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class AccelerometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3784,7 +3780,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Accelerometer*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Accelerometer*,ABI::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IAccelerometer*,ABI::Windows::Devices::Sensors::IAccelerometerReadingChangedEventArgs*>
@@ -3802,9 +3798,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class AccelerometerShakenEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3828,7 +3824,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Accelerometer*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Accelerometer*,ABI::Windows::Devices::Sensors::AccelerometerShakenEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IAccelerometer*,ABI::Windows::Devices::Sensors::IAccelerometerShakenEventArgs*>
@@ -3846,9 +3842,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ActivitySensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3872,7 +3868,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::ActivitySensor*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::ActivitySensor*,ABI::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IActivitySensor*,ABI::Windows::Devices::Sensors::IActivitySensorReadingChangedEventArgs*>
@@ -3889,9 +3885,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class Altimeter;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3899,9 +3895,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class AltimeterReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3925,7 +3921,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Altimeter*,ABI::Windows::Devi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Altimeter*,ABI::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IAltimeter*,ABI::Windows::Devices::Sensors::IAltimeterReadingChangedEventArgs*>
@@ -3943,9 +3939,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class BarometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3969,7 +3965,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Barometer*,ABI::Windows::Devi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Barometer*,ABI::Windows::Devices::Sensors::BarometerReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IBarometer*,ABI::Windows::Devices::Sensors::IBarometerReadingChangedEventArgs*>
@@ -3987,9 +3983,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class CompassReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4013,7 +4009,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Compass*,ABI::Windows::Device
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Compass*,ABI::Windows::Devices::Sensors::CompassReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::ICompass*,ABI::Windows::Devices::Sensors::ICompassReadingChangedEventArgs*>
@@ -4031,9 +4027,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class GyrometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4057,7 +4053,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Gyrometer*,ABI::Windows::Devi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Gyrometer*,ABI::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IGyrometer*,ABI::Windows::Devices::Sensors::IGyrometerReadingChangedEventArgs*>
@@ -4075,9 +4071,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class HingeAngleSensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -4101,7 +4097,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::HingeAngleSensor*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::HingeAngleSensor*,ABI::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IHingeAngleSensor*,ABI::Windows::Devices::Sensors::IHingeAngleSensorReadingChangedEventArgs*>
@@ -4119,9 +4115,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class InclinometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4145,7 +4141,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Inclinometer*,ABI::Windows::D
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Inclinometer*,ABI::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IInclinometer*,ABI::Windows::Devices::Sensors::IInclinometerReadingChangedEventArgs*>
@@ -4163,9 +4159,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class LightSensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4189,7 +4185,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::LightSensor*,ABI::Windows::De
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::LightSensor*,ABI::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::ILightSensor*,ABI::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs*>
@@ -4207,9 +4203,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class MagnetometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4233,7 +4229,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Magnetometer*,ABI::Windows::D
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Magnetometer*,ABI::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IMagnetometer*,ABI::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs*>
@@ -4251,9 +4247,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class OrientationSensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4277,7 +4273,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::OrientationSensor*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::OrientationSensor*,ABI::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IOrientationSensor*,ABI::Windows::Devices::Sensors::IOrientationSensorReadingChangedEventArgs*>
@@ -4295,9 +4291,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class PedometerReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4321,7 +4317,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Pedometer*,ABI::Windows::Devi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Pedometer*,ABI::Windows::Devices::Sensors::PedometerReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IPedometer*,ABI::Windows::Devices::Sensors::IPedometerReadingChangedEventArgs*>
@@ -4338,9 +4334,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ProximitySensor;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4348,9 +4344,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ProximitySensorReadingChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4374,7 +4370,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::ProximitySensor*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::ProximitySensor*,ABI::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::IProximitySensor*,ABI::Windows::Devices::Sensors::IProximitySensorReadingChangedEventArgs*>
@@ -4392,9 +4388,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class SimpleOrientationSensorOrientationChangedEventArgs;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4418,7 +4414,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::SimpleOrientationSensor*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::SimpleOrientationSensor*,ABI::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::ISimpleOrientationSensor*,ABI::Windows::Devices::Sensors::ISimpleOrientationSensorOrientationChangedEventArgs*>
@@ -4435,8 +4431,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -4457,7 +4453,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -4487,7 +4483,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -4517,7 +4513,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -4547,7 +4543,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -4577,7 +4573,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -4606,7 +4602,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -4635,7 +4631,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -4653,8 +4649,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -4662,8 +4658,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -4675,8 +4671,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4688,9 +4684,9 @@ namespace ABI {
                 
                 typedef enum DisplayOrientations : unsigned int DisplayOrientations;
                 
-            } /* Windows */
+            } /* Display */
         } /* Graphics */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4702,9 +4698,9 @@ namespace ABI {
                 
                 typedef enum AccelerometerReadingType : int AccelerometerReadingType;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4713,9 +4709,9 @@ namespace ABI {
                 
                 typedef enum ActivitySensorReadingConfidence : int ActivitySensorReadingConfidence;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4724,9 +4720,9 @@ namespace ABI {
                 
                 typedef enum ActivityType : int ActivityType;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4735,9 +4731,9 @@ namespace ABI {
                 
                 typedef enum MagnetometerAccuracy : int MagnetometerAccuracy;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4746,9 +4742,9 @@ namespace ABI {
                 
                 typedef enum PedometerStepKind : int PedometerStepKind;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4757,9 +4753,9 @@ namespace ABI {
                 
                 typedef enum SensorOptimizationGoal : int SensorOptimizationGoal;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4768,9 +4764,9 @@ namespace ABI {
                 
                 typedef enum SensorReadingType : int SensorReadingType;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4779,9 +4775,9 @@ namespace ABI {
                 
                 typedef enum SensorType : int SensorType;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4790,9 +4786,9 @@ namespace ABI {
                 
                 typedef enum SimpleOrientation : int SimpleOrientation;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4918,9 +4914,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class AccelerometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4934,9 +4930,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ActivitySensorTriggerDetails;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4945,9 +4941,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class AltimeterReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4957,9 +4953,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class BarometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4969,9 +4965,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class CompassReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4981,9 +4977,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class GyrometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4996,9 +4992,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class InclinometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5008,9 +5004,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class LightSensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5020,9 +5016,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class MagnetometerReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5032,9 +5028,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class OrientationSensorReading;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5044,9 +5040,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class PedometerDataThreshold;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5057,9 +5053,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ProximitySensorDataThreshold;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5067,9 +5063,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class ProximitySensorDisplayOnOffController;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5079,9 +5075,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class SensorDataThresholdTriggerDetails;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5089,9 +5085,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class SensorQuaternion;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5099,9 +5095,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class SensorRotationMatrix;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5136,9 +5132,9 @@ namespace ABI {
                     AccelerometerReadingType_Gravity = 2,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -5163,9 +5159,9 @@ namespace ABI {
                     ActivitySensorReadingConfidence_Low = 1,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5196,9 +5192,9 @@ namespace ABI {
                     ActivityType_Biking = 7,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5225,9 +5221,9 @@ namespace ABI {
                     MagnetometerAccuracy_High = 3,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5253,9 +5249,9 @@ namespace ABI {
                     PedometerStepKind_Running = 2,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5280,9 +5276,9 @@ namespace ABI {
                     SensorOptimizationGoal_PowerEfficiency = 1,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -5307,9 +5303,9 @@ namespace ABI {
                     SensorReadingType_Relative = 1,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5346,9 +5342,9 @@ namespace ABI {
                     SensorType_SimpleOrientationSensor = 13,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -5377,9 +5373,9 @@ namespace ABI {
                     SimpleOrientation_Facedown = 5,
                 };
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5438,9 +5434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometer=_uuidof(IAccelerometer);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer_INTERFACE_DEFINED__) */
@@ -5482,9 +5478,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometer2=_uuidof(IAccelerometer2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometer2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer2_INTERFACE_DEFINED__) */
@@ -5529,9 +5525,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometer3=_uuidof(IAccelerometer3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometer3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer3_INTERFACE_DEFINED__) */
@@ -5570,9 +5566,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometer4=_uuidof(IAccelerometer4);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometer4;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometer4_INTERFACE_DEFINED__) */
@@ -5611,9 +5607,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerDeviceId=_uuidof(IAccelerometerDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerDeviceId_INTERFACE_DEFINED__) */
@@ -5661,9 +5657,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerReading=_uuidof(IAccelerometerReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading_INTERFACE_DEFINED__) */
@@ -5705,9 +5701,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerReading2=_uuidof(IAccelerometerReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReading2_INTERFACE_DEFINED__) */
@@ -5746,9 +5742,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerReadingChangedEventArgs=_uuidof(IAccelerometerReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5787,9 +5783,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerShakenEventArgs=_uuidof(IAccelerometerShakenEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerShakenEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerShakenEventArgs_INTERFACE_DEFINED__) */
@@ -5828,9 +5824,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerStatics=_uuidof(IAccelerometerStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics_INTERFACE_DEFINED__) */
@@ -5870,9 +5866,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerStatics2=_uuidof(IAccelerometerStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics2_INTERFACE_DEFINED__) */
@@ -5916,9 +5912,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccelerometerStatics3=_uuidof(IAccelerometerStatics3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAccelerometerStatics3_INTERFACE_DEFINED__) */
@@ -5979,9 +5975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensor=_uuidof(IActivitySensor);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensor_INTERFACE_DEFINED__) */
@@ -6026,9 +6022,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensorReading=_uuidof(IActivitySensorReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReading_INTERFACE_DEFINED__) */
@@ -6067,9 +6063,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensorReadingChangeReport=_uuidof(IActivitySensorReadingChangeReport);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangeReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangeReport_INTERFACE_DEFINED__) */
@@ -6108,9 +6104,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensorReadingChangedEventArgs=_uuidof(IActivitySensorReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -6165,9 +6161,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensorStatics=_uuidof(IActivitySensorStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorStatics_INTERFACE_DEFINED__) */
@@ -6206,9 +6202,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensorTriggerDetails=_uuidof(IActivitySensorTriggerDetails);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails_INTERFACE_DEFINED__) */
@@ -6266,9 +6262,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAltimeter=_uuidof(IAltimeter);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAltimeter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAltimeter_INTERFACE_DEFINED__) */
@@ -6313,9 +6309,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAltimeter2=_uuidof(IAltimeter2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAltimeter2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAltimeter2_INTERFACE_DEFINED__) */
@@ -6357,9 +6353,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAltimeterReading=_uuidof(IAltimeterReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading_INTERFACE_DEFINED__) */
@@ -6401,9 +6397,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAltimeterReading2=_uuidof(IAltimeterReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAltimeterReading2_INTERFACE_DEFINED__) */
@@ -6442,9 +6438,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAltimeterReadingChangedEventArgs=_uuidof(IAltimeterReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAltimeterReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAltimeterReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -6483,9 +6479,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAltimeterStatics=_uuidof(IAltimeterStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAltimeterStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAltimeterStatics_INTERFACE_DEFINED__) */
@@ -6543,9 +6539,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarometer=_uuidof(IBarometer);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIBarometer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIBarometer_INTERFACE_DEFINED__) */
@@ -6590,9 +6586,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarometer2=_uuidof(IBarometer2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIBarometer2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIBarometer2_INTERFACE_DEFINED__) */
@@ -6634,9 +6630,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarometerReading=_uuidof(IBarometerReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIBarometerReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIBarometerReading_INTERFACE_DEFINED__) */
@@ -6678,9 +6674,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarometerReading2=_uuidof(IBarometerReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIBarometerReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIBarometerReading2_INTERFACE_DEFINED__) */
@@ -6719,9 +6715,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarometerReadingChangedEventArgs=_uuidof(IBarometerReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIBarometerReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIBarometerReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -6760,9 +6756,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarometerStatics=_uuidof(IBarometerStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics_INTERFACE_DEFINED__) */
@@ -6805,9 +6801,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBarometerStatics2=_uuidof(IBarometerStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIBarometerStatics2_INTERFACE_DEFINED__) */
@@ -6862,9 +6858,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompass=_uuidof(ICompass);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompass;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompass_INTERFACE_DEFINED__) */
@@ -6906,9 +6902,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompass2=_uuidof(ICompass2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompass2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompass2_INTERFACE_DEFINED__) */
@@ -6953,9 +6949,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompass3=_uuidof(ICompass3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompass3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompass3_INTERFACE_DEFINED__) */
@@ -6994,9 +6990,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompassDeviceId=_uuidof(ICompassDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompassDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompassDeviceId_INTERFACE_DEFINED__) */
@@ -7041,9 +7037,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompassReading=_uuidof(ICompassReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompassReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompassReading_INTERFACE_DEFINED__) */
@@ -7085,9 +7081,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompassReading2=_uuidof(ICompassReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompassReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompassReading2_INTERFACE_DEFINED__) */
@@ -7126,9 +7122,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompassReadingChangedEventArgs=_uuidof(ICompassReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompassReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompassReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -7167,9 +7163,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompassReadingHeadingAccuracy=_uuidof(ICompassReadingHeadingAccuracy);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompassReadingHeadingAccuracy;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompassReadingHeadingAccuracy_INTERFACE_DEFINED__) */
@@ -7208,9 +7204,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompassStatics=_uuidof(ICompassStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompassStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompassStatics_INTERFACE_DEFINED__) */
@@ -7253,9 +7249,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompassStatics2=_uuidof(ICompassStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CICompassStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CICompassStatics2_INTERFACE_DEFINED__) */
@@ -7310,9 +7306,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometer=_uuidof(IGyrometer);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometer_INTERFACE_DEFINED__) */
@@ -7354,9 +7350,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometer2=_uuidof(IGyrometer2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometer2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometer2_INTERFACE_DEFINED__) */
@@ -7401,9 +7397,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometer3=_uuidof(IGyrometer3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometer3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometer3_INTERFACE_DEFINED__) */
@@ -7442,9 +7438,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometerDeviceId=_uuidof(IGyrometerDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometerDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometerDeviceId_INTERFACE_DEFINED__) */
@@ -7492,9 +7488,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometerReading=_uuidof(IGyrometerReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading_INTERFACE_DEFINED__) */
@@ -7536,9 +7532,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometerReading2=_uuidof(IGyrometerReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometerReading2_INTERFACE_DEFINED__) */
@@ -7577,9 +7573,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometerReadingChangedEventArgs=_uuidof(IGyrometerReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometerReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometerReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -7618,9 +7614,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometerStatics=_uuidof(IGyrometerStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics_INTERFACE_DEFINED__) */
@@ -7663,9 +7659,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGyrometerStatics2=_uuidof(IGyrometerStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIGyrometerStatics2_INTERFACE_DEFINED__) */
@@ -7710,9 +7706,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHingeAngleReading=_uuidof(IHingeAngleReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHingeAngleReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleReading_INTERFACE_DEFINED__) */
@@ -7770,9 +7766,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHingeAngleSensor=_uuidof(IHingeAngleSensor);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensor_INTERFACE_DEFINED__) */
@@ -7811,9 +7807,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHingeAngleSensorReadingChangedEventArgs=_uuidof(IHingeAngleSensorReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -7864,9 +7860,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHingeAngleSensorStatics=_uuidof(IHingeAngleSensorStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorStatics_INTERFACE_DEFINED__) */
@@ -7921,9 +7917,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometer=_uuidof(IInclinometer);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometer_INTERFACE_DEFINED__) */
@@ -7968,9 +7964,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometer2=_uuidof(IInclinometer2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometer2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometer2_INTERFACE_DEFINED__) */
@@ -8015,9 +8011,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometer3=_uuidof(IInclinometer3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometer3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometer3_INTERFACE_DEFINED__) */
@@ -8056,9 +8052,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerDeviceId=_uuidof(IInclinometerDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerDeviceId_INTERFACE_DEFINED__) */
@@ -8106,9 +8102,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerReading=_uuidof(IInclinometerReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading_INTERFACE_DEFINED__) */
@@ -8150,9 +8146,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerReading2=_uuidof(IInclinometerReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReading2_INTERFACE_DEFINED__) */
@@ -8191,9 +8187,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerReadingChangedEventArgs=_uuidof(IInclinometerReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -8232,9 +8228,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerReadingYawAccuracy=_uuidof(IInclinometerReadingYawAccuracy);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingYawAccuracy;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingYawAccuracy_INTERFACE_DEFINED__) */
@@ -8273,9 +8269,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerStatics=_uuidof(IInclinometerStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics_INTERFACE_DEFINED__) */
@@ -8314,9 +8310,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerStatics2=_uuidof(IInclinometerStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics2_INTERFACE_DEFINED__) */
@@ -8356,9 +8352,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerStatics3=_uuidof(IInclinometerStatics3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics3_INTERFACE_DEFINED__) */
@@ -8402,9 +8398,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInclinometerStatics4=_uuidof(IInclinometerStatics4);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics4;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIInclinometerStatics4_INTERFACE_DEFINED__) */
@@ -8459,9 +8455,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensor=_uuidof(ILightSensor);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensor_INTERFACE_DEFINED__) */
@@ -8506,9 +8502,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensor2=_uuidof(ILightSensor2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensor2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensor2_INTERFACE_DEFINED__) */
@@ -8547,9 +8543,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensorDeviceId=_uuidof(ILightSensorDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorDeviceId_INTERFACE_DEFINED__) */
@@ -8591,9 +8587,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensorReading=_uuidof(ILightSensorReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorReading_INTERFACE_DEFINED__) */
@@ -8635,9 +8631,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensorReading2=_uuidof(ILightSensorReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorReading2_INTERFACE_DEFINED__) */
@@ -8676,9 +8672,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensorReadingChangedEventArgs=_uuidof(ILightSensorReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -8717,9 +8713,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensorStatics=_uuidof(ILightSensorStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics_INTERFACE_DEFINED__) */
@@ -8762,9 +8758,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILightSensorStatics2=_uuidof(ILightSensorStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2_INTERFACE_DEFINED__) */
@@ -8819,9 +8815,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometer=_uuidof(IMagnetometer);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer_INTERFACE_DEFINED__) */
@@ -8863,9 +8859,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometer2=_uuidof(IMagnetometer2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometer2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer2_INTERFACE_DEFINED__) */
@@ -8910,9 +8906,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometer3=_uuidof(IMagnetometer3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometer3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer3_INTERFACE_DEFINED__) */
@@ -8951,9 +8947,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometerDeviceId=_uuidof(IMagnetometerDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometerDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerDeviceId_INTERFACE_DEFINED__) */
@@ -9004,9 +9000,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometerReading=_uuidof(IMagnetometerReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading_INTERFACE_DEFINED__) */
@@ -9048,9 +9044,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometerReading2=_uuidof(IMagnetometerReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReading2_INTERFACE_DEFINED__) */
@@ -9089,9 +9085,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometerReadingChangedEventArgs=_uuidof(IMagnetometerReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -9130,9 +9126,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometerStatics=_uuidof(IMagnetometerStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics_INTERFACE_DEFINED__) */
@@ -9175,9 +9171,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMagnetometerStatics2=_uuidof(IMagnetometerStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIMagnetometerStatics2_INTERFACE_DEFINED__) */
@@ -9232,9 +9228,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensor=_uuidof(IOrientationSensor);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor_INTERFACE_DEFINED__) */
@@ -9279,9 +9275,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensor2=_uuidof(IOrientationSensor2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor2_INTERFACE_DEFINED__) */
@@ -9326,9 +9322,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensor3=_uuidof(IOrientationSensor3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor3_INTERFACE_DEFINED__) */
@@ -9367,9 +9363,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorDeviceId=_uuidof(IOrientationSensorDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorDeviceId_INTERFACE_DEFINED__) */
@@ -9414,9 +9410,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorReading=_uuidof(IOrientationSensorReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading_INTERFACE_DEFINED__) */
@@ -9458,9 +9454,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorReading2=_uuidof(IOrientationSensorReading2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReading2_INTERFACE_DEFINED__) */
@@ -9499,9 +9495,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorReadingChangedEventArgs=_uuidof(IOrientationSensorReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -9540,9 +9536,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorReadingYawAccuracy=_uuidof(IOrientationSensorReadingYawAccuracy);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingYawAccuracy;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingYawAccuracy_INTERFACE_DEFINED__) */
@@ -9581,9 +9577,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorStatics=_uuidof(IOrientationSensorStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics_INTERFACE_DEFINED__) */
@@ -9622,9 +9618,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorStatics2=_uuidof(IOrientationSensorStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics2_INTERFACE_DEFINED__) */
@@ -9669,9 +9665,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorStatics3=_uuidof(IOrientationSensorStatics3);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics3_INTERFACE_DEFINED__) */
@@ -9720,9 +9716,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOrientationSensorStatics4=_uuidof(IOrientationSensorStatics4);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics4;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorStatics4_INTERFACE_DEFINED__) */
@@ -9780,9 +9776,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPedometer=_uuidof(IPedometer);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIPedometer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIPedometer_INTERFACE_DEFINED__) */
@@ -9821,9 +9817,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPedometer2=_uuidof(IPedometer2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIPedometer2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIPedometer2_INTERFACE_DEFINED__) */
@@ -9864,9 +9860,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPedometerDataThresholdFactory=_uuidof(IPedometerDataThresholdFactory);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIPedometerDataThresholdFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIPedometerDataThresholdFactory_INTERFACE_DEFINED__) */
@@ -9914,9 +9910,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPedometerReading=_uuidof(IPedometerReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIPedometerReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIPedometerReading_INTERFACE_DEFINED__) */
@@ -9955,9 +9951,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPedometerReadingChangedEventArgs=_uuidof(IPedometerReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIPedometerReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIPedometerReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -10012,9 +10008,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPedometerStatics=_uuidof(IPedometerStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics_INTERFACE_DEFINED__) */
@@ -10054,9 +10050,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPedometerStatics2=_uuidof(IPedometerStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIPedometerStatics2_INTERFACE_DEFINED__) */
@@ -10114,9 +10110,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximitySensor=_uuidof(IProximitySensor);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIProximitySensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIProximitySensor_INTERFACE_DEFINED__) */
@@ -10156,9 +10152,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximitySensorDataThresholdFactory=_uuidof(IProximitySensorDataThresholdFactory);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIProximitySensorDataThresholdFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorDataThresholdFactory_INTERFACE_DEFINED__) */
@@ -10193,7 +10189,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDetected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DistanceInMillimeters(
                         /* [retval, out] */__RPC__deref_out_opt __FIReference_1_UINT32 * * value
@@ -10203,9 +10199,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximitySensorReading=_uuidof(IProximitySensorReading);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReading_INTERFACE_DEFINED__) */
@@ -10244,9 +10240,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximitySensorReadingChangedEventArgs=_uuidof(IProximitySensorReadingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -10289,9 +10285,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximitySensorStatics=_uuidof(IProximitySensorStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics_INTERFACE_DEFINED__) */
@@ -10331,9 +10327,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProximitySensorStatics2=_uuidof(IProximitySensorStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIProximitySensorStatics2_INTERFACE_DEFINED__) */
@@ -10366,9 +10362,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISensorDataThreshold=_uuidof(ISensorDataThreshold);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold_INTERFACE_DEFINED__) */
@@ -10410,9 +10406,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISensorDataThresholdTriggerDetails=_uuidof(ISensorDataThresholdTriggerDetails);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISensorDataThresholdTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISensorDataThresholdTriggerDetails_INTERFACE_DEFINED__) */
@@ -10460,9 +10456,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISensorQuaternion=_uuidof(ISensorQuaternion);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISensorQuaternion;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISensorQuaternion_INTERFACE_DEFINED__) */
@@ -10525,9 +10521,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISensorRotationMatrix=_uuidof(ISensorRotationMatrix);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISensorRotationMatrix;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISensorRotationMatrix_INTERFACE_DEFINED__) */
@@ -10573,9 +10569,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleOrientationSensor=_uuidof(ISimpleOrientationSensor);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor_INTERFACE_DEFINED__) */
@@ -10617,9 +10613,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleOrientationSensor2=_uuidof(ISimpleOrientationSensor2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor2_INTERFACE_DEFINED__) */
@@ -10658,9 +10654,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleOrientationSensorDeviceId=_uuidof(ISimpleOrientationSensorDeviceId);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorDeviceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorDeviceId_INTERFACE_DEFINED__) */
@@ -10702,9 +10698,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleOrientationSensorOrientationChangedEventArgs=_uuidof(ISimpleOrientationSensorOrientationChangedEventArgs);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorOrientationChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorOrientationChangedEventArgs_INTERFACE_DEFINED__) */
@@ -10743,9 +10739,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleOrientationSensorStatics=_uuidof(ISimpleOrientationSensorStatics);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics_INTERFACE_DEFINED__) */
@@ -10788,9 +10784,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISimpleOrientationSensorStatics2=_uuidof(ISimpleOrientationSensorStatics2);
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2_INTERFACE_DEFINED__) */
@@ -16473,7 +16469,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CAcceleromet
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerReadingChangedEventArgsVtbl;
 
@@ -16526,7 +16522,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CAcceleromet
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerShakenEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAccelerometerShakenEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CAccelerometer_Windows__CDevices__CSensors__CAccelerometerShakenEventArgsVtbl;
 
@@ -16579,7 +16575,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySen
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIActivitySensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIActivitySensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CActivitySensor_Windows__CDevices__CSensors__CActivitySensorReadingChangedEventArgsVtbl;
 
@@ -16632,7 +16628,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAltimeter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAltimeterReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAltimeter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIAltimeterReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CAltimeter_Windows__CDevices__CSensors__CAltimeterReadingChangedEventArgsVtbl;
 
@@ -16685,7 +16681,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIBarometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIBarometerReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIBarometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIBarometerReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CBarometer_Windows__CDevices__CSensors__CBarometerReadingChangedEventArgsVtbl;
 
@@ -16738,7 +16734,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Win
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CICompass * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CICompassReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CICompass * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CICompassReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CCompass_Windows__CDevices__CSensors__CCompassReadingChangedEventArgsVtbl;
 
@@ -16791,7 +16787,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIGyrometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIGyrometerReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIGyrometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIGyrometerReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CGyrometer_Windows__CDevices__CSensors__CGyrometerReadingChangedEventArgsVtbl;
 
@@ -16844,7 +16840,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleS
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIHingeAngleSensorReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CHingeAngleSensor_Windows__CDevices__CSensors__CHingeAngleSensorReadingChangedEventArgsVtbl;
 
@@ -16897,7 +16893,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinomete
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIInclinometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIInclinometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIInclinometerReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CInclinometer_Windows__CDevices__CSensors__CInclinometerReadingChangedEventArgsVtbl;
 
@@ -16950,7 +16946,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CILightSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CILightSensorReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CILightSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CILightSensorReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CLightSensor_Windows__CDevices__CSensors__CLightSensorReadingChangedEventArgsVtbl;
 
@@ -17003,7 +16999,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetomete
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIMagnetometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIMagnetometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIMagnetometerReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CMagnetometer_Windows__CDevices__CSensors__CMagnetometerReadingChangedEventArgsVtbl;
 
@@ -17056,7 +17052,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientation
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIOrientationSensorReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__COrientationSensor_Windows__CDevices__CSensors__COrientationSensorReadingChangedEventArgsVtbl;
 
@@ -17109,7 +17105,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIPedometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIPedometerReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIPedometer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIPedometerReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CPedometer_Windows__CDevices__CSensors__CPedometerReadingChangedEventArgsVtbl;
 
@@ -17162,7 +17158,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIProximitySensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIProximitySensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CIProximitySensorReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CProximitySensor_Windows__CDevices__CSensors__CProximitySensorReadingChangedEventArgsVtbl;
 
@@ -17215,7 +17211,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrien
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorOrientationChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorOrientationChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientationSensor_Windows__CDevices__CSensors__CSimpleOrientationSensorOrientationChangedEventArgsVtbl;
 
@@ -17681,7 +17677,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

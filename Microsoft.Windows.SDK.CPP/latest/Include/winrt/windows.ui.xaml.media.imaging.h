@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.media.imaging.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,11 +279,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IDownloadProgressEventHandler;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler ABI::Windows::UI::Xaml::Media::Imaging::IDownloadProgressEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler_FWD_DEFINED__
@@ -301,11 +297,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapImage;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage ABI::Windows::UI::Xaml::Media::Imaging::IBitmapImage
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage_FWD_DEFINED__
@@ -319,11 +315,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapImage2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage2 ABI::Windows::UI::Xaml::Media::Imaging::IBitmapImage2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage2_FWD_DEFINED__
@@ -337,11 +333,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapImage3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage3 ABI::Windows::UI::Xaml::Media::Imaging::IBitmapImage3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage3_FWD_DEFINED__
@@ -355,11 +351,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapImageFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory ABI::Windows::UI::Xaml::Media::Imaging::IBitmapImageFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory_FWD_DEFINED__
@@ -373,11 +369,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapImageStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics ABI::Windows::UI::Xaml::Media::Imaging::IBitmapImageStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics_FWD_DEFINED__
@@ -391,11 +387,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapImageStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics2 ABI::Windows::UI::Xaml::Media::Imaging::IBitmapImageStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics2_FWD_DEFINED__
@@ -409,11 +405,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapImageStatics3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics3 ABI::Windows::UI::Xaml::Media::Imaging::IBitmapImageStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics3_FWD_DEFINED__
@@ -427,11 +423,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSource ABI::Windows::UI::Xaml::Media::Imaging::IBitmapSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSource_FWD_DEFINED__
@@ -445,11 +441,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory ABI::Windows::UI::Xaml::Media::Imaging::IBitmapSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory_FWD_DEFINED__
@@ -463,11 +459,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IBitmapSourceStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics ABI::Windows::UI::Xaml::Media::Imaging::IBitmapSourceStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics_FWD_DEFINED__
@@ -481,11 +477,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IDownloadProgressEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs ABI::Windows::UI::Xaml::Media::Imaging::IDownloadProgressEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs_FWD_DEFINED__
@@ -499,11 +495,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IRenderTargetBitmap;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmap ABI::Windows::UI::Xaml::Media::Imaging::IRenderTargetBitmap
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmap_FWD_DEFINED__
@@ -517,11 +513,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IRenderTargetBitmapStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmapStatics ABI::Windows::UI::Xaml::Media::Imaging::IRenderTargetBitmapStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmapStatics_FWD_DEFINED__
@@ -535,11 +531,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISoftwareBitmapSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISoftwareBitmapSource ABI::Windows::UI::Xaml::Media::Imaging::ISoftwareBitmapSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISoftwareBitmapSource_FWD_DEFINED__
@@ -553,11 +549,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISurfaceImageSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource ABI::Windows::UI::Xaml::Media::Imaging::ISurfaceImageSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource_FWD_DEFINED__
@@ -571,11 +567,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISurfaceImageSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory ABI::Windows::UI::Xaml::Media::Imaging::ISurfaceImageSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory_FWD_DEFINED__
@@ -589,11 +585,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISvgImageSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource_FWD_DEFINED__
@@ -607,11 +603,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISvgImageSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFactory ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFactory_FWD_DEFINED__
@@ -625,11 +621,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISvgImageSourceFailedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFailedEventArgs ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSourceFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFailedEventArgs_FWD_DEFINED__
@@ -643,11 +639,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISvgImageSourceOpenedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceOpenedEventArgs ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSourceOpenedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceOpenedEventArgs_FWD_DEFINED__
@@ -661,11 +657,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface ISvgImageSourceStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceStatics ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSourceStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceStatics_FWD_DEFINED__
@@ -679,11 +675,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IVirtualSurfaceImageSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource ABI::Windows::UI::Xaml::Media::Imaging::IVirtualSurfaceImageSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource_FWD_DEFINED__
@@ -697,11 +693,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IVirtualSurfaceImageSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory ABI::Windows::UI::Xaml::Media::Imaging::IVirtualSurfaceImageSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory_FWD_DEFINED__
@@ -715,11 +711,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IWriteableBitmap;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmap ABI::Windows::UI::Xaml::Media::Imaging::IWriteableBitmap
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmap_FWD_DEFINED__
@@ -733,11 +729,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IWriteableBitmapFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmapFactory ABI::Windows::UI::Xaml::Media::Imaging::IWriteableBitmapFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmapFactory_FWD_DEFINED__
@@ -751,11 +747,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IXamlRenderingBackgroundTask;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTask ABI::Windows::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTask
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTask_FWD_DEFINED__
@@ -769,11 +765,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IXamlRenderingBackgroundTaskFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskFactory ABI::Windows::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTaskFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskFactory_FWD_DEFINED__
@@ -787,11 +783,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         interface IXamlRenderingBackgroundTaskOverrides;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskOverrides ABI::Windows::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTaskOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskOverrides_FWD_DEFINED__
@@ -806,11 +802,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         enum SvgImageSourceLoadStatus : int;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus_USE
@@ -831,7 +827,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::UI::Xaml::Media::Imaging::Svg
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus>
@@ -861,7 +857,7 @@ IAsyncOperation<enum ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadS
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus> __FIAsyncOperation_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus_t;
 #define __FIAsyncOperation_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceLoadStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus>
@@ -878,11 +874,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class SvgImageSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -892,11 +888,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class SvgImageSourceFailedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -920,7 +916,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSource*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSource*,ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSource*,ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSourceFailedEventArgs*>
@@ -940,11 +936,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class SvgImageSourceOpenedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -968,7 +964,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSource*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSource*,ABI::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSource*,ABI::Windows::UI::Xaml::Media::Imaging::ISvgImageSourceOpenedEventArgs*>
@@ -987,9 +983,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1015,7 +1011,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1047,7 +1043,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1067,9 +1063,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskInstance;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance ABI::Windows::ApplicationModel::Background::IBackgroundTaskInstance
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance_FWD_DEFINED__
@@ -1084,8 +1080,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1097,8 +1093,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1109,8 +1105,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1118,8 +1114,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1132,9 +1128,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -1143,9 +1139,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -1162,9 +1158,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1178,9 +1174,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -1189,9 +1185,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -1204,9 +1200,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IExceptionRoutedEventHandler;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIExceptionRoutedEventHandler ABI::Windows::UI::Xaml::IExceptionRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIExceptionRoutedEventHandler_FWD_DEFINED__
@@ -1219,9 +1215,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IRoutedEventHandler;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler ABI::Windows::UI::Xaml::IRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler_FWD_DEFINED__
@@ -1232,9 +1228,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -1243,9 +1239,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -1263,11 +1259,11 @@ namespace ABI {
                         
                         typedef enum BitmapCreateOptions : unsigned int BitmapCreateOptions;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1278,11 +1274,11 @@ namespace ABI {
                         
                         typedef enum DecodePixelType : int DecodePixelType;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1293,11 +1289,11 @@ namespace ABI {
                         
                         typedef enum SvgImageSourceLoadStatus : int SvgImageSourceLoadStatus;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1335,11 +1331,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class BitmapImage;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1349,11 +1345,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class BitmapSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1363,11 +1359,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class DownloadProgressEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1377,11 +1373,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class RenderTargetBitmap;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1391,11 +1387,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class SoftwareBitmapSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1405,11 +1401,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class SurfaceImageSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1422,11 +1418,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class VirtualSurfaceImageSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1436,11 +1432,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class WriteableBitmap;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1450,11 +1446,11 @@ namespace ABI {
                 namespace Media {
                     namespace Imaging {
                         class XamlRenderingBackgroundTask;
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1494,11 +1490,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(BitmapCreateOptions)
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1525,11 +1521,11 @@ namespace ABI {
                             DecodePixelType_Logical = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1558,11 +1554,11 @@ namespace ABI {
                             SvgImageSourceLoadStatus_Other = 3,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1597,11 +1593,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDownloadProgressEventHandler=_uuidof(IDownloadProgressEventHandler);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler_INTERFACE_DEFINED__) */
@@ -1684,11 +1680,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapImage=_uuidof(IBitmapImage);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage_INTERFACE_DEFINED__) */
@@ -1732,11 +1728,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapImage2=_uuidof(IBitmapImage2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage2_INTERFACE_DEFINED__) */
@@ -1770,16 +1766,16 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAnimatedBitmap(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlaying(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoPlay(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoPlay(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Play(void) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
@@ -1788,11 +1784,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapImage3=_uuidof(IBitmapImage3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImage3_INTERFACE_DEFINED__) */
@@ -1834,11 +1830,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapImageFactory=_uuidof(IBitmapImageFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory_INTERFACE_DEFINED__) */
@@ -1888,11 +1884,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapImageStatics=_uuidof(IBitmapImageStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics_INTERFACE_DEFINED__) */
@@ -1933,11 +1929,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapImageStatics2=_uuidof(IBitmapImageStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics2_INTERFACE_DEFINED__) */
@@ -1984,11 +1980,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapImageStatics3=_uuidof(IBitmapImageStatics3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics3_INTERFACE_DEFINED__) */
@@ -2039,11 +2035,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapSource=_uuidof(IBitmapSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSource_INTERFACE_DEFINED__) */
@@ -2086,11 +2082,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapSourceFactory=_uuidof(IBitmapSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory_INTERFACE_DEFINED__) */
@@ -2134,11 +2130,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBitmapSourceStatics=_uuidof(IBitmapSourceStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics_INTERFACE_DEFINED__) */
@@ -2182,11 +2178,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDownloadProgressEventArgs=_uuidof(IDownloadProgressEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs_INTERFACE_DEFINED__) */
@@ -2243,11 +2239,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRenderTargetBitmap=_uuidof(IRenderTargetBitmap);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmap;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmap_INTERFACE_DEFINED__) */
@@ -2291,11 +2287,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRenderTargetBitmapStatics=_uuidof(IRenderTargetBitmapStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmapStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIRenderTargetBitmapStatics_INTERFACE_DEFINED__) */
@@ -2337,11 +2333,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISoftwareBitmapSource=_uuidof(ISoftwareBitmapSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISoftwareBitmapSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISoftwareBitmapSource_INTERFACE_DEFINED__) */
@@ -2379,11 +2375,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISurfaceImageSource=_uuidof(ISurfaceImageSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource_INTERFACE_DEFINED__) */
@@ -2426,7 +2422,7 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE CreateInstanceWithDimensionsAndOpacity(
                                 /* [in] */INT32 pixelWidth,
                                 /* [in] */INT32 pixelHeight,
-                                /* [in] */boolean isOpaque,
+                                /* [in] */::boolean isOpaque,
                                 /* [in] */__RPC__in_opt IInspectable * baseInterface,
                                 /* [out] */__RPC__deref_out_opt IInspectable * * innerInterface,
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Media::Imaging::ISurfaceImageSource * * value
@@ -2436,11 +2432,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISurfaceImageSourceFactory=_uuidof(ISurfaceImageSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory_INTERFACE_DEFINED__) */
@@ -2514,11 +2510,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISvgImageSource=_uuidof(ISvgImageSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource_INTERFACE_DEFINED__) */
@@ -2567,11 +2563,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISvgImageSourceFactory=_uuidof(ISvgImageSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFactory_INTERFACE_DEFINED__) */
@@ -2612,11 +2608,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISvgImageSourceFailedEventArgs=_uuidof(ISvgImageSourceFailedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFailedEventArgs_INTERFACE_DEFINED__) */
@@ -2654,11 +2650,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISvgImageSourceOpenedEventArgs=_uuidof(ISvgImageSourceOpenedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceOpenedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceOpenedEventArgs_INTERFACE_DEFINED__) */
@@ -2705,11 +2701,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISvgImageSourceStatics=_uuidof(ISvgImageSourceStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceStatics_INTERFACE_DEFINED__) */
@@ -2747,11 +2743,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IVirtualSurfaceImageSource=_uuidof(IVirtualSurfaceImageSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource_INTERFACE_DEFINED__) */
@@ -2792,7 +2788,7 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE CreateInstanceWithDimensionsAndOpacity(
                                 /* [in] */INT32 pixelWidth,
                                 /* [in] */INT32 pixelHeight,
-                                /* [in] */boolean isOpaque,
+                                /* [in] */::boolean isOpaque,
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Media::Imaging::IVirtualSurfaceImageSource * * value
                                 ) = 0;
                             
@@ -2800,11 +2796,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IVirtualSurfaceImageSourceFactory=_uuidof(IVirtualSurfaceImageSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory_INTERFACE_DEFINED__) */
@@ -2846,11 +2842,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWriteableBitmap=_uuidof(IWriteableBitmap);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmap;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmap_INTERFACE_DEFINED__) */
@@ -2893,11 +2889,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWriteableBitmapFactory=_uuidof(IWriteableBitmapFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmapFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIWriteableBitmapFactory_INTERFACE_DEFINED__) */
@@ -2935,11 +2931,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IXamlRenderingBackgroundTask=_uuidof(IXamlRenderingBackgroundTask);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTask;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTask_INTERFACE_DEFINED__) */
@@ -2982,11 +2978,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IXamlRenderingBackgroundTaskFactory=_uuidof(IXamlRenderingBackgroundTaskFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskFactory_INTERFACE_DEFINED__) */
@@ -3027,11 +3023,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IXamlRenderingBackgroundTaskOverrides=_uuidof(IXamlRenderingBackgroundTaskOverrides);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Imaging */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Imaging */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderingBackgroundTaskOverrides_INTERFACE_DEFINED__) */
@@ -3670,7 +3666,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CS
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFailedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceFailedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceFailedEventArgsVtbl;
 
@@ -3723,7 +3719,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CS
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceOpenedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CISvgImageSourceOpenedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSource_Windows__CUI__CXaml__CMedia__CImaging__CSvgImageSourceOpenedEventArgsVtbl;
 

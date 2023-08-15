@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -966,6 +966,33 @@ enum class TreeViewSelectionMode : int32_t
     Multiple = 2,
 };
 
+enum class TwoPaneViewMode : int32_t
+{
+    SinglePane = 0,
+    Wide = 1,
+    Tall = 2,
+};
+
+enum class TwoPaneViewPriority : int32_t
+{
+    Pane1 = 0,
+    Pane2 = 1,
+};
+
+enum class TwoPaneViewTallModeConfiguration : int32_t
+{
+    SinglePane = 0,
+    TopBottom = 1,
+    BottomTop = 2,
+};
+
+enum class TwoPaneViewWideModeConfiguration : int32_t
+{
+    SinglePane = 0,
+    LeftRight = 1,
+    RightLeft = 2,
+};
+
 enum class VirtualizationMode : int32_t
 {
     Standard = 0,
@@ -1194,6 +1221,8 @@ struct IDatePickerFlyout2;
 struct IDatePickerFlyoutItem;
 struct IDatePickerFlyoutItemStatics;
 struct IDatePickerFlyoutPresenter;
+struct IDatePickerFlyoutPresenter2;
+struct IDatePickerFlyoutPresenterStatics2;
 struct IDatePickerFlyoutStatics;
 struct IDatePickerFlyoutStatics2;
 struct IDatePickerSelectedValueChangedEventArgs;
@@ -1217,7 +1246,9 @@ struct IFlipViewStatics2;
 struct IFlyout;
 struct IFlyoutFactory;
 struct IFlyoutPresenter;
+struct IFlyoutPresenter2;
 struct IFlyoutPresenterFactory;
+struct IFlyoutPresenterStatics2;
 struct IFlyoutStatics;
 struct IFocusDisengagedEventArgs;
 struct IFocusEngagedEventArgs;
@@ -1296,6 +1327,7 @@ struct IInkCanvas;
 struct IInkCanvasFactory;
 struct IInkToolbar;
 struct IInkToolbar2;
+struct IInkToolbar3;
 struct IInkToolbarBallpointPenButton;
 struct IInkToolbarBallpointPenButtonFactory;
 struct IInkToolbarCustomPen;
@@ -1336,6 +1368,7 @@ struct IInkToolbarRulerButtonFactory;
 struct IInkToolbarRulerButtonStatics;
 struct IInkToolbarStatics;
 struct IInkToolbarStatics2;
+struct IInkToolbarStatics3;
 struct IInkToolbarStencilButton;
 struct IInkToolbarStencilButtonFactory;
 struct IInkToolbarStencilButtonStatics;
@@ -1445,7 +1478,9 @@ struct IMenuFlyoutItemStatics2;
 struct IMenuFlyoutItemStatics3;
 struct IMenuFlyoutPresenter;
 struct IMenuFlyoutPresenter2;
+struct IMenuFlyoutPresenter3;
 struct IMenuFlyoutPresenterFactory;
+struct IMenuFlyoutPresenterStatics3;
 struct IMenuFlyoutSeparator;
 struct IMenuFlyoutSeparatorFactory;
 struct IMenuFlyoutStatics;
@@ -1738,6 +1773,8 @@ struct ITimePicker3;
 struct ITimePickerFactory;
 struct ITimePickerFlyout;
 struct ITimePickerFlyoutPresenter;
+struct ITimePickerFlyoutPresenter2;
+struct ITimePickerFlyoutPresenterStatics2;
 struct ITimePickerFlyoutStatics;
 struct ITimePickerSelectedValueChangedEventArgs;
 struct ITimePickerStatics;
@@ -1787,6 +1824,9 @@ struct ITreeViewNodeFactory;
 struct ITreeViewNodeStatics;
 struct ITreeViewStatics;
 struct ITreeViewStatics2;
+struct ITwoPaneView;
+struct ITwoPaneViewFactory;
+struct ITwoPaneViewStatics;
 struct IUIElementCollection;
 struct IUserControl;
 struct IUserControlFactory;
@@ -2096,6 +2136,7 @@ struct TreeViewItemInvokedEventArgs;
 struct TreeViewItemTemplateSettings;
 struct TreeViewList;
 struct TreeViewNode;
+struct TwoPaneView;
 struct UIElementCollection;
 struct UserControl;
 struct VariableSizedWrapGrid;
@@ -2332,6 +2373,8 @@ template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyout2>{ us
 template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyoutItem>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyoutItemStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenterStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyoutStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IDatePickerFlyoutStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IDatePickerSelectedValueChangedEventArgs>{ using type = interface_category; };
@@ -2355,7 +2398,9 @@ template <> struct category<Windows::UI::Xaml::Controls::IFlipViewStatics2>{ usi
 template <> struct category<Windows::UI::Xaml::Controls::IFlyout>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IFlyoutFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IFlyoutPresenter>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IFlyoutPresenter2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IFlyoutPresenterFactory>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IFlyoutPresenterStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IFlyoutStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IFocusDisengagedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IFocusEngagedEventArgs>{ using type = interface_category; };
@@ -2434,6 +2479,7 @@ template <> struct category<Windows::UI::Xaml::Controls::IInkCanvas>{ using type
 template <> struct category<Windows::UI::Xaml::Controls::IInkCanvasFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbar>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbar2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IInkToolbar3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarBallpointPenButton>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarBallpointPenButtonFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarCustomPen>{ using type = interface_category; };
@@ -2474,6 +2520,7 @@ template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarRulerButtonF
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarRulerButtonStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarStatics2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarStencilButton>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarStencilButtonFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IInkToolbarStencilButtonStatics>{ using type = interface_category; };
@@ -2583,7 +2630,9 @@ template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutItemStatics2
 template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutItemStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterFactory>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutSeparator>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutSeparatorFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IMenuFlyoutStatics>{ using type = interface_category; };
@@ -2876,6 +2925,8 @@ template <> struct category<Windows::UI::Xaml::Controls::ITimePicker3>{ using ty
 template <> struct category<Windows::UI::Xaml::Controls::ITimePickerFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::ITimePickerFlyout>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenterStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::ITimePickerFlyoutStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::ITimePickerSelectedValueChangedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::ITimePickerStatics>{ using type = interface_category; };
@@ -2925,6 +2976,9 @@ template <> struct category<Windows::UI::Xaml::Controls::ITreeViewNodeFactory>{ 
 template <> struct category<Windows::UI::Xaml::Controls::ITreeViewNodeStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::ITreeViewStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::ITreeViewStatics2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::ITwoPaneView>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::ITwoPaneViewFactory>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::ITwoPaneViewStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IUIElementCollection>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IUserControl>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::IUserControlFactory>{ using type = interface_category; };
@@ -3234,6 +3288,7 @@ template <> struct category<Windows::UI::Xaml::Controls::TreeViewItemInvokedEven
 template <> struct category<Windows::UI::Xaml::Controls::TreeViewItemTemplateSettings>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Controls::TreeViewList>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Controls::TreeViewNode>{ using type = class_category; };
+template <> struct category<Windows::UI::Xaml::Controls::TwoPaneView>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Controls::UIElementCollection>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Controls::UserControl>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Controls::VariableSizedWrapGrid>{ using type = class_category; };
@@ -3322,6 +3377,10 @@ template <> struct category<Windows::UI::Xaml::Controls::SwipeBehaviorOnInvoked>
 template <> struct category<Windows::UI::Xaml::Controls::SwipeMode>{ using type = enum_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Symbol>{ using type = enum_category; };
 template <> struct category<Windows::UI::Xaml::Controls::TreeViewSelectionMode>{ using type = enum_category; };
+template <> struct category<Windows::UI::Xaml::Controls::TwoPaneViewMode>{ using type = enum_category; };
+template <> struct category<Windows::UI::Xaml::Controls::TwoPaneViewPriority>{ using type = enum_category; };
+template <> struct category<Windows::UI::Xaml::Controls::TwoPaneViewTallModeConfiguration>{ using type = enum_category; };
+template <> struct category<Windows::UI::Xaml::Controls::TwoPaneViewWideModeConfiguration>{ using type = enum_category; };
 template <> struct category<Windows::UI::Xaml::Controls::VirtualizationMode>{ using type = enum_category; };
 template <> struct category<Windows::UI::Xaml::Controls::WebViewExecutionMode>{ using type = enum_category; };
 template <> struct category<Windows::UI::Xaml::Controls::WebViewPermissionState>{ using type = enum_category; };
@@ -3533,6 +3592,8 @@ template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyout2>{ static
 template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyoutItem>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerFlyoutItem" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyoutItemStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerFlyoutItemStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerFlyoutPresenter" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerFlyoutPresenter2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenterStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerFlyoutPresenterStatics2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyoutStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerFlyoutStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IDatePickerFlyoutStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerFlyoutStatics2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IDatePickerSelectedValueChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IDatePickerSelectedValueChangedEventArgs" }; };
@@ -3556,7 +3617,9 @@ template <> struct name<Windows::UI::Xaml::Controls::IFlipViewStatics2>{ static 
 template <> struct name<Windows::UI::Xaml::Controls::IFlyout>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFlyout" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IFlyoutFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFlyoutFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IFlyoutPresenter>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFlyoutPresenter" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IFlyoutPresenter2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFlyoutPresenter2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IFlyoutPresenterFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFlyoutPresenterFactory" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IFlyoutPresenterStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFlyoutPresenterStatics2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IFlyoutStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFlyoutStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IFocusDisengagedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFocusDisengagedEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IFocusEngagedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IFocusEngagedEventArgs" }; };
@@ -3635,6 +3698,7 @@ template <> struct name<Windows::UI::Xaml::Controls::IInkCanvas>{ static constex
 template <> struct name<Windows::UI::Xaml::Controls::IInkCanvasFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkCanvasFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbar>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbar" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbar2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbar2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IInkToolbar3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbar3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarBallpointPenButton>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarBallpointPenButton" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarBallpointPenButtonFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarBallpointPenButtonFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarCustomPen>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarCustomPen" }; };
@@ -3675,6 +3739,7 @@ template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarRulerButtonFacto
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarRulerButtonStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarRulerButtonStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarStatics2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarStatics3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarStencilButton>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarStencilButton" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarStencilButtonFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarStencilButtonFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IInkToolbarStencilButtonStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IInkToolbarStencilButtonStatics" }; };
@@ -3784,7 +3849,9 @@ template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutItemStatics2>{ s
 template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutItemStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutItemStatics3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutPresenter" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutPresenter2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutPresenter3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutPresenterFactory" }; };
+template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutPresenterStatics3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutSeparator>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutSeparator" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutSeparatorFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutSeparatorFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IMenuFlyoutStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IMenuFlyoutStatics" }; };
@@ -4077,6 +4144,8 @@ template <> struct name<Windows::UI::Xaml::Controls::ITimePicker3>{ static const
 template <> struct name<Windows::UI::Xaml::Controls::ITimePickerFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::ITimePickerFlyout>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerFlyout" }; };
 template <> struct name<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerFlyoutPresenter" }; };
+template <> struct name<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerFlyoutPresenter2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenterStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerFlyoutPresenterStatics2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::ITimePickerFlyoutStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerFlyoutStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::ITimePickerSelectedValueChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerSelectedValueChangedEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::ITimePickerStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITimePickerStatics" }; };
@@ -4126,6 +4195,9 @@ template <> struct name<Windows::UI::Xaml::Controls::ITreeViewNodeFactory>{ stat
 template <> struct name<Windows::UI::Xaml::Controls::ITreeViewNodeStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITreeViewNodeStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::ITreeViewStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITreeViewStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::ITreeViewStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITreeViewStatics2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::ITwoPaneView>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITwoPaneView" }; };
+template <> struct name<Windows::UI::Xaml::Controls::ITwoPaneViewFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITwoPaneViewFactory" }; };
+template <> struct name<Windows::UI::Xaml::Controls::ITwoPaneViewStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.ITwoPaneViewStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IUIElementCollection>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IUIElementCollection" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IUserControl>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IUserControl" }; };
 template <> struct name<Windows::UI::Xaml::Controls::IUserControlFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.IUserControlFactory" }; };
@@ -4435,6 +4507,7 @@ template <> struct name<Windows::UI::Xaml::Controls::TreeViewItemInvokedEventArg
 template <> struct name<Windows::UI::Xaml::Controls::TreeViewItemTemplateSettings>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TreeViewItemTemplateSettings" }; };
 template <> struct name<Windows::UI::Xaml::Controls::TreeViewList>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TreeViewList" }; };
 template <> struct name<Windows::UI::Xaml::Controls::TreeViewNode>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TreeViewNode" }; };
+template <> struct name<Windows::UI::Xaml::Controls::TwoPaneView>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TwoPaneView" }; };
 template <> struct name<Windows::UI::Xaml::Controls::UIElementCollection>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.UIElementCollection" }; };
 template <> struct name<Windows::UI::Xaml::Controls::UserControl>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.UserControl" }; };
 template <> struct name<Windows::UI::Xaml::Controls::VariableSizedWrapGrid>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.VariableSizedWrapGrid" }; };
@@ -4523,6 +4596,10 @@ template <> struct name<Windows::UI::Xaml::Controls::SwipeBehaviorOnInvoked>{ st
 template <> struct name<Windows::UI::Xaml::Controls::SwipeMode>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.SwipeMode" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Symbol>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Symbol" }; };
 template <> struct name<Windows::UI::Xaml::Controls::TreeViewSelectionMode>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TreeViewSelectionMode" }; };
+template <> struct name<Windows::UI::Xaml::Controls::TwoPaneViewMode>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TwoPaneViewMode" }; };
+template <> struct name<Windows::UI::Xaml::Controls::TwoPaneViewPriority>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TwoPaneViewPriority" }; };
+template <> struct name<Windows::UI::Xaml::Controls::TwoPaneViewTallModeConfiguration>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TwoPaneViewTallModeConfiguration" }; };
+template <> struct name<Windows::UI::Xaml::Controls::TwoPaneViewWideModeConfiguration>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration" }; };
 template <> struct name<Windows::UI::Xaml::Controls::VirtualizationMode>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.VirtualizationMode" }; };
 template <> struct name<Windows::UI::Xaml::Controls::WebViewExecutionMode>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.WebViewExecutionMode" }; };
 template <> struct name<Windows::UI::Xaml::Controls::WebViewPermissionState>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.WebViewPermissionState" }; };
@@ -4734,6 +4811,8 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyout2>
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyoutItem>{ static constexpr guid value{ 0x9D9BC289,0x00D2,0x4AAC,{ 0x9C,0x85,0xD7,0x4F,0x06,0x36,0x78,0x87 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyoutItemStatics>{ static constexpr guid value{ 0xAA9C91DA,0x07F6,0x4CDF,{ 0x89,0xB4,0xDD,0xA3,0xBD,0xB0,0xEA,0x6B } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter>{ static constexpr guid value{ 0x7C62F70E,0x2DDC,0x4381,{ 0x83,0x2F,0x54,0xCB,0xDF,0xAA,0x84,0x9A } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter2>{ static constexpr guid value{ 0xC5B2578F,0x96D8,0x55CC,{ 0x97,0xEE,0x3F,0x88,0xFC,0x85,0xE4,0x79 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenterStatics2>{ static constexpr guid value{ 0x4DC0C49E,0x1F8E,0x5966,{ 0xBB,0xDB,0x21,0x57,0x50,0xC7,0x3A,0xBA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyoutStatics>{ static constexpr guid value{ 0xCD570377,0x5845,0x4C12,{ 0x8C,0x10,0x59,0x2D,0x9F,0xCC,0x7C,0xD9 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerFlyoutStatics2>{ static constexpr guid value{ 0xAFD3E569,0x81E6,0x4B54,{ 0x84,0xA9,0x68,0x07,0x9B,0x73,0xE3,0x4E } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IDatePickerSelectedValueChangedEventArgs>{ static constexpr guid value{ 0x564DCEED,0x744A,0x5C3A,{ 0x9B,0xD2,0x4D,0xCD,0x99,0x19,0xA7,0xB7 } }; };
@@ -4757,7 +4836,9 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlipViewStatics2>{
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlyout>{ static constexpr guid value{ 0x6584EBDF,0xCBC7,0x4E19,{ 0x84,0x3A,0xA1,0x4F,0x24,0xA7,0x93,0xEA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlyoutFactory>{ static constexpr guid value{ 0x4BED4933,0x008E,0x4B03,{ 0xA3,0x85,0x79,0xFE,0x52,0x66,0xDD,0xBA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlyoutPresenter>{ static constexpr guid value{ 0x827D5B79,0xE37B,0x46A5,{ 0x8D,0x44,0x63,0xA1,0x1A,0x58,0x0E,0x83 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlyoutPresenter2>{ static constexpr guid value{ 0x4F857E92,0x36B4,0x5048,{ 0x90,0x51,0xA9,0x92,0xB4,0x3E,0x8A,0x1D } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlyoutPresenterFactory>{ static constexpr guid value{ 0xEE4D668F,0xDA76,0x469A,{ 0xAC,0xD7,0x30,0x60,0xE6,0x13,0xAD,0xE7 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlyoutPresenterStatics2>{ static constexpr guid value{ 0x1492AE4B,0x2727,0x5E8E,{ 0x91,0x05,0x6D,0x7A,0x2B,0x11,0x85,0xB2 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IFlyoutStatics>{ static constexpr guid value{ 0x61364E0B,0xDB75,0x47E1,{ 0xB2,0xC3,0x5B,0x90,0x1C,0x3D,0x74,0xB6 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IFocusDisengagedEventArgs>{ static constexpr guid value{ 0x5E14280F,0x953E,0x4CF8,{ 0xB9,0xEA,0xC5,0x30,0xA1,0xCE,0x02,0xAD } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IFocusEngagedEventArgs>{ static constexpr guid value{ 0xA69FC352,0xDA66,0x404C,{ 0x82,0x3F,0x53,0x58,0x59,0x4E,0x70,0xBB } }; };
@@ -4836,6 +4917,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkCanvas>{ static
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkCanvasFactory>{ static constexpr guid value{ 0x924AC2DE,0xAB04,0x48F0,{ 0x96,0x53,0xE0,0xF2,0xDA,0x4D,0xBF,0x1A } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbar>{ static constexpr guid value{ 0x3DDD0CCA,0x51F0,0x486F,{ 0xA0,0x3E,0x4E,0xE1,0x3D,0xC1,0x2B,0xCB } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbar2>{ static constexpr guid value{ 0x86F0C111,0xB484,0x454A,{ 0xAE,0x78,0x1D,0x25,0xA3,0x3D,0x1C,0x67 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbar3>{ static constexpr guid value{ 0xA8A6DEF0,0x7AA8,0x5326,{ 0xB7,0xC4,0x88,0xAE,0x25,0x01,0x33,0x62 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarBallpointPenButton>{ static constexpr guid value{ 0x158329F8,0x1E99,0x3ACC,{ 0x91,0x0F,0x9D,0xA2,0xD8,0x72,0xAE,0x12 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarBallpointPenButtonFactory>{ static constexpr guid value{ 0x2F0BD3E4,0xD754,0x4255,{ 0x8E,0xC4,0x00,0xCD,0x10,0x12,0x96,0xAB } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarCustomPen>{ static constexpr guid value{ 0x4082207B,0x2F3D,0x4E6A,{ 0x8C,0x27,0xFE,0x61,0xEF,0x7E,0x70,0xEB } }; };
@@ -4876,6 +4958,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarRulerBut
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarRulerButtonStatics>{ static constexpr guid value{ 0xBAE75F65,0xBE30,0x4BEE,{ 0x96,0x4B,0xFF,0x9E,0x49,0x8F,0xEE,0x37 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarStatics>{ static constexpr guid value{ 0xA3B493BB,0xCB4F,0x4E6B,{ 0xA3,0x3D,0xF1,0x1E,0x7A,0x29,0x5E,0xFA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarStatics2>{ static constexpr guid value{ 0xAAC1F8F2,0x2C1F,0x4E9C,{ 0xB3,0xF3,0x31,0xFF,0x22,0xB5,0x1C,0x7A } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarStatics3>{ static constexpr guid value{ 0xA0EE663D,0xB63F,0x516E,{ 0xA0,0xA4,0x07,0x04,0xC4,0x54,0x4D,0x62 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarStencilButton>{ static constexpr guid value{ 0x306A2616,0x5B40,0x4BF3,{ 0x92,0xB7,0xF1,0xDF,0x93,0x6A,0xEF,0xF5 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarStencilButtonFactory>{ static constexpr guid value{ 0xA20701D1,0x8A70,0x4D77,{ 0x89,0xD4,0x17,0x30,0xA3,0xA5,0x8E,0xDF } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IInkToolbarStencilButtonStatics>{ static constexpr guid value{ 0x4748C07F,0x63E4,0x420D,{ 0x93,0x9A,0x6B,0x72,0x43,0xE9,0xD1,0x24 } }; };
@@ -4985,7 +5068,9 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutItemStat
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutItemStatics3>{ static constexpr guid value{ 0xD83FD7C3,0x0AEB,0x4EF3,{ 0x82,0x70,0x8B,0x9B,0x95,0xF2,0xB2,0x98 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter>{ static constexpr guid value{ 0x906E0304,0x254E,0x413F,{ 0xB2,0x19,0xC7,0xB9,0x7F,0x00,0x37,0x52 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter2>{ static constexpr guid value{ 0x895894DF,0x5A9F,0x4A1F,{ 0x85,0xEC,0x6F,0x3C,0x1B,0x6D,0xCB,0x89 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter3>{ static constexpr guid value{ 0x6AFD4E16,0xAEE0,0x584A,{ 0x98,0x49,0xED,0xAA,0x32,0x3A,0x48,0x4F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterFactory>{ static constexpr guid value{ 0xB88B5091,0x101C,0x41F8,{ 0xAA,0xC1,0x1B,0x10,0x5C,0x14,0xFB,0x99 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterStatics3>{ static constexpr guid value{ 0x3772A818,0x825A,0x520C,{ 0x80,0xAE,0x4D,0x39,0xA2,0xD5,0x9A,0xB5 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutSeparator>{ static constexpr guid value{ 0x71FA2B7D,0x0B51,0x4950,{ 0xA1,0xA4,0xBB,0xC4,0x2E,0xAC,0x4C,0x12 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutSeparatorFactory>{ static constexpr guid value{ 0xC159DCC8,0xB437,0x44E0,{ 0xB2,0x4B,0x57,0x20,0xAE,0xA1,0xDB,0xAC } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IMenuFlyoutStatics>{ static constexpr guid value{ 0x3DBEFBA1,0x9522,0x4045,{ 0x9E,0x58,0xC9,0x9B,0x13,0xAA,0xB9,0xB9 } }; };
@@ -5278,6 +5363,8 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePicker3>{ stat
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerFactory>{ static constexpr guid value{ 0x553FE413,0x6CD7,0x46A9,{ 0xA9,0x7B,0xA1,0x8B,0xDC,0x4B,0x4C,0xA3 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerFlyout>{ static constexpr guid value{ 0xBB739D75,0xE836,0x439E,{ 0x86,0xD5,0x50,0x6D,0x2D,0x18,0xE4,0x04 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter>{ static constexpr guid value{ 0xC5320638,0x7A18,0x40ED,{ 0x9F,0xD0,0x4C,0x85,0x2C,0x09,0xB2,0x4E } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter2>{ static constexpr guid value{ 0xA13B5B68,0x7EE9,0x59F7,{ 0xAA,0xD6,0x65,0x32,0xA8,0xA8,0xC3,0xBF } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenterStatics2>{ static constexpr guid value{ 0xAA5F0DDC,0xF2BB,0x53F2,{ 0xA5,0x4D,0xB3,0x4A,0xCC,0xCF,0x51,0xE4 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerFlyoutStatics>{ static constexpr guid value{ 0x3F6728CE,0x2169,0x4003,{ 0xB4,0xA8,0x8D,0xE7,0x03,0x5A,0x0A,0xD6 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerSelectedValueChangedEventArgs>{ static constexpr guid value{ 0x6E20FB35,0x3B9B,0x5BB6,{ 0x98,0x88,0x26,0x65,0x24,0xDB,0x18,0x1E } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITimePickerStatics>{ static constexpr guid value{ 0xFA71DFB1,0x233E,0x4F31,{ 0xB8,0xBE,0xA6,0xEA,0x67,0x0C,0x25,0xCD } }; };
@@ -5327,6 +5414,9 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::ITreeViewNodeFactor
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITreeViewNodeStatics>{ static constexpr guid value{ 0x5D8276FE,0xE1D1,0x4B61,{ 0x9E,0x81,0xC7,0xFB,0x18,0x9A,0x29,0x80 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITreeViewStatics>{ static constexpr guid value{ 0xEF913E08,0x83F2,0x4E16,{ 0xBF,0xB1,0x15,0x77,0xB9,0x83,0x55,0xF5 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::ITreeViewStatics2>{ static constexpr guid value{ 0x16B1C8F9,0x7AA1,0x5E38,{ 0x82,0x18,0x7B,0xBA,0x3E,0xA4,0x17,0xC0 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::ITwoPaneView>{ static constexpr guid value{ 0x1B4D0DB5,0x14AD,0x5926,{ 0xBB,0x8A,0x5B,0x0A,0x5C,0x00,0x85,0xF0 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::ITwoPaneViewFactory>{ static constexpr guid value{ 0x18FF792D,0x58B4,0x59ED,{ 0xA0,0x51,0x51,0xAC,0xEF,0xFB,0xCC,0xA9 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::ITwoPaneViewStatics>{ static constexpr guid value{ 0x5A35C389,0x85C4,0x55F4,{ 0xAB,0xB1,0x97,0x45,0x1B,0xC3,0x2D,0x71 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IUIElementCollection>{ static constexpr guid value{ 0xD6602D54,0x88F6,0x43F6,{ 0x85,0xD8,0xA9,0xD9,0x14,0xA6,0xDD,0x3B } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IUserControl>{ static constexpr guid value{ 0xA7A69EC9,0xEA35,0x4679,{ 0xBF,0x29,0xF4,0xF0,0x92,0x86,0xD3,0x14 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::IUserControlFactory>{ static constexpr guid value{ 0x38B1ED92,0xA28A,0x4972,{ 0x93,0xDF,0xF4,0xF7,0x59,0xB8,0xAF,0xD2 } }; };
@@ -5652,6 +5742,7 @@ template <> struct default_interface<Windows::UI::Xaml::Controls::TreeViewItemIn
 template <> struct default_interface<Windows::UI::Xaml::Controls::TreeViewItemTemplateSettings>{ using type = Windows::UI::Xaml::Controls::ITreeViewItemTemplateSettings; };
 template <> struct default_interface<Windows::UI::Xaml::Controls::TreeViewList>{ using type = Windows::UI::Xaml::Controls::ITreeViewList; };
 template <> struct default_interface<Windows::UI::Xaml::Controls::TreeViewNode>{ using type = Windows::UI::Xaml::Controls::ITreeViewNode; };
+template <> struct default_interface<Windows::UI::Xaml::Controls::TwoPaneView>{ using type = Windows::UI::Xaml::Controls::ITwoPaneView; };
 template <> struct default_interface<Windows::UI::Xaml::Controls::UIElementCollection>{ using type = Windows::Foundation::Collections::IVector<Windows::UI::Xaml::UIElement>; };
 template <> struct default_interface<Windows::UI::Xaml::Controls::UserControl>{ using type = Windows::UI::Xaml::Controls::IUserControl; };
 template <> struct default_interface<Windows::UI::Xaml::Controls::VariableSizedWrapGrid>{ using type = Windows::UI::Xaml::Controls::IVariableSizedWrapGrid; };
@@ -7442,6 +7533,17 @@ template <> struct abi<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter>{
 {
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabled(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_IsDefaultShadowEnabled(bool value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenterStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabledProperty(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::IDatePickerFlyoutStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_CalendarIdentifierProperty(void** value) noexcept = 0;
@@ -7582,9 +7684,20 @@ template <> struct abi<Windows::UI::Xaml::Controls::IFlyoutPresenter>{ struct ty
 {
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::IFlyoutPresenter2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabled(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_IsDefaultShadowEnabled(bool value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::IFlyoutPresenterFactory>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::IFlyoutPresenterStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabledProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::IFlyoutStatics>{ struct type : IInspectable
@@ -8163,6 +8276,12 @@ template <> struct abi<Windows::UI::Xaml::Controls::IInkToolbar2>{ struct type :
     virtual int32_t WINRT_CALL GetMenuButton(Windows::UI::Xaml::Controls::InkToolbarMenuKind menu, void** result) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::IInkToolbar3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_TargetInkPresenter(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_TargetInkPresenter(void* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::IInkToolbarBallpointPenButton>{ struct type : IInspectable
 {
 };};
@@ -8393,6 +8512,11 @@ template <> struct abi<Windows::UI::Xaml::Controls::IInkToolbarStatics2>{ struct
     virtual int32_t WINRT_CALL get_IsStencilButtonCheckedProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_ButtonFlyoutPlacementProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_OrientationProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::IInkToolbarStatics3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_TargetInkPresenterProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::IInkToolbarStencilButton>{ struct type : IInspectable
@@ -9416,9 +9540,20 @@ template <> struct abi<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter2>{ stru
     virtual int32_t WINRT_CALL get_TemplateSettings(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabled(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_IsDefaultShadowEnabled(bool value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterFactory>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterStatics3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabledProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::IMenuFlyoutSeparator>{ struct type : IInspectable
@@ -12177,6 +12312,17 @@ template <> struct abi<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter>{
 {
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabled(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_IsDefaultShadowEnabled(bool value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenterStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsDefaultShadowEnabledProperty(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::ITimePickerFlyoutStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_ClockIdentifierProperty(void** value) noexcept = 0;
@@ -12568,6 +12714,50 @@ template <> struct abi<Windows::UI::Xaml::Controls::ITreeViewStatics2>{ struct t
     virtual int32_t WINRT_CALL get_ItemContainerStyleSelectorProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_ItemContainerTransitionsProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_ItemsSourceProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::ITwoPaneView>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Pane1(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Pane1(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Pane2(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Pane2(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Pane1Length(struct struct_Windows_UI_Xaml_GridLength* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Pane1Length(struct struct_Windows_UI_Xaml_GridLength value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Pane2Length(struct struct_Windows_UI_Xaml_GridLength* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Pane2Length(struct struct_Windows_UI_Xaml_GridLength value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_PanePriority(Windows::UI::Xaml::Controls::TwoPaneViewPriority* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_PanePriority(Windows::UI::Xaml::Controls::TwoPaneViewPriority value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Mode(Windows::UI::Xaml::Controls::TwoPaneViewMode* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_WideModeConfiguration(Windows::UI::Xaml::Controls::TwoPaneViewWideModeConfiguration* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_WideModeConfiguration(Windows::UI::Xaml::Controls::TwoPaneViewWideModeConfiguration value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_TallModeConfiguration(Windows::UI::Xaml::Controls::TwoPaneViewTallModeConfiguration* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_TallModeConfiguration(Windows::UI::Xaml::Controls::TwoPaneViewTallModeConfiguration value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MinWideModeWidth(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_MinWideModeWidth(double value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MinTallModeHeight(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_MinTallModeHeight(double value) noexcept = 0;
+    virtual int32_t WINRT_CALL add_ModeChanged(void* handler, winrt::event_token* token) noexcept = 0;
+    virtual int32_t WINRT_CALL remove_ModeChanged(winrt::event_token token) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::ITwoPaneViewFactory>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::ITwoPaneViewStatics>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Pane1Property(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Pane2Property(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Pane1LengthProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Pane2LengthProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_PanePriorityProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_ModeProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_WideModeConfigurationProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_TallModeConfigurationProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MinWideModeWidthProperty(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MinTallModeHeightProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::IUIElementCollection>{ struct type : IInspectable
@@ -15267,6 +15457,21 @@ struct consume_Windows_UI_Xaml_Controls_IDatePickerFlyoutPresenter
 template <> struct consume<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IDatePickerFlyoutPresenter<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IDatePickerFlyoutPresenter2
+{
+    bool IsDefaultShadowEnabled() const;
+    void IsDefaultShadowEnabled(bool value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenter2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IDatePickerFlyoutPresenter2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IDatePickerFlyoutPresenterStatics2
+{
+    Windows::UI::Xaml::DependencyProperty IsDefaultShadowEnabledProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IDatePickerFlyoutPresenterStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IDatePickerFlyoutPresenterStatics2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IDatePickerFlyoutStatics
 {
     Windows::UI::Xaml::DependencyProperty CalendarIdentifierProperty() const;
@@ -15453,11 +15658,26 @@ struct consume_Windows_UI_Xaml_Controls_IFlyoutPresenter
 template <> struct consume<Windows::UI::Xaml::Controls::IFlyoutPresenter> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IFlyoutPresenter<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IFlyoutPresenter2
+{
+    bool IsDefaultShadowEnabled() const;
+    void IsDefaultShadowEnabled(bool value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IFlyoutPresenter2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IFlyoutPresenter2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IFlyoutPresenterFactory
 {
     Windows::UI::Xaml::Controls::FlyoutPresenter CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
 };
 template <> struct consume<Windows::UI::Xaml::Controls::IFlyoutPresenterFactory> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IFlyoutPresenterFactory<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IFlyoutPresenterStatics2
+{
+    Windows::UI::Xaml::DependencyProperty IsDefaultShadowEnabledProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IFlyoutPresenterStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IFlyoutPresenterStatics2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IFlyoutStatics
@@ -16222,6 +16442,14 @@ struct consume_Windows_UI_Xaml_Controls_IInkToolbar2
 template <> struct consume<Windows::UI::Xaml::Controls::IInkToolbar2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IInkToolbar2<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IInkToolbar3
+{
+    Windows::UI::Input::Inking::InkPresenter TargetInkPresenter() const;
+    void TargetInkPresenter(Windows::UI::Input::Inking::InkPresenter const& value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IInkToolbar3> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IInkToolbar3<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IInkToolbarBallpointPenButton
 {
 };
@@ -16536,6 +16764,13 @@ struct consume_Windows_UI_Xaml_Controls_IInkToolbarStatics2
     Windows::UI::Xaml::DependencyProperty OrientationProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::Controls::IInkToolbarStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IInkToolbarStatics2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IInkToolbarStatics3
+{
+    Windows::UI::Xaml::DependencyProperty TargetInkPresenterProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IInkToolbarStatics3> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IInkToolbarStatics3<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IInkToolbarStencilButton
@@ -17819,11 +18054,26 @@ struct consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenter2
 template <> struct consume<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenter2<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenter3
+{
+    bool IsDefaultShadowEnabled() const;
+    void IsDefaultShadowEnabled(bool value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IMenuFlyoutPresenter3> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenter3<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenterFactory
 {
     Windows::UI::Xaml::Controls::MenuFlyoutPresenter CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
 };
 template <> struct consume<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterFactory> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenterFactory<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenterStatics3
+{
+    Windows::UI::Xaml::DependencyProperty IsDefaultShadowEnabledProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::IMenuFlyoutPresenterStatics3> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_IMenuFlyoutPresenterStatics3<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IMenuFlyoutSeparator
@@ -21324,6 +21574,21 @@ struct consume_Windows_UI_Xaml_Controls_ITimePickerFlyoutPresenter
 template <> struct consume<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_ITimePickerFlyoutPresenter<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_ITimePickerFlyoutPresenter2
+{
+    bool IsDefaultShadowEnabled() const;
+    void IsDefaultShadowEnabled(bool value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenter2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_ITimePickerFlyoutPresenter2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_ITimePickerFlyoutPresenterStatics2
+{
+    Windows::UI::Xaml::DependencyProperty IsDefaultShadowEnabledProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::ITimePickerFlyoutPresenterStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_ITimePickerFlyoutPresenterStatics2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_ITimePickerFlyoutStatics
 {
     Windows::UI::Xaml::DependencyProperty ClockIdentifierProperty() const;
@@ -21831,6 +22096,58 @@ struct consume_Windows_UI_Xaml_Controls_ITreeViewStatics2
     Windows::UI::Xaml::DependencyProperty ItemsSourceProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::Controls::ITreeViewStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_ITreeViewStatics2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_ITwoPaneView
+{
+    Windows::UI::Xaml::UIElement Pane1() const;
+    void Pane1(Windows::UI::Xaml::UIElement const& value) const;
+    Windows::UI::Xaml::UIElement Pane2() const;
+    void Pane2(Windows::UI::Xaml::UIElement const& value) const;
+    Windows::UI::Xaml::GridLength Pane1Length() const;
+    void Pane1Length(Windows::UI::Xaml::GridLength const& value) const;
+    Windows::UI::Xaml::GridLength Pane2Length() const;
+    void Pane2Length(Windows::UI::Xaml::GridLength const& value) const;
+    Windows::UI::Xaml::Controls::TwoPaneViewPriority PanePriority() const;
+    void PanePriority(Windows::UI::Xaml::Controls::TwoPaneViewPriority const& value) const;
+    Windows::UI::Xaml::Controls::TwoPaneViewMode Mode() const;
+    Windows::UI::Xaml::Controls::TwoPaneViewWideModeConfiguration WideModeConfiguration() const;
+    void WideModeConfiguration(Windows::UI::Xaml::Controls::TwoPaneViewWideModeConfiguration const& value) const;
+    Windows::UI::Xaml::Controls::TwoPaneViewTallModeConfiguration TallModeConfiguration() const;
+    void TallModeConfiguration(Windows::UI::Xaml::Controls::TwoPaneViewTallModeConfiguration const& value) const;
+    double MinWideModeWidth() const;
+    void MinWideModeWidth(double value) const;
+    double MinTallModeHeight() const;
+    void MinTallModeHeight(double value) const;
+    winrt::event_token ModeChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Controls::TwoPaneView, Windows::Foundation::IInspectable> const& handler) const;
+    using ModeChanged_revoker = impl::event_revoker<Windows::UI::Xaml::Controls::ITwoPaneView, &impl::abi_t<Windows::UI::Xaml::Controls::ITwoPaneView>::remove_ModeChanged>;
+    ModeChanged_revoker ModeChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Controls::TwoPaneView, Windows::Foundation::IInspectable> const& handler) const;
+    void ModeChanged(winrt::event_token const& token) const noexcept;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::ITwoPaneView> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_ITwoPaneView<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_ITwoPaneViewFactory
+{
+    Windows::UI::Xaml::Controls::TwoPaneView CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::ITwoPaneViewFactory> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_ITwoPaneViewFactory<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_ITwoPaneViewStatics
+{
+    Windows::UI::Xaml::DependencyProperty Pane1Property() const;
+    Windows::UI::Xaml::DependencyProperty Pane2Property() const;
+    Windows::UI::Xaml::DependencyProperty Pane1LengthProperty() const;
+    Windows::UI::Xaml::DependencyProperty Pane2LengthProperty() const;
+    Windows::UI::Xaml::DependencyProperty PanePriorityProperty() const;
+    Windows::UI::Xaml::DependencyProperty ModeProperty() const;
+    Windows::UI::Xaml::DependencyProperty WideModeConfigurationProperty() const;
+    Windows::UI::Xaml::DependencyProperty TallModeConfigurationProperty() const;
+    Windows::UI::Xaml::DependencyProperty MinWideModeWidthProperty() const;
+    Windows::UI::Xaml::DependencyProperty MinTallModeHeightProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::ITwoPaneViewStatics> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_ITwoPaneViewStatics<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Controls_IUIElementCollection

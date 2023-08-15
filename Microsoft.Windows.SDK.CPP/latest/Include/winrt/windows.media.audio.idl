@@ -410,6 +410,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand*>;
 
+                interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode*>;
+
                 interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult*>;
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult*>;

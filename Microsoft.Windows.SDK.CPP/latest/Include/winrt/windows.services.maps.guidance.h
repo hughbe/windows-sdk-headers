@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.services.maps.guidance.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -152,10 +152,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceAudioNotificationRequestedEventArgs;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceAudioNotificationRequestedEventArgs ABI::Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceAudioNotificationRequestedEventArgs_FWD_DEFINED__
@@ -168,10 +168,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceLaneInfo;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceLaneInfo ABI::Windows::Services::Maps::Guidance::IGuidanceLaneInfo
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceLaneInfo_FWD_DEFINED__
@@ -184,10 +184,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceManeuver;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceManeuver ABI::Windows::Services::Maps::Guidance::IGuidanceManeuver
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceManeuver_FWD_DEFINED__
@@ -200,10 +200,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceMapMatchedCoordinate;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceMapMatchedCoordinate ABI::Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceMapMatchedCoordinate_FWD_DEFINED__
@@ -216,10 +216,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceNavigator;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator ABI::Windows::Services::Maps::Guidance::IGuidanceNavigator
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator_FWD_DEFINED__
@@ -232,10 +232,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceNavigator2;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator2 ABI::Windows::Services::Maps::Guidance::IGuidanceNavigator2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator2_FWD_DEFINED__
@@ -248,10 +248,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceNavigatorStatics;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics ABI::Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics_FWD_DEFINED__
@@ -264,10 +264,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceNavigatorStatics2;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics2 ABI::Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics2_FWD_DEFINED__
@@ -280,10 +280,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceReroutedEventArgs;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceReroutedEventArgs ABI::Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceReroutedEventArgs_FWD_DEFINED__
@@ -296,10 +296,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceRoadSegment;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment ABI::Windows::Services::Maps::Guidance::IGuidanceRoadSegment
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment_FWD_DEFINED__
@@ -312,10 +312,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceRoadSegment2;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment2 ABI::Windows::Services::Maps::Guidance::IGuidanceRoadSegment2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment2_FWD_DEFINED__
@@ -328,10 +328,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceRoadSignpost;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSignpost ABI::Windows::Services::Maps::Guidance::IGuidanceRoadSignpost
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSignpost_FWD_DEFINED__
@@ -344,10 +344,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceRoute;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoute ABI::Windows::Services::Maps::Guidance::IGuidanceRoute
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoute_FWD_DEFINED__
@@ -360,10 +360,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceRouteStatics;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRouteStatics ABI::Windows::Services::Maps::Guidance::IGuidanceRouteStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRouteStatics_FWD_DEFINED__
@@ -376,10 +376,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceTelemetryCollector;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollector ABI::Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollector_FWD_DEFINED__
@@ -392,10 +392,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceTelemetryCollectorStatics;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollectorStatics ABI::Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollectorStatics_FWD_DEFINED__
@@ -408,10 +408,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     interface IGuidanceUpdatedEventArgs;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceUpdatedEventArgs ABI::Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceUpdatedEventArgs_FWD_DEFINED__
@@ -425,10 +425,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceLaneInfo;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
@@ -451,7 +451,7 @@ IIterator<ABI::Windows::Services::Maps::Guidance::GuidanceLaneInfo*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::Guidance::GuidanceLaneInfo*> __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::Guidance::IGuidanceLaneInfo*>
@@ -483,7 +483,7 @@ IIterable<ABI::Windows::Services::Maps::Guidance::GuidanceLaneInfo*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::Guidance::GuidanceLaneInfo*> __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::Guidance::IGuidanceLaneInfo*>
@@ -500,10 +500,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceManeuver;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
@@ -526,7 +526,7 @@ IIterator<ABI::Windows::Services::Maps::Guidance::GuidanceManeuver*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::Guidance::GuidanceManeuver*> __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::Guidance::IGuidanceManeuver*>
@@ -558,7 +558,7 @@ IIterable<ABI::Windows::Services::Maps::Guidance::GuidanceManeuver*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::Guidance::GuidanceManeuver*> __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::Guidance::IGuidanceManeuver*>
@@ -575,10 +575,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceRoadSegment;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
@@ -601,7 +601,7 @@ IIterator<ABI::Windows::Services::Maps::Guidance::GuidanceRoadSegment*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::Guidance::GuidanceRoadSegment*> __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::Guidance::IGuidanceRoadSegment*>
@@ -633,7 +633,7 @@ IIterable<ABI::Windows::Services::Maps::Guidance::GuidanceRoadSegment*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::Guidance::GuidanceRoadSegment*> __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::Guidance::IGuidanceRoadSegment*>
@@ -665,7 +665,7 @@ IVectorView<ABI::Windows::Services::Maps::Guidance::GuidanceLaneInfo*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::Guidance::GuidanceLaneInfo*> __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::Guidance::IGuidanceLaneInfo*>
@@ -697,7 +697,7 @@ IVectorView<ABI::Windows::Services::Maps::Guidance::GuidanceManeuver*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::Guidance::GuidanceManeuver*> __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceManeuver ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::Guidance::IGuidanceManeuver*>
@@ -729,7 +729,7 @@ IVectorView<ABI::Windows::Services::Maps::Guidance::GuidanceRoadSegment*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::Guidance::GuidanceRoadSegment*> __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceRoadSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::Guidance::IGuidanceRoadSegment*>
@@ -746,10 +746,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceNavigator;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 
@@ -773,7 +773,7 @@ ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,II
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,IInspectable*> __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::IGuidanceNavigator*,IInspectable*>
@@ -791,10 +791,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceAudioNotificationRequestedEventArgs;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
@@ -818,7 +818,7 @@ ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,ABI::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs*> __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::IGuidanceNavigator*,ABI::Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs*>
@@ -837,10 +837,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceReroutedEventArgs;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
@@ -864,7 +864,7 @@ ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,ABI::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs*> __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::IGuidanceNavigator*,ABI::Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs*>
@@ -883,10 +883,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceUpdatedEventArgs;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
@@ -910,7 +910,7 @@ ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::GuidanceNavigator*,ABI::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Maps::Guidance::IGuidanceNavigator*,ABI::Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs*>
@@ -941,7 +941,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -970,7 +970,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -999,7 +999,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1018,18 +1018,18 @@ namespace ABI {
                 
                 typedef struct BasicGeoposition BasicGeoposition;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Geolocation {
                 class GeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -1038,9 +1038,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox ABI::Windows::Devices::Geolocation::IGeoboundingBox
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -1051,9 +1051,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geocoordinate;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate_FWD_DEFINED__
@@ -1062,9 +1062,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocoordinate;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate ABI::Windows::Devices::Geolocation::IGeocoordinate
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate_FWD_DEFINED__
@@ -1075,9 +1075,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
@@ -1086,9 +1086,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopath ABI::Windows::Devices::Geolocation::IGeopath
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
@@ -1099,9 +1099,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -1110,9 +1110,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint ABI::Windows::Devices::Geolocation::IGeopoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -1127,8 +1127,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1138,9 +1138,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapRoute;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CServices_CMaps_CIMapRoute_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CMaps_CIMapRoute_FWD_DEFINED__
@@ -1149,9 +1149,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRoute;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRoute ABI::Windows::Services::Maps::IMapRoute
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRoute_FWD_DEFINED__
@@ -1166,8 +1166,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1179,10 +1179,10 @@ namespace ABI {
                     
                     typedef enum GuidanceAudioMeasurementSystem : int GuidanceAudioMeasurementSystem;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1192,10 +1192,10 @@ namespace ABI {
                     
                     typedef enum GuidanceAudioNotificationKind : int GuidanceAudioNotificationKind;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1205,10 +1205,10 @@ namespace ABI {
                     
                     typedef enum GuidanceAudioNotifications : unsigned int GuidanceAudioNotifications;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1218,10 +1218,10 @@ namespace ABI {
                     
                     typedef enum GuidanceLaneMarkers : unsigned int GuidanceLaneMarkers;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1231,10 +1231,10 @@ namespace ABI {
                     
                     typedef enum GuidanceManeuverKind : int GuidanceManeuverKind;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1244,10 +1244,10 @@ namespace ABI {
                     
                     typedef enum GuidanceMode : int GuidanceMode;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1275,10 +1275,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceMapMatchedCoordinate;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1290,10 +1290,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceRoadSignpost;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1302,10 +1302,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceRoute;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1314,10 +1314,10 @@ namespace ABI {
             namespace Maps {
                 namespace Guidance {
                     class GuidanceTelemetryCollector;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1354,10 +1354,10 @@ namespace ABI {
                         GuidanceAudioMeasurementSystem_MilesAndFeet = 2,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
 
 
@@ -1387,10 +1387,10 @@ namespace ABI {
                         GuidanceAudioNotificationKind_TrafficCamera = 5,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x20000
 
 
@@ -1423,10 +1423,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(GuidanceAudioNotifications)
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
 
 
@@ -1463,10 +1463,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(GuidanceLaneMarkers)
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
 
 
@@ -1538,10 +1538,10 @@ namespace ABI {
                         GuidanceManeuverKind_LeaveTransitStation = 47,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
 
 
@@ -1569,10 +1569,10 @@ namespace ABI {
                         GuidanceMode_Tracking = 3,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_MAPS_GUIDANCECONTRACT_VERSION >= 0x10000
 
 
@@ -1615,10 +1615,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceAudioNotificationRequestedEventArgs=_uuidof(IGuidanceAudioNotificationRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceAudioNotificationRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceAudioNotificationRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1654,17 +1654,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Services::Maps::Guidance::GuidanceLaneMarkers * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOnRoute(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceLaneInfo=_uuidof(IGuidanceLaneInfo);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceLaneInfo;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceLaneInfo_INTERFACE_DEFINED__) */
@@ -1737,10 +1737,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceManeuver=_uuidof(IGuidanceManeuver);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceManeuver;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceManeuver_INTERFACE_DEFINED__) */
@@ -1782,7 +1782,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__out DOUBLE * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOnStreet(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Road(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Services::Maps::Guidance::IGuidanceRoadSegment * * value
@@ -1792,10 +1792,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceMapMatchedCoordinate=_uuidof(IGuidanceMapMatchedCoordinate);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceMapMatchedCoordinate;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceMapMatchedCoordinate_INTERFACE_DEFINED__) */
@@ -1916,10 +1916,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceNavigator=_uuidof(IGuidanceNavigator);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator_INTERFACE_DEFINED__) */
@@ -1959,20 +1959,20 @@ namespace ABI {
                             /* [in] */EventRegistrationToken token
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGuidanceAudioMuted(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsGuidanceAudioMuted(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceNavigator2=_uuidof(IGuidanceNavigator2);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator2_INTERFACE_DEFINED__) */
@@ -2012,10 +2012,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceNavigatorStatics=_uuidof(IGuidanceNavigatorStatics);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics_INTERFACE_DEFINED__) */
@@ -2048,17 +2048,17 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UseAppProvidedVoice(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceNavigatorStatics2=_uuidof(IGuidanceNavigatorStatics2);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigatorStatics2_INTERFACE_DEFINED__) */
@@ -2098,10 +2098,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceReroutedEventArgs=_uuidof(IGuidanceReroutedEventArgs);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceReroutedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceReroutedEventArgs_INTERFACE_DEFINED__) */
@@ -2152,23 +2152,23 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHighway(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTunnel(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTollRoad(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceRoadSegment=_uuidof(IGuidanceRoadSegment);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment_INTERFACE_DEFINED__) */
@@ -2201,17 +2201,17 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsScenic(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceRoadSegment2=_uuidof(IGuidanceRoadSegment2);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSegment2_INTERFACE_DEFINED__) */
@@ -2263,10 +2263,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceRoadSignpost=_uuidof(IGuidanceRoadSignpost);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSignpost;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoadSignpost_INTERFACE_DEFINED__) */
@@ -2324,10 +2324,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceRoute=_uuidof(IGuidanceRoute);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoute;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRoute_INTERFACE_DEFINED__) */
@@ -2361,7 +2361,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CanCreateFromMapRoute(
                             /* [in] */__RPC__in_opt ABI::Windows::Services::Maps::IMapRoute * mapRoute,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryCreateFromMapRoute(
                             /* [in] */__RPC__in_opt ABI::Windows::Services::Maps::IMapRoute * mapRoute,
@@ -2372,10 +2372,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceRouteStatics=_uuidof(IGuidanceRouteStatics);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRouteStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceRouteStatics_INTERFACE_DEFINED__) */
@@ -2408,10 +2408,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Enabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ClearLocalData(void) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SpeedTrigger(
@@ -2431,10 +2431,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceTelemetryCollector=_uuidof(IGuidanceTelemetryCollector);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollector;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollector_INTERFACE_DEFINED__) */
@@ -2474,10 +2474,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceTelemetryCollectorStatics=_uuidof(IGuidanceTelemetryCollectorStatics);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceTelemetryCollectorStatics_INTERFACE_DEFINED__) */
@@ -2546,7 +2546,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate * * result
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNewManeuver(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LaneInfo(
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CServices__CMaps__CGuidance__CGuidanceLaneInfo * * value
@@ -2556,10 +2556,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGuidanceUpdatedEventArgs=_uuidof(IGuidanceUpdatedEventArgs);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* Guidance */} /* ABI */
+                } /* Guidance */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -3792,7 +3792,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGu
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_IInspectableVtbl;
 
@@ -3844,7 +3844,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGu
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceAudioNotificationRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceAudioNotificationRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceAudioNotificationRequestedEventArgsVtbl;
 
@@ -3897,7 +3897,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGu
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceReroutedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceReroutedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceReroutedEventArgsVtbl;
 
@@ -3950,7 +3950,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGu
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceNavigator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_CGuidance_CIGuidanceUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CMaps__CGuidance__CGuidanceNavigator_Windows__CServices__CMaps__CGuidance__CGuidanceUpdatedEventArgsVtbl;
 

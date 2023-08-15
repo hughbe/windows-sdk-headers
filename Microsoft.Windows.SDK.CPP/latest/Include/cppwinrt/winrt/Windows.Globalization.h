@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -817,6 +817,27 @@ template <typename D> hstring consume_Windows_Globalization_IClockIdentifiersSta
     hstring value{};
     check_hresult(WINRT_SHIM(Windows::Globalization::IClockIdentifiersStatics)->get_TwentyFourHour(put_abi(value)));
     return value;
+}
+
+template <typename D> hstring consume_Windows_Globalization_ICurrencyAmount<D>::Amount() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Globalization::ICurrencyAmount)->get_Amount(put_abi(value)));
+    return value;
+}
+
+template <typename D> hstring consume_Windows_Globalization_ICurrencyAmount<D>::Currency() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Globalization::ICurrencyAmount)->get_Currency(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Globalization::CurrencyAmount consume_Windows_Globalization_ICurrencyAmountFactory<D>::Create(param::hstring const& amount, param::hstring const& currency) const
+{
+    Windows::Globalization::CurrencyAmount result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Globalization::ICurrencyAmountFactory)->Create(get_abi(amount), get_abi(currency), put_abi(result)));
+    return result;
 }
 
 template <typename D> hstring consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AED() const
@@ -4046,6 +4067,53 @@ struct produce<D, Windows::Globalization::IClockIdentifiersStatics> : produce_ba
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TwentyFourHour, WINRT_WRAP(hstring));
             *value = detach_from<hstring>(this->shim().TwentyFourHour());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Globalization::ICurrencyAmount> : produce_base<D, Windows::Globalization::ICurrencyAmount>
+{
+    int32_t WINRT_CALL get_Amount(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Amount, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().Amount());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Currency(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Currency, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().Currency());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Globalization::ICurrencyAmountFactory> : produce_base<D, Windows::Globalization::ICurrencyAmountFactory>
+{
+    int32_t WINRT_CALL Create(void* amount, void* currency, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Create, WINRT_WRAP(Windows::Globalization::CurrencyAmount), hstring const&, hstring const&);
+            *result = detach_from<Windows::Globalization::CurrencyAmount>(this->shim().Create(*reinterpret_cast<hstring const*>(&amount), *reinterpret_cast<hstring const*>(&currency)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7338,6 +7406,10 @@ inline hstring ClockIdentifiers::TwentyFourHour()
     return impl::call_factory<ClockIdentifiers, Windows::Globalization::IClockIdentifiersStatics>([&](auto&& f) { return f.TwentyFourHour(); });
 }
 
+inline CurrencyAmount::CurrencyAmount(param::hstring const& amount, param::hstring const& currency) :
+    CurrencyAmount(impl::call_factory<CurrencyAmount, Windows::Globalization::ICurrencyAmountFactory>([&](auto&& f) { return f.Create(amount, currency); }))
+{}
+
 inline hstring CurrencyIdentifiers::AED()
 {
     return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AED(); });
@@ -8443,6 +8515,8 @@ template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatic
 template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics2> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendarIdentifiersStatics2> {};
 template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics3> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendarIdentifiersStatics3> {};
 template<> struct hash<winrt::Windows::Globalization::IClockIdentifiersStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::IClockIdentifiersStatics> {};
+template<> struct hash<winrt::Windows::Globalization::ICurrencyAmount> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyAmount> {};
+template<> struct hash<winrt::Windows::Globalization::ICurrencyAmountFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyAmountFactory> {};
 template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyIdentifiersStatics> {};
 template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics2> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyIdentifiersStatics2> {};
 template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics3> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyIdentifiersStatics3> {};
@@ -8464,6 +8538,7 @@ template<> struct hash<winrt::Windows::Globalization::ApplicationLanguages> : wi
 template<> struct hash<winrt::Windows::Globalization::Calendar> : winrt::impl::hash_base<winrt::Windows::Globalization::Calendar> {};
 template<> struct hash<winrt::Windows::Globalization::CalendarIdentifiers> : winrt::impl::hash_base<winrt::Windows::Globalization::CalendarIdentifiers> {};
 template<> struct hash<winrt::Windows::Globalization::ClockIdentifiers> : winrt::impl::hash_base<winrt::Windows::Globalization::ClockIdentifiers> {};
+template<> struct hash<winrt::Windows::Globalization::CurrencyAmount> : winrt::impl::hash_base<winrt::Windows::Globalization::CurrencyAmount> {};
 template<> struct hash<winrt::Windows::Globalization::CurrencyIdentifiers> : winrt::impl::hash_base<winrt::Windows::Globalization::CurrencyIdentifiers> {};
 template<> struct hash<winrt::Windows::Globalization::GeographicRegion> : winrt::impl::hash_base<winrt::Windows::Globalization::GeographicRegion> {};
 template<> struct hash<winrt::Windows::Globalization::JapanesePhoneme> : winrt::impl::hash_base<winrt::Windows::Globalization::JapanesePhoneme> {};

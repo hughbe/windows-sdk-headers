@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -72,6 +72,8 @@ enum class NetworkAuthenticationType : int32_t
     Rsna = 7,
     RsnaPsk = 8,
     Ihv = 9,
+    Wpa3 = 10,
+    Wpa3Sae = 11,
 };
 
 enum class NetworkConnectivityLevel : int32_t

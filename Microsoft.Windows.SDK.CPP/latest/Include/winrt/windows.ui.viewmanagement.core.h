@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.viewmanagement.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -128,6 +128,7 @@
 #include "EventToken.h"
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
+#include "Windows.UI.h"
 // Importing Collections header
 #include <windows.foundation.collections.h>
 
@@ -141,10 +142,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     interface ICoreInputView;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView ABI::Windows::UI::ViewManagement::Core::ICoreInputView
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView_FWD_DEFINED__
@@ -157,10 +158,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     interface ICoreInputView2;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView2 ABI::Windows::UI::ViewManagement::Core::ICoreInputView2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView2_FWD_DEFINED__
@@ -173,10 +174,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     interface ICoreInputView3;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView3 ABI::Windows::UI::ViewManagement::Core::ICoreInputView3
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView3_FWD_DEFINED__
@@ -189,10 +190,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     interface ICoreInputViewOcclusion;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusion ABI::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusion_FWD_DEFINED__
@@ -205,10 +206,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     interface ICoreInputViewOcclusionsChangedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusionsChangedEventArgs ABI::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusionsChangedEventArgs_FWD_DEFINED__
@@ -221,13 +222,29 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     interface ICoreInputViewStatics;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics ABI::Windows::UI::ViewManagement::Core::ICoreInputViewStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                namespace Core {
+                    interface ICoreInputViewStatics2;
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 ABI::Windows::UI::ViewManagement::Core::ICoreInputViewStatics2
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs_FWD_DEFINED__
@@ -237,10 +254,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     interface ICoreInputViewTransferringXYFocusEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs ABI::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs_FWD_DEFINED__
@@ -254,10 +271,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     class CoreInputViewOcclusion;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -280,7 +297,7 @@ IIterator<ABI::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion*> __FIIterator_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion_t;
 #define __FIIterator_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion*>
@@ -312,7 +329,7 @@ IIterable<ABI::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion*> __FIIterable_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion_t;
 #define __FIIterable_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion*>
@@ -344,7 +361,7 @@ IVectorView<ABI::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion*> __FIVectorView_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion_t;
 #define __FIVectorView_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion*>
@@ -361,10 +378,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     class CoreInputView;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -388,7 +405,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::CoreInputView*,IInspe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::CoreInputView*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::ICoreInputView*,IInspectable*>
@@ -406,10 +423,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     class CoreInputViewOcclusionsChangedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -433,7 +450,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::CoreInputView*,ABI::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::CoreInputView*,ABI::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::ICoreInputView*,ABI::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs*>
@@ -452,10 +469,10 @@ namespace ABI {
             namespace ViewManagement {
                 namespace Core {
                     class CoreInputViewTransferringXYFocusEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -479,7 +496,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::CoreInputView*,ABI::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::CoreInputView*,ABI::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::Core::ICoreInputView*,ABI::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs*>
@@ -499,8 +516,30 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            class UIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            interface IUIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CIUIContext ABI::Windows::UI::IUIContext
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
 
 
 
@@ -513,10 +552,10 @@ namespace ABI {
                     
                     typedef enum CoreInputViewKind : int CoreInputViewKind;
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -526,10 +565,10 @@ namespace ABI {
                     
                     typedef enum CoreInputViewOcclusionKind : int CoreInputViewOcclusionKind;
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -539,10 +578,11 @@ namespace ABI {
                     
                     typedef enum CoreInputViewXYFocusTransferDirection : int CoreInputViewXYFocusTransferDirection;
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -589,10 +629,10 @@ namespace ABI {
                         CoreInputViewKind_Emoji = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -619,10 +659,10 @@ namespace ABI {
                         CoreInputViewOcclusionKind_Overlay = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -650,10 +690,10 @@ namespace ABI {
                         CoreInputViewXYFocusTransferDirection_Left = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -693,20 +733,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryShowPrimaryView(
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryHidePrimaryView(
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICoreInputView=_uuidof(ICoreInputView);
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView_INTERFACE_DEFINED__) */
@@ -755,17 +795,17 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE TryTransferXYFocusToPrimaryView(
                             /* [in] */ABI::Windows::Foundation::Rect origin,
                             /* [in] */ABI::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection direction,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICoreInputView2=_uuidof(ICoreInputView2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView2_INTERFACE_DEFINED__) */
@@ -798,24 +838,24 @@ namespace ABI {
                     {
                     public:
                         /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryShow(
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryShowWithKind(
                             /* [in] */ABI::Windows::UI::ViewManagement::Core::CoreInputViewKind type,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryHide(
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICoreInputView3=_uuidof(ICoreInputView3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView3_INTERFACE_DEFINED__) */
@@ -858,10 +898,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreInputViewOcclusion=_uuidof(ICoreInputViewOcclusion);
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusion;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusion_INTERFACE_DEFINED__) */
@@ -897,20 +937,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusion * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICoreInputViewOcclusionsChangedEventArgs=_uuidof(ICoreInputViewOcclusionsChangedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusionsChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusionsChangedEventArgs_INTERFACE_DEFINED__) */
@@ -950,14 +990,58 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICoreInputViewStatics=_uuidof(ICoreInputViewStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.Core.ICoreInputViewStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.Core.CoreInputView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_Core_ICoreInputViewStatics2[] = L"Windows.UI.ViewManagement.Core.ICoreInputViewStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                namespace Core {
+                    /* [object, uuid("7EBC0862-D049-4E52-87B0-1E90E98C49ED"), exclusiveto, contract] */
+                    MIDL_INTERFACE("7EBC0862-D049-4E52-87B0-1E90E98C49ED")
+                    ICoreInputViewStatics2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE GetForUIContext(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::IUIContext * context,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::ViewManagement::Core::ICoreInputView * * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ICoreInputViewStatics2=_uuidof(ICoreInputViewStatics2);
+                    
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -992,26 +1076,26 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TransferHandled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TransferHandled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_KeepPrimaryViewVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeepPrimaryViewVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICoreInputViewTransferringXYFocusEventArgs=_uuidof(ICoreInputViewTransferringXYFocusEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* ViewManagement */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs_INTERFACE_DEFINED__) */
@@ -1026,6 +1110,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputVie
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.ViewManagement.Core.ICoreInputViewStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.Core.ICoreInputViewStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -1151,6 +1236,12 @@ typedef interface __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOccl
 typedef interface __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs_FWD_DEFINED__
@@ -1455,7 +1546,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_IInspectableVtbl;
 
@@ -1507,7 +1598,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusionsChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewOcclusionsChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewOcclusionsChangedEventArgsVtbl;
 
@@ -1560,7 +1651,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewTransferringXYFocusEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CCore__CCoreInputView_Windows__CUI__CViewManagement__CCore__CCoreInputViewTransferringXYFocusEventArgsVtbl;
 
@@ -1598,6 +1689,15 @@ typedef struct __x_ABI_CWindows_CFoundation_CRect __x_ABI_CWindows_CFoundation_C
 
 
 
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CIUIContext __x_ABI_CWindows_CUI_CIUIContext;
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+
+
+
+
 
 typedef enum __x_ABI_CWindows_CUI_CViewManagement_CCore_CCoreInputViewKind __x_ABI_CWindows_CUI_CViewManagement_CCore_CCoreInputViewKind;
 
@@ -1606,6 +1706,7 @@ typedef enum __x_ABI_CWindows_CUI_CViewManagement_CCore_CCoreInputViewOcclusionK
 
 
 typedef enum __x_ABI_CWindows_CUI_CViewManagement_CCore_CCoreInputViewXYFocusTransferDirection __x_ABI_CWindows_CUI_CViewManagement_CCore_CCoreInputViewXYFocusTransferDirection;
+
 
 
 
@@ -2347,6 +2448,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputVie
 
 /*
  *
+ * Interface Windows.UI.ViewManagement.Core.ICoreInputViewStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.Core.CoreInputView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_Core_ICoreInputViewStatics2[] = L"Windows.UI.ViewManagement.Core.ICoreInputViewStatics2";
+/* [object, uuid("7EBC0862-D049-4E52-87B0-1E90E98C49ED"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetForUIContext )(
+        __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CIUIContext * context,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputView * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_GetForUIContext(This,context,result) \
+    ( (This)->lpVtbl->GetForUIContext(This,context,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputViewStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.ViewManagement.Core.ICoreInputViewTransferringXYFocusEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
@@ -2481,6 +2676,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CCore_CICoreInputVie
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.ViewManagement.Core.ICoreInputViewStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.Core.ICoreInputViewStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:

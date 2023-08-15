@@ -122,6 +122,8 @@ namespace Windows
             typedef enum FocusState FocusState;
 
             runtimeclass UIElement;
+
+            runtimeclass XamlRoot;
         }
     }
 }
@@ -221,6 +223,8 @@ namespace Windows
 
                 interface IFocusManagerStatics6;
 
+                interface IFocusManagerStatics7;
+
                 interface IFocusMovementResult;
 
                 interface IGettingFocusEventArgs;
@@ -294,6 +298,8 @@ namespace Windows
                 interface IRightTappedRoutedEventArgs;
 
                 interface IStandardUICommand;
+
+                interface IStandardUICommand2;
 
                 interface IStandardUICommandFactory;
 
@@ -939,6 +945,14 @@ namespace Windows
                     [eventremove] HRESULT LosingFocus([in] EventRegistrationToken token);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Input.FocusManager)]
+                [uuid(95D6FA97-F0FC-5C32-B29D-07C04EC966B0)]
+                interface IFocusManagerStatics7 : IInspectable
+                {
+                    [overload("GetFocusedElement")] HRESULT GetFocusedElement([in] Windows.UI.Xaml.XamlRoot* xamlRoot, [out] [retval] IInspectable** result);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [exclusiveto(Windows.UI.Xaml.Input.FocusMovementResult)]
                 [uuid(06DFEAD3-C2AE-44BB-BFAB-9C73DE8407A4)]
@@ -1347,6 +1361,14 @@ namespace Windows
                     [propget] HRESULT Kind([out] [retval] Windows.UI.Xaml.Input.StandardUICommandKind* value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Input.StandardUICommand)]
+                [uuid(E3666069-F9E4-51EB-885B-7A620A0782EA)]
+                interface IStandardUICommand2 : IInspectable
+                {
+                    [propput] HRESULT Kind([in] Windows.UI.Xaml.Input.StandardUICommandKind value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [exclusiveto(Windows.UI.Xaml.Input.StandardUICommand)]
                 [uuid(8F1A7590-DCE1-56E4-AB63-F5CE3CE4EBF6)]
@@ -1513,6 +1535,7 @@ namespace Windows
                 [static(Windows.UI.Xaml.Input.IFocusManagerStatics4, Windows.Foundation.UniversalApiContract, 4.0)]
                 [static(Windows.UI.Xaml.Input.IFocusManagerStatics5, Windows.Foundation.UniversalApiContract, 6.0)]
                 [static(Windows.UI.Xaml.Input.IFocusManagerStatics6, Windows.Foundation.UniversalApiContract, 7.0)]
+                [static(Windows.UI.Xaml.Input.IFocusManagerStatics7, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass FocusManager
                 {
@@ -1740,6 +1763,7 @@ namespace Windows
                 runtimeclass StandardUICommand : Windows.UI.Xaml.Input.XamlUICommand
                 {
                     [default] interface Windows.UI.Xaml.Input.IStandardUICommand;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Input.IStandardUICommand2;
                 }
 
                 [activatable(Windows.Foundation.UniversalApiContract, 1.0)]

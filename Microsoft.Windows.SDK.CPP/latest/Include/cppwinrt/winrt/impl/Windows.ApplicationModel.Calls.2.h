@@ -1,10 +1,11 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
 #include "winrt/impl/Windows.ApplicationModel.Contacts.1.h"
+#include "winrt/impl/Windows.Devices.Enumeration.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.UI.1.h"
@@ -159,7 +160,8 @@ struct WINRT_EBO PhoneDialOptions :
 };
 
 struct WINRT_EBO PhoneLine :
-    Windows::ApplicationModel::Calls::IPhoneLine
+    Windows::ApplicationModel::Calls::IPhoneLine,
+    impl::require<PhoneLine, Windows::ApplicationModel::Calls::IPhoneLine2>
 {
     PhoneLine(std::nullptr_t) noexcept {}
     static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Calls::PhoneLine> FromIdAsync(winrt::guid const& lineId);
@@ -175,6 +177,15 @@ struct WINRT_EBO PhoneLineConfiguration :
     Windows::ApplicationModel::Calls::IPhoneLineConfiguration
 {
     PhoneLineConfiguration(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO PhoneLineTransportDevice :
+    Windows::ApplicationModel::Calls::IPhoneLineTransportDevice
+{
+    PhoneLineTransportDevice(std::nullptr_t) noexcept {}
+    static Windows::ApplicationModel::Calls::PhoneLineTransportDevice FromId(param::hstring const& id);
+    static hstring GetDeviceSelector();
+    static hstring GetDeviceSelector(Windows::ApplicationModel::Calls::PhoneLineTransport const& transport);
 };
 
 struct WINRT_EBO PhoneLineWatcher :

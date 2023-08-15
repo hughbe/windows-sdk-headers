@@ -143,6 +143,8 @@ namespace Windows
 
             typedef enum UnifiedPosPowerReportingType UnifiedPosPowerReportingType;
 
+            typedef struct SizeUInt32 SizeUInt32;
+
             interface IBarcodeScanner;
 
             interface IBarcodeScanner2;
@@ -245,7 +247,11 @@ namespace Windows
 
             interface ICommonReceiptSlipCapabilities;
 
+            interface IJournalPrintJob;
+
             interface IJournalPrinterCapabilities;
+
+            interface IJournalPrinterCapabilities2;
 
             interface ILineDisplay;
 
@@ -305,11 +311,17 @@ namespace Windows
 
             interface IPosPrinter;
 
+            interface IPosPrinter2;
+
             interface IPosPrinterCapabilities;
 
             interface IPosPrinterCharacterSetIdsStatics;
 
+            interface IPosPrinterFontProperty;
+
             interface IPosPrinterJob;
+
+            interface IPosPrinterPrintOptions;
 
             interface IPosPrinterReleaseDeviceRequestedEventArgs;
 
@@ -325,9 +337,17 @@ namespace Windows
 
             interface IReceiptPrintJob;
 
+            interface IReceiptPrintJob2;
+
             interface IReceiptPrinterCapabilities;
 
+            interface IReceiptPrinterCapabilities2;
+
+            interface ISlipPrintJob;
+
             interface ISlipPrinterCapabilities;
+
+            interface ISlipPrinterCapabilities2;
 
             interface IUnifiedPosErrorData;
 
@@ -447,6 +467,10 @@ namespace Windows
 
             runtimeclass PosPrinterCharacterSetIds;
 
+            runtimeclass PosPrinterFontProperty;
+
+            runtimeclass PosPrinterPrintOptions;
+
             runtimeclass PosPrinterReleaseDeviceRequestedEventArgs;
 
             runtimeclass PosPrinterStatus;
@@ -477,9 +501,15 @@ namespace Windows
             {
                 interface Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.PosPrinterRotation>;
 
+                interface Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.SizeUInt32>;
+
                 interface Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation>;
 
+                interface Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32>;
+
                 interface Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32>;
 
                 interface Windows.Foundation.EventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner*>;
 
@@ -924,6 +954,13 @@ namespace Windows
                 Advanced                  = 2
             };
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            struct SizeUInt32
+            {
+                UINT32 Width;
+                UINT32 Height;
+            };
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.PointOfService.BarcodeScanner)]
             [uuid(BEA33E06-B264-4F03-A9C1-45B20F01134F)]
@@ -1000,7 +1037,7 @@ namespace Windows
             [uuid(F3B7DE85-6E8B-434E-9F58-06EF26BC4BAF)]
             interface IBarcodeScannerImagePreviewReceivedEventArgs : IInspectable
             {
-                [propget] HRESULT Preview([out] [retval] Windows.Storage.Streams.IRandomAccessStreamWithContentType** preview);
+                [propget] HRESULT Preview([out] [retval] Windows.Storage.Streams.IRandomAccessStreamWithContentType** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1240,7 +1277,7 @@ namespace Windows
             [uuid(69CB3BC1-147F-421C-9C23-090123BB786C)]
             interface ICashDrawerEventSourceEventArgs : IInspectable
             {
-                [propget] HRESULT CashDrawer([out] [retval] Windows.Devices.PointOfService.CashDrawer** drawer);
+                [propget] HRESULT CashDrawer([out] [retval] Windows.Devices.PointOfService.CashDrawer** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1282,8 +1319,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedBarcodeScanner)]
             [uuid(4A63B49C-8FA4-4332-BB26-945D11D81E0F)]
             interface IClaimedBarcodeScanner : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT IsEnabled([out] [retval] boolean* value);
@@ -1316,8 +1351,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedBarcodeScanner)]
             [uuid(F61AAD0C-8551-42B4-998C-970C20210A22)]
             interface IClaimedBarcodeScanner1 : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 HRESULT StartSoftwareTriggerAsync([out] [retval] Windows.Foundation.IAsyncAction** result);
                 HRESULT StopSoftwareTriggerAsync([out] [retval] Windows.Foundation.IAsyncAction** result);
@@ -1327,8 +1360,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedBarcodeScanner)]
             [uuid(E3B59E8C-2D8B-4F70-8AF3-3448BEDD5FE2)]
             interface IClaimedBarcodeScanner2 : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 HRESULT GetSymbologyAttributesAsync([in] UINT32 barcodeSymbology, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeSymbologyAttributes*>** result);
                 HRESULT SetSymbologyAttributesAsync([in] UINT32 barcodeSymbology, [in] Windows.Devices.PointOfService.BarcodeSymbologyAttributes* attributes, [out] [retval] Windows.Foundation.IAsyncOperation<boolean>** result);
@@ -1365,8 +1396,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedCashDrawer)]
             [uuid(CA3F99AF-ABB8-42C1-8A84-5C66512F5A75)]
             interface IClaimedCashDrawer : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT IsEnabled([out] [retval] boolean* value);
@@ -1402,8 +1431,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedJournalPrinter)]
             [uuid(67EA0630-517D-487F-9FDF-D2E0A0A264A5)]
             interface IClaimedJournalPrinter : IInspectable
-                requires
-                    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
             {
                 HRESULT CreateJob([out] [retval] Windows.Devices.PointOfService.JournalPrintJob** value);
             }
@@ -1412,8 +1439,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedLineDisplay)]
             [uuid(120AC970-9A75-4ACF-AAE7-09972BCF8794)]
             interface IClaimedLineDisplay : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT Capabilities([out] [retval] Windows.Devices.PointOfService.LineDisplayCapabilities** value);
@@ -1432,8 +1457,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedLineDisplay)]
             [uuid(A31C75ED-41F5-4E76-A074-795E47A46E97)]
             interface IClaimedLineDisplay2 : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 HRESULT GetStatisticsAsync([in] Windows.Foundation.Collections.IIterable<HSTRING>* statisticsCategories, [out] [retval] Windows.Foundation.IAsyncOperation<HSTRING>** result);
                 HRESULT CheckHealthAsync([in] Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel level, [out] [retval] Windows.Foundation.IAsyncOperation<HSTRING>** result);
@@ -1484,8 +1507,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedMagneticStripeReader)]
             [uuid(475CA8F3-9417-48BC-B9D7-4163A7844C02)]
             interface IClaimedMagneticStripeReader : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT IsEnabled([out] [retval] boolean* value);
@@ -1542,8 +1563,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedPosPrinter)]
             [uuid(6D64CE0C-E03E-4B14-A38E-C28C34B86353)]
             interface IClaimedPosPrinter : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT IsEnabled([out] [retval] boolean* value);
@@ -1586,8 +1605,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedReceiptPrinter)]
             [uuid(9AD27A74-DD61-4EE2-9837-5B5D72D538B9)]
             interface IClaimedReceiptPrinter : IInspectable
-                requires
-                    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
             {
                 [propget] HRESULT SidewaysMaxLines([out] [retval] UINT32* value);
                 [propget] HRESULT SidewaysMaxChars([out] [retval] UINT32* value);
@@ -1601,8 +1618,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ClaimedSlipPrinter)]
             [uuid(BD5DEFF2-AF90-4E8A-B77B-E3AE9CA63A7F)]
             interface IClaimedSlipPrinter : IInspectable
-                requires
-                    Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation
             {
                 [propget] HRESULT SidewaysMaxLines([out] [retval] UINT32* value);
                 [propget] HRESULT SidewaysMaxChars([out] [retval] UINT32* value);
@@ -1680,21 +1695,40 @@ namespace Windows
                 [propget] HRESULT SupportedBitmapRotations([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation>** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.JournalPrintJob)]
+            [uuid(9F4F2864-F3F0-55D0-8C39-74CC91783EED)]
+            interface IJournalPrintJob : IInspectable
+            {
+                HRESULT Print([in] HSTRING data, [in] Windows.Devices.PointOfService.PosPrinterPrintOptions* printOptions);
+                HRESULT FeedPaperByLine([in] INT32 lineCount);
+                HRESULT FeedPaperByMapModeUnit([in] INT32 distance);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.PointOfService.JournalPrinterCapabilities)]
             [uuid(3B5CCC43-E047-4463-BB58-17B5BA1D8056)]
             interface IJournalPrinterCapabilities : IInspectable
-                requires
-                    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
             {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.JournalPrinterCapabilities)]
+            [uuid(03B0B645-33B8-533B-BAAA-A4389283AB0A)]
+            interface IJournalPrinterCapabilities2 : IInspectable
+            {
+                [propget] HRESULT IsReverseVideoSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsStrikethroughSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsSuperscriptSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsSubscriptSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsReversePaperFeedByLineSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsReversePaperFeedByMapModeUnitSupported([out] [retval] boolean* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [exclusiveto(Windows.Devices.PointOfService.LineDisplay)]
             [uuid(24F5DF4E-3C99-44E2-B73F-E51BE3637A8C)]
             interface ILineDisplay : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT Capabilities([out] [retval] Windows.Devices.PointOfService.LineDisplayCapabilities** value);
@@ -1710,8 +1744,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.LineDisplay)]
             [uuid(C296A628-EF44-40F3-BD1C-B04C6A5CDC7D)]
             interface ILineDisplay2 : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 HRESULT CheckPowerStatusAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus>** result);
             }
@@ -1860,7 +1892,7 @@ namespace Windows
             [uuid(F621515B-D81E-43BA-BF1B-BCFA3C785BA0)]
             interface ILineDisplayStoredBitmap : IInspectable
             {
-                [propget] HRESULT EscapeSequence([out] [retval] HSTRING* escapeSequence);
+                [propget] HRESULT EscapeSequence([out] [retval] HSTRING* value);
                 HRESULT TryDeleteAsync([out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
             }
 
@@ -1868,8 +1900,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.LineDisplayWindow)]
             [uuid(D21FEEF4-2364-4BE5-BEE1-851680AF4964)]
             interface ILineDisplayWindow : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT SizeInCharacters([out] [retval] Windows.Foundation.Size* value);
                 [propget] HRESULT InterCharacterWaitInterval([out] [retval] Windows.Foundation.TimeSpan* value);
@@ -1886,8 +1916,6 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.LineDisplayWindow)]
             [uuid(A95CE2E6-BDD8-4365-8E11-DE94DE8DFF02)]
             interface ILineDisplayWindow2 : IInspectable
-                requires
-                    Windows.Foundation.IClosable
             {
                 [propget] HRESULT Cursor([out] [retval] Windows.Devices.PointOfService.LineDisplayCursor** value);
                 [propget] HRESULT Marquee([out] [retval] Windows.Devices.PointOfService.LineDisplayMarquee** value);
@@ -2089,6 +2117,15 @@ namespace Windows
                 [eventremove] HRESULT StatusUpdated([in] EventRegistrationToken token);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.PosPrinter)]
+            [uuid(248475E8-8B98-5517-8E48-760E86F68987)]
+            interface IPosPrinter2 : IInspectable
+            {
+                [propget] HRESULT SupportedBarcodeSymbologies([out] [retval] Windows.Foundation.Collections.IVectorView<UINT32>** value);
+                HRESULT GetFontProperty([in] HSTRING typeface, [out] [retval] Windows.Devices.PointOfService.PosPrinterFontProperty** result);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.PointOfService.PosPrinterCapabilities)]
             [uuid(CDE95721-4380-4985-ADC5-39DB30CD93BC)]
@@ -2116,6 +2153,16 @@ namespace Windows
                 [propget] HRESULT Ansi([out] [retval] UINT32* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.PosPrinterFontProperty)]
+            [uuid(A7F4E93A-F8AC-5F04-84D2-29B16D8A633C)]
+            interface IPosPrinterFontProperty : IInspectable
+            {
+                [propget] HRESULT TypeFace([out] [retval] HSTRING* value);
+                [propget] HRESULT IsScalableToAnySize([out] [retval] boolean* value);
+                [propget] HRESULT CharacterSizes([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32>** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [uuid(9A94005C-0615-4591-A58F-30F87EDFE2E4)]
             interface IPosPrinterJob : IInspectable
@@ -2124,6 +2171,39 @@ namespace Windows
                 [overload("PrintLine")] HRESULT PrintLine([in] HSTRING data);
                 [overload("PrintLine")] HRESULT PrintNewline();
                 HRESULT ExecuteAsync([out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.PosPrinterPrintOptions)]
+            [uuid(0A2E16FD-1D02-5A58-9D59-BFCDE76FDE86)]
+            interface IPosPrinterPrintOptions : IInspectable
+            {
+                [propget] HRESULT TypeFace([out] [retval] HSTRING* value);
+                [propput] HRESULT TypeFace([in] HSTRING value);
+                [propget] HRESULT CharacterHeight([out] [retval] UINT32* value);
+                [propput] HRESULT CharacterHeight([in] UINT32 value);
+                [propget] HRESULT Bold([out] [retval] boolean* value);
+                [propput] HRESULT Bold([in] boolean value);
+                [propget] HRESULT Italic([out] [retval] boolean* value);
+                [propput] HRESULT Italic([in] boolean value);
+                [propget] HRESULT Underline([out] [retval] boolean* value);
+                [propput] HRESULT Underline([in] boolean value);
+                [propget] HRESULT ReverseVideo([out] [retval] boolean* value);
+                [propput] HRESULT ReverseVideo([in] boolean value);
+                [propget] HRESULT Strikethrough([out] [retval] boolean* value);
+                [propput] HRESULT Strikethrough([in] boolean value);
+                [propget] HRESULT Superscript([out] [retval] boolean* value);
+                [propput] HRESULT Superscript([in] boolean value);
+                [propget] HRESULT Subscript([out] [retval] boolean* value);
+                [propput] HRESULT Subscript([in] boolean value);
+                [propget] HRESULT DoubleWide([out] [retval] boolean* value);
+                [propput] HRESULT DoubleWide([in] boolean value);
+                [propget] HRESULT DoubleHigh([out] [retval] boolean* value);
+                [propput] HRESULT DoubleHigh([in] boolean value);
+                [propget] HRESULT Alignment([out] [retval] Windows.Devices.PointOfService.PosPrinterAlignment* value);
+                [propput] HRESULT Alignment([in] Windows.Devices.PointOfService.PosPrinterAlignment value);
+                [propget] HRESULT CharacterSet([out] [retval] UINT32* value);
+                [propput] HRESULT CharacterSet([in] UINT32 value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2195,38 +2275,76 @@ namespace Windows
             [exclusiveto(Windows.Devices.PointOfService.ReceiptPrintJob)]
             [uuid(AA96066E-ACAD-4B79-9D0F-C0CFC08DC77B)]
             interface IReceiptPrintJob : IInspectable
-                requires
-                    Windows.Devices.PointOfService.IReceiptOrSlipJob,
-                    Windows.Devices.PointOfService.IPosPrinterJob
             {
                 HRESULT MarkFeed([in] Windows.Devices.PointOfService.PosPrinterMarkFeedKind kind);
                 [overload("CutPaper")] HRESULT CutPaper([in] DOUBLE percentage);
                 [overload("CutPaper")] HRESULT CutPaperDefault();
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.ReceiptPrintJob)]
+            [uuid(0CBC12E3-9E29-5179-BCD8-1811D3B9A10E)]
+            interface IReceiptPrintJob2 : IInspectable
+            {
+                HRESULT StampPaper();
+                HRESULT Print([in] HSTRING data, [in] Windows.Devices.PointOfService.PosPrinterPrintOptions* printOptions);
+                HRESULT FeedPaperByLine([in] INT32 lineCount);
+                HRESULT FeedPaperByMapModeUnit([in] INT32 distance);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.PointOfService.ReceiptPrinterCapabilities)]
             [uuid(B8F0B58F-51A8-43FC-9BD5-8DE272A6415B)]
             interface IReceiptPrinterCapabilities : IInspectable
-                requires
-                    Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities,
-                    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
             {
                 [propget] HRESULT CanCutPaper([out] [retval] boolean* value);
                 [propget] HRESULT IsStampSupported([out] [retval] boolean* value);
                 [propget] HRESULT MarkFeedCapabilities([out] [retval] Windows.Devices.PointOfService.PosPrinterMarkFeedCapabilities* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.ReceiptPrinterCapabilities)]
+            [uuid(20030638-8A2C-55AC-9A7B-7576D8869E99)]
+            interface IReceiptPrinterCapabilities2 : IInspectable
+            {
+                [propget] HRESULT IsReverseVideoSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsStrikethroughSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsSuperscriptSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsSubscriptSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsReversePaperFeedByLineSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsReversePaperFeedByMapModeUnitSupported([out] [retval] boolean* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.SlipPrintJob)]
+            [uuid(5D88F95D-6131-5A4B-B7D5-8EF2DA7B4165)]
+            interface ISlipPrintJob : IInspectable
+            {
+                HRESULT Print([in] HSTRING data, [in] Windows.Devices.PointOfService.PosPrinterPrintOptions* printOptions);
+                HRESULT FeedPaperByLine([in] INT32 lineCount);
+                HRESULT FeedPaperByMapModeUnit([in] INT32 distance);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.PointOfService.SlipPrinterCapabilities)]
             [uuid(99B16399-488C-4157-8AC2-9F57F708D3DB)]
             interface ISlipPrinterCapabilities : IInspectable
-                requires
-                    Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities,
-                    Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities
             {
                 [propget] HRESULT IsFullLengthSupported([out] [retval] boolean* value);
                 [propget] HRESULT IsBothSidesPrintingSupported([out] [retval] boolean* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.PointOfService.SlipPrinterCapabilities)]
+            [uuid(6FF89671-2D1A-5000-87C2-B0851BFDF07E)]
+            interface ISlipPrinterCapabilities2 : IInspectable
+            {
+                [propget] HRESULT IsReverseVideoSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsStrikethroughSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsSuperscriptSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsSubscriptSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsReversePaperFeedByLineSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsReversePaperFeedByMapModeUnitSupported([out] [retval] boolean* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2293,6 +2411,7 @@ namespace Windows
             [activatable(Windows.Devices.PointOfService.IBarcodeScannerReportFactory, Windows.Foundation.UniversalApiContract, 6.0)]
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
+            [threading(both)]
             runtimeclass BarcodeScannerReport
             {
                 [default] interface Windows.Devices.PointOfService.IBarcodeScannerReport;
@@ -2316,7 +2435,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass BarcodeSymbologyAttributes
             {
                 [default] interface Windows.Devices.PointOfService.IBarcodeSymbologyAttributes;
@@ -2335,7 +2453,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass CashDrawerCapabilities
             {
                 [default] interface Windows.Devices.PointOfService.ICashDrawerCapabilities;
@@ -2343,7 +2460,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass CashDrawerCloseAlarm
             {
                 [default] interface Windows.Devices.PointOfService.ICashDrawerCloseAlarm;
@@ -2351,7 +2467,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass CashDrawerClosedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs;
@@ -2359,7 +2474,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass CashDrawerEventSource
             {
                 [default] interface Windows.Devices.PointOfService.ICashDrawerEventSource;
@@ -2367,7 +2481,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass CashDrawerOpenedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs;
@@ -2375,7 +2488,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass CashDrawerStatus
             {
                 [default] interface Windows.Devices.PointOfService.ICashDrawerStatus;
@@ -2383,7 +2495,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass CashDrawerStatusUpdatedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.ICashDrawerStatusUpdatedEventArgs;
@@ -2391,20 +2502,18 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedBarcodeScanner
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedBarcodeScanner;
-                interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.PointOfService.IClaimedBarcodeScanner1;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Devices.PointOfService.IClaimedBarcodeScanner2;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Devices.PointOfService.IClaimedBarcodeScanner3;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.Devices.PointOfService.IClaimedBarcodeScanner4;
+                interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 7.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedBarcodeScannerClosedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedBarcodeScannerClosedEventArgs;
@@ -2412,17 +2521,15 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedCashDrawer
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedCashDrawer;
-                interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.Devices.PointOfService.IClaimedCashDrawer2;
+                interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 7.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedCashDrawerClosedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedCashDrawerClosedEventArgs;
@@ -2430,7 +2537,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedJournalPrinter
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedJournalPrinter;
@@ -2444,14 +2550,13 @@ namespace Windows
             runtimeclass ClaimedLineDisplay
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedLineDisplay;
-                interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.PointOfService.IClaimedLineDisplay2;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.Devices.PointOfService.IClaimedLineDisplay3;
+                interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 7.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedLineDisplayClosedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedLineDisplayClosedEventArgs;
@@ -2459,17 +2564,15 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedMagneticStripeReader
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedMagneticStripeReader;
-                interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.Devices.PointOfService.IClaimedMagneticStripeReader2;
+                interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 7.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedMagneticStripeReaderClosedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedMagneticStripeReaderClosedEventArgs;
@@ -2477,17 +2580,15 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedPosPrinter
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedPosPrinter;
-                interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.Devices.PointOfService.IClaimedPosPrinter2;
+                interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 7.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedPosPrinterClosedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedPosPrinterClosedEventArgs;
@@ -2495,7 +2596,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedReceiptPrinter
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedReceiptPrinter;
@@ -2504,7 +2604,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ClaimedSlipPrinter
             {
                 [default] interface Windows.Devices.PointOfService.IClaimedSlipPrinter;
@@ -2513,18 +2612,18 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass JournalPrintJob
             {
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.PointOfService.IJournalPrintJob;
                 [default] interface Windows.Devices.PointOfService.IPosPrinterJob;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass JournalPrinterCapabilities
             {
                 [default] interface Windows.Devices.PointOfService.IJournalPrinterCapabilities;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.PointOfService.IJournalPrinterCapabilities2;
                 interface Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities;
             }
 
@@ -2536,13 +2635,12 @@ namespace Windows
             runtimeclass LineDisplay
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplay;
-                interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.PointOfService.ILineDisplay2;
+                interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayAttributes
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayAttributes;
@@ -2550,7 +2648,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayCapabilities
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayCapabilities;
@@ -2558,7 +2655,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayCursor
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayCursor;
@@ -2566,7 +2662,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayCursorAttributes
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayCursorAttributes;
@@ -2574,7 +2669,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayCustomGlyphs
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayCustomGlyphs;
@@ -2582,7 +2676,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayMarquee
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayMarquee;
@@ -2590,7 +2683,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayStatisticsCategorySelector
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayStatisticsCategorySelector;
@@ -2598,7 +2690,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayStatusUpdatedEventArgs
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayStatusUpdatedEventArgs;
@@ -2606,7 +2697,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayStoredBitmap
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayStoredBitmap;
@@ -2614,12 +2704,11 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass LineDisplayWindow
             {
                 [default] interface Windows.Devices.PointOfService.ILineDisplayWindow;
-                interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.PointOfService.ILineDisplayWindow2;
+                interface Windows.Foundation.IClosable;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2713,6 +2802,7 @@ namespace Windows
             runtimeclass PosPrinter
             {
                 [default] interface Windows.Devices.PointOfService.IPosPrinter;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.PointOfService.IPosPrinter2;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Foundation.IClosable;
             }
 
@@ -2729,6 +2819,22 @@ namespace Windows
             [threading(both)]
             runtimeclass PosPrinterCharacterSetIds
             {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass PosPrinterFontProperty
+            {
+                [default] interface Windows.Devices.PointOfService.IPosPrinterFontProperty;
+            }
+
+            [activatable(Windows.Foundation.UniversalApiContract, 8.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass PosPrinterPrintOptions
+            {
+                [default] interface Windows.Devices.PointOfService.IPosPrinterPrintOptions;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2754,39 +2860,39 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ReceiptPrintJob
             {
                 [default] interface Windows.Devices.PointOfService.IReceiptPrintJob;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.PointOfService.IReceiptPrintJob2;
                 interface Windows.Devices.PointOfService.IReceiptOrSlipJob;
                 interface Windows.Devices.PointOfService.IPosPrinterJob;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ReceiptPrinterCapabilities
             {
                 [default] interface Windows.Devices.PointOfService.IReceiptPrinterCapabilities;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.PointOfService.IReceiptPrinterCapabilities2;
                 interface Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities;
                 interface Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass SlipPrintJob
             {
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.PointOfService.ISlipPrintJob;
                 [default] interface Windows.Devices.PointOfService.IReceiptOrSlipJob;
                 interface Windows.Devices.PointOfService.IPosPrinterJob;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass SlipPrinterCapabilities
             {
                 [default] interface Windows.Devices.PointOfService.ISlipPrinterCapabilities;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.PointOfService.ISlipPrinterCapabilities2;
                 interface Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities;
                 interface Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities;
             }
@@ -2794,6 +2900,7 @@ namespace Windows
             [activatable(Windows.Devices.PointOfService.IUnifiedPosErrorDataFactory, Windows.Foundation.UniversalApiContract, 6.0)]
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
+            [threading(both)]
             runtimeclass UnifiedPosErrorData
             {
                 [default] interface Windows.Devices.PointOfService.IUnifiedPosErrorData;

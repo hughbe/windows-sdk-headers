@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,6 +8,7 @@
 #include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.UI.Core.1.h"
 #include "winrt/impl/Windows.UI.Popups.1.h"
+#include "winrt/impl/Windows.UI.WindowManagement.1.h"
 #include "winrt/impl/Windows.UI.ViewManagement.1.h"
 
 WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement {
@@ -35,7 +36,7 @@ struct WINRT_EBO ActivationViewSwitcher :
 
 struct WINRT_EBO ApplicationView :
     Windows::UI::ViewManagement::IApplicationView,
-    impl::require<ApplicationView, Windows::UI::ViewManagement::IApplicationView2, Windows::UI::ViewManagement::IApplicationView3, Windows::UI::ViewManagement::IApplicationView4>
+    impl::require<ApplicationView, Windows::UI::ViewManagement::IApplicationView2, Windows::UI::ViewManagement::IApplicationView3, Windows::UI::ViewManagement::IApplicationView4, Windows::UI::ViewManagement::IApplicationView7, Windows::UI::ViewManagement::IApplicationView9, Windows::UI::ViewManagement::IApplicationViewWithContext>
 {
     ApplicationView(std::nullptr_t) noexcept {}
     static bool TryUnsnapToFullscreen();
@@ -49,6 +50,8 @@ struct WINRT_EBO ApplicationView :
     static void PreferredLaunchWindowingMode(Windows::UI::ViewManagement::ApplicationViewWindowingMode const& value);
     static Windows::Foundation::Size PreferredLaunchViewSize();
     static void PreferredLaunchViewSize(Windows::Foundation::Size const& value);
+    static void ClearAllPersistedState();
+    static void ClearPersistedState(param::hstring const& key);
 };
 
 struct WINRT_EBO ApplicationViewConsolidatedEventArgs :
@@ -102,6 +105,7 @@ struct WINRT_EBO InputPane :
 {
     InputPane(std::nullptr_t) noexcept {}
     static Windows::UI::ViewManagement::InputPane GetForCurrentView();
+    static Windows::UI::ViewManagement::InputPane GetForUIContext(Windows::UI::UIContext const& context);
 };
 
 struct WINRT_EBO InputPaneVisibilityEventArgs :
@@ -142,10 +146,16 @@ struct WINRT_EBO StatusBarProgressIndicator :
 
 struct WINRT_EBO UISettings :
     Windows::UI::ViewManagement::IUISettings,
-    impl::require<UISettings, Windows::UI::ViewManagement::IUISettings2, Windows::UI::ViewManagement::IUISettings3, Windows::UI::ViewManagement::IUISettings4>
+    impl::require<UISettings, Windows::UI::ViewManagement::IUISettings2, Windows::UI::ViewManagement::IUISettings3, Windows::UI::ViewManagement::IUISettings4, Windows::UI::ViewManagement::IUISettings5>
 {
     UISettings(std::nullptr_t) noexcept {}
     UISettings();
+};
+
+struct WINRT_EBO UISettingsAutoHideScrollBarsChangedEventArgs :
+    Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs
+{
+    UISettingsAutoHideScrollBarsChangedEventArgs(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO UIViewSettings :

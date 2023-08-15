@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.smartcards.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardPinResetHandler;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetHandler ABI::Windows::Devices::SmartCards::ISmartCardPinResetHandler
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetHandler_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ICardAddedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CICardAddedEventArgs ABI::Windows::Devices::SmartCards::ICardAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CICardAddedEventArgs_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ICardRemovedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CICardRemovedEventArgs ABI::Windows::Devices::SmartCards::ICardRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CICardRemovedEventArgs_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface IKnownSmartCardAppletIds;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CIKnownSmartCardAppletIds ABI::Windows::Devices::SmartCards::IKnownSmartCardAppletIds
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CIKnownSmartCardAppletIds_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCard;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCard ABI::Windows::Devices::SmartCards::ISmartCard
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCard_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAppletIdGroup;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroup
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAppletIdGroup2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup2 ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup2_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAppletIdGroupFactory;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupFactory ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupFactory_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAppletIdGroupRegistration;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAppletIdGroupRegistration2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration2 ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration2_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAppletIdGroupStatics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupStatics ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupStatics_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAutomaticResponseApdu;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu ABI::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAutomaticResponseApdu2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu2 ABI::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu2_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAutomaticResponseApdu3;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu3 ABI::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu3_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardAutomaticResponseApduFactory;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApduFactory ABI::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApduFactory_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardChallengeContext;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardChallengeContext ABI::Windows::Devices::SmartCards::ISmartCardChallengeContext
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardChallengeContext_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardConnect;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnect ABI::Windows::Devices::SmartCards::ISmartCardConnect
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnect_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardConnection;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnection ABI::Windows::Devices::SmartCards::ISmartCardConnection
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnection_FWD_DEFINED__
@@ -530,9 +526,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramGenerator;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator_FWD_DEFINED__
@@ -544,9 +540,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramGenerator2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator2 ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator2_FWD_DEFINED__
@@ -558,9 +554,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramGeneratorStatics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics_FWD_DEFINED__
@@ -572,9 +568,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramGeneratorStatics2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics2 ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics2_FWD_DEFINED__
@@ -586,9 +582,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_FWD_DEFINED__
@@ -600,9 +596,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_FWD_DEFINED__
@@ -614,9 +610,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_FWD_DEFINED__
@@ -628,9 +624,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramMaterialCharacteristics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialCharacteristics ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialCharacteristics_FWD_DEFINED__
@@ -642,9 +638,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramMaterialPackageCharacteristics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPackageCharacteristics ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPackageCharacteristics_FWD_DEFINED__
@@ -656,9 +652,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramMaterialPossessionProof;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPossessionProof ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPossessionProof_FWD_DEFINED__
@@ -670,9 +666,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramPlacementStep;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramPlacementStep ABI::Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramPlacementStep_FWD_DEFINED__
@@ -684,9 +680,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramStorageKeyCharacteristics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyCharacteristics ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyCharacteristics_FWD_DEFINED__
@@ -698,9 +694,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramStorageKeyInfo;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo_FWD_DEFINED__
@@ -712,9 +708,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardCryptogramStorageKeyInfo2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo2 ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo2_FWD_DEFINED__
@@ -726,9 +722,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulator;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator ABI::Windows::Devices::SmartCards::ISmartCardEmulator
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator_FWD_DEFINED__
@@ -740,9 +736,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulator2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator2 ABI::Windows::Devices::SmartCards::ISmartCardEmulator2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator2_FWD_DEFINED__
@@ -754,9 +750,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorApduReceivedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs ABI::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs_FWD_DEFINED__
@@ -768,9 +764,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorApduReceivedEventArgs2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs2 ABI::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs2_FWD_DEFINED__
@@ -782,9 +778,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorApduReceivedEventArgsWithCryptograms;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgsWithCryptograms ABI::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgsWithCryptograms_FWD_DEFINED__
@@ -796,9 +792,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorConnectionDeactivatedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionDeactivatedEventArgs ABI::Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionDeactivatedEventArgs_FWD_DEFINED__
@@ -810,9 +806,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorConnectionProperties;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionProperties ABI::Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionProperties_FWD_DEFINED__
@@ -824,9 +820,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorStatics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics ABI::Windows::Devices::SmartCards::ISmartCardEmulatorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics_FWD_DEFINED__
@@ -838,9 +834,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorStatics2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics2 ABI::Windows::Devices::SmartCards::ISmartCardEmulatorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics2_FWD_DEFINED__
@@ -852,9 +848,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardEmulatorStatics3;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics3 ABI::Windows::Devices::SmartCards::ISmartCardEmulatorStatics3
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics3_FWD_DEFINED__
@@ -866,9 +862,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardPinPolicy;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinPolicy ABI::Windows::Devices::SmartCards::ISmartCardPinPolicy
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinPolicy_FWD_DEFINED__
@@ -880,9 +876,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardPinResetDeferral;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetDeferral ABI::Windows::Devices::SmartCards::ISmartCardPinResetDeferral
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetDeferral_FWD_DEFINED__
@@ -894,9 +890,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardPinResetRequest;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetRequest ABI::Windows::Devices::SmartCards::ISmartCardPinResetRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetRequest_FWD_DEFINED__
@@ -908,9 +904,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardProvisioning;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning ABI::Windows::Devices::SmartCards::ISmartCardProvisioning
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning_FWD_DEFINED__
@@ -922,9 +918,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardProvisioning2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning2 ABI::Windows::Devices::SmartCards::ISmartCardProvisioning2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning2_FWD_DEFINED__
@@ -936,9 +932,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardProvisioningStatics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics ABI::Windows::Devices::SmartCards::ISmartCardProvisioningStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics_FWD_DEFINED__
@@ -950,9 +946,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardProvisioningStatics2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics2 ABI::Windows::Devices::SmartCards::ISmartCardProvisioningStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics2_FWD_DEFINED__
@@ -964,9 +960,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardReader;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader ABI::Windows::Devices::SmartCards::ISmartCardReader
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader_FWD_DEFINED__
@@ -978,9 +974,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardReaderStatics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReaderStatics ABI::Windows::Devices::SmartCards::ISmartCardReaderStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReaderStatics_FWD_DEFINED__
@@ -992,9 +988,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardTriggerDetails;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails ABI::Windows::Devices::SmartCards::ISmartCardTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails_FWD_DEFINED__
@@ -1006,9 +1002,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardTriggerDetails2;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails2 ABI::Windows::Devices::SmartCards::ISmartCardTriggerDetails2
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails2_FWD_DEFINED__
@@ -1020,9 +1016,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 interface ISmartCardTriggerDetails3;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails3 ABI::Windows::Devices::SmartCards::ISmartCardTriggerDetails3
 
 #endif // ____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails3_FWD_DEFINED__
@@ -1035,9 +1031,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCard;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1060,7 +1056,7 @@ IIterator<ABI::Windows::Devices::SmartCards::SmartCard*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::SmartCards::SmartCard*> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCard_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCard_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::ISmartCard*>
@@ -1092,7 +1088,7 @@ IIterable<ABI::Windows::Devices::SmartCards::SmartCard*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::SmartCards::SmartCard*> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCard_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCard_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::ISmartCard*>
@@ -1108,9 +1104,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardAppletIdGroupRegistration;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
@@ -1133,7 +1129,7 @@ IIterator<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration*
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration*> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration*>
@@ -1165,7 +1161,7 @@ IIterable<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration*
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration*> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration*>
@@ -1181,9 +1177,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardAutomaticResponseApdu;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
@@ -1206,7 +1202,7 @@ IIterator<ABI::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu*> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu*>
@@ -1238,7 +1234,7 @@ IIterable<ABI::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu*> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardAutomaticResponseApdu ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu*>
@@ -1254,9 +1250,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardCryptogramAlgorithm : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm_USE
@@ -1277,7 +1273,7 @@ IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm> 
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>
@@ -1307,7 +1303,7 @@ IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm> 
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>
@@ -1322,9 +1318,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramMaterialCharacteristics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x40000
@@ -1347,7 +1343,7 @@ IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics*> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics*>
@@ -1379,7 +1375,7 @@ IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics*> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics*>
@@ -1395,9 +1391,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramMaterialPackageCharacteristics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x40000
@@ -1420,7 +1416,7 @@ IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageC
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics*> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics*>
@@ -1452,7 +1448,7 @@ IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageC
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics*> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics*>
@@ -1468,9 +1464,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardCryptogramMaterialPackageConfirmationResponseFormat : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat_USE
@@ -1491,7 +1487,7 @@ IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPac
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
@@ -1521,7 +1517,7 @@ IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPac
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
@@ -1536,9 +1532,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardCryptogramMaterialPackageFormat : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat_USE
@@ -1559,7 +1555,7 @@ IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPac
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>
@@ -1589,7 +1585,7 @@ IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPac
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>
@@ -1604,9 +1600,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardCryptogramMaterialType : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType_USE
@@ -1627,7 +1623,7 @@ IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialTyp
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>
@@ -1657,7 +1653,7 @@ IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialTyp
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>
@@ -1672,9 +1668,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramPlacementStep;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
@@ -1697,7 +1693,7 @@ IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep*> 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep*> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep*>
@@ -1729,7 +1725,7 @@ IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep*> 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep*> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramPlacementStep ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep*>
@@ -1745,9 +1741,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardCryptogramStorageKeyCapabilities : unsigned int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities_USE
@@ -1768,7 +1764,7 @@ IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyC
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>
@@ -1798,7 +1794,7 @@ IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyC
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>
@@ -1813,9 +1809,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramStorageKeyCharacteristics;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x40000
@@ -1838,7 +1834,7 @@ IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharac
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics*> __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics_t;
 #define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics*>
@@ -1870,7 +1866,7 @@ IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharac
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics*> __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics_t;
 #define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics*>
@@ -1902,7 +1898,7 @@ IVectorView<ABI::Windows::Devices::SmartCards::SmartCard*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::SmartCards::SmartCard*> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCard*>
@@ -1934,7 +1930,7 @@ IVectorView<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistratio
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration*> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration*>
@@ -1965,7 +1961,7 @@ IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramAlgorithm ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>
@@ -1996,7 +1992,7 @@ IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharac
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics*> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialCharacteristics ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics*>
@@ -2028,7 +2024,7 @@ IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackag
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics*> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageCharacteristics ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics*>
@@ -2059,7 +2055,7 @@ IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialP
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageConfirmationResponseFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
@@ -2089,7 +2085,7 @@ IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialP
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPackageFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>
@@ -2119,7 +2115,7 @@ IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialT
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialType ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>
@@ -2149,7 +2145,7 @@ IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKe
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCapabilities ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>
@@ -2180,7 +2176,7 @@ IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyChar
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics*> __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics_t;
 #define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyCharacteristics ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics*>
@@ -2196,9 +2192,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardActivationPolicyChangeResult : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult_USE
@@ -2219,7 +2215,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCar
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>
@@ -2249,7 +2245,7 @@ IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardActivationPolic
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardActivationPolicyChangeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>
@@ -2280,7 +2276,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardAppl
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration*>
@@ -2312,7 +2308,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistr
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration*>
@@ -2328,9 +2324,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardChallengeContext;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2353,7 +2349,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardChal
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardChallengeContext*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardChallengeContext*>
@@ -2385,7 +2381,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardChallengeContext*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardChallengeContext*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardChallengeContext ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardChallengeContext*>
@@ -2401,9 +2397,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardConnection;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2426,7 +2422,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardConn
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardConnection*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardConnection_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardConnection ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardConnection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardConnection ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardConnection*>
@@ -2458,7 +2454,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardConnection*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardConnection*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardConnection_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardConnection ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardConnection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardConnection ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardConnection*>
@@ -2474,9 +2470,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramGenerator;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
@@ -2499,7 +2495,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGenerator*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator*>
@@ -2531,7 +2527,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGenerator*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGenerator*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGenerator ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator*>
@@ -2547,9 +2543,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardCryptogramGeneratorOperationStatus : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus_USE
@@ -2570,7 +2566,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCar
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>
@@ -2600,7 +2596,7 @@ IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramGener
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGeneratorOperationStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>
@@ -2615,9 +2611,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x40000
@@ -2640,7 +2636,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult*>
@@ -2672,7 +2668,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult*>
@@ -2688,9 +2684,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x40000
@@ -2713,7 +2709,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult*>
@@ -2745,7 +2741,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult*>
@@ -2761,9 +2757,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x40000
@@ -2786,7 +2782,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult*>
@@ -2818,7 +2814,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult*>
@@ -2834,9 +2830,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramMaterialPossessionProof;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
@@ -2859,7 +2855,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof*>
@@ -2891,7 +2887,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPo
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramMaterialPossessionProof ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof*>
@@ -2907,9 +2903,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardCryptogramStorageKeyInfo;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
@@ -2932,7 +2928,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo*>
@@ -2964,7 +2960,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKey
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardCryptogramStorageKeyInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo*>
@@ -2980,9 +2976,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardEmulator;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
@@ -3005,7 +3001,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardEmul
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardEmulator*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardEmulator_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardEmulator ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardEmulator_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardEmulator ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardEmulator*>
@@ -3037,7 +3033,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardEmulator*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardEmulator*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardEmulator_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardEmulator ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardEmulator_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardEmulator ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardEmulator*>
@@ -3053,9 +3049,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardProvisioning;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3078,7 +3074,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardProv
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardProvisioning*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardProvisioning*>
@@ -3110,7 +3106,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardProvisioning*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardProvisioning*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardProvisioning ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardProvisioning*>
@@ -3126,9 +3122,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardReader;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3151,7 +3147,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardRead
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardReader*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReader_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReader ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReader ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::ISmartCardReader*>
@@ -3183,7 +3179,7 @@ IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardReader*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardReader*> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReader_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReader ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReader ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::ISmartCardReader*>
@@ -3199,9 +3195,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardReaderStatus : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus_USE
@@ -3222,7 +3218,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCar
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCardReaderStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardReaderStatus>
@@ -3252,7 +3248,7 @@ IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardReaderStatus> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardReaderStatus> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardReaderStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardReaderStatus>
@@ -3267,9 +3263,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 enum SmartCardStatus : int;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardStatus_USE
@@ -3290,7 +3286,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCar
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::SmartCards::SmartCardStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSmartCards__CSmartCardStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::SmartCards::SmartCardStatus>
@@ -3320,7 +3316,7 @@ IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardStatus> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::SmartCards::SmartCardStatus> __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSmartCards__CSmartCardStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::SmartCards::SmartCardStatus>
@@ -3351,7 +3347,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSmartCards_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCard*>*>
@@ -3383,7 +3379,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCard ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCard*>*>
@@ -3415,7 +3411,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSmartCards_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration*>*>
@@ -3447,7 +3443,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardApple
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSmartCards__CSmartCardAppletIdGroupRegistration ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration*>*>
@@ -3464,9 +3460,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardEmulatorApduReceivedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
@@ -3490,7 +3486,7 @@ ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardEmulator*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardEmulator*,ABI::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::SmartCards::ISmartCardEmulator*,ABI::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs*>
@@ -3508,9 +3504,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardEmulatorConnectionDeactivatedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
@@ -3534,7 +3530,7 @@ ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardEmulator*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardEmulator*,ABI::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::SmartCards::ISmartCardEmulator*,ABI::Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs*>
@@ -3552,9 +3548,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class CardAddedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3578,7 +3574,7 @@ ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardReader*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardReader*,ABI::Windows::Devices::SmartCards::CardAddedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::SmartCards::ISmartCardReader*,ABI::Windows::Devices::SmartCards::ICardAddedEventArgs*>
@@ -3596,9 +3592,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class CardRemovedEventArgs;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3622,7 +3618,7 @@ ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardReader*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::SmartCards::SmartCardReader*,ABI::Windows::Devices::SmartCards::CardRemovedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::SmartCards::ISmartCardReader*,ABI::Windows::Devices::SmartCards::ICardRemovedEventArgs*>
@@ -3641,9 +3637,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -3669,7 +3665,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -3701,7 +3697,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -3733,7 +3729,7 @@ IIterator<ABI::Windows::Storage::Streams::IBuffer*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::Streams::IBuffer*> __FIIterator_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterator_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Streams::IBuffer*>
@@ -3765,7 +3761,7 @@ IIterable<ABI::Windows::Storage::Streams::IBuffer*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::Streams::IBuffer*> __FIIterable_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterable_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Streams::IBuffer*>
@@ -3797,7 +3793,7 @@ IVectorView<ABI::Windows::Storage::Streams::IBuffer*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::Streams::IBuffer*> __FIVectorView_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIVectorView_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IBuffer*>
@@ -3829,7 +3825,7 @@ IVector<ABI::Windows::Storage::Streams::IBuffer*> : IVector_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::Streams::IBuffer*> __FIVector_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIVector_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::Streams::IBuffer*>
@@ -3860,7 +3856,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -3890,7 +3886,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -3920,7 +3916,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -3950,7 +3946,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -3980,7 +3976,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -4009,7 +4005,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -4039,7 +4035,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -4069,7 +4065,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -4098,7 +4094,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -4127,7 +4123,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -4156,7 +4152,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -4185,7 +4181,7 @@ IAsyncOperationCompletedHandler<GUID> : IAsyncOperationCompletedHandler_impl<GUI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<GUID> __FIAsyncOperationCompletedHandler_1_GUID_t;
 #define __FIAsyncOperationCompletedHandler_1_GUID ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_GUID ABI::Windows::Foundation::IAsyncOperationCompletedHandler<GUID>
@@ -4214,7 +4210,7 @@ IAsyncOperation<GUID> : IAsyncOperation_impl<GUID>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<GUID> __FIAsyncOperation_1_GUID_t;
 #define __FIAsyncOperation_1_GUID ABI::Windows::Foundation::__FIAsyncOperation_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_GUID ABI::Windows::Foundation::IAsyncOperation<GUID>
@@ -4243,7 +4239,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -4272,7 +4268,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -4289,9 +4285,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -4300,9 +4296,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -4317,8 +4313,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -4326,8 +4322,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -4339,8 +4335,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -4357,10 +4353,10 @@ namespace ABI {
                     
                     typedef enum CryptographicPublicKeyBlobType : int CryptographicPublicKeyBlobType;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4374,9 +4370,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -4394,9 +4390,9 @@ namespace ABI {
                 
                 typedef enum SmartCardActivationPolicyChangeResult : int SmartCardActivationPolicyChangeResult;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4405,9 +4401,9 @@ namespace ABI {
                 
                 typedef enum SmartCardAppletIdGroupActivationPolicy : int SmartCardAppletIdGroupActivationPolicy;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4416,9 +4412,9 @@ namespace ABI {
                 
                 typedef enum SmartCardAutomaticResponseStatus : int SmartCardAutomaticResponseStatus;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4427,9 +4423,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramAlgorithm : int SmartCardCryptogramAlgorithm;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4438,9 +4434,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramGeneratorOperationStatus : int SmartCardCryptogramGeneratorOperationStatus;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4449,9 +4445,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramMaterialPackageConfirmationResponseFormat : int SmartCardCryptogramMaterialPackageConfirmationResponseFormat;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4460,9 +4456,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramMaterialPackageFormat : int SmartCardCryptogramMaterialPackageFormat;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4471,9 +4467,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramMaterialProtectionMethod : int SmartCardCryptogramMaterialProtectionMethod;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4482,9 +4478,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramMaterialType : int SmartCardCryptogramMaterialType;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4493,9 +4489,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramPlacementOptions : unsigned int SmartCardCryptogramPlacementOptions;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4504,9 +4500,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramStorageKeyAlgorithm : int SmartCardCryptogramStorageKeyAlgorithm;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4515,9 +4511,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptogramStorageKeyCapabilities : unsigned int SmartCardCryptogramStorageKeyCapabilities;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4526,9 +4522,9 @@ namespace ABI {
                 
                 typedef enum SmartCardCryptographicKeyAttestationStatus : int SmartCardCryptographicKeyAttestationStatus;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4537,9 +4533,9 @@ namespace ABI {
                 
                 typedef enum SmartCardEmulationCategory : int SmartCardEmulationCategory;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4548,9 +4544,9 @@ namespace ABI {
                 
                 typedef enum SmartCardEmulationType : int SmartCardEmulationType;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4559,9 +4555,9 @@ namespace ABI {
                 
                 typedef enum SmartCardEmulatorConnectionDeactivatedReason : int SmartCardEmulatorConnectionDeactivatedReason;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4570,9 +4566,9 @@ namespace ABI {
                 
                 typedef enum SmartCardEmulatorConnectionSource : int SmartCardEmulatorConnectionSource;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4581,9 +4577,9 @@ namespace ABI {
                 
                 typedef enum SmartCardEmulatorEnablementPolicy : int SmartCardEmulatorEnablementPolicy;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4592,9 +4588,9 @@ namespace ABI {
                 
                 typedef enum SmartCardLaunchBehavior : int SmartCardLaunchBehavior;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4603,9 +4599,9 @@ namespace ABI {
                 
                 typedef enum SmartCardPinCharacterPolicyOption : int SmartCardPinCharacterPolicyOption;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4614,9 +4610,9 @@ namespace ABI {
                 
                 typedef enum SmartCardReaderKind : int SmartCardReaderKind;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4625,9 +4621,9 @@ namespace ABI {
                 
                 typedef enum SmartCardReaderStatus : int SmartCardReaderStatus;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4636,9 +4632,9 @@ namespace ABI {
                 
                 typedef enum SmartCardStatus : int SmartCardStatus;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4647,9 +4643,9 @@ namespace ABI {
                 
                 typedef enum SmartCardTriggerType : int SmartCardTriggerType;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4658,9 +4654,9 @@ namespace ABI {
                 
                 typedef enum SmartCardUnlockPromptingBehavior : int SmartCardUnlockPromptingBehavior;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4725,9 +4721,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardAppletIdGroup;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4752,9 +4748,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardEmulatorConnectionProperties;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4762,9 +4758,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardPinPolicy;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4772,9 +4768,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardPinResetDeferral;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4782,9 +4778,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardPinResetRequest;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4794,9 +4790,9 @@ namespace ABI {
         namespace Devices {
             namespace SmartCards {
                 class SmartCardTriggerDetails;
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4830,9 +4826,9 @@ namespace ABI {
                     SmartCardActivationPolicyChangeResult_Allowed = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -4858,9 +4854,9 @@ namespace ABI {
                     SmartCardAppletIdGroupActivationPolicy_Enabled = 2,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -4886,9 +4882,9 @@ namespace ABI {
                     SmartCardAutomaticResponseStatus_UnknownError = 2,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -4924,9 +4920,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -4971,9 +4967,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -4998,9 +4994,9 @@ namespace ABI {
                     SmartCardCryptogramMaterialPackageConfirmationResponseFormat_VisaHmac = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5025,9 +5021,9 @@ namespace ABI {
                     SmartCardCryptogramMaterialPackageFormat_JweRsaPki = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5052,9 +5048,9 @@ namespace ABI {
                     SmartCardCryptogramMaterialProtectionMethod_WhiteBoxing = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x40000
 
 
@@ -5082,9 +5078,9 @@ namespace ABI {
                     SmartCardCryptogramMaterialType_RsaPkcs1 = 4,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5112,9 +5108,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(SmartCardCryptogramPlacementOptions)
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5139,9 +5135,9 @@ namespace ABI {
                     SmartCardCryptogramStorageKeyAlgorithm_Rsa2048 = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5169,9 +5165,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(SmartCardCryptogramStorageKeyCapabilities)
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5202,9 +5198,9 @@ namespace ABI {
                     SmartCardCryptographicKeyAttestationStatus_TpmKeyWithAttestation = 7,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5229,9 +5225,9 @@ namespace ABI {
                     SmartCardEmulationCategory_Payment = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -5261,9 +5257,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -5288,9 +5284,9 @@ namespace ABI {
                     SmartCardEmulatorConnectionDeactivatedReason_ConnectionRedirected = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -5315,9 +5311,9 @@ namespace ABI {
                     SmartCardEmulatorConnectionSource_NfcReader = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -5344,9 +5340,9 @@ namespace ABI {
                     SmartCardEmulatorEnablementPolicy_ScreenUnlocked = 3,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x10000
 
 
@@ -5371,9 +5367,9 @@ namespace ABI {
                     SmartCardLaunchBehavior_AboveLock = 1,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION >= 0x10000
 
 
@@ -5399,9 +5395,9 @@ namespace ABI {
                     SmartCardPinCharacterPolicyOption_Disallow = 2,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5434,9 +5430,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5462,9 +5458,9 @@ namespace ABI {
                     SmartCardReaderStatus_Exclusive = 2,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5492,9 +5488,9 @@ namespace ABI {
                     SmartCardStatus_Unresponsive = 4,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5535,9 +5531,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION >= 0x10000
 
 
@@ -5563,9 +5559,9 @@ namespace ABI {
                     SmartCardUnlockPromptingBehavior_PreventUnlockPrompt = 2,
                 };
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION >= 0x20000
 
 
@@ -5598,9 +5594,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardPinResetHandler=_uuidof(ISmartCardPinResetHandler);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetHandler;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetHandler_INTERFACE_DEFINED__) */
@@ -5639,9 +5635,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICardAddedEventArgs=_uuidof(ICardAddedEventArgs);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CICardAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CICardAddedEventArgs_INTERFACE_DEFINED__) */
@@ -5680,9 +5676,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICardRemovedEventArgs=_uuidof(ICardRemovedEventArgs);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CICardRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CICardRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -5724,9 +5720,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownSmartCardAppletIds=_uuidof(IKnownSmartCardAppletIds);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CIKnownSmartCardAppletIds;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CIKnownSmartCardAppletIds_INTERFACE_DEFINED__) */
@@ -5771,9 +5767,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCard=_uuidof(ISmartCard);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCard;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCard_INTERFACE_DEFINED__) */
@@ -5826,19 +5822,19 @@ namespace ABI {
                         /* [in] */ABI::Windows::Devices::SmartCards::SmartCardEmulationType value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutomaticEnablement(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutomaticEnablement(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAppletIdGroup=_uuidof(ISmartCardAppletIdGroup);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup_INTERFACE_DEFINED__) */
@@ -5885,19 +5881,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SecureUserAuthenticationRequired(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SecureUserAuthenticationRequired(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAppletIdGroup2=_uuidof(ISmartCardAppletIdGroup2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroup2_INTERFACE_DEFINED__) */
@@ -5940,9 +5936,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAppletIdGroupFactory=_uuidof(ISmartCardAppletIdGroupFactory);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupFactory_INTERFACE_DEFINED__) */
@@ -5995,9 +5991,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAppletIdGroupRegistration=_uuidof(ISmartCardAppletIdGroupRegistration);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration_INTERFACE_DEFINED__) */
@@ -6040,9 +6036,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAppletIdGroupRegistration2=_uuidof(ISmartCardAppletIdGroupRegistration2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupRegistration2_INTERFACE_DEFINED__) */
@@ -6081,9 +6077,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAppletIdGroupStatics=_uuidof(ISmartCardAppletIdGroupStatics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAppletIdGroupStatics_INTERFACE_DEFINED__) */
@@ -6127,10 +6123,10 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldMatchLength(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShouldMatchLength(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AppletId(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * value
@@ -6149,9 +6145,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAutomaticResponseApdu=_uuidof(ISmartCardAutomaticResponseApdu);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu_INTERFACE_DEFINED__) */
@@ -6199,9 +6195,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAutomaticResponseApdu2=_uuidof(ISmartCardAutomaticResponseApdu2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu2_INTERFACE_DEFINED__) */
@@ -6233,19 +6229,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowWhenCryptogramGeneratorNotPrepared(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowWhenCryptogramGeneratorNotPrepared(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAutomaticResponseApdu3=_uuidof(ISmartCardAutomaticResponseApdu3);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApdu3_INTERFACE_DEFINED__) */
@@ -6286,9 +6282,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardAutomaticResponseApduFactory=_uuidof(ISmartCardAutomaticResponseApduFactory);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApduFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardAutomaticResponseApduFactory_INTERFACE_DEFINED__) */
@@ -6332,12 +6328,12 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE ProvisionAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * response,
-                        /* [in] */boolean formatCard,
+                        /* [in] */::boolean formatCard,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE ProvisionAsyncWithNewCardId(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * response,
-                        /* [in] */boolean formatCard,
+                        /* [in] */::boolean formatCard,
                         /* [in] */GUID newCardId,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
                         ) = 0;
@@ -6351,9 +6347,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardChallengeContext=_uuidof(ISmartCardChallengeContext);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardChallengeContext;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardChallengeContext_INTERFACE_DEFINED__) */
@@ -6392,9 +6388,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardConnect=_uuidof(ISmartCardConnect);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnect;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnect_INTERFACE_DEFINED__) */
@@ -6438,9 +6434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardConnection=_uuidof(ISmartCardConnection);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnection;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardConnection_INTERFACE_DEFINED__) */
@@ -6531,9 +6527,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramGenerator=_uuidof(ISmartCardCryptogramGenerator);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator_INTERFACE_DEFINED__) */
@@ -6590,9 +6586,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramGenerator2=_uuidof(ISmartCardCryptogramGenerator2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGenerator2_INTERFACE_DEFINED__) */
@@ -6631,9 +6627,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramGeneratorStatics=_uuidof(ISmartCardCryptogramGeneratorStatics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics_INTERFACE_DEFINED__) */
@@ -6665,16 +6661,16 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramGeneratorStatics2=_uuidof(ISmartCardCryptogramGeneratorStatics2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGeneratorStatics2_INTERFACE_DEFINED__) */
@@ -6716,9 +6712,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult=_uuidof(ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_INTERFACE_DEFINED__) */
@@ -6760,9 +6756,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult=_uuidof(ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_INTERFACE_DEFINED__) */
@@ -6804,9 +6800,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult=_uuidof(ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_INTERFACE_DEFINED__) */
@@ -6866,9 +6862,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramMaterialCharacteristics=_uuidof(ISmartCardCryptogramMaterialCharacteristics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialCharacteristics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialCharacteristics_INTERFACE_DEFINED__) */
@@ -6916,9 +6912,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramMaterialPackageCharacteristics=_uuidof(ISmartCardCryptogramMaterialPackageCharacteristics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPackageCharacteristics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPackageCharacteristics_INTERFACE_DEFINED__) */
@@ -6960,9 +6956,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramMaterialPossessionProof=_uuidof(ISmartCardCryptogramMaterialPossessionProof);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPossessionProof;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramMaterialPossessionProof_INTERFACE_DEFINED__) */
@@ -7052,9 +7048,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramPlacementStep=_uuidof(ISmartCardCryptogramPlacementStep);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramPlacementStep;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramPlacementStep_INTERFACE_DEFINED__) */
@@ -7102,9 +7098,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramStorageKeyCharacteristics=_uuidof(ISmartCardCryptogramStorageKeyCharacteristics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyCharacteristics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyCharacteristics_INTERFACE_DEFINED__) */
@@ -7161,9 +7157,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramStorageKeyInfo=_uuidof(ISmartCardCryptogramStorageKeyInfo);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo_INTERFACE_DEFINED__) */
@@ -7202,9 +7198,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardCryptogramStorageKeyInfo2=_uuidof(ISmartCardCryptogramStorageKeyInfo2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardCryptogramStorageKeyInfo2_INTERFACE_DEFINED__) */
@@ -7243,9 +7239,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulator=_uuidof(ISmartCardEmulator);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator_INTERFACE_DEFINED__) */
@@ -7292,16 +7288,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsHostCardEmulationSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulator2=_uuidof(ISmartCardEmulator2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator2_INTERFACE_DEFINED__) */
@@ -7350,9 +7346,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorApduReceivedEventArgs=_uuidof(ISmartCardEmulatorApduReceivedEventArgs);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -7396,9 +7392,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorApduReceivedEventArgs2=_uuidof(ISmartCardEmulatorApduReceivedEventArgs2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs2_INTERFACE_DEFINED__) */
@@ -7445,9 +7441,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorApduReceivedEventArgsWithCryptograms=_uuidof(ISmartCardEmulatorApduReceivedEventArgsWithCryptograms);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgsWithCryptograms;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgsWithCryptograms_INTERFACE_DEFINED__) */
@@ -7489,9 +7485,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorConnectionDeactivatedEventArgs=_uuidof(ISmartCardEmulatorConnectionDeactivatedEventArgs);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionDeactivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionDeactivatedEventArgs_INTERFACE_DEFINED__) */
@@ -7533,9 +7529,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorConnectionProperties=_uuidof(ISmartCardEmulatorConnectionProperties);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionProperties;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionProperties_INTERFACE_DEFINED__) */
@@ -7574,9 +7570,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorStatics=_uuidof(ISmartCardEmulatorStatics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics_INTERFACE_DEFINED__) */
@@ -7626,9 +7622,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorStatics2=_uuidof(ISmartCardEmulatorStatics2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics2_INTERFACE_DEFINED__) */
@@ -7660,16 +7656,16 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardEmulatorStatics3=_uuidof(ISmartCardEmulatorStatics3);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorStatics3_INTERFACE_DEFINED__) */
@@ -7741,9 +7737,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardPinPolicy=_uuidof(ISmartCardPinPolicy);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinPolicy;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinPolicy_INTERFACE_DEFINED__) */
@@ -7780,9 +7776,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardPinResetDeferral=_uuidof(ISmartCardPinResetDeferral);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetDeferral;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetDeferral_INTERFACE_DEFINED__) */
@@ -7830,9 +7826,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardPinResetRequest=_uuidof(ISmartCardPinResetRequest);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardPinResetRequest_INTERFACE_DEFINED__) */
@@ -7887,9 +7883,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardProvisioning=_uuidof(ISmartCardProvisioning);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning_INTERFACE_DEFINED__) */
@@ -7928,9 +7924,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardProvisioning2=_uuidof(ISmartCardProvisioning2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioning2_INTERFACE_DEFINED__) */
@@ -7987,9 +7983,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardProvisioningStatics=_uuidof(ISmartCardProvisioningStatics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics_INTERFACE_DEFINED__) */
@@ -8038,9 +8034,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardProvisioningStatics2=_uuidof(ISmartCardProvisioningStatics2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardProvisioningStatics2_INTERFACE_DEFINED__) */
@@ -8105,9 +8101,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardReader=_uuidof(ISmartCardReader);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader_INTERFACE_DEFINED__) */
@@ -8154,9 +8150,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardReaderStatics=_uuidof(ISmartCardReaderStatics);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReaderStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReaderStatics_INTERFACE_DEFINED__) */
@@ -8201,9 +8197,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardTriggerDetails=_uuidof(ISmartCardTriggerDetails);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails_INTERFACE_DEFINED__) */
@@ -8251,9 +8247,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardTriggerDetails2=_uuidof(ISmartCardTriggerDetails2);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails2_INTERFACE_DEFINED__) */
@@ -8292,9 +8288,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardTriggerDetails3=_uuidof(ISmartCardTriggerDetails3);
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSmartCards_CISmartCardTriggerDetails3_INTERFACE_DEFINED__) */
@@ -14488,7 +14484,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCar
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorApduReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorApduReceivedEventArgsVtbl;
 
@@ -14541,7 +14537,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCar
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionDeactivatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardEmulatorConnectionDeactivatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardEmulator_Windows__CDevices__CSmartCards__CSmartCardEmulatorConnectionDeactivatedEventArgsVtbl;
 
@@ -14594,7 +14590,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCar
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CICardAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CICardAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardAddedEventArgsVtbl;
 
@@ -14647,7 +14643,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCar
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CICardRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CISmartCardReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSmartCards_CICardRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSmartCards__CSmartCardReader_Windows__CDevices__CSmartCards__CCardRemovedEventArgsVtbl;
 
@@ -15805,7 +15801,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.dialprotocol.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialApp;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialApp ABI::Windows::Media::DialProtocol::IDialApp
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialApp_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialAppStateDetails;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialAppStateDetails ABI::Windows::Media::DialProtocol::IDialAppStateDetails
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialAppStateDetails_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialDevice;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice ABI::Windows::Media::DialProtocol::IDialDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialDevice2;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice2 ABI::Windows::Media::DialProtocol::IDialDevice2
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice2_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialDevicePicker;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker ABI::Windows::Media::DialProtocol::IDialDevicePicker
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialDevicePickerFilter;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePickerFilter ABI::Windows::Media::DialProtocol::IDialDevicePickerFilter
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePickerFilter_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialDeviceSelectedEventArgs;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceSelectedEventArgs ABI::Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceSelectedEventArgs_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialDeviceStatics;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceStatics ABI::Windows::Media::DialProtocol::IDialDeviceStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceStatics_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialDisconnectButtonClickedEventArgs;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDisconnectButtonClickedEventArgs ABI::Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDisconnectButtonClickedEventArgs_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialReceiverApp;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp ABI::Windows::Media::DialProtocol::IDialReceiverApp
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialReceiverApp2;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp2 ABI::Windows::Media::DialProtocol::IDialReceiverApp2
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp2_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 interface IDialReceiverAppStatics;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverAppStatics ABI::Windows::Media::DialProtocol::IDialReceiverAppStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverAppStatics_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 enum DialAppLaunchResult : int;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult_USE
@@ -471,7 +467,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::DialProtocol::DialAppL
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::DialProtocol::DialAppLaunchResult> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::DialAppLaunchResult>
@@ -501,7 +497,7 @@ IAsyncOperation<enum ABI::Windows::Media::DialProtocol::DialAppLaunchResult> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::DialProtocol::DialAppLaunchResult> __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppLaunchResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::DialProtocol::DialAppLaunchResult>
@@ -516,9 +512,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialAppStateDetails;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -541,7 +537,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::DialAppStateD
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::DialAppStateDetails*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::IDialAppStateDetails*>
@@ -573,7 +569,7 @@ IAsyncOperation<ABI::Windows::Media::DialProtocol::DialAppStateDetails*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::DialProtocol::DialAppStateDetails*> __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStateDetails ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::DialProtocol::IDialAppStateDetails*>
@@ -589,9 +585,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 enum DialAppStopResult : int;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStopResult_USE
@@ -612,7 +608,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::DialProtocol::DialAppS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::DialProtocol::DialAppStopResult> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStopResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStopResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStopResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialAppStopResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::DialAppStopResult>
@@ -642,7 +638,7 @@ IAsyncOperation<enum ABI::Windows::Media::DialProtocol::DialAppStopResult> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::DialProtocol::DialAppStopResult> __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStopResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStopResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStopResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialAppStopResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::DialProtocol::DialAppStopResult>
@@ -657,9 +653,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialDevice;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -682,7 +678,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::DialDevice*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::DialDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CDialProtocol__CDialDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::DialProtocol::IDialDevice*>
@@ -714,7 +710,7 @@ IAsyncOperation<ABI::Windows::Media::DialProtocol::DialDevice*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::DialProtocol::DialDevice*> __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialDevice_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CDialProtocol__CDialDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::DialProtocol::IDialDevice*>
@@ -730,9 +726,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialDevicePicker;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -756,7 +752,7 @@ ITypedEventHandler<ABI::Windows::Media::DialProtocol::DialDevicePicker*,IInspect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::DialProtocol::DialDevicePicker*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::DialProtocol::IDialDevicePicker*,IInspectable*>
@@ -773,9 +769,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialDeviceSelectedEventArgs;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -799,7 +795,7 @@ ITypedEventHandler<ABI::Windows::Media::DialProtocol::DialDevicePicker*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::DialProtocol::DialDevicePicker*,ABI::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::DialProtocol::IDialDevicePicker*,ABI::Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs*>
@@ -817,9 +813,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialDisconnectButtonClickedEventArgs;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -843,7 +839,7 @@ ITypedEventHandler<ABI::Windows::Media::DialProtocol::DialDevicePicker*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::DialProtocol::DialDevicePicker*,ABI::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::DialProtocol::IDialDevicePicker*,ABI::Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs*>
@@ -874,7 +870,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -903,7 +899,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -932,7 +928,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -961,7 +957,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -990,7 +986,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1019,7 +1015,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1048,7 +1044,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1078,7 +1074,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1108,7 +1104,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1137,7 +1133,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1166,7 +1162,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -1196,7 +1192,7 @@ IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_HSTRING*> : IAsyncOperationCom
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>*>
@@ -1226,7 +1222,7 @@ IAsyncOperation<__FIMap_2_HSTRING_HSTRING*> : IAsyncOperation_impl<__FIMap_2_HST
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMap_2_HSTRING_HSTRING*> __FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>*>
@@ -1255,7 +1251,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -1284,7 +1280,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -1301,9 +1297,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1312,9 +1308,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1325,9 +1321,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DevicePickerAppearance;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_FWD_DEFINED__
@@ -1336,9 +1332,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePickerAppearance;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance ABI::Windows::Devices::Enumeration::IDevicePickerAppearance
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_FWD_DEFINED__
@@ -1353,8 +1349,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1366,8 +1362,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1379,9 +1375,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -1397,9 +1393,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1411,9 +1407,9 @@ namespace ABI {
                 
                 typedef enum DialAppLaunchResult : int DialAppLaunchResult;
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1422,9 +1418,9 @@ namespace ABI {
                 
                 typedef enum DialAppState : int DialAppState;
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1433,9 +1429,9 @@ namespace ABI {
                 
                 typedef enum DialAppStopResult : int DialAppStopResult;
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1444,9 +1440,9 @@ namespace ABI {
                 
                 typedef enum DialDeviceDisplayStatus : int DialDeviceDisplayStatus;
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1465,9 +1461,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialApp;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1478,9 +1474,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialDevicePickerFilter;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1490,9 +1486,9 @@ namespace ABI {
         namespace Media {
             namespace DialProtocol {
                 class DialReceiverApp;
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1526,9 +1522,9 @@ namespace ABI {
                     DialAppLaunchResult_NetworkFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1555,9 +1551,9 @@ namespace ABI {
                     DialAppState_NetworkFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1584,9 +1580,9 @@ namespace ABI {
                     DialAppStopResult_NetworkFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1615,9 +1611,9 @@ namespace ABI {
                     DialDeviceDisplayStatus_Error = 5,
                 };
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1663,9 +1659,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialApp=_uuidof(IDialApp);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialApp;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialApp_INTERFACE_DEFINED__) */
@@ -1707,9 +1703,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialAppStateDetails=_uuidof(IDialAppStateDetails);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialAppStateDetails;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialAppStateDetails_INTERFACE_DEFINED__) */
@@ -1752,9 +1748,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialDevice=_uuidof(IDialDevice);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice_INTERFACE_DEFINED__) */
@@ -1796,9 +1792,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialDevice2=_uuidof(IDialDevice2);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevice2_INTERFACE_DEFINED__) */
@@ -1882,9 +1878,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialDevicePicker=_uuidof(IDialDevicePicker);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker_INTERFACE_DEFINED__) */
@@ -1923,9 +1919,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialDevicePickerFilter=_uuidof(IDialDevicePickerFilter);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePickerFilter;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePickerFilter_INTERFACE_DEFINED__) */
@@ -1964,9 +1960,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialDeviceSelectedEventArgs=_uuidof(IDialDeviceSelectedEventArgs);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceSelectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceSelectedEventArgs_INTERFACE_DEFINED__) */
@@ -2014,9 +2010,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialDeviceStatics=_uuidof(IDialDeviceStatics);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceStatics_INTERFACE_DEFINED__) */
@@ -2055,9 +2051,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialDisconnectButtonClickedEventArgs=_uuidof(IDialDisconnectButtonClickedEventArgs);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialDisconnectButtonClickedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialDisconnectButtonClickedEventArgs_INTERFACE_DEFINED__) */
@@ -2100,9 +2096,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialReceiverApp=_uuidof(IDialReceiverApp);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp_INTERFACE_DEFINED__) */
@@ -2141,9 +2137,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialReceiverApp2=_uuidof(IDialReceiverApp2);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverApp2_INTERFACE_DEFINED__) */
@@ -2182,9 +2178,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDialReceiverAppStatics=_uuidof(IDialReceiverAppStatics);
                 
-            } /* Windows */
+            } /* DialProtocol */
         } /* Media */
-    } /* DialProtocol */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverAppStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDialProtocol_CIDialReceiverAppStatics_INTERFACE_DEFINED__) */
@@ -2946,7 +2942,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_IInspectableVtbl;
 
@@ -2998,7 +2994,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceSelectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDeviceSelectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDeviceSelectedEventArgsVtbl;
 
@@ -3051,7 +3047,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDisconnectButtonClickedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CDialProtocol_CIDialDisconnectButtonClickedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CDialProtocol__CDialDevicePicker_Windows__CMedia__CDialProtocol__CDialDisconnectButtonClickedEventArgsVtbl;
 

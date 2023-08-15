@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,6 +10,7 @@
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.UI.Composition.2.h"
+#include "winrt/impl/Windows.UI.WindowManagement.2.h"
 #include "winrt/impl/Windows.UI.Xaml.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.2.h"
@@ -232,6 +233,18 @@ template <typename D> Windows::UI::Composition::CompositionPropertySet consume_W
 {
     Windows::UI::Composition::CompositionPropertySet result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2)->GetPointerPositionPropertySet(get_abi(targetElement), put_abi(result)));
+    return result;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics3<D>::SetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow, Windows::UI::Xaml::UIElement const& xamlContent) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3)->SetAppWindowContent(get_abi(appWindow), get_abi(xamlContent)));
+}
+
+template <typename D> Windows::UI::Xaml::UIElement consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics3<D>::GetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow) const
+{
+    Windows::UI::Xaml::UIElement result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3)->GetAppWindowContent(get_abi(appWindow), put_abi(result)));
     return result;
 }
 
@@ -829,6 +842,35 @@ struct produce<D, Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3> : produce_base<D, Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>
+{
+    int32_t WINRT_CALL SetAppWindowContent(void* appWindow, void* xamlContent) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SetAppWindowContent, WINRT_WRAP(void), Windows::UI::WindowManagement::AppWindow const&, Windows::UI::Xaml::UIElement const&);
+            this->shim().SetAppWindowContent(*reinterpret_cast<Windows::UI::WindowManagement::AppWindow const*>(&appWindow), *reinterpret_cast<Windows::UI::Xaml::UIElement const*>(&xamlContent));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetAppWindowContent(void* appWindow, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetAppWindowContent, WINRT_WRAP(Windows::UI::Xaml::UIElement), Windows::UI::WindowManagement::AppWindow const&);
+            *result = detach_from<Windows::UI::Xaml::UIElement>(this->shim().GetAppWindowContent(*reinterpret_cast<Windows::UI::WindowManagement::AppWindow const*>(&appWindow)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Hosting::IWindowsXamlManager> : produce_base<D, Windows::UI::Xaml::Hosting::IWindowsXamlManager>
 {};
 
@@ -1265,6 +1307,16 @@ inline Windows::UI::Composition::CompositionPropertySet ElementCompositionPrevie
     return impl::call_factory<ElementCompositionPreview, Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2>([&](auto&& f) { return f.GetPointerPositionPropertySet(targetElement); });
 }
 
+inline void ElementCompositionPreview::SetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow, Windows::UI::Xaml::UIElement const& xamlContent)
+{
+    impl::call_factory<ElementCompositionPreview, Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>([&](auto&& f) { return f.SetAppWindowContent(appWindow, xamlContent); });
+}
+
+inline Windows::UI::Xaml::UIElement ElementCompositionPreview::GetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow)
+{
+    return impl::call_factory<ElementCompositionPreview, Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>([&](auto&& f) { return f.GetAppWindowContent(appWindow); });
+}
+
 inline Windows::UI::Xaml::Hosting::WindowsXamlManager WindowsXamlManager::InitializeForCurrentThread()
 {
     return impl::call_factory<WindowsXamlManager, Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics>([&](auto&& f) { return f.InitializeForCurrentThread(); });
@@ -1346,6 +1398,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSour
 template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreview> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreview> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IWindowsXamlManager> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Hosting::IWindowsXamlManager> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest> {};

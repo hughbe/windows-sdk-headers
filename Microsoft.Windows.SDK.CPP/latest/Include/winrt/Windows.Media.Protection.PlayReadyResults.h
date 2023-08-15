@@ -23,6 +23,8 @@
 **
 */
 
+
+
 #define DRM_FAILED(Status) ((DRM_RESULT)(Status)<0)
 #define DRM_SUCCEEDED(Status) ((DRM_RESULT)(Status) >= 0)
 
@@ -32,32 +34,32 @@
 
 
 /*
-*  !!!!!!  VERY IMPORTANT, PLEASE READ !!!!!
-*
-*   NOTE: The following ranges are reserved and should never be used to define PK error codes.
-*   The range from 80040000 to 80040fff is reserved for Windows error codes.
-*   The range from 80041000 to 80047fff is reserved for non-PlayReady Microsoft error codes.
-*   The range from 8004b000 to 8004bfff is reserved for PlayReady PC error codes.
-*   The range from 8004e000 to 8004ffff is reserved for PlayReady PC error codes.
-*
-*   NOTE: The following ranges are OK to be used for PK errors.
-*   The range from 80048000 to 8004afff is reserved for PlayReady PK error codes.
-*   The range from 8004c000 to 8004dfff is reserved for PlayReady PK error codes.
-*       Exceptions:
-*            The sub-range 8004c600 to 8004c6ff is reserved for PlayReady Server and Services error codes.
-*            The sub-range 8004dc80 to 8004ddff is reserved for OEM-defined PlayReady PK error codes.
-*
-*   There's a range of error codes that is only applicable to the PC and should
-*   not be included here. These errors are in common\include, files:
-*   msprerr.h
-*   drmndbridgeerr.h
-*   errorservice.h
-*   To prevent overlaps of PK and PC error codes, please assume that:
-*   The range from 0x8004B000 to 0x8004BEFF is reserved for the PC (error codes).
-*   The range from 0x0004B000 to 0x0004BEFF is reserved for the PC (success codes).
-*   The range from 0x8004BE00 to 0x8004BFFF is reserved for the Modern SDK (error codes).
-*   The range from 0x0004BE00 to 0x0004BFFF is reserved for the Modern SDK (success codes).
-*   The following three defines represent the basecodes for the PC.
+** !!!!!!  VERY IMPORTANT, PLEASE READ !!!!!
+**
+**  NOTE: The following ranges are reserved and should never be used to define PK error codes.
+**  The range from 80040000 to 80040fff is reserved for Windows error codes.
+**  The range from 80041000 to 80047fff is reserved for non-PlayReady Microsoft error codes.
+**  The range from 8004b000 to 8004bfff is reserved for PlayReady PC error codes.
+**  The range from 8004e000 to 8004ffff is reserved for PlayReady PC error codes.
+**
+**  NOTE: The following ranges are OK to be used for PK errors.
+**  The range from 80048000 to 8004afff is reserved for PlayReady PK error codes.
+**  The range from 8004c000 to 8004dfff is reserved for PlayReady PK error codes.
+**      Exceptions:
+**           The sub-range 8004c600 to 8004c6ff is reserved for PlayReady Server and Services error codes.
+**           The sub-range 8004dc80 to 8004ddff is reserved for OEM-defined PlayReady PK error codes.
+**
+**  There's a range of error codes that is only applicable to the PC and should
+**  not be included here. These errors are in common\include, files:
+**  msprerr.h
+**  drmndbridgeerr.h
+**  errorservice.h
+**  To prevent overlaps of PK and PC error codes, please assume that:
+**  The range from 0x8004B000 to 0x8004BEFF is reserved for the PC (error codes).
+**  The range from 0x0004B000 to 0x0004BEFF is reserved for the PC (success codes).
+**  The range from 0x8004BE00 to 0x8004BFFF is reserved for the Modern SDK (error codes).
+**  The range from 0x0004BE00 to 0x0004BFFF is reserved for the Modern SDK (success codes).
+**  The following three defines represent the basecodes for the PC.
 */
 #define DRM_E_NDBRIDGEONLY_BASECODE     0xB000
 #define DRM_E_MSPRSDK_BASECODE          0xB800
@@ -1532,16 +1534,6 @@
 #define DRM_E_DST_EXCLUSIVE_LOCK_ONLY    ((DRM_RESULT)0x8004C039L)
 
 /*
- * MessageId: DRM_E_V1_NOT_SUPPORTED
- *
- * MessageText:
- *
- * V1 Lic Acquisition is not supported
- *
- */
-#define DRM_E_V1_NOT_SUPPORTED           ((DRM_RESULT)0x8004C03BL)
-
-/*
  * MessageId: DRM_E_HEADER_NOT_SET
  *
  * MessageText:
@@ -1570,16 +1562,6 @@
  *
  */
 #define DRM_E_CLK_INVALID_RESPONSE       ((DRM_RESULT)0x8004C03FL)
-
-/*
- * MessageId: DRM_E_INVALID_DEVCERT_TEMPLATE
- *
- * MessageText:
- *
- * The device certificate template is invalid.
- *
- */
-#define DRM_E_INVALID_DEVCERT_TEMPLATE   ((DRM_RESULT)0x8004C042L)
 
 /*
  * MessageId: DRM_E_DEVCERT_EXCEEDS_SIZE_LIMIT
@@ -5619,9 +5601,11 @@
 #define DRM_E_DEPRECATED_BACKUP_EXISTS                                             ((DRM_RESULT)0x8004C032L)
 #define DRM_E_DEPRECATED_LICENSE_TOO_LONG                                          ((DRM_RESULT)0x8004C033L)
 #define DRM_E_DEPRECATED_DST_RESERVED_KEY_DETECTED                                 ((DRM_RESULT)0x8004C03AL)
+#define DRM_E_DEPRECATED_V1_NOT_SUPPORTED                                          ((DRM_RESULT)0x8004C03BL)
 #define DRM_E_DEPRECATED_NEED_DEVCERT_INDIV                                        ((DRM_RESULT)0x8004C03DL)
 #define DRM_E_DEPRECATED_CLK_INVALID_DATE                                          ((DRM_RESULT)0x8004C040L)
 #define DRM_E_DEPRECATED_CLK_UNSUPPORTED_VALUE                                     ((DRM_RESULT)0x8004C041L)
+#define DRM_E_DEPRECATED_INVALID_DEVCERT_TEMPLATE                                  ((DRM_RESULT)0x8004C042L)
 #define DRM_E_DEPRECATED_DEVCERT_TEMPLATE_EXCEEDS_SIZE_LIMIT                       ((DRM_RESULT)0x8004C044L)
 #define DRM_E_DEPRECATED_DEVCERT_READ_ERROR                                        ((DRM_RESULT)0x8004C045L)
 #define DRM_E_DEPRECATED_DEVCERT_WRITE_ERROR                                       ((DRM_RESULT)0x8004C046L)

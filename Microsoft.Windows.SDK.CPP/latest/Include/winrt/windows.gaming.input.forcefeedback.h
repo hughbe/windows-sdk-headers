@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.gaming.input.forcefeedback.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,10 +142,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IConditionForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffect ABI::Windows::Gaming::Input::ForceFeedback::IConditionForceEffect
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffect_FWD_DEFINED__
@@ -158,10 +158,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IConditionForceEffectFactory;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffectFactory ABI::Windows::Gaming::Input::ForceFeedback::IConditionForceEffectFactory
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffectFactory_FWD_DEFINED__
@@ -174,10 +174,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IConstantForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConstantForceEffect ABI::Windows::Gaming::Input::ForceFeedback::IConstantForceEffect
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConstantForceEffect_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IForceFeedbackEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackEffect ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackEffect_FWD_DEFINED__
@@ -206,10 +206,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IForceFeedbackMotor;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor_FWD_DEFINED__
@@ -222,10 +222,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IPeriodicForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffect ABI::Windows::Gaming::Input::ForceFeedback::IPeriodicForceEffect
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffect_FWD_DEFINED__
@@ -238,10 +238,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IPeriodicForceEffectFactory;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffectFactory ABI::Windows::Gaming::Input::ForceFeedback::IPeriodicForceEffectFactory
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffectFactory_FWD_DEFINED__
@@ -254,10 +254,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IRampForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIRampForceEffect ABI::Windows::Gaming::Input::ForceFeedback::IRampForceEffect
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIRampForceEffect_FWD_DEFINED__
@@ -271,10 +271,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     class ForceFeedbackMotor;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -297,7 +297,7 @@ IIterator<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> __FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor*>
@@ -329,7 +329,7 @@ IIterable<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> __FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor*>
@@ -361,7 +361,7 @@ IVectorView<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> __FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor*>
@@ -378,10 +378,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     enum ForceFeedbackLoadEffectResult : int;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult_USE
@@ -402,7 +402,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Gaming::Input::ForceFeedback:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult> __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult>
@@ -432,7 +432,7 @@ IAsyncOperation<enum ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLo
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult> __FIAsyncOperation_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult_t;
 #define __FIAsyncOperation_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackLoadEffectResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult>
@@ -461,7 +461,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -490,7 +490,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -509,9 +509,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -522,8 +522,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -536,10 +536,10 @@ namespace ABI {
                     
                     typedef enum ConditionForceEffectKind : int ConditionForceEffectKind;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -549,10 +549,10 @@ namespace ABI {
                     
                     typedef enum ForceFeedbackEffectAxes : unsigned int ForceFeedbackEffectAxes;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -562,10 +562,10 @@ namespace ABI {
                     
                     typedef enum ForceFeedbackEffectState : int ForceFeedbackEffectState;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -575,10 +575,10 @@ namespace ABI {
                     
                     typedef enum ForceFeedbackLoadEffectResult : int ForceFeedbackLoadEffectResult;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -588,10 +588,10 @@ namespace ABI {
                     
                     typedef enum PeriodicForceEffectKind : int PeriodicForceEffectKind;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -607,10 +607,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     class ConditionForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -619,10 +619,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     class ConstantForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -632,10 +632,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     class PeriodicForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -644,10 +644,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     class RampForceEffect;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -684,10 +684,10 @@ namespace ABI {
                         ConditionForceEffectKind_Friction = 3,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -717,10 +717,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(ForceFeedbackEffectAxes)
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -748,10 +748,10 @@ namespace ABI {
                         ForceFeedbackEffectState_Faulted = 3,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -778,10 +778,10 @@ namespace ABI {
                         ForceFeedbackLoadEffectResult_EffectNotSupported = 2,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -810,10 +810,10 @@ namespace ABI {
                         PeriodicForceEffectKind_SawtoothWaveDown = 4,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -863,10 +863,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IConditionForceEffect=_uuidof(IConditionForceEffect);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffect;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffect_INTERFACE_DEFINED__) */
@@ -907,10 +907,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IConditionForceEffectFactory=_uuidof(IConditionForceEffectFactory);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffectFactory;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConditionForceEffectFactory_INTERFACE_DEFINED__) */
@@ -966,10 +966,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IConstantForceEffect=_uuidof(IConstantForceEffect);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConstantForceEffect;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIConstantForceEffect_INTERFACE_DEFINED__) */
@@ -1014,10 +1014,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IForceFeedbackEffect=_uuidof(IForceFeedbackEffect);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackEffect;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackEffect_INTERFACE_DEFINED__) */
@@ -1050,7 +1050,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreEffectsPaused(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MasterGain(
                             /* [retval, out] */__RPC__out DOUBLE * value
@@ -1059,7 +1059,7 @@ namespace ABI {
                             /* [in] */DOUBLE value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedAxes(
                             /* [retval, out] */__RPC__out ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectAxes * value
@@ -1089,10 +1089,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IForceFeedbackMotor=_uuidof(IForceFeedbackMotor);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor_INTERFACE_DEFINED__) */
@@ -1157,10 +1157,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPeriodicForceEffect=_uuidof(IPeriodicForceEffect);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffect;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffect_INTERFACE_DEFINED__) */
@@ -1201,10 +1201,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPeriodicForceEffectFactory=_uuidof(IPeriodicForceEffectFactory);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffectFactory;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIPeriodicForceEffectFactory_INTERFACE_DEFINED__) */
@@ -1262,10 +1262,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRampForceEffect=_uuidof(IRampForceEffect);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIRampForceEffect;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIRampForceEffect_INTERFACE_DEFINED__) */

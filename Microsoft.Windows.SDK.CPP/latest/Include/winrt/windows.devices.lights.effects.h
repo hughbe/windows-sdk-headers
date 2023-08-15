@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.lights.effects.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayBitmapEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffect ABI::Windows::Devices::Lights::Effects::ILampArrayBitmapEffect
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffect_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayBitmapEffectFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffectFactory ABI::Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffectFactory_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayBitmapRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapRequestedEventArgs ABI::Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapRequestedEventArgs_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayBlinkEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffect ABI::Windows::Devices::Lights::Effects::ILampArrayBlinkEffect
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffect_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayBlinkEffectFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffectFactory ABI::Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffectFactory_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayColorRampEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffect ABI::Windows::Devices::Lights::Effects::ILampArrayColorRampEffect
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffect_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayColorRampEffectFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffectFactory ABI::Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffectFactory_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayCustomEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffect ABI::Windows::Devices::Lights::Effects::ILampArrayCustomEffect
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffect_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayCustomEffectFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffectFactory ABI::Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffectFactory_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffect ABI::Windows::Devices::Lights::Effects::ILampArrayEffect
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffect_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayEffectPlaylist;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylist ABI::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylist_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayEffectPlaylistStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylistStatics ABI::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylistStatics_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArraySolidEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffect ABI::Windows::Devices::Lights::Effects::ILampArraySolidEffect
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffect_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArraySolidEffectFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffectFactory ABI::Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffectFactory_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     interface ILampArrayUpdateRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayUpdateRequestedEventArgs ABI::Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayUpdateRequestedEventArgs_FWD_DEFINED__
@@ -536,7 +532,7 @@ IIterator<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*> __FIIterator_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect_t;
 #define __FIIterator_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*>
@@ -568,7 +564,7 @@ IIterable<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*> __FIIterable_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect_t;
 #define __FIIterable_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*>
@@ -600,7 +596,7 @@ IVectorView<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*> __FIVectorView_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect_t;
 #define __FIVectorView_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CLights__CEffects__CILampArrayEffect ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Lights::Effects::ILampArrayEffect*>
@@ -617,10 +613,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArrayEffectPlaylist;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -643,7 +639,7 @@ IIterator<ABI::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist*> __FIIterator_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist_t;
 #define __FIIterator_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist*>
@@ -675,7 +671,7 @@ IIterable<ABI::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist*> __FIIterable_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist_t;
 #define __FIIterable_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CLights__CEffects__CLampArrayEffectPlaylist ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist*>
@@ -692,10 +688,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArrayBitmapEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -704,10 +700,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArrayBitmapRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -731,7 +727,7 @@ ITypedEventHandler<ABI::Windows::Devices::Lights::Effects::LampArrayBitmapEffect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Lights::Effects::LampArrayBitmapEffect*,ABI::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Lights::Effects::ILampArrayBitmapEffect*,ABI::Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs*>
@@ -749,10 +745,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArrayCustomEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -761,10 +757,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArrayUpdateRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -788,7 +784,7 @@ ITypedEventHandler<ABI::Windows::Devices::Lights::Effects::LampArrayCustomEffect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Lights::Effects::LampArrayCustomEffect*,ABI::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Lights::Effects::ILampArrayCustomEffect*,ABI::Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs*>
@@ -807,9 +803,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 class LampArray;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CLights_CILampArray_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CLights_CILampArray_FWD_DEFINED__
@@ -818,9 +814,9 @@ namespace ABI {
         namespace Devices {
             namespace Lights {
                 interface ILampArray;
-            } /* Windows */
+            } /* Lights */
         } /* Devices */
-    } /* Lights */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CLights_CILampArray ABI::Windows::Devices::Lights::ILampArray
 
 #endif // ____x_ABI_CWindows_CDevices_CLights_CILampArray_FWD_DEFINED__
@@ -835,8 +831,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -844,8 +840,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -855,9 +851,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -866,9 +862,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -883,8 +879,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -896,10 +892,10 @@ namespace ABI {
                     
                     typedef enum LampArrayEffectCompletionBehavior : int LampArrayEffectCompletionBehavior;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -909,10 +905,10 @@ namespace ABI {
                     
                     typedef enum LampArrayEffectStartMode : int LampArrayEffectStartMode;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -922,10 +918,10 @@ namespace ABI {
                     
                     typedef enum LampArrayRepetitionMode : int LampArrayRepetitionMode;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -950,10 +946,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArrayBlinkEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -962,10 +958,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArrayColorRampEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -976,10 +972,10 @@ namespace ABI {
             namespace Lights {
                 namespace Effects {
                     class LampArraySolidEffect;
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1015,10 +1011,10 @@ namespace ABI {
                         LampArrayEffectCompletionBehavior_KeepState = 1,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -1044,10 +1040,10 @@ namespace ABI {
                         LampArrayEffectStartMode_Simultaneous = 1,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -1073,10 +1069,10 @@ namespace ABI {
                         LampArrayRepetitionMode_Forever = 1,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -1138,10 +1134,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayBitmapEffect=_uuidof(ILampArrayBitmapEffect);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffect;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffect_INTERFACE_DEFINED__) */
@@ -1184,10 +1180,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayBitmapEffectFactory=_uuidof(ILampArrayBitmapEffectFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffectFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffectFactory_INTERFACE_DEFINED__) */
@@ -1230,10 +1226,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayBitmapRequestedEventArgs=_uuidof(ILampArrayBitmapRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1318,10 +1314,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayBlinkEffect=_uuidof(ILampArrayBlinkEffect);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffect;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffect_INTERFACE_DEFINED__) */
@@ -1364,10 +1360,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayBlinkEffectFactory=_uuidof(ILampArrayBlinkEffectFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffectFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBlinkEffectFactory_INTERFACE_DEFINED__) */
@@ -1428,10 +1424,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayColorRampEffect=_uuidof(ILampArrayColorRampEffect);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffect;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffect_INTERFACE_DEFINED__) */
@@ -1474,10 +1470,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayColorRampEffectFactory=_uuidof(ILampArrayColorRampEffectFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffectFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayColorRampEffectFactory_INTERFACE_DEFINED__) */
@@ -1533,10 +1529,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayCustomEffect=_uuidof(ILampArrayCustomEffect);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffect;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffect_INTERFACE_DEFINED__) */
@@ -1579,10 +1575,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayCustomEffectFactory=_uuidof(ILampArrayCustomEffectFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffectFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffectFactory_INTERFACE_DEFINED__) */
@@ -1622,10 +1618,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayEffect=_uuidof(ILampArrayEffect);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffect;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffect_INTERFACE_DEFINED__) */
@@ -1689,10 +1685,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayEffectPlaylist=_uuidof(ILampArrayEffectPlaylist);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylist;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylist_INTERFACE_DEFINED__) */
@@ -1738,10 +1734,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayEffectPlaylistStatics=_uuidof(ILampArrayEffectPlaylistStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylistStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayEffectPlaylistStatics_INTERFACE_DEFINED__) */
@@ -1802,10 +1798,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArraySolidEffect=_uuidof(ILampArraySolidEffect);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffect;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffect_INTERFACE_DEFINED__) */
@@ -1848,10 +1844,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArraySolidEffectFactory=_uuidof(ILampArraySolidEffectFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffectFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArraySolidEffectFactory_INTERFACE_DEFINED__) */
@@ -1909,10 +1905,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILampArrayUpdateRequestedEventArgs=_uuidof(ILampArrayUpdateRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Lights */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Lights */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayUpdateRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayUpdateRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2690,7 +2686,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffect * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapEffect * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayBitmapRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayBitmapEffect_Windows__CDevices__CLights__CEffects__CLampArrayBitmapRequestedEventArgsVtbl;
 
@@ -2743,7 +2739,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffect * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayUpdateRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayCustomEffect * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CLights_CEffects_CILampArrayUpdateRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CLights__CEffects__CLampArrayCustomEffect_Windows__CDevices__CLights__CEffects__CLampArrayUpdateRequestedEventArgsVtbl;
 

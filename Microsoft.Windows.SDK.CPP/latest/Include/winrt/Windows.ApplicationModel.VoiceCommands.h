@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.voicecommands.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommand;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommand ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommand
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommand_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandCompletedEventArgs;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandCompletedEventArgs ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandCompletedEventArgs_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandConfirmationResult;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandConfirmationResult ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandConfirmationResult_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandContentTile;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandContentTile ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandContentTile_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandDefinition;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinition ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinition_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandDefinitionManagerStatics;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinitionManagerStatics ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinitionManagerStatics_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandDisambiguationResult;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDisambiguationResult ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDisambiguationResult_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandResponse;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponse ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponse_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandResponseStatics;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponseStatics ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponseStatics_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandServiceConnection;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnection ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnection_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandServiceConnectionStatics;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnectionStatics ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnectionStatics_FWD_DEFINED__
@@ -434,9 +430,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 interface IVoiceCommandUserMessage;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandUserMessage ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandUserMessage_FWD_DEFINED__
@@ -449,9 +445,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandContentTile;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -474,7 +470,7 @@ IIterator<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile*> __FIIterator_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t;
 #define __FIIterator_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile*>
@@ -506,7 +502,7 @@ IIterable<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile*> __FIIterable_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t;
 #define __FIIterable_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile*>
@@ -522,9 +518,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandDefinition;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -547,7 +543,7 @@ IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::VoiceComman
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition*> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition*>
@@ -579,7 +575,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands_
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition*>*>
@@ -611,7 +607,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands_
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition*>*>
@@ -643,7 +639,7 @@ IMapView<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefi
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition*> __FIMapView_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDefinition ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition*>
@@ -675,7 +671,7 @@ IVectorView<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile*> __FIVectorView_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile*>
@@ -707,7 +703,7 @@ IVector<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile*>
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile*> __FIVector_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t;
 #define __FIVector_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandContentTile ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile*>
@@ -723,9 +719,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommand;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -748,7 +744,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::V
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommand*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommand*>
@@ -780,7 +776,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommand*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommand*> __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommand ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommand*>
@@ -796,9 +792,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandConfirmationResult;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -821,7 +817,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::V
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult*>
@@ -853,7 +849,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfi
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandConfirmationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult*>
@@ -869,9 +865,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandDisambiguationResult;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -894,7 +890,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::V
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult*>
@@ -926,7 +922,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisam
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandDisambiguationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult*>
@@ -942,9 +938,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandServiceConnection;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -952,9 +948,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandCompletedEventArgs;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -978,7 +974,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandSe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection*,ABI::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection*,ABI::Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs*>
@@ -1009,7 +1005,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1038,7 +1034,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1067,7 +1063,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1097,7 +1093,7 @@ IKeyValuePair<HSTRING,__FIVectorView_1_HSTRING*> : IKeyValuePair_impl<HSTRING,__
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,__FIVectorView_1_HSTRING*> __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -1127,7 +1123,7 @@ IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>*>
@@ -1157,7 +1153,7 @@ IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>*>
@@ -1187,7 +1183,7 @@ IMapView<HSTRING,__FIVectorView_1_HSTRING*> : IMapView_impl<HSTRING,__FIVectorVi
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,__FIVectorView_1_HSTRING*> __FIMapView_2_HSTRING___FIVectorView_1_HSTRING_t;
 #define __FIMapView_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING___FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -1204,9 +1200,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceTriggerDetails;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails_FWD_DEFINED__
@@ -1215,9 +1211,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceTriggerDetails;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails ABI::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails_FWD_DEFINED__
@@ -1232,8 +1228,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1246,8 +1242,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Language;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -1255,8 +1251,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage ABI::Windows::Globalization::ILanguage
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -1269,9 +1265,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 class SpeechRecognitionResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_FWD_DEFINED__
@@ -1280,9 +1276,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechRecognition {
                 interface ISpeechRecognitionResult;
-            } /* Windows */
+            } /* SpeechRecognition */
         } /* Media */
-    } /* SpeechRecognition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult ABI::Windows::Media::SpeechRecognition::ISpeechRecognitionResult
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechRecognition_CISpeechRecognitionResult_FWD_DEFINED__
@@ -1297,8 +1293,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1308,8 +1304,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1321,9 +1317,9 @@ namespace ABI {
                 
                 typedef enum VoiceCommandCompletionReason : int VoiceCommandCompletionReason;
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1332,9 +1328,9 @@ namespace ABI {
                 
                 typedef enum VoiceCommandContentTileType : int VoiceCommandContentTileType;
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1360,9 +1356,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandResponse;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1371,9 +1367,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace VoiceCommands {
                 class VoiceCommandUserMessage;
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1410,9 +1406,9 @@ namespace ABI {
                     VoiceCommandCompletionReason_Completed = 6,
                 };
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1443,9 +1439,9 @@ namespace ABI {
                     VoiceCommandContentTileType_TitleWith280x140IconAndText = 7,
                 };
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1487,9 +1483,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommand=_uuidof(IVoiceCommand);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommand;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommand_INTERFACE_DEFINED__) */
@@ -1528,9 +1524,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandCompletedEventArgs=_uuidof(IVoiceCommandCompletedEventArgs);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -1562,16 +1558,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Confirmed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandConfirmationResult=_uuidof(IVoiceCommandConfirmationResult);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandConfirmationResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandConfirmationResult_INTERFACE_DEFINED__) */
@@ -1655,9 +1651,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandContentTile=_uuidof(IVoiceCommandContentTile);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandContentTile;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandContentTile_INTERFACE_DEFINED__) */
@@ -1704,9 +1700,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandDefinition=_uuidof(IVoiceCommandDefinition);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinition;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinition_INTERFACE_DEFINED__) */
@@ -1749,9 +1745,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandDefinitionManagerStatics=_uuidof(IVoiceCommandDefinitionManagerStatics);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinitionManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDefinitionManagerStatics_INTERFACE_DEFINED__) */
@@ -1790,9 +1786,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandDisambiguationResult=_uuidof(IVoiceCommandDisambiguationResult);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDisambiguationResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandDisambiguationResult_INTERFACE_DEFINED__) */
@@ -1849,9 +1845,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandResponse=_uuidof(IVoiceCommandResponse);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponse;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponse_INTERFACE_DEFINED__) */
@@ -1910,9 +1906,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandResponseStatics=_uuidof(IVoiceCommandResponseStatics);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponseStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandResponseStatics_INTERFACE_DEFINED__) */
@@ -1985,9 +1981,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandServiceConnection=_uuidof(IVoiceCommandServiceConnection);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnection;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnection_INTERFACE_DEFINED__) */
@@ -2027,9 +2023,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandServiceConnectionStatics=_uuidof(IVoiceCommandServiceConnectionStatics);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnectionStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnectionStatics_INTERFACE_DEFINED__) */
@@ -2077,9 +2073,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceCommandUserMessage=_uuidof(IVoiceCommandUserMessage);
                 
-            } /* Windows */
+            } /* VoiceCommands */
         } /* ApplicationModel */
-    } /* VoiceCommands */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandUserMessage;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandUserMessage_INTERFACE_DEFINED__) */
@@ -3484,7 +3480,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommand
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandServiceConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CVoiceCommands_CIVoiceCommandCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandServiceConnection_Windows__CApplicationModel__CVoiceCommands__CVoiceCommandCompletedEventArgsVtbl;
 

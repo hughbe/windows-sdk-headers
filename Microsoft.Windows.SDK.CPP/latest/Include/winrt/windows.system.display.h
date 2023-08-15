@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.display.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -138,9 +138,9 @@ namespace ABI {
         namespace System {
             namespace Display {
                 interface IDisplayRequest;
-            } /* Windows */
+            } /* Display */
         } /* System */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest ABI::Windows::System::Display::IDisplayRequest
 
 #endif // ____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_FWD_DEFINED__
@@ -155,9 +155,9 @@ namespace ABI {
         namespace System {
             namespace Display {
                 class DisplayRequest;
-            } /* Windows */
+            } /* Display */
         } /* System */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -195,9 +195,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayRequest=_uuidof(IDisplayRequest);
                 
-            } /* Windows */
+            } /* Display */
         } /* System */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_INTERFACE_DEFINED__) */

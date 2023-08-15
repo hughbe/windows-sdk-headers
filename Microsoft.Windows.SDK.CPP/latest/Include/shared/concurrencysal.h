@@ -56,7 +56,7 @@ extern int _Global_critical_region_;
 /*
  * Annotation identifiers
  */
-#define _Internal_create_CSAL_identifier_(id) const char id##[] = "";
+#define _Internal_create_CSAL_identifier_(id) const char id[] = "";
 
 _Internal_create_CSAL_identifier_(_Lock_kind_mutex_)
 _Internal_create_CSAL_identifier_(_Lock_kind_event_)

@@ -532,7 +532,7 @@ Revision History:
 //
 // A conflict has been detected between two drivers which claimed two overlapping
 // memory regions.
-// Driver %2, with device {3>, claimed a memory range with starting address
+// Driver %2, with device <%3>, claimed a memory range with starting address
 // in data address 0x28 and 0x2c, and length in data address 0x30.
 //
 #define IO_ERR_MEMORY_CONFLICT_DETECTED  ((NTSTATUS)0xC0040015L)
@@ -544,7 +544,7 @@ Revision History:
 //
 // A conflict has been detected between two drivers which claimed two overlapping
 // Io port regions.
-// Driver %2, with device {3>, claimed an IO port range with starting address
+// Driver %2, with device <%3>, claimed an IO port range with starting address
 // in data address 0x28 and 0x2c, and length in data address 0x30.
 //
 #define IO_ERR_PORT_CONFLICT_DETECTED    ((NTSTATUS)0xC0040016L)
@@ -556,7 +556,7 @@ Revision History:
 //
 // A conflict has been detected between two drivers which claimed equivalent DMA
 // channels.
-// Driver %2, with device {3>, claimed the DMA Channel in data address 0x28, with
+// Driver %2, with device <%3>, claimed the DMA Channel in data address 0x28, with
 // optinal port in data address 0x2c.
 //
 #define IO_ERR_DMA_CONFLICT_DETECTED     ((NTSTATUS)0xC0040017L)
@@ -567,7 +567,7 @@ Revision History:
 // MessageText:
 //
 // A conflict has been detected between two drivers which claimed equivalent IRQs.
-// Driver %2, with device {3>, claimed an interrupt with Level in data address
+// Driver %2, with device <%3>, claimed an interrupt with Level in data address
 // 0x28, vector in data address 0x2c and Affinity in data address 0x30.
 //
 #define IO_ERR_IRQ_CONFLICT_DETECTED     ((NTSTATUS)0xC0040018L)

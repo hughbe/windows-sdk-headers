@@ -1,10 +1,11 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
 #include "winrt/impl/Windows.Storage.1.h"
+#include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Storage.AccessCache.1.h"
 
 WINRT_EXPORT namespace winrt::Windows::Storage::AccessCache {
@@ -50,6 +51,8 @@ struct StorageApplicationPermissions
     StorageApplicationPermissions() = delete;
     static Windows::Storage::AccessCache::StorageItemAccessList FutureAccessList();
     static Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList MostRecentlyUsedList();
+    static Windows::Storage::AccessCache::StorageItemAccessList GetFutureAccessListForUser(Windows::System::User const& user);
+    static Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList GetMostRecentlyUsedListForUser(Windows::System::User const& user);
 };
 
 struct WINRT_EBO StorageItemAccessList :

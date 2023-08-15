@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.web.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -276,8 +272,8 @@ namespace ABI {
     namespace Windows {
         namespace Web {
             interface IUriToStreamResolver;
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CIUriToStreamResolver ABI::Windows::Web::IUriToStreamResolver
 
 #endif // ____x_ABI_CWindows_CWeb_CIUriToStreamResolver_FWD_DEFINED__
@@ -288,8 +284,8 @@ namespace ABI {
     namespace Windows {
         namespace Web {
             interface IWebErrorStatics;
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CIWebErrorStatics ABI::Windows::Web::IWebErrorStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CIWebErrorStatics_FWD_DEFINED__
@@ -301,8 +297,8 @@ namespace ABI {
     namespace Windows {
         namespace Web {
             enum WebErrorStatus : int;
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CWeb__CWebErrorStatus_USE
@@ -323,7 +319,7 @@ IIterator<enum ABI::Windows::Web::WebErrorStatus> : IIterator_impl<enum ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Web::WebErrorStatus> __FIIterator_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIIterator_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::WebErrorStatus>
@@ -353,7 +349,7 @@ IIterable<enum ABI::Windows::Web::WebErrorStatus> : IIterable_impl<enum ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Web::WebErrorStatus> __FIIterable_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIIterable_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::WebErrorStatus>
@@ -383,7 +379,7 @@ IVectorView<enum ABI::Windows::Web::WebErrorStatus> : IVectorView_impl<enum ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Web::WebErrorStatus> __FIVectorView_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIVectorView_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::WebErrorStatus>
@@ -413,7 +409,7 @@ IVector<enum ABI::Windows::Web::WebErrorStatus> : IVector_impl<enum ABI::Windows
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Web::WebErrorStatus> __FIVector_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIVector_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::WebErrorStatus>
@@ -443,7 +439,7 @@ IReference<enum ABI::Windows::Web::WebErrorStatus> : IReference_impl<enum ABI::W
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Web::WebErrorStatus> __FIReference_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIReference_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::__FIReference_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::IReference<ABI::Windows::Web::WebErrorStatus>
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -488,7 +484,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*>
@@ -520,7 +516,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IInputStream*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IInputStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIInputStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IInputStream*>
@@ -538,8 +534,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -547,8 +543,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -566,8 +562,8 @@ namespace ABI {
             
             typedef enum WebErrorStatus : int WebErrorStatus;
             
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -659,8 +655,8 @@ namespace ABI {
                 WebErrorStatus_HttpVersionNotSupported = 505,
             };
             
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -693,8 +689,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUriToStreamResolver=_uuidof(IUriToStreamResolver);
             
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CIUriToStreamResolver;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CIUriToStreamResolver_INTERFACE_DEFINED__) */
@@ -733,8 +729,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IWebErrorStatics=_uuidof(IWebErrorStatics);
             
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CIWebErrorStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CIWebErrorStatics_INTERFACE_DEFINED__) */

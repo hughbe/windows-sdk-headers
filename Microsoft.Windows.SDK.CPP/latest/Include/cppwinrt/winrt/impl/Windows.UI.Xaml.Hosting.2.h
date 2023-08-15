@@ -1,10 +1,11 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
 #include "winrt/impl/Windows.UI.Composition.1.h"
+#include "winrt/impl/Windows.UI.WindowManagement.1.h"
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.1.h"
@@ -74,6 +75,8 @@ struct WINRT_EBO ElementCompositionPreview :
     static void SetImplicitHideAnimation(Windows::UI::Xaml::UIElement const& element, Windows::UI::Composition::ICompositionAnimationBase const& animation);
     static void SetIsTranslationEnabled(Windows::UI::Xaml::UIElement const& element, bool value);
     static Windows::UI::Composition::CompositionPropertySet GetPointerPositionPropertySet(Windows::UI::Xaml::UIElement const& targetElement);
+    static void SetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow, Windows::UI::Xaml::UIElement const& xamlContent);
+    static Windows::UI::Xaml::UIElement GetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow);
 };
 
 struct WINRT_EBO WindowsXamlManager :

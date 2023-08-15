@@ -59,6 +59,8 @@ library BackgroundCopyManager10_2
   interface IEnumBitsPeers;
 }
 
+cpp_quote("#include \"bits10_3.h\"")
+
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 

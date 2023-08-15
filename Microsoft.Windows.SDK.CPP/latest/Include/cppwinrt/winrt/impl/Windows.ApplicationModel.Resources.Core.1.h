@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,6 +7,7 @@
 #include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.Storage.0.h"
 #include "winrt/impl/Windows.Storage.Streams.0.h"
+#include "winrt/impl/Windows.UI.0.h"
 #include "winrt/impl/Windows.Foundation.Collections.0.h"
 #include "winrt/impl/Windows.ApplicationModel.Resources.Core.0.h"
 
@@ -31,6 +32,13 @@ struct WINRT_EBO IResourceCandidate2 :
     impl::consume_t<IResourceCandidate2>
 {
     IResourceCandidate2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IResourceCandidate3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IResourceCandidate3>
+{
+    IResourceCandidate3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IResourceContext :
@@ -59,6 +67,13 @@ struct WINRT_EBO IResourceContextStatics3 :
     impl::consume_t<IResourceContextStatics3>
 {
     IResourceContextStatics3(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IResourceContextStatics4 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IResourceContextStatics4>
+{
+    IResourceContextStatics4(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IResourceManager :

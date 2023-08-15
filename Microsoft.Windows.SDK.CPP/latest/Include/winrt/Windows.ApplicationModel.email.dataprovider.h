@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.email.dataprovider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,10 +275,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailDataProviderConnection;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailDataProviderTriggerDetails;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderTriggerDetails ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderTriggerDetails_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxCreateFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxCreateFolderRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequest_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxCreateFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxCreateFolderRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequestEventArgs_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxDeleteFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDeleteFolderRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequest_FWD_DEFINED__
@@ -359,10 +355,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxDeleteFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDeleteFolderRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequestEventArgs_FWD_DEFINED__
@@ -375,10 +371,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxDownloadAttachmentRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDownloadAttachmentRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequest_FWD_DEFINED__
@@ -391,10 +387,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxDownloadAttachmentRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDownloadAttachmentRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequestEventArgs_FWD_DEFINED__
@@ -407,10 +403,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxDownloadMessageRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDownloadMessageRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequest_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxDownloadMessageRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDownloadMessageRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequestEventArgs_FWD_DEFINED__
@@ -439,10 +435,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxEmptyFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxEmptyFolderRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequest_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxEmptyFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxEmptyFolderRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequestEventArgs_FWD_DEFINED__
@@ -471,10 +467,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxForwardMeetingRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxForwardMeetingRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequest_FWD_DEFINED__
@@ -487,10 +483,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxForwardMeetingRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxForwardMeetingRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequestEventArgs_FWD_DEFINED__
@@ -503,10 +499,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxGetAutoReplySettingsRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxGetAutoReplySettingsRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequest_FWD_DEFINED__
@@ -519,10 +515,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxGetAutoReplySettingsRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxGetAutoReplySettingsRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequestEventArgs_FWD_DEFINED__
@@ -535,10 +531,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxMoveFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxMoveFolderRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequest_FWD_DEFINED__
@@ -551,10 +547,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxMoveFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxMoveFolderRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequestEventArgs_FWD_DEFINED__
@@ -567,10 +563,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxProposeNewTimeForMeetingRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxProposeNewTimeForMeetingRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequest_FWD_DEFINED__
@@ -583,10 +579,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxProposeNewTimeForMeetingRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxProposeNewTimeForMeetingRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequestEventArgs_FWD_DEFINED__
@@ -599,10 +595,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxResolveRecipientsRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxResolveRecipientsRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequest_FWD_DEFINED__
@@ -615,10 +611,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxResolveRecipientsRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxResolveRecipientsRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequestEventArgs_FWD_DEFINED__
@@ -631,10 +627,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxServerSearchReadBatchRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxServerSearchReadBatchRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequest_FWD_DEFINED__
@@ -647,10 +643,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxServerSearchReadBatchRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxServerSearchReadBatchRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequestEventArgs_FWD_DEFINED__
@@ -663,10 +659,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxSetAutoReplySettingsRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxSetAutoReplySettingsRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequest_FWD_DEFINED__
@@ -679,10 +675,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxSetAutoReplySettingsRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxSetAutoReplySettingsRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequestEventArgs_FWD_DEFINED__
@@ -695,10 +691,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxSyncManagerSyncRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxSyncManagerSyncRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequest_FWD_DEFINED__
@@ -711,10 +707,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxSyncManagerSyncRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxSyncManagerSyncRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequestEventArgs_FWD_DEFINED__
@@ -727,10 +723,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxUpdateMeetingResponseRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxUpdateMeetingResponseRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequest_FWD_DEFINED__
@@ -743,10 +739,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxUpdateMeetingResponseRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxUpdateMeetingResponseRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequestEventArgs_FWD_DEFINED__
@@ -759,10 +755,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxValidateCertificatesRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequest ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxValidateCertificatesRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequest_FWD_DEFINED__
@@ -775,10 +771,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     interface IEmailMailboxValidateCertificatesRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequestEventArgs ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxValidateCertificatesRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequestEventArgs_FWD_DEFINED__
@@ -792,10 +788,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailDataProviderConnection;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -804,10 +800,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxCreateFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -831,7 +827,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxCreateFolderRequestEventArgs*>
@@ -850,10 +846,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxDeleteFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -877,7 +873,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDeleteFolderRequestEventArgs*>
@@ -896,10 +892,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxDownloadAttachmentRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -923,7 +919,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDownloadAttachmentRequestEventArgs*>
@@ -942,10 +938,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxDownloadMessageRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -969,7 +965,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxDownloadMessageRequestEventArgs*>
@@ -988,10 +984,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxEmptyFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1015,7 +1011,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxEmptyFolderRequestEventArgs*>
@@ -1034,10 +1030,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxForwardMeetingRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1061,7 +1057,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxForwardMeetingRequestEventArgs*>
@@ -1080,10 +1076,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxGetAutoReplySettingsRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1107,7 +1103,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxGetAutoReplySettingsRequestEventArgs*>
@@ -1126,10 +1122,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxMoveFolderRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1153,7 +1149,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxMoveFolderRequestEventArgs*>
@@ -1172,10 +1168,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxProposeNewTimeForMeetingRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1199,7 +1195,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxProposeNewTimeForMeetingRequestEventArgs*>
@@ -1218,10 +1214,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxResolveRecipientsRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1245,7 +1241,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxResolveRecipientsRequestEventArgs*>
@@ -1264,10 +1260,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxServerSearchReadBatchRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1291,7 +1287,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxServerSearchReadBatchRequestEventArgs*>
@@ -1310,10 +1306,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxSetAutoReplySettingsRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1337,7 +1333,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxSetAutoReplySettingsRequestEventArgs*>
@@ -1356,10 +1352,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxSyncManagerSyncRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1383,7 +1379,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxSyncManagerSyncRequestEventArgs*>
@@ -1402,10 +1398,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxUpdateMeetingResponseRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1429,7 +1425,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxUpdateMeetingResponseRequestEventArgs*>
@@ -1448,10 +1444,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxValidateCertificatesRequestEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1475,7 +1471,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDat
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::DataProvider::IEmailDataProviderConnection*,ABI::Windows::ApplicationModel::Email::DataProvider::IEmailMailboxValidateCertificatesRequestEventArgs*>
@@ -1492,9 +1488,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailRecipient;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient_FWD_DEFINED__
@@ -1503,9 +1499,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailRecipient;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient ABI::Windows::ApplicationModel::Email::IEmailRecipient
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient_FWD_DEFINED__
@@ -1531,7 +1527,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipient*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipient*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailRecipient*>
@@ -1563,7 +1559,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipient*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipient*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailRecipient*>
@@ -1595,7 +1591,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailRecipient*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailRecipient*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailRecipient*>
@@ -1625,7 +1621,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1654,7 +1650,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1683,7 +1679,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1698,9 +1694,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailRecipientResolutionResult;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult_FWD_DEFINED__
@@ -1709,9 +1705,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailRecipientResolutionResult;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult_FWD_DEFINED__
@@ -1737,7 +1733,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult*>
@@ -1769,7 +1765,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult*>
@@ -1786,10 +1782,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -1799,10 +1795,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -1828,7 +1824,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -1860,7 +1856,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -1892,7 +1888,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -1908,9 +1904,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 enum EmailCertificateValidationStatus : int;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_USE
@@ -1931,7 +1927,7 @@ IIterator<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidation
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>
@@ -1961,7 +1957,7 @@ IIterable<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidation
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>
@@ -1980,9 +1976,9 @@ namespace ABI {
                 
                 typedef enum EmailBatchStatus : int EmailBatchStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1991,18 +1987,18 @@ namespace ABI {
                 
                 typedef enum EmailCertificateValidationStatus : int EmailCertificateValidationStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Email {
                 class EmailFolder;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder_FWD_DEFINED__
@@ -2011,9 +2007,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailFolder;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder ABI::Windows::ApplicationModel::Email::IEmailFolder
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder_FWD_DEFINED__
@@ -2026,18 +2022,18 @@ namespace ABI {
                 
                 typedef enum EmailMailboxAutoReplyMessageResponseKind : int EmailMailboxAutoReplyMessageResponseKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxAutoReplySettings;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings_FWD_DEFINED__
@@ -2046,9 +2042,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxAutoReplySettings;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings ABI::Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings_FWD_DEFINED__
@@ -2061,9 +2057,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxCreateFolderStatus : int EmailMailboxCreateFolderStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2072,9 +2068,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxDeleteFolderStatus : int EmailMailboxDeleteFolderStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2083,9 +2079,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxEmptyFolderStatus : int EmailMailboxEmptyFolderStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2094,18 +2090,18 @@ namespace ABI {
                 
                 typedef enum EmailMeetingResponseType : int EmailMeetingResponseType;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMessage;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage_FWD_DEFINED__
@@ -2114,9 +2110,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMessage;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage ABI::Windows::ApplicationModel::Email::IEmailMessage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage_FWD_DEFINED__
@@ -2129,18 +2125,18 @@ namespace ABI {
                 
                 typedef enum EmailMessageBodyKind : int EmailMessageBodyKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Email {
                 class EmailQueryOptions;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions_FWD_DEFINED__
@@ -2149,9 +2145,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailQueryOptions;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions ABI::Windows::ApplicationModel::Email::IEmailQueryOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions_FWD_DEFINED__
@@ -2168,15 +2164,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2184,8 +2180,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2197,8 +2193,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2210,8 +2206,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2260,10 +2256,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailDataProviderTriggerDetails;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2272,10 +2268,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxCreateFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2285,10 +2281,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxDeleteFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2298,10 +2294,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxDownloadAttachmentRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2311,10 +2307,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxDownloadMessageRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2324,10 +2320,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxEmptyFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2337,10 +2333,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxForwardMeetingRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2350,10 +2346,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxGetAutoReplySettingsRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2363,10 +2359,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxMoveFolderRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2376,10 +2372,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxProposeNewTimeForMeetingRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2389,10 +2385,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxResolveRecipientsRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2402,10 +2398,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxServerSearchReadBatchRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2415,10 +2411,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxSetAutoReplySettingsRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2428,10 +2424,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxSyncManagerSyncRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2441,10 +2437,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxUpdateMeetingResponseRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2454,10 +2450,10 @@ namespace ABI {
             namespace Email {
                 namespace DataProvider {
                     class EmailMailboxValidateCertificatesRequest;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2607,10 +2603,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailDataProviderConnection=_uuidof(IEmailDataProviderConnection);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection_INTERFACE_DEFINED__) */
@@ -2650,10 +2646,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailDataProviderTriggerDetails=_uuidof(IEmailDataProviderTriggerDetails);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderTriggerDetails_INTERFACE_DEFINED__) */
@@ -2707,10 +2703,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxCreateFolderRequest=_uuidof(IEmailMailboxCreateFolderRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequest_INTERFACE_DEFINED__) */
@@ -2753,10 +2749,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxCreateFolderRequestEventArgs=_uuidof(IEmailMailboxCreateFolderRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequestEventArgs_INTERFACE_DEFINED__) */
@@ -2806,10 +2802,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxDeleteFolderRequest=_uuidof(IEmailMailboxDeleteFolderRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequest_INTERFACE_DEFINED__) */
@@ -2852,10 +2848,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxDeleteFolderRequestEventArgs=_uuidof(IEmailMailboxDeleteFolderRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequestEventArgs_INTERFACE_DEFINED__) */
@@ -2907,10 +2903,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxDownloadAttachmentRequest=_uuidof(IEmailMailboxDownloadAttachmentRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequest_INTERFACE_DEFINED__) */
@@ -2953,10 +2949,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxDownloadAttachmentRequestEventArgs=_uuidof(IEmailMailboxDownloadAttachmentRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3005,10 +3001,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxDownloadMessageRequest=_uuidof(IEmailMailboxDownloadMessageRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequest_INTERFACE_DEFINED__) */
@@ -3051,10 +3047,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxDownloadMessageRequestEventArgs=_uuidof(IEmailMailboxDownloadMessageRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3104,10 +3100,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxEmptyFolderRequest=_uuidof(IEmailMailboxEmptyFolderRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequest_INTERFACE_DEFINED__) */
@@ -3150,10 +3146,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxEmptyFolderRequestEventArgs=_uuidof(IEmailMailboxEmptyFolderRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3217,10 +3213,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxForwardMeetingRequest=_uuidof(IEmailMailboxForwardMeetingRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequest_INTERFACE_DEFINED__) */
@@ -3263,10 +3259,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxForwardMeetingRequestEventArgs=_uuidof(IEmailMailboxForwardMeetingRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3316,10 +3312,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxGetAutoReplySettingsRequest=_uuidof(IEmailMailboxGetAutoReplySettingsRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequest_INTERFACE_DEFINED__) */
@@ -3362,10 +3358,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxGetAutoReplySettingsRequestEventArgs=_uuidof(IEmailMailboxGetAutoReplySettingsRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3420,10 +3416,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxMoveFolderRequest=_uuidof(IEmailMailboxMoveFolderRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequest_INTERFACE_DEFINED__) */
@@ -3466,10 +3462,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxMoveFolderRequestEventArgs=_uuidof(IEmailMailboxMoveFolderRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3530,10 +3526,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxProposeNewTimeForMeetingRequest=_uuidof(IEmailMailboxProposeNewTimeForMeetingRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequest_INTERFACE_DEFINED__) */
@@ -3576,10 +3572,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxProposeNewTimeForMeetingRequestEventArgs=_uuidof(IEmailMailboxProposeNewTimeForMeetingRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3629,10 +3625,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxResolveRecipientsRequest=_uuidof(IEmailMailboxResolveRecipientsRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequest_INTERFACE_DEFINED__) */
@@ -3675,10 +3671,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxResolveRecipientsRequestEventArgs=_uuidof(IEmailMailboxResolveRecipientsRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3741,10 +3737,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxServerSearchReadBatchRequest=_uuidof(IEmailMailboxServerSearchReadBatchRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequest_INTERFACE_DEFINED__) */
@@ -3787,10 +3783,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxServerSearchReadBatchRequestEventArgs=_uuidof(IEmailMailboxServerSearchReadBatchRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3839,10 +3835,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxSetAutoReplySettingsRequest=_uuidof(IEmailMailboxSetAutoReplySettingsRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequest_INTERFACE_DEFINED__) */
@@ -3885,10 +3881,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxSetAutoReplySettingsRequestEventArgs=_uuidof(IEmailMailboxSetAutoReplySettingsRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3934,10 +3930,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxSyncManagerSyncRequest=_uuidof(IEmailMailboxSyncManagerSyncRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequest_INTERFACE_DEFINED__) */
@@ -3980,10 +3976,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxSyncManagerSyncRequestEventArgs=_uuidof(IEmailMailboxSyncManagerSyncRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequestEventArgs_INTERFACE_DEFINED__) */
@@ -4031,7 +4027,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SendUpdate(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ReportCompletedAsync(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
@@ -4044,10 +4040,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxUpdateMeetingResponseRequest=_uuidof(IEmailMailboxUpdateMeetingResponseRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequest_INTERFACE_DEFINED__) */
@@ -4090,10 +4086,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxUpdateMeetingResponseRequestEventArgs=_uuidof(IEmailMailboxUpdateMeetingResponseRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequestEventArgs_INTERFACE_DEFINED__) */
@@ -4143,10 +4139,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxValidateCertificatesRequest=_uuidof(IEmailMailboxValidateCertificatesRequest);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequest_INTERFACE_DEFINED__) */
@@ -4189,10 +4185,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEmailMailboxValidateCertificatesRequestEventArgs=_uuidof(IEmailMailboxValidateCertificatesRequestEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Email */
-    } /* DataProvider */} /* ABI */
+                } /* DataProvider */
+            } /* Email */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequestEventArgs_INTERFACE_DEFINED__) */
@@ -5189,7 +5185,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxCreateFolderRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxCreateFolderRequestEventArgsVtbl;
 
@@ -5242,7 +5238,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDeleteFolderRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDeleteFolderRequestEventArgsVtbl;
 
@@ -5295,7 +5291,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadAttachmentRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadAttachmentRequestEventArgsVtbl;
 
@@ -5348,7 +5344,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxDownloadMessageRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxDownloadMessageRequestEventArgsVtbl;
 
@@ -5401,7 +5397,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxEmptyFolderRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxEmptyFolderRequestEventArgsVtbl;
 
@@ -5454,7 +5450,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxForwardMeetingRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxForwardMeetingRequestEventArgsVtbl;
 
@@ -5507,7 +5503,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxGetAutoReplySettingsRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxGetAutoReplySettingsRequestEventArgsVtbl;
 
@@ -5560,7 +5556,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxMoveFolderRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxMoveFolderRequestEventArgsVtbl;
 
@@ -5613,7 +5609,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxProposeNewTimeForMeetingRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxProposeNewTimeForMeetingRequestEventArgsVtbl;
 
@@ -5666,7 +5662,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxResolveRecipientsRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxResolveRecipientsRequestEventArgsVtbl;
 
@@ -5719,7 +5715,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxServerSearchReadBatchRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxServerSearchReadBatchRequestEventArgsVtbl;
 
@@ -5772,7 +5768,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSetAutoReplySettingsRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSetAutoReplySettingsRequestEventArgsVtbl;
 
@@ -5825,7 +5821,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxSyncManagerSyncRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxSyncManagerSyncRequestEventArgsVtbl;
 
@@ -5878,7 +5874,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxUpdateMeetingResponseRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxUpdateMeetingResponseRequestEventArgsVtbl;
 
@@ -5931,7 +5927,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CData
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailDataProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CDataProvider_CIEmailMailboxValidateCertificatesRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CDataProvider__CEmailDataProviderConnection_Windows__CApplicationModel__CEmail__CDataProvider__CEmailMailboxValidateCertificatesRequestEventArgsVtbl;
 

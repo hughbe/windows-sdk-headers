@@ -42,7 +42,6 @@ const unsigned LOCATIONTYPE_ABSOLUTE = 0x00000002;
 const unsigned LOCATIONTYPE_COMPRESSED = 0x00000004;
 const unsigned LOCATIONTYPE_IGNORE = 0x00000008;
 const unsigned LOCATIONTYPE_DUPLICATE = 0x00000010;
-const unsigned LOCATIONTYPE_VOLATILE = 0x00000020;
 const unsigned LOCATIONTYPE__MASK_TYPE = 0xFFFF0000;
 
 typedef enum
@@ -124,7 +123,7 @@ cpp_quote( "#define DPX_CLEANUP_OPTION_NAME L\"postprocess_source_cleanup\"" )
 
 #define DPX_COMPRESSION_ALGORITHM_XPRESS_HUFF L"xpress_huff"
 cpp_quote( "#define DPX_COMPRESSION_ALGORITHM_XPRESS_HUFF L\"xpress_huff\"" )
-#define DPX_COMPRESSION_ALGORITHM_XPRESS_WOF_PROVIDER_FILE L"wof_provider_file"
+#define DPX_COMPRESSION_ALGORITHM_WOF_PROVIDER_FILE L"wof_provider_file"
 cpp_quote( "#define DPX_COMPRESSION_ALGORITHM_WOF_PROVIDER_FILE L\"wof_provider_file\"" )
 
 #define DPX_COMPRESSED_FILE_HEADER_LENGTH 4
@@ -138,6 +137,9 @@ cpp_quote( "#define DPX_XPRESS_HUFF_BLOCK_SIZE (1024 * 1024)" )
 
 #define DPX_OPTION_TELEMETRY_CORRELATION_VECTOR L"Telemetry_correlation_vector"
 cpp_quote("#define DPX_OPTION_TELEMETRY_CORRELATION_VECTOR L\"Telemetry_correlation_vector\"")
+
+#define DPX_OPTION_HASH_TYPE L"cix_hash_type"
+cpp_quote( "#define DPX_OPTION_HASH_TYPE L\"cix_hash_type\"" )
 
 [ uuid( ddc1b711-0e55-452f-838e-d1505b866e2b ), object, pointer_default( unique ) ]
 interface IDpxJob : IUnknown

@@ -517,7 +517,7 @@ enum __SAL_YesNo {_SAL_notpresent, _SAL_no, _SAL_maybe, _SAL_yes, _SAL_default};
 //
 // describing conditions that hold for return values after the call
 
-// e.g. _Ret_z_ CString::operator const wchar_t*() const throw();
+// e.g. _Ret_z_ CString::operator const wchar_t*() const noexcept;
 #define _Ret_z_                             _SAL2_Source_(_Ret_z_, (), _Ret2_impl_(__notnull_impl,  __zterm_impl) _Ret_valid_impl_)
 #define _Ret_maybenull_z_                   _SAL2_Source_(_Ret_maybenull_z_, (), _Ret2_impl_(__maybenull_impl,__zterm_impl) _Ret_valid_impl_)
 

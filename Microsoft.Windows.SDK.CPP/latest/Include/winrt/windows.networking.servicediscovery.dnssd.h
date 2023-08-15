@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.servicediscovery.dnssd.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     interface IDnssdRegistrationResult;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     interface IDnssdServiceInstance;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     interface IDnssdServiceInstanceFactory;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstanceFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     interface IDnssdServiceWatcher;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_FWD_DEFINED__
@@ -345,10 +341,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     class DnssdServiceInstance;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -371,7 +367,7 @@ IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanc
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
@@ -403,7 +399,7 @@ IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanc
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
@@ -435,7 +431,7 @@ IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInsta
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
@@ -452,10 +448,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     class DnssdRegistrationResult;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -478,7 +474,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnss
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>
@@ -510,7 +506,7 @@ IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistra
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>
@@ -527,10 +523,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     class DnssdServiceWatcher;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 
@@ -554,7 +550,7 @@ ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*,IInspectable*>
@@ -588,7 +584,7 @@ ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*,ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*,ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
@@ -619,7 +615,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -649,7 +645,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -679,7 +675,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -708,7 +704,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -737,7 +733,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -755,8 +751,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -770,9 +766,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 class NetworkAdapter;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -781,9 +777,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 interface INetworkAdapter;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter ABI::Windows::Networking::Connectivity::INetworkAdapter
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -796,8 +792,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -805,8 +801,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -819,9 +815,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class DatagramSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
@@ -830,9 +826,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket ABI::Windows::Networking::Sockets::IDatagramSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
@@ -843,9 +839,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -854,9 +850,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener ABI::Windows::Networking::Sockets::IStreamSocketListener
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -873,10 +869,10 @@ namespace ABI {
                     
                     typedef enum DnssdRegistrationStatus : int DnssdRegistrationStatus;
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -886,10 +882,10 @@ namespace ABI {
                     
                     typedef enum DnssdServiceWatcherStatus : int DnssdServiceWatcherStatus;
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 
@@ -903,10 +899,10 @@ namespace ABI {
             namespace ServiceDiscovery {
                 namespace Dnssd {
                     class DnssdServiceInstanceCollection;
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 
@@ -944,10 +940,10 @@ namespace ABI {
                         DnssdRegistrationStatus_SecurityError = 3,
                     };
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -977,10 +973,10 @@ namespace ABI {
                         DnssdServiceWatcherStatus_Aborted = 5,
                     };
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1016,17 +1012,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::IHostName * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasInstanceNameChanged(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IDnssdRegistrationResult=_uuidof(IDnssdRegistrationResult);
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_INTERFACE_DEFINED__) */
@@ -1114,10 +1110,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDnssdServiceInstance=_uuidof(IDnssdServiceInstance);
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_INTERFACE_DEFINED__) */
@@ -1160,10 +1156,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDnssdServiceInstanceFactory=_uuidof(IDnssdServiceInstanceFactory);
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_INTERFACE_DEFINED__) */
@@ -1226,10 +1222,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDnssdServiceWatcher=_uuidof(IDnssdServiceWatcher);
                     
-                } /* Windows */
-            } /* Networking */
-        } /* ServiceDiscovery */
-    } /* Dnssd */} /* ABI */
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_INTERFACE_DEFINED__) */
@@ -1778,7 +1774,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectableVtbl;
 
@@ -1830,7 +1826,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl;
 

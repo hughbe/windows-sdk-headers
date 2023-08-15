@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.composition.diagnostics.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -276,10 +272,10 @@ namespace ABI {
             namespace Composition {
                 namespace Diagnostics {
                     interface ICompositionDebugHeatMaps;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugHeatMaps ABI::Windows::UI::Composition::Diagnostics::ICompositionDebugHeatMaps
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugHeatMaps_FWD_DEFINED__
@@ -292,10 +288,10 @@ namespace ABI {
             namespace Composition {
                 namespace Diagnostics {
                     interface ICompositionDebugSettings;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettings ABI::Windows::UI::Composition::Diagnostics::ICompositionDebugSettings
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettings_FWD_DEFINED__
@@ -308,10 +304,10 @@ namespace ABI {
             namespace Composition {
                 namespace Diagnostics {
                     interface ICompositionDebugSettingsStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettingsStatics ABI::Windows::UI::Composition::Diagnostics::ICompositionDebugSettingsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettingsStatics_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Compositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositor ABI::Windows::UI::Composition::ICompositor
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Visual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
@@ -360,9 +356,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IVisual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIVisual ABI::Windows::UI::Composition::IVisual
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
@@ -379,10 +375,10 @@ namespace ABI {
                     
                     typedef enum CompositionDebugOverdrawContentKinds : unsigned int CompositionDebugOverdrawContentKinds;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -393,10 +389,10 @@ namespace ABI {
             namespace Composition {
                 namespace Diagnostics {
                     class CompositionDebugHeatMaps;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -405,10 +401,10 @@ namespace ABI {
             namespace Composition {
                 namespace Diagnostics {
                     class CompositionDebugSettings;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -447,10 +443,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(CompositionDebugOverdrawContentKinds)
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -497,10 +493,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionDebugHeatMaps=_uuidof(ICompositionDebugHeatMaps);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugHeatMaps;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugHeatMaps_INTERFACE_DEFINED__) */
@@ -540,10 +536,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionDebugSettings=_uuidof(ICompositionDebugSettings);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettings_INTERFACE_DEFINED__) */
@@ -584,10 +580,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionDebugSettingsStatics=_uuidof(ICompositionDebugSettingsStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Diagnostics */} /* ABI */
+                } /* Diagnostics */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CDiagnostics_CICompositionDebugSettingsStatics_INTERFACE_DEFINED__) */

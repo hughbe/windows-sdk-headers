@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.datatransfer.dragdrop.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,11 +277,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDragDropManager;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManager ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragDropManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManager_FWD_DEFINED__
@@ -299,11 +295,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDragDropManagerStatics;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManagerStatics ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragDropManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManagerStatics_FWD_DEFINED__
@@ -317,11 +313,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDragInfo;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo_FWD_DEFINED__
@@ -335,11 +331,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDragInfo2;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo2 ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragInfo2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo2_FWD_DEFINED__
@@ -353,11 +349,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDragOperation;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation_FWD_DEFINED__
@@ -371,11 +367,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDragOperation2;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation2 ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragOperation2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation2_FWD_DEFINED__
@@ -389,11 +385,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDragUIOverride;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragUIOverride ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragUIOverride
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragUIOverride_FWD_DEFINED__
@@ -407,11 +403,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDropOperationTarget;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTarget ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTarget_FWD_DEFINED__
@@ -425,11 +421,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         interface ICoreDropOperationTargetRequestedEventArgs;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTargetRequestedEventArgs ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTargetRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTargetRequestedEventArgs_FWD_DEFINED__
@@ -444,11 +440,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         class CoreDragDropManager;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -458,11 +454,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         class CoreDropOperationTargetRequestedEventArgs;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -486,7 +482,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager*,ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragDropManager*,ABI::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTargetRequestedEventArgs*>
@@ -503,9 +499,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 enum DataPackageOperation : unsigned int;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_USE
@@ -526,7 +522,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::DataTransfe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -556,7 +552,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::DataTransfer::DataPackageOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation> __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -573,9 +569,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackage;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_FWD_DEFINED__
@@ -584,9 +580,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackage;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage ABI::Windows::ApplicationModel::DataTransfer::IDataPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_FWD_DEFINED__
@@ -599,18 +595,18 @@ namespace ABI {
                 
                 typedef enum DataPackageOperation : unsigned int DataPackageOperation;
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackageView;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView_FWD_DEFINED__
@@ -619,9 +615,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackageView;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView ABI::Windows::ApplicationModel::DataTransfer::IDataPackageView
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView_FWD_DEFINED__
@@ -638,10 +634,10 @@ namespace ABI {
                     
                     typedef enum DragDropModifiers : unsigned int DragDropModifiers;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* DataTransfer */
-    } /* DragDrop */} /* ABI */
+                } /* DragDrop */
+            } /* DataTransfer */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -653,8 +649,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -666,8 +662,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -677,9 +673,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -688,9 +684,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -708,11 +704,11 @@ namespace ABI {
                         
                         typedef enum CoreDragUIContentMode : unsigned int CoreDragUIContentMode;
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -731,11 +727,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         class CoreDragInfo;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -745,11 +741,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         class CoreDragOperation;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -759,11 +755,11 @@ namespace ABI {
                 namespace DragDrop {
                     namespace Core {
                         class CoreDragUIOverride;
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -804,11 +800,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(CoreDragUIContentMode)
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -846,21 +842,21 @@ namespace ABI {
                                 /* [in] */EventRegistrationToken value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreConcurrentOperationsEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AreConcurrentOperationsEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_ICoreDragDropManager=_uuidof(ICoreDragDropManager);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManager_INTERFACE_DEFINED__) */
@@ -901,11 +897,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDragDropManagerStatics=_uuidof(ICoreDragDropManagerStatics);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManagerStatics_INTERFACE_DEFINED__) */
@@ -952,11 +948,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDragInfo=_uuidof(ICoreDragInfo);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo_INTERFACE_DEFINED__) */
@@ -1001,11 +997,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDragInfo2=_uuidof(ICoreDragInfo2);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragInfo2_INTERFACE_DEFINED__) */
@@ -1065,11 +1061,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDragOperation=_uuidof(ICoreDragOperation);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation_INTERFACE_DEFINED__) */
@@ -1117,11 +1113,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDragOperation2=_uuidof(ICoreDragOperation2);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragOperation2_INTERFACE_DEFINED__) */
@@ -1162,10 +1158,10 @@ namespace ABI {
                                 /* [in] */ABI::Windows::Foundation::Point anchorPoint
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsContentVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsContentVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Caption(
                                 /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1174,16 +1170,16 @@ namespace ABI {
                                 /* [in] */__RPC__in HSTRING value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCaptionVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCaptionVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGlyphVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsGlyphVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Clear(void) = 0;
                             
@@ -1191,11 +1187,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDragUIOverride=_uuidof(ICoreDragUIOverride);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragUIOverride;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragUIOverride_INTERFACE_DEFINED__) */
@@ -1248,11 +1244,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDropOperationTarget=_uuidof(ICoreDropOperationTarget);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTarget;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTarget_INTERFACE_DEFINED__) */
@@ -1293,11 +1289,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICoreDropOperationTargetRequestedEventArgs=_uuidof(ICoreDropOperationTargetRequestedEventArgs);
                         
-                    } /* Windows */
-                } /* ApplicationModel */
+                    } /* Core */
+                } /* DragDrop */
             } /* DataTransfer */
-        } /* DragDrop */
-    } /* Core */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTargetRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTargetRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1517,7 +1513,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTargetRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDragDropManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CCore_CICoreDropOperationTargetRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDragDropManager_Windows__CApplicationModel__CDataTransfer__CDragDrop__CCore__CCoreDropOperationTargetRequestedEventArgsVtbl;
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.composition.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Composition {
                 namespace Core {
                     interface ICompositorController;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CCore_CICompositorController ABI::Windows::UI::Composition::Core::ICompositorController
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CCore_CICompositorController_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Composition {
                 namespace Core {
                     class CompositorController;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -322,7 +318,7 @@ ITypedEventHandler<ABI::Windows::UI::Composition::Core::CompositorController*,II
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Composition::Core::CompositorController*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Composition::Core::ICompositorController*,IInspectable*>
@@ -341,8 +337,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -354,8 +350,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -369,9 +365,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Compositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -380,9 +376,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositor ABI::Windows::UI::Composition::ICompositor
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -447,10 +443,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositorController=_uuidof(ICompositorController);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CCore_CICompositorController;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CCore_CICompositorController_INTERFACE_DEFINED__) */
@@ -520,7 +516,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CCore_CICompositorController * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CCore_CICompositorController * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CComposition__CCore__CCompositorController_IInspectableVtbl;
 

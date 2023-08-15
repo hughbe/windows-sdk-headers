@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.streaming.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IConnectionStatusHandler;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler ABI::Windows::Media::Streaming::IConnectionStatusHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IDeviceControllerFinderHandler;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler ABI::Windows::Media::Streaming::IDeviceControllerFinderHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IRenderingParametersUpdateHandler;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler ABI::Windows::Media::Streaming::IRenderingParametersUpdateHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface ITransportParametersUpdateHandler;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler ABI::Windows::Media::Streaming::ITransportParametersUpdateHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler_FWD_DEFINED__
@@ -338,9 +334,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IActiveBasicDevice;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice ABI::Windows::Media::Streaming::IActiveBasicDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IActiveBasicDeviceStatics;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics ABI::Windows::Media::Streaming::IActiveBasicDeviceStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics_FWD_DEFINED__
@@ -366,9 +362,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IBasicDevice;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice ABI::Windows::Media::Streaming::IBasicDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_FWD_DEFINED__
@@ -380,9 +376,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IDeviceController;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDeviceController ABI::Windows::Media::Streaming::IDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDeviceController_FWD_DEFINED__
@@ -394,9 +390,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IDeviceIcon;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon ABI::Windows::Media::Streaming::IDeviceIcon
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IDevicePair;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDevicePair ABI::Windows::Media::Streaming::IDevicePair
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDevicePair_FWD_DEFINED__
@@ -422,9 +418,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IMediaRenderer;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer ABI::Windows::Media::Streaming::IMediaRenderer
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
@@ -436,9 +432,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IMediaRendererActionInformation;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation ABI::Windows::Media::Streaming::IMediaRendererActionInformation
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation_FWD_DEFINED__
@@ -450,9 +446,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IMediaRendererFactory;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory ABI::Windows::Media::Streaming::IMediaRendererFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory_FWD_DEFINED__
@@ -464,9 +460,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IStreamSelectorStatics;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics ABI::Windows::Media::Streaming::IStreamSelectorStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics_FWD_DEFINED__
@@ -478,9 +474,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface ITransportParameters;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CITransportParameters ABI::Windows::Media::Streaming::ITransportParameters
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CITransportParameters_FWD_DEFINED__
@@ -509,7 +505,7 @@ IIterator<ABI::Windows::Media::Streaming::IBasicDevice*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Streaming::IBasicDevice*> __FIIterator_1_Windows__CMedia__CStreaming__CIBasicDevice_t;
 #define __FIIterator_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CStreaming__CIBasicDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Streaming::IBasicDevice*>
@@ -541,7 +537,7 @@ IIterable<ABI::Windows::Media::Streaming::IBasicDevice*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Streaming::IBasicDevice*> __FIIterable_1_Windows__CMedia__CStreaming__CIBasicDevice_t;
 #define __FIIterable_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CStreaming__CIBasicDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Streaming::IBasicDevice*>
@@ -573,7 +569,7 @@ IIterator<ABI::Windows::Media::Streaming::IDeviceIcon*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Streaming::IDeviceIcon*> __FIIterator_1_Windows__CMedia__CStreaming__CIDeviceIcon_t;
 #define __FIIterator_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CStreaming__CIDeviceIcon_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Streaming::IDeviceIcon*>
@@ -605,7 +601,7 @@ IIterable<ABI::Windows::Media::Streaming::IDeviceIcon*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Streaming::IDeviceIcon*> __FIIterable_1_Windows__CMedia__CStreaming__CIDeviceIcon_t;
 #define __FIIterable_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CStreaming__CIDeviceIcon_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Streaming::IDeviceIcon*>
@@ -622,9 +618,9 @@ namespace ABI {
             namespace Streaming {
                 struct PlaySpeed;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CStreaming__CPlaySpeed_USE
@@ -645,7 +641,7 @@ IIterator<struct ABI::Windows::Media::Streaming::PlaySpeed> : IIterator_impl<str
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Media::Streaming::PlaySpeed> __FIIterator_1_Windows__CMedia__CStreaming__CPlaySpeed_t;
 #define __FIIterator_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CStreaming__CPlaySpeed_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Streaming::PlaySpeed>
@@ -675,7 +671,7 @@ IIterable<struct ABI::Windows::Media::Streaming::PlaySpeed> : IIterable_impl<str
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Media::Streaming::PlaySpeed> __FIIterable_1_Windows__CMedia__CStreaming__CPlaySpeed_t;
 #define __FIIterable_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CStreaming__CPlaySpeed_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Streaming::PlaySpeed>
@@ -706,7 +702,7 @@ IVectorView<ABI::Windows::Media::Streaming::IBasicDevice*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Streaming::IBasicDevice*> __FIVectorView_1_Windows__CMedia__CStreaming__CIBasicDevice_t;
 #define __FIVectorView_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CStreaming__CIBasicDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Streaming::IBasicDevice*>
@@ -738,7 +734,7 @@ IVectorView<ABI::Windows::Media::Streaming::IDeviceIcon*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Streaming::IDeviceIcon*> __FIVectorView_1_Windows__CMedia__CStreaming__CIDeviceIcon_t;
 #define __FIVectorView_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CStreaming__CIDeviceIcon_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Streaming::IDeviceIcon*>
@@ -769,7 +765,7 @@ IVectorView<struct ABI::Windows::Media::Streaming::PlaySpeed> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Media::Streaming::PlaySpeed> __FIVectorView_1_Windows__CMedia__CStreaming__CPlaySpeed_t;
 #define __FIVectorView_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CStreaming__CPlaySpeed_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Streaming::PlaySpeed>
@@ -800,7 +796,7 @@ IVector<ABI::Windows::Media::Streaming::IBasicDevice*> : IVector_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Streaming::IBasicDevice*> __FIVector_1_Windows__CMedia__CStreaming__CIBasicDevice_t;
 #define __FIVector_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CStreaming__CIBasicDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CStreaming__CIBasicDevice ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Streaming::IBasicDevice*>
@@ -832,7 +828,7 @@ IVector<ABI::Windows::Media::Streaming::IDeviceIcon*> : IVector_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Streaming::IDeviceIcon*> __FIVector_1_Windows__CMedia__CStreaming__CIDeviceIcon_t;
 #define __FIVector_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CStreaming__CIDeviceIcon_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CStreaming__CIDeviceIcon ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Streaming::IDeviceIcon*>
@@ -863,7 +859,7 @@ IVector<struct ABI::Windows::Media::Streaming::PlaySpeed> : IVector_impl<struct 
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::Media::Streaming::PlaySpeed> __FIVector_1_Windows__CMedia__CStreaming__CPlaySpeed_t;
 #define __FIVector_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CStreaming__CPlaySpeed_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CStreaming__CPlaySpeed ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Streaming::PlaySpeed>
@@ -878,9 +874,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class ActiveBasicDevice;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
@@ -903,7 +899,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::ActiveBasicDevic
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::ActiveBasicDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CActiveBasicDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CActiveBasicDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CActiveBasicDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CActiveBasicDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::IActiveBasicDevice*>
@@ -935,7 +931,7 @@ IAsyncOperation<ABI::Windows::Media::Streaming::ActiveBasicDevice*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Streaming::ActiveBasicDevice*> __FIAsyncOperation_1_Windows__CMedia__CStreaming__CActiveBasicDevice_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CActiveBasicDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CStreaming__CActiveBasicDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CActiveBasicDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Streaming::IActiveBasicDevice*>
@@ -951,9 +947,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class DevicePair;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
@@ -976,7 +972,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::DevicePair*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::DevicePair*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CDevicePair_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CDevicePair ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CDevicePair_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CDevicePair ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::IDevicePair*>
@@ -1008,7 +1004,7 @@ IAsyncOperation<ABI::Windows::Media::Streaming::DevicePair*> : IAsyncOperation_i
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Streaming::DevicePair*> __FIAsyncOperation_1_Windows__CMedia__CStreaming__CDevicePair_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CDevicePair ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CStreaming__CDevicePair_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CDevicePair ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Streaming::IDevicePair*>
@@ -1024,9 +1020,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class MediaRenderer;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
@@ -1049,7 +1045,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::MediaRenderer*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::MediaRenderer*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::IMediaRenderer*>
@@ -1081,7 +1077,7 @@ IAsyncOperation<ABI::Windows::Media::Streaming::MediaRenderer*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Streaming::MediaRenderer*> __FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Streaming::IMediaRenderer*>
@@ -1098,9 +1094,9 @@ namespace ABI {
             namespace Streaming {
                 struct PositionInformation;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CPositionInformation_USE
@@ -1121,7 +1117,7 @@ IAsyncOperationCompletedHandler<struct ABI::Windows::Media::Streaming::PositionI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<struct ABI::Windows::Media::Streaming::PositionInformation> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CPositionInformation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CPositionInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CPositionInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CPositionInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::PositionInformation>
@@ -1151,7 +1147,7 @@ IAsyncOperation<struct ABI::Windows::Media::Streaming::PositionInformation> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<struct ABI::Windows::Media::Streaming::PositionInformation> __FIAsyncOperation_1_Windows__CMedia__CStreaming__CPositionInformation_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CPositionInformation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CStreaming__CPositionInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CPositionInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Streaming::PositionInformation>
@@ -1167,9 +1163,9 @@ namespace ABI {
             namespace Streaming {
                 struct TransportInformation;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CTransportInformation_USE
@@ -1190,7 +1186,7 @@ IAsyncOperationCompletedHandler<struct ABI::Windows::Media::Streaming::Transport
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<struct ABI::Windows::Media::Streaming::TransportInformation> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CTransportInformation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CTransportInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CTransportInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CTransportInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::TransportInformation>
@@ -1220,7 +1216,7 @@ IAsyncOperation<struct ABI::Windows::Media::Streaming::TransportInformation> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<struct ABI::Windows::Media::Streaming::TransportInformation> __FIAsyncOperation_1_Windows__CMedia__CStreaming__CTransportInformation_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CTransportInformation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CStreaming__CTransportInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CTransportInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Streaming::TransportInformation>
@@ -1249,7 +1245,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1278,7 +1274,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1307,7 +1303,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1336,7 +1332,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1365,7 +1361,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -1394,7 +1390,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -1423,7 +1419,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1452,7 +1448,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1469,9 +1465,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1497,7 +1493,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1529,7 +1525,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentTy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1547,9 +1543,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1575,7 +1571,7 @@ IIterator<ABI::Windows::Foundation::Collections::IPropertySet*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::Collections::IPropertySet*> __FIIterator_1___F__CIPropertySet_t;
 #define __FIIterator_1___F__CIPropertySet ABI::Windows::Foundation::Collections::__FIIterator_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___F__CIPropertySet ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IPropertySet*>
@@ -1607,7 +1603,7 @@ IIterable<ABI::Windows::Foundation::Collections::IPropertySet*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::Collections::IPropertySet*> __FIIterable_1___F__CIPropertySet_t;
 #define __FIIterable_1___F__CIPropertySet ABI::Windows::Foundation::Collections::__FIIterable_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___F__CIPropertySet ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IPropertySet*>
@@ -1639,7 +1635,7 @@ IVectorView<ABI::Windows::Foundation::Collections::IPropertySet*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Foundation::Collections::IPropertySet*> __FIVectorView_1___F__CIPropertySet_t;
 #define __FIVectorView_1___F__CIPropertySet ABI::Windows::Foundation::Collections::__FIVectorView_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1___F__CIPropertySet ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IPropertySet*>
@@ -1671,7 +1667,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1___F__CIPropertySet*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1___F__CIPropertySet*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1___F__CIPropertySet_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1___F__CIPropertySet ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1___F__CIPropertySet ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IPropertySet*>*>
@@ -1703,7 +1699,7 @@ IAsyncOperation<__FIVectorView_1___F__CIPropertySet*> : IAsyncOperation_impl<__F
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1___F__CIPropertySet*> __FIAsyncOperation_1___FIVectorView_1___F__CIPropertySet_t;
 #define __FIAsyncOperation_1___FIVectorView_1___F__CIPropertySet ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1___F__CIPropertySet ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Collections::IPropertySet*>*>
@@ -1724,9 +1720,9 @@ namespace ABI {
                 
                 typedef enum ConnectionStatus : int ConnectionStatus;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1735,9 +1731,9 @@ namespace ABI {
                 
                 typedef enum DeviceTypes : unsigned int DeviceTypes;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1746,9 +1742,9 @@ namespace ABI {
                 
                 typedef enum TransportState : int TransportState;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1757,9 +1753,9 @@ namespace ABI {
                 
                 typedef enum TransportStatus : int TransportStatus;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1768,9 +1764,9 @@ namespace ABI {
                 
                 typedef struct PlaySpeed PlaySpeed;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1779,9 +1775,9 @@ namespace ABI {
                 
                 typedef struct PositionInformation PositionInformation;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1790,9 +1786,9 @@ namespace ABI {
                 
                 typedef struct RenderingParameters RenderingParameters;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1801,9 +1797,9 @@ namespace ABI {
                 
                 typedef struct TrackInformation TrackInformation;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1812,9 +1808,9 @@ namespace ABI {
                 
                 typedef struct TransportInformation TransportInformation;
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1837,9 +1833,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class BasicDevice;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1847,9 +1843,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class CreateMediaRendererOperation;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1857,9 +1853,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class DeviceController;
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1896,9 +1892,9 @@ namespace ABI {
                     ConnectionStatus_Sleeping = 2,
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -1927,9 +1923,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(DeviceTypes)
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -1960,9 +1956,9 @@ namespace ABI {
                     TransportState_Last = 7,
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -1989,9 +1985,9 @@ namespace ABI {
                     TransportStatus_Last = 3,
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2016,9 +2012,9 @@ namespace ABI {
                     UINT32 Denominator;
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2044,9 +2040,9 @@ namespace ABI {
                     ABI::Windows::Foundation::TimeSpan TrackDuration;
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2071,9 +2067,9 @@ namespace ABI {
                     ABI::Windows::Foundation::TimeSpan relativeTime;
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2095,12 +2091,12 @@ namespace ABI {
                 struct RenderingParameters
                 {
                     UINT32 volume;
-                    boolean mute;
+                    ::boolean mute;
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2126,9 +2122,9 @@ namespace ABI {
                     ABI::Windows::Media::Streaming::PlaySpeed CurrentSpeed;
                 };
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2161,9 +2157,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IConnectionStatusHandler=_uuidof(IConnectionStatusHandler);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler_INTERFACE_DEFINED__) */
@@ -2200,9 +2196,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceControllerFinderHandler=_uuidof(IDeviceControllerFinderHandler);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler_INTERFACE_DEFINED__) */
@@ -2238,9 +2234,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRenderingParametersUpdateHandler=_uuidof(IRenderingParametersUpdateHandler);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler_INTERFACE_DEFINED__) */
@@ -2276,9 +2272,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITransportParametersUpdateHandler=_uuidof(ITransportParametersUpdateHandler);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler_INTERFACE_DEFINED__) */
@@ -2314,22 +2310,22 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMuteSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSetNextSourceSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAudioSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVideoSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsImageSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSearchSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetCachedSinkProtocolInfo(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2341,7 +2337,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetEffectiveBandwidth(
-                        /* [in] */boolean transmitSpeed,
+                        /* [in] */::boolean transmitSpeed,
                         /* [retval, out] */__RPC__out UINT64 * currentSpeed
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetCachedBitrateMeasurement(
@@ -2359,16 +2355,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out GUID * physicalNetworkInterface
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE NotifyStreamingStatus(
-                        /* [in] */boolean fIsStreaming
+                        /* [in] */::boolean fIsStreaming
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IActiveBasicDevice=_uuidof(IActiveBasicDevice);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice_INTERFACE_DEFINED__) */
@@ -2408,15 +2404,15 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE GetDevicesOnMatchingNetworkAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::Media::Streaming::IActiveBasicDevice * server,
                         /* [in] */__RPC__in_opt ABI::Windows::Media::Streaming::IActiveBasicDevice * renderer,
-                        /* [in] */boolean optimizeForProxying,
-                        /* [in] */boolean allowChangeRendererNetwork,
+                        /* [in] */::boolean optimizeForProxying,
+                        /* [in] */::boolean allowChangeRendererNetwork,
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CStreaming__CDevicePair * * operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateDevicesOnMatchingNetworkAsync(
                         /* [in] */__RPC__in HSTRING serverUDN,
                         /* [in] */__RPC__in_opt ABI::Windows::Media::Streaming::IActiveBasicDevice * renderer,
-                        /* [in] */boolean optimizeForProxying,
-                        /* [in] */boolean allowChangeRendererNetwork,
+                        /* [in] */::boolean optimizeForProxying,
+                        /* [in] */::boolean allowChangeRendererNetwork,
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CStreaming__CDevicePair * * operation
                         ) = 0;
                     
@@ -2424,9 +2420,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActiveBasicDeviceStatics=_uuidof(IActiveBasicDeviceStatics);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics_INTERFACE_DEFINED__) */
@@ -2497,10 +2493,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanWakeDevices(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DiscoveredOnCurrentNetwork(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Type(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Streaming::DeviceTypes * value
@@ -2523,9 +2519,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBasicDevice=_uuidof(IBasicDevice);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_INTERFACE_DEFINED__) */
@@ -2581,9 +2577,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceController=_uuidof(IDeviceController);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDeviceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDeviceController_INTERFACE_DEFINED__) */
@@ -2628,9 +2624,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceIcon=_uuidof(IDeviceIcon);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon_INTERFACE_DEFINED__) */
@@ -2669,9 +2665,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePair=_uuidof(IDevicePair);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDevicePair;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDevicePair_INTERFACE_DEFINED__) */
@@ -2704,13 +2700,13 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAudioSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVideoSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsImageSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ActionInformation(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Streaming::IMediaRendererActionInformation * * value
@@ -2756,7 +2752,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetMuteAsync(
-                        /* [in] */boolean mute,
+                        /* [in] */::boolean mute,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetVolumeAsync(
@@ -2798,9 +2794,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaRenderer=_uuidof(IMediaRenderer);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_INTERFACE_DEFINED__) */
@@ -2829,25 +2825,25 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMuteAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPauseAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlayAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSeekAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSetNextSourceAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStopAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVolumeAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PlaySpeeds(
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CMedia__CStreaming__CPlaySpeed * * value
@@ -2857,9 +2853,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaRendererActionInformation=_uuidof(IMediaRendererActionInformation);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation_INTERFACE_DEFINED__) */
@@ -2900,9 +2896,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaRendererFactory=_uuidof(IMediaRendererFactory);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory_INTERFACE_DEFINED__) */
@@ -2955,9 +2951,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSelectorStatics=_uuidof(IStreamSelectorStatics);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics_INTERFACE_DEFINED__) */
@@ -2999,9 +2995,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITransportParameters=_uuidof(ITransportParameters);
                 
-            } /* Windows */
+            } /* Streaming */
         } /* Media */
-    } /* Streaming */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CITransportParameters;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CITransportParameters_INTERFACE_DEFINED__) */
@@ -5557,7 +5553,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 

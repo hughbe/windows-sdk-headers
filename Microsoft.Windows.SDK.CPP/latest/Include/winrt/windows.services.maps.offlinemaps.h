@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.services.maps.offlinemaps.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,10 +142,10 @@ namespace ABI {
             namespace Maps {
                 namespace OfflineMaps {
                     interface IOfflineMapPackage;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackage ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackage
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackage_FWD_DEFINED__
@@ -158,10 +158,10 @@ namespace ABI {
             namespace Maps {
                 namespace OfflineMaps {
                     interface IOfflineMapPackageQueryResult;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageQueryResult ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageQueryResult
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageQueryResult_FWD_DEFINED__
@@ -174,10 +174,10 @@ namespace ABI {
             namespace Maps {
                 namespace OfflineMaps {
                     interface IOfflineMapPackageStartDownloadResult;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStartDownloadResult ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageStartDownloadResult
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStartDownloadResult_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Maps {
                 namespace OfflineMaps {
                     interface IOfflineMapPackageStatics;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStatics ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStatics_FWD_DEFINED__
@@ -207,10 +207,10 @@ namespace ABI {
             namespace Maps {
                 namespace OfflineMaps {
                     class OfflineMapPackage;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -233,7 +233,7 @@ IIterator<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*> __FIIterator_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_t;
 #define __FIIterator_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackage*>
@@ -265,7 +265,7 @@ IIterable<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*> __FIIterable_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_t;
 #define __FIIterable_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackage*>
@@ -297,7 +297,7 @@ IVectorView<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*> __FIVectorView_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackage*>
@@ -314,10 +314,10 @@ namespace ABI {
             namespace Maps {
                 namespace OfflineMaps {
                     class OfflineMapPackageQueryResult;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -340,7 +340,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::OfflineMaps::Offli
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageQueryResult*>
@@ -372,7 +372,7 @@ IAsyncOperation<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQuer
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult*> __FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageQueryResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageQueryResult*>
@@ -389,10 +389,10 @@ namespace ABI {
             namespace Maps {
                 namespace OfflineMaps {
                     class OfflineMapPackageStartDownloadResult;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -415,7 +415,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::OfflineMaps::Offli
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageStartDownloadResult*>
@@ -447,7 +447,7 @@ IAsyncOperation<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStar
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult*> __FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackageStartDownloadResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageStartDownloadResult*>
@@ -480,7 +480,7 @@ ITypedEventHandler<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Maps::OfflineMaps::OfflineMapPackage*,IInspectable*> __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Maps::OfflineMaps::IOfflineMapPackage*,IInspectable*>
@@ -498,9 +498,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class GeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -509,9 +509,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox ABI::Windows::Devices::Geolocation::IGeoboundingBox
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -522,9 +522,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geocircle;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_FWD_DEFINED__
@@ -533,9 +533,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocircle;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle ABI::Windows::Devices::Geolocation::IGeocircle
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_FWD_DEFINED__
@@ -546,9 +546,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -557,9 +557,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint ABI::Windows::Devices::Geolocation::IGeopoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -579,10 +579,10 @@ namespace ABI {
                     
                     typedef enum OfflineMapPackageQueryStatus : int OfflineMapPackageQueryStatus;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -592,10 +592,10 @@ namespace ABI {
                     
                     typedef enum OfflineMapPackageStartDownloadStatus : int OfflineMapPackageStartDownloadStatus;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -605,10 +605,10 @@ namespace ABI {
                     
                     typedef enum OfflineMapPackageStatus : int OfflineMapPackageStatus;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 
@@ -651,10 +651,10 @@ namespace ABI {
                         OfflineMapPackageQueryStatus_NetworkFailure = 3,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -682,10 +682,10 @@ namespace ABI {
                         OfflineMapPackageStartDownloadStatus_DeniedWithoutCapability = 3,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -713,10 +713,10 @@ namespace ABI {
                         OfflineMapPackageStatus_Deleting = 3,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -772,10 +772,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOfflineMapPackage=_uuidof(IOfflineMapPackage);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackage;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackage_INTERFACE_DEFINED__) */
@@ -818,10 +818,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOfflineMapPackageQueryResult=_uuidof(IOfflineMapPackageQueryResult);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageQueryResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageQueryResult_INTERFACE_DEFINED__) */
@@ -861,10 +861,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOfflineMapPackageStartDownloadResult=_uuidof(IOfflineMapPackageStartDownloadResult);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStartDownloadResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStartDownloadResult_INTERFACE_DEFINED__) */
@@ -913,10 +913,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOfflineMapPackageStatics=_uuidof(IOfflineMapPackageStatics);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* OfflineMaps */} /* ABI */
+                } /* OfflineMaps */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackageStatics_INTERFACE_DEFINED__) */
@@ -1554,7 +1554,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackage * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CMaps_COfflineMaps_CIOfflineMapPackage * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CMaps__COfflineMaps__COfflineMapPackage_IInspectableVtbl;
 

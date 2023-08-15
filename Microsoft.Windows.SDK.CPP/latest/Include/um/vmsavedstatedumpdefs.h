@@ -30,6 +30,11 @@ typedef UINT64 GUEST_VIRTUAL_ADDRESS;
 typedef UINT64 GUEST_PHYSICAL_ADDRESS;
 
 //
+// Define verbose function pointer type
+//
+typedef void (*VM_SAVED_STATE_DUMP_VERBOSE_HANDLER)(LPCWSTR Message);
+
+//
 // Define paging modes
 //
 typedef enum PAGING_MODE

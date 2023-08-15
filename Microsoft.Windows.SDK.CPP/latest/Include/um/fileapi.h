@@ -632,12 +632,6 @@ GetFileAttributesExW(
 #define GetFileAttributesEx  GetFileAttributesExA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 typedef struct _BY_HANDLE_FILE_INFORMATION {
     DWORD dwFileAttributes;
     FILETIME ftCreationTime;
@@ -659,6 +653,12 @@ GetFileInformationByHandle(
     _Out_ LPBY_HANDLE_FILE_INFORMATION lpFileInformation
     );
 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 DWORD
@@ -733,6 +733,12 @@ GetFileTime(
     );
 
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINBASEAPI
 _Success_(return != 0 && return < nBufferLength)
 DWORD
@@ -764,6 +770,12 @@ GetFullPathNameA(
 #ifndef UNICODE
 #define GetFullPathName GetFullPathNameA
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 DWORD

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -29,6 +29,13 @@ struct WINRT_EBO IAppBarTemplateSettings :
     impl::consume_t<IAppBarTemplateSettings>
 {
     IAppBarTemplateSettings(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IAppBarTemplateSettings2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAppBarTemplateSettings2>
+{
+    IAppBarTemplateSettings2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IAppBarToggleButtonTemplateSettings :
@@ -185,6 +192,13 @@ struct WINRT_EBO ICommandBarTemplateSettings3 :
     ICommandBarTemplateSettings3(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ICommandBarTemplateSettings4 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICommandBarTemplateSettings4>
+{
+    ICommandBarTemplateSettings4(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IDragCompletedEventArgs :
     Windows::Foundation::IInspectable,
     impl::consume_t<IDragCompletedEventArgs>
@@ -262,6 +276,13 @@ struct WINRT_EBO IFlyoutBase5 :
     IFlyoutBase5(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IFlyoutBase6 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IFlyoutBase6>
+{
+    IFlyoutBase6(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IFlyoutBaseClosingEventArgs :
     Windows::Foundation::IInspectable,
     impl::consume_t<IFlyoutBaseClosingEventArgs>
@@ -316,6 +337,13 @@ struct WINRT_EBO IFlyoutBaseStatics5 :
     impl::consume_t<IFlyoutBaseStatics5>
 {
     IFlyoutBaseStatics5(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IFlyoutBaseStatics6 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IFlyoutBaseStatics6>
+{
+    IFlyoutBaseStatics6(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IFlyoutShowOptions :
@@ -633,6 +661,13 @@ struct WINRT_EBO IPopup2 :
     IPopup2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IPopup3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPopup3>
+{
+    IPopup3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IPopupStatics :
     Windows::Foundation::IInspectable,
     impl::consume_t<IPopupStatics>
@@ -645,6 +680,13 @@ struct WINRT_EBO IPopupStatics2 :
     impl::consume_t<IPopupStatics2>
 {
     IPopupStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPopupStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPopupStatics3>
+{
+    IPopupStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IProgressBarTemplateSettings :

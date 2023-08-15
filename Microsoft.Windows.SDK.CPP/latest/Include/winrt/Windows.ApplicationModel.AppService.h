@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.appservice.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceCatalogStatics;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceCatalogStatics ABI::Windows::ApplicationModel::AppService::IAppServiceCatalogStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceCatalogStatics_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceClosedEventArgs;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceClosedEventArgs ABI::Windows::ApplicationModel::AppService::IAppServiceClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceClosedEventArgs_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceConnection;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection ABI::Windows::ApplicationModel::AppService::IAppServiceConnection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
@@ -321,12 +317,26 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceConnection2;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection2 ABI::Windows::ApplicationModel::AppService::IAppServiceConnection2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                interface IAppServiceConnectionStatics;
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics ABI::Windows::ApplicationModel::AppService::IAppServiceConnectionStatics
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral_FWD_DEFINED__
@@ -335,9 +345,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceDeferral;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral ABI::Windows::ApplicationModel::AppService::IAppServiceDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral_FWD_DEFINED__
@@ -349,9 +359,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceRequest;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequest ABI::Windows::ApplicationModel::AppService::IAppServiceRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequest_FWD_DEFINED__
@@ -363,9 +373,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceRequestReceivedEventArgs;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs ABI::Windows::ApplicationModel::AppService::IAppServiceRequestReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs_FWD_DEFINED__
@@ -377,9 +387,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceResponse;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceResponse ABI::Windows::ApplicationModel::AppService::IAppServiceResponse
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceResponse_FWD_DEFINED__
@@ -391,9 +401,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceTriggerDetails;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails ABI::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails_FWD_DEFINED__
@@ -405,9 +415,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceTriggerDetails2;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails2 ABI::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails2_FWD_DEFINED__
@@ -419,12 +429,40 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceTriggerDetails3;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails3 ABI::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                interface IAppServiceTriggerDetails4;
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 ABI::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails4
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                interface IStatelessAppServiceResponse;
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse ABI::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -434,9 +472,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 enum AppServiceConnectionStatus : int;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus_USE
@@ -457,7 +495,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::AppService:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::AppService::AppServiceConnectionStatus> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::AppServiceConnectionStatus>
@@ -487,7 +525,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::AppService::AppServiceConne
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::AppService::AppServiceConnectionStatus> __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceConnectionStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::AppService::AppServiceConnectionStatus>
@@ -502,9 +540,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceResponse;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -527,7 +565,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::AppS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::AppServiceResponse*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponse_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponse ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponse_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponse ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::IAppServiceResponse*>
@@ -559,7 +597,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::AppService::AppServiceResponse*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::AppService::AppServiceResponse*> __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponse_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponse ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponse_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponse ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::AppService::IAppServiceResponse*>
@@ -575,9 +613,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 enum AppServiceResponseStatus : int;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus_USE
@@ -598,7 +636,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::AppService:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::AppService::AppServiceResponseStatus> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::AppServiceResponseStatus>
@@ -628,7 +666,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::AppService::AppServiceRespo
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::AppService::AppServiceResponseStatus> __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServiceResponseStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::AppService::AppServiceResponseStatus>
@@ -642,10 +680,83 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace AppService {
-                class AppServiceConnection;
-            } /* Windows */
+                class StatelessAppServiceResponse;
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("4d1ee4ed-4d79-53fa-a9d7-c9c9354e4f55"))
+IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::StatelessAppServiceResponse*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::AppService::StatelessAppServiceResponse*, ABI::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.ApplicationModel.AppService.StatelessAppServiceResponse>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::StatelessAppServiceResponse*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse*>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_USE
+#define DEF___FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("b2a1524e-beab-5beb-aae9-b43501c3a488"))
+IAsyncOperation<ABI::Windows::ApplicationModel::AppService::StatelessAppServiceResponse*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::AppService::StatelessAppServiceResponse*, ABI::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.StatelessAppServiceResponse>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::ApplicationModel::AppService::StatelessAppServiceResponse*> __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_t;
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse*>
+//#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                class AppServiceConnection;
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -653,9 +764,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceClosedEventArgs;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -679,7 +790,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::AppService::AppServiceConnect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::AppService::AppServiceConnection*,ABI::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::AppService::IAppServiceConnection*,ABI::Windows::ApplicationModel::AppService::IAppServiceClosedEventArgs*>
@@ -697,9 +808,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceRequestReceivedEventArgs;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -723,7 +834,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::AppService::AppServiceConnect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::AppService::AppServiceConnection*,ABI::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::AppService::IAppServiceConnection*,ABI::Windows::ApplicationModel::AppService::IAppServiceRequestReceivedEventArgs*>
@@ -739,8 +850,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -748,8 +859,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInfo ABI::Windows::ApplicationModel::IAppInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -775,7 +886,7 @@ IIterator<ABI::Windows::ApplicationModel::AppInfo*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::AppInfo*> __FIIterator_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -807,7 +918,7 @@ IIterable<ABI::Windows::ApplicationModel::AppInfo*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::AppInfo*> __FIIterable_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -839,7 +950,7 @@ IVectorView<ABI::Windows::ApplicationModel::AppInfo*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::AppInfo*> __FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -871,7 +982,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>*>
@@ -903,7 +1014,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>*>
@@ -934,7 +1045,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -964,7 +1075,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -994,7 +1105,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1024,7 +1135,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1054,7 +1165,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1083,7 +1194,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -1113,7 +1224,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -1143,7 +1254,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -1172,7 +1283,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1201,7 +1312,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1221,9 +1332,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1232,9 +1343,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1249,8 +1360,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1264,9 +1375,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemConnectionRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_FWD_DEFINED__
@@ -1275,9 +1386,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_FWD_DEFINED__
@@ -1290,8 +1401,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1299,8 +1410,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1315,9 +1426,9 @@ namespace ABI {
                 
                 typedef enum AppServiceClosedStatus : int AppServiceClosedStatus;
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1326,9 +1437,9 @@ namespace ABI {
                 
                 typedef enum AppServiceConnectionStatus : int AppServiceConnectionStatus;
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1337,9 +1448,23 @@ namespace ABI {
                 
                 typedef enum AppServiceResponseStatus : int AppServiceResponseStatus;
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                
+                typedef enum StatelessAppServiceResponseStatus : int StatelessAppServiceResponseStatus;
+                
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
+
+
 
 
 
@@ -1360,9 +1485,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceDeferral;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1370,9 +1495,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceRequest;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1382,9 +1507,10 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceTriggerDetails;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -1418,9 +1544,9 @@ namespace ABI {
                     AppServiceClosedStatus_Unknown = 3,
                 };
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1463,9 +1589,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1502,10 +1628,46 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                /* [v1_enum, contract] */
+                enum StatelessAppServiceResponseStatus : int
+                {
+                    StatelessAppServiceResponseStatus_Success = 0,
+                    StatelessAppServiceResponseStatus_AppNotInstalled = 1,
+                    StatelessAppServiceResponseStatus_AppUnavailable = 2,
+                    StatelessAppServiceResponseStatus_AppServiceUnavailable = 3,
+                    StatelessAppServiceResponseStatus_RemoteSystemUnavailable = 4,
+                    StatelessAppServiceResponseStatus_RemoteSystemNotSupportedByApp = 5,
+                    StatelessAppServiceResponseStatus_NotAuthorized = 6,
+                    StatelessAppServiceResponseStatus_ResourceLimitsExceeded = 7,
+                    StatelessAppServiceResponseStatus_MessageSizeTooLarge = 8,
+                    StatelessAppServiceResponseStatus_Failure = 9,
+                    StatelessAppServiceResponseStatus_Unknown = 10,
+                };
+                
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1541,9 +1703,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceCatalogStatics=_uuidof(IAppServiceCatalogStatics);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceCatalogStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceCatalogStatics_INTERFACE_DEFINED__) */
@@ -1582,9 +1744,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceClosedEventArgs=_uuidof(IAppServiceClosedEventArgs);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceClosedEventArgs_INTERFACE_DEFINED__) */
@@ -1599,10 +1761,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServi
  *
  *
  * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.AppServiceConnection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -1657,9 +1815,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceConnection=_uuidof(IAppServiceConnection);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_INTERFACE_DEFINED__) */
@@ -1705,13 +1863,57 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceConnection2=_uuidof(IAppServiceConnection2);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.AppService.IAppServiceConnectionStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.AppServiceConnection
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_AppService_IAppServiceConnectionStatics[] = L"Windows.ApplicationModel.AppService.IAppServiceConnectionStatics";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                /* [object, uuid("ADC56CE9-D408-5673-8637-827A4B274168"), exclusiveto, contract] */
+                MIDL_INTERFACE("ADC56CE9-D408-5673-8637-827A4B274168")
+                IAppServiceConnectionStatics : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE SendStatelessMessageAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::AppService::IAppServiceConnection * connection,
+                        /* [in] */__RPC__in_opt ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest * connectionRequest,
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * message,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * * operation
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IAppServiceConnectionStatics=_uuidof(IAppServiceConnectionStatics);
+                
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1744,9 +1946,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceDeferral=_uuidof(IAppServiceDeferral);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral_INTERFACE_DEFINED__) */
@@ -1789,9 +1991,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceRequest=_uuidof(IAppServiceRequest);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequest_INTERFACE_DEFINED__) */
@@ -1826,16 +2028,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::AppService::IAppServiceRequest * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::AppService::IAppServiceDeferral * * value
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::AppService::IAppServiceDeferral * * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceRequestReceivedEventArgs=_uuidof(IAppServiceRequestReceivedEventArgs);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -1877,9 +2079,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceResponse=_uuidof(IAppServiceResponse);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceResponse;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceResponse_INTERFACE_DEFINED__) */
@@ -1924,9 +2126,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceTriggerDetails=_uuidof(IAppServiceTriggerDetails);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails_INTERFACE_DEFINED__) */
@@ -1958,16 +2160,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRemoteSystemConnection(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceTriggerDetails2=_uuidof(IAppServiceTriggerDetails2);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails2_INTERFACE_DEFINED__) */
@@ -2007,13 +2209,98 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppServiceTriggerDetails3=_uuidof(IAppServiceTriggerDetails3);
                 
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.AppServiceTriggerDetails
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_AppService_IAppServiceTriggerDetails4[] = L"Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                /* [object, uuid("1185B180-8861-5E30-AB55-1CF4D08BBF6D"), exclusiveto, contract] */
+                MIDL_INTERFACE("1185B180-8861-5E30-AB55-1CF4D08BBF6D")
+                IAppServiceTriggerDetails4 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CallerRemoteConnectionToken(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IAppServiceTriggerDetails4=_uuidof(IAppServiceTriggerDetails4);
+                
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.StatelessAppServiceResponse
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_AppService_IStatelessAppServiceResponse[] = L"Windows.ApplicationModel.AppService.IStatelessAppServiceResponse";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace AppService {
+                /* [object, uuid("43754AF7-A9EC-52FE-82E7-939B68DC9388"), exclusiveto, contract] */
+                MIDL_INTERFACE("43754AF7-A9EC-52FE-82E7-939B68DC9388")
+                IStatelessAppServiceResponse : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Message(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Status(
+                        /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IStatelessAppServiceResponse=_uuidof(IStatelessAppServiceResponse);
+                
+            } /* AppService */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2025,6 +2312,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServi
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.AppService.IAppServiceCatalogStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2044,8 +2335,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -2069,10 +2358,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.AppService.IAppServiceConnectionStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceConnection ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.ApplicationModel.AppService.IAppServiceConnection2
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -2098,8 +2390,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceDeferral ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -2121,8 +2411,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceRequest ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -2146,8 +2434,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -2169,8 +2455,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceResponse ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -2195,8 +2479,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails ** Default Interface **
  *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2
  *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -2208,6 +2491,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_AppService_AppServiceTriggerDetails[] = L"Windows.ApplicationModel.AppService.AppServiceTriggerDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.ApplicationModel.AppService.StatelessAppServiceResponse
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.ApplicationModel.AppService.IStatelessAppServiceResponse ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_ApplicationModel_AppService_StatelessAppServiceResponse_DEFINED
+#define RUNTIMECLASS_Windows_ApplicationModel_AppService_StatelessAppServiceResponse_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_AppService_StatelessAppServiceResponse[] = L"Windows.ApplicationModel.AppService.StatelessAppServiceResponse";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 
@@ -2237,6 +2542,12 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceCon
 typedef interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection2 __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection2;
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral_FWD_DEFINED__
@@ -2279,6 +2590,18 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTri
 typedef interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails3 __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails3;
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -2621,6 +2944,121 @@ interface __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CAppServ
 
 
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponseVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponseVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponseVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse;
+
+typedef struct __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponseVtbl;
+
+interface __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponseVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2642,7 +3080,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceClosedEventArgsVtbl;
 
@@ -2695,7 +3133,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppService__CAppServiceConnection_Windows__CApplicationModel__CAppService__CAppServiceRequestReceivedEventArgsVtbl;
 
@@ -3848,6 +4286,13 @@ typedef enum __x_ABI_CWindows_CApplicationModel_CAppService_CAppServiceConnectio
 typedef enum __x_ABI_CWindows_CApplicationModel_CAppService_CAppServiceResponseStatus __x_ABI_CWindows_CApplicationModel_CAppService_CAppServiceResponseStatus;
 
 
+typedef enum __x_ABI_CWindows_CApplicationModel_CAppService_CStatelessAppServiceResponseStatus __x_ABI_CWindows_CApplicationModel_CAppService_CStatelessAppServiceResponseStatus;
+
+
+
+
+
+
 
 
 
@@ -3961,6 +4406,34 @@ enum __x_ABI_CWindows_CApplicationModel_CAppService_CAppServiceResponseStatus
     
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, contract] */
+enum __x_ABI_CWindows_CApplicationModel_CAppService_CStatelessAppServiceResponseStatus
+{
+    StatelessAppServiceResponseStatus_Success = 0,
+    StatelessAppServiceResponseStatus_AppNotInstalled = 1,
+    StatelessAppServiceResponseStatus_AppUnavailable = 2,
+    StatelessAppServiceResponseStatus_AppServiceUnavailable = 3,
+    StatelessAppServiceResponseStatus_RemoteSystemUnavailable = 4,
+    StatelessAppServiceResponseStatus_RemoteSystemNotSupportedByApp = 5,
+    StatelessAppServiceResponseStatus_NotAuthorized = 6,
+    StatelessAppServiceResponseStatus_ResourceLimitsExceeded = 7,
+    StatelessAppServiceResponseStatus_MessageSizeTooLarge = 8,
+    StatelessAppServiceResponseStatus_Failure = 9,
+    StatelessAppServiceResponseStatus_Unknown = 10,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4158,10 +4631,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServi
  *
  *
  * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.AppServiceConnection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -4423,6 +4892,102 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServi
 
 /*
  *
+ * Interface Windows.ApplicationModel.AppService.IAppServiceConnectionStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.AppServiceConnection
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_AppService_IAppServiceConnectionStatics[] = L"Windows.ApplicationModel.AppService.IAppServiceConnectionStatics";
+/* [object, uuid("ADC56CE9-D408-5673-8637-827A4B274168"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *SendStatelessMessageAsync )(
+        __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection * connection,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest * connectionRequest,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * message,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CApplicationModel__CAppService__CStatelessAppServiceResponse * * operation
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStaticsVtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStaticsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_SendStatelessMessageAsync(This,connection,connectionRequest,message,operation) \
+    ( (This)->lpVtbl->SendStatelessMessageAsync(This,connection,connectionRequest,message,operation) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnectionStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.ApplicationModel.AppService.IAppServiceDeferral
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -4669,7 +5234,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         );
     HRESULT ( STDMETHODCALLTYPE *GetDeferral )(
         __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral * * value
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceDeferral * * result
         );
     END_INTERFACE
     
@@ -4702,8 +5267,8 @@ interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestRece
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs_get_Request(This,value) \
     ( (This)->lpVtbl->get_Request(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs_GetDeferral(This,value) \
-    ( (This)->lpVtbl->GetDeferral(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceRequestReceivedEventArgs_GetDeferral(This,result) \
+    ( (This)->lpVtbl->GetDeferral(This,result) )
 
 
 #endif /* COBJMACROS */
@@ -5110,6 +5675,199 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServi
 
 /*
  *
+ * Interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.AppServiceTriggerDetails
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_AppService_IAppServiceTriggerDetails4[] = L"Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4";
+/* [object, uuid("1185B180-8861-5E30-AB55-1CF4D08BBF6D"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CallerRemoteConnectionToken )(
+        __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4 * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4Vtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_get_CallerRemoteConnectionToken(This,value) \
+    ( (This)->lpVtbl->get_CallerRemoteConnectionToken(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceTriggerDetails4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppService.StatelessAppServiceResponse
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_AppService_IStatelessAppServiceResponse[] = L"Windows.ApplicationModel.AppService.IStatelessAppServiceResponse";
+/* [object, uuid("43754AF7-A9EC-52FE-82E7-939B68DC9388"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Message )(
+        __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Status )(
+        __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CApplicationModel_CAppService_CStatelessAppServiceResponseStatus * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponseVtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponseVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_get_Message(This,value) \
+    ( (This)->lpVtbl->get_Message(This,value) )
+
+#define __x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_get_Status(This,value) \
+    ( (This)->lpVtbl->get_Status(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppService_CIStatelessAppServiceResponse_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.ApplicationModel.AppService.AppServiceCatalog
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -5117,6 +5875,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppService_CIAppServi
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.AppService.IAppServiceCatalogStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -5136,8 +5898,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5161,10 +5921,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.AppService.IAppServiceConnectionStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceConnection ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.ApplicationModel.AppService.IAppServiceConnection2
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5190,8 +5953,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceDeferral ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -5213,8 +5974,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceRequest ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5238,8 +5997,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -5261,8 +6018,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.AppService.IAppServiceResponse ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5287,8 +6042,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails ** Default Interface **
  *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2
  *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5300,6 +6054,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_AppService_AppServiceTriggerDetails[] = L"Windows.ApplicationModel.AppService.AppServiceTriggerDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.ApplicationModel.AppService.StatelessAppServiceResponse
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.ApplicationModel.AppService.IStatelessAppServiceResponse ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_ApplicationModel_AppService_StatelessAppServiceResponse_DEFINED
+#define RUNTIMECLASS_Windows_ApplicationModel_AppService_StatelessAppServiceResponse_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_AppService_StatelessAppServiceResponse[] = L"Windows.ApplicationModel.AppService.StatelessAppServiceResponse";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -56,7 +56,7 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Holographic {
 
 struct WINRT_EBO HolographicCamera :
     Windows::Graphics::Holographic::IHolographicCamera,
-    impl::require<HolographicCamera, Windows::Graphics::Holographic::IHolographicCamera2, Windows::Graphics::Holographic::IHolographicCamera3, Windows::Graphics::Holographic::IHolographicCamera4, Windows::Graphics::Holographic::IHolographicCamera5>
+    impl::require<HolographicCamera, Windows::Graphics::Holographic::IHolographicCamera2, Windows::Graphics::Holographic::IHolographicCamera3, Windows::Graphics::Holographic::IHolographicCamera4, Windows::Graphics::Holographic::IHolographicCamera5, Windows::Graphics::Holographic::IHolographicCamera6>
 {
     HolographicCamera(std::nullptr_t) noexcept {}
 };
@@ -83,7 +83,7 @@ struct WINRT_EBO HolographicCameraViewportParameters :
 
 struct WINRT_EBO HolographicDisplay :
     Windows::Graphics::Holographic::IHolographicDisplay,
-    impl::require<HolographicDisplay, Windows::Graphics::Holographic::IHolographicDisplay2>
+    impl::require<HolographicDisplay, Windows::Graphics::Holographic::IHolographicDisplay2, Windows::Graphics::Holographic::IHolographicDisplay3>
 {
     HolographicDisplay(std::nullptr_t) noexcept {}
     static Windows::Graphics::Holographic::HolographicDisplay GetDefault();
@@ -155,6 +155,12 @@ struct WINRT_EBO HolographicSpaceCameraRemovedEventArgs :
     Windows::Graphics::Holographic::IHolographicSpaceCameraRemovedEventArgs
 {
     HolographicSpaceCameraRemovedEventArgs(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO HolographicViewConfiguration :
+    Windows::Graphics::Holographic::IHolographicViewConfiguration
+{
+    HolographicViewConfiguration(std::nullptr_t) noexcept {}
 };
 
 }

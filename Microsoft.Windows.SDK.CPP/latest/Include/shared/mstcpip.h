@@ -350,8 +350,8 @@ typedef struct {
 #ifdef _WS2DEF_
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 #define _SECURE_SOCKET_TYPES_DEFINED_
 
 //
@@ -501,7 +501,7 @@ typedef struct _SOCKET_SECURITY_QUERY_INFO_IPSEC2
 
 #define SIO_QUERY_WFP_ALE_ENDPOINT_HANDLE _WSAIOR(IOC_VENDOR, 205)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 //
@@ -1703,6 +1703,9 @@ INET_UNCANONICALIZE_SCOPE_ID(
 //
 #ifdef _WS2DEF_
 
+#pragma region Desktop Family or Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 NTSYSAPI
 PSTR
 NTAPI
@@ -1791,9 +1794,14 @@ RtlIpv4StringToAddressExW (
 #define RtlIpv4StringToAddressEx RtlIpv4StringToAddressExA
 #endif // UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+
 #endif //_WS2DEF_
 
 #ifdef _WS2IPDEF_
+
+#pragma region Desktop Family or Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 NTSYSAPI
 PSTR
@@ -1883,12 +1891,17 @@ RtlIpv6StringToAddressExW (
 #define RtlIpv6AddressToStringEx RtlIpv6AddressToStringExA
 #endif // UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+
 #endif // __WS2IPDEF__
 
 //
 //  Some simple Rtl routines for Ethernet address <-> string literal conversion
 //
 #ifdef _WS2DEF_
+
+#pragma region Desktop Family or Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 union _DL_EUI48;
 typedef union _DL_EUI48 DL_EUI48, *PDL_EUI48;
@@ -1935,6 +1948,8 @@ RtlEthernetStringToAddressW (
 #define RtlEthernetStringToAddress RtlEthernetStringToAddressA
 #endif // UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+
 #endif //_WS2DEF_
 
 #endif // (NTDDI >= NTDDI_VISTA)
@@ -1958,5 +1973,4 @@ RtlEthernetStringToAddressW (
 #endif // GUID_DEFS_ONLY
 
 #endif // !_MSTCPIP_
-
 

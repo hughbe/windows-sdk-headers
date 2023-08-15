@@ -26,14 +26,22 @@ Revision History:
 
 #include <winapifamily.h>
 
+#define NONGAMESPARTITIONS WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PKG_WER
+
 #pragma region Desktop Family or WER Package
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PKG_WER)
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 
 // As a general principal always call the 64 bit version
 // of every API, if a choice exists.  The 64 bit version
 // works great on 32 bit platforms, and is forward
 // compatible to 64 bit platforms.
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
 
 #ifdef _WIN64
 #ifndef _IMAGEHLP64
@@ -61,6 +69,12 @@ extern "C" {
 #endif
 
 #define DBHLPAPI IMAGEAPI
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 #define IMAGE_SEPARATION (64*1024)
 
@@ -94,7 +108,19 @@ typedef struct _LOADED_IMAGE {
     ULONG                 SizeOfImage;
 } LOADED_IMAGE, *PLOADED_IMAGE;
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 #define MAX_SYM_NAME            2000
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 
 // Error codes set by dbghelp functions.  Call GetLastError
@@ -488,6 +514,13 @@ UnDecorateSymbolNameW(
 #define DBHHEADER_DEBUGDIRS     0x1
 #define DBHHEADER_CVMISC        0x2
 #define DBHHEADER_PDBGUID       0x3
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 typedef struct _MODLOAD_DATA {
     DWORD   ssize;                  // size of this struct
     DWORD   ssig;                   // signature identifying the passed data
@@ -495,6 +528,12 @@ typedef struct _MODLOAD_DATA {
     DWORD   size;                   // size of passed data
     DWORD   flags;                  // options
 } MODLOAD_DATA, *PMODLOAD_DATA;
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 typedef struct _MODLOAD_CVMISC {
     DWORD   oCV;                    // ofset to the codeview record
@@ -514,6 +553,12 @@ typedef struct _MODLOAD_PDBGUID_PDBAGE {
 // StackWalking API
 //
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 typedef enum {
     AddrMode1616,
     AddrMode1632,
@@ -526,6 +571,12 @@ typedef struct _tagADDRESS64 {
     WORD          Segment;
     ADDRESS_MODE  Mode;
 } ADDRESS64, *LPADDRESS64;
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 #if !defined(_IMAGEHLP_SOURCE_) && defined(_IMAGEHLP64)
 #define ADDRESS ADDRESS64
@@ -561,6 +612,12 @@ Address64To32(
     a32->Mode = a64->Mode;
 }
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
 
 //
 // This structure is included in the STACKFRAME structure,
@@ -706,6 +763,12 @@ typedef struct _KDHELP {
 
 } KDHELP, *PKDHELP;
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+
 __inline
 void
 KdHelp32To64(
@@ -726,6 +789,12 @@ KdHelp32To64(
 }
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 typedef struct _tagSTACKFRAME64 {
     ADDRESS64   AddrPC;               // program counter
     ADDRESS64   AddrReturn;           // return address
@@ -739,6 +808,12 @@ typedef struct _tagSTACKFRAME64 {
     DWORD64     Reserved[3];
     KDHELP64    KdHelp;
 } STACKFRAME64, *LPSTACKFRAME64;
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 #define INLINE_FRAME_CONTEXT_INIT   0
 #define INLINE_FRAME_CONTEXT_IGNORE 0xFFFFFFFF
@@ -780,6 +855,12 @@ typedef struct _tagSTACKFRAME {
     ADDRESS     AddrBStore;           // backing store pointer
 } STACKFRAME, *LPSTACKFRAME;
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
 
 typedef
 BOOL
@@ -826,6 +907,12 @@ StackWalk64(
     _In_opt_ PGET_MODULE_BASE_ROUTINE64 GetModuleBaseRoutine,
     _In_opt_ PTRANSLATE_ADDRESS_ROUTINE64 TranslateAddress
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 #define SYM_STKWALK_DEFAULT        0x00000000
 #define SYM_STKWALK_FORCE_FRAMEPTR 0x00000001
@@ -1149,6 +1236,12 @@ enum SymTagEnum
 
 #define SYMFLAG_RESET            0x80000000
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 //
 // symbol type enumeration
 //
@@ -1380,6 +1473,12 @@ typedef struct _IMAGEHLP_LINEW {
 } IMAGEHLP_LINEW, *PIMAGEHLP_LINEW;
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+
 //
 // source file structure
 //
@@ -1575,47 +1674,67 @@ SymGetOmaps(
     _Out_ PDWORD64 cOmapFrom
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 //
 // options that are set/returned by SymSetOptions() & SymGetOptions()
 // these are used as a mask
 //
-#define SYMOPT_CASE_INSENSITIVE          0x00000001
-#define SYMOPT_UNDNAME                   0x00000002
-#define SYMOPT_DEFERRED_LOADS            0x00000004
-#define SYMOPT_NO_CPP                    0x00000008
-#define SYMOPT_LOAD_LINES                0x00000010
-#define SYMOPT_OMAP_FIND_NEAREST         0x00000020
-#define SYMOPT_LOAD_ANYTHING             0x00000040
-#define SYMOPT_IGNORE_CVREC              0x00000080
-#define SYMOPT_NO_UNQUALIFIED_LOADS      0x00000100
-#define SYMOPT_FAIL_CRITICAL_ERRORS      0x00000200
-#define SYMOPT_EXACT_SYMBOLS             0x00000400
-#define SYMOPT_ALLOW_ABSOLUTE_SYMBOLS    0x00000800
-#define SYMOPT_IGNORE_NT_SYMPATH         0x00001000
-#define SYMOPT_INCLUDE_32BIT_MODULES     0x00002000
-#define SYMOPT_PUBLICS_ONLY              0x00004000
-#define SYMOPT_NO_PUBLICS                0x00008000
-#define SYMOPT_AUTO_PUBLICS              0x00010000
-#define SYMOPT_NO_IMAGE_SEARCH           0x00020000
-#define SYMOPT_SECURE                    0x00040000
-#define SYMOPT_NO_PROMPTS                0x00080000
-#define SYMOPT_OVERWRITE                 0x00100000
-#define SYMOPT_IGNORE_IMAGEDIR           0x00200000
-#define SYMOPT_FLAT_DIRECTORY            0x00400000
-#define SYMOPT_FAVOR_COMPRESSED          0x00800000
-#define SYMOPT_ALLOW_ZERO_ADDRESS        0x01000000
-#define SYMOPT_DISABLE_SYMSRV_AUTODETECT 0x02000000
-#define SYMOPT_READONLY_CACHE            0x04000000
-#define SYMOPT_SYMPATH_LAST              0x08000000
-#define SYMOPT_DISABLE_FAST_SYMBOLS      0x10000000
-#define SYMOPT_DISABLE_SYMSRV_TIMEOUT    0x20000000
-#define SYMOPT_DISABLE_SRVSTAR_ON_STARTUP 0x40000000
-#define SYMOPT_DEBUG                     0x80000000
+
+ #define SYMOPT_CASE_INSENSITIVE          0x00000001
+ #define SYMOPT_UNDNAME                   0x00000002
+ #define SYMOPT_DEFERRED_LOADS            0x00000004
+ #define SYMOPT_NO_CPP                    0x00000008
+ #define SYMOPT_LOAD_LINES                0x00000010
+ #define SYMOPT_OMAP_FIND_NEAREST         0x00000020
+ #define SYMOPT_LOAD_ANYTHING             0x00000040
+ #define SYMOPT_IGNORE_CVREC              0x00000080
+ #define SYMOPT_NO_UNQUALIFIED_LOADS      0x00000100
+ #define SYMOPT_FAIL_CRITICAL_ERRORS      0x00000200
+ #define SYMOPT_EXACT_SYMBOLS             0x00000400
+ #define SYMOPT_ALLOW_ABSOLUTE_SYMBOLS    0x00000800
+ #define SYMOPT_IGNORE_NT_SYMPATH         0x00001000
+ #define SYMOPT_INCLUDE_32BIT_MODULES     0x00002000
+ #define SYMOPT_PUBLICS_ONLY              0x00004000
+ #define SYMOPT_NO_PUBLICS                0x00008000
+ #define SYMOPT_AUTO_PUBLICS              0x00010000
+ #define SYMOPT_NO_IMAGE_SEARCH           0x00020000
+ #define SYMOPT_SECURE                    0x00040000
+ #define SYMOPT_NO_PROMPTS                0x00080000
+ #define SYMOPT_OVERWRITE                 0x00100000
+ #define SYMOPT_IGNORE_IMAGEDIR           0x00200000
+ #define SYMOPT_FLAT_DIRECTORY            0x00400000
+ #define SYMOPT_FAVOR_COMPRESSED          0x00800000
+ #define SYMOPT_ALLOW_ZERO_ADDRESS        0x01000000
+ #define SYMOPT_DISABLE_SYMSRV_AUTODETECT 0x02000000
+ #define SYMOPT_READONLY_CACHE            0x04000000
+ #define SYMOPT_SYMPATH_LAST              0x08000000
+ #define SYMOPT_DISABLE_FAST_SYMBOLS      0x10000000
+ #define SYMOPT_DISABLE_SYMSRV_TIMEOUT    0x20000000
+ #define SYMOPT_DISABLE_SRVSTAR_ON_STARTUP 0x40000000
+ #define SYMOPT_DEBUG                     0x80000000
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */ 
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 typedef enum {
     SYMOPT_EX_DISABLEACCESSTIMEUPDATE, // Disable File Last Access Time on Symbols
+    SYMOPT_EX_LASTVALIDDEBUGDIRECTORY, // For entries with multiple debug directories: prefer the last to the first
     SYMOPT_EX_MAX                      // Unused
 } IMAGEHLP_EXTENDED_OPTIONS;
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
 
 DWORD
 IMAGEAPI
@@ -1628,6 +1747,12 @@ IMAGEAPI
 SymGetOptions(
     VOID
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 BOOL
 IMAGEAPI
@@ -1776,12 +1901,24 @@ EnumerateLoadedModules(
     );
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 PVOID
 IMAGEAPI
 SymFunctionTableAccess64(
     _In_ HANDLE hProcess,
     _In_ DWORD64 AddrBase
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 PVOID
 IMAGEAPI
@@ -1811,6 +1948,12 @@ SymGetUnwindInfo(
     _Out_writes_bytes_opt_(*Size) PVOID Buffer,
     _Inout_ PULONG Size
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
 
 BOOL
 IMAGEAPI
@@ -1867,6 +2010,12 @@ SymGetModuleBase(
     );
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+
 typedef struct _SRCCODEINFO {
     DWORD   SizeOfStruct;           // set to sizeof(SRCCODEINFO)
     PVOID   Key;                    // not used
@@ -1921,6 +2070,12 @@ SymEnumLinesW(
     _In_opt_ PVOID UserContext
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 BOOL
 IMAGEAPI
 SymGetLineFromAddr64(
@@ -1929,6 +2084,12 @@ SymGetLineFromAddr64(
     _Out_ PDWORD pdwDisplacement,
     _Out_ PIMAGEHLP_LINE64 Line64
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 BOOL
 IMAGEAPI
@@ -2305,6 +2466,12 @@ SymEnumSourceFileTokens(
     _In_ PENUMSOURCEFILETOKENSCALLBACK Callback
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 BOOL
 IMAGEAPI
 SymInitialize(
@@ -2320,6 +2487,18 @@ SymInitializeW(
     _In_opt_ PCWSTR UserSearchPath,
     _In_ BOOL fInvadeProcess
     );
+    
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 BOOL
 IMAGEAPI
@@ -2344,12 +2523,24 @@ SymSetSearchPath(
     _In_opt_ PCSTR SearchPath
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 BOOL
 IMAGEAPI
 SymSetSearchPathW(
     _In_ HANDLE hProcess,
     _In_opt_ PCWSTR SearchPath
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 #define SLMFLAG_VIRTUAL     0x1
 #define SLMFLAG_ALT_INDEX   0x2
@@ -2368,6 +2559,12 @@ SymLoadModuleEx(
     _In_opt_ DWORD Flags
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 DWORD64
 IMAGEAPI
 SymLoadModuleExW(
@@ -2380,6 +2577,12 @@ SymLoadModuleExW(
     _In_opt_ PMODLOAD_DATA Data,
     _In_opt_ DWORD Flags
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 BOOL
 IMAGEAPI
@@ -3020,11 +3223,23 @@ SymDeleteSymbolW(
     _In_ DWORD Flags
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 BOOL
 IMAGEAPI
 SymRefreshModuleList(
     _In_ HANDLE hProcess
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 BOOL
 IMAGEAPI
@@ -3225,6 +3440,12 @@ SymSrvStoreFile(
     _In_ DWORD Flags
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 PCWSTR
 IMAGEAPI
 SymSrvStoreFileW(
@@ -3233,6 +3454,12 @@ SymSrvStoreFileW(
     _In_ PCWSTR File,
     _In_ DWORD Flags
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 // used by SymGetSymbolFile's "Type" parameter
 
@@ -3302,6 +3529,12 @@ DbgHelpCreateUserDumpW(
 // ones are recommended.  SymFromName and SymFromAddr provide
 // much more detailed info on the returned symbol.
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 BOOL
 IMAGEAPI
 SymGetSymFromAddr64(
@@ -3324,6 +3557,12 @@ SymGetSymFromAddr(
     _Inout_ PIMAGEHLP_SYMBOL Symbol
     );
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 // While following two APIs will provide a symbol from a name,
 // SymEnumSymbols can provide the same matching information
@@ -3459,21 +3698,34 @@ typedef BOOL (WINAPI *PSYMBOLSERVERSETHTTPAUTHHEADER)(_In_ PCWSTR pszAuthHeader)
 #define SSRVURI_COMPRESSED          SSRVURI_HTTP_COMPRESSED
 #define SSRVURI_FILEPTR             SSRVURI_HTTP_FILEPTR
 
-#define SSRVACTION_TRACE        1
-#define SSRVACTION_QUERYCANCEL  2
-#define SSRVACTION_EVENT        3
-#define SSRVACTION_EVENTW       4
-#define SSRVACTION_SIZE         5
-#define SSRVACTION_HTTPSTATUS   6
-#define SSRVACTION_XMLOUTPUT    7
+#define SSRVACTION_TRACE            1
+#define SSRVACTION_QUERYCANCEL      2
+#define SSRVACTION_EVENT            3
+#define SSRVACTION_EVENTW           4
+#define SSRVACTION_SIZE             5
+#define SSRVACTION_HTTPSTATUS       6
+#define SSRVACTION_XMLOUTPUT        7
+#define SSRVACTION_CHECKSUMSTATUS   8
 
-#define SYMSTOREOPT_COMPRESS        0x01
-#define SYMSTOREOPT_OVERWRITE       0x02
-#define SYMSTOREOPT_RETURNINDEX     0x04
-#define SYMSTOREOPT_POINTER         0x08
-#define SYMSTOREOPT_ALT_INDEX       0x10
-#define SYMSTOREOPT_UNICODE         0x20
-#define SYMSTOREOPT_PASS_IF_EXISTS  0x40
+#endif WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+ 
+ #define SYMSTOREOPT_COMPRESS        0x01
+ #define SYMSTOREOPT_OVERWRITE       0x02
+ #define SYMSTOREOPT_RETURNINDEX     0x04
+ #define SYMSTOREOPT_POINTER         0x08
+ #define SYMSTOREOPT_ALT_INDEX       0x10
+ #define SYMSTOREOPT_UNICODE         0x20
+ #define SYMSTOREOPT_PASS_IF_EXISTS  0x40
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 #ifdef DBGHELP_TRANSLATE_TCHAR
  #define SymInitialize                     SymInitializeW
@@ -3572,7 +3824,10 @@ typedef BOOL (WINAPI *PSYMBOLSERVERSETHTTPAUTHHEADER)(_In_ PCWSTR pszAuthHeader)
 
  #define PSYMBOLSERVERPROC                 PSYMBOLSERVERPROCW
  #define PSYMBOLSERVERPINGPROC             PSYMBOLSERVERPINGPROCW
-#endif
+
+#pragma endregion
+#endif WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+
 
 // -----------------------------------------------------------------
 // The following APIs exist only for backwards compatibility
@@ -3907,13 +4162,19 @@ RangeMapWrite(
     _Out_opt_ PDWORD DoneBytes
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
 #include <poppack.h>
 
 
 #include <minidumpapiset.h>
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PKG_WER) */
+#endif /* WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS) */
 #pragma endregion
 
 #endif // _DBGHELP_

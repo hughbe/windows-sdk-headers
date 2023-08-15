@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.exchangeactivesyncprovisioning.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -144,9 +144,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 interface IEasClientDeviceInformation;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation ABI::Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation
 
 #endif // ____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation_FWD_DEFINED__
@@ -158,9 +158,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 interface IEasClientDeviceInformation2;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation2 ABI::Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2
 
 #endif // ____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation2_FWD_DEFINED__
@@ -172,9 +172,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 interface IEasClientSecurityPolicy;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientSecurityPolicy ABI::Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy
 
 #endif // ____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientSecurityPolicy_FWD_DEFINED__
@@ -186,9 +186,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 interface IEasComplianceResults;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults ABI::Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults
 
 #endif // ____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults_FWD_DEFINED__
@@ -200,9 +200,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 interface IEasComplianceResults2;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults2 ABI::Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2
 
 #endif // ____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults2_FWD_DEFINED__
@@ -215,9 +215,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 class EasComplianceResults;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
@@ -240,7 +240,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::ExchangeActiveSyncProvis
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults*>
@@ -272,7 +272,7 @@ IAsyncOperation<ABI::Windows::Security::ExchangeActiveSyncProvisioning::EasCompl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults*> __FIAsyncOperation_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CExchangeActiveSyncProvisioning__CEasComplianceResults ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults*>
@@ -291,8 +291,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -305,9 +305,9 @@ namespace ABI {
                 
                 typedef enum EasDisallowConvenienceLogonResult : int EasDisallowConvenienceLogonResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -316,9 +316,9 @@ namespace ABI {
                 
                 typedef enum EasEncryptionProviderType : int EasEncryptionProviderType;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -327,9 +327,9 @@ namespace ABI {
                 
                 typedef enum EasMaxInactivityTimeLockResult : int EasMaxInactivityTimeLockResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -338,9 +338,9 @@ namespace ABI {
                 
                 typedef enum EasMaxPasswordFailedAttemptsResult : int EasMaxPasswordFailedAttemptsResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -349,9 +349,9 @@ namespace ABI {
                 
                 typedef enum EasMinPasswordComplexCharactersResult : int EasMinPasswordComplexCharactersResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -360,9 +360,9 @@ namespace ABI {
                 
                 typedef enum EasMinPasswordLengthResult : int EasMinPasswordLengthResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -371,9 +371,9 @@ namespace ABI {
                 
                 typedef enum EasPasswordExpirationResult : int EasPasswordExpirationResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -382,9 +382,9 @@ namespace ABI {
                 
                 typedef enum EasPasswordHistoryResult : int EasPasswordHistoryResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -393,9 +393,9 @@ namespace ABI {
                 
                 typedef enum EasRequireEncryptionResult : int EasRequireEncryptionResult;
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -407,9 +407,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 class EasClientDeviceInformation;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -417,9 +417,9 @@ namespace ABI {
         namespace Security {
             namespace ExchangeActiveSyncProvisioning {
                 class EasClientSecurityPolicy;
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -455,9 +455,9 @@ namespace ABI {
                     EasDisallowConvenienceLogonResult_RequestedPolicyIsStricter = 3,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -483,9 +483,9 @@ namespace ABI {
                     EasEncryptionProviderType_OtherEncryption = 2,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -513,9 +513,9 @@ namespace ABI {
                     EasMaxInactivityTimeLockResult_InvalidParameter = 4,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -543,9 +543,9 @@ namespace ABI {
                     EasMaxPasswordFailedAttemptsResult_InvalidParameter = 4,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -583,9 +583,9 @@ namespace ABI {
                     EasMinPasswordComplexCharactersResult_ChangeConnectedUserPassword = 14,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -623,9 +623,9 @@ namespace ABI {
                     EasMinPasswordLengthResult_ChangeConnectedUserPassword = 14,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -657,9 +657,9 @@ namespace ABI {
                     EasPasswordExpirationResult_LocalControlledUsersCannotChangePassword = 8,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -687,9 +687,9 @@ namespace ABI {
                     EasPasswordHistoryResult_InvalidParameter = 4,
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -783,9 +783,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_EASCONTRACT_VERSION >= 0x10000
 
 
@@ -836,9 +836,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEasClientDeviceInformation=_uuidof(IEasClientDeviceInformation);
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation_INTERFACE_DEFINED__) */
@@ -884,9 +884,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEasClientDeviceInformation2=_uuidof(IEasClientDeviceInformation2);
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientDeviceInformation2_INTERFACE_DEFINED__) */
@@ -918,10 +918,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequireEncryption(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RequireEncryption(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinPasswordLength(
                         /* [retval, out] */__RPC__out BYTE * value
@@ -930,10 +930,10 @@ namespace ABI {
                         /* [in] */BYTE value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisallowConvenienceLogon(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DisallowConvenienceLogon(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinPasswordComplexCharacters(
                         /* [retval, out] */__RPC__out BYTE * value
@@ -976,9 +976,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEasClientSecurityPolicy=_uuidof(IEasClientSecurityPolicy);
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientSecurityPolicy;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasClientSecurityPolicy_INTERFACE_DEFINED__) */
@@ -1010,7 +1010,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Compliant(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequireEncryptionResult(
                         /* [retval, out] */__RPC__out ABI::Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult * value
@@ -1041,9 +1041,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEasComplianceResults=_uuidof(IEasComplianceResults);
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults_INTERFACE_DEFINED__) */
@@ -1086,9 +1086,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEasComplianceResults2=_uuidof(IEasComplianceResults2);
                 
-            } /* Windows */
+            } /* ExchangeActiveSyncProvisioning */
         } /* Security */
-    } /* ExchangeActiveSyncProvisioning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CExchangeActiveSyncProvisioning_CIEasComplianceResults2_INTERFACE_DEFINED__) */

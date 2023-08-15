@@ -191,6 +191,8 @@ namespace Windows
 
             interface IToastActivatedEventArgs;
 
+            interface IToastActivatedEventArgs2;
+
             interface IToastCollection;
 
             interface IToastCollectionFactory;
@@ -208,6 +210,8 @@ namespace Windows
             interface IToastNotification3;
 
             interface IToastNotification4;
+
+            interface IToastNotification6;
 
             interface IToastNotificationActionTriggerDetail;
 
@@ -1179,6 +1183,14 @@ namespace Windows
                 [propget] HRESULT Arguments([out] [retval] HSTRING* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Notifications.ToastActivatedEventArgs)]
+            [uuid(AB7DA512-CC61-568E-81BE-304AC31038FA)]
+            interface IToastActivatedEventArgs2 : IInspectable
+            {
+                [propget] HRESULT UserInput([out] [retval] Windows.Foundation.Collections.ValueSet** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [exclusiveto(Windows.UI.Notifications.ToastCollection)]
             [uuid(0A8BC3B0-E0BE-4858-BC2A-89DFE0B32863)]
@@ -1280,6 +1292,15 @@ namespace Windows
                 [propput] HRESULT Data([in] Windows.UI.Notifications.NotificationData* value);
                 [propget] HRESULT Priority([out] [retval] Windows.UI.Notifications.ToastNotificationPriority* value);
                 [propput] HRESULT Priority([in] Windows.UI.Notifications.ToastNotificationPriority value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Notifications.ToastNotification)]
+            [uuid(43EBFE53-89AE-5C1E-A279-3AECFE9B6F54)]
+            interface IToastNotification6 : IInspectable
+            {
+                [propget] HRESULT ExpiresOnReboot([out] [retval] boolean* value);
+                [propput] HRESULT ExpiresOnReboot([in] boolean value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1574,6 +1595,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+            [marshaling_behavior(agile)]
             runtimeclass ShownTileNotification
             {
                 [default] interface Windows.UI.Notifications.IShownTileNotification;
@@ -1641,6 +1663,7 @@ namespace Windows
             runtimeclass ToastActivatedEventArgs
             {
                 [default] interface Windows.UI.Notifications.IToastActivatedEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Notifications.IToastActivatedEventArgs2;
             }
 
             [activatable(Windows.UI.Notifications.IToastCollectionFactory, Windows.Foundation.UniversalApiContract, 4.0)]
@@ -1683,6 +1706,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.Notifications.IToastNotification2;
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Notifications.IToastNotification3;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Notifications.IToastNotification4;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Notifications.IToastNotification6;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

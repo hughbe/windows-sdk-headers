@@ -42,6 +42,8 @@ namespace Windows
 {
     namespace Foundation
     {
+        interface IClosable;
+
         typedef struct Point Point;
 
         typedef struct Rect Rect;
@@ -83,9 +85,13 @@ namespace Windows
 
             typedef enum EdgeGestureKind EdgeGestureKind;
 
+            typedef enum GazeInputAccessStatus GazeInputAccessStatus;
+
             typedef enum GestureSettings GestureSettings;
 
             typedef enum HoldingState HoldingState;
+
+            typedef enum InputActivationState InputActivationState;
 
             typedef enum PointerUpdateKind PointerUpdateKind;
 
@@ -98,6 +104,10 @@ namespace Windows
             typedef struct ManipulationDelta ManipulationDelta;
 
             typedef struct ManipulationVelocities ManipulationVelocities;
+
+            interface IAttachableInputObject;
+
+            interface IAttachableInputObjectFactory;
 
             interface ICrossSlidingEventArgs;
 
@@ -112,6 +122,10 @@ namespace Windows
             interface IGestureRecognizer;
 
             interface IHoldingEventArgs;
+
+            interface IInputActivationListener;
+
+            interface IInputActivationListenerActivationChangedEventArgs;
 
             interface IKeyboardDeliveryInterceptor;
 
@@ -197,6 +211,8 @@ namespace Windows
 
             interface ITappedEventArgs;
 
+            runtimeclass AttachableInputObject;
+
             runtimeclass CrossSlidingEventArgs;
 
             runtimeclass DraggingEventArgs;
@@ -208,6 +224,10 @@ namespace Windows
             runtimeclass GestureRecognizer;
 
             runtimeclass HoldingEventArgs;
+
+            runtimeclass InputActivationListener;
+
+            runtimeclass InputActivationListenerActivationChangedEventArgs;
 
             runtimeclass KeyboardDeliveryInterceptor;
 
@@ -291,6 +311,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem*>;
 
+                interface Windows.Foundation.IAsyncOperation<Windows.UI.Input.GazeInputAccessStatus>;
+
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.EdgeGesture*, Windows.UI.Input.EdgeGestureEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.CrossSlidingEventArgs*>;
@@ -310,6 +332,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.RightTappedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.TappedEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.InputActivationListener*, Windows.UI.Input.InputActivationListenerActivationChangedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController*, IInspectable*>;
 
@@ -370,6 +394,15 @@ namespace Windows
                 Mouse    = 2
             };
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            enum GazeInputAccessStatus
+            {
+                Unspecified    = 0,
+                Allowed        = 1,
+                DeniedByUser   = 2,
+                DeniedBySystem = 3
+            };
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [flags]
             enum GestureSettings
@@ -401,6 +434,15 @@ namespace Windows
                 Started   = 0,
                 Completed = 1,
                 Canceled  = 2
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            enum InputActivationState
+            {
+                None                   = 0,
+                Deactivated            = 1,
+                ActivatedNotForeground = 2,
+                ActivatedInForeground  = 3
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -468,6 +510,20 @@ namespace Windows
                 FLOAT Angular;
                 FLOAT Expansion;
             };
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Input.AttachableInputObject)]
+            [uuid(9B822734-A3C1-542A-B2F4-0E32B773FB07)]
+            interface IAttachableInputObject : IInspectable
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Input.AttachableInputObject)]
+            [uuid(A4C54C4E-42BC-58FA-A640-EA1516F4C06B)]
+            interface IAttachableInputObjectFactory : IInspectable
+            {
+            }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Input.CrossSlidingEventArgs)]
@@ -591,6 +647,24 @@ namespace Windows
                 [propget] HRESULT PointerDeviceType([out] [retval] Windows.Devices.Input.PointerDeviceType* value);
                 [propget] HRESULT Position([out] [retval] Windows.Foundation.Point* value);
                 [propget] HRESULT HoldingState([out] [retval] Windows.UI.Input.HoldingState* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Input.InputActivationListener)]
+            [uuid(5D6D4ED2-28C7-5AE3-AA74-C918A9F243CA)]
+            interface IInputActivationListener : IInspectable
+            {
+                [propget] HRESULT State([out] [retval] Windows.UI.Input.InputActivationState* value);
+                [eventadd] HRESULT InputActivationChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.InputActivationListener*, Windows.UI.Input.InputActivationListenerActivationChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT InputActivationChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Input.InputActivationListenerActivationChangedEventArgs)]
+            [uuid(7699B465-1DCF-5791-B4B9-6CAFBEED2056)]
+            interface IInputActivationListenerActivationChangedEventArgs : IInspectable
+            {
+                [propget] HRESULT State([out] [retval] Windows.UI.Input.InputActivationState* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -1047,6 +1121,16 @@ namespace Windows
                 [propget] HRESULT TapCount([out] [retval] UINT32* value);
             }
 
+            [composable(Windows.UI.Input.IAttachableInputObjectFactory, public, Windows.Foundation.UniversalApiContract, 8.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass AttachableInputObject
+            {
+                [default] interface Windows.UI.Input.IAttachableInputObject;
+                interface Windows.Foundation.IClosable;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(none)]
             runtimeclass CrossSlidingEventArgs
@@ -1090,6 +1174,21 @@ namespace Windows
             runtimeclass HoldingEventArgs
             {
                 [default] interface Windows.UI.Input.IHoldingEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass InputActivationListener : Windows.UI.Input.AttachableInputObject
+            {
+                [default] interface Windows.UI.Input.IInputActivationListener;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass InputActivationListenerActivationChangedEventArgs
+            {
+                [default] interface Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]

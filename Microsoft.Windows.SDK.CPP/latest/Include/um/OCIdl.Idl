@@ -180,8 +180,8 @@ interface IOleControlTypes
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
+#pragma region Application Family or OneCore Family or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -330,7 +330,7 @@ interface IConnectionPointContainer : IUnknown
     );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -1710,8 +1710,8 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_P
 
 #if !defined(_NON_DCOM_REMOTING_) && !defined(_DCOM_OC_REMOTING_)
 
-#pragma region Application Family or OneCore Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
+#pragma region Application Family or OneCore Family or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -1775,7 +1775,7 @@ interface IPropertyBag2 : IUnknown
             );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -1849,8 +1849,8 @@ interface IAdviseSinkEx : IAdviseSink
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
+#pragma region Application Family or OneCore Family or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -1924,7 +1924,7 @@ interface IQuickActivate : IUnknown
             );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #endif // #if !defined(_NON_DCOM_REMOTING_) && !defined(_DCOM_OA_REMOTING_)

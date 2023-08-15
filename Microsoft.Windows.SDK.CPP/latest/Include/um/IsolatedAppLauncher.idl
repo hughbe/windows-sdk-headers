@@ -52,6 +52,8 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma region App Family
 cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
+cpp_quote("STDAPI IsProcessInWDAGContainer(_In_ PVOID Reserved, _Out_ BOOL *isProcessInWDAGContainer);")
+
 cpp_quote("STDAPI IsProcessInIsolatedContainer(_Out_ BOOL *isProcessInIsolatedContainer);")
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")

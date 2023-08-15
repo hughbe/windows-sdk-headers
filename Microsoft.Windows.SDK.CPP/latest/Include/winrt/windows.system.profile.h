@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.profile.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_PROFILE_PROFILEHARDWARETOKENCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_PROFILE_PROFILEHARDWARETOKENCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_SYSTEM_PROFILE_PROFILEHARDWARETOKENCONTRACT_VERSION)
@@ -290,9 +286,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IAnalyticsInfoStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics ABI::Windows::System::Profile::IAnalyticsInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics_FWD_DEFINED__
@@ -304,9 +300,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IAnalyticsInfoStatics2;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics2 ABI::Windows::System::Profile::IAnalyticsInfoStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics2_FWD_DEFINED__
@@ -318,12 +314,26 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IAnalyticsVersionInfo;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo ABI::Windows::System::Profile::IAnalyticsVersionInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace Profile {
+                interface IAppApplicabilityStatics;
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics ABI::Windows::System::Profile::IAppApplicabilityStatics
+
+#endif // ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics_FWD_DEFINED__
@@ -332,9 +342,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IEducationSettingsStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics ABI::Windows::System::Profile::IEducationSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics_FWD_DEFINED__
@@ -346,9 +356,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IHardwareIdentificationStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIHardwareIdentificationStatics ABI::Windows::System::Profile::IHardwareIdentificationStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIHardwareIdentificationStatics_FWD_DEFINED__
@@ -360,9 +370,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IHardwareToken;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIHardwareToken ABI::Windows::System::Profile::IHardwareToken
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIHardwareToken_FWD_DEFINED__
@@ -374,9 +384,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IKnownRetailInfoPropertiesStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIKnownRetailInfoPropertiesStatics ABI::Windows::System::Profile::IKnownRetailInfoPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIKnownRetailInfoPropertiesStatics_FWD_DEFINED__
@@ -388,9 +398,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IPlatformDiagnosticsAndUsageDataSettingsStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIPlatformDiagnosticsAndUsageDataSettingsStatics ABI::Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIPlatformDiagnosticsAndUsageDataSettingsStatics_FWD_DEFINED__
@@ -402,9 +412,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IRetailInfoStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIRetailInfoStatics ABI::Windows::System::Profile::IRetailInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIRetailInfoStatics_FWD_DEFINED__
@@ -416,9 +426,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface ISharedModeSettingsStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics ABI::Windows::System::Profile::ISharedModeSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics_FWD_DEFINED__
@@ -430,9 +440,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface ISharedModeSettingsStatics2;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics2 ABI::Windows::System::Profile::ISharedModeSettingsStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics2_FWD_DEFINED__
@@ -444,9 +454,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface ISystemIdentificationInfo;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationInfo ABI::Windows::System::Profile::ISystemIdentificationInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationInfo_FWD_DEFINED__
@@ -458,9 +468,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface ISystemIdentificationStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationStatics ABI::Windows::System::Profile::ISystemIdentificationStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationStatics_FWD_DEFINED__
@@ -472,12 +482,26 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface ISystemSetupInfoStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CISystemSetupInfoStatics ABI::Windows::System::Profile::ISystemSetupInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CISystemSetupInfoStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace Profile {
+                interface IUnsupportedAppRequirement;
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement ABI::Windows::System::Profile::IUnsupportedAppRequirement
+
+#endif // ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics_FWD_DEFINED__
@@ -486,9 +510,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 interface IWindowsIntegrityPolicyStatics;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics ABI::Windows::System::Profile::IWindowsIntegrityPolicyStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics_FWD_DEFINED__
@@ -496,6 +520,111 @@ namespace ABI {
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace Profile {
+                class UnsupportedAppRequirement;
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE
+#define DEF___FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("10956160-6437-5430-9322-df0d6ab2ebe6"))
+IIterator<ABI::Windows::System::Profile::UnsupportedAppRequirement*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::Profile::UnsupportedAppRequirement*, ABI::Windows::System::Profile::IUnsupportedAppRequirement*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.System.Profile.UnsupportedAppRequirement>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::System::Profile::UnsupportedAppRequirement*> __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t;
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::Profile::IUnsupportedAppRequirement*>
+//#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::Profile::IUnsupportedAppRequirement*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE
+#define DEF___FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("bd9ded1d-0379-5143-a490-168b6b8413a3"))
+IIterable<ABI::Windows::System::Profile::UnsupportedAppRequirement*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::Profile::UnsupportedAppRequirement*, ABI::Windows::System::Profile::IUnsupportedAppRequirement*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.System.Profile.UnsupportedAppRequirement>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::System::Profile::UnsupportedAppRequirement*> __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t;
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::Profile::IUnsupportedAppRequirement*>
+//#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::Profile::IUnsupportedAppRequirement*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE
+#define DEF___FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("5b638c58-9d04-5d1a-92fb-860852c3e4d0"))
+IVectorView<ABI::Windows::System::Profile::UnsupportedAppRequirement*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::Profile::UnsupportedAppRequirement*, ABI::Windows::System::Profile::IUnsupportedAppRequirement*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.System.Profile.UnsupportedAppRequirement>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::System::Profile::UnsupportedAppRequirement*> __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t;
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Profile::IUnsupportedAppRequirement*>
+//#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Profile::IUnsupportedAppRequirement*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
 
 #ifndef DEF___FIIterator_1_HSTRING_USE
 #define DEF___FIIterator_1_HSTRING_USE
@@ -515,7 +644,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -544,7 +673,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -573,7 +702,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -603,7 +732,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -633,7 +762,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -662,7 +791,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -692,7 +821,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_HSTRING*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>*>
@@ -722,7 +851,7 @@ IAsyncOperation<__FIMapView_2_HSTRING_HSTRING*> : IAsyncOperation_impl<__FIMapVi
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_HSTRING_HSTRING*> __FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING_t;
 #define __FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>*>
@@ -752,7 +881,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -782,7 +911,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -812,7 +941,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -842,7 +971,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -872,7 +1001,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -894,9 +1023,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -909,8 +1038,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -918,8 +1047,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -937,9 +1066,9 @@ namespace ABI {
                 
                 typedef enum PlatformDataCollectionLevel : int PlatformDataCollectionLevel;
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -948,9 +1077,9 @@ namespace ABI {
                 
                 typedef enum SystemIdentificationSource : int SystemIdentificationSource;
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -959,9 +1088,22 @@ namespace ABI {
                 
                 typedef enum SystemOutOfBoxExperienceState : int SystemOutOfBoxExperienceState;
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace Profile {
+                
+                typedef enum UnsupportedAppRequirementReasons : unsigned int UnsupportedAppRequirementReasons;
+                
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+
 
 
 
@@ -984,9 +1126,10 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 class AnalyticsVersionInfo;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -996,9 +1139,9 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 class HardwareToken;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1011,9 +1154,14 @@ namespace ABI {
         namespace System {
             namespace Profile {
                 class SystemIdentificationInfo;
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
 
 
 
@@ -1048,9 +1196,9 @@ namespace ABI {
                     PlatformDataCollectionLevel_Full = 3,
                 };
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -1081,9 +1229,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1109,10 +1257,39 @@ namespace ABI {
                     SystemOutOfBoxExperienceState_Completed = 2,
                 };
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Struct Windows.System.Profile.UnsupportedAppRequirementReasons
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace Profile {
+                /* [v1_enum, flags, contract] */
+                enum UnsupportedAppRequirementReasons : unsigned int
+                {
+                    UnsupportedAppRequirementReasons_Unknown = 0,
+                    UnsupportedAppRequirementReasons_DeniedBySystem = 0x1,
+                };
+                
+                DEFINE_ENUM_FLAG_OPERATORS(UnsupportedAppRequirementReasons)
+                
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1150,9 +1327,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAnalyticsInfoStatics=_uuidof(IAnalyticsInfoStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics_INTERFACE_DEFINED__) */
@@ -1192,9 +1369,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAnalyticsInfoStatics2=_uuidof(IAnalyticsInfoStatics2);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics2_INTERFACE_DEFINED__) */
@@ -1236,13 +1413,55 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAnalyticsVersionInfo=_uuidof(IAnalyticsVersionInfo);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.System.Profile.IAppApplicabilityStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.Profile.AppApplicability
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Profile_IAppApplicabilityStatics[] = L"Windows.System.Profile.IAppApplicabilityStatics";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace Profile {
+                /* [object, uuid("1664A082-0F38-5C99-83E4-48995970861C"), exclusiveto, contract] */
+                MIDL_INTERFACE("1664A082-0F38-5C99-83E4-48995970861C")
+                IAppApplicabilityStatics : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetUnsupportedAppRequirements(
+                        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * capabilities,
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IAppApplicabilityStatics=_uuidof(IAppApplicabilityStatics);
+                
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1270,16 +1489,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEducationEnvironment(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IEducationSettingsStatics=_uuidof(IEducationSettingsStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics_INTERFACE_DEFINED__) */
@@ -1319,9 +1538,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHardwareIdentificationStatics=_uuidof(IHardwareIdentificationStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIHardwareIdentificationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIHardwareIdentificationStatics_INTERFACE_DEFINED__) */
@@ -1366,9 +1585,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHardwareToken=_uuidof(IHardwareToken);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIHardwareToken;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIHardwareToken_INTERFACE_DEFINED__) */
@@ -1470,9 +1689,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownRetailInfoPropertiesStatics=_uuidof(IKnownRetailInfoPropertiesStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIKnownRetailInfoPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIKnownRetailInfoPropertiesStatics_INTERFACE_DEFINED__) */
@@ -1515,16 +1734,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CanCollectDiagnostics(
                         /* [in] */ABI::Windows::System::Profile::PlatformDataCollectionLevel level,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPlatformDiagnosticsAndUsageDataSettingsStatics=_uuidof(IPlatformDiagnosticsAndUsageDataSettingsStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIPlatformDiagnosticsAndUsageDataSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIPlatformDiagnosticsAndUsageDataSettingsStatics_INTERFACE_DEFINED__) */
@@ -1556,7 +1775,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDemoModeEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Properties(
                         /* [retval, out] */__RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable * * value
@@ -1566,9 +1785,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRetailInfoStatics=_uuidof(IRetailInfoStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIRetailInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIRetailInfoStatics_INTERFACE_DEFINED__) */
@@ -1600,16 +1819,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISharedModeSettingsStatics=_uuidof(ISharedModeSettingsStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics_INTERFACE_DEFINED__) */
@@ -1641,16 +1860,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldAvoidLocalStorage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISharedModeSettingsStatics2=_uuidof(ISharedModeSettingsStatics2);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CISharedModeSettingsStatics2_INTERFACE_DEFINED__) */
@@ -1692,9 +1911,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemIdentificationInfo=_uuidof(ISystemIdentificationInfo);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationInfo_INTERFACE_DEFINED__) */
@@ -1737,9 +1956,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemIdentificationStatics=_uuidof(ISystemIdentificationStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CISystemIdentificationStatics_INTERFACE_DEFINED__) */
@@ -1785,13 +2004,57 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemSetupInfoStatics=_uuidof(ISystemSetupInfoStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CISystemSetupInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CISystemSetupInfoStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.System.Profile.IUnsupportedAppRequirement
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.Profile.UnsupportedAppRequirement
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Profile_IUnsupportedAppRequirement[] = L"Windows.System.Profile.IUnsupportedAppRequirement";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace Profile {
+                /* [object, uuid("6182445C-894B-5CBC-8976-A98E0A9B998D"), exclusiveto, contract] */
+                MIDL_INTERFACE("6182445C-894B-5CBC-8976-A98E0A9B998D")
+                IUnsupportedAppRequirement : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Requirement(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Reasons(
+                        /* [retval, out] */__RPC__out ABI::Windows::System::Profile::UnsupportedAppRequirementReasons * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IUnsupportedAppRequirement=_uuidof(IUnsupportedAppRequirement);
+                
+            } /* Profile */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1819,16 +2082,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabledForTrial(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanDisable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisableSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_PolicyChanged(
                         /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
@@ -1842,9 +2105,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWindowsIntegrityPolicyStatics=_uuidof(IWindowsIntegrityPolicyStatics);
                 
-            } /* Windows */
+            } /* Profile */
         } /* System */
-    } /* Profile */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics_INTERFACE_DEFINED__) */
@@ -1897,6 +2160,29 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Profile_AnalyticsVersionInfo[] = L"Windows.System.Profile.AnalyticsVersionInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.System.Profile.AppApplicability
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.Profile.IAppApplicabilityStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#ifndef RUNTIMECLASS_Windows_System_Profile_AppApplicability_DEFINED
+#define RUNTIMECLASS_Windows_System_Profile_AppApplicability_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Profile_AppApplicability[] = L"Windows.System.Profile.AppApplicability";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2126,6 +2412,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.System.Profile.UnsupportedAppRequirement
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.System.Profile.IUnsupportedAppRequirement ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_System_Profile_UnsupportedAppRequirement_DEFINED
+#define RUNTIMECLASS_Windows_System_Profile_UnsupportedAppRequirement_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Profile_UnsupportedAppRequirement[] = L"Windows.System.Profile.UnsupportedAppRequirement";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.System.Profile.WindowsIntegrityPolicy
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
@@ -2168,6 +2476,12 @@ typedef interface __x_ABI_CWindows_CSystem_CProfile_CIAnalyticsInfoStatics2 __x_
 typedef interface __x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo __x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo;
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics;
+
+#endif // ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CProfile_CIEducationSettingsStatics_FWD_DEFINED__
@@ -2235,6 +2549,12 @@ typedef interface __x_ABI_CWindows_CSystem_CProfile_CISystemSetupInfoStatics __x
 
 #endif // ____x_ABI_CWindows_CSystem_CProfile_CISystemSetupInfoStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement;
+
+#endif // ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics __x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStatics;
@@ -2244,6 +2564,279 @@ typedef interface __x_ABI_CWindows_CSystem_CProfile_CIWindowsIntegrityPolicyStat
 // Parameterized interface forward declarations (C)
 
 // Collection interface definitions
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement;
+
+typedef struct __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl;
+
+interface __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement;
+
+typedef  struct __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl;
+
+interface __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement;
+
+typedef struct __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+            /* [in] */ __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl;
+
+interface __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirementVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
 #if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
 #define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
 
@@ -3183,6 +3776,17 @@ typedef enum __x_ABI_CWindows_CSystem_CProfile_CSystemIdentificationSource __x_A
 typedef enum __x_ABI_CWindows_CSystem_CProfile_CSystemOutOfBoxExperienceState __x_ABI_CWindows_CSystem_CProfile_CSystemOutOfBoxExperienceState;
 
 
+typedef enum __x_ABI_CWindows_CSystem_CProfile_CUnsupportedAppRequirementReasons __x_ABI_CWindows_CSystem_CProfile_CUnsupportedAppRequirementReasons;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3281,6 +3885,25 @@ enum __x_ABI_CWindows_CSystem_CProfile_CSystemOutOfBoxExperienceState
     SystemOutOfBoxExperienceState_Completed = 2,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Struct Windows.System.Profile.UnsupportedAppRequirementReasons
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, flags, contract] */
+enum __x_ABI_CWindows_CSystem_CProfile_CUnsupportedAppRequirementReasons
+{
+    UnsupportedAppRequirementReasons_Unknown = 0,
+    UnsupportedAppRequirementReasons_DeniedBySystem = 0x1,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3575,6 +4198,100 @@ interface __x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIAnalyticsVersionInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.System.Profile.IAppApplicabilityStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.Profile.AppApplicability
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Profile_IAppApplicabilityStatics[] = L"Windows.System.Profile.IAppApplicabilityStatics";
+/* [object, uuid("1664A082-0F38-5C99-83E4-48995970861C"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetUnsupportedAppRequirements )(
+        __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics * This,
+        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * capabilities,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CSystem__CProfile__CUnsupportedAppRequirement * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStaticsVtbl;
+
+interface __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStaticsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_GetUnsupportedAppRequirements(This,capabilities,result) \
+    ( (This)->lpVtbl->GetUnsupportedAppRequirements(This,capabilities,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIAppApplicabilityStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4824,6 +5541,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CISystemSetupInfoStatic
 
 /*
  *
+ * Interface Windows.System.Profile.IUnsupportedAppRequirement
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.Profile.UnsupportedAppRequirement
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Profile_IUnsupportedAppRequirement[] = L"Windows.System.Profile.IUnsupportedAppRequirement";
+/* [object, uuid("6182445C-894B-5CBC-8976-A98E0A9B998D"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirementVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Requirement )(
+        __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Reasons )(
+        __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSystem_CProfile_CUnsupportedAppRequirementReasons * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirementVtbl;
+
+interface __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirementVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_get_Requirement(This,value) \
+    ( (This)->lpVtbl->get_Requirement(This,value) )
+
+#define __x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_get_Reasons(This,value) \
+    ( (This)->lpVtbl->get_Reasons(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CProfile_CIUnsupportedAppRequirement_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.System.Profile.IWindowsIntegrityPolicyStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
@@ -4997,6 +5814,29 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Profile_AnalyticsVersionInfo[] = L"Windows.System.Profile.AnalyticsVersionInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.System.Profile.AppApplicability
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.Profile.IAppApplicabilityStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#ifndef RUNTIMECLASS_Windows_System_Profile_AppApplicability_DEFINED
+#define RUNTIMECLASS_Windows_System_Profile_AppApplicability_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Profile_AppApplicability[] = L"Windows.System.Profile.AppApplicability";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -5222,6 +6062,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Profile_SystemSetupInfo[] = L"Windows.System.Profile.SystemSetupInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Class Windows.System.Profile.UnsupportedAppRequirement
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.System.Profile.IUnsupportedAppRequirement ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_System_Profile_UnsupportedAppRequirement_DEFINED
+#define RUNTIMECLASS_Windows_System_Profile_UnsupportedAppRequirement_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Profile_UnsupportedAppRequirement[] = L"Windows.System.Profile.UnsupportedAppRequirement";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*

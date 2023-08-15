@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,6 +10,12 @@ WINRT_EXPORT namespace winrt::Windows::Storage {
 struct IStorageItem;
 struct StorageFile;
 struct StorageFolder;
+
+}
+
+WINRT_EXPORT namespace winrt::Windows::System {
+
+struct User;
 
 }
 
@@ -32,6 +38,7 @@ enum class RecentStorageItemVisibility : int32_t
 
 struct IItemRemovedEventArgs;
 struct IStorageApplicationPermissionsStatics;
+struct IStorageApplicationPermissionsStatics2;
 struct IStorageItemAccessList;
 struct IStorageItemMostRecentlyUsedList;
 struct IStorageItemMostRecentlyUsedList2;
@@ -49,6 +56,7 @@ namespace winrt::impl {
 template<> struct is_enum_flag<Windows::Storage::AccessCache::AccessCacheOptions> : std::true_type {};
 template <> struct category<Windows::Storage::AccessCache::IItemRemovedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics>{ using type = interface_category; };
+template <> struct category<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2>{ using type = interface_category; };
 template <> struct category<Windows::Storage::AccessCache::IStorageItemAccessList>{ using type = interface_category; };
 template <> struct category<Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList>{ using type = interface_category; };
 template <> struct category<Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2>{ using type = interface_category; };
@@ -62,6 +70,7 @@ template <> struct category<Windows::Storage::AccessCache::RecentStorageItemVisi
 template <> struct category<Windows::Storage::AccessCache::AccessListEntry>{ using type = struct_category<hstring,hstring>; };
 template <> struct name<Windows::Storage::AccessCache::IItemRemovedEventArgs>{ static constexpr auto & value{ L"Windows.Storage.AccessCache.IItemRemovedEventArgs" }; };
 template <> struct name<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics>{ static constexpr auto & value{ L"Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics" }; };
+template <> struct name<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2>{ static constexpr auto & value{ L"Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2" }; };
 template <> struct name<Windows::Storage::AccessCache::IStorageItemAccessList>{ static constexpr auto & value{ L"Windows.Storage.AccessCache.IStorageItemAccessList" }; };
 template <> struct name<Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList>{ static constexpr auto & value{ L"Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList" }; };
 template <> struct name<Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2>{ static constexpr auto & value{ L"Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2" }; };
@@ -75,6 +84,7 @@ template <> struct name<Windows::Storage::AccessCache::RecentStorageItemVisibili
 template <> struct name<Windows::Storage::AccessCache::AccessListEntry>{ static constexpr auto & value{ L"Windows.Storage.AccessCache.AccessListEntry" }; };
 template <> struct guid_storage<Windows::Storage::AccessCache::IItemRemovedEventArgs>{ static constexpr guid value{ 0x59677E5C,0x55BE,0x4C66,{ 0xBA,0x66,0x5E,0xAE,0xA7,0x9D,0x26,0x31 } }; };
 template <> struct guid_storage<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics>{ static constexpr guid value{ 0x4391DFAA,0xD033,0x48F9,{ 0x80,0x60,0x3E,0xC8,0x47,0xD2,0xE3,0xF1 } }; };
+template <> struct guid_storage<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2>{ static constexpr guid value{ 0x072716EC,0xAA05,0x4294,{ 0x9A,0x11,0x1A,0x3D,0x04,0x51,0x9A,0xD0 } }; };
 template <> struct guid_storage<Windows::Storage::AccessCache::IStorageItemAccessList>{ static constexpr guid value{ 0x2CAFF6AD,0xDE90,0x47F5,{ 0xB2,0xC3,0xDD,0x36,0xC9,0xFD,0xD4,0x53 } }; };
 template <> struct guid_storage<Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList>{ static constexpr guid value{ 0x016239D5,0x510D,0x411E,{ 0x8C,0xF1,0xC3,0xD1,0xEF,0xFA,0x4C,0x33 } }; };
 template <> struct guid_storage<Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2>{ static constexpr guid value{ 0xDA481EA0,0xED8D,0x4731,{ 0xA1,0xDB,0xE4,0x4E,0xE2,0x20,0x40,0x93 } }; };
@@ -92,6 +102,12 @@ template <> struct abi<Windows::Storage::AccessCache::IStorageApplicationPermiss
 {
     virtual int32_t WINRT_CALL get_FutureAccessList(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_MostRecentlyUsedList(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetFutureAccessListForUser(void* user, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetMostRecentlyUsedListForUser(void* user, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Storage::AccessCache::IStorageItemAccessList>{ struct type : IInspectable
@@ -140,6 +156,14 @@ struct consume_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics
     Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList MostRecentlyUsedList() const;
 };
 template <> struct consume<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics> { template <typename D> using type = consume_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics<D>; };
+
+template <typename D>
+struct consume_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics2
+{
+    Windows::Storage::AccessCache::StorageItemAccessList GetFutureAccessListForUser(Windows::System::User const& user) const;
+    Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList GetMostRecentlyUsedListForUser(Windows::System::User const& user) const;
+};
+template <> struct consume<Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2> { template <typename D> using type = consume_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics2<D>; };
 
 template <typename D>
 struct consume_Windows_Storage_AccessCache_IStorageItemAccessList

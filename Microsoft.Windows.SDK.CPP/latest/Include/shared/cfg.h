@@ -44,7 +44,7 @@ Revision History:
 //      CM_Uninstall_DevNode
 //      CM_Query_And_Remove_SubTree
 //
-typedef enum    _PNP_VETO_TYPE {
+typedef enum _PNP_VETO_TYPE {
     PNP_VetoTypeUnknown,            // Name is unspecified
     PNP_VetoLegacyDevice,           // Name is an Instance Path
     PNP_VetoPendingClose,           // Name is an Instance Path
@@ -57,8 +57,9 @@ typedef enum    _PNP_VETO_TYPE {
     PNP_VetoInsufficientPower,      // Name is unspecified
     PNP_VetoNonDisableable,         // Name is an Instance Path
     PNP_VetoLegacyDriver,           // Name is a Service
-    PNP_VetoInsufficientRights      // Name is unspecified
-}   PNP_VETO_TYPE, *PPNP_VETO_TYPE;
+    PNP_VetoInsufficientRights,     // Name is unspecified
+    PNP_VetoAlreadyRemoved,         // Name is unspecified
+} PNP_VETO_TYPE, *PPNP_VETO_TYPE;
 
 
 //

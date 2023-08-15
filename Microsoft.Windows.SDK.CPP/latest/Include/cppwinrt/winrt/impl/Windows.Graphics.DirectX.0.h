@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -167,6 +167,16 @@ enum class DirectXPixelFormat : int32_t
     V408 = 132,
 };
 
+enum class DirectXPrimitiveTopology : int32_t
+{
+    Undefined = 0,
+    PointList = 1,
+    LineList = 2,
+    LineStrip = 3,
+    TriangleList = 4,
+    TriangleStrip = 5,
+};
+
 }
 
 namespace winrt::impl {
@@ -174,8 +184,10 @@ namespace winrt::impl {
 template <> struct category<Windows::Graphics::DirectX::DirectXAlphaMode>{ using type = enum_category; };
 template <> struct category<Windows::Graphics::DirectX::DirectXColorSpace>{ using type = enum_category; };
 template <> struct category<Windows::Graphics::DirectX::DirectXPixelFormat>{ using type = enum_category; };
+template <> struct category<Windows::Graphics::DirectX::DirectXPrimitiveTopology>{ using type = enum_category; };
 template <> struct name<Windows::Graphics::DirectX::DirectXAlphaMode>{ static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXAlphaMode" }; };
 template <> struct name<Windows::Graphics::DirectX::DirectXColorSpace>{ static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXColorSpace" }; };
 template <> struct name<Windows::Graphics::DirectX::DirectXPixelFormat>{ static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXPixelFormat" }; };
+template <> struct name<Windows::Graphics::DirectX::DirectXPrimitiveTopology>{ static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXPrimitiveTopology" }; };
 
 }

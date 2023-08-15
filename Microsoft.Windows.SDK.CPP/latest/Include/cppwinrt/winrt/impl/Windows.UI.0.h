@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,8 +12,12 @@ struct IColorHelperStatics;
 struct IColorHelperStatics2;
 struct IColors;
 struct IColorsStatics;
+struct IUIContentRoot;
+struct IUIContext;
 struct ColorHelper;
 struct Colors;
+struct UIContentRoot;
+struct UIContext;
 struct Color;
 
 }
@@ -25,24 +29,36 @@ template <> struct category<Windows::UI::IColorHelperStatics>{ using type = inte
 template <> struct category<Windows::UI::IColorHelperStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::IColors>{ using type = interface_category; };
 template <> struct category<Windows::UI::IColorsStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::IUIContentRoot>{ using type = interface_category; };
+template <> struct category<Windows::UI::IUIContext>{ using type = interface_category; };
 template <> struct category<Windows::UI::ColorHelper>{ using type = class_category; };
 template <> struct category<Windows::UI::Colors>{ using type = class_category; };
+template <> struct category<Windows::UI::UIContentRoot>{ using type = class_category; };
+template <> struct category<Windows::UI::UIContext>{ using type = class_category; };
 template <> struct category<Windows::UI::Color>{ using type = struct_category<uint8_t,uint8_t,uint8_t,uint8_t>; };
 template <> struct name<Windows::UI::IColorHelper>{ static constexpr auto & value{ L"Windows.UI.IColorHelper" }; };
 template <> struct name<Windows::UI::IColorHelperStatics>{ static constexpr auto & value{ L"Windows.UI.IColorHelperStatics" }; };
 template <> struct name<Windows::UI::IColorHelperStatics2>{ static constexpr auto & value{ L"Windows.UI.IColorHelperStatics2" }; };
 template <> struct name<Windows::UI::IColors>{ static constexpr auto & value{ L"Windows.UI.IColors" }; };
 template <> struct name<Windows::UI::IColorsStatics>{ static constexpr auto & value{ L"Windows.UI.IColorsStatics" }; };
+template <> struct name<Windows::UI::IUIContentRoot>{ static constexpr auto & value{ L"Windows.UI.IUIContentRoot" }; };
+template <> struct name<Windows::UI::IUIContext>{ static constexpr auto & value{ L"Windows.UI.IUIContext" }; };
 template <> struct name<Windows::UI::ColorHelper>{ static constexpr auto & value{ L"Windows.UI.ColorHelper" }; };
 template <> struct name<Windows::UI::Colors>{ static constexpr auto & value{ L"Windows.UI.Colors" }; };
+template <> struct name<Windows::UI::UIContentRoot>{ static constexpr auto & value{ L"Windows.UI.UIContentRoot" }; };
+template <> struct name<Windows::UI::UIContext>{ static constexpr auto & value{ L"Windows.UI.UIContext" }; };
 template <> struct name<Windows::UI::Color>{ static constexpr auto & value{ L"Windows.UI.Color" }; };
 template <> struct guid_storage<Windows::UI::IColorHelper>{ static constexpr guid value{ 0x193CFBE7,0x65C7,0x4540,{ 0xAD,0x08,0x62,0x83,0xBA,0x76,0x87,0x9A } }; };
 template <> struct guid_storage<Windows::UI::IColorHelperStatics>{ static constexpr guid value{ 0x8504DBEA,0xFB6A,0x4144,{ 0xA6,0xC2,0x33,0x49,0x9C,0x92,0x84,0xF5 } }; };
 template <> struct guid_storage<Windows::UI::IColorHelperStatics2>{ static constexpr guid value{ 0x24D9AF02,0x6EB0,0x4B94,{ 0x85,0x5C,0xFC,0xF0,0x81,0x8D,0x9A,0x16 } }; };
 template <> struct guid_storage<Windows::UI::IColors>{ static constexpr guid value{ 0x9B8C9326,0x4CA6,0x4CE5,{ 0x89,0x94,0x9E,0xFF,0x65,0xCA,0xBD,0xCC } }; };
 template <> struct guid_storage<Windows::UI::IColorsStatics>{ static constexpr guid value{ 0xCFF52E04,0xCCA6,0x4614,{ 0xA1,0x7E,0x75,0x49,0x10,0xC8,0x4A,0x99 } }; };
+template <> struct guid_storage<Windows::UI::IUIContentRoot>{ static constexpr guid value{ 0x1DFCBAC6,0xB36B,0x5CB9,{ 0x9B,0xC5,0x2B,0x7A,0x0E,0xDD,0xC3,0x78 } }; };
+template <> struct guid_storage<Windows::UI::IUIContext>{ static constexpr guid value{ 0xBB5CFACD,0x5BD8,0x59D0,{ 0xA5,0x9E,0x1C,0x17,0xA4,0xD6,0xD2,0x43 } }; };
 template <> struct default_interface<Windows::UI::ColorHelper>{ using type = Windows::UI::IColorHelper; };
 template <> struct default_interface<Windows::UI::Colors>{ using type = Windows::UI::IColors; };
+template <> struct default_interface<Windows::UI::UIContentRoot>{ using type = Windows::UI::IUIContentRoot; };
+template <> struct default_interface<Windows::UI::UIContext>{ using type = Windows::UI::IUIContext; };
 
 template <> struct abi<Windows::UI::IColorHelper>{ struct type : IInspectable
 {
@@ -205,6 +221,15 @@ template <> struct abi<Windows::UI::IColorsStatics>{ struct type : IInspectable
     virtual int32_t WINRT_CALL get_WhiteSmoke(struct struct_Windows_UI_Color* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_Yellow(struct struct_Windows_UI_Color* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_YellowGreen(struct struct_Windows_UI_Color* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::IUIContentRoot>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_UIContext(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::IUIContext>{ struct type : IInspectable
+{
 };};
 
 template <typename D>
@@ -379,6 +404,19 @@ struct consume_Windows_UI_IColorsStatics
     Windows::UI::Color YellowGreen() const;
 };
 template <> struct consume<Windows::UI::IColorsStatics> { template <typename D> using type = consume_Windows_UI_IColorsStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_IUIContentRoot
+{
+    Windows::UI::UIContext UIContext() const;
+};
+template <> struct consume<Windows::UI::IUIContentRoot> { template <typename D> using type = consume_Windows_UI_IUIContentRoot<D>; };
+
+template <typename D>
+struct consume_Windows_UI_IUIContext
+{
+};
+template <> struct consume<Windows::UI::IUIContext> { template <typename D> using type = consume_Windows_UI_IUIContext<D>; };
 
 struct struct_Windows_UI_Color
 {

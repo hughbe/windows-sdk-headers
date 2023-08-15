@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.display.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,9 +141,9 @@ namespace ABI {
         namespace Devices {
             namespace Display {
                 interface IDisplayMonitor;
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor ABI::Windows::Devices::Display::IDisplayMonitor
 
 #endif // ____x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor_FWD_DEFINED__
@@ -155,9 +155,9 @@ namespace ABI {
         namespace Devices {
             namespace Display {
                 interface IDisplayMonitorStatics;
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics ABI::Windows::Devices::Display::IDisplayMonitorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics_FWD_DEFINED__
@@ -170,9 +170,9 @@ namespace ABI {
         namespace Devices {
             namespace Display {
                 class DisplayMonitor;
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -195,7 +195,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Display::DisplayMonitor*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Display::DisplayMonitor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CDisplay__CDisplayMonitor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CDisplay__CDisplayMonitor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CDisplay__CDisplayMonitor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CDisplay__CDisplayMonitor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Display::IDisplayMonitor*>
@@ -227,7 +227,7 @@ IAsyncOperation<ABI::Windows::Devices::Display::DisplayMonitor*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Display::DisplayMonitor*> __FIAsyncOperation_1_Windows__CDevices__CDisplay__CDisplayMonitor_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CDisplay__CDisplayMonitor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CDisplay__CDisplayMonitor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CDisplay__CDisplayMonitor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Display::IDisplayMonitor*>
@@ -243,8 +243,8 @@ namespace ABI {
         namespace Foundation {
             struct Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CSize_USE
@@ -265,7 +265,7 @@ IReference<struct ABI::Windows::Foundation::Size> : IReference_impl<struct ABI::
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Size> __FIReference_1_Windows__CFoundation__CSize_t;
 #define __FIReference_1_Windows__CFoundation__CSize ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CSize_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CSize ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Size>
@@ -283,8 +283,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -292,8 +292,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -304,8 +304,8 @@ namespace ABI {
             
             typedef struct DisplayAdapterId DisplayAdapterId;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -313,8 +313,8 @@ namespace ABI {
             
             typedef struct SizeInt32 SizeInt32;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -325,9 +325,9 @@ namespace ABI {
                 
                 typedef enum DisplayMonitorConnectionKind : int DisplayMonitorConnectionKind;
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -336,9 +336,9 @@ namespace ABI {
                 
                 typedef enum DisplayMonitorDescriptorKind : int DisplayMonitorDescriptorKind;
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -347,9 +347,9 @@ namespace ABI {
                 
                 typedef enum DisplayMonitorPhysicalConnectorKind : int DisplayMonitorPhysicalConnectorKind;
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -358,9 +358,9 @@ namespace ABI {
                 
                 typedef enum DisplayMonitorUsageKind : int DisplayMonitorUsageKind;
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -396,9 +396,9 @@ namespace ABI {
                     DisplayMonitorConnectionKind_Virtual = 3,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -423,9 +423,9 @@ namespace ABI {
                     DisplayMonitorDescriptorKind_DisplayId = 1,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -456,9 +456,9 @@ namespace ABI {
                     DisplayMonitorPhysicalConnectorKind_DisplayPort = 7,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -484,9 +484,9 @@ namespace ABI {
                     DisplayMonitorUsageKind_SpecialPurpose = 2,
                 };
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -573,17 +573,17 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDescriptor(
                         /* [in] */ABI::Windows::Devices::Display::DisplayMonitorDescriptorKind descriptorKind,
-                        /* [out] */__RPC__out UINT32 * __valueSize,
-                        /* [size_is(, *(__valueSize)), retval, out] */__RPC__deref_out_ecount_full_opt(*(__valueSize)) BYTE * * value
+                        /* [out] */__RPC__out UINT32 * __resultSize,
+                        /* [size_is(, *(__resultSize)), retval, out] */__RPC__deref_out_ecount_full_opt(*(__resultSize)) BYTE * * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDisplayMonitor=_uuidof(IDisplayMonitor);
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor_INTERFACE_DEFINED__) */
@@ -615,7 +615,7 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetDeviceSelector(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE FromIdAsync(
                         /* [in] */__RPC__in HSTRING deviceId,
@@ -630,9 +630,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDisplayMonitorStatics=_uuidof(IDisplayMonitorStatics);
                 
-            } /* Windows */
+            } /* Display */
         } /* Devices */
-    } /* Display */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics_INTERFACE_DEFINED__) */
@@ -1112,8 +1112,8 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     HRESULT ( STDMETHODCALLTYPE *GetDescriptor )(
         __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor * This,
         /* [in] */__x_ABI_CWindows_CDevices_CDisplay_CDisplayMonitorDescriptorKind descriptorKind,
-        /* [out] */__RPC__out UINT32 * __valueSize,
-        /* [size_is(, *(__valueSize)), retval, out] */__RPC__deref_out_ecount_full_opt(*(__valueSize)) BYTE * * value
+        /* [out] */__RPC__out UINT32 * __resultSize,
+        /* [size_is(, *(__resultSize)), retval, out] */__RPC__deref_out_ecount_full_opt(*(__resultSize)) BYTE * * result
         );
     END_INTERFACE
     
@@ -1200,8 +1200,8 @@ interface __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor
 #define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor_get_MaxAverageFullFrameLuminanceInNits(This,value) \
     ( (This)->lpVtbl->get_MaxAverageFullFrameLuminanceInNits(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor_GetDescriptor(This,descriptorKind,__valueSize,value) \
-    ( (This)->lpVtbl->GetDescriptor(This,descriptorKind,__valueSize,value) )
+#define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitor_GetDescriptor(This,descriptorKind,__resultSize,result) \
+    ( (This)->lpVtbl->GetDescriptor(This,descriptorKind,__resultSize,result) )
 
 
 #endif /* COBJMACROS */
@@ -1263,7 +1263,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 HRESULT ( STDMETHODCALLTYPE *GetDeviceSelector )(
         __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
         );
     HRESULT ( STDMETHODCALLTYPE *FromIdAsync )(
         __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics * This,
@@ -1303,8 +1303,8 @@ interface __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics
 #define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics_GetDeviceSelector(This,value) \
-    ( (This)->lpVtbl->GetDeviceSelector(This,value) )
+#define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics_GetDeviceSelector(This,result) \
+    ( (This)->lpVtbl->GetDeviceSelector(This,result) )
 
 #define __x_ABI_CWindows_CDevices_CDisplay_CIDisplayMonitorStatics_FromIdAsync(This,deviceId,operation) \
     ( (This)->lpVtbl->FromIdAsync(This,deviceId,operation) )

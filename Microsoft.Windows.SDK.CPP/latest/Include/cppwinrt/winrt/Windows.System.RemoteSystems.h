@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -125,6 +125,13 @@ template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Sys
     return value;
 }
 
+template <typename D> Windows::System::User consume_Windows_System_RemoteSystems_IRemoteSystem6<D>::User() const
+{
+    Windows::System::User value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystem6)->get_User(put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::System::RemoteSystems::RemoteSystem consume_Windows_System_RemoteSystems_IRemoteSystemAddedEventArgs<D>::RemoteSystem() const
 {
     Windows::System::RemoteSystems::RemoteSystem value{ nullptr };
@@ -164,6 +171,20 @@ template <typename D> Windows::Foundation::Collections::IMapView<hstring, hstrin
 {
     Windows::Foundation::Collections::IMapView<hstring, hstring> value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp)->get_Attributes(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::System::User consume_Windows_System_RemoteSystems_IRemoteSystemApp2<D>::User() const
+{
+    Windows::System::User value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp2)->get_User(put_abi(value)));
+    return value;
+}
+
+template <typename D> hstring consume_Windows_System_RemoteSystems_IRemoteSystemApp2<D>::ConnectionToken() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp2)->get_ConnectionToken(put_abi(value)));
     return value;
 }
 
@@ -244,6 +265,13 @@ template <typename D> Windows::System::RemoteSystems::RemoteSystemApp consume_Wi
     return value;
 }
 
+template <typename D> hstring consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest3<D>::ConnectionToken() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3)->get_ConnectionToken(put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::System::RemoteSystems::RemoteSystemConnectionRequest consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestFactory<D>::Create(Windows::System::RemoteSystems::RemoteSystem const& remoteSystem) const
 {
     Windows::System::RemoteSystems::RemoteSystemConnectionRequest value{ nullptr };
@@ -255,6 +283,20 @@ template <typename D> Windows::System::RemoteSystems::RemoteSystemConnectionRequ
 {
     Windows::System::RemoteSystems::RemoteSystemConnectionRequest result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics)->CreateForApp(get_abi(remoteSystemApp), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::System::RemoteSystems::RemoteSystemConnectionRequest consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2<D>::CreateFromConnectionToken(param::hstring const& connectionToken) const
+{
+    Windows::System::RemoteSystems::RemoteSystemConnectionRequest result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2)->CreateFromConnectionToken(get_abi(connectionToken), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::System::RemoteSystems::RemoteSystemConnectionRequest consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2<D>::CreateFromConnectionTokenForUser(Windows::System::User const& user, param::hstring const& connectionToken) const
+{
+    Windows::System::RemoteSystems::RemoteSystemConnectionRequest result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2)->CreateFromConnectionTokenForUser(get_abi(user), get_abi(connectionToken), put_abi(result)));
     return result;
 }
 
@@ -878,6 +920,20 @@ template <typename D> bool consume_Windows_System_RemoteSystems_IRemoteSystemSta
     return result;
 }
 
+template <typename D> Windows::System::RemoteSystems::RemoteSystemWatcher consume_Windows_System_RemoteSystems_IRemoteSystemStatics3<D>::CreateWatcherForUser(Windows::System::User const& user) const
+{
+    Windows::System::RemoteSystems::RemoteSystemWatcher result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics3)->CreateWatcherForUser(get_abi(user), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::System::RemoteSystems::RemoteSystemWatcher consume_Windows_System_RemoteSystems_IRemoteSystemStatics3<D>::CreateWatcherForUser(Windows::System::User const& user, param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters) const
+{
+    Windows::System::RemoteSystems::RemoteSystemWatcher result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics3)->CreateWatcherWithFiltersForUser(get_abi(user), get_abi(filters), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::System::RemoteSystems::RemoteSystemStatusType consume_Windows_System_RemoteSystems_IRemoteSystemStatusTypeFilter<D>::RemoteSystemStatusType() const
 {
     Windows::System::RemoteSystems::RemoteSystemStatusType value{};
@@ -992,6 +1048,13 @@ template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSyste
 template <typename D> void consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
 {
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_ErrorOccurred(get_abi(token)));
+}
+
+template <typename D> Windows::System::User consume_Windows_System_RemoteSystems_IRemoteSystemWatcher3<D>::User() const
+{
+    Windows::System::User value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher3)->get_User(put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::System::RemoteSystems::RemoteSystemWatcherError consume_Windows_System_RemoteSystems_IRemoteSystemWatcherErrorOccurredEventArgs<D>::Error() const
@@ -1231,6 +1294,23 @@ struct produce<D, Windows::System::RemoteSystems::IRemoteSystem5> : produce_base
 };
 
 template <typename D>
+struct produce<D, Windows::System::RemoteSystems::IRemoteSystem6> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystem6>
+{
+    int32_t WINRT_CALL get_User(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(User, WINRT_WRAP(Windows::System::User));
+            *value = detach_from<Windows::System::User>(this->shim().User());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs>
 {
     int32_t WINRT_CALL get_RemoteSystem(void** value) noexcept final
@@ -1308,6 +1388,36 @@ struct produce<D, Windows::System::RemoteSystems::IRemoteSystemApp> : produce_ba
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Attributes, WINRT_WRAP(Windows::Foundation::Collections::IMapView<hstring, hstring>));
             *value = detach_from<Windows::Foundation::Collections::IMapView<hstring, hstring>>(this->shim().Attributes());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::System::RemoteSystems::IRemoteSystemApp2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemApp2>
+{
+    int32_t WINRT_CALL get_User(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(User, WINRT_WRAP(Windows::System::User));
+            *value = detach_from<Windows::System::User>(this->shim().User());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_ConnectionToken(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ConnectionToken, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().ConnectionToken());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1488,6 +1598,23 @@ struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest
 };
 
 template <typename D>
+struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3>
+{
+    int32_t WINRT_CALL get_ConnectionToken(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ConnectionToken, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().ConnectionToken());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory>
 {
     int32_t WINRT_CALL Create(void* remoteSystem, void** value) noexcept final
@@ -1515,6 +1642,36 @@ struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateForApp, WINRT_WRAP(Windows::System::RemoteSystems::RemoteSystemConnectionRequest), Windows::System::RemoteSystems::RemoteSystemApp const&);
             *result = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateForApp(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemApp const*>(&remoteSystemApp)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2>
+{
+    int32_t WINRT_CALL CreateFromConnectionToken(void* connectionToken, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromConnectionToken, WINRT_WRAP(Windows::System::RemoteSystems::RemoteSystemConnectionRequest), hstring const&);
+            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateFromConnectionToken(*reinterpret_cast<hstring const*>(&connectionToken)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateFromConnectionTokenForUser(void* user, void* connectionToken, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromConnectionTokenForUser, WINRT_WRAP(Windows::System::RemoteSystems::RemoteSystemConnectionRequest), Windows::System::User const&, hstring const&);
+            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateFromConnectionTokenForUser(*reinterpret_cast<Windows::System::User const*>(&user), *reinterpret_cast<hstring const*>(&connectionToken)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2710,6 +2867,36 @@ struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatics2> : produ
 };
 
 template <typename D>
+struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatics3> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemStatics3>
+{
+    int32_t WINRT_CALL CreateWatcherForUser(void* user, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateWatcherForUser, WINRT_WRAP(Windows::System::RemoteSystems::RemoteSystemWatcher), Windows::System::User const&);
+            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcherForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL CreateWatcherWithFiltersForUser(void* user, void* filters, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateWatcherForUser, WINRT_WRAP(Windows::System::RemoteSystems::RemoteSystemWatcher), Windows::System::User const&, Windows::Foundation::Collections::IIterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const&);
+            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcherForUser(*reinterpret_cast<Windows::System::User const*>(&user), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const*>(&filters)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter>
 {
     int32_t WINRT_CALL get_RemoteSystemStatusType(Windows::System::RemoteSystems::RemoteSystemStatusType* value) noexcept final
@@ -2892,6 +3079,23 @@ struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWatcher2> : produ
 };
 
 template <typename D>
+struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWatcher3> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWatcher3>
+{
+    int32_t WINRT_CALL get_User(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(User, WINRT_WRAP(Windows::System::User));
+            *value = detach_from<Windows::System::User>(this->shim().User());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs>
 {
     int32_t WINRT_CALL get_Error(Windows::System::RemoteSystems::RemoteSystemWatcherError* value) noexcept final
@@ -2990,6 +3194,16 @@ inline bool RemoteSystem::IsAuthorizationKindEnabled(Windows::System::RemoteSyst
     return impl::call_factory<RemoteSystem, Windows::System::RemoteSystems::IRemoteSystemStatics2>([&](auto&& f) { return f.IsAuthorizationKindEnabled(kind); });
 }
 
+inline Windows::System::RemoteSystems::RemoteSystemWatcher RemoteSystem::CreateWatcherForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<RemoteSystem, Windows::System::RemoteSystems::IRemoteSystemStatics3>([&](auto&& f) { return f.CreateWatcherForUser(user); });
+}
+
+inline Windows::System::RemoteSystems::RemoteSystemWatcher RemoteSystem::CreateWatcherForUser(Windows::System::User const& user, param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters)
+{
+    return impl::call_factory<RemoteSystem, Windows::System::RemoteSystems::IRemoteSystemStatics3>([&](auto&& f) { return f.CreateWatcherForUser(user, filters); });
+}
+
 inline Windows::System::RemoteSystems::RemoteSystemAppRegistration RemoteSystemAppRegistration::GetDefault()
 {
     return impl::call_factory<RemoteSystemAppRegistration, Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics>([&](auto&& f) { return f.GetDefault(); });
@@ -3016,6 +3230,16 @@ inline RemoteSystemConnectionRequest::RemoteSystemConnectionRequest(Windows::Sys
 inline Windows::System::RemoteSystems::RemoteSystemConnectionRequest RemoteSystemConnectionRequest::CreateForApp(Windows::System::RemoteSystems::RemoteSystemApp const& remoteSystemApp)
 {
     return impl::call_factory<RemoteSystemConnectionRequest, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics>([&](auto&& f) { return f.CreateForApp(remoteSystemApp); });
+}
+
+inline Windows::System::RemoteSystems::RemoteSystemConnectionRequest RemoteSystemConnectionRequest::CreateFromConnectionToken(param::hstring const& connectionToken)
+{
+    return impl::call_factory<RemoteSystemConnectionRequest, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2>([&](auto&& f) { return f.CreateFromConnectionToken(connectionToken); });
+}
+
+inline Windows::System::RemoteSystems::RemoteSystemConnectionRequest RemoteSystemConnectionRequest::CreateFromConnectionTokenForUser(Windows::System::User const& user, param::hstring const& connectionToken)
+{
+    return impl::call_factory<RemoteSystemConnectionRequest, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2>([&](auto&& f) { return f.CreateFromConnectionTokenForUser(user, connectionToken); });
 }
 
 inline RemoteSystemDiscoveryTypeFilter::RemoteSystemDiscoveryTypeFilter(Windows::System::RemoteSystems::RemoteSystemDiscoveryType const& discoveryType) :
@@ -3113,8 +3337,10 @@ template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystem2> : 
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystem3> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystem3> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystem4> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystem4> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystem5> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystem5> {};
+template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystem6> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystem6> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemApp> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemApp> {};
+template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemApp2> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemApp2> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter> {};
@@ -3123,8 +3349,10 @@ template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConne
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2> {};
+template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics> {};
+template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs> {};
@@ -3161,11 +3389,13 @@ template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemSessi
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemStatics> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemStatics> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemStatics2> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemStatics2> {};
+template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemStatics3> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemStatics3> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2> {};
+template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher3> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher3> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter> {};
 template<> struct hash<winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory> : winrt::impl::hash_base<winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory> {};

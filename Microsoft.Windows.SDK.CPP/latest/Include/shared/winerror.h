@@ -199,6 +199,7 @@
 #define FACILITY_WEP                     2049
 #define FACILITY_SYNCENGINE              2050
 #define FACILITY_XBOX                    2339
+#define FACILITY_GAME                    2340
 #define FACILITY_PIX                     2748
 
 
@@ -3094,13 +3095,13 @@
 #define ERROR_NOT_DAX_MAPPABLE           421L
 
 //
-// MessageId: ERROR_TIME_CRITICAL_THREAD
+// MessageId: ERROR_TIME_SENSITIVE_THREAD
 //
 // MessageText:
 //
 // Operation cannot be performed on a time critical thread.
 //
-#define ERROR_TIME_CRITICAL_THREAD       422L
+#define ERROR_TIME_SENSITIVE_THREAD      422L
 
 //
 // MessageId: ERROR_DPL_NOT_SUPPORTED_FOR_USER
@@ -3119,6 +3120,87 @@
 // This directory contains entries whose names differ only in case.
 //
 #define ERROR_CASE_DIFFERING_NAMES_IN_DIR 424L
+
+//
+// MessageId: ERROR_FILE_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The file cannot be safely opened because it is not supported by this version of Windows.
+//
+#define ERROR_FILE_NOT_SUPPORTED         425L
+
+//
+// MessageId: ERROR_CLOUD_FILE_REQUEST_TIMEOUT
+//
+// MessageText:
+//
+// The cloud operation was not completed before the time-out period expired.
+//
+#define ERROR_CLOUD_FILE_REQUEST_TIMEOUT 426L
+
+//
+// MessageId: ERROR_NO_TASK_QUEUE
+//
+// MessageText:
+//
+// A task queue is required for this operation but none is available.
+//
+#define ERROR_NO_TASK_QUEUE              427L
+
+//
+// MessageId: ERROR_SRC_SRV_DLL_LOAD_FAILED
+//
+// MessageText:
+//
+// Failed loading a valid version of srcsrv.dll.
+//
+#define ERROR_SRC_SRV_DLL_LOAD_FAILED    428L
+
+//
+// MessageId: ERROR_NOT_SUPPORTED_WITH_BTT
+//
+// MessageText:
+//
+// This operation is not supported with BTT enabled.
+//
+#define ERROR_NOT_SUPPORTED_WITH_BTT     429L
+
+//
+// MessageId: ERROR_ENCRYPTION_DISABLED
+//
+// MessageText:
+//
+// This operation cannot be performed because encryption is currently disabled.
+//
+#define ERROR_ENCRYPTION_DISABLED        430L
+
+//
+// MessageId: ERROR_ENCRYPTING_METADATA_DISALLOWED
+//
+// MessageText:
+//
+// This encryption operation cannot be performed on filesystem metadata.
+//
+#define ERROR_ENCRYPTING_METADATA_DISALLOWED 431L
+
+//
+// MessageId: ERROR_CANT_CLEAR_ENCRYPTION_FLAG
+//
+// MessageText:
+//
+// Encryption cannot be cleared on this file/directory because it still has an encrypted attribute.
+//
+#define ERROR_CANT_CLEAR_ENCRYPTION_FLAG 432L
+
+//
+// MessageId: ERROR_NO_SUCH_DEVICE
+//
+// MessageText:
+//
+// A device which does not exist was specified.
+//
+#define ERROR_NO_SUCH_DEVICE             433L
 
 //
 // **** Available SYSTEM error codes ****
@@ -13576,6 +13658,24 @@
 //
 #define ERROR_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED 4553L
 
+//
+// MessageId: ERROR_SYSTEM_INTEGRITY_TOO_MANY_POLICIES
+//
+// MessageText:
+//
+// The number of System Integrity policies is out of limit.
+//
+#define ERROR_SYSTEM_INTEGRITY_TOO_MANY_POLICIES 4554L
+
+//
+// MessageId: ERROR_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
+//
+// MessageText:
+//
+// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
+//
+#define ERROR_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED 4555L
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -15745,6 +15845,15 @@
 // The requested operation was blocked by policy. For more information, contact your system administrator.
 //
 #define ERROR_ENCRYPTION_POLICY_DENIES_OPERATION 6022L
+
+//
+// MessageId: ERROR_WIP_ENCRYPTION_FAILED
+//
+// MessageText:
+//
+// The specified file could not be encrypted with Windows Information Protection.
+//
+#define ERROR_WIP_ENCRYPTION_FAILED      6023L
 
 
 ///////////////////////////////////////////////////
@@ -26605,6 +26714,15 @@
 //
 #define ERROR_SXS_FILE_HASH_MISSING      14110L
 
+//
+// MessageId: ERROR_SXS_DUPLICATE_ACTIVATABLE_CLASS
+//
+// MessageText:
+//
+// Two or more components referenced directly or indirectly by the application manifest have the same WinRT ActivatableClass IDs.
+//
+#define ERROR_SXS_DUPLICATE_ACTIVATABLE_CLASS 14111L
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -27474,6 +27592,15 @@
 //
 #define ERROR_MRM_PACKAGE_NOT_FOUND      15159L
 
+//
+// MessageId: ERROR_MRM_MISSING_DEFAULT_LANGUAGE
+//
+// MessageText:
+//
+// No default value for language was specified.
+//
+#define ERROR_MRM_MISSING_DEFAULT_LANGUAGE 15160L
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -28199,6 +28326,87 @@
 //
 #define ERROR_REGISTRATION_FROM_REMOTE_DRIVE_NOT_SUPPORTED 15647L
 
+//
+// MessageId: ERROR_APPX_RAW_DATA_WRITE_FAILED
+//
+// MessageText:
+//
+// Failed to process and write downloaded APPX package data to disk.
+//
+#define ERROR_APPX_RAW_DATA_WRITE_FAILED 15648L
+
+//
+// MessageId: ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_PACKAGE
+//
+// MessageText:
+//
+// The deployment operation was blocked due to a per-package-family policy restricting deployments on a non-system volume. Per policy, this app must be installed to the system drive, but that's not set as the default. In Storage Settings, make the system drive the default location to save new content, then retry the install.
+//
+#define ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_PACKAGE 15649L
+
+//
+// MessageId: ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_MACHINE
+//
+// MessageText:
+//
+// The deployment operation was blocked due to a machine-wide policy restricting deployments on a non-system volume. Per policy, this app must be installed to the system drive, but that's not set as the default. In Storage Settings, make the system drive the default location to save new content, then retry the install.
+//
+#define ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_MACHINE 15650L
+
+//
+// MessageId: ERROR_DEPLOYMENT_BLOCKED_BY_PROFILE_POLICY
+//
+// MessageText:
+//
+// The deployment operation was blocked because Special profile deployment is not allowed. Please try logging into an account that is not a Special profile. You can try logging out and logging back into the current account, or try logging into a different account.
+//
+#define ERROR_DEPLOYMENT_BLOCKED_BY_PROFILE_POLICY 15651L
+
+//
+// MessageId: ERROR_DEPLOYMENT_FAILED_CONFLICTING_MUTABLE_PACKAGE_DIRECTORY
+//
+// MessageText:
+//
+// The deployment operation failed due to a conflicting package's mutable package directory. To install this package remove the existing package with the conflicting mutable package directory.
+//
+#define ERROR_DEPLOYMENT_FAILED_CONFLICTING_MUTABLE_PACKAGE_DIRECTORY 15652L
+
+//
+// MessageId: ERROR_SINGLETON_RESOURCE_INSTALLED_IN_ACTIVE_USER
+//
+// MessageText:
+//
+// The package installation failed because a singleton resource was specified and another user with that package installed is logged in. Please make sure that all active users with the package installed are logged out and retry installation.
+//
+#define ERROR_SINGLETON_RESOURCE_INSTALLED_IN_ACTIVE_USER 15653L
+
+//
+// MessageId: ERROR_DIFFERENT_VERSION_OF_PACKAGED_SERVICE_INSTALLED
+//
+// MessageText:
+//
+// The package installation failed because a different version of the service is installed. Try installing a newer version of the package.
+//
+#define ERROR_DIFFERENT_VERSION_OF_PACKAGED_SERVICE_INSTALLED 15654L
+
+//
+// MessageId: ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE
+//
+// MessageText:
+//
+// The package installation failed because a version of the service exists outside of APPX packaging. Please contact your software vendor.
+//
+#define ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE 15655L
+
+//
+// MessageId: ERROR_PACKAGED_SERVICE_REQUIRES_ADMIN_PRIVILEGES
+//
+// MessageText:
+//
+// The package installation failed because administrator privileges are required. Please contact an administrator to install this package.
+//
+#define ERROR_PACKAGED_SERVICE_REQUIRES_ADMIN_PRIVILEGES 15656L
+
 //////////////////////////
 //                      //
 // AppModel Error Codes //
@@ -28267,6 +28475,15 @@
 // The package is currently not available.
 //
 #define APPMODEL_ERROR_PACKAGE_NOT_AVAILABLE 15706L
+
+//
+// MessageId: APPMODEL_ERROR_NO_MUTABLE_DIRECTORY
+//
+// MessageText:
+//
+// The package does not have a mutable directory.
+//
+#define APPMODEL_ERROR_NO_MUTABLE_DIRECTORY 15707L
 
 /////////////////////////////
 //                         //
@@ -28673,7 +28890,8 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define E_NOT_SET                HRESULT_FROM_WIN32(ERROR_NOT_FOUND)
 #define E_NOT_VALID_STATE        HRESULT_FROM_WIN32(ERROR_INVALID_STATE)
 #define E_NOT_SUFFICIENT_BUFFER  HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)
-#define E_TIME_CRITICAL_THREAD   HRESULT_FROM_WIN32(ERROR_TIME_CRITICAL_THREAD)
+#define E_TIME_SENSITIVE_THREAD  HRESULT_FROM_WIN32(ERROR_TIME_SENSITIVE_THREAD)
+#define E_NO_TASK_QUEUE          HRESULT_FROM_WIN32(ERROR_NO_TASK_QUEUE)
 
 // ---------------------- HRESULT value definitions -----------------
 //
@@ -35254,6 +35472,15 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define SEC_I_LOCAL_LOGON                _HRESULT_TYPEDEF_(0x00090315L)
 
 //
+// MessageId: SEC_I_GENERIC_EXTENSION_RECEIVED
+//
+// MessageText:
+//
+// Schannel has received a TLS extension the SSPI caller subscribed to.
+//
+#define SEC_I_GENERIC_EXTENSION_RECEIVED _HRESULT_TYPEDEF_(0x00090316L)
+
+//
 // MessageId: SEC_E_BAD_PKGID
 //
 // MessageText:
@@ -35856,6 +36083,24 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // You can't sign in with a user ID in this format. Try using your email address instead.
 //
 #define SEC_E_INVALID_UPN_NAME           _HRESULT_TYPEDEF_(0x80090369L)
+
+//
+// MessageId: SEC_E_EXT_BUFFER_TOO_SMALL
+//
+// MessageText:
+//
+// The buffer supplied by the SSPI caller to receive generic extensions is too small.
+//
+#define SEC_E_EXT_BUFFER_TOO_SMALL       _HRESULT_TYPEDEF_(0x8009036AL)
+
+//
+// MessageId: SEC_E_INSUFFICIENT_BUFFERS
+//
+// MessageText:
+//
+// Not enough secbuffers were supplied to generate a token.
+//
+#define SEC_E_INSUFFICIENT_BUFFERS       _HRESULT_TYPEDEF_(0x8009036BL)
 
 //
 // Provided for backwards compatibility
@@ -41391,6 +41636,24 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // Vail state has been changed
 //
 #define ERROR_GRAPHICS_VAIL_STATE_CHANGED _HRESULT_TYPEDEF_(0xC0262011L)
+
+//
+// MessageId: ERROR_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
+//
+// MessageText:
+//
+// Notifying indirect display UMDF class driver to abandon current swapchain.
+//
+#define ERROR_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN _HRESULT_TYPEDEF_(0xC0262012L)
+
+//
+// MessageId: ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
+//
+// MessageText:
+//
+// Notifying indirect display UMDF class driver that indirect display device has been stopped.
+//
+#define ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED _HRESULT_TYPEDEF_(0xC0262013L)
 
 //
 // Video Memory Manager (VidMM) subsystem errors {0x2100..0x21ff}
@@ -48403,6 +48666,69 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define FVE_E_OSV_KSR_NOT_ALLOWED        _HRESULT_TYPEDEF_(0x803100D9L)
 
 //
+// MessageId: FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_OS_DRIVE
+//
+// MessageText:
+//
+// Recovery Password Rotation cannot be performed because Active Directory Backup policy is not set to Required for OS drive.
+//
+#define FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_OS_DRIVE _HRESULT_TYPEDEF_(0x803100DAL)
+
+//
+// MessageId: FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_FIXED_DRIVE
+//
+// MessageText:
+//
+// Recovery Password Rotation cannot be performed because Active Directory Backup policy is not set to Required for Fixed drive.
+//
+#define FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_FIXED_DRIVE _HRESULT_TYPEDEF_(0x803100DBL)
+
+//
+// MessageId: FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_REMOVABLE_DRIVE
+//
+// MessageText:
+//
+// Recovery Password Rotation cannot be performed because Active Directory Backup policy is not set to Required for Removable drive.
+//
+#define FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_REMOVABLE_DRIVE _HRESULT_TYPEDEF_(0x803100DCL)
+
+//
+// MessageId: FVE_E_KEY_ROTATION_NOT_SUPPORTED
+//
+// MessageText:
+//
+// Bitlocker Recovery Password rotation not supported.
+//
+#define FVE_E_KEY_ROTATION_NOT_SUPPORTED _HRESULT_TYPEDEF_(0x803100DDL)
+
+//
+// MessageId: FVE_E_EXECUTE_REQUEST_SENT_TOO_SOON
+//
+// MessageText:
+//
+// An Instance of Server issued recovery password rotation already in Progress. No second RotateRecoveryPasswords request allowed within 1 hour interval.
+//
+#define FVE_E_EXECUTE_REQUEST_SENT_TOO_SOON _HRESULT_TYPEDEF_(0x803100DEL)
+
+//
+// MessageId: FVE_E_KEY_ROTATION_NOT_ENABLED
+//
+// MessageText:
+//
+// Recovery Passwords Key Rotation is not Enabled.
+//
+#define FVE_E_KEY_ROTATION_NOT_ENABLED   _HRESULT_TYPEDEF_(0x803100DFL)
+
+//
+// MessageId: FVE_E_DEVICE_NOT_JOINED
+//
+// MessageText:
+//
+// Recovery Passwords Rotation could not be performed because the device is not joined to AAD or Hybrid.
+//
+#define FVE_E_DEVICE_NOT_JOINED          _HRESULT_TYPEDEF_(0x803100E0L)
+
+//
 // =======================================================
 // Windows Filtering Platform Error Messages
 // =======================================================
@@ -51053,7 +51379,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// An event callback has already been registered on this handle. 
+// An event callback has already been registered on this handle.
 //
 #define HCS_E_OPERATION_SYSTEM_CALLBACK_ALREADY_SET _HRESULT_TYPEDEF_(0x80370119L)
 
@@ -52891,6 +53217,60 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // Default Namespace already exists
 //
 #define GCN_E_DEFAULTNAMESPACE_EXISTS    _HRESULT_TYPEDEF_(0x803B0029L)
+
+//
+// MessageId: HCN_E_ICS_DISABLED
+//
+// MessageText:
+//
+// Internet Connection Sharing service (SharedAccess) is disabled and cannot be started
+//
+#define HCN_E_ICS_DISABLED               _HRESULT_TYPEDEF_(0x803B002AL)
+
+//
+// MessageId: HCN_E_ENDPOINT_NAMESPACE_ALREADY_EXISTS
+//
+// MessageText:
+//
+// This requested operation is invalid as endpoint is already part of a network namespace.
+//
+#define HCN_E_ENDPOINT_NAMESPACE_ALREADY_EXISTS _HRESULT_TYPEDEF_(0x803B002BL)
+
+//
+// MessageId: HCN_E_ENTITY_HAS_REFERENCES
+//
+// MessageText:
+//
+// The specified entity cannot be removed while it still has references.
+//
+#define HCN_E_ENTITY_HAS_REFERENCES      _HRESULT_TYPEDEF_(0x803B002CL)
+
+//
+// MessageId: HCN_E_INVALID_INTERNAL_PORT
+//
+// MessageText:
+//
+// The internal port must exist and cannot be zero.
+//
+#define HCN_E_INVALID_INTERNAL_PORT      _HRESULT_TYPEDEF_(0x803B002DL)
+
+//
+// MessageId: HCN_E_NAMESPACE_ATTACH_FAILED
+//
+// MessageText:
+//
+// The requested operation for attach namespace failed.
+//
+#define HCN_E_NAMESPACE_ATTACH_FAILED    _HRESULT_TYPEDEF_(0x803B002EL)
+
+//
+// MessageId: HCN_E_ADDR_INVALID_OR_RESERVED
+//
+// MessageText:
+//
+// An address provided is invalid or reserved.
+//
+#define HCN_E_ADDR_INVALID_OR_RESERVED   _HRESULT_TYPEDEF_(0x803B002FL)
 
 //
 // =======================================================
@@ -61804,6 +62184,15 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // The file for the GetFileInfo action must be under the \Windows, \Program Files, or \Program Files (x86) directories.
 //
 #define UTC_E_GETFILEINFOACTION_FILE_NOT_APPROVED _HRESULT_TYPEDEF_(0x87C5105BL)
+
+//
+// MessageId: UTC_E_SETREGKEYACTION_TYPE_NOT_APPROVED
+//
+// MessageText:
+//
+// The registry value type for SetRegKey action must be REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ, REG_BINARY, REG_DWORD, or REG_QWORD.
+//
+#define UTC_E_SETREGKEYACTION_TYPE_NOT_APPROVED _HRESULT_TYPEDEF_(0x87C5105CL)
 
 
 //

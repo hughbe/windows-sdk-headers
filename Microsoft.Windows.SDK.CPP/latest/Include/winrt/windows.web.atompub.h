@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.web.atompub.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 interface IAtomPubClient;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClient ABI::Windows::Web::AtomPub::IAtomPubClient
 
 #endif // ____x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClient_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 interface IAtomPubClientFactory;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClientFactory ABI::Windows::Web::AtomPub::IAtomPubClientFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClientFactory_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 interface IResourceCollection;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CAtomPub_CIResourceCollection ABI::Windows::Web::AtomPub::IResourceCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CAtomPub_CIResourceCollection_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 interface IServiceDocument;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CAtomPub_CIServiceDocument ABI::Windows::Web::AtomPub::IServiceDocument
 
 #endif // ____x_ABI_CWindows_CWeb_CAtomPub_CIServiceDocument_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 interface IWorkspace;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CAtomPub_CIWorkspace ABI::Windows::Web::AtomPub::IWorkspace
 
 #endif // ____x_ABI_CWindows_CWeb_CAtomPub_CIWorkspace_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 class ResourceCollection;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -375,7 +371,7 @@ IIterator<ABI::Windows::Web::AtomPub::ResourceCollection*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::AtomPub::ResourceCollection*> __FIIterator_1_Windows__CWeb__CAtomPub__CResourceCollection_t;
 #define __FIIterator_1_Windows__CWeb__CAtomPub__CResourceCollection ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CAtomPub__CResourceCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CAtomPub__CResourceCollection ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::AtomPub::IResourceCollection*>
@@ -407,7 +403,7 @@ IIterable<ABI::Windows::Web::AtomPub::ResourceCollection*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::AtomPub::ResourceCollection*> __FIIterable_1_Windows__CWeb__CAtomPub__CResourceCollection_t;
 #define __FIIterable_1_Windows__CWeb__CAtomPub__CResourceCollection ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CAtomPub__CResourceCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CAtomPub__CResourceCollection ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::AtomPub::IResourceCollection*>
@@ -423,9 +419,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 class Workspace;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -448,7 +444,7 @@ IIterator<ABI::Windows::Web::AtomPub::Workspace*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::AtomPub::Workspace*> __FIIterator_1_Windows__CWeb__CAtomPub__CWorkspace_t;
 #define __FIIterator_1_Windows__CWeb__CAtomPub__CWorkspace ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CAtomPub__CWorkspace_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CAtomPub__CWorkspace ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::AtomPub::IWorkspace*>
@@ -480,7 +476,7 @@ IIterable<ABI::Windows::Web::AtomPub::Workspace*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::AtomPub::Workspace*> __FIIterable_1_Windows__CWeb__CAtomPub__CWorkspace_t;
 #define __FIIterable_1_Windows__CWeb__CAtomPub__CWorkspace ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CAtomPub__CWorkspace_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CAtomPub__CWorkspace ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::AtomPub::IWorkspace*>
@@ -512,7 +508,7 @@ IVectorView<ABI::Windows::Web::AtomPub::ResourceCollection*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::AtomPub::ResourceCollection*> __FIVectorView_1_Windows__CWeb__CAtomPub__CResourceCollection_t;
 #define __FIVectorView_1_Windows__CWeb__CAtomPub__CResourceCollection ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CAtomPub__CResourceCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CAtomPub__CResourceCollection ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::AtomPub::IResourceCollection*>
@@ -544,7 +540,7 @@ IVectorView<ABI::Windows::Web::AtomPub::Workspace*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::AtomPub::Workspace*> __FIVectorView_1_Windows__CWeb__CAtomPub__CWorkspace_t;
 #define __FIVectorView_1_Windows__CWeb__CAtomPub__CWorkspace ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CAtomPub__CWorkspace_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CAtomPub__CWorkspace ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::AtomPub::IWorkspace*>
@@ -560,9 +556,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 class ServiceDocument;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -571,9 +567,9 @@ namespace ABI {
             namespace Syndication {
                 struct RetrievalProgress;
                 
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -595,7 +591,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Web::AtomPub::ServiceDocument*,stru
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Web::AtomPub::ServiceDocument*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::AtomPub::IServiceDocument*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -628,7 +624,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::AtomPub::ServiceD
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::AtomPub::ServiceDocument*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::AtomPub::IServiceDocument*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -661,7 +657,7 @@ IAsyncOperationWithProgress<ABI::Windows::Web::AtomPub::ServiceDocument*,struct 
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Web::AtomPub::ServiceDocument*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::AtomPub::IServiceDocument*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -679,9 +675,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -708,7 +704,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,str
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -741,7 +737,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInp
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -774,7 +770,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,struct
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -790,9 +786,9 @@ namespace ABI {
         namespace Web {
             namespace Syndication {
                 class SyndicationItem;
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationItem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationItem_FWD_DEFINED__
@@ -801,9 +797,9 @@ namespace ABI {
         namespace Web {
             namespace Syndication {
                 interface ISyndicationItem;
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CSyndication_CISyndicationItem ABI::Windows::Web::Syndication::ISyndicationItem
 
 #endif // ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationItem_FWD_DEFINED__
@@ -830,7 +826,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Web::Syndication::SyndicationItem*,
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Syndication::SyndicationItem*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Syndication::ISyndicationItem*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -863,7 +859,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Syndication::Synd
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Syndication::SyndicationItem*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Syndication::ISyndicationItem*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -896,7 +892,7 @@ IAsyncOperationWithProgress<ABI::Windows::Web::Syndication::SyndicationItem*,str
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Web::Syndication::SyndicationItem*,struct ABI::Windows::Web::Syndication::RetrievalProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Syndication::ISyndicationItem*,ABI::Windows::Web::Syndication::RetrievalProgress>
@@ -914,9 +910,9 @@ namespace ABI {
             namespace Syndication {
                 struct TransferProgress;
                 
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -938,7 +934,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Web::Syndication::SyndicationItem*,
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Syndication::SyndicationItem*,struct ABI::Windows::Web::Syndication::TransferProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Syndication::ISyndicationItem*,ABI::Windows::Web::Syndication::TransferProgress>
@@ -971,7 +967,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Syndication::Synd
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Syndication::SyndicationItem*,struct ABI::Windows::Web::Syndication::TransferProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Syndication::ISyndicationItem*,ABI::Windows::Web::Syndication::TransferProgress>
@@ -1004,7 +1000,7 @@ IAsyncOperationWithProgress<ABI::Windows::Web::Syndication::SyndicationItem*,str
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Web::Syndication::SyndicationItem*,struct ABI::Windows::Web::Syndication::TransferProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Syndication::ISyndicationItem*,ABI::Windows::Web::Syndication::TransferProgress>
@@ -1035,7 +1031,7 @@ IAsyncActionProgressHandler<struct ABI::Windows::Web::Syndication::TransferProgr
 // correct parameterized interface specialization.
 typedef IAsyncActionProgressHandler<struct ABI::Windows::Web::Syndication::TransferProgress> __FIAsyncActionProgressHandler_1_Windows__CWeb__CSyndication__CTransferProgress_t;
 #define __FIAsyncActionProgressHandler_1_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::__FIAsyncActionProgressHandler_1_Windows__CWeb__CSyndication__CTransferProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionProgressHandler_1_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::IAsyncActionProgressHandler<ABI::Windows::Web::Syndication::TransferProgress>
@@ -1065,7 +1061,7 @@ IAsyncActionWithProgressCompletedHandler<struct ABI::Windows::Web::Syndication::
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgressCompletedHandler<struct ABI::Windows::Web::Syndication::TransferProgress> __FIAsyncActionWithProgressCompletedHandler_1_Windows__CWeb__CSyndication__CTransferProgress_t;
 #define __FIAsyncActionWithProgressCompletedHandler_1_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::__FIAsyncActionWithProgressCompletedHandler_1_Windows__CWeb__CSyndication__CTransferProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgressCompletedHandler_1_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::IAsyncActionWithProgressCompletedHandler<ABI::Windows::Web::Syndication::TransferProgress>
@@ -1095,7 +1091,7 @@ IAsyncActionWithProgress<struct ABI::Windows::Web::Syndication::TransferProgress
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgress<struct ABI::Windows::Web::Syndication::TransferProgress> __FIAsyncActionWithProgress_1_Windows__CWeb__CSyndication__CTransferProgress_t;
 #define __FIAsyncActionWithProgress_1_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::__FIAsyncActionWithProgress_1_Windows__CWeb__CSyndication__CTransferProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgress_1_Windows__CWeb__CSyndication__CTransferProgress ABI::Windows::Foundation::IAsyncActionWithProgress<ABI::Windows::Web::Syndication::TransferProgress>
@@ -1110,9 +1106,9 @@ namespace ABI {
         namespace Web {
             namespace Syndication {
                 class SyndicationCategory;
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationCategory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationCategory_FWD_DEFINED__
@@ -1121,9 +1117,9 @@ namespace ABI {
         namespace Web {
             namespace Syndication {
                 interface ISyndicationCategory;
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CSyndication_CISyndicationCategory ABI::Windows::Web::Syndication::ISyndicationCategory
 
 #endif // ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationCategory_FWD_DEFINED__
@@ -1149,7 +1145,7 @@ IIterator<ABI::Windows::Web::Syndication::SyndicationCategory*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Syndication::SyndicationCategory*> __FIIterator_1_Windows__CWeb__CSyndication__CSyndicationCategory_t;
 #define __FIIterator_1_Windows__CWeb__CSyndication__CSyndicationCategory ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CSyndication__CSyndicationCategory_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CSyndication__CSyndicationCategory ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Syndication::ISyndicationCategory*>
@@ -1181,7 +1177,7 @@ IIterable<ABI::Windows::Web::Syndication::SyndicationCategory*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Syndication::SyndicationCategory*> __FIIterable_1_Windows__CWeb__CSyndication__CSyndicationCategory_t;
 #define __FIIterable_1_Windows__CWeb__CSyndication__CSyndicationCategory ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CSyndication__CSyndicationCategory_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CSyndication__CSyndicationCategory ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Syndication::ISyndicationCategory*>
@@ -1213,7 +1209,7 @@ IVectorView<ABI::Windows::Web::Syndication::SyndicationCategory*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Syndication::SyndicationCategory*> __FIVectorView_1_Windows__CWeb__CSyndication__CSyndicationCategory_t;
 #define __FIVectorView_1_Windows__CWeb__CSyndication__CSyndicationCategory ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CSyndication__CSyndicationCategory_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CSyndication__CSyndicationCategory ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Syndication::ISyndicationCategory*>
@@ -1243,7 +1239,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1272,7 +1268,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1301,7 +1297,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1318,8 +1314,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1327,8 +1323,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1341,9 +1337,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -1352,9 +1348,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -1374,9 +1370,9 @@ namespace ABI {
         namespace Web {
             namespace Syndication {
                 interface ISyndicationClient;
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CSyndication_CISyndicationClient ABI::Windows::Web::Syndication::ISyndicationClient
 
 #endif // ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationClient_FWD_DEFINED__
@@ -1389,9 +1385,9 @@ namespace ABI {
         namespace Web {
             namespace Syndication {
                 interface ISyndicationNode;
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CSyndication_CISyndicationNode ABI::Windows::Web::Syndication::ISyndicationNode
 
 #endif // ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationNode_FWD_DEFINED__
@@ -1404,9 +1400,9 @@ namespace ABI {
         namespace Web {
             namespace Syndication {
                 interface ISyndicationText;
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CSyndication_CISyndicationText ABI::Windows::Web::Syndication::ISyndicationText
 
 #endif // ____x_ABI_CWindows_CWeb_CSyndication_CISyndicationText_FWD_DEFINED__
@@ -1419,9 +1415,9 @@ namespace ABI {
                 
                 typedef struct RetrievalProgress RetrievalProgress;
                 
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1432,9 +1428,9 @@ namespace ABI {
                 
                 typedef struct TransferProgress TransferProgress;
                 
-            } /* Windows */
+            } /* Syndication */
         } /* Web */
-    } /* Syndication */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1449,9 +1445,9 @@ namespace ABI {
         namespace Web {
             namespace AtomPub {
                 class AtomPubClient;
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1547,9 +1543,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAtomPubClient=_uuidof(IAtomPubClient);
                 
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClient;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClient_INTERFACE_DEFINED__) */
@@ -1589,9 +1585,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAtomPubClientFactory=_uuidof(IAtomPubClientFactory);
                 
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClientFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CAtomPub_CIAtomPubClientFactory_INTERFACE_DEFINED__) */
@@ -1643,9 +1639,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IResourceCollection=_uuidof(IResourceCollection);
                 
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CAtomPub_CIResourceCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CAtomPub_CIResourceCollection_INTERFACE_DEFINED__) */
@@ -1688,9 +1684,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServiceDocument=_uuidof(IServiceDocument);
                 
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CAtomPub_CIServiceDocument;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CAtomPub_CIServiceDocument_INTERFACE_DEFINED__) */
@@ -1736,9 +1732,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWorkspace=_uuidof(IWorkspace);
                 
-            } /* Windows */
+            } /* AtomPub */
         } /* Web */
-    } /* AtomPub */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CAtomPub_CIWorkspace;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CAtomPub_CIWorkspace_INTERFACE_DEFINED__) */
@@ -2451,7 +2447,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CSer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CSyndication_CRetrievalProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CWeb__CAtomPub__CServiceDocument_Windows__CWeb__CSyndication__CRetrievalProgressVtbl;
 
@@ -2633,7 +2629,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CSyndication_CRetrievalProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CSyndication__CRetrievalProgressVtbl;
 
@@ -2815,7 +2811,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CSyndication_CRetrievalProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CRetrievalProgressVtbl;
 
@@ -2992,7 +2988,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CSyndication_CTransferProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CWeb__CSyndication__CSyndicationItem_Windows__CWeb__CSyndication__CTransferProgressVtbl;
 

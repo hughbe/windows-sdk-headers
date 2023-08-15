@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.gaming.preview.gamesenumeration.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -284,10 +280,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameListChangedEventHandler;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListChangedEventHandler ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListChangedEventHandler
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListChangedEventHandler_FWD_DEFINED__
@@ -300,10 +296,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameListRemovedEventHandler;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListRemovedEventHandler ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListRemovedEventHandler
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListRemovedEventHandler_FWD_DEFINED__
@@ -316,10 +312,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameListEntry;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry_FWD_DEFINED__
@@ -332,10 +328,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameListEntry2;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry2 ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry2_FWD_DEFINED__
@@ -348,10 +344,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameListStatics;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics_FWD_DEFINED__
@@ -364,10 +360,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameListStatics2;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics2 ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics2
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics2_FWD_DEFINED__
@@ -380,10 +376,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameModeConfiguration;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeConfiguration ABI::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeConfiguration_FWD_DEFINED__
@@ -396,10 +392,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameModeUserConfiguration;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfiguration ABI::Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfiguration
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfiguration_FWD_DEFINED__
@@ -412,10 +408,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     interface IGameModeUserConfigurationStatics;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfigurationStatics ABI::Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfigurationStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfigurationStatics_FWD_DEFINED__
@@ -429,10 +425,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     class GameListEntry;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_PREVIEW_GAMESENUMERATIONCONTRACT_VERSION >= 0x10000
@@ -455,7 +451,7 @@ IIterator<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> __FIIterator_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t;
 #define __FIIterator_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry*>
@@ -487,7 +483,7 @@ IIterable<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> __FIIterable_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t;
 #define __FIIterable_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry*>
@@ -519,7 +515,7 @@ IVectorView<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> __FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t;
 #define __FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry*>
@@ -551,7 +547,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CGaming__CPreview__CGa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry*>*>
@@ -583,7 +579,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry*> __FIAsyncOperation_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry*>*>
@@ -615,7 +611,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Gaming::Preview::GamesEnumeration:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry*>
@@ -647,7 +643,7 @@ IAsyncOperation<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Gaming::Preview::GamesEnumeration::GameListEntry*> __FIAsyncOperation_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t;
 #define __FIAsyncOperation_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGaming__CPreview__CGamesEnumeration__CGameListEntry ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry*>
@@ -677,7 +673,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -706,7 +702,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -736,7 +732,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -766,7 +762,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -796,7 +792,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -826,7 +822,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -855,7 +851,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -884,7 +880,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -913,7 +909,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -942,7 +938,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -971,7 +967,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -987,8 +983,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppDisplayInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo_FWD_DEFINED__
@@ -996,8 +992,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppDisplayInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo ABI::Windows::ApplicationModel::IAppDisplayInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo_FWD_DEFINED__
@@ -1011,8 +1007,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1030,8 +1026,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1047,10 +1043,10 @@ namespace ABI {
                     
                     typedef enum GameListCategory : int GameListCategory;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1060,10 +1056,10 @@ namespace ABI {
                     
                     typedef enum GameListEntryLaunchableState : int GameListEntryLaunchableState;
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1082,10 +1078,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     class GameModeConfiguration;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1094,10 +1090,10 @@ namespace ABI {
             namespace Preview {
                 namespace GamesEnumeration {
                     class GameModeUserConfiguration;
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1133,10 +1129,10 @@ namespace ABI {
                         GameListCategory_ConfirmedByUser = 2,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GAMING_PREVIEW_GAMESENUMERATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -1164,10 +1160,10 @@ namespace ABI {
                         GameListEntryLaunchableState_ByTile = 3,
                     };
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_GAMING_PREVIEW_GAMESENUMERATIONCONTRACT_VERSION >= 0x20000
 
 
@@ -1200,10 +1196,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameListChangedEventHandler=_uuidof(IGameListChangedEventHandler);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListChangedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListChangedEventHandler_INTERFACE_DEFINED__) */
@@ -1239,10 +1235,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameListRemovedEventHandler=_uuidof(IGameListRemovedEventHandler);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListRemovedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListRemovedEventHandler_INTERFACE_DEFINED__) */
@@ -1292,10 +1288,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameListEntry=_uuidof(IGameListEntry);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry_INTERFACE_DEFINED__) */
@@ -1364,10 +1360,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameListEntry2=_uuidof(IGameListEntry2);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListEntry2_INTERFACE_DEFINED__) */
@@ -1432,10 +1428,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameListStatics=_uuidof(IGameListStatics);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics_INTERFACE_DEFINED__) */
@@ -1481,10 +1477,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameListStatics2=_uuidof(IGameListStatics2);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameListStatics2_INTERFACE_DEFINED__) */
@@ -1517,10 +1513,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RelatedProcessNames(
                             /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
@@ -1562,10 +1558,10 @@ namespace ABI {
                             /* [in] */__RPC__in_opt __FIReference_1_int * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AffinitizeToExclusiveCpus(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AffinitizeToExclusiveCpus(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SaveAsync(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * operation
@@ -1575,10 +1571,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameModeConfiguration=_uuidof(IGameModeConfiguration);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeConfiguration_INTERFACE_DEFINED__) */
@@ -1621,10 +1617,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameModeUserConfiguration=_uuidof(IGameModeUserConfiguration);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfiguration_INTERFACE_DEFINED__) */
@@ -1664,10 +1660,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGameModeUserConfigurationStatics=_uuidof(IGameModeUserConfigurationStatics);
                     
-                } /* Windows */
-            } /* Gaming */
-        } /* Preview */
-    } /* GamesEnumeration */} /* ABI */
+                } /* GamesEnumeration */
+            } /* Preview */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CPreview_CGamesEnumeration_CIGameModeUserConfigurationStatics_INTERFACE_DEFINED__) */

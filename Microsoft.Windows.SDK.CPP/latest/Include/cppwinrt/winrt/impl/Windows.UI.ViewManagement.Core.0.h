@@ -1,9 +1,15 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
+
+WINRT_EXPORT namespace winrt::Windows::UI {
+
+struct UIContext;
+
+}
 
 WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement::Core {
 
@@ -36,6 +42,7 @@ struct ICoreInputView3;
 struct ICoreInputViewOcclusion;
 struct ICoreInputViewOcclusionsChangedEventArgs;
 struct ICoreInputViewStatics;
+struct ICoreInputViewStatics2;
 struct ICoreInputViewTransferringXYFocusEventArgs;
 struct CoreInputView;
 struct CoreInputViewOcclusion;
@@ -52,6 +59,7 @@ template <> struct category<Windows::UI::ViewManagement::Core::ICoreInputView3>{
 template <> struct category<Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::Core::ICoreInputViewStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::Core::CoreInputView>{ using type = class_category; };
 template <> struct category<Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>{ using type = class_category; };
@@ -66,6 +74,7 @@ template <> struct name<Windows::UI::ViewManagement::Core::ICoreInputView3>{ sta
 template <> struct name<Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.Core.ICoreInputViewOcclusion" }; };
 template <> struct name<Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.Core.ICoreInputViewOcclusionsChangedEventArgs" }; };
 template <> struct name<Windows::UI::ViewManagement::Core::ICoreInputViewStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.Core.ICoreInputViewStatics" }; };
+template <> struct name<Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.Core.ICoreInputViewStatics2" }; };
 template <> struct name<Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.Core.ICoreInputViewTransferringXYFocusEventArgs" }; };
 template <> struct name<Windows::UI::ViewManagement::Core::CoreInputView>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.Core.CoreInputView" }; };
 template <> struct name<Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.Core.CoreInputViewOcclusion" }; };
@@ -80,6 +89,7 @@ template <> struct guid_storage<Windows::UI::ViewManagement::Core::ICoreInputVie
 template <> struct guid_storage<Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion>{ static constexpr guid value{ 0xCC36CE06,0x3865,0x4177,{ 0xB5,0xF5,0x8B,0x65,0xE0,0xB9,0xCE,0x84 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs>{ static constexpr guid value{ 0xBE1027E8,0xB3EE,0x4DF7,{ 0x95,0x54,0x89,0xCD,0xC6,0x60,0x82,0xC2 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::Core::ICoreInputViewStatics>{ static constexpr guid value{ 0x7D9B97CD,0xEDBE,0x49CF,{ 0xA5,0x4F,0x33,0x7D,0xE0,0x52,0x90,0x7F } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>{ static constexpr guid value{ 0x7EBC0862,0xD049,0x4E52,{ 0x87,0xB0,0x1E,0x90,0xE9,0x8C,0x49,0xED } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs>{ static constexpr guid value{ 0x04DE169F,0xBA02,0x4850,{ 0x8B,0x55,0xD8,0x2D,0x03,0xBA,0x6D,0x7F } }; };
 template <> struct default_interface<Windows::UI::ViewManagement::Core::CoreInputView>{ using type = Windows::UI::ViewManagement::Core::ICoreInputView; };
 template <> struct default_interface<Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>{ using type = Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion; };
@@ -127,6 +137,11 @@ template <> struct abi<Windows::UI::ViewManagement::Core::ICoreInputViewOcclusio
 template <> struct abi<Windows::UI::ViewManagement::Core::ICoreInputViewStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL GetForCurrentView(void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetForUIContext(void* context, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs>{ struct type : IInspectable
@@ -199,6 +214,13 @@ struct consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics
     Windows::UI::ViewManagement::Core::CoreInputView GetForCurrentView() const;
 };
 template <> struct consume<Windows::UI::ViewManagement::Core::ICoreInputViewStatics> { template <typename D> using type = consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics2
+{
+    Windows::UI::ViewManagement::Core::CoreInputView GetForUIContext(Windows::UI::UIContext const& context) const;
+};
+template <> struct consume<Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> { template <typename D> using type = consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs

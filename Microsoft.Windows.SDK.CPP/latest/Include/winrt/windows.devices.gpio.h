@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.gpio.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -146,9 +146,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioChangeCounter;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounter ABI::Windows::Devices::Gpio::IGpioChangeCounter
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounter_FWD_DEFINED__
@@ -160,9 +160,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioChangeCounterFactory;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounterFactory ABI::Windows::Devices::Gpio::IGpioChangeCounterFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounterFactory_FWD_DEFINED__
@@ -174,9 +174,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioChangeReader;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReader ABI::Windows::Devices::Gpio::IGpioChangeReader
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReader_FWD_DEFINED__
@@ -188,9 +188,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioChangeReaderFactory;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReaderFactory ABI::Windows::Devices::Gpio::IGpioChangeReaderFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReaderFactory_FWD_DEFINED__
@@ -202,9 +202,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioController;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioController ABI::Windows::Devices::Gpio::IGpioController
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioController_FWD_DEFINED__
@@ -216,9 +216,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioControllerStatics;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics ABI::Windows::Devices::Gpio::IGpioControllerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics_FWD_DEFINED__
@@ -230,9 +230,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioControllerStatics2;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics2 ABI::Windows::Devices::Gpio::IGpioControllerStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics2_FWD_DEFINED__
@@ -244,9 +244,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioPin;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioPin ABI::Windows::Devices::Gpio::IGpioPin
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioPin_FWD_DEFINED__
@@ -258,9 +258,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 interface IGpioPinValueChangedEventArgs;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CIGpioPinValueChangedEventArgs ABI::Windows::Devices::Gpio::IGpioPinValueChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CIGpioPinValueChangedEventArgs_FWD_DEFINED__
@@ -274,9 +274,9 @@ namespace ABI {
             namespace Gpio {
                 struct GpioChangeRecord;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CGpio__CGpioChangeRecord_USE
@@ -297,7 +297,7 @@ IIterator<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> __FIIterator_1_Windows__CDevices__CGpio__CGpioChangeRecord_t;
 #define __FIIterator_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGpio__CGpioChangeRecord_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Gpio::GpioChangeRecord>
@@ -327,7 +327,7 @@ IIterable<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> __FIIterable_1_Windows__CDevices__CGpio__CGpioChangeRecord_t;
 #define __FIIterable_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGpio__CGpioChangeRecord_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Gpio::GpioChangeRecord>
@@ -342,9 +342,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 class GpioController;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
@@ -367,7 +367,7 @@ IIterator<ABI::Windows::Devices::Gpio::GpioController*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Gpio::GpioController*> __FIIterator_1_Windows__CDevices__CGpio__CGpioController_t;
 #define __FIIterator_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGpio__CGpioController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Gpio::IGpioController*>
@@ -399,7 +399,7 @@ IIterable<ABI::Windows::Devices::Gpio::GpioController*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Gpio::GpioController*> __FIIterable_1_Windows__CDevices__CGpio__CGpioController_t;
 #define __FIIterable_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGpio__CGpioController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Gpio::IGpioController*>
@@ -430,7 +430,7 @@ IVectorView<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> __FIVectorView_1_Windows__CDevices__CGpio__CGpioChangeRecord_t;
 #define __FIVectorView_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGpio__CGpioChangeRecord_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Gpio::GpioChangeRecord>
@@ -461,7 +461,7 @@ IVectorView<ABI::Windows::Devices::Gpio::GpioController*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Gpio::GpioController*> __FIVectorView_1_Windows__CDevices__CGpio__CGpioController_t;
 #define __FIVectorView_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGpio__CGpioController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Gpio::IGpioController*>
@@ -492,7 +492,7 @@ IVector<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> : IVector_impl<str
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::Devices::Gpio::GpioChangeRecord> __FIVector_1_Windows__CDevices__CGpio__CGpioChangeRecord_t;
 #define __FIVector_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CGpio__CGpioChangeRecord_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CGpio__CGpioChangeRecord ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Gpio::GpioChangeRecord>
@@ -523,7 +523,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Gpio::GpioController*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Gpio::GpioController*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGpio__CGpioController_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGpio__CGpioController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Gpio::IGpioController*>
@@ -555,7 +555,7 @@ IAsyncOperation<ABI::Windows::Devices::Gpio::GpioController*> : IAsyncOperation_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Gpio::GpioController*> __FIAsyncOperation_1_Windows__CDevices__CGpio__CGpioController_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CGpio__CGpioController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Gpio::IGpioController*>
@@ -587,7 +587,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CGpio__CGpio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CGpio__CGpioController*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Gpio::IGpioController*>*>
@@ -619,7 +619,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CGpio__CGpioController*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CGpio__CGpioController*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGpio__CGpioController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Gpio::IGpioController*>*>
@@ -635,9 +635,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 class GpioPin;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -645,9 +645,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 class GpioPinValueChangedEventArgs;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
@@ -671,7 +671,7 @@ ITypedEventHandler<ABI::Windows::Devices::Gpio::GpioPin*,ABI::Windows::Devices::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Gpio::GpioPin*,ABI::Windows::Devices::Gpio::GpioPinValueChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Gpio::IGpioPin*,ABI::Windows::Devices::Gpio::IGpioPinValueChangedEventArgs*>
@@ -696,10 +696,10 @@ namespace ABI {
             namespace Gpio {
                 namespace Provider {
                     interface IGpioProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Gpio */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Gpio */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGpio_CProvider_CIGpioProvider ABI::Windows::Devices::Gpio::Provider::IGpioProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CGpio_CProvider_CIGpioProvider_FWD_DEFINED__
@@ -715,8 +715,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -728,8 +728,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -741,8 +741,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -753,9 +753,9 @@ namespace ABI {
                 
                 typedef enum GpioChangePolarity : int GpioChangePolarity;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -764,9 +764,9 @@ namespace ABI {
                 
                 typedef enum GpioOpenStatus : int GpioOpenStatus;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -775,9 +775,9 @@ namespace ABI {
                 
                 typedef enum GpioPinDriveMode : int GpioPinDriveMode;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -786,9 +786,9 @@ namespace ABI {
                 
                 typedef enum GpioPinEdge : int GpioPinEdge;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -797,9 +797,9 @@ namespace ABI {
                 
                 typedef enum GpioPinValue : int GpioPinValue;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -808,9 +808,9 @@ namespace ABI {
                 
                 typedef enum GpioSharingMode : int GpioSharingMode;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -819,9 +819,9 @@ namespace ABI {
                 
                 typedef struct GpioChangeCount GpioChangeCount;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -830,9 +830,9 @@ namespace ABI {
                 
                 typedef struct GpioChangeRecord GpioChangeRecord;
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -848,9 +848,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 class GpioChangeCounter;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -858,9 +858,9 @@ namespace ABI {
         namespace Devices {
             namespace Gpio {
                 class GpioChangeReader;
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -896,9 +896,9 @@ namespace ABI {
                     GpioChangePolarity_Both = 2,
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x30000
 
 
@@ -926,9 +926,9 @@ namespace ABI {
                     GpioOpenStatus_UnknownError = 4,
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -959,9 +959,9 @@ namespace ABI {
                     GpioPinDriveMode_OutputOpenSourcePullDown = 7,
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -986,9 +986,9 @@ namespace ABI {
                     GpioPinEdge_RisingEdge = 1,
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -1013,9 +1013,9 @@ namespace ABI {
                     GpioPinValue_High = 1,
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -1040,9 +1040,9 @@ namespace ABI {
                     GpioSharingMode_SharedReadOnly = 1,
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -1067,9 +1067,9 @@ namespace ABI {
                     ABI::Windows::Foundation::TimeSpan RelativeTime;
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x30000
 
 
@@ -1094,9 +1094,9 @@ namespace ABI {
                     ABI::Windows::Devices::Gpio::GpioPinEdge Edge;
                 };
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x30000
 
 
@@ -1135,7 +1135,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Gpio::GpioChangePolarity * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStarted(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
@@ -1150,9 +1150,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioChangeCounter=_uuidof(IGpioChangeCounter);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounter_INTERFACE_DEFINED__) */
@@ -1192,9 +1192,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioChangeCounterFactory=_uuidof(IGpioChangeCounterFactory);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounterFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeCounterFactory_INTERFACE_DEFINED__) */
@@ -1236,10 +1236,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEmpty(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOverflowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Polarity(
                         /* [in] */ABI::Windows::Devices::Gpio::GpioChangePolarity value
@@ -1248,7 +1248,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Gpio::GpioChangePolarity * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStarted(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
@@ -1271,9 +1271,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioChangeReader=_uuidof(IGpioChangeReader);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReader_INTERFACE_DEFINED__) */
@@ -1318,9 +1318,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioChangeReaderFactory=_uuidof(IGpioChangeReaderFactory);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioChangeReaderFactory_INTERFACE_DEFINED__) */
@@ -1368,16 +1368,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::Devices::Gpio::GpioSharingMode sharingMode,
                         /* [out] */__RPC__deref_out_opt ABI::Windows::Devices::Gpio::IGpioPin * * pin,
                         /* [out] */__RPC__out ABI::Windows::Devices::Gpio::GpioOpenStatus * openStatus,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IGpioController=_uuidof(IGpioController);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioController_INTERFACE_DEFINED__) */
@@ -1416,9 +1416,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioControllerStatics=_uuidof(IGpioControllerStatics);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics_INTERFACE_DEFINED__) */
@@ -1461,9 +1461,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioControllerStatics2=_uuidof(IGpioControllerStatics2);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioControllerStatics2_INTERFACE_DEFINED__) */
@@ -1519,7 +1519,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsDriveModeSupported(
                         /* [in] */ABI::Windows::Devices::Gpio::GpioPinDriveMode driveMode,
-                        /* [retval, out] */__RPC__out boolean * supported
+                        /* [retval, out] */__RPC__out ::boolean * supported
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDriveMode(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Gpio::GpioPinDriveMode * value
@@ -1538,9 +1538,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioPin=_uuidof(IGpioPin);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioPin;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioPin_INTERFACE_DEFINED__) */
@@ -1579,9 +1579,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGpioPinValueChangedEventArgs=_uuidof(IGpioPinValueChangedEventArgs);
                 
-            } /* Windows */
+            } /* Gpio */
         } /* Devices */
-    } /* Gpio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGpio_CIGpioPinValueChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGpio_CIGpioPinValueChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2706,7 +2706,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Window
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGpio_CIGpioPin * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGpio_CIGpioPinValueChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGpio_CIGpioPin * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGpio_CIGpioPinValueChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CGpio__CGpioPin_Windows__CDevices__CGpio__CGpioPinValueChangedEventArgsVtbl;
 

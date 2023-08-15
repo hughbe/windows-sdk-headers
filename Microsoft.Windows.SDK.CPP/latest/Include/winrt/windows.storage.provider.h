@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface ICachedFileUpdaterStatics;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterStatics ABI::Windows::Storage::Provider::ICachedFileUpdaterStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterStatics_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface ICachedFileUpdaterUI;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI ABI::Windows::Storage::Provider::ICachedFileUpdaterUI
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface ICachedFileUpdaterUI2;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI2 ABI::Windows::Storage::Provider::ICachedFileUpdaterUI2
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI2_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IFileUpdateRequest;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest ABI::Windows::Storage::Provider::IFileUpdateRequest
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IFileUpdateRequest2;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest2 ABI::Windows::Storage::Provider::IFileUpdateRequest2
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest2_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IFileUpdateRequestDeferral;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestDeferral ABI::Windows::Storage::Provider::IFileUpdateRequestDeferral
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestDeferral_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IFileUpdateRequestedEventArgs;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestedEventArgs ABI::Windows::Storage::Provider::IFileUpdateRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestedEventArgs_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderGetContentInfoForPathResult;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetContentInfoForPathResult ABI::Windows::Storage::Provider::IStorageProviderGetContentInfoForPathResult
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetContentInfoForPathResult_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderGetPathForContentUriResult;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetPathForContentUriResult ABI::Windows::Storage::Provider::IStorageProviderGetPathForContentUriResult
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetPathForContentUriResult_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderItemPropertiesStatics;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertiesStatics ABI::Windows::Storage::Provider::IStorageProviderItemPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertiesStatics_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderItemProperty;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemProperty ABI::Windows::Storage::Provider::IStorageProviderItemProperty
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemProperty_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderItemPropertyDefinition;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertyDefinition ABI::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertyDefinition_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderItemPropertySource;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertySource ABI::Windows::Storage::Provider::IStorageProviderItemPropertySource
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertySource_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderPropertyCapabilities;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderPropertyCapabilities ABI::Windows::Storage::Provider::IStorageProviderPropertyCapabilities
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderPropertyCapabilities_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderSyncRootInfo;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo ABI::Windows::Storage::Provider::IStorageProviderSyncRootInfo
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderSyncRootInfo2;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo2 ABI::Windows::Storage::Provider::IStorageProviderSyncRootInfo2
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo2_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderSyncRootManagerStatics;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics ABI::Windows::Storage::Provider::IStorageProviderSyncRootManagerStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IStorageProviderUriSource;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderUriSource ABI::Windows::Storage::Provider::IStorageProviderUriSource
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderUriSource_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class StorageProviderItemProperty;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
@@ -556,7 +552,7 @@ IIterator<ABI::Windows::Storage::Provider::StorageProviderItemProperty*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::Provider::StorageProviderItemProperty*> __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemProperty_t;
 #define __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemProperty ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemProperty_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemProperty ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Provider::IStorageProviderItemProperty*>
@@ -588,7 +584,7 @@ IIterable<ABI::Windows::Storage::Provider::StorageProviderItemProperty*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::Provider::StorageProviderItemProperty*> __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemProperty_t;
 #define __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemProperty ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemProperty_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemProperty ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Provider::IStorageProviderItemProperty*>
@@ -604,9 +600,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class StorageProviderItemPropertyDefinition;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
@@ -629,7 +625,7 @@ IIterator<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefinition
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefinition*> __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t;
 #define __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition*>
@@ -661,7 +657,7 @@ IIterable<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefinition
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefinition*> __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t;
 #define __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition*>
@@ -677,9 +673,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class StorageProviderSyncRootInfo;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
@@ -702,7 +698,7 @@ IIterator<ABI::Windows::Storage::Provider::StorageProviderSyncRootInfo*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::Provider::StorageProviderSyncRootInfo*> __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_t;
 #define __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Provider::IStorageProviderSyncRootInfo*>
@@ -734,7 +730,7 @@ IIterable<ABI::Windows::Storage::Provider::StorageProviderSyncRootInfo*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::Provider::StorageProviderSyncRootInfo*> __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_t;
 #define __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Provider::IStorageProviderSyncRootInfo*>
@@ -766,7 +762,7 @@ IVectorView<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefiniti
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefinition*> __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t;
 #define __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition*>
@@ -798,7 +794,7 @@ IVectorView<ABI::Windows::Storage::Provider::StorageProviderSyncRootInfo*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::Provider::StorageProviderSyncRootInfo*> __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_t;
 #define __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Provider::IStorageProviderSyncRootInfo*>
@@ -830,7 +826,7 @@ IVector<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefinition*>
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefinition*> __FIVector_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t;
 #define __FIVector_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition*>
@@ -846,9 +842,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 enum FileUpdateStatus : int;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CProvider__CFileUpdateStatus_USE
@@ -869,7 +865,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Storage::Provider::FileUpdate
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Storage::Provider::FileUpdateStatus> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CProvider__CFileUpdateStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CProvider__CFileUpdateStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CProvider__CFileUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CProvider__CFileUpdateStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Provider::FileUpdateStatus>
@@ -899,7 +895,7 @@ IAsyncOperation<enum ABI::Windows::Storage::Provider::FileUpdateStatus> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Storage::Provider::FileUpdateStatus> __FIAsyncOperation_1_Windows__CStorage__CProvider__CFileUpdateStatus_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CProvider__CFileUpdateStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CProvider__CFileUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CProvider__CFileUpdateStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Provider::FileUpdateStatus>
@@ -914,9 +910,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class CachedFileUpdaterUI;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -940,7 +936,7 @@ ITypedEventHandler<ABI::Windows::Storage::Provider::CachedFileUpdaterUI*,IInspec
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::Provider::CachedFileUpdaterUI*,IInspectable*> __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::Provider::ICachedFileUpdaterUI*,IInspectable*>
@@ -957,9 +953,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class FileUpdateRequestedEventArgs;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -983,7 +979,7 @@ ITypedEventHandler<ABI::Windows::Storage::Provider::CachedFileUpdaterUI*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::Provider::CachedFileUpdaterUI*,ABI::Windows::Storage::Provider::FileUpdateRequestedEventArgs*> __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::Provider::ICachedFileUpdaterUI*,ABI::Windows::Storage::Provider::IFileUpdateRequestedEventArgs*>
@@ -1003,8 +999,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1015,8 +1011,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1024,8 +1020,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1039,8 +1035,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1052,8 +1048,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1065,8 +1061,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -1076,8 +1072,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1089,9 +1085,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1108,9 +1104,9 @@ namespace ABI {
                 
                 typedef enum CachedFileOptions : unsigned int CachedFileOptions;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1119,9 +1115,9 @@ namespace ABI {
                 
                 typedef enum CachedFileTarget : int CachedFileTarget;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1130,9 +1126,9 @@ namespace ABI {
                 
                 typedef enum FileUpdateStatus : int FileUpdateStatus;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1141,9 +1137,9 @@ namespace ABI {
                 
                 typedef enum ReadActivationMode : int ReadActivationMode;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1152,9 +1148,9 @@ namespace ABI {
                 
                 typedef enum StorageProviderHardlinkPolicy : unsigned int StorageProviderHardlinkPolicy;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1163,9 +1159,9 @@ namespace ABI {
                 
                 typedef enum StorageProviderHydrationPolicy : int StorageProviderHydrationPolicy;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1174,9 +1170,9 @@ namespace ABI {
                 
                 typedef enum StorageProviderHydrationPolicyModifier : unsigned int StorageProviderHydrationPolicyModifier;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1185,9 +1181,9 @@ namespace ABI {
                 
                 typedef enum StorageProviderInSyncPolicy : unsigned int StorageProviderInSyncPolicy;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1196,9 +1192,9 @@ namespace ABI {
                 
                 typedef enum StorageProviderPopulationPolicy : int StorageProviderPopulationPolicy;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1207,9 +1203,9 @@ namespace ABI {
                 
                 typedef enum StorageProviderProtectionMode : int StorageProviderProtectionMode;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1218,9 +1214,9 @@ namespace ABI {
                 
                 typedef enum StorageProviderUriSourceStatus : int StorageProviderUriSourceStatus;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1229,9 +1225,9 @@ namespace ABI {
                 
                 typedef enum UIStatus : int UIStatus;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1240,9 +1236,9 @@ namespace ABI {
                 
                 typedef enum WriteActivationMode : int WriteActivationMode;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1269,9 +1265,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class FileUpdateRequest;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1279,9 +1275,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class FileUpdateRequestDeferral;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1290,9 +1286,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class StorageProviderGetContentInfoForPathResult;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1300,9 +1296,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 class StorageProviderGetPathForContentUriResult;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1344,9 +1340,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(CachedFileOptions)
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1371,9 +1367,9 @@ namespace ABI {
                     CachedFileTarget_Remote = 1,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1402,9 +1398,9 @@ namespace ABI {
                     FileUpdateStatus_CompleteAndRenamed = 5,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1429,9 +1425,9 @@ namespace ABI {
                     ReadActivationMode_BeforeAccess = 1,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1458,9 +1454,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(StorageProviderHardlinkPolicy)
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
 
@@ -1487,9 +1483,9 @@ namespace ABI {
                     StorageProviderHydrationPolicy_AlwaysFull = 3,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
 
@@ -1522,9 +1518,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(StorageProviderHydrationPolicyModifier)
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
 
@@ -1561,9 +1557,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(StorageProviderInSyncPolicy)
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
 
@@ -1588,9 +1584,9 @@ namespace ABI {
                     StorageProviderPopulationPolicy_AlwaysFull = 2,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
 
@@ -1615,9 +1611,9 @@ namespace ABI {
                     StorageProviderProtectionMode_Personal = 1,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
 
@@ -1643,9 +1639,9 @@ namespace ABI {
                     StorageProviderUriSourceStatus_FileNotFound = 2,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x20000
 
 
@@ -1672,9 +1668,9 @@ namespace ABI {
                     UIStatus_Complete = 3,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1700,9 +1696,9 @@ namespace ABI {
                     WriteActivationMode_AfterWrite = 2,
                 };
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1742,9 +1738,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICachedFileUpdaterStatics=_uuidof(ICachedFileUpdaterStatics);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterStatics_INTERFACE_DEFINED__) */
@@ -1806,9 +1802,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICachedFileUpdaterUI=_uuidof(ICachedFileUpdaterUI);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI_INTERFACE_DEFINED__) */
@@ -1854,9 +1850,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICachedFileUpdaterUI2=_uuidof(ICachedFileUpdaterUI2);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI2_INTERFACE_DEFINED__) */
@@ -1910,9 +1906,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileUpdateRequest=_uuidof(IFileUpdateRequest);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest_INTERFACE_DEFINED__) */
@@ -1958,9 +1954,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileUpdateRequest2=_uuidof(IFileUpdateRequest2);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest2_INTERFACE_DEFINED__) */
@@ -1997,9 +1993,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileUpdateRequestDeferral=_uuidof(IFileUpdateRequestDeferral);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestDeferral_INTERFACE_DEFINED__) */
@@ -2038,9 +2034,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileUpdateRequestedEventArgs=_uuidof(IFileUpdateRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2094,9 +2090,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderGetContentInfoForPathResult=_uuidof(IStorageProviderGetContentInfoForPathResult);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetContentInfoForPathResult;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetContentInfoForPathResult_INTERFACE_DEFINED__) */
@@ -2144,9 +2140,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderGetPathForContentUriResult=_uuidof(IStorageProviderGetPathForContentUriResult);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetPathForContentUriResult;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderGetPathForContentUriResult_INTERFACE_DEFINED__) */
@@ -2187,9 +2183,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderItemPropertiesStatics=_uuidof(IStorageProviderItemPropertiesStatics);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertiesStatics_INTERFACE_DEFINED__) */
@@ -2243,9 +2239,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderItemProperty=_uuidof(IStorageProviderItemProperty);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemProperty;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemProperty_INTERFACE_DEFINED__) */
@@ -2293,9 +2289,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderItemPropertyDefinition=_uuidof(IStorageProviderItemPropertyDefinition);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertyDefinition;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertyDefinition_INTERFACE_DEFINED__) */
@@ -2332,9 +2328,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderItemPropertySource=_uuidof(IStorageProviderItemPropertySource);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertySource;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItemPropertySource_INTERFACE_DEFINED__) */
@@ -2364,16 +2360,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsPropertySupported(
                         /* [in] */__RPC__in HSTRING propertyCanonicalName,
-                        /* [retval, out] */__RPC__out boolean * isSupported
+                        /* [retval, out] */__RPC__out ::boolean * isSupported
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderPropertyCapabilities=_uuidof(IStorageProviderPropertyCapabilities);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderPropertyCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderPropertyCapabilities_INTERFACE_DEFINED__) */
@@ -2465,10 +2461,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::Storage::Provider::StorageProviderHardlinkPolicy value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowSiblingsAsGroup(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowSiblingsAsGroup(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Version(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2483,10 +2479,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::Storage::Provider::StorageProviderProtectionMode value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowPinning(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowPinning(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StorageProviderItemPropertyDefinitions(
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition * * value
@@ -2502,9 +2498,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderSyncRootInfo=_uuidof(IStorageProviderSyncRootInfo);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo_INTERFACE_DEFINED__) */
@@ -2546,9 +2542,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderSyncRootInfo2=_uuidof(IStorageProviderSyncRootInfo2);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo2_INTERFACE_DEFINED__) */
@@ -2601,9 +2597,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderSyncRootManagerStatics=_uuidof(IStorageProviderSyncRootManagerStatics);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics_INTERFACE_DEFINED__) */
@@ -2644,9 +2640,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageProviderUriSource=_uuidof(IStorageProviderUriSource);
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderUriSource;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderUriSource_INTERFACE_DEFINED__) */
@@ -4036,7 +4032,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFile
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_IInspectableVtbl;
 
@@ -4088,7 +4084,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFile
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CProvider_CICachedFileUpdaterUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdaterUI_Windows__CStorage__CProvider__CFileUpdateRequestedEventArgsVtbl;
 

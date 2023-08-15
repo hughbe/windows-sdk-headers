@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13390,7 +13390,7 @@ namespace winrt::impl
                 double r8;
                 guid g;
                 void* s;
-                uint8_t v[1024];
+                uint8_t v[512];
             }
             value{};
             guid iid{};
@@ -13435,7 +13435,7 @@ decltype(winrt::impl::natvis::get_val) & WINRT_get_val = winrt::impl::natvis::ge
 
 #endif
 
-#define CPPWINRT_VERSION "1.0.180821.2"
+#define CPPWINRT_VERSION "1.0.190111.3"
 
 // WINRT_version is used by Microsoft to analyze C++/WinRT library adoption and inform future product decisions.
 extern "C"

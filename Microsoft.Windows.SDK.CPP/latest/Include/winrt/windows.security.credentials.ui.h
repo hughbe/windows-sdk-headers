@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.credentials.ui.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     interface ICredentialPickerOptions;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerOptions ABI::Windows::Security::Credentials::UI::ICredentialPickerOptions
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerOptions_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     interface ICredentialPickerResults;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerResults ABI::Windows::Security::Credentials::UI::ICredentialPickerResults
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerResults_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     interface ICredentialPickerStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerStatics ABI::Windows::Security::Credentials::UI::ICredentialPickerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerStatics_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     interface IUserConsentVerifierStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CUI_CIUserConsentVerifierStatics ABI::Windows::Security::Credentials::UI::IUserConsentVerifierStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CUI_CIUserConsentVerifierStatics_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     class CredentialPickerResults;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -369,7 +365,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::UI::Credent
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::UI::CredentialPickerResults*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::UI::ICredentialPickerResults*>
@@ -401,7 +397,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::UI::CredentialPickerResults
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::UI::CredentialPickerResults*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CCredentialPickerResults ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::UI::ICredentialPickerResults*>
@@ -418,10 +414,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     enum UserConsentVerificationResult : int;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult_USE
@@ -442,7 +438,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Credentials::UI::Us
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Credentials::UI::UserConsentVerificationResult> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::UI::UserConsentVerificationResult>
@@ -472,7 +468,7 @@ IAsyncOperation<enum ABI::Windows::Security::Credentials::UI::UserConsentVerific
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::Credentials::UI::UserConsentVerificationResult> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerificationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::UI::UserConsentVerificationResult>
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     enum UserConsentVerifierAvailability : int;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability_USE
@@ -512,7 +508,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Credentials::UI::Us
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Credentials::UI::UserConsentVerifierAvailability> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::UI::UserConsentVerifierAvailability>
@@ -542,7 +538,7 @@ IAsyncOperation<enum ABI::Windows::Security::Credentials::UI::UserConsentVerifie
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::Credentials::UI::UserConsentVerifierAvailability> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CUI__CUserConsentVerifierAvailability ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::UI::UserConsentVerifierAvailability>
@@ -564,9 +560,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -583,10 +579,10 @@ namespace ABI {
                     
                     typedef enum AuthenticationProtocol : int AuthenticationProtocol;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -596,10 +592,10 @@ namespace ABI {
                     
                     typedef enum CredentialSaveOption : int CredentialSaveOption;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -609,10 +605,10 @@ namespace ABI {
                     
                     typedef enum UserConsentVerificationResult : int UserConsentVerificationResult;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -622,10 +618,10 @@ namespace ABI {
                     
                     typedef enum UserConsentVerifierAvailability : int UserConsentVerifierAvailability;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -638,10 +634,10 @@ namespace ABI {
             namespace Credentials {
                 namespace UI {
                     class CredentialPickerOptions;
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -683,10 +679,10 @@ namespace ABI {
                         AuthenticationProtocol_Custom = 6,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -713,10 +709,10 @@ namespace ABI {
                         CredentialSaveOption_Hidden = 2,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -747,10 +743,10 @@ namespace ABI {
                         UserConsentVerificationResult_Canceled = 6,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -779,10 +775,10 @@ namespace ABI {
                         UserConsentVerifierAvailability_DeviceBusy = 4,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -854,16 +850,16 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlwaysDisplayDialog(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlwaysDisplayDialog(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CallerSavesCredential(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CallerSavesCredential(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CredentialSaveOption(
                             /* [in] */ABI::Windows::Security::Credentials::UI::CredentialSaveOption value
@@ -876,10 +872,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICredentialPickerOptions=_uuidof(ICredentialPickerOptions);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerOptions;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerOptions_INTERFACE_DEFINED__) */
@@ -918,7 +914,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Security::Credentials::UI::CredentialSaveOption * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CredentialSaved(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Credential(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * value
@@ -937,10 +933,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICredentialPickerResults=_uuidof(ICredentialPickerResults);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerResults;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerResults_INTERFACE_DEFINED__) */
@@ -992,10 +988,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICredentialPickerStatics=_uuidof(ICredentialPickerStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CUI_CICredentialPickerStatics_INTERFACE_DEFINED__) */
@@ -1039,10 +1035,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserConsentVerifierStatics=_uuidof(IUserConsentVerifierStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Credentials */
-    } /* UI */} /* ABI */
+                } /* UI */
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CUI_CIUserConsentVerifierStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CUI_CIUserConsentVerifierStatics_INTERFACE_DEFINED__) */

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,6 +10,7 @@
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.ApplicationModel.Contacts.2.h"
+#include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.UI.2.h"
@@ -819,6 +820,18 @@ template <typename D> void consume_Windows_ApplicationModel_Calls_IPhoneLine<D>:
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLine)->DialWithOptions(get_abi(options)));
 }
 
+template <typename D> void consume_Windows_ApplicationModel_Calls_IPhoneLine2<D>::EnableTextReply(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLine2)->EnableTextReply(value));
+}
+
+template <typename D> hstring consume_Windows_ApplicationModel_Calls_IPhoneLine2<D>::TransportDeviceId() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLine2)->get_TransportDeviceId(put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::ApplicationModel::Calls::PhoneSimState consume_Windows_ApplicationModel_Calls_IPhoneLineCellularDetails<D>::SimState() const
 {
     Windows::ApplicationModel::Calls::PhoneSimState value{};
@@ -872,6 +885,89 @@ template <typename D> Windows::Foundation::IAsyncOperation<Windows::ApplicationM
 {
     Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Calls::PhoneLine> result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineStatics)->FromIdAsync(get_abi(lineId), put_abi(result)));
+    return result;
+}
+
+template <typename D> hstring consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::DeviceId() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->get_DeviceId(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::ApplicationModel::Calls::PhoneLineTransport consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::Transport() const
+{
+    Windows::ApplicationModel::Calls::PhoneLineTransport value{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->get_Transport(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus> consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::RequestAccessAsync() const
+{
+    Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->RequestAccessAsync(put_abi(operation)));
+    return operation;
+}
+
+template <typename D> void consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::RegisterApp() const
+{
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->RegisterApp());
+}
+
+template <typename D> void consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::RegisterAppForUser(Windows::System::User const& user) const
+{
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->RegisterAppForUser(get_abi(user)));
+}
+
+template <typename D> void consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::UnregisterApp() const
+{
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->UnregisterApp());
+}
+
+template <typename D> void consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::UnregisterAppForUser(Windows::System::User const& user) const
+{
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->UnregisterAppForUser(get_abi(user)));
+}
+
+template <typename D> bool consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::IsRegistered() const
+{
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->IsRegistered(&result));
+    return result;
+}
+
+template <typename D> bool consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::Connect() const
+{
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->Connect(&result));
+    return result;
+}
+
+template <typename D> Windows::Foundation::IAsyncOperation<bool> consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>::ConnectAsync() const
+{
+    Windows::Foundation::IAsyncOperation<bool> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDevice)->ConnectAsync(put_abi(operation)));
+    return operation;
+}
+
+template <typename D> Windows::ApplicationModel::Calls::PhoneLineTransportDevice consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDeviceStatics<D>::FromId(param::hstring const& id) const
+{
+    Windows::ApplicationModel::Calls::PhoneLineTransportDevice result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics)->FromId(get_abi(id), put_abi(result)));
+    return result;
+}
+
+template <typename D> hstring consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDeviceStatics<D>::GetDeviceSelector() const
+{
+    hstring result{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics)->GetDeviceSelector(put_abi(result)));
+    return result;
+}
+
+template <typename D> hstring consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDeviceStatics<D>::GetDeviceSelector(Windows::ApplicationModel::Calls::PhoneLineTransport const& transport) const
+{
+    hstring result{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics)->GetDeviceSelectorForPhoneLineTransport(get_abi(transport), put_abi(result)));
     return result;
 }
 
@@ -2874,6 +2970,35 @@ struct produce<D, Windows::ApplicationModel::Calls::IPhoneLine> : produce_base<D
 };
 
 template <typename D>
+struct produce<D, Windows::ApplicationModel::Calls::IPhoneLine2> : produce_base<D, Windows::ApplicationModel::Calls::IPhoneLine2>
+{
+    int32_t WINRT_CALL EnableTextReply(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(EnableTextReply, WINRT_WRAP(void), bool);
+            this->shim().EnableTextReply(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_TransportDeviceId(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TransportDeviceId, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().TransportDeviceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::ApplicationModel::Calls::IPhoneLineCellularDetails> : produce_base<D, Windows::ApplicationModel::Calls::IPhoneLineCellularDetails>
 {
     int32_t WINRT_CALL get_SimState(Windows::ApplicationModel::Calls::PhoneSimState* value) noexcept final
@@ -2978,6 +3103,176 @@ struct produce<D, Windows::ApplicationModel::Calls::IPhoneLineStatics> : produce
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(FromIdAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Calls::PhoneLine>), winrt::guid const);
             *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Calls::PhoneLine>>(this->shim().FromIdAsync(*reinterpret_cast<winrt::guid const*>(&lineId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::ApplicationModel::Calls::IPhoneLineTransportDevice> : produce_base<D, Windows::ApplicationModel::Calls::IPhoneLineTransportDevice>
+{
+    int32_t WINRT_CALL get_DeviceId(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(DeviceId, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().DeviceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Transport(Windows::ApplicationModel::Calls::PhoneLineTransport* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Transport, WINRT_WRAP(Windows::ApplicationModel::Calls::PhoneLineTransport));
+            *value = detach_from<Windows::ApplicationModel::Calls::PhoneLineTransport>(this->shim().Transport());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL RequestAccessAsync(void** operation) noexcept final
+    {
+        try
+        {
+            *operation = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RequestAccessAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus>));
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus>>(this->shim().RequestAccessAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL RegisterApp() noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RegisterApp, WINRT_WRAP(void));
+            this->shim().RegisterApp();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL RegisterAppForUser(void* user) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RegisterAppForUser, WINRT_WRAP(void), Windows::System::User const&);
+            this->shim().RegisterAppForUser(*reinterpret_cast<Windows::System::User const*>(&user));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL UnregisterApp() noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UnregisterApp, WINRT_WRAP(void));
+            this->shim().UnregisterApp();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL UnregisterAppForUser(void* user) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UnregisterAppForUser, WINRT_WRAP(void), Windows::System::User const&);
+            this->shim().UnregisterAppForUser(*reinterpret_cast<Windows::System::User const*>(&user));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL IsRegistered(bool* result) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsRegistered, WINRT_WRAP(bool));
+            *result = detach_from<bool>(this->shim().IsRegistered());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL Connect(bool* result) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Connect, WINRT_WRAP(bool));
+            *result = detach_from<bool>(this->shim().Connect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL ConnectAsync(void** operation) noexcept final
+    {
+        try
+        {
+            *operation = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ConnectAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<bool>));
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().ConnectAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics> : produce_base<D, Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>
+{
+    int32_t WINRT_CALL FromId(void* id, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(FromId, WINRT_WRAP(Windows::ApplicationModel::Calls::PhoneLineTransportDevice), hstring const&);
+            *result = detach_from<Windows::ApplicationModel::Calls::PhoneLineTransportDevice>(this->shim().FromId(*reinterpret_cast<hstring const*>(&id)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetDeviceSelector(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetDeviceSelector, WINRT_WRAP(hstring));
+            *result = detach_from<hstring>(this->shim().GetDeviceSelector());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetDeviceSelectorForPhoneLineTransport(Windows::ApplicationModel::Calls::PhoneLineTransport transport, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetDeviceSelector, WINRT_WRAP(hstring), Windows::ApplicationModel::Calls::PhoneLineTransport const&);
+            *result = detach_from<hstring>(this->shim().GetDeviceSelector(*reinterpret_cast<Windows::ApplicationModel::Calls::PhoneLineTransport const*>(&transport)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3779,6 +4074,21 @@ inline Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Calls::Ph
     return impl::call_factory<PhoneLine, Windows::ApplicationModel::Calls::IPhoneLineStatics>([&](auto&& f) { return f.FromIdAsync(lineId); });
 }
 
+inline Windows::ApplicationModel::Calls::PhoneLineTransportDevice PhoneLineTransportDevice::FromId(param::hstring const& id)
+{
+    return impl::call_factory<PhoneLineTransportDevice, Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>([&](auto&& f) { return f.FromId(id); });
+}
+
+inline hstring PhoneLineTransportDevice::GetDeviceSelector()
+{
+    return impl::call_factory<PhoneLineTransportDevice, Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+}
+
+inline hstring PhoneLineTransportDevice::GetDeviceSelector(Windows::ApplicationModel::Calls::PhoneLineTransport const& transport)
+{
+    return impl::call_factory<PhoneLineTransportDevice, Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(transport); });
+}
+
 inline Windows::ApplicationModel::Calls::VoipCallCoordinator VoipCallCoordinator::GetDefault()
 {
     return impl::call_factory<VoipCallCoordinator, Windows::ApplicationModel::Calls::IVoipCallCoordinatorStatics>([&](auto&& f) { return f.GetDefault(); });
@@ -3812,9 +4122,12 @@ template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneCallVideoC
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneCallVideoCapabilitiesManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneCallVideoCapabilitiesManagerStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneDialOptions> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneDialOptions> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLine> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLine> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLine2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLine2> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLineCellularDetails> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLineCellularDetails> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLineConfiguration> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLineConfiguration> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLineStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLineStatics> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDevice> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDevice> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcherEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcherEventArgs> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::IPhoneVoicemail> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::IPhoneVoicemail> {};
@@ -3849,6 +4162,7 @@ template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneDialOptions
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneLine> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::PhoneLine> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail> {};

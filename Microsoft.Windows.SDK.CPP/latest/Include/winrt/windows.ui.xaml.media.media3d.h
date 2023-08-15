@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.media.media3d.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,11 +273,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface ICompositeTransform3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3D ABI::Windows::UI::Xaml::Media::Media3D::ICompositeTransform3D
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3D_FWD_DEFINED__
@@ -295,11 +291,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface ICompositeTransform3DStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3DStatics ABI::Windows::UI::Xaml::Media::Media3D::ICompositeTransform3DStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3DStatics_FWD_DEFINED__
@@ -313,11 +309,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface IMatrix3DHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelper ABI::Windows::UI::Xaml::Media::Media3D::IMatrix3DHelper
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelper_FWD_DEFINED__
@@ -331,11 +327,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface IMatrix3DHelperStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelperStatics ABI::Windows::UI::Xaml::Media::Media3D::IMatrix3DHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelperStatics_FWD_DEFINED__
@@ -349,11 +345,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface IPerspectiveTransform3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3D ABI::Windows::UI::Xaml::Media::Media3D::IPerspectiveTransform3D
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3D_FWD_DEFINED__
@@ -367,11 +363,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface IPerspectiveTransform3DStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3DStatics ABI::Windows::UI::Xaml::Media::Media3D::IPerspectiveTransform3DStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3DStatics_FWD_DEFINED__
@@ -385,11 +381,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface ITransform3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3D ABI::Windows::UI::Xaml::Media::Media3D::ITransform3D
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3D_FWD_DEFINED__
@@ -403,11 +399,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         interface ITransform3DFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3DFactory ABI::Windows::UI::Xaml::Media::Media3D::ITransform3DFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3DFactory_FWD_DEFINED__
@@ -421,9 +417,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -452,11 +448,11 @@ namespace ABI {
                         
                         typedef struct Matrix3D Matrix3D;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -473,11 +469,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         class CompositeTransform3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -487,11 +483,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         class Matrix3DHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -501,11 +497,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         class PerspectiveTransform3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -515,11 +511,11 @@ namespace ABI {
                 namespace Media {
                     namespace Media3D {
                         class Transform3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -565,11 +561,11 @@ namespace ABI {
                             DOUBLE M44;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -676,11 +672,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICompositeTransform3D=_uuidof(ICompositeTransform3D);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3D;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3D_INTERFACE_DEFINED__) */
@@ -754,11 +750,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICompositeTransform3DStatics=_uuidof(ICompositeTransform3DStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3DStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CICompositeTransform3DStatics_INTERFACE_DEFINED__) */
@@ -796,11 +792,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMatrix3DHelper=_uuidof(IMatrix3DHelper);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelper_INTERFACE_DEFINED__) */
@@ -862,11 +858,11 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetHasInverse(
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Media3D::Matrix3D target,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetIsIdentity(
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Media3D::Matrix3D target,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Invert(
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Media3D::Matrix3D target,
@@ -877,11 +873,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMatrix3DHelperStatics=_uuidof(IMatrix3DHelperStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIMatrix3DHelperStatics_INTERFACE_DEFINED__) */
@@ -937,11 +933,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPerspectiveTransform3D=_uuidof(IPerspectiveTransform3D);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3D;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3D_INTERFACE_DEFINED__) */
@@ -988,11 +984,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPerspectiveTransform3DStatics=_uuidof(IPerspectiveTransform3DStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3DStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CIPerspectiveTransform3DStatics_INTERFACE_DEFINED__) */
@@ -1030,11 +1026,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITransform3D=_uuidof(ITransform3D);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3D;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3D_INTERFACE_DEFINED__) */
@@ -1077,11 +1073,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITransform3DFactory=_uuidof(ITransform3DFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3DFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CITransform3DFactory_INTERFACE_DEFINED__) */

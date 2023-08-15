@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -150,16 +150,16 @@ template <typename D> float consume_Windows_Devices_Display_IDisplayMonitor<D>::
 
 template <typename D> com_array<uint8_t> consume_Windows_Devices_Display_IDisplayMonitor<D>::GetDescriptor(Windows::Devices::Display::DisplayMonitorDescriptorKind const& descriptorKind) const
 {
-    com_array<uint8_t> value;
-    check_hresult(WINRT_SHIM(Windows::Devices::Display::IDisplayMonitor)->GetDescriptor(get_abi(descriptorKind), impl::put_size_abi(value), put_abi(value)));
-    return value;
+    com_array<uint8_t> result;
+    check_hresult(WINRT_SHIM(Windows::Devices::Display::IDisplayMonitor)->GetDescriptor(get_abi(descriptorKind), impl::put_size_abi(result), put_abi(result)));
+    return result;
 }
 
 template <typename D> hstring consume_Windows_Devices_Display_IDisplayMonitorStatics<D>::GetDeviceSelector() const
 {
-    hstring value{};
-    check_hresult(WINRT_SHIM(Windows::Devices::Display::IDisplayMonitorStatics)->GetDeviceSelector(put_abi(value)));
-    return value;
+    hstring result{};
+    check_hresult(WINRT_SHIM(Windows::Devices::Display::IDisplayMonitorStatics)->GetDeviceSelector(put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor> consume_Windows_Devices_Display_IDisplayMonitorStatics<D>::FromIdAsync(param::hstring const& deviceId) const
@@ -411,15 +411,15 @@ struct produce<D, Windows::Devices::Display::IDisplayMonitor> : produce_base<D, 
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL GetDescriptor(Windows::Devices::Display::DisplayMonitorDescriptorKind descriptorKind, uint32_t* __valueSize, uint8_t** value) noexcept final
+    int32_t WINRT_CALL GetDescriptor(Windows::Devices::Display::DisplayMonitorDescriptorKind descriptorKind, uint32_t* __resultSize, uint8_t** result) noexcept final
     {
         try
         {
-            *__valueSize = 0;
-            *value = nullptr;
+            *__resultSize = 0;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetDescriptor, WINRT_WRAP(com_array<uint8_t>), Windows::Devices::Display::DisplayMonitorDescriptorKind const&);
-            std::tie(*__valueSize, *value) = detach_abi(this->shim().GetDescriptor(*reinterpret_cast<Windows::Devices::Display::DisplayMonitorDescriptorKind const*>(&descriptorKind)));
+            std::tie(*__resultSize, *result) = detach_abi(this->shim().GetDescriptor(*reinterpret_cast<Windows::Devices::Display::DisplayMonitorDescriptorKind const*>(&descriptorKind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -429,14 +429,14 @@ struct produce<D, Windows::Devices::Display::IDisplayMonitor> : produce_base<D, 
 template <typename D>
 struct produce<D, Windows::Devices::Display::IDisplayMonitorStatics> : produce_base<D, Windows::Devices::Display::IDisplayMonitorStatics>
 {
-    int32_t WINRT_CALL GetDeviceSelector(void** value) noexcept final
+    int32_t WINRT_CALL GetDeviceSelector(void** result) noexcept final
     {
         try
         {
-            *value = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetDeviceSelector, WINRT_WRAP(hstring));
-            *value = detach_from<hstring>(this->shim().GetDeviceSelector());
+            *result = detach_from<hstring>(this->shim().GetDeviceSelector());
             return 0;
         }
         catch (...) { return to_hresult(); }

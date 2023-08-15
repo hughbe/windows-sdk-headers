@@ -430,6 +430,12 @@ enum _TDH_OUT_TYPE {
         Specifies that the field should be treated as an address that can
         potentially be decoded into a symbol name. Applicable to InTypes
         UInt32, UInt64, HexInt32, HexInt64, and Pointer. */
+    TDH_OUTTYPE_DATETIME_UTC, /*
+        Usable with the FILETIME and SYSTEMTIME InType values. Data is decoded
+        as a date/time. FILETIME is decoded as a 64-bit integer representing
+        the number of 100-nanosecond intervals since January 1, 1601.
+        SYSTEMTIME is decoded as the Win32 SYSTEMTIME structure. In both cases,
+        the time zone is assumed to be UTC.) */
 
     // End of winmeta outtypes.
     // Start of TDH outtypes for WBEM.
@@ -472,7 +478,17 @@ typedef struct _EVENT_PROPERTY_INFO {
             ULONG padding;
         } structType;
         struct _customSchemaType {
-            USHORT padding2;
+            // Data of this field is described by a user-defined serialization
+            // protocol such as Bond or Protocol Buffers. InType and OutType
+            // should be set for best-effort decoding by decoders that do not
+            // understand the schema, e.g. InType could be set to
+            // TDH_INTYPE_BINARY so that a decoder can properly extract or skip
+            // the raw serialized data even if it can't parse it. The
+            // CustomSchemaOffset points at a structure laid out as:
+            // UINT16 Protocol; // User-defined value from 5..31
+            // UINT16 Length;
+            // BYTE SchemaData[Length];
+            USHORT InType;
             USHORT OutType;
             ULONG CustomSchemaOffset;
         } customSchemaType;
@@ -540,11 +556,19 @@ typedef struct _TRACE_EVENT_INFO {
 
     ULONG TaskNameOffset; /* Meaning of this field depends on DecodingSource.
         - XMLFile: The offset to the name of the associated task.
-        - Wbem: The offset to the name of the event.
+        - Wbem: The offset to the event's MOF "DisplayName" property. For many
+          Wbem providers, ProviderName is a provider category and TaskName is
+          the provider subcategory.
         - WPP: Not used.
         - Tlg: The offset to the name of the event. */
 
-    ULONG OpcodeNameOffset;
+    ULONG OpcodeNameOffset; /* Meaning of this field depends on DecodingSource.
+        - XMLFile: The offset to the name of the associated opcode.
+        - Wbem: The offset to the event's MOF "EventTypeName" property. For
+          many Wbem providers, OpcodeName is the event's name.
+        - WPP: Not used.
+        - Tlg: The offset to the name of the associated opcode. */
+
     ULONG EventMessageOffset;
     ULONG ProviderMessageOffset;
     ULONG BinaryXMLOffset;
@@ -802,7 +826,7 @@ typedef enum _TDH_CONTEXT_TYPE {
         with the name [ProviderId].TMF will be found during the search. */
     TDH_CONTEXT_WPP_GMT, /* Integer value. If set to 1, the TdhGetWppProperty
         and TdhGetWppMessage functions will format a WPP event's timestamp in
-        GMT. By default, the timestamp is formatted in local time. */
+        UTC (GMT). By default, the timestamp is formatted in local time. */
     TDH_CONTEXT_POINTERSIZE, /* Integer value, set to 4 or 8. Used when
         decoding POINTER or SIZE_T fields on WPP events that do not set a
         pointer size in the event header. If the event does not set a pointer
@@ -933,11 +957,29 @@ TdhLoadManifest(
     );
 #endif
 
+#if (WINVER >= _WIN32_WINNT_WIN10)
+TDHSTATUS
+__stdcall
+TdhLoadManifestFromMemory(
+    _In_reads_bytes_(cbData) LPCVOID pData,
+    _In_ ULONG cbData
+    );
+#endif
+
 #if (WINVER >= _WIN32_WINNT_WIN7)
 TDHSTATUS
 __stdcall
 TdhUnloadManifest(
     _In_ PWSTR Manifest
+    );
+#endif
+
+#if (WINVER >= _WIN32_WINNT_WIN10)
+TDHSTATUS
+__stdcall
+TdhUnloadManifestFromMemory(
+    _In_reads_bytes_(cbData) LPCVOID pData,
+    _In_ ULONG cbData
     );
 #endif
 

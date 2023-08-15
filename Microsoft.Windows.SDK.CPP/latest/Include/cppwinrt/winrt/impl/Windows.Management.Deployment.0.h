@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -26,6 +26,7 @@ enum class AddPackageByAppInstallerOptions : uint32_t
     InstallAllResources = 0x20,
     ForceTargetAppShutdown = 0x40,
     RequiredContentGroupOnly = 0x100,
+    LimitToExistingPackages = 0x200,
 };
 
 enum class DeploymentOptions : uint32_t
@@ -37,6 +38,7 @@ enum class DeploymentOptions : uint32_t
     ForceTargetApplicationShutdown = 0x40,
     RequiredContentGroupOnly = 0x100,
     ForceUpdateFromAnyVersion = 0x40000,
+    RetainFilesOnFailure = 0x200000,
 };
 
 enum class DeploymentProgressState : int32_t

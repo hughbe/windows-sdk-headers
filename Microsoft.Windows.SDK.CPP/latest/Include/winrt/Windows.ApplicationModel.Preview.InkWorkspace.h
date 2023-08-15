@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.preview.inkworkspace.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Preview {
                 namespace InkWorkspace {
                     interface IInkWorkspaceHostedAppManager;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* InkWorkspace */} /* ABI */
+                } /* InkWorkspace */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager ABI::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Preview {
                 namespace InkWorkspace {
                     interface IInkWorkspaceHostedAppManagerStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* InkWorkspace */} /* ABI */
+                } /* InkWorkspace */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics ABI::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_FWD_DEFINED__
@@ -311,8 +307,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -356,10 +352,10 @@ namespace ABI {
             namespace Preview {
                 namespace InkWorkspace {
                     class InkWorkspaceHostedAppManager;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* InkWorkspace */} /* ABI */
+                } /* InkWorkspace */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -402,10 +398,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkWorkspaceHostedAppManager=_uuidof(IInkWorkspaceHostedAppManager);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* InkWorkspace */} /* ABI */
+                } /* InkWorkspace */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_INTERFACE_DEFINED__) */
@@ -445,10 +441,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkWorkspaceHostedAppManagerStatics=_uuidof(IInkWorkspaceHostedAppManagerStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* InkWorkspace */} /* ABI */
+                } /* InkWorkspace */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_INTERFACE_DEFINED__) */

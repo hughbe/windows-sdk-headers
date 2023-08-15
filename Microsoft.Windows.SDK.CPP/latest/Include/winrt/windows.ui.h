@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -139,8 +139,8 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             interface IColorHelper;
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CIColorHelper ABI::Windows::UI::IColorHelper
 
 #endif // ____x_ABI_CWindows_CUI_CIColorHelper_FWD_DEFINED__
@@ -151,8 +151,8 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             interface IColorHelperStatics;
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CIColorHelperStatics ABI::Windows::UI::IColorHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CIColorHelperStatics_FWD_DEFINED__
@@ -163,8 +163,8 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             interface IColorHelperStatics2;
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CIColorHelperStatics2 ABI::Windows::UI::IColorHelperStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CIColorHelperStatics2_FWD_DEFINED__
@@ -175,8 +175,8 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             interface IColors;
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CIColors ABI::Windows::UI::IColors
 
 #endif // ____x_ABI_CWindows_CUI_CIColors_FWD_DEFINED__
@@ -187,11 +187,35 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             interface IColorsStatics;
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CIColorsStatics ABI::Windows::UI::IColorsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CIColorsStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContentRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContentRoot_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            interface IUIContentRoot;
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CIUIContentRoot ABI::Windows::UI::IUIContentRoot
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContentRoot_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            interface IUIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CIUIContext ABI::Windows::UI::IUIContext
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -201,8 +225,8 @@ namespace ABI {
         namespace UI {
             struct Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CUI__CColor_USE
@@ -223,7 +247,7 @@ IIterator<struct ABI::Windows::UI::Color> : IIterator_impl<struct ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::UI::Color> __FIIterator_1_Windows__CUI__CColor_t;
 #define __FIIterator_1_Windows__CUI__CColor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CColor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CColor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Color>
@@ -253,7 +277,7 @@ IIterable<struct ABI::Windows::UI::Color> : IIterable_impl<struct ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::UI::Color> __FIIterable_1_Windows__CUI__CColor_t;
 #define __FIIterable_1_Windows__CUI__CColor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CColor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CColor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Color>
@@ -283,7 +307,7 @@ IReference<struct ABI::Windows::UI::Color> : IReference_impl<struct ABI::Windows
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::UI::Color> __FIReference_1_Windows__CUI__CColor_t;
 #define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CColor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::IReference<ABI::Windows::UI::Color>
@@ -304,8 +328,10 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
 
 
 
@@ -316,16 +342,32 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             class ColorHelper;
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             class Colors;
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            class UIContentRoot;
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            class UIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -356,8 +398,8 @@ namespace ABI {
                 BYTE B;
             };
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -389,8 +431,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IColorHelper=_uuidof(IColorHelper);
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIColorHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CIColorHelper_INTERFACE_DEFINED__) */
@@ -432,8 +474,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IColorHelperStatics=_uuidof(IColorHelperStatics);
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIColorHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CIColorHelperStatics_INTERFACE_DEFINED__) */
@@ -472,8 +514,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IColorHelperStatics2=_uuidof(IColorHelperStatics2);
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIColorHelperStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CIColorHelperStatics2_INTERFACE_DEFINED__) */
@@ -508,8 +550,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IColors=_uuidof(IColors);
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIColors;
 #endif /* !defined(____x_ABI_CWindows_CUI_CIColors_INTERFACE_DEFINED__) */
@@ -967,12 +1009,87 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IColorsStatics=_uuidof(IColorsStatics);
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIColorsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CIColorsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.IUIContentRoot
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIContentRoot
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CIUIContentRoot_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CIUIContentRoot_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_IUIContentRoot[] = L"Windows.UI.IUIContentRoot";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            /* [object, uuid("1DFCBAC6-B36B-5CB9-9BC5-2B7A0EDDC378"), exclusiveto, contract] */
+            MIDL_INTERFACE("1DFCBAC6-B36B-5CB9-9BC5-2B7A0EDDC378")
+            IUIContentRoot : public IInspectable
+            {
+            public:
+                /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UIContext(
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::IUIContext * * value
+                    ) = 0;
+                
+            };
+
+            extern MIDL_CONST_ID IID & IID_IUIContentRoot=_uuidof(IUIContentRoot);
+            
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIUIContentRoot;
+#endif /* !defined(____x_ABI_CWindows_CUI_CIUIContentRoot_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.IUIContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIContext
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CIUIContext_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CIUIContext_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_IUIContext[] = L"Windows.UI.IUIContext";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            /* [object, uuid("BB5CFACD-5BD8-59D0-A59E-1C17A4D6D243"), exclusiveto, contract] */
+            MIDL_INTERFACE("BB5CFACD-5BD8-59D0-A59E-1C17A4D6D243")
+            IUIContext : public IInspectable
+            {
+            public:
+                
+            };
+
+            extern MIDL_CONST_ID IID & IID_IUIContext=_uuidof(IUIContext);
+            
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIUIContext;
+#endif /* !defined(____x_ABI_CWindows_CUI_CIUIContext_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1030,6 +1147,54 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
+/*
+ *
+ * Class Windows.UI.UIContentRoot
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.IUIContentRoot ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_UIContentRoot_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIContentRoot_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIContentRoot[] = L"Windows.UI.UIContentRoot";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.UI.UIContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.IUIContext ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_UIContext_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIContext_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIContext[] = L"Windows.UI.UIContext";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -1062,6 +1227,18 @@ typedef interface __x_ABI_CWindows_CUI_CIColors __x_ABI_CWindows_CUI_CIColors;
 typedef interface __x_ABI_CWindows_CUI_CIColorsStatics __x_ABI_CWindows_CUI_CIColorsStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CIColorsStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContentRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContentRoot_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CIUIContentRoot __x_ABI_CWindows_CUI_CIUIContentRoot;
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContentRoot_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CIUIContext __x_ABI_CWindows_CUI_CIUIContext;
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -1288,6 +1465,10 @@ interface __FIReference_1_Windows__CUI__CColor
 
 
 typedef struct __x_ABI_CWindows_CUI_CColor __x_ABI_CWindows_CUI_CColor;
+
+
+
+
 
 
 
@@ -2761,6 +2942,185 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIColorsStatics;
 
 /*
  *
+ * Interface Windows.UI.IUIContentRoot
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIContentRoot
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CIUIContentRoot_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CIUIContentRoot_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_IUIContentRoot[] = L"Windows.UI.IUIContentRoot";
+/* [object, uuid("1DFCBAC6-B36B-5CB9-9BC5-2B7A0EDDC378"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CIUIContentRootVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContentRoot * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContentRoot * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContentRoot * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContentRoot * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContentRoot * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContentRoot * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_UIContext )(
+        __x_ABI_CWindows_CUI_CIUIContentRoot * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CIUIContext * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CIUIContentRootVtbl;
+
+interface __x_ABI_CWindows_CUI_CIUIContentRoot
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CIUIContentRootVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CIUIContentRoot_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CIUIContentRoot_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CIUIContentRoot_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CIUIContentRoot_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CIUIContentRoot_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CIUIContentRoot_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CIUIContentRoot_get_UIContext(This,value) \
+    ( (This)->lpVtbl->get_UIContext(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIUIContentRoot;
+#endif /* !defined(____x_ABI_CWindows_CUI_CIUIContentRoot_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.IUIContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIContext
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CIUIContext_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CIUIContext_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_IUIContext[] = L"Windows.UI.IUIContext";
+/* [object, uuid("BB5CFACD-5BD8-59D0-A59E-1C17A4D6D243"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CIUIContextVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContext * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContext * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContext * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContext * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContext * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CIUIContext * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CIUIContextVtbl;
+
+interface __x_ABI_CWindows_CUI_CIUIContext
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CIUIContextVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CIUIContext_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CIUIContext_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CIUIContext_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CIUIContext_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CIUIContext_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CIUIContext_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CIUIContext;
+#endif /* !defined(____x_ABI_CWindows_CUI_CIUIContext_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.UI.ColorHelper
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -2812,6 +3172,54 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Colors[] = L"Windows.UI.Colors";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.UIContentRoot
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.IUIContentRoot ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_UIContentRoot_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIContentRoot_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIContentRoot[] = L"Windows.UI.UIContentRoot";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.UI.UIContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.IUIContext ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_UIContext_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIContext_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIContext[] = L"Windows.UI.UIContext";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 

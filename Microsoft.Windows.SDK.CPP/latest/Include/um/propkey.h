@@ -3934,6 +3934,14 @@ DEFINE_PROPERTYKEY(PKEY_Devices_AepService_ServiceId, 0xC9C141A9, 0x1B4C, 0x4F17
 DEFINE_PROPERTYKEY(PKEY_Devices_AppPackageFamilyName, 0x51236583, 0x0C4A, 0x4FE8, 0xB8, 0x1F, 0x16, 0x6A, 0xEC, 0x13, 0xF5, 0x10, 100);
 #define INIT_PKEY_Devices_AppPackageFamilyName { { 0x51236583, 0x0C4A, 0x4FE8, 0xB8, 0x1F, 0x16, 0x6A, 0xEC, 0x13, 0xF5, 0x10 }, 100 }
 
+//  Name:     System.Devices.AudioDevice.Microphone.IsFarField -- PKEY_Devices_AudioDevice_Microphone_IsFarField
+//  Type:     Boolean -- VT_BOOL
+//  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 6
+//
+//  Far field capability of the microphone. If VARIANT_TRUE the microphone element will detect far field sound.
+DEFINE_PROPERTYKEY(PKEY_Devices_AudioDevice_Microphone_IsFarField, 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB, 6);
+#define INIT_PKEY_Devices_AudioDevice_Microphone_IsFarField { { 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB }, 6 }
+
 //  Name:     System.Devices.AudioDevice.Microphone.SensitivityInDbfs -- PKEY_Devices_AudioDevice_Microphone_SensitivityInDbfs
 //  Type:     Double -- VT_R8
 //  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 3
@@ -4581,6 +4589,14 @@ DEFINE_PROPERTYKEY(PKEY_Devices_Panel_PanelId, 0x8DBC9C86, 0x97A9, 0x4BFF, 0x9B,
 //  Parent device.
 DEFINE_PROPERTYKEY(PKEY_Devices_Parent, 0x4340A6C5, 0x93FA, 0x4706, 0x97, 0x2C, 0x7B, 0x64, 0x80, 0x08, 0xA5, 0xA7, 8);
 #define INIT_PKEY_Devices_Parent { { 0x4340A6C5, 0x93FA, 0x4706, 0x97, 0x2C, 0x7B, 0x64, 0x80, 0x08, 0xA5, 0xA7 }, 8 }
+
+//  Name:     System.Devices.PhoneLineTransportDevice.Connected -- PKEY_Devices_PhoneLineTransportDevice_Connected
+//  Type:     Boolean -- VT_BOOL
+//  FormatID: {AECF2FE8-1D00-4FEE-8A6D-A70D719B772B}, 2
+//
+//  Connection status of a PhoneLineTransportDevice.
+DEFINE_PROPERTYKEY(PKEY_Devices_PhoneLineTransportDevice_Connected, 0xAECF2FE8, 0x1D00, 0x4FEE, 0x8A, 0x6D, 0xA7, 0x0D, 0x71, 0x9B, 0x77, 0x2B, 2);
+#define INIT_PKEY_Devices_PhoneLineTransportDevice_Connected { { 0xAECF2FE8, 0x1D00, 0x4FEE, 0x8A, 0x6D, 0xA7, 0x0D, 0x71, 0x9B, 0x77, 0x2B }, 2 }
 
 //  Name:     System.Devices.PhysicalDeviceLocation -- PKEY_Devices_PhysicalDeviceLocation
 //  Type:     Buffer -- VT_VECTOR | VT_UI1  (For variants: VT_ARRAY | VT_UI1)

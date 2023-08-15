@@ -348,6 +348,27 @@ typedef enum _THREADINFOCLASS {
     ThreadIsIoPending = 16
 } THREADINFOCLASS;
 
+// bitmask values for CodeIntegrityOptions
+#define CODEINTEGRITY_OPTION_ENABLED                        0x01
+#define CODEINTEGRITY_OPTION_TESTSIGN                       0x02
+#define CODEINTEGRITY_OPTION_UMCI_ENABLED                   0x04
+#define CODEINTEGRITY_OPTION_UMCI_AUDITMODE_ENABLED         0x08
+#define CODEINTEGRITY_OPTION_UMCI_EXCLUSIONPATHS_ENABLED    0x10
+#define CODEINTEGRITY_OPTION_TEST_BUILD                     0x20
+#define CODEINTEGRITY_OPTION_PREPRODUCTION_BUILD            0x40
+#define CODEINTEGRITY_OPTION_DEBUGMODE_ENABLED              0x80
+#define CODEINTEGRITY_OPTION_FLIGHT_BUILD                   0x100
+#define CODEINTEGRITY_OPTION_FLIGHTING_ENABLED              0x200
+#define CODEINTEGRITY_OPTION_HVCI_KMCI_ENABLED              0x400
+#define CODEINTEGRITY_OPTION_HVCI_KMCI_AUDITMODE_ENABLED    0x800
+#define CODEINTEGRITY_OPTION_HVCI_KMCI_STRICTMODE_ENABLED   0x1000
+#define CODEINTEGRITY_OPTION_HVCI_IUM_ENABLED               0x2000
+
+typedef struct _SYSTEM_CODEINTEGRITY_INFORMATION {
+    ULONG   Length;
+    ULONG   CodeIntegrityOptions;
+} SYSTEM_CODEINTEGRITY_INFORMATION, *PSYSTEM_CODEINTEGRITY_INFORMATION;
+
 typedef enum _SYSTEM_INFORMATION_CLASS {
     SystemBasicInformation = 0,
     SystemPerformanceInformation = 2,
@@ -358,6 +379,7 @@ typedef enum _SYSTEM_INFORMATION_CLASS {
     SystemExceptionInformation = 33,
     SystemRegistryQuotaInformation = 37,
     SystemLookasideInformation = 45,
+    SystemCodeIntegrityInformation = 103,
     SystemPolicyInformation = 134,
 } SYSTEM_INFORMATION_CLASS;
 

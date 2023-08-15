@@ -25,8 +25,8 @@ cpp_quote("#endif")
 
 import "AudioSessionTypes.h";
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application and Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 //-------------------------------------------------------------------------
 // Description: AudioClient buffer flags
@@ -57,8 +57,8 @@ enum _AUDCLNT_BUFFERFLAGS
 //                                 may match this format only if the format can be accepted
 //                                 the audio driver and associated APOs. 
 //
-//     AUDCLNT_STREAMOPTIONS_AMBISONICS - The client is requesting the audio client to insert  
-//                                  Ambisonics renderer and configure the pipeline to match Ambisonics format types 
+//     AUDCLNT_STREAMOPTIONS_AMBISONICS - The client is requesting the audio client to insert
+//                                  Ambisonics renderer and configure the pipeline to match Ambisonics format types
 //
 typedef [v1_enum] enum AUDCLNT_STREAMOPTIONS
 {
@@ -1089,6 +1089,7 @@ interface IAudioClock : IUnknown
 
 }; // IAudioClock
 
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 //-----------------------------------------------------------------------------
 // Description: IAudioClock2 interface
 //
@@ -1126,6 +1127,7 @@ interface IAudioClock2 : IUnknown
     //
     HRESULT GetDevicePosition([out, annotation("_Out_")] UINT64* DevicePosition, [out,unique, annotation("_Out_opt_")] UINT64* QPCPosition );
 }; // IAudioClock2
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 
 [
     uuid(f6e4c0a0-46d9-4fb8-be21-57a3ef2b626c),
@@ -1158,6 +1160,7 @@ interface IAudioClockAdjustment : IUnknown
     HRESULT SetSampleRate([in, annotation("_In_")] float flSampleRate);
 }; // IAudioClockAdjustment
 
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 //-----------------------------------------------------------------------------
 // Description: ISimpleAudioVolume interface
 //
@@ -1255,6 +1258,7 @@ interface ISimpleAudioVolume : IUnknown
     HRESULT GetMute([out, annotation("_Out_")] BOOL *pbMute);
 
 }
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -1369,7 +1373,11 @@ interface IAudioStreamVolume : IUnknown
     //
     HRESULT GetAllVolumes([in, annotation("_In_")] UINT32 dwCount,[out, size_is(dwCount), , annotation("_Out_writes_(dwCount)")] float *pfVolumes);
 }
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+#pragma endregion
 
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 //-------------------------------------------------------------------------
 // Description: Enumeration of ambisonics type 
 // 
@@ -1509,11 +1517,11 @@ interface IAudioAmbisonicsControl : IUnknown
     //-------------------------------------------------------------------------
     // Description:
     //
-    //  Sets rotation values in Quaternion  
-    //  Quaternion represents orientation and rotation of objects in 3D 
-    //  These Rotation values corresponds to head rotation/head tracking. 
-    //  For e.g. a user panning 360 degree video to 90 degrees on the right will hear the audio as if the user’s head is rotated to 90 degrees on the right. 
-    //  This method will return error AUDCLNT_E_HEADTRACKING_ENABLED if the SetHeadTracking is set to TRUE (default is TRUE) i.e., the user will have to first call SetHeadTracking(FALSE) before using SetRotation. 
+    //  Sets rotation values in Quaternion
+    //  Quaternion represents orientation and rotation of objects in 3D
+    //  These Rotation values corresponds to head rotation/head tracking.
+    //  For e.g. a user panning 360 degree video to 90 degrees on the right will hear the audio as if the user's head is rotated to 90 degrees on the right.
+    //  This method will return error AUDCLNT_E_HEADTRACKING_ENABLED if the SetHeadTracking is set to TRUE (default is TRUE) i.e., the user will have to first call SetHeadTracking(FALSE) before using SetRotation.
     //
     // Parameters:
     //
@@ -1530,8 +1538,8 @@ interface IAudioAmbisonicsControl : IUnknown
     //
     HRESULT SetRotation([in] float X, [in] float Y, [in] float Z, [in] float W);
 }
-
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1668,8 +1676,8 @@ interface IChannelAudioVolume : IUnknown
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application and Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 cpp_quote("#define AUDCLNT_ERR(n) MAKE_HRESULT(SEVERITY_ERROR, FACILITY_AUDCLNT, n)")
 cpp_quote("#define AUDCLNT_SUCCESS(n) MAKE_SCODE(SEVERITY_SUCCESS, FACILITY_AUDCLNT, n)")
@@ -1718,5 +1726,5 @@ cpp_quote("#define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
 // NOTE! error codes of 0x100 and above a reserved for SpatialAudioClient. AUDCLNT_ERR(0x100) to AUDCLNT_ERR(0x1FF)
 // NOTE! error codes of 0x200 and above a reserved for SpatialAudioMetadataClient. AUDCLNT_ERR(0x200) to AUDCLNT_ERR(0x2FF)
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion

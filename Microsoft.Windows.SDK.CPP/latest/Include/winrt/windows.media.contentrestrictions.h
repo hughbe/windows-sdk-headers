@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.contentrestrictions.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 interface IContentRestrictionsBrowsePolicy;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CContentRestrictions_CIContentRestrictionsBrowsePolicy ABI::Windows::Media::ContentRestrictions::IContentRestrictionsBrowsePolicy
 
 #endif // ____x_ABI_CWindows_CMedia_CContentRestrictions_CIContentRestrictionsBrowsePolicy_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 interface IRatedContentDescription;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescription ABI::Windows::Media::ContentRestrictions::IRatedContentDescription
 
 #endif // ____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescription_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 interface IRatedContentDescriptionFactory;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescriptionFactory ABI::Windows::Media::ContentRestrictions::IRatedContentDescriptionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescriptionFactory_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 interface IRatedContentRestrictions;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictions ABI::Windows::Media::ContentRestrictions::IRatedContentRestrictions
 
 #endif // ____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictions_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 interface IRatedContentRestrictionsFactory;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictionsFactory ABI::Windows::Media::ContentRestrictions::IRatedContentRestrictionsFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictionsFactory_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 enum ContentAccessRestrictionLevel : int;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel_USE
@@ -371,7 +367,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::ContentRestrictions::C
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel>
@@ -401,7 +397,7 @@ IAsyncOperation<enum ABI::Windows::Media::ContentRestrictions::ContentAccessRest
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel> __FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentAccessRestrictionLevel ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel>
@@ -416,9 +412,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 class ContentRestrictionsBrowsePolicy;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -441,7 +437,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::ContentRestrictions::Conten
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::ContentRestrictions::IContentRestrictionsBrowsePolicy*>
@@ -473,7 +469,7 @@ IAsyncOperation<ABI::Windows::Media::ContentRestrictions::ContentRestrictionsBro
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy*> __FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CContentRestrictions__CContentRestrictionsBrowsePolicy ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::ContentRestrictions::IContentRestrictionsBrowsePolicy*>
@@ -503,7 +499,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -532,7 +528,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -561,7 +557,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -590,7 +586,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -619,7 +615,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -648,7 +644,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -677,7 +673,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -707,7 +703,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -729,9 +725,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -747,9 +743,9 @@ namespace ABI {
                 
                 typedef enum ContentAccessRestrictionLevel : int ContentAccessRestrictionLevel;
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -758,9 +754,9 @@ namespace ABI {
                 
                 typedef enum RatedContentCategory : int RatedContentCategory;
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -773,9 +769,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 class RatedContentDescription;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -783,9 +779,9 @@ namespace ABI {
         namespace Media {
             namespace ContentRestrictions {
                 class RatedContentRestrictions;
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -819,9 +815,9 @@ namespace ABI {
                     ContentAccessRestrictionLevel_Hide = 3,
                 };
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -850,9 +846,9 @@ namespace ABI {
                     RatedContentCategory_Music = 5,
                 };
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -894,9 +890,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentRestrictionsBrowsePolicy=_uuidof(IContentRestrictionsBrowsePolicy);
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CContentRestrictions_CIContentRestrictionsBrowsePolicy;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CContentRestrictions_CIContentRestrictionsBrowsePolicy_INTERFACE_DEFINED__) */
@@ -962,9 +958,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRatedContentDescription=_uuidof(IRatedContentDescription);
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescription;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescription_INTERFACE_DEFINED__) */
@@ -1006,9 +1002,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRatedContentDescriptionFactory=_uuidof(IRatedContentDescriptionFactory);
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescriptionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentDescriptionFactory_INTERFACE_DEFINED__) */
@@ -1062,9 +1058,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRatedContentRestrictions=_uuidof(IRatedContentRestrictions);
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictions;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictions_INTERFACE_DEFINED__) */
@@ -1104,9 +1100,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRatedContentRestrictionsFactory=_uuidof(IRatedContentRestrictionsFactory);
                 
-            } /* Windows */
+            } /* ContentRestrictions */
         } /* Media */
-    } /* ContentRestrictions */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CContentRestrictions_CIRatedContentRestrictionsFactory_INTERFACE_DEFINED__) */
@@ -1479,7 +1475,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

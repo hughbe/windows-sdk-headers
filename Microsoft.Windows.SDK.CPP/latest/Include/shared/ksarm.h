@@ -207,7 +207,7 @@
 #define PS_MITIGATION_OPTION_MASK 0x3
 #define PS_MITIGATION_OPTION_RETURN_FLOW_GUARD 0x10
 #define PS_MITIGATION_OPTION_RESTRICT_SET_THREAD_CONTEXT 0x13
-#define PS_MITIGATION_OPTION_CET_SHADOW_STACKS 0x1f
+#define PS_MITIGATION_OPTION_CET_USER_SHADOW_STACKS 0x1f
 
 //
 // User Shared Data Structure Offset Definitions
@@ -331,6 +331,7 @@
 #define FAST_FAIL_INVALID_CONTROL_STACK 0x2f
 #define FAST_FAIL_SET_CONTEXT_DENIED 0x30
 #define FAST_FAIL_ENCLAVE_CALL_FAILURE 0x35
+#define FAST_FAIL_FLAGS_CORRUPTION 0x3b
 
 //
 // APC Object Structure Offset Definitions
@@ -454,7 +455,7 @@
 #define PrUserTime 0x9c
 #define PrInstrumentationCallback 0xa4
 #define KernelProcessObjectLength 0xb0
-#define ExecutiveProcessObjectLength 0x408
+#define ExecutiveProcessObjectLength 0x500
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -490,8 +491,8 @@
 // Thread Object Structure Offset Definitions
 //
 
-#define EtCid 0x374
-#define EtPicoContext 0x43c
+#define EtCid 0x37c
+#define EtPicoContext 0x444
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -539,7 +540,7 @@
 #define KTHREAD_SYSTEM_THREAD_BIT 0xa
 #define KTHREAD_QUEUE_DEFER_PREEMPTION_BIT 0xb
 #define KTHREAD_BAM_QOS_LEVEL_MASK 0x3
-#define KTHREAD_CET_SHADOW_STACK_BIT 0x14
+#define KTHREAD_CET_USER_SHADOW_STACK_BIT 0x14
 
 #define ThMiscFlags 0x4c
 #define ThThreadFlags 0x50
@@ -554,8 +555,8 @@
 #define ThWin32Thread 0x11c
 #define ThStackBase 0x28
 #define ThLegoData 0x1b8
-#define KernelThreadObjectLength 0x348
-#define ExecutiveThreadObjectLength 0x478
+#define KernelThreadObjectLength 0x350
+#define ExecutiveThreadObjectLength 0x480
 
 #define KF_VFP_32REG 0x10
 
@@ -967,8 +968,8 @@
 #define PbPanicMiniStack 0xfd0
 #define PbCycleCounterHigh 0x970
 #define ThNpxState 0x85
-#define ThUserRoBase 0x440
-#define ThUserRwBase 0x444
+#define ThUserRoBase 0x448
+#define ThUserRwBase 0x44c
 
 //
 // KTHREAD state

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.appointments.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointment;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment ABI::Windows::ApplicationModel::Appointments::IAppointment
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointment2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment2 ABI::Windows::ApplicationModel::Appointments::IAppointment2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment2_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointment3;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment3 ABI::Windows::ApplicationModel::Appointments::IAppointment3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment3_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentCalendar;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentCalendar2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar2 ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar2_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentCalendar3;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar3 ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar3_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentCalendarSyncManager;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentCalendarSyncManager2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager2 ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager2_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentConflictResult;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentConflictResult ABI::Windows::ApplicationModel::Appointments::IAppointmentConflictResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentConflictResult_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentException;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentException ABI::Windows::ApplicationModel::Appointments::IAppointmentException
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentException_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentInvitee;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentInvitee ABI::Windows::ApplicationModel::Appointments::IAppointmentInvitee
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentInvitee_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentManagerForUser;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerForUser ABI::Windows::ApplicationModel::Appointments::IAppointmentManagerForUser
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerForUser_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentManagerStatics;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics ABI::Windows::ApplicationModel::Appointments::IAppointmentManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentManagerStatics2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics2 ABI::Windows::ApplicationModel::Appointments::IAppointmentManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics2_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentManagerStatics3;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics3 ABI::Windows::ApplicationModel::Appointments::IAppointmentManagerStatics3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics3_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentParticipant;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentParticipant ABI::Windows::ApplicationModel::Appointments::IAppointmentParticipant
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentParticipant_FWD_DEFINED__
@@ -503,9 +499,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentPropertiesStatics;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics ABI::Windows::ApplicationModel::Appointments::IAppointmentPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics_FWD_DEFINED__
@@ -517,9 +513,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentPropertiesStatics2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics2 ABI::Windows::ApplicationModel::Appointments::IAppointmentPropertiesStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics2_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentRecurrence;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence ABI::Windows::ApplicationModel::Appointments::IAppointmentRecurrence
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence_FWD_DEFINED__
@@ -545,9 +541,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentRecurrence2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence2 ABI::Windows::ApplicationModel::Appointments::IAppointmentRecurrence2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence2_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentRecurrence3;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence3 ABI::Windows::ApplicationModel::Appointments::IAppointmentRecurrence3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence3_FWD_DEFINED__
@@ -573,9 +569,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStore;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore ABI::Windows::ApplicationModel::Appointments::IAppointmentStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore_FWD_DEFINED__
@@ -587,9 +583,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStore2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore2 ABI::Windows::ApplicationModel::Appointments::IAppointmentStore2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore2_FWD_DEFINED__
@@ -601,9 +597,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStore3;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore3 ABI::Windows::ApplicationModel::Appointments::IAppointmentStore3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore3_FWD_DEFINED__
@@ -615,9 +611,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreChange;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChange
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange_FWD_DEFINED__
@@ -629,9 +625,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreChange2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange2 ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChange2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange2_FWD_DEFINED__
@@ -643,9 +639,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreChangeReader;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeReader ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeReader_FWD_DEFINED__
@@ -657,9 +653,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreChangeTracker;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker_FWD_DEFINED__
@@ -671,9 +667,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreChangeTracker2;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker2 ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker2_FWD_DEFINED__
@@ -685,9 +681,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreChangedDeferral;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedDeferral ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChangedDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedDeferral_FWD_DEFINED__
@@ -699,9 +695,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreChangedEventArgs;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedEventArgs ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedEventArgs_FWD_DEFINED__
@@ -713,9 +709,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentStoreNotificationTriggerDetails;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreNotificationTriggerDetails ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreNotificationTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreNotificationTriggerDetails_FWD_DEFINED__
@@ -727,9 +723,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IFindAppointmentsOptions;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIFindAppointmentsOptions ABI::Windows::ApplicationModel::Appointments::IFindAppointmentsOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIFindAppointmentsOptions_FWD_DEFINED__
@@ -742,9 +738,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class Appointment;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -767,7 +763,7 @@ IIterator<ABI::Windows::ApplicationModel::Appointments::Appointment*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Appointments::Appointment*> __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointment_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Appointments::IAppointment*>
@@ -799,7 +795,7 @@ IIterable<ABI::Windows::ApplicationModel::Appointments::Appointment*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Appointments::Appointment*> __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointment_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Appointments::IAppointment*>
@@ -815,9 +811,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentCalendar;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -840,7 +836,7 @@ IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -872,7 +868,7 @@ IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -888,9 +884,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentException;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -913,7 +909,7 @@ IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentException*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentException*> __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Appointments::IAppointmentException*>
@@ -945,7 +941,7 @@ IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentException*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentException*> __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Appointments::IAppointmentException*>
@@ -961,9 +957,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentInvitee;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -986,7 +982,7 @@ IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> : I
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Appointments::IAppointmentInvitee*>
@@ -1018,7 +1014,7 @@ IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> : I
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Appointments::IAppointmentInvitee*>
@@ -1034,9 +1030,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentStoreChange;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1059,7 +1055,7 @@ IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentStoreChange*>
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentStoreChange*> __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChange*>
@@ -1091,7 +1087,7 @@ IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentStoreChange*>
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentStoreChange*> __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChange*>
@@ -1123,7 +1119,7 @@ IVectorView<ABI::Windows::ApplicationModel::Appointments::Appointment*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Appointments::Appointment*> __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointment*>
@@ -1155,7 +1151,7 @@ IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -1187,7 +1183,7 @@ IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentException*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentException*> __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentException*>
@@ -1219,7 +1215,7 @@ IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> :
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentInvitee*>
@@ -1251,7 +1247,7 @@ IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentStoreChange
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentStoreChange*> __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChange*>
@@ -1283,7 +1279,7 @@ IVector<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> : IVe
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Appointments::AppointmentInvitee*> __FIVector_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t;
 #define __FIVector_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CAppointments__CAppointmentInvitee ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Appointments::IAppointmentInvitee*>
@@ -1315,7 +1311,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::Ap
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::Appointment*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointment_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointment_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::IAppointment*>
@@ -1347,7 +1343,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::Appointment*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::Appointment*> __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointment_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointment_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::IAppointment*>
@@ -1379,7 +1375,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::Ap
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -1411,7 +1407,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::AppointmentCalenda
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -1427,9 +1423,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentConflictResult;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1452,7 +1448,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::Ap
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::AppointmentConflictResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::IAppointmentConflictResult*>
@@ -1484,7 +1480,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::AppointmentConflic
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::AppointmentConflictResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentConflictResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::IAppointmentConflictResult*>
@@ -1500,9 +1496,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentStore;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1525,7 +1521,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::Ap
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::AppointmentStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CAppointments__CAppointmentStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Appointments::IAppointmentStore*>
@@ -1557,7 +1553,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::AppointmentStore*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::AppointmentStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CAppointments__CAppointmentStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Appointments::IAppointmentStore*>
@@ -1589,7 +1585,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointment*>*>
@@ -1621,7 +1617,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CApp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointment ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointment*>*>
@@ -1653,7 +1649,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>*>
@@ -1685,7 +1681,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CApp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>*>
@@ -1717,7 +1713,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentException*>*>
@@ -1749,7 +1745,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CApp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentException ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentException*>*>
@@ -1781,7 +1777,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChange*>*>
@@ -1813,7 +1809,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CApp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentStoreChange ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChange*>*>
@@ -1829,9 +1825,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentCalendarSyncManager;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1855,7 +1851,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Appointments::AppointmentCale
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager*,IInspectable*>
@@ -1872,9 +1868,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentStoreChangedEventArgs;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1898,7 +1894,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Appointments::AppointmentStor
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Appointments::AppointmentStore*,ABI::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Appointments::IAppointmentStore*,ABI::Windows::ApplicationModel::Appointments::IAppointmentStoreChangedEventArgs*>
@@ -1915,8 +1911,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -1937,7 +1933,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -1952,8 +1948,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1974,7 +1970,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -2003,7 +1999,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -2032,7 +2028,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -2061,7 +2057,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2090,7 +2086,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2119,7 +2115,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -2148,7 +2144,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -2177,7 +2173,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -2206,7 +2202,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -2235,7 +2231,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -2265,7 +2261,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> : IAsyncOperationComp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -2295,7 +2291,7 @@ IAsyncOperation<__FIVectorView_1_HSTRING*> : IAsyncOperation_impl<__FIVectorView
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_HSTRING*> __FIAsyncOperation_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -2313,8 +2309,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2322,8 +2318,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2335,8 +2331,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2344,16 +2340,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2361,8 +2357,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2374,8 +2370,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2383,8 +2379,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2398,8 +2394,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2410,9 +2406,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2424,9 +2420,9 @@ namespace ABI {
                 
                 typedef enum AppointmentBusyStatus : int AppointmentBusyStatus;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2435,9 +2431,9 @@ namespace ABI {
                 
                 typedef enum AppointmentCalendarOtherAppReadAccess : int AppointmentCalendarOtherAppReadAccess;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2446,9 +2442,9 @@ namespace ABI {
                 
                 typedef enum AppointmentCalendarOtherAppWriteAccess : int AppointmentCalendarOtherAppWriteAccess;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2457,9 +2453,9 @@ namespace ABI {
                 
                 typedef enum AppointmentCalendarSyncStatus : int AppointmentCalendarSyncStatus;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2468,9 +2464,9 @@ namespace ABI {
                 
                 typedef enum AppointmentConflictType : int AppointmentConflictType;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2479,9 +2475,9 @@ namespace ABI {
                 
                 typedef enum AppointmentDaysOfWeek : unsigned int AppointmentDaysOfWeek;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2490,9 +2486,9 @@ namespace ABI {
                 
                 typedef enum AppointmentDetailsKind : int AppointmentDetailsKind;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2501,9 +2497,9 @@ namespace ABI {
                 
                 typedef enum AppointmentParticipantResponse : int AppointmentParticipantResponse;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2512,9 +2508,9 @@ namespace ABI {
                 
                 typedef enum AppointmentParticipantRole : int AppointmentParticipantRole;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2523,9 +2519,9 @@ namespace ABI {
                 
                 typedef enum AppointmentRecurrenceUnit : int AppointmentRecurrenceUnit;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2534,9 +2530,9 @@ namespace ABI {
                 
                 typedef enum AppointmentSensitivity : int AppointmentSensitivity;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2545,9 +2541,9 @@ namespace ABI {
                 
                 typedef enum AppointmentStoreAccessType : int AppointmentStoreAccessType;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2556,9 +2552,9 @@ namespace ABI {
                 
                 typedef enum AppointmentStoreChangeType : int AppointmentStoreChangeType;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2567,9 +2563,9 @@ namespace ABI {
                 
                 typedef enum AppointmentSummaryCardView : int AppointmentSummaryCardView;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2578,9 +2574,9 @@ namespace ABI {
                 
                 typedef enum AppointmentWeekOfMonth : int AppointmentWeekOfMonth;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2589,9 +2585,9 @@ namespace ABI {
                 
                 typedef enum FindAppointmentCalendarsOptions : unsigned int FindAppointmentCalendarsOptions;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2600,9 +2596,9 @@ namespace ABI {
                 
                 typedef enum RecurrenceType : int RecurrenceType;
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2649,9 +2645,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentManagerForUser;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2659,9 +2655,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentOrganizer;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2670,9 +2666,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentRecurrence;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2682,9 +2678,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentStoreChangeReader;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2692,9 +2688,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentStoreChangeTracker;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2702,9 +2698,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentStoreChangedDeferral;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2713,9 +2709,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentStoreNotificationTriggerDetails;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2723,9 +2719,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class FindAppointmentsOptions;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2760,9 +2756,9 @@ namespace ABI {
                     AppointmentBusyStatus_WorkingElsewhere = 4,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2793,9 +2789,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2825,9 +2821,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2861,9 +2857,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2889,9 +2885,9 @@ namespace ABI {
                     AppointmentConflictType_Overlap = 2,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2924,9 +2920,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(AppointmentDaysOfWeek)
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2951,9 +2947,9 @@ namespace ABI {
                     AppointmentDetailsKind_Html = 1,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2981,9 +2977,9 @@ namespace ABI {
                     AppointmentParticipantResponse_Unknown = 4,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3009,9 +3005,9 @@ namespace ABI {
                     AppointmentParticipantRole_Resource = 2,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3040,9 +3036,9 @@ namespace ABI {
                     AppointmentRecurrenceUnit_YearlyOnDay = 5,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3067,9 +3063,9 @@ namespace ABI {
                     AppointmentSensitivity_Private = 1,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3099,9 +3095,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3143,9 +3139,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3170,9 +3166,9 @@ namespace ABI {
                     AppointmentSummaryCardView_App = 1,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3200,9 +3196,9 @@ namespace ABI {
                     AppointmentWeekOfMonth_Last = 4,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3229,9 +3225,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(FindAppointmentCalendarsOptions)
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3257,9 +3253,9 @@ namespace ABI {
                     RecurrenceType_ExceptionInstance = 2,
                 };
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3345,10 +3341,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::ApplicationModel::Appointments::AppointmentBusyStatus value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllDay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllDay(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Sensitivity(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Appointments::AppointmentSensitivity * value
@@ -3367,9 +3363,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointment=_uuidof(IAppointment);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment_INTERFACE_DEFINED__) */
@@ -3420,16 +3416,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CDateTime * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsResponseRequested(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsResponseRequested(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowNewTimeProposal(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowNewTimeProposal(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OnlineMeetingLink(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -3450,28 +3446,28 @@ namespace ABI {
                         /* [in] */ABI::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasInvitees(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceledMeeting(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCanceledMeeting(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOrganizedByUser(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsOrganizedByUser(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppointment2=_uuidof(IAppointment2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment2_INTERFACE_DEFINED__) */
@@ -3527,9 +3523,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointment3=_uuidof(IAppointment3);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment3_INTERFACE_DEFINED__) */
@@ -3573,7 +3569,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHidden(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OtherAppReadAccess(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppReadAccess * value
@@ -3664,9 +3660,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentCalendar=_uuidof(IAppointmentCalendar);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar_INTERFACE_DEFINED__) */
@@ -3714,63 +3710,63 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::Color value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsHidden(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UserDataAccountId(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanCreateOrUpdateAppointments(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanCreateOrUpdateAppointments(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanCancelMeetings(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanCancelMeetings(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanForwardMeetings(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanForwardMeetings(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanProposeNewTimeForMeetings(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanProposeNewTimeForMeetings(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanUpdateMeetingResponses(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanUpdateMeetingResponses(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanNotifyInvitees(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanNotifyInvitees(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MustNofityInvitees(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MustNofityInvitees(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryCreateOrUpdateAppointmentAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Appointments::IAppointment * appointment,
-                        /* [in] */boolean notifyInvitees,
+                        /* [in] */::boolean notifyInvitees,
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryCancelMeetingAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Appointments::IAppointment * meeting,
                         /* [in] */__RPC__in HSTRING subject,
                         /* [in] */__RPC__in HSTRING comment,
-                        /* [in] */boolean notifyInvitees,
+                        /* [in] */::boolean notifyInvitees,
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryForwardMeetingAsync(
@@ -3794,7 +3790,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse response,
                         /* [in] */__RPC__in HSTRING subject,
                         /* [in] */__RPC__in HSTRING comment,
-                        /* [in] */boolean sendUpdate,
+                        /* [in] */::boolean sendUpdate,
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * result
                         ) = 0;
                     
@@ -3802,9 +3798,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentCalendar2=_uuidof(IAppointmentCalendar2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar2_INTERFACE_DEFINED__) */
@@ -3843,9 +3839,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentCalendar3=_uuidof(IAppointmentCalendar3);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar3_INTERFACE_DEFINED__) */
@@ -3900,9 +3896,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentCalendarSyncManager=_uuidof(IAppointmentCalendarSyncManager);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager_INTERFACE_DEFINED__) */
@@ -3947,9 +3943,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentCalendarSyncManager2=_uuidof(IAppointmentCalendarSyncManager2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager2_INTERFACE_DEFINED__) */
@@ -3991,9 +3987,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentConflictResult=_uuidof(IAppointmentConflictResult);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentConflictResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentConflictResult_INTERFACE_DEFINED__) */
@@ -4031,16 +4027,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDeleted(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentException=_uuidof(IAppointmentException);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentException;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentException_INTERFACE_DEFINED__) */
@@ -4092,9 +4088,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentInvitee=_uuidof(IAppointmentInvitee);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentInvitee;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentInvitee_INTERFACE_DEFINED__) */
@@ -4205,9 +4201,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentManagerForUser=_uuidof(IAppointmentManagerForUser);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerForUser_INTERFACE_DEFINED__) */
@@ -4298,9 +4294,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentManagerStatics=_uuidof(IAppointmentManagerStatics);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics_INTERFACE_DEFINED__) */
@@ -4353,9 +4349,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentManagerStatics2=_uuidof(IAppointmentManagerStatics2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics2_INTERFACE_DEFINED__) */
@@ -4395,9 +4391,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentManagerStatics3=_uuidof(IAppointmentManagerStatics3);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentManagerStatics3_INTERFACE_DEFINED__) */
@@ -4442,9 +4438,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentParticipant=_uuidof(IAppointmentParticipant);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentParticipant;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentParticipant_INTERFACE_DEFINED__) */
@@ -4549,9 +4545,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentPropertiesStatics=_uuidof(IAppointmentPropertiesStatics);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics_INTERFACE_DEFINED__) */
@@ -4600,9 +4596,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentPropertiesStatics2=_uuidof(IAppointmentPropertiesStatics2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentPropertiesStatics2_INTERFACE_DEFINED__) */
@@ -4686,9 +4682,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentRecurrence=_uuidof(IAppointmentRecurrence);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence_INTERFACE_DEFINED__) */
@@ -4737,9 +4733,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentRecurrence2=_uuidof(IAppointmentRecurrence2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence2_INTERFACE_DEFINED__) */
@@ -4783,9 +4779,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentRecurrence3=_uuidof(IAppointmentRecurrence3);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence3_INTERFACE_DEFINED__) */
@@ -4921,9 +4917,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStore=_uuidof(IAppointmentStore);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore_INTERFACE_DEFINED__) */
@@ -4975,9 +4971,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStore2=_uuidof(IAppointmentStore2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore2_INTERFACE_DEFINED__) */
@@ -5017,9 +5013,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStore3=_uuidof(IAppointmentStore3);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore3_INTERFACE_DEFINED__) */
@@ -5061,9 +5057,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreChange=_uuidof(IAppointmentStoreChange);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange_INTERFACE_DEFINED__) */
@@ -5106,9 +5102,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreChange2=_uuidof(IAppointmentStoreChange2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChange2_INTERFACE_DEFINED__) */
@@ -5151,9 +5147,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreChangeReader=_uuidof(IAppointmentStoreChangeReader);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeReader_INTERFACE_DEFINED__) */
@@ -5194,9 +5190,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreChangeTracker=_uuidof(IAppointmentStoreChangeTracker);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker_INTERFACE_DEFINED__) */
@@ -5228,16 +5224,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTracking(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreChangeTracker2=_uuidof(IAppointmentStoreChangeTracker2);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangeTracker2_INTERFACE_DEFINED__) */
@@ -5274,9 +5270,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreChangedDeferral=_uuidof(IAppointmentStoreChangedDeferral);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedDeferral_INTERFACE_DEFINED__) */
@@ -5315,9 +5311,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreChangedEventArgs=_uuidof(IAppointmentStoreChangedEventArgs);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5353,9 +5349,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreNotificationTriggerDetails=_uuidof(IAppointmentStoreNotificationTriggerDetails);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreNotificationTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreNotificationTriggerDetails_INTERFACE_DEFINED__) */
@@ -5393,10 +5389,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeHidden(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeHidden(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxCount(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -5409,9 +5405,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFindAppointmentsOptions=_uuidof(IFindAppointmentsOptions);
                 
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CIFindAppointmentsOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CIFindAppointmentsOptions_INTERFACE_DEFINED__) */
@@ -8544,7 +8540,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendarSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentCalendarSyncManager_IInspectableVtbl;
 
@@ -8596,7 +8592,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentStoreChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CAppointments__CAppointmentStore_Windows__CApplicationModel__CAppointments__CAppointmentStoreChangedEventArgsVtbl;
 
@@ -9389,7 +9385,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

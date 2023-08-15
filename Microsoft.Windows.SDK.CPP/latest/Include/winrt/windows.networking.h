@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -276,8 +272,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IEndpointPair;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIEndpointPair ABI::Windows::Networking::IEndpointPair
 
 #endif // ____x_ABI_CWindows_CNetworking_CIEndpointPair_FWD_DEFINED__
@@ -288,8 +284,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IEndpointPairFactory;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIEndpointPairFactory ABI::Windows::Networking::IEndpointPairFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CIEndpointPairFactory_FWD_DEFINED__
@@ -300,8 +296,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -312,8 +308,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostNameFactory;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostNameFactory ABI::Windows::Networking::IHostNameFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostNameFactory_FWD_DEFINED__
@@ -324,8 +320,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostNameStatics;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostNameStatics ABI::Windows::Networking::IHostNameStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostNameStatics_FWD_DEFINED__
@@ -337,8 +333,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class EndpointPair;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -361,7 +357,7 @@ IIterator<ABI::Windows::Networking::EndpointPair*> : IIterator_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::EndpointPair*> __FIIterator_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIIterator_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::IEndpointPair*>
@@ -393,7 +389,7 @@ IIterable<ABI::Windows::Networking::EndpointPair*> : IIterable_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::EndpointPair*> __FIIterable_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIIterable_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::IEndpointPair*>
@@ -408,8 +404,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -432,7 +428,7 @@ IIterator<ABI::Windows::Networking::HostName*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::HostName*> __FIIterator_1_Windows__CNetworking__CHostName_t;
 #define __FIIterator_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::IHostName*>
@@ -464,7 +460,7 @@ IIterable<ABI::Windows::Networking::HostName*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::HostName*> __FIIterable_1_Windows__CNetworking__CHostName_t;
 #define __FIIterable_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::IHostName*>
@@ -496,7 +492,7 @@ IVectorView<ABI::Windows::Networking::EndpointPair*> : IVectorView_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::EndpointPair*> __FIVectorView_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IEndpointPair*>
@@ -528,7 +524,7 @@ IVectorView<ABI::Windows::Networking::HostName*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::HostName*> __FIVectorView_1_Windows__CNetworking__CHostName_t;
 #define __FIVectorView_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IHostName*>
@@ -560,7 +556,7 @@ IVector<ABI::Windows::Networking::HostName*> : IVector_impl<ABI::Windows::Founda
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::HostName*> __FIVector_1_Windows__CNetworking__CHostName_t;
 #define __FIVector_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::IHostName*>
@@ -592,7 +588,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CEndpoint
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CEndpointPair*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IEndpointPair*>*>
@@ -624,7 +620,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CEndpointPair*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CEndpointPair*> __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IEndpointPair*>*>
@@ -643,8 +639,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -658,9 +654,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 class IPInformation;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CIIPInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CIIPInformation_FWD_DEFINED__
@@ -669,9 +665,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 interface IIPInformation;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CIIPInformation ABI::Windows::Networking::Connectivity::IIPInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CIIPInformation_FWD_DEFINED__
@@ -686,8 +682,8 @@ namespace ABI {
             
             typedef enum DomainNameType : int DomainNameType;
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -695,8 +691,8 @@ namespace ABI {
             
             typedef enum HostNameSortOptions : unsigned int HostNameSortOptions;
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -704,8 +700,8 @@ namespace ABI {
             
             typedef enum HostNameType : int HostNameType;
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 
@@ -740,8 +736,8 @@ namespace ABI {
                 DomainNameType_FullyQualified = 1,
             };
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -767,8 +763,8 @@ namespace ABI {
             
             DEFINE_ENUM_FLAG_OPERATORS(HostNameSortOptions)
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -794,8 +790,8 @@ namespace ABI {
                 HostNameType_Bluetooth = 3,
             };
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -851,8 +847,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IEndpointPair=_uuidof(IEndpointPair);
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CIEndpointPair;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CIEndpointPair_INTERFACE_DEFINED__) */
@@ -894,8 +890,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IEndpointPairFactory=_uuidof(IEndpointPairFactory);
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CIEndpointPairFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CIEndpointPairFactory_INTERFACE_DEFINED__) */
@@ -942,15 +938,15 @@ namespace ABI {
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE IsEqual(
                     /* [in] */__RPC__in_opt ABI::Windows::Networking::IHostName * hostName,
-                    /* [retval, out] */__RPC__out boolean * isEqual
+                    /* [retval, out] */__RPC__out ::boolean * isEqual
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IHostName=_uuidof(IHostName);
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CIHostName;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CIHostName_INTERFACE_DEFINED__) */
@@ -989,8 +985,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IHostNameFactory=_uuidof(IHostNameFactory);
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CIHostNameFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CIHostNameFactory_INTERFACE_DEFINED__) */
@@ -1030,8 +1026,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IHostNameStatics=_uuidof(IHostNameStatics);
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CIHostNameStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CIHostNameStatics_INTERFACE_DEFINED__) */

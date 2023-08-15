@@ -157,8 +157,6 @@ namespace Windows
 {
     namespace System
     {
-        apicontract AndromedaPlaceholderContract;
-
         apicontract SystemManagementContract;
 
         typedef enum AppDiagnosticInfoWatcherStatus AppDiagnosticInfoWatcherStatus;
@@ -260,6 +258,8 @@ namespace Windows
         interface IDateTimeSettingsStatics;
 
         interface IDispatcherQueue;
+
+        interface IDispatcherQueue2;
 
         interface IDispatcherQueueController;
 
@@ -550,11 +550,6 @@ namespace Windows
 {
     namespace System
     {
-        [contractversion(1.0)]
-        apicontract AndromedaPlaceholderContract
-        {
-        }
-
         [contractversion(6.0)]
         apicontract SystemManagementContract
         {
@@ -681,11 +676,15 @@ namespace Windows
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
         enum ProcessorArchitecture
         {
-            X86     = 0,
-            Arm     = 5,
-            X64     = 9,
-            Neutral = 11,
-            Unknown = 65535
+            X86        = 0,
+            Arm        = 5,
+            X64        = 9,
+            Neutral    = 11,
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            Arm64      = 12,
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            X86OnArm64 = 14,
+            Unknown    = 65535
         };
 
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -1251,6 +1250,14 @@ namespace Windows
             [eventremove] HRESULT ShutdownCompleted([in] EventRegistrationToken token);
         }
 
+        [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+        [exclusiveto(Windows.System.DispatcherQueue)]
+        [uuid(C822C647-30EF-506E-BD1E-A647AE6675FF)]
+        interface IDispatcherQueue2 : IInspectable
+        {
+            [propget] HRESULT HasThreadAccess([out] [retval] boolean* value);
+        }
+
         [contract(Windows.Foundation.UniversalApiContract, 5.0)]
         [exclusiveto(Windows.System.DispatcherQueueController)]
         [uuid(22F34E66-50DB-4E36-A98D-61C01B384D20)]
@@ -1273,7 +1280,7 @@ namespace Windows
         [uuid(C4724C4C-FF97-40C0-A226-CC0AAA545E89)]
         interface IDispatcherQueueShutdownStartingEventArgs : IInspectable
         {
-            HRESULT GetDeferral([out] [retval] Windows.Foundation.Deferral** value);
+            HRESULT GetDeferral([out] [retval] Windows.Foundation.Deferral** result);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 5.0)]
@@ -1642,7 +1649,7 @@ namespace Windows
         [uuid(8C030F28-A711-4C1E-AB48-04179C15938F)]
         interface IUserAuthenticationStatusChangingEventArgs : IInspectable
         {
-            HRESULT GetDeferral([out] [retval] Windows.System.UserAuthenticationStatusChangeDeferral** deferral);
+            HRESULT GetDeferral([out] [retval] Windows.System.UserAuthenticationStatusChangeDeferral** result);
             [propget] HRESULT User([out] [retval] Windows.System.User** value);
             [propget] HRESULT NewStatus([out] [retval] Windows.System.UserAuthenticationStatus* value);
             [propget] HRESULT CurrentStatus([out] [retval] Windows.System.UserAuthenticationStatus* value);
@@ -1685,7 +1692,7 @@ namespace Windows
             [propput] HRESULT AllowGuestAccounts([in] boolean value);
             [propget] HRESULT SuggestedSelectedUser([out] [retval] Windows.System.User** value);
             [propput] HRESULT SuggestedSelectedUser([in] Windows.System.User* value);
-            HRESULT PickSingleUserAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.System.User*>** pickSingleUserOperation);
+            HRESULT PickSingleUserAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.System.User*>** operation);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -1693,7 +1700,7 @@ namespace Windows
         [uuid(DE3290DC-7E73-4DF6-A1AE-4D7ECA82B40D)]
         interface IUserPickerStatics : IInspectable
         {
-            HRESULT IsSupported([out] [retval] boolean* value);
+            HRESULT IsSupported([out] [retval] boolean* result);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1701,11 +1708,11 @@ namespace Windows
         [uuid(155EB23B-242A-45E0-A2E9-3171FC6A7FDD)]
         interface IUserStatics : IInspectable
         {
-            HRESULT CreateWatcher([out] [retval] Windows.System.UserWatcher** watcher);
+            HRESULT CreateWatcher([out] [retval] Windows.System.UserWatcher** result);
             [default_overload] [overload("FindAllAsync")] HRESULT FindAllAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
             [overload("FindAllAsync")] HRESULT FindAllAsyncByType([in] Windows.System.UserType type, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
             [overload("FindAllAsync")] HRESULT FindAllAsyncByTypeAndStatus([in] Windows.System.UserType type, [in] Windows.System.UserAuthenticationStatus status, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
-            HRESULT GetFromId([in] HSTRING nonRoamableId, [out] [retval] Windows.System.User** value);
+            HRESULT GetFromId([in] HSTRING nonRoamableId, [out] [retval] Windows.System.User** result);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1889,6 +1896,7 @@ namespace Windows
         runtimeclass DispatcherQueue
         {
             [default] interface Windows.System.IDispatcherQueue;
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.System.IDispatcherQueue2;
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 5.0)]
@@ -1902,7 +1910,6 @@ namespace Windows
 
         [contract(Windows.Foundation.UniversalApiContract, 5.0)]
         [marshaling_behavior(agile)]
-        [threading(both)]
         runtimeclass DispatcherQueueShutdownStartingEventArgs
         {
             [default] interface Windows.System.IDispatcherQueueShutdownStartingEventArgs;
@@ -1910,7 +1917,6 @@ namespace Windows
 
         [contract(Windows.Foundation.UniversalApiContract, 5.0)]
         [marshaling_behavior(agile)]
-        [threading(both)]
         runtimeclass DispatcherQueueTimer
         {
             [default] interface Windows.System.IDispatcherQueueTimer;
@@ -1929,6 +1935,7 @@ namespace Windows
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
         [marshaling_behavior(agile)]
         [static(Windows.System.IKnownUserPropertiesStatics, Windows.Foundation.UniversalApiContract, 1.0)]
+        [threading(both)]
         runtimeclass KnownUserProperties
         {
         }
@@ -2056,6 +2063,7 @@ namespace Windows
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
         [marshaling_behavior(agile)]
         [static(Windows.System.IUserStatics, Windows.Foundation.UniversalApiContract, 1.0)]
+        [threading(both)]
         runtimeclass User
         {
             [default] interface Windows.System.IUser;
@@ -2102,6 +2110,7 @@ namespace Windows
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]
         [marshaling_behavior(agile)]
         [static(Windows.System.IUserPickerStatics, Windows.Foundation.UniversalApiContract, 3.0)]
+        [threading(both)]
         runtimeclass UserPicker
         {
             [default] interface Windows.System.IUserPicker;

@@ -820,6 +820,14 @@ namespace Windows
 
                 typedef enum TreeViewSelectionMode TreeViewSelectionMode;
 
+                typedef enum TwoPaneViewMode TwoPaneViewMode;
+
+                typedef enum TwoPaneViewPriority TwoPaneViewPriority;
+
+                typedef enum TwoPaneViewTallModeConfiguration TwoPaneViewTallModeConfiguration;
+
+                typedef enum TwoPaneViewWideModeConfiguration TwoPaneViewWideModeConfiguration;
+
                 typedef enum VirtualizationMode VirtualizationMode;
 
                 typedef enum WebViewExecutionMode WebViewExecutionMode;
@@ -1242,6 +1250,10 @@ namespace Windows
 
                 interface IDatePickerFlyoutPresenter;
 
+                interface IDatePickerFlyoutPresenter2;
+
+                interface IDatePickerFlyoutPresenterStatics2;
+
                 interface IDatePickerFlyoutStatics;
 
                 interface IDatePickerFlyoutStatics2;
@@ -1288,7 +1300,11 @@ namespace Windows
 
                 interface IFlyoutPresenter;
 
+                interface IFlyoutPresenter2;
+
                 interface IFlyoutPresenterFactory;
+
+                interface IFlyoutPresenterStatics2;
 
                 interface IFlyoutStatics;
 
@@ -1446,6 +1462,8 @@ namespace Windows
 
                 interface IInkToolbar2;
 
+                interface IInkToolbar3;
+
                 interface IInkToolbarBallpointPenButton;
 
                 interface IInkToolbarBallpointPenButtonFactory;
@@ -1525,6 +1543,8 @@ namespace Windows
                 interface IInkToolbarStatics;
 
                 interface IInkToolbarStatics2;
+
+                interface IInkToolbarStatics3;
 
                 interface IInkToolbarStencilButton;
 
@@ -1744,7 +1764,11 @@ namespace Windows
 
                 interface IMenuFlyoutPresenter2;
 
+                interface IMenuFlyoutPresenter3;
+
                 interface IMenuFlyoutPresenterFactory;
+
+                interface IMenuFlyoutPresenterStatics3;
 
                 interface IMenuFlyoutSeparator;
 
@@ -2330,6 +2354,10 @@ namespace Windows
 
                 interface ITimePickerFlyoutPresenter;
 
+                interface ITimePickerFlyoutPresenter2;
+
+                interface ITimePickerFlyoutPresenterStatics2;
+
                 interface ITimePickerFlyoutStatics;
 
                 interface ITimePickerSelectedValueChangedEventArgs;
@@ -2427,6 +2455,12 @@ namespace Windows
                 interface ITreeViewStatics;
 
                 interface ITreeViewStatics2;
+
+                interface ITwoPaneView;
+
+                interface ITwoPaneViewFactory;
+
+                interface ITwoPaneViewStatics;
 
                 interface IUIElementCollection;
 
@@ -3046,6 +3080,8 @@ namespace Windows
 
                 runtimeclass TreeViewNode;
 
+                runtimeclass TwoPaneView;
+
                 runtimeclass UIElementCollection;
 
                 runtimeclass UserControl;
@@ -3362,6 +3398,8 @@ namespace Windows
                     interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.TreeView*, Windows.UI.Xaml.Controls.TreeViewExpandingEventArgs*>;
 
                     interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.TreeView*, Windows.UI.Xaml.Controls.TreeViewItemInvokedEventArgs*>;
+
+                    interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.TwoPaneView*, IInspectable*>;
 
                     interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.WebView*, IInspectable*>;
 
@@ -4117,6 +4155,37 @@ namespace Windows
                     None     = 0,
                     Single   = 1,
                     Multiple = 2
+                };
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                enum TwoPaneViewMode
+                {
+                    SinglePane = 0,
+                    Wide       = 1,
+                    Tall       = 2
+                };
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                enum TwoPaneViewPriority
+                {
+                    Pane1 = 0,
+                    Pane2 = 1
+                };
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                enum TwoPaneViewTallModeConfiguration
+                {
+                    SinglePane = 0,
+                    TopBottom  = 1,
+                    BottomTop  = 2
+                };
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                enum TwoPaneViewWideModeConfiguration
+                {
+                    SinglePane = 0,
+                    LeftRight  = 1,
+                    RightLeft  = 2
                 };
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -6580,6 +6649,23 @@ namespace Windows
                 {
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.DatePickerFlyoutPresenter)]
+                [uuid(C5B2578F-96D8-55CC-97EE-3F88FC85E479)]
+                interface IDatePickerFlyoutPresenter2 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabled([out] [retval] boolean* value);
+                    [propput] HRESULT IsDefaultShadowEnabled([in] boolean value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.DatePickerFlyoutPresenter)]
+                [uuid(4DC0C49E-1F8E-5966-BBDB-215750C73ABA)]
+                interface IDatePickerFlyoutPresenterStatics2 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabledProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Xaml.Controls.DatePickerFlyout)]
                 [uuid(CD570377-5845-4C12-8C10-592D9FCC7CD9)]
@@ -6789,12 +6875,29 @@ namespace Windows
                 {
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.FlyoutPresenter)]
+                [uuid(4F857E92-36B4-5048-9051-A992B43E8A1D)]
+                interface IFlyoutPresenter2 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabled([out] [retval] boolean* value);
+                    [propput] HRESULT IsDefaultShadowEnabled([in] boolean value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Xaml.Controls.FlyoutPresenter)]
                 [uuid(EE4D668F-DA76-469A-ACD7-3060E613ADE7)]
                 interface IFlyoutPresenterFactory : IInspectable
                 {
                     HRESULT CreateInstance([in] IInspectable* baseInterface, [out] IInspectable** innerInterface, [out] [retval] Windows.UI.Xaml.Controls.FlyoutPresenter** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.FlyoutPresenter)]
+                [uuid(1492AE4B-2727-5E8E-9105-6D7A2B1185B2)]
+                interface IFlyoutPresenterStatics2 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabledProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -7607,6 +7710,15 @@ namespace Windows
                     HRESULT GetMenuButton([in] Windows.UI.Xaml.Controls.InkToolbarMenuKind menu, [out] [retval] Windows.UI.Xaml.Controls.InkToolbarMenuButton** result);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.InkToolbar)]
+                [uuid(A8A6DEF0-7AA8-5326-B7C4-88AE25013362)]
+                interface IInkToolbar3 : IInspectable
+                {
+                    [propget] HRESULT TargetInkPresenter([out] [retval] Windows.UI.Input.Inking.InkPresenter** value);
+                    [propput] HRESULT TargetInkPresenter([in] Windows.UI.Input.Inking.InkPresenter* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [exclusiveto(Windows.UI.Xaml.Controls.InkToolbarBallpointPenButton)]
                 [uuid(158329F8-1E99-3ACC-910F-9DA2D872AE12)]
@@ -7960,6 +8072,14 @@ namespace Windows
                     [propget] HRESULT IsStencilButtonCheckedProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT ButtonFlyoutPlacementProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT OrientationProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.InkToolbar)]
+                [uuid(A0EE663D-B63F-516E-A0A4-0704C4544D62)]
+                interface IInkToolbarStatics3 : IInspectable
+                {
+                    [propget] HRESULT TargetInkPresenterProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
@@ -9308,12 +9428,29 @@ namespace Windows
                     [propget] HRESULT TemplateSettings([out] [retval] Windows.UI.Xaml.Controls.Primitives.MenuFlyoutPresenterTemplateSettings** value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.MenuFlyoutPresenter)]
+                [uuid(6AFD4E16-AEE0-584A-9849-EDAA323A484F)]
+                interface IMenuFlyoutPresenter3 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabled([out] [retval] boolean* value);
+                    [propput] HRESULT IsDefaultShadowEnabled([in] boolean value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Xaml.Controls.MenuFlyoutPresenter)]
                 [uuid(B88B5091-101C-41F8-AAC1-1B105C14FB99)]
                 interface IMenuFlyoutPresenterFactory : IInspectable
                 {
                     HRESULT CreateInstance([in] IInspectable* baseInterface, [out] IInspectable** innerInterface, [out] [retval] Windows.UI.Xaml.Controls.MenuFlyoutPresenter** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.MenuFlyoutPresenter)]
+                [uuid(3772A818-825A-520C-80AE-4D39A2D59AB5)]
+                interface IMenuFlyoutPresenterStatics3 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabledProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -12945,6 +13082,23 @@ namespace Windows
                 {
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.TimePickerFlyoutPresenter)]
+                [uuid(A13B5B68-7EE9-59F7-AAD6-6532A8A8C3BF)]
+                interface ITimePickerFlyoutPresenter2 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabled([out] [retval] boolean* value);
+                    [propput] HRESULT IsDefaultShadowEnabled([in] boolean value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.TimePickerFlyoutPresenter)]
+                [uuid(AA5F0DDC-F2BB-53F2-A54D-B34ACCCF51E4)]
+                interface ITimePickerFlyoutPresenterStatics2 : IInspectable
+                {
+                    [propget] HRESULT IsDefaultShadowEnabledProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Xaml.Controls.TimePickerFlyout)]
                 [uuid(3F6728CE-2169-4003-B4A8-8DE7035A0AD6)]
@@ -13483,6 +13637,59 @@ namespace Windows
                     [propget] HRESULT ItemContainerStyleSelectorProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT ItemContainerTransitionsProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT ItemsSourceProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.TwoPaneView)]
+                [uuid(1B4D0DB5-14AD-5926-BB8A-5B0A5C0085F0)]
+                interface ITwoPaneView : IInspectable
+                {
+                    [propget] HRESULT Pane1([out] [retval] Windows.UI.Xaml.UIElement** value);
+                    [propput] HRESULT Pane1([in] Windows.UI.Xaml.UIElement* value);
+                    [propget] HRESULT Pane2([out] [retval] Windows.UI.Xaml.UIElement** value);
+                    [propput] HRESULT Pane2([in] Windows.UI.Xaml.UIElement* value);
+                    [propget] HRESULT Pane1Length([out] [retval] Windows.UI.Xaml.GridLength* value);
+                    [propput] HRESULT Pane1Length([in] Windows.UI.Xaml.GridLength value);
+                    [propget] HRESULT Pane2Length([out] [retval] Windows.UI.Xaml.GridLength* value);
+                    [propput] HRESULT Pane2Length([in] Windows.UI.Xaml.GridLength value);
+                    [propget] HRESULT PanePriority([out] [retval] Windows.UI.Xaml.Controls.TwoPaneViewPriority* value);
+                    [propput] HRESULT PanePriority([in] Windows.UI.Xaml.Controls.TwoPaneViewPriority value);
+                    [propget] HRESULT Mode([out] [retval] Windows.UI.Xaml.Controls.TwoPaneViewMode* value);
+                    [propget] HRESULT WideModeConfiguration([out] [retval] Windows.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration* value);
+                    [propput] HRESULT WideModeConfiguration([in] Windows.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration value);
+                    [propget] HRESULT TallModeConfiguration([out] [retval] Windows.UI.Xaml.Controls.TwoPaneViewTallModeConfiguration* value);
+                    [propput] HRESULT TallModeConfiguration([in] Windows.UI.Xaml.Controls.TwoPaneViewTallModeConfiguration value);
+                    [propget] HRESULT MinWideModeWidth([out] [retval] DOUBLE* value);
+                    [propput] HRESULT MinWideModeWidth([in] DOUBLE value);
+                    [propget] HRESULT MinTallModeHeight([out] [retval] DOUBLE* value);
+                    [propput] HRESULT MinTallModeHeight([in] DOUBLE value);
+                    [eventadd] HRESULT ModeChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.TwoPaneView*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                    [eventremove] HRESULT ModeChanged([in] EventRegistrationToken token);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.TwoPaneView)]
+                [uuid(18FF792D-58B4-59ED-A051-51ACEFFBCCA9)]
+                interface ITwoPaneViewFactory : IInspectable
+                {
+                    HRESULT CreateInstance([in] IInspectable* baseInterface, [out] IInspectable** innerInterface, [out] [retval] Windows.UI.Xaml.Controls.TwoPaneView** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.TwoPaneView)]
+                [uuid(5A35C389-85C4-55F4-ABB1-97451BC32D71)]
+                interface ITwoPaneViewStatics : IInspectable
+                {
+                    [propget] HRESULT Pane1Property([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT Pane2Property([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT Pane1LengthProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT Pane2LengthProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT PanePriorityProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT ModeProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT WideModeConfigurationProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TallModeConfigurationProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT MinWideModeWidthProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT MinTallModeHeightProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -14644,10 +14851,12 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [marshaling_behavior(agile)]
+                [static(Windows.UI.Xaml.Controls.IDatePickerFlyoutPresenterStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass DatePickerFlyoutPresenter : Windows.UI.Xaml.Controls.Control
                 {
                     [default] interface Windows.UI.Xaml.Controls.IDatePickerFlyoutPresenter;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.IDatePickerFlyoutPresenter2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -14741,10 +14950,12 @@ namespace Windows
                 [composable(Windows.UI.Xaml.Controls.IFlyoutPresenterFactory, public, Windows.Foundation.UniversalApiContract, 1.0)]
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [marshaling_behavior(agile)]
+                [static(Windows.UI.Xaml.Controls.IFlyoutPresenterStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass FlyoutPresenter : Windows.UI.Xaml.Controls.ContentControl
                 {
                     [default] interface Windows.UI.Xaml.Controls.IFlyoutPresenter;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.IFlyoutPresenter2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -15006,11 +15217,13 @@ namespace Windows
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Xaml.Controls.IInkToolbarStatics, Windows.Foundation.UniversalApiContract, 3.0)]
                 [static(Windows.UI.Xaml.Controls.IInkToolbarStatics2, Windows.Foundation.UniversalApiContract, 4.0)]
+                [static(Windows.UI.Xaml.Controls.IInkToolbarStatics3, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass InkToolbar : Windows.UI.Xaml.Controls.Control
                 {
                     [default] interface Windows.UI.Xaml.Controls.IInkToolbar;
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Xaml.Controls.IInkToolbar2;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.IInkToolbar3;
                 }
 
                 [composable(Windows.UI.Xaml.Controls.IInkToolbarBallpointPenButtonFactory, public, Windows.Foundation.UniversalApiContract, 3.0)]
@@ -15508,11 +15721,13 @@ namespace Windows
                 [composable(Windows.UI.Xaml.Controls.IMenuFlyoutPresenterFactory, public, Windows.Foundation.UniversalApiContract, 1.0)]
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [marshaling_behavior(agile)]
+                [static(Windows.UI.Xaml.Controls.IMenuFlyoutPresenterStatics3, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass MenuFlyoutPresenter : Windows.UI.Xaml.Controls.ItemsControl
                 {
                     [default] interface Windows.UI.Xaml.Controls.IMenuFlyoutPresenter;
                     [contract(Windows.Foundation.UniversalApiContract, 2.0)] interface Windows.UI.Xaml.Controls.IMenuFlyoutPresenter2;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.IMenuFlyoutPresenter3;
                 }
 
                 [composable(Windows.UI.Xaml.Controls.IMenuFlyoutSeparatorFactory, public, Windows.Foundation.UniversalApiContract, 1.0)]
@@ -16488,10 +16703,12 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [marshaling_behavior(agile)]
+                [static(Windows.UI.Xaml.Controls.ITimePickerFlyoutPresenterStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass TimePickerFlyoutPresenter : Windows.UI.Xaml.Controls.Control
                 {
                     [default] interface Windows.UI.Xaml.Controls.ITimePickerFlyoutPresenter;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.ITimePickerFlyoutPresenter2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -16665,6 +16882,16 @@ namespace Windows
                 runtimeclass TreeViewNode : Windows.UI.Xaml.DependencyObject
                 {
                     [default] interface Windows.UI.Xaml.Controls.ITreeViewNode;
+                }
+
+                [composable(Windows.UI.Xaml.Controls.ITwoPaneViewFactory, public, Windows.Foundation.UniversalApiContract, 8.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [marshaling_behavior(agile)]
+                [static(Windows.UI.Xaml.Controls.ITwoPaneViewStatics, Windows.Foundation.UniversalApiContract, 8.0)]
+                [threading(both)]
+                runtimeclass TwoPaneView : Windows.UI.Xaml.Controls.Control
+                {
+                    [default] interface Windows.UI.Xaml.Controls.ITwoPaneView;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]

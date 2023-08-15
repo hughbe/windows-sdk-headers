@@ -1451,59 +1451,59 @@ typedef struct DisplayTransformLut
     UINT16 blue[256];
 } DisplayTransformLut;
 
-HRESULT ColorAdapterGetSystemModifyWhitePointCaps(
+HRESULT WINAPI ColorAdapterGetSystemModifyWhitePointCaps(
     _Out_ BOOL* whitePointAdjCapable,
     _Out_ BOOL* isColorOverrideActive
 );
 
-HRESULT ColorAdapterUpdateDisplayGamma(
+HRESULT WINAPI ColorAdapterUpdateDisplayGamma(
     _In_ DisplayID displayID,
     _In_ DisplayTransformLut* displayTransform,
     _In_ BOOL internal
 );
 
-HRESULT ColorAdapterUpdateDeviceProfile(
+HRESULT WINAPI ColorAdapterUpdateDeviceProfile(
     _In_ DisplayID displayID,
     _In_ LPWSTR profName
 );
 
-HRESULT ColorAdapterGetDisplayCurrentStateID(
+HRESULT WINAPI ColorAdapterGetDisplayCurrentStateID(
     _In_ DisplayID displayID,
     _Out_ DisplayStateID* displayStateID
 );
 
-HRESULT ColorAdapterGetDisplayTransformData(
+HRESULT WINAPI ColorAdapterGetDisplayTransformData(
     _In_ DisplayID displayID,
     _Out_ DisplayTransformLut* displayTransformLut,
     _Out_ UINT32* transformID
 );
 
-HRESULT ColorAdapterGetDisplayTargetWhitePoint(
+HRESULT WINAPI ColorAdapterGetDisplayTargetWhitePoint(
     _In_ DisplayID displayID,
     _Out_ WhitePoint* wtpt,
     _Out_ UINT32* transitionTime,
     _Out_ UINT32* whitepointID
 );
 
-HRESULT ColorAdapterGetDisplayProfile(
+HRESULT WINAPI ColorAdapterGetDisplayProfile(
     _In_ DisplayID displayID,
     _Out_writes_(COLORADAPTER_PROFILE_NAME_MAX_LENGTH) LPWSTR displayProfile,
     _Out_ UINT32* profileID,
     _Out_ BOOL* bUseAccurate
 );
 
-HRESULT ColorAdapterGetCurrentProfileCalibration(
+HRESULT WINAPI ColorAdapterGetCurrentProfileCalibration(
     _In_ DisplayID displayID,
     _In_ DWORD maxCalibrationBlobSize,
     _Out_ UINT32* blobSize,
     _Out_writes_bytes_(*blobSize) BYTE* calibrationBlob
 );
 
-HRESULT ColorAdapterRegisterOEMColorService(
+HRESULT WINAPI ColorAdapterRegisterOEMColorService(
     _Out_ HANDLE* registration
 );
 
-HRESULT ColorAdapterUnregisterOEMColorService(
+HRESULT WINAPI ColorAdapterUnregisterOEMColorService(
     _In_ HANDLE registration
 );
     

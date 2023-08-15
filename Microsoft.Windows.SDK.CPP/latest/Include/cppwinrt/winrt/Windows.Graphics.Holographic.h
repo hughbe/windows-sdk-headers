@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -134,6 +134,13 @@ template <typename D> bool consume_Windows_Graphics_Holographic_IHolographicCame
 template <typename D> void consume_Windows_Graphics_Holographic_IHolographicCamera5<D>::IsHardwareContentProtectionEnabled(bool value) const
 {
     check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicCamera5)->put_IsHardwareContentProtectionEnabled(value));
+}
+
+template <typename D> Windows::Graphics::Holographic::HolographicViewConfiguration consume_Windows_Graphics_Holographic_IHolographicCamera6<D>::ViewConfiguration() const
+{
+    Windows::Graphics::Holographic::HolographicViewConfiguration value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicCamera6)->get_ViewConfiguration(put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Graphics::Holographic::HolographicCamera consume_Windows_Graphics_Holographic_IHolographicCameraPose<D>::HolographicCamera() const
@@ -326,6 +333,13 @@ template <typename D> double consume_Windows_Graphics_Holographic_IHolographicDi
     double value{};
     check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicDisplay2)->get_RefreshRate(&value));
     return value;
+}
+
+template <typename D> Windows::Graphics::Holographic::HolographicViewConfiguration consume_Windows_Graphics_Holographic_IHolographicDisplay3<D>::TryGetViewConfiguration(Windows::Graphics::Holographic::HolographicViewConfigurationKind const& kind) const
+{
+    Windows::Graphics::Holographic::HolographicViewConfiguration result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicDisplay3)->TryGetViewConfiguration(get_abi(kind), put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Graphics::Holographic::HolographicDisplay consume_Windows_Graphics_Holographic_IHolographicDisplayStatics<D>::GetDefault() const
@@ -691,6 +705,86 @@ template <typename D> bool consume_Windows_Graphics_Holographic_IHolographicSpac
     return value;
 }
 
+template <typename D> Windows::Foundation::Size consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::NativeRenderTargetSize() const
+{
+    Windows::Foundation::Size value{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_NativeRenderTargetSize(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Size consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::RenderTargetSize() const
+{
+    Windows::Foundation::Size value{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_RenderTargetSize(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Size consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::RequestRenderTargetSize(Windows::Foundation::Size const& size) const
+{
+    Windows::Foundation::Size result{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->RequestRenderTargetSize(get_abi(size), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat> consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::SupportedPixelFormats() const
+{
+    Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat> value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_SupportedPixelFormats(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Graphics::DirectX::DirectXPixelFormat consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::PixelFormat() const
+{
+    Windows::Graphics::DirectX::DirectXPixelFormat value{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_PixelFormat(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->put_PixelFormat(get_abi(value)));
+}
+
+template <typename D> bool consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::IsStereo() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_IsStereo(&value));
+    return value;
+}
+
+template <typename D> double consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::RefreshRate() const
+{
+    double value{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_RefreshRate(&value));
+    return value;
+}
+
+template <typename D> Windows::Graphics::Holographic::HolographicViewConfigurationKind consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::Kind() const
+{
+    Windows::Graphics::Holographic::HolographicViewConfigurationKind value{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_Kind(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Graphics::Holographic::HolographicDisplay consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::Display() const
+{
+    Windows::Graphics::Holographic::HolographicDisplay value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_Display(put_abi(value)));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::IsEnabled() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->get_IsEnabled(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Graphics_Holographic_IHolographicViewConfiguration<D>::IsEnabled(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Graphics::Holographic::IHolographicViewConfiguration)->put_IsEnabled(value));
+}
+
 template <typename D>
 struct produce<D, Windows::Graphics::Holographic::IHolographicCamera> : produce_base<D, Windows::Graphics::Holographic::IHolographicCamera>
 {
@@ -925,6 +1019,23 @@ struct produce<D, Windows::Graphics::Holographic::IHolographicCamera5> : produce
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(IsHardwareContentProtectionEnabled, WINRT_WRAP(void), bool);
             this->shim().IsHardwareContentProtectionEnabled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Graphics::Holographic::IHolographicCamera6> : produce_base<D, Windows::Graphics::Holographic::IHolographicCamera6>
+{
+    int32_t WINRT_CALL get_ViewConfiguration(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ViewConfiguration, WINRT_WRAP(Windows::Graphics::Holographic::HolographicViewConfiguration));
+            *value = detach_from<Windows::Graphics::Holographic::HolographicViewConfiguration>(this->shim().ViewConfiguration());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1329,6 +1440,23 @@ struct produce<D, Windows::Graphics::Holographic::IHolographicDisplay2> : produc
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(RefreshRate, WINRT_WRAP(double));
             *value = detach_from<double>(this->shim().RefreshRate());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Graphics::Holographic::IHolographicDisplay3> : produce_base<D, Windows::Graphics::Holographic::IHolographicDisplay3>
+{
+    int32_t WINRT_CALL TryGetViewConfiguration(Windows::Graphics::Holographic::HolographicViewConfigurationKind kind, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TryGetViewConfiguration, WINRT_WRAP(Windows::Graphics::Holographic::HolographicViewConfiguration), Windows::Graphics::Holographic::HolographicViewConfigurationKind const&);
+            *result = detach_from<Windows::Graphics::Holographic::HolographicViewConfiguration>(this->shim().TryGetViewConfiguration(*reinterpret_cast<Windows::Graphics::Holographic::HolographicViewConfigurationKind const*>(&kind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2042,6 +2170,156 @@ struct produce<D, Windows::Graphics::Holographic::IHolographicSpaceStatics3> : p
     }
 };
 
+template <typename D>
+struct produce<D, Windows::Graphics::Holographic::IHolographicViewConfiguration> : produce_base<D, Windows::Graphics::Holographic::IHolographicViewConfiguration>
+{
+    int32_t WINRT_CALL get_NativeRenderTargetSize(Windows::Foundation::Size* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(NativeRenderTargetSize, WINRT_WRAP(Windows::Foundation::Size));
+            *value = detach_from<Windows::Foundation::Size>(this->shim().NativeRenderTargetSize());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_RenderTargetSize(Windows::Foundation::Size* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RenderTargetSize, WINRT_WRAP(Windows::Foundation::Size));
+            *value = detach_from<Windows::Foundation::Size>(this->shim().RenderTargetSize());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL RequestRenderTargetSize(Windows::Foundation::Size size, Windows::Foundation::Size* result) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RequestRenderTargetSize, WINRT_WRAP(Windows::Foundation::Size), Windows::Foundation::Size const&);
+            *result = detach_from<Windows::Foundation::Size>(this->shim().RequestRenderTargetSize(*reinterpret_cast<Windows::Foundation::Size const*>(&size)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_SupportedPixelFormats(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SupportedPixelFormats, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat>));
+            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat>>(this->shim().SupportedPixelFormats());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(PixelFormat, WINRT_WRAP(Windows::Graphics::DirectX::DirectXPixelFormat));
+            *value = detach_from<Windows::Graphics::DirectX::DirectXPixelFormat>(this->shim().PixelFormat());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(PixelFormat, WINRT_WRAP(void), Windows::Graphics::DirectX::DirectXPixelFormat const&);
+            this->shim().PixelFormat(*reinterpret_cast<Windows::Graphics::DirectX::DirectXPixelFormat const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsStereo(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsStereo, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsStereo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_RefreshRate(double* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RefreshRate, WINRT_WRAP(double));
+            *value = detach_from<double>(this->shim().RefreshRate());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Kind(Windows::Graphics::Holographic::HolographicViewConfigurationKind* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Kind, WINRT_WRAP(Windows::Graphics::Holographic::HolographicViewConfigurationKind));
+            *value = detach_from<Windows::Graphics::Holographic::HolographicViewConfigurationKind>(this->shim().Kind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Display(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Display, WINRT_WRAP(Windows::Graphics::Holographic::HolographicDisplay));
+            *value = detach_from<Windows::Graphics::Holographic::HolographicDisplay>(this->shim().Display());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsEnabled(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsEnabled, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_IsEnabled(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsEnabled, WINRT_WRAP(void), bool);
+            this->shim().IsEnabled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::Graphics::Holographic {
@@ -2104,6 +2382,7 @@ template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCamera
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCamera3> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCamera3> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCamera4> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCamera4> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCamera5> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCamera5> {};
+template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCamera6> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCamera6> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCameraPose> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCameraPose> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCameraPose2> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCameraPose2> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters> {};
@@ -2112,6 +2391,7 @@ template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCamera
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicCameraViewportParameters> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicCameraViewportParameters> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicDisplay> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicDisplay> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicDisplay2> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicDisplay2> {};
+template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicDisplay3> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicDisplay3> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicDisplayStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicDisplayStatics> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicFrame> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicFrame> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicFrame2> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicFrame2> {};
@@ -2129,6 +2409,7 @@ template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicSpaceC
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicSpaceStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicSpaceStatics> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicSpaceStatics2> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicSpaceStatics2> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicSpaceStatics3> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicSpaceStatics3> {};
+template<> struct hash<winrt::Windows::Graphics::Holographic::IHolographicViewConfiguration> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::IHolographicViewConfiguration> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicCamera> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::HolographicCamera> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicCameraPose> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::HolographicCameraPose> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters> {};
@@ -2143,5 +2424,6 @@ template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicQuadLay
 template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicSpace> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::HolographicSpace> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs> {};
 template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs> {};
+template<> struct hash<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration> : winrt::impl::hash_base<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration> {};
 
 }

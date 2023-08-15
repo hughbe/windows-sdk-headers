@@ -72,9 +72,9 @@
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="Name" type="t:ST_AppServiceName" use="required"/>
+    <xs:attribute name="Name" type="t:ST_AppServiceNameLonger" use="required"/>
     <xs:attribute name="Id" type="t:ST_AppServiceName" use="required"/>
-    <xs:attribute name="PublicFolder" type="t:ST_FileName" use="required"/>
+    <xs:attribute name="PublicFolder" type="t:ST_FileName" use="optional"/>
     <xs:attribute name="DisplayName" type="t:ST_DisplayName" use="required"/>
     <xs:attribute name="Description" type="t:ST_Description" use="optional"/>
   </xs:complexType>

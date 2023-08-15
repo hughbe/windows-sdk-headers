@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.background.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -295,9 +291,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskCanceledEventHandler;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCanceledEventHandler ABI::Windows::ApplicationModel::Background::IBackgroundTaskCanceledEventHandler
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCanceledEventHandler_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskCompletedEventHandler;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventHandler ABI::Windows::ApplicationModel::Background::IBackgroundTaskCompletedEventHandler
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventHandler_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskProgressEventHandler;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventHandler ABI::Windows::ApplicationModel::Background::IBackgroundTaskProgressEventHandler
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventHandler_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IActivitySensorTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTrigger ABI::Windows::ApplicationModel::Background::IActivitySensorTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTrigger_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IActivitySensorTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTriggerFactory ABI::Windows::ApplicationModel::Background::IActivitySensorTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTriggerFactory_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IAlarmApplicationManagerStatics;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIAlarmApplicationManagerStatics ABI::Windows::ApplicationModel::Background::IAlarmApplicationManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIAlarmApplicationManagerStatics_FWD_DEFINED__
@@ -379,9 +375,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IAppBroadcastTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTrigger ABI::Windows::ApplicationModel::Background::IAppBroadcastTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTrigger_FWD_DEFINED__
@@ -393,9 +389,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IAppBroadcastTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerFactory ABI::Windows::ApplicationModel::Background::IAppBroadcastTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerFactory_FWD_DEFINED__
@@ -407,9 +403,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IAppBroadcastTriggerProviderInfo;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerProviderInfo ABI::Windows::ApplicationModel::Background::IAppBroadcastTriggerProviderInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerProviderInfo_FWD_DEFINED__
@@ -421,9 +417,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IApplicationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTrigger ABI::Windows::ApplicationModel::Background::IApplicationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTrigger_FWD_DEFINED__
@@ -435,9 +431,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IApplicationTriggerDetails;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTriggerDetails ABI::Windows::ApplicationModel::Background::IApplicationTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTriggerDetails_FWD_DEFINED__
@@ -449,9 +445,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IAppointmentStoreNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIAppointmentStoreNotificationTrigger ABI::Windows::ApplicationModel::Background::IAppointmentStoreNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIAppointmentStoreNotificationTrigger_FWD_DEFINED__
@@ -463,9 +459,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundCondition;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundCondition ABI::Windows::ApplicationModel::Background::IBackgroundCondition
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundCondition_FWD_DEFINED__
@@ -477,9 +473,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundExecutionManagerStatics;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics ABI::Windows::ApplicationModel::Background::IBackgroundExecutionManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics_FWD_DEFINED__
@@ -491,9 +487,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundExecutionManagerStatics2;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics2 ABI::Windows::ApplicationModel::Background::IBackgroundExecutionManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics2_FWD_DEFINED__
@@ -505,9 +501,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTask;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTask ABI::Windows::ApplicationModel::Background::IBackgroundTask
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTask_FWD_DEFINED__
@@ -519,9 +515,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskBuilder;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder ABI::Windows::ApplicationModel::Background::IBackgroundTaskBuilder
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder_FWD_DEFINED__
@@ -533,9 +529,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskBuilder2;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder2 ABI::Windows::ApplicationModel::Background::IBackgroundTaskBuilder2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder2_FWD_DEFINED__
@@ -547,9 +543,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskBuilder3;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder3 ABI::Windows::ApplicationModel::Background::IBackgroundTaskBuilder3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder3_FWD_DEFINED__
@@ -561,9 +557,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskBuilder4;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder4 ABI::Windows::ApplicationModel::Background::IBackgroundTaskBuilder4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder4_FWD_DEFINED__
@@ -575,9 +571,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskCompletedEventArgs;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventArgs ABI::Windows::ApplicationModel::Background::IBackgroundTaskCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventArgs_FWD_DEFINED__
@@ -589,9 +585,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskDeferral;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskDeferral ABI::Windows::ApplicationModel::Background::IBackgroundTaskDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskDeferral_FWD_DEFINED__
@@ -603,9 +599,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskInstance;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance ABI::Windows::ApplicationModel::Background::IBackgroundTaskInstance
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance_FWD_DEFINED__
@@ -617,9 +613,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskInstance2;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance2 ABI::Windows::ApplicationModel::Background::IBackgroundTaskInstance2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance2_FWD_DEFINED__
@@ -631,9 +627,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskInstance4;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance4 ABI::Windows::ApplicationModel::Background::IBackgroundTaskInstance4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance4_FWD_DEFINED__
@@ -645,9 +641,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskProgressEventArgs;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventArgs ABI::Windows::ApplicationModel::Background::IBackgroundTaskProgressEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventArgs_FWD_DEFINED__
@@ -659,9 +655,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistration;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration_FWD_DEFINED__
@@ -673,9 +669,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistration2;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration2 ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration2_FWD_DEFINED__
@@ -687,9 +683,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistration3;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration3 ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration3_FWD_DEFINED__
@@ -701,9 +697,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistrationGroup;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup_FWD_DEFINED__
@@ -715,9 +711,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistrationGroupFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroupFactory ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroupFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroupFactory_FWD_DEFINED__
@@ -729,9 +725,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistrationStatics;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics_FWD_DEFINED__
@@ -743,9 +739,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTaskRegistrationStatics2;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics2 ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics2_FWD_DEFINED__
@@ -757,9 +753,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger ABI::Windows::ApplicationModel::Background::IBackgroundTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger_FWD_DEFINED__
@@ -771,9 +767,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundWorkCostStatics;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundWorkCostStatics ABI::Windows::ApplicationModel::Background::IBackgroundWorkCostStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundWorkCostStatics_FWD_DEFINED__
@@ -785,9 +781,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBluetoothLEAdvertisementPublisherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementPublisherTrigger ABI::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementPublisherTrigger_FWD_DEFINED__
@@ -799,9 +795,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBluetoothLEAdvertisementWatcherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementWatcherTrigger ABI::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementWatcherTrigger_FWD_DEFINED__
@@ -813,9 +809,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ICachedFileUpdaterTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTrigger ABI::Windows::ApplicationModel::Background::ICachedFileUpdaterTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTrigger_FWD_DEFINED__
@@ -827,9 +823,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ICachedFileUpdaterTriggerDetails;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTriggerDetails ABI::Windows::ApplicationModel::Background::ICachedFileUpdaterTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTriggerDetails_FWD_DEFINED__
@@ -841,9 +837,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IChatMessageNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageNotificationTrigger ABI::Windows::ApplicationModel::Background::IChatMessageNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageNotificationTrigger_FWD_DEFINED__
@@ -855,9 +851,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IChatMessageReceivedNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageReceivedNotificationTrigger ABI::Windows::ApplicationModel::Background::IChatMessageReceivedNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageReceivedNotificationTrigger_FWD_DEFINED__
@@ -869,9 +865,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ICommunicationBlockingAppSetAsActiveTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CICommunicationBlockingAppSetAsActiveTrigger ABI::Windows::ApplicationModel::Background::ICommunicationBlockingAppSetAsActiveTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CICommunicationBlockingAppSetAsActiveTrigger_FWD_DEFINED__
@@ -883,9 +879,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IContactStoreNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIContactStoreNotificationTrigger ABI::Windows::ApplicationModel::Background::IContactStoreNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIContactStoreNotificationTrigger_FWD_DEFINED__
@@ -897,9 +893,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IContentPrefetchTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTrigger ABI::Windows::ApplicationModel::Background::IContentPrefetchTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTrigger_FWD_DEFINED__
@@ -911,9 +907,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IContentPrefetchTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTriggerFactory ABI::Windows::ApplicationModel::Background::IContentPrefetchTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTriggerFactory_FWD_DEFINED__
@@ -925,9 +921,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ICustomSystemEventTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTrigger ABI::Windows::ApplicationModel::Background::ICustomSystemEventTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTrigger_FWD_DEFINED__
@@ -939,9 +935,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ICustomSystemEventTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTriggerFactory ABI::Windows::ApplicationModel::Background::ICustomSystemEventTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTriggerFactory_FWD_DEFINED__
@@ -953,9 +949,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceConnectionChangeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTrigger ABI::Windows::ApplicationModel::Background::IDeviceConnectionChangeTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTrigger_FWD_DEFINED__
@@ -967,9 +963,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceConnectionChangeTriggerStatics;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTriggerStatics ABI::Windows::ApplicationModel::Background::IDeviceConnectionChangeTriggerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTriggerStatics_FWD_DEFINED__
@@ -981,9 +977,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceManufacturerNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTrigger ABI::Windows::ApplicationModel::Background::IDeviceManufacturerNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTrigger_FWD_DEFINED__
@@ -995,9 +991,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceManufacturerNotificationTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTriggerFactory ABI::Windows::ApplicationModel::Background::IDeviceManufacturerNotificationTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTriggerFactory_FWD_DEFINED__
@@ -1009,9 +1005,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceServicingTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceServicingTrigger ABI::Windows::ApplicationModel::Background::IDeviceServicingTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceServicingTrigger_FWD_DEFINED__
@@ -1023,9 +1019,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceUseTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceUseTrigger ABI::Windows::ApplicationModel::Background::IDeviceUseTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceUseTrigger_FWD_DEFINED__
@@ -1037,9 +1033,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceWatcherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger ABI::Windows::ApplicationModel::Background::IDeviceWatcherTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger_FWD_DEFINED__
@@ -1051,9 +1047,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IEmailStoreNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIEmailStoreNotificationTrigger ABI::Windows::ApplicationModel::Background::IEmailStoreNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIEmailStoreNotificationTrigger_FWD_DEFINED__
@@ -1065,9 +1061,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGattCharacteristicNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger ABI::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger_FWD_DEFINED__
@@ -1079,9 +1075,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGattCharacteristicNotificationTrigger2;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger2 ABI::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTrigger2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger2_FWD_DEFINED__
@@ -1093,9 +1089,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGattCharacteristicNotificationTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory ABI::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory_FWD_DEFINED__
@@ -1107,9 +1103,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGattCharacteristicNotificationTriggerFactory2;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory2 ABI::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTriggerFactory2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory2_FWD_DEFINED__
@@ -1121,9 +1117,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGattServiceProviderTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTrigger ABI::Windows::ApplicationModel::Background::IGattServiceProviderTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTrigger_FWD_DEFINED__
@@ -1135,9 +1131,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGattServiceProviderTriggerResult;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerResult ABI::Windows::ApplicationModel::Background::IGattServiceProviderTriggerResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerResult_FWD_DEFINED__
@@ -1149,9 +1145,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGattServiceProviderTriggerStatics;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerStatics ABI::Windows::ApplicationModel::Background::IGattServiceProviderTriggerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerStatics_FWD_DEFINED__
@@ -1163,9 +1159,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IGeovisitTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIGeovisitTrigger ABI::Windows::ApplicationModel::Background::IGeovisitTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIGeovisitTrigger_FWD_DEFINED__
@@ -1177,9 +1173,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ILocationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CILocationTrigger ABI::Windows::ApplicationModel::Background::ILocationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CILocationTrigger_FWD_DEFINED__
@@ -1191,9 +1187,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ILocationTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CILocationTriggerFactory ABI::Windows::ApplicationModel::Background::ILocationTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CILocationTriggerFactory_FWD_DEFINED__
@@ -1205,9 +1201,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IMaintenanceTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTrigger ABI::Windows::ApplicationModel::Background::IMaintenanceTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTrigger_FWD_DEFINED__
@@ -1219,9 +1215,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IMaintenanceTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTriggerFactory ABI::Windows::ApplicationModel::Background::IMaintenanceTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTriggerFactory_FWD_DEFINED__
@@ -1233,9 +1229,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IMediaProcessingTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIMediaProcessingTrigger ABI::Windows::ApplicationModel::Background::IMediaProcessingTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIMediaProcessingTrigger_FWD_DEFINED__
@@ -1247,9 +1243,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface INetworkOperatorHotspotAuthenticationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorHotspotAuthenticationTrigger ABI::Windows::ApplicationModel::Background::INetworkOperatorHotspotAuthenticationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorHotspotAuthenticationTrigger_FWD_DEFINED__
@@ -1261,9 +1257,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface INetworkOperatorNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTrigger ABI::Windows::ApplicationModel::Background::INetworkOperatorNotificationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTrigger_FWD_DEFINED__
@@ -1275,9 +1271,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface INetworkOperatorNotificationTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTriggerFactory ABI::Windows::ApplicationModel::Background::INetworkOperatorNotificationTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTriggerFactory_FWD_DEFINED__
@@ -1289,9 +1285,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IPhoneTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTrigger ABI::Windows::ApplicationModel::Background::IPhoneTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTrigger_FWD_DEFINED__
@@ -1303,9 +1299,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IPhoneTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTriggerFactory ABI::Windows::ApplicationModel::Background::IPhoneTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTriggerFactory_FWD_DEFINED__
@@ -1317,9 +1313,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IPushNotificationTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory ABI::Windows::ApplicationModel::Background::IPushNotificationTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory_FWD_DEFINED__
@@ -1331,9 +1327,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IRcsEndUserMessageAvailableTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIRcsEndUserMessageAvailableTrigger ABI::Windows::ApplicationModel::Background::IRcsEndUserMessageAvailableTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIRcsEndUserMessageAvailableTrigger_FWD_DEFINED__
@@ -1345,9 +1341,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IRfcommConnectionTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIRfcommConnectionTrigger ABI::Windows::ApplicationModel::Background::IRfcommConnectionTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIRfcommConnectionTrigger_FWD_DEFINED__
@@ -1359,9 +1355,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISecondaryAuthenticationFactorAuthenticationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISecondaryAuthenticationFactorAuthenticationTrigger ABI::Windows::ApplicationModel::Background::ISecondaryAuthenticationFactorAuthenticationTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISecondaryAuthenticationFactorAuthenticationTrigger_FWD_DEFINED__
@@ -1373,9 +1369,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISensorDataThresholdTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTrigger ABI::Windows::ApplicationModel::Background::ISensorDataThresholdTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTrigger_FWD_DEFINED__
@@ -1387,9 +1383,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISensorDataThresholdTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTriggerFactory ABI::Windows::ApplicationModel::Background::ISensorDataThresholdTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTriggerFactory_FWD_DEFINED__
@@ -1401,9 +1397,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISmartCardTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTrigger ABI::Windows::ApplicationModel::Background::ISmartCardTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTrigger_FWD_DEFINED__
@@ -1415,9 +1411,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISmartCardTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTriggerFactory ABI::Windows::ApplicationModel::Background::ISmartCardTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTriggerFactory_FWD_DEFINED__
@@ -1429,9 +1425,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISmsMessageReceivedTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISmsMessageReceivedTriggerFactory ABI::Windows::ApplicationModel::Background::ISmsMessageReceivedTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISmsMessageReceivedTriggerFactory_FWD_DEFINED__
@@ -1443,9 +1439,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISocketActivityTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISocketActivityTrigger ABI::Windows::ApplicationModel::Background::ISocketActivityTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISocketActivityTrigger_FWD_DEFINED__
@@ -1457,9 +1453,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IStorageLibraryChangeTrackerTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryChangeTrackerTriggerFactory ABI::Windows::ApplicationModel::Background::IStorageLibraryChangeTrackerTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryChangeTrackerTriggerFactory_FWD_DEFINED__
@@ -1471,9 +1467,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IStorageLibraryContentChangedTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTrigger ABI::Windows::ApplicationModel::Background::IStorageLibraryContentChangedTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTrigger_FWD_DEFINED__
@@ -1485,9 +1481,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IStorageLibraryContentChangedTriggerStatics;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTriggerStatics ABI::Windows::ApplicationModel::Background::IStorageLibraryContentChangedTriggerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTriggerStatics_FWD_DEFINED__
@@ -1499,9 +1495,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISystemCondition;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISystemCondition ABI::Windows::ApplicationModel::Background::ISystemCondition
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISystemCondition_FWD_DEFINED__
@@ -1513,9 +1509,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISystemConditionFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISystemConditionFactory ABI::Windows::ApplicationModel::Background::ISystemConditionFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISystemConditionFactory_FWD_DEFINED__
@@ -1527,9 +1523,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISystemTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISystemTrigger ABI::Windows::ApplicationModel::Background::ISystemTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISystemTrigger_FWD_DEFINED__
@@ -1541,9 +1537,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ISystemTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CISystemTriggerFactory ABI::Windows::ApplicationModel::Background::ISystemTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CISystemTriggerFactory_FWD_DEFINED__
@@ -1555,9 +1551,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ITimeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CITimeTrigger ABI::Windows::ApplicationModel::Background::ITimeTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CITimeTrigger_FWD_DEFINED__
@@ -1569,9 +1565,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface ITimeTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CITimeTriggerFactory ABI::Windows::ApplicationModel::Background::ITimeTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CITimeTriggerFactory_FWD_DEFINED__
@@ -1583,9 +1579,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IToastNotificationActionTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationActionTriggerFactory ABI::Windows::ApplicationModel::Background::IToastNotificationActionTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationActionTriggerFactory_FWD_DEFINED__
@@ -1597,9 +1593,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IToastNotificationHistoryChangedTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationHistoryChangedTriggerFactory ABI::Windows::ApplicationModel::Background::IToastNotificationHistoryChangedTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationHistoryChangedTriggerFactory_FWD_DEFINED__
@@ -1611,9 +1607,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IUserNotificationChangedTriggerFactory;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIUserNotificationChangedTriggerFactory ABI::Windows::ApplicationModel::Background::IUserNotificationChangedTriggerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIUserNotificationChangedTriggerFactory_FWD_DEFINED__
@@ -1626,9 +1622,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BackgroundTaskRegistration;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1651,7 +1647,7 @@ IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::BackgroundTaskReg
 // correct parameterized interface specialization.
 typedef IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::BackgroundTaskRegistration*> __FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t;
 #define __FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>
@@ -1683,7 +1679,7 @@ IIterator<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBack
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration*> __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t;
 #define __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>*>
@@ -1715,7 +1711,7 @@ IIterable<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBack
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration*> __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t;
 #define __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>*>
@@ -1747,7 +1743,7 @@ IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRe
 // correct parameterized interface specialization.
 typedef IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*> __FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t;
 #define __FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>
@@ -1779,7 +1775,7 @@ IIterator<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBac
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration*> __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t;
 #define __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>*>
@@ -1811,7 +1807,7 @@ IIterable<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBac
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration*> __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t;
 #define __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>*>
@@ -1827,9 +1823,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BackgroundTaskRegistrationGroup;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1852,7 +1848,7 @@ IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Background::BackgroundTask
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup*> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup*>
@@ -1884,7 +1880,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CB
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup*>*>
@@ -1916,7 +1912,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CB
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup*>*>
@@ -1948,7 +1944,7 @@ IMapView<GUID,ABI::Windows::ApplicationModel::Background::BackgroundTaskRegistra
 // correct parameterized interface specialization.
 typedef IMapView<GUID,ABI::Windows::ApplicationModel::Background::BackgroundTaskRegistration*> __FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t;
 #define __FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IMapView<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>
@@ -1980,7 +1976,7 @@ IMapView<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistr
 // correct parameterized interface specialization.
 typedef IMapView<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*> __FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t;
 #define __FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::__FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_GUID_Windows__CApplicationModel__CBackground__CIBackgroundTaskRegistration ABI::Windows::Foundation::Collections::IMapView<GUID,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistration*>
@@ -2012,7 +2008,7 @@ IMapView<HSTRING,ABI::Windows::ApplicationModel::Background::BackgroundTaskRegis
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup*> __FIMapView_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup*>
@@ -2028,9 +2024,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 enum AlarmAccessStatus : int;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus_USE
@@ -2051,7 +2047,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background::AlarmAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::AlarmAccessStatus>
@@ -2081,7 +2077,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::AlarmAccessStat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::AlarmAccessStatus> __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CAlarmAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Background::AlarmAccessStatus>
@@ -2096,9 +2092,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 enum ApplicationTriggerResult : int;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult_USE
@@ -2119,7 +2115,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background::ApplicationTriggerResult> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::ApplicationTriggerResult>
@@ -2149,7 +2145,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::ApplicationTrig
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::ApplicationTriggerResult> __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CApplicationTriggerResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Background::ApplicationTriggerResult>
@@ -2164,9 +2160,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 enum BackgroundAccessStatus : int;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus_USE
@@ -2187,7 +2183,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background::BackgroundAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::BackgroundAccessStatus>
@@ -2217,7 +2213,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::BackgroundAcces
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::BackgroundAccessStatus> __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CBackgroundAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Background::BackgroundAccessStatus>
@@ -2232,9 +2228,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class DeviceConnectionChangeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2257,7 +2253,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::Devi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::IDeviceConnectionChangeTrigger*>
@@ -2289,7 +2285,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Background::DeviceConnectionChan
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger*> __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceConnectionChangeTrigger ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Background::IDeviceConnectionChangeTrigger*>
@@ -2305,9 +2301,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 enum DeviceTriggerResult : int;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult_USE
@@ -2328,7 +2324,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background::DeviceTriggerResult> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::DeviceTriggerResult>
@@ -2358,7 +2354,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::DeviceTriggerRe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::DeviceTriggerResult> __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CDeviceTriggerResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Background::DeviceTriggerResult>
@@ -2373,9 +2369,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class GattServiceProviderTriggerResult;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2398,7 +2394,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::Gatt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::IGattServiceProviderTriggerResult*>
@@ -2430,7 +2426,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Background::GattServiceProviderT
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CGattServiceProviderTriggerResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Background::IGattServiceProviderTriggerResult*>
@@ -2446,9 +2442,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 enum MediaProcessingTriggerResult : int;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult_USE
@@ -2469,7 +2465,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Background::MediaProcessingTriggerResult> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Background::MediaProcessingTriggerResult>
@@ -2499,7 +2495,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::MediaProcessing
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::Background::MediaProcessingTriggerResult> __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CBackground__CMediaProcessingTriggerResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Background::MediaProcessingTriggerResult>
@@ -2514,9 +2510,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 enum ActivityType : int;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSensors__CActivityType_USE
@@ -2537,7 +2533,7 @@ IIterator<enum ABI::Windows::Devices::Sensors::ActivityType> : IIterator_impl<en
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::Sensors::ActivityType> __FIIterator_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIIterator_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2567,7 +2563,7 @@ IIterable<enum ABI::Windows::Devices::Sensors::ActivityType> : IIterable_impl<en
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::Sensors::ActivityType> __FIIterable_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIIterable_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2597,7 +2593,7 @@ IVectorView<enum ABI::Windows::Devices::Sensors::ActivityType> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::Sensors::ActivityType> __FIVectorView_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIVectorView_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2627,7 +2623,7 @@ IVector<enum ABI::Windows::Devices::Sensors::ActivityType> : IVector_impl<enum A
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Devices::Sensors::ActivityType> __FIVector_1_Windows__CDevices__CSensors__CActivityType_t;
 #define __FIVector_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CSensors__CActivityType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CSensors__CActivityType ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Sensors::ActivityType>
@@ -2657,7 +2653,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -2687,7 +2683,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2717,7 +2713,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2747,7 +2743,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -2777,7 +2773,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -2806,7 +2802,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -2836,7 +2832,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -2866,7 +2862,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -2895,7 +2891,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -2924,7 +2920,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -2940,9 +2936,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 class BackgroundActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs_FWD_DEFINED__
@@ -2951,9 +2947,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IBackgroundActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs_FWD_DEFINED__
@@ -2980,7 +2976,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Background::BackgroundTaskReg
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup*,ABI::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup*,ABI::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs*>
@@ -2996,8 +2992,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageLibrary;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageLibrary_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageLibrary_FWD_DEFINED__
@@ -3005,8 +3001,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageLibrary;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageLibrary ABI::Windows::Storage::IStorageLibrary
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageLibrary_FWD_DEFINED__
@@ -3032,7 +3028,7 @@ IIterator<ABI::Windows::Storage::StorageLibrary*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageLibrary*> __FIIterator_1_Windows__CStorage__CStorageLibrary_t;
 #define __FIIterator_1_Windows__CStorage__CStorageLibrary ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageLibrary_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageLibrary ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageLibrary*>
@@ -3064,7 +3060,7 @@ IIterable<ABI::Windows::Storage::StorageLibrary*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageLibrary*> __FIIterable_1_Windows__CStorage__CStorageLibrary_t;
 #define __FIIterable_1_Windows__CStorage__CStorageLibrary ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageLibrary_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageLibrary ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageLibrary*>
@@ -3090,10 +3086,10 @@ namespace ABI {
                     
                     typedef enum PhoneTriggerType : int PhoneTriggerType;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Calls */
-    } /* Background */} /* ABI */
+                } /* Background */
+            } /* Calls */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3113,10 +3109,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisement;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement_FWD_DEFINED__
@@ -3126,10 +3122,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisement;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisement
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement_FWD_DEFINED__
@@ -3141,10 +3137,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementFilter;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter_FWD_DEFINED__
@@ -3154,10 +3150,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementFilter;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementFilter
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter_FWD_DEFINED__
@@ -3175,10 +3171,10 @@ namespace ABI {
                     
                     typedef enum BluetoothEventTriggeringMode : int BluetoothEventTriggeringMode;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Background */} /* ABI */
+                } /* Background */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3186,10 +3182,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Background {
                     class RfcommInboundConnectionInformation;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Background */} /* ABI */
+                } /* Background */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommInboundConnectionInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommInboundConnectionInformation_FWD_DEFINED__
@@ -3199,10 +3195,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Background {
                     interface IRfcommInboundConnectionInformation;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Background */} /* ABI */
+                } /* Background */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommInboundConnectionInformation ABI::Windows::Devices::Bluetooth::Background::IRfcommInboundConnectionInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommInboundConnectionInformation_FWD_DEFINED__
@@ -3214,10 +3210,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Background {
                     class RfcommOutboundConnectionInformation;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Background */} /* ABI */
+                } /* Background */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommOutboundConnectionInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommOutboundConnectionInformation_FWD_DEFINED__
@@ -3227,10 +3223,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Background {
                     interface IRfcommOutboundConnectionInformation;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Background */} /* ABI */
+                } /* Background */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommOutboundConnectionInformation ABI::Windows::Devices::Bluetooth::Background::IRfcommOutboundConnectionInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CBackground_CIRfcommOutboundConnectionInformation_FWD_DEFINED__
@@ -3247,18 +3243,18 @@ namespace ABI {
                 
                 typedef enum BluetoothError : int BluetoothError;
                 
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Bluetooth {
                 class BluetoothSignalStrengthFilter;
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter_FWD_DEFINED__
@@ -3267,9 +3263,9 @@ namespace ABI {
         namespace Devices {
             namespace Bluetooth {
                 interface IBluetoothSignalStrengthFilter;
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter ABI::Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter_FWD_DEFINED__
@@ -3284,10 +3280,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace GenericAttributeProfile {
                     class GattCharacteristic;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* GenericAttributeProfile */} /* ABI */
+                } /* GenericAttributeProfile */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattCharacteristic_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattCharacteristic_FWD_DEFINED__
@@ -3297,10 +3293,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace GenericAttributeProfile {
                     interface IGattCharacteristic;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* GenericAttributeProfile */} /* ABI */
+                } /* GenericAttributeProfile */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattCharacteristic ABI::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattCharacteristic_FWD_DEFINED__
@@ -3312,10 +3308,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace GenericAttributeProfile {
                     class GattLocalService;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* GenericAttributeProfile */} /* ABI */
+                } /* GenericAttributeProfile */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattLocalService_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattLocalService_FWD_DEFINED__
@@ -3325,10 +3321,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace GenericAttributeProfile {
                     interface IGattLocalService;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* GenericAttributeProfile */} /* ABI */
+                } /* GenericAttributeProfile */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattLocalService ABI::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattLocalService_FWD_DEFINED__
@@ -3340,10 +3336,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace GenericAttributeProfile {
                     class GattServiceProviderAdvertisingParameters;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* GenericAttributeProfile */} /* ABI */
+                } /* GenericAttributeProfile */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattServiceProviderAdvertisingParameters_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattServiceProviderAdvertisingParameters_FWD_DEFINED__
@@ -3353,10 +3349,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace GenericAttributeProfile {
                     interface IGattServiceProviderAdvertisingParameters;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* GenericAttributeProfile */} /* ABI */
+                } /* GenericAttributeProfile */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattServiceProviderAdvertisingParameters ABI::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CGenericAttributeProfile_CIGattServiceProviderAdvertisingParameters_FWD_DEFINED__
@@ -3373,9 +3369,9 @@ namespace ABI {
                 
                 typedef enum VisitMonitoringScope : int VisitMonitoringScope;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3387,9 +3383,9 @@ namespace ABI {
                 
                 typedef enum ActivityType : int ActivityType;
                 
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold_FWD_DEFINED__
@@ -3398,9 +3394,9 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 interface ISensorDataThreshold;
-            } /* Windows */
+            } /* Sensors */
         } /* Devices */
-    } /* Sensors */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold ABI::Windows::Devices::Sensors::ISensorDataThreshold
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISensorDataThreshold_FWD_DEFINED__
@@ -3417,9 +3413,9 @@ namespace ABI {
                 
                 typedef enum SmartCardTriggerType : int SmartCardTriggerType;
                 
-            } /* Windows */
+            } /* SmartCards */
         } /* Devices */
-    } /* SmartCards */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3429,9 +3425,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsFilterRules;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CSms_CISmsFilterRules_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSms_CISmsFilterRules_FWD_DEFINED__
@@ -3440,9 +3436,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsFilterRules;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsFilterRules ABI::Windows::Devices::Sms::ISmsFilterRules
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsFilterRules_FWD_DEFINED__
@@ -3456,9 +3452,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3467,9 +3463,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3484,8 +3480,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3498,8 +3494,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -3507,8 +3503,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -3523,9 +3519,9 @@ namespace ABI {
                 
                 typedef enum SocketProtectionLevel : int SocketProtectionLevel;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3537,18 +3533,18 @@ namespace ABI {
                 
                 typedef enum CachedFileTarget : int CachedFileTarget;
                 
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Storage {
             namespace Provider {
                 class FileUpdateRequest;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest_FWD_DEFINED__
@@ -3557,9 +3553,9 @@ namespace ABI {
         namespace Storage {
             namespace Provider {
                 interface IFileUpdateRequest;
-            } /* Windows */
+            } /* Provider */
         } /* Storage */
-    } /* Provider */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest ABI::Windows::Storage::Provider::IFileUpdateRequest
 
 #endif // ____x_ABI_CWindows_CStorage_CProvider_CIFileUpdateRequest_FWD_DEFINED__
@@ -3573,8 +3569,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageLibraryChangeTracker;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker_FWD_DEFINED__
@@ -3582,8 +3578,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageLibraryChangeTracker;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker ABI::Windows::Storage::IStorageLibraryChangeTracker
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageLibraryChangeTracker_FWD_DEFINED__
@@ -3595,8 +3591,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3604,8 +3600,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3620,9 +3616,9 @@ namespace ABI {
                 
                 typedef enum NotificationKinds : unsigned int NotificationKinds;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3635,9 +3631,9 @@ namespace ABI {
                 
                 typedef enum AlarmAccessStatus : int AlarmAccessStatus;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3646,9 +3642,9 @@ namespace ABI {
                 
                 typedef enum ApplicationTriggerResult : int ApplicationTriggerResult;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3657,9 +3653,9 @@ namespace ABI {
                 
                 typedef enum BackgroundAccessRequestKind : int BackgroundAccessRequestKind;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3668,9 +3664,9 @@ namespace ABI {
                 
                 typedef enum BackgroundAccessStatus : int BackgroundAccessStatus;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3679,9 +3675,9 @@ namespace ABI {
                 
                 typedef enum BackgroundTaskCancellationReason : int BackgroundTaskCancellationReason;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3690,9 +3686,9 @@ namespace ABI {
                 
                 typedef enum BackgroundTaskThrottleCounter : int BackgroundTaskThrottleCounter;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3701,9 +3697,9 @@ namespace ABI {
                 
                 typedef enum BackgroundWorkCostValue : int BackgroundWorkCostValue;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3712,9 +3708,9 @@ namespace ABI {
                 
                 typedef enum CustomSystemEventTriggerRecurrence : int CustomSystemEventTriggerRecurrence;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3723,9 +3719,9 @@ namespace ABI {
                 
                 typedef enum DeviceTriggerResult : int DeviceTriggerResult;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3734,9 +3730,9 @@ namespace ABI {
                 
                 typedef enum LocationTriggerType : int LocationTriggerType;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3745,9 +3741,9 @@ namespace ABI {
                 
                 typedef enum MediaProcessingTriggerResult : int MediaProcessingTriggerResult;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3756,9 +3752,9 @@ namespace ABI {
                 
                 typedef enum SystemConditionType : int SystemConditionType;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3767,9 +3763,9 @@ namespace ABI {
                 
                 typedef enum SystemTriggerType : int SystemTriggerType;
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3871,9 +3867,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ActivitySensorTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3882,9 +3878,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class AppBroadcastTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3892,9 +3888,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class AppBroadcastTriggerProviderInfo;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3902,9 +3898,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ApplicationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3912,9 +3908,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ApplicationTriggerDetails;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3922,9 +3918,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class AppointmentStoreNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3933,9 +3929,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BackgroundTaskBuilder;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3943,9 +3939,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BackgroundTaskCompletedEventArgs;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3953,9 +3949,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BackgroundTaskDeferral;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3963,9 +3959,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BackgroundTaskProgressEventArgs;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3976,9 +3972,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BluetoothLEAdvertisementPublisherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3986,9 +3982,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class BluetoothLEAdvertisementWatcherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3996,9 +3992,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class CachedFileUpdaterTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4006,9 +4002,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class CachedFileUpdaterTriggerDetails;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4016,9 +4012,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ChatMessageNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4026,9 +4022,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ChatMessageReceivedNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4036,9 +4032,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class CommunicationBlockingAppSetAsActiveTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4046,9 +4042,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ContactStoreNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4056,9 +4052,19 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ContentPrefetchTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Background {
+                class ConversationalAgentTrigger;
+            } /* Background */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4066,9 +4072,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class CustomSystemEventTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4077,9 +4083,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class DeviceManufacturerNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4087,9 +4093,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class DeviceServicingTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4097,9 +4103,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class DeviceUseTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4107,9 +4113,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class DeviceWatcherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4117,9 +4123,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class EmailStoreNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4127,9 +4133,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class GattCharacteristicNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4137,9 +4143,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class GattServiceProviderTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4148,9 +4154,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class GeovisitTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4158,9 +4164,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class LocationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4168,9 +4174,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class MaintenanceTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4178,9 +4184,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class MediaProcessingTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4188,9 +4194,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class MobileBroadbandDeviceServiceNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4198,9 +4204,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class MobileBroadbandPcoDataChangeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4208,9 +4214,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class MobileBroadbandPinLockStateChangeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4218,9 +4224,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class MobileBroadbandRadioStateChangeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4228,9 +4234,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class MobileBroadbandRegistrationStateChangeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4238,9 +4244,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class NetworkOperatorDataUsageTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4248,9 +4254,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class NetworkOperatorHotspotAuthenticationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4258,9 +4264,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class NetworkOperatorNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4268,9 +4274,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class PaymentAppCanMakePaymentTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4278,9 +4284,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class PhoneTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4288,9 +4294,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class PushNotificationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4298,9 +4304,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class RcsEndUserMessageAvailableTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4308,9 +4314,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class RfcommConnectionTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4318,9 +4324,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class SecondaryAuthenticationFactorAuthenticationTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4328,9 +4334,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class SensorDataThresholdTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4338,9 +4344,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class SmartCardTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4348,9 +4354,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class SmsMessageReceivedTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4358,9 +4364,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class SocketActivityTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4368,9 +4374,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class StorageLibraryChangeTrackerTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4378,9 +4384,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class StorageLibraryContentChangedTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4388,9 +4394,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class SystemCondition;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4398,9 +4404,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class SystemTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4408,9 +4414,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class TetheringEntitlementCheckTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4418,9 +4424,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class TimeTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4428,9 +4434,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ToastNotificationActionTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4438,9 +4444,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class ToastNotificationHistoryChangedTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4448,9 +4454,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class UserNotificationChangedTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4485,9 +4491,9 @@ namespace ABI {
                     AlarmAccessStatus_Denied = 3,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -4514,9 +4520,9 @@ namespace ABI {
                     ApplicationTriggerResult_UnknownError = 3,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4541,9 +4547,9 @@ namespace ABI {
                     BackgroundAccessRequestKind_AllowedSubjectToSystemPolicy = 1,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -4602,9 +4608,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4671,9 +4677,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4699,9 +4705,9 @@ namespace ABI {
                     BackgroundTaskThrottleCounter_Network = 2,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4727,9 +4733,9 @@ namespace ABI {
                     BackgroundWorkCostValue_High = 2,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4754,9 +4760,9 @@ namespace ABI {
                     CustomSystemEventTriggerRecurrence_Always = 1,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -4783,9 +4789,9 @@ namespace ABI {
                     DeviceTriggerResult_LowBattery = 3,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4809,9 +4815,9 @@ namespace ABI {
                     LocationTriggerType_Geofence = 0,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4838,9 +4844,9 @@ namespace ABI {
                     MediaProcessingTriggerResult_UnknownError = 3,
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4880,9 +4886,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4933,9 +4939,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4968,9 +4974,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskCanceledEventHandler=_uuidof(IBackgroundTaskCanceledEventHandler);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCanceledEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCanceledEventHandler_INTERFACE_DEFINED__) */
@@ -5006,9 +5012,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskCompletedEventHandler=_uuidof(IBackgroundTaskCompletedEventHandler);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventHandler_INTERFACE_DEFINED__) */
@@ -5044,9 +5050,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskProgressEventHandler=_uuidof(IBackgroundTaskProgressEventHandler);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventHandler_INTERFACE_DEFINED__) */
@@ -5098,9 +5104,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensorTrigger=_uuidof(IActivitySensorTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTrigger_INTERFACE_DEFINED__) */
@@ -5140,9 +5146,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IActivitySensorTriggerFactory=_uuidof(IActivitySensorTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIActivitySensorTriggerFactory_INTERFACE_DEFINED__) */
@@ -5184,9 +5190,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAlarmApplicationManagerStatics=_uuidof(IAlarmApplicationManagerStatics);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIAlarmApplicationManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIAlarmApplicationManagerStatics_INTERFACE_DEFINED__) */
@@ -5232,9 +5238,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastTrigger=_uuidof(IAppBroadcastTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTrigger_INTERFACE_DEFINED__) */
@@ -5274,9 +5280,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastTriggerFactory=_uuidof(IAppBroadcastTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerFactory_INTERFACE_DEFINED__) */
@@ -5348,9 +5354,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppBroadcastTriggerProviderInfo=_uuidof(IAppBroadcastTriggerProviderInfo);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerProviderInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIAppBroadcastTriggerProviderInfo_INTERFACE_DEFINED__) */
@@ -5397,9 +5403,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationTrigger=_uuidof(IApplicationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTrigger_INTERFACE_DEFINED__) */
@@ -5438,9 +5444,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationTriggerDetails=_uuidof(IApplicationTriggerDetails);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIApplicationTriggerDetails_INTERFACE_DEFINED__) */
@@ -5480,9 +5486,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppointmentStoreNotificationTrigger=_uuidof(IAppointmentStoreNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIAppointmentStoreNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIAppointmentStoreNotificationTrigger_INTERFACE_DEFINED__) */
@@ -5515,9 +5521,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundCondition=_uuidof(IBackgroundCondition);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundCondition;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundCondition_INTERFACE_DEFINED__) */
@@ -5571,9 +5577,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundExecutionManagerStatics=_uuidof(IBackgroundExecutionManagerStatics);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics_INTERFACE_DEFINED__) */
@@ -5614,9 +5620,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundExecutionManagerStatics2=_uuidof(IBackgroundExecutionManagerStatics2);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundExecutionManagerStatics2_INTERFACE_DEFINED__) */
@@ -5652,9 +5658,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTask=_uuidof(IBackgroundTask);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTask;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTask_INTERFACE_DEFINED__) */
@@ -5711,9 +5717,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskBuilder=_uuidof(IBackgroundTaskBuilder);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder_INTERFACE_DEFINED__) */
@@ -5749,19 +5755,19 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CancelOnConditionLoss(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CancelOnConditionLoss(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskBuilder2=_uuidof(IBackgroundTaskBuilder2);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder2_INTERFACE_DEFINED__) */
@@ -5797,19 +5803,19 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsNetworkRequested(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNetworkRequested(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskBuilder3=_uuidof(IBackgroundTaskBuilder3);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder3_INTERFACE_DEFINED__) */
@@ -5855,9 +5861,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskBuilder4=_uuidof(IBackgroundTaskBuilder4);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskBuilder4_INTERFACE_DEFINED__) */
@@ -5897,9 +5903,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskCompletedEventArgs=_uuidof(IBackgroundTaskCompletedEventArgs);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -5936,9 +5942,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskDeferral=_uuidof(IBackgroundTaskDeferral);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskDeferral_INTERFACE_DEFINED__) */
@@ -5999,9 +6005,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskInstance=_uuidof(IBackgroundTaskInstance);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance_INTERFACE_DEFINED__) */
@@ -6042,9 +6048,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskInstance2=_uuidof(IBackgroundTaskInstance2);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance2_INTERFACE_DEFINED__) */
@@ -6084,9 +6090,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskInstance4=_uuidof(IBackgroundTaskInstance4);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskInstance4_INTERFACE_DEFINED__) */
@@ -6128,9 +6134,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskProgressEventArgs=_uuidof(IBackgroundTaskProgressEventArgs);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskProgressEventArgs_INTERFACE_DEFINED__) */
@@ -6179,16 +6185,16 @@ namespace ABI {
                         /* [in] */EventRegistrationToken cookie
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Unregister(
-                        /* [in] */boolean cancelTask
+                        /* [in] */::boolean cancelTask
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskRegistration=_uuidof(IBackgroundTaskRegistration);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration_INTERFACE_DEFINED__) */
@@ -6228,9 +6234,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskRegistration2=_uuidof(IBackgroundTaskRegistration2);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration2_INTERFACE_DEFINED__) */
@@ -6270,9 +6276,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskRegistration3=_uuidof(IBackgroundTaskRegistration3);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistration3_INTERFACE_DEFINED__) */
@@ -6324,9 +6330,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskRegistrationGroup=_uuidof(IBackgroundTaskRegistrationGroup);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup_INTERFACE_DEFINED__) */
@@ -6371,9 +6377,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskRegistrationGroupFactory=_uuidof(IBackgroundTaskRegistrationGroupFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroupFactory_INTERFACE_DEFINED__) */
@@ -6412,9 +6418,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskRegistrationStatics=_uuidof(IBackgroundTaskRegistrationStatics);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics_INTERFACE_DEFINED__) */
@@ -6457,9 +6463,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTaskRegistrationStatics2=_uuidof(IBackgroundTaskRegistrationStatics2);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationStatics2_INTERFACE_DEFINED__) */
@@ -6492,9 +6498,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTrigger=_uuidof(IBackgroundTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger_INTERFACE_DEFINED__) */
@@ -6533,9 +6539,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundWorkCostStatics=_uuidof(IBackgroundWorkCostStatics);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundWorkCostStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundWorkCostStatics_INTERFACE_DEFINED__) */
@@ -6578,9 +6584,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementPublisherTrigger=_uuidof(IBluetoothLEAdvertisementPublisherTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementPublisherTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementPublisherTrigger_INTERFACE_DEFINED__) */
@@ -6644,9 +6650,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementWatcherTrigger=_uuidof(IBluetoothLEAdvertisementWatcherTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementWatcherTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIBluetoothLEAdvertisementWatcherTrigger_INTERFACE_DEFINED__) */
@@ -6686,9 +6692,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICachedFileUpdaterTrigger=_uuidof(ICachedFileUpdaterTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTrigger_INTERFACE_DEFINED__) */
@@ -6726,16 +6732,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Provider::IFileUpdateRequest * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRequestUserInput(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ICachedFileUpdaterTriggerDetails=_uuidof(ICachedFileUpdaterTriggerDetails);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CICachedFileUpdaterTriggerDetails_INTERFACE_DEFINED__) */
@@ -6775,9 +6781,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageNotificationTrigger=_uuidof(IChatMessageNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageNotificationTrigger_INTERFACE_DEFINED__) */
@@ -6817,9 +6823,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageReceivedNotificationTrigger=_uuidof(IChatMessageReceivedNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageReceivedNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIChatMessageReceivedNotificationTrigger_INTERFACE_DEFINED__) */
@@ -6859,9 +6865,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommunicationBlockingAppSetAsActiveTrigger=_uuidof(ICommunicationBlockingAppSetAsActiveTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CICommunicationBlockingAppSetAsActiveTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CICommunicationBlockingAppSetAsActiveTrigger_INTERFACE_DEFINED__) */
@@ -6901,9 +6907,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactStoreNotificationTrigger=_uuidof(IContactStoreNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIContactStoreNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIContactStoreNotificationTrigger_INTERFACE_DEFINED__) */
@@ -6946,9 +6952,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentPrefetchTrigger=_uuidof(IContentPrefetchTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTrigger_INTERFACE_DEFINED__) */
@@ -6988,9 +6994,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentPrefetchTriggerFactory=_uuidof(IContentPrefetchTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIContentPrefetchTriggerFactory_INTERFACE_DEFINED__) */
@@ -7032,9 +7038,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICustomSystemEventTrigger=_uuidof(ICustomSystemEventTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTrigger_INTERFACE_DEFINED__) */
@@ -7075,9 +7081,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICustomSystemEventTriggerFactory=_uuidof(ICustomSystemEventTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CICustomSystemEventTriggerFactory_INTERFACE_DEFINED__) */
@@ -7116,22 +7122,22 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanMaintainConnection(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaintainConnection(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MaintainConnection(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDeviceConnectionChangeTrigger=_uuidof(IDeviceConnectionChangeTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTrigger_INTERFACE_DEFINED__) */
@@ -7171,9 +7177,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceConnectionChangeTriggerStatics=_uuidof(IDeviceConnectionChangeTriggerStatics);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTriggerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceConnectionChangeTriggerStatics_INTERFACE_DEFINED__) */
@@ -7224,16 +7230,16 @@ namespace ABI {
                     DEPRECATED("DeviceManufacturerNotificationTrigger is deprecated and might not work on all platforms")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_OneShot(
-                        /* [retval, out] */__RPC__out boolean * oneShot
+                        /* [retval, out] */__RPC__out ::boolean * oneShot
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDeviceManufacturerNotificationTrigger=_uuidof(IDeviceManufacturerNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTrigger_INTERFACE_DEFINED__) */
@@ -7274,7 +7280,7 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */__RPC__in HSTRING triggerQualifier,
-                        /* [in] */boolean oneShot,
+                        /* [in] */::boolean oneShot,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::IDeviceManufacturerNotificationTrigger * * trigger
                         ) = 0;
                     
@@ -7282,9 +7288,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceManufacturerNotificationTriggerFactory=_uuidof(IDeviceManufacturerNotificationTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceManufacturerNotificationTriggerFactory_INTERFACE_DEFINED__) */
@@ -7335,9 +7341,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceServicingTrigger=_uuidof(IDeviceServicingTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceServicingTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceServicingTrigger_INTERFACE_DEFINED__) */
@@ -7386,9 +7392,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceUseTrigger=_uuidof(IDeviceUseTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceUseTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceUseTrigger_INTERFACE_DEFINED__) */
@@ -7428,9 +7434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceWatcherTrigger=_uuidof(IDeviceWatcherTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger_INTERFACE_DEFINED__) */
@@ -7470,9 +7476,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailStoreNotificationTrigger=_uuidof(IEmailStoreNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIEmailStoreNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIEmailStoreNotificationTrigger_INTERFACE_DEFINED__) */
@@ -7515,9 +7521,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGattCharacteristicNotificationTrigger=_uuidof(IGattCharacteristicNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger_INTERFACE_DEFINED__) */
@@ -7556,9 +7562,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGattCharacteristicNotificationTrigger2=_uuidof(IGattCharacteristicNotificationTrigger2);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTrigger2_INTERFACE_DEFINED__) */
@@ -7598,9 +7604,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGattCharacteristicNotificationTriggerFactory=_uuidof(IGattCharacteristicNotificationTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory_INTERFACE_DEFINED__) */
@@ -7641,9 +7647,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGattCharacteristicNotificationTriggerFactory2=_uuidof(IGattCharacteristicNotificationTriggerFactory2);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGattCharacteristicNotificationTriggerFactory2_INTERFACE_DEFINED__) */
@@ -7691,9 +7697,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGattServiceProviderTrigger=_uuidof(IGattServiceProviderTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTrigger_INTERFACE_DEFINED__) */
@@ -7735,9 +7741,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGattServiceProviderTriggerResult=_uuidof(IGattServiceProviderTriggerResult);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerResult_INTERFACE_DEFINED__) */
@@ -7778,9 +7784,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGattServiceProviderTriggerStatics=_uuidof(IGattServiceProviderTriggerStatics);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGattServiceProviderTriggerStatics_INTERFACE_DEFINED__) */
@@ -7826,9 +7832,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeovisitTrigger=_uuidof(IGeovisitTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIGeovisitTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIGeovisitTrigger_INTERFACE_DEFINED__) */
@@ -7871,9 +7877,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILocationTrigger=_uuidof(ILocationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CILocationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CILocationTrigger_INTERFACE_DEFINED__) */
@@ -7913,9 +7919,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILocationTriggerFactory=_uuidof(ILocationTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CILocationTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CILocationTriggerFactory_INTERFACE_DEFINED__) */
@@ -7954,16 +7960,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * freshnessTime
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OneShot(
-                        /* [retval, out] */__RPC__out boolean * oneShot
+                        /* [retval, out] */__RPC__out ::boolean * oneShot
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMaintenanceTrigger=_uuidof(IMaintenanceTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTrigger_INTERFACE_DEFINED__) */
@@ -7996,7 +8002,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */UINT32 freshnessTime,
-                        /* [in] */boolean oneShot,
+                        /* [in] */::boolean oneShot,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::IMaintenanceTrigger * * trigger
                         ) = 0;
                     
@@ -8004,9 +8010,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMaintenanceTriggerFactory=_uuidof(IMaintenanceTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIMaintenanceTriggerFactory_INTERFACE_DEFINED__) */
@@ -8053,9 +8059,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaProcessingTrigger=_uuidof(IMediaProcessingTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIMediaProcessingTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIMediaProcessingTrigger_INTERFACE_DEFINED__) */
@@ -8095,9 +8101,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INetworkOperatorHotspotAuthenticationTrigger=_uuidof(INetworkOperatorHotspotAuthenticationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorHotspotAuthenticationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorHotspotAuthenticationTrigger_INTERFACE_DEFINED__) */
@@ -8140,9 +8146,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INetworkOperatorNotificationTrigger=_uuidof(INetworkOperatorNotificationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTrigger_INTERFACE_DEFINED__) */
@@ -8182,9 +8188,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INetworkOperatorNotificationTriggerFactory=_uuidof(INetworkOperatorNotificationTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CINetworkOperatorNotificationTriggerFactory_INTERFACE_DEFINED__) */
@@ -8221,7 +8227,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OneShot(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TriggerType(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Calls::Background::PhoneTriggerType * result
@@ -8231,9 +8237,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhoneTrigger=_uuidof(IPhoneTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTrigger_INTERFACE_DEFINED__) */
@@ -8268,7 +8274,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */ABI::Windows::ApplicationModel::Calls::Background::PhoneTriggerType type,
-                        /* [in] */boolean oneShot,
+                        /* [in] */::boolean oneShot,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::IPhoneTrigger * * result
                         ) = 0;
                     
@@ -8276,9 +8282,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhoneTriggerFactory=_uuidof(IPhoneTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIPhoneTriggerFactory_INTERFACE_DEFINED__) */
@@ -8312,16 +8318,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */__RPC__in HSTRING applicationId,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::IBackgroundTrigger * * trigger
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::IBackgroundTrigger * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationTriggerFactory=_uuidof(IPushNotificationTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory_INTERFACE_DEFINED__) */
@@ -8361,9 +8367,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsEndUserMessageAvailableTrigger=_uuidof(IRcsEndUserMessageAvailableTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIRcsEndUserMessageAvailableTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIRcsEndUserMessageAvailableTrigger_INTERFACE_DEFINED__) */
@@ -8405,10 +8411,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Bluetooth::Background::IRfcommOutboundConnectionInformation * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowMultipleConnections(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowMultipleConnections(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProtectionLevel(
                         /* [retval, out] */__RPC__out ABI::Windows::Networking::Sockets::SocketProtectionLevel * value
@@ -8427,9 +8433,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRfcommConnectionTrigger=_uuidof(IRfcommConnectionTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIRfcommConnectionTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIRfcommConnectionTrigger_INTERFACE_DEFINED__) */
@@ -8469,9 +8475,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorAuthenticationTrigger=_uuidof(ISecondaryAuthenticationFactorAuthenticationTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISecondaryAuthenticationFactorAuthenticationTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISecondaryAuthenticationFactorAuthenticationTrigger_INTERFACE_DEFINED__) */
@@ -8511,9 +8517,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISensorDataThresholdTrigger=_uuidof(ISensorDataThresholdTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTrigger_INTERFACE_DEFINED__) */
@@ -8553,9 +8559,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISensorDataThresholdTriggerFactory=_uuidof(ISensorDataThresholdTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISensorDataThresholdTriggerFactory_INTERFACE_DEFINED__) */
@@ -8598,9 +8604,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardTrigger=_uuidof(ISmartCardTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTrigger_INTERFACE_DEFINED__) */
@@ -8640,9 +8646,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmartCardTriggerFactory=_uuidof(ISmartCardTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISmartCardTriggerFactory_INTERFACE_DEFINED__) */
@@ -8682,9 +8688,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessageReceivedTriggerFactory=_uuidof(ISmsMessageReceivedTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISmsMessageReceivedTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISmsMessageReceivedTriggerFactory_INTERFACE_DEFINED__) */
@@ -8716,16 +8722,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsWakeFromLowPowerSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISocketActivityTrigger=_uuidof(ISocketActivityTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISocketActivityTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISocketActivityTrigger_INTERFACE_DEFINED__) */
@@ -8765,9 +8771,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageLibraryChangeTrackerTriggerFactory=_uuidof(IStorageLibraryChangeTrackerTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryChangeTrackerTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryChangeTrackerTriggerFactory_INTERFACE_DEFINED__) */
@@ -8807,9 +8813,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageLibraryContentChangedTrigger=_uuidof(IStorageLibraryContentChangedTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTrigger_INTERFACE_DEFINED__) */
@@ -8853,9 +8859,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageLibraryContentChangedTriggerStatics=_uuidof(IStorageLibraryContentChangedTriggerStatics);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTriggerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIStorageLibraryContentChangedTriggerStatics_INTERFACE_DEFINED__) */
@@ -8898,9 +8904,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemCondition=_uuidof(ISystemCondition);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISystemCondition;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISystemCondition_INTERFACE_DEFINED__) */
@@ -8940,9 +8946,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemConditionFactory=_uuidof(ISystemConditionFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISystemConditionFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISystemConditionFactory_INTERFACE_DEFINED__) */
@@ -8978,7 +8984,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OneShot(
-                        /* [retval, out] */__RPC__out boolean * oneShot
+                        /* [retval, out] */__RPC__out ::boolean * oneShot
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TriggerType(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Background::SystemTriggerType * triggerType
@@ -8988,9 +8994,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemTrigger=_uuidof(ISystemTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISystemTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISystemTrigger_INTERFACE_DEFINED__) */
@@ -9023,7 +9029,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */ABI::Windows::ApplicationModel::Background::SystemTriggerType triggerType,
-                        /* [in] */boolean oneShot,
+                        /* [in] */::boolean oneShot,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::ISystemTrigger * * trigger
                         ) = 0;
                     
@@ -9031,9 +9037,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemTriggerFactory=_uuidof(ISystemTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CISystemTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CISystemTriggerFactory_INTERFACE_DEFINED__) */
@@ -9072,16 +9078,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * freshnessTime
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OneShot(
-                        /* [retval, out] */__RPC__out boolean * oneShot
+                        /* [retval, out] */__RPC__out ::boolean * oneShot
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ITimeTrigger=_uuidof(ITimeTrigger);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CITimeTrigger;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CITimeTrigger_INTERFACE_DEFINED__) */
@@ -9114,7 +9120,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */UINT32 freshnessTime,
-                        /* [in] */boolean oneShot,
+                        /* [in] */::boolean oneShot,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::ITimeTrigger * * trigger
                         ) = 0;
                     
@@ -9122,9 +9128,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITimeTriggerFactory=_uuidof(ITimeTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CITimeTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CITimeTriggerFactory_INTERFACE_DEFINED__) */
@@ -9164,9 +9170,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationActionTriggerFactory=_uuidof(IToastNotificationActionTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationActionTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationActionTriggerFactory_INTERFACE_DEFINED__) */
@@ -9206,9 +9212,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationHistoryChangedTriggerFactory=_uuidof(IToastNotificationHistoryChangedTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationHistoryChangedTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIToastNotificationHistoryChangedTriggerFactory_INTERFACE_DEFINED__) */
@@ -9248,9 +9254,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserNotificationChangedTriggerFactory=_uuidof(IUserNotificationChangedTriggerFactory);
                 
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CBackground_CIUserNotificationChangedTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CBackground_CIUserNotificationChangedTriggerFactory_INTERFACE_DEFINED__) */
@@ -9881,6 +9887,29 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Background_ContentPrefetchTrigger[] = L"Windows.ApplicationModel.Background.ContentPrefetchTrigger";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.ApplicationModel.Background.ConversationalAgentTrigger
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_ApplicationModel_Background_ConversationalAgentTrigger_DEFINED
+#define RUNTIMECLASS_Windows_ApplicationModel_Background_ConversationalAgentTrigger_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Background_ConversationalAgentTrigger[] = L"Windows.ApplicationModel.Background.ConversationalAgentTrigger";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -10564,6 +10593,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **
  *
  * Class Threading Model:  Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -14403,7 +14434,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTaskRegistrationGroup * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CBackground__CBackgroundTaskRegistrationGroup_Windows__CApplicationModel__CActivation__CBackgroundActivatedEventArgsVtbl;
 
@@ -14848,6 +14879,7 @@ typedef enum __x_ABI_CWindows_CApplicationModel_CBackground_CSystemConditionType
 
 
 typedef enum __x_ABI_CWindows_CApplicationModel_CBackground_CSystemTriggerType __x_ABI_CWindows_CApplicationModel_CBackground_CSystemTriggerType;
+
 
 
 
@@ -22781,7 +22813,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory * This,
         /* [in] */__RPC__in HSTRING applicationId,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger * * trigger
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger * * value
         );
     END_INTERFACE
     
@@ -22811,8 +22843,8 @@ interface __x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTrigg
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory_Create(This,applicationId,trigger) \
-    ( (This)->lpVtbl->Create(This,applicationId,trigger) )
+#define __x_ABI_CWindows_CApplicationModel_CBackground_CIPushNotificationTriggerFactory_Create(This,applicationId,value) \
+    ( (This)->lpVtbl->Create(This,applicationId,value) )
 
 
 #endif /* COBJMACROS */
@@ -25496,6 +25528,29 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.ApplicationModel.Background.ConversationalAgentTrigger
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_ApplicationModel_Background_ConversationalAgentTrigger_DEFINED
+#define RUNTIMECLASS_Windows_ApplicationModel_Background_ConversationalAgentTrigger_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Background_ConversationalAgentTrigger[] = L"Windows.ApplicationModel.Background.ConversationalAgentTrigger";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.ApplicationModel.Background.CustomSystemEventTrigger
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
@@ -26175,6 +26230,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **
  *
  * Class Threading Model:  Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000

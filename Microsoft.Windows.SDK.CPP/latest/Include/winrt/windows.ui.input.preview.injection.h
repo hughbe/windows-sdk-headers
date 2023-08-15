@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.input.preview.injection.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,11 +275,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInjectedInputGamepadInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfo ABI::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfo_FWD_DEFINED__
@@ -297,11 +293,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInjectedInputGamepadInfoFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfoFactory ABI::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfoFactory_FWD_DEFINED__
@@ -315,11 +311,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInjectedInputKeyboardInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputKeyboardInfo ABI::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputKeyboardInfo_FWD_DEFINED__
@@ -333,11 +329,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInjectedInputMouseInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputMouseInfo ABI::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputMouseInfo_FWD_DEFINED__
@@ -351,11 +347,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInjectedInputPenInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputPenInfo ABI::Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputPenInfo_FWD_DEFINED__
@@ -369,11 +365,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInjectedInputTouchInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputTouchInfo ABI::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputTouchInfo_FWD_DEFINED__
@@ -387,11 +383,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInputInjector;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector ABI::Windows::UI::Input::Preview::Injection::IInputInjector
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector_FWD_DEFINED__
@@ -405,11 +401,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInputInjector2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector2 ABI::Windows::UI::Input::Preview::Injection::IInputInjector2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector2_FWD_DEFINED__
@@ -423,11 +419,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInputInjectorStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics ABI::Windows::UI::Input::Preview::Injection::IInputInjectorStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics_FWD_DEFINED__
@@ -441,11 +437,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         interface IInputInjectorStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics2 ABI::Windows::UI::Input::Preview::Injection::IInputInjectorStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics2_FWD_DEFINED__
@@ -460,11 +456,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         class InjectedInputKeyboardInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -487,7 +483,7 @@ IIterator<ABI::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo*> __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo_t;
 #define __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo*>
@@ -519,7 +515,7 @@ IIterable<ABI::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo*> __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo_t;
 #define __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputKeyboardInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo*>
@@ -537,11 +533,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         class InjectedInputMouseInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -564,7 +560,7 @@ IIterator<ABI::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo*> 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo*> __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo_t;
 #define __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo*>
@@ -596,7 +592,7 @@ IIterable<ABI::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo*> 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo*> __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo_t;
 #define __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputMouseInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo*>
@@ -614,11 +610,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         class InjectedInputTouchInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -641,7 +637,7 @@ IIterator<ABI::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo*> 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo*> __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo_t;
 #define __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo*>
@@ -673,7 +669,7 @@ IIterable<ABI::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo*> 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo*> __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo_t;
 #define __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CPreview__CInjection__CInjectedInputTouchInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo*>
@@ -696,9 +692,9 @@ namespace ABI {
                 
                 typedef enum GamepadButtons : unsigned int GamepadButtons;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -707,9 +703,9 @@ namespace ABI {
                 
                 typedef struct GamepadReading GamepadReading;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -723,11 +719,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputButtonChangeKind : int InjectedInputButtonChangeKind;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -738,11 +734,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputKeyOptions : unsigned int InjectedInputKeyOptions;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -753,11 +749,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputMouseOptions : unsigned int InjectedInputMouseOptions;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -768,11 +764,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputPenButtons : unsigned int InjectedInputPenButtons;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -783,11 +779,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputPenParameters : unsigned int InjectedInputPenParameters;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -798,11 +794,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputPointerOptions : unsigned int InjectedInputPointerOptions;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -813,11 +809,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputShortcut : int InjectedInputShortcut;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -828,11 +824,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputTouchParameters : unsigned int InjectedInputTouchParameters;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -843,11 +839,11 @@ namespace ABI {
                         
                         typedef enum InjectedInputVisualizationMode : int InjectedInputVisualizationMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -858,11 +854,11 @@ namespace ABI {
                         
                         typedef struct InjectedInputPoint InjectedInputPoint;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -873,11 +869,11 @@ namespace ABI {
                         
                         typedef struct InjectedInputPointerInfo InjectedInputPointerInfo;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -888,11 +884,11 @@ namespace ABI {
                         
                         typedef struct InjectedInputRectangle InjectedInputRectangle;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -911,11 +907,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         class InjectedInputGamepadInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -927,11 +923,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         class InjectedInputPenInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -942,11 +938,11 @@ namespace ABI {
                 namespace Preview {
                     namespace Injection {
                         class InputInjector;
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -993,11 +989,11 @@ namespace ABI {
                             InjectedInputButtonChangeKind_FifthButtonUp = 10,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1029,11 +1025,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(InjectedInputKeyOptions)
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1075,11 +1071,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(InjectedInputMouseOptions)
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1110,11 +1106,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(InjectedInputPenButtons)
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1146,11 +1142,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(InjectedInputPenParameters)
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1190,11 +1186,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(InjectedInputPointerOptions)
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1222,11 +1218,11 @@ namespace ABI {
                             InjectedInputShortcut_Search = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1257,11 +1253,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(InjectedInputTouchParameters)
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1289,11 +1285,11 @@ namespace ABI {
                             InjectedInputVisualizationMode_Indirect = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1320,11 +1316,11 @@ namespace ABI {
                             INT32 PositionY;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1354,11 +1350,11 @@ namespace ABI {
                             UINT64 PerformanceCount;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1387,11 +1383,11 @@ namespace ABI {
                             INT32 Right;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1468,11 +1464,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInjectedInputGamepadInfo=_uuidof(IInjectedInputGamepadInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfo_INTERFACE_DEFINED__) */
@@ -1514,11 +1510,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInjectedInputGamepadInfoFactory=_uuidof(IInjectedInputGamepadInfoFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputGamepadInfoFactory_INTERFACE_DEFINED__) */
@@ -1574,11 +1570,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInjectedInputKeyboardInfo=_uuidof(IInjectedInputKeyboardInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputKeyboardInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputKeyboardInfo_INTERFACE_DEFINED__) */
@@ -1646,11 +1642,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInjectedInputMouseInfo=_uuidof(IInjectedInputMouseInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputMouseInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputMouseInfo_INTERFACE_DEFINED__) */
@@ -1730,11 +1726,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInjectedInputPenInfo=_uuidof(IInjectedInputPenInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputPenInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputPenInfo_INTERFACE_DEFINED__) */
@@ -1802,11 +1798,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInjectedInputTouchInfo=_uuidof(IInjectedInputTouchInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputTouchInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInjectedInputTouchInfo_INTERFACE_DEFINED__) */
@@ -1867,11 +1863,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInputInjector=_uuidof(IInputInjector);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector_INTERFACE_DEFINED__) */
@@ -1918,11 +1914,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInputInjector2=_uuidof(IInputInjector2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjector2_INTERFACE_DEFINED__) */
@@ -1963,11 +1959,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInputInjectorStatics=_uuidof(IInputInjectorStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics_INTERFACE_DEFINED__) */
@@ -2012,11 +2008,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInputInjectorStatics2=_uuidof(IInputInjectorStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Injection */
+                } /* Preview */
             } /* Input */
-        } /* Preview */
-    } /* Injection */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CPreview_CInjection_CIInputInjectorStatics2_INTERFACE_DEFINED__) */

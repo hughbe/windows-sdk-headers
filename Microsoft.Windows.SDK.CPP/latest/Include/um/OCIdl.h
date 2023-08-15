@@ -441,8 +441,8 @@ extern RPC_IF_HANDLE IOleControlTypes_v1_0_s_ifspec;
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_ocidl_0000_0001_v0_0_c_ifspec;
@@ -943,7 +943,7 @@ EXTERN_C const IID IID_IConnectionPointContainer;
 /* interface __MIDL_itf_ocidl_0000_0005 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
@@ -5987,8 +5987,8 @@ EXTERN_C const IID IID_IPerPropertyBrowsing;
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_ocidl_0000_0037_v0_0_c_ifspec;
@@ -6165,7 +6165,7 @@ EXTERN_C const IID IID_IPropertyBag2;
 /* interface __MIDL_itf_ocidl_0000_0038 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
@@ -6446,8 +6446,8 @@ void __RPC_STUB IAdviseSinkEx_RemoteOnViewStatusChange_Stub(
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_ocidl_0000_0040_v0_0_c_ifspec;
@@ -6618,7 +6618,7 @@ void __RPC_STUB IQuickActivate_RemoteQuickActivate_Stub(
 /* interface __MIDL_itf_ocidl_0000_0041 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 #if _MSC_VER >= 1200
 #pragma warning(pop)

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.perception.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownCameraIntrinsicsPropertiesStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownCameraIntrinsicsPropertiesStatics ABI::Windows::Devices::Perception::IKnownCameraIntrinsicsPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownCameraIntrinsicsPropertiesStatics_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownPerceptionColorFrameSourcePropertiesStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionColorFrameSourcePropertiesStatics ABI::Windows::Devices::Perception::IKnownPerceptionColorFrameSourcePropertiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionColorFrameSourcePropertiesStatics_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownPerceptionDepthFrameSourcePropertiesStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionDepthFrameSourcePropertiesStatics ABI::Windows::Devices::Perception::IKnownPerceptionDepthFrameSourcePropertiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionDepthFrameSourcePropertiesStatics_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownPerceptionFrameSourcePropertiesStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics ABI::Windows::Devices::Perception::IKnownPerceptionFrameSourcePropertiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownPerceptionFrameSourcePropertiesStatics2;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics2 ABI::Windows::Devices::Perception::IKnownPerceptionFrameSourcePropertiesStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics2_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownPerceptionInfraredFrameSourcePropertiesStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionInfraredFrameSourcePropertiesStatics ABI::Windows::Devices::Perception::IKnownPerceptionInfraredFrameSourcePropertiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionInfraredFrameSourcePropertiesStatics_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownPerceptionVideoFrameSourcePropertiesStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoFrameSourcePropertiesStatics ABI::Windows::Devices::Perception::IKnownPerceptionVideoFrameSourcePropertiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoFrameSourcePropertiesStatics_FWD_DEFINED__
@@ -379,9 +375,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IKnownPerceptionVideoProfilePropertiesStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoProfilePropertiesStatics ABI::Windows::Devices::Perception::IKnownPerceptionVideoProfilePropertiesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoProfilePropertiesStatics_FWD_DEFINED__
@@ -393,9 +389,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrame;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrame ABI::Windows::Devices::Perception::IPerceptionColorFrame
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrame_FWD_DEFINED__
@@ -407,9 +403,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameArrivedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameArrivedEventArgs ABI::Windows::Devices::Perception::IPerceptionColorFrameArrivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameArrivedEventArgs_FWD_DEFINED__
@@ -421,9 +417,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameReader;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameReader ABI::Windows::Devices::Perception::IPerceptionColorFrameReader
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameReader_FWD_DEFINED__
@@ -435,9 +431,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameSource;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource ABI::Windows::Devices::Perception::IPerceptionColorFrameSource
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource_FWD_DEFINED__
@@ -449,9 +445,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameSource2;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource2 ABI::Windows::Devices::Perception::IPerceptionColorFrameSource2
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource2_FWD_DEFINED__
@@ -463,9 +459,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameSourceAddedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceAddedEventArgs ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceAddedEventArgs_FWD_DEFINED__
@@ -477,9 +473,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameSourceRemovedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceRemovedEventArgs ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceRemovedEventArgs_FWD_DEFINED__
@@ -491,9 +487,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameSourceStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceStatics ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceStatics_FWD_DEFINED__
@@ -505,9 +501,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionColorFrameSourceWatcher;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher_FWD_DEFINED__
@@ -519,9 +515,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionControlSession;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionControlSession ABI::Windows::Devices::Perception::IPerceptionControlSession
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionControlSession_FWD_DEFINED__
@@ -533,9 +529,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthCorrelatedCameraIntrinsics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCameraIntrinsics ABI::Windows::Devices::Perception::IPerceptionDepthCorrelatedCameraIntrinsics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCameraIntrinsics_FWD_DEFINED__
@@ -547,9 +543,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthCorrelatedCoordinateMapper;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCoordinateMapper ABI::Windows::Devices::Perception::IPerceptionDepthCorrelatedCoordinateMapper
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCoordinateMapper_FWD_DEFINED__
@@ -561,9 +557,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrame;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrame ABI::Windows::Devices::Perception::IPerceptionDepthFrame
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrame_FWD_DEFINED__
@@ -575,9 +571,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameArrivedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameArrivedEventArgs ABI::Windows::Devices::Perception::IPerceptionDepthFrameArrivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameArrivedEventArgs_FWD_DEFINED__
@@ -589,9 +585,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameReader;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameReader ABI::Windows::Devices::Perception::IPerceptionDepthFrameReader
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameReader_FWD_DEFINED__
@@ -603,9 +599,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameSource;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource_FWD_DEFINED__
@@ -617,9 +613,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameSource2;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource2 ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource2
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource2_FWD_DEFINED__
@@ -631,9 +627,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameSourceAddedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceAddedEventArgs ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceAddedEventArgs_FWD_DEFINED__
@@ -645,9 +641,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameSourceRemovedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceRemovedEventArgs ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceRemovedEventArgs_FWD_DEFINED__
@@ -659,9 +655,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameSourceStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceStatics ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceStatics_FWD_DEFINED__
@@ -673,9 +669,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionDepthFrameSourceWatcher;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher_FWD_DEFINED__
@@ -687,9 +683,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionFrameSourcePropertiesChangedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs ABI::Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs_FWD_DEFINED__
@@ -701,9 +697,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionFrameSourcePropertyChangeResult;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertyChangeResult ABI::Windows::Devices::Perception::IPerceptionFrameSourcePropertyChangeResult
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertyChangeResult_FWD_DEFINED__
@@ -715,9 +711,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrame;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrame ABI::Windows::Devices::Perception::IPerceptionInfraredFrame
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrame_FWD_DEFINED__
@@ -729,9 +725,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameArrivedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameArrivedEventArgs ABI::Windows::Devices::Perception::IPerceptionInfraredFrameArrivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameArrivedEventArgs_FWD_DEFINED__
@@ -743,9 +739,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameReader;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameReader ABI::Windows::Devices::Perception::IPerceptionInfraredFrameReader
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameReader_FWD_DEFINED__
@@ -757,9 +753,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameSource;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource_FWD_DEFINED__
@@ -771,9 +767,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameSource2;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource2 ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource2
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource2_FWD_DEFINED__
@@ -785,9 +781,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameSourceAddedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceAddedEventArgs ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceAddedEventArgs_FWD_DEFINED__
@@ -799,9 +795,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameSourceRemovedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceRemovedEventArgs ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceRemovedEventArgs_FWD_DEFINED__
@@ -813,9 +809,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameSourceStatics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceStatics ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceStatics_FWD_DEFINED__
@@ -827,9 +823,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionInfraredFrameSourceWatcher;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher_FWD_DEFINED__
@@ -841,9 +837,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 interface IPerceptionVideoProfile;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPerception_CIPerceptionVideoProfile ABI::Windows::Devices::Perception::IPerceptionVideoProfile
 
 #endif // ____x_ABI_CWindows_CDevices_CPerception_CIPerceptionVideoProfile_FWD_DEFINED__
@@ -856,9 +852,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionColorFrameSource;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -881,7 +877,7 @@ IIterator<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> __FIIterator_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t;
 #define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*>
@@ -913,7 +909,7 @@ IIterable<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> __FIIterable_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t;
 #define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*>
@@ -929,9 +925,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthFrameSource;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -954,7 +950,7 @@ IIterator<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> __FIIterator_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t;
 #define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*>
@@ -986,7 +982,7 @@ IIterable<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> __FIIterable_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t;
 #define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*>
@@ -1002,9 +998,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionInfraredFrameSource;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1027,7 +1023,7 @@ IIterator<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> : I
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> __FIIterator_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t;
 #define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*>
@@ -1059,7 +1055,7 @@ IIterable<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> : I
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> __FIIterable_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t;
 #define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*>
@@ -1075,9 +1071,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionVideoProfile;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1100,7 +1096,7 @@ IIterator<ABI::Windows::Devices::Perception::PerceptionVideoProfile*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Perception::PerceptionVideoProfile*> __FIIterator_1_Windows__CDevices__CPerception__CPerceptionVideoProfile_t;
 #define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionVideoProfile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPerception__CPerceptionVideoProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CPerception__CPerceptionVideoProfile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Perception::IPerceptionVideoProfile*>
@@ -1132,7 +1128,7 @@ IIterable<ABI::Windows::Devices::Perception::PerceptionVideoProfile*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Perception::PerceptionVideoProfile*> __FIIterable_1_Windows__CDevices__CPerception__CPerceptionVideoProfile_t;
 #define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionVideoProfile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPerception__CPerceptionVideoProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CPerception__CPerceptionVideoProfile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Perception::IPerceptionVideoProfile*>
@@ -1164,7 +1160,7 @@ IVectorView<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t;
 #define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*>
@@ -1196,7 +1192,7 @@ IVectorView<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t;
 #define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*>
@@ -1228,7 +1224,7 @@ IVectorView<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> :
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t;
 #define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*>
@@ -1260,7 +1256,7 @@ IVectorView<ABI::Windows::Devices::Perception::PerceptionVideoProfile*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Perception::PerceptionVideoProfile*> __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionVideoProfile_t;
 #define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionVideoProfile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionVideoProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CPerception__CPerceptionVideoProfile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionVideoProfile*>
@@ -1292,7 +1288,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionCol
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*>
@@ -1324,7 +1320,7 @@ IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*> __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*>
@@ -1340,9 +1336,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthCorrelatedCameraIntrinsics;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1365,7 +1361,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionDep
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::IPerceptionDepthCorrelatedCameraIntrinsics*>
@@ -1397,7 +1393,7 @@ IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionDepthCorrelatedCame
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics*> __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCameraIntrinsics ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Perception::IPerceptionDepthCorrelatedCameraIntrinsics*>
@@ -1413,9 +1409,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthCorrelatedCoordinateMapper;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1438,7 +1434,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionDep
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::IPerceptionDepthCorrelatedCoordinateMapper*>
@@ -1470,7 +1466,7 @@ IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionDepthCorrelatedCoor
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper*> __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthCorrelatedCoordinateMapper ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Perception::IPerceptionDepthCorrelatedCoordinateMapper*>
@@ -1502,7 +1498,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionDep
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*>
@@ -1534,7 +1530,7 @@ IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*> __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*>
@@ -1550,9 +1546,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 enum PerceptionFrameSourceAccessStatus : int;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus_USE
@@ -1573,7 +1569,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Perception::Percepti
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Perception::PerceptionFrameSourceAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionFrameSourceAccessStatus>
@@ -1603,7 +1599,7 @@ IAsyncOperation<enum ABI::Windows::Devices::Perception::PerceptionFrameSourceAcc
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::Perception::PerceptionFrameSourceAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourceAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionFrameSourceAccessStatus>
@@ -1618,9 +1614,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionFrameSourcePropertyChangeResult;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1643,7 +1639,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionFra
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::IPerceptionFrameSourcePropertyChangeResult*>
@@ -1675,7 +1671,7 @@ IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionFrameSourceProperty
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult*> __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertyChangeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Perception::IPerceptionFrameSourcePropertyChangeResult*>
@@ -1707,7 +1703,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionInf
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*>
@@ -1739,7 +1735,7 @@ IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*> __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*>
@@ -1771,7 +1767,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CPerception_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*>*>
@@ -1803,7 +1799,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColo
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionColorFrameSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*>*>
@@ -1835,7 +1831,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CPerception_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*>*>
@@ -1867,7 +1863,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDept
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionDepthFrameSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*>*>
@@ -1899,7 +1895,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CPerception_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*>*>
@@ -1931,7 +1927,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfr
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*>*>
@@ -1947,9 +1943,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionColorFrameReader;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1957,9 +1953,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionColorFrameArrivedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1983,7 +1979,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameReader
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameReader*,ABI::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionColorFrameReader*,ABI::Windows::Devices::Perception::IPerceptionColorFrameArrivedEventArgs*>
@@ -2017,7 +2013,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*,IInspectable*>
@@ -2034,9 +2030,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionFrameSourcePropertiesChangedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2060,7 +2056,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource*,ABI::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionColorFrameSource*,ABI::Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs*>
@@ -2077,9 +2073,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionColorFrameSourceWatcher;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2103,7 +2099,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher*,IInspectable*>
@@ -2120,9 +2116,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionColorFrameSourceAddedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2146,7 +2142,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher*,ABI::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher*,ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceAddedEventArgs*>
@@ -2164,9 +2160,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionColorFrameSourceRemovedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2190,7 +2186,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher*,ABI::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher*,ABI::Windows::Devices::Perception::IPerceptionColorFrameSourceRemovedEventArgs*>
@@ -2207,9 +2203,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionControlSession;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2233,7 +2229,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionControlSession*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionControlSession*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionControlSession*,IInspectable*>
@@ -2249,9 +2245,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthFrameReader;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2259,9 +2255,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthFrameArrivedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2285,7 +2281,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameReader
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameReader*,ABI::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionDepthFrameReader*,ABI::Windows::Devices::Perception::IPerceptionDepthFrameArrivedEventArgs*>
@@ -2319,7 +2315,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*,IInspectable*>
@@ -2353,7 +2349,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource*,ABI::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSource*,ABI::Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs*>
@@ -2370,9 +2366,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthFrameSourceWatcher;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2396,7 +2392,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher*,IInspectable*>
@@ -2413,9 +2409,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthFrameSourceAddedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2439,7 +2435,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher*,ABI::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher*,ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceAddedEventArgs*>
@@ -2457,9 +2453,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthFrameSourceRemovedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2483,7 +2479,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher*,ABI::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher*,ABI::Windows::Devices::Perception::IPerceptionDepthFrameSourceRemovedEventArgs*>
@@ -2500,9 +2496,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionInfraredFrameReader;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2510,9 +2506,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionInfraredFrameArrivedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2536,7 +2532,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameRea
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameReader*,ABI::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameReader*,ABI::Windows::Devices::Perception::IPerceptionInfraredFrameArrivedEventArgs*>
@@ -2570,7 +2566,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSou
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*,IInspectable*>
@@ -2604,7 +2600,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSou
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSource*,ABI::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSource*,ABI::Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs*>
@@ -2621,9 +2617,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionInfraredFrameSourceWatcher;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2647,7 +2643,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSou
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher*,IInspectable*>
@@ -2664,9 +2660,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionInfraredFrameSourceAddedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2690,7 +2686,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSou
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher*,ABI::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher*,ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceAddedEventArgs*>
@@ -2708,9 +2704,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionInfraredFrameSourceRemovedEventArgs;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2734,7 +2730,7 @@ ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSou
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher*,ABI::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher*,ABI::Windows::Devices::Perception::IPerceptionInfraredFrameSourceRemovedEventArgs*>
@@ -2766,7 +2762,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -2796,7 +2792,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2826,7 +2822,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2856,7 +2852,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -2875,9 +2871,9 @@ namespace ABI {
                 
                 typedef enum DeviceWatcherStatus : int DeviceWatcherStatus;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2889,9 +2885,9 @@ namespace ABI {
                 
                 typedef enum CollectionChange : int CollectionChange;
                 
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2902,8 +2898,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2915,8 +2911,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2931,9 +2927,9 @@ namespace ABI {
                 
                 typedef struct Matrix4x4 Matrix4x4;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2942,9 +2938,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2955,8 +2951,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2964,8 +2960,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2973,8 +2969,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2986,9 +2982,9 @@ namespace ABI {
                 
                 typedef enum BitmapAlphaMode : int BitmapAlphaMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2997,9 +2993,9 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3010,10 +3006,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class CameraIntrinsics;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_FWD_DEFINED__
@@ -3023,10 +3019,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface ICameraIntrinsics;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics ABI::Windows::Media::Devices::Core::ICameraIntrinsics
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_FWD_DEFINED__
@@ -3040,8 +3036,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -3049,8 +3045,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -3065,9 +3061,9 @@ namespace ABI {
                 
                 typedef enum PerceptionFrameSourceAccessStatus : int PerceptionFrameSourceAccessStatus;
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3076,9 +3072,9 @@ namespace ABI {
                 
                 typedef enum PerceptionFrameSourcePropertyChangeStatus : int PerceptionFrameSourcePropertyChangeStatus;
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3133,9 +3129,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionColorFrame;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3152,9 +3148,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionDepthFrame;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3170,9 +3166,9 @@ namespace ABI {
         namespace Devices {
             namespace Perception {
                 class PerceptionInfraredFrame;
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3217,9 +3213,9 @@ namespace ABI {
                     PerceptionFrameSourceAccessStatus_DeniedBySystem = 3,
                 };
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3252,9 +3248,9 @@ namespace ABI {
                     PerceptionFrameSourcePropertyChangeStatus_ValueOutOfRange = 5,
                 };
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3319,9 +3315,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownCameraIntrinsicsPropertiesStatics=_uuidof(IKnownCameraIntrinsicsPropertiesStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownCameraIntrinsicsPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownCameraIntrinsicsPropertiesStatics_INTERFACE_DEFINED__) */
@@ -3382,9 +3378,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownPerceptionColorFrameSourcePropertiesStatics=_uuidof(IKnownPerceptionColorFrameSourcePropertiesStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionColorFrameSourcePropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionColorFrameSourcePropertiesStatics_INTERFACE_DEFINED__) */
@@ -3438,9 +3434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownPerceptionDepthFrameSourcePropertiesStatics=_uuidof(IKnownPerceptionDepthFrameSourcePropertiesStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionDepthFrameSourcePropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionDepthFrameSourcePropertiesStatics_INTERFACE_DEFINED__) */
@@ -3515,9 +3511,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownPerceptionFrameSourcePropertiesStatics=_uuidof(IKnownPerceptionFrameSourcePropertiesStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics_INTERFACE_DEFINED__) */
@@ -3564,9 +3560,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownPerceptionFrameSourcePropertiesStatics2=_uuidof(IKnownPerceptionFrameSourcePropertiesStatics2);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionFrameSourcePropertiesStatics2_INTERFACE_DEFINED__) */
@@ -3655,9 +3651,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownPerceptionInfraredFrameSourcePropertiesStatics=_uuidof(IKnownPerceptionInfraredFrameSourcePropertiesStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionInfraredFrameSourcePropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionInfraredFrameSourcePropertiesStatics_INTERFACE_DEFINED__) */
@@ -3732,9 +3728,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownPerceptionVideoFrameSourcePropertiesStatics=_uuidof(IKnownPerceptionVideoFrameSourcePropertiesStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoFrameSourcePropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoFrameSourcePropertiesStatics_INTERFACE_DEFINED__) */
@@ -3809,9 +3805,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownPerceptionVideoProfilePropertiesStatics=_uuidof(IKnownPerceptionVideoProfilePropertiesStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoProfilePropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIKnownPerceptionVideoProfilePropertiesStatics_INTERFACE_DEFINED__) */
@@ -3862,9 +3858,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrame=_uuidof(IPerceptionColorFrame);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrame;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrame_INTERFACE_DEFINED__) */
@@ -3918,9 +3914,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameArrivedEventArgs=_uuidof(IPerceptionColorFrameArrivedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameArrivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameArrivedEventArgs_INTERFACE_DEFINED__) */
@@ -3986,14 +3982,14 @@ namespace ABI {
                     DEPRECATED("PerceptionColorFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsPaused(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionColorFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_IsPaused(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -4007,9 +4003,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameReader=_uuidof(IPerceptionColorFrameReader);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameReader_INTERFACE_DEFINED__) */
@@ -4145,21 +4141,21 @@ namespace ABI {
                     DEPRECATED("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Available(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Active(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsControlled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -4209,7 +4205,7 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE CanControlIndependentlyFrom(
                         /* [in] */__RPC__in HSTRING targetId,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -4217,7 +4213,7 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE IsCorrelatedWith(
                         /* [in] */__RPC__in HSTRING targetId,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -4226,7 +4222,7 @@ namespace ABI {
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE TryGetTransformTo(
                         /* [in] */__RPC__in HSTRING targetId,
                         /* [out] */__RPC__out ABI::Windows::Foundation::Numerics::Matrix4x4 * result,
-                        /* [retval, out] */__RPC__out boolean * hasResult
+                        /* [retval, out] */__RPC__out ::boolean * hasResult
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -4266,9 +4262,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameSource=_uuidof(IPerceptionColorFrameSource);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource_INTERFACE_DEFINED__) */
@@ -4315,9 +4311,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameSource2=_uuidof(IPerceptionColorFrameSource2);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource2_INTERFACE_DEFINED__) */
@@ -4364,9 +4360,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameSourceAddedEventArgs=_uuidof(IPerceptionColorFrameSourceAddedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceAddedEventArgs_INTERFACE_DEFINED__) */
@@ -4413,9 +4409,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameSourceRemovedEventArgs=_uuidof(IPerceptionColorFrameSourceRemovedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -4484,9 +4480,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameSourceStatics=_uuidof(IPerceptionColorFrameSourceStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceStatics_INTERFACE_DEFINED__) */
@@ -4603,9 +4599,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionColorFrameSourceWatcher=_uuidof(IPerceptionColorFrameSourceWatcher);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher_INTERFACE_DEFINED__) */
@@ -4673,9 +4669,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionControlSession=_uuidof(IPerceptionControlSession);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionControlSession;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionControlSession_INTERFACE_DEFINED__) */
@@ -4756,9 +4752,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthCorrelatedCameraIntrinsics=_uuidof(IPerceptionDepthCorrelatedCameraIntrinsics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCameraIntrinsics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCameraIntrinsics_INTERFACE_DEFINED__) */
@@ -4839,9 +4835,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthCorrelatedCoordinateMapper=_uuidof(IPerceptionDepthCorrelatedCoordinateMapper);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCoordinateMapper;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthCorrelatedCoordinateMapper_INTERFACE_DEFINED__) */
@@ -4892,9 +4888,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrame=_uuidof(IPerceptionDepthFrame);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrame;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrame_INTERFACE_DEFINED__) */
@@ -4948,9 +4944,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameArrivedEventArgs=_uuidof(IPerceptionDepthFrameArrivedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameArrivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameArrivedEventArgs_INTERFACE_DEFINED__) */
@@ -5016,14 +5012,14 @@ namespace ABI {
                     DEPRECATED("PerceptionDepthFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsPaused(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionDepthFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_IsPaused(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5037,9 +5033,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameReader=_uuidof(IPerceptionDepthFrameReader);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameReader_INTERFACE_DEFINED__) */
@@ -5175,21 +5171,21 @@ namespace ABI {
                     DEPRECATED("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Available(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Active(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsControlled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5239,7 +5235,7 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE CanControlIndependentlyFrom(
                         /* [in] */__RPC__in HSTRING targetId,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5247,7 +5243,7 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE IsCorrelatedWith(
                         /* [in] */__RPC__in HSTRING targetId,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5256,7 +5252,7 @@ namespace ABI {
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE TryGetTransformTo(
                         /* [in] */__RPC__in HSTRING targetId,
                         /* [out] */__RPC__out ABI::Windows::Foundation::Numerics::Matrix4x4 * result,
-                        /* [retval, out] */__RPC__out boolean * hasResult
+                        /* [retval, out] */__RPC__out ::boolean * hasResult
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5296,9 +5292,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameSource=_uuidof(IPerceptionDepthFrameSource);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource_INTERFACE_DEFINED__) */
@@ -5345,9 +5341,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameSource2=_uuidof(IPerceptionDepthFrameSource2);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource2_INTERFACE_DEFINED__) */
@@ -5394,9 +5390,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameSourceAddedEventArgs=_uuidof(IPerceptionDepthFrameSourceAddedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceAddedEventArgs_INTERFACE_DEFINED__) */
@@ -5443,9 +5439,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameSourceRemovedEventArgs=_uuidof(IPerceptionDepthFrameSourceRemovedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -5514,9 +5510,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameSourceStatics=_uuidof(IPerceptionDepthFrameSourceStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceStatics_INTERFACE_DEFINED__) */
@@ -5633,9 +5629,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionDepthFrameSourceWatcher=_uuidof(IPerceptionDepthFrameSourceWatcher);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher_INTERFACE_DEFINED__) */
@@ -5689,9 +5685,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionFrameSourcePropertiesChangedEventArgs=_uuidof(IPerceptionFrameSourcePropertiesChangedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5745,9 +5741,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionFrameSourcePropertyChangeResult=_uuidof(IPerceptionFrameSourcePropertyChangeResult);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertyChangeResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertyChangeResult_INTERFACE_DEFINED__) */
@@ -5798,9 +5794,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrame=_uuidof(IPerceptionInfraredFrame);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrame;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrame_INTERFACE_DEFINED__) */
@@ -5854,9 +5850,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameArrivedEventArgs=_uuidof(IPerceptionInfraredFrameArrivedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameArrivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameArrivedEventArgs_INTERFACE_DEFINED__) */
@@ -5922,14 +5918,14 @@ namespace ABI {
                     DEPRECATED("PerceptionInfraredFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsPaused(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionInfraredFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_IsPaused(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5943,9 +5939,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameReader=_uuidof(IPerceptionInfraredFrameReader);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameReader_INTERFACE_DEFINED__) */
@@ -6081,21 +6077,21 @@ namespace ABI {
                     DEPRECATED("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Available(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Active(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     DEPRECATED("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsControlled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -6145,7 +6141,7 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE CanControlIndependentlyFrom(
                         /* [in] */__RPC__in HSTRING targetId,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -6153,7 +6149,7 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE IsCorrelatedWith(
                         /* [in] */__RPC__in HSTRING targetId,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -6162,7 +6158,7 @@ namespace ABI {
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE TryGetTransformTo(
                         /* [in] */__RPC__in HSTRING targetId,
                         /* [out] */__RPC__out ABI::Windows::Foundation::Numerics::Matrix4x4 * result,
-                        /* [retval, out] */__RPC__out boolean * hasResult
+                        /* [retval, out] */__RPC__out ::boolean * hasResult
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -6202,9 +6198,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameSource=_uuidof(IPerceptionInfraredFrameSource);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource_INTERFACE_DEFINED__) */
@@ -6251,9 +6247,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameSource2=_uuidof(IPerceptionInfraredFrameSource2);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource2_INTERFACE_DEFINED__) */
@@ -6300,9 +6296,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameSourceAddedEventArgs=_uuidof(IPerceptionInfraredFrameSourceAddedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceAddedEventArgs_INTERFACE_DEFINED__) */
@@ -6349,9 +6345,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameSourceRemovedEventArgs=_uuidof(IPerceptionInfraredFrameSourceRemovedEventArgs);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -6420,9 +6416,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameSourceStatics=_uuidof(IPerceptionInfraredFrameSourceStatics);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceStatics_INTERFACE_DEFINED__) */
@@ -6539,9 +6535,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionInfraredFrameSourceWatcher=_uuidof(IPerceptionInfraredFrameSourceWatcher);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher_INTERFACE_DEFINED__) */
@@ -6617,16 +6613,16 @@ namespace ABI {
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE IsEqual(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Perception::IPerceptionVideoProfile * other,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPerceptionVideoProfile=_uuidof(IPerceptionVideoProfile);
                 
-            } /* Windows */
+            } /* Perception */
         } /* Devices */
-    } /* Perception */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPerception_CIPerceptionVideoProfile;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPerception_CIPerceptionVideoProfile_INTERFACE_DEFINED__) */
@@ -10111,7 +10107,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameArrivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameArrivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameReader_Windows__CDevices__CPerception__CPerceptionColorFrameArrivedEventArgsVtbl;
 
@@ -10163,7 +10159,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_IInspectableVtbl;
 
@@ -10215,7 +10211,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgsVtbl;
 
@@ -10267,7 +10263,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_IInspectableVtbl;
 
@@ -10319,7 +10315,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceAddedEventArgsVtbl;
 
@@ -10372,7 +10368,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionColorFrameSourceRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionColorFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionColorFrameSourceRemovedEventArgsVtbl;
 
@@ -10424,7 +10420,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionControlSession * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionControlSession * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionControlSession_IInspectableVtbl;
 
@@ -10476,7 +10472,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameArrivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameArrivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameReader_Windows__CDevices__CPerception__CPerceptionDepthFrameArrivedEventArgsVtbl;
 
@@ -10528,7 +10524,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_IInspectableVtbl;
 
@@ -10580,7 +10576,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgsVtbl;
 
@@ -10632,7 +10628,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_IInspectableVtbl;
 
@@ -10684,7 +10680,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceAddedEventArgsVtbl;
 
@@ -10737,7 +10733,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionDepthFrameSourceRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionDepthFrameSourceRemovedEventArgsVtbl;
 
@@ -10790,7 +10786,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameArrivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameArrivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameReader_Windows__CDevices__CPerception__CPerceptionInfraredFrameArrivedEventArgsVtbl;
 
@@ -10842,7 +10838,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_IInspectableVtbl;
 
@@ -10894,7 +10890,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionFrameSourcePropertiesChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSource_Windows__CDevices__CPerception__CPerceptionFrameSourcePropertiesChangedEventArgsVtbl;
 
@@ -10946,7 +10942,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_IInspectableVtbl;
 
@@ -10998,7 +10994,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceAddedEventArgsVtbl;
 
@@ -11051,7 +11047,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPerception__CPercepti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPerception_CIPerceptionInfraredFrameSourceRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceWatcher_Windows__CDevices__CPerception__CPerceptionInfraredFrameSourceRemovedEventArgsVtbl;
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.management.deployment.preview.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION)
@@ -143,10 +143,10 @@ namespace ABI {
             namespace Deployment {
                 namespace Preview {
                     interface IClassicAppManagerStatics;
-                } /* Windows */
-            } /* Management */
-        } /* Deployment */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Deployment */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics ABI::Windows::Management::Deployment::Preview::IClassicAppManagerStatics
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_FWD_DEFINED__
@@ -159,10 +159,10 @@ namespace ABI {
             namespace Deployment {
                 namespace Preview {
                     interface IInstalledClassicAppInfo;
-                } /* Windows */
-            } /* Management */
-        } /* Deployment */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Deployment */
+        } /* Management */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo ABI::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_FWD_DEFINED__
@@ -178,10 +178,10 @@ namespace ABI {
             namespace Deployment {
                 namespace Preview {
                     class InstalledClassicAppInfo;
-                } /* Windows */
-            } /* Management */
-        } /* Deployment */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Deployment */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 
 
@@ -224,10 +224,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IClassicAppManagerStatics=_uuidof(IClassicAppManagerStatics);
                     
-                } /* Windows */
-            } /* Management */
-        } /* Deployment */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Deployment */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_INTERFACE_DEFINED__) */
@@ -270,10 +270,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInstalledClassicAppInfo=_uuidof(IInstalledClassicAppInfo);
                     
-                } /* Windows */
-            } /* Management */
-        } /* Deployment */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Deployment */
+        } /* Management */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_INTERFACE_DEFINED__) */

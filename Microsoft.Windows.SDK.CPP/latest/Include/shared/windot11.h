@@ -3176,7 +3176,7 @@ typedef struct _DOT11_WPS_DEVICE_NAME {
 typedef 
 struct _DOT11_WFD_CONFIGURATION_TIMEOUT
 {
-    UCHAR GOTimeout;	// Milliseconds
+    UCHAR GOTimeout;
     UCHAR ClientTimeout;
 } DOT11_WFD_CONFIGURATION_TIMEOUT, * PDOT11_WFD_CONFIGURATION_TIMEOUT;
 
@@ -4314,6 +4314,12 @@ typedef struct _DOT11_WFD_ADVERTISED_SERVICE_LIST
 // because it is a Direct Oid that needs to be visible to Ndis
 //
 #define OID_DOT11_SET_FT_REASSOCIATION_PARAMETERS NWF_DEFINE_OID( 0x168, NWF_OPERATIONAL_OID,NWF_MANDATORY_OID)
+
+//
+// OID_DOT11_SET_SAE_AUTH_PARAMS is a new Oid for WDI.  It is defined here
+// because it is a Direct Oid that needs to be visible to Ndis
+//
+#define OID_DOT11_SET_SAE_AUTH_PARAMS NWF_DEFINE_OID( 0x172, NWF_OPERATIONAL_OID,NWF_MANDATORY_OID)
 
 #if _MSC_VER >= 1200
 #pragma warning(pop)

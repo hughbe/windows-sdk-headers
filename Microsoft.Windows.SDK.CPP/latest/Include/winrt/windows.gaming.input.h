@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.gaming.input.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IArcadeStick;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIArcadeStick ABI::Windows::Gaming::Input::IArcadeStick
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIArcadeStick_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IArcadeStickStatics;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics ABI::Windows::Gaming::Input::IArcadeStickStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IArcadeStickStatics2;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics2 ABI::Windows::Gaming::Input::IArcadeStickStatics2
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics2_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IFlightStick;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIFlightStick ABI::Windows::Gaming::Input::IFlightStick
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIFlightStick_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IFlightStickStatics;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIFlightStickStatics ABI::Windows::Gaming::Input::IFlightStickStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIFlightStickStatics_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGameController;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGameController ABI::Windows::Gaming::Input::IGameController
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGameController_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGameControllerBatteryInfo;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGameControllerBatteryInfo ABI::Windows::Gaming::Input::IGameControllerBatteryInfo
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGameControllerBatteryInfo_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGamepad;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGamepad ABI::Windows::Gaming::Input::IGamepad
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGamepad_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGamepad2;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGamepad2 ABI::Windows::Gaming::Input::IGamepad2
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGamepad2_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGamepadStatics;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGamepadStatics ABI::Windows::Gaming::Input::IGamepadStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGamepadStatics_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGamepadStatics2;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGamepadStatics2 ABI::Windows::Gaming::Input::IGamepadStatics2
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGamepadStatics2_FWD_DEFINED__
@@ -434,9 +430,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IHeadset;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIHeadset ABI::Windows::Gaming::Input::IHeadset
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIHeadset_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IRacingWheel;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIRacingWheel ABI::Windows::Gaming::Input::IRacingWheel
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIRacingWheel_FWD_DEFINED__
@@ -462,9 +458,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IRacingWheelStatics;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics ABI::Windows::Gaming::Input::IRacingWheelStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics_FWD_DEFINED__
@@ -476,9 +472,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IRacingWheelStatics2;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics2 ABI::Windows::Gaming::Input::IRacingWheelStatics2
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics2_FWD_DEFINED__
@@ -490,9 +486,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IRawGameController;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIRawGameController ABI::Windows::Gaming::Input::IRawGameController
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIRawGameController_FWD_DEFINED__
@@ -504,9 +500,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IRawGameController2;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIRawGameController2 ABI::Windows::Gaming::Input::IRawGameController2
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIRawGameController2_FWD_DEFINED__
@@ -518,9 +514,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IRawGameControllerStatics;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIRawGameControllerStatics ABI::Windows::Gaming::Input::IRawGameControllerStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIRawGameControllerStatics_FWD_DEFINED__
@@ -532,9 +528,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IUINavigationController;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIUINavigationController ABI::Windows::Gaming::Input::IUINavigationController
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIUINavigationController_FWD_DEFINED__
@@ -546,9 +542,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IUINavigationControllerStatics;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics ABI::Windows::Gaming::Input::IUINavigationControllerStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics_FWD_DEFINED__
@@ -560,9 +556,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IUINavigationControllerStatics2;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics2 ABI::Windows::Gaming::Input::IUINavigationControllerStatics2
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics2_FWD_DEFINED__
@@ -575,9 +571,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 class ArcadeStick;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -600,7 +596,7 @@ IIterator<ABI::Windows::Gaming::Input::ArcadeStick*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::ArcadeStick*> __FIIterator_1_Windows__CGaming__CInput__CArcadeStick_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CArcadeStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::IArcadeStick*>
@@ -632,7 +628,7 @@ IIterable<ABI::Windows::Gaming::Input::ArcadeStick*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::ArcadeStick*> __FIIterable_1_Windows__CGaming__CInput__CArcadeStick_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CArcadeStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::IArcadeStick*>
@@ -648,9 +644,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 class FlightStick;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -673,7 +669,7 @@ IIterator<ABI::Windows::Gaming::Input::FlightStick*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::FlightStick*> __FIIterator_1_Windows__CGaming__CInput__CFlightStick_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CFlightStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::IFlightStick*>
@@ -705,7 +701,7 @@ IIterable<ABI::Windows::Gaming::Input::FlightStick*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::FlightStick*> __FIIterable_1_Windows__CGaming__CInput__CFlightStick_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CFlightStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::IFlightStick*>
@@ -721,9 +717,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 class Gamepad;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -746,7 +742,7 @@ IIterator<ABI::Windows::Gaming::Input::Gamepad*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::Gamepad*> __FIIterator_1_Windows__CGaming__CInput__CGamepad_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CGamepad_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::IGamepad*>
@@ -778,7 +774,7 @@ IIterable<ABI::Windows::Gaming::Input::Gamepad*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::Gamepad*> __FIIterable_1_Windows__CGaming__CInput__CGamepad_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CGamepad_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::IGamepad*>
@@ -794,9 +790,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 class RacingWheel;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -819,7 +815,7 @@ IIterator<ABI::Windows::Gaming::Input::RacingWheel*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::RacingWheel*> __FIIterator_1_Windows__CGaming__CInput__CRacingWheel_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CRacingWheel_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::IRacingWheel*>
@@ -851,7 +847,7 @@ IIterable<ABI::Windows::Gaming::Input::RacingWheel*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::RacingWheel*> __FIIterable_1_Windows__CGaming__CInput__CRacingWheel_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CRacingWheel_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::IRacingWheel*>
@@ -867,9 +863,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 class RawGameController;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -892,7 +888,7 @@ IIterator<ABI::Windows::Gaming::Input::RawGameController*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::RawGameController*> __FIIterator_1_Windows__CGaming__CInput__CRawGameController_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CRawGameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::IRawGameController*>
@@ -924,7 +920,7 @@ IIterable<ABI::Windows::Gaming::Input::RawGameController*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::RawGameController*> __FIIterable_1_Windows__CGaming__CInput__CRawGameController_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CRawGameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::IRawGameController*>
@@ -940,9 +936,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 class UINavigationController;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -965,7 +961,7 @@ IIterator<ABI::Windows::Gaming::Input::UINavigationController*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::UINavigationController*> __FIIterator_1_Windows__CGaming__CInput__CUINavigationController_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CUINavigationController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::IUINavigationController*>
@@ -997,7 +993,7 @@ IIterable<ABI::Windows::Gaming::Input::UINavigationController*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::UINavigationController*> __FIIterable_1_Windows__CGaming__CInput__CUINavigationController_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CUINavigationController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::IUINavigationController*>
@@ -1029,7 +1025,7 @@ IVectorView<ABI::Windows::Gaming::Input::ArcadeStick*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::ArcadeStick*> __FIVectorView_1_Windows__CGaming__CInput__CArcadeStick_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CArcadeStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::IArcadeStick*>
@@ -1061,7 +1057,7 @@ IVectorView<ABI::Windows::Gaming::Input::FlightStick*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::FlightStick*> __FIVectorView_1_Windows__CGaming__CInput__CFlightStick_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CFlightStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::IFlightStick*>
@@ -1093,7 +1089,7 @@ IVectorView<ABI::Windows::Gaming::Input::Gamepad*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::Gamepad*> __FIVectorView_1_Windows__CGaming__CInput__CGamepad_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CGamepad_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::IGamepad*>
@@ -1125,7 +1121,7 @@ IVectorView<ABI::Windows::Gaming::Input::RacingWheel*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::RacingWheel*> __FIVectorView_1_Windows__CGaming__CInput__CRacingWheel_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CRacingWheel_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::IRacingWheel*>
@@ -1157,7 +1153,7 @@ IVectorView<ABI::Windows::Gaming::Input::RawGameController*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::RawGameController*> __FIVectorView_1_Windows__CGaming__CInput__CRawGameController_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CRawGameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::IRawGameController*>
@@ -1189,7 +1185,7 @@ IVectorView<ABI::Windows::Gaming::Input::UINavigationController*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::UINavigationController*> __FIVectorView_1_Windows__CGaming__CInput__CUINavigationController_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CUINavigationController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::IUINavigationController*>
@@ -1221,7 +1217,7 @@ IEventHandler<ABI::Windows::Gaming::Input::ArcadeStick*> : IEventHandler_impl<AB
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Gaming::Input::ArcadeStick*> __FIEventHandler_1_Windows__CGaming__CInput__CArcadeStick_t;
 #define __FIEventHandler_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::__FIEventHandler_1_Windows__CGaming__CInput__CArcadeStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CGaming__CInput__CArcadeStick ABI::Windows::Foundation::IEventHandler<ABI::Windows::Gaming::Input::IArcadeStick*>
@@ -1253,7 +1249,7 @@ IEventHandler<ABI::Windows::Gaming::Input::FlightStick*> : IEventHandler_impl<AB
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Gaming::Input::FlightStick*> __FIEventHandler_1_Windows__CGaming__CInput__CFlightStick_t;
 #define __FIEventHandler_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::__FIEventHandler_1_Windows__CGaming__CInput__CFlightStick_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CGaming__CInput__CFlightStick ABI::Windows::Foundation::IEventHandler<ABI::Windows::Gaming::Input::IFlightStick*>
@@ -1285,7 +1281,7 @@ IEventHandler<ABI::Windows::Gaming::Input::Gamepad*> : IEventHandler_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Gaming::Input::Gamepad*> __FIEventHandler_1_Windows__CGaming__CInput__CGamepad_t;
 #define __FIEventHandler_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::__FIEventHandler_1_Windows__CGaming__CInput__CGamepad_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CGaming__CInput__CGamepad ABI::Windows::Foundation::IEventHandler<ABI::Windows::Gaming::Input::IGamepad*>
@@ -1317,7 +1313,7 @@ IEventHandler<ABI::Windows::Gaming::Input::RacingWheel*> : IEventHandler_impl<AB
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Gaming::Input::RacingWheel*> __FIEventHandler_1_Windows__CGaming__CInput__CRacingWheel_t;
 #define __FIEventHandler_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::__FIEventHandler_1_Windows__CGaming__CInput__CRacingWheel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CGaming__CInput__CRacingWheel ABI::Windows::Foundation::IEventHandler<ABI::Windows::Gaming::Input::IRacingWheel*>
@@ -1349,7 +1345,7 @@ IEventHandler<ABI::Windows::Gaming::Input::RawGameController*> : IEventHandler_i
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Gaming::Input::RawGameController*> __FIEventHandler_1_Windows__CGaming__CInput__CRawGameController_t;
 #define __FIEventHandler_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::__FIEventHandler_1_Windows__CGaming__CInput__CRawGameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CGaming__CInput__CRawGameController ABI::Windows::Foundation::IEventHandler<ABI::Windows::Gaming::Input::IRawGameController*>
@@ -1381,7 +1377,7 @@ IEventHandler<ABI::Windows::Gaming::Input::UINavigationController*> : IEventHand
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Gaming::Input::UINavigationController*> __FIEventHandler_1_Windows__CGaming__CInput__CUINavigationController_t;
 #define __FIEventHandler_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::__FIEventHandler_1_Windows__CGaming__CInput__CUINavigationController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CGaming__CInput__CUINavigationController ABI::Windows::Foundation::IEventHandler<ABI::Windows::Gaming::Input::IUINavigationController*>
@@ -1398,9 +1394,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 class Headset;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1424,7 +1420,7 @@ ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::G
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::Gaming::Input::Headset*> __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset_t;
 #define __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::Gaming::Input::IHeadset*>
@@ -1441,8 +1437,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class UserChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUserChangedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUserChangedEventArgs_FWD_DEFINED__
@@ -1450,8 +1446,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserChangedEventArgs ABI::Windows::System::IUserChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserChangedEventArgs_FWD_DEFINED__
@@ -1478,7 +1474,7 @@ ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::S
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::System::UserChangedEventArgs*> __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::System::IUserChangedEventArgs*>
@@ -1496,10 +1492,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     class ForceFeedbackMotor;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor_FWD_DEFINED__
@@ -1509,10 +1505,10 @@ namespace ABI {
             namespace Input {
                 namespace ForceFeedback {
                     interface IForceFeedbackMotor;
-                } /* Windows */
-            } /* Gaming */
-        } /* Input */
-    } /* ForceFeedback */} /* ABI */
+                } /* ForceFeedback */
+            } /* Input */
+        } /* Gaming */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CForceFeedback_CIForceFeedbackMotor_FWD_DEFINED__
@@ -1538,7 +1534,7 @@ IIterator<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> __FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t;
 #define __FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor*>
@@ -1570,7 +1566,7 @@ IIterable<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> __FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t;
 #define __FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor*>
@@ -1602,7 +1598,7 @@ IVectorView<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor*> __FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t;
 #define __FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGaming__CInput__CForceFeedback__CForceFeedbackMotor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Gaming::Input::ForceFeedback::IForceFeedbackMotor*>
@@ -1618,9 +1614,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 class SimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -1629,9 +1625,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface ISimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController ABI::Windows::Devices::Haptics::ISimpleHapticsController
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -1657,7 +1653,7 @@ IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
 #define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
@@ -1689,7 +1685,7 @@ IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
 #define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
@@ -1721,7 +1717,7 @@ IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
 #define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
@@ -1743,9 +1739,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 class BatteryReport;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_FWD_DEFINED__
@@ -1754,9 +1750,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 interface IBatteryReport;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPower_CIBatteryReport ABI::Windows::Devices::Power::IBatteryReport
 
 #endif // ____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_FWD_DEFINED__
@@ -1777,8 +1773,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1786,8 +1782,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1804,9 +1800,9 @@ namespace ABI {
                 
                 typedef enum ArcadeStickButtons : unsigned int ArcadeStickButtons;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1815,9 +1811,9 @@ namespace ABI {
                 
                 typedef enum FlightStickButtons : unsigned int FlightStickButtons;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1826,9 +1822,9 @@ namespace ABI {
                 
                 typedef enum GameControllerButtonLabel : int GameControllerButtonLabel;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1837,9 +1833,9 @@ namespace ABI {
                 
                 typedef enum GameControllerSwitchKind : int GameControllerSwitchKind;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1848,9 +1844,9 @@ namespace ABI {
                 
                 typedef enum GameControllerSwitchPosition : int GameControllerSwitchPosition;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1859,9 +1855,9 @@ namespace ABI {
                 
                 typedef enum GamepadButtons : unsigned int GamepadButtons;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1870,9 +1866,9 @@ namespace ABI {
                 
                 typedef enum OptionalUINavigationButtons : unsigned int OptionalUINavigationButtons;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1881,9 +1877,9 @@ namespace ABI {
                 
                 typedef enum RacingWheelButtons : unsigned int RacingWheelButtons;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1892,9 +1888,9 @@ namespace ABI {
                 
                 typedef enum RequiredUINavigationButtons : unsigned int RequiredUINavigationButtons;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1903,9 +1899,9 @@ namespace ABI {
                 
                 typedef struct ArcadeStickReading ArcadeStickReading;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1914,9 +1910,9 @@ namespace ABI {
                 
                 typedef struct FlightStickReading FlightStickReading;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1925,9 +1921,9 @@ namespace ABI {
                 
                 typedef struct GamepadReading GamepadReading;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1936,9 +1932,9 @@ namespace ABI {
                 
                 typedef struct GamepadVibration GamepadVibration;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1947,9 +1943,9 @@ namespace ABI {
                 
                 typedef struct RacingWheelReading RacingWheelReading;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1958,9 +1954,9 @@ namespace ABI {
                 
                 typedef struct UINavigationReading UINavigationReading;
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2033,9 +2029,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(ArcadeStickButtons)
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2063,9 +2059,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(FlightStickButtons)
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2157,9 +2153,9 @@ namespace ABI {
                     GameControllerButtonLabel_Suspension = 68,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2185,9 +2181,9 @@ namespace ABI {
                     GameControllerSwitchKind_EightWay = 2,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2219,9 +2215,9 @@ namespace ABI {
                     GameControllerSwitchPosition_UpLeft = 8,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2281,9 +2277,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(GamepadButtons)
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2321,9 +2317,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(OptionalUINavigationButtons)
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2371,9 +2367,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(RacingWheelButtons)
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2407,9 +2403,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(RequiredUINavigationButtons)
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2434,9 +2430,9 @@ namespace ABI {
                     ABI::Windows::Gaming::Input::ArcadeStickButtons Buttons;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2466,9 +2462,9 @@ namespace ABI {
                     DOUBLE Throttle;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2499,9 +2495,9 @@ namespace ABI {
                     DOUBLE RightThumbstickY;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2528,9 +2524,9 @@ namespace ABI {
                     DOUBLE RightTrigger;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2561,9 +2557,9 @@ namespace ABI {
                     DOUBLE Handbrake;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2589,9 +2585,9 @@ namespace ABI {
                     ABI::Windows::Gaming::Input::OptionalUINavigationButtons OptionalButtons;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2635,9 +2631,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IArcadeStick=_uuidof(IArcadeStick);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIArcadeStick;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIArcadeStick_INTERFACE_DEFINED__) */
@@ -2690,9 +2686,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IArcadeStickStatics=_uuidof(IArcadeStickStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics_INTERFACE_DEFINED__) */
@@ -2736,9 +2732,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IArcadeStickStatics2=_uuidof(IArcadeStickStatics2);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIArcadeStickStatics2_INTERFACE_DEFINED__) */
@@ -2788,9 +2784,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFlightStick=_uuidof(IFlightStick);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIFlightStick;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIFlightStick_INTERFACE_DEFINED__) */
@@ -2847,9 +2843,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFlightStickStatics=_uuidof(IFlightStickStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIFlightStickStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIFlightStickStatics_INTERFACE_DEFINED__) */
@@ -2902,7 +2898,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Gaming::Input::IHeadset * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsWireless(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
@@ -2912,9 +2908,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGameController=_uuidof(IGameController);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIGameController;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIGameController_INTERFACE_DEFINED__) */
@@ -2950,9 +2946,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGameControllerBatteryInfo=_uuidof(IGameControllerBatteryInfo);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIGameControllerBatteryInfo;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIGameControllerBatteryInfo_INTERFACE_DEFINED__) */
@@ -3001,9 +2997,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGamepad=_uuidof(IGamepad);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIGamepad;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIGamepad_INTERFACE_DEFINED__) */
@@ -3048,9 +3044,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGamepad2=_uuidof(IGamepad2);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIGamepad2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIGamepad2_INTERFACE_DEFINED__) */
@@ -3103,9 +3099,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGamepadStatics=_uuidof(IGamepadStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIGamepadStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIGamepadStatics_INTERFACE_DEFINED__) */
@@ -3149,9 +3145,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGamepadStatics2=_uuidof(IGamepadStatics2);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIGamepadStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIGamepadStatics2_INTERFACE_DEFINED__) */
@@ -3193,9 +3189,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHeadset=_uuidof(IHeadset);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIHeadset;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIHeadset_INTERFACE_DEFINED__) */
@@ -3231,13 +3227,13 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasClutch(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasHandbrake(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasPatternShifter(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxPatternShifterGear(
                         /* [retval, out] */__RPC__out INT32 * value
@@ -3260,9 +3256,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRacingWheel=_uuidof(IRacingWheel);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIRacingWheel;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIRacingWheel_INTERFACE_DEFINED__) */
@@ -3315,9 +3311,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRacingWheelStatics=_uuidof(IRacingWheelStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics_INTERFACE_DEFINED__) */
@@ -3361,9 +3357,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRacingWheelStatics2=_uuidof(IRacingWheelStatics2);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIRacingWheelStatics2_INTERFACE_DEFINED__) */
@@ -3422,7 +3418,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetCurrentReading(
                         /* [in] */UINT32 __buttonArraySize,
-                        /* [size_is(__buttonArraySize), out] */__RPC__out_ecount_full(__buttonArraySize) boolean * buttonArray,
+                        /* [size_is(__buttonArraySize), out] */__RPC__out_ecount_full(__buttonArraySize) ::boolean * buttonArray,
                         /* [in] */UINT32 __switchArraySize,
                         /* [size_is(__switchArraySize), out] */__RPC__out_ecount_full(__switchArraySize) ABI::Windows::Gaming::Input::GameControllerSwitchPosition * switchArray,
                         /* [in] */UINT32 __axisArraySize,
@@ -3438,9 +3434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRawGameController=_uuidof(IRawGameController);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIRawGameController;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIRawGameController_INTERFACE_DEFINED__) */
@@ -3490,9 +3486,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRawGameController2=_uuidof(IRawGameController2);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIRawGameController2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIRawGameController2_INTERFACE_DEFINED__) */
@@ -3549,9 +3545,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRawGameControllerStatics=_uuidof(IRawGameControllerStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIRawGameControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIRawGameControllerStatics_INTERFACE_DEFINED__) */
@@ -3602,9 +3598,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUINavigationController=_uuidof(IUINavigationController);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIUINavigationController;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIUINavigationController_INTERFACE_DEFINED__) */
@@ -3657,9 +3653,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUINavigationControllerStatics=_uuidof(IUINavigationControllerStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics_INTERFACE_DEFINED__) */
@@ -3703,9 +3699,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUINavigationControllerStatics2=_uuidof(IUINavigationControllerStatics2);
                 
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CInput_CIUINavigationControllerStatics2_INTERFACE_DEFINED__) */
@@ -5986,7 +5982,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameControlle
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIGameController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIHeadset * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadset * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIGameController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIHeadset * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CGaming__CInput__CHeadsetVtbl;
 
@@ -6045,7 +6041,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameControlle
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIGameController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIGameController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgsVtbl;
 

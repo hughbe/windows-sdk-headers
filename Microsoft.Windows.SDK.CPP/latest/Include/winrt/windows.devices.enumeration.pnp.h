@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.enumeration.pnp.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     interface IPnpObject;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObject ABI::Windows::Devices::Enumeration::Pnp::IPnpObject
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObject_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     interface IPnpObjectStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectStatics ABI::Windows::Devices::Enumeration::Pnp::IPnpObjectStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectStatics_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     interface IPnpObjectUpdate;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectUpdate ABI::Windows::Devices::Enumeration::Pnp::IPnpObjectUpdate
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectUpdate_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     interface IPnpObjectWatcher;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher ABI::Windows::Devices::Enumeration::Pnp::IPnpObjectWatcher
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     class PnpObject;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -369,7 +365,7 @@ IIterator<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> __FIIterator_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t;
 #define __FIIterator_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Enumeration::Pnp::IPnpObject*>
@@ -401,7 +397,7 @@ IIterable<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> __FIIterable_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t;
 #define __FIIterable_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Enumeration::Pnp::IPnpObject*>
@@ -433,7 +429,7 @@ IVectorView<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> __FIVectorView_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t;
 #define __FIVectorView_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Enumeration::Pnp::IPnpObject*>
@@ -465,7 +461,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObje
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::Pnp::IPnpObject*>
@@ -497,7 +493,7 @@ IAsyncOperation<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Enumeration::Pnp::IPnpObject*>
@@ -514,10 +510,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     class PnpObjectCollection;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -540,7 +536,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObje
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectCollection*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection ABI::Windows::Foundation::IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject*>
@@ -572,7 +568,7 @@ IAsyncOperation<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectCollection*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectCollection*> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CPnp__CPnpObjectCollection ABI::Windows::Foundation::IAsyncOperation<__FIVectorView_1_Windows__CDevices__CEnumeration__CPnp__CPnpObject*>
@@ -589,10 +585,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     class PnpObjectWatcher;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -616,7 +612,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher*,II
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::IPnpObjectWatcher*,IInspectable*>
@@ -650,7 +646,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher*,ABI::Windows::Devices::Enumeration::Pnp::PnpObject*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::IPnpObjectWatcher*,ABI::Windows::Devices::Enumeration::Pnp::IPnpObject*>
@@ -669,10 +665,10 @@ namespace ABI {
             namespace Enumeration {
                 namespace Pnp {
                     class PnpObjectUpdate;
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -696,7 +692,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher*,ABI::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::Pnp::IPnpObjectWatcher*,ABI::Windows::Devices::Enumeration::Pnp::IPnpObjectUpdate*>
@@ -728,7 +724,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -758,7 +754,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -788,7 +784,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -818,7 +814,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -847,7 +843,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -876,7 +872,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -895,9 +891,9 @@ namespace ABI {
                 
                 typedef enum DeviceWatcherStatus : int DeviceWatcherStatus;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -913,10 +909,10 @@ namespace ABI {
                     
                     typedef enum PnpObjectType : int PnpObjectType;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -969,10 +965,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1018,10 +1014,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPnpObject=_uuidof(IPnpObject);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObject;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObject_INTERFACE_DEFINED__) */
@@ -1086,10 +1082,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPnpObjectStatics=_uuidof(IPnpObjectStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectStatics_INTERFACE_DEFINED__) */
@@ -1135,10 +1131,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPnpObjectUpdate=_uuidof(IPnpObjectUpdate);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectUpdate;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectUpdate_INTERFACE_DEFINED__) */
@@ -1215,10 +1211,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPnpObjectWatcher=_uuidof(IPnpObjectWatcher);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Enumeration */
-    } /* Pnp */} /* ABI */
+                } /* Pnp */
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher_INTERFACE_DEFINED__) */
@@ -1875,7 +1871,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_IInspectableVtbl;
 
@@ -1927,7 +1923,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObject * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObject * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObject * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectVtbl;
 
@@ -1980,7 +1976,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectUpdate * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdate * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CPnp_CIPnpObjectUpdate * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CPnp__CPnpObjectWatcher_Windows__CDevices__CEnumeration__CPnp__CPnpObjectUpdateVtbl;
 

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -42,9 +42,16 @@ enum class SystemOutOfBoxExperienceState : int32_t
     Completed = 2,
 };
 
+enum class UnsupportedAppRequirementReasons : uint32_t
+{
+    Unknown = 0x0,
+    DeniedBySystem = 0x1,
+};
+
 struct IAnalyticsInfoStatics;
 struct IAnalyticsInfoStatics2;
 struct IAnalyticsVersionInfo;
+struct IAppApplicabilityStatics;
 struct IEducationSettingsStatics;
 struct IHardwareIdentificationStatics;
 struct IHardwareToken;
@@ -56,9 +63,11 @@ struct ISharedModeSettingsStatics2;
 struct ISystemIdentificationInfo;
 struct ISystemIdentificationStatics;
 struct ISystemSetupInfoStatics;
+struct IUnsupportedAppRequirement;
 struct IWindowsIntegrityPolicyStatics;
 struct AnalyticsInfo;
 struct AnalyticsVersionInfo;
+struct AppApplicability;
 struct EducationSettings;
 struct HardwareIdentification;
 struct HardwareToken;
@@ -69,15 +78,18 @@ struct SharedModeSettings;
 struct SystemIdentification;
 struct SystemIdentificationInfo;
 struct SystemSetupInfo;
+struct UnsupportedAppRequirement;
 struct WindowsIntegrityPolicy;
 
 }
 
 namespace winrt::impl {
 
+template<> struct is_enum_flag<Windows::System::Profile::UnsupportedAppRequirementReasons> : std::true_type {};
 template <> struct category<Windows::System::Profile::IAnalyticsInfoStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::IAnalyticsInfoStatics2>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::IAnalyticsVersionInfo>{ using type = interface_category; };
+template <> struct category<Windows::System::Profile::IAppApplicabilityStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::IEducationSettingsStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::IHardwareIdentificationStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::IHardwareToken>{ using type = interface_category; };
@@ -89,9 +101,11 @@ template <> struct category<Windows::System::Profile::ISharedModeSettingsStatics
 template <> struct category<Windows::System::Profile::ISystemIdentificationInfo>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::ISystemIdentificationStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::ISystemSetupInfoStatics>{ using type = interface_category; };
+template <> struct category<Windows::System::Profile::IUnsupportedAppRequirement>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::IWindowsIntegrityPolicyStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::Profile::AnalyticsInfo>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::AnalyticsVersionInfo>{ using type = class_category; };
+template <> struct category<Windows::System::Profile::AppApplicability>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::EducationSettings>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::HardwareIdentification>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::HardwareToken>{ using type = class_category; };
@@ -102,13 +116,16 @@ template <> struct category<Windows::System::Profile::SharedModeSettings>{ using
 template <> struct category<Windows::System::Profile::SystemIdentification>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::SystemIdentificationInfo>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::SystemSetupInfo>{ using type = class_category; };
+template <> struct category<Windows::System::Profile::UnsupportedAppRequirement>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::WindowsIntegrityPolicy>{ using type = class_category; };
 template <> struct category<Windows::System::Profile::PlatformDataCollectionLevel>{ using type = enum_category; };
 template <> struct category<Windows::System::Profile::SystemIdentificationSource>{ using type = enum_category; };
 template <> struct category<Windows::System::Profile::SystemOutOfBoxExperienceState>{ using type = enum_category; };
+template <> struct category<Windows::System::Profile::UnsupportedAppRequirementReasons>{ using type = enum_category; };
 template <> struct name<Windows::System::Profile::IAnalyticsInfoStatics>{ static constexpr auto & value{ L"Windows.System.Profile.IAnalyticsInfoStatics" }; };
 template <> struct name<Windows::System::Profile::IAnalyticsInfoStatics2>{ static constexpr auto & value{ L"Windows.System.Profile.IAnalyticsInfoStatics2" }; };
 template <> struct name<Windows::System::Profile::IAnalyticsVersionInfo>{ static constexpr auto & value{ L"Windows.System.Profile.IAnalyticsVersionInfo" }; };
+template <> struct name<Windows::System::Profile::IAppApplicabilityStatics>{ static constexpr auto & value{ L"Windows.System.Profile.IAppApplicabilityStatics" }; };
 template <> struct name<Windows::System::Profile::IEducationSettingsStatics>{ static constexpr auto & value{ L"Windows.System.Profile.IEducationSettingsStatics" }; };
 template <> struct name<Windows::System::Profile::IHardwareIdentificationStatics>{ static constexpr auto & value{ L"Windows.System.Profile.IHardwareIdentificationStatics" }; };
 template <> struct name<Windows::System::Profile::IHardwareToken>{ static constexpr auto & value{ L"Windows.System.Profile.IHardwareToken" }; };
@@ -120,9 +137,11 @@ template <> struct name<Windows::System::Profile::ISharedModeSettingsStatics2>{ 
 template <> struct name<Windows::System::Profile::ISystemIdentificationInfo>{ static constexpr auto & value{ L"Windows.System.Profile.ISystemIdentificationInfo" }; };
 template <> struct name<Windows::System::Profile::ISystemIdentificationStatics>{ static constexpr auto & value{ L"Windows.System.Profile.ISystemIdentificationStatics" }; };
 template <> struct name<Windows::System::Profile::ISystemSetupInfoStatics>{ static constexpr auto & value{ L"Windows.System.Profile.ISystemSetupInfoStatics" }; };
+template <> struct name<Windows::System::Profile::IUnsupportedAppRequirement>{ static constexpr auto & value{ L"Windows.System.Profile.IUnsupportedAppRequirement" }; };
 template <> struct name<Windows::System::Profile::IWindowsIntegrityPolicyStatics>{ static constexpr auto & value{ L"Windows.System.Profile.IWindowsIntegrityPolicyStatics" }; };
 template <> struct name<Windows::System::Profile::AnalyticsInfo>{ static constexpr auto & value{ L"Windows.System.Profile.AnalyticsInfo" }; };
 template <> struct name<Windows::System::Profile::AnalyticsVersionInfo>{ static constexpr auto & value{ L"Windows.System.Profile.AnalyticsVersionInfo" }; };
+template <> struct name<Windows::System::Profile::AppApplicability>{ static constexpr auto & value{ L"Windows.System.Profile.AppApplicability" }; };
 template <> struct name<Windows::System::Profile::EducationSettings>{ static constexpr auto & value{ L"Windows.System.Profile.EducationSettings" }; };
 template <> struct name<Windows::System::Profile::HardwareIdentification>{ static constexpr auto & value{ L"Windows.System.Profile.HardwareIdentification" }; };
 template <> struct name<Windows::System::Profile::HardwareToken>{ static constexpr auto & value{ L"Windows.System.Profile.HardwareToken" }; };
@@ -133,13 +152,16 @@ template <> struct name<Windows::System::Profile::SharedModeSettings>{ static co
 template <> struct name<Windows::System::Profile::SystemIdentification>{ static constexpr auto & value{ L"Windows.System.Profile.SystemIdentification" }; };
 template <> struct name<Windows::System::Profile::SystemIdentificationInfo>{ static constexpr auto & value{ L"Windows.System.Profile.SystemIdentificationInfo" }; };
 template <> struct name<Windows::System::Profile::SystemSetupInfo>{ static constexpr auto & value{ L"Windows.System.Profile.SystemSetupInfo" }; };
+template <> struct name<Windows::System::Profile::UnsupportedAppRequirement>{ static constexpr auto & value{ L"Windows.System.Profile.UnsupportedAppRequirement" }; };
 template <> struct name<Windows::System::Profile::WindowsIntegrityPolicy>{ static constexpr auto & value{ L"Windows.System.Profile.WindowsIntegrityPolicy" }; };
 template <> struct name<Windows::System::Profile::PlatformDataCollectionLevel>{ static constexpr auto & value{ L"Windows.System.Profile.PlatformDataCollectionLevel" }; };
 template <> struct name<Windows::System::Profile::SystemIdentificationSource>{ static constexpr auto & value{ L"Windows.System.Profile.SystemIdentificationSource" }; };
 template <> struct name<Windows::System::Profile::SystemOutOfBoxExperienceState>{ static constexpr auto & value{ L"Windows.System.Profile.SystemOutOfBoxExperienceState" }; };
+template <> struct name<Windows::System::Profile::UnsupportedAppRequirementReasons>{ static constexpr auto & value{ L"Windows.System.Profile.UnsupportedAppRequirementReasons" }; };
 template <> struct guid_storage<Windows::System::Profile::IAnalyticsInfoStatics>{ static constexpr guid value{ 0x1D5EE066,0x188D,0x5BA9,{ 0x43,0x87,0xAC,0xAE,0xB0,0xE7,0xE3,0x05 } }; };
 template <> struct guid_storage<Windows::System::Profile::IAnalyticsInfoStatics2>{ static constexpr guid value{ 0x101704EA,0xA7F9,0x46D2,{ 0xAB,0x94,0x01,0x68,0x65,0xAF,0xDB,0x25 } }; };
 template <> struct guid_storage<Windows::System::Profile::IAnalyticsVersionInfo>{ static constexpr guid value{ 0x926130B8,0x9955,0x4C74,{ 0xBD,0xC1,0x7C,0xD0,0xDE,0xCF,0x9B,0x03 } }; };
+template <> struct guid_storage<Windows::System::Profile::IAppApplicabilityStatics>{ static constexpr guid value{ 0x1664A082,0x0F38,0x5C99,{ 0x83,0xE4,0x48,0x99,0x59,0x70,0x86,0x1C } }; };
 template <> struct guid_storage<Windows::System::Profile::IEducationSettingsStatics>{ static constexpr guid value{ 0xFC53F0EF,0x4D3E,0x4E13,{ 0x9B,0x23,0x50,0x5F,0x4D,0x09,0x1E,0x92 } }; };
 template <> struct guid_storage<Windows::System::Profile::IHardwareIdentificationStatics>{ static constexpr guid value{ 0x971260E0,0xF170,0x4A42,{ 0xBD,0x55,0xA9,0x00,0xB2,0x12,0xDA,0xE2 } }; };
 template <> struct guid_storage<Windows::System::Profile::IHardwareToken>{ static constexpr guid value{ 0x28F6D4C0,0xFB12,0x40A4,{ 0x81,0x67,0x7F,0x4E,0x03,0xD2,0x72,0x4C } }; };
@@ -151,10 +173,12 @@ template <> struct guid_storage<Windows::System::Profile::ISharedModeSettingsSta
 template <> struct guid_storage<Windows::System::Profile::ISystemIdentificationInfo>{ static constexpr guid value{ 0x0C659E7D,0xC3C2,0x4D33,{ 0xA2,0xDF,0x21,0xBC,0x41,0x91,0x6E,0xB3 } }; };
 template <> struct guid_storage<Windows::System::Profile::ISystemIdentificationStatics>{ static constexpr guid value{ 0x5581F42A,0xD3DF,0x4D93,{ 0xA3,0x7D,0xC4,0x1A,0x61,0x6C,0x6D,0x01 } }; };
 template <> struct guid_storage<Windows::System::Profile::ISystemSetupInfoStatics>{ static constexpr guid value{ 0x2C9620A8,0x1D88,0x5E2D,{ 0xA3,0x24,0xA5,0x43,0xAF,0x42,0x47,0xEE } }; };
+template <> struct guid_storage<Windows::System::Profile::IUnsupportedAppRequirement>{ static constexpr guid value{ 0x6182445C,0x894B,0x5CBC,{ 0x89,0x76,0xA9,0x8E,0x0A,0x9B,0x99,0x8D } }; };
 template <> struct guid_storage<Windows::System::Profile::IWindowsIntegrityPolicyStatics>{ static constexpr guid value{ 0x7D1D81DB,0x8D63,0x4789,{ 0x9E,0xA5,0xDD,0xCF,0x65,0xA9,0x4F,0x3C } }; };
 template <> struct default_interface<Windows::System::Profile::AnalyticsVersionInfo>{ using type = Windows::System::Profile::IAnalyticsVersionInfo; };
 template <> struct default_interface<Windows::System::Profile::HardwareToken>{ using type = Windows::System::Profile::IHardwareToken; };
 template <> struct default_interface<Windows::System::Profile::SystemIdentificationInfo>{ using type = Windows::System::Profile::ISystemIdentificationInfo; };
+template <> struct default_interface<Windows::System::Profile::UnsupportedAppRequirement>{ using type = Windows::System::Profile::IUnsupportedAppRequirement; };
 
 template <> struct abi<Windows::System::Profile::IAnalyticsInfoStatics>{ struct type : IInspectable
 {
@@ -171,6 +195,11 @@ template <> struct abi<Windows::System::Profile::IAnalyticsVersionInfo>{ struct 
 {
     virtual int32_t WINRT_CALL get_DeviceFamily(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_DeviceFamilyVersion(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::System::Profile::IAppApplicabilityStatics>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetUnsupportedAppRequirements(void* capabilities, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::System::Profile::IEducationSettingsStatics>{ struct type : IInspectable
@@ -259,6 +288,12 @@ template <> struct abi<Windows::System::Profile::ISystemSetupInfoStatics>{ struc
     virtual int32_t WINRT_CALL remove_OutOfBoxExperienceStateChanged(winrt::event_token token) noexcept = 0;
 };};
 
+template <> struct abi<Windows::System::Profile::IUnsupportedAppRequirement>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Requirement(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Reasons(Windows::System::Profile::UnsupportedAppRequirementReasons* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::System::Profile::IWindowsIntegrityPolicyStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_IsEnabled(bool* value) noexcept = 0;
@@ -291,6 +326,13 @@ struct consume_Windows_System_Profile_IAnalyticsVersionInfo
     hstring DeviceFamilyVersion() const;
 };
 template <> struct consume<Windows::System::Profile::IAnalyticsVersionInfo> { template <typename D> using type = consume_Windows_System_Profile_IAnalyticsVersionInfo<D>; };
+
+template <typename D>
+struct consume_Windows_System_Profile_IAppApplicabilityStatics
+{
+    Windows::Foundation::Collections::IVectorView<Windows::System::Profile::UnsupportedAppRequirement> GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities) const;
+};
+template <> struct consume<Windows::System::Profile::IAppApplicabilityStatics> { template <typename D> using type = consume_Windows_System_Profile_IAppApplicabilityStatics<D>; };
 
 template <typename D>
 struct consume_Windows_System_Profile_IEducationSettingsStatics
@@ -403,6 +445,14 @@ struct consume_Windows_System_Profile_ISystemSetupInfoStatics
     void OutOfBoxExperienceStateChanged(winrt::event_token const& token) const noexcept;
 };
 template <> struct consume<Windows::System::Profile::ISystemSetupInfoStatics> { template <typename D> using type = consume_Windows_System_Profile_ISystemSetupInfoStatics<D>; };
+
+template <typename D>
+struct consume_Windows_System_Profile_IUnsupportedAppRequirement
+{
+    hstring Requirement() const;
+    Windows::System::Profile::UnsupportedAppRequirementReasons Reasons() const;
+};
+template <> struct consume<Windows::System::Profile::IUnsupportedAppRequirement> { template <typename D> using type = consume_Windows_System_Profile_IUnsupportedAppRequirement<D>; };
 
 template <typename D>
 struct consume_Windows_System_Profile_IWindowsIntegrityPolicyStatics

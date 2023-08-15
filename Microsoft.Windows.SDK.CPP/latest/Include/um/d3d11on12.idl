@@ -13,7 +13,7 @@ import "d3d12.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 cpp_quote( "" )
 cpp_quote( "///////////////////////////////////////////////////////////////////////////" )
@@ -121,7 +121,7 @@ interface ID3D11On12Device1
 }
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote( "DEFINE_GUID(IID_ID3D11On12Device,0x85611e73,0x70a9,0x490e,0x96,0x14,0xa9,0xe3,0x02,0x77,0x79,0x04);" )

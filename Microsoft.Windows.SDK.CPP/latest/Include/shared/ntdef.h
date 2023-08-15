@@ -24,6 +24,28 @@ Abstract:
 #include <ctype.h>  // winnt ntndis
 #include <winapifamily.h>  // winnt
 
+// begin_winnt begin_ntoshvp begin_ntddk
+
+//
+// Anywhere that NOINITALL is defined, warning 4845 should be disabled. This warning
+// fires whenever __declspec(no_init_all) is found but /d1initall isn't set. This isn't
+// helpful since this will be done intentionally (not all components opt-in).
+//
+
+#if (_MSC_VER >= 1915)
+#pragma warning(disable:4845)   // __declspec(no_init_all) used but d1initall not set
+#endif
+
+#ifndef DECLSPEC_NOINITALL
+#if (_MSC_VER >= 1915) && !defined(MIDL_PASS)
+#define DECLSPEC_NOINITALL __declspec(no_init_all)
+#else
+#define DECLSPEC_NOINITALL
+#endif
+#endif
+
+// end_winnt end_ntoshvp end_ntddk
+
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #pragma warning(disable:4201) // nameless struct/union
@@ -1963,8 +1985,8 @@ typedef struct  _OBJECTID {     // size is 20
 
 // end_ntndis end_ntminiport
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family Or Game Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 // begin_ntndis begin_ntminiport
 
@@ -1974,7 +1996,7 @@ char (*RtlpNumberOf( UNALIGNED T (&)[N] ))[N];
 
 // end_ntndis end_ntminiport
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 // begin_ntndis begin_ntminiport
@@ -2167,6 +2189,17 @@ typedef KIRQL *PKIRQL;
 // end_ntoshvp
 // end_wudfwdm
 // end_ntminiport end_ntndis
+
+// begin_winnt
+
+//
+// Enclave ID definitions
+//
+
+#define ENCLAVE_SHORT_ID_LENGTH             16
+#define ENCLAVE_LONG_ID_LENGTH              32
+
+// end_winnt
 
 //
 // Product types
@@ -2369,6 +2402,7 @@ typedef _Enum_is_bitflag_ enum _SUITE_TYPE {
 #define PRODUCT_ENTERPRISE_S_EVALUATION             0x00000081
 #define PRODUCT_ENTERPRISE_S_N_EVALUATION           0x00000082
 #define PRODUCT_HOLOGRAPHIC                         0x00000087
+#define PRODUCT_HOLOGRAPHIC_BUSINESS                0x00000088
 #define PRODUCT_PRO_SINGLE_LANGUAGE                 0x0000008A
 #define PRODUCT_PRO_CHINA                           0x0000008B
 #define PRODUCT_ENTERPRISE_SUBSCRIPTION             0x0000008C
@@ -2399,6 +2433,10 @@ typedef _Enum_is_bitflag_ enum _SUITE_TYPE {
 #define PRODUCT_ANDROMEDA                           0x000000B8
 #define PRODUCT_IOTOS                               0x000000B9
 #define PRODUCT_CLOUDEN                             0x000000BA
+#define PRODUCT_IOTEDGEOS                           0x000000BB
+#define PRODUCT_IOTENTERPRISE                       0x000000BC
+#define PRODUCT_LITE                                0x000000BD
+#define PRODUCT_IOTENTERPRISES                      0x000000BF
 
 #define PRODUCT_UNLICENSED                          0xABCDABCD
 
@@ -2730,7 +2768,7 @@ typedef _Enum_is_bitflag_ enum _SUITE_TYPE {
 #define SUBLANG_FRENCH_LUXEMBOURG                   0x05    // French (Luxembourg)
 #define SUBLANG_FRENCH_MONACO                       0x06    // French (Monaco)
 #define SUBLANG_FRISIAN_NETHERLANDS                 0x01    // Frisian (Netherlands) 0x0462 fy-NL
-#define SUBLANG_FULAH_SENEGAL                       0x02    // Fulah (Senegal) 0x0867 ff-SN
+#define SUBLANG_FULAH_SENEGAL                       0x02    // Fulah (Senegal) 0x0867 ff-Latn-SN
 #define SUBLANG_GALICIAN_GALICIAN                   0x01    // Galician (Galician) 0x0456 gl-ES
 #define SUBLANG_GEORGIAN_GEORGIA                    0x01    // Georgian (Georgia) 0x0437 ka-GE
 #define SUBLANG_GERMAN                              0x01    // German
@@ -3289,7 +3327,23 @@ inline ENUMTYPE &operator ^= (ENUMTYPE &a, ENUMTYPE b) throw() { return (ENUMTYP
 
 #endif  // NOMINMAX
 
-// end_ntminiport end_ntndis end_ntminitape
+// end_ntndis end_ntminitape
+// begin_winnt
+
+// Much of the Windows SDK assumes the default packing of structs.
+#if !defined(WINDOWS_IGNORE_PACKING_MISMATCH) && !defined(__midl) && !defined(MIDL_PASS) && !defined(SORTPP_PASS) && !defined(RC_INVOKED)
+#if defined(__cplusplus) && (_MSC_VER >= 1600)
+static_assert(__alignof(LARGE_INTEGER) == 8, "Windows headers require the default packing option. Changing this can lead to memory corruption."
+    " This diagnostic can be disabled by building with WINDOWS_IGNORE_PACKING_MISMATCH defined.");
+#elif _MSC_VER >= 1300
+#pragma warning(push)
+#pragma warning(disable: 4116)
+C_ASSERT(TYPE_ALIGNMENT(LARGE_INTEGER) == 8);
+#pragma warning(pop)
+#endif
+#endif
+
+// end_ntminiport end_winnt
 
 #if _MSC_VER >= 1200
 #pragma warning(pop)

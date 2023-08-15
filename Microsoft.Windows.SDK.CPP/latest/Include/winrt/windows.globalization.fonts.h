@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.globalization.fonts.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -275,9 +271,9 @@ namespace ABI {
         namespace Globalization {
             namespace Fonts {
                 interface ILanguageFont;
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CFonts_CILanguageFont ABI::Windows::Globalization::Fonts::ILanguageFont
 
 #endif // ____x_ABI_CWindows_CGlobalization_CFonts_CILanguageFont_FWD_DEFINED__
@@ -289,9 +285,9 @@ namespace ABI {
         namespace Globalization {
             namespace Fonts {
                 interface ILanguageFontGroup;
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroup ABI::Windows::Globalization::Fonts::ILanguageFontGroup
 
 #endif // ____x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroup_FWD_DEFINED__
@@ -303,9 +299,9 @@ namespace ABI {
         namespace Globalization {
             namespace Fonts {
                 interface ILanguageFontGroupFactory;
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroupFactory ABI::Windows::Globalization::Fonts::ILanguageFontGroupFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroupFactory_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
                 
                 typedef enum FontStretch : int FontStretch;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -332,9 +328,9 @@ namespace ABI {
                 
                 typedef enum FontStyle : int FontStyle;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -343,9 +339,9 @@ namespace ABI {
                 
                 typedef struct FontWeight FontWeight;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -358,9 +354,9 @@ namespace ABI {
         namespace Globalization {
             namespace Fonts {
                 class LanguageFont;
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -368,9 +364,9 @@ namespace ABI {
         namespace Globalization {
             namespace Fonts {
                 class LanguageFontGroup;
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -421,9 +417,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILanguageFont=_uuidof(ILanguageFont);
                 
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CFonts_CILanguageFont;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CFonts_CILanguageFont_INTERFACE_DEFINED__) */
@@ -492,9 +488,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILanguageFontGroup=_uuidof(ILanguageFontGroup);
                 
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroup;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroup_INTERFACE_DEFINED__) */
@@ -534,9 +530,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILanguageFontGroupFactory=_uuidof(ILanguageFontGroupFactory);
                 
-            } /* Windows */
+            } /* Fonts */
         } /* Globalization */
-    } /* Fonts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroupFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CFonts_CILanguageFontGroupFactory_INTERFACE_DEFINED__) */

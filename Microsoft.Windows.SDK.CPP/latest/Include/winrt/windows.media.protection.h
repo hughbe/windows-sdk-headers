@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.protection.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IComponentLoadFailedEventHandler;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler ABI::Windows::Media::Protection::IComponentLoadFailedEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IRebootNeededEventHandler;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler ABI::Windows::Media::Protection::IRebootNeededEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IServiceRequestedEventHandler;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler ABI::Windows::Media::Protection::IServiceRequestedEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IComponentLoadFailedEventArgs;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs ABI::Windows::Media::Protection::IComponentLoadFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IComponentRenewalStatics;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics ABI::Windows::Media::Protection::IComponentRenewalStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IHdcpSession;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession ABI::Windows::Media::Protection::IHdcpSession
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionManager;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager ABI::Windows::Media::Protection::IMediaProtectionManager
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionPMPServer;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer ABI::Windows::Media::Protection::IMediaProtectionPMPServer
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionPMPServerFactory;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory ABI::Windows::Media::Protection::IMediaProtectionPMPServerFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionServiceCompletion;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion ABI::Windows::Media::Protection::IMediaProtectionServiceCompletion
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionServiceRequest;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest ABI::Windows::Media::Protection::IMediaProtectionServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IProtectionCapabilities;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities ABI::Windows::Media::Protection::IProtectionCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IRevocationAndRenewalInformation;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation ABI::Windows::Media::Protection::IRevocationAndRenewalInformation
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IRevocationAndRenewalItem;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem ABI::Windows::Media::Protection::IRevocationAndRenewalItem
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IServiceRequestedEventArgs;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs ABI::Windows::Media::Protection::IServiceRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IServiceRequestedEventArgs2;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 ABI::Windows::Media::Protection::IServiceRequestedEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class RevocationAndRenewalItem;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -527,7 +523,7 @@ IIterator<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
@@ -559,7 +555,7 @@ IIterable<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
@@ -591,7 +587,7 @@ IVectorView<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
@@ -623,7 +619,7 @@ IVector<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVector_im
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
@@ -639,9 +635,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 enum RenewalStatus : int;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
@@ -662,7 +658,7 @@ IAsyncOperationProgressHandler<enum ABI::Windows::Media::Protection::RenewalStat
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
@@ -692,7 +688,7 @@ IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Protection
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
@@ -722,7 +718,7 @@ IAsyncOperationWithProgress<enum ABI::Windows::Media::Protection::RenewalStatus,
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
@@ -737,9 +733,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 enum HdcpSetProtectionResult : int;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
@@ -760,7 +756,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Protection::HdcpSetPro
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::HdcpSetProtectionResult>
@@ -790,7 +786,7 @@ IAsyncOperation<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Protection::HdcpSetProtectionResult>
@@ -805,9 +801,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 enum HdcpProtection : int;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_USE
@@ -828,7 +824,7 @@ IReference<enum ABI::Windows::Media::Protection::HdcpProtection> : IReference_im
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::Protection::HdcpProtection> __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_t;
 #define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection ABI::Windows::Foundation::IReference<ABI::Windows::Media::Protection::HdcpProtection>
@@ -843,9 +839,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class HdcpSession;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -869,7 +865,7 @@ ITypedEventHandler<ABI::Windows::Media::Protection::HdcpSession*,IInspectable*> 
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Protection::HdcpSession*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::IHdcpSession*,IInspectable*>
@@ -889,9 +885,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -906,8 +902,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -921,9 +917,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackItem;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
@@ -932,9 +928,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItem;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem ABI::Windows::Media::Playback::IMediaPlaybackItem
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
@@ -951,9 +947,9 @@ namespace ABI {
                 
                 typedef enum GraphicsTrustStatus : int GraphicsTrustStatus;
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -962,9 +958,9 @@ namespace ABI {
                 
                 typedef enum HdcpProtection : int HdcpProtection;
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -973,9 +969,9 @@ namespace ABI {
                 
                 typedef enum HdcpSetProtectionResult : int HdcpSetProtectionResult;
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -984,9 +980,9 @@ namespace ABI {
                 
                 typedef enum ProtectionCapabilityResult : int ProtectionCapabilityResult;
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -995,9 +991,9 @@ namespace ABI {
                 
                 typedef enum RenewalStatus : int RenewalStatus;
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1006,9 +1002,9 @@ namespace ABI {
                 
                 typedef enum RevocationAndRenewalReasons : unsigned int RevocationAndRenewalReasons;
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1031,9 +1027,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class ComponentLoadFailedEventArgs;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1043,9 +1039,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class MediaProtectionManager;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1053,9 +1049,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class MediaProtectionPMPServer;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1063,9 +1059,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class MediaProtectionServiceCompletion;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1073,9 +1069,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class ProtectionCapabilities;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1083,9 +1079,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class RevocationAndRenewalInformation;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1094,9 +1090,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class ServiceRequestedEventArgs;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1133,9 +1129,9 @@ namespace ABI {
                     GraphicsTrustStatus_UnknownFailure = 5,
                 };
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1161,9 +1157,9 @@ namespace ABI {
                     HdcpProtection_OnWithTypeEnforcement = 2,
                 };
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1190,9 +1186,9 @@ namespace ABI {
                     HdcpSetProtectionResult_UnknownFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1218,9 +1214,9 @@ namespace ABI {
                     ProtectionCapabilityResult_Probably = 2,
                 };
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -1248,9 +1244,9 @@ namespace ABI {
                     RenewalStatus_NoComponentsFound = 4,
                 };
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
 
 
@@ -1290,9 +1286,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(RevocationAndRenewalReasons)
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1325,9 +1321,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IComponentLoadFailedEventHandler=_uuidof(IComponentLoadFailedEventHandler);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_INTERFACE_DEFINED__) */
@@ -1362,9 +1358,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRebootNeededEventHandler=_uuidof(IRebootNeededEventHandler);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_INTERFACE_DEFINED__) */
@@ -1400,9 +1396,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServiceRequestedEventHandler=_uuidof(IServiceRequestedEventHandler);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_INTERFACE_DEFINED__) */
@@ -1444,9 +1440,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IComponentLoadFailedEventArgs=_uuidof(IComponentLoadFailedEventArgs);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_INTERFACE_DEFINED__) */
@@ -1486,9 +1482,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IComponentRenewalStatics=_uuidof(IComponentRenewalStatics);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_INTERFACE_DEFINED__) */
@@ -1525,7 +1521,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsEffectiveProtectionAtLeast(
                         /* [in] */ABI::Windows::Media::Protection::HdcpProtection protection,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetEffectiveProtection(
                         /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * * value
@@ -1546,9 +1542,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHdcpSession=_uuidof(IHdcpSession);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIHdcpSession;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_INTERFACE_DEFINED__) */
@@ -1608,9 +1604,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaProtectionManager=_uuidof(IMediaProtectionManager);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_INTERFACE_DEFINED__) */
@@ -1649,9 +1645,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaProtectionPMPServer=_uuidof(IMediaProtectionPMPServer);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_INTERFACE_DEFINED__) */
@@ -1691,9 +1687,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaProtectionPMPServerFactory=_uuidof(IMediaProtectionPMPServerFactory);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_INTERFACE_DEFINED__) */
@@ -1725,16 +1721,16 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Complete(
-                        /* [in] */boolean success
+                        /* [in] */::boolean success
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaProtectionServiceCompletion=_uuidof(IMediaProtectionServiceCompletion);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_INTERFACE_DEFINED__) */
@@ -1773,9 +1769,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaProtectionServiceRequest=_uuidof(IMediaProtectionServiceRequest);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_INTERFACE_DEFINED__) */
@@ -1816,9 +1812,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectionCapabilities=_uuidof(IProtectionCapabilities);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_INTERFACE_DEFINED__) */
@@ -1857,9 +1853,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRevocationAndRenewalInformation=_uuidof(IRevocationAndRenewalInformation);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_INTERFACE_DEFINED__) */
@@ -1910,9 +1906,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRevocationAndRenewalItem=_uuidof(IRevocationAndRenewalItem);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_INTERFACE_DEFINED__) */
@@ -1954,9 +1950,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServiceRequestedEventArgs=_uuidof(IServiceRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1995,9 +1991,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServiceRequestedEventArgs2=_uuidof(IServiceRequestedEventArgs2);
                 
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_INTERFACE_DEFINED__) */
@@ -2784,7 +2780,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl;
 
@@ -3118,7 +3114,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSessio
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectableVtbl;
 

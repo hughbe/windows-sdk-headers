@@ -111,6 +111,8 @@ namespace Windows
 
             typedef struct SpatialBoundingSphere SpatialBoundingSphere;
 
+            typedef struct SpatialRay SpatialRay;
+
             interface ISpatialAnchor;
 
             interface ISpatialAnchor2;
@@ -253,6 +255,8 @@ namespace Windows
 
                 interface Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingOrientedBox>;
 
+                interface Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialRay>;
+
                 interface Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialAnchor*, Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher*, IInspectable*>;
@@ -360,6 +364,13 @@ namespace Windows
             {
                 Windows.Foundation.Numerics.Vector3 Center;
                 FLOAT Radius;
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            struct SpatialRay
+            {
+                Windows.Foundation.Numerics.Vector3 Origin;
+                Windows.Foundation.Numerics.Vector3 Direction;
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]

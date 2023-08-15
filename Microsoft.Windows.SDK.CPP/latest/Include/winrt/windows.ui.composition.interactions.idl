@@ -44,6 +44,8 @@ namespace Windows
 
             runtimeclass ExpressionAnimation;
 
+            interface IVisualElement;
+
             runtimeclass ScalarNaturalMotionAnimation;
 
             runtimeclass Vector2NaturalMotionAnimation;
@@ -70,6 +72,8 @@ namespace Windows
         {
             namespace Interactions
             {
+                typedef enum InteractionBindingAxisModes InteractionBindingAxisModes;
+
                 typedef enum InteractionChainingMode InteractionChainingMode;
 
                 typedef enum InteractionSourceMode InteractionSourceMode;
@@ -100,7 +104,11 @@ namespace Windows
 
                 interface IInteractionTrackerCustomAnimationStateEnteredArgs;
 
+                interface IInteractionTrackerCustomAnimationStateEnteredArgs2;
+
                 interface IInteractionTrackerIdleStateEnteredArgs;
+
+                interface IInteractionTrackerIdleStateEnteredArgs2;
 
                 interface IInteractionTrackerInertiaModifier;
 
@@ -122,13 +130,19 @@ namespace Windows
 
                 interface IInteractionTrackerInertiaStateEnteredArgs2;
 
+                interface IInteractionTrackerInertiaStateEnteredArgs3;
+
                 interface IInteractionTrackerInteractingStateEnteredArgs;
+
+                interface IInteractionTrackerInteractingStateEnteredArgs2;
 
                 interface IInteractionTrackerOwner;
 
                 interface IInteractionTrackerRequestIgnoredArgs;
 
                 interface IInteractionTrackerStatics;
+
+                interface IInteractionTrackerStatics2;
 
                 interface IInteractionTrackerValuesChangedArgs;
 
@@ -149,6 +163,8 @@ namespace Windows
                 interface IVisualInteractionSourceObjectFactory;
 
                 interface IVisualInteractionSourceStatics;
+
+                interface IVisualInteractionSourceStatics2;
 
                 runtimeclass CompositionConditionalValue;
 
@@ -229,6 +245,16 @@ namespace Windows
         {
             namespace Interactions
             {
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [flags]
+                enum InteractionBindingAxisModes
+                {
+                    None      = 0x0,
+                    PositionX = 0x1,
+                    PositionY = 0x2,
+                    Scale     = 0x4
+                };
+
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 enum InteractionChainingMode
                 {
@@ -396,12 +422,28 @@ namespace Windows
                     [propget] HRESULT RequestId([out] [retval] INT32* value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs)]
+                [uuid(47D579B7-0985-5E99-B024-2F32C380C1A4)]
+                interface IInteractionTrackerCustomAnimationStateEnteredArgs2 : IInspectable
+                {
+                    [propget] HRESULT IsFromBinding([out] [retval] boolean* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [exclusiveto(Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs)]
                 [uuid(50012FAA-1510-4142-A1A5-019B09F8857B)]
                 interface IInteractionTrackerIdleStateEnteredArgs : IInspectable
                 {
                     [propget] HRESULT RequestId([out] [retval] INT32* value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs)]
+                [uuid(F2E771ED-B803-5137-9435-1C96E48721E9)]
+                interface IInteractionTrackerIdleStateEnteredArgs2 : IInspectable
+                {
+                    [propget] HRESULT IsFromBinding([out] [retval] boolean* value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -497,12 +539,28 @@ namespace Windows
                     [propget] HRESULT IsInertiaFromImpulse([out] [retval] boolean* value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs)]
+                [uuid(48AC1C2F-47BD-59AF-A58C-79BD2EB9EF71)]
+                interface IInteractionTrackerInertiaStateEnteredArgs3 : IInspectable
+                {
+                    [propget] HRESULT IsFromBinding([out] [retval] boolean* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [exclusiveto(Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs)]
                 [uuid(A7263939-A17B-4011-99FD-B5C24F143748)]
                 interface IInteractionTrackerInteractingStateEnteredArgs : IInspectable
                 {
                     [propget] HRESULT RequestId([out] [retval] INT32* value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs)]
+                [uuid(509652D6-D488-59CD-819F-F52310295B11)]
+                interface IInteractionTrackerInteractingStateEnteredArgs2 : IInspectable
+                {
+                    [propget] HRESULT IsFromBinding([out] [retval] boolean* value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -532,6 +590,15 @@ namespace Windows
                 {
                     HRESULT Create([in] Windows.UI.Composition.Compositor* compositor, [out] [retval] Windows.UI.Composition.Interactions.InteractionTracker** result);
                     HRESULT CreateWithOwner([in] Windows.UI.Composition.Compositor* compositor, [in] Windows.UI.Composition.Interactions.IInteractionTrackerOwner* owner, [out] [retval] Windows.UI.Composition.Interactions.InteractionTracker** result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Composition.Interactions.InteractionTracker)]
+                [uuid(35E53720-46B7-5CB0-B505-F3D6884A6163)]
+                interface IInteractionTrackerStatics2 : IInspectable
+                {
+                    HRESULT SetBindingMode([in] Windows.UI.Composition.Interactions.InteractionTracker* boundTracker1, [in] Windows.UI.Composition.Interactions.InteractionTracker* boundTracker2, [in] Windows.UI.Composition.Interactions.InteractionBindingAxisModes axisMode);
+                    HRESULT GetBindingMode([in] Windows.UI.Composition.Interactions.InteractionTracker* boundTracker1, [in] Windows.UI.Composition.Interactions.InteractionTracker* boundTracker2, [out] [retval] Windows.UI.Composition.Interactions.InteractionBindingAxisModes* result);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -645,6 +712,14 @@ namespace Windows
                     HRESULT Create([in] Windows.UI.Composition.Visual* source, [out] [retval] Windows.UI.Composition.Interactions.VisualInteractionSource** result);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Composition.Interactions.VisualInteractionSource)]
+                [uuid(A979C032-5764-55E0-BC1F-0778786DCFDE)]
+                interface IVisualInteractionSourceStatics2 : IInspectable
+                {
+                    HRESULT CreateFromIVisualElement([in] Windows.UI.Composition.IVisualElement* source, [out] [retval] Windows.UI.Composition.Interactions.VisualInteractionSource** result);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Composition.Interactions.ICompositionConditionalValueStatics, Windows.Foundation.UniversalApiContract, 4.0)]
@@ -674,6 +749,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Composition.Interactions.IInteractionTrackerStatics, Windows.Foundation.UniversalApiContract, 3.0)]
+                [static(Windows.UI.Composition.Interactions.IInteractionTrackerStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass InteractionTracker : Windows.UI.Composition.CompositionObject
                 {
@@ -685,18 +761,18 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass InteractionTrackerCustomAnimationStateEnteredArgs
                 {
                     [default] interface Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass InteractionTrackerIdleStateEnteredArgs
                 {
                     [default] interface Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2;
                 }
 
                 [composable(Windows.UI.Composition.Interactions.IInteractionTrackerInertiaModifierFactory, protected, Windows.Foundation.UniversalApiContract, 3.0)]
@@ -737,19 +813,19 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass InteractionTrackerInertiaStateEnteredArgs
                 {
                     [default] interface Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs;
                     [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass InteractionTrackerInteractingStateEnteredArgs
                 {
                     [default] interface Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -790,6 +866,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics, Windows.Foundation.UniversalApiContract, 3.0)]
+                [static(Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass VisualInteractionSource : Windows.UI.Composition.CompositionObject
                 {

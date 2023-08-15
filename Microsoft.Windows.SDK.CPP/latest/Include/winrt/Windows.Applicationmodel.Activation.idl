@@ -1709,6 +1709,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+            [marshaling_behavior(agile)]
             runtimeclass TileActivatedInfo
             {
                 [default] interface Windows.ApplicationModel.Activation.ITileActivatedInfo;

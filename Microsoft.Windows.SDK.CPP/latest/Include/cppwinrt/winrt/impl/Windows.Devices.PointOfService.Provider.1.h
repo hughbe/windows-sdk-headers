@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -56,8 +56,7 @@ struct WINRT_EBO IBarcodeScannerEnableScannerRequestEventArgs :
 
 struct WINRT_EBO IBarcodeScannerFrameReader :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IBarcodeScannerFrameReader>,
-    impl::require<IBarcodeScannerFrameReader, Windows::Foundation::IClosable>
+    impl::consume_t<IBarcodeScannerFrameReader>
 {
     IBarcodeScannerFrameReader(std::nullptr_t = nullptr) noexcept {}
 };
@@ -113,16 +112,14 @@ struct WINRT_EBO IBarcodeScannerHideVideoPreviewRequestEventArgs :
 
 struct WINRT_EBO IBarcodeScannerProviderConnection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IBarcodeScannerProviderConnection>,
-    impl::require<IBarcodeScannerProviderConnection, Windows::Foundation::IClosable>
+    impl::consume_t<IBarcodeScannerProviderConnection>
 {
     IBarcodeScannerProviderConnection(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IBarcodeScannerProviderConnection2 :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IBarcodeScannerProviderConnection2>,
-    impl::require<IBarcodeScannerProviderConnection2, Windows::Foundation::IClosable>
+    impl::consume_t<IBarcodeScannerProviderConnection2>
 {
     IBarcodeScannerProviderConnection2(std::nullptr_t = nullptr) noexcept {}
 };
@@ -220,8 +217,7 @@ struct WINRT_EBO IBarcodeScannerStopSoftwareTriggerRequestEventArgs :
 
 struct WINRT_EBO IBarcodeScannerVideoFrame :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IBarcodeScannerVideoFrame>,
-    impl::require<IBarcodeScannerVideoFrame, Windows::Foundation::IClosable>
+    impl::consume_t<IBarcodeScannerVideoFrame>
 {
     IBarcodeScannerVideoFrame(std::nullptr_t = nullptr) noexcept {}
 };

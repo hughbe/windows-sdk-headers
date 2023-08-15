@@ -587,6 +587,19 @@ typedef struct _STORAGE_DEVICE_NUMBER {
 
 typedef struct _STORAGE_DEVICE_NUMBERS {
 
+    //
+    // Size of this structure serves
+    // as the version
+    //
+
+    DWORD Version;
+
+    //
+    // Size of this structure
+    //
+
+    DWORD Size;
+
     DWORD NumberOfDevices;
 
     STORAGE_DEVICE_NUMBER Devices[ANYSIZE_ARRAY];
@@ -1047,6 +1060,32 @@ typedef enum _STORAGE_QUERY_TYPE {
 } STORAGE_QUERY_TYPE, *PSTORAGE_QUERY_TYPE;
 
 //
+// IOCTL_STORAGE_SET_PROPERTY
+//
+// Input Buffer:
+//      a STORAGE_PROPERTY_SET structure which describes what type of property set
+//      is being done, what property is being set, and any additional
+//      parameters which a particular property set requires.
+//
+//  Output Buffer:
+//      Contains a buffer to place the results of the query into.  Since all
+//      property descriptors can be cast into a STORAGE_DESCRIPTOR_HEADER,
+//      the IOCTL can be called once with a small buffer then again using
+//      a buffer as large as the header reports is necessary.
+//
+
+
+//
+// Types of set operation
+//
+
+typedef enum _STORAGE_SET_TYPE {
+    PropertyStandardSet = 0,          // Sets the descriptor
+    PropertyExistsSet,                // Used to test whether the descriptor is supported
+    PropertySetMaxDefined             // use to validate the value
+} STORAGE_SET_TYPE, *PSTORAGE_SET_TYPE;
+
+//
 // define some initial property id's
 //
 
@@ -1082,7 +1121,8 @@ typedef enum __WRAPPED__ _STORAGE_PROPERTY_ID {
     StorageDeviceLocationProperty,
     StorageDeviceNumaProperty,
     StorageDeviceZonedDeviceProperty,
-    StorageDeviceUnsafeShutdownCount
+    StorageDeviceUnsafeShutdownCount,
+    StorageDeviceEnduranceProperty,
 } STORAGE_PROPERTY_ID, *PSTORAGE_PROPERTY_ID;
 
 //
@@ -1111,6 +1151,33 @@ typedef struct _STORAGE_PROPERTY_QUERY {
     BYTE  AdditionalParameters[1];
 
 } STORAGE_PROPERTY_QUERY, *PSTORAGE_PROPERTY_QUERY;
+
+//
+// Set structure - additional parameters for specific set property that can follow
+// the header
+//
+
+typedef struct _STORAGE_PROPERTY_SET {
+
+    //
+    // ID of the property being retrieved
+    //
+
+    STORAGE_PROPERTY_ID PropertyId;
+
+    //
+    // Flags indicating the type of set property being performed
+    //
+
+    STORAGE_SET_TYPE SetType;
+
+    //
+    // Space for additional parameters if necessary
+    //
+
+    BYTE  AdditionalParameters[1];
+
+} STORAGE_PROPERTY_SET, *PSTORAGE_PROPERTY_SET;
 
 //
 // Standard property descriptor header.  All property pages should use this
@@ -2129,7 +2196,7 @@ typedef enum _STORAGE_PROTOCOL_NVME_DATA_TYPE {
     NVMeDataTypeIdentify,       // Retrieved by command - IDENTIFY CONTROLLER or IDENTIFY NAMESPACE
                                 // Corresponding values in STORAGE_PROTOCOL_SPECIFIC_DATA,
                                 //      ProtocolDataRequestValue - Defined in NVME_IDENTIFY_CNS_CODES
-                                //      ProtocolDataRequestSubValue - For NVME_IDENTIFY_CNS_SPECIFIC_NAMESPACE, 
+                                //      ProtocolDataRequestSubValue - For NVME_IDENTIFY_CNS_SPECIFIC_NAMESPACE,
                                 //                                    specifies namespace Id
 
     NVMeDataTypeLogPage,        // Retrieved by command - GET LOG PAGE
@@ -2137,6 +2204,7 @@ typedef enum _STORAGE_PROTOCOL_NVME_DATA_TYPE {
                                 //      ProtocolDataRequestValue - Log page id
                                 //      ProtocolDataRequestSubValue - Lower 32-bit offset value
                                 //      ProtocolDataRequestSubValue2 - Upper 32-bit offset value
+                                //      ProtocolDataRequestSubValue3 - Log specific identifier
 
     NVMeDataTypeFeature,        // Retrieved by command - GET FEATURES
                                 // Corresponding values in STORAGE_PROTOCOL_SPECIFIC_DATA,
@@ -2173,10 +2241,38 @@ typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA {
     DWORD   ProtocolDataLength;
 
     DWORD   FixedProtocolReturnData;
-    DWORD   ProtocolDataRequestSubValue2; // Additional data sub request value
+    DWORD   ProtocolDataRequestSubValue2; // First additional data sub request value
 
-    DWORD   Reserved[2];
+    DWORD   ProtocolDataRequestSubValue3; // Second additional data sub request value
+    DWORD   Reserved;
 } STORAGE_PROTOCOL_SPECIFIC_DATA, *PSTORAGE_PROTOCOL_SPECIFIC_DATA;
+
+//
+// Extended type incorporates both Get/Set protocol data
+// Protocol Data should follow this data structure in the same buffer.
+// The offset of Protocol Data from the beginning of this data structure
+// is reported in data field - "ProtocolDataOffset".
+//
+typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA_EXT {
+
+    STORAGE_PROTOCOL_TYPE ProtocolType;
+    DWORD   DataType;                   // The value will be protocol specific, as defined in STORAGE_PROTOCOL_NVME_DATA_TYPE or STORAGE_PROTOCOL_ATA_DATA_TYPE.
+
+    DWORD   ProtocolDataValue;
+    DWORD   ProtocolDataSubValue;      // Data sub request value
+
+    DWORD   ProtocolDataOffset;         // The offset of data buffer is from beginning of this data structure.
+    DWORD   ProtocolDataLength;
+
+    DWORD   FixedProtocolReturnData;
+    DWORD   ProtocolDataSubValue2;     // First additional data sub request value
+
+    DWORD   ProtocolDataSubValue3;     // Second additional data sub request value
+    DWORD   ProtocolDataSubValue4;     // Third additional data sub request value
+
+    DWORD   ProtocolDataSubValue5;     // Fourth additional data sub request value
+    DWORD   Reserved[5];
+} STORAGE_PROTOCOL_SPECIFIC_DATA_EXT, *PSTORAGE_PROTOCOL_SPECIFIC_DATA_EXT;
 
 //
 // Input parameters for StorageAdapterProtocolSpecificProperty (or StorageDeviceProtocolSpecificProperty) & PropertyStandardQuery
@@ -2195,6 +2291,25 @@ typedef struct _STORAGE_PROTOCOL_DATA_DESCRIPTOR {
     STORAGE_PROTOCOL_SPECIFIC_DATA ProtocolSpecificData;
 
 } STORAGE_PROTOCOL_DATA_DESCRIPTOR, *PSTORAGE_PROTOCOL_DATA_DESCRIPTOR;
+
+//
+// Input parameters for StorageAdapterProtocolSpecificProperty (or StorageDeviceProtocolSpecificProperty) & PropertyStandardQuery (or PropertyStandardSet)
+// will be data structure STORAGE_PROPERTY_QUERY/STORAGE_PROPERTY_SET, where the data field "AdditionalParameters" is a buffer
+// in format of STORAGE_PROTOCOL_SPECIFIC_DATA.
+//
+
+//
+// Out parameters for StorageAdapterProtocolSpecificProperty (or StorageDeviceProtocolSpecificProperty) & PropertyStandardQuery (or PropertyStandardSet)
+//
+typedef struct _STORAGE_PROTOCOL_DATA_DESCRIPTOR_EXT {
+
+    DWORD   Version;
+    DWORD   Size;
+
+    STORAGE_PROTOCOL_SPECIFIC_DATA_EXT ProtocolSpecificData;
+
+} STORAGE_PROTOCOL_DATA_DESCRIPTOR_EXT, *PSTORAGE_PROTOCOL_DATA_DESCRIPTOR_EXT;
+
 
 //
 // Parameters for StorageAdapterTemperatureProperty (or StorageDeviceTemperatureProperty) & PropertyStandardQuery
@@ -2864,6 +2979,54 @@ typedef struct _STORAGE_DEVICE_UNSAFE_SHUTDOWN_COUNT {
     DWORD UnsafeShutdownCount;
 } STORAGE_DEVICE_UNSAFE_SHUTDOWN_COUNT, *PSTORAGE_DEVICE_UNSAFE_SHUTDOWN_COUNT;
 
+#pragma warning(push)
+#pragma warning(disable:4214)   // bit fields other than int to disable this around the struct
+#pragma warning(disable:4201)   // nameless struct/union
+
+//
+// Parameters for StorageDeviceEnduranceProperty & PropertyStandardQuery
+//
+
+//
+// Input parameters for StorageDeviceEnduranceProperty & PropertyStandardQuery
+// uses data structure STORAGE_PROPERTY_QUERY.
+//
+
+//
+// Out parameters for StorageDeviceEnduranceProperty  & PropertyStandardQuery
+// For endurance info fields, ValidFields represents bit mapping of valid fields.
+//
+
+typedef struct _STORAGE_HW_ENDURANCE_INFO {
+    DWORD       ValidFields;        // ValidFields represents bit mapping of valid fields of any type
+                                    // Eg: Bit 0 stands for GroupId, Bit 1 stands for Flags, Bit 3 for BytesReadCount
+
+    DWORD       GroupId;            // Set Id Eg: Set Id for NVMe sets
+
+    struct {
+        DWORD   Shared:1;           // TRUE if information is shared with multiple units/groups
+
+        DWORD   Reserved:31;
+    } Flags;
+
+    DWORD       LifePercentage;         // Used life percentage
+
+    BYTE        BytesReadCount[16];     // Total bytes read from device (Billion Unit)
+
+    BYTE        ByteWriteCount[16];     // Total bytes written to device (Billion Unit)
+
+} STORAGE_HW_ENDURANCE_INFO, *PSTORAGE_HW_ENDURANCE_INFO;
+
+typedef struct _STORAGE_HW_ENDURANCE_DATA_DESCRIPTOR {
+    DWORD                           Version;            // keep compatible with STORAGE_DESCRIPTOR_HEADER
+
+    DWORD                           Size;               // keep compatible with STORAGE_DESCRIPTOR_HEADER
+
+    STORAGE_HW_ENDURANCE_INFO       EnduranceInfo;      // Endurance Information of the device
+
+} STORAGE_HW_ENDURANCE_DATA_DESCRIPTOR, *PSTORAGE_HW_ENDURANCE_DATA_DESCRIPTOR;
+
+#pragma warning(pop)
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -2920,6 +3083,7 @@ typedef DWORD DEVICE_DATA_MANAGEMENT_SET_ACTION, DEVICE_DSM_ACTION;
 #define DeviceDsmAction_WriteZeroes             (0x00000019u)
 #define DeviceDsmAction_LostQuery               (0x0000001Au | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_GetFreeSpace            (0x0000001Bu | DeviceDsmActionFlag_NonDestructive)
+#define DeviceDsmAction_ConversionQuery         (0x0000001Cu | DeviceDsmActionFlag_NonDestructive)
 
 //
 // DEVICE_DSM_INPUT.Flags
@@ -3195,7 +3359,7 @@ typedef struct _DEVICE_DSM_OFFLOAD_READ_PARAMETERS {
     // requested by the initiator
     //
 
-    DWORD TimeToLive; 
+    DWORD TimeToLive;
 
     DWORD Reserved[2];
 
@@ -3861,6 +4025,18 @@ typedef struct _DEVICE_DATA_SET_TOPOLOGY_ID_QUERY_OUTPUT {
 
 #define DEVICE_DSM_FLAG_PHYSICAL_ADDRESSES_OMIT_TOTAL_RANGES 0x10000000
 
+//
+// A driver can set the StartAddress field to this value
+// to indicate that an address range has a memory error.
+// Address ranges with memory errors must not be merged:
+// if there are two physically contiguous address ranges
+// with errors, they must be reported as two separate
+// address ranges, both of which have StartAddress set
+// to this value.
+//
+
+#define DEVICE_DSM_PHYSICAL_ADDRESS_HAS_MEMORY_ERROR ((LONGLONG)-1)
+
 typedef struct _DEVICE_STORAGE_ADDRESS_RANGE {
 
     LONGLONG    StartAddress;
@@ -4351,6 +4527,45 @@ typedef struct _DEVICE_DSM_FREE_SPACE_OUTPUT {
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+// DeviceDsmAction_ConversionQuery
+//
+
+typedef struct _DEVICE_DSM_CONVERSION_OUTPUT {
+
+    //
+    // Size of this structure serves
+    // as the version
+    //
+
+    DWORD Version;
+
+    //
+    // Stable  identifier associated
+    // with the source
+    //
+
+    GUID Source;
+
+} DEVICE_DSM_CONVERSION_OUTPUT, *PDEVICE_DSM_CONVERSION_OUTPUT;
+
+//
+// SingleRange    - Yes
+// ParameterBlock - No
+// Output         - Yes
+// OutputBlock    - Yes
+//
+
+#define DeviceDsmDefinition_ConversionQuery {DeviceDsmAction_ConversionQuery,         \
+                                             TRUE,                                    \
+                                             0,                                       \
+                                             0,                                       \
+                                             TRUE,                                    \
+                                             __alignof(DEVICE_DSM_CONVERSION_OUTPUT), \
+                                             sizeof(DEVICE_DSM_CONVERSION_OUTPUT)}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
 // Dsm helper routines
 //
 
@@ -4653,10 +4868,20 @@ DeviceDsmGetOutputLength (
     _In_ DWORD OutputBlockLength
     )
 {
-    DWORD Bytes = sizeof(DEVICE_DSM_OUTPUT);
+    DWORD Bytes = 0;
 
-    if (OutputBlockLength == 0) {
+    if (!Definition->HasOutput) {
         goto Cleanup;
+    }
+
+    Bytes  = sizeof(DEVICE_DSM_OUTPUT);
+
+    if (Definition->OutputBlockLength == 0) {
+        goto Cleanup;
+    }
+
+    if (Definition->OutputBlockLength > OutputBlockLength) {
+        OutputBlockLength = Definition->OutputBlockLength;
     }
 
     Bytes  = DEVICE_DSM_ROUND_UP(Bytes, Definition->OutputBlockAlignment);
@@ -4665,6 +4890,20 @@ DeviceDsmGetOutputLength (
 Cleanup:
 
     return Bytes;
+}
+
+
+FORCEINLINE
+BOOLEAN
+DeviceDsmValidateOutputLength (
+    _In_ PDEVICE_DSM_DEFINITION Definition,
+    _In_ DWORD OutputLength
+    )
+{
+    DWORD Bytes = DeviceDsmGetOutputLength(Definition,
+                                           0);
+
+    return (OutputLength >= Bytes);
 }
 
 
@@ -7676,6 +7915,7 @@ typedef struct _SCM_PD_REINITIALIZE_MEDIA_OUTPUT {
 #define PARTITION_DM                    0x54      // OnTrack Disk Manager partition
 #define PARTITION_EZDRIVE               0x55      // EZ-Drive partition
 #define PARTITION_UNIX                  0x63      // Unix
+#define PARTITION_SPACES_DATA           0xD7      // Storage Spaces protective partition
 #define PARTITION_SPACES                0xE7      // Storage Spaces protective partition
 #define PARTITION_GPT                   0xEE      // Gpt protective partition
 #define PARTITION_SYSTEM                0xEF      // System partition
@@ -9786,7 +10026,7 @@ typedef enum _CHANGER_DEVICE_PROBLEM_TYPE {
 #define FSCTL_MARK_HANDLE               CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 63, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define FSCTL_SIS_COPYFILE              CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 64, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define FSCTL_SIS_LINK_FILES            CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 65, METHOD_BUFFERED, FILE_READ_DATA | FILE_WRITE_DATA)
-// decommissional fsctl value                                             66
+// decommissioned fsctl value                                             66
 // decommissioned fsctl value                                             67
 // decommissioned fsctl value                                             68
 #define FSCTL_RECALL_FILE               CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 69, METHOD_NEITHER, FILE_ANY_ACCESS)
@@ -10068,7 +10308,7 @@ typedef enum _CHANGER_DEVICE_PROBLEM_TYPE {
 // begin_ntifs
 
 //
-// The following long list of structs are associated with the preceeding
+// The following long list of structs are associated with the preceding
 // file system fsctls.
 //
 
@@ -10611,9 +10851,9 @@ typedef union {
 #define USN_REASON_CLOSE                 (0x80000000)
 
 //
-//==================== FSCTL_QUERY_USN_JOUNAL ======================
+//==================== FSCTL_QUERY_USN_JOURNAL ======================
 //
-//  Structure for FSCTL_QUERY_USN_JOUNAL
+//  Structure for FSCTL_QUERY_USN_JOURNAL
 //
 
 typedef struct {
@@ -10684,11 +10924,15 @@ typedef struct {
 
 #define USN_DELETE_VALID_FLAGS              (0x00000003)
 
+#endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
+
 //
 //==================== FSCTL_MARK_HANDLE ======================
 //
 //  Structure for FSCTL_MARK_HANDLE
 //
+
+#if (NTDDI_VERSION >= NTDDI_WIN2K)
 
 #if _MSC_VER >= 1200
 #pragma warning(push)
@@ -10697,14 +10941,14 @@ typedef struct {
 
 typedef struct {
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN8)
     union {
         DWORD UsnSourceInfo;
         DWORD CopyNumber;
     } DUMMYUNIONNAME;
 #else
     DWORD UsnSourceInfo;
-#endif /*_WIN32_WINNT >= _WIN32_WINNT_WIN8 */
+#endif /*NTDDI_VERSION >= NTDDI_WIN8 */
 
     HANDLE VolumeHandle;
     DWORD HandleInfo;
@@ -10718,14 +10962,14 @@ typedef struct {
 
 typedef struct {
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN8)
     union {
         DWORD UsnSourceInfo;
         DWORD CopyNumber;
     } DUMMYUNIONNAME;
 #else
     DWORD UsnSourceInfo;
-#endif /*_WIN32_WINNT >= _WIN32_WINNT_WIN8 */
+#endif /*NTDDI_VERSION >= NTDDI_WIN8 */
     UINT32 VolumeHandle;
     DWORD HandleInfo;
 
@@ -10754,7 +10998,7 @@ typedef struct {
 //          replica set.
 //
 //      USN_SOURCE_CLIENT_REPLICATION_MANAGEMENT - Replication is being performed
-//          on clint systems either from the cloud or servers
+//          on client systems either from the cloud or servers
 //
 
 #define USN_SOURCE_DATA_MANAGEMENT                  (0x00000001)
@@ -10771,9 +11015,11 @@ typedef struct {
 //
 //  Flags for the HandleInfo field above
 //
+//  Introduced in W2K
 //  MARK_HANDLE_PROTECT_CLUSTERS - disallow any defragmenting (FSCTL_MOVE_FILE) until the
 //      the handle is closed
 //
+//  Introduced in Vista
 //  MARK_HANDLE_TXF_SYSTEM_LOG - indicates that this stream is being used as the Txf
 //      log for an RM on the volume.  Must be called in the kernel using
 //      IRP_MN_KERNEL_CALL.
@@ -10781,73 +11027,95 @@ typedef struct {
 //  MARK_HANDLE_NOT_TXF_SYSTEM_LOG - indicates that this user is no longer using this
 //      object as a log file.
 //
-//  MARK_HANDLE_REALTIME
+//  Introduced in Win7
+//  MARK_HANDLE_REALTIME - only supported by the UDFS file system.  Marks the device
+//      to do realtime streaming of video
 //
-//  MARK_HANDLE_NOT_REALTIME
+//  MARK_HANDLE_NOT_REALTIME - only supported by the UDFS file system.  Marks the device
+//      to do realtime streaming of video
 //
+//  MARK_HANDLE_CLOUD_SYNC - this flag is deprecated and is no longer used
+//
+//  Introduced in Win8
 //  MARK_HANDLE_READ_COPY - indicates the data must be read from the specified copy.
 //
 //  MARK_HANDLE_NOT_READ_COPY - indicates the data is no longer to be read from a specific copy.
 //
-//  MARK_HANDLE_CLOUD_SYNC - indicates that the handle belongs to the cloud sync engine
+//  Introduced in WinBlue (win 8.1)
+//  MARK_HANDLE_FILTER_METADATA - Flag reserved for internal Microsoft use
+//
+//  MARK_HANDLE_RETURN_PURGE_FAILURE - When intermixing memory mapped/cached IO with
+//      non-cached IO the system attempts, when a non-cached io is issued, to purge
+//      memory mappings for the range of the non-cached IO.  If these purges fail
+//      the system normally does not return the failure to the caller which can
+//      lead to corrupted state (which is why the documentation says to not do this).
+//      This flag tells the system to return purge failures for the given handle
+//      so the application can better handle this situation
+//
+//  Introduced in WinThreshold (win10)
+//  MARK_HANDLE_DISABLE_FILE_METADATA_OPTIMIZATION - This disabled the FRS compaction
+//      feature on the given file.
+//
+//  MARK_HANDLE_ENABLE_USN_SOURCE_ON_PAGING_IO - Tells NTFS to set the given UsnSourceInfo
+//      value on Paging writes in the USN Journal.  Traditionally this was not
+//      done on paging writes since you did not know what thread made the given
+//      changes.  This is an override.  This only works of the FileObject MM is
+//      holding on to has this state associated with it.
+//
+//  MARK_HANDLE_SKIP_COHERENCY_SYNC_DISALLOW_WRITES - Setting this flag tells
+//      the system that writes are not allowed on this file.  If someone tries
+//      to open the file for write access, the operation is failed with STATUS_ACCESS_DENIED.
+//      If a write is seen the operation is failed with STATUS_MARKED_TO_DISALLOW_WRITES
+//
+//  Introduced in RS4 (win10)
+//  MARK_HANDLE_ENABLE_CPU_CACHE - Flag reserved for internal Microsoft use, it is
+//      only used on the
 //
 
 #define MARK_HANDLE_PROTECT_CLUSTERS                    (0x00000001)
 #define MARK_HANDLE_TXF_SYSTEM_LOG                      (0x00000004)
 #define MARK_HANDLE_NOT_TXF_SYSTEM_LOG                  (0x00000008)
 
-#endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
+#endif /* NTDDI_VERSION >= NTDDI_WIN2K */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
+#if (NTDDI_VERSION >= NTDDI_WIN7)
 
 #define MARK_HANDLE_REALTIME                            (0x00000020)
 #define MARK_HANDLE_NOT_REALTIME                        (0x00000040)
-#define MARK_HANDLE_FILTER_METADATA                     (0x00000200)        // 8.1 update and newer
+#define MARK_HANDLE_FILTER_METADATA                     (0x00000200)        // 8.1 and newer
+#define MARK_HANDLE_CLOUD_SYNC                          (0x00000800)
 
-#endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN7 */
+#endif /* NTDDI_VERSION >= NTDDI_WIN7 */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN8)
 
 #define MARK_HANDLE_READ_COPY                           (0x00000080)
 #define MARK_HANDLE_NOT_READ_COPY                       (0x00000100)
 #define MARK_HANDLE_RETURN_PURGE_FAILURE                (0x00000400)        // 8.1 and newer
 
-#endif /*_WIN32_WINNT >= _WIN32_WINNT_WIN8 */
+#endif /*NTDDI_VERSION >= NTDDI_WIN8 */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
+#if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
 
-#define MARK_HANDLE_CLOUD_SYNC                          (0x00000800)
+#define MARK_HANDLE_DISABLE_FILE_METADATA_OPTIMIZATION  (0x00001000)
+#define MARK_HANDLE_ENABLE_USN_SOURCE_ON_PAGING_IO      (0x00002000)
+#define MARK_HANDLE_SKIP_COHERENCY_SYNC_DISALLOW_WRITES (0x00004000)
 
-#endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN7 */
+#endif /*NTDDI_VERSION >= NTDDI_WINTHRESHOLD */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
-
-#define MARK_HANDLE_DISABLE_FILE_METADATA_OPTIMIZATION  (0x00001000)        // 9.0 and newer
-#define MARK_HANDLE_ENABLE_USN_SOURCE_ON_PAGING_IO      (0x00002000)        // 9.0 and newer
-#define MARK_HANDLE_SKIP_COHERENCY_SYNC_DISALLOW_WRITES (0x00004000)        // 9.0 and newer
-
-#endif /*_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD */
-
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS4)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
 
 #define MARK_HANDLE_ENABLE_CPU_CACHE                    (0x10000000)
 
-#endif /*_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS4 */
+#endif /*NTDDI_VERSION >= NTDDI_WIN10_RS4 */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
-
-#define NO_8DOT3_NAME_PRESENT               (0x00000001)
-#define REMOVED_8DOT3_NAME                  (0x00000002)
-
-#endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN7 */
-
-
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //==================== FSCTL_SECURITY_ID_CHECK ======================
 //
 // Structure for FSCTL_SECURITY_ID_CHECK
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 typedef struct {
 
@@ -10857,22 +11125,25 @@ typedef struct {
 } BULK_SECURITY_TEST_DATA, *PBULK_SECURITY_TEST_DATA;
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //==================== FSCTL_IS_VOLUME_DIRTY ======================
 //
-//  Output flags for the FSCTL_IS_VOLUME_DIRTY
+//  Output flags for the FSCTL_IS_VOLUME_DIRTY is a DWORD
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 #define VOLUME_IS_DIRTY                  (0x00000001)
 #define VOLUME_UPGRADE_SCHEDULED         (0x00000002)
 #define VOLUME_SESSION_OPEN              (0x00000004)
+
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
+//
+//==================== FSCTL_FILE_PREFETCH ======================
+//
+
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
-//
-// Structures for FSCTL_FILE_PREFETCH
-//
 
 typedef struct _FILE_PREFETCH {
     DWORD Type;
@@ -10909,7 +11180,7 @@ typedef struct _FILESYSTEM_STATISTICS {
     WORD   FileSystemType;
     WORD   Version;                     // currently version 1
 
-    DWORD SizeOfCompleteStructure;      // must by a mutiple of 64 bytes
+    DWORD SizeOfCompleteStructure;      // must by a multiple of 64 bytes
 
     DWORD UserFileReads;
     DWORD UserFileReadBytes;
@@ -11062,7 +11333,7 @@ typedef struct _NTFS_STATISTICS {
         DWORD Clusters;             // number of clusters allocated
         DWORD Hints;                // number of times a hint was specified
 
-        DWORD RunsReturned;         // number of runs used to satisify all the requests
+        DWORD RunsReturned;         // number of runs used to satisfy all the requests
 
         DWORD HintsHonored;         // number of times the hint was useful
         DWORD HintsClusters;        // number of clusters allocated via the hint
@@ -11089,7 +11360,7 @@ typedef struct _FILESYSTEM_STATISTICS_EX {
     WORD   FileSystemType;
     WORD   Version;                     // currently version 1
 
-    DWORD SizeOfCompleteStructure;      // must by a mutiple of 64 bytes
+    DWORD SizeOfCompleteStructure;      // must by a multiple of 64 bytes
 
     DWORDLONG UserFileReads;
     DWORDLONG UserFileReadBytes;
@@ -11201,7 +11472,7 @@ typedef struct _NTFS_STATISTICS_EX {
 
     struct {
         DWORD Calls;                    // number of individual calls to allocate clusters
-        DWORD RunsReturned;             // number of runs used to satisify all the requests
+        DWORD RunsReturned;             // number of runs used to satisfy all the requests
         DWORD Hints;                    // number of times a hint was specified
         DWORD HintsHonored;             // number of times the hint was useful
         DWORD Cache;                    // number of times the cache was useful other than the hint
@@ -11244,7 +11515,6 @@ typedef struct _NTFS_STATISTICS_EX {
 
 } NTFS_STATISTICS_EX, *PNTFS_STATISTICS_EX;
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //==================== FSCTL_SET_OBJECT_ID ================================
 //==================== FSCTL_GET_OBJECT_ID ================================
@@ -11253,6 +11523,8 @@ typedef struct _NTFS_STATISTICS_EX {
 //  Structures for FSCTL_SET_OBJECT_ID, FSCTL_GET_OBJECT_ID, and
 //  FSCTL_CREATE_OR_GET_OBJECT_ID
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 #if _MSC_VER >= 1200
 #pragma warning(push)
@@ -11291,13 +11563,13 @@ typedef struct _FILE_OBJECTID_BUFFER {
 
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
-
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //==================== FSCTL_SET_SPARSE ======================
 //
 // Structure for FSCTL_SET_SPARSE
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 typedef struct _FILE_SET_SPARSE_BUFFER {
     BOOLEAN SetSparse;
@@ -11307,12 +11579,13 @@ typedef struct _FILE_SET_SPARSE_BUFFER {
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //==================== FSCTL_SET_ZERO_DATA ======================
 //
 // Structure for FSCTL_SET_ZERO_DATA
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 typedef struct _FILE_ZERO_DATA_INFORMATION {
 
@@ -11325,7 +11598,6 @@ typedef struct _FILE_ZERO_DATA_INFORMATION {
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
 
-#define FILE_ZERO_DATA_INFORMATION_FLAG_PRESERVE_CACHED_DATA       (0x00000001)
 typedef struct _FILE_ZERO_DATA_INFORMATION_EX {
 
     LARGE_INTEGER FileOffset;
@@ -11334,14 +11606,22 @@ typedef struct _FILE_ZERO_DATA_INFORMATION_EX {
 
 } FILE_ZERO_DATA_INFORMATION_EX, *PFILE_ZERO_DATA_INFORMATION_EX;
 
+//
+//  When set tells the file system to not purge the cache for the given range
+//  being zeroed
+//
+
+#define FILE_ZERO_DATA_INFORMATION_FLAG_PRESERVE_CACHED_DATA       (0x00000001)
+
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //==================== FSCTL_QUERY_ALLOCATED_RANGES ======================
 //
 // Structure for FSCTL_QUERY_ALLOCATED_RANGES
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 //
 // Querying the allocated ranges requires an output buffer to store the
@@ -11356,10 +11636,9 @@ typedef struct _FILE_ALLOCATED_RANGE_BUFFER {
     LARGE_INTEGER Length;
 
 } FILE_ALLOCATED_RANGE_BUFFER, *PFILE_ALLOCATED_RANGE_BUFFER;
+
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
-
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //====================== FSCTL_SET_ENCRYPTION ===============================
 //====================== FSCTL_WRITE_RAW_ENCRYPTED ==========================
@@ -11367,6 +11646,8 @@ typedef struct _FILE_ALLOCATED_RANGE_BUFFER {
 //
 // Structures for FSCTL_SET_ENCRYPTION, FSCTL_WRITE_RAW_ENCRYPTED, and FSCTL_READ_RAW_ENCRYPTED
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 //
 //  The input buffer to set encryption indicates whether we are to encrypt/decrypt a file
@@ -11561,9 +11842,11 @@ typedef struct _ENCRYPTED_DATA_INFO {
     DWORD DataBlockSize[ANYSIZE_ARRAY];
 
 } ENCRYPTED_DATA_INFO, *PENCRYPTED_DATA_INFO;
+
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
+
 //
 //  Extended encryption structure for read/write raw encrypted operations.
 //  This was needed so we can explicitly indicate if a file is sparse or not
@@ -11598,10 +11881,9 @@ typedef struct _EXTENDED_ENCRYPTED_DATA_INFO {
     DWORD Reserved;
 
 } EXTENDED_ENCRYPTED_DATA_INFO, *PEXTENDED_ENCRYPTED_DATA_INFO;
+
 #endif /*(_WIN32_WINNT >= _WIN32_WINNT_WIN7)*/
 
-
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //======================== FSCTL_READ_FROM_PLEX ===========================
 //
@@ -11609,6 +11891,8 @@ typedef struct _EXTENDED_ENCRYPTED_DATA_INFO {
 //  the range of the file to read.  It also describes
 //  which plex to perform the read from.
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 typedef struct _PLEX_READ_DATA_REQUEST {
 
@@ -11627,9 +11911,9 @@ typedef struct _PLEX_READ_DATA_REQUEST {
     DWORD PlexNumber;
 
 } PLEX_READ_DATA_REQUEST, *PPLEX_READ_DATA_REQUEST;
+
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 //
 //======================== FSCTL_SIS_COPYFILE ===========================
 //
@@ -11638,6 +11922,8 @@ typedef struct _PLEX_READ_DATA_REQUEST {
 // the beginning of FileNameBuffer, and the destination name immediately
 // following.  Length fields include terminating nulls.
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN2K)
 
 typedef struct _SI_COPYFILE {
     DWORD SourceFileNameLength;
@@ -11649,14 +11935,16 @@ typedef struct _SI_COPYFILE {
 #define COPYFILE_SIS_LINK       0x0001              // Copy only if source is SIS
 #define COPYFILE_SIS_REPLACE    0x0002              // Replace destination if it exists, otherwise don't.
 #define COPYFILE_SIS_FLAGS      0x0003
+
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_VISTA)
 //
 //======================== FSCTL_MAKE_MEDIA_COMPATIBLE ===========================
 //
 //  Input parameter structure for FSCTL_MAKE_MEDIA_COMPATIBLE
 //
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_VISTA)
 
 typedef struct _FILE_MAKE_COMPATIBLE_BUFFER {
     BOOLEAN CloseDisc;
@@ -12559,7 +12847,7 @@ typedef struct _TXFS_GET_TRANSACTED_VERSION {
 
     //
     //  If this is a handle to a miniversion, the ID of the miniversion.
-    //  If it is not a handle to a minivers, this field will be 0.
+    //  If it is not a handle to a miniversion, this field will be 0.
     //
 
     WORD   ThisMiniVersion;
@@ -12763,7 +13051,7 @@ typedef struct _FILE_FS_PERSISTENT_VOLUME_INFORMATION {
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WINBLUE)
 //
-//  Persistent volume flags to control the file systems' storage tiering
+//  Persistent volume flags to control the file system's storage tiering
 //  awareness.
 //
 
@@ -12787,7 +13075,7 @@ typedef struct _FILE_FS_PERSISTENT_VOLUME_INFORMATION {
 
 //
 //  The volume is backed by other volume that actually has the system files.
-//  And hence this relies on the other volume being present in order for the sytem to boot up.
+//  And hence this relies on the other volume being present in order for the system to boot up.
 //
 
 #define PERSISTENT_VOLUME_STATE_BACKED_BY_WIM                       (0x00000040)
@@ -13016,7 +13304,7 @@ typedef struct _SD_CHANGE_MACHINE_SID_INPUT {
     WORD   CurrentMachineSIDLength;
 
     //
-    //  The new machine SID value to set inplace of the current machine SID
+    //  The new machine SID value to set in-place of the current machine SID
     //  This defines the offset from the beginning of the SD_GLOBAL_CHANGE_INPUT
     //  structure of where the NewMachineSID to set begins.  This will
     //  be a SID structure.  The length defines the length of the imbedded SID
@@ -13067,7 +13355,7 @@ typedef struct _SD_CHANGE_MACHINE_SID_OUTPUT {
     DWORDLONG NumMftSDChangedFail;
 
     //
-    //  Total number of entriess process in the $MFT file
+    //  Total number of entries processed in the $MFT file
     //
 
     DWORDLONG NumMftSDTotal;
@@ -13400,7 +13688,7 @@ typedef struct _FILE_TYPE_NOTIFICATION_INPUT {
     DWORD NumFileTypeIDs;
 
     //
-    //  This is a unique identifer for the type of file notification occuring
+    //  This is a unique identifier for the type of file notification occurring
     //
 
     GUID FileTypeID[1];
@@ -13669,6 +13957,7 @@ typedef enum _STORAGE_RESERVE_ID {
     StorageReserveIdNone = 0,
     StorageReserveIdHard,
     StorageReserveIdSoft,
+    StorageReserveIdUpdateScratch,
 
     StorageReserveIdMax
 
@@ -13759,35 +14048,36 @@ typedef struct _FILE_LEVEL_TRIM_OUTPUT {
 #define QUERY_FILE_LAYOUT_RESTART                                       (0x00000001)
 
 //
-// Request that the API call retrieve name information for the
-// objects on the volume.
+//  Request that the API call retrieve name information for the
+//  objects on the volume.
 //
 #define QUERY_FILE_LAYOUT_INCLUDE_NAMES                                 (0x00000002)
 
 //
-// Request that the API call include streams of the file.
+//  Request that the API call include streams of the file.
 //
 #define QUERY_FILE_LAYOUT_INCLUDE_STREAMS                               (0x00000004)
 
 //
-// Include extent information with the attribute entries, where applicable.
-// Use of this flag requires the _INCLUDE_STREAMS flag.
+//  Include extent information with the attribute entries, where applicable.
+//  Use of this flag requires the _INCLUDE_STREAMS flag.
 //
 #define QUERY_FILE_LAYOUT_INCLUDE_EXTENTS                               (0x00000008)
 
 //
-// Include extra information, such as modification times and security
-// IDs, with each returned file layout entry.
+//  Include extra information, such as modification times and security
+//  IDs, with each returned file layout entry.
 //
 #define QUERY_FILE_LAYOUT_INCLUDE_EXTRA_INFO                            (0x00000010)
 
 //
-// Include unallocated attributes in the enumeration, which in NTFS means one
-// of two cases:
+//  Include unallocated attributes in the enumeration, which in NTFS means one
+//  of three cases:
 //      1. Resident attributes.
-//      2. Compressed or sparse nonresident attributes with no physical
+//      2. Nonresident attributes of length 0.
+//      3. Compressed or sparse nonresident attributes with no physical
 //         allocation (consisting only of a sparse hole).
-//  This flag may only be used when no cluster ranges are specified (i. e.
+//  This flag may only be used when no cluster ranges are specified (i.e.
 //  on a whole-volume query).
 //
 #define QUERY_FILE_LAYOUT_INCLUDE_STREAMS_WITH_NO_CLUSTERS_ALLOCATED    (0x00000020)
@@ -15139,7 +15429,7 @@ typedef struct _SET_DAX_ALLOC_ALIGNMENT_HINT_INPUT {
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS4)
 
 //
-//  MANDATORY - If allocation satisyfing AlignmentShift (or at least
+//  MANDATORY - If allocation satisfying AlignmentShift (or at least
 //     FallbackAlignmentShift if specified) cannot be found, then fail
 //     the file system operation (e.g. extending the file).
 //

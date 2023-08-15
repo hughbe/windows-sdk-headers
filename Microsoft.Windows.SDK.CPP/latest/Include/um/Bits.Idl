@@ -85,16 +85,17 @@ interface IEnumBackgroundCopyFiles : IUnknown
 ]
 interface IBackgroundCopyError : IUnknown
 {
-    typedef enum
+    typedef enum BG_ERROR_CONTEXT
     {
-       BG_ERROR_CONTEXT_NONE                       = 0,
-       BG_ERROR_CONTEXT_UNKNOWN                    = 1,
-       BG_ERROR_CONTEXT_GENERAL_QUEUE_MANAGER      = 2,
-       BG_ERROR_CONTEXT_QUEUE_MANAGER_NOTIFICATION = 3,
-       BG_ERROR_CONTEXT_LOCAL_FILE                 = 4,
-       BG_ERROR_CONTEXT_REMOTE_FILE                = 5,
-       BG_ERROR_CONTEXT_GENERAL_TRANSPORT          = 6,
-       BG_ERROR_CONTEXT_REMOTE_APPLICATION         = 7
+       BG_ERROR_CONTEXT_NONE                        = 0,
+       BG_ERROR_CONTEXT_UNKNOWN                     = 1,
+       BG_ERROR_CONTEXT_GENERAL_QUEUE_MANAGER       = 2,
+       BG_ERROR_CONTEXT_QUEUE_MANAGER_NOTIFICATION  = 3,
+       BG_ERROR_CONTEXT_LOCAL_FILE                  = 4,
+       BG_ERROR_CONTEXT_REMOTE_FILE                 = 5,
+       BG_ERROR_CONTEXT_GENERAL_TRANSPORT           = 6,
+       BG_ERROR_CONTEXT_REMOTE_APPLICATION          = 7,
+       BG_ERROR_CONTEXT_SERVER_CERTIFICATE_CALLBACK = 8,
     } BG_ERROR_CONTEXT;
 
     HRESULT GetError( [out,ref] BG_ERROR_CONTEXT *pContext,
@@ -152,7 +153,7 @@ interface IBackgroundCopyJob : IUnknown
     }
     BG_JOB_TIMES;
 
-    typedef enum
+    typedef enum BG_JOB_PRIORITY
     {
         BG_JOB_PRIORITY_FOREGROUND,
         BG_JOB_PRIORITY_HIGH,
@@ -161,7 +162,7 @@ interface IBackgroundCopyJob : IUnknown
 
     } BG_JOB_PRIORITY;
 
-    typedef enum
+    typedef enum BG_JOB_STATE
     {
         BG_JOB_STATE_QUEUED,
         BG_JOB_STATE_CONNECTING,
@@ -175,7 +176,7 @@ interface IBackgroundCopyJob : IUnknown
 
     } BG_JOB_STATE;
 
-    typedef enum
+    typedef enum BG_JOB_TYPE
     {
         BG_JOB_TYPE_DOWNLOAD,
         BG_JOB_TYPE_UPLOAD,
@@ -183,7 +184,7 @@ interface IBackgroundCopyJob : IUnknown
 
     } BG_JOB_TYPE;
 
-    typedef enum
+    typedef enum BG_JOB_PROXY_USAGE
     {
        BG_JOB_PROXY_USAGE_PRECONFIG,
        BG_JOB_PROXY_USAGE_NO_PROXY,

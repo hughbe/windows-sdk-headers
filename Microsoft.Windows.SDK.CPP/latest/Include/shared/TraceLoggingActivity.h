@@ -522,6 +522,16 @@ protected:
         m_HasRelatedId = true;
     }
 
+    /*
+    Should be called at an appropriate point in activity setup, after SetRelatedId() is called.
+    Returns the related activity Id, if there is one.
+    Returns NULL if the related activity Id has not been set or if it is GUID_NULL.
+    */
+    _Ret_opt_ const GUID* GetRelatedId() const
+    {
+        return m_HasRelatedId && !_TlgGuidIsZero(m_CapturedRelatedId) ? &m_CapturedRelatedId : NULL;
+    }
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
     /*
@@ -633,7 +643,7 @@ public:
     _Ret_opt_ const GUID* zInternalRelatedId() const
     {
         _TLG_ASSERT(m_State == Started, "TraceLoggingWriteStart race condition");
-        return m_HasRelatedId && !_TlgGuidIsZero(m_CapturedRelatedId) ? &m_CapturedRelatedId : NULL;
+        return GetRelatedId();
     }
 
     /*
@@ -653,7 +663,7 @@ public:
         else
         {
             // Zero the activity id in case we end up logging the stop.
-            ZeroMemory(&m_Id, sizeof(&m_Id));
+            ZeroMemory(&m_Id, sizeof(m_Id));
         }
 
         m_State = Started;

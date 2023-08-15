@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.core.direct.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -256,7 +252,7 @@
 #endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION)
-#define WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION 0x10000
+#define WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -284,11 +280,11 @@ namespace ABI {
                 namespace Core {
                     namespace Direct {
                         interface IXamlDirect;
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect ABI::Windows::UI::Xaml::Core::Direct::IXamlDirect
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_FWD_DEFINED__
@@ -302,11 +298,11 @@ namespace ABI {
                 namespace Core {
                     namespace Direct {
                         interface IXamlDirectObject;
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_FWD_DEFINED__
@@ -320,11 +316,11 @@ namespace ABI {
                 namespace Core {
                     namespace Direct {
                         interface IXamlDirectStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_FWD_DEFINED__
@@ -336,8 +332,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -345,8 +341,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -354,8 +350,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -363,8 +359,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -372,8 +368,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -383,8 +379,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -395,9 +391,9 @@ namespace ABI {
                 
                 typedef struct CornerRadius CornerRadius;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -406,9 +402,9 @@ namespace ABI {
                 
                 typedef struct Duration Duration;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -417,9 +413,9 @@ namespace ABI {
                 
                 typedef struct GridLength GridLength;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -432,10 +428,10 @@ namespace ABI {
                     
                     typedef struct Matrix Matrix;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -450,11 +446,11 @@ namespace ABI {
                         
                         typedef struct Matrix3D Matrix3D;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -468,9 +464,9 @@ namespace ABI {
                 
                 typedef struct Thickness Thickness;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -485,11 +481,11 @@ namespace ABI {
                         
                         typedef enum XamlEventIndex : int XamlEventIndex;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -500,11 +496,11 @@ namespace ABI {
                         
                         typedef enum XamlPropertyIndex : int XamlPropertyIndex;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -515,11 +511,11 @@ namespace ABI {
                         
                         typedef enum XamlTypeIndex : int XamlTypeIndex;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -531,11 +527,11 @@ namespace ABI {
                 namespace Core {
                     namespace Direct {
                         class XamlDirect;
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -704,11 +700,11 @@ namespace ABI {
                             XamlEventIndex_TimePicker_SelectedTimeChanged = 323,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 
 
@@ -2237,6 +2233,11 @@ namespace ABI {
                             XamlPropertyIndex_FontIconSource_MirroredWhenRightToLeft = 2121,
                             XamlPropertyIndex_PathIconSource_Data = 2122,
                             XamlPropertyIndex_SymbolIconSource_Symbol = 2123,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_UIElement_Shadow = 2130,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
                             XamlPropertyIndex_IconSourceElement_IconSource = 2131,
                             XamlPropertyIndex_PasswordBox_CanPasteClipboardContent = 2137,
                             XamlPropertyIndex_TextBox_CanPasteClipboardContent = 2138,
@@ -2308,6 +2309,11 @@ namespace ABI {
                             XamlPropertyIndex_FlyoutBase_IsOpen = 2267,
                             XamlPropertyIndex_StandardUICommand_Kind = 2275,
                             XamlPropertyIndex_UIElement_CanBeScrollAnchor = 2276,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_ThemeShadow_Receivers = 2279,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
                             XamlPropertyIndex_ScrollContentPresenter_SizesContentToTemplatedParent = 2280,
                             XamlPropertyIndex_ComboBox_TextBoxStyle = 2281,
                             XamlPropertyIndex_Frame_IsNavigationStackEnabled = 2282,
@@ -2329,13 +2335,73 @@ namespace ABI {
                             XamlPropertyIndex_XamlUICommand_Label = 2352,
                             XamlPropertyIndex_DatePicker_SelectedDate = 2355,
                             XamlPropertyIndex_TimePicker_SelectedTime = 2356,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_AppBarTemplateSettings_NegativeCompactVerticalDelta = 2367,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_AppBarTemplateSettings_NegativeHiddenVerticalDelta = 2368,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_AppBarTemplateSettings_NegativeMinimalVerticalDelta = 2369,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_FlyoutBase_ShouldConstrainToRootBounds = 2378,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_Popup_ShouldConstrainToRootBounds = 2379,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_FlyoutPresenter_IsDefaultShadowEnabled = 2380,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_MenuFlyoutPresenter_IsDefaultShadowEnabled = 2381,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_UIElement_ActualOffset = 2382,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_UIElement_ActualSize = 2383,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentCompactYTranslation = 2384,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentHiddenYTranslation = 2385,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentMinimalYTranslation = 2386,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 
 
@@ -2606,14 +2672,19 @@ namespace ABI {
                             XamlTypeIndex_AppBarElementContainer = 945,
                             XamlTypeIndex_ColorPaletteResources = 952,
                             XamlTypeIndex_StandardUICommand = 961,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
+                            XamlTypeIndex_ThemeShadow = 964,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+                            
                             XamlTypeIndex_XamlUICommand = 969,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 
 
@@ -2668,7 +2739,7 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE SetBooleanProperty(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
                                 /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetDoubleProperty(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
@@ -2763,7 +2834,7 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE GetBooleanProperty(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
                                 /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetDoubleProperty(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
@@ -2870,7 +2941,7 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE RemoveFromCollection(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * value,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveFromCollectionAt(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
@@ -2888,7 +2959,7 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
                                 /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlEventIndex eventIndex,
                                 /* [in] */__RPC__in_opt IInspectable * handler,
-                                /* [in] */boolean handledEventsToo
+                                /* [in] */::boolean handledEventsToo
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveEventHandler(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
@@ -2900,11 +2971,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IXamlDirect=_uuidof(IXamlDirect);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_INTERFACE_DEFINED__) */
@@ -2939,11 +3010,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IXamlDirectObject=_uuidof(IXamlDirectObject);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_INTERFACE_DEFINED__) */
@@ -2984,11 +3055,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IXamlDirectStatics=_uuidof(IXamlDirectStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Direct */
+                } /* Core */
             } /* Xaml */
-        } /* Core */
-    } /* Direct */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_INTERFACE_DEFINED__) */
@@ -4796,6 +4867,11 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
     XamlPropertyIndex_FontIconSource_MirroredWhenRightToLeft = 2121,
     XamlPropertyIndex_PathIconSource_Data = 2122,
     XamlPropertyIndex_SymbolIconSource_Symbol = 2123,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_UIElement_Shadow = 2130,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
     XamlPropertyIndex_IconSourceElement_IconSource = 2131,
     XamlPropertyIndex_PasswordBox_CanPasteClipboardContent = 2137,
     XamlPropertyIndex_TextBox_CanPasteClipboardContent = 2138,
@@ -4867,6 +4943,11 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
     XamlPropertyIndex_FlyoutBase_IsOpen = 2267,
     XamlPropertyIndex_StandardUICommand_Kind = 2275,
     XamlPropertyIndex_UIElement_CanBeScrollAnchor = 2276,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_ThemeShadow_Receivers = 2279,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
     XamlPropertyIndex_ScrollContentPresenter_SizesContentToTemplatedParent = 2280,
     XamlPropertyIndex_ComboBox_TextBoxStyle = 2281,
     XamlPropertyIndex_Frame_IsNavigationStackEnabled = 2282,
@@ -4888,6 +4969,66 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
     XamlPropertyIndex_XamlUICommand_Label = 2352,
     XamlPropertyIndex_DatePicker_SelectedDate = 2355,
     XamlPropertyIndex_TimePicker_SelectedTime = 2356,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_AppBarTemplateSettings_NegativeCompactVerticalDelta = 2367,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_AppBarTemplateSettings_NegativeHiddenVerticalDelta = 2368,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_AppBarTemplateSettings_NegativeMinimalVerticalDelta = 2369,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_FlyoutBase_ShouldConstrainToRootBounds = 2378,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_Popup_ShouldConstrainToRootBounds = 2379,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_FlyoutPresenter_IsDefaultShadowEnabled = 2380,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_MenuFlyoutPresenter_IsDefaultShadowEnabled = 2381,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_UIElement_ActualOffset = 2382,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_UIElement_ActualSize = 2383,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentCompactYTranslation = 2384,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentHiddenYTranslation = 2385,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentMinimalYTranslation = 2386,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
 };
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 
@@ -5153,6 +5294,11 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex
     XamlTypeIndex_AppBarElementContainer = 945,
     XamlTypeIndex_ColorPaletteResources = 952,
     XamlTypeIndex_StandardUICommand = 961,
+#if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
+    XamlTypeIndex_ThemeShadow = 964,
+#endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
+    
     XamlTypeIndex_XamlUICommand = 969,
 };
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000

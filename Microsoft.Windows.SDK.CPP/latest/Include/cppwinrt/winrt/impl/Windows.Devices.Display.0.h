@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -94,12 +94,12 @@ template <> struct abi<Windows::Devices::Display::IDisplayMonitor>{ struct type 
     virtual int32_t WINRT_CALL get_MaxLuminanceInNits(float* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_MinLuminanceInNits(float* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_MaxAverageFullFrameLuminanceInNits(float* value) noexcept = 0;
-    virtual int32_t WINRT_CALL GetDescriptor(Windows::Devices::Display::DisplayMonitorDescriptorKind descriptorKind, uint32_t* __valueSize, uint8_t** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDescriptor(Windows::Devices::Display::DisplayMonitorDescriptorKind descriptorKind, uint32_t* __resultSize, uint8_t** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::Display::IDisplayMonitorStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL GetDeviceSelector(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDeviceSelector(void** result) noexcept = 0;
     virtual int32_t WINRT_CALL FromIdAsync(void* deviceId, void** operation) noexcept = 0;
     virtual int32_t WINRT_CALL FromInterfaceIdAsync(void* deviceInterfaceId, void** operation) noexcept = 0;
 };};

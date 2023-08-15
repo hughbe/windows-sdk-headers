@@ -13,6 +13,14 @@
 #ifndef BUILD_WINDOWS
 namespace ABI {
 #endif
+
+namespace Windows {
+namespace UI {
+namespace Internal {
+namespace Input {
+    interface IInputSite;
+}}}}
+
 namespace Windows {
 namespace UI {
 namespace Composition {
@@ -89,6 +97,14 @@ DECLARE_INTERFACE_IID_(ICompositorInterop, IUnknown, "25297D5C-3AD4-4C9C-B5CF-E3
 };
 
 
+#undef INTERFACE
+#define INTERFACE ISwapChainInterop
+DECLARE_INTERFACE_IID_(ISwapChainInterop, IUnknown, "26f496a0-7f38-45fb-88f7-faaabe67dd59")
+{
+    IFACEMETHOD(SetSwapChain)(
+        _In_ IUnknown * swapChain) PURE;
+};
+
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
@@ -133,6 +149,10 @@ DECLARE_INTERFACE_IID_(ICompositorDesktopInterop, IUnknown, "29E691FA-4567-4DCA-
         _In_ BOOL isTopmost,
         _COM_Outptr_ IDesktopWindowTarget ** result
         ) PURE;
+
+    IFACEMETHOD(EnsureOnThread)(
+        _In_ DWORD threadId
+        ) PURE;
 };
 
 
@@ -142,6 +162,23 @@ DECLARE_INTERFACE_IID_(IDesktopWindowTargetInterop, IUnknown, "35DBF59E-E3F9-45B
 {
     IFACEMETHOD(get_Hwnd)(
         _Outptr_ HWND * value
+        ) PURE;
+};
+
+
+#undef INTERFACE
+#define INTERFACE IDesktopWindowContentBridgeInterop
+DECLARE_INTERFACE_IID_(IDesktopWindowContentBridgeInterop, IUnknown, "37642806-F421-4FD0-9F82-23AE7C776182")
+{
+    IFACEMETHOD(Initialize)(
+        _In_ Windows::UI::Composition::ICompositor* compositor, _In_ HWND parentHwnd) PURE;
+
+    IFACEMETHOD(get_Hwnd)(
+        _Outptr_ HWND * value
+        ) PURE;
+
+    IFACEMETHOD(get_AppliedScaleFactor)(
+        _Out_ float* value
         ) PURE;
 };
 

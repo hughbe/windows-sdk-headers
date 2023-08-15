@@ -28,6 +28,42 @@ Abstract:
 extern "C" {
 #endif
 
+/// Allows callers to set an informational verbose function handler. The provided handler
+/// is used for informational verbose messages.
+///
+/// \param InfoHandler   Supplies a handler for informational verbose messages.
+///
+VOID
+WINAPI
+SetInfoVerboseHandler(
+    _In_opt_    VM_SAVED_STATE_DUMP_VERBOSE_HANDLER InfoHandler
+    );
+
+
+/// Allows callers to set an error verbose function handler. The provided handler
+/// is used for error verbose messages.
+///
+/// \param ErrorHandler   Supplies a handler for error verbose messages.
+///
+VOID
+WINAPI
+SetErrorVerboseHandler(
+    _In_opt_    VM_SAVED_STATE_DUMP_VERBOSE_HANDLER ErrorHandler
+    );
+
+
+/// Allows callers to set a debug verbose function handler. The provided handler
+/// is used for debug verbose messages.
+///
+/// \param DebugHandler   Supplies a handler for debug verbose messages.
+///
+VOID
+WINAPI
+SetDebugVerboseHandler(
+    _In_opt_    VM_SAVED_STATE_DUMP_VERBOSE_HANDLER DebugHandler
+    );
+
+
 /// Locates the saved state file(s) for a given VM and/or snapshot. This function uses WMI and the V1 or V2
 /// virtualization namespace. So this is expected to fail if ran on a machine without Hyper-V installed.
 ///  - If the given VM has a VMRS file, parameters BinPath and VsvPath will be a single null terminator character.
@@ -164,6 +200,41 @@ GetArchitecture(
     );
 
 
+/// Forces the current Architecture/ISA of a given virtual processor.
+/// This is useful to force architecture specific virtual to physical address translation techniques.
+///
+/// \param  VmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \param  VpId                    Supplies the VP to force the architecure on.
+/// \retval Architecture            Supplies the architecture to force on the vp.
+///
+/// \return HRESULT.
+///
+HRESULT
+WINAPI
+ForceArchitecture(
+    _In_    VM_SAVED_STATE_DUMP_HANDLE      VmSavedStateDumpHandle,
+    _In_    UINT32                          VpId,
+    _In_    VIRTUAL_PROCESSOR_ARCH          Architecture
+    );
+
+
+/// Queries if a given VP is in kernel space.
+///
+/// \param  VmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \param  VpId                    Supplies the VP to query.
+/// \retval InKernelSpace           Returns if the VP is in kernel space.
+///
+/// \return HRESULT.
+///
+HRESULT
+WINAPI
+InKernelSpace(
+    _In_    VM_SAVED_STATE_DUMP_HANDLE      VmSavedStateDumpHandle,
+    _In_    UINT32                          VpId,
+    _Out_   BOOL*                           InKernelSpace
+    );
+
+
 /// Queries for a specific register value for a given VP in a VmSavedStateDump.
 /// Callers must specify architecture and register ID in parameter Register, and this function
 /// returns the register value through it.
@@ -198,6 +269,24 @@ GetPagingMode(
     _In_    VM_SAVED_STATE_DUMP_HANDLE      VmSavedStateDumpHandle,
     _In_    UINT32                          VpId,
     _Out_   PAGING_MODE*                    PagingMode
+    );
+
+
+/// Forces the Paging Mode for a given virtual processor.
+/// This is useful to force paging mode specific virtual to physical address translation techniques.
+///
+/// \param  VmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \param  VpId                    Supplies the Virtual Processor Id.
+/// \retval PagingMode              Supplies the paging mode to force on the virtual processor.
+///
+/// \returns HRESULT.
+///
+HRESULT
+WINAPI
+ForcePagingMode(
+    _In_    VM_SAVED_STATE_DUMP_HANDLE  VmSavedStateDumpHandle,
+    _In_    UINT32                      VpId,
+    _In_    PAGING_MODE                 PagingMode
     );
 
 

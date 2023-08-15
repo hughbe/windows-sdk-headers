@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.perception.spatial.preview.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -269,6 +265,22 @@
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                namespace Preview {
+                    interface ISpatialGraphInteropFrameOfReferencePreview;
+                } /* Preview */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview ABI::Windows::Perception::Spatial::Preview::ISpatialGraphInteropFrameOfReferencePreview
+
+#endif // ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics_FWD_DEFINED__
 namespace ABI {
@@ -277,14 +289,41 @@ namespace ABI {
             namespace Spatial {
                 namespace Preview {
                     interface ISpatialGraphInteropPreviewStatics;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics ABI::Windows::Perception::Spatial::Preview::ISpatialGraphInteropPreviewStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                namespace Preview {
+                    interface ISpatialGraphInteropPreviewStatics2;
+                } /* Preview */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 ABI::Windows::Perception::Spatial::Preview::ISpatialGraphInteropPreviewStatics2
+
+#endif // ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_FWD_DEFINED__
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            namespace Numerics {
+                
+                typedef struct Matrix4x4 Matrix4x4;
+                
+            } /* Numerics */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -293,9 +332,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -304,9 +343,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -319,9 +358,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -330,9 +369,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -343,9 +382,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialLocator;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_FWD_DEFINED__
@@ -354,9 +393,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocator;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator ABI::Windows::Perception::Spatial::ISpatialLocator
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_FWD_DEFINED__
@@ -368,8 +407,71 @@ namespace ABI {
 
 
 
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                namespace Preview {
+                    class SpatialGraphInteropFrameOfReferencePreview;
+                } /* Preview */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
+
+
+
+
+
+
+/*
+ *
+ * Interface Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Perception_Spatial_Preview_ISpatialGraphInteropFrameOfReferencePreview[] = L"Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview";
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                namespace Preview {
+                    /* [object, uuid("A8271B23-735F-5729-A98E-E64ED189ABC5"), exclusiveto, contract] */
+                    MIDL_INTERFACE("A8271B23-735F-5729-A98E-E64ED189ABC5")
+                    ISpatialGraphInteropFrameOfReferencePreview : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CoordinateSystem(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem * * value
+                            ) = 0;
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NodeId(
+                            /* [retval, out] */__RPC__out GUID * value
+                            ) = 0;
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CoordinateSystemToNodeTransform(
+                            /* [retval, out] */__RPC__out ABI::Windows::Foundation::Numerics::Matrix4x4 * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ISpatialGraphInteropFrameOfReferencePreview=_uuidof(ISpatialGraphInteropFrameOfReferencePreview);
+                    
+                } /* Preview */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview;
+#endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -421,14 +523,91 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialGraphInteropPreviewStatics=_uuidof(ISpatialGraphInteropPreviewStatics);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Perception_Spatial_Preview_ISpatialGraphInteropPreviewStatics2[] = L"Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace Spatial {
+                namespace Preview {
+                    /* [object, uuid("2490B15F-6CBD-4B1E-B765-31E462A32DF2"), exclusiveto, contract] */
+                    MIDL_INTERFACE("2490B15F-6CBD-4B1E-B765-31E462A32DF2")
+                    ISpatialGraphInteropPreviewStatics2 : public IInspectable
+                    {
+                    public:
+                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryCreateFrameOfReference(
+                            /* [in] */__RPC__in_opt ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem * coordinateSystem,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::Spatial::Preview::ISpatialGraphInteropFrameOfReferencePreview * * result
+                            ) = 0;
+                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryCreateFrameOfReferenceWithPosition(
+                            /* [in] */__RPC__in_opt ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem * coordinateSystem,
+                            /* [in] */ABI::Windows::Foundation::Numerics::Vector3 relativePosition,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::Spatial::Preview::ISpatialGraphInteropFrameOfReferencePreview * * result
+                            ) = 0;
+                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryCreateFrameOfReferenceWithPositionAndOrientation(
+                            /* [in] */__RPC__in_opt ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem * coordinateSystem,
+                            /* [in] */ABI::Windows::Foundation::Numerics::Vector3 relativePosition,
+                            /* [in] */ABI::Windows::Foundation::Numerics::Quaternion relativeOrientation,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::Spatial::Preview::ISpatialGraphInteropFrameOfReferencePreview * * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ISpatialGraphInteropPreviewStatics2=_uuidof(ISpatialGraphInteropPreviewStatics2);
+                    
+                } /* Preview */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2;
+#endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Perception_Spatial_Preview_SpatialGraphInteropFrameOfReferencePreview_DEFINED
+#define RUNTIMECLASS_Windows_Perception_Spatial_Preview_SpatialGraphInteropFrameOfReferencePreview_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Perception_Spatial_Preview_SpatialGraphInteropFrameOfReferencePreview[] = L"Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -439,6 +618,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialG
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -459,11 +639,26 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview;
+
+#endif // ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics;
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2;
+
+#endif // ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_FWD_DEFINED__
+
+
+typedef struct __x_ABI_CWindows_CFoundation_CNumerics_CMatrix4x4 __x_ABI_CWindows_CFoundation_CNumerics_CMatrix4x4;
 
 
 typedef struct __x_ABI_CWindows_CFoundation_CNumerics_CQuaternion __x_ABI_CWindows_CFoundation_CNumerics_CQuaternion;
@@ -499,6 +694,116 @@ typedef interface __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator __x_ABI
 
 
 
+
+
+
+
+
+/*
+ *
+ * Interface Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Perception_Spatial_Preview_ISpatialGraphInteropFrameOfReferencePreview[] = L"Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview";
+/* [object, uuid("A8271B23-735F-5729-A98E-E64ED189ABC5"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreviewVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CoordinateSystem )(
+        __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NodeId )(
+        __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This,
+        /* [retval, out] */__RPC__out GUID * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CoordinateSystemToNodeTransform )(
+        __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CNumerics_CMatrix4x4 * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreviewVtbl;
+
+interface __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview
+{
+    CONST_VTBL struct __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreviewVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_get_CoordinateSystem(This,value) \
+    ( (This)->lpVtbl->get_CoordinateSystem(This,value) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_get_NodeId(This,value) \
+    ( (This)->lpVtbl->get_NodeId(This,value) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_get_CoordinateSystemToNodeTransform(This,value) \
+    ( (This)->lpVtbl->get_CoordinateSystemToNodeTransform(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview;
+#endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -624,12 +929,148 @@ EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialG
 
 /*
  *
+ * Interface Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Perception_Spatial_Preview_ISpatialGraphInteropPreviewStatics2[] = L"Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2";
+/* [object, uuid("2490B15F-6CBD-4B1E-B765-31E462A32DF2"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [overload] */HRESULT ( STDMETHODCALLTYPE *TryCreateFrameOfReference )(
+        __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem * coordinateSystem,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * * result
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *TryCreateFrameOfReferenceWithPosition )(
+        __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem * coordinateSystem,
+        /* [in] */__x_ABI_CWindows_CFoundation_CNumerics_CVector3 relativePosition,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * * result
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *TryCreateFrameOfReferenceWithPositionAndOrientation )(
+        __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem * coordinateSystem,
+        /* [in] */__x_ABI_CWindows_CFoundation_CNumerics_CVector3 relativePosition,
+        /* [in] */__x_ABI_CWindows_CFoundation_CNumerics_CQuaternion relativeOrientation,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropFrameOfReferencePreview * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2Vtbl;
+
+interface __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_TryCreateFrameOfReference(This,coordinateSystem,result) \
+    ( (This)->lpVtbl->TryCreateFrameOfReference(This,coordinateSystem,result) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_TryCreateFrameOfReferenceWithPosition(This,coordinateSystem,relativePosition,result) \
+    ( (This)->lpVtbl->TryCreateFrameOfReferenceWithPosition(This,coordinateSystem,relativePosition,result) )
+
+#define __x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_TryCreateFrameOfReferenceWithPositionAndOrientation(This,coordinateSystem,relativePosition,relativeOrientation,result) \
+    ( (This)->lpVtbl->TryCreateFrameOfReferenceWithPositionAndOrientation(This,coordinateSystem,relativePosition,relativeOrientation,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2;
+#endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CPreview_CISpatialGraphInteropPreviewStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Perception_Spatial_Preview_SpatialGraphInteropFrameOfReferencePreview_DEFINED
+#define RUNTIMECLASS_Windows_Perception_Spatial_Preview_SpatialGraphInteropFrameOfReferencePreview_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Perception_Spatial_Preview_SpatialGraphInteropFrameOfReferencePreview[] = L"Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment

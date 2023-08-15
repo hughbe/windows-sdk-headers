@@ -73,6 +73,9 @@
 #define SZ_KEY_ADDEVENTPROVIDER TEXT("AddEventProvider")
 #define SZ_KEY_ADDCHANNEL       TEXT("AddChannel")
 #define SZ_KEY_IMPORTCHANNEL    TEXT("ImportChannel")
+#define SZ_KEY_ADDFILTER        TEXT("AddFilter")
+#define SZ_KEY_FILTERLEVEL      TEXT("FilterLevel")
+#define SZ_KEY_FILTERPOSITION   TEXT("FilterPosition")
 
 // These are here for compatability with SetupX
 // They are registry keys, and are not used by SetupAPI
@@ -137,6 +140,7 @@
 // Used to install a primitive INF
 //
 #define INFSTR_SECT_DEFAULT_INSTALL     TEXT("DefaultInstall")
+#define INFSTR_SECT_DEFAULT_UNINSTALL   TEXT("DefaultUninstall")
 
 //
 //  Used to install an interface class
@@ -290,6 +294,7 @@
 #define INFSTR_SUBKEY_LOGCONFIGOVERRIDE TEXT("LogConfigOverride")
 #define INFSTR_SUBKEY_WMI               TEXT("WMI")
 #define INFSTR_SUBKEY_EVENTS            TEXT("Events")
+#define INFSTR_SUBKEY_FILTERS           TEXT("Filters")
 
 // Control Section
 #define INFSTR_CONTROLFLAGS_SECTION         TEXT("ControlFlags")

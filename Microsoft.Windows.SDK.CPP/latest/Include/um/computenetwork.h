@@ -25,22 +25,22 @@ extern "C" {
 /// Notifications indicated to callbacks 
 typedef enum HCN_NOTIFICATIONS
 {
-       HcnNotificationInvalid           = 0x00000000,
+       HcnNotificationInvalid                         = 0x00000000,
 
        /// Notifications for HCN_SERVICE handles
-       HcnNotificationNetworkPreCreate  = 0x00000001,
-       HcnNotificationNetworkCreate     = 0x00000002,
-       HcnNotificationNetworkPreDelete  = 0x00000003,
-       HcnNotificationNetworkDelete     = 0x00000004,
+       HcnNotificationNetworkPreCreate                = 0x00000001,
+       HcnNotificationNetworkCreate                   = 0x00000002,
+       HcnNotificationNetworkPreDelete                = 0x00000003,
+       HcnNotificationNetworkDelete                   = 0x00000004,
        // Namespace Notifications
-       HcnNotificationNamespaceCreate   = 0x00000005,
-       HcnNotificationNamespaceDelete   = 0x00000006,
+       HcnNotificationNamespaceCreate                 = 0x00000005,
+       HcnNotificationNamespaceDelete                 = 0x00000006,
 
        /// Common notifications
-       HcnNotificationServiceDisconnect = 0x01000000,
+       HcnNotificationServiceDisconnect               = 0x01000000,
 
        /// The upper 4 bits are reserved for flags
-       HcnNotificationFlagsReserved     = 0xF0000000
+       HcnNotificationFlagsReserved                   = 0xF0000000
 } HCN_NOTIFICATIONS;
 
 /// Handle to a callback registered on a hns object

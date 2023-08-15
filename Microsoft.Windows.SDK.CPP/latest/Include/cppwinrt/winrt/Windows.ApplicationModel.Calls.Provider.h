@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -97,6 +97,13 @@ template <typename D> Windows::Foundation::IAsyncOperation<bool> consume_Windows
     Windows::Foundation::IAsyncOperation<bool> result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics2)->RequestSetAsActiveCallOriginAppAsync(put_abi(result)));
     return result;
+}
+
+template <typename D> bool consume_Windows_ApplicationModel_Calls_Provider_IPhoneCallOriginManagerStatics3<D>::IsSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics3)->get_IsSupported(&value));
+    return value;
 }
 
 template <typename D>
@@ -293,6 +300,22 @@ struct produce<D, Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginMa
     }
 };
 
+template <typename D>
+struct produce<D, Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics3> : produce_base<D, Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics3>
+{
+    int32_t WINRT_CALL get_IsSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls::Provider {
@@ -321,6 +344,11 @@ inline Windows::Foundation::IAsyncOperation<bool> PhoneCallOriginManager::Reques
     return impl::call_factory<PhoneCallOriginManager, Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics2>([&](auto&& f) { return f.RequestSetAsActiveCallOriginAppAsync(); });
 }
 
+inline bool PhoneCallOriginManager::IsSupported()
+{
+    return impl::call_factory<PhoneCallOriginManager, Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics3>([&](auto&& f) { return f.IsSupported(); });
+}
+
 }
 
 WINRT_EXPORT namespace std {
@@ -330,6 +358,7 @@ template<> struct hash<winrt::Windows::ApplicationModel::Calls::Provider::IPhone
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin3> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics2> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics3> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager> {};
 

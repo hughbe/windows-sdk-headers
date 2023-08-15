@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.input.inking.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,10 +278,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkDrawingAttributes;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes ABI::Windows::UI::Input::Inking::IInkDrawingAttributes
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes_FWD_DEFINED__
@@ -298,10 +294,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkDrawingAttributes2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes2 ABI::Windows::UI::Input::Inking::IInkDrawingAttributes2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes2_FWD_DEFINED__
@@ -314,10 +310,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkDrawingAttributes3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes3 ABI::Windows::UI::Input::Inking::IInkDrawingAttributes3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes3_FWD_DEFINED__
@@ -330,10 +326,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkDrawingAttributes4;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes4 ABI::Windows::UI::Input::Inking::IInkDrawingAttributes4
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes4_FWD_DEFINED__
@@ -346,10 +342,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkDrawingAttributes5;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes5 ABI::Windows::UI::Input::Inking::IInkDrawingAttributes5
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes5_FWD_DEFINED__
@@ -362,10 +358,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkDrawingAttributesPencilProperties;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesPencilProperties ABI::Windows::UI::Input::Inking::IInkDrawingAttributesPencilProperties
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesPencilProperties_FWD_DEFINED__
@@ -378,10 +374,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkDrawingAttributesStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesStatics ABI::Windows::UI::Input::Inking::IInkDrawingAttributesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesStatics_FWD_DEFINED__
@@ -394,10 +390,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkInputConfiguration;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration ABI::Windows::UI::Input::Inking::IInkInputConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration_FWD_DEFINED__
@@ -410,10 +406,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkInputProcessingConfiguration;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration ABI::Windows::UI::Input::Inking::IInkInputProcessingConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration_FWD_DEFINED__
@@ -426,10 +422,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkManager;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkManager ABI::Windows::UI::Input::Inking::IInkManager
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkManager_FWD_DEFINED__
@@ -442,10 +438,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkModelerAttributes;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkModelerAttributes ABI::Windows::UI::Input::Inking::IInkModelerAttributes
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkModelerAttributes_FWD_DEFINED__
@@ -458,10 +454,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPoint;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint ABI::Windows::UI::Input::Inking::IInkPoint
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint_FWD_DEFINED__
@@ -474,10 +470,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPoint2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint2 ABI::Windows::UI::Input::Inking::IInkPoint2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint2_FWD_DEFINED__
@@ -490,10 +486,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPointFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory ABI::Windows::UI::Input::Inking::IInkPointFactory
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory_FWD_DEFINED__
@@ -506,10 +502,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPointFactory2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory2 ABI::Windows::UI::Input::Inking::IInkPointFactory2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory2_FWD_DEFINED__
@@ -522,10 +518,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenter;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter ABI::Windows::UI::Input::Inking::IInkPresenter
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter_FWD_DEFINED__
@@ -538,10 +534,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenter2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter2 ABI::Windows::UI::Input::Inking::IInkPresenter2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter2_FWD_DEFINED__
@@ -554,10 +550,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenter3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter3 ABI::Windows::UI::Input::Inking::IInkPresenter3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter3_FWD_DEFINED__
@@ -570,10 +566,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenterProtractor;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractor ABI::Windows::UI::Input::Inking::IInkPresenterProtractor
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractor_FWD_DEFINED__
@@ -586,10 +582,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenterProtractorFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractorFactory ABI::Windows::UI::Input::Inking::IInkPresenterProtractorFactory
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractorFactory_FWD_DEFINED__
@@ -602,10 +598,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenterRuler;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler ABI::Windows::UI::Input::Inking::IInkPresenterRuler
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler_FWD_DEFINED__
@@ -618,10 +614,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenterRuler2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler2 ABI::Windows::UI::Input::Inking::IInkPresenterRuler2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler2_FWD_DEFINED__
@@ -634,10 +630,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenterRulerFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRulerFactory ABI::Windows::UI::Input::Inking::IInkPresenterRulerFactory
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRulerFactory_FWD_DEFINED__
@@ -650,10 +646,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkPresenterStencil;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterStencil ABI::Windows::UI::Input::Inking::IInkPresenterStencil
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterStencil_FWD_DEFINED__
@@ -666,10 +662,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkRecognitionResult;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognitionResult ABI::Windows::UI::Input::Inking::IInkRecognitionResult
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognitionResult_FWD_DEFINED__
@@ -682,10 +678,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkRecognizer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizer ABI::Windows::UI::Input::Inking::IInkRecognizer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizer_FWD_DEFINED__
@@ -698,10 +694,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkRecognizerContainer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizerContainer ABI::Windows::UI::Input::Inking::IInkRecognizerContainer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizerContainer_FWD_DEFINED__
@@ -714,10 +710,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStroke;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke ABI::Windows::UI::Input::Inking::IInkStroke
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
@@ -730,10 +726,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStroke2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke2 ABI::Windows::UI::Input::Inking::IInkStroke2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke2_FWD_DEFINED__
@@ -746,10 +742,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStroke3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3 ABI::Windows::UI::Input::Inking::IInkStroke3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3_FWD_DEFINED__
@@ -762,10 +758,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeBuilder;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder ABI::Windows::UI::Input::Inking::IInkStrokeBuilder
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder_FWD_DEFINED__
@@ -778,10 +774,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeBuilder2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder2 ABI::Windows::UI::Input::Inking::IInkStrokeBuilder2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder2_FWD_DEFINED__
@@ -794,10 +790,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeBuilder3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder3 ABI::Windows::UI::Input::Inking::IInkStrokeBuilder3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder3_FWD_DEFINED__
@@ -810,10 +806,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeContainer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer ABI::Windows::UI::Input::Inking::IInkStrokeContainer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer_FWD_DEFINED__
@@ -826,10 +822,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeContainer2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer2 ABI::Windows::UI::Input::Inking::IInkStrokeContainer2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer2_FWD_DEFINED__
@@ -842,10 +838,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeContainer3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer3 ABI::Windows::UI::Input::Inking::IInkStrokeContainer3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer3_FWD_DEFINED__
@@ -858,10 +854,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput ABI::Windows::UI::Input::Inking::IInkStrokeInput
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput_FWD_DEFINED__
@@ -874,10 +870,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeRenderingSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeRenderingSegment ABI::Windows::UI::Input::Inking::IInkStrokeRenderingSegment
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeRenderingSegment_FWD_DEFINED__
@@ -890,10 +886,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokesCollectedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesCollectedEventArgs ABI::Windows::UI::Input::Inking::IInkStrokesCollectedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesCollectedEventArgs_FWD_DEFINED__
@@ -906,10 +902,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokesErasedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesErasedEventArgs ABI::Windows::UI::Input::Inking::IInkStrokesErasedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesErasedEventArgs_FWD_DEFINED__
@@ -922,10 +918,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkSynchronizer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkSynchronizer ABI::Windows::UI::Input::Inking::IInkSynchronizer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkSynchronizer_FWD_DEFINED__
@@ -938,10 +934,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkUnprocessedInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput ABI::Windows::UI::Input::Inking::IInkUnprocessedInput
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput_FWD_DEFINED__
@@ -954,10 +950,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IPenAndInkSettings;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings ABI::Windows::UI::Input::Inking::IPenAndInkSettings
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings_FWD_DEFINED__
@@ -970,10 +966,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IPenAndInkSettingsStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics ABI::Windows::UI::Input::Inking::IPenAndInkSettingsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics_FWD_DEFINED__
@@ -987,10 +983,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkPoint;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1013,7 +1009,7 @@ IIterator<ABI::Windows::UI::Input::Inking::InkPoint*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::InkPoint*> __FIIterator_1_Windows__CUI__CInput__CInking__CInkPoint_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CInkPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkPoint*>
@@ -1045,7 +1041,7 @@ IIterable<ABI::Windows::UI::Input::Inking::InkPoint*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::InkPoint*> __FIIterable_1_Windows__CUI__CInput__CInking__CInkPoint_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CInkPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkPoint*>
@@ -1062,10 +1058,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkRecognitionResult;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1088,7 +1084,7 @@ IIterator<ABI::Windows::UI::Input::Inking::InkRecognitionResult*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::InkRecognitionResult*> __FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkRecognitionResult*>
@@ -1120,7 +1116,7 @@ IIterable<ABI::Windows::UI::Input::Inking::InkRecognitionResult*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::InkRecognitionResult*> __FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkRecognitionResult*>
@@ -1137,10 +1133,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkRecognizer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1163,7 +1159,7 @@ IIterator<ABI::Windows::UI::Input::Inking::InkRecognizer*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::InkRecognizer*> __FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognizer_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognizer ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognizer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkRecognizer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkRecognizer*>
@@ -1195,7 +1191,7 @@ IIterable<ABI::Windows::UI::Input::Inking::InkRecognizer*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::InkRecognizer*> __FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognizer_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognizer ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognizer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkRecognizer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkRecognizer*>
@@ -1212,10 +1208,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStroke;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1238,7 +1234,7 @@ IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkStroke*>
@@ -1270,7 +1266,7 @@ IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkStroke*>
@@ -1287,10 +1283,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStrokeRenderingSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1313,7 +1309,7 @@ IIterator<ABI::Windows::UI::Input::Inking::InkStrokeRenderingSegment*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::InkStrokeRenderingSegment*> __FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkStrokeRenderingSegment*>
@@ -1345,7 +1341,7 @@ IIterable<ABI::Windows::UI::Input::Inking::InkStrokeRenderingSegment*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::InkStrokeRenderingSegment*> __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkStrokeRenderingSegment*>
@@ -1377,7 +1373,7 @@ IVectorView<ABI::Windows::UI::Input::Inking::InkPoint*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::Inking::InkPoint*> __FIVectorView_1_Windows__CUI__CInput__CInking__CInkPoint_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CInkPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::IInkPoint*>
@@ -1409,7 +1405,7 @@ IVectorView<ABI::Windows::UI::Input::Inking::InkRecognitionResult*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::Inking::InkRecognitionResult*> __FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::IInkRecognitionResult*>
@@ -1441,7 +1437,7 @@ IVectorView<ABI::Windows::UI::Input::Inking::InkRecognizer*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::Inking::InkRecognizer*> __FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognizer_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognizer ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognizer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognizer ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::IInkRecognizer*>
@@ -1473,7 +1469,7 @@ IVectorView<ABI::Windows::UI::Input::Inking::InkStroke*> : IVectorView_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::Inking::InkStroke*> __FIVectorView_1_Windows__CUI__CInput__CInking__CInkStroke_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CInkStroke_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::IInkStroke*>
@@ -1505,7 +1501,7 @@ IVectorView<ABI::Windows::UI::Input::Inking::InkStrokeRenderingSegment*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::Inking::InkStrokeRenderingSegment*> __FIVectorView_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::IInkStrokeRenderingSegment*>
@@ -1537,7 +1533,7 @@ IVector<ABI::Windows::UI::Input::Inking::InkPoint*> : IVector_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Input::Inking::InkPoint*> __FIVector_1_Windows__CUI__CInput__CInking__CInkPoint_t;
 #define __FIVector_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CInput__CInking__CInkPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CInput__CInking__CInkPoint ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Input::Inking::IInkPoint*>
@@ -1569,7 +1565,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CInput__CInking__
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::IInkRecognitionResult*>*>
@@ -1601,7 +1597,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionR
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult*> __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CInput__CInking__CInkRecognitionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::IInkRecognitionResult*>*>
@@ -1618,10 +1614,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkPresenter;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1630,10 +1626,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStrokesCollectedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1657,7 +1653,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkPresenter*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkPresenter*,ABI::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Inking::IInkPresenter*,ABI::Windows::UI::Input::Inking::IInkStrokesCollectedEventArgs*>
@@ -1676,10 +1672,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStrokesErasedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1703,7 +1699,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkPresenter*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkPresenter*,ABI::Windows::UI::Input::Inking::InkStrokesErasedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Inking::IInkPresenter*,ABI::Windows::UI::Input::Inking::IInkStrokesErasedEventArgs*>
@@ -1734,7 +1730,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1763,7 +1759,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1792,7 +1788,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1807,8 +1803,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1829,7 +1825,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1844,8 +1840,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -1866,7 +1862,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -1881,8 +1877,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
@@ -1903,7 +1899,7 @@ IIterator<struct ABI::Windows::Foundation::Point> : IIterator_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::Point> __FIIterator_1_Windows__CFoundation__CPoint_t;
 #define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Point>
@@ -1933,7 +1929,7 @@ IIterable<struct ABI::Windows::Foundation::Point> : IIterable_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::Point> __FIIterable_1_Windows__CFoundation__CPoint_t;
 #define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>
@@ -1962,7 +1958,7 @@ IAsyncActionProgressHandler<UINT64> : IAsyncActionProgressHandler_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IAsyncActionProgressHandler<UINT64> __FIAsyncActionProgressHandler_1_UINT64_t;
 #define __FIAsyncActionProgressHandler_1_UINT64 ABI::Windows::Foundation::__FIAsyncActionProgressHandler_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionProgressHandler_1_UINT64 ABI::Windows::Foundation::IAsyncActionProgressHandler<UINT64>
@@ -1991,7 +1987,7 @@ IAsyncActionWithProgressCompletedHandler<UINT64> : IAsyncActionWithProgressCompl
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgressCompletedHandler<UINT64> __FIAsyncActionWithProgressCompletedHandler_1_UINT64_t;
 #define __FIAsyncActionWithProgressCompletedHandler_1_UINT64 ABI::Windows::Foundation::__FIAsyncActionWithProgressCompletedHandler_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgressCompletedHandler_1_UINT64 ABI::Windows::Foundation::IAsyncActionWithProgressCompletedHandler<UINT64>
@@ -2020,7 +2016,7 @@ IAsyncActionWithProgress<UINT64> : IAsyncActionWithProgress_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgress<UINT64> __FIAsyncActionWithProgress_1_UINT64_t;
 #define __FIAsyncActionWithProgress_1_UINT64 ABI::Windows::Foundation::__FIAsyncActionWithProgress_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgress_1_UINT64 ABI::Windows::Foundation::IAsyncActionWithProgress<UINT64>
@@ -2049,7 +2045,7 @@ IAsyncOperationProgressHandler<UINT32,UINT32> : IAsyncOperationProgressHandler_i
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<UINT32,UINT32> __FIAsyncOperationProgressHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<UINT32,UINT32>
@@ -2078,7 +2074,7 @@ IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> : IAsyncOperationWith
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32>
@@ -2107,7 +2103,7 @@ IAsyncOperationWithProgress<UINT32,UINT32> : IAsyncOperationWithProgress_impl<UI
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<UINT32,UINT32> __FIAsyncOperationWithProgress_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<UINT32,UINT32>
@@ -2123,10 +2119,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStrokeInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2134,9 +2130,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class PointerEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CCore_CIPointerEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CIPointerEventArgs_FWD_DEFINED__
@@ -2145,9 +2141,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IPointerEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs ABI::Windows::UI::Core::IPointerEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIPointerEventArgs_FWD_DEFINED__
@@ -2174,7 +2170,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkStrokeInput*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkStrokeInput*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Inking::IInkStrokeInput*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -2192,10 +2188,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkUnprocessedInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2220,7 +2216,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkUnprocessedInput*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkUnprocessedInput*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Inking::IInkUnprocessedInput*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -2240,8 +2236,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2252,9 +2248,9 @@ namespace ABI {
                 
                 typedef struct Matrix3x2 Matrix3x2;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2265,8 +2261,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2274,8 +2270,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2283,8 +2279,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2292,8 +2288,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2305,9 +2301,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -2320,9 +2316,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -2337,8 +2333,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2349,9 +2345,9 @@ namespace ABI {
                 
                 typedef enum CoreInputDeviceTypes : unsigned int CoreInputDeviceTypes;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2362,9 +2358,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class PointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
@@ -2373,9 +2369,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPoint ABI::Windows::UI::Input::IPointerPoint
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
@@ -2392,10 +2388,10 @@ namespace ABI {
                     
                     typedef enum HandwritingLineHeight : int HandwritingLineHeight;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2405,10 +2401,10 @@ namespace ABI {
                     
                     typedef enum InkDrawingAttributesKind : int InkDrawingAttributesKind;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2418,10 +2414,10 @@ namespace ABI {
                     
                     typedef enum InkHighContrastAdjustment : int InkHighContrastAdjustment;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2431,10 +2427,10 @@ namespace ABI {
                     
                     typedef enum InkInputProcessingMode : int InkInputProcessingMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2444,10 +2440,10 @@ namespace ABI {
                     
                     typedef enum InkInputRightDragAction : int InkInputRightDragAction;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2457,10 +2453,10 @@ namespace ABI {
                     
                     typedef enum InkManipulationMode : int InkManipulationMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2470,10 +2466,10 @@ namespace ABI {
                     
                     typedef enum InkPersistenceFormat : int InkPersistenceFormat;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2483,10 +2479,10 @@ namespace ABI {
                     
                     typedef enum InkPresenterPredefinedConfiguration : int InkPresenterPredefinedConfiguration;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2496,10 +2492,10 @@ namespace ABI {
                     
                     typedef enum InkPresenterStencilKind : int InkPresenterStencilKind;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2509,10 +2505,10 @@ namespace ABI {
                     
                     typedef enum InkRecognitionTarget : int InkRecognitionTarget;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2522,10 +2518,10 @@ namespace ABI {
                     
                     typedef enum PenHandedness : int PenHandedness;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2535,10 +2531,10 @@ namespace ABI {
                     
                     typedef enum PenTipShape : int PenTipShape;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2590,10 +2586,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkDrawingAttributes;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2602,10 +2598,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkDrawingAttributesPencilProperties;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2614,10 +2610,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkInputConfiguration;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2626,10 +2622,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkInputProcessingConfiguration;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2638,10 +2634,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkManager;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2650,10 +2646,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkModelerAttributes;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2664,10 +2660,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkPresenterProtractor;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2676,10 +2672,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkPresenterRuler;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2690,10 +2686,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkRecognizerContainer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2703,10 +2699,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStrokeBuilder;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2715,10 +2711,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStrokeContainer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2731,10 +2727,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkSynchronizer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2744,10 +2740,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class PenAndInkSettings;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2783,10 +2779,10 @@ namespace ABI {
                         HandwritingLineHeight_Large = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -2812,10 +2808,10 @@ namespace ABI {
                         InkDrawingAttributesKind_Pencil = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2842,10 +2838,10 @@ namespace ABI {
                         InkHighContrastAdjustment_UseOriginalColors = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2872,10 +2868,10 @@ namespace ABI {
                         InkInputProcessingMode_Erasing = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2901,10 +2897,10 @@ namespace ABI {
                         InkInputRightDragAction_AllowProcessing = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2931,10 +2927,10 @@ namespace ABI {
                         InkManipulationMode_Selecting = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2960,10 +2956,10 @@ namespace ABI {
                         InkPersistenceFormat_Isf = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2989,10 +2985,10 @@ namespace ABI {
                         InkPresenterPredefinedConfiguration_SimpleMultiplePointer = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3023,10 +3019,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3053,10 +3049,10 @@ namespace ABI {
                         InkRecognitionTarget_Recent = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3082,10 +3078,10 @@ namespace ABI {
                         PenHandedness_Left = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -3111,10 +3107,10 @@ namespace ABI {
                         PenTipShape_Rectangle = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3162,26 +3158,26 @@ namespace ABI {
                             /* [in] */ABI::Windows::Foundation::Size value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IgnorePressure(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IgnorePressure(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FitToCurve(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_FitToCurve(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInkDrawingAttributes=_uuidof(IInkDrawingAttributes);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes_INTERFACE_DEFINED__) */
@@ -3220,20 +3216,20 @@ namespace ABI {
                             /* [in] */ABI::Windows::Foundation::Numerics::Matrix3x2 value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DrawAsHighlighter(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DrawAsHighlighter(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInkDrawingAttributes2=_uuidof(IInkDrawingAttributes2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes2_INTERFACE_DEFINED__) */
@@ -3276,10 +3272,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkDrawingAttributes3=_uuidof(IInkDrawingAttributes3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes3_INTERFACE_DEFINED__) */
@@ -3312,20 +3308,20 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IgnoreTilt(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IgnoreTilt(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInkDrawingAttributes4=_uuidof(IInkDrawingAttributes4);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes4_INTERFACE_DEFINED__) */
@@ -3365,10 +3361,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkDrawingAttributes5=_uuidof(IInkDrawingAttributes5);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributes5_INTERFACE_DEFINED__) */
@@ -3411,10 +3407,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkDrawingAttributesPencilProperties=_uuidof(IInkDrawingAttributesPencilProperties);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesPencilProperties;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesPencilProperties_INTERFACE_DEFINED__) */
@@ -3454,10 +3450,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkDrawingAttributesStatics=_uuidof(IInkDrawingAttributesStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkDrawingAttributesStatics_INTERFACE_DEFINED__) */
@@ -3490,26 +3486,26 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrimaryBarrelButtonInputEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPrimaryBarrelButtonInputEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEraserInputEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEraserInputEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInkInputConfiguration=_uuidof(IInkInputConfiguration);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration_INTERFACE_DEFINED__) */
@@ -3558,10 +3554,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkInputProcessingConfiguration=_uuidof(IInkInputProcessingConfiguration);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration_INTERFACE_DEFINED__) */
@@ -3627,10 +3623,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkManager=_uuidof(IInkManager);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkManager_INTERFACE_DEFINED__) */
@@ -3679,10 +3675,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkModelerAttributes=_uuidof(IInkModelerAttributes);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkModelerAttributes;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkModelerAttributes_INTERFACE_DEFINED__) */
@@ -3725,10 +3721,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPoint=_uuidof(IInkPoint);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint_INTERFACE_DEFINED__) */
@@ -3774,10 +3770,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPoint2=_uuidof(IInkPoint2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPoint2_INTERFACE_DEFINED__) */
@@ -3816,10 +3812,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPointFactory=_uuidof(IInkPointFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory_INTERFACE_DEFINED__) */
@@ -3864,10 +3860,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPointFactory2=_uuidof(IInkPointFactory2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPointFactory2_INTERFACE_DEFINED__) */
@@ -3900,10 +3896,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInputEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsInputEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InputDeviceTypes(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Core::CoreInputDeviceTypes * value
@@ -3957,10 +3953,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenter=_uuidof(IInkPresenter);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter_INTERFACE_DEFINED__) */
@@ -4007,10 +4003,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenter2=_uuidof(IInkPresenter2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter2_INTERFACE_DEFINED__) */
@@ -4050,10 +4046,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenter3=_uuidof(IInkPresenter3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter3_INTERFACE_DEFINED__) */
@@ -4090,34 +4086,34 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreTickMarksVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AreTickMarksVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreRaysVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AreRaysVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCenterMarkerVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCenterMarkerVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAngleReadoutVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAngleReadoutVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsResizable(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsResizable(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Radius(
                             /* [retval, out] */__RPC__out DOUBLE * value
@@ -4136,10 +4132,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenterProtractor=_uuidof(IInkPresenterProtractor);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractor;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractor_INTERFACE_DEFINED__) */
@@ -4180,10 +4176,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenterProtractorFactory=_uuidof(IInkPresenterProtractorFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractorFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterProtractorFactory_INTERFACE_DEFINED__) */
@@ -4236,10 +4232,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenterRuler=_uuidof(IInkPresenterRuler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler_INTERFACE_DEFINED__) */
@@ -4272,26 +4268,26 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreTickMarksVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AreTickMarksVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCompassVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCompassVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenterRuler2=_uuidof(IInkPresenterRuler2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRuler2_INTERFACE_DEFINED__) */
@@ -4329,10 +4325,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenterRulerFactory=_uuidof(IInkPresenterRulerFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRulerFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterRulerFactory_INTERFACE_DEFINED__) */
@@ -4365,10 +4361,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Input::Inking::InkPresenterStencilKind * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsVisible(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BackgroundColor(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Color * value
@@ -4393,10 +4389,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkPresenterStencil=_uuidof(IInkPresenterStencil);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterStencil;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenterStencil_INTERFACE_DEFINED__) */
@@ -4442,10 +4438,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkRecognitionResult=_uuidof(IInkRecognitionResult);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognitionResult;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognitionResult_INTERFACE_DEFINED__) */
@@ -4485,10 +4481,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkRecognizer=_uuidof(IInkRecognizer);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizer_INTERFACE_DEFINED__) */
@@ -4533,10 +4529,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkRecognizerContainer=_uuidof(IInkRecognizerContainer);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizerContainer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkRecognizerContainer_INTERFACE_DEFINED__) */
@@ -4578,13 +4574,13 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Selected(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Selected(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Recognized(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetRenderingSegments(
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CInput__CInking__CInkStrokeRenderingSegment * * renderingSegments
@@ -4597,10 +4593,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStroke=_uuidof(IInkStroke);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_INTERFACE_DEFINED__) */
@@ -4646,10 +4642,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStroke2=_uuidof(IInkStroke2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke2_INTERFACE_DEFINED__) */
@@ -4701,10 +4697,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStroke3=_uuidof(IInkStroke3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3_INTERFACE_DEFINED__) */
@@ -4759,10 +4755,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeBuilder=_uuidof(IInkStrokeBuilder);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder_INTERFACE_DEFINED__) */
@@ -4804,10 +4800,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeBuilder2=_uuidof(IInkStrokeBuilder2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder2_INTERFACE_DEFINED__) */
@@ -4851,10 +4847,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeBuilder3=_uuidof(IInkStrokeBuilder3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder3_INTERFACE_DEFINED__) */
@@ -4911,7 +4907,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * invalidatedRectangle
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CanPasteFromClipboard(
-                            /* [retval, out] */__RPC__out boolean * canPaste
+                            /* [retval, out] */__RPC__out ::boolean * canPaste
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE LoadAsync(
                             /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IInputStream * inputStream,
@@ -4935,10 +4931,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeContainer=_uuidof(IInkStrokeContainer);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer_INTERFACE_DEFINED__) */
@@ -4979,10 +4975,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeContainer2=_uuidof(IInkStrokeContainer2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer2_INTERFACE_DEFINED__) */
@@ -5028,10 +5024,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeContainer3=_uuidof(IInkStrokeContainer3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeContainer3_INTERFACE_DEFINED__) */
@@ -5099,10 +5095,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeInput=_uuidof(IInkStrokeInput);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput_INTERFACE_DEFINED__) */
@@ -5160,10 +5156,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokeRenderingSegment=_uuidof(IInkStrokeRenderingSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeRenderingSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeRenderingSegment_INTERFACE_DEFINED__) */
@@ -5203,10 +5199,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokesCollectedEventArgs=_uuidof(IInkStrokesCollectedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesCollectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesCollectedEventArgs_INTERFACE_DEFINED__) */
@@ -5246,10 +5242,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkStrokesErasedEventArgs=_uuidof(IInkStrokesErasedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesErasedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesErasedEventArgs_INTERFACE_DEFINED__) */
@@ -5290,10 +5286,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkSynchronizer=_uuidof(IInkSynchronizer);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkSynchronizer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkSynchronizer_INTERFACE_DEFINED__) */
@@ -5382,10 +5378,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInkUnprocessedInput=_uuidof(IInkUnprocessedInput);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput_INTERFACE_DEFINED__) */
@@ -5418,7 +5414,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHandwritingDirectlyIntoTextFieldEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PenHandedness(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Input::Inking::PenHandedness * value
@@ -5430,20 +5426,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UserConsentsToHandwritingTelemetryCollection(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTouchHandwritingEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPenAndInkSettings=_uuidof(IPenAndInkSettings);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings_INTERFACE_DEFINED__) */
@@ -5483,10 +5479,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPenAndInkSettingsStatics=_uuidof(IPenAndInkSettingsStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics_INTERFACE_DEFINED__) */
@@ -7979,7 +7975,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresen
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesCollectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesCollectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesCollectedEventArgsVtbl;
 
@@ -8032,7 +8028,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresen
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesErasedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkPresenter * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokesErasedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkPresenter_Windows__CUI__CInput__CInking__CInkStrokesErasedEventArgsVtbl;
 
@@ -8781,7 +8777,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl;
 
@@ -8883,7 +8879,7 @@ typedef struct __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_UINT32_UINT32 **handler);
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl;
 
@@ -8952,7 +8948,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStroke
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgsVtbl;
 
@@ -9005,7 +9001,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnproc
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgsVtbl;
 

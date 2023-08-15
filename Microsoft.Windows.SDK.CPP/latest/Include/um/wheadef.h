@@ -48,6 +48,9 @@ typedef enum _WHEA_ERROR_SOURCE_TYPE {
     WheaErrSrcTypeIPFCPE       = 0x0b,    // Itanium Corrected Platform Error
     WheaErrSrcTypeGenericV2    = 0x0c,    // Other types of error sources v2
     WheaErrSrcTypeSCIGenericV2 = 0x0d,    // SCI-based GHESv2
+    WheaErrSrcTypeBMC          = 0x0e,    // BMC error info
+    WheaErrSrcTypePMEM         = 0x0f,    // ARS PMEM Error Source
+    WheaErrSrcTypeDeviceDriver = 0x10,    // Device Driver Error Source
     WheaErrSrcTypeMax
 } WHEA_ERROR_SOURCE_TYPE, *PWHEA_ERROR_SOURCE_TYPE;
 
@@ -57,11 +60,14 @@ typedef enum _WHEA_ERROR_SOURCE_TYPE {
 //
 
 typedef enum _WHEA_ERROR_SOURCE_STATE {
-    WheaErrSrcStateStopped = 0x01,
-    WheaErrSrcStateStarted = 0x02
+    WheaErrSrcStateStopped       = 0x01,
+    WheaErrSrcStateStarted       = 0x02,
+    WheaErrSrcStateRemoved       = 0x03,
+    WheaErrSrcStateRemovePending = 0x04
 } WHEA_ERROR_SOURCE_STATE, *PWHEA_ERROR_SOURCE_STATE;
 
 #define WHEA_ERROR_SOURCE_DESCRIPTOR_VERSION_10          10
+#define WHEA_ERROR_SOURCE_DESCRIPTOR_VERSION_11          11
 
 #define WHEA_MAX_MC_BANKS                                32
 
@@ -100,6 +106,61 @@ typedef enum _WHEA_ERROR_SOURCE_STATE {
 #define WHEA_NOTIFICATION_TYPE_SDEI                      11
 
 #include <pshpack1.h>
+
+//---------------------- -------- WHEA_ERROR_SOURCE_CALLBACKS for device drivers
+
+typedef
+ULONG   
+(_WHEA_ERROR_SOURCE_INITIALIZE_DEVICE_DRIVER)(
+    _Inout_opt_ PVOID Context,
+    _In_ ULONG ErrorSourceId
+    );
+
+typedef _WHEA_ERROR_SOURCE_INITIALIZE_DEVICE_DRIVER
+    *WHEA_ERROR_SOURCE_INITIALIZE_DEVICE_DRIVER;
+
+typedef
+VOID
+(_WHEA_ERROR_SOURCE_UNINITIALIZE_DEVICE_DRIVER)(
+    _Inout_opt_ PVOID Context
+    );
+
+typedef _WHEA_ERROR_SOURCE_UNINITIALIZE_DEVICE_DRIVER 
+    *WHEA_ERROR_SOURCE_UNINITIALIZE_DEVICE_DRIVER;
+
+typedef
+ULONG 
+(_WHEA_ERROR_SOURCE_CORRECT_DEVICE_DRIVER)(
+    _Inout_ PVOID ErrorSourceDesc,
+    _Out_ PULONG MaximumSectionLength
+    );
+
+typedef _WHEA_ERROR_SOURCE_CORRECT_DEVICE_DRIVER 
+    *WHEA_ERROR_SOURCE_CORRECT_DEVICE_DRIVER;
+
+typedef
+VOID
+(_WHEA_ERROR_SOURCE_READY_DEVICE_DRIVER)(
+    _Inout_ PVOID ErrorSourceDesc,
+    _Inout_opt_ PVOID Context
+    );
+
+typedef _WHEA_ERROR_SOURCE_READY_DEVICE_DRIVER
+    *WHEA_ERROR_SOURCE_READY_DEVICE_DRIVER;
+
+typedef struct _WHEA_ERROR_SOURCE_CONFIGURATION_DD {
+    WHEA_ERROR_SOURCE_INITIALIZE_DEVICE_DRIVER Initialize;
+    WHEA_ERROR_SOURCE_UNINITIALIZE_DEVICE_DRIVER Uninitialize;
+    WHEA_ERROR_SOURCE_READY_DEVICE_DRIVER Ready;
+    WHEA_ERROR_SOURCE_CORRECT_DEVICE_DRIVER Correct;
+} WHEA_ERROR_SOURCE_CONFIGURATION_DD, *PWHEA_ERROR_SOURCE_CONFIGURATION_DD;
+
+typedef struct _WHEA_ERROR_SOURCE_CONFIGURATION_DEVICE_DRIVER {
+    WHEA_ERROR_SOURCE_INITIALIZE_DEVICE_DRIVER Initialize;
+    WHEA_ERROR_SOURCE_UNINITIALIZE_DEVICE_DRIVER Uninitialize;
+    WHEA_ERROR_SOURCE_READY_DEVICE_DRIVER Ready;
+} WHEA_ERROR_SOURCE_CONFIGURATION_DEVICE_DRIVER,
+  *PWHEA_ERROR_SOURCE_CONFIGURATION_DEVICE_DRIVER;
 
 //------------------------------------------------ WHEA_ERROR_SOURCE_DESCRIPTOR
 
@@ -514,6 +575,13 @@ typedef struct _WHEA_GENERIC_ERROR_DESCRIPTOR_V2 {
 
 } WHEA_GENERIC_ERROR_DESCRIPTOR_V2, *PWHEA_GENERIC_ERROR_DESCRIPTOR_V2;
 
+typedef struct _WHEA_DEVICE_DRIVER_DESCRIPTOR {
+    USHORT Type;
+    BOOLEAN Enabled;
+    UCHAR Reserved;
+    WHEA_ERROR_SOURCE_CONFIGURATION_DD Config;
+} WHEA_DEVICE_DRIVER_DESCRIPTOR, *PWHEA_DEVICE_DRIVER_DESCRIPTOR;
+
 typedef struct _WHEA_IPF_MCA_DESCRIPTOR {
     USHORT Type;
     UCHAR Enabled;
@@ -556,6 +624,7 @@ typedef struct _WHEA_ERROR_SOURCE_DESCRIPTOR {
         WHEA_AER_BRIDGE_DESCRIPTOR AerBridgeDescriptor;
         WHEA_GENERIC_ERROR_DESCRIPTOR GenErrDescriptor;
         WHEA_GENERIC_ERROR_DESCRIPTOR_V2 GenErrDescriptorV2;
+        WHEA_DEVICE_DRIVER_DESCRIPTOR DeviceDriverDescriptor;
     } Info;
 
 } WHEA_ERROR_SOURCE_DESCRIPTOR, *PWHEA_ERROR_SOURCE_DESCRIPTOR;
@@ -572,7 +641,56 @@ typedef struct _WHEA_ERROR_SOURCE_DESCRIPTOR {
 #define    WHEA_MEM_PFA_TIMEOUT        5
 #define    WHEA_DISABLE_DUMMY_WRITE    6
 
+#define IPMI_OS_SEL_RECORD_SIGNATURE 'RSSO'
+#define IPMI_OS_SEL_RECORD_VERSION_1 1
+#define IPMI_OS_SEL_RECORD_VERSION IPMI_OS_SEL_RECORD_VERSION_1
+
+#define IPMI_IOCTL_INDEX 0x0400
+
+#define IOCTL_IPMI_INTERNAL_RECORD_SEL_EVENT  CTL_CODE(FILE_DEVICE_UNKNOWN,  \
+                                                       IPMI_IOCTL_INDEX + 0, \
+                                                       METHOD_BUFFERED,      \
+                                                       FILE_ANY_ACCESS)
+
+//
+// Enumeration of OS SEL record types.
+//
+
+typedef enum _IPMI_OS_SEL_RECORD_TYPE {
+    IpmiOsSelRecordTypeWhea = 0,
+    IpmiOsSelRecordTypeOther,
+    IpmiOsSelRecordTypeWheaErrorXpfMca,
+    IpmiOsSelRecordTypeWheaErrorPci,
+    IpmiOsSelRecordTypeWheaErrorNmi,
+    IpmiOsSelRecordTypeWheaErrorOther,
+    IpmiOsSelRecordTypeMax   
+} IPMI_OS_SEL_RECORD_TYPE, *PIPMI_OS_SEL_RECORD_TYPE;
+
+//
+// This structure represents an OS BMC SEL record.
+//
+
+typedef struct _IPMI_OS_SEL_RECORD {
+    ULONG Signature;
+    ULONG Version;
+    ULONG Length;
+    IPMI_OS_SEL_RECORD_TYPE RecordType;
+    ULONG DataLength;
+    UCHAR Data[ANYSIZE_ARRAY];
+} IPMI_OS_SEL_RECORD, *PIPMI_OS_SEL_RECORD;
+
 #include <poppack.h>
+
+#define IPMI_OS_SEL_RECORD_SIGNATURE 'RSSO'
+#define IPMI_OS_SEL_RECORD_VERSION_1 1
+#define IPMI_OS_SEL_RECORD_VERSION IPMI_OS_SEL_RECORD_VERSION_1
+
+#define IPMI_IOCTL_INDEX 0x0400
+
+#define IOCTL_IPMI_INTERNAL_RECORD_SEL_EVENT  CTL_CODE(FILE_DEVICE_UNKNOWN,  \
+                                                       IPMI_IOCTL_INDEX + 0, \
+                                                       METHOD_BUFFERED,      \
+                                                       FILE_ANY_ACCESS)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

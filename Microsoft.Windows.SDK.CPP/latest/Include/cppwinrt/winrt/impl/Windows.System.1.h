@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -205,6 +205,13 @@ struct WINRT_EBO IDispatcherQueue :
     impl::consume_t<IDispatcherQueue>
 {
     IDispatcherQueue(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IDispatcherQueue2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IDispatcherQueue2>
+{
+    IDispatcherQueue2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IDispatcherQueueController :

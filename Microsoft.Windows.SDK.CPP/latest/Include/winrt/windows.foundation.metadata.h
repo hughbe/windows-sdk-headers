@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.foundation.metadata.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -138,9 +138,9 @@ namespace ABI {
         namespace Foundation {
             namespace Metadata {
                 interface IApiInformationStatics;
-            } /* Windows */
+            } /* Metadata */
         } /* Foundation */
-    } /* Metadata */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CMetadata_CIApiInformationStatics ABI::Windows::Foundation::Metadata::IApiInformationStatics
 
 #endif // ____x_ABI_CWindows_CFoundation_CMetadata_CIApiInformationStatics_FWD_DEFINED__
@@ -156,9 +156,9 @@ namespace ABI {
                 
                 typedef enum GCPressureAmount : int GCPressureAmount;
                 
-            } /* Windows */
+            } /* Metadata */
         } /* Foundation */
-    } /* Metadata */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -188,9 +188,9 @@ namespace ABI {
                     GCPressureAmount_High = 2,
                 };
                 
-            } /* Windows */
+            } /* Metadata */
         } /* Foundation */
-    } /* Metadata */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -220,63 +220,63 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsTypePresent(
                         /* [in] */__RPC__in HSTRING typeName,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE IsMethodPresent(
                         /* [in] */__RPC__in HSTRING typeName,
                         /* [in] */__RPC__in HSTRING methodName,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE IsMethodPresentWithArity(
                         /* [in] */__RPC__in HSTRING typeName,
                         /* [in] */__RPC__in HSTRING methodName,
                         /* [in] */UINT32 inputParameterCount,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsEventPresent(
                         /* [in] */__RPC__in HSTRING typeName,
                         /* [in] */__RPC__in HSTRING eventName,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsPropertyPresent(
                         /* [in] */__RPC__in HSTRING typeName,
                         /* [in] */__RPC__in HSTRING propertyName,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsReadOnlyPropertyPresent(
                         /* [in] */__RPC__in HSTRING typeName,
                         /* [in] */__RPC__in HSTRING propertyName,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsWriteablePropertyPresent(
                         /* [in] */__RPC__in HSTRING typeName,
                         /* [in] */__RPC__in HSTRING propertyName,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsEnumNamedValuePresent(
                         /* [in] */__RPC__in HSTRING enumTypeName,
                         /* [in] */__RPC__in HSTRING valueName,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE IsApiContractPresentByMajor(
                         /* [in] */__RPC__in HSTRING contractName,
                         /* [in] */UINT16 majorVersion,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE IsApiContractPresentByMajorAndMinor(
                         /* [in] */__RPC__in HSTRING contractName,
                         /* [in] */UINT16 majorVersion,
                         /* [in] */UINT16 minorVersion,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IApiInformationStatics=_uuidof(IApiInformationStatics);
                 
-            } /* Windows */
+            } /* Metadata */
         } /* Foundation */
-    } /* Metadata */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CMetadata_CIApiInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CMetadata_CIApiInformationStatics_INTERFACE_DEFINED__) */

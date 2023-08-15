@@ -30,7 +30,7 @@ extern "C" {
 #endif
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 typedef
 VOID
@@ -40,8 +40,6 @@ VOID
     );
 
 typedef struct _APPSTATE_REGISTRATION *PAPPSTATE_REGISTRATION;
-
-#if (NTDDI_VERSION >= NTDDI_WINBLUE)
 
 APICONTRACT
 ULONG
@@ -61,9 +59,34 @@ UnregisterAppStateChangeNotification(
     );
 
 
-#endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
+typedef 
+VOID 
+(*PAPPCONSTRAIN_CHANGE_ROUTINE) ( 
+    _In_ BOOLEAN Constrained, 
+    _In_ PVOID Context 
+); 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+typedef struct _APPCONSTRAIN_REGISTRATION *PAPPCONSTRAIN_REGISTRATION; 
+
+APICONTRACT
+ULONG
+NTAPI
+RegisterAppConstrainedChangeNotification(
+    _In_ PAPPCONSTRAIN_CHANGE_ROUTINE Routine,
+    _In_opt_ PVOID Context,
+    _Out_ PAPPCONSTRAIN_REGISTRATION* Registration
+    );
+ 
+
+APICONTRACT
+VOID
+NTAPI
+UnregisterAppConstrainedChangeNotification(
+    _Inout_ PAPPCONSTRAIN_REGISTRATION Registration
+    );
+ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #ifdef __cplusplus

@@ -97,15 +97,15 @@ typedef struct _BG_JOB_REPLY_PROGRESS
     UINT64 BytesTransferred;
     } 	BG_JOB_REPLY_PROGRESS;
 
-typedef /* [public][public][public][public][public] */ 
-enum __MIDL_IBackgroundCopyJob2_0001
+typedef 
+enum BG_AUTH_TARGET
     {
         BG_AUTH_TARGET_SERVER	= 1,
         BG_AUTH_TARGET_PROXY	= ( BG_AUTH_TARGET_SERVER + 1 ) 
     } 	BG_AUTH_TARGET;
 
-typedef /* [public][public][public][public][public] */ 
-enum __MIDL_IBackgroundCopyJob2_0002
+typedef 
+enum BG_AUTH_SCHEME
     {
         BG_AUTH_SCHEME_BASIC	= 1,
         BG_AUTH_SCHEME_DIGEST	= ( BG_AUTH_SCHEME_BASIC + 1 ) ,
@@ -114,7 +114,7 @@ enum __MIDL_IBackgroundCopyJob2_0002
         BG_AUTH_SCHEME_PASSPORT	= ( BG_AUTH_SCHEME_NEGOTIATE + 1 ) 
     } 	BG_AUTH_SCHEME;
 
-typedef /* [public][public][public][public][public][public] */ struct __MIDL_IBackgroundCopyJob2_0003
+typedef /* [public][public][public][public][public][public] */ struct __MIDL_IBackgroundCopyJob2_0001
     {
     LPWSTR UserName;
     LPWSTR Password;
@@ -122,13 +122,13 @@ typedef /* [public][public][public][public][public][public] */ struct __MIDL_IBa
 
 typedef BG_BASIC_CREDENTIALS *PBG_BASIC_CREDENTIALS;
 
-typedef /* [public][public][public][public][switch_type] */ union __MIDL_IBackgroundCopyJob2_0004
+typedef /* [public][public][public][public][switch_type] */ union __MIDL_IBackgroundCopyJob2_0002
     {
     /* [case()] */ BG_BASIC_CREDENTIALS Basic;
     /* [default] */  /* Empty union arm */ 
     } 	BG_AUTH_CREDENTIALS_UNION;
 
-typedef /* [public][public][public] */ struct __MIDL_IBackgroundCopyJob2_0005
+typedef /* [public][public][public] */ struct __MIDL_IBackgroundCopyJob2_0003
     {
     BG_AUTH_TARGET Target;
     BG_AUTH_SCHEME Scheme;

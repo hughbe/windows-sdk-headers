@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.printing.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,10 +273,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IAddPagesEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler ABI::Windows::UI::Xaml::Printing::IAddPagesEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_FWD_DEFINED__
@@ -293,10 +289,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IGetPreviewPageEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_FWD_DEFINED__
@@ -309,10 +305,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPaginateEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler ABI::Windows::UI::Xaml::Printing::IPaginateEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_FWD_DEFINED__
@@ -325,10 +321,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IAddPagesEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs ABI::Windows::UI::Xaml::Printing::IAddPagesEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_FWD_DEFINED__
@@ -341,10 +337,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IGetPreviewPageEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_FWD_DEFINED__
@@ -357,10 +353,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPaginateEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs ABI::Windows::UI::Xaml::Printing::IPaginateEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_FWD_DEFINED__
@@ -373,10 +369,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPrintDocument;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument ABI::Windows::UI::Xaml::Printing::IPrintDocument
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_FWD_DEFINED__
@@ -389,10 +385,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPrintDocumentFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory ABI::Windows::UI::Xaml::Printing::IPrintDocumentFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_FWD_DEFINED__
@@ -405,10 +401,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPrintDocumentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics ABI::Windows::UI::Xaml::Printing::IPrintDocumentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_FWD_DEFINED__
@@ -424,9 +420,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintDocumentSource;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource ABI::Windows::Graphics::Printing::IPrintDocumentSource
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
@@ -437,9 +433,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskOptions;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCore;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
@@ -464,9 +460,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -499,9 +495,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -518,10 +514,10 @@ namespace ABI {
                     
                     typedef enum PreviewPageCountType : int PreviewPageCountType;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -538,10 +534,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class AddPagesEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -550,10 +546,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class GetPreviewPageEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -562,10 +558,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class PaginateEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -574,10 +570,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class PrintDocument;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -607,10 +603,10 @@ namespace ABI {
                         PreviewPageCountType_Intermediate = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -644,10 +640,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAddPagesEventHandler=_uuidof(IAddPagesEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_INTERFACE_DEFINED__) */
@@ -684,10 +680,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGetPreviewPageEventHandler=_uuidof(IGetPreviewPageEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_INTERFACE_DEFINED__) */
@@ -724,10 +720,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaginateEventHandler=_uuidof(IPaginateEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_INTERFACE_DEFINED__) */
@@ -767,10 +763,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAddPagesEventArgs=_uuidof(IAddPagesEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_INTERFACE_DEFINED__) */
@@ -810,10 +806,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGetPreviewPageEventArgs=_uuidof(IGetPreviewPageEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_INTERFACE_DEFINED__) */
@@ -856,10 +852,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaginateEventArgs=_uuidof(IPaginateEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_INTERFACE_DEFINED__) */
@@ -933,10 +929,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintDocument=_uuidof(IPrintDocument);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_INTERFACE_DEFINED__) */
@@ -978,10 +974,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintDocumentFactory=_uuidof(IPrintDocumentFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_INTERFACE_DEFINED__) */
@@ -1021,10 +1017,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintDocumentStatics=_uuidof(IPrintDocumentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Printing */} /* ABI */
+                } /* Printing */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_INTERFACE_DEFINED__) */

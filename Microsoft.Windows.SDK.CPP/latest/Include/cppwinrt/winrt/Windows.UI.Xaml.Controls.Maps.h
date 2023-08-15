@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -1293,6 +1293,34 @@ template <typename D> void consume_Windows_UI_Xaml_Controls_Maps_IMapControl7<D>
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControl7)->put_Region(get_abi(value)));
 }
 
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Maps_IMapControl8<D>::CanTiltDown() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControl8)->get_CanTiltDown(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Maps_IMapControl8<D>::CanTiltUp() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControl8)->get_CanTiltUp(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Maps_IMapControl8<D>::CanZoomIn() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControl8)->get_CanZoomIn(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_UI_Xaml_Controls_Maps_IMapControl8<D>::CanZoomOut() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControl8)->get_CanZoomOut(&value));
+    return value;
+}
+
 template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::LocalSearch::LocalLocation> consume_Windows_UI_Xaml_Controls_Maps_IMapControlBusinessLandmarkClickEventArgs<D>::LocalLocations() const
 {
     Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::LocalSearch::LocalLocation> value{ nullptr };
@@ -1744,6 +1772,34 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
 {
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControlStatics7)->get_RegionProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8<D>::CanTiltDownProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControlStatics8)->get_CanTiltDownProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8<D>::CanTiltUpProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControlStatics8)->get_CanTiltUpProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8<D>::CanZoomInProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControlStatics8)->get_CanZoomInProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8<D>::CanZoomOutProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Controls::Maps::IMapControlStatics8)->get_CanZoomOutProperty(put_abi(value)));
     return value;
 }
 
@@ -6283,6 +6339,58 @@ struct produce<D, Windows::UI::Xaml::Controls::Maps::IMapControl7> : produce_bas
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Maps::IMapControl8> : produce_base<D, Windows::UI::Xaml::Controls::Maps::IMapControl8>
+{
+    int32_t WINRT_CALL get_CanTiltDown(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanTiltDown, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().CanTiltDown());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CanTiltUp(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanTiltUp, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().CanTiltUp());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CanZoomIn(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanZoomIn, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().CanZoomIn());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CanZoomOut(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanZoomOut, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().CanZoomOut());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs> : produce_base<D, Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs>
 {
     int32_t WINRT_CALL get_LocalLocations(void** value) noexcept final
@@ -7087,6 +7195,62 @@ struct produce<D, Windows::UI::Xaml::Controls::Maps::IMapControlStatics7> : prod
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(RegionProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().RegionProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Controls::Maps::IMapControlStatics8> : produce_base<D, Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>
+{
+    int32_t WINRT_CALL get_CanTiltDownProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanTiltDownProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CanTiltDownProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CanTiltUpProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanTiltUpProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CanTiltUpProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CanZoomInProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanZoomInProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CanZoomInProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CanZoomOutProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CanZoomOutProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CanZoomOutProperty());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -11863,6 +12027,26 @@ inline Windows::UI::Xaml::DependencyProperty MapControl::RegionProperty()
     return impl::call_factory<MapControl, Windows::UI::Xaml::Controls::Maps::IMapControlStatics7>([&](auto&& f) { return f.RegionProperty(); });
 }
 
+inline Windows::UI::Xaml::DependencyProperty MapControl::CanTiltDownProperty()
+{
+    return impl::call_factory<MapControl, Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>([&](auto&& f) { return f.CanTiltDownProperty(); });
+}
+
+inline Windows::UI::Xaml::DependencyProperty MapControl::CanTiltUpProperty()
+{
+    return impl::call_factory<MapControl, Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>([&](auto&& f) { return f.CanTiltUpProperty(); });
+}
+
+inline Windows::UI::Xaml::DependencyProperty MapControl::CanZoomInProperty()
+{
+    return impl::call_factory<MapControl, Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>([&](auto&& f) { return f.CanZoomInProperty(); });
+}
+
+inline Windows::UI::Xaml::DependencyProperty MapControl::CanZoomOutProperty()
+{
+    return impl::call_factory<MapControl, Windows::UI::Xaml::Controls::Maps::IMapControlStatics8>([&](auto&& f) { return f.CanZoomOutProperty(); });
+}
+
 inline MapControlBusinessLandmarkClickEventArgs::MapControlBusinessLandmarkClickEventArgs() :
     MapControlBusinessLandmarkClickEventArgs(impl::call_factory<MapControlBusinessLandmarkClickEventArgs>([](auto&& f) { return f.template ActivateInstance<MapControlBusinessLandmarkClickEventArgs>(); }))
 {}
@@ -12931,6 +13115,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl4> :
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl6> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl7> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl8> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl8> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerEnteredEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerEnteredEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerExitedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerExitedEventArgs> {};
@@ -12945,6 +13130,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStat
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics5> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics6> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics7> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics8> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics8> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerEnteredEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerEnteredEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerExitedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerExitedEventArgs> {};

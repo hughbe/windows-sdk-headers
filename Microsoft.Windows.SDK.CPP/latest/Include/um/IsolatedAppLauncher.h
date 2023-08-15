@@ -195,6 +195,7 @@ IsolatedAppLauncher;
 #pragma endregion
 #pragma region App Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+STDAPI IsProcessInWDAGContainer(_In_ PVOID Reserved, _Out_ BOOL *isProcessInWDAGContainer);
 STDAPI IsProcessInIsolatedContainer(_Out_ BOOL *isProcessInIsolatedContainer);
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion

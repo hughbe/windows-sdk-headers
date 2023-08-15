@@ -572,7 +572,7 @@ interface IWRdsRemoteFXGraphicsConnection : IUnknown
         [out] IUnknown** ppTransport
         );
 };
-
+cpp_quote("#pragma deprecated(IWRdsRemoteFXGraphicsConnection)")
 
 //
 // Following interfaces are for Windows 8

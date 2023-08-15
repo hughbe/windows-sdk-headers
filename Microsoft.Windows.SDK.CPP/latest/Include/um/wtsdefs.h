@@ -784,6 +784,20 @@ EXTERN_C const __declspec(selectany) GUID PROPERTY_DYNAMIC_TIME_ZONE_INFORMATION
 
 // ************************************************************************
 
+
+// ************** PROPERTY_GET_FAST_RECONNECT ******************
+// 
+// This is used to get whether fast reconnect should work or not based on the stack
+// 
+// There are no inputs to this query.
+//
+// Output to this query - It passes 1 WTS_PROPERTY_VALUE structure. Protocol needs to set it to:
+//          pPropertyEntriesOut[0].Type = WTS_VALUE_TYPE_ULONG;
+//          pPropertyEntriesOut[0].u.strVal.pstrVal = (0 = Don't do fast reconnect, 1 = Do fast reconnect)
+//
+EXTERN_C const _declspec(selectany) GUID PROPERTY_TYPE_GET_FAST_RECONNECT = /* 6212d757-0043-4862-99c3-9f3059ac2a3b*/
+{ 0x6212d757, 0x0043, 0x4862,{ 0x99, 0xc3, 0x9f, 0x30, 0x59, 0xac, 0x2a, 0x3b } };
+
 #endif
 
 

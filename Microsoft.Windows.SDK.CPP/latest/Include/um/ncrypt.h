@@ -798,7 +798,8 @@ NCryptCreatePersistedKey(
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 #define NCRYPT_PCP_SESSIONID_PROPERTY                      L"PCP_SESSIONID"
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
+#define NCRYPT_PCP_PSS_SALT_SIZE_PROPERTY                  L"PSS Salt Size"
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
 // TPM RSAPSS Salt size types
 

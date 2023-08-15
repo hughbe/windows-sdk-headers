@@ -131,9 +131,6 @@ rex_push_eflags macro
 ;   with a jmp reg must include a redundant rex prefix to signify
 ;   the presence of a tail call epilogue to the unwinder.
 ;
-;   N.B.  The tail call register must be one of the first 8
-;         registers.
-;
 ; Arguments:
 ;
 ;   reg - supplies the integer register to jump to.
@@ -142,8 +139,7 @@ rex_push_eflags macro
 
 rex_jmp_reg macro Reg
 
-        db      048h                    ; hint tail call to unwinder
-        jmp     Reg
+   rexw jmp Reg
 
         endm
 

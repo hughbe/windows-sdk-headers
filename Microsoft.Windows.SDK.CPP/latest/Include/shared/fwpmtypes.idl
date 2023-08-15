@@ -81,11 +81,12 @@ typedef enum FWPM_SERVICE_STATE_
 } FWPM_SERVICE_STATE;
 
 // Keywords used for finer control of net event collection.
-cpp_quote("#define FWPM_NET_EVENT_KEYWORD_INBOUND_MCAST (0x00000001)")
-cpp_quote("#define FWPM_NET_EVENT_KEYWORD_INBOUND_BCAST (0x00000002)")
-cpp_quote("#define FWPM_NET_EVENT_KEYWORD_CAPABILITY_DROP (0x00000004)")
-cpp_quote("#define FWPM_NET_EVENT_KEYWORD_CAPABILITY_ALLOW (0x00000008)")
-cpp_quote("#define FWPM_NET_EVENT_KEYWORD_CLASSIFY_ALLOW (0x00000010)")
+cpp_quote("#define FWPM_NET_EVENT_KEYWORD_INBOUND_MCAST      (0x00000001)")
+cpp_quote("#define FWPM_NET_EVENT_KEYWORD_INBOUND_BCAST      (0x00000002)")
+cpp_quote("#define FWPM_NET_EVENT_KEYWORD_CAPABILITY_DROP    (0x00000004)")
+cpp_quote("#define FWPM_NET_EVENT_KEYWORD_CAPABILITY_ALLOW   (0x00000008)")
+cpp_quote("#define FWPM_NET_EVENT_KEYWORD_CLASSIFY_ALLOW     (0x00000010)")
+cpp_quote("#define FWPM_NET_EVENT_KEYWORD_PORT_SCANNING_DROP (0x00000020)")
 
 cpp_quote("#define FWPM_ENGINE_OPTION_PACKET_QUEUE_NONE (0x00000000)")
 cpp_quote("#define FWPM_ENGINE_OPTION_PACKET_QUEUE_INBOUND (0x00000001)")
@@ -1851,6 +1852,8 @@ typedef struct FWPM_NET_EVENT4_
 cpp_quote("#endif //(NTDDI_VERSION >= NTDDI_WIN10_RS4)")  
 
 cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)") //NTDDI_WIN10_RS5 
+// NOTE: If FWPM_NET_EVENT is being updated, you MUST update FWPM_NET_EVENT_INTERNAL in fwpptypes.idl
+// so that the first part of the _INTERNAL struct exactly matches the current FWPM_NET_EVENT
 // Version-4 of consolidated event struct for all event types.
 typedef struct FWPM_NET_EVENT5_
 {

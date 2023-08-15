@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -82,6 +82,18 @@ template <typename D> void consume_Windows_UI_Xaml_Media_IAcrylicBrush<D>::Alway
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IAcrylicBrush)->put_AlwaysUseFallback(value));
 }
 
+template <typename D> Windows::Foundation::IReference<double> consume_Windows_UI_Xaml_Media_IAcrylicBrush2<D>::TintLuminosityOpacity() const
+{
+    Windows::Foundation::IReference<double> value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IAcrylicBrush2)->get_TintLuminosityOpacity(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Media_IAcrylicBrush2<D>::TintLuminosityOpacity(optional<double> const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IAcrylicBrush2)->put_TintLuminosityOpacity(get_abi(value)));
+}
+
 template <typename D> Windows::UI::Xaml::Media::AcrylicBrush consume_Windows_UI_Xaml_Media_IAcrylicBrushFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
 {
     Windows::UI::Xaml::Media::AcrylicBrush value{ nullptr };
@@ -121,6 +133,13 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
 {
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IAcrylicBrushStatics)->get_AlwaysUseFallbackProperty(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_Xaml_Media_IAcrylicBrushStatics2<D>::TintLuminosityOpacityProperty() const
+{
+    Windows::UI::Xaml::DependencyProperty value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IAcrylicBrushStatics2)->get_TintLuminosityOpacityProperty(put_abi(value)));
     return value;
 }
 
@@ -2050,6 +2069,20 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
     return value;
 }
 
+template <typename D> Windows::UI::Xaml::UIElementWeakCollection consume_Windows_UI_Xaml_Media_IThemeShadow<D>::Receivers() const
+{
+    Windows::UI::Xaml::UIElementWeakCollection value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IThemeShadow)->get_Receivers(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::UI::Xaml::Media::ThemeShadow consume_Windows_UI_Xaml_Media_IThemeShadowFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+{
+    Windows::UI::Xaml::Media::ThemeShadow value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IThemeShadowFactory)->CreateInstance(get_abi(baseInterface), put_abi(innerInterface), put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::UI::Xaml::Media::AlignmentX consume_Windows_UI_Xaml_Media_ITileBrush<D>::AlignmentX() const
 {
     Windows::UI::Xaml::Media::AlignmentX value{};
@@ -2305,6 +2338,13 @@ template <typename D> Windows::Foundation::Collections::IVectorView<Windows::UI:
 {
     Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IVisualTreeHelperStatics2)->GetOpenPopups(get_abi(window), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics3<D>::GetOpenPopupsForXamlRoot(Windows::UI::Xaml::XamlRoot const& xamlRoot) const
+{
+    Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::IVisualTreeHelperStatics3)->GetOpenPopupsForXamlRoot(get_abi(xamlRoot), put_abi(result)));
     return result;
 }
 
@@ -2581,6 +2621,35 @@ struct produce<D, Windows::UI::Xaml::Media::IAcrylicBrush> : produce_base<D, Win
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::IAcrylicBrush2> : produce_base<D, Windows::UI::Xaml::Media::IAcrylicBrush2>
+{
+    int32_t WINRT_CALL get_TintLuminosityOpacity(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TintLuminosityOpacity, WINRT_WRAP(Windows::Foundation::IReference<double>));
+            *value = detach_from<Windows::Foundation::IReference<double>>(this->shim().TintLuminosityOpacity());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_TintLuminosityOpacity(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TintLuminosityOpacity, WINRT_WRAP(void), Windows::Foundation::IReference<double> const&);
+            this->shim().TintLuminosityOpacity(*reinterpret_cast<Windows::Foundation::IReference<double> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Media::IAcrylicBrushFactory> : produce_base<D, Windows::UI::Xaml::Media::IAcrylicBrushFactory>
 {
     int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final
@@ -2663,6 +2732,23 @@ struct produce<D, Windows::UI::Xaml::Media::IAcrylicBrushStatics> : produce_base
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(AlwaysUseFallbackProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().AlwaysUseFallbackProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::IAcrylicBrushStatics2> : produce_base<D, Windows::UI::Xaml::Media::IAcrylicBrushStatics2>
+{
+    int32_t WINRT_CALL get_TintLuminosityOpacityProperty(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TintLuminosityOpacityProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().TintLuminosityOpacityProperty());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6504,6 +6590,14 @@ struct produce<D, Windows::UI::Xaml::Media::IScaleTransformStatics> : produce_ba
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::IShadow> : produce_base<D, Windows::UI::Xaml::Media::IShadow>
+{};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::IShadowFactory> : produce_base<D, Windows::UI::Xaml::Media::IShadowFactory>
+{};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Media::ISkewTransform> : produce_base<D, Windows::UI::Xaml::Media::ISkewTransform>
 {
     int32_t WINRT_CALL get_CenterX(double* value) noexcept final
@@ -6715,6 +6809,43 @@ struct produce<D, Windows::UI::Xaml::Media::ISolidColorBrushStatics> : produce_b
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(ColorProperty, WINRT_WRAP(Windows::UI::Xaml::DependencyProperty));
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().ColorProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::IThemeShadow> : produce_base<D, Windows::UI::Xaml::Media::IThemeShadow>
+{
+    int32_t WINRT_CALL get_Receivers(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Receivers, WINRT_WRAP(Windows::UI::Xaml::UIElementWeakCollection));
+            *value = detach_from<Windows::UI::Xaml::UIElementWeakCollection>(this->shim().Receivers());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::IThemeShadowFactory> : produce_base<D, Windows::UI::Xaml::Media::IThemeShadowFactory>
+{
+    int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final
+    {
+        try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            Windows::Foundation::IInspectable __local_innerInterface;
+            WINRT_ASSERT_DECLARATION(CreateInstance, WINRT_WRAP(Windows::UI::Xaml::Media::ThemeShadow), Windows::Foundation::IInspectable const&, Windows::Foundation::IInspectable&);
+            *value = detach_from<Windows::UI::Xaml::Media::ThemeShadow>(this->shim().CreateInstance(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&baseInterface), __local_innerInterface));
+            if (innerInterface) *innerInterface = detach_abi(__local_innerInterface);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7286,6 +7417,23 @@ struct produce<D, Windows::UI::Xaml::Media::IVisualTreeHelperStatics2> : produce
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::IVisualTreeHelperStatics3> : produce_base<D, Windows::UI::Xaml::Media::IVisualTreeHelperStatics3>
+{
+    int32_t WINRT_CALL GetOpenPopupsForXamlRoot(void* xamlRoot, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetOpenPopupsForXamlRoot, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup>), Windows::UI::Xaml::XamlRoot const&);
+            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup>>(this->shim().GetOpenPopupsForXamlRoot(*reinterpret_cast<Windows::UI::Xaml::XamlRoot const*>(&xamlRoot)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Media::IXamlCompositionBrushBase> : produce_base<D, Windows::UI::Xaml::Media::IXamlCompositionBrushBase>
 {
     int32_t WINRT_CALL get_FallbackColor(struct struct_Windows_UI_Color* value) noexcept final
@@ -7687,6 +7835,11 @@ inline Windows::UI::Xaml::DependencyProperty AcrylicBrush::TintTransitionDuratio
 inline Windows::UI::Xaml::DependencyProperty AcrylicBrush::AlwaysUseFallbackProperty()
 {
     return impl::call_factory<AcrylicBrush, Windows::UI::Xaml::Media::IAcrylicBrushStatics>([&](auto&& f) { return f.AlwaysUseFallbackProperty(); });
+}
+
+inline Windows::UI::Xaml::DependencyProperty AcrylicBrush::TintLuminosityOpacityProperty()
+{
+    return impl::call_factory<AcrylicBrush, Windows::UI::Xaml::Media::IAcrylicBrushStatics2>([&](auto&& f) { return f.TintLuminosityOpacityProperty(); });
 }
 
 inline ArcSegment::ArcSegment() :
@@ -8369,6 +8522,12 @@ inline Windows::UI::Xaml::DependencyProperty SolidColorBrush::ColorProperty()
     return impl::call_factory<SolidColorBrush, Windows::UI::Xaml::Media::ISolidColorBrushStatics>([&](auto&& f) { return f.ColorProperty(); });
 }
 
+inline ThemeShadow::ThemeShadow()
+{
+    Windows::Foundation::IInspectable baseInterface, innerInterface;
+    *this = impl::call_factory<ThemeShadow, Windows::UI::Xaml::Media::IThemeShadowFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+}
+
 inline Windows::UI::Xaml::DependencyProperty TileBrush::AlignmentXProperty()
 {
     return impl::call_factory<TileBrush, Windows::UI::Xaml::Media::ITileBrushStatics>([&](auto&& f) { return f.AlignmentXProperty(); });
@@ -8481,6 +8640,11 @@ inline void VisualTreeHelper::DisconnectChildrenRecursive(Windows::UI::Xaml::UIE
 inline Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> VisualTreeHelper::GetOpenPopups(Windows::UI::Xaml::Window const& window)
 {
     return impl::call_factory<VisualTreeHelper, Windows::UI::Xaml::Media::IVisualTreeHelperStatics2>([&](auto&& f) { return f.GetOpenPopups(window); });
+}
+
+inline Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> VisualTreeHelper::GetOpenPopupsForXamlRoot(Windows::UI::Xaml::XamlRoot const& xamlRoot)
+{
+    return impl::call_factory<VisualTreeHelper, Windows::UI::Xaml::Media::IVisualTreeHelperStatics3>([&](auto&& f) { return f.GetOpenPopupsForXamlRoot(xamlRoot); });
 }
 
 inline Windows::UI::Xaml::DependencyProperty XamlCompositionBrushBase::FallbackColorProperty()
@@ -8612,7 +8776,7 @@ template <typename D> void IXamlLightOverridesT<D>::OnDisconnected(Windows::UI::
 template <typename D, typename... Interfaces>
 struct AcrylicBrushT :
     implements<D, Windows::UI::Xaml::Media::IBrushOverrides2, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Media::IAcrylicBrush, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Media::IBrush, Windows::UI::Xaml::Media::IXamlCompositionBrushBase, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>,
+    impl::require<D, Windows::UI::Xaml::Media::IAcrylicBrush, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Media::IAcrylicBrush2, Windows::UI::Xaml::Media::IBrush, Windows::UI::Xaml::Media::IXamlCompositionBrushBase, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>,
     impl::base<D, Windows::UI::Xaml::Media::AcrylicBrush, Windows::UI::Xaml::Media::XamlCompositionBrushBase, Windows::UI::Xaml::Media::Brush, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Media::IBrushOverrides2T<D>, Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverridesT<D>
 {
@@ -8767,6 +8931,21 @@ protected:
 };
 
 template <typename D, typename... Interfaces>
+struct ThemeShadowT :
+    implements<D, Windows::Foundation::IInspectable, composing, Interfaces...>,
+    impl::require<D, Windows::UI::Xaml::Media::IThemeShadow, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Media::IShadow>,
+    impl::base<D, Windows::UI::Xaml::Media::ThemeShadow, Windows::UI::Xaml::Media::Shadow, Windows::UI::Xaml::DependencyObject>
+{
+    using composable = ThemeShadow;
+
+protected:
+    ThemeShadowT()
+    {
+        impl::call_factory<Windows::UI::Xaml::Media::ThemeShadow, Windows::UI::Xaml::Media::IThemeShadowFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+    }
+};
+
+template <typename D, typename... Interfaces>
 struct TileBrushT :
     implements<D, Windows::UI::Xaml::Media::IBrushOverrides2, composing, Interfaces...>,
     impl::require<D, Windows::UI::Xaml::Media::ITileBrush, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Media::IBrush>,
@@ -8819,8 +8998,10 @@ protected:
 WINRT_EXPORT namespace std {
 
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IAcrylicBrush> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IAcrylicBrush> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::IAcrylicBrush2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IAcrylicBrush2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IAcrylicBrushFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IAcrylicBrushFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IAcrylicBrushStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IAcrylicBrushStatics> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::IAcrylicBrushStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IAcrylicBrushStatics2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IArcSegment> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IArcSegment> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IArcSegmentStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IArcSegmentStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IBezierSegment> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IBezierSegment> {};
@@ -8912,11 +9093,15 @@ template<> struct hash<winrt::Windows::UI::Xaml::Media::IRotateTransform> : winr
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IRotateTransformStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IRotateTransformStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IScaleTransform> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IScaleTransform> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IScaleTransformStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IScaleTransformStatics> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::IShadow> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IShadow> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::IShadowFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IShadowFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ISkewTransform> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ISkewTransform> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ISkewTransformStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ISkewTransformStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ISolidColorBrush> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ISolidColorBrush> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ISolidColorBrushFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ISolidColorBrushFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ISolidColorBrushStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ISolidColorBrushStatics> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::IThemeShadow> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IThemeShadow> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::IThemeShadowFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IThemeShadowFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ITileBrush> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ITileBrush> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ITileBrushFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ITileBrushFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ITileBrushStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ITileBrushStatics> {};
@@ -8932,6 +9117,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Media::ITranslateTransformStati
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IVisualTreeHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IVisualTreeHelper> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics2> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBase> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides> {};
@@ -8994,8 +9180,10 @@ template<> struct hash<winrt::Windows::UI::Xaml::Media::RevealBorderBrush> : win
 template<> struct hash<winrt::Windows::UI::Xaml::Media::RevealBrush> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::RevealBrush> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::RotateTransform> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::RotateTransform> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::ScaleTransform> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ScaleTransform> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::Shadow> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Shadow> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::SkewTransform> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::SkewTransform> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::SolidColorBrush> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::SolidColorBrush> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::ThemeShadow> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::ThemeShadow> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::TileBrush> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::TileBrush> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::TimelineMarker> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::TimelineMarker> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection> {};

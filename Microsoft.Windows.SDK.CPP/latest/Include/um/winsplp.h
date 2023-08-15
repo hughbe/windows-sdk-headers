@@ -36,132 +36,132 @@ extern "C" {
 
 #if (NTDDI_VERSION >= NTDDI_WINBLUE)
 
-//                                                                                      
-// EBranchOfficeJobState represents the Job state to be logged.                         
-//                                                                                      
-typedef enum                                                                            
-{                                                                                       
-    kInvalidJobState=0,                                                                 
-    kLogJobPrinted,        // The job has been successfully printed                     
-    kLogJobRendered,       // The job was successfully rendered in the pipeline         
-    kLogJobError,          // The job has failed due to an error                        
-    kLogJobPipelineError,  // The job failed during the print pipeline   
-    kLogOfflineFileFull    // The Offline archive for Brach Office Job Log entries 
+//
+// EBranchOfficeJobState represents the Job state to be logged.
+//
+typedef enum
+{
+    kInvalidJobState=0,
+    kLogJobPrinted,        // The job has been successfully printed
+    kLogJobRendered,       // The job was successfully rendered in the pipeline
+    kLogJobError,          // The job has failed due to an error
+    kLogJobPipelineError,  // The job failed during the print pipeline
+    kLogOfflineFileFull    // The Offline archive for Brach Office Job Log entries
                            // exceeded its maximum size
-} EBranchOfficeJobEventType;                                                            
+} EBranchOfficeJobEventType;
 
-//                                                                                      
-// BranchOfficeJobDataPrinted contains the necessary data for logging a                 
-// branch office job completed event on a remote server. This is based on standard      
-// job-related data available to the spooler.                                           
-//                                                                                      
-typedef struct                                                                          
-{                                                                                       
-    DWORD     Status;         // The current status, or the failure code for a JOB_ERROR event  
-    LPWSTR    pDocumentName;  // The Name of the Print Document                         
-    LPWSTR    pUserName;      // The user who submitted the job                         
-    LPWSTR    pMachineName;   // The name of the client machine printing the job        
-    LPWSTR    pPrinterName;   // The name of the print connection                       
-    LPWSTR    pPortName;      // The Name of the port the job printed on                
-    LONGLONG  Size;           // The size of the job (64 bits)                          
-    DWORD     TotalPages;     // The total number of pages in the job                   
-} BranchOfficeJobDataPrinted, *PBranchOfficeJobDataPrinted;                             
-    
-//                                                                                      
-// BranchOfficeJobDataError contains the necessary data for logging a                   
-// branch office job failure event on a remote server. This is based on standard        
-// job-related data available to the spooler.                                           
-//                                                                                      
-typedef struct                                                                          
-{                                                                                       
-    DWORD     LastError;          // The LastError at the time the event was logged     
-    LPWSTR    pDocumentName;      // The Name of the Print Document                     
-    LPWSTR    pUserName;          // The user who submitted the job                     
-    LPWSTR    pPrinterName;       // The name of the print connection                   
-    LPWSTR    pDataType;          // The data type of the job                           
-    LONGLONG  TotalSize;          // The size of the job (64 bits)                      
-    LONGLONG  PrintedSize;        // The size of the job (64 bits)                      
-    DWORD     TotalPages;         // The total number of pages in the job               
-    DWORD     PrintedPages;       // The number of pages currently printed              
-    LPWSTR    pMachineName;       // The name of the client machine printing the job    
-    LPWSTR    pJobError;          // The failure code for a JOB_ERROR event             
-    LPWSTR    pErrorDescription;  // The text description of the error (if available)   
-} BranchOfficeJobDataError, *PBranchOfficeJobDataError;                                 
+//
+// BranchOfficeJobDataPrinted contains the necessary data for logging a
+// branch office job completed event on a remote server. This is based on standard
+// job-related data available to the spooler.
+//
+typedef struct
+{
+    DWORD     Status;         // The current status, or the failure code for a JOB_ERROR event
+    LPWSTR    pDocumentName;  // The Name of the Print Document
+    LPWSTR    pUserName;      // The user who submitted the job
+    LPWSTR    pMachineName;   // The name of the client machine printing the job
+    LPWSTR    pPrinterName;   // The name of the print connection
+    LPWSTR    pPortName;      // The Name of the port the job printed on
+    LONGLONG  Size;           // The size of the job (64 bits)
+    DWORD     TotalPages;     // The total number of pages in the job
+} BranchOfficeJobDataPrinted, *PBranchOfficeJobDataPrinted;
 
-//                                                                                      
-// BranchOfficeJobDataRendered contains the necessary data for logging a                
-// branch office job Pipeline Rendering event on a remote server. This is based on      
-// standard job-related data available to the spooler.                                  
-//                                                                                      
-typedef struct                                                                          
-{                                                                                       
-    LONGLONG   Size;           // The size of the job (64 bits)                         
-    DWORD      ICMMethod;                                                               
-    short      Color;                                                                   
-    short      PrintQuality;                                                            
-    short      YResolution;                                                             
-    short      Copies;                                                                  
-    short      TTOption;                                                                
-} BranchOfficeJobDataRendered, *PBranchOfficeJobDataRendered;                           
+//
+// BranchOfficeJobDataError contains the necessary data for logging a
+// branch office job failure event on a remote server. This is based on standard
+// job-related data available to the spooler.
+//
+typedef struct
+{
+    DWORD     LastError;          // The LastError at the time the event was logged
+    LPWSTR    pDocumentName;      // The Name of the Print Document
+    LPWSTR    pUserName;          // The user who submitted the job
+    LPWSTR    pPrinterName;       // The name of the print connection
+    LPWSTR    pDataType;          // The data type of the job
+    LONGLONG  TotalSize;          // The size of the job (64 bits)
+    LONGLONG  PrintedSize;        // The size of the job (64 bits)
+    DWORD     TotalPages;         // The total number of pages in the job
+    DWORD     PrintedPages;       // The number of pages currently printed
+    LPWSTR    pMachineName;       // The name of the client machine printing the job
+    LPWSTR    pJobError;          // The failure code for a JOB_ERROR event
+    LPWSTR    pErrorDescription;  // The text description of the error (if available)
+} BranchOfficeJobDataError, *PBranchOfficeJobDataError;
 
-//                                                                                      
-// BranchOfficeJobDataPipelineFailed contains the necessary data for logging a          
-// branch office job Pipeline Rendering Failed event on a remote server. This is based  
-// on standard job-related data available to the spooler.                               
-//                                                                                      
-typedef struct                                                                          
-{                                                                                       
-    LPWSTR     pDocumentName;  // The Name of the Print Document                        
-    LPWSTR     pPrinterName;   // The name of the print connection                      
-    LPWSTR     pExtraErrorInfo;// The name of the client machine printing the job       
-} BranchOfficeJobDataPipelineFailed, *PBranchOfficeJobDataPipelineFailed;               
+//
+// BranchOfficeJobDataRendered contains the necessary data for logging a
+// branch office job Pipeline Rendering event on a remote server. This is based on
+// standard job-related data available to the spooler.
+//
+typedef struct
+{
+    LONGLONG   Size;           // The size of the job (64 bits)
+    DWORD      ICMMethod;
+    short      Color;
+    short      PrintQuality;
+    short      YResolution;
+    short      Copies;
+    short      TTOption;
+} BranchOfficeJobDataRendered, *PBranchOfficeJobDataRendered;
 
-//                                                                                      
-// BranchOfficeLogOfflineFileFull contains the necessary data for logging that          
-// the Offline Log archive on the current client overflowed at some point              
-//                                                                                      
-typedef struct                                                                          
-{                                                                                       
+//
+// BranchOfficeJobDataPipelineFailed contains the necessary data for logging a
+// branch office job Pipeline Rendering Failed event on a remote server. This is based
+// on standard job-related data available to the spooler.
+//
+typedef struct
+{
+    LPWSTR     pDocumentName;  // The Name of the Print Document
+    LPWSTR     pPrinterName;   // The name of the print connection
+    LPWSTR     pExtraErrorInfo;// The name of the client machine printing the job
+} BranchOfficeJobDataPipelineFailed, *PBranchOfficeJobDataPipelineFailed;
+
+//
+// BranchOfficeLogOfflineFileFull contains the necessary data for logging that
+// the Offline Log archive on the current client overflowed at some point
+//
+typedef struct
+{
     LPWSTR     pMachineName;   // The Name of the print client
-} BranchOfficeLogOfflineFileFull, *PBranchOfficeLogOfflineFileFull;               
+} BranchOfficeLogOfflineFileFull, *PBranchOfficeLogOfflineFileFull;
 
-//                                                                                      
-// BranchOfficeJobData contains the type of event to log (eEventType), the job Id        
-// and the data required by the event.                                                  
-//                                                                                      
-typedef struct                                                                          
-{                                                                                       
-    EBranchOfficeJobEventType  eEventType;  // The type of event to be logged           
-    DWORD                      JobId;       // The ID of the job on the client          
-    union                                                                               
-    {                                                                                   
-        BranchOfficeJobDataPrinted             LogJobPrinted;                           
-        BranchOfficeJobDataRendered            LogJobRendered;                          
-        BranchOfficeJobDataError               LogJobError;                             
-        BranchOfficeJobDataPipelineFailed      LogPipelineFailed;  
+//
+// BranchOfficeJobData contains the type of event to log (eEventType), the job Id
+// and the data required by the event.
+//
+typedef struct
+{
+    EBranchOfficeJobEventType  eEventType;  // The type of event to be logged
+    DWORD                      JobId;       // The ID of the job on the client
+    union
+    {
+        BranchOfficeJobDataPrinted             LogJobPrinted;
+        BranchOfficeJobDataRendered            LogJobRendered;
+        BranchOfficeJobDataError               LogJobError;
+        BranchOfficeJobDataPipelineFailed      LogPipelineFailed;
         BranchOfficeLogOfflineFileFull         LogOfflineFileFull;
-    } JobInfo;                                                                          
-} BranchOfficeJobData, *PBranchOfficeJobData;                                           
+    } JobInfo;
+} BranchOfficeJobData, *PBranchOfficeJobData;
 
-//                                                                                      
-// BranchOfficeJobDataContainer defines a container for one or                          
-// more BranchOfficeJobData structures to send to a server                              
-//                                                                                      
-typedef struct                                                                          
-{                                                                                       
-    DWORD                cJobDataEntries;                                               
-    BranchOfficeJobData  JobData[ 1 ];                                                  
-} BranchOfficeJobDataContainer, *PBranchOfficeJobDataContainer, *LPBranchOfficeJobDataContainer;    
+//
+// BranchOfficeJobDataContainer defines a container for one or
+// more BranchOfficeJobData structures to send to a server
+//
+typedef struct
+{
+    DWORD                cJobDataEntries;
+    BranchOfficeJobData  JobData[ 1 ];
+} BranchOfficeJobDataContainer, *PBranchOfficeJobDataContainer, *LPBranchOfficeJobDataContainer;
 
-//                                                                                      
-// LogJobInfoForBranchOffice is the new RPC entrypoint used to allow Branch             
-// Office clients to send job events to the host print server.                          
-//                                                                                      
-// Returns: an HRESULT indicating success or failure.                                   
-//                                                                                      
-DWORD                                                                                   
-WINAPI                                                                                  
-LogJobInfoForBranchOffice(                                                              
+//
+// LogJobInfoForBranchOffice is the new RPC entrypoint used to allow Branch
+// Office clients to send job events to the host print server.
+//
+// Returns: an HRESULT indicating success or failure.
+//
+DWORD
+WINAPI
+LogJobInfoForBranchOffice(
     _In_    HANDLE                        hPrinter,           // handle to the CSR printer
     _In_    PBranchOfficeJobDataContainer pJobDataContainer   // A pointer to an array of BranchOfficeJobData
     );                                                        // structs, containing the events to be logged.
@@ -1023,7 +1023,7 @@ typedef struct _PRINTPROVIDOR
 #endif // (NTDDI_VERSION >= NTDDI_WIN8)
 
 #if (NTDDI_VERSION >= NTDDI_WINBLUE)
-    
+
     BOOL
     (*fpCanShutdown)();
 
@@ -1034,6 +1034,12 @@ typedef struct _PRINTPROVIDOR
         );                                                        // structs, containing the events to be logged.
 
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
+    DWORD (*fpRegeneratePrintDeviceCapabilities)(
+        _In_    HANDLE  hPrinter
+        );
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 }
 PRINTPROVIDOR, *LPPRINTPROVIDOR;
 
@@ -2026,7 +2032,7 @@ GenerateCopyFilePaths(
         _In_    HANDLE  hPrinter,
         _Out_   HANDLE *phDeviceObject
         );
-    
+
     HRESULT
     WINAPI
     UpdatePrintDeviceObject(

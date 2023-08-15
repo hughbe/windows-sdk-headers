@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,6 +13,7 @@
 #include "winrt/impl/Windows.Networking.Sockets.2.h"
 #include "winrt/impl/Windows.Security.Credentials.2.h"
 #include "winrt/impl/Windows.Security.Cryptography.Certificates.2.h"
+#include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.Web.Http.2.h"
 #include "winrt/impl/Windows.Web.Http.Filters.2.h"
 #include "winrt/Windows.Web.Http.h"
@@ -160,26 +161,40 @@ template <typename D> void consume_Windows_Web_Http_Filters_IHttpBaseProtocolFil
     check_hresult(WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilter3)->put_CookieUsageBehavior(get_abi(value)));
 }
 
-template <typename D> winrt::event_token consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested(Windows::Foundation::TypedEventHandler<Windows::Web::Http::Filters::HttpBaseProtocolFilter, Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs> const& eventHandler) const
+template <typename D> winrt::event_token consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested(Windows::Foundation::TypedEventHandler<Windows::Web::Http::Filters::HttpBaseProtocolFilter, Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs> const& handler) const
 {
-    winrt::event_token eventCookie{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilter4)->add_ServerCustomValidationRequested(get_abi(eventHandler), put_abi(eventCookie)));
-    return eventCookie;
+    winrt::event_token token{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilter4)->add_ServerCustomValidationRequested(get_abi(handler), put_abi(token)));
+    return token;
 }
 
-template <typename D> typename consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested_revoker consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Web::Http::Filters::HttpBaseProtocolFilter, Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs> const& eventHandler) const
+template <typename D> typename consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested_revoker consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Web::Http::Filters::HttpBaseProtocolFilter, Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs> const& handler) const
 {
-    return impl::make_event_revoker<D, ServerCustomValidationRequested_revoker>(this, ServerCustomValidationRequested(eventHandler));
+    return impl::make_event_revoker<D, ServerCustomValidationRequested_revoker>(this, ServerCustomValidationRequested(handler));
 }
 
-template <typename D> void consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested(winrt::event_token const& eventCookie) const noexcept
+template <typename D> void consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ServerCustomValidationRequested(winrt::event_token const& token) const noexcept
 {
-    WINRT_VERIFY_(0, WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilter4)->remove_ServerCustomValidationRequested(get_abi(eventCookie)));
+    WINRT_VERIFY_(0, WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilter4)->remove_ServerCustomValidationRequested(get_abi(token)));
 }
 
 template <typename D> void consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter4<D>::ClearAuthenticationCache() const
 {
     check_hresult(WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilter4)->ClearAuthenticationCache());
+}
+
+template <typename D> Windows::System::User consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilter5<D>::User() const
+{
+    Windows::System::User value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilter5)->get_User(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Web::Http::Filters::HttpBaseProtocolFilter consume_Windows_Web_Http_Filters_IHttpBaseProtocolFilterStatics<D>::CreateForUser(Windows::System::User const& user) const
+{
+    Windows::Web::Http::Filters::HttpBaseProtocolFilter result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics)->CreateForUser(get_abi(user), put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Filters::HttpCacheReadBehavior consume_Windows_Web_Http_Filters_IHttpCacheControl<D>::ReadBehavior() const
@@ -557,23 +572,23 @@ struct produce<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilter3> : produ
 template <typename D>
 struct produce<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilter4> : produce_base<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilter4>
 {
-    int32_t WINRT_CALL add_ServerCustomValidationRequested(void* eventHandler, winrt::event_token* eventCookie) noexcept final
+    int32_t WINRT_CALL add_ServerCustomValidationRequested(void* handler, winrt::event_token* token) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(ServerCustomValidationRequested, WINRT_WRAP(winrt::event_token), Windows::Foundation::TypedEventHandler<Windows::Web::Http::Filters::HttpBaseProtocolFilter, Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs> const&);
-            *eventCookie = detach_from<winrt::event_token>(this->shim().ServerCustomValidationRequested(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Web::Http::Filters::HttpBaseProtocolFilter, Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs> const*>(&eventHandler)));
+            *token = detach_from<winrt::event_token>(this->shim().ServerCustomValidationRequested(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Web::Http::Filters::HttpBaseProtocolFilter, Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL remove_ServerCustomValidationRequested(winrt::event_token eventCookie) noexcept final
+    int32_t WINRT_CALL remove_ServerCustomValidationRequested(winrt::event_token token) noexcept final
     {
         typename D::abi_guard guard(this->shim());
         WINRT_ASSERT_DECLARATION(ServerCustomValidationRequested, WINRT_WRAP(void), winrt::event_token const&);
-        this->shim().ServerCustomValidationRequested(*reinterpret_cast<winrt::event_token const*>(&eventCookie));
+        this->shim().ServerCustomValidationRequested(*reinterpret_cast<winrt::event_token const*>(&token));
         return 0;
     }
 
@@ -584,6 +599,40 @@ struct produce<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilter4> : produ
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(ClearAuthenticationCache, WINRT_WRAP(void));
             this->shim().ClearAuthenticationCache();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilter5> : produce_base<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilter5>
+{
+    int32_t WINRT_CALL get_User(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(User, WINRT_WRAP(Windows::System::User));
+            *value = detach_from<Windows::System::User>(this->shim().User());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics> : produce_base<D, Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics>
+{
+    int32_t WINRT_CALL CreateForUser(void* user, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateForUser, WINRT_WRAP(Windows::Web::Http::Filters::HttpBaseProtocolFilter), Windows::System::User const&);
+            *result = detach_from<Windows::Web::Http::Filters::HttpBaseProtocolFilter>(this->shim().CreateForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -760,6 +809,11 @@ inline HttpBaseProtocolFilter::HttpBaseProtocolFilter() :
     HttpBaseProtocolFilter(impl::call_factory<HttpBaseProtocolFilter>([](auto&& f) { return f.template ActivateInstance<HttpBaseProtocolFilter>(); }))
 {}
 
+inline Windows::Web::Http::Filters::HttpBaseProtocolFilter HttpBaseProtocolFilter::CreateForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<HttpBaseProtocolFilter, Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics>([&](auto&& f) { return f.CreateForUser(user); });
+}
+
 }
 
 WINRT_EXPORT namespace std {
@@ -768,6 +822,8 @@ template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilt
 template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter2> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter2> {};
 template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter3> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter3> {};
 template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter4> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter4> {};
+template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter5> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter5> {};
+template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics> {};
 template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpCacheControl> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpCacheControl> {};
 template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpFilter> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpFilter> {};
 template<> struct hash<winrt::Windows::Web::Http::Filters::IHttpServerCustomValidationRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Web::Http::Filters::IHttpServerCustomValidationRequestedEventArgs> {};

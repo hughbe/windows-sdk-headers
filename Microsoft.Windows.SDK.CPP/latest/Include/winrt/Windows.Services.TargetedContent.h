@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.services.targetedcontent.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentAction;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAction ABI::Windows::Services::TargetedContent::ITargetedContentAction
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAction_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentAvailabilityChangedEventArgs;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAvailabilityChangedEventArgs ABI::Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAvailabilityChangedEventArgs_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentChangedEventArgs;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentChangedEventArgs ABI::Windows::Services::TargetedContent::ITargetedContentChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentChangedEventArgs_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentCollection;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentCollection ABI::Windows::Services::TargetedContent::ITargetedContentCollection
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentCollection_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentContainer;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainer ABI::Windows::Services::TargetedContent::ITargetedContentContainer
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainer_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentContainerStatics;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainerStatics ABI::Windows::Services::TargetedContent::ITargetedContentContainerStatics
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainerStatics_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentImage;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentImage ABI::Windows::Services::TargetedContent::ITargetedContentImage
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentImage_FWD_DEFINED__
@@ -379,9 +375,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentItem;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItem ABI::Windows::Services::TargetedContent::ITargetedContentItem
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItem_FWD_DEFINED__
@@ -393,9 +389,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentItemState;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItemState ABI::Windows::Services::TargetedContent::ITargetedContentItemState
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItemState_FWD_DEFINED__
@@ -407,9 +403,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentObject;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentObject ABI::Windows::Services::TargetedContent::ITargetedContentObject
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentObject_FWD_DEFINED__
@@ -421,9 +417,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentStateChangedEventArgs;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentStateChangedEventArgs ABI::Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentStateChangedEventArgs_FWD_DEFINED__
@@ -435,9 +431,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentSubscription;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription ABI::Windows::Services::TargetedContent::ITargetedContentSubscription
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription_FWD_DEFINED__
@@ -449,9 +445,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentSubscriptionOptions;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionOptions ABI::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionOptions_FWD_DEFINED__
@@ -463,9 +459,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentSubscriptionStatics;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionStatics ABI::Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionStatics_FWD_DEFINED__
@@ -477,9 +473,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 interface ITargetedContentValue;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentValue ABI::Windows::Services::TargetedContent::ITargetedContentValue
 
 #endif // ____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentValue_FWD_DEFINED__
@@ -492,9 +488,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentValue;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -517,7 +513,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Services::TargetedContent::TargetedContentVa
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Services::TargetedContent::TargetedContentValue*> __FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::TargetedContent::ITargetedContentValue*>
@@ -549,7 +545,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTarg
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::TargetedContent::ITargetedContentValue*>*>
@@ -581,7 +577,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTarg
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::TargetedContent::ITargetedContentValue*>*>
@@ -597,9 +593,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentAction;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -622,7 +618,7 @@ IIterator<ABI::Windows::Services::TargetedContent::TargetedContentAction*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::TargetedContent::TargetedContentAction*> __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentAction_t;
 #define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentAction ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentAction ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::TargetedContent::ITargetedContentAction*>
@@ -654,7 +650,7 @@ IIterable<ABI::Windows::Services::TargetedContent::TargetedContentAction*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::TargetedContent::TargetedContentAction*> __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentAction_t;
 #define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentAction ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentAction ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::TargetedContent::ITargetedContentAction*>
@@ -670,9 +666,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentCollection;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -695,7 +691,7 @@ IIterator<ABI::Windows::Services::TargetedContent::TargetedContentCollection*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::TargetedContent::TargetedContentCollection*> __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentCollection_t;
 #define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentCollection ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentCollection ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::TargetedContent::ITargetedContentCollection*>
@@ -727,7 +723,7 @@ IIterable<ABI::Windows::Services::TargetedContent::TargetedContentCollection*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::TargetedContent::TargetedContentCollection*> __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentCollection_t;
 #define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentCollection ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentCollection ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::TargetedContent::ITargetedContentCollection*>
@@ -743,9 +739,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentFile;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -754,9 +750,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -782,7 +778,7 @@ IIterator<ABI::Windows::Services::TargetedContent::TargetedContentFile*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::TargetedContent::TargetedContentFile*> __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentFile_t;
 #define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentFile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentFile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -814,7 +810,7 @@ IIterable<ABI::Windows::Services::TargetedContent::TargetedContentFile*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::TargetedContent::TargetedContentFile*> __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentFile_t;
 #define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentFile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentFile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -830,9 +826,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentImage;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -855,7 +851,7 @@ IIterator<ABI::Windows::Services::TargetedContent::TargetedContentImage*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::TargetedContent::TargetedContentImage*> __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentImage_t;
 #define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentImage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentImage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentImage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::TargetedContent::ITargetedContentImage*>
@@ -887,7 +883,7 @@ IIterable<ABI::Windows::Services::TargetedContent::TargetedContentImage*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::TargetedContent::TargetedContentImage*> __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentImage_t;
 #define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentImage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentImage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentImage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::TargetedContent::ITargetedContentImage*>
@@ -903,9 +899,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentItem;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -928,7 +924,7 @@ IIterator<ABI::Windows::Services::TargetedContent::TargetedContentItem*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::TargetedContent::TargetedContentItem*> __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentItem_t;
 #define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CTargetedContent__CTargetedContentItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::TargetedContent::ITargetedContentItem*>
@@ -960,7 +956,7 @@ IIterable<ABI::Windows::Services::TargetedContent::TargetedContentItem*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::TargetedContent::TargetedContentItem*> __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentItem_t;
 #define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CTargetedContent__CTargetedContentItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::TargetedContent::ITargetedContentItem*>
@@ -992,7 +988,7 @@ IMapView<HSTRING,ABI::Windows::Services::TargetedContent::TargetedContentValue*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Services::TargetedContent::TargetedContentValue*> __FIMapView_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t;
 #define __FIMapView_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CServices__CTargetedContent__CTargetedContentValue ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Services::TargetedContent::ITargetedContentValue*>
@@ -1024,7 +1020,7 @@ IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentAction*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentAction*> __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentAction_t;
 #define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentAction ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentAction ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::TargetedContent::ITargetedContentAction*>
@@ -1056,7 +1052,7 @@ IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentCollection*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentCollection*> __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentCollection_t;
 #define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentCollection ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentCollection ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::TargetedContent::ITargetedContentCollection*>
@@ -1088,7 +1084,7 @@ IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentFile*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentFile*> __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentFile_t;
 #define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentFile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentFile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -1120,7 +1116,7 @@ IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentImage*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentImage*> __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentImage_t;
 #define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentImage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentImage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentImage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::TargetedContent::ITargetedContentImage*>
@@ -1152,7 +1148,7 @@ IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentItem*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::TargetedContent::TargetedContentItem*> __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentItem_t;
 #define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CTargetedContent__CTargetedContentItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::TargetedContent::ITargetedContentItem*>
@@ -1168,9 +1164,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentContainer;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -1193,7 +1189,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::TargetedContent::Targete
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::TargetedContent::TargetedContentContainer*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentContainer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentContainer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentContainer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentContainer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::TargetedContent::ITargetedContentContainer*>
@@ -1225,7 +1221,7 @@ IAsyncOperation<ABI::Windows::Services::TargetedContent::TargetedContentContaine
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::TargetedContent::TargetedContentContainer*> __FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentContainer_t;
 #define __FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentContainer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentContainer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentContainer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::TargetedContent::ITargetedContentContainer*>
@@ -1241,9 +1237,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentSubscription;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -1266,7 +1262,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::TargetedContent::Targete
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::TargetedContent::TargetedContentSubscription*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::TargetedContent::ITargetedContentSubscription*>
@@ -1298,7 +1294,7 @@ IAsyncOperation<ABI::Windows::Services::TargetedContent::TargetedContentSubscrip
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::TargetedContent::TargetedContentSubscription*> __FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription_t;
 #define __FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CTargetedContent__CTargetedContentSubscription ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::TargetedContent::ITargetedContentSubscription*>
@@ -1315,9 +1311,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentAvailabilityChangedEventArgs;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -1341,7 +1337,7 @@ ITypedEventHandler<ABI::Windows::Services::TargetedContent::TargetedContentSubsc
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::TargetedContent::TargetedContentSubscription*,ABI::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs*> __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::TargetedContent::ITargetedContentSubscription*,ABI::Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs*>
@@ -1359,9 +1355,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentChangedEventArgs;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -1385,7 +1381,7 @@ ITypedEventHandler<ABI::Windows::Services::TargetedContent::TargetedContentSubsc
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::TargetedContent::TargetedContentSubscription*,ABI::Windows::Services::TargetedContent::TargetedContentChangedEventArgs*> __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::TargetedContent::ITargetedContentSubscription*,ABI::Windows::Services::TargetedContent::ITargetedContentChangedEventArgs*>
@@ -1403,9 +1399,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentStateChangedEventArgs;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
@@ -1429,7 +1425,7 @@ ITypedEventHandler<ABI::Windows::Services::TargetedContent::TargetedContentSubsc
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::TargetedContent::TargetedContentSubscription*,ABI::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::TargetedContent::ITargetedContentSubscription*,ABI::Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs*>
@@ -1460,7 +1456,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1490,7 +1486,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1520,7 +1516,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1549,7 +1545,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1578,7 +1574,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -1607,7 +1603,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1636,7 +1632,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1665,7 +1661,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1694,7 +1690,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1708,8 +1704,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1717,8 +1713,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1744,7 +1740,7 @@ IIterator<ABI::Windows::Foundation::Uri*> : IIterator_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::Uri*> __FIIterator_1_Windows__CFoundation__CUri_t;
 #define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1776,7 +1772,7 @@ IIterable<ABI::Windows::Foundation::Uri*> : IIterable_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::Uri*> __FIIterable_1_Windows__CFoundation__CUri_t;
 #define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1808,7 +1804,7 @@ IVectorView<ABI::Windows::Foundation::Uri*> : IVectorView_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Foundation::Uri*> __FIVectorView_1_Windows__CFoundation__CUri_t;
 #define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1838,7 +1834,7 @@ IIterator<double> : IIterator_impl<double>
 // correct parameterized interface specialization.
 typedef IIterator<double> __FIIterator_1_double_t;
 #define __FIIterator_1_double ABI::Windows::Foundation::Collections::__FIIterator_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_double ABI::Windows::Foundation::Collections::IIterator<DOUBLE>
@@ -1867,7 +1863,7 @@ IIterable<double> : IIterable_impl<double>
 // correct parameterized interface specialization.
 typedef IIterable<double> __FIIterable_1_double_t;
 #define __FIIterable_1_double ABI::Windows::Foundation::Collections::__FIIterable_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_double ABI::Windows::Foundation::Collections::IIterable<DOUBLE>
@@ -1896,7 +1892,7 @@ IVectorView<double> : IVectorView_impl<double>
 // correct parameterized interface specialization.
 typedef IVectorView<double> __FIVectorView_1_double_t;
 #define __FIVectorView_1_double ABI::Windows::Foundation::Collections::__FIVectorView_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_double ABI::Windows::Foundation::Collections::IVectorView<DOUBLE>
@@ -1925,7 +1921,7 @@ IIterator<bool> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateTy
 // correct parameterized interface specialization.
 typedef IIterator<bool> __FIIterator_1_boolean_t;
 #define __FIIterator_1_boolean ABI::Windows::Foundation::Collections::__FIIterator_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_boolean ABI::Windows::Foundation::Collections::IIterator<boolean>
@@ -1954,7 +1950,7 @@ IIterable<bool> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateTy
 // correct parameterized interface specialization.
 typedef IIterable<bool> __FIIterable_1_boolean_t;
 #define __FIIterable_1_boolean ABI::Windows::Foundation::Collections::__FIIterable_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_boolean ABI::Windows::Foundation::Collections::IIterable<boolean>
@@ -1983,7 +1979,7 @@ IVectorView<bool> : IVectorView_impl<ABI::Windows::Foundation::Internal::Aggrega
 // correct parameterized interface specialization.
 typedef IVectorView<bool> __FIVectorView_1_boolean_t;
 #define __FIVectorView_1_boolean ABI::Windows::Foundation::Collections::__FIVectorView_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_boolean ABI::Windows::Foundation::Collections::IVectorView<boolean>
@@ -2001,15 +1997,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2017,8 +2013,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2030,8 +2026,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2052,9 +2048,9 @@ namespace ABI {
                 
                 typedef enum TargetedContentAppInstallationState : int TargetedContentAppInstallationState;
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2063,9 +2059,9 @@ namespace ABI {
                 
                 typedef enum TargetedContentAvailability : int TargetedContentAvailability;
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2074,9 +2070,9 @@ namespace ABI {
                 
                 typedef enum TargetedContentInteraction : int TargetedContentInteraction;
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2085,9 +2081,9 @@ namespace ABI {
                 
                 typedef enum TargetedContentObjectKind : int TargetedContentObjectKind;
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2096,9 +2092,9 @@ namespace ABI {
                 
                 typedef enum TargetedContentValueKind : int TargetedContentValueKind;
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2128,9 +2124,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentItemState;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2138,9 +2134,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentObject;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2150,9 +2146,9 @@ namespace ABI {
         namespace Services {
             namespace TargetedContent {
                 class TargetedContentSubscriptionOptions;
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2187,9 +2183,9 @@ namespace ABI {
                     TargetedContentAppInstallationState_Installed = 2,
                 };
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
 
 
@@ -2215,9 +2211,9 @@ namespace ABI {
                     TargetedContentAvailability_All = 2,
                 };
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
 
 
@@ -2253,9 +2249,9 @@ namespace ABI {
                     TargetedContentInteraction_Opportunity = 12,
                 };
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
 
 
@@ -2281,9 +2277,9 @@ namespace ABI {
                     TargetedContentObjectKind_Value = 2,
                 };
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
 
 
@@ -2320,9 +2316,9 @@ namespace ABI {
                     TargetedContentValueKind_Actions = 13,
                 };
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_TARGETEDCONTENT_TARGETEDCONTENTCONTRACT_VERSION >= 0x10000
 
 
@@ -2358,9 +2354,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentAction=_uuidof(ITargetedContentAction);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAction;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAction_INTERFACE_DEFINED__) */
@@ -2399,9 +2395,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentAvailabilityChangedEventArgs=_uuidof(ITargetedContentAvailabilityChangedEventArgs);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAvailabilityChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAvailabilityChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2436,16 +2432,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasPreviousContentExpired(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentChangedEventArgs=_uuidof(ITargetedContentChangedEventArgs);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2502,9 +2498,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentCollection=_uuidof(ITargetedContentCollection);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentCollection;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentCollection_INTERFACE_DEFINED__) */
@@ -2556,9 +2552,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentContainer=_uuidof(ITargetedContentContainer);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainer;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainer_INTERFACE_DEFINED__) */
@@ -2598,9 +2594,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentContainerStatics=_uuidof(ITargetedContentContainerStatics);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainerStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentContainerStatics_INTERFACE_DEFINED__) */
@@ -2646,9 +2642,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentImage=_uuidof(ITargetedContentImage);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentImage;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentImage_INTERFACE_DEFINED__) */
@@ -2702,9 +2698,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentItem=_uuidof(ITargetedContentItem);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItem;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItem_INTERFACE_DEFINED__) */
@@ -2736,7 +2732,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldDisplay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AppInstallationState(
                         /* [retval, out] */__RPC__out ABI::Windows::Services::TargetedContent::TargetedContentAppInstallationState * value
@@ -2746,9 +2742,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentItemState=_uuidof(ITargetedContentItemState);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItemState;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentItemState_INTERFACE_DEFINED__) */
@@ -2796,9 +2792,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentObject=_uuidof(ITargetedContentObject);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentObject;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentObject_INTERFACE_DEFINED__) */
@@ -2837,9 +2833,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentStateChangedEventArgs=_uuidof(ITargetedContentStateChangedEventArgs);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2902,9 +2898,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentSubscription=_uuidof(ITargetedContentSubscription);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription_INTERFACE_DEFINED__) */
@@ -2939,10 +2935,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowPartialContentAvailability(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowPartialContentAvailability(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CloudQueryParameters(
                         /* [retval, out] */__RPC__deref_out_opt __FIMap_2_HSTRING_HSTRING * * value
@@ -2956,9 +2952,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentSubscriptionOptions=_uuidof(ITargetedContentSubscriptionOptions);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionOptions;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionOptions_INTERFACE_DEFINED__) */
@@ -3002,9 +2998,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentSubscriptionStatics=_uuidof(ITargetedContentSubscriptionStatics);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscriptionStatics_INTERFACE_DEFINED__) */
@@ -3051,7 +3047,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out DOUBLE * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Boolean(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_File(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStreamReference * * value
@@ -3088,9 +3084,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetedContentValue=_uuidof(ITargetedContentValue);
                 
-            } /* Windows */
+            } /* TargetedContent */
         } /* Services */
-    } /* TargetedContent */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentValue;
 #endif /* !defined(____x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentValue_INTERFACE_DEFINED__) */
@@ -5465,7 +5461,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAvailabilityChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentAvailabilityChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentAvailabilityChangedEventArgsVtbl;
 
@@ -5518,7 +5514,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentChangedEventArgsVtbl;
 
@@ -5571,7 +5567,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentSubscription * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CTargetedContent_CITargetedContentStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CTargetedContent__CTargetedContentSubscription_Windows__CServices__CTargetedContent__CTargetedContentStateChangedEventArgsVtbl;
 

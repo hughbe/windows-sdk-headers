@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -2110,6 +2110,18 @@ template <typename D> bool consume_Windows_Devices_Bluetooth_GenericAttributePro
 {
     bool value{};
     check_hresult(WINRT_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters)->get_IsDiscoverable(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters2<D>::ServiceData(Windows::Storage::Streams::IBuffer const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2)->put_ServiceData(get_abi(value)));
+}
+
+template <typename D> Windows::Storage::Streams::IBuffer consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters2<D>::ServiceData() const
+{
+    Windows::Storage::Streams::IBuffer value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2)->get_ServiceData(put_abi(value)));
     return value;
 }
 
@@ -6359,6 +6371,35 @@ struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSer
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2>
+{
+    int32_t WINRT_CALL put_ServiceData(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ServiceData, WINRT_WRAP(void), Windows::Storage::Streams::IBuffer const&);
+            this->shim().ServiceData(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_ServiceData(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ServiceData, WINRT_WRAP(Windows::Storage::Streams::IBuffer));
+            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().ServiceData());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult>
 {
     int32_t WINRT_CALL get_Error(Windows::Devices::Bluetooth::BluetoothError* value) noexcept final
@@ -7993,6 +8034,7 @@ template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfi
 template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider> {};
 template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs> {};
 template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters> {};
+template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2> {};
 template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult> {};
 template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics> {};
 template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics> {};

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -123,6 +123,13 @@ enum class HdrVideoMode : int32_t
     Off = 0,
     On = 1,
     Auto = 2,
+};
+
+enum class InfraredTorchMode : int32_t
+{
+    Off = 0,
+    On = 1,
+    AlternatingFrameIllumination = 2,
 };
 
 enum class IsoSpeedPreset : int32_t
@@ -256,6 +263,7 @@ struct IAdvancedVideoCaptureDeviceController3;
 struct IAdvancedVideoCaptureDeviceController4;
 struct IAdvancedVideoCaptureDeviceController5;
 struct IAdvancedVideoCaptureDeviceController6;
+struct IAdvancedVideoCaptureDeviceController7;
 struct IAudioDeviceController;
 struct IAudioDeviceModule;
 struct IAudioDeviceModuleNotificationEventArgs;
@@ -274,6 +282,7 @@ struct IFocusControl;
 struct IFocusControl2;
 struct IFocusSettings;
 struct IHdrVideoControl;
+struct IInfraredTorchControl;
 struct IIsoSpeedControl;
 struct IIsoSpeedControl2;
 struct IKeypadPressedEventArgs;
@@ -316,6 +325,7 @@ struct FlashControl;
 struct FocusControl;
 struct FocusSettings;
 struct HdrVideoControl;
+struct InfraredTorchControl;
 struct IsoSpeedControl;
 struct KeypadPressedEventArgs;
 struct LowLagPhotoControl;
@@ -354,6 +364,7 @@ template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDevice
 template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6>{ using type = interface_category; };
+template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IAudioDeviceController>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IAudioDeviceModule>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs>{ using type = interface_category; };
@@ -372,6 +383,7 @@ template <> struct category<Windows::Media::Devices::IFocusControl>{ using type 
 template <> struct category<Windows::Media::Devices::IFocusControl2>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IFocusSettings>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IHdrVideoControl>{ using type = interface_category; };
+template <> struct category<Windows::Media::Devices::IInfraredTorchControl>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IIsoSpeedControl>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IIsoSpeedControl2>{ using type = interface_category; };
 template <> struct category<Windows::Media::Devices::IKeypadPressedEventArgs>{ using type = interface_category; };
@@ -414,6 +426,7 @@ template <> struct category<Windows::Media::Devices::FlashControl>{ using type =
 template <> struct category<Windows::Media::Devices::FocusControl>{ using type = class_category; };
 template <> struct category<Windows::Media::Devices::FocusSettings>{ using type = class_category; };
 template <> struct category<Windows::Media::Devices::HdrVideoControl>{ using type = class_category; };
+template <> struct category<Windows::Media::Devices::InfraredTorchControl>{ using type = class_category; };
 template <> struct category<Windows::Media::Devices::IsoSpeedControl>{ using type = class_category; };
 template <> struct category<Windows::Media::Devices::KeypadPressedEventArgs>{ using type = class_category; };
 template <> struct category<Windows::Media::Devices::LowLagPhotoControl>{ using type = class_category; };
@@ -445,6 +458,7 @@ template <> struct category<Windows::Media::Devices::ColorTemperaturePreset>{ us
 template <> struct category<Windows::Media::Devices::FocusMode>{ using type = enum_category; };
 template <> struct category<Windows::Media::Devices::FocusPreset>{ using type = enum_category; };
 template <> struct category<Windows::Media::Devices::HdrVideoMode>{ using type = enum_category; };
+template <> struct category<Windows::Media::Devices::InfraredTorchMode>{ using type = enum_category; };
 template <> struct category<Windows::Media::Devices::IsoSpeedPreset>{ using type = enum_category; };
 template <> struct category<Windows::Media::Devices::ManualFocusDistance>{ using type = enum_category; };
 template <> struct category<Windows::Media::Devices::MediaCaptureFocusState>{ using type = enum_category; };
@@ -470,6 +484,7 @@ template <> struct name<Windows::Media::Devices::IAdvancedVideoCaptureDeviceCont
 template <> struct name<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>{ static constexpr auto & value{ L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4" }; };
 template <> struct name<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5>{ static constexpr auto & value{ L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5" }; };
 template <> struct name<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6>{ static constexpr auto & value{ L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6" }; };
+template <> struct name<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7>{ static constexpr auto & value{ L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7" }; };
 template <> struct name<Windows::Media::Devices::IAudioDeviceController>{ static constexpr auto & value{ L"Windows.Media.Devices.IAudioDeviceController" }; };
 template <> struct name<Windows::Media::Devices::IAudioDeviceModule>{ static constexpr auto & value{ L"Windows.Media.Devices.IAudioDeviceModule" }; };
 template <> struct name<Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs>{ static constexpr auto & value{ L"Windows.Media.Devices.IAudioDeviceModuleNotificationEventArgs" }; };
@@ -488,6 +503,7 @@ template <> struct name<Windows::Media::Devices::IFocusControl>{ static constexp
 template <> struct name<Windows::Media::Devices::IFocusControl2>{ static constexpr auto & value{ L"Windows.Media.Devices.IFocusControl2" }; };
 template <> struct name<Windows::Media::Devices::IFocusSettings>{ static constexpr auto & value{ L"Windows.Media.Devices.IFocusSettings" }; };
 template <> struct name<Windows::Media::Devices::IHdrVideoControl>{ static constexpr auto & value{ L"Windows.Media.Devices.IHdrVideoControl" }; };
+template <> struct name<Windows::Media::Devices::IInfraredTorchControl>{ static constexpr auto & value{ L"Windows.Media.Devices.IInfraredTorchControl" }; };
 template <> struct name<Windows::Media::Devices::IIsoSpeedControl>{ static constexpr auto & value{ L"Windows.Media.Devices.IIsoSpeedControl" }; };
 template <> struct name<Windows::Media::Devices::IIsoSpeedControl2>{ static constexpr auto & value{ L"Windows.Media.Devices.IIsoSpeedControl2" }; };
 template <> struct name<Windows::Media::Devices::IKeypadPressedEventArgs>{ static constexpr auto & value{ L"Windows.Media.Devices.IKeypadPressedEventArgs" }; };
@@ -530,6 +546,7 @@ template <> struct name<Windows::Media::Devices::FlashControl>{ static constexpr
 template <> struct name<Windows::Media::Devices::FocusControl>{ static constexpr auto & value{ L"Windows.Media.Devices.FocusControl" }; };
 template <> struct name<Windows::Media::Devices::FocusSettings>{ static constexpr auto & value{ L"Windows.Media.Devices.FocusSettings" }; };
 template <> struct name<Windows::Media::Devices::HdrVideoControl>{ static constexpr auto & value{ L"Windows.Media.Devices.HdrVideoControl" }; };
+template <> struct name<Windows::Media::Devices::InfraredTorchControl>{ static constexpr auto & value{ L"Windows.Media.Devices.InfraredTorchControl" }; };
 template <> struct name<Windows::Media::Devices::IsoSpeedControl>{ static constexpr auto & value{ L"Windows.Media.Devices.IsoSpeedControl" }; };
 template <> struct name<Windows::Media::Devices::KeypadPressedEventArgs>{ static constexpr auto & value{ L"Windows.Media.Devices.KeypadPressedEventArgs" }; };
 template <> struct name<Windows::Media::Devices::LowLagPhotoControl>{ static constexpr auto & value{ L"Windows.Media.Devices.LowLagPhotoControl" }; };
@@ -561,6 +578,7 @@ template <> struct name<Windows::Media::Devices::ColorTemperaturePreset>{ static
 template <> struct name<Windows::Media::Devices::FocusMode>{ static constexpr auto & value{ L"Windows.Media.Devices.FocusMode" }; };
 template <> struct name<Windows::Media::Devices::FocusPreset>{ static constexpr auto & value{ L"Windows.Media.Devices.FocusPreset" }; };
 template <> struct name<Windows::Media::Devices::HdrVideoMode>{ static constexpr auto & value{ L"Windows.Media.Devices.HdrVideoMode" }; };
+template <> struct name<Windows::Media::Devices::InfraredTorchMode>{ static constexpr auto & value{ L"Windows.Media.Devices.InfraredTorchMode" }; };
 template <> struct name<Windows::Media::Devices::IsoSpeedPreset>{ static constexpr auto & value{ L"Windows.Media.Devices.IsoSpeedPreset" }; };
 template <> struct name<Windows::Media::Devices::ManualFocusDistance>{ static constexpr auto & value{ L"Windows.Media.Devices.ManualFocusDistance" }; };
 template <> struct name<Windows::Media::Devices::MediaCaptureFocusState>{ static constexpr auto & value{ L"Windows.Media.Devices.MediaCaptureFocusState" }; };
@@ -586,6 +604,7 @@ template <> struct guid_storage<Windows::Media::Devices::IAdvancedVideoCaptureDe
 template <> struct guid_storage<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>{ static constexpr guid value{ 0xEA9FBFAF,0xD371,0x41C3,{ 0x9A,0x17,0x82,0x4A,0x87,0xEB,0xDF,0xD2 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5>{ static constexpr guid value{ 0x33512B17,0xB9CB,0x4A23,{ 0xB8,0x75,0xF9,0xEA,0xAB,0x53,0x54,0x92 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6>{ static constexpr guid value{ 0xB6563A53,0x68A1,0x44B7,{ 0x9F,0x89,0xB5,0xFA,0x97,0xAC,0x0C,0xBE } }; };
+template <> struct guid_storage<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7>{ static constexpr guid value{ 0x8D2927F0,0xA054,0x50E7,{ 0xB7,0xDF,0x7C,0x04,0x23,0x4D,0x10,0xF0 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IAudioDeviceController>{ static constexpr guid value{ 0xEDD4A388,0x79C7,0x4F7C,{ 0x90,0xE8,0xEF,0x93,0x4B,0x21,0x58,0x0A } }; };
 template <> struct guid_storage<Windows::Media::Devices::IAudioDeviceModule>{ static constexpr guid value{ 0x86CFAC36,0x47C1,0x4B33,{ 0x98,0x52,0x87,0x73,0xEC,0x4B,0xE1,0x23 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs>{ static constexpr guid value{ 0xE3E3CCAF,0x224C,0x48BE,{ 0x95,0x6B,0x9A,0x13,0x13,0x4E,0x96,0xE8 } }; };
@@ -604,6 +623,7 @@ template <> struct guid_storage<Windows::Media::Devices::IFocusControl>{ static 
 template <> struct guid_storage<Windows::Media::Devices::IFocusControl2>{ static constexpr guid value{ 0x3F7CFF48,0xC534,0x4E9E,{ 0x94,0xC3,0x52,0xEF,0x2A,0xFD,0x5D,0x07 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IFocusSettings>{ static constexpr guid value{ 0x79958F6B,0x3263,0x4275,{ 0x85,0xD6,0xAE,0xAE,0x89,0x1C,0x96,0xEE } }; };
 template <> struct guid_storage<Windows::Media::Devices::IHdrVideoControl>{ static constexpr guid value{ 0x55D8E2D0,0x30C0,0x43BF,{ 0x9B,0x9A,0x97,0x99,0xD7,0x0C,0xED,0x94 } }; };
+template <> struct guid_storage<Windows::Media::Devices::IInfraredTorchControl>{ static constexpr guid value{ 0x1CBA2C83,0x6CB6,0x5A04,{ 0xA6,0xFC,0x3B,0xE7,0xB3,0x3F,0xF0,0x56 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IIsoSpeedControl>{ static constexpr guid value{ 0x27B6C322,0x25AD,0x4F1B,{ 0xAA,0xAB,0x52,0x4A,0xB3,0x76,0xCA,0x33 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IIsoSpeedControl2>{ static constexpr guid value{ 0x6F1578F2,0x6D77,0x4F8A,{ 0x8C,0x2F,0x61,0x30,0xB6,0x39,0x50,0x53 } }; };
 template <> struct guid_storage<Windows::Media::Devices::IKeypadPressedEventArgs>{ static constexpr guid value{ 0xD3A43900,0xB4FA,0x49CD,{ 0x94,0x42,0x89,0xAF,0x65,0x68,0xF6,0x01 } }; };
@@ -650,6 +670,7 @@ template <> struct default_interface<Windows::Media::Devices::FlashControl>{ usi
 template <> struct default_interface<Windows::Media::Devices::FocusControl>{ using type = Windows::Media::Devices::IFocusControl; };
 template <> struct default_interface<Windows::Media::Devices::FocusSettings>{ using type = Windows::Media::Devices::IFocusSettings; };
 template <> struct default_interface<Windows::Media::Devices::HdrVideoControl>{ using type = Windows::Media::Devices::IHdrVideoControl; };
+template <> struct default_interface<Windows::Media::Devices::InfraredTorchControl>{ using type = Windows::Media::Devices::IInfraredTorchControl; };
 template <> struct default_interface<Windows::Media::Devices::IsoSpeedControl>{ using type = Windows::Media::Devices::IIsoSpeedControl; };
 template <> struct default_interface<Windows::Media::Devices::KeypadPressedEventArgs>{ using type = Windows::Media::Devices::IKeypadPressedEventArgs; };
 template <> struct default_interface<Windows::Media::Devices::LowLagPhotoControl>{ using type = Windows::Media::Devices::ILowLagPhotoControl; };
@@ -737,6 +758,11 @@ template <> struct abi<Windows::Media::Devices::IAdvancedVideoCaptureDeviceContr
 template <> struct abi<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_VideoTemporalDenoisingControl(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_InfraredTorchControl(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Media::Devices::IAudioDeviceController>{ struct type : IInspectable
@@ -917,6 +943,19 @@ template <> struct abi<Windows::Media::Devices::IHdrVideoControl>{ struct type :
     virtual int32_t WINRT_CALL get_SupportedModes(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_Mode(Windows::Media::Devices::HdrVideoMode* value) noexcept = 0;
     virtual int32_t WINRT_CALL put_Mode(Windows::Media::Devices::HdrVideoMode value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Media::Devices::IInfraredTorchControl>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_SupportedModes(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CurrentMode(Windows::Media::Devices::InfraredTorchMode* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_CurrentMode(Windows::Media::Devices::InfraredTorchMode value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MinPower(int32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MaxPower(int32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_PowerStep(int32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Power(int32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Power(int32_t value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Media::Devices::IIsoSpeedControl>{ struct type : IInspectable
@@ -1266,6 +1305,13 @@ struct consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController6
 template <> struct consume<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6> { template <typename D> using type = consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController6<D>; };
 
 template <typename D>
+struct consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController7
+{
+    Windows::Media::Devices::InfraredTorchControl InfraredTorchControl() const;
+};
+template <> struct consume<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> { template <typename D> using type = consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController7<D>; };
+
+template <typename D>
 struct consume_Windows_Media_Devices_IAudioDeviceController
 {
     void Muted(bool value) const;
@@ -1494,6 +1540,21 @@ struct consume_Windows_Media_Devices_IHdrVideoControl
     void Mode(Windows::Media::Devices::HdrVideoMode const& value) const;
 };
 template <> struct consume<Windows::Media::Devices::IHdrVideoControl> { template <typename D> using type = consume_Windows_Media_Devices_IHdrVideoControl<D>; };
+
+template <typename D>
+struct consume_Windows_Media_Devices_IInfraredTorchControl
+{
+    bool IsSupported() const;
+    Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::InfraredTorchMode> SupportedModes() const;
+    Windows::Media::Devices::InfraredTorchMode CurrentMode() const;
+    void CurrentMode(Windows::Media::Devices::InfraredTorchMode const& value) const;
+    int32_t MinPower() const;
+    int32_t MaxPower() const;
+    int32_t PowerStep() const;
+    int32_t Power() const;
+    void Power(int32_t value) const;
+};
+template <> struct consume<Windows::Media::Devices::IInfraredTorchControl> { template <typename D> using type = consume_Windows_Media_Devices_IInfraredTorchControl<D>; };
 
 template <typename D>
 struct consume_Windows_Media_Devices_IIsoSpeedControl

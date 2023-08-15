@@ -23,13 +23,13 @@
 #endif
 #include <winapifamily.h>
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 
 
 //
-// Constants 
+// Constants
 //
 
 //
@@ -95,7 +95,7 @@ typedef struct _SecPkgCred_SupportedProtocols
     DWORD      	grbitProtocol;
 } SecPkgCred_SupportedProtocols, *PSecPkgCred_SupportedProtocols;
 
-//An IDL struct _SecPkgCred_ClientCertPolicy_RPC is defined in minio/security/base/lsa/idl/sspi/sspirpc.idl for rpc calls. 
+//An IDL struct _SecPkgCred_ClientCertPolicy_RPC is defined in minio/security/base/lsa/idl/sspi/sspirpc.idl for rpc calls.
 //The IDL struct should also be updated if there is any change on struct _SecPkgCred_ClientCertPolicy.
 
 typedef struct _SecPkgCred_ClientCertPolicy
@@ -112,7 +112,7 @@ typedef struct _SecPkgCred_ClientCertPolicy
 } SecPkgCred_ClientCertPolicy, *PSecPkgCred_ClientCertPolicy;
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // __MINSCHANNEL_H__

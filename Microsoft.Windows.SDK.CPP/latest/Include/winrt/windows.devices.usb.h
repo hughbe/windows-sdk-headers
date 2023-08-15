@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.usb.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbBulkInEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInEndpointDescriptor ABI::Windows::Devices::Usb::IUsbBulkInEndpointDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInEndpointDescriptor_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbBulkInPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInPipe ABI::Windows::Devices::Usb::IUsbBulkInPipe
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInPipe_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbBulkOutEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutEndpointDescriptor ABI::Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutEndpointDescriptor_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbBulkOutPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutPipe ABI::Windows::Devices::Usb::IUsbBulkOutPipe
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutPipe_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbConfiguration;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbConfiguration ABI::Windows::Devices::Usb::IUsbConfiguration
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbConfiguration_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbConfigurationDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptor ABI::Windows::Devices::Usb::IUsbConfigurationDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptor_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbConfigurationDescriptorStatics;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptorStatics ABI::Windows::Devices::Usb::IUsbConfigurationDescriptorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptorStatics_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbControlRequestType;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbControlRequestType ABI::Windows::Devices::Usb::IUsbControlRequestType
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbControlRequestType_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbDescriptor ABI::Windows::Devices::Usb::IUsbDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbDescriptor_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbDevice;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbDevice ABI::Windows::Devices::Usb::IUsbDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbDevice_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbDeviceClass;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClass ABI::Windows::Devices::Usb::IUsbDeviceClass
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClass_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbDeviceClasses;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClasses ABI::Windows::Devices::Usb::IUsbDeviceClasses
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClasses_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbDeviceClassesStatics;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClassesStatics ABI::Windows::Devices::Usb::IUsbDeviceClassesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClassesStatics_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbDeviceDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceDescriptor ABI::Windows::Devices::Usb::IUsbDeviceDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceDescriptor_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbDeviceStatics;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceStatics ABI::Windows::Devices::Usb::IUsbDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceStatics_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptor ABI::Windows::Devices::Usb::IUsbEndpointDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptor_FWD_DEFINED__
@@ -501,9 +497,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbEndpointDescriptorStatics;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptorStatics ABI::Windows::Devices::Usb::IUsbEndpointDescriptorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptorStatics_FWD_DEFINED__
@@ -515,9 +511,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterface;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterface ABI::Windows::Devices::Usb::IUsbInterface
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterface_FWD_DEFINED__
@@ -529,9 +525,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterfaceDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptor ABI::Windows::Devices::Usb::IUsbInterfaceDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptor_FWD_DEFINED__
@@ -543,9 +539,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterfaceDescriptorStatics;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptorStatics ABI::Windows::Devices::Usb::IUsbInterfaceDescriptorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptorStatics_FWD_DEFINED__
@@ -557,9 +553,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterfaceSetting;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceSetting ABI::Windows::Devices::Usb::IUsbInterfaceSetting
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceSetting_FWD_DEFINED__
@@ -571,9 +567,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterruptInEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEndpointDescriptor ABI::Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEndpointDescriptor_FWD_DEFINED__
@@ -585,9 +581,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterruptInEventArgs;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEventArgs ABI::Windows::Devices::Usb::IUsbInterruptInEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEventArgs_FWD_DEFINED__
@@ -599,9 +595,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterruptInPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInPipe ABI::Windows::Devices::Usb::IUsbInterruptInPipe
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInPipe_FWD_DEFINED__
@@ -613,9 +609,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterruptOutEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutEndpointDescriptor ABI::Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutEndpointDescriptor_FWD_DEFINED__
@@ -627,9 +623,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbInterruptOutPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutPipe ABI::Windows::Devices::Usb::IUsbInterruptOutPipe
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutPipe_FWD_DEFINED__
@@ -641,9 +637,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbSetupPacket;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacket ABI::Windows::Devices::Usb::IUsbSetupPacket
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacket_FWD_DEFINED__
@@ -655,9 +651,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 interface IUsbSetupPacketFactory;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacketFactory ABI::Windows::Devices::Usb::IUsbSetupPacketFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacketFactory_FWD_DEFINED__
@@ -670,9 +666,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbBulkInEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -695,7 +691,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbBulkInEndpointDescriptor*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbBulkInEndpointDescriptor*> __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbBulkInEndpointDescriptor*>
@@ -727,7 +723,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbBulkInEndpointDescriptor*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbBulkInEndpointDescriptor*> __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbBulkInEndpointDescriptor*>
@@ -743,9 +739,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbBulkInPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -768,7 +764,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbBulkInPipe*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbBulkInPipe*> __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInPipe_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInPipe ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkInPipe ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbBulkInPipe*>
@@ -800,7 +796,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbBulkInPipe*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbBulkInPipe*> __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInPipe_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInPipe ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkInPipe ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbBulkInPipe*>
@@ -816,9 +812,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbBulkOutEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -841,7 +837,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor*> __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor*>
@@ -873,7 +869,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor*> __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor*>
@@ -889,9 +885,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbBulkOutPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -914,7 +910,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbBulkOutPipe*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbBulkOutPipe*> __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutPipe_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutPipe ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbBulkOutPipe ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbBulkOutPipe*>
@@ -946,7 +942,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbBulkOutPipe*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbBulkOutPipe*> __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutPipe_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutPipe ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbBulkOutPipe ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbBulkOutPipe*>
@@ -962,9 +958,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -987,7 +983,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbDescriptor*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbDescriptor*> __FIIterator_1_Windows__CDevices__CUsb__CUsbDescriptor_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbDescriptor*>
@@ -1019,7 +1015,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbDescriptor*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbDescriptor*> __FIIterable_1_Windows__CDevices__CUsb__CUsbDescriptor_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbDescriptor*>
@@ -1035,9 +1031,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterface;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1060,7 +1056,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbInterface*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbInterface*> __FIIterator_1_Windows__CDevices__CUsb__CUsbInterface_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterface ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbInterface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterface ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbInterface*>
@@ -1092,7 +1088,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbInterface*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbInterface*> __FIIterable_1_Windows__CDevices__CUsb__CUsbInterface_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterface ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbInterface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterface ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbInterface*>
@@ -1108,9 +1104,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterfaceSetting;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1133,7 +1129,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbInterfaceSetting*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbInterfaceSetting*> __FIIterator_1_Windows__CDevices__CUsb__CUsbInterfaceSetting_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterfaceSetting ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbInterfaceSetting_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterfaceSetting ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbInterfaceSetting*>
@@ -1165,7 +1161,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbInterfaceSetting*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbInterfaceSetting*> __FIIterable_1_Windows__CDevices__CUsb__CUsbInterfaceSetting_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterfaceSetting ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbInterfaceSetting_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterfaceSetting ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbInterfaceSetting*>
@@ -1181,9 +1177,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterruptInEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1206,7 +1202,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor*> __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor*>
@@ -1238,7 +1234,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor*> __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor*>
@@ -1254,9 +1250,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterruptInPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1279,7 +1275,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbInterruptInPipe*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbInterruptInPipe*> __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInPipe_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInPipe ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptInPipe ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbInterruptInPipe*>
@@ -1311,7 +1307,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbInterruptInPipe*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbInterruptInPipe*> __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInPipe_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInPipe ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptInPipe ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbInterruptInPipe*>
@@ -1327,9 +1323,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterruptOutEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1352,7 +1348,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor*> __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor*>
@@ -1384,7 +1380,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor*> __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor*>
@@ -1400,9 +1396,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterruptOutPipe;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1425,7 +1421,7 @@ IIterator<ABI::Windows::Devices::Usb::UsbInterruptOutPipe*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Usb::UsbInterruptOutPipe*> __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe_t;
 #define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Usb::IUsbInterruptOutPipe*>
@@ -1457,7 +1453,7 @@ IIterable<ABI::Windows::Devices::Usb::UsbInterruptOutPipe*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Usb::UsbInterruptOutPipe*> __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe_t;
 #define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Usb::IUsbInterruptOutPipe*>
@@ -1489,7 +1485,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbBulkInEndpointDescriptor*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbBulkInEndpointDescriptor*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInEndpointDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbBulkInEndpointDescriptor*>
@@ -1521,7 +1517,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbBulkInPipe*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbBulkInPipe*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInPipe_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInPipe ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkInPipe ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbBulkInPipe*>
@@ -1553,7 +1549,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutEndpointDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor*>
@@ -1585,7 +1581,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbBulkOutPipe*> : IVectorView_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbBulkOutPipe*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutPipe_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutPipe ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbBulkOutPipe ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbBulkOutPipe*>
@@ -1617,7 +1613,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbDescriptor*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbDescriptor*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbDescriptor_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbDescriptor*>
@@ -1649,7 +1645,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbInterface*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbInterface*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterface_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterface ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbInterface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterface ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbInterface*>
@@ -1681,7 +1677,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbInterfaceSetting*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbInterfaceSetting*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterfaceSetting_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterfaceSetting ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbInterfaceSetting_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterfaceSetting ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbInterfaceSetting*>
@@ -1713,7 +1709,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInEndpointDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor*>
@@ -1745,7 +1741,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbInterruptInPipe*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbInterruptInPipe*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInPipe_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInPipe ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptInPipe ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbInterruptInPipe*>
@@ -1777,7 +1773,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor*>
@@ -1809,7 +1805,7 @@ IVectorView<ABI::Windows::Devices::Usb::UsbInterruptOutPipe*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Usb::UsbInterruptOutPipe*> __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe_t;
 #define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutPipe ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Usb::IUsbInterruptOutPipe*>
@@ -1825,9 +1821,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbDevice;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1850,7 +1846,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Usb::UsbDevice*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Usb::UsbDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CUsb__CUsbDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CUsb__CUsbDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CUsb__CUsbDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CUsb__CUsbDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Usb::IUsbDevice*>
@@ -1882,7 +1878,7 @@ IAsyncOperation<ABI::Windows::Devices::Usb::UsbDevice*> : IAsyncOperation_impl<A
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Usb::UsbDevice*> __FIAsyncOperation_1_Windows__CDevices__CUsb__CUsbDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CUsb__CUsbDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CUsb__CUsbDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CUsb__CUsbDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Usb::IUsbDevice*>
@@ -1899,9 +1895,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterruptInEventArgs;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1925,7 +1921,7 @@ ITypedEventHandler<ABI::Windows::Devices::Usb::UsbInterruptInPipe*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Usb::UsbInterruptInPipe*,ABI::Windows::Devices::Usb::UsbInterruptInEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Usb::IUsbInterruptInPipe*,ABI::Windows::Devices::Usb::IUsbInterruptInEventArgs*>
@@ -1956,7 +1952,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -1985,7 +1981,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -2002,9 +1998,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -2030,7 +2026,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -2062,7 +2058,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -2080,7 +2076,7 @@ typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOpera
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("e5198cc8-2873-55f5-b0a1-84ff9e4aad62"))
-IReference<byte> : IReference_impl<byte> 
+IReference<::byte> : IReference_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -2090,9 +2086,9 @@ IReference<byte> : IReference_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IReference<byte> __FIReference_1_byte_t;
+typedef IReference<::byte> __FIReference_1_byte_t;
 #define __FIReference_1_byte ABI::Windows::Foundation::__FIReference_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_byte ABI::Windows::Foundation::IReference<BYTE>
@@ -2110,8 +2106,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2123,8 +2119,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2136,8 +2132,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2150,9 +2146,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -2165,9 +2161,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -2183,9 +2179,9 @@ namespace ABI {
                 
                 typedef enum UsbControlRecipient : int UsbControlRecipient;
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2194,9 +2190,9 @@ namespace ABI {
                 
                 typedef enum UsbControlTransferType : int UsbControlTransferType;
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2205,9 +2201,9 @@ namespace ABI {
                 
                 typedef enum UsbEndpointType : int UsbEndpointType;
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2216,9 +2212,9 @@ namespace ABI {
                 
                 typedef enum UsbReadOptions : unsigned int UsbReadOptions;
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2227,9 +2223,9 @@ namespace ABI {
                 
                 typedef enum UsbTransferDirection : int UsbTransferDirection;
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2238,9 +2234,9 @@ namespace ABI {
                 
                 typedef enum UsbWriteOptions : unsigned int UsbWriteOptions;
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2279,9 +2275,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbConfiguration;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2289,9 +2285,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbConfigurationDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2299,9 +2295,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbControlRequestType;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2311,9 +2307,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbDeviceClass;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2321,9 +2317,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbDeviceClasses;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2331,9 +2327,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbDeviceDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2341,9 +2337,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbEndpointDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2352,9 +2348,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbInterfaceDescriptor;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2368,9 +2364,9 @@ namespace ABI {
         namespace Devices {
             namespace Usb {
                 class UsbSetupPacket;
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2405,9 +2401,9 @@ namespace ABI {
                     UsbControlRecipient_DefaultInterface = 4,
                 };
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2433,9 +2429,9 @@ namespace ABI {
                     UsbControlTransferType_Vendor = 2,
                 };
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2462,9 +2458,9 @@ namespace ABI {
                     UsbEndpointType_Interrupt = 3,
                 };
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2494,9 +2490,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(UsbReadOptions)
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2521,9 +2517,9 @@ namespace ABI {
                     UsbTransferDirection_In = 1,
                 };
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2551,9 +2547,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(UsbWriteOptions)
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2595,9 +2591,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbBulkInEndpointDescriptor=_uuidof(IUsbBulkInEndpointDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInEndpointDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInEndpointDescriptor_INTERFACE_DEFINED__) */
@@ -2652,9 +2648,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbBulkInPipe=_uuidof(IUsbBulkInPipe);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInPipe;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkInPipe_INTERFACE_DEFINED__) */
@@ -2699,9 +2695,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbBulkOutEndpointDescriptor=_uuidof(IUsbBulkOutEndpointDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutEndpointDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutEndpointDescriptor_INTERFACE_DEFINED__) */
@@ -2752,9 +2748,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbBulkOutPipe=_uuidof(IUsbBulkOutPipe);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutPipe;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbBulkOutPipe_INTERFACE_DEFINED__) */
@@ -2799,9 +2795,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbConfiguration=_uuidof(IUsbConfiguration);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbConfiguration_INTERFACE_DEFINED__) */
@@ -2839,19 +2835,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SelfPowered(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RemoteWakeup(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IUsbConfigurationDescriptor=_uuidof(IUsbConfigurationDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptor_INTERFACE_DEFINED__) */
@@ -2885,7 +2881,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryParse(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Usb::IUsbDescriptor * descriptor,
                         /* [out] */__RPC__deref_out_opt ABI::Windows::Devices::Usb::IUsbConfigurationDescriptor * * parsed,
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Parse(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Usb::IUsbDescriptor * descriptor,
@@ -2896,9 +2892,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbConfigurationDescriptorStatics=_uuidof(IUsbConfigurationDescriptorStatics);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbConfigurationDescriptorStatics_INTERFACE_DEFINED__) */
@@ -2958,9 +2954,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbControlRequestType=_uuidof(IUsbControlRequestType);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbControlRequestType;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbControlRequestType_INTERFACE_DEFINED__) */
@@ -3005,9 +3001,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbDescriptor=_uuidof(IUsbDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbDescriptor_INTERFACE_DEFINED__) */
@@ -3074,9 +3070,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbDevice=_uuidof(IUsbDevice);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbDevice_INTERFACE_DEFINED__) */
@@ -3130,9 +3126,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbDeviceClass=_uuidof(IUsbDeviceClass);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClass;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClass_INTERFACE_DEFINED__) */
@@ -3168,9 +3164,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbDeviceClasses=_uuidof(IUsbDeviceClasses);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClasses;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClasses_INTERFACE_DEFINED__) */
@@ -3233,9 +3229,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbDeviceClassesStatics=_uuidof(IUsbDeviceClassesStatics);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClassesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceClassesStatics_INTERFACE_DEFINED__) */
@@ -3289,9 +3285,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbDeviceDescriptor=_uuidof(IUsbDeviceDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceDescriptor_INTERFACE_DEFINED__) */
@@ -3350,9 +3346,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbDeviceStatics=_uuidof(IUsbDeviceStatics);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbDeviceStatics_INTERFACE_DEFINED__) */
@@ -3409,9 +3405,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbEndpointDescriptor=_uuidof(IUsbEndpointDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptor_INTERFACE_DEFINED__) */
@@ -3445,7 +3441,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryParse(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Usb::IUsbDescriptor * descriptor,
                         /* [out] */__RPC__deref_out_opt ABI::Windows::Devices::Usb::IUsbEndpointDescriptor * * parsed,
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Parse(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Usb::IUsbDescriptor * descriptor,
@@ -3456,9 +3452,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbEndpointDescriptorStatics=_uuidof(IUsbEndpointDescriptorStatics);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbEndpointDescriptorStatics_INTERFACE_DEFINED__) */
@@ -3515,9 +3511,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterface=_uuidof(IUsbInterface);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterface;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterface_INTERFACE_DEFINED__) */
@@ -3568,9 +3564,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterfaceDescriptor=_uuidof(IUsbInterfaceDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptor_INTERFACE_DEFINED__) */
@@ -3604,7 +3600,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryParse(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Usb::IUsbDescriptor * descriptor,
                         /* [out] */__RPC__deref_out_opt ABI::Windows::Devices::Usb::IUsbInterfaceDescriptor * * parsed,
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Parse(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Usb::IUsbDescriptor * descriptor,
@@ -3615,9 +3611,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterfaceDescriptorStatics=_uuidof(IUsbInterfaceDescriptorStatics);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceDescriptorStatics_INTERFACE_DEFINED__) */
@@ -3661,7 +3657,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CUsb__CUsbInterruptOutEndpointDescriptor * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Selected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SelectSettingAsync(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * operation
@@ -3677,9 +3673,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterfaceSetting=_uuidof(IUsbInterfaceSetting);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceSetting;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterfaceSetting_INTERFACE_DEFINED__) */
@@ -3727,9 +3723,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterruptInEndpointDescriptor=_uuidof(IUsbInterruptInEndpointDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEndpointDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEndpointDescriptor_INTERFACE_DEFINED__) */
@@ -3768,9 +3764,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterruptInEventArgs=_uuidof(IUsbInterruptInEventArgs);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEventArgs_INTERFACE_DEFINED__) */
@@ -3819,9 +3815,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterruptInPipe=_uuidof(IUsbInterruptInPipe);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInPipe;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInPipe_INTERFACE_DEFINED__) */
@@ -3869,9 +3865,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterruptOutEndpointDescriptor=_uuidof(IUsbInterruptOutEndpointDescriptor);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutEndpointDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutEndpointDescriptor_INTERFACE_DEFINED__) */
@@ -3922,9 +3918,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbInterruptOutPipe=_uuidof(IUsbInterruptOutPipe);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutPipe;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptOutPipe_INTERFACE_DEFINED__) */
@@ -3990,9 +3986,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbSetupPacket=_uuidof(IUsbSetupPacket);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacket;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacket_INTERFACE_DEFINED__) */
@@ -4032,9 +4028,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUsbSetupPacketFactory=_uuidof(IUsbSetupPacketFactory);
                 
-            } /* Windows */
+            } /* Usb */
         } /* Devices */
-    } /* Usb */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacketFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CUsb_CIUsbSetupPacketFactory_INTERFACE_DEFINED__) */
@@ -7866,7 +7862,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInPipe * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInPipe * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CUsb_CIUsbInterruptInEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CUsb__CUsbInterruptInPipe_Windows__CDevices__CUsb__CUsbInterruptInEventArgsVtbl;
 
@@ -7970,7 +7966,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 

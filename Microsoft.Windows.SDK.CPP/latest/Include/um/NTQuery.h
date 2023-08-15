@@ -76,32 +76,6 @@ STDAPI BindIFilterFromStream(_In_ IStream * pStm,
                              _In_ IUnknown * pUnkOuter,
                              _Outptr_ void ** ppIUnk );
 
-_Success_((return == S_OK) && (*pccMachine <= _Old_(*pccMachine)) && (*pccCat <= _Old_(*pccCat)))
-STDAPI LocateCatalogsW(_In_ PCWSTR pwszScope,
-                       ULONG         iBmk,
-                       _Out_writes_(*pccMachine) PWSTR pwszMachine,
-                       _Inout_ ULONG *       pccMachine,
-                       _Out_writes_(*pccCat) PWSTR pwszCat,
-                       _Inout_ ULONG *       pccCat);
-
-//
-// For calling from VB
-//
-
-_Success_((return == S_OK) && (*pccMachine <= _Old_(*pccMachine)) && (*pccCat <= _Old_(*pccCat)))
-STDAPI LocateCatalogsA( _In_ PCSTR pwszScope,
-                        ULONG iBmk,
-                        _Out_writes_(*pccMachine) PSTR pwszMachine,
-                        _Inout_ ULONG * pccMachine,
-                        _Out_writes_(*pccCat) PSTR pwszCat,
-                        _Inout_ ULONG * pccCat );
-
-#ifdef UNICODE
-#define LocateCatalogs  LocateCatalogsW
-#else
-#define LocateCatalogs  LocateCatalogsA
-#endif // !UNICODE
-
 // The Index Server Data Source Object CLSID
 
 #define CLSID_INDEX_SERVER_DSO \
@@ -301,33 +275,7 @@ typedef struct  _CI_STATE
 #include <poppack.h>
 #endif   // CI_STATE_DEFINED
 
-STDAPI CIState( WCHAR const * pwcsCat,
-                WCHAR const * pwcsMachine,
-                CI_STATE *    pCiState );
-
 #if defined __ICommand_INTERFACE_DEFINED__
-
-//
-// Create an ICommand, specifying scopes, catalogs, and machines
-//
-STDAPI CIMakeICommand( ICommand **           ppCommand,
-                       ULONG                 cScope,
-                       DWORD const *         aDepths,
-                       WCHAR const * const * awcsScope,
-                       WCHAR const * const * awcsCatalogs,
-                       WCHAR const * const * awcsMachine );
-
-//
-// Create an ICommand, specifying a catalog and machine
-//
-
-STDAPI CICreateCommand( IUnknown **   ppCommand,     // New object
-                        IUnknown *    pUnkOuter,     // Outer unknown
-                        REFIID        riid,          // IID of returned object.
-                                                     // Must be IID_IUnknown unless pUnkOuter == 0
-                        WCHAR const * pwcsCatalog,   // Catalog
-                        WCHAR const * pwcsMachine ); // Machine
-
 
 #if defined __ICommandTree_INTERFACE_DEFINED__
 
@@ -342,91 +290,8 @@ typedef struct tagCIPROPERTYDEF
 
 #endif //__propertydef_h__
 
-//
-// Values for ulDialect in CITextToSelectTreeEx and CITextToFullTreeEx
-//
-
-#define ISQLANG_V1 1 // Same as the non-Ex versions
-#define ISQLANG_V2 2
-
-//
-// Convert pwszRestriction in Triplish to a command tree.
-//
-STDAPI CITextToSelectTree( WCHAR const *     pwszRestriction,
-                           DBCOMMANDTREE * * ppTree,
-                           ULONG             cProperties,
-             /*optional*/  CIPROPERTYDEF *   pProperties,
-                           LCID              LocaleID );
-
-STDAPI CITextToSelectTreeEx( WCHAR const *     pwszRestriction,
-                             ULONG             ulDialect,
-                             DBCOMMANDTREE * * ppTree,
-                             ULONG             cProperties,
-               /*optional*/  CIPROPERTYDEF *   pProperties,
-                             LCID              LocaleID );
-
-//
-// Convert pwszRestriction in Triplish, project columns, sort columns
-// and grouping columns to a command tree.
-//
-STDAPI CITextToFullTree( WCHAR const *     pwszRestriction,
-                         WCHAR const *     pwszColumns,
-                         WCHAR const *     pwszSortColumns, // may be NULL
-                         WCHAR const *     pwszGroupings,   // may be NULL
-                         DBCOMMANDTREE * * ppTree,
-                         ULONG             cProperties,
-           /*optional*/  CIPROPERTYDEF *   pProperties,
-                         LCID              LocaleID );
-
-STDAPI CITextToFullTreeEx( WCHAR const *     pwszRestriction,
-                           ULONG             ulDialect,
-                           WCHAR const *     pwszColumns,
-                           WCHAR const *     pwszSortColumns, // may be NULL
-                           WCHAR const *     pwszGroupings,   // may be NULL
-                           DBCOMMANDTREE * * ppTree,
-                           ULONG             cProperties,
-             /*optional*/  CIPROPERTYDEF *   pProperties,
-                           LCID              LocaleID );
-
-//
-// Build a simple restriction node.
-//
-
-STDAPI CIBuildQueryNode( WCHAR const *wcsProperty,    // friendly property name
-                         DBCOMMANDOP dbOperator,    // enumerated constant
-                         PROPVARIANT const *pvarPropertyValue, // value of the property
-                         DBCOMMANDTREE ** ppTree, // ptr to tree returned here. should be non-null
-                         ULONG cProperties,
-                         CIPROPERTYDEF const * pProperty, // Can be 0.
-                         LCID LocaleID );  // locale id to interpret strings
-
-//
-// Build a restriction tree from an existing tree (could be empty) and a newly added node/tree.
-//
-
-STDAPI CIBuildQueryTree( DBCOMMANDTREE const *pExistingTree,  // existing tree. can be null.
-                         DBCOMMANDOP dbBoolOp,   // enumerator constant
-                         ULONG cSiblings, // number of siblings in the array
-                         DBCOMMANDTREE const * const *ppSibsToCombine,
-                         DBCOMMANDTREE ** ppTree);   // ptr to tree returned here. should be non-null
-
-//
-// Convert restriction tree, project columns, sort columns
-// and grouping columns to a command tree.
-//
-STDAPI CIRestrictionToFullTree( DBCOMMANDTREE const *pTree,
-                         WCHAR const * pwszColumns,
-                         WCHAR const * pwszSortColumns, // may be NULL
-                         WCHAR const * pwszGroupings,   // may be NULL
-                         DBCOMMANDTREE * * ppTree,
-                         ULONG cProperties,
-           /*optional*/  CIPROPERTYDEF * pReserved,
-                         LCID LocaleID );
-
 #endif  // __ICommandTree_INTERFACE_DEFINED__
 #endif  // __ICommand_INTERFACE_DEFINED__
-
-STDAPI_(void) CIShutdown(void);
 
 #if defined(__cplusplus)
 }

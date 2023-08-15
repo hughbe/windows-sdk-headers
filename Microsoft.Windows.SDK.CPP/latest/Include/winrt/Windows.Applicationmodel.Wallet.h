@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.wallet.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletBarcode;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcode ABI::Windows::ApplicationModel::Wallet::IWalletBarcode
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcode_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletBarcodeFactory;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcodeFactory ABI::Windows::ApplicationModel::Wallet::IWalletBarcodeFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcodeFactory_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletItem;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItem ABI::Windows::ApplicationModel::Wallet::IWalletItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItem_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletItemCustomProperty;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomProperty ABI::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomProperty_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletItemCustomPropertyFactory;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomPropertyFactory ABI::Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomPropertyFactory_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletItemFactory;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemFactory ABI::Windows::ApplicationModel::Wallet::IWalletItemFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemFactory_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletItemStore;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore ABI::Windows::ApplicationModel::Wallet::IWalletItemStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletItemStore2;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore2 ABI::Windows::ApplicationModel::Wallet::IWalletItemStore2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore2_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletManagerStatics;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletManagerStatics ABI::Windows::ApplicationModel::Wallet::IWalletManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletManagerStatics_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletRelevantLocation;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletRelevantLocation ABI::Windows::ApplicationModel::Wallet::IWalletRelevantLocation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletRelevantLocation_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletTransaction;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletTransaction ABI::Windows::ApplicationModel::Wallet::IWalletTransaction
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletTransaction_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletVerb;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerb ABI::Windows::ApplicationModel::Wallet::IWalletVerb
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerb_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 interface IWalletVerbFactory;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerbFactory ABI::Windows::ApplicationModel::Wallet::IWalletVerbFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerbFactory_FWD_DEFINED__
@@ -462,9 +458,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 class WalletItem;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -487,7 +483,7 @@ IIterator<ABI::Windows::ApplicationModel::Wallet::WalletItem*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Wallet::WalletItem*> __FIIterator_1_Windows__CApplicationModel__CWallet__CWalletItem_t;
 #define __FIIterator_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CWallet__CWalletItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Wallet::IWalletItem*>
@@ -519,7 +515,7 @@ IIterable<ABI::Windows::ApplicationModel::Wallet::WalletItem*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Wallet::WalletItem*> __FIIterable_1_Windows__CApplicationModel__CWallet__CWalletItem_t;
 #define __FIIterable_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CWallet__CWalletItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Wallet::IWalletItem*>
@@ -535,9 +531,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 class WalletItemCustomProperty;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -560,7 +556,7 @@ IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletItemCustomPr
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletItemCustomProperty*> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty*>
@@ -592,7 +588,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty*>*>
@@ -624,7 +620,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty*>*>
@@ -640,9 +636,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 class WalletRelevantLocation;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -665,7 +661,7 @@ IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletRelevantLoca
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletRelevantLocation*> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletRelevantLocation*>
@@ -697,7 +693,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletRelevantLocation*>*>
@@ -729,7 +725,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletRelevantLocation*>*>
@@ -745,9 +741,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 class WalletTransaction;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -770,7 +766,7 @@ IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletTransaction*
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletTransaction*> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletTransaction*>
@@ -802,7 +798,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletTransaction*>*>
@@ -834,7 +830,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletTransaction*>*>
@@ -850,9 +846,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 class WalletVerb;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -875,7 +871,7 @@ IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletVerb*> : IKe
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletVerb*> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletVerb*>
@@ -907,7 +903,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletVerb*>*>
@@ -939,7 +935,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalle
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletVerb*>*>
@@ -971,7 +967,7 @@ IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletItemCustomPropert
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletItemCustomProperty*> __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty*>
@@ -1003,7 +999,7 @@ IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletRelevantLocation*
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletRelevantLocation*> __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletRelevantLocation*>
@@ -1035,7 +1031,7 @@ IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletTransaction*> : I
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletTransaction*> __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletTransaction*>
@@ -1067,7 +1063,7 @@ IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletVerb*> : IMapView
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletVerb*> __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletVerb*>
@@ -1099,7 +1095,7 @@ IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletItemCustomProperty*> 
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletItemCustomProperty*> __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t;
 #define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty*>
@@ -1131,7 +1127,7 @@ IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletRelevantLocation*> : 
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletRelevantLocation*> __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t;
 #define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletRelevantLocation*>
@@ -1163,7 +1159,7 @@ IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletTransaction*> : IMap_
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletTransaction*> __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t;
 #define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletTransaction ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletTransaction*>
@@ -1195,7 +1191,7 @@ IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletVerb*> : IMap_impl<HS
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::WalletVerb*> __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t;
 #define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletVerb ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::ApplicationModel::Wallet::IWalletVerb*>
@@ -1227,7 +1223,7 @@ IVectorView<ABI::Windows::ApplicationModel::Wallet::WalletItem*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Wallet::WalletItem*> __FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Wallet::IWalletItem*>
@@ -1259,7 +1255,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Wallet::WalletIt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Wallet::WalletItem*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItem_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Wallet::IWalletItem*>
@@ -1291,7 +1287,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Wallet::WalletItem*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Wallet::WalletItem*> __FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItem_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Wallet::IWalletItem*>
@@ -1307,9 +1303,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 class WalletItemStore;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1332,7 +1328,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Wallet::WalletIt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Wallet::WalletItemStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItemStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItemStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItemStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CWallet__CWalletItemStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Wallet::IWalletItemStore*>
@@ -1364,7 +1360,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Wallet::WalletItemStore*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Wallet::WalletItemStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItemStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItemStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItemStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CWallet__CWalletItemStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Wallet::IWalletItemStore*>
@@ -1396,7 +1392,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CWa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Wallet::IWalletItem*>*>
@@ -1428,7 +1424,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletIte
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CWallet__CWalletItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Wallet::IWalletItem*>*>
@@ -1461,7 +1457,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Wallet::WalletItemStore*,IIns
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Wallet::WalletItemStore*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Wallet::IWalletItemStore*,IInspectable*>
@@ -1479,9 +1475,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -1507,7 +1503,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -1539,7 +1535,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -1555,8 +1551,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1577,7 +1573,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1596,9 +1592,9 @@ namespace ABI {
                 
                 typedef struct BasicGeoposition BasicGeoposition;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1609,8 +1605,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1618,8 +1614,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1638,8 +1634,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1651,9 +1647,9 @@ namespace ABI {
                 
                 typedef enum WalletActionKind : int WalletActionKind;
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1662,9 +1658,9 @@ namespace ABI {
                 
                 typedef enum WalletBarcodeSymbology : int WalletBarcodeSymbology;
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1673,9 +1669,9 @@ namespace ABI {
                 
                 typedef enum WalletDetailViewPosition : int WalletDetailViewPosition;
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1684,9 +1680,9 @@ namespace ABI {
                 
                 typedef enum WalletItemKind : int WalletItemKind;
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1695,9 +1691,9 @@ namespace ABI {
                 
                 typedef enum WalletSummaryViewPosition : int WalletSummaryViewPosition;
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1717,9 +1713,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Wallet {
                 class WalletBarcode;
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1762,9 +1758,9 @@ namespace ABI {
                     WalletActionKind_Verb = 4,
                 };
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION >= 0x10000
 
 
@@ -1799,9 +1795,9 @@ namespace ABI {
                     WalletBarcodeSymbology_Custom = 100000,
                 };
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1839,9 +1835,9 @@ namespace ABI {
                     WalletDetailViewPosition_FooterField4 = 14,
                 };
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1871,9 +1867,9 @@ namespace ABI {
                     WalletItemKind_MembershipCard = 6,
                 };
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1899,9 +1895,9 @@ namespace ABI {
                     WalletSummaryViewPosition_Field2 = 2,
                 };
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1943,9 +1939,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletBarcode=_uuidof(IWalletBarcode);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcode;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcode_INTERFACE_DEFINED__) */
@@ -1990,9 +1986,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletBarcodeFactory=_uuidof(IWalletBarcodeFactory);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcodeFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletBarcodeFactory_INTERFACE_DEFINED__) */
@@ -2033,10 +2029,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAcknowledged(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAcknowledged(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IssuerDisplayName(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2090,10 +2086,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisplayMessageLaunchable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDisplayMessageLaunchable(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LogoText(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2168,10 +2164,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletRelevantLocation * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMoreTransactionHistoryLaunchable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsMoreTransactionHistoryLaunchable(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplayProperties(
                         /* [retval, out] */__RPC__deref_out_opt __FIMap_2_HSTRING_Windows__CApplicationModel__CWallet__CWalletItemCustomProperty * * value
@@ -2184,9 +2180,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletItem=_uuidof(IWalletItem);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItem;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItem_INTERFACE_DEFINED__) */
@@ -2230,10 +2226,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoDetectLinks(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoDetectLinks(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DetailViewPosition(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Wallet::WalletDetailViewPosition * value
@@ -2252,9 +2248,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletItemCustomProperty=_uuidof(IWalletItemCustomProperty);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomProperty;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomProperty_INTERFACE_DEFINED__) */
@@ -2295,9 +2291,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletItemCustomPropertyFactory=_uuidof(IWalletItemCustomPropertyFactory);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomPropertyFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemCustomPropertyFactory_INTERFACE_DEFINED__) */
@@ -2338,9 +2334,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletItemFactory=_uuidof(IWalletItemFactory);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemFactory_INTERFACE_DEFINED__) */
@@ -2414,9 +2410,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletItemStore=_uuidof(IWalletItemStore);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore_INTERFACE_DEFINED__) */
@@ -2459,9 +2455,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletItemStore2=_uuidof(IWalletItemStore2);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore2_INTERFACE_DEFINED__) */
@@ -2500,9 +2496,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletManagerStatics=_uuidof(IWalletManagerStatics);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletManagerStatics_INTERFACE_DEFINED__) */
@@ -2550,9 +2546,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletRelevantLocation=_uuidof(IWalletRelevantLocation);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletRelevantLocation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletRelevantLocation_INTERFACE_DEFINED__) */
@@ -2596,10 +2592,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IgnoreTimeOfDay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IgnoreTimeOfDay(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplayLocation(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2614,19 +2610,19 @@ namespace ABI {
                         /* [in] */__RPC__in_opt __FIReference_1_Windows__CFoundation__CDateTime * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLaunchable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsLaunchable(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IWalletTransaction=_uuidof(IWalletTransaction);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletTransaction;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletTransaction_INTERFACE_DEFINED__) */
@@ -2668,9 +2664,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletVerb=_uuidof(IWalletVerb);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerb;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerb_INTERFACE_DEFINED__) */
@@ -2710,9 +2706,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWalletVerbFactory=_uuidof(IWalletVerbFactory);
                 
-            } /* Windows */
+            } /* Wallet */
         } /* ApplicationModel */
-    } /* Wallet */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerbFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CWallet_CIWalletVerbFactory_INTERFACE_DEFINED__) */
@@ -5236,7 +5232,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWal
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CWallet_CIWalletItemStore * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CWallet__CWalletItemStore_IInspectableVtbl;
 

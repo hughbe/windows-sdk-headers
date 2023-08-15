@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -24,7 +24,20 @@ struct IRandomAccessStream;
 
 }
 
+WINRT_EXPORT namespace winrt::Windows::UI {
+
+struct UIContext;
+
+}
+
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Resources::Core {
+
+enum class ResourceCandidateKind : int32_t
+{
+    String = 0,
+    File = 1,
+    EmbeddedData = 2,
+};
 
 enum class ResourceQualifierPersistence : int32_t
 {
@@ -35,10 +48,12 @@ enum class ResourceQualifierPersistence : int32_t
 struct INamedResource;
 struct IResourceCandidate;
 struct IResourceCandidate2;
+struct IResourceCandidate3;
 struct IResourceContext;
 struct IResourceContextStatics;
 struct IResourceContextStatics2;
 struct IResourceContextStatics3;
+struct IResourceContextStatics4;
 struct IResourceManager;
 struct IResourceManager2;
 struct IResourceManagerStatics;
@@ -67,10 +82,12 @@ namespace winrt::impl {
 template <> struct category<Windows::ApplicationModel::Resources::Core::INamedResource>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceCandidate>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceCandidate2>{ using type = interface_category; };
+template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceCandidate3>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceContext>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceContextStatics>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>{ using type = interface_category; };
+template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceManager>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceManager2>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>{ using type = interface_category; };
@@ -90,15 +107,18 @@ template <> struct category<Windows::ApplicationModel::Resources::Core::Resource
 template <> struct category<Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>{ using type = class_category; };
+template <> struct category<Windows::ApplicationModel::Resources::Core::ResourceCandidateKind>{ using type = enum_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence>{ using type = enum_category; };
 template <> struct category<Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>{ using type = struct_category<uint32_t,uint32_t,uint32_t,uint32_t,int32_t>; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::INamedResource>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.INamedResource" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceCandidate>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceCandidate" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceCandidate2>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceCandidate2" }; };
+template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceCandidate3>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceCandidate3" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceContext>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceContext" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceContextStatics>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceContextStatics" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceContextStatics2" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceContextStatics3" }; };
+template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceContextStatics4" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceManager>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceManager" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceManager2>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceManager2" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.IResourceManagerStatics" }; };
@@ -118,15 +138,18 @@ template <> struct name<Windows::ApplicationModel::Resources::Core::ResourceQual
 template <> struct name<Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView" }; };
+template <> struct name<Windows::ApplicationModel::Resources::Core::ResourceCandidateKind>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.ResourceCandidateKind" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence" }; };
 template <> struct name<Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>{ static constexpr auto & value{ L"Windows.ApplicationModel.Resources.Core.ResourceLayoutInfo" }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::INamedResource>{ static constexpr guid value{ 0x1C98C219,0x0B13,0x4240,{ 0x89,0xA5,0xD4,0x95,0xDC,0x18,0x9A,0x00 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceCandidate>{ static constexpr guid value{ 0xAF5207D9,0xC433,0x4764,{ 0xB3,0xFD,0x8F,0xA6,0xBF,0xBC,0xBA,0xDC } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceCandidate2>{ static constexpr guid value{ 0x69E5B468,0xF6FC,0x4013,{ 0xAA,0xA2,0xD5,0x3F,0x17,0x57,0xD3,0xB5 } }; };
+template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceCandidate3>{ static constexpr guid value{ 0x08AE97F8,0x517A,0x4674,{ 0x95,0x8C,0x4A,0x3C,0x7C,0xD2,0xCC,0x6B } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceContext>{ static constexpr guid value{ 0x2FA22F4B,0x707E,0x4B27,{ 0xAD,0x0D,0xD0,0xD8,0xCD,0x46,0x8F,0xD2 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceContextStatics>{ static constexpr guid value{ 0x98BE9D6C,0x6338,0x4B31,{ 0x99,0xDF,0xB2,0xB4,0x42,0xF1,0x71,0x49 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>{ static constexpr guid value{ 0x41F752EF,0x12AF,0x41B9,{ 0xAB,0x36,0xB1,0xEB,0x4B,0x51,0x24,0x60 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>{ static constexpr guid value{ 0x20CF492C,0xAF0F,0x450B,{ 0x9D,0xA6,0x10,0x6D,0xD0,0xC2,0x9A,0x39 } }; };
+template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>{ static constexpr guid value{ 0x22EB9CCD,0xFB31,0x4BFA,{ 0xB8,0x6B,0xDF,0x9D,0x9D,0x7B,0xDC,0x39 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceManager>{ static constexpr guid value{ 0xF744D97B,0x9988,0x44FB,{ 0xAB,0xD6,0x53,0x78,0x84,0x4C,0xFA,0x8B } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceManager2>{ static constexpr guid value{ 0x9D66FE6C,0xA4D7,0x4C23,{ 0x9E,0x85,0x67,0x5F,0x30,0x4C,0x25,0x2D } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>{ static constexpr guid value{ 0x1CC0FDFC,0x69EE,0x4E43,{ 0x99,0x01,0x47,0xF1,0x26,0x87,0xBA,0xF7 } }; };
@@ -173,6 +196,11 @@ template <> struct abi<Windows::ApplicationModel::Resources::Core::IResourceCand
     virtual int32_t WINRT_CALL GetValueAsStreamAsync(void** operation) noexcept = 0;
 };};
 
+template <> struct abi<Windows::ApplicationModel::Resources::Core::IResourceCandidate3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Kind(Windows::ApplicationModel::Resources::Core::ResourceCandidateKind* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::ApplicationModel::Resources::Core::IResourceContext>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_QualifierValues(void** value) noexcept = 0;
@@ -201,6 +229,11 @@ template <> struct abi<Windows::ApplicationModel::Resources::Core::IResourceCont
 template <> struct abi<Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL SetGlobalQualifierValueWithPersistence(void* key, void* value, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence persistence) noexcept = 0;
+};};
+
+template <> struct abi<Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetForUIContext(void* context, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::ApplicationModel::Resources::Core::IResourceManager>{ struct type : IInspectable
@@ -274,6 +307,13 @@ struct consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate2
 template <> struct consume<Windows::ApplicationModel::Resources::Core::IResourceCandidate2> { template <typename D> using type = consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate2<D>; };
 
 template <typename D>
+struct consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate3
+{
+    Windows::ApplicationModel::Resources::Core::ResourceCandidateKind Kind() const;
+};
+template <> struct consume<Windows::ApplicationModel::Resources::Core::IResourceCandidate3> { template <typename D> using type = consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate3<D>; };
+
+template <typename D>
 struct consume_Windows_ApplicationModel_Resources_Core_IResourceContext
 {
     Windows::Foundation::Collections::IObservableMap<hstring, hstring> QualifierValues() const;
@@ -310,6 +350,13 @@ struct consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics3
     void SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence) const;
 };
 template <> struct consume<Windows::ApplicationModel::Resources::Core::IResourceContextStatics3> { template <typename D> using type = consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics3<D>; };
+
+template <typename D>
+struct consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics4
+{
+    Windows::ApplicationModel::Resources::Core::ResourceContext GetForUIContext(Windows::UI::UIContext const& context) const;
+};
+template <> struct consume<Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> { template <typename D> using type = consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics4<D>; };
 
 template <typename D>
 struct consume_Windows_ApplicationModel_Resources_Core_IResourceManager

@@ -25,8 +25,8 @@ Revision History:
 #define _WINDNS_INCLUDED_
 #include <winapifamily.h>
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 
@@ -34,7 +34,6 @@ Revision History:
 extern "C"
 {
 #endif  // __cplusplus
-
 
 //
 //  Define QWORD -- not yet defined globally
@@ -62,6 +61,11 @@ typedef DWORD   IP4_ADDRESS, *PIP4_ADDRESS;
 
 #define IP4_ADDRESS_STRING_BUFFER_LENGTH    (16)
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
 //  IP Address Array type
@@ -78,6 +82,11 @@ typedef struct  _IP4_ARRAY
 }
 IP4_ARRAY, *PIP4_ARRAY;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 //  IPv6 Address
@@ -117,6 +126,11 @@ IP6_ADDRESS, *PIP6_ADDRESS;
 
 #endif // MIDL_PASS
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
 //  DNS Address structures representing both IPv4 and IPv6 addresses.
@@ -1603,9 +1617,25 @@ DNS_SECTION;
 //  properly aligned unpacked.
 //
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 #ifdef MIDL_PASS
 
 #define PDNS_RECORD     PVOID
+
+#endif // MIDL_PASS
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
+#ifdef MIDL_PASS
 #define PDNS_RECORDA    PVOID
 #define PDNS_RECORDW    PVOID
 
@@ -2038,7 +2068,6 @@ DnsRecordListFree(
 #endif /* _WIN32_WINNT >= 0x0501 */
 
 
-
 //
 //  DNS Query API
 //
@@ -2182,7 +2211,6 @@ DnsCancelQuery(
     );
 
 #endif
-
 
 //
 //  DNS Update API
@@ -2733,13 +2761,290 @@ DnsConnectionDeletePolicyEntries(
     _In_ DNS_CONNECTION_POLICY_TAG PolicyEntryTag
 );
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
+#ifdef __midl
+typedef[string] wchar_t *DNSSD_RPC_STRING;
+#endif
+
+typedef struct _DNS_SERVICE_INSTANCE
+{
+#ifdef __midl
+    DNSSD_RPC_STRING    pszInstanceName;
+#else
+    LPWSTR              pszInstanceName;
+#endif
+#ifdef __midl
+    DNSSD_RPC_STRING    pszHostName;
+#else
+    LPWSTR              pszHostName;
+#endif
+
+    IP4_ADDRESS *ip4Address;
+    IP6_ADDRESS *ip6Address;
+
+    WORD wPort;
+    WORD wPriority;
+    WORD wWeight;
+
+    // Property list
+    DWORD dwPropertyCount;
+#ifdef __midl
+    [size_is(dwPropertyCount)] DNSSD_RPC_STRING *keys;
+    [size_is(dwPropertyCount)] DNSSD_RPC_STRING *values;
+#else
+    PWSTR *keys;
+    PWSTR *values;
+#endif
+
+    DWORD dwInterfaceIndex;
+} DNS_SERVICE_INSTANCE, *PDNS_SERVICE_INSTANCE;
+
+#ifndef __midl
+
+PDNS_SERVICE_INSTANCE
+DnsServiceConstructInstance(
+    _In_ PCWSTR pServiceName,
+    _In_ PCWSTR pHostName,
+    _In_opt_ PIP4_ADDRESS pIp4,
+    _In_opt_ PIP6_ADDRESS pIp6,
+    _In_ WORD wPort,
+    _In_ WORD wPriority,
+    _In_ WORD wWeight,
+    _In_ DWORD dwPropertiesCount,
+    __in_ecount(dwPropertiesCount) PCWSTR *keys,
+    __in_ecount(dwPropertiesCount) PCWSTR *values
+    );
+
+PDNS_SERVICE_INSTANCE
+DnsServiceCopyInstance(
+    _In_ PDNS_SERVICE_INSTANCE pOrig
+    );
+
+VOID
+DnsServiceFreeInstance(
+    _In_ PDNS_SERVICE_INSTANCE pInstance
+    );
+
+//
+// Cancellation mechanism
+//
+
+typedef struct _DNS_SERVICE_CANCEL{
+    PVOID reserved;
+} DNS_SERVICE_CANCEL, *PDNS_SERVICE_CANCEL;
+
+//
+// Browse
+//
+
+typedef
+VOID
+WINAPI
+DNS_SERVICE_BROWSE_CALLBACK(
+    _In_    DWORD Status,
+    _In_    PVOID pQueryContext,
+    _In_    PDNS_RECORD pDnsRecord
+    );
+
+typedef DNS_SERVICE_BROWSE_CALLBACK *PDNS_SERVICE_BROWSE_CALLBACK;
+
+#if defined(USE_PRIVATE_DNS_ADDR)
+
+#define DNS_QUERY_RESULTS_VERSION1  0x1
+
+typedef struct _DNS_QUERY_RESULT
+{
+    _In_        ULONG           Version;
+    _Out_       DNS_STATUS      QueryStatus;
+    _Out_       ULONG64         QueryOptions;
+    _Out_       PDNS_RECORD     pQueryRecords;
+    _Inout_opt_ PVOID           Reserved;
+}
+DNS_QUERY_RESULT, *PDNS_QUERY_RESULT;
+
+typedef
+VOID
+WINAPI
+DNS_QUERY_COMPLETION_ROUTINE(
+    _In_        PVOID               pQueryContext,
+    _Inout_     PDNS_QUERY_RESULT   pQueryResults
+);
+
+typedef DNS_QUERY_COMPLETION_ROUTINE *PDNS_QUERY_COMPLETION_ROUTINE;
+
+#endif
+
+#pragma warning(push)
+#pragma warning(disable: 4201)
+
+//
+// For DNS_QUERY_REQUEST_VERSION2 Version,
+// pBrowseCallback needs to be a DNS_QUERY_COMPLETION_ROUTINE callback
+//
+typedef struct _DNS_SERVICE_BROWSE_REQUEST
+{
+    ULONG   Version;
+    ULONG   InterfaceIndex;
+    PCWSTR  QueryName;
+    union
+    {
+        PDNS_SERVICE_BROWSE_CALLBACK pBrowseCallback;
+        DNS_QUERY_COMPLETION_ROUTINE *pBrowseCallbackV2;
+    };
+    PVOID   pQueryContext;
+} DNS_SERVICE_BROWSE_REQUEST, *PDNS_SERVICE_BROWSE_REQUEST;
+
+#pragma warning(pop)
+
+DNS_STATUS
+WINAPI
+DnsServiceBrowse(
+    _In_    PDNS_SERVICE_BROWSE_REQUEST    pRequest,
+    _Inout_ PDNS_SERVICE_CANCEL            pCancel
+    );
+
+DNS_STATUS
+WINAPI
+DnsServiceBrowseCancel(
+    _In_ PDNS_SERVICE_CANCEL pCancelHandle
+    );
+
+//
+// Resolve
+//
+
+typedef
+VOID
+WINAPI
+DNS_SERVICE_RESOLVE_COMPLETE(
+    _In_ DWORD Status,
+    _In_ PVOID pQueryContext,
+    _In_ PDNS_SERVICE_INSTANCE pInstance
+    );
+
+typedef DNS_SERVICE_RESOLVE_COMPLETE *PDNS_SERVICE_RESOLVE_COMPLETE;
+
+typedef struct _DNS_SERVICE_RESOLVE_REQUEST{
+    ULONG   Version;
+    ULONG   InterfaceIndex;
+    PWSTR   QueryName;
+    PDNS_SERVICE_RESOLVE_COMPLETE pResolveCompletionCallback;
+    PVOID pQueryContext;
+} DNS_SERVICE_RESOLVE_REQUEST, *PDNS_SERVICE_RESOLVE_REQUEST;
+
+DNS_STATUS
+WINAPI
+DnsServiceResolve(
+    _In_    PDNS_SERVICE_RESOLVE_REQUEST    pRequest,
+    _Inout_ PDNS_SERVICE_CANCEL             pCancel
+    );
+
+DNS_STATUS
+WINAPI
+DnsServiceResolveCancel(
+    _In_ PDNS_SERVICE_CANCEL pCancelHandle
+    );
+
+//
+// Register
+//
+
+typedef
+VOID
+WINAPI
+DNS_SERVICE_REGISTER_COMPLETE(
+    _In_    DWORD Status,
+    _In_    PVOID pQueryContext,
+    _In_   PDNS_SERVICE_INSTANCE pInstance
+    );
+
+typedef DNS_SERVICE_REGISTER_COMPLETE *PDNS_SERVICE_REGISTER_COMPLETE;
+
+typedef struct _DNS_SERVICE_REGISTER_REQUEST{
+    ULONG Version;
+    ULONG   InterfaceIndex;
+    PDNS_SERVICE_INSTANCE pServiceInstance;
+    PDNS_SERVICE_REGISTER_COMPLETE pRegisterCompletionCallback;
+    PVOID pQueryContext;
+    HANDLE hCredentials;
+    BOOL unicastEnabled;
+} DNS_SERVICE_REGISTER_REQUEST, *PDNS_SERVICE_REGISTER_REQUEST;
+
+DWORD
+DnsServiceRegister(
+    _In_    PDNS_SERVICE_REGISTER_REQUEST   pRequest,
+    _Inout_opt_ PDNS_SERVICE_CANCEL             pCancel
+    );
+
+DWORD
+DnsServiceDeRegister(
+    _In_    PDNS_SERVICE_REGISTER_REQUEST   pRequest,
+    _Inout_opt_ PDNS_SERVICE_CANCEL             pCancel
+    );
+
+DWORD
+DnsServiceRegisterCancel(
+    _In_ PDNS_SERVICE_CANCEL pCancelHandle
+    );
+
+#endif  // __midl
+
+typedef struct _MDNS_QUERY_HANDLE
+{
+    WCHAR nameBuf[DNS_MAX_NAME_BUFFER_LENGTH];
+    WORD  wType;
+
+    // Internal notification bookkeeping, do not edit
+    PVOID pSubscription;
+    PVOID pWnfCallbackParams;
+    ULONG stateNameData[2];
+} MDNS_QUERY_HANDLE, *PMDNS_QUERY_HANDLE;
+
+typedef VOID WINAPI MDNS_QUERY_CALLBACK(
+    _In_    PVOID pQueryContext,
+    _Inout_ PMDNS_QUERY_HANDLE pQueryHandle,
+    _Inout_ PDNS_QUERY_RESULT pQueryResults
+    );
+
+typedef MDNS_QUERY_CALLBACK *PMDNS_QUERY_CALLBACK;
+
+typedef struct _MDNS_QUERY_REQUEST
+{
+    ULONG                   Version;
+    ULONG                   ulRefCount;      // Refcount for async query
+    PCWSTR                  Query;
+    WORD                    QueryType;
+    ULONG64                 QueryOptions;
+    ULONG                   InterfaceIndex;
+    PMDNS_QUERY_CALLBACK    pQueryCallback;
+    PVOID                   pQueryContext;
+    BOOL                    fAnswerReceived; // Reserved
+    ULONG                   ulResendCount;   // Reserved
+} MDNS_QUERY_REQUEST, *PMDNS_QUERY_REQUEST;
+
+DNS_STATUS WINAPI DnsStartMulticastQuery(
+    _In_        PMDNS_QUERY_REQUEST pQueryRequest,
+    _Inout_     PMDNS_QUERY_HANDLE pHandle
+    );
+
+DNS_STATUS WINAPI DnsStopMulticastQuery(
+    _Inout_     PMDNS_QUERY_HANDLE pHandle
+    );
+
+//
+// End of mDNS definitions
+//
 
 #ifdef __cplusplus
 }
 #endif  // __cplusplus
 
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _WINDNS_INCLUDED_

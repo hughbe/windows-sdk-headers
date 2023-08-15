@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.midi.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiChannelPressureMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessage ABI::Windows::Devices::Midi::IMidiChannelPressureMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessage_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiChannelPressureMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessageFactory ABI::Windows::Devices::Midi::IMidiChannelPressureMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessageFactory_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiControlChangeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessage ABI::Windows::Devices::Midi::IMidiControlChangeMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessage_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiControlChangeMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessageFactory ABI::Windows::Devices::Midi::IMidiControlChangeMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessageFactory_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiInPort;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiInPort ABI::Windows::Devices::Midi::IMidiInPort
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiInPort_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiInPortStatics;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiInPortStatics ABI::Windows::Devices::Midi::IMidiInPortStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiInPortStatics_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiMessage ABI::Windows::Devices::Midi::IMidiMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiMessage_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiMessageReceivedEventArgs ABI::Windows::Devices::Midi::IMidiMessageReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiMessageReceivedEventArgs_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiNoteOffMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessage ABI::Windows::Devices::Midi::IMidiNoteOffMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessage_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiNoteOffMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessageFactory ABI::Windows::Devices::Midi::IMidiNoteOffMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessageFactory_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiNoteOnMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessage ABI::Windows::Devices::Midi::IMidiNoteOnMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessage_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiNoteOnMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessageFactory ABI::Windows::Devices::Midi::IMidiNoteOnMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessageFactory_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiOutPort;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiOutPort ABI::Windows::Devices::Midi::IMidiOutPort
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiOutPort_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiOutPortStatics;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiOutPortStatics ABI::Windows::Devices::Midi::IMidiOutPortStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiOutPortStatics_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiPitchBendChangeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessage ABI::Windows::Devices::Midi::IMidiPitchBendChangeMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessage_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiPitchBendChangeMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessageFactory ABI::Windows::Devices::Midi::IMidiPitchBendChangeMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessageFactory_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiPolyphonicKeyPressureMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessage ABI::Windows::Devices::Midi::IMidiPolyphonicKeyPressureMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessage_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiPolyphonicKeyPressureMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessageFactory ABI::Windows::Devices::Midi::IMidiPolyphonicKeyPressureMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessageFactory_FWD_DEFINED__
@@ -530,9 +526,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiProgramChangeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessage ABI::Windows::Devices::Midi::IMidiProgramChangeMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessage_FWD_DEFINED__
@@ -544,9 +540,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiProgramChangeMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessageFactory ABI::Windows::Devices::Midi::IMidiProgramChangeMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessageFactory_FWD_DEFINED__
@@ -558,9 +554,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiSongPositionPointerMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessage ABI::Windows::Devices::Midi::IMidiSongPositionPointerMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessage_FWD_DEFINED__
@@ -572,9 +568,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiSongPositionPointerMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessageFactory ABI::Windows::Devices::Midi::IMidiSongPositionPointerMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessageFactory_FWD_DEFINED__
@@ -586,9 +582,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiSongSelectMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessage ABI::Windows::Devices::Midi::IMidiSongSelectMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessage_FWD_DEFINED__
@@ -600,9 +596,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiSongSelectMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessageFactory ABI::Windows::Devices::Midi::IMidiSongSelectMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessageFactory_FWD_DEFINED__
@@ -614,9 +610,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiSynthesizer;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizer ABI::Windows::Devices::Midi::IMidiSynthesizer
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizer_FWD_DEFINED__
@@ -628,9 +624,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiSynthesizerStatics;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizerStatics ABI::Windows::Devices::Midi::IMidiSynthesizerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizerStatics_FWD_DEFINED__
@@ -642,9 +638,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiSystemExclusiveMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiSystemExclusiveMessageFactory ABI::Windows::Devices::Midi::IMidiSystemExclusiveMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiSystemExclusiveMessageFactory_FWD_DEFINED__
@@ -656,9 +652,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiTimeCodeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessage ABI::Windows::Devices::Midi::IMidiTimeCodeMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessage_FWD_DEFINED__
@@ -670,9 +666,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 interface IMidiTimeCodeMessageFactory;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessageFactory ABI::Windows::Devices::Midi::IMidiTimeCodeMessageFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessageFactory_FWD_DEFINED__
@@ -701,7 +697,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::IMidiOutPort*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::IMidiOutPort*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CIMidiOutPort_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CIMidiOutPort ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CIMidiOutPort_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CIMidiOutPort ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::IMidiOutPort*>
@@ -733,7 +729,7 @@ IAsyncOperation<ABI::Windows::Devices::Midi::IMidiOutPort*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Midi::IMidiOutPort*> __FIAsyncOperation_1_Windows__CDevices__CMidi__CIMidiOutPort_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CMidi__CIMidiOutPort ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CMidi__CIMidiOutPort_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CMidi__CIMidiOutPort ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Midi::IMidiOutPort*>
@@ -749,9 +745,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiInPort;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -774,7 +770,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::MidiInPort*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::MidiInPort*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiInPort_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiInPort ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiInPort_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiInPort ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::IMidiInPort*>
@@ -806,7 +802,7 @@ IAsyncOperation<ABI::Windows::Devices::Midi::MidiInPort*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Midi::MidiInPort*> __FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiInPort_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiInPort ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiInPort_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiInPort ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Midi::IMidiInPort*>
@@ -822,9 +818,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiSynthesizer;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -847,7 +843,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::MidiSynthesizer*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::MidiSynthesizer*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiSynthesizer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiSynthesizer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiSynthesizer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CMidi__CMidiSynthesizer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Midi::IMidiSynthesizer*>
@@ -879,7 +875,7 @@ IAsyncOperation<ABI::Windows::Devices::Midi::MidiSynthesizer*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Midi::MidiSynthesizer*> __FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiSynthesizer_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiSynthesizer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiSynthesizer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CMidi__CMidiSynthesizer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Midi::IMidiSynthesizer*>
@@ -896,9 +892,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -922,7 +918,7 @@ ITypedEventHandler<ABI::Windows::Devices::Midi::MidiInPort*,ABI::Windows::Device
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Midi::MidiInPort*,ABI::Windows::Devices::Midi::MidiMessageReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Midi::IMidiInPort*,ABI::Windows::Devices::Midi::IMidiMessageReceivedEventArgs*>
@@ -941,9 +937,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -952,9 +948,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -969,8 +965,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -982,8 +978,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -995,9 +991,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1013,9 +1009,9 @@ namespace ABI {
                 
                 typedef enum MidiMessageType : int MidiMessageType;
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1051,9 +1047,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiActiveSensingMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1061,9 +1057,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiChannelPressureMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1071,9 +1067,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiContinueMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1081,9 +1077,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiControlChangeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1093,9 +1089,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiNoteOffMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1103,9 +1099,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiNoteOnMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1113,9 +1109,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiOutPort;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1123,9 +1119,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiPitchBendChangeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1133,9 +1129,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiPolyphonicKeyPressureMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1143,9 +1139,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiProgramChangeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1153,9 +1149,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiSongPositionPointerMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1163,9 +1159,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiSongSelectMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1173,9 +1169,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiStartMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1183,9 +1179,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiStopMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1194,9 +1190,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiSystemExclusiveMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1204,9 +1200,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiSystemResetMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1214,9 +1210,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiTimeCodeMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1224,9 +1220,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiTimingClockMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1234,9 +1230,9 @@ namespace ABI {
         namespace Devices {
             namespace Midi {
                 class MidiTuneRequestMessage;
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1286,9 +1282,9 @@ namespace ABI {
                     MidiMessageType_SystemReset = 255,
                 };
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1331,9 +1327,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiChannelPressureMessage=_uuidof(IMidiChannelPressureMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessage_INTERFACE_DEFINED__) */
@@ -1374,9 +1370,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiChannelPressureMessageFactory=_uuidof(IMidiChannelPressureMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiChannelPressureMessageFactory_INTERFACE_DEFINED__) */
@@ -1425,9 +1421,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiControlChangeMessage=_uuidof(IMidiControlChangeMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessage_INTERFACE_DEFINED__) */
@@ -1469,9 +1465,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiControlChangeMessageFactory=_uuidof(IMidiControlChangeMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiControlChangeMessageFactory_INTERFACE_DEFINED__) */
@@ -1521,9 +1517,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiInPort=_uuidof(IMidiInPort);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiInPort;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiInPort_INTERFACE_DEFINED__) */
@@ -1566,9 +1562,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiInPortStatics=_uuidof(IMidiInPortStatics);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiInPortStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiInPortStatics_INTERFACE_DEFINED__) */
@@ -1610,9 +1606,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiMessage=_uuidof(IMidiMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiMessage_INTERFACE_DEFINED__) */
@@ -1651,9 +1647,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiMessageReceivedEventArgs=_uuidof(IMidiMessageReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiMessageReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiMessageReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -1702,9 +1698,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiNoteOffMessage=_uuidof(IMidiNoteOffMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessage_INTERFACE_DEFINED__) */
@@ -1746,9 +1742,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiNoteOffMessageFactory=_uuidof(IMidiNoteOffMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOffMessageFactory_INTERFACE_DEFINED__) */
@@ -1797,9 +1793,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiNoteOnMessage=_uuidof(IMidiNoteOnMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessage_INTERFACE_DEFINED__) */
@@ -1841,9 +1837,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiNoteOnMessageFactory=_uuidof(IMidiNoteOnMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiNoteOnMessageFactory_INTERFACE_DEFINED__) */
@@ -1889,9 +1885,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiOutPort=_uuidof(IMidiOutPort);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiOutPort;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiOutPort_INTERFACE_DEFINED__) */
@@ -1934,9 +1930,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiOutPortStatics=_uuidof(IMidiOutPortStatics);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiOutPortStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiOutPortStatics_INTERFACE_DEFINED__) */
@@ -1982,9 +1978,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiPitchBendChangeMessage=_uuidof(IMidiPitchBendChangeMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessage_INTERFACE_DEFINED__) */
@@ -2025,9 +2021,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiPitchBendChangeMessageFactory=_uuidof(IMidiPitchBendChangeMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiPitchBendChangeMessageFactory_INTERFACE_DEFINED__) */
@@ -2076,9 +2072,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiPolyphonicKeyPressureMessage=_uuidof(IMidiPolyphonicKeyPressureMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessage_INTERFACE_DEFINED__) */
@@ -2120,9 +2116,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiPolyphonicKeyPressureMessageFactory=_uuidof(IMidiPolyphonicKeyPressureMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiPolyphonicKeyPressureMessageFactory_INTERFACE_DEFINED__) */
@@ -2168,9 +2164,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiProgramChangeMessage=_uuidof(IMidiProgramChangeMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessage_INTERFACE_DEFINED__) */
@@ -2211,9 +2207,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiProgramChangeMessageFactory=_uuidof(IMidiProgramChangeMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiProgramChangeMessageFactory_INTERFACE_DEFINED__) */
@@ -2256,9 +2252,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiSongPositionPointerMessage=_uuidof(IMidiSongPositionPointerMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessage_INTERFACE_DEFINED__) */
@@ -2298,9 +2294,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiSongPositionPointerMessageFactory=_uuidof(IMidiSongPositionPointerMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiSongPositionPointerMessageFactory_INTERFACE_DEFINED__) */
@@ -2343,9 +2339,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiSongSelectMessage=_uuidof(IMidiSongSelectMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessage_INTERFACE_DEFINED__) */
@@ -2385,9 +2381,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiSongSelectMessageFactory=_uuidof(IMidiSongSelectMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiSongSelectMessageFactory_INTERFACE_DEFINED__) */
@@ -2437,9 +2433,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiSynthesizer=_uuidof(IMidiSynthesizer);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizer_INTERFACE_DEFINED__) */
@@ -2479,16 +2475,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSynthesizer(
                         /* [in] */__RPC__in_opt ABI::Windows::Devices::Enumeration::IDeviceInformation * midiDevice,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMidiSynthesizerStatics=_uuidof(IMidiSynthesizerStatics);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiSynthesizerStatics_INTERFACE_DEFINED__) */
@@ -2528,9 +2524,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiSystemExclusiveMessageFactory=_uuidof(IMidiSystemExclusiveMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiSystemExclusiveMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiSystemExclusiveMessageFactory_INTERFACE_DEFINED__) */
@@ -2576,9 +2572,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiTimeCodeMessage=_uuidof(IMidiTimeCodeMessage);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessage_INTERFACE_DEFINED__) */
@@ -2619,9 +2615,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMidiTimeCodeMessageFactory=_uuidof(IMidiTimeCodeMessageFactory);
                 
-            } /* Windows */
+            } /* Midi */
         } /* Devices */
-    } /* Midi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CMidi_CIMidiTimeCodeMessageFactory_INTERFACE_DEFINED__) */
@@ -3781,7 +3777,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Win
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CMidi_CIMidiInPort * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CMidi_CIMidiMessageReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CMidi_CIMidiInPort * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CMidi_CIMidiMessageReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CMidi__CMidiInPort_Windows__CDevices__CMidi__CMidiMessageReceivedEventArgsVtbl;
 

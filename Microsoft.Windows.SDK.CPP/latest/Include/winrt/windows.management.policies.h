@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.management.policies.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Management {
             namespace Policies {
                 interface INamedPolicyData;
-            } /* Windows */
+            } /* Policies */
         } /* Management */
-    } /* Policies */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyData ABI::Windows::Management::Policies::INamedPolicyData
 
 #endif // ____x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyData_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Management {
             namespace Policies {
                 interface INamedPolicyStatics;
-            } /* Windows */
+            } /* Policies */
         } /* Management */
-    } /* Policies */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyStatics ABI::Windows::Management::Policies::INamedPolicyStatics
 
 #endif // ____x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyStatics_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Management {
             namespace Policies {
                 class NamedPolicyData;
-            } /* Windows */
+            } /* Policies */
         } /* Management */
-    } /* Policies */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -333,7 +329,7 @@ ITypedEventHandler<ABI::Windows::Management::Policies::NamedPolicyData*,IInspect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Management::Policies::NamedPolicyData*,IInspectable*> __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Management::Policies::INamedPolicyData*,IInspectable*>
@@ -356,9 +352,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -371,8 +367,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -380,8 +376,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -396,9 +392,9 @@ namespace ABI {
                 
                 typedef enum NamedPolicyKind : int NamedPolicyKind;
                 
-            } /* Windows */
+            } /* Policies */
         } /* Management */
-    } /* Policies */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -437,9 +433,9 @@ namespace ABI {
                     NamedPolicyKind_String = 5,
                 };
                 
-            } /* Windows */
+            } /* Policies */
         } /* Management */
-    } /* Policies */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -477,16 +473,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Management::Policies::NamedPolicyKind * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsManaged(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsUserPolicy(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetBoolean(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetBinary(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * result
@@ -512,9 +508,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INamedPolicyData=_uuidof(INamedPolicyData);
                 
-            } /* Windows */
+            } /* Policies */
         } /* Management */
-    } /* Policies */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyData;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyData_INTERFACE_DEFINED__) */
@@ -561,9 +557,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INamedPolicyStatics=_uuidof(INamedPolicyStatics);
                 
-            } /* Windows */
+            } /* Policies */
         } /* Management */
-    } /* Policies */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyStatics_INTERFACE_DEFINED__) */
@@ -657,7 +653,7 @@ typedef struct __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyData * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CManagement_CPolicies_CINamedPolicyData * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CManagement__CPolicies__CNamedPolicyData_IInspectableVtbl;
 

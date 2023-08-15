@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,6 +10,12 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition {
 struct CompositionPropertySet;
 struct ICompositionAnimationBase;
 struct Visual;
+
+}
+
+WINRT_EXPORT namespace winrt::Windows::UI::WindowManagement {
+
+struct AppWindow;
 
 }
 
@@ -64,6 +70,7 @@ struct IDesktopWindowXamlSourceTakeFocusRequestedEventArgs;
 struct IElementCompositionPreview;
 struct IElementCompositionPreviewStatics;
 struct IElementCompositionPreviewStatics2;
+struct IElementCompositionPreviewStatics3;
 struct IWindowsXamlManager;
 struct IWindowsXamlManagerStatics;
 struct IXamlSourceFocusNavigationRequest;
@@ -103,6 +110,7 @@ template <> struct category<Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource
 template <> struct category<Windows::UI::Xaml::Hosting::IElementCompositionPreview>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Hosting::IWindowsXamlManager>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest>{ using type = interface_category; };
@@ -139,6 +147,7 @@ template <> struct name<Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceTake
 template <> struct name<Windows::UI::Xaml::Hosting::IElementCompositionPreview>{ static constexpr auto & value{ L"Windows.UI.Xaml.Hosting.IElementCompositionPreview" }; };
 template <> struct name<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics" }; };
 template <> struct name<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2" }; };
+template <> struct name<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3" }; };
 template <> struct name<Windows::UI::Xaml::Hosting::IWindowsXamlManager>{ static constexpr auto & value{ L"Windows.UI.Xaml.Hosting.IWindowsXamlManager" }; };
 template <> struct name<Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Hosting.IWindowsXamlManagerStatics" }; };
 template <> struct name<Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest>{ static constexpr auto & value{ L"Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest" }; };
@@ -175,6 +184,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Hosting::IDesktopWindowXamlSo
 template <> struct guid_storage<Windows::UI::Xaml::Hosting::IElementCompositionPreview>{ static constexpr guid value{ 0xB6F1A676,0xCFE6,0x46AC,{ 0xAC,0xF6,0xC4,0x68,0x7B,0xB6,0x5E,0x60 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics>{ static constexpr guid value{ 0x08C92B38,0xEC99,0x4C55,{ 0xBC,0x85,0xA1,0xC1,0x80,0xB2,0x76,0x46 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2>{ static constexpr guid value{ 0x24148FBB,0x23D6,0x4F37,{ 0xBA,0x0C,0x07,0x33,0xE7,0x99,0x72,0x2D } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>{ static constexpr guid value{ 0x843BC4C3,0xC105,0x59FE,{ 0xA3,0xD1,0x37,0x3C,0x1D,0x3E,0x6F,0xBC } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Hosting::IWindowsXamlManager>{ static constexpr guid value{ 0x56096C31,0x1AA0,0x5288,{ 0x88,0x18,0x6E,0x74,0xA2,0xDC,0xAF,0xF5 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics>{ static constexpr guid value{ 0x28258A12,0x7D82,0x505B,{ 0xB2,0x10,0x71,0x2B,0x04,0xA5,0x88,0x82 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest>{ static constexpr guid value{ 0xFBB93BB5,0x1496,0x5A80,{ 0xAC,0x00,0xE7,0x57,0x35,0x97,0x55,0xE6 } }; };
@@ -272,6 +282,12 @@ template <> struct abi<Windows::UI::Xaml::Hosting::IElementCompositionPreviewSta
     virtual int32_t WINRT_CALL SetImplicitHideAnimation(void* element, void* animation) noexcept = 0;
     virtual int32_t WINRT_CALL SetIsTranslationEnabled(void* element, bool value) noexcept = 0;
     virtual int32_t WINRT_CALL GetPointerPositionPropertySet(void* targetElement, void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL SetAppWindowContent(void* appWindow, void* xamlContent) noexcept = 0;
+    virtual int32_t WINRT_CALL GetAppWindowContent(void* appWindow, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Hosting::IWindowsXamlManager>{ struct type : IInspectable
@@ -451,6 +467,14 @@ struct consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics2
     Windows::UI::Composition::CompositionPropertySet GetPointerPositionPropertySet(Windows::UI::Xaml::UIElement const& targetElement) const;
 };
 template <> struct consume<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics3
+{
+    void SetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow, Windows::UI::Xaml::UIElement const& xamlContent) const;
+    Windows::UI::Xaml::UIElement GetAppWindowContent(Windows::UI::WindowManagement::AppWindow const& appWindow) const;
+};
+template <> struct consume<Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3> { template <typename D> using type = consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics3<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Hosting_IWindowsXamlManager

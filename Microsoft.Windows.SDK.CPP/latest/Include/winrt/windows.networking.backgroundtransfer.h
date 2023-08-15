@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.backgroundtransfer.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundDownloader;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader ABI::Windows::Networking::BackgroundTransfer::IBackgroundDownloader
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundDownloader2;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader2 ABI::Windows::Networking::BackgroundTransfer::IBackgroundDownloader2
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader2_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundDownloader3;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader3 ABI::Windows::Networking::BackgroundTransfer::IBackgroundDownloader3
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader3_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundDownloaderFactory;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderFactory ABI::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderFactory_FWD_DEFINED__
@@ -338,9 +334,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundDownloaderStaticMethods;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods ABI::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundDownloaderStaticMethods2;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods2 ABI::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods2_FWD_DEFINED__
@@ -366,9 +362,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundDownloaderUserConsent;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderUserConsent ABI::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderUserConsent_FWD_DEFINED__
@@ -380,9 +376,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferBase;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferBase ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferBase_FWD_DEFINED__
@@ -394,9 +390,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferCompletionGroup;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroup ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroup_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferCompletionGroupTriggerDetails;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroupTriggerDetails ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroupTriggerDetails_FWD_DEFINED__
@@ -422,9 +418,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferContentPart;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPart ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPart_FWD_DEFINED__
@@ -436,9 +432,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferContentPartFactory;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPartFactory ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPartFactory_FWD_DEFINED__
@@ -450,9 +446,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferErrorStaticMethods;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferErrorStaticMethods ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferErrorStaticMethods_FWD_DEFINED__
@@ -464,9 +460,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferGroup;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroup ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroup_FWD_DEFINED__
@@ -478,9 +474,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferGroupStatics;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroupStatics ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroupStatics_FWD_DEFINED__
@@ -492,9 +488,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferOperation;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperation ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperation_FWD_DEFINED__
@@ -506,9 +502,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferOperationPriority;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperationPriority ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperationPriority_FWD_DEFINED__
@@ -520,9 +516,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundTransferRangesDownloadedEventArgs;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferRangesDownloadedEventArgs ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferRangesDownloadedEventArgs_FWD_DEFINED__
@@ -534,9 +530,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundUploader;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader ABI::Windows::Networking::BackgroundTransfer::IBackgroundUploader
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader_FWD_DEFINED__
@@ -548,9 +544,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundUploader2;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader2 ABI::Windows::Networking::BackgroundTransfer::IBackgroundUploader2
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader2_FWD_DEFINED__
@@ -562,9 +558,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundUploader3;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader3 ABI::Windows::Networking::BackgroundTransfer::IBackgroundUploader3
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader3_FWD_DEFINED__
@@ -576,9 +572,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundUploaderFactory;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderFactory ABI::Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderFactory_FWD_DEFINED__
@@ -590,9 +586,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundUploaderStaticMethods;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods ABI::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods_FWD_DEFINED__
@@ -604,9 +600,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundUploaderStaticMethods2;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods2 ABI::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods2_FWD_DEFINED__
@@ -618,9 +614,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IBackgroundUploaderUserConsent;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderUserConsent ABI::Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderUserConsent_FWD_DEFINED__
@@ -632,9 +628,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IContentPrefetcher;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcher ABI::Windows::Networking::BackgroundTransfer::IContentPrefetcher
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcher_FWD_DEFINED__
@@ -646,9 +642,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IContentPrefetcherTime;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcherTime ABI::Windows::Networking::BackgroundTransfer::IContentPrefetcherTime
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcherTime_FWD_DEFINED__
@@ -660,9 +656,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IDownloadOperation;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation_FWD_DEFINED__
@@ -674,9 +670,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IDownloadOperation2;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation2 ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation2
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation2_FWD_DEFINED__
@@ -688,9 +684,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IDownloadOperation3;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation3 ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation3
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation3_FWD_DEFINED__
@@ -702,9 +698,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IDownloadOperation4;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation4 ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation4
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation4_FWD_DEFINED__
@@ -716,9 +712,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IResponseInformation;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIResponseInformation ABI::Windows::Networking::BackgroundTransfer::IResponseInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIResponseInformation_FWD_DEFINED__
@@ -730,9 +726,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IUnconstrainedTransferRequestResult;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUnconstrainedTransferRequestResult ABI::Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUnconstrainedTransferRequestResult_FWD_DEFINED__
@@ -744,9 +740,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IUploadOperation;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation ABI::Windows::Networking::BackgroundTransfer::IUploadOperation
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation_FWD_DEFINED__
@@ -758,9 +754,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IUploadOperation2;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation2 ABI::Windows::Networking::BackgroundTransfer::IUploadOperation2
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation2_FWD_DEFINED__
@@ -772,9 +768,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 interface IUploadOperation3;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation3 ABI::Windows::Networking::BackgroundTransfer::IUploadOperation3
 
 #endif // ____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation3_FWD_DEFINED__
@@ -787,9 +783,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class BackgroundTransferContentPart;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -812,7 +808,7 @@ IIterator<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferConten
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart*> __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart_t;
 #define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart*>
@@ -844,7 +840,7 @@ IIterable<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferConten
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart*> __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart_t;
 #define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferContentPart ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart*>
@@ -861,9 +857,9 @@ namespace ABI {
             namespace BackgroundTransfer {
                 struct BackgroundTransferFileRange;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_USE
@@ -884,7 +880,7 @@ IIterator<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTransfe
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange> __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t;
 #define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
@@ -914,7 +910,7 @@ IIterable<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTransfe
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange> __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t;
 #define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
@@ -929,9 +925,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class DownloadOperation;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -954,7 +950,7 @@ IIterator<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -986,7 +982,7 @@ IIterable<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -1002,9 +998,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class UploadOperation;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1027,7 +1023,7 @@ IIterator<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1059,7 +1055,7 @@ IIterable<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1090,7 +1086,7 @@ IVectorView<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTrans
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange> __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t;
 #define __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
@@ -1121,7 +1117,7 @@ IVectorView<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -1153,7 +1149,7 @@ IVectorView<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1184,7 +1180,7 @@ IVector<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferF
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange> __FIVector_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t;
 #define __FIVector_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
@@ -1217,7 +1213,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Networking::BackgroundTransfer::Dow
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -1252,7 +1248,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Networking::Background
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -1287,7 +1283,7 @@ IAsyncOperationWithProgress<ABI::Windows::Networking::BackgroundTransfer::Downlo
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -1322,7 +1318,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Networking::BackgroundTransfer::Upl
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*,ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*,ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1357,7 +1353,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Networking::Background
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*,ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*,ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1392,7 +1388,7 @@ IAsyncOperationWithProgress<ABI::Windows::Networking::BackgroundTransfer::Upload
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*,ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*,ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1425,7 +1421,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CBackgrou
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>*>
@@ -1457,7 +1453,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDow
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>*>
@@ -1489,7 +1485,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CBackgrou
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>*>
@@ -1521,7 +1517,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUpl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>*>
@@ -1553,7 +1549,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::Do
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -1585,7 +1581,7 @@ IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*> __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*>
@@ -1601,9 +1597,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class UnconstrainedTransferRequestResult;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1626,7 +1622,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::Un
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult*>
@@ -1658,7 +1654,7 @@ IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::UnconstrainedTrans
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult*> __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUnconstrainedTransferRequestResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult*>
@@ -1690,7 +1686,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::Up
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1722,7 +1718,7 @@ IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::UploadOperation*> __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CBackgroundTransfer__CUploadOperation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::BackgroundTransfer::IUploadOperation*>
@@ -1739,9 +1735,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class BackgroundTransferRangesDownloadedEventArgs;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1765,7 +1761,7 @@ ITypedEventHandler<ABI::Windows::Networking::BackgroundTransfer::DownloadOperati
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::BackgroundTransfer::DownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::BackgroundTransfer::IDownloadOperation*,ABI::Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs*>
@@ -1781,8 +1777,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1790,8 +1786,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1817,7 +1813,7 @@ IIterator<ABI::Windows::Foundation::Uri*> : IIterator_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::Uri*> __FIIterator_1_Windows__CFoundation__CUri_t;
 #define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1849,7 +1845,7 @@ IIterable<ABI::Windows::Foundation::Uri*> : IIterable_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::Uri*> __FIIterable_1_Windows__CFoundation__CUri_t;
 #define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1881,7 +1877,7 @@ IVectorView<ABI::Windows::Foundation::Uri*> : IVectorView_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Foundation::Uri*> __FIVectorView_1_Windows__CFoundation__CUri_t;
 #define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1913,7 +1909,7 @@ IVector<ABI::Windows::Foundation::Uri*> : IVector_impl<ABI::Windows::Foundation:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Foundation::Uri*> __FIVector_1_Windows__CFoundation__CUri_t;
 #define __FIVector_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -1929,8 +1925,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1951,7 +1947,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1965,8 +1961,8 @@ namespace ABI {
     namespace Windows {
         namespace Web {
             enum WebErrorStatus : int;
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CWeb__CWebErrorStatus_USE
@@ -1987,7 +1983,7 @@ IIterator<enum ABI::Windows::Web::WebErrorStatus> : IIterator_impl<enum ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Web::WebErrorStatus> __FIIterator_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIIterator_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::WebErrorStatus>
@@ -2017,7 +2013,7 @@ IIterable<enum ABI::Windows::Web::WebErrorStatus> : IIterable_impl<enum ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Web::WebErrorStatus> __FIIterable_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIIterable_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::WebErrorStatus>
@@ -2047,7 +2043,7 @@ IVectorView<enum ABI::Windows::Web::WebErrorStatus> : IVectorView_impl<enum ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Web::WebErrorStatus> __FIVectorView_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIVectorView_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::WebErrorStatus>
@@ -2077,7 +2073,7 @@ IVector<enum ABI::Windows::Web::WebErrorStatus> : IVector_impl<enum ABI::Windows
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Web::WebErrorStatus> __FIVector_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIVector_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::WebErrorStatus>
@@ -2107,7 +2103,7 @@ IReference<enum ABI::Windows::Web::WebErrorStatus> : IReference_impl<enum ABI::W
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Web::WebErrorStatus> __FIReference_1_Windows__CWeb__CWebErrorStatus_t;
 #define __FIReference_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::__FIReference_1_Windows__CWeb__CWebErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CWeb__CWebErrorStatus ABI::Windows::Foundation::IReference<ABI::Windows::Web::WebErrorStatus>
@@ -2136,7 +2132,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -2166,7 +2162,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -2196,7 +2192,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -2225,7 +2221,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -2244,9 +2240,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger ABI::Windows::ApplicationModel::Background::IBackgroundTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger_FWD_DEFINED__
@@ -2261,15 +2257,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2277,8 +2273,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2293,9 +2289,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2304,9 +2300,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2321,8 +2317,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2337,9 +2333,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -2352,9 +2348,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2368,9 +2364,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CITileNotification_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CITileNotification_FWD_DEFINED__
@@ -2379,9 +2375,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileNotification ABI::Windows::UI::Notifications::ITileNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileNotification_FWD_DEFINED__
@@ -2392,9 +2388,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_FWD_DEFINED__
@@ -2403,9 +2399,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification ABI::Windows::UI::Notifications::IToastNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_FWD_DEFINED__
@@ -2420,8 +2416,8 @@ namespace ABI {
             
             typedef enum WebErrorStatus : int WebErrorStatus;
             
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2432,9 +2428,9 @@ namespace ABI {
                 
                 typedef enum BackgroundTransferBehavior : int BackgroundTransferBehavior;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2443,9 +2439,9 @@ namespace ABI {
                 
                 typedef enum BackgroundTransferCostPolicy : int BackgroundTransferCostPolicy;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2454,9 +2450,9 @@ namespace ABI {
                 
                 typedef enum BackgroundTransferPriority : int BackgroundTransferPriority;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2465,9 +2461,9 @@ namespace ABI {
                 
                 typedef enum BackgroundTransferStatus : int BackgroundTransferStatus;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2476,9 +2472,9 @@ namespace ABI {
                 
                 typedef struct BackgroundDownloadProgress BackgroundDownloadProgress;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2487,9 +2483,9 @@ namespace ABI {
                 
                 typedef struct BackgroundTransferFileRange BackgroundTransferFileRange;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2498,9 +2494,9 @@ namespace ABI {
                 
                 typedef struct BackgroundUploadProgress BackgroundUploadProgress;
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2543,9 +2539,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class BackgroundDownloader;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2553,9 +2549,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class BackgroundTransferCompletionGroup;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2563,9 +2559,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class BackgroundTransferCompletionGroupTriggerDetails;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2575,9 +2571,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class BackgroundTransferGroup;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2586,9 +2582,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class BackgroundUploader;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2598,9 +2594,9 @@ namespace ABI {
         namespace Networking {
             namespace BackgroundTransfer {
                 class ResponseInformation;
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2634,9 +2630,9 @@ namespace ABI {
                     BackgroundTransferBehavior_Serialized = 1,
                 };
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2662,9 +2658,9 @@ namespace ABI {
                     BackgroundTransferCostPolicy_Always = 2,
                 };
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2694,9 +2690,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2737,9 +2733,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2763,13 +2759,13 @@ namespace ABI {
                     UINT64 BytesReceived;
                     UINT64 TotalBytesToReceive;
                     ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus Status;
-                    boolean HasResponseChanged;
-                    boolean HasRestarted;
+                    ::boolean HasResponseChanged;
+                    ::boolean HasRestarted;
                 };
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2794,9 +2790,9 @@ namespace ABI {
                     UINT64 Length;
                 };
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -2822,13 +2818,13 @@ namespace ABI {
                     UINT64 TotalBytesToReceive;
                     UINT64 TotalBytesToSend;
                     ABI::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus Status;
-                    boolean HasResponseChanged;
-                    boolean HasRestarted;
+                    ::boolean HasResponseChanged;
+                    ::boolean HasRestarted;
                 };
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2882,9 +2878,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundDownloader=_uuidof(IBackgroundDownloader);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader_INTERFACE_DEFINED__) */
@@ -2950,9 +2946,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundDownloader2=_uuidof(IBackgroundDownloader2);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader2_INTERFACE_DEFINED__) */
@@ -2991,9 +2987,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundDownloader3=_uuidof(IBackgroundDownloader3);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader3_INTERFACE_DEFINED__) */
@@ -3033,9 +3029,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundDownloaderFactory=_uuidof(IBackgroundDownloaderFactory);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderFactory_INTERFACE_DEFINED__) */
@@ -3082,9 +3078,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundDownloaderStaticMethods=_uuidof(IBackgroundDownloaderStaticMethods);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods_INTERFACE_DEFINED__) */
@@ -3124,9 +3120,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundDownloaderStaticMethods2=_uuidof(IBackgroundDownloaderStaticMethods2);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderStaticMethods2_INTERFACE_DEFINED__) */
@@ -3174,9 +3170,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundDownloaderUserConsent=_uuidof(IBackgroundDownloaderUserConsent);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderUserConsent;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderUserConsent_INTERFACE_DEFINED__) */
@@ -3251,9 +3247,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferBase=_uuidof(IBackgroundTransferBase);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferBase;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferBase_INTERFACE_DEFINED__) */
@@ -3288,7 +3284,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Background::IBackgroundTrigger * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Enable(void) = 0;
                     
@@ -3296,9 +3292,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferCompletionGroup=_uuidof(IBackgroundTransferCompletionGroup);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroup;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroup_INTERFACE_DEFINED__) */
@@ -3340,9 +3336,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferCompletionGroupTriggerDetails=_uuidof(IBackgroundTransferCompletionGroupTriggerDetails);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroupTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferCompletionGroupTriggerDetails_INTERFACE_DEFINED__) */
@@ -3388,9 +3384,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferContentPart=_uuidof(IBackgroundTransferContentPart);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPart;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPart_INTERFACE_DEFINED__) */
@@ -3432,9 +3428,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferContentPartFactory=_uuidof(IBackgroundTransferContentPartFactory);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPartFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPartFactory_INTERFACE_DEFINED__) */
@@ -3474,9 +3470,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferErrorStaticMethods=_uuidof(IBackgroundTransferErrorStaticMethods);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferErrorStaticMethods;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferErrorStaticMethods_INTERFACE_DEFINED__) */
@@ -3521,9 +3517,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferGroup=_uuidof(IBackgroundTransferGroup);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroup;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroup_INTERFACE_DEFINED__) */
@@ -3563,9 +3559,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferGroupStatics=_uuidof(IBackgroundTransferGroupStatics);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroupStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroupStatics_INTERFACE_DEFINED__) */
@@ -3627,9 +3623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferOperation=_uuidof(IBackgroundTransferOperation);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperation_INTERFACE_DEFINED__) */
@@ -3668,9 +3664,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferOperationPriority=_uuidof(IBackgroundTransferOperationPriority);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperationPriority;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferOperationPriority_INTERFACE_DEFINED__) */
@@ -3702,7 +3698,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WasDownloadRestarted(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AddedRanges(
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferFileRange * * value
@@ -3715,9 +3711,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundTransferRangesDownloadedEventArgs=_uuidof(IBackgroundTransferRangesDownloadedEventArgs);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferRangesDownloadedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferRangesDownloadedEventArgs_INTERFACE_DEFINED__) */
@@ -3785,9 +3781,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundUploader=_uuidof(IBackgroundUploader);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader_INTERFACE_DEFINED__) */
@@ -3853,9 +3849,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundUploader2=_uuidof(IBackgroundUploader2);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader2_INTERFACE_DEFINED__) */
@@ -3894,9 +3890,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundUploader3=_uuidof(IBackgroundUploader3);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploader3_INTERFACE_DEFINED__) */
@@ -3936,9 +3932,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundUploaderFactory=_uuidof(IBackgroundUploaderFactory);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderFactory_INTERFACE_DEFINED__) */
@@ -3985,9 +3981,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundUploaderStaticMethods=_uuidof(IBackgroundUploaderStaticMethods);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods_INTERFACE_DEFINED__) */
@@ -4027,9 +4023,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundUploaderStaticMethods2=_uuidof(IBackgroundUploaderStaticMethods2);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderStaticMethods2_INTERFACE_DEFINED__) */
@@ -4077,9 +4073,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundUploaderUserConsent=_uuidof(IBackgroundUploaderUserConsent);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderUserConsent;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundUploaderUserConsent_INTERFACE_DEFINED__) */
@@ -4124,9 +4120,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentPrefetcher=_uuidof(IContentPrefetcher);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcher;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcher_INTERFACE_DEFINED__) */
@@ -4165,9 +4161,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContentPrefetcherTime=_uuidof(IContentPrefetcherTime);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcherTime;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcherTime_INTERFACE_DEFINED__) */
@@ -4221,9 +4217,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDownloadOperation=_uuidof(IDownloadOperation);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation_INTERFACE_DEFINED__) */
@@ -4262,9 +4258,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDownloadOperation2=_uuidof(IDownloadOperation2);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation2_INTERFACE_DEFINED__) */
@@ -4296,10 +4292,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRandomAccessRequired(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRandomAccessRequired(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetResultRandomAccessStreamReference(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStreamReference * * stream
@@ -4328,9 +4324,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDownloadOperation3=_uuidof(IDownloadOperation3);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation3_INTERFACE_DEFINED__) */
@@ -4367,9 +4363,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDownloadOperation4=_uuidof(IDownloadOperation4);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation4;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation4_INTERFACE_DEFINED__) */
@@ -4401,7 +4397,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsResumable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ActualUri(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IUriRuntimeClass * * value
@@ -4417,9 +4413,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IResponseInformation=_uuidof(IResponseInformation);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIResponseInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIResponseInformation_INTERFACE_DEFINED__) */
@@ -4459,16 +4455,16 @@ namespace ABI {
                     DEPRECATED("IsUnconstrained is deprecated and may not work on all platforms. For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsUnconstrained(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IUnconstrainedTransferRequestResult=_uuidof(IUnconstrainedTransferRequestResult);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUnconstrainedTransferRequestResult;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUnconstrainedTransferRequestResult_INTERFACE_DEFINED__) */
@@ -4520,9 +4516,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUploadOperation=_uuidof(IUploadOperation);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation_INTERFACE_DEFINED__) */
@@ -4561,9 +4557,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUploadOperation2=_uuidof(IUploadOperation2);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation2_INTERFACE_DEFINED__) */
@@ -4600,9 +4596,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUploadOperation3=_uuidof(IUploadOperation3);
                 
-            } /* Windows */
+            } /* BackgroundTransfer */
         } /* Networking */
-    } /* BackgroundTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation3_INTERFACE_DEFINED__) */
@@ -6324,7 +6320,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgr
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation *asyncInfo, /* [in] */ __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation * progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CDownloadOperationVtbl;
 
@@ -6506,7 +6502,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgr
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperation *asyncInfo, /* [in] */ __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation * progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CNetworking__CBackgroundTransfer__CUploadOperation_Windows__CNetworking__CBackgroundTransfer__CUploadOperationVtbl;
 
@@ -7260,7 +7256,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferRangesDownloadedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferRangesDownloadedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CBackgroundTransfer__CDownloadOperation_Windows__CNetworking__CBackgroundTransfer__CBackgroundTransferRangesDownloadedEventArgsVtbl;
 

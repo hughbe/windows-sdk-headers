@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -78,11 +78,12 @@ struct WINRT_EBO SpatialInteractionManager :
 {
     SpatialInteractionManager(std::nullptr_t) noexcept {}
     static Windows::UI::Input::Spatial::SpatialInteractionManager GetForCurrentView();
+    static bool IsSourceKindSupported(Windows::UI::Input::Spatial::SpatialInteractionSourceKind const& kind);
 };
 
 struct WINRT_EBO SpatialInteractionSource :
     Windows::UI::Input::Spatial::ISpatialInteractionSource,
-    impl::require<SpatialInteractionSource, Windows::UI::Input::Spatial::ISpatialInteractionSource2, Windows::UI::Input::Spatial::ISpatialInteractionSource3>
+    impl::require<SpatialInteractionSource, Windows::UI::Input::Spatial::ISpatialInteractionSource2, Windows::UI::Input::Spatial::ISpatialInteractionSource3, Windows::UI::Input::Spatial::ISpatialInteractionSource4>
 {
     SpatialInteractionSource(std::nullptr_t) noexcept {}
 };
@@ -109,7 +110,7 @@ struct WINRT_EBO SpatialInteractionSourceProperties :
 
 struct WINRT_EBO SpatialInteractionSourceState :
     Windows::UI::Input::Spatial::ISpatialInteractionSourceState,
-    impl::require<SpatialInteractionSourceState, Windows::UI::Input::Spatial::ISpatialInteractionSourceState2>
+    impl::require<SpatialInteractionSourceState, Windows::UI::Input::Spatial::ISpatialInteractionSourceState2, Windows::UI::Input::Spatial::ISpatialInteractionSourceState3>
 {
     SpatialInteractionSourceState(std::nullptr_t) noexcept {}
 };
@@ -177,7 +178,7 @@ struct WINRT_EBO SpatialPointerInteractionSourcePose :
 
 struct WINRT_EBO SpatialPointerPose :
     Windows::UI::Input::Spatial::ISpatialPointerPose,
-    impl::require<SpatialPointerPose, Windows::UI::Input::Spatial::ISpatialPointerPose2>
+    impl::require<SpatialPointerPose, Windows::UI::Input::Spatial::ISpatialPointerPose2, Windows::UI::Input::Spatial::ISpatialPointerPose3>
 {
     SpatialPointerPose(std::nullptr_t) noexcept {}
     static Windows::UI::Input::Spatial::SpatialPointerPose TryGetAtTimestamp(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::PerceptionTimestamp const& timestamp);

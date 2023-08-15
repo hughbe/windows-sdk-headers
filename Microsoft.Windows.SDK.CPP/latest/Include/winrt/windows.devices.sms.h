@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.sms.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsDeviceStatusChangedEventHandler;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatusChangedEventHandler ABI::Windows::Devices::Sms::ISmsDeviceStatusChangedEventHandler
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatusChangedEventHandler_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsMessageReceivedEventHandler;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventHandler ABI::Windows::Devices::Sms::ISmsMessageReceivedEventHandler
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventHandler_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsAppMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsAppMessage ABI::Windows::Devices::Sms::ISmsAppMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsAppMessage_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsBinaryMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsBinaryMessage ABI::Windows::Devices::Sms::ISmsBinaryMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsBinaryMessage_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsBroadcastMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsBroadcastMessage ABI::Windows::Devices::Sms::ISmsBroadcastMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsBroadcastMessage_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsDevice;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsDevice ABI::Windows::Devices::Sms::ISmsDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsDevice_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsDevice2;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsDevice2 ABI::Windows::Devices::Sms::ISmsDevice2
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsDevice2_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsDevice2Statics;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsDevice2Statics ABI::Windows::Devices::Sms::ISmsDevice2Statics
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsDevice2Statics_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsDeviceMessageStore;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsDeviceMessageStore ABI::Windows::Devices::Sms::ISmsDeviceMessageStore
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsDeviceMessageStore_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsDeviceStatics;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics ABI::Windows::Devices::Sms::ISmsDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsDeviceStatics2;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics2 ABI::Windows::Devices::Sms::ISmsDeviceStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics2_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsFilterRule;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsFilterRule ABI::Windows::Devices::Sms::ISmsFilterRule
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsFilterRule_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsFilterRuleFactory;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsFilterRuleFactory ABI::Windows::Devices::Sms::ISmsFilterRuleFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsFilterRuleFactory_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsFilterRules;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsFilterRules ABI::Windows::Devices::Sms::ISmsFilterRules
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsFilterRules_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsFilterRulesFactory;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsFilterRulesFactory ABI::Windows::Devices::Sms::ISmsFilterRulesFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsFilterRulesFactory_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsMessage ABI::Windows::Devices::Sms::ISmsMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsMessage_FWD_DEFINED__
@@ -501,9 +497,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsMessageBase;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsMessageBase ABI::Windows::Devices::Sms::ISmsMessageBase
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsMessageBase_FWD_DEFINED__
@@ -515,9 +511,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventArgs ABI::Windows::Devices::Sms::ISmsMessageReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventArgs_FWD_DEFINED__
@@ -529,9 +525,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsMessageReceivedTriggerDetails;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedTriggerDetails ABI::Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedTriggerDetails_FWD_DEFINED__
@@ -543,9 +539,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsMessageRegistration;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistration ABI::Windows::Devices::Sms::ISmsMessageRegistration
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistration_FWD_DEFINED__
@@ -557,9 +553,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsMessageRegistrationStatics;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistrationStatics ABI::Windows::Devices::Sms::ISmsMessageRegistrationStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistrationStatics_FWD_DEFINED__
@@ -571,9 +567,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsReceivedEventDetails;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails ABI::Windows::Devices::Sms::ISmsReceivedEventDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails_FWD_DEFINED__
@@ -585,9 +581,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsReceivedEventDetails2;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails2 ABI::Windows::Devices::Sms::ISmsReceivedEventDetails2
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails2_FWD_DEFINED__
@@ -599,9 +595,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsSendMessageResult;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsSendMessageResult ABI::Windows::Devices::Sms::ISmsSendMessageResult
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsSendMessageResult_FWD_DEFINED__
@@ -613,9 +609,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsStatusMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsStatusMessage ABI::Windows::Devices::Sms::ISmsStatusMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsStatusMessage_FWD_DEFINED__
@@ -627,9 +623,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsTextMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsTextMessage ABI::Windows::Devices::Sms::ISmsTextMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsTextMessage_FWD_DEFINED__
@@ -641,9 +637,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsTextMessage2;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsTextMessage2 ABI::Windows::Devices::Sms::ISmsTextMessage2
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsTextMessage2_FWD_DEFINED__
@@ -655,9 +651,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsTextMessageStatics;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsTextMessageStatics ABI::Windows::Devices::Sms::ISmsTextMessageStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsTextMessageStatics_FWD_DEFINED__
@@ -669,9 +665,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsVoicemailMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsVoicemailMessage ABI::Windows::Devices::Sms::ISmsVoicemailMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsVoicemailMessage_FWD_DEFINED__
@@ -683,9 +679,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 interface ISmsWapMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSms_CISmsWapMessage ABI::Windows::Devices::Sms::ISmsWapMessage
 
 #endif // ____x_ABI_CWindows_CDevices_CSms_CISmsWapMessage_FWD_DEFINED__
@@ -714,7 +710,7 @@ IIterator<ABI::Windows::Devices::Sms::ISmsBinaryMessage*> : IIterator_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sms::ISmsBinaryMessage*> __FIIterator_1_Windows__CDevices__CSms__CISmsBinaryMessage_t;
 #define __FIIterator_1_Windows__CDevices__CSms__CISmsBinaryMessage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSms__CISmsBinaryMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSms__CISmsBinaryMessage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sms::ISmsBinaryMessage*>
@@ -746,7 +742,7 @@ IIterable<ABI::Windows::Devices::Sms::ISmsBinaryMessage*> : IIterable_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sms::ISmsBinaryMessage*> __FIIterable_1_Windows__CDevices__CSms__CISmsBinaryMessage_t;
 #define __FIIterable_1_Windows__CDevices__CSms__CISmsBinaryMessage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSms__CISmsBinaryMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSms__CISmsBinaryMessage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sms::ISmsBinaryMessage*>
@@ -778,7 +774,7 @@ IIterator<ABI::Windows::Devices::Sms::ISmsMessage*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sms::ISmsMessage*> __FIIterator_1_Windows__CDevices__CSms__CISmsMessage_t;
 #define __FIIterator_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSms__CISmsMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sms::ISmsMessage*>
@@ -810,7 +806,7 @@ IIterable<ABI::Windows::Devices::Sms::ISmsMessage*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sms::ISmsMessage*> __FIIterable_1_Windows__CDevices__CSms__CISmsMessage_t;
 #define __FIIterable_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSms__CISmsMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sms::ISmsMessage*>
@@ -826,9 +822,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 enum SmsBroadcastType : int;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CSms__CSmsBroadcastType_USE
@@ -849,7 +845,7 @@ IIterator<enum ABI::Windows::Devices::Sms::SmsBroadcastType> : IIterator_impl<en
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::Sms::SmsBroadcastType> __FIIterator_1_Windows__CDevices__CSms__CSmsBroadcastType_t;
 #define __FIIterator_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSms__CSmsBroadcastType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sms::SmsBroadcastType>
@@ -879,7 +875,7 @@ IIterable<enum ABI::Windows::Devices::Sms::SmsBroadcastType> : IIterable_impl<en
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::Sms::SmsBroadcastType> __FIIterable_1_Windows__CDevices__CSms__CSmsBroadcastType_t;
 #define __FIIterable_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSms__CSmsBroadcastType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sms::SmsBroadcastType>
@@ -894,9 +890,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsFilterRule;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -919,7 +915,7 @@ IIterator<ABI::Windows::Devices::Sms::SmsFilterRule*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sms::SmsFilterRule*> __FIIterator_1_Windows__CDevices__CSms__CSmsFilterRule_t;
 #define __FIIterator_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSms__CSmsFilterRule_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sms::ISmsFilterRule*>
@@ -951,7 +947,7 @@ IIterable<ABI::Windows::Devices::Sms::SmsFilterRule*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sms::SmsFilterRule*> __FIIterable_1_Windows__CDevices__CSms__CSmsFilterRule_t;
 #define __FIIterable_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSms__CSmsFilterRule_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sms::ISmsFilterRule*>
@@ -967,9 +963,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsMessageRegistration;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -992,7 +988,7 @@ IIterator<ABI::Windows::Devices::Sms::SmsMessageRegistration*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Sms::SmsMessageRegistration*> __FIIterator_1_Windows__CDevices__CSms__CSmsMessageRegistration_t;
 #define __FIIterator_1_Windows__CDevices__CSms__CSmsMessageRegistration ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSms__CSmsMessageRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSms__CSmsMessageRegistration ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Sms::ISmsMessageRegistration*>
@@ -1024,7 +1020,7 @@ IIterable<ABI::Windows::Devices::Sms::SmsMessageRegistration*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Sms::SmsMessageRegistration*> __FIIterable_1_Windows__CDevices__CSms__CSmsMessageRegistration_t;
 #define __FIIterable_1_Windows__CDevices__CSms__CSmsMessageRegistration ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSms__CSmsMessageRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSms__CSmsMessageRegistration ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Sms::ISmsMessageRegistration*>
@@ -1056,7 +1052,7 @@ IVectorView<ABI::Windows::Devices::Sms::ISmsBinaryMessage*> : IVectorView_impl<A
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sms::ISmsBinaryMessage*> __FIVectorView_1_Windows__CDevices__CSms__CISmsBinaryMessage_t;
 #define __FIVectorView_1_Windows__CDevices__CSms__CISmsBinaryMessage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSms__CISmsBinaryMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSms__CISmsBinaryMessage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::ISmsBinaryMessage*>
@@ -1088,7 +1084,7 @@ IVectorView<ABI::Windows::Devices::Sms::ISmsMessage*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sms::ISmsMessage*> __FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_t;
 #define __FIVectorView_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::ISmsMessage*>
@@ -1119,7 +1115,7 @@ IVectorView<enum ABI::Windows::Devices::Sms::SmsBroadcastType> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::Sms::SmsBroadcastType> __FIVectorView_1_Windows__CDevices__CSms__CSmsBroadcastType_t;
 #define __FIVectorView_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSms__CSmsBroadcastType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::SmsBroadcastType>
@@ -1150,7 +1146,7 @@ IVectorView<ABI::Windows::Devices::Sms::SmsFilterRule*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sms::SmsFilterRule*> __FIVectorView_1_Windows__CDevices__CSms__CSmsFilterRule_t;
 #define __FIVectorView_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSms__CSmsFilterRule_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::ISmsFilterRule*>
@@ -1182,7 +1178,7 @@ IVectorView<ABI::Windows::Devices::Sms::SmsMessageRegistration*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Sms::SmsMessageRegistration*> __FIVectorView_1_Windows__CDevices__CSms__CSmsMessageRegistration_t;
 #define __FIVectorView_1_Windows__CDevices__CSms__CSmsMessageRegistration ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSms__CSmsMessageRegistration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSms__CSmsMessageRegistration ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::ISmsMessageRegistration*>
@@ -1213,7 +1209,7 @@ IVector<enum ABI::Windows::Devices::Sms::SmsBroadcastType> : IVector_impl<enum A
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Devices::Sms::SmsBroadcastType> __FIVector_1_Windows__CDevices__CSms__CSmsBroadcastType_t;
 #define __FIVector_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CSms__CSmsBroadcastType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CSms__CSmsBroadcastType ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Sms::SmsBroadcastType>
@@ -1244,7 +1240,7 @@ IVector<ABI::Windows::Devices::Sms::SmsFilterRule*> : IVector_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Sms::SmsFilterRule*> __FIVector_1_Windows__CDevices__CSms__CSmsFilterRule_t;
 #define __FIVector_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CSms__CSmsFilterRule_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CSms__CSmsFilterRule ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Sms::ISmsFilterRule*>
@@ -1276,7 +1272,7 @@ IAsyncOperationProgressHandler<__FIVectorView_1_Windows__CDevices__CSms__CISmsMe
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<__FIVectorView_1_Windows__CDevices__CSms__CISmsMessage*,int> __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int_t;
 #define __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::ISmsMessage*>*,INT32>
@@ -1308,7 +1304,7 @@ IAsyncOperationWithProgressCompletedHandler<__FIVectorView_1_Windows__CDevices__
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<__FIVectorView_1_Windows__CDevices__CSms__CISmsMessage*,int> __FIAsyncOperationWithProgressCompletedHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::ISmsMessage*>*,INT32>
@@ -1340,7 +1336,7 @@ IAsyncOperationWithProgress<__FIVectorView_1_Windows__CDevices__CSms__CISmsMessa
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<__FIVectorView_1_Windows__CDevices__CSms__CISmsMessage*,int> __FIAsyncOperationWithProgress_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int_t;
 #define __FIAsyncOperationWithProgress_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Sms::ISmsMessage*>*,INT32>
@@ -1372,7 +1368,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::ISmsMessage*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::ISmsMessage*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CISmsMessage_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CISmsMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::ISmsMessage*>
@@ -1404,7 +1400,7 @@ IAsyncOperation<ABI::Windows::Devices::Sms::ISmsMessage*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sms::ISmsMessage*> __FIAsyncOperation_1_Windows__CDevices__CSms__CISmsMessage_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSms__CISmsMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSms__CISmsMessage ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sms::ISmsMessage*>
@@ -1420,9 +1416,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsDevice;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION >= 0x10000
@@ -1445,7 +1441,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::SmsDevice*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::SmsDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::ISmsDevice*>
@@ -1477,7 +1473,7 @@ IAsyncOperation<ABI::Windows::Devices::Sms::SmsDevice*> : IAsyncOperation_impl<A
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sms::SmsDevice*> __FIAsyncOperation_1_Windows__CDevices__CSms__CSmsDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSms__CSmsDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSms__CSmsDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSms__CSmsDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sms::ISmsDevice*>
@@ -1493,9 +1489,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsSendMessageResult;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1518,7 +1514,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::SmsSendMessageResult
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::SmsSendMessageResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsSendMessageResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsSendMessageResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsSendMessageResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSms__CSmsSendMessageResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sms::ISmsSendMessageResult*>
@@ -1550,7 +1546,7 @@ IAsyncOperation<ABI::Windows::Devices::Sms::SmsSendMessageResult*> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sms::SmsSendMessageResult*> __FIAsyncOperation_1_Windows__CDevices__CSms__CSmsSendMessageResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSms__CSmsSendMessageResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSms__CSmsSendMessageResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSms__CSmsSendMessageResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sms::ISmsSendMessageResult*>
@@ -1566,9 +1562,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsDevice2;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1592,7 +1588,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sms::SmsDevice2*,IInspectable*> : ITyp
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sms::SmsDevice2*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sms::ISmsDevice2*,IInspectable*>
@@ -1609,9 +1605,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsMessageReceivedTriggerDetails;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1635,7 +1631,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sms::SmsMessageRegistration*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sms::SmsMessageRegistration*,ABI::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails*> __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sms::ISmsMessageRegistration*,ABI::Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails*>
@@ -1666,7 +1662,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1695,7 +1691,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1724,7 +1720,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1753,7 +1749,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1782,7 +1778,7 @@ IIterator<int> : IIterator_impl<int>
 // correct parameterized interface specialization.
 typedef IIterator<int> __FIIterator_1_int_t;
 #define __FIIterator_1_int ABI::Windows::Foundation::Collections::__FIIterator_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_int ABI::Windows::Foundation::Collections::IIterator<INT32>
@@ -1811,7 +1807,7 @@ IIterable<int> : IIterable_impl<int>
 // correct parameterized interface specialization.
 typedef IIterable<int> __FIIterable_1_int_t;
 #define __FIIterable_1_int ABI::Windows::Foundation::Collections::__FIIterable_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_int ABI::Windows::Foundation::Collections::IIterable<INT32>
@@ -1840,7 +1836,7 @@ IVectorView<int> : IVectorView_impl<int>
 // correct parameterized interface specialization.
 typedef IVectorView<int> __FIVectorView_1_int_t;
 #define __FIVectorView_1_int ABI::Windows::Foundation::Collections::__FIVectorView_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_int ABI::Windows::Foundation::Collections::IVectorView<INT32>
@@ -1869,7 +1865,7 @@ IVector<int> : IVector_impl<int>
 // correct parameterized interface specialization.
 typedef IVector<int> __FIVector_1_int_t;
 #define __FIVector_1_int ABI::Windows::Foundation::Collections::__FIVector_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_int ABI::Windows::Foundation::Collections::IVector<INT32>
@@ -1898,7 +1894,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -1927,7 +1923,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1957,7 +1953,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1987,7 +1983,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -2016,7 +2012,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -2045,7 +2041,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -2063,8 +2059,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2072,8 +2068,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2089,9 +2085,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -2108,9 +2104,9 @@ namespace ABI {
                 
                 typedef enum CellularClass : int CellularClass;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2119,9 +2115,9 @@ namespace ABI {
                 
                 typedef enum SmsBroadcastType : int SmsBroadcastType;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2130,9 +2126,9 @@ namespace ABI {
                 
                 typedef enum SmsDataFormat : int SmsDataFormat;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2141,9 +2137,9 @@ namespace ABI {
                 
                 typedef enum SmsDeviceStatus : int SmsDeviceStatus;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2152,9 +2148,9 @@ namespace ABI {
                 
                 typedef enum SmsEncoding : int SmsEncoding;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2163,9 +2159,9 @@ namespace ABI {
                 
                 typedef enum SmsFilterActionType : int SmsFilterActionType;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2174,9 +2170,9 @@ namespace ABI {
                 
                 typedef enum SmsGeographicalScope : int SmsGeographicalScope;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2185,9 +2181,9 @@ namespace ABI {
                 
                 typedef enum SmsMessageClass : int SmsMessageClass;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2196,9 +2192,9 @@ namespace ABI {
                 
                 typedef enum SmsMessageFilter : int SmsMessageFilter;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2207,9 +2203,9 @@ namespace ABI {
                 
                 typedef enum SmsMessageType : int SmsMessageType;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2218,9 +2214,9 @@ namespace ABI {
                 
                 typedef enum SmsModemErrorCode : int SmsModemErrorCode;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2229,9 +2225,9 @@ namespace ABI {
                 
                 typedef struct SmsEncodedLength SmsEncodedLength;
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2268,9 +2264,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class DeleteSmsMessageOperation;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2278,9 +2274,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class DeleteSmsMessagesOperation;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2288,9 +2284,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class GetSmsDeviceOperation;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2298,9 +2294,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class GetSmsMessageOperation;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2308,9 +2304,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class GetSmsMessagesOperation;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2318,9 +2314,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SendSmsMessageOperation;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2328,9 +2324,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsAppMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2338,9 +2334,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsBinaryMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2348,9 +2344,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsBroadcastMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2360,9 +2356,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsDeviceMessageStore;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2371,9 +2367,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsFilterRules;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2381,9 +2377,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2393,9 +2389,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsReceivedEventDetails;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2404,9 +2400,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsStatusMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2414,9 +2410,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsTextMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2424,9 +2420,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsTextMessage2;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2434,9 +2430,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsVoicemailMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2444,9 +2440,9 @@ namespace ABI {
         namespace Devices {
             namespace Sms {
                 class SmsWapMessage;
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2480,9 +2476,9 @@ namespace ABI {
                     CellularClass_Cdma = 2,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2520,9 +2516,9 @@ namespace ABI {
                     SmsBroadcastType_LatAlertLocal = 14,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2550,9 +2546,9 @@ namespace ABI {
                     SmsDataFormat_GsmDeliver = 4,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2583,9 +2579,9 @@ namespace ABI {
                     SmsDeviceStatus_DeviceBlocked = 7,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2643,9 +2639,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2672,9 +2668,9 @@ namespace ABI {
                     SmsFilterActionType_Accept = 3,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2702,9 +2698,9 @@ namespace ABI {
                     SmsGeographicalScope_Cell = 4,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2732,9 +2728,9 @@ namespace ABI {
                     SmsMessageClass_Class3 = 4,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2766,9 +2762,9 @@ namespace ABI {
                     SmsMessageFilter_Draft = 4,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2818,9 +2814,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2855,9 +2851,9 @@ namespace ABI {
                     SmsModemErrorCode_FixedDialingNumberRestricted = 11,
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2885,9 +2881,9 @@ namespace ABI {
                     UINT32 BytesPerSegment;
                 };
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2923,9 +2919,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsDeviceStatusChangedEventHandler=_uuidof(ISmsDeviceStatusChangedEventHandler);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatusChangedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatusChangedEventHandler_INTERFACE_DEFINED__) */
@@ -2965,9 +2961,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessageReceivedEventHandler=_uuidof(ISmsMessageReceivedEventHandler);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventHandler_INTERFACE_DEFINED__) */
@@ -3027,10 +3023,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDeliveryNotificationEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDeliveryNotificationEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RetryAttemptCount(
                         /* [retval, out] */__RPC__out INT32 * value
@@ -3073,9 +3069,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsAppMessage=_uuidof(ISmsAppMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsAppMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsAppMessage_INTERFACE_DEFINED__) */
@@ -3146,9 +3142,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsBinaryMessage=_uuidof(ISmsBinaryMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsBinaryMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsBinaryMessage_INTERFACE_DEFINED__) */
@@ -3208,19 +3204,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Sms::SmsBroadcastType * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEmergencyAlert(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsUserPopupRequested(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISmsBroadcastMessage=_uuidof(ISmsBroadcastMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsBroadcastMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsBroadcastMessage_INTERFACE_DEFINED__) */
@@ -3331,9 +3327,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsDevice=_uuidof(ISmsDevice);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsDevice_INTERFACE_DEFINED__) */
@@ -3405,9 +3401,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsDevice2=_uuidof(ISmsDevice2);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsDevice2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsDevice2_INTERFACE_DEFINED__) */
@@ -3457,9 +3453,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsDevice2Statics=_uuidof(ISmsDevice2Statics);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsDevice2Statics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsDevice2Statics_INTERFACE_DEFINED__) */
@@ -3538,9 +3534,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsDeviceMessageStore=_uuidof(ISmsDeviceMessageStore);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsDeviceMessageStore;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsDeviceMessageStore_INTERFACE_DEFINED__) */
@@ -3602,9 +3598,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsDeviceStatics=_uuidof(ISmsDeviceStatics);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics_INTERFACE_DEFINED__) */
@@ -3652,9 +3648,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsDeviceStatics2=_uuidof(ISmsDeviceStatics2);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsDeviceStatics2_INTERFACE_DEFINED__) */
@@ -3732,9 +3728,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsFilterRule=_uuidof(ISmsFilterRule);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsFilterRule;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsFilterRule_INTERFACE_DEFINED__) */
@@ -3774,9 +3770,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsFilterRuleFactory=_uuidof(ISmsFilterRuleFactory);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsFilterRuleFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsFilterRuleFactory_INTERFACE_DEFINED__) */
@@ -3818,9 +3814,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsFilterRules=_uuidof(ISmsFilterRules);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsFilterRules;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsFilterRules_INTERFACE_DEFINED__) */
@@ -3860,9 +3856,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsFilterRulesFactory=_uuidof(ISmsFilterRulesFactory);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsFilterRulesFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsFilterRulesFactory_INTERFACE_DEFINED__) */
@@ -3901,9 +3897,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessage=_uuidof(ISmsMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsMessage_INTERFACE_DEFINED__) */
@@ -3951,9 +3947,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessageBase=_uuidof(ISmsMessageBase);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsMessageBase;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsMessageBase_INTERFACE_DEFINED__) */
@@ -4007,9 +4003,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessageReceivedEventArgs=_uuidof(ISmsMessageReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -4068,9 +4064,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessageReceivedTriggerDetails=_uuidof(ISmsMessageReceivedTriggerDetails);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedTriggerDetails_INTERFACE_DEFINED__) */
@@ -4117,9 +4113,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessageRegistration=_uuidof(ISmsMessageRegistration);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistration;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistration_INTERFACE_DEFINED__) */
@@ -4163,9 +4159,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsMessageRegistrationStatics=_uuidof(ISmsMessageRegistrationStatics);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistrationStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistrationStatics_INTERFACE_DEFINED__) */
@@ -4219,9 +4215,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsReceivedEventDetails=_uuidof(ISmsReceivedEventDetails);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails_INTERFACE_DEFINED__) */
@@ -4275,9 +4271,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsReceivedEventDetails2=_uuidof(ISmsReceivedEventDetails2);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsReceivedEventDetails2_INTERFACE_DEFINED__) */
@@ -4309,7 +4305,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSuccessful(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MessageReferenceNumbers(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_int * * value
@@ -4321,7 +4317,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Sms::SmsModemErrorCode * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsErrorTransient(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NetworkCauseCode(
                         /* [retval, out] */__RPC__out INT32 * value
@@ -4334,9 +4330,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsSendMessageResult=_uuidof(ISmsSendMessageResult);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsSendMessageResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsSendMessageResult_INTERFACE_DEFINED__) */
@@ -4397,9 +4393,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsStatusMessage=_uuidof(ISmsStatusMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsStatusMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsStatusMessage_INTERFACE_DEFINED__) */
@@ -4532,9 +4528,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsTextMessage=_uuidof(ISmsTextMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsTextMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsTextMessage_INTERFACE_DEFINED__) */
@@ -4600,10 +4596,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDeliveryNotificationEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDeliveryNotificationEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RetryAttemptCount(
                         /* [retval, out] */__RPC__out INT32 * value
@@ -4622,9 +4618,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsTextMessage2=_uuidof(ISmsTextMessage2);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsTextMessage2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsTextMessage2_INTERFACE_DEFINED__) */
@@ -4682,9 +4678,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsTextMessageStatics=_uuidof(ISmsTextMessageStatics);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsTextMessageStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsTextMessageStatics_INTERFACE_DEFINED__) */
@@ -4736,9 +4732,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsVoicemailMessage=_uuidof(ISmsVoicemailMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsVoicemailMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsVoicemailMessage_INTERFACE_DEFINED__) */
@@ -4799,9 +4795,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISmsWapMessage=_uuidof(ISmsWapMessage);
                 
-            } /* Windows */
+            } /* Sms */
         } /* Devices */
-    } /* Sms */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSms_CISmsWapMessage;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSms_CISmsWapMessage_INTERFACE_DEFINED__) */
@@ -7271,7 +7267,7 @@ typedef struct __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_int *asyncInfo, /* [in] */ int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2___FIVectorView_1_Windows__CDevices__CSms__CISmsMessage_intVtbl;
 
@@ -7787,7 +7783,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IIns
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSms_CISmsDevice2 * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSms_CISmsDevice2 * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsDevice2_IInspectableVtbl;
 
@@ -7839,7 +7835,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegis
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistration * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedTriggerDetails * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetails * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSms_CISmsMessageRegistration * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSms_CISmsMessageReceivedTriggerDetails * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSms__CSmsMessageRegistration_Windows__CDevices__CSms__CSmsMessageReceivedTriggerDetailsVtbl;
 

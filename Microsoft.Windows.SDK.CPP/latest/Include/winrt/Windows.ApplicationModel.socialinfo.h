@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.socialinfo.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialFeedChildItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedChildItem ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedChildItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedChildItem_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialFeedContent;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedContent
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialFeedItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialFeedSharedItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedSharedItem ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedSharedItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedSharedItem_FWD_DEFINED__
@@ -338,9 +334,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialItemThumbnail;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail ABI::Windows::ApplicationModel::SocialInfo::ISocialItemThumbnail
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 interface ISocialUserInfo;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialUserInfo ABI::Windows::ApplicationModel::SocialInfo::ISocialUserInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialUserInfo_FWD_DEFINED__
@@ -367,9 +363,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialFeedItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
@@ -392,7 +388,7 @@ IIterator<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -424,7 +420,7 @@ IIterable<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -440,9 +436,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialItemThumbnail;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
@@ -465,7 +461,7 @@ IIterator<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t;
 #define __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::SocialInfo::ISocialItemThumbnail*>
@@ -497,7 +493,7 @@ IIterable<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t;
 #define __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::SocialInfo::ISocialItemThumbnail*>
@@ -529,7 +525,7 @@ IVectorView<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -561,7 +557,7 @@ IVectorView<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::SocialInfo::ISocialItemThumbnail*>
@@ -593,7 +589,7 @@ IVector<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> : IVector_i
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::SocialInfo::SocialFeedItem*> __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t;
 #define __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialFeedItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::SocialInfo::ISocialFeedItem*>
@@ -625,7 +621,7 @@ IVector<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> : IVec
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail*> __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t;
 #define __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CSocialInfo__CSocialItemThumbnail ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::SocialInfo::ISocialItemThumbnail*>
@@ -644,8 +640,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -653,8 +649,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -664,8 +660,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -673,8 +669,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -689,9 +685,9 @@ namespace ABI {
                 
                 typedef struct BitmapSize BitmapSize;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -703,9 +699,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -722,9 +718,9 @@ namespace ABI {
                 
                 typedef enum SocialFeedItemStyle : int SocialFeedItemStyle;
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -733,9 +729,9 @@ namespace ABI {
                 
                 typedef enum SocialFeedKind : int SocialFeedKind;
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -744,9 +740,9 @@ namespace ABI {
                 
                 typedef enum SocialFeedUpdateMode : int SocialFeedUpdateMode;
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -755,9 +751,9 @@ namespace ABI {
                 
                 typedef enum SocialItemBadgeStyle : int SocialItemBadgeStyle;
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -770,9 +766,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialFeedChildItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -780,9 +776,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialFeedContent;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -791,9 +787,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialFeedSharedItem;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -802,9 +798,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace SocialInfo {
                 class SocialUserInfo;
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -841,9 +837,9 @@ namespace ABI {
                     SocialFeedItemStyle_Photo = 1,
                 };
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
 
 
@@ -873,9 +869,9 @@ namespace ABI {
                     SocialFeedKind_Dashboard = 2,
                 };
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
 
 
@@ -904,9 +900,9 @@ namespace ABI {
                     SocialFeedUpdateMode_Replace = 1,
                 };
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
 
 
@@ -936,9 +932,9 @@ namespace ABI {
                     SocialItemBadgeStyle_VisibleWithCount = 2,
                 };
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_SOCIALINFO_SOCIALINFOCONTRACT_VERSION >= 0x10000
 
 
@@ -1045,9 +1041,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocialFeedChildItem=_uuidof(ISocialFeedChildItem);
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedChildItem;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedChildItem_INTERFACE_DEFINED__) */
@@ -1129,9 +1125,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocialFeedContent=_uuidof(ISocialFeedContent);
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedContent_INTERFACE_DEFINED__) */
@@ -1311,9 +1307,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocialFeedItem=_uuidof(ISocialFeedItem);
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedItem_INTERFACE_DEFINED__) */
@@ -1416,9 +1412,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocialFeedSharedItem=_uuidof(ISocialFeedSharedItem);
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedSharedItem;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialFeedSharedItem_INTERFACE_DEFINED__) */
@@ -1508,9 +1504,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocialItemThumbnail=_uuidof(ISocialItemThumbnail);
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialItemThumbnail_INTERFACE_DEFINED__) */
@@ -1606,9 +1602,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocialUserInfo=_uuidof(ISocialUserInfo);
                 
-            } /* Windows */
+            } /* SocialInfo */
         } /* ApplicationModel */
-    } /* SocialInfo */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialUserInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSocialInfo_CISocialUserInfo_INTERFACE_DEFINED__) */

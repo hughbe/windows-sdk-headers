@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.notifications.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IAdaptiveNotificationContent;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationContent ABI::Windows::UI::Notifications::IAdaptiveNotificationContent
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationContent_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IAdaptiveNotificationText;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationText ABI::Windows::UI::Notifications::IAdaptiveNotificationText
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationText_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification ABI::Windows::UI::Notifications::IBadgeNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeNotificationFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeNotificationFactory ABI::Windows::UI::Notifications::IBadgeNotificationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeNotificationFactory_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeUpdateManagerForUser;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerForUser ABI::Windows::UI::Notifications::IBadgeUpdateManagerForUser
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerForUser_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeUpdateManagerStatics;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics ABI::Windows::UI::Notifications::IBadgeUpdateManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeUpdateManagerStatics2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics2 ABI::Windows::UI::Notifications::IBadgeUpdateManagerStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics2_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater ABI::Windows::UI::Notifications::IBadgeUpdater
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IKnownAdaptiveNotificationHintsStatics;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationHintsStatics ABI::Windows::UI::Notifications::IKnownAdaptiveNotificationHintsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationHintsStatics_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IKnownAdaptiveNotificationTextStylesStatics;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationTextStylesStatics ABI::Windows::UI::Notifications::IKnownAdaptiveNotificationTextStylesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationTextStylesStatics_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IKnownNotificationBindingsStatics;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIKnownNotificationBindingsStatics ABI::Windows::UI::Notifications::IKnownNotificationBindingsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIKnownNotificationBindingsStatics_FWD_DEFINED__
@@ -434,9 +430,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface INotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CINotification ABI::Windows::UI::Notifications::INotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CINotification_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface INotificationBinding;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CINotificationBinding ABI::Windows::UI::Notifications::INotificationBinding
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CINotificationBinding_FWD_DEFINED__
@@ -462,9 +458,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface INotificationData;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CINotificationData ABI::Windows::UI::Notifications::INotificationData
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CINotificationData_FWD_DEFINED__
@@ -476,9 +472,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface INotificationDataFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CINotificationDataFactory ABI::Windows::UI::Notifications::INotificationDataFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CINotificationDataFactory_FWD_DEFINED__
@@ -490,9 +486,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface INotificationVisual;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CINotificationVisual ABI::Windows::UI::Notifications::INotificationVisual
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CINotificationVisual_FWD_DEFINED__
@@ -504,9 +500,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledTileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotification ABI::Windows::UI::Notifications::IScheduledTileNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotification_FWD_DEFINED__
@@ -518,9 +514,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledTileNotificationFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotificationFactory ABI::Windows::UI::Notifications::IScheduledTileNotificationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotificationFactory_FWD_DEFINED__
@@ -532,9 +528,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification ABI::Windows::UI::Notifications::IScheduledToastNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification_FWD_DEFINED__
@@ -546,9 +542,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledToastNotification2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification2 ABI::Windows::UI::Notifications::IScheduledToastNotification2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification2_FWD_DEFINED__
@@ -560,9 +556,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledToastNotification3;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification3 ABI::Windows::UI::Notifications::IScheduledToastNotification3
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification3_FWD_DEFINED__
@@ -574,9 +570,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledToastNotification4;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification4 ABI::Windows::UI::Notifications::IScheduledToastNotification4
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification4_FWD_DEFINED__
@@ -588,9 +584,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledToastNotificationFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory ABI::Windows::UI::Notifications::IScheduledToastNotificationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory_FWD_DEFINED__
@@ -602,9 +598,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IScheduledToastNotificationShowingEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs ABI::Windows::UI::Notifications::IScheduledToastNotificationShowingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs_FWD_DEFINED__
@@ -616,9 +612,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IShownTileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification ABI::Windows::UI::Notifications::IShownTileNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification_FWD_DEFINED__
@@ -630,9 +626,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileFlyoutNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotification ABI::Windows::UI::Notifications::ITileFlyoutNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotification_FWD_DEFINED__
@@ -644,9 +640,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileFlyoutNotificationFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotificationFactory ABI::Windows::UI::Notifications::ITileFlyoutNotificationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotificationFactory_FWD_DEFINED__
@@ -658,9 +654,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileFlyoutUpdateManagerStatics;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdateManagerStatics ABI::Windows::UI::Notifications::ITileFlyoutUpdateManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdateManagerStatics_FWD_DEFINED__
@@ -672,9 +668,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileFlyoutUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdater ABI::Windows::UI::Notifications::ITileFlyoutUpdater
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdater_FWD_DEFINED__
@@ -686,9 +682,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileNotification ABI::Windows::UI::Notifications::ITileNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileNotification_FWD_DEFINED__
@@ -700,9 +696,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileNotificationFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileNotificationFactory ABI::Windows::UI::Notifications::ITileNotificationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileNotificationFactory_FWD_DEFINED__
@@ -714,9 +710,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileUpdateManagerForUser;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerForUser ABI::Windows::UI::Notifications::ITileUpdateManagerForUser
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerForUser_FWD_DEFINED__
@@ -728,9 +724,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileUpdateManagerStatics;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics ABI::Windows::UI::Notifications::ITileUpdateManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics_FWD_DEFINED__
@@ -742,9 +738,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileUpdateManagerStatics2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics2 ABI::Windows::UI::Notifications::ITileUpdateManagerStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics2_FWD_DEFINED__
@@ -756,9 +752,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileUpdater ABI::Windows::UI::Notifications::ITileUpdater
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileUpdater_FWD_DEFINED__
@@ -770,9 +766,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileUpdater2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileUpdater2 ABI::Windows::UI::Notifications::ITileUpdater2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileUpdater2_FWD_DEFINED__
@@ -784,12 +780,26 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastActivatedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs ABI::Windows::UI::Notifications::IToastActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                interface IToastActivatedEventArgs2;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 ABI::Windows::UI::Notifications::IToastActivatedEventArgs2
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastCollection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastCollection_FWD_DEFINED__
@@ -798,9 +808,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastCollection;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastCollection ABI::Windows::UI::Notifications::IToastCollection
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastCollection_FWD_DEFINED__
@@ -812,9 +822,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastCollectionFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastCollectionFactory ABI::Windows::UI::Notifications::IToastCollectionFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastCollectionFactory_FWD_DEFINED__
@@ -826,9 +836,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastCollectionManager;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastCollectionManager ABI::Windows::UI::Notifications::IToastCollectionManager
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastCollectionManager_FWD_DEFINED__
@@ -840,9 +850,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastDismissedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastDismissedEventArgs ABI::Windows::UI::Notifications::IToastDismissedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastDismissedEventArgs_FWD_DEFINED__
@@ -854,9 +864,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastFailedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastFailedEventArgs ABI::Windows::UI::Notifications::IToastFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastFailedEventArgs_FWD_DEFINED__
@@ -868,9 +878,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification ABI::Windows::UI::Notifications::IToastNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_FWD_DEFINED__
@@ -882,9 +892,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotification2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification2 ABI::Windows::UI::Notifications::IToastNotification2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification2_FWD_DEFINED__
@@ -896,9 +906,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotification3;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification3 ABI::Windows::UI::Notifications::IToastNotification3
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification3_FWD_DEFINED__
@@ -910,12 +920,26 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotification4;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification4 ABI::Windows::UI::Notifications::IToastNotification4
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                interface IToastNotification6;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 ABI::Windows::UI::Notifications::IToastNotification6
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail_FWD_DEFINED__
@@ -924,9 +948,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationActionTriggerDetail;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail ABI::Windows::UI::Notifications::IToastNotificationActionTriggerDetail
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail_FWD_DEFINED__
@@ -938,9 +962,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationFactory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory ABI::Windows::UI::Notifications::IToastNotificationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory_FWD_DEFINED__
@@ -952,9 +976,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationHistory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory ABI::Windows::UI::Notifications::IToastNotificationHistory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory_FWD_DEFINED__
@@ -966,9 +990,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationHistory2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory2 ABI::Windows::UI::Notifications::IToastNotificationHistory2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory2_FWD_DEFINED__
@@ -980,9 +1004,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationHistoryChangedTriggerDetail;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail ABI::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail_FWD_DEFINED__
@@ -994,9 +1018,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationHistoryChangedTriggerDetail2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail2 ABI::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail2_FWD_DEFINED__
@@ -1008,9 +1032,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationManagerForUser;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser ABI::Windows::UI::Notifications::IToastNotificationManagerForUser
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser_FWD_DEFINED__
@@ -1022,9 +1046,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationManagerForUser2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser2 ABI::Windows::UI::Notifications::IToastNotificationManagerForUser2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser2_FWD_DEFINED__
@@ -1036,9 +1060,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationManagerStatics;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics ABI::Windows::UI::Notifications::IToastNotificationManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics_FWD_DEFINED__
@@ -1050,9 +1074,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationManagerStatics2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2 ABI::Windows::UI::Notifications::IToastNotificationManagerStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2_FWD_DEFINED__
@@ -1064,9 +1088,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationManagerStatics4;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4 ABI::Windows::UI::Notifications::IToastNotificationManagerStatics4
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4_FWD_DEFINED__
@@ -1078,9 +1102,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotificationManagerStatics5;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5 ABI::Windows::UI::Notifications::IToastNotificationManagerStatics5
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5_FWD_DEFINED__
@@ -1092,9 +1116,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotifier;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotifier ABI::Windows::UI::Notifications::IToastNotifier
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier_FWD_DEFINED__
@@ -1106,9 +1130,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotifier2;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotifier2 ABI::Windows::UI::Notifications::IToastNotifier2
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier2_FWD_DEFINED__
@@ -1120,9 +1144,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotifier3;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotifier3 ABI::Windows::UI::Notifications::IToastNotifier3
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier3_FWD_DEFINED__
@@ -1134,9 +1158,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IUserNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIUserNotification ABI::Windows::UI::Notifications::IUserNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIUserNotification_FWD_DEFINED__
@@ -1148,9 +1172,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IUserNotificationChangedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs ABI::Windows::UI::Notifications::IUserNotificationChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs_FWD_DEFINED__
@@ -1163,9 +1187,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class AdaptiveNotificationText;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1188,7 +1212,7 @@ IIterator<ABI::Windows::UI::Notifications::AdaptiveNotificationText*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::AdaptiveNotificationText*> __FIIterator_1_Windows__CUI__CNotifications__CAdaptiveNotificationText_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CAdaptiveNotificationText ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CAdaptiveNotificationText_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CAdaptiveNotificationText ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IAdaptiveNotificationText*>
@@ -1220,7 +1244,7 @@ IIterable<ABI::Windows::UI::Notifications::AdaptiveNotificationText*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::AdaptiveNotificationText*> __FIIterable_1_Windows__CUI__CNotifications__CAdaptiveNotificationText_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CAdaptiveNotificationText ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CAdaptiveNotificationText_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CAdaptiveNotificationText ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IAdaptiveNotificationText*>
@@ -1236,9 +1260,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class NotificationBinding;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1261,7 +1285,7 @@ IIterator<ABI::Windows::UI::Notifications::NotificationBinding*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::NotificationBinding*> __FIIterator_1_Windows__CUI__CNotifications__CNotificationBinding_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CNotificationBinding_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::INotificationBinding*>
@@ -1293,7 +1317,7 @@ IIterable<ABI::Windows::UI::Notifications::NotificationBinding*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::NotificationBinding*> __FIIterable_1_Windows__CUI__CNotifications__CNotificationBinding_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CNotificationBinding_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::INotificationBinding*>
@@ -1309,9 +1333,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ScheduledTileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1334,7 +1358,7 @@ IIterator<ABI::Windows::UI::Notifications::ScheduledTileNotification*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::ScheduledTileNotification*> __FIIterator_1_Windows__CUI__CNotifications__CScheduledTileNotification_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CScheduledTileNotification ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CScheduledTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CScheduledTileNotification ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IScheduledTileNotification*>
@@ -1366,7 +1390,7 @@ IIterable<ABI::Windows::UI::Notifications::ScheduledTileNotification*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::ScheduledTileNotification*> __FIIterable_1_Windows__CUI__CNotifications__CScheduledTileNotification_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CScheduledTileNotification ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CScheduledTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CScheduledTileNotification ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IScheduledTileNotification*>
@@ -1382,9 +1406,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ScheduledToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1407,7 +1431,7 @@ IIterator<ABI::Windows::UI::Notifications::ScheduledToastNotification*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::ScheduledToastNotification*> __FIIterator_1_Windows__CUI__CNotifications__CScheduledToastNotification_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CScheduledToastNotification ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CScheduledToastNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CScheduledToastNotification ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IScheduledToastNotification*>
@@ -1439,7 +1463,7 @@ IIterable<ABI::Windows::UI::Notifications::ScheduledToastNotification*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::ScheduledToastNotification*> __FIIterable_1_Windows__CUI__CNotifications__CScheduledToastNotification_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CScheduledToastNotification ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CScheduledToastNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CScheduledToastNotification ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IScheduledToastNotification*>
@@ -1455,9 +1479,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ShownTileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1480,7 +1504,7 @@ IIterator<ABI::Windows::UI::Notifications::ShownTileNotification*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::ShownTileNotification*> __FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IShownTileNotification*>
@@ -1512,7 +1536,7 @@ IIterable<ABI::Windows::UI::Notifications::ShownTileNotification*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::ShownTileNotification*> __FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IShownTileNotification*>
@@ -1528,9 +1552,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastCollection;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1553,7 +1577,7 @@ IIterator<ABI::Windows::UI::Notifications::ToastCollection*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::ToastCollection*> __FIIterator_1_Windows__CUI__CNotifications__CToastCollection_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CToastCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IToastCollection*>
@@ -1585,7 +1609,7 @@ IIterable<ABI::Windows::UI::Notifications::ToastCollection*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::ToastCollection*> __FIIterable_1_Windows__CUI__CNotifications__CToastCollection_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CToastCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IToastCollection*>
@@ -1601,9 +1625,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1626,7 +1650,7 @@ IIterator<ABI::Windows::UI::Notifications::ToastNotification*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::ToastNotification*> __FIIterator_1_Windows__CUI__CNotifications__CToastNotification_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CToastNotification ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CToastNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CToastNotification ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IToastNotification*>
@@ -1658,7 +1682,7 @@ IIterable<ABI::Windows::UI::Notifications::ToastNotification*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::ToastNotification*> __FIIterable_1_Windows__CUI__CNotifications__CToastNotification_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CToastNotification ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CToastNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CToastNotification ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IToastNotification*>
@@ -1674,9 +1698,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class UserNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1699,7 +1723,7 @@ IIterator<ABI::Windows::UI::Notifications::UserNotification*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Notifications::UserNotification*> __FIIterator_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIIterator_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Notifications::IUserNotification*>
@@ -1731,7 +1755,7 @@ IIterable<ABI::Windows::UI::Notifications::UserNotification*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Notifications::UserNotification*> __FIIterable_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIIterable_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Notifications::IUserNotification*>
@@ -1763,7 +1787,7 @@ IVectorView<ABI::Windows::UI::Notifications::AdaptiveNotificationText*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::AdaptiveNotificationText*> __FIVectorView_1_Windows__CUI__CNotifications__CAdaptiveNotificationText_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CAdaptiveNotificationText ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CAdaptiveNotificationText_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CAdaptiveNotificationText ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IAdaptiveNotificationText*>
@@ -1795,7 +1819,7 @@ IVectorView<ABI::Windows::UI::Notifications::NotificationBinding*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::NotificationBinding*> __FIVectorView_1_Windows__CUI__CNotifications__CNotificationBinding_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CNotificationBinding_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::INotificationBinding*>
@@ -1827,7 +1851,7 @@ IVectorView<ABI::Windows::UI::Notifications::ScheduledTileNotification*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::ScheduledTileNotification*> __FIVectorView_1_Windows__CUI__CNotifications__CScheduledTileNotification_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CScheduledTileNotification ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CScheduledTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CScheduledTileNotification ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IScheduledTileNotification*>
@@ -1859,7 +1883,7 @@ IVectorView<ABI::Windows::UI::Notifications::ScheduledToastNotification*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::ScheduledToastNotification*> __FIVectorView_1_Windows__CUI__CNotifications__CScheduledToastNotification_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CScheduledToastNotification ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CScheduledToastNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CScheduledToastNotification ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IScheduledToastNotification*>
@@ -1891,7 +1915,7 @@ IVectorView<ABI::Windows::UI::Notifications::ShownTileNotification*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::ShownTileNotification*> __FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CShownTileNotification ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IShownTileNotification*>
@@ -1923,7 +1947,7 @@ IVectorView<ABI::Windows::UI::Notifications::ToastCollection*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::ToastCollection*> __FIVectorView_1_Windows__CUI__CNotifications__CToastCollection_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CToastCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IToastCollection*>
@@ -1955,7 +1979,7 @@ IVectorView<ABI::Windows::UI::Notifications::ToastNotification*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::ToastNotification*> __FIVectorView_1_Windows__CUI__CNotifications__CToastNotification_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CToastNotification ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CToastNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CToastNotification ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IToastNotification*>
@@ -1987,7 +2011,7 @@ IVectorView<ABI::Windows::UI::Notifications::UserNotification*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Notifications::UserNotification*> __FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IUserNotification*>
@@ -2019,7 +2043,7 @@ IVector<ABI::Windows::UI::Notifications::NotificationBinding*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Notifications::NotificationBinding*> __FIVector_1_Windows__CUI__CNotifications__CNotificationBinding_t;
 #define __FIVector_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CNotifications__CNotificationBinding_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CNotifications__CNotificationBinding ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Notifications::INotificationBinding*>
@@ -2051,7 +2075,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CNotifications__C
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CNotifications__CToastCollection*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IToastCollection*>*>
@@ -2083,7 +2107,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CUI__CNotifications__CToastCollection*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CUI__CNotifications__CToastCollection*> __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IToastCollection*>*>
@@ -2115,7 +2139,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CNotifications__C
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IUserNotification*>*>
@@ -2147,7 +2171,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CUI__CNotifications__CUserNotification*> __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CNotifications__CUserNotification ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Notifications::IUserNotification*>*>
@@ -2179,7 +2203,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::ToastCollection
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::ToastCollection*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastCollection_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::IToastCollection*>
@@ -2211,7 +2235,7 @@ IAsyncOperation<ABI::Windows::UI::Notifications::ToastCollection*> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Notifications::ToastCollection*> __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastCollection_t;
 #define __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CNotifications__CToastCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastCollection ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Notifications::IToastCollection*>
@@ -2227,9 +2251,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotificationHistory;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2252,7 +2276,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::ToastNotificati
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::ToastNotificationHistory*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotificationHistory_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotificationHistory ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotificationHistory_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotificationHistory ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::IToastNotificationHistory*>
@@ -2284,7 +2308,7 @@ IAsyncOperation<ABI::Windows::UI::Notifications::ToastNotificationHistory*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Notifications::ToastNotificationHistory*> __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotificationHistory_t;
 #define __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotificationHistory ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotificationHistory_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotificationHistory ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Notifications::IToastNotificationHistory*>
@@ -2300,9 +2324,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotifier;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2325,7 +2349,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::ToastNotifier*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::ToastNotifier*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotifier_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotifier ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CNotifications__CToastNotifier ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Notifications::IToastNotifier*>
@@ -2357,7 +2381,7 @@ IAsyncOperation<ABI::Windows::UI::Notifications::ToastNotifier*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Notifications::ToastNotifier*> __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotifier_t;
 #define __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotifier ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CNotifications__CToastNotifier ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Notifications::IToastNotifier*>
@@ -2374,10 +2398,10 @@ namespace ABI {
             namespace Notifications {
                 namespace Management {
                     class UserNotificationListener;
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener_FWD_DEFINED__
@@ -2387,10 +2411,10 @@ namespace ABI {
             namespace Notifications {
                 namespace Management {
                     interface IUserNotificationListener;
-                } /* Windows */
-            } /* UI */
-        } /* Notifications */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener ABI::Windows::UI::Notifications::Management::IUserNotificationListener
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener_FWD_DEFINED__
@@ -2401,9 +2425,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class UserNotificationChangedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2427,7 +2451,7 @@ ITypedEventHandler<ABI::Windows::UI::Notifications::Management::UserNotification
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Notifications::Management::UserNotificationListener*,ABI::Windows::UI::Notifications::UserNotificationChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Notifications::Management::IUserNotificationListener*,ABI::Windows::UI::Notifications::IUserNotificationChangedEventArgs*>
@@ -2461,7 +2485,7 @@ ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotification*,IInspecta
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotification*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Notifications::IToastNotification*,IInspectable*>
@@ -2478,9 +2502,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastDismissedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2504,7 +2528,7 @@ ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotification*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotification*,ABI::Windows::UI::Notifications::ToastDismissedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Notifications::IToastNotification*,ABI::Windows::UI::Notifications::IToastDismissedEventArgs*>
@@ -2522,9 +2546,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastFailedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2548,7 +2572,7 @@ ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotification*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotification*,ABI::Windows::UI::Notifications::ToastFailedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Notifications::IToastNotification*,ABI::Windows::UI::Notifications::IToastFailedEventArgs*>
@@ -2566,9 +2590,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ScheduledToastNotificationShowingEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2592,7 +2616,7 @@ ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotifier*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotifier*,ABI::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Notifications::IToastNotifier*,ABI::Windows::UI::Notifications::IScheduledToastNotificationShowingEventArgs*>
@@ -2623,7 +2647,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -2653,7 +2677,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -2683,7 +2707,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -2712,7 +2736,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -2741,7 +2765,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -2756,8 +2780,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -2778,7 +2802,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -2793,8 +2817,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -2815,7 +2839,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -2829,8 +2853,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2838,8 +2862,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2865,7 +2889,7 @@ IIterator<ABI::Windows::Foundation::Uri*> : IIterator_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::Uri*> __FIIterator_1_Windows__CFoundation__CUri_t;
 #define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2897,7 +2921,7 @@ IIterable<ABI::Windows::Foundation::Uri*> : IIterable_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::Uri*> __FIIterable_1_Windows__CFoundation__CUri_t;
 #define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2928,7 +2952,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -2958,7 +2982,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2988,7 +3012,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -3018,7 +3042,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -3048,7 +3072,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -3077,7 +3101,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -3107,7 +3131,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -3137,7 +3161,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -3153,8 +3177,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -3162,8 +3186,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInfo ABI::Windows::ApplicationModel::IAppInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -3177,10 +3201,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlDocument;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_FWD_DEFINED__
 #define ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_FWD_DEFINED__
@@ -3190,10 +3214,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocument;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument ABI::Windows::Data::Xml::Dom::IXmlDocument
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_FWD_DEFINED__
@@ -3208,9 +3232,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3219,9 +3243,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3236,15 +3260,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -3252,8 +3276,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -3265,8 +3289,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3278,8 +3302,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3289,8 +3313,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3298,8 +3322,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3319,9 +3343,9 @@ namespace ABI {
                 
                 typedef enum AdaptiveNotificationContentKind : int AdaptiveNotificationContentKind;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3330,9 +3354,9 @@ namespace ABI {
                 
                 typedef enum BadgeTemplateType : int BadgeTemplateType;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3341,9 +3365,9 @@ namespace ABI {
                 
                 typedef enum NotificationKinds : unsigned int NotificationKinds;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3352,9 +3376,9 @@ namespace ABI {
                 
                 typedef enum NotificationMirroring : int NotificationMirroring;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3363,9 +3387,9 @@ namespace ABI {
                 
                 typedef enum NotificationSetting : int NotificationSetting;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3374,9 +3398,9 @@ namespace ABI {
                 
                 typedef enum NotificationUpdateResult : int NotificationUpdateResult;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3385,9 +3409,9 @@ namespace ABI {
                 
                 typedef enum PeriodicUpdateRecurrence : int PeriodicUpdateRecurrence;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3396,9 +3420,9 @@ namespace ABI {
                 
                 typedef enum TileFlyoutTemplateType : int TileFlyoutTemplateType;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3407,9 +3431,9 @@ namespace ABI {
                 
                 typedef enum TileTemplateType : int TileTemplateType;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3418,9 +3442,9 @@ namespace ABI {
                 
                 typedef enum ToastDismissalReason : int ToastDismissalReason;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3429,9 +3453,9 @@ namespace ABI {
                 
                 typedef enum ToastHistoryChangedType : int ToastHistoryChangedType;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3440,9 +3464,9 @@ namespace ABI {
                 
                 typedef enum ToastNotificationPriority : int ToastNotificationPriority;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3451,9 +3475,9 @@ namespace ABI {
                 
                 typedef enum ToastTemplateType : int ToastTemplateType;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3462,9 +3486,11 @@ namespace ABI {
                 
                 typedef enum UserNotificationChangedKind : int UserNotificationChangedKind;
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
 
 
 
@@ -3535,9 +3561,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class BadgeNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3546,9 +3572,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class BadgeUpdateManagerForUser;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3556,9 +3582,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class BadgeUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3569,9 +3595,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class Notification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3580,9 +3606,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class NotificationData;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3590,9 +3616,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class NotificationVisual;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3604,9 +3630,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileFlyoutNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3615,9 +3641,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileFlyoutUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3625,9 +3651,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3636,9 +3662,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileUpdateManagerForUser;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3646,9 +3672,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3656,9 +3682,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastActivatedEventArgs;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3667,9 +3693,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastCollectionManager;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3680,9 +3706,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotificationActionTriggerDetail;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3691,9 +3717,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotificationHistoryChangedTriggerDetail;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3702,9 +3728,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotificationManagerForUser;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3738,9 +3764,9 @@ namespace ABI {
                     AdaptiveNotificationContentKind_Text = 0,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3765,9 +3791,9 @@ namespace ABI {
                     BadgeTemplateType_BadgeNumber = 1,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3794,9 +3820,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(NotificationKinds)
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3821,9 +3847,9 @@ namespace ABI {
                     NotificationMirroring_Disabled = 1,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3851,9 +3877,9 @@ namespace ABI {
                     NotificationSetting_DisabledByManifest = 4,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3879,9 +3905,9 @@ namespace ABI {
                     NotificationUpdateResult_NotificationNotFound = 2,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3909,9 +3935,9 @@ namespace ABI {
                     PeriodicUpdateRecurrence_Daily = 4,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3935,9 +3961,9 @@ namespace ABI {
                     TileFlyoutTemplateType_TileFlyoutTemplate01 = 0,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4590,9 +4616,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4618,9 +4644,9 @@ namespace ABI {
                     ToastDismissalReason_TimedOut = 2,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4647,9 +4673,9 @@ namespace ABI {
                     ToastHistoryChangedType_Added = 3,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4674,9 +4700,9 @@ namespace ABI {
                     ToastNotificationPriority_High = 1,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -4707,9 +4733,9 @@ namespace ABI {
                     ToastTemplateType_ToastText04 = 7,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4734,9 +4760,9 @@ namespace ABI {
                     UserNotificationChangedKind_Removed = 1,
                 };
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -4772,9 +4798,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdaptiveNotificationContent=_uuidof(IAdaptiveNotificationContent);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationContent;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationContent_INTERFACE_DEFINED__) */
@@ -4822,9 +4848,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdaptiveNotificationText=_uuidof(IAdaptiveNotificationText);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationText;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIAdaptiveNotificationText_INTERFACE_DEFINED__) */
@@ -4869,9 +4895,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBadgeNotification=_uuidof(IBadgeNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification_INTERFACE_DEFINED__) */
@@ -4911,9 +4937,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBadgeNotificationFactory=_uuidof(IBadgeNotificationFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIBadgeNotificationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIBadgeNotificationFactory_INTERFACE_DEFINED__) */
@@ -4963,9 +4989,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBadgeUpdateManagerForUser=_uuidof(IBadgeUpdateManagerForUser);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerForUser_INTERFACE_DEFINED__) */
@@ -5016,9 +5042,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBadgeUpdateManagerStatics=_uuidof(IBadgeUpdateManagerStatics);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics_INTERFACE_DEFINED__) */
@@ -5058,9 +5084,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBadgeUpdateManagerStatics2=_uuidof(IBadgeUpdateManagerStatics2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdateManagerStatics2_INTERFACE_DEFINED__) */
@@ -5110,9 +5136,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBadgeUpdater=_uuidof(IBadgeUpdater);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater_INTERFACE_DEFINED__) */
@@ -5166,9 +5192,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownAdaptiveNotificationHintsStatics=_uuidof(IKnownAdaptiveNotificationHintsStatics);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationHintsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationHintsStatics_INTERFACE_DEFINED__) */
@@ -5261,9 +5287,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownAdaptiveNotificationTextStylesStatics=_uuidof(IKnownAdaptiveNotificationTextStylesStatics);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationTextStylesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIKnownAdaptiveNotificationTextStylesStatics_INTERFACE_DEFINED__) */
@@ -5302,9 +5328,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownNotificationBindingsStatics=_uuidof(IKnownNotificationBindingsStatics);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIKnownNotificationBindingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIKnownNotificationBindingsStatics_INTERFACE_DEFINED__) */
@@ -5352,9 +5378,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INotification=_uuidof(INotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CINotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CINotification_INTERFACE_DEFINED__) */
@@ -5408,9 +5434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INotificationBinding=_uuidof(INotificationBinding);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CINotificationBinding;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CINotificationBinding_INTERFACE_DEFINED__) */
@@ -5455,9 +5481,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INotificationData=_uuidof(INotificationData);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CINotificationData;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CINotificationData_INTERFACE_DEFINED__) */
@@ -5502,9 +5528,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INotificationDataFactory=_uuidof(INotificationDataFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CINotificationDataFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CINotificationDataFactory_INTERFACE_DEFINED__) */
@@ -5553,9 +5579,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INotificationVisual=_uuidof(INotificationVisual);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CINotificationVisual;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CINotificationVisual_INTERFACE_DEFINED__) */
@@ -5615,9 +5641,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScheduledTileNotification=_uuidof(IScheduledTileNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotification_INTERFACE_DEFINED__) */
@@ -5658,9 +5684,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScheduledTileNotificationFactory=_uuidof(IScheduledTileNotificationFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotificationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledTileNotificationFactory_INTERFACE_DEFINED__) */
@@ -5714,9 +5740,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScheduledToastNotification=_uuidof(IScheduledToastNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification_INTERFACE_DEFINED__) */
@@ -5760,19 +5786,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SuppressPopup(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SuppressPopup(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IScheduledToastNotification2=_uuidof(IScheduledToastNotification2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification2_INTERFACE_DEFINED__) */
@@ -5820,9 +5846,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScheduledToastNotification3=_uuidof(IScheduledToastNotification3);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification3_INTERFACE_DEFINED__) */
@@ -5864,9 +5890,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScheduledToastNotification4=_uuidof(IScheduledToastNotification4);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotification4_INTERFACE_DEFINED__) */
@@ -5914,9 +5940,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScheduledToastNotificationFactory=_uuidof(IScheduledToastNotificationFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory_INTERFACE_DEFINED__) */
@@ -5948,10 +5974,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Cancel(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Cancel(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ScheduledToastNotification(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Notifications::IScheduledToastNotification * * value
@@ -5964,9 +5990,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScheduledToastNotificationShowingEventArgs=_uuidof(IScheduledToastNotificationShowingEventArgs);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs_INTERFACE_DEFINED__) */
@@ -6005,9 +6031,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShownTileNotification=_uuidof(IShownTileNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIShownTileNotification_INTERFACE_DEFINED__) */
@@ -6052,9 +6078,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileFlyoutNotification=_uuidof(ITileFlyoutNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotification_INTERFACE_DEFINED__) */
@@ -6094,9 +6120,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileFlyoutNotificationFactory=_uuidof(ITileFlyoutNotificationFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotificationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutNotificationFactory_INTERFACE_DEFINED__) */
@@ -6147,9 +6173,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileFlyoutUpdateManagerStatics=_uuidof(ITileFlyoutUpdateManagerStatics);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdateManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdateManagerStatics_INTERFACE_DEFINED__) */
@@ -6202,9 +6228,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileFlyoutUpdater=_uuidof(ITileFlyoutUpdater);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdater;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileFlyoutUpdater_INTERFACE_DEFINED__) */
@@ -6255,9 +6281,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileNotification=_uuidof(ITileNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileNotification_INTERFACE_DEFINED__) */
@@ -6297,9 +6323,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileNotificationFactory=_uuidof(ITileNotificationFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileNotificationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileNotificationFactory_INTERFACE_DEFINED__) */
@@ -6349,9 +6375,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileUpdateManagerForUser=_uuidof(ITileUpdateManagerForUser);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerForUser_INTERFACE_DEFINED__) */
@@ -6402,9 +6428,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileUpdateManagerStatics=_uuidof(ITileUpdateManagerStatics);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics_INTERFACE_DEFINED__) */
@@ -6444,9 +6470,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileUpdateManagerStatics2=_uuidof(ITileUpdateManagerStatics2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileUpdateManagerStatics2_INTERFACE_DEFINED__) */
@@ -6482,7 +6508,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Clear(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EnableNotificationQueue(
-                        /* [in] */boolean enable
+                        /* [in] */::boolean enable
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Setting(
                         /* [retval, out] */__RPC__out ABI::Windows::UI::Notifications::NotificationSetting * value
@@ -6520,9 +6546,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileUpdater=_uuidof(ITileUpdater);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileUpdater;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileUpdater_INTERFACE_DEFINED__) */
@@ -6554,22 +6580,22 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE EnableNotificationQueueForSquare150x150(
-                        /* [in] */boolean enable
+                        /* [in] */::boolean enable
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EnableNotificationQueueForWide310x150(
-                        /* [in] */boolean enable
+                        /* [in] */::boolean enable
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EnableNotificationQueueForSquare310x310(
-                        /* [in] */boolean enable
+                        /* [in] */::boolean enable
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ITileUpdater2=_uuidof(ITileUpdater2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CITileUpdater2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CITileUpdater2_INTERFACE_DEFINED__) */
@@ -6608,13 +6634,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastActivatedEventArgs=_uuidof(IToastActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Notifications.IToastActivatedEventArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastActivatedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastActivatedEventArgs2[] = L"Windows.UI.Notifications.IToastActivatedEventArgs2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                /* [object, uuid("AB7DA512-CC61-568E-81BE-304AC31038FA"), exclusiveto, contract] */
+                MIDL_INTERFACE("AB7DA512-CC61-568E-81BE-304AC31038FA")
+                IToastActivatedEventArgs2 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UserInput(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IToastActivatedEventArgs2=_uuidof(IToastActivatedEventArgs2);
+                
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6667,9 +6734,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastCollection=_uuidof(IToastCollection);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastCollection;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastCollection_INTERFACE_DEFINED__) */
@@ -6712,9 +6779,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastCollectionFactory=_uuidof(IToastCollectionFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastCollectionFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastCollectionFactory_INTERFACE_DEFINED__) */
@@ -6774,9 +6841,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastCollectionManager=_uuidof(IToastCollectionManager);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastCollectionManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastCollectionManager_INTERFACE_DEFINED__) */
@@ -6815,9 +6882,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastDismissedEventArgs=_uuidof(IToastDismissedEventArgs);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastDismissedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastDismissedEventArgs_INTERFACE_DEFINED__) */
@@ -6856,9 +6923,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastFailedEventArgs=_uuidof(IToastFailedEventArgs);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastFailedEventArgs_INTERFACE_DEFINED__) */
@@ -6924,9 +6991,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotification=_uuidof(IToastNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_INTERFACE_DEFINED__) */
@@ -6970,19 +7037,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SuppressPopup(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SuppressPopup(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IToastNotification2=_uuidof(IToastNotification2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotification2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification2_INTERFACE_DEFINED__) */
@@ -7030,9 +7097,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotification3=_uuidof(IToastNotification3);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotification3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification3_INTERFACE_DEFINED__) */
@@ -7080,13 +7147,57 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotification4=_uuidof(IToastNotification4);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotification4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Notifications.IToastNotification6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotification
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotification6[] = L"Windows.UI.Notifications.IToastNotification6";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                /* [object, uuid("43EBFE53-89AE-5C1E-A279-3AECFE9B6F54"), exclusiveto, contract] */
+                MIDL_INTERFACE("43EBFE53-89AE-5C1E-A279-3AECFE9B6F54")
+                IToastNotification6 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpiresOnReboot(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ExpiresOnReboot(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IToastNotification6=_uuidof(IToastNotification6);
+                
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotification6;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -7124,9 +7235,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationActionTriggerDetail=_uuidof(IToastNotificationActionTriggerDetail);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail_INTERFACE_DEFINED__) */
@@ -7166,9 +7277,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationFactory=_uuidof(IToastNotificationFactory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory_INTERFACE_DEFINED__) */
@@ -7227,9 +7338,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationHistory=_uuidof(IToastNotificationHistory);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory_INTERFACE_DEFINED__) */
@@ -7272,9 +7383,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationHistory2=_uuidof(IToastNotificationHistory2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory2_INTERFACE_DEFINED__) */
@@ -7313,9 +7424,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationHistoryChangedTriggerDetail=_uuidof(IToastNotificationHistoryChangedTriggerDetail);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail_INTERFACE_DEFINED__) */
@@ -7354,9 +7465,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationHistoryChangedTriggerDetail2=_uuidof(IToastNotificationHistoryChangedTriggerDetail2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistoryChangedTriggerDetail2_INTERFACE_DEFINED__) */
@@ -7405,9 +7516,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationManagerForUser=_uuidof(IToastNotificationManagerForUser);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser_INTERFACE_DEFINED__) */
@@ -7458,9 +7569,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationManagerForUser2=_uuidof(IToastNotificationManagerForUser2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser2_INTERFACE_DEFINED__) */
@@ -7507,9 +7618,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationManagerStatics=_uuidof(IToastNotificationManagerStatics);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics_INTERFACE_DEFINED__) */
@@ -7548,9 +7659,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationManagerStatics2=_uuidof(IToastNotificationManagerStatics2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2_INTERFACE_DEFINED__) */
@@ -7593,9 +7704,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationManagerStatics4=_uuidof(IToastNotificationManagerStatics4);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4_INTERFACE_DEFINED__) */
@@ -7634,9 +7745,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationManagerStatics5=_uuidof(IToastNotificationManagerStatics5);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5_INTERFACE_DEFINED__) */
@@ -7690,9 +7801,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotifier=_uuidof(IToastNotifier);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotifier;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier_INTERFACE_DEFINED__) */
@@ -7739,9 +7850,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotifier2=_uuidof(IToastNotifier2);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotifier2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier2_INTERFACE_DEFINED__) */
@@ -7784,9 +7895,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotifier3=_uuidof(IToastNotifier3);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotifier3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier3_INTERFACE_DEFINED__) */
@@ -7834,9 +7945,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserNotification=_uuidof(IUserNotification);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIUserNotification;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIUserNotification_INTERFACE_DEFINED__) */
@@ -7878,9 +7989,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserNotificationChangedEventArgs=_uuidof(IUserNotificationChangedEventArgs);
                 
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs_INTERFACE_DEFINED__) */
@@ -8267,6 +8378,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Notifications.IShownTileNotification ** Default Interface **
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -8454,6 +8567,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Notifications.IToastActivatedEventArgs ** Default Interface **
+ *    Windows.UI.Notifications.IToastActivatedEventArgs2
  *
  * Class Marshaling Behavior:  Standard - Class marshals using the standard marshaler
  *
@@ -8575,6 +8689,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Notifications.IToastNotification2
  *    Windows.UI.Notifications.IToastNotification3
  *    Windows.UI.Notifications.IToastNotification4
+ *    Windows.UI.Notifications.IToastNotification6
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -9001,6 +9116,12 @@ typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs 
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2;
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastCollection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastCollection_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastCollection __x_ABI_CWindows_CUI_CNotifications_CIToastCollection;
@@ -9054,6 +9175,12 @@ typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotification3 __x_A
 typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotification4 __x_ABI_CWindows_CUI_CNotifications_CIToastNotification4;
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6;
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionTriggerDetail_FWD_DEFINED__
@@ -12090,7 +12217,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CManagement_CIUserNotificationListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIUserNotificationChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CNotifications__CManagement__CUserNotificationListener_Windows__CUI__CNotifications__CUserNotificationChangedEventArgsVtbl;
 
@@ -12142,7 +12269,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotif
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotification * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotification * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_IInspectableVtbl;
 
@@ -12194,7 +12321,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotif
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotification * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastDismissedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotification * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastDismissedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastDismissedEventArgsVtbl;
 
@@ -12247,7 +12374,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotif
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotification * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastFailedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotification * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastFailedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotification_Windows__CUI__CNotifications__CToastFailedEventArgsVtbl;
 
@@ -12300,7 +12427,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotif
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotifier * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIToastNotifier * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgsVtbl;
 
@@ -13678,6 +13805,8 @@ typedef enum __x_ABI_CWindows_CUI_CNotifications_CToastTemplateType __x_ABI_CWin
 
 
 typedef enum __x_ABI_CWindows_CUI_CNotifications_CUserNotificationChangedKind __x_ABI_CWindows_CUI_CNotifications_CUserNotificationChangedKind;
+
+
 
 
 
@@ -18948,6 +19077,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEvent
 
 /*
  *
+ * Interface Windows.UI.Notifications.IToastActivatedEventArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastActivatedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastActivatedEventArgs2[] = L"Windows.UI.Notifications.IToastActivatedEventArgs2";
+/* [object, uuid("AB7DA512-CC61-568E-81BE-304AC31038FA"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_UserInput )(
+        __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_get_UserInput(This,value) \
+    ( (This)->lpVtbl->get_UserInput(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastActivatedEventArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Notifications.IToastCollection
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
@@ -20008,6 +20230,106 @@ interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotification4
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotification4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Notifications.IToastNotification6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotification
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotification6[] = L"Windows.UI.Notifications.IToastNotification6";
+/* [object, uuid("43EBFE53-89AE-5C1E-A279-3AECFE9B6F54"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExpiresOnReboot )(
+        __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_ExpiresOnReboot )(
+        __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6 * This,
+        /* [in] */boolean value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6Vtbl;
+
+interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_get_ExpiresOnReboot(This,value) \
+    ( (This)->lpVtbl->get_ExpiresOnReboot(This,value) )
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_put_ExpiresOnReboot(This,value) \
+    ( (This)->lpVtbl->put_ExpiresOnReboot(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotification6;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotification6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -22185,6 +22507,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Notifications.IShownTileNotification ** Default Interface **
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -22372,6 +22696,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Notifications.IToastActivatedEventArgs ** Default Interface **
+ *    Windows.UI.Notifications.IToastActivatedEventArgs2
  *
  * Class Marshaling Behavior:  Standard - Class marshals using the standard marshaler
  *
@@ -22493,6 +22818,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Notifications.IToastNotification2
  *    Windows.UI.Notifications.IToastNotification3
  *    Windows.UI.Notifications.IToastNotification4
+ *    Windows.UI.Notifications.IToastNotification6
  *
  * Class Threading Model:  Multi Threaded Apartment
  *

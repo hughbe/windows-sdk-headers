@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.controls.primitives.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -286,11 +282,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragCompletedEventHandler;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventHandler ABI::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventHandler_FWD_DEFINED__
@@ -304,11 +300,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragDeltaEventHandler;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventHandler ABI::Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventHandler_FWD_DEFINED__
@@ -322,11 +318,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragStartedEventHandler;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventHandler ABI::Windows::UI::Xaml::Controls::Primitives::IDragStartedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventHandler_FWD_DEFINED__
@@ -340,11 +336,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IItemsChangedEventHandler;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventHandler ABI::Windows::UI::Xaml::Controls::Primitives::IItemsChangedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventHandler_FWD_DEFINED__
@@ -358,11 +354,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRangeBaseValueChangedEventHandler;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler ABI::Windows::UI::Xaml::Controls::Primitives::IRangeBaseValueChangedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler_FWD_DEFINED__
@@ -376,11 +372,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IScrollEventHandler;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventHandler ABI::Windows::UI::Xaml::Controls::Primitives::IScrollEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventHandler_FWD_DEFINED__
@@ -394,11 +390,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IAppBarButtonTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarButtonTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IAppBarButtonTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarButtonTemplateSettings_FWD_DEFINED__
@@ -412,14 +408,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IAppBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        interface IAppBarTemplateSettings2;
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 ABI::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings_FWD_DEFINED__
@@ -430,11 +444,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IAppBarToggleButtonTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings_FWD_DEFINED__
@@ -448,11 +462,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IButtonBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBase ABI::Windows::UI::Xaml::Controls::Primitives::IButtonBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBase_FWD_DEFINED__
@@ -466,11 +480,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IButtonBaseFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseFactory ABI::Windows::UI::Xaml::Controls::Primitives::IButtonBaseFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseFactory_FWD_DEFINED__
@@ -484,11 +498,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IButtonBaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics ABI::Windows::UI::Xaml::Controls::Primitives::IButtonBaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics_FWD_DEFINED__
@@ -502,11 +516,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICalendarPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarPanel ABI::Windows::UI::Xaml::Controls::Primitives::ICalendarPanel
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarPanel_FWD_DEFINED__
@@ -520,11 +534,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICalendarViewTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarViewTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::ICalendarViewTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarViewTemplateSettings_FWD_DEFINED__
@@ -538,11 +552,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICarouselPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanel ABI::Windows::UI::Xaml::Controls::Primitives::ICarouselPanel
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanel_FWD_DEFINED__
@@ -556,11 +570,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICarouselPanelFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanelFactory ABI::Windows::UI::Xaml::Controls::Primitives::ICarouselPanelFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanelFactory_FWD_DEFINED__
@@ -574,11 +588,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IColorPickerSlider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSlider ABI::Windows::UI::Xaml::Controls::Primitives::IColorPickerSlider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSlider_FWD_DEFINED__
@@ -592,11 +606,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IColorPickerSliderFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderFactory ABI::Windows::UI::Xaml::Controls::Primitives::IColorPickerSliderFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderFactory_FWD_DEFINED__
@@ -610,11 +624,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IColorPickerSliderStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderStatics ABI::Windows::UI::Xaml::Controls::Primitives::IColorPickerSliderStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderStatics_FWD_DEFINED__
@@ -628,11 +642,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IColorSpectrum;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrum ABI::Windows::UI::Xaml::Controls::Primitives::IColorSpectrum
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrum_FWD_DEFINED__
@@ -646,11 +660,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IColorSpectrumFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumFactory ABI::Windows::UI::Xaml::Controls::Primitives::IColorSpectrumFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumFactory_FWD_DEFINED__
@@ -664,11 +678,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IColorSpectrumStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumStatics ABI::Windows::UI::Xaml::Controls::Primitives::IColorSpectrumStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumStatics_FWD_DEFINED__
@@ -682,11 +696,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IComboBoxTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IComboBoxTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings_FWD_DEFINED__
@@ -700,11 +714,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IComboBoxTemplateSettings2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings2 ABI::Windows::UI::Xaml::Controls::Primitives::IComboBoxTemplateSettings2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings2_FWD_DEFINED__
@@ -718,11 +732,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICommandBarFlyoutCommandBar;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBar ABI::Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBar
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBar_FWD_DEFINED__
@@ -736,11 +750,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICommandBarFlyoutCommandBarFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarFactory ABI::Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBarFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarFactory_FWD_DEFINED__
@@ -754,11 +768,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICommandBarFlyoutCommandBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBarTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarTemplateSettings_FWD_DEFINED__
@@ -772,11 +786,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICommandBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings_FWD_DEFINED__
@@ -790,11 +804,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICommandBarTemplateSettings2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings2 ABI::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings2_FWD_DEFINED__
@@ -808,14 +822,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ICommandBarTemplateSettings3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings3 ABI::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        interface ICommandBarTemplateSettings4;
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 ABI::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs_FWD_DEFINED__
@@ -826,11 +858,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragCompletedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs ABI::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs_FWD_DEFINED__
@@ -844,11 +876,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragCompletedEventArgsFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgsFactory ABI::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgsFactory_FWD_DEFINED__
@@ -862,11 +894,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragDeltaEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgs ABI::Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgs_FWD_DEFINED__
@@ -880,11 +912,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragDeltaEventArgsFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgsFactory ABI::Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgsFactory_FWD_DEFINED__
@@ -898,11 +930,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragStartedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgs ABI::Windows::UI::Xaml::Controls::Primitives::IDragStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgs_FWD_DEFINED__
@@ -916,11 +948,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IDragStartedEventArgsFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgsFactory ABI::Windows::UI::Xaml::Controls::Primitives::IDragStartedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgsFactory_FWD_DEFINED__
@@ -934,11 +966,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase_FWD_DEFINED__
@@ -952,11 +984,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBase2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase2 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase2_FWD_DEFINED__
@@ -970,11 +1002,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBase3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase3 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase3_FWD_DEFINED__
@@ -988,11 +1020,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBase4;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase4 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase4_FWD_DEFINED__
@@ -1006,14 +1038,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBase5;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase5 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        interface IFlyoutBase6;
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs_FWD_DEFINED__
@@ -1024,11 +1074,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseClosingEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs_FWD_DEFINED__
@@ -1042,11 +1092,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory_FWD_DEFINED__
@@ -1060,11 +1110,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseOverrides;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides_FWD_DEFINED__
@@ -1078,11 +1128,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseOverrides4;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides4 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides4_FWD_DEFINED__
@@ -1096,11 +1146,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics_FWD_DEFINED__
@@ -1114,11 +1164,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics2 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics2_FWD_DEFINED__
@@ -1132,11 +1182,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseStatics3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics3 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics3_FWD_DEFINED__
@@ -1150,14 +1200,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutBaseStatics5;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        interface IFlyoutBaseStatics6;
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions_FWD_DEFINED__
@@ -1168,11 +1236,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutShowOptions;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions_FWD_DEFINED__
@@ -1186,11 +1254,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IFlyoutShowOptionsFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptionsFactory ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptionsFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptionsFactory_FWD_DEFINED__
@@ -1204,11 +1272,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IGeneratorPositionHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelper ABI::Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelper
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelper_FWD_DEFINED__
@@ -1222,11 +1290,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IGeneratorPositionHelperStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelperStatics ABI::Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelperStatics_FWD_DEFINED__
@@ -1240,11 +1308,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IGridViewItemPresenter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenter ABI::Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenter_FWD_DEFINED__
@@ -1258,11 +1326,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IGridViewItemPresenterFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterFactory ABI::Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenterFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterFactory_FWD_DEFINED__
@@ -1276,11 +1344,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IGridViewItemPresenterStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterStatics ABI::Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenterStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterStatics_FWD_DEFINED__
@@ -1294,11 +1362,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IGridViewItemTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IGridViewItemTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemTemplateSettings_FWD_DEFINED__
@@ -1312,11 +1380,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IItemsChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventArgs ABI::Windows::UI::Xaml::Controls::Primitives::IItemsChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventArgs_FWD_DEFINED__
@@ -1330,11 +1398,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IJumpListItemBackgroundConverter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverter ABI::Windows::UI::Xaml::Controls::Primitives::IJumpListItemBackgroundConverter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverter_FWD_DEFINED__
@@ -1348,11 +1416,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IJumpListItemBackgroundConverterStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverterStatics ABI::Windows::UI::Xaml::Controls::Primitives::IJumpListItemBackgroundConverterStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverterStatics_FWD_DEFINED__
@@ -1366,11 +1434,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IJumpListItemForegroundConverter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverter ABI::Windows::UI::Xaml::Controls::Primitives::IJumpListItemForegroundConverter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverter_FWD_DEFINED__
@@ -1384,11 +1452,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IJumpListItemForegroundConverterStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverterStatics ABI::Windows::UI::Xaml::Controls::Primitives::IJumpListItemForegroundConverterStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverterStatics_FWD_DEFINED__
@@ -1402,11 +1470,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ILayoutInformation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformation ABI::Windows::UI::Xaml::Controls::Primitives::ILayoutInformation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformation_FWD_DEFINED__
@@ -1420,11 +1488,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ILayoutInformationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics ABI::Windows::UI::Xaml::Controls::Primitives::ILayoutInformationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics_FWD_DEFINED__
@@ -1438,11 +1506,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ILayoutInformationStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics2 ABI::Windows::UI::Xaml::Controls::Primitives::ILayoutInformationStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics2_FWD_DEFINED__
@@ -1456,11 +1524,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemPresenter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter_FWD_DEFINED__
@@ -1474,11 +1542,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemPresenter2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter2 ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter2_FWD_DEFINED__
@@ -1492,11 +1560,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemPresenter3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter3 ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter3_FWD_DEFINED__
@@ -1510,11 +1578,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemPresenterFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterFactory ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterFactory_FWD_DEFINED__
@@ -1528,11 +1596,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemPresenterStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics_FWD_DEFINED__
@@ -1546,11 +1614,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemPresenterStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics2 ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics2_FWD_DEFINED__
@@ -1564,11 +1632,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemPresenterStatics3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics3 ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics3_FWD_DEFINED__
@@ -1582,11 +1650,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IListViewItemTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemTemplateSettings_FWD_DEFINED__
@@ -1600,11 +1668,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ILoopingSelector;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelector ABI::Windows::UI::Xaml::Controls::Primitives::ILoopingSelector
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelector_FWD_DEFINED__
@@ -1618,11 +1686,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ILoopingSelectorItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorItem ABI::Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorItem
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorItem_FWD_DEFINED__
@@ -1636,11 +1704,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ILoopingSelectorPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorPanel ABI::Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorPanel
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorPanel_FWD_DEFINED__
@@ -1654,11 +1722,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ILoopingSelectorStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorStatics ABI::Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorStatics_FWD_DEFINED__
@@ -1672,11 +1740,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IMenuFlyoutItemTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutItemTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IMenuFlyoutItemTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutItemTemplateSettings_FWD_DEFINED__
@@ -1690,11 +1758,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IMenuFlyoutPresenterTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutPresenterTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IMenuFlyoutPresenterTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutPresenterTemplateSettings_FWD_DEFINED__
@@ -1708,11 +1776,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface INavigationViewItemPresenter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenter ABI::Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenter_FWD_DEFINED__
@@ -1726,11 +1794,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface INavigationViewItemPresenterFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterFactory ABI::Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenterFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterFactory_FWD_DEFINED__
@@ -1744,11 +1812,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface INavigationViewItemPresenterStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterStatics ABI::Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenterStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterStatics_FWD_DEFINED__
@@ -1762,11 +1830,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IOrientedVirtualizingPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanel ABI::Windows::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanel_FWD_DEFINED__
@@ -1780,11 +1848,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IOrientedVirtualizingPanelFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanelFactory ABI::Windows::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanelFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanelFactory_FWD_DEFINED__
@@ -1798,11 +1866,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPickerFlyoutBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBase ABI::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBase_FWD_DEFINED__
@@ -1816,11 +1884,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPickerFlyoutBaseFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseFactory ABI::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseFactory_FWD_DEFINED__
@@ -1834,11 +1902,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPickerFlyoutBaseOverrides;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseOverrides ABI::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseOverrides_FWD_DEFINED__
@@ -1852,11 +1920,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPickerFlyoutBaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseStatics ABI::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseStatics_FWD_DEFINED__
@@ -1870,11 +1938,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPivotHeaderItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItem ABI::Windows::UI::Xaml::Controls::Primitives::IPivotHeaderItem
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItem_FWD_DEFINED__
@@ -1888,11 +1956,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPivotHeaderItemFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItemFactory ABI::Windows::UI::Xaml::Controls::Primitives::IPivotHeaderItemFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItemFactory_FWD_DEFINED__
@@ -1906,11 +1974,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPivotHeaderPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderPanel ABI::Windows::UI::Xaml::Controls::Primitives::IPivotHeaderPanel
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderPanel_FWD_DEFINED__
@@ -1924,11 +1992,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPivotPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotPanel ABI::Windows::UI::Xaml::Controls::Primitives::IPivotPanel
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotPanel_FWD_DEFINED__
@@ -1942,11 +2010,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPopup;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup ABI::Windows::UI::Xaml::Controls::Primitives::IPopup
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup_FWD_DEFINED__
@@ -1960,14 +2028,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPopup2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup2 ABI::Windows::UI::Xaml::Controls::Primitives::IPopup2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        interface IPopup3;
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 ABI::Windows::UI::Xaml::Controls::Primitives::IPopup3
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics_FWD_DEFINED__
@@ -1978,11 +2064,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPopupStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics ABI::Windows::UI::Xaml::Controls::Primitives::IPopupStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics_FWD_DEFINED__
@@ -1996,14 +2082,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPopupStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2 ABI::Windows::UI::Xaml::Controls::Primitives::IPopupStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        interface IPopupStatics3;
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 ABI::Windows::UI::Xaml::Controls::Primitives::IPopupStatics3
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings_FWD_DEFINED__
@@ -2014,11 +2118,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IProgressBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings_FWD_DEFINED__
@@ -2032,11 +2136,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IProgressRingTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressRingTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressRingTemplateSettings_FWD_DEFINED__
@@ -2050,11 +2154,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRangeBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBase ABI::Windows::UI::Xaml::Controls::Primitives::IRangeBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBase_FWD_DEFINED__
@@ -2068,11 +2172,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRangeBaseFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseFactory ABI::Windows::UI::Xaml::Controls::Primitives::IRangeBaseFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseFactory_FWD_DEFINED__
@@ -2086,11 +2190,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRangeBaseOverrides;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides ABI::Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides_FWD_DEFINED__
@@ -2104,11 +2208,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRangeBaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics ABI::Windows::UI::Xaml::Controls::Primitives::IRangeBaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics_FWD_DEFINED__
@@ -2122,11 +2226,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRangeBaseValueChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs ABI::Windows::UI::Xaml::Controls::Primitives::IRangeBaseValueChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs_FWD_DEFINED__
@@ -2140,11 +2244,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRepeatButton;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButton ABI::Windows::UI::Xaml::Controls::Primitives::IRepeatButton
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButton_FWD_DEFINED__
@@ -2158,11 +2262,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IRepeatButtonStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButtonStatics ABI::Windows::UI::Xaml::Controls::Primitives::IRepeatButtonStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButtonStatics_FWD_DEFINED__
@@ -2176,11 +2280,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IScrollBar;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBar ABI::Windows::UI::Xaml::Controls::Primitives::IScrollBar
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBar_FWD_DEFINED__
@@ -2194,11 +2298,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IScrollBarStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBarStatics ABI::Windows::UI::Xaml::Controls::Primitives::IScrollBarStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBarStatics_FWD_DEFINED__
@@ -2212,11 +2316,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IScrollEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventArgs ABI::Windows::UI::Xaml::Controls::Primitives::IScrollEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventArgs_FWD_DEFINED__
@@ -2230,11 +2334,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IScrollSnapPointsInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo ABI::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo_FWD_DEFINED__
@@ -2248,11 +2352,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISelector;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelector ABI::Windows::UI::Xaml::Controls::Primitives::ISelector
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelector_FWD_DEFINED__
@@ -2266,11 +2370,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISelectorFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorFactory ABI::Windows::UI::Xaml::Controls::Primitives::ISelectorFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorFactory_FWD_DEFINED__
@@ -2284,11 +2388,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISelectorItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItem ABI::Windows::UI::Xaml::Controls::Primitives::ISelectorItem
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItem_FWD_DEFINED__
@@ -2302,11 +2406,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISelectorItemFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemFactory ABI::Windows::UI::Xaml::Controls::Primitives::ISelectorItemFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemFactory_FWD_DEFINED__
@@ -2320,11 +2424,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISelectorItemStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemStatics ABI::Windows::UI::Xaml::Controls::Primitives::ISelectorItemStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemStatics_FWD_DEFINED__
@@ -2338,11 +2442,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISelectorStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorStatics ABI::Windows::UI::Xaml::Controls::Primitives::ISelectorStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorStatics_FWD_DEFINED__
@@ -2356,11 +2460,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISettingsFlyoutTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISettingsFlyoutTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::ISettingsFlyoutTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISettingsFlyoutTemplateSettings_FWD_DEFINED__
@@ -2374,11 +2478,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ISplitViewTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISplitViewTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::ISplitViewTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISplitViewTemplateSettings_FWD_DEFINED__
@@ -2392,11 +2496,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IThumb;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumb ABI::Windows::UI::Xaml::Controls::Primitives::IThumb
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumb_FWD_DEFINED__
@@ -2410,11 +2514,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IThumbStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumbStatics ABI::Windows::UI::Xaml::Controls::Primitives::IThumbStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumbStatics_FWD_DEFINED__
@@ -2428,11 +2532,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ITickBar;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBar ABI::Windows::UI::Xaml::Controls::Primitives::ITickBar
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBar_FWD_DEFINED__
@@ -2446,11 +2550,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface ITickBarStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBarStatics ABI::Windows::UI::Xaml::Controls::Primitives::ITickBarStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBarStatics_FWD_DEFINED__
@@ -2464,11 +2568,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IToggleButton;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButton ABI::Windows::UI::Xaml::Controls::Primitives::IToggleButton
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButton_FWD_DEFINED__
@@ -2482,11 +2586,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IToggleButtonFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonFactory ABI::Windows::UI::Xaml::Controls::Primitives::IToggleButtonFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonFactory_FWD_DEFINED__
@@ -2500,11 +2604,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IToggleButtonOverrides;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonOverrides ABI::Windows::UI::Xaml::Controls::Primitives::IToggleButtonOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonOverrides_FWD_DEFINED__
@@ -2518,11 +2622,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IToggleButtonStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonStatics ABI::Windows::UI::Xaml::Controls::Primitives::IToggleButtonStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonStatics_FWD_DEFINED__
@@ -2536,11 +2640,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IToggleSwitchTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleSwitchTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IToggleSwitchTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleSwitchTemplateSettings_FWD_DEFINED__
@@ -2554,11 +2658,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IToolTipTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToolTipTemplateSettings ABI::Windows::UI::Xaml::Controls::Primitives::IToolTipTemplateSettings
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToolTipTemplateSettings_FWD_DEFINED__
@@ -2573,11 +2677,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class Popup;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2600,7 +2704,7 @@ IIterator<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> __FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Controls::Primitives::IPopup*>
@@ -2632,7 +2736,7 @@ IIterable<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> __FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Controls::Primitives::IPopup*>
@@ -2664,7 +2768,7 @@ IVectorView<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Controls::Primitives::IPopup*>
@@ -2682,11 +2786,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class FlyoutBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2696,11 +2800,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class FlyoutBaseClosingEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2724,7 +2828,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutBase*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutBase*,ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase*,ABI::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs*>
@@ -2743,11 +2847,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ColorSpectrum;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2756,10 +2860,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class ColorChangedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIColorChangedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIColorChangedEventArgs_FWD_DEFINED__
@@ -2769,10 +2873,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IColorChangedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIColorChangedEventArgs ABI::Windows::UI::Xaml::Controls::IColorChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIColorChangedEventArgs_FWD_DEFINED__
@@ -2799,7 +2903,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum*,ABI::Windows::UI::Xaml::Controls::ColorChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Primitives::IColorSpectrum*,ABI::Windows::UI::Xaml::Controls::IColorChangedEventArgs*>
@@ -2831,7 +2935,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -2846,8 +2950,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CPoint_USE
@@ -2868,7 +2972,7 @@ IReference<struct ABI::Windows::Foundation::Point> : IReference_impl<struct ABI:
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Point> __FIReference_1_Windows__CFoundation__CPoint_t;
 #define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Point>
@@ -2883,8 +2987,8 @@ namespace ABI {
         namespace Foundation {
             struct Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CRect_USE
@@ -2905,7 +3009,7 @@ IReference<struct ABI::Windows::Foundation::Rect> : IReference_impl<struct ABI::
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Rect> __FIReference_1_Windows__CFoundation__CRect_t;
 #define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CRect_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Rect>
@@ -2935,7 +3039,7 @@ IIterator<IInspectable*> : IIterator_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IIterator<IInspectable*> __FIIterator_1_IInspectable_t;
 #define __FIIterator_1_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_IInspectable ABI::Windows::Foundation::Collections::IIterator<IInspectable*>
@@ -2965,7 +3069,7 @@ IIterable<IInspectable*> : IIterable_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IIterable<IInspectable*> __FIIterable_1_IInspectable_t;
 #define __FIIterable_1_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_IInspectable ABI::Windows::Foundation::Collections::IIterable<IInspectable*>
@@ -2995,7 +3099,7 @@ IVectorView<IInspectable*> : IVectorView_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IVectorView<IInspectable*> __FIVectorView_1_IInspectable_t;
 #define __FIVectorView_1_IInspectable ABI::Windows::Foundation::Collections::__FIVectorView_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_IInspectable ABI::Windows::Foundation::Collections::IVectorView<IInspectable*>
@@ -3025,7 +3129,7 @@ IVector<IInspectable*> : IVector_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IVector<IInspectable*> __FIVector_1_IInspectable_t;
 #define __FIVector_1_IInspectable ABI::Windows::Foundation::Collections::__FIVector_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_IInspectable ABI::Windows::Foundation::Collections::IVector<IInspectable*>
@@ -3042,11 +3146,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class Transition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition_FWD_DEFINED__
@@ -3057,11 +3161,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ITransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition ABI::Windows::UI::Xaml::Media::Animation::ITransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition_FWD_DEFINED__
@@ -3087,7 +3191,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3119,7 +3223,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3151,7 +3255,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3183,7 +3287,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3213,7 +3317,7 @@ IIterator<float> : IIterator_impl<float>
 // correct parameterized interface specialization.
 typedef IIterator<float> __FIIterator_1_float_t;
 #define __FIIterator_1_float ABI::Windows::Foundation::Collections::__FIIterator_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_float ABI::Windows::Foundation::Collections::IIterator<FLOAT>
@@ -3242,7 +3346,7 @@ IIterable<float> : IIterable_impl<float>
 // correct parameterized interface specialization.
 typedef IIterable<float> __FIIterable_1_float_t;
 #define __FIIterable_1_float ABI::Windows::Foundation::Collections::__FIIterable_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_float ABI::Windows::Foundation::Collections::IIterable<FLOAT>
@@ -3271,7 +3375,7 @@ IVectorView<float> : IVectorView_impl<float>
 // correct parameterized interface specialization.
 typedef IVectorView<float> __FIVectorView_1_float_t;
 #define __FIVectorView_1_float ABI::Windows::Foundation::Collections::__FIVectorView_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_float ABI::Windows::Foundation::Collections::IVectorView<FLOAT>
@@ -3300,7 +3404,7 @@ IReference<bool> : IReference_impl<ABI::Windows::Foundation::Internal::Aggregate
 // correct parameterized interface specialization.
 typedef IReference<bool> __FIReference_1_boolean_t;
 #define __FIReference_1_boolean ABI::Windows::Foundation::__FIReference_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_boolean ABI::Windows::Foundation::IReference<boolean>
@@ -3319,9 +3423,9 @@ namespace ABI {
                 
                 typedef struct Vector4 Vector4;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3332,8 +3436,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3341,8 +3445,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3350,8 +3454,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3362,8 +3466,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3375,10 +3479,10 @@ namespace ABI {
                     
                     typedef enum ClickMode : int ClickMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3389,10 +3493,10 @@ namespace ABI {
                     
                     typedef enum ColorPickerHsvChannel : int ColorPickerHsvChannel;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3402,10 +3506,10 @@ namespace ABI {
                     
                     typedef enum ColorSpectrumComponents : int ColorSpectrumComponents;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3415,10 +3519,10 @@ namespace ABI {
                     
                     typedef enum ColorSpectrumShape : int ColorSpectrumShape;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3426,10 +3530,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class Control;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIControl_FWD_DEFINED__
@@ -3439,10 +3543,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IControl;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIControl ABI::Windows::UI::Xaml::Controls::IControl
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIControl_FWD_DEFINED__
@@ -3456,10 +3560,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IInsertionPanel;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIInsertionPanel ABI::Windows::UI::Xaml::Controls::IInsertionPanel
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIInsertionPanel_FWD_DEFINED__
@@ -3471,10 +3575,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class IconElement;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIIconElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIIconElement_FWD_DEFINED__
@@ -3484,10 +3588,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IIconElement;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIIconElement ABI::Windows::UI::Xaml::Controls::IIconElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIIconElement_FWD_DEFINED__
@@ -3501,10 +3605,10 @@ namespace ABI {
                     
                     typedef enum LightDismissOverlayMode : int LightDismissOverlayMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3514,10 +3618,10 @@ namespace ABI {
                     
                     typedef enum Orientation : int Orientation;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CISelectionChangedEventHandler_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CISelectionChangedEventHandler_FWD_DEFINED__
@@ -3527,10 +3631,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface ISelectionChangedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CISelectionChangedEventHandler ABI::Windows::UI::Xaml::Controls::ISelectionChangedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CISelectionChangedEventHandler_FWD_DEFINED__
@@ -3548,10 +3652,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Data {
                     interface IValueConverter;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Data */} /* ABI */
+                } /* Data */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CData_CIValueConverter ABI::Windows::UI::Xaml::Data::IValueConverter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CData_CIValueConverter_FWD_DEFINED__
@@ -3566,9 +3670,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DataTemplate;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDataTemplate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDataTemplate_FWD_DEFINED__
@@ -3577,9 +3681,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDataTemplate;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDataTemplate ABI::Windows::UI::Xaml::IDataTemplate
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDataTemplate_FWD_DEFINED__
@@ -3590,9 +3694,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -3601,9 +3705,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyObject ABI::Windows::UI::Xaml::IDependencyObject
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -3614,9 +3718,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -3625,9 +3729,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -3640,18 +3744,18 @@ namespace ABI {
                 
                 typedef enum ElementSoundMode : int ElementSoundMode;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 class FrameworkElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
@@ -3660,9 +3764,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IFrameworkElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIFrameworkElement ABI::Windows::UI::Xaml::IFrameworkElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
@@ -3675,9 +3779,9 @@ namespace ABI {
                 
                 typedef struct GridLength GridLength;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3686,9 +3790,9 @@ namespace ABI {
                 
                 typedef enum HorizontalAlignment : int HorizontalAlignment;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3701,10 +3805,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     interface ICommand;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInput_CICommand ABI::Windows::UI::Xaml::Input::ICommand
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInput_CICommand_FWD_DEFINED__
@@ -3716,10 +3820,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     class ProcessKeyboardAcceleratorEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs_FWD_DEFINED__
@@ -3729,10 +3833,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     interface IProcessKeyboardAcceleratorEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs ABI::Windows::UI::Xaml::Input::IProcessKeyboardAcceleratorEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs_FWD_DEFINED__
@@ -3749,11 +3853,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class TransitionCollection;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3767,10 +3871,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class Brush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_FWD_DEFINED__
@@ -3780,10 +3884,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush ABI::Windows::UI::Xaml::Media::IBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_FWD_DEFINED__
@@ -3795,10 +3899,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class ImageSource;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource_FWD_DEFINED__
@@ -3808,10 +3912,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IImageSource;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource ABI::Windows::UI::Xaml::Media::IImageSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource_FWD_DEFINED__
@@ -3828,9 +3932,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IRoutedEventHandler;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler ABI::Windows::UI::Xaml::IRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler_FWD_DEFINED__
@@ -3843,18 +3947,18 @@ namespace ABI {
                 
                 typedef struct Thickness Thickness;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -3863,9 +3967,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -3878,9 +3982,9 @@ namespace ABI {
                 
                 typedef enum VerticalAlignment : int VerticalAlignment;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3889,9 +3993,33 @@ namespace ABI {
                 
                 typedef enum Visibility : int Visibility;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                class XamlRoot;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                interface IXamlRoot;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CIXamlRoot ABI::Windows::UI::Xaml::IXamlRoot
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+
 
 
 
@@ -3905,11 +4033,11 @@ namespace ABI {
                         
                         typedef enum AnimationDirection : int AnimationDirection;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3920,11 +4048,11 @@ namespace ABI {
                         
                         typedef enum ComponentResourceLocation : int ComponentResourceLocation;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3935,11 +4063,11 @@ namespace ABI {
                         
                         typedef enum EdgeTransitionLocation : int EdgeTransitionLocation;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3950,11 +4078,11 @@ namespace ABI {
                         
                         typedef enum FlyoutPlacementMode : int FlyoutPlacementMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3965,11 +4093,11 @@ namespace ABI {
                         
                         typedef enum FlyoutShowMode : int FlyoutShowMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3980,11 +4108,11 @@ namespace ABI {
                         
                         typedef enum GeneratorDirection : int GeneratorDirection;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3995,11 +4123,11 @@ namespace ABI {
                         
                         typedef enum GroupHeaderPlacement : int GroupHeaderPlacement;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4010,11 +4138,11 @@ namespace ABI {
                         
                         typedef enum ListViewItemPresenterCheckMode : int ListViewItemPresenterCheckMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4025,11 +4153,11 @@ namespace ABI {
                         
                         typedef enum PlacementMode : int PlacementMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4040,11 +4168,11 @@ namespace ABI {
                         
                         typedef enum ScrollEventType : int ScrollEventType;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4055,11 +4183,11 @@ namespace ABI {
                         
                         typedef enum ScrollingIndicatorMode : int ScrollingIndicatorMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4070,11 +4198,11 @@ namespace ABI {
                         
                         typedef enum SliderSnapsTo : int SliderSnapsTo;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4085,11 +4213,11 @@ namespace ABI {
                         
                         typedef enum SnapPointsAlignment : int SnapPointsAlignment;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4100,11 +4228,11 @@ namespace ABI {
                         
                         typedef enum TickPlacement : int TickPlacement;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4115,11 +4243,17 @@ namespace ABI {
                         
                         typedef struct GeneratorPosition GeneratorPosition;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
 
 
 
@@ -4255,11 +4389,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class AppBarButtonTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4269,11 +4403,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class AppBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4283,11 +4417,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class AppBarToggleButtonTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4297,11 +4431,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ButtonBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4311,11 +4445,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class CalendarPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4325,11 +4459,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class CalendarViewTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4339,11 +4473,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class CarouselPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4353,11 +4487,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ColorPickerSlider;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4368,11 +4502,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ComboBoxTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4382,11 +4516,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class CommandBarFlyoutCommandBar;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4396,11 +4530,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class CommandBarFlyoutCommandBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4410,11 +4544,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class CommandBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4424,11 +4558,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class DragCompletedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4438,11 +4572,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class DragDeltaEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4452,11 +4586,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class DragStartedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4468,11 +4602,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class FlyoutShowOptions;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4482,11 +4616,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class GeneratorPositionHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4496,11 +4630,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class GridViewItemPresenter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4510,11 +4644,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class GridViewItemTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4524,11 +4658,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ItemsChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4538,11 +4672,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class JumpListItemBackgroundConverter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4552,11 +4686,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class JumpListItemForegroundConverter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4566,11 +4700,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class LayoutInformation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4580,11 +4714,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ListViewItemPresenter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4594,11 +4728,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ListViewItemTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4608,11 +4742,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class LoopingSelector;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4622,11 +4756,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class LoopingSelectorItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4636,11 +4770,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class LoopingSelectorPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4650,11 +4784,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class MenuFlyoutItemTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4664,11 +4798,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class MenuFlyoutPresenterTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4678,11 +4812,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class NavigationViewItemPresenter;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4692,11 +4826,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class OrientedVirtualizingPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4706,11 +4840,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class PickerFlyoutBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4720,11 +4854,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class PivotHeaderItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4734,11 +4868,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class PivotHeaderPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4748,11 +4882,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class PivotPanel;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4763,11 +4897,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ProgressBarTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4777,11 +4911,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ProgressRingTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4791,11 +4925,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class RangeBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4805,11 +4939,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class RangeBaseValueChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4819,11 +4953,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class RepeatButton;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4833,11 +4967,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ScrollBar;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4847,11 +4981,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ScrollEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4861,11 +4995,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class Selector;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4875,11 +5009,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class SelectorItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4889,11 +5023,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class SettingsFlyoutTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4903,11 +5037,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class SplitViewTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4917,11 +5051,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class Thumb;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4931,11 +5065,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class TickBar;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4945,11 +5079,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ToggleButton;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4959,11 +5093,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ToggleSwitchTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4973,11 +5107,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class ToolTipTemplateSettings;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5017,11 +5151,11 @@ namespace ABI {
                             AnimationDirection_Bottom = 3,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5048,11 +5182,11 @@ namespace ABI {
                             ComponentResourceLocation_Nested = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5081,11 +5215,11 @@ namespace ABI {
                             EdgeTransitionLocation_Bottom = 3,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5160,11 +5294,11 @@ namespace ABI {
                             
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5193,11 +5327,11 @@ namespace ABI {
                             FlyoutShowMode_TransientWithDismissOnPointerMoveAway = 3,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -5224,11 +5358,11 @@ namespace ABI {
                             GeneratorDirection_Backward = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5255,11 +5389,11 @@ namespace ABI {
                             GroupHeaderPlacement_Left = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5286,11 +5420,11 @@ namespace ABI {
                             ListViewItemPresenterCheckMode_Overlay = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5320,11 +5454,11 @@ namespace ABI {
                             PlacementMode_Top = 10,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5358,11 +5492,11 @@ namespace ABI {
                             ScrollEventType_EndScroll = 8,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5390,11 +5524,11 @@ namespace ABI {
                             ScrollingIndicatorMode_MouseIndicator = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5421,11 +5555,11 @@ namespace ABI {
                             SliderSnapsTo_Ticks = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5453,11 +5587,11 @@ namespace ABI {
                             SnapPointsAlignment_Far = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5487,11 +5621,11 @@ namespace ABI {
                             TickPlacement_Inline = 4,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5518,11 +5652,11 @@ namespace ABI {
                             INT32 Offset;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5557,11 +5691,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragCompletedEventHandler=_uuidof(IDragCompletedEventHandler);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventHandler_INTERFACE_DEFINED__) */
@@ -5599,11 +5733,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragDeltaEventHandler=_uuidof(IDragDeltaEventHandler);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventHandler_INTERFACE_DEFINED__) */
@@ -5641,11 +5775,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragStartedEventHandler=_uuidof(IDragStartedEventHandler);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventHandler_INTERFACE_DEFINED__) */
@@ -5683,11 +5817,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IItemsChangedEventHandler=_uuidof(IItemsChangedEventHandler);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventHandler_INTERFACE_DEFINED__) */
@@ -5725,11 +5859,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRangeBaseValueChangedEventHandler=_uuidof(IRangeBaseValueChangedEventHandler);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler_INTERFACE_DEFINED__) */
@@ -5767,11 +5901,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IScrollEventHandler=_uuidof(IScrollEventHandler);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventHandler_INTERFACE_DEFINED__) */
@@ -5812,11 +5946,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IAppBarButtonTemplateSettings=_uuidof(IAppBarButtonTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarButtonTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarButtonTemplateSettings_INTERFACE_DEFINED__) */
@@ -5875,15 +6009,66 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IAppBarTemplateSettings=_uuidof(IAppBarTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2[] = L"Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        /* [object, uuid("CBE66259-0399-5BCC-B925-4D5F5C9A4568"), exclusiveto, contract] */
+                        MIDL_INTERFACE("CBE66259-0399-5BCC-B925-4D5F5C9A4568")
+                        IAppBarTemplateSettings2 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NegativeCompactVerticalDelta(
+                                /* [retval, out] */__RPC__out DOUBLE * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NegativeMinimalVerticalDelta(
+                                /* [retval, out] */__RPC__out DOUBLE * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NegativeHiddenVerticalDelta(
+                                /* [retval, out] */__RPC__out DOUBLE * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IAppBarTemplateSettings2=_uuidof(IAppBarTemplateSettings2);
+                        
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -5920,11 +6105,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IAppBarToggleButtonTemplateSettings=_uuidof(IAppBarToggleButtonTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings_INTERFACE_DEFINED__) */
@@ -5964,10 +6149,10 @@ namespace ABI {
                                 /* [in] */ABI::Windows::UI::Xaml::Controls::ClickMode value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPointerOver(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPressed(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Command(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Input::ICommand * * value
@@ -5993,11 +6178,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IButtonBase=_uuidof(IButtonBase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBase_INTERFACE_DEFINED__) */
@@ -6040,11 +6225,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IButtonBaseFactory=_uuidof(IButtonBaseFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseFactory_INTERFACE_DEFINED__) */
@@ -6097,11 +6282,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IButtonBaseStatics=_uuidof(IButtonBaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics_INTERFACE_DEFINED__) */
@@ -6139,11 +6324,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICalendarPanel=_uuidof(ICalendarPanel);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarPanel;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarPanel_INTERFACE_DEFINED__) */
@@ -6204,13 +6389,13 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasMoreContentAfter(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasMoreContentBefore(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasMoreViews(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ClipRect(
                                 /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
@@ -6226,11 +6411,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICalendarViewTemplateSettings=_uuidof(ICalendarViewTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarViewTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICalendarViewTemplateSettings_INTERFACE_DEFINED__) */
@@ -6264,16 +6449,16 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanVerticallyScroll(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanVerticallyScroll(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanHorizontallyScroll(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanHorizontallyScroll(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtentWidth(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -6327,11 +6512,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICarouselPanel=_uuidof(ICarouselPanel);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanel;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanel_INTERFACE_DEFINED__) */
@@ -6374,11 +6559,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICarouselPanelFactory=_uuidof(ICarouselPanelFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanelFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICarouselPanelFactory_INTERFACE_DEFINED__) */
@@ -6422,11 +6607,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorPickerSlider=_uuidof(IColorPickerSlider);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSlider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSlider_INTERFACE_DEFINED__) */
@@ -6469,11 +6654,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorPickerSliderFactory=_uuidof(IColorPickerSliderFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderFactory_INTERFACE_DEFINED__) */
@@ -6514,11 +6699,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorPickerSliderStatics=_uuidof(IColorPickerSliderStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorPickerSliderStatics_INTERFACE_DEFINED__) */
@@ -6623,11 +6808,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorSpectrum=_uuidof(IColorSpectrum);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrum;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrum_INTERFACE_DEFINED__) */
@@ -6670,11 +6855,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorSpectrumFactory=_uuidof(IColorSpectrumFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumFactory_INTERFACE_DEFINED__) */
@@ -6742,11 +6927,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorSpectrumStatics=_uuidof(IColorSpectrumStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrumStatics_INTERFACE_DEFINED__) */
@@ -6796,11 +6981,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IComboBoxTemplateSettings=_uuidof(IComboBoxTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings_INTERFACE_DEFINED__) */
@@ -6841,11 +7026,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IComboBoxTemplateSettings2=_uuidof(IComboBoxTemplateSettings2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComboBoxTemplateSettings2_INTERFACE_DEFINED__) */
@@ -6886,11 +7071,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICommandBarFlyoutCommandBar=_uuidof(ICommandBarFlyoutCommandBar);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBar;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBar_INTERFACE_DEFINED__) */
@@ -6933,11 +7118,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICommandBarFlyoutCommandBarFactory=_uuidof(ICommandBarFlyoutCommandBarFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarFactory_INTERFACE_DEFINED__) */
@@ -7035,11 +7220,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICommandBarFlyoutCommandBarTemplateSettings=_uuidof(ICommandBarFlyoutCommandBarTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarFlyoutCommandBarTemplateSettings_INTERFACE_DEFINED__) */
@@ -7098,11 +7283,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICommandBarTemplateSettings=_uuidof(ICommandBarTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings_INTERFACE_DEFINED__) */
@@ -7143,11 +7328,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICommandBarTemplateSettings2=_uuidof(ICommandBarTemplateSettings2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings2_INTERFACE_DEFINED__) */
@@ -7188,15 +7373,66 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICommandBarTemplateSettings3=_uuidof(ICommandBarTemplateSettings3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4[] = L"Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        /* [object, uuid("F2562DD3-AA58-59C5-853B-828A19D1214E"), exclusiveto, contract] */
+                        MIDL_INTERFACE("F2562DD3-AA58-59C5-853B-828A19D1214E")
+                        ICommandBarTemplateSettings4 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OverflowContentCompactYTranslation(
+                                /* [retval, out] */__RPC__out DOUBLE * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OverflowContentMinimalYTranslation(
+                                /* [retval, out] */__RPC__out DOUBLE * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OverflowContentHiddenYTranslation(
+                                /* [retval, out] */__RPC__out DOUBLE * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_ICommandBarTemplateSettings4=_uuidof(ICommandBarTemplateSettings4);
+                        
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -7232,18 +7468,18 @@ namespace ABI {
                                 /* [retval, out] */__RPC__out DOUBLE * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Canceled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IDragCompletedEventArgs=_uuidof(IDragCompletedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -7279,7 +7515,7 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE CreateInstanceWithHorizontalChangeVerticalChangeAndCanceled(
                                 /* [in] */DOUBLE horizontalChange,
                                 /* [in] */DOUBLE verticalChange,
-                                /* [in] */boolean canceled,
+                                /* [in] */::boolean canceled,
                                 /* [in] */__RPC__in_opt IInspectable * baseInterface,
                                 /* [out] */__RPC__deref_out_opt IInspectable * * innerInterface,
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs * * value
@@ -7289,11 +7525,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragCompletedEventArgsFactory=_uuidof(IDragCompletedEventArgsFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -7337,11 +7573,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragDeltaEventArgs=_uuidof(IDragDeltaEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgs_INTERFACE_DEFINED__) */
@@ -7386,11 +7622,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragDeltaEventArgsFactory=_uuidof(IDragDeltaEventArgsFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragDeltaEventArgsFactory_INTERFACE_DEFINED__) */
@@ -7434,11 +7670,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragStartedEventArgs=_uuidof(IDragStartedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgs_INTERFACE_DEFINED__) */
@@ -7483,11 +7719,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragStartedEventArgsFactory=_uuidof(IDragStartedEventArgsFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragStartedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -7556,11 +7792,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBase=_uuidof(IFlyoutBase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase_INTERFACE_DEFINED__) */
@@ -7597,10 +7833,10 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IFrameworkElement * * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowFocusOnInteraction(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowFocusOnInteraction(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LightDismissOverlayMode(
                                 /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Controls::LightDismissOverlayMode * value
@@ -7609,10 +7845,10 @@ namespace ABI {
                                 /* [in] */ABI::Windows::UI::Xaml::Controls::LightDismissOverlayMode value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowFocusWhenDisabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowFocusWhenDisabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ElementSoundMode(
                                 /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::ElementSoundMode * value
@@ -7632,11 +7868,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBase2=_uuidof(IFlyoutBase2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase2_INTERFACE_DEFINED__) */
@@ -7680,11 +7916,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBase3=_uuidof(IFlyoutBase3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase3_INTERFACE_DEFINED__) */
@@ -7725,11 +7961,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBase4=_uuidof(IFlyoutBase4);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase4_INTERFACE_DEFINED__) */
@@ -7769,16 +8005,16 @@ namespace ABI {
                                 /* [in] */ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InputDevicePrefersPrimaryCommands(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreOpenCloseAnimationsEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AreOpenCloseAnimationsEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOpen(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE ShowAt(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * placementTarget,
@@ -7789,15 +8025,72 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBase5=_uuidof(IFlyoutBase5);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.FlyoutBase
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6[] = L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        /* [object, uuid("5399DE8C-06CC-5B52-B65A-FF9322D1C940"), exclusiveto, contract] */
+                        MIDL_INTERFACE("5399DE8C-06CC-5B52-B65A-FF9322D1C940")
+                        IFlyoutBase6 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldConstrainToRootBounds(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShouldConstrainToRootBounds(
+                                /* [in] */::boolean value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsConstrainedToRootBounds(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_XamlRoot(
+                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IXamlRoot * * value
+                                ) = 0;
+                            /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_XamlRoot(
+                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IXamlRoot * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IFlyoutBase6=_uuidof(IFlyoutBase6);
+                        
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -7827,21 +8120,21 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Cancel(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Cancel(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseClosingEventArgs=_uuidof(IFlyoutBaseClosingEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs_INTERFACE_DEFINED__) */
@@ -7884,11 +8177,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseFactory=_uuidof(IFlyoutBaseFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory_INTERFACE_DEFINED__) */
@@ -7929,11 +8222,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseOverrides=_uuidof(IFlyoutBaseOverrides);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides_INTERFACE_DEFINED__) */
@@ -7974,11 +8267,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseOverrides4=_uuidof(IFlyoutBaseOverrides4);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseOverrides4_INTERFACE_DEFINED__) */
@@ -8033,11 +8326,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseStatics=_uuidof(IFlyoutBaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics_INTERFACE_DEFINED__) */
@@ -8087,11 +8380,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseStatics2=_uuidof(IFlyoutBaseStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics2_INTERFACE_DEFINED__) */
@@ -8132,11 +8425,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseStatics3=_uuidof(IFlyoutBaseStatics3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics3_INTERFACE_DEFINED__) */
@@ -8189,15 +8482,60 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutBaseStatics5=_uuidof(IFlyoutBaseStatics5);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.FlyoutBase
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics6[] = L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        /* [object, uuid("96D49254-C91B-5246-8B39-AFC2A2C50CF8"), exclusiveto, contract] */
+                        MIDL_INTERFACE("96D49254-C91B-5246-8B39-AFC2A2C50CF8")
+                        IFlyoutBaseStatics6 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldConstrainToRootBoundsProperty(
+                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IFlyoutBaseStatics6=_uuidof(IFlyoutBaseStatics6);
+                        
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -8255,11 +8593,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutShowOptions=_uuidof(IFlyoutShowOptions);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions_INTERFACE_DEFINED__) */
@@ -8302,11 +8640,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFlyoutShowOptionsFactory=_uuidof(IFlyoutShowOptionsFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptionsFactory_INTERFACE_DEFINED__) */
@@ -8344,11 +8682,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGeneratorPositionHelper=_uuidof(IGeneratorPositionHelper);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelper_INTERFACE_DEFINED__) */
@@ -8391,11 +8729,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGeneratorPositionHelperStatics=_uuidof(IGeneratorPositionHelperStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGeneratorPositionHelperStatics_INTERFACE_DEFINED__) */
@@ -8429,10 +8767,10 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SelectionCheckMarkVisualEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SelectionCheckMarkVisualEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CheckHintBrush(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Media::IBrush * * value
@@ -8589,11 +8927,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGridViewItemPresenter=_uuidof(IGridViewItemPresenter);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenter_INTERFACE_DEFINED__) */
@@ -8636,11 +8974,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGridViewItemPresenterFactory=_uuidof(IGridViewItemPresenterFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterFactory_INTERFACE_DEFINED__) */
@@ -8756,11 +9094,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGridViewItemPresenterStatics=_uuidof(IGridViewItemPresenterStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemPresenterStatics_INTERFACE_DEFINED__) */
@@ -8801,11 +9139,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGridViewItemTemplateSettings=_uuidof(IGridViewItemTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIGridViewItemTemplateSettings_INTERFACE_DEFINED__) */
@@ -8858,11 +9196,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IItemsChangedEventArgs=_uuidof(IItemsChangedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIItemsChangedEventArgs_INTERFACE_DEFINED__) */
@@ -8912,11 +9250,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IJumpListItemBackgroundConverter=_uuidof(IJumpListItemBackgroundConverter);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverter_INTERFACE_DEFINED__) */
@@ -8960,11 +9298,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IJumpListItemBackgroundConverterStatics=_uuidof(IJumpListItemBackgroundConverterStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverterStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemBackgroundConverterStatics_INTERFACE_DEFINED__) */
@@ -9014,11 +9352,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IJumpListItemForegroundConverter=_uuidof(IJumpListItemForegroundConverter);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverter_INTERFACE_DEFINED__) */
@@ -9062,11 +9400,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IJumpListItemForegroundConverterStatics=_uuidof(IJumpListItemForegroundConverterStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverterStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIJumpListItemForegroundConverterStatics_INTERFACE_DEFINED__) */
@@ -9104,11 +9442,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILayoutInformation=_uuidof(ILayoutInformation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformation_INTERFACE_DEFINED__) */
@@ -9154,11 +9492,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILayoutInformationStatics=_uuidof(ILayoutInformationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics_INTERFACE_DEFINED__) */
@@ -9200,11 +9538,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILayoutInformationStatics2=_uuidof(ILayoutInformationStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILayoutInformationStatics2_INTERFACE_DEFINED__) */
@@ -9238,10 +9576,10 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SelectionCheckMarkVisualEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SelectionCheckMarkVisualEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CheckHintBrush(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Media::IBrush * * value
@@ -9398,11 +9736,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemPresenter=_uuidof(IListViewItemPresenter);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter_INTERFACE_DEFINED__) */
@@ -9476,11 +9814,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemPresenter2=_uuidof(IListViewItemPresenter2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter2_INTERFACE_DEFINED__) */
@@ -9532,21 +9870,21 @@ namespace ABI {
                                 /* [in] */ABI::Windows::UI::Xaml::Thickness value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RevealBackgroundShowsAboveContent(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RevealBackgroundShowsAboveContent(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemPresenter3=_uuidof(IListViewItemPresenter3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenter3_INTERFACE_DEFINED__) */
@@ -9589,11 +9927,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemPresenterFactory=_uuidof(IListViewItemPresenterFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterFactory_INTERFACE_DEFINED__) */
@@ -9709,11 +10047,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemPresenterStatics=_uuidof(IListViewItemPresenterStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics_INTERFACE_DEFINED__) */
@@ -9769,11 +10107,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemPresenterStatics2=_uuidof(IListViewItemPresenterStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics2_INTERFACE_DEFINED__) */
@@ -9823,11 +10161,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemPresenterStatics3=_uuidof(IListViewItemPresenterStatics3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemPresenterStatics3_INTERFACE_DEFINED__) */
@@ -9868,11 +10206,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IListViewItemTemplateSettings=_uuidof(IListViewItemTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIListViewItemTemplateSettings_INTERFACE_DEFINED__) */
@@ -9906,10 +10244,10 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldLoop(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShouldLoop(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Items(
                                 /* [retval, out] */__RPC__deref_out_opt __FIVector_1_IInspectable * * value
@@ -9959,11 +10297,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILoopingSelector=_uuidof(ILoopingSelector);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelector;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelector_INTERFACE_DEFINED__) */
@@ -10001,11 +10339,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILoopingSelectorItem=_uuidof(ILoopingSelectorItem);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorItem_INTERFACE_DEFINED__) */
@@ -10043,11 +10381,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILoopingSelectorPanel=_uuidof(ILoopingSelectorPanel);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorPanel;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorPanel_INTERFACE_DEFINED__) */
@@ -10106,11 +10444,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILoopingSelectorStatics=_uuidof(ILoopingSelectorStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CILoopingSelectorStatics_INTERFACE_DEFINED__) */
@@ -10151,11 +10489,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMenuFlyoutItemTemplateSettings=_uuidof(IMenuFlyoutItemTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutItemTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutItemTemplateSettings_INTERFACE_DEFINED__) */
@@ -10196,11 +10534,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMenuFlyoutPresenterTemplateSettings=_uuidof(IMenuFlyoutPresenterTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutPresenterTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIMenuFlyoutPresenterTemplateSettings_INTERFACE_DEFINED__) */
@@ -10244,11 +10582,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationViewItemPresenter=_uuidof(INavigationViewItemPresenter);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenter_INTERFACE_DEFINED__) */
@@ -10291,11 +10629,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationViewItemPresenterFactory=_uuidof(INavigationViewItemPresenterFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterFactory_INTERFACE_DEFINED__) */
@@ -10336,11 +10674,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationViewItemPresenterStatics=_uuidof(INavigationViewItemPresenterStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CINavigationViewItemPresenterStatics_INTERFACE_DEFINED__) */
@@ -10374,16 +10712,16 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanVerticallyScroll(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanVerticallyScroll(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanHorizontallyScroll(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanHorizontallyScroll(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtentWidth(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -10437,11 +10775,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IOrientedVirtualizingPanel=_uuidof(IOrientedVirtualizingPanel);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanel;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanel_INTERFACE_DEFINED__) */
@@ -10479,11 +10817,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IOrientedVirtualizingPanelFactory=_uuidof(IOrientedVirtualizingPanelFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanelFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIOrientedVirtualizingPanelFactory_INTERFACE_DEFINED__) */
@@ -10521,11 +10859,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPickerFlyoutBase=_uuidof(IPickerFlyoutBase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBase_INTERFACE_DEFINED__) */
@@ -10568,11 +10906,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPickerFlyoutBaseFactory=_uuidof(IPickerFlyoutBaseFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseFactory_INTERFACE_DEFINED__) */
@@ -10607,18 +10945,18 @@ namespace ABI {
                         public:
                             virtual HRESULT STDMETHODCALLTYPE OnConfirmed(void) = 0;
                             virtual HRESULT STDMETHODCALLTYPE ShouldShowConfirmationButtons(
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IPickerFlyoutBaseOverrides=_uuidof(IPickerFlyoutBaseOverrides);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseOverrides_INTERFACE_DEFINED__) */
@@ -10667,11 +11005,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPickerFlyoutBaseStatics=_uuidof(IPickerFlyoutBaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPickerFlyoutBaseStatics_INTERFACE_DEFINED__) */
@@ -10709,11 +11047,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPivotHeaderItem=_uuidof(IPivotHeaderItem);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItem_INTERFACE_DEFINED__) */
@@ -10756,11 +11094,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPivotHeaderItemFactory=_uuidof(IPivotHeaderItemFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItemFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderItemFactory_INTERFACE_DEFINED__) */
@@ -10798,11 +11136,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPivotHeaderPanel=_uuidof(IPivotHeaderPanel);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderPanel;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotHeaderPanel_INTERFACE_DEFINED__) */
@@ -10840,11 +11178,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPivotPanel=_uuidof(IPivotPanel);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotPanel;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPivotPanel_INTERFACE_DEFINED__) */
@@ -10884,10 +11222,10 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOpen(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsOpen(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HorizontalOffset(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -10908,10 +11246,10 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLightDismissEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsLightDismissEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Opened(
                                 /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
@@ -10932,11 +11270,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopup=_uuidof(IPopup);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup_INTERFACE_DEFINED__) */
@@ -10980,15 +11318,66 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopup2=_uuidof(IPopup2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IPopup3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.Popup
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IPopup3[] = L"Windows.UI.Xaml.Controls.Primitives.IPopup3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        /* [object, uuid("F9C46915-A65C-5F68-9F54-310A1B51095F"), exclusiveto, contract] */
+                        MIDL_INTERFACE("F9C46915-A65C-5F68-9F54-310A1B51095F")
+                        IPopup3 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldConstrainToRootBounds(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShouldConstrainToRootBounds(
+                                /* [in] */::boolean value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsConstrainedToRootBounds(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IPopup3=_uuidof(IPopup3);
+                        
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11040,11 +11429,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopupStatics=_uuidof(IPopupStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics_INTERFACE_DEFINED__) */
@@ -11085,15 +11474,60 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopupStatics2=_uuidof(IPopupStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IPopupStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.Popup
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IPopupStatics3[] = L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Primitives {
+                        /* [object, uuid("00789589-C580-558F-945A-7D02EE004D3E"), exclusiveto, contract] */
+                        MIDL_INTERFACE("00789589-C580-558F-945A-7D02EE004D3E")
+                        IPopupStatics3 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldConstrainToRootBoundsProperty(
+                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IPopupStatics3=_uuidof(IPopupStatics3);
+                        
+                    } /* Primitives */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11148,11 +11582,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IProgressBarTemplateSettings=_uuidof(IProgressBarTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings_INTERFACE_DEFINED__) */
@@ -11199,11 +11633,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IProgressRingTemplateSettings=_uuidof(IProgressRingTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressRingTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressRingTemplateSettings_INTERFACE_DEFINED__) */
@@ -11278,11 +11712,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRangeBase=_uuidof(IRangeBase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBase_INTERFACE_DEFINED__) */
@@ -11325,11 +11759,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRangeBaseFactory=_uuidof(IRangeBaseFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseFactory_INTERFACE_DEFINED__) */
@@ -11379,11 +11813,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRangeBaseOverrides=_uuidof(IRangeBaseOverrides);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides_INTERFACE_DEFINED__) */
@@ -11436,11 +11870,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRangeBaseStatics=_uuidof(IRangeBaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics_INTERFACE_DEFINED__) */
@@ -11484,11 +11918,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRangeBaseValueChangedEventArgs=_uuidof(IRangeBaseValueChangedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs_INTERFACE_DEFINED__) */
@@ -11538,11 +11972,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRepeatButton=_uuidof(IRepeatButton);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButton;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButton_INTERFACE_DEFINED__) */
@@ -11586,11 +12020,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRepeatButtonStatics=_uuidof(IRepeatButtonStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButtonStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIRepeatButtonStatics_INTERFACE_DEFINED__) */
@@ -11653,11 +12087,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IScrollBar=_uuidof(IScrollBar);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBar;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBar_INTERFACE_DEFINED__) */
@@ -11704,11 +12138,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IScrollBarStatics=_uuidof(IScrollBarStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBarStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollBarStatics_INTERFACE_DEFINED__) */
@@ -11752,11 +12186,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IScrollEventArgs=_uuidof(IScrollEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollEventArgs_INTERFACE_DEFINED__) */
@@ -11787,10 +12221,10 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreHorizontalSnapPointsRegular(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AreVerticalSnapPointsRegular(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_HorizontalSnapPointsChanged(
                                 /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
@@ -11822,11 +12256,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IScrollSnapPointsInfo=_uuidof(IScrollSnapPointsInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo_INTERFACE_DEFINED__) */
@@ -11901,11 +12335,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISelector=_uuidof(ISelector);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelector;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelector_INTERFACE_DEFINED__) */
@@ -11943,11 +12377,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISelectorFactory=_uuidof(ISelectorFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorFactory_INTERFACE_DEFINED__) */
@@ -11981,21 +12415,21 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSelected(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSelected(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_ISelectorItem=_uuidof(ISelectorItem);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItem_INTERFACE_DEFINED__) */
@@ -12038,11 +12472,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISelectorItemFactory=_uuidof(ISelectorItemFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemFactory_INTERFACE_DEFINED__) */
@@ -12083,11 +12517,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISelectorItemStatics=_uuidof(ISelectorItemStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorItemStatics_INTERFACE_DEFINED__) */
@@ -12137,18 +12571,18 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetIsSelectionActive(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_ISelectorStatics=_uuidof(ISelectorStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISelectorStatics_INTERFACE_DEFINED__) */
@@ -12204,11 +12638,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISettingsFlyoutTemplateSettings=_uuidof(ISettingsFlyoutTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISettingsFlyoutTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISettingsFlyoutTemplateSettings_INTERFACE_DEFINED__) */
@@ -12264,11 +12698,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplitViewTemplateSettings=_uuidof(ISplitViewTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISplitViewTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CISplitViewTemplateSettings_INTERFACE_DEFINED__) */
@@ -12302,7 +12736,7 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDragging(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_DragStarted(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Controls::Primitives::IDragStartedEventHandler  * handler,
@@ -12331,11 +12765,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IThumb=_uuidof(IThumb);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumb;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumb_INTERFACE_DEFINED__) */
@@ -12376,11 +12810,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IThumbStatics=_uuidof(IThumbStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumbStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIThumbStatics_INTERFACE_DEFINED__) */
@@ -12424,11 +12858,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITickBar=_uuidof(ITickBar);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBar;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBar_INTERFACE_DEFINED__) */
@@ -12469,11 +12903,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITickBarStatics=_uuidof(ITickBarStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBarStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CITickBarStatics_INTERFACE_DEFINED__) */
@@ -12513,10 +12947,10 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt __FIReference_1_boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsThreeState(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsThreeState(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Checked(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IRoutedEventHandler  * handler,
@@ -12544,11 +12978,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IToggleButton=_uuidof(IToggleButton);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButton;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButton_INTERFACE_DEFINED__) */
@@ -12591,11 +13025,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IToggleButtonFactory=_uuidof(IToggleButtonFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonFactory_INTERFACE_DEFINED__) */
@@ -12634,11 +13068,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IToggleButtonOverrides=_uuidof(IToggleButtonOverrides);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonOverrides_INTERFACE_DEFINED__) */
@@ -12682,11 +13116,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IToggleButtonStatics=_uuidof(IToggleButtonStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleButtonStatics_INTERFACE_DEFINED__) */
@@ -12748,11 +13182,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IToggleSwitchTemplateSettings=_uuidof(IToggleSwitchTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleSwitchTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToggleSwitchTemplateSettings_INTERFACE_DEFINED__) */
@@ -12796,11 +13230,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IToolTipTemplateSettings=_uuidof(IToolTipTemplateSettings);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToolTipTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIToolTipTemplateSettings_INTERFACE_DEFINED__) */
@@ -12840,6 +13274,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings ** Default Interface **
+ *    Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -13120,6 +13555,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings ** Default Interface **
  *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings2
  *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings3
+ *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -13215,6 +13651,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -13226,6 +13663,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase3
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase4
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase5
+ *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides4
  *
@@ -13829,12 +14267,14 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IPopupStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IPopupStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IPopupStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Controls.Primitives.IPopup ** Default Interface **
  *    Windows.UI.Xaml.Controls.Primitives.IPopup2
+ *    Windows.UI.Xaml.Controls.Primitives.IPopup3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -14329,6 +14769,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTempl
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarToggleButtonTemplateSettings;
@@ -14461,6 +14907,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarT
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings3_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIDragCompletedEventArgs;
@@ -14527,6 +14979,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase5
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase5_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs;
@@ -14574,6 +15032,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseS
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutShowOptions_FWD_DEFINED__
@@ -14845,6 +15309,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup2 __x_
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics;
@@ -14856,6 +15326,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatic
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIProgressBarTemplateSettings_FWD_DEFINED__
@@ -15341,7 +15817,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitiv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseClosingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBase_Windows__CUI__CXaml__CControls__CPrimitives__CFlyoutBaseClosingEventArgsVtbl;
 
@@ -15400,7 +15876,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitiv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrum * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIColorChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIColorSpectrum * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIColorChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CPrimitives__CColorSpectrum_Windows__CUI__CXaml__CControls__CColorChangedEventArgsVtbl;
 
@@ -16932,6 +17408,13 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CVerticalAlignment __x_ABI_CWindows_CUI_
 
 typedef enum __x_ABI_CWindows_CUI_CXaml_CVisibility __x_ABI_CWindows_CUI_CXaml_CVisibility;
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CIXamlRoot __x_ABI_CWindows_CUI_CXaml_CIXamlRoot;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+
+
 
 
 
@@ -16979,6 +17462,12 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CTickPlacement __x
 
 
 typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CGeneratorPosition __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CGeneratorPosition;
+
+
+
+
+
+
 
 
 
@@ -18127,6 +18616,113 @@ interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSetti
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2[] = L"Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2";
+/* [object, uuid("CBE66259-0399-5BCC-B925-4D5F5C9A4568"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NegativeCompactVerticalDelta )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This,
+        /* [retval, out] */__RPC__out DOUBLE * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NegativeMinimalVerticalDelta )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This,
+        /* [retval, out] */__RPC__out DOUBLE * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NegativeHiddenVerticalDelta )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2 * This,
+        /* [retval, out] */__RPC__out DOUBLE * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_get_NegativeCompactVerticalDelta(This,value) \
+    ( (This)->lpVtbl->get_NegativeCompactVerticalDelta(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_get_NegativeMinimalVerticalDelta(This,value) \
+    ( (This)->lpVtbl->get_NegativeMinimalVerticalDelta(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_get_NegativeHiddenVerticalDelta(This,value) \
+    ( (This)->lpVtbl->get_NegativeHiddenVerticalDelta(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIAppBarTemplateSettings2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -20956,6 +21552,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIComman
 
 /*
  *
+ * Interface Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4[] = L"Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4";
+/* [object, uuid("F2562DD3-AA58-59C5-853B-828A19D1214E"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_OverflowContentCompactYTranslation )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This,
+        /* [retval, out] */__RPC__out DOUBLE * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_OverflowContentMinimalYTranslation )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This,
+        /* [retval, out] */__RPC__out DOUBLE * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_OverflowContentHiddenYTranslation )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4 * This,
+        /* [retval, out] */__RPC__out DOUBLE * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_get_OverflowContentCompactYTranslation(This,value) \
+    ( (This)->lpVtbl->get_OverflowContentCompactYTranslation(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_get_OverflowContentMinimalYTranslation(This,value) \
+    ( (This)->lpVtbl->get_OverflowContentMinimalYTranslation(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_get_OverflowContentHiddenYTranslation(This,value) \
+    ( (This)->lpVtbl->get_OverflowContentHiddenYTranslation(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CICommandBarTemplateSettings4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Controls.Primitives.IDragCompletedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -22206,6 +22909,127 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyout
 
 /*
  *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.FlyoutBase
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6[] = L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6";
+/* [object, uuid("5399DE8C-06CC-5B52-B65A-FF9322D1C940"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ShouldConstrainToRootBounds )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_ShouldConstrainToRootBounds )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsConstrainedToRootBounds )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_XamlRoot )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIXamlRoot * * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_XamlRoot )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIXamlRoot * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_get_ShouldConstrainToRootBounds(This,value) \
+    ( (This)->lpVtbl->get_ShouldConstrainToRootBounds(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_put_ShouldConstrainToRootBounds(This,value) \
+    ( (This)->lpVtbl->put_ShouldConstrainToRootBounds(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_get_IsConstrainedToRootBounds(This,value) \
+    ( (This)->lpVtbl->get_IsConstrainedToRootBounds(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_get_XamlRoot(This,value) \
+    ( (This)->lpVtbl->get_XamlRoot(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_put_XamlRoot(This,value) \
+    ( (This)->lpVtbl->put_XamlRoot(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseClosingEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
@@ -23034,6 +23858,99 @@ interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.FlyoutBase
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics6[] = L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6";
+/* [object, uuid("96D49254-C91B-5246-8B39-AFC2A2C50CF8"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ShouldConstrainToRootBoundsProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_get_ShouldConstrainToRootBoundsProperty(This,value) \
+    ( (This)->lpVtbl->get_ShouldConstrainToRootBoundsProperty(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseStatics6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -29002,6 +29919,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup2
 
 /*
  *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IPopup3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.Popup
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IPopup3[] = L"Windows.UI.Xaml.Controls.Primitives.IPopup3";
+/* [object, uuid("F9C46915-A65C-5F68-9F54-310A1B51095F"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ShouldConstrainToRootBounds )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_ShouldConstrainToRootBounds )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsConstrainedToRootBounds )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_get_ShouldConstrainToRootBounds(This,value) \
+    ( (This)->lpVtbl->get_ShouldConstrainToRootBounds(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_put_ShouldConstrainToRootBounds(This,value) \
+    ( (This)->lpVtbl->put_ShouldConstrainToRootBounds(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_get_IsConstrainedToRootBounds(This,value) \
+    ( (This)->lpVtbl->get_IsConstrainedToRootBounds(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Controls.Primitives.IPopupStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -29219,6 +30243,99 @@ interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Primitives.IPopupStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Primitives.Popup
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Primitives_IPopupStatics3[] = L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics3";
+/* [object, uuid("00789589-C580-558F-945A-7D02EE004D3E"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ShouldConstrainToRootBoundsProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_get_ShouldConstrainToRootBoundsProperty(This,value) \
+    ( (This)->lpVtbl->get_ShouldConstrainToRootBoundsProperty(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopupStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -32851,6 +33968,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings ** Default Interface **
+ *    Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -33131,6 +34249,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings ** Default Interface **
  *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings2
  *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings3
+ *    Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -33226,6 +34345,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -33237,6 +34357,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase3
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase4
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase5
+ *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides
  *    Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides4
  *
@@ -33840,12 +34961,14 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IPopupStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IPopupStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Primitives.IPopupStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Controls.Primitives.IPopup ** Default Interface **
  *    Windows.UI.Xaml.Controls.Primitives.IPopup2
+ *    Windows.UI.Xaml.Controls.Primitives.IPopup3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

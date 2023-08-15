@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.data.text.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ISelectableWordSegmentsTokenizingHandler;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CISelectableWordSegmentsTokenizingHandler ABI::Windows::Data::Text::ISelectableWordSegmentsTokenizingHandler
 
 #endif // ____x_ABI_CWindows_CData_CText_CISelectableWordSegmentsTokenizingHandler_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface IWordSegmentsTokenizingHandler;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CIWordSegmentsTokenizingHandler ABI::Windows::Data::Text::IWordSegmentsTokenizingHandler
 
 #endif // ____x_ABI_CWindows_CData_CText_CIWordSegmentsTokenizingHandler_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface IAlternateWordForm;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CIAlternateWordForm ABI::Windows::Data::Text::IAlternateWordForm
 
 #endif // ____x_ABI_CWindows_CData_CText_CIAlternateWordForm_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ISelectableWordSegment;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CISelectableWordSegment ABI::Windows::Data::Text::ISelectableWordSegment
 
 #endif // ____x_ABI_CWindows_CData_CText_CISelectableWordSegment_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ISelectableWordsSegmenter;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CISelectableWordsSegmenter ABI::Windows::Data::Text::ISelectableWordsSegmenter
 
 #endif // ____x_ABI_CWindows_CData_CText_CISelectableWordsSegmenter_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ISelectableWordsSegmenterFactory;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CISelectableWordsSegmenterFactory ABI::Windows::Data::Text::ISelectableWordsSegmenterFactory
 
 #endif // ____x_ABI_CWindows_CData_CText_CISelectableWordsSegmenterFactory_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ISemanticTextQuery;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CISemanticTextQuery ABI::Windows::Data::Text::ISemanticTextQuery
 
 #endif // ____x_ABI_CWindows_CData_CText_CISemanticTextQuery_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ISemanticTextQueryFactory;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CISemanticTextQueryFactory ABI::Windows::Data::Text::ISemanticTextQueryFactory
 
 #endif // ____x_ABI_CWindows_CData_CText_CISemanticTextQueryFactory_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextConversionGenerator;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextConversionGenerator ABI::Windows::Data::Text::ITextConversionGenerator
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextConversionGenerator_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextConversionGeneratorFactory;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextConversionGeneratorFactory ABI::Windows::Data::Text::ITextConversionGeneratorFactory
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextConversionGeneratorFactory_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextPhoneme;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextPhoneme ABI::Windows::Data::Text::ITextPhoneme
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextPhoneme_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextPredictionGenerator;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextPredictionGenerator ABI::Windows::Data::Text::ITextPredictionGenerator
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextPredictionGenerator_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextPredictionGenerator2;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextPredictionGenerator2 ABI::Windows::Data::Text::ITextPredictionGenerator2
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextPredictionGenerator2_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextPredictionGeneratorFactory;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextPredictionGeneratorFactory ABI::Windows::Data::Text::ITextPredictionGeneratorFactory
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextPredictionGeneratorFactory_FWD_DEFINED__
@@ -473,9 +469,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextReverseConversionGenerator;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator ABI::Windows::Data::Text::ITextReverseConversionGenerator
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator_FWD_DEFINED__
@@ -487,9 +483,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextReverseConversionGenerator2;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator2 ABI::Windows::Data::Text::ITextReverseConversionGenerator2
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator2_FWD_DEFINED__
@@ -501,9 +497,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface ITextReverseConversionGeneratorFactory;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CITextReverseConversionGeneratorFactory ABI::Windows::Data::Text::ITextReverseConversionGeneratorFactory
 
 #endif // ____x_ABI_CWindows_CData_CText_CITextReverseConversionGeneratorFactory_FWD_DEFINED__
@@ -515,9 +511,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface IUnicodeCharactersStatics;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CIUnicodeCharactersStatics ABI::Windows::Data::Text::IUnicodeCharactersStatics
 
 #endif // ____x_ABI_CWindows_CData_CText_CIUnicodeCharactersStatics_FWD_DEFINED__
@@ -529,9 +525,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface IWordSegment;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CIWordSegment ABI::Windows::Data::Text::IWordSegment
 
 #endif // ____x_ABI_CWindows_CData_CText_CIWordSegment_FWD_DEFINED__
@@ -543,9 +539,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface IWordsSegmenter;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CIWordsSegmenter ABI::Windows::Data::Text::IWordsSegmenter
 
 #endif // ____x_ABI_CWindows_CData_CText_CIWordsSegmenter_FWD_DEFINED__
@@ -557,9 +553,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 interface IWordsSegmenterFactory;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CText_CIWordsSegmenterFactory ABI::Windows::Data::Text::IWordsSegmenterFactory
 
 #endif // ____x_ABI_CWindows_CData_CText_CIWordsSegmenterFactory_FWD_DEFINED__
@@ -572,9 +568,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class AlternateWordForm;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -597,7 +593,7 @@ IIterator<ABI::Windows::Data::Text::AlternateWordForm*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Data::Text::AlternateWordForm*> __FIIterator_1_Windows__CData__CText__CAlternateWordForm_t;
 #define __FIIterator_1_Windows__CData__CText__CAlternateWordForm ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CText__CAlternateWordForm_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CText__CAlternateWordForm ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Text::IAlternateWordForm*>
@@ -629,7 +625,7 @@ IIterable<ABI::Windows::Data::Text::AlternateWordForm*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Data::Text::AlternateWordForm*> __FIIterable_1_Windows__CData__CText__CAlternateWordForm_t;
 #define __FIIterable_1_Windows__CData__CText__CAlternateWordForm ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CText__CAlternateWordForm_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CText__CAlternateWordForm ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Text::IAlternateWordForm*>
@@ -645,9 +641,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class SelectableWordSegment;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -670,7 +666,7 @@ IIterator<ABI::Windows::Data::Text::SelectableWordSegment*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Data::Text::SelectableWordSegment*> __FIIterator_1_Windows__CData__CText__CSelectableWordSegment_t;
 #define __FIIterator_1_Windows__CData__CText__CSelectableWordSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CText__CSelectableWordSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CText__CSelectableWordSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Text::ISelectableWordSegment*>
@@ -702,7 +698,7 @@ IIterable<ABI::Windows::Data::Text::SelectableWordSegment*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Data::Text::SelectableWordSegment*> __FIIterable_1_Windows__CData__CText__CSelectableWordSegment_t;
 #define __FIIterable_1_Windows__CData__CText__CSelectableWordSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CText__CSelectableWordSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CText__CSelectableWordSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Text::ISelectableWordSegment*>
@@ -718,9 +714,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class TextPhoneme;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -743,7 +739,7 @@ IIterator<ABI::Windows::Data::Text::TextPhoneme*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Data::Text::TextPhoneme*> __FIIterator_1_Windows__CData__CText__CTextPhoneme_t;
 #define __FIIterator_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CText__CTextPhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Text::ITextPhoneme*>
@@ -775,7 +771,7 @@ IIterable<ABI::Windows::Data::Text::TextPhoneme*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Data::Text::TextPhoneme*> __FIIterable_1_Windows__CData__CText__CTextPhoneme_t;
 #define __FIIterable_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CText__CTextPhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Text::ITextPhoneme*>
@@ -792,9 +788,9 @@ namespace ABI {
             namespace Text {
                 struct TextSegment;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CData__CText__CTextSegment_USE
@@ -815,7 +811,7 @@ IIterator<struct ABI::Windows::Data::Text::TextSegment> : IIterator_impl<struct 
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Data::Text::TextSegment> __FIIterator_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterator_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Text::TextSegment>
@@ -845,7 +841,7 @@ IIterable<struct ABI::Windows::Data::Text::TextSegment> : IIterable_impl<struct 
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Data::Text::TextSegment> __FIIterable_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterable_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Text::TextSegment>
@@ -860,9 +856,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class WordSegment;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -885,7 +881,7 @@ IIterator<ABI::Windows::Data::Text::WordSegment*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Data::Text::WordSegment*> __FIIterator_1_Windows__CData__CText__CWordSegment_t;
 #define __FIIterator_1_Windows__CData__CText__CWordSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CText__CWordSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CText__CWordSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Text::IWordSegment*>
@@ -917,7 +913,7 @@ IIterable<ABI::Windows::Data::Text::WordSegment*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Data::Text::WordSegment*> __FIIterable_1_Windows__CData__CText__CWordSegment_t;
 #define __FIIterable_1_Windows__CData__CText__CWordSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CText__CWordSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CText__CWordSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Text::IWordSegment*>
@@ -948,7 +944,7 @@ IVectorView<struct ABI::Windows::Data::Text::TextSegment> : IVectorView_impl<str
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Data::Text::TextSegment> __FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>
@@ -978,7 +974,7 @@ IKeyValuePair<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> : I
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>
@@ -1008,7 +1004,7 @@ IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTe
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>*>
@@ -1038,7 +1034,7 @@ IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTe
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>*>
@@ -1068,7 +1064,7 @@ IMapView<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> : IMapVi
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>
@@ -1098,7 +1094,7 @@ IMap<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> : IMap_impl<
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,__FIVectorView_1_Windows__CData__CText__CTextSegment*> __FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING___FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>*>
@@ -1129,7 +1125,7 @@ IVectorView<ABI::Windows::Data::Text::AlternateWordForm*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Data::Text::AlternateWordForm*> __FIVectorView_1_Windows__CData__CText__CAlternateWordForm_t;
 #define __FIVectorView_1_Windows__CData__CText__CAlternateWordForm ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CText__CAlternateWordForm_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CText__CAlternateWordForm ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::IAlternateWordForm*>
@@ -1161,7 +1157,7 @@ IVectorView<ABI::Windows::Data::Text::SelectableWordSegment*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Data::Text::SelectableWordSegment*> __FIVectorView_1_Windows__CData__CText__CSelectableWordSegment_t;
 #define __FIVectorView_1_Windows__CData__CText__CSelectableWordSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CText__CSelectableWordSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CText__CSelectableWordSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::ISelectableWordSegment*>
@@ -1193,7 +1189,7 @@ IVectorView<ABI::Windows::Data::Text::TextPhoneme*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Data::Text::TextPhoneme*> __FIVectorView_1_Windows__CData__CText__CTextPhoneme_t;
 #define __FIVectorView_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CText__CTextPhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::ITextPhoneme*>
@@ -1225,7 +1221,7 @@ IVectorView<ABI::Windows::Data::Text::WordSegment*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Data::Text::WordSegment*> __FIVectorView_1_Windows__CData__CText__CWordSegment_t;
 #define __FIVectorView_1_Windows__CData__CText__CWordSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CText__CWordSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CText__CWordSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::IWordSegment*>
@@ -1257,7 +1253,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CData__CText__CTextPho
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CData__CText__CTextPhoneme*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::ITextPhoneme*>*>
@@ -1289,7 +1285,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CData__CText__CTextPhoneme*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CData__CText__CTextPhoneme*> __FIAsyncOperation_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CData__CText__CTextPhoneme ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::ITextPhoneme*>*>
@@ -1319,7 +1315,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1348,7 +1344,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1377,7 +1373,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1407,7 +1403,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> : IAsyncOperationComp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -1437,7 +1433,7 @@ IAsyncOperation<__FIVectorView_1_HSTRING*> : IAsyncOperation_impl<__FIVectorView
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_HSTRING*> __FIAsyncOperation_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -1466,7 +1462,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -1495,7 +1491,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -1518,10 +1514,10 @@ namespace ABI {
                     
                     typedef enum CoreTextInputScope : int CoreTextInputScope;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Text */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Text */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1534,9 +1530,9 @@ namespace ABI {
                 
                 typedef enum AlternateNormalizationFormat : int AlternateNormalizationFormat;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1545,9 +1541,9 @@ namespace ABI {
                 
                 typedef enum TextPredictionOptions : unsigned int TextPredictionOptions;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1556,9 +1552,9 @@ namespace ABI {
                 
                 typedef enum UnicodeGeneralCategory : int UnicodeGeneralCategory;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1567,9 +1563,9 @@ namespace ABI {
                 
                 typedef enum UnicodeNumericType : int UnicodeNumericType;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1578,9 +1574,9 @@ namespace ABI {
                 
                 typedef struct TextSegment TextSegment;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1610,9 +1606,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class SelectableWordsSegmenter;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1620,9 +1616,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class SemanticTextQuery;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1630,9 +1626,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class TextConversionGenerator;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1641,9 +1637,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class TextPredictionGenerator;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1651,9 +1647,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class TextReverseConversionGenerator;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1663,9 +1659,9 @@ namespace ABI {
         namespace Data {
             namespace Text {
                 class WordsSegmenter;
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1700,9 +1696,9 @@ namespace ABI {
                     AlternateNormalizationFormat_Time = 5,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1730,9 +1726,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(TextPredictionOptions)
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -1785,9 +1781,9 @@ namespace ABI {
                     UnicodeGeneralCategory_NotAssigned = 29,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1814,9 +1810,9 @@ namespace ABI {
                     UnicodeNumericType_Numeric = 3,
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1841,9 +1837,9 @@ namespace ABI {
                     UINT32 Length;
                 };
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1876,9 +1872,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISelectableWordSegmentsTokenizingHandler=_uuidof(ISelectableWordSegmentsTokenizingHandler);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CISelectableWordSegmentsTokenizingHandler;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CISelectableWordSegmentsTokenizingHandler_INTERFACE_DEFINED__) */
@@ -1914,9 +1910,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWordSegmentsTokenizingHandler=_uuidof(IWordSegmentsTokenizingHandler);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CIWordSegmentsTokenizingHandler;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CIWordSegmentsTokenizingHandler_INTERFACE_DEFINED__) */
@@ -1961,9 +1957,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAlternateWordForm=_uuidof(IAlternateWordForm);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CIAlternateWordForm;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CIAlternateWordForm_INTERFACE_DEFINED__) */
@@ -2005,9 +2001,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISelectableWordSegment=_uuidof(ISelectableWordSegment);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CISelectableWordSegment;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CISelectableWordSegment_INTERFACE_DEFINED__) */
@@ -2060,9 +2056,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISelectableWordsSegmenter=_uuidof(ISelectableWordsSegmenter);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CISelectableWordsSegmenter;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CISelectableWordsSegmenter_INTERFACE_DEFINED__) */
@@ -2102,9 +2098,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISelectableWordsSegmenterFactory=_uuidof(ISelectableWordsSegmenterFactory);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CISelectableWordsSegmenterFactory;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CISelectableWordsSegmenterFactory_INTERFACE_DEFINED__) */
@@ -2149,9 +2145,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISemanticTextQuery=_uuidof(ISemanticTextQuery);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CISemanticTextQuery;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CISemanticTextQuery_INTERFACE_DEFINED__) */
@@ -2196,9 +2192,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISemanticTextQueryFactory=_uuidof(ISemanticTextQueryFactory);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CISemanticTextQueryFactory;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CISemanticTextQueryFactory_INTERFACE_DEFINED__) */
@@ -2233,7 +2229,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LanguageAvailableButNotInstalled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE GetCandidatesAsync(
                         /* [in] */__RPC__in HSTRING input,
@@ -2249,9 +2245,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextConversionGenerator=_uuidof(ITextConversionGenerator);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextConversionGenerator;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextConversionGenerator_INTERFACE_DEFINED__) */
@@ -2291,9 +2287,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextConversionGeneratorFactory=_uuidof(ITextConversionGeneratorFactory);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextConversionGeneratorFactory;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextConversionGeneratorFactory_INTERFACE_DEFINED__) */
@@ -2335,9 +2331,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextPhoneme=_uuidof(ITextPhoneme);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextPhoneme;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextPhoneme_INTERFACE_DEFINED__) */
@@ -2372,7 +2368,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LanguageAvailableButNotInstalled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE GetCandidatesAsync(
                         /* [in] */__RPC__in HSTRING input,
@@ -2388,9 +2384,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextPredictionGenerator=_uuidof(ITextPredictionGenerator);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextPredictionGenerator;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextPredictionGenerator_INTERFACE_DEFINED__) */
@@ -2444,9 +2440,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextPredictionGenerator2=_uuidof(ITextPredictionGenerator2);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextPredictionGenerator2;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextPredictionGenerator2_INTERFACE_DEFINED__) */
@@ -2486,9 +2482,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextPredictionGeneratorFactory=_uuidof(ITextPredictionGeneratorFactory);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextPredictionGeneratorFactory;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextPredictionGeneratorFactory_INTERFACE_DEFINED__) */
@@ -2523,7 +2519,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LanguageAvailableButNotInstalled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ConvertBackAsync(
                         /* [in] */__RPC__in HSTRING input,
@@ -2534,9 +2530,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextReverseConversionGenerator=_uuidof(ITextReverseConversionGenerator);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator_INTERFACE_DEFINED__) */
@@ -2576,9 +2572,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextReverseConversionGenerator2=_uuidof(ITextReverseConversionGenerator2);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator2;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextReverseConversionGenerator2_INTERFACE_DEFINED__) */
@@ -2618,9 +2614,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITextReverseConversionGeneratorFactory=_uuidof(ITextReverseConversionGeneratorFactory);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CITextReverseConversionGeneratorFactory;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CITextReverseConversionGeneratorFactory_INTERFACE_DEFINED__) */
@@ -2663,55 +2659,55 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsHighSurrogate(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsLowSurrogate(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSupplementary(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsNoncharacter(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsWhitespace(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsAlphabetic(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsCased(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsUppercase(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsLowercase(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsIdStart(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsIdContinue(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsGraphemeBase(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsGraphemeExtend(
                         /* [in] */UINT32 codepoint,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetNumericType(
                         /* [in] */UINT32 codepoint,
@@ -2726,9 +2722,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUnicodeCharactersStatics=_uuidof(IUnicodeCharactersStatics);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CIUnicodeCharactersStatics;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CIUnicodeCharactersStatics_INTERFACE_DEFINED__) */
@@ -2773,9 +2769,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWordSegment=_uuidof(IWordSegment);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CIWordSegment;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CIWordSegment_INTERFACE_DEFINED__) */
@@ -2828,9 +2824,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWordsSegmenter=_uuidof(IWordsSegmenter);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CIWordsSegmenter;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CIWordsSegmenter_INTERFACE_DEFINED__) */
@@ -2870,9 +2866,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWordsSegmenterFactory=_uuidof(IWordsSegmenterFactory);
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CText_CIWordsSegmenterFactory;
 #endif /* !defined(____x_ABI_CWindows_CData_CText_CIWordsSegmenterFactory_INTERFACE_DEFINED__) */

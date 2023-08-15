@@ -178,6 +178,11 @@ RemoveVectoredContinueHandler(
 
 
 #endif // (_WIN32_WINNT >= 0x0501)
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 // RC warns because "WINBASE_DECLARE_RESTORE_LAST_ERROR" is a bit long.
 #if !defined(RC_INVOKED)
@@ -200,7 +205,7 @@ typedef VOID (WINAPI* PRESTORE_LAST_ERROR)(DWORD);
 #endif 
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Application Family or OneCore Family

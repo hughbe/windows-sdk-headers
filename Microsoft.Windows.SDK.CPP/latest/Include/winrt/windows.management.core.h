@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.management.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -275,9 +271,9 @@ namespace ABI {
         namespace Management {
             namespace Core {
                 interface IApplicationDataManager;
-            } /* Windows */
+            } /* Core */
         } /* Management */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CCore_CIApplicationDataManager ABI::Windows::Management::Core::IApplicationDataManager
 
 #endif // ____x_ABI_CWindows_CManagement_CCore_CIApplicationDataManager_FWD_DEFINED__
@@ -289,9 +285,9 @@ namespace ABI {
         namespace Management {
             namespace Core {
                 interface IApplicationDataManagerStatics;
-            } /* Windows */
+            } /* Core */
         } /* Management */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CCore_CIApplicationDataManagerStatics ABI::Windows::Management::Core::IApplicationDataManagerStatics
 
 #endif // ____x_ABI_CWindows_CManagement_CCore_CIApplicationDataManagerStatics_FWD_DEFINED__
@@ -304,8 +300,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class ApplicationData;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIApplicationData_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIApplicationData_FWD_DEFINED__
@@ -313,8 +309,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IApplicationData;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIApplicationData ABI::Windows::Storage::IApplicationData
 
 #endif // ____x_ABI_CWindows_CStorage_CIApplicationData_FWD_DEFINED__
@@ -329,9 +325,9 @@ namespace ABI {
         namespace Management {
             namespace Core {
                 class ApplicationDataManager;
-            } /* Windows */
+            } /* Core */
         } /* Management */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -367,9 +363,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationDataManager=_uuidof(IApplicationDataManager);
                 
-            } /* Windows */
+            } /* Core */
         } /* Management */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CCore_CIApplicationDataManager;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CCore_CIApplicationDataManager_INTERFACE_DEFINED__) */
@@ -409,9 +405,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationDataManagerStatics=_uuidof(IApplicationDataManagerStatics);
                 
-            } /* Windows */
+            } /* Core */
         } /* Management */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CCore_CIApplicationDataManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CCore_CIApplicationDataManagerStatics_INTERFACE_DEFINED__) */

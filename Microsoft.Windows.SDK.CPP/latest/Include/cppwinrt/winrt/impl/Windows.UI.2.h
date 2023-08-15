@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -187,6 +187,18 @@ struct WINRT_EBO Colors :
     static Windows::UI::Color WhiteSmoke();
     static Windows::UI::Color Yellow();
     static Windows::UI::Color YellowGreen();
+};
+
+struct WINRT_EBO UIContentRoot :
+    Windows::UI::IUIContentRoot
+{
+    UIContentRoot(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO UIContext :
+    Windows::UI::IUIContext
+{
+    UIContext(std::nullptr_t) noexcept {}
 };
 
 }

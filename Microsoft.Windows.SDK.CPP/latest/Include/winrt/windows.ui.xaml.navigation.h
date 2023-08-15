@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.navigation.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface ILoadCompletedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CILoadCompletedEventHandler ABI::Windows::UI::Xaml::Navigation::ILoadCompletedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CILoadCompletedEventHandler_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigatedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatedEventHandler ABI::Windows::UI::Xaml::Navigation::INavigatedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatedEventHandler_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigatingCancelEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventHandler ABI::Windows::UI::Xaml::Navigation::INavigatingCancelEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventHandler_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigationFailedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventHandler ABI::Windows::UI::Xaml::Navigation::INavigationFailedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventHandler_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigationStoppedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationStoppedEventHandler ABI::Windows::UI::Xaml::Navigation::INavigationStoppedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationStoppedEventHandler_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface IFrameNavigationOptions;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptions ABI::Windows::UI::Xaml::Navigation::IFrameNavigationOptions
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptions_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface IFrameNavigationOptionsFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptionsFactory ABI::Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptionsFactory_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigatingCancelEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs ABI::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigatingCancelEventArgs2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs2 ABI::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs2_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigationEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs ABI::Windows::UI::Xaml::Navigation::INavigationEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigationEventArgs2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs2 ABI::Windows::UI::Xaml::Navigation::INavigationEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs2_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface INavigationFailedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventArgs ABI::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventArgs_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface IPageStackEntry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntry ABI::Windows::UI::Xaml::Navigation::IPageStackEntry
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntry_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface IPageStackEntryFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryFactory ABI::Windows::UI::Xaml::Navigation::IPageStackEntryFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryFactory_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     interface IPageStackEntryStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryStatics ABI::Windows::UI::Xaml::Navigation::IPageStackEntryStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryStatics_FWD_DEFINED__
@@ -521,10 +517,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     class PageStackEntry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -547,7 +543,7 @@ IIterator<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> __FIIterator_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Navigation::IPageStackEntry*>
@@ -579,7 +575,7 @@ IIterable<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> __FIIterable_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Navigation::IPageStackEntry*>
@@ -611,7 +607,7 @@ IVectorView<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> __FIVectorView_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Navigation::IPageStackEntry*>
@@ -643,7 +639,7 @@ IVector<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> : IVector_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Navigation::PageStackEntry*> __FIVector_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t;
 #define __FIVector_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CNavigation__CPageStackEntry ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Navigation::IPageStackEntry*>
@@ -661,8 +657,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -670,8 +666,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -684,9 +680,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -695,9 +691,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -714,10 +710,10 @@ namespace ABI {
                     
                     typedef struct TypeName TypeName;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -730,11 +726,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class NavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo_FWD_DEFINED__
@@ -745,11 +741,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface INavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo_FWD_DEFINED__
@@ -768,10 +764,10 @@ namespace ABI {
                     
                     typedef enum NavigationCacheMode : int NavigationCacheMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -781,10 +777,10 @@ namespace ABI {
                     
                     typedef enum NavigationMode : int NavigationMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -807,10 +803,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     class FrameNavigationOptions;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -819,10 +815,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     class NavigatingCancelEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -831,10 +827,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     class NavigationEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -843,10 +839,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Navigation {
                     class NavigationFailedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -883,10 +879,10 @@ namespace ABI {
                         NavigationCacheMode_Enabled = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -914,10 +910,10 @@ namespace ABI {
                         NavigationMode_Refresh = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -951,10 +947,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILoadCompletedEventHandler=_uuidof(ILoadCompletedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CILoadCompletedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CILoadCompletedEventHandler_INTERFACE_DEFINED__) */
@@ -991,10 +987,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigatedEventHandler=_uuidof(INavigatedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatedEventHandler_INTERFACE_DEFINED__) */
@@ -1031,10 +1027,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigatingCancelEventHandler=_uuidof(INavigatingCancelEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventHandler_INTERFACE_DEFINED__) */
@@ -1071,10 +1067,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigationFailedEventHandler=_uuidof(INavigationFailedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventHandler_INTERFACE_DEFINED__) */
@@ -1111,10 +1107,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigationStoppedEventHandler=_uuidof(INavigationStoppedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationStoppedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationStoppedEventHandler_INTERFACE_DEFINED__) */
@@ -1147,10 +1143,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNavigationStackEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsNavigationStackEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TransitionInfoOverride(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfo * * value
@@ -1163,10 +1159,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameNavigationOptions=_uuidof(IFrameNavigationOptions);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptions;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptions_INTERFACE_DEFINED__) */
@@ -1208,10 +1204,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameNavigationOptionsFactory=_uuidof(IFrameNavigationOptionsFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CIFrameNavigationOptionsFactory_INTERFACE_DEFINED__) */
@@ -1244,10 +1240,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Cancel(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Cancel(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NavigationMode(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Navigation::NavigationMode * value
@@ -1260,10 +1256,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigatingCancelEventArgs=_uuidof(INavigatingCancelEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs_INTERFACE_DEFINED__) */
@@ -1306,10 +1302,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigatingCancelEventArgs2=_uuidof(INavigatingCancelEventArgs2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigatingCancelEventArgs2_INTERFACE_DEFINED__) */
@@ -1364,10 +1360,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigationEventArgs=_uuidof(INavigationEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs_INTERFACE_DEFINED__) */
@@ -1407,10 +1403,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigationEventArgs2=_uuidof(INavigationEventArgs2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationEventArgs2_INTERFACE_DEFINED__) */
@@ -1446,10 +1442,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__out HRESULT * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SourcePageType(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Interop::TypeName * value
@@ -1459,10 +1455,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INavigationFailedEventArgs=_uuidof(INavigationFailedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CINavigationFailedEventArgs_INTERFACE_DEFINED__) */
@@ -1508,10 +1504,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPageStackEntry=_uuidof(IPageStackEntry);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntry;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntry_INTERFACE_DEFINED__) */
@@ -1554,10 +1550,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPageStackEntryFactory=_uuidof(IPageStackEntryFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryFactory_INTERFACE_DEFINED__) */
@@ -1597,10 +1593,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPageStackEntryStatics=_uuidof(IPageStackEntryStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Navigation */} /* ABI */
+                } /* Navigation */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CNavigation_CIPageStackEntryStatics_INTERFACE_DEFINED__) */

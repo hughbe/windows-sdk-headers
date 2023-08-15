@@ -208,29 +208,31 @@ typedef struct _DOMAIN_CONTROLLER_INFOW {
 // Function Prototypes
 //
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcNameA(
-    IN _In_opt_ LPCSTR ComputerName OPTIONAL,
-    IN _In_opt_ LPCSTR DomainName OPTIONAL,
-    IN GUID *DomainGuid OPTIONAL,
-    IN _In_opt_ LPCSTR SiteName OPTIONAL,
-    IN ULONG Flags,
-    OUT PDOMAIN_CONTROLLER_INFOA *DomainControllerInfo
-);
+    _In_opt_ LPCSTR ComputerName,
+    _In_opt_ LPCSTR DomainName,
+    _In_opt_ GUID *DomainGuid,
+    _In_opt_ LPCSTR SiteName,
+    _In_ ULONG Flags,
+    _Outptr_result_nullonfailure_ PDOMAIN_CONTROLLER_INFOA *DomainControllerInfo
+    );
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcNameW(
-    IN _In_opt_ LPCWSTR ComputerName OPTIONAL,
-    IN _In_opt_ LPCWSTR DomainName OPTIONAL,
-    IN GUID *DomainGuid OPTIONAL,
-    IN _In_opt_ LPCWSTR SiteName OPTIONAL,
-    IN ULONG Flags,
-    OUT PDOMAIN_CONTROLLER_INFOW *DomainControllerInfo
-);
+    _In_opt_ LPCWSTR ComputerName,
+    _In_opt_ LPCWSTR DomainName,
+    _In_opt_ GUID *DomainGuid,
+    _In_opt_ LPCWSTR SiteName,
+    _In_ ULONG Flags,
+    _Outptr_result_nullonfailure_ PDOMAIN_CONTROLLER_INFOW *DomainControllerInfo
+    );
 
 #ifdef UNICODE
 #define DsGetDcName DsGetDcNameW
@@ -238,21 +240,23 @@ DsGetDcNameW(
 #define DsGetDcName DsGetDcNameA
 #endif // !UNICODE
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetSiteNameA(
-    IN _In_opt_ LPCSTR ComputerName OPTIONAL,
-    OUT _Outptr_ LPSTR *SiteName
-);
+    _In_opt_ LPCSTR ComputerName,
+    _Outptr_result_nullonfailure_ LPSTR *SiteName
+    );
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetSiteNameW(
-    IN _In_opt_ LPCWSTR ComputerName OPTIONAL,
-    OUT  _Outptr_ LPWSTR *SiteName
-);
+    _In_opt_ LPCWSTR ComputerName,
+    _Outptr_result_nullonfailure_ LPWSTR *SiteName
+    );
 
 #ifdef UNICODE
 #define DsGetSiteName DsGetSiteNameW
@@ -260,20 +264,19 @@ DsGetSiteNameW(
 #define DsGetSiteName DsGetSiteNameA
 #endif // !UNICODE
 
-
 DSGETDCAPI
 DWORD
 WINAPI
 DsValidateSubnetNameW(
-    _In_ IN LPCWSTR SubnetName
-);
+    _In_ LPCWSTR SubnetName
+    );
 
 DSGETDCAPI
 DWORD
 WINAPI
 DsValidateSubnetNameA(
-    _In_ IN LPCSTR SubnetName
-);
+    _In_ LPCSTR SubnetName
+    );
 
 #ifdef UNICODE
 #define DsValidateSubnetName DsValidateSubnetNameW
@@ -286,24 +289,27 @@ DsValidateSubnetNameA(
 // Only include if winsock2.h has been included
 //
 #ifdef _WINSOCK2API_
+
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsAddressToSiteNamesW(
-    IN _In_opt_ LPCWSTR ComputerName OPTIONAL,
-    IN DWORD EntryCount,
-    IN PSOCKET_ADDRESS SocketAddresses,
-    OUT _Outptr_result_buffer_(EntryCount) LPWSTR **SiteNames
+    _In_opt_ LPCWSTR ComputerName,
+    _In_ DWORD EntryCount,
+    _In_reads_(EntryCount) PSOCKET_ADDRESS SocketAddresses,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(EntryCount) LPWSTR **SiteNames
     );
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsAddressToSiteNamesA(
-    IN _In_opt_ LPCSTR ComputerName OPTIONAL,
-    IN DWORD EntryCount,
-    IN PSOCKET_ADDRESS SocketAddresses,
-    OUT _Outptr_result_buffer_(EntryCount) LPSTR **SiteNames
+    _In_opt_ LPCSTR ComputerName,
+    _In_ DWORD EntryCount,
+    _In_reads_(EntryCount) PSOCKET_ADDRESS SocketAddresses,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(EntryCount) LPSTR **SiteNames
     );
 
 #ifdef UNICODE
@@ -312,26 +318,28 @@ DsAddressToSiteNamesA(
 #define DsAddressToSiteNames DsAddressToSiteNamesA
 #endif // !UNICODE
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsAddressToSiteNamesExW(
-    IN _In_opt_ LPCWSTR ComputerName OPTIONAL,
-    IN DWORD EntryCount,
-    IN PSOCKET_ADDRESS SocketAddresses,
-    OUT _Outptr_result_buffer_(EntryCount) LPWSTR **SiteNames,
-    OUT _Outptr_result_buffer_(EntryCount) LPWSTR **SubnetNames
+    _In_opt_ LPCWSTR ComputerName,
+    _In_ DWORD EntryCount,
+    _In_reads_(EntryCount) PSOCKET_ADDRESS SocketAddresses,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(EntryCount) LPWSTR **SiteNames,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(EntryCount) LPWSTR **SubnetNames
     );
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsAddressToSiteNamesExA(
-    IN _In_opt_ LPCSTR ComputerName OPTIONAL,
-    IN DWORD EntryCount,
-    IN PSOCKET_ADDRESS SocketAddresses,
-    OUT _Outptr_result_buffer_(EntryCount) LPSTR **SiteNames,
-    OUT _Outptr_result_buffer_(EntryCount) LPSTR **SubnetNames
+    _In_opt_ LPCSTR ComputerName,
+    _In_ DWORD EntryCount,
+    _In_reads_(EntryCount) PSOCKET_ADDRESS SocketAddresses,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(EntryCount) LPSTR **SiteNames,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(EntryCount) LPSTR **SubnetNames
     );
 
 #ifdef UNICODE
@@ -435,23 +443,25 @@ typedef struct _DS_DOMAIN_TRUSTSA {
 #define PDS_DOMAIN_TRUSTS PDS_DOMAIN_TRUSTSA
 #endif // !UNICODE
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsEnumerateDomainTrustsW (
-    _In_opt_ LPWSTR ServerName OPTIONAL,
+    _In_opt_ LPWSTR ServerName,
     _In_ ULONG Flags,
-    _Outptr_result_buffer_(*DomainCount) PDS_DOMAIN_TRUSTSW *Domains,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(*DomainCount) PDS_DOMAIN_TRUSTSW *Domains,
     _Out_ PULONG DomainCount
     );
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsEnumerateDomainTrustsA (
-    _In_opt_ LPSTR ServerName OPTIONAL,
+    _In_opt_ LPSTR ServerName,
     _In_ ULONG Flags,
-    _Outptr_result_buffer_(*DomainCount) PDS_DOMAIN_TRUSTSA *Domains,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(*DomainCount) PDS_DOMAIN_TRUSTSA *Domains,
     _Out_ PULONG DomainCount
     );
 
@@ -461,8 +471,6 @@ DsEnumerateDomainTrustsA (
 #define DsEnumerateDomainTrusts DsEnumerateDomainTrustsA
 #endif // !UNICODE
 
-
-
 //
 // Only define this API if the caller has #included the pre-requisite 
 // ntlsa.h or ntsecapi.h  
@@ -470,47 +478,51 @@ DsEnumerateDomainTrustsA (
 
 #if defined(_NTLSA_) || defined(_NTSECAPI_)
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetForestTrustInformationW (
-    IN LPCWSTR ServerName OPTIONAL,
-    IN LPCWSTR TrustedDomainName OPTIONAL,
-    IN DWORD Flags,
-    OUT PLSA_FOREST_TRUST_INFORMATION *ForestTrustInfo
+    _In_opt_ LPCWSTR ServerName,
+    _In_opt_ LPCWSTR TrustedDomainName,
+    _In_ DWORD Flags,
+    _Outptr_result_nullonfailure_ PLSA_FOREST_TRUST_INFORMATION *ForestTrustInfo
     );
 
 #define DS_GFTI_UPDATE_TDO      0x1     // Update TDO with information returned
 #define DS_GFTI_VALID_FLAGS     0x1     // All valid flags to DsGetForestTrustInformation
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsMergeForestTrustInformationW(
-    IN LPCWSTR DomainName,
-    IN PLSA_FOREST_TRUST_INFORMATION NewForestTrustInfo,
-    IN PLSA_FOREST_TRUST_INFORMATION OldForestTrustInfo OPTIONAL,
-    OUT PLSA_FOREST_TRUST_INFORMATION *MergedForestTrustInfo
+    _In_ LPCWSTR DomainName,
+    _In_ PLSA_FOREST_TRUST_INFORMATION NewForestTrustInfo,
+    _In_opt_ PLSA_FOREST_TRUST_INFORMATION OldForestTrustInfo,
+    _Outptr_result_nullonfailure_ PLSA_FOREST_TRUST_INFORMATION *MergedForestTrustInfo
     );
 
 #endif // _NTLSA_ || _NTSECAPI_
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcSiteCoverageW(
-    IN _In_opt_ LPCWSTR ServerName OPTIONAL,
-    OUT PULONG EntryCount,
-    OUT _Outptr_result_buffer_(*EntryCount) LPWSTR **SiteNames
+    _In_opt_ LPCWSTR ServerName,
+    _Out_ PULONG EntryCount,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(*EntryCount) LPWSTR **SiteNames
     );
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcSiteCoverageA(
-    IN _In_opt_ LPCSTR ServerName OPTIONAL,
-    OUT PULONG EntryCount,
-    OUT _Outptr_result_buffer_(*EntryCount) LPSTR **SiteNames
+    _In_opt_ LPCSTR ServerName,
+    _Out_ PULONG EntryCount,
+    _Outptr_result_nullonfailure_ _Outptr_result_buffer_(*EntryCount) LPSTR **SiteNames
     );
 
 #ifdef UNICODE
@@ -523,10 +535,10 @@ DSGETDCAPI
 DWORD
 WINAPI
 DsDeregisterDnsHostRecordsW (
-    _In_opt_ LPWSTR ServerName OPTIONAL,
-    _In_opt_ LPWSTR DnsDomainName OPTIONAL,
-    _In_opt_ GUID   *DomainGuid OPTIONAL,
-    _In_opt_ GUID   *DsaGuid OPTIONAL,
+    _In_opt_ LPWSTR ServerName,
+    _In_opt_ LPWSTR DnsDomainName,
+    _In_opt_ GUID   *DomainGuid,
+    _In_opt_ GUID   *DsaGuid,
     _In_ LPWSTR DnsHostName
     );
 
@@ -534,10 +546,10 @@ DSGETDCAPI
 DWORD
 WINAPI
 DsDeregisterDnsHostRecordsA (
-    _In_opt_ LPSTR ServerName OPTIONAL,
-    _In_opt_ LPSTR DnsDomainName OPTIONAL,
-    _In_opt_ GUID  *DomainGuid OPTIONAL,
-    _In_opt_ GUID  *DsaGuid OPTIONAL,
+    _In_opt_ LPSTR ServerName,
+    _In_opt_ LPSTR DnsDomainName,
+    _In_opt_ GUID  *DomainGuid,
+    _In_opt_ GUID  *DsaGuid,
     _In_ LPSTR DnsHostName
     );
 
@@ -572,30 +584,31 @@ DsDeregisterDnsHostRecordsA (
             DS_GC_SERVER_REQUIRED | \
             DS_WRITABLE_REQUIRED )
 
+
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcOpenW(
-    IN LPCWSTR DnsName,
-    IN ULONG OptionFlags,
-    IN LPCWSTR SiteName OPTIONAL,
-    IN GUID *DomainGuid OPTIONAL,
-    IN LPCWSTR DnsForestName OPTIONAL,
-    IN ULONG DcFlags,
-    OUT PHANDLE RetGetDcContext
+    _In_ LPCWSTR DnsName,
+    _In_ ULONG OptionFlags,
+    _In_opt_ LPCWSTR SiteName,
+    _In_opt_ GUID *DomainGuid,
+    _In_opt_ LPCWSTR DnsForestName,
+    _In_ ULONG DcFlags,
+    _Out_ PHANDLE RetGetDcContext
     );
 
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcOpenA(
-    IN LPCSTR DnsName,
-    IN ULONG OptionFlags,
-    IN LPCSTR SiteName OPTIONAL,
-    IN GUID *DomainGuid OPTIONAL,
-    IN LPCSTR DnsForestName OPTIONAL,
-    IN ULONG DcFlags,
-    OUT PHANDLE RetGetDcContext
+    _In_ LPCSTR DnsName,
+    _In_ ULONG OptionFlags,
+    _In_opt_ LPCSTR SiteName,
+    _In_opt_ GUID *DomainGuid,
+    _In_opt_ LPCSTR DnsForestName,
+    _In_ ULONG DcFlags,
+    _Out_ PHANDLE RetGetDcContext
     );
 
 #ifdef UNICODE
@@ -604,24 +617,26 @@ DsGetDcOpenA(
 #define DsGetDcOpen DsGetDcOpenA
 #endif // !UNICODE
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcNextW(
-    IN HANDLE GetDcContextHandle,
-    OUT PULONG SockAddressCount OPTIONAL,
-    OUT LPSOCKET_ADDRESS *SockAddresses OPTIONAL,
-    OUT _Outptr_opt_ LPWSTR *DnsHostName OPTIONAL
+    _In_ HANDLE GetDcContextHandle,
+    _Out_opt_ PULONG SockAddressCount,
+    _Outptr_opt_result_buffer_(*SockAddressCount) LPSOCKET_ADDRESS *SockAddresses,
+    _Outptr_opt_result_nullonfailure_ LPWSTR *DnsHostName
     );
 
+_Success_(return == ERROR_SUCCESS)
 DSGETDCAPI
 DWORD
 WINAPI
 DsGetDcNextA(
-    IN HANDLE GetDcContextHandle,
-    OUT PULONG SockAddressCount OPTIONAL,
-    OUT LPSOCKET_ADDRESS *SockAddresses OPTIONAL,
-    OUT _Outptr_opt_ LPSTR *DnsHostName OPTIONAL
+    _In_ HANDLE GetDcContextHandle,
+    _Out_opt_ PULONG SockAddressCount,
+    _Outptr_opt_result_buffer_(*SockAddressCount) LPSOCKET_ADDRESS *SockAddresses,
+    _Outptr_opt_result_nullonfailure_ LPSTR *DnsHostName
     );
 
 #ifdef UNICODE
@@ -634,7 +649,7 @@ DSGETDCAPI
 VOID
 WINAPI
 DsGetDcCloseW(
-    IN HANDLE GetDcContextHandle
+    _In_ HANDLE GetDcContextHandle
     );
 
 #ifdef UNICODE

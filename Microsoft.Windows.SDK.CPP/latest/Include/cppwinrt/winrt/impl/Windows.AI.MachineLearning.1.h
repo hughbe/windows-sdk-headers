@@ -1,9 +1,10 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
+#include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.Foundation.Collections.0.h"
 #include "winrt/impl/Windows.Graphics.0.h"
 #include "winrt/impl/Windows.Graphics.DirectX.Direct3D11.0.h"
@@ -11,7 +12,6 @@
 #include "winrt/impl/Windows.Media.0.h"
 #include "winrt/impl/Windows.Storage.0.h"
 #include "winrt/impl/Windows.Storage.Streams.0.h"
-#include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.Foundation.Collections.0.h"
 #include "winrt/impl/Windows.AI.MachineLearning.0.h"
 
@@ -122,6 +122,20 @@ struct WINRT_EBO ILearningModelSessionFactory :
     ILearningModelSessionFactory(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ILearningModelSessionFactory2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ILearningModelSessionFactory2>
+{
+    ILearningModelSessionFactory2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ILearningModelSessionOptions :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ILearningModelSessionOptions>
+{
+    ILearningModelSessionOptions(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ILearningModelStatics :
     Windows::Foundation::IInspectable,
     impl::consume_t<ILearningModelStatics>
@@ -165,6 +179,13 @@ struct WINRT_EBO ITensorBooleanStatics :
     ITensorBooleanStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITensorBooleanStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorBooleanStatics2>
+{
+    ITensorBooleanStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITensorDouble :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITensorDouble>
@@ -177,6 +198,13 @@ struct WINRT_EBO ITensorDoubleStatics :
     impl::consume_t<ITensorDoubleStatics>
 {
     ITensorDoubleStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITensorDoubleStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorDoubleStatics2>
+{
+    ITensorDoubleStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ITensorFeatureDescriptor :
@@ -207,11 +235,25 @@ struct WINRT_EBO ITensorFloat16BitStatics :
     ITensorFloat16BitStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITensorFloat16BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorFloat16BitStatics2>
+{
+    ITensorFloat16BitStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITensorFloatStatics :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITensorFloatStatics>
 {
     ITensorFloatStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITensorFloatStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorFloatStatics2>
+{
+    ITensorFloatStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ITensorInt16Bit :
@@ -228,6 +270,13 @@ struct WINRT_EBO ITensorInt16BitStatics :
     ITensorInt16BitStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITensorInt16BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorInt16BitStatics2>
+{
+    ITensorInt16BitStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITensorInt32Bit :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITensorInt32Bit>
@@ -240,6 +289,13 @@ struct WINRT_EBO ITensorInt32BitStatics :
     impl::consume_t<ITensorInt32BitStatics>
 {
     ITensorInt32BitStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITensorInt32BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorInt32BitStatics2>
+{
+    ITensorInt32BitStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ITensorInt64Bit :
@@ -256,6 +312,13 @@ struct WINRT_EBO ITensorInt64BitStatics :
     ITensorInt64BitStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITensorInt64BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorInt64BitStatics2>
+{
+    ITensorInt64BitStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITensorInt8Bit :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITensorInt8Bit>
@@ -268,6 +331,13 @@ struct WINRT_EBO ITensorInt8BitStatics :
     impl::consume_t<ITensorInt8BitStatics>
 {
     ITensorInt8BitStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITensorInt8BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorInt8BitStatics2>
+{
+    ITensorInt8BitStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ITensorString :
@@ -284,6 +354,13 @@ struct WINRT_EBO ITensorStringStatics :
     ITensorStringStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITensorStringStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorStringStatics2>
+{
+    ITensorStringStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITensorUInt16Bit :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITensorUInt16Bit>
@@ -296,6 +373,13 @@ struct WINRT_EBO ITensorUInt16BitStatics :
     impl::consume_t<ITensorUInt16BitStatics>
 {
     ITensorUInt16BitStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITensorUInt16BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorUInt16BitStatics2>
+{
+    ITensorUInt16BitStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ITensorUInt32Bit :
@@ -312,6 +396,13 @@ struct WINRT_EBO ITensorUInt32BitStatics :
     ITensorUInt32BitStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITensorUInt32BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorUInt32BitStatics2>
+{
+    ITensorUInt32BitStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITensorUInt64Bit :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITensorUInt64Bit>
@@ -326,6 +417,13 @@ struct WINRT_EBO ITensorUInt64BitStatics :
     ITensorUInt64BitStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITensorUInt64BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorUInt64BitStatics2>
+{
+    ITensorUInt64BitStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITensorUInt8Bit :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITensorUInt8Bit>
@@ -338,6 +436,13 @@ struct WINRT_EBO ITensorUInt8BitStatics :
     impl::consume_t<ITensorUInt8BitStatics>
 {
     ITensorUInt8BitStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITensorUInt8BitStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITensorUInt8BitStatics2>
+{
+    ITensorUInt8BitStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 }

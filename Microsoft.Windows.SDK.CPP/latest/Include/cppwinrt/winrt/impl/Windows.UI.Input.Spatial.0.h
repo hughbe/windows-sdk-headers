@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -25,6 +25,9 @@ struct PerceptionTimestamp;
 
 WINRT_EXPORT namespace winrt::Windows::Perception::People {
 
+struct EyesPose;
+struct HandMeshObserver;
+struct HandPose;
 struct HeadPose;
 
 }
@@ -103,9 +106,11 @@ struct ISpatialInteractionDetectedEventArgs;
 struct ISpatialInteractionDetectedEventArgs2;
 struct ISpatialInteractionManager;
 struct ISpatialInteractionManagerStatics;
+struct ISpatialInteractionManagerStatics2;
 struct ISpatialInteractionSource;
 struct ISpatialInteractionSource2;
 struct ISpatialInteractionSource3;
+struct ISpatialInteractionSource4;
 struct ISpatialInteractionSourceEventArgs;
 struct ISpatialInteractionSourceEventArgs2;
 struct ISpatialInteractionSourceLocation;
@@ -114,6 +119,7 @@ struct ISpatialInteractionSourceLocation3;
 struct ISpatialInteractionSourceProperties;
 struct ISpatialInteractionSourceState;
 struct ISpatialInteractionSourceState2;
+struct ISpatialInteractionSourceState3;
 struct ISpatialManipulationCanceledEventArgs;
 struct ISpatialManipulationCompletedEventArgs;
 struct ISpatialManipulationDelta;
@@ -127,6 +133,7 @@ struct ISpatialPointerInteractionSourcePose;
 struct ISpatialPointerInteractionSourcePose2;
 struct ISpatialPointerPose;
 struct ISpatialPointerPose2;
+struct ISpatialPointerPose3;
 struct ISpatialPointerPoseStatics;
 struct ISpatialRecognitionEndedEventArgs;
 struct ISpatialRecognitionStartedEventArgs;
@@ -179,9 +186,11 @@ template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionDete
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionManager>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSource>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSource2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSource3>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSource4>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation>{ using type = interface_category; };
@@ -190,6 +199,7 @@ template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSour
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSourceProperties>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSourceState>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSourceState2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::Spatial::ISpatialInteractionSourceState3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialManipulationCompletedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialManipulationDelta>{ using type = interface_category; };
@@ -203,6 +213,7 @@ template <> struct category<Windows::UI::Input::Spatial::ISpatialPointerInteract
 template <> struct category<Windows::UI::Input::Spatial::ISpatialPointerInteractionSourcePose2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialPointerPose>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialPointerPose2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::Spatial::ISpatialPointerPose3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialPointerPoseStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialRecognitionEndedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::Spatial::ISpatialRecognitionStartedEventArgs>{ using type = interface_category; };
@@ -254,9 +265,11 @@ template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionDetected
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs2>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs2" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionManager>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionManager" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics" }; };
+template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSource>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSource" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSource2>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSource2" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSource3>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSource3" }; };
+template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSource4>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSource4" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs2>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs2" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation" }; };
@@ -265,6 +278,7 @@ template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceLo
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceProperties>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceState>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSourceState" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceState2>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSourceState2" }; };
+template <> struct name<Windows::UI::Input::Spatial::ISpatialInteractionSourceState3>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialInteractionSourceState3" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialManipulationCanceledEventArgs" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialManipulationCompletedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialManipulationDelta>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialManipulationDelta" }; };
@@ -278,6 +292,7 @@ template <> struct name<Windows::UI::Input::Spatial::ISpatialPointerInteractionS
 template <> struct name<Windows::UI::Input::Spatial::ISpatialPointerInteractionSourcePose2>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialPointerPose>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialPointerPose" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialPointerPose2>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialPointerPose2" }; };
+template <> struct name<Windows::UI::Input::Spatial::ISpatialPointerPose3>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialPointerPose3" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialPointerPoseStatics>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialPointerPoseStatics" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialRecognitionEndedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialRecognitionEndedEventArgs" }; };
 template <> struct name<Windows::UI::Input::Spatial::ISpatialRecognitionStartedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs" }; };
@@ -329,9 +344,11 @@ template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteraction
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs2>{ static constexpr guid value{ 0x7B263E93,0x5F13,0x419C,{ 0x97,0xD5,0x83,0x46,0x78,0x26,0x6A,0xA6 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionManager>{ static constexpr guid value{ 0x32A64EA8,0xA15A,0x3995,{ 0xB8,0xBD,0x80,0x51,0x3C,0xB5,0xAD,0xEF } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics>{ static constexpr guid value{ 0x00E31FA6,0x8CA2,0x30BF,{ 0x91,0xFE,0xD9,0xCB,0x4A,0x00,0x89,0x90 } }; };
+template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2>{ static constexpr guid value{ 0x93F16C52,0xB88A,0x5929,{ 0x8D,0x7C,0x48,0xCB,0x94,0x8B,0x08,0x1C } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSource>{ static constexpr guid value{ 0xFB5433BA,0xB0B3,0x3148,{ 0x9F,0x3B,0xE9,0xF5,0xDE,0x56,0x8F,0x5D } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSource2>{ static constexpr guid value{ 0xE4C5B70C,0x0470,0x4028,{ 0x88,0xC0,0xA0,0xEB,0x44,0xD3,0x4E,0xFE } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSource3>{ static constexpr guid value{ 0x0406D9F9,0x9AFD,0x44F9,{ 0x85,0xDC,0x70,0x00,0x23,0xA9,0x62,0xE3 } }; };
+template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSource4>{ static constexpr guid value{ 0x0073BC4D,0xDF66,0x5A91,{ 0xA2,0xBA,0xCE,0xA3,0xE5,0xC5,0x8A,0x19 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs>{ static constexpr guid value{ 0x23B786CF,0xEC23,0x3979,{ 0xB2,0x7C,0xEB,0x0E,0x12,0xFE,0xB7,0xC7 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs2>{ static constexpr guid value{ 0xD8B4B467,0xE648,0x4D52,{ 0xAB,0x49,0xE0,0xD2,0x27,0x19,0x9F,0x63 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation>{ static constexpr guid value{ 0xEA4696C4,0x7E8B,0x30CA,{ 0xBC,0xC5,0xC7,0x71,0x89,0xCE,0xA3,0x0A } }; };
@@ -340,6 +357,7 @@ template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteraction
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSourceProperties>{ static constexpr guid value{ 0x05604542,0x3EF7,0x3222,{ 0x9F,0x53,0x63,0xC9,0xCB,0x7E,0x3B,0xC7 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSourceState>{ static constexpr guid value{ 0xD5C475EF,0x4B63,0x37EC,{ 0x98,0xB9,0x9F,0xC6,0x52,0xB9,0xD2,0xF2 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSourceState2>{ static constexpr guid value{ 0x45F6D0BD,0x1773,0x492E,{ 0x9B,0xA3,0x8A,0xC1,0xCB,0xE7,0x7C,0x08 } }; };
+template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialInteractionSourceState3>{ static constexpr guid value{ 0xF2F00BC2,0xBD2B,0x4A01,{ 0xA8,0xFB,0x32,0x3E,0x01,0x58,0x52,0x7C } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs>{ static constexpr guid value{ 0x2D40D1CB,0xE7DA,0x4220,{ 0xB0,0xBF,0x81,0x93,0x01,0x67,0x47,0x80 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialManipulationCompletedEventArgs>{ static constexpr guid value{ 0x05086802,0xF301,0x4343,{ 0x92,0x50,0x2F,0xBA,0xA5,0xF8,0x7A,0x37 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialManipulationDelta>{ static constexpr guid value{ 0xA7EC967A,0xD123,0x3A81,{ 0xA1,0x5B,0x99,0x29,0x23,0xDC,0xBE,0x91 } }; };
@@ -353,6 +371,7 @@ template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialPointerInte
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialPointerInteractionSourcePose2>{ static constexpr guid value{ 0xECCD86B8,0x52DB,0x469F,{ 0x9E,0x3F,0x80,0xC4,0x7F,0x74,0xBC,0xE9 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialPointerPose>{ static constexpr guid value{ 0x6953A42E,0xC17E,0x357D,{ 0x97,0xA1,0x72,0x69,0xD0,0xED,0x2D,0x10 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialPointerPose2>{ static constexpr guid value{ 0x9D202B17,0x954E,0x4E0C,{ 0x96,0xD1,0xB6,0x79,0x0B,0x6F,0xC2,0xFD } }; };
+template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialPointerPose3>{ static constexpr guid value{ 0x6342F3F0,0xEC49,0x5B4B,{ 0xB8,0xD1,0xD1,0x6C,0xBB,0x16,0xBE,0x84 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialPointerPoseStatics>{ static constexpr guid value{ 0xA25591A9,0xACA1,0x3EE0,{ 0x98,0x16,0x78,0x5C,0xFB,0x2E,0x3F,0xB8 } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialRecognitionEndedEventArgs>{ static constexpr guid value{ 0x0E35F5CB,0x3F75,0x43F3,{ 0xAC,0x81,0xD1,0xDC,0x2D,0xF9,0xB1,0xFB } }; };
 template <> struct guid_storage<Windows::UI::Input::Spatial::ISpatialRecognitionStartedEventArgs>{ static constexpr guid value{ 0x24DA128F,0x0008,0x4A6D,{ 0xAA,0x50,0x2A,0x76,0xF9,0xCF,0xB2,0x64 } }; };
@@ -513,6 +532,11 @@ template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionManagerSt
     virtual int32_t WINRT_CALL GetForCurrentView(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL IsSourceKindSupported(Windows::UI::Input::Spatial::SpatialInteractionSourceKind kind, bool* result) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionSource>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Id(uint32_t* value) noexcept = 0;
@@ -531,6 +555,12 @@ template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionSource2>{
 template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionSource3>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Handedness(Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionSource4>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL TryCreateHandMeshObserver(void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL TryCreateHandMeshObserverAsync(void** operation) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs>{ struct type : IInspectable
@@ -584,6 +614,11 @@ template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionSourceSta
     virtual int32_t WINRT_CALL get_IsGrasped(bool* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_SelectPressedValue(double* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_ControllerProperties(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Input::Spatial::ISpatialInteractionSourceState3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL TryGetHandPose(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs>{ struct type : IInspectable
@@ -662,6 +697,12 @@ template <> struct abi<Windows::UI::Input::Spatial::ISpatialPointerPose>{ struct
 template <> struct abi<Windows::UI::Input::Spatial::ISpatialPointerPose2>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL TryGetInteractionSourcePose(void* source, void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Input::Spatial::ISpatialPointerPose3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Eyes(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsHeadCapturedBySystem(bool* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Input::Spatial::ISpatialPointerPoseStatics>{ struct type : IInspectable
@@ -884,6 +925,13 @@ struct consume_Windows_UI_Input_Spatial_ISpatialInteractionManagerStatics
 template <> struct consume<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialInteractionManagerStatics<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Input_Spatial_ISpatialInteractionManagerStatics2
+{
+    bool IsSourceKindSupported(Windows::UI::Input::Spatial::SpatialInteractionSourceKind const& kind) const;
+};
+template <> struct consume<Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialInteractionManagerStatics2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Input_Spatial_ISpatialInteractionSource
 {
     uint32_t Id() const;
@@ -908,6 +956,14 @@ struct consume_Windows_UI_Input_Spatial_ISpatialInteractionSource3
     Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness Handedness() const;
 };
 template <> struct consume<Windows::UI::Input::Spatial::ISpatialInteractionSource3> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialInteractionSource3<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Input_Spatial_ISpatialInteractionSource4
+{
+    Windows::Perception::People::HandMeshObserver TryCreateHandMeshObserver() const;
+    Windows::Foundation::IAsyncOperation<Windows::Perception::People::HandMeshObserver> TryCreateHandMeshObserverAsync() const;
+};
+template <> struct consume<Windows::UI::Input::Spatial::ISpatialInteractionSource4> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialInteractionSource4<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Input_Spatial_ISpatialInteractionSourceEventArgs
@@ -977,6 +1033,13 @@ struct consume_Windows_UI_Input_Spatial_ISpatialInteractionSourceState2
     Windows::UI::Input::Spatial::SpatialInteractionControllerProperties ControllerProperties() const;
 };
 template <> struct consume<Windows::UI::Input::Spatial::ISpatialInteractionSourceState2> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialInteractionSourceState2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Input_Spatial_ISpatialInteractionSourceState3
+{
+    Windows::Perception::People::HandPose TryGetHandPose() const;
+};
+template <> struct consume<Windows::UI::Input::Spatial::ISpatialInteractionSourceState3> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialInteractionSourceState3<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Input_Spatial_ISpatialManipulationCanceledEventArgs
@@ -1081,6 +1144,14 @@ struct consume_Windows_UI_Input_Spatial_ISpatialPointerPose2
     Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose TryGetInteractionSourcePose(Windows::UI::Input::Spatial::SpatialInteractionSource const& source) const;
 };
 template <> struct consume<Windows::UI::Input::Spatial::ISpatialPointerPose2> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialPointerPose2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Input_Spatial_ISpatialPointerPose3
+{
+    Windows::Perception::People::EyesPose Eyes() const;
+    bool IsHeadCapturedBySystem() const;
+};
+template <> struct consume<Windows::UI::Input::Spatial::ISpatialPointerPose3> { template <typename D> using type = consume_Windows_UI_Input_Spatial_ISpatialPointerPose3<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Input_Spatial_ISpatialPointerPoseStatics

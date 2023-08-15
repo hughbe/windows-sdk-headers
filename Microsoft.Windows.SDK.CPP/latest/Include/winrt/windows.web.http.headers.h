@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.web.http.headers.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,10 +277,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCacheDirectiveHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection_FWD_DEFINED__
@@ -297,10 +293,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpChallengeHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue_FWD_DEFINED__
@@ -313,10 +309,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpChallengeHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection_FWD_DEFINED__
@@ -329,10 +325,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpChallengeHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory_FWD_DEFINED__
@@ -345,10 +341,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpChallengeHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics_FWD_DEFINED__
@@ -361,10 +357,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpConnectionOptionHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue_FWD_DEFINED__
@@ -377,10 +373,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpConnectionOptionHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection_FWD_DEFINED__
@@ -393,10 +389,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpConnectionOptionHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory_FWD_DEFINED__
@@ -409,10 +405,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpConnectionOptionHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics_FWD_DEFINED__
@@ -425,10 +421,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue_FWD_DEFINED__
@@ -441,10 +437,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection_FWD_DEFINED__
@@ -457,10 +453,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory_FWD_DEFINED__
@@ -473,10 +469,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics_FWD_DEFINED__
@@ -489,10 +485,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingWithQualityHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue_FWD_DEFINED__
@@ -505,10 +501,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingWithQualityHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection_FWD_DEFINED__
@@ -521,10 +517,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingWithQualityHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory_FWD_DEFINED__
@@ -537,10 +533,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentCodingWithQualityHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics_FWD_DEFINED__
@@ -553,10 +549,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentDispositionHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue_FWD_DEFINED__
@@ -569,10 +565,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentDispositionHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory_FWD_DEFINED__
@@ -585,10 +581,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentDispositionHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics_FWD_DEFINED__
@@ -601,10 +597,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection ABI::Windows::Web::Http::Headers::IHttpContentHeaderCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_FWD_DEFINED__
@@ -617,10 +613,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentRangeHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue_FWD_DEFINED__
@@ -633,10 +629,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentRangeHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_FWD_DEFINED__
@@ -649,10 +645,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentRangeHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics_FWD_DEFINED__
@@ -665,10 +661,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCookiePairHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue_FWD_DEFINED__
@@ -681,10 +677,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCookiePairHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection_FWD_DEFINED__
@@ -697,10 +693,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCookiePairHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory_FWD_DEFINED__
@@ -713,10 +709,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCookiePairHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics_FWD_DEFINED__
@@ -729,10 +725,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCredentialsHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue_FWD_DEFINED__
@@ -745,10 +741,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCredentialsHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory_FWD_DEFINED__
@@ -761,10 +757,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpCredentialsHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics_FWD_DEFINED__
@@ -777,10 +773,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpDateOrDeltaHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue ABI::Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue_FWD_DEFINED__
@@ -793,10 +789,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpDateOrDeltaHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics_FWD_DEFINED__
@@ -809,10 +805,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpExpectationHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue_FWD_DEFINED__
@@ -825,10 +821,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpExpectationHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection_FWD_DEFINED__
@@ -841,10 +837,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpExpectationHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory_FWD_DEFINED__
@@ -857,10 +853,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpExpectationHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics_FWD_DEFINED__
@@ -873,10 +869,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpLanguageHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection_FWD_DEFINED__
@@ -889,10 +885,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpLanguageRangeWithQualityHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue_FWD_DEFINED__
@@ -905,10 +901,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpLanguageRangeWithQualityHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection_FWD_DEFINED__
@@ -921,10 +917,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpLanguageRangeWithQualityHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory_FWD_DEFINED__
@@ -937,10 +933,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpLanguageRangeWithQualityHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics_FWD_DEFINED__
@@ -953,10 +949,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMediaTypeHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue_FWD_DEFINED__
@@ -969,10 +965,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMediaTypeHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory_FWD_DEFINED__
@@ -985,10 +981,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMediaTypeHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics_FWD_DEFINED__
@@ -1001,10 +997,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMediaTypeWithQualityHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue_FWD_DEFINED__
@@ -1017,10 +1013,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMediaTypeWithQualityHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection_FWD_DEFINED__
@@ -1033,10 +1029,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMediaTypeWithQualityHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory_FWD_DEFINED__
@@ -1049,10 +1045,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMediaTypeWithQualityHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics_FWD_DEFINED__
@@ -1065,10 +1061,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpMethodHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpMethodHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection_FWD_DEFINED__
@@ -1081,10 +1077,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpNameValueHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue_FWD_DEFINED__
@@ -1097,10 +1093,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpNameValueHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory_FWD_DEFINED__
@@ -1113,10 +1109,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpNameValueHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics_FWD_DEFINED__
@@ -1129,10 +1125,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpProductHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue_FWD_DEFINED__
@@ -1145,10 +1141,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpProductHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpProductHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory_FWD_DEFINED__
@@ -1161,10 +1157,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpProductHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpProductHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics_FWD_DEFINED__
@@ -1177,10 +1173,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpProductInfoHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue_FWD_DEFINED__
@@ -1193,10 +1189,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpProductInfoHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection_FWD_DEFINED__
@@ -1209,10 +1205,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpProductInfoHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory_FWD_DEFINED__
@@ -1225,10 +1221,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpProductInfoHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics_FWD_DEFINED__
@@ -1241,10 +1237,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpRequestHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection ABI::Windows::Web::Http::Headers::IHttpRequestHeaderCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_FWD_DEFINED__
@@ -1257,10 +1253,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpResponseHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection ABI::Windows::Web::Http::Headers::IHttpResponseHeaderCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_FWD_DEFINED__
@@ -1273,10 +1269,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpTransferCodingHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue_FWD_DEFINED__
@@ -1289,10 +1285,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpTransferCodingHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection_FWD_DEFINED__
@@ -1305,10 +1301,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpTransferCodingHeaderValueFactory;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory_FWD_DEFINED__
@@ -1321,10 +1317,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpTransferCodingHeaderValueStatics;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics_FWD_DEFINED__
@@ -1338,10 +1334,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpChallengeHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1364,7 +1360,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue*>
@@ -1396,7 +1392,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue*>
@@ -1413,10 +1409,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpConnectionOptionHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1439,7 +1435,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue*>
@@ -1471,7 +1467,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue*>
@@ -1488,10 +1484,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentCodingHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1514,7 +1510,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue*>
@@ -1546,7 +1542,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue*>
@@ -1563,10 +1559,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentCodingWithQualityHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1589,7 +1585,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderVa
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue*>
@@ -1621,7 +1617,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderVa
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue*>
@@ -1638,10 +1634,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpCookiePairHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1664,7 +1660,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue*>
@@ -1696,7 +1692,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue*>
@@ -1713,10 +1709,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpExpectationHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1739,7 +1735,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue*>
@@ -1771,7 +1767,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue*>
@@ -1788,10 +1784,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpLanguageRangeWithQualityHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1814,7 +1810,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderVa
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue*>
@@ -1846,7 +1842,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderVa
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue*>
@@ -1863,10 +1859,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpMediaTypeWithQualityHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1889,7 +1885,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue*
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue*>
@@ -1921,7 +1917,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue*
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue*>
@@ -1938,10 +1934,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpNameValueHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1964,7 +1960,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue*>
@@ -1996,7 +1992,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue*>
@@ -2013,10 +2009,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpProductInfoHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2039,7 +2035,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue*>
@@ -2071,7 +2067,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue*>
@@ -2088,10 +2084,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpTransferCodingHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2114,7 +2110,7 @@ IIterator<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue*>
@@ -2146,7 +2142,7 @@ IIterable<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue*>
@@ -2178,7 +2174,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue*>
@@ -2210,7 +2206,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue*>
@@ -2242,7 +2238,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue*>
@@ -2274,7 +2270,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeader
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue*>
@@ -2306,7 +2302,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue*>
@@ -2338,7 +2334,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue*>
@@ -2370,7 +2366,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeader
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue*>
@@ -2402,7 +2398,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValu
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue*>
@@ -2434,7 +2430,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue*>
@@ -2466,7 +2462,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue*>
@@ -2498,7 +2494,7 @@ IVectorView<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue*>
@@ -2530,7 +2526,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> : IVector_i
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpChallengeHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpChallengeHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue*>
@@ -2562,7 +2558,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> : IV
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpConnectionOptionHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue*>
@@ -2594,7 +2590,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> : IVect
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpContentCodingHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue*>
@@ -2626,7 +2622,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValu
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpContentCodingWithQualityHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue*>
@@ -2658,7 +2654,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> : IVector_
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpCookiePairHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpCookiePairHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue*>
@@ -2690,7 +2686,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> : IVector
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpExpectationHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpExpectationHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue*>
@@ -2722,7 +2718,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValu
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpLanguageRangeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue*>
@@ -2754,7 +2750,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue*> 
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpMediaTypeWithQualityHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue*>
@@ -2786,7 +2782,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> : IVector_i
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpNameValueHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpNameValueHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue*>
@@ -2818,7 +2814,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> : IVector
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpProductInfoHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpProductInfoHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue*>
@@ -2850,7 +2846,7 @@ IVector<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> : IVec
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue*> __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHeaders__CHttpTransferCodingHeaderValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue*>
@@ -2866,8 +2862,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -2888,7 +2884,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -2917,7 +2913,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -2946,7 +2942,7 @@ IReference<UINT64> : IReference_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IReference<UINT64> __FIReference_1_UINT64_t;
 #define __FIReference_1_UINT64 ABI::Windows::Foundation::__FIReference_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT64 ABI::Windows::Foundation::IReference<UINT64>
@@ -2956,159 +2952,12 @@ typedef IReference<UINT64> __FIReference_1_UINT64_t;
 
 
 
-
-#ifndef DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#define DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("60310303-49c5-52e6-abc6-a9b36eccc716"))
-IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
-#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
-//#define __FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE */
-
-
-
-
-
-#ifndef DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#define DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("05eb86f1-7140-5517-b88d-cbaebe57e6b1"))
-IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_HSTRING*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
-
-
-
-
-
-#ifndef DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#define DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b"))
-IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_HSTRING*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
-
-
-
-
-#ifndef DEF___FIMapView_2_HSTRING_HSTRING_USE
-#define DEF___FIMapView_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("ac7f26f2-feb7-5b2a-8ac4-345bc62caede"))
-IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IMapView`2<String, String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
-#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
-//#define __FIMapView_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIMapView_2_HSTRING_HSTRING_USE */
-
-
-
-
-#ifndef DEF___FIMap_2_HSTRING_HSTRING_USE
-#define DEF___FIMap_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("f6d1f700-49c2-52ae-8154-826f9908773c"))
-IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IMap`2<String, String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
-#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
-//#define __FIMap_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIMap_2_HSTRING_HSTRING_USE */
-
-
-
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Language;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -3116,8 +2965,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage ABI::Windows::Globalization::ILanguage
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -3143,7 +2992,7 @@ IIterator<ABI::Windows::Globalization::Language*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Globalization::Language*> __FIIterator_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Globalization::ILanguage*>
@@ -3175,7 +3024,7 @@ IIterable<ABI::Windows::Globalization::Language*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Globalization::Language*> __FIIterable_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Globalization::ILanguage*>
@@ -3207,7 +3056,7 @@ IVectorView<ABI::Windows::Globalization::Language*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Globalization::Language*> __FIVectorView_1_Windows__CGlobalization__CLanguage_t;
 #define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Globalization::ILanguage*>
@@ -3239,7 +3088,7 @@ IVector<ABI::Windows::Globalization::Language*> : IVector_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Globalization::Language*> __FIVector_1_Windows__CGlobalization__CLanguage_t;
 #define __FIVector_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Globalization::ILanguage*>
@@ -3255,8 +3104,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -3277,7 +3126,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -3287,14 +3136,43 @@ typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Wi
 
 
 
+
+#ifndef DEF___FIReference_1_UINT32_USE
+#define DEF___FIReference_1_UINT32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("513ef3af-e784-5325-a91e-97c2b8111cf3"))
+IReference<UINT32> : IReference_impl<UINT32> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IReference`1<UInt32>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IReference<UINT32> __FIReference_1_UINT32_t;
+#define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
+//#define __FIReference_1_UINT32_t ABI::Windows::Foundation::IReference<UINT32>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIReference_1_UINT32_USE */
+
+
+
 namespace ABI {
     namespace Windows {
         namespace Web {
             namespace Http {
                 class HttpMethod;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
@@ -3303,9 +3181,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMethod;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMethod ABI::Windows::Web::Http::IHttpMethod
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
@@ -3331,7 +3209,7 @@ IIterator<ABI::Windows::Web::Http::HttpMethod*> : IIterator_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::HttpMethod*> __FIIterator_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::IHttpMethod*>
@@ -3363,7 +3241,7 @@ IIterable<ABI::Windows::Web::Http::HttpMethod*> : IIterable_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::HttpMethod*> __FIIterable_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::IHttpMethod*>
@@ -3395,7 +3273,7 @@ IVectorView<ABI::Windows::Web::Http::HttpMethod*> : IVectorView_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::HttpMethod*> __FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::IHttpMethod*>
@@ -3427,7 +3305,7 @@ IVector<ABI::Windows::Web::Http::HttpMethod*> : IVector_impl<ABI::Windows::Found
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::HttpMethod*> __FIVector_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::IHttpMethod*>
@@ -3439,31 +3317,149 @@ typedef IVector<ABI::Windows::Web::Http::HttpMethod*> __FIVector_1_Windows__CWeb
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
-#ifndef DEF___FIReference_1_UINT32_USE
-#define DEF___FIReference_1_UINT32_USE
+#ifndef DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#define DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("513ef3af-e784-5325-a91e-97c2b8111cf3"))
-IReference<UINT32> : IReference_impl<UINT32> 
+struct __declspec(uuid("60310303-49c5-52e6-abc6-a9b36eccc716"))
+IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.IReference`1<UInt32>"; 
+        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, String>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IReference<UINT32> __FIReference_1_UINT32_t;
-#define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
+#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
-//#define __FIReference_1_UINT32_t ABI::Windows::Foundation::IReference<UINT32>
+//#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
+//#define __FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIReference_1_UINT32_USE */
+#endif /* DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE */
+
+
+
+
+
+#ifndef DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#define DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("05eb86f1-7140-5517-b88d-cbaebe57e6b1"))
+IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_HSTRING*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
+//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
+
+
+
+
+
+#ifndef DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#define DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b"))
+IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_HSTRING*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
+//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
+
+
+
+
+#ifndef DEF___FIMapView_2_HSTRING_HSTRING_USE
+#define DEF___FIMapView_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("ac7f26f2-feb7-5b2a-8ac4-345bc62caede"))
+IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IMapView`2<String, String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
+#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
+//#define __FIMapView_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIMapView_2_HSTRING_HSTRING_USE */
+
+
+
+
+#ifndef DEF___FIMap_2_HSTRING_HSTRING_USE
+#define DEF___FIMap_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("f6d1f700-49c2-52ae-8154-826f9908773c"))
+IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IMap`2<String, String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
+#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
+//#define __FIMap_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIMap_2_HSTRING_HSTRING_USE */
 
 
 
@@ -3475,8 +3471,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -3484,8 +3480,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -3497,16 +3493,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3514,8 +3510,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3530,8 +3526,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -3539,8 +3535,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -3555,9 +3551,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -3642,10 +3638,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpCacheDirectiveHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3655,10 +3651,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpChallengeHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3668,10 +3664,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpConnectionOptionHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3681,10 +3677,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentCodingHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3694,10 +3690,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentCodingWithQualityHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3706,10 +3702,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentDispositionHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3718,10 +3714,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3730,10 +3726,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentRangeHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3743,10 +3739,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpCookiePairHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3755,10 +3751,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpCredentialsHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3767,10 +3763,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpDateOrDeltaHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3780,10 +3776,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpExpectationHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3792,10 +3788,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpLanguageHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3805,10 +3801,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpLanguageRangeWithQualityHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3817,10 +3813,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpMediaTypeHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3830,10 +3826,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpMediaTypeWithQualityHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3842,10 +3838,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpMethodHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3855,10 +3851,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpProductHeaderValue;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3868,10 +3864,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpProductInfoHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3880,10 +3876,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpRequestHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3892,10 +3888,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpResponseHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3905,10 +3901,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpTransferCodingHeaderValueCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3929,11 +3925,6 @@ namespace ABI {
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
  *
  *
  */
@@ -3980,17 +3971,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpCacheDirectiveHeaderValueCollection=_uuidof(IHttpCacheDirectiveHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -4036,10 +4027,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpChallengeHeaderValue=_uuidof(IHttpChallengeHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue_INTERFACE_DEFINED__) */
@@ -4054,11 +4045,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeade
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpChallengeHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpChallengeHeaderValue
  *
  *
  */
@@ -4081,17 +4067,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpChallengeHeaderValueCollection=_uuidof(IHttpChallengeHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -4125,22 +4111,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromScheme(
                             /* [in] */__RPC__in HSTRING scheme,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue * * challengeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromSchemeWithToken(
                             /* [in] */__RPC__in HSTRING scheme,
                             /* [in] */__RPC__in HSTRING token,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue * * challengeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpChallengeHeaderValueFactory=_uuidof(IHttpChallengeHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -4174,22 +4160,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue * * challengeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpChallengeHeaderValue * * challengeHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpChallengeHeaderValueStatics=_uuidof(IHttpChallengeHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -4229,10 +4215,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpConnectionOptionHeaderValue=_uuidof(IHttpConnectionOptionHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue_INTERFACE_DEFINED__) */
@@ -4247,11 +4233,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOpti
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
  *
  *
  */
@@ -4274,17 +4255,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpConnectionOptionHeaderValueCollection=_uuidof(IHttpConnectionOptionHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -4318,17 +4299,17 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Create(
                             /* [in] */__RPC__in HSTRING token,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue * * connectionOptionHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpConnectionOptionHeaderValueFactory=_uuidof(IHttpConnectionOptionHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -4362,22 +4343,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue * * connectionOptionHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue * * connectionOptionHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpConnectionOptionHeaderValueStatics=_uuidof(IHttpConnectionOptionHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -4417,10 +4398,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingHeaderValue=_uuidof(IHttpContentCodingHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue_INTERFACE_DEFINED__) */
@@ -4435,11 +4416,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingH
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpContentCodingHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingHeaderValue
  *
  *
  */
@@ -4462,17 +4438,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingHeaderValueCollection=_uuidof(IHttpContentCodingHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -4506,17 +4482,17 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Create(
                             /* [in] */__RPC__in HSTRING contentCoding,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue * * contentCodingHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingHeaderValueFactory=_uuidof(IHttpContentCodingHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -4550,22 +4526,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue * * contentCodingHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue * * contentCodingHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingHeaderValueStatics=_uuidof(IHttpContentCodingHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -4608,10 +4584,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingWithQualityHeaderValue=_uuidof(IHttpContentCodingWithQualityHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue_INTERFACE_DEFINED__) */
@@ -4626,11 +4602,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingW
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
  *
  *
  */
@@ -4653,17 +4624,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingWithQualityHeaderValueCollection=_uuidof(IHttpContentCodingWithQualityHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -4697,22 +4668,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromValue(
                             /* [in] */__RPC__in HSTRING contentCoding,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue * * contentCodingWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromValueWithQuality(
                             /* [in] */__RPC__in HSTRING contentCoding,
                             /* [in] */DOUBLE quality,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue * * contentCodingWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingWithQualityHeaderValueFactory=_uuidof(IHttpContentCodingWithQualityHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -4746,22 +4717,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue * * contentCodingWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue * * contentCodingWithQualityHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentCodingWithQualityHeaderValueStatics=_uuidof(IHttpContentCodingWithQualityHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -4831,10 +4802,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentDispositionHeaderValue=_uuidof(IHttpContentDispositionHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue_INTERFACE_DEFINED__) */
@@ -4868,17 +4839,17 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Create(
                             /* [in] */__RPC__in HSTRING dispositionType,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue * * contentDispositionHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentDispositionHeaderValueFactory=_uuidof(IHttpContentDispositionHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -4912,22 +4883,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue * * contentDispositionHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue * * contentDispositionHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentDispositionHeaderValueStatics=_uuidof(IHttpContentDispositionHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -4942,11 +4913,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDisposi
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpContentHeaderCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *
  *
  */
@@ -5025,17 +4991,17 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE TryAppendWithoutValidation(
                             /* [in] */__RPC__in HSTRING name,
                             /* [in] */__RPC__in HSTRING value,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentHeaderCollection=_uuidof(IHttpContentHeaderCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_INTERFACE_DEFINED__) */
@@ -5087,10 +5053,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentRangeHeaderValue=_uuidof(IHttpContentRangeHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue_INTERFACE_DEFINED__) */
@@ -5124,28 +5090,28 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromLength(
                             /* [in] */UINT64 length,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * contentRangeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromRange(
                             /* [in] */UINT64 from,
                             /* [in] */UINT64 to,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * contentRangeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromRangeWithLength(
                             /* [in] */UINT64 from,
                             /* [in] */UINT64 to,
                             /* [in] */UINT64 length,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * contentRangeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentRangeHeaderValueFactory=_uuidof(IHttpContentRangeHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -5179,22 +5145,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * contentRangeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue * * contentRangeHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpContentRangeHeaderValueStatics=_uuidof(IHttpContentRangeHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -5240,10 +5206,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpCookiePairHeaderValue=_uuidof(IHttpCookiePairHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue_INTERFACE_DEFINED__) */
@@ -5258,11 +5224,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHead
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpCookiePairHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpCookiePairHeaderValue
  *
  *
  */
@@ -5285,17 +5246,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpCookiePairHeaderValueCollection=_uuidof(IHttpCookiePairHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -5329,7 +5290,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromName(
                             /* [in] */__RPC__in HSTRING name,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue * * cookiePairHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromNameWithValue(
                             /* [in] */__RPC__in HSTRING name,
@@ -5341,10 +5302,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpCookiePairHeaderValueFactory=_uuidof(IHttpCookiePairHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -5378,22 +5339,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue * * cookiePairHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue * * cookiePairHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpCookiePairHeaderValueStatics=_uuidof(IHttpCookiePairHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -5439,10 +5400,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpCredentialsHeaderValue=_uuidof(IHttpCredentialsHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue_INTERFACE_DEFINED__) */
@@ -5476,22 +5437,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromScheme(
                             /* [in] */__RPC__in HSTRING scheme,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue * * credentialsHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromSchemeWithToken(
                             /* [in] */__RPC__in HSTRING scheme,
                             /* [in] */__RPC__in HSTRING token,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue * * credentialsHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpCredentialsHeaderValueFactory=_uuidof(IHttpCredentialsHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -5525,22 +5486,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue * * credentialsHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue * * credentialsHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpCredentialsHeaderValueStatics=_uuidof(IHttpCredentialsHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -5583,10 +5544,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpDateOrDeltaHeaderValue=_uuidof(IHttpDateOrDeltaHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue_INTERFACE_DEFINED__) */
@@ -5620,22 +5581,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValue * * dateOrDeltaHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValue * * dateOrDeltaHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpDateOrDeltaHeaderValueStatics=_uuidof(IHttpDateOrDeltaHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -5684,10 +5645,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpExpectationHeaderValue=_uuidof(IHttpExpectationHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue_INTERFACE_DEFINED__) */
@@ -5702,11 +5663,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHea
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpExpectationHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpExpectationHeaderValue
  *
  *
  */
@@ -5729,17 +5685,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpExpectationHeaderValueCollection=_uuidof(IHttpExpectationHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -5773,7 +5729,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromName(
                             /* [in] */__RPC__in HSTRING name,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue * * expectationHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromNameWithValue(
                             /* [in] */__RPC__in HSTRING name,
@@ -5785,10 +5741,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpExpectationHeaderValueFactory=_uuidof(IHttpExpectationHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -5822,22 +5778,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue * * expectationHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpExpectationHeaderValue * * expectationHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpExpectationHeaderValueStatics=_uuidof(IHttpExpectationHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -5852,11 +5808,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHea
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Globalization.Language
- *     Windows.Foundation.Collections.IIterable_1_Windows.Globalization.Language
  *
  *
  */
@@ -5879,17 +5830,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpLanguageHeaderValueCollection=_uuidof(IHttpLanguageHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -5922,7 +5873,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LanguageRange(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * languageRange
+                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Quality(
                             /* [retval, out] */__RPC__deref_out_opt __FIReference_1_double * * value
@@ -5932,10 +5883,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpLanguageRangeWithQualityHeaderValue=_uuidof(IHttpLanguageRangeWithQualityHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue_INTERFACE_DEFINED__) */
@@ -5950,11 +5901,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeW
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
  *
  *
  */
@@ -5977,17 +5923,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpLanguageRangeWithQualityHeaderValueCollection=_uuidof(IHttpLanguageRangeWithQualityHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -6021,22 +5967,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromLanguageRange(
                             /* [in] */__RPC__in HSTRING languageRange,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue * * languageRangeWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromLanguageRangeWithQuality(
                             /* [in] */__RPC__in HSTRING languageRange,
                             /* [in] */DOUBLE quality,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue * * languageRangeWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpLanguageRangeWithQualityHeaderValueFactory=_uuidof(IHttpLanguageRangeWithQualityHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -6070,22 +6016,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue * * languageRangeWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue * * languageRangeWithQualityHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpLanguageRangeWithQualityHeaderValueStatics=_uuidof(IHttpLanguageRangeWithQualityHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -6137,10 +6083,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpMediaTypeHeaderValue=_uuidof(IHttpMediaTypeHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue_INTERFACE_DEFINED__) */
@@ -6174,17 +6120,17 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Create(
                             /* [in] */__RPC__in HSTRING mediaType,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue * * mediaTypeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpMediaTypeHeaderValueFactory=_uuidof(IHttpMediaTypeHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -6218,22 +6164,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue * * mediaTypeHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue * * mediaTypeHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpMediaTypeHeaderValueStatics=_uuidof(IHttpMediaTypeHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -6291,10 +6237,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpMediaTypeWithQualityHeaderValue=_uuidof(IHttpMediaTypeWithQualityHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue_INTERFACE_DEFINED__) */
@@ -6309,11 +6255,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQ
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
  *
  *
  */
@@ -6336,17 +6277,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpMediaTypeWithQualityHeaderValueCollection=_uuidof(IHttpMediaTypeWithQualityHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -6380,22 +6321,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromMediaType(
                             /* [in] */__RPC__in HSTRING mediaType,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue * * mediaTypeWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromMediaTypeWithQuality(
                             /* [in] */__RPC__in HSTRING mediaType,
                             /* [in] */DOUBLE quality,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue * * mediaTypeWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpMediaTypeWithQualityHeaderValueFactory=_uuidof(IHttpMediaTypeWithQualityHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -6429,22 +6370,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue * * mediaTypeWithQualityHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue * * mediaTypeWithQualityHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpMediaTypeWithQualityHeaderValueStatics=_uuidof(IHttpMediaTypeWithQualityHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -6459,11 +6400,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQ
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpMethodHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.HttpMethod
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.HttpMethod
  *
  *
  */
@@ -6486,17 +6422,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpMethodHeaderValueCollection=_uuidof(IHttpMethodHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -6542,10 +6478,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpNameValueHeaderValue=_uuidof(IHttpNameValueHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue_INTERFACE_DEFINED__) */
@@ -6579,7 +6515,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromName(
                             /* [in] */__RPC__in HSTRING name,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue * * nameValueHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromNameWithValue(
                             /* [in] */__RPC__in HSTRING name,
@@ -6591,10 +6527,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpNameValueHeaderValueFactory=_uuidof(IHttpNameValueHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -6628,22 +6564,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue * * nameValueHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpNameValueHeaderValue * * nameValueHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpNameValueHeaderValueStatics=_uuidof(IHttpNameValueHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -6686,10 +6622,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpProductHeaderValue=_uuidof(IHttpProductHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue_INTERFACE_DEFINED__) */
@@ -6723,22 +6659,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromName(
                             /* [in] */__RPC__in HSTRING productName,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue * * productHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromNameWithVersion(
                             /* [in] */__RPC__in HSTRING productName,
                             /* [in] */__RPC__in HSTRING productVersion,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue * * productHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpProductHeaderValueFactory=_uuidof(IHttpProductHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -6772,22 +6708,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue * * productHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductHeaderValue * * productHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpProductHeaderValueStatics=_uuidof(IHttpProductHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -6830,10 +6766,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpProductInfoHeaderValue=_uuidof(IHttpProductInfoHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue_INTERFACE_DEFINED__) */
@@ -6848,11 +6784,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHea
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpProductInfoHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpProductInfoHeaderValue
  *
  *
  */
@@ -6875,17 +6806,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpProductInfoHeaderValueCollection=_uuidof(IHttpProductInfoHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -6919,22 +6850,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateFromComment(
                             /* [in] */__RPC__in HSTRING productComment,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue * * productInfoHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateFromNameWithVersion(
                             /* [in] */__RPC__in HSTRING productName,
                             /* [in] */__RPC__in HSTRING productVersion,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue * * productInfoHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpProductInfoHeaderValueFactory=_uuidof(IHttpProductInfoHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -6968,22 +6899,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue * * productInfoHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue * * productInfoHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpProductInfoHeaderValueStatics=_uuidof(IHttpProductInfoHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -6998,11 +6929,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHea
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpRequestHeaderCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *
  *
  */
@@ -7108,17 +7034,17 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE TryAppendWithoutValidation(
                             /* [in] */__RPC__in HSTRING name,
                             /* [in] */__RPC__in HSTRING value,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpRequestHeaderCollection=_uuidof(IHttpRequestHeaderCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_INTERFACE_DEFINED__) */
@@ -7133,11 +7059,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderC
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpResponseHeaderCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *
  *
  */
@@ -7204,17 +7125,17 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE TryAppendWithoutValidation(
                             /* [in] */__RPC__in HSTRING name,
                             /* [in] */__RPC__in HSTRING value,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpResponseHeaderCollection=_uuidof(IHttpResponseHeaderCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_INTERFACE_DEFINED__) */
@@ -7257,10 +7178,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHttpTransferCodingHeaderValue=_uuidof(IHttpTransferCodingHeaderValue);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue_INTERFACE_DEFINED__) */
@@ -7275,11 +7196,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCoding
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
  *
  *
  */
@@ -7302,17 +7218,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParseAdd(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpTransferCodingHeaderValueCollection=_uuidof(IHttpTransferCodingHeaderValueCollection);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection_INTERFACE_DEFINED__) */
@@ -7346,17 +7262,17 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Create(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue * * transferCodingHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue * * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpTransferCodingHeaderValueFactory=_uuidof(IHttpTransferCodingHeaderValueFactory);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory_INTERFACE_DEFINED__) */
@@ -7390,22 +7306,22 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Parse(
                             /* [in] */__RPC__in HSTRING input,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue * * transferCodingHeaderValue
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryParse(
                             /* [in] */__RPC__in HSTRING input,
                             /* [out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue * * transferCodingHeaderValue,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHttpTransferCodingHeaderValueStatics=_uuidof(IHttpTransferCodingHeaderValueStatics);
                     
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics_INTERFACE_DEFINED__) */
@@ -7424,8 +7340,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCoding
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -7483,8 +7397,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpChallengeHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -7540,8 +7452,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -7599,8 +7509,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -7656,8 +7564,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -7807,8 +7713,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpCookiePairHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -7924,8 +7828,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpExpectationHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -7950,8 +7852,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Globalization.Language
  *    Windows.Foundation.Collections.IIterable_1_Windows.Globalization.Language
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -8008,8 +7908,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -8098,8 +7996,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -8124,8 +8020,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.HttpMethod
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.HttpMethod
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -8245,8 +8139,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpProductInfoHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -8272,8 +8164,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -8298,8 +8188,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
  *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -8356,8 +8244,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13489,7 +13375,7 @@ typedef struct __FIReference_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *value);
     END_INTERFACE
 } __FIReference_1_UINT64Vtbl;
 
@@ -13519,393 +13405,6 @@ interface __FIReference_1_UINT64
 
 
 #endif // ____FIReference_1_UINT64_INTERFACE_DEFINED__
-
-
-#if !defined(____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIKeyValuePair_2_HSTRING_HSTRING __FIKeyValuePair_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_HSTRING;
-
-typedef struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This,
-            /* [out] */ __RPC__out ULONG *iidCount,
-            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *key);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt HSTRING *value);
-    END_INTERFACE
-} __FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
-
-interface __FIKeyValuePair_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Key(This,key)	\
-    ( (This)->lpVtbl -> get_Key(This,key) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Value(This,value)	\
-    ( (This)->lpVtbl -> get_Value(This,value) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out __FIKeyValuePair_2_HSTRING_HSTRING * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __FIKeyValuePair_2_HSTRING_HSTRING * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
-
-interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-typedef  struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING **first);
-
-    END_INTERFACE
-} __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
-
-interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-#if !defined(____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIMapView_2_HSTRING_HSTRING __FIMapView_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIMapView_2_HSTRING_HSTRING;
-
-typedef struct __FIMapView_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in HSTRING key,
-        /* [retval][out] */ __RPC__deref_out_opt HSTRING *value);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [in] */ __RPC__in HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
-    HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **firstPartition,
-        /* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **secondPartition);
-    END_INTERFACE
-} __FIMapView_2_HSTRING_HSTRINGVtbl;
-
-interface __FIMapView_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIMapView_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIMapView_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIMapView_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIMapView_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIMapView_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIMapView_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIMapView_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIMapView_2_HSTRING_HSTRING_Lookup(This,key,value)	\
-    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
-#define __FIMapView_2_HSTRING_HSTRING_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-#define __FIMapView_2_HSTRING_HSTRING_HasKey(This,key,found)	\
-    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
-#define __FIMapView_2_HSTRING_HSTRING_Split(This,firstPartition,secondPartition)	\
-    ( (This)->lpVtbl -> Split(This,firstPartition,secondPartition) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-#if !defined(____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIMap_2_HSTRING_HSTRING __FIMap_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIMap_2_HSTRING_HSTRING;
-
-typedef struct __FIMap_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [in] */ HSTRING key,
-        /* [retval][out] */ __RPC__deref_out_opt HSTRING **value);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [in] */ HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
-    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **view);
-    HRESULT ( STDMETHODCALLTYPE *Insert )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [in] */ HSTRING key,
-        /* [in] */ __RPC__in_opt HSTRING *value,
-        /* [retval][out] */ __RPC__out boolean *replaced);
-    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,/* [in] */ HSTRING key);
-    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
-    END_INTERFACE
-} __FIMap_2_HSTRING_HSTRINGVtbl;
-
-interface __FIMap_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIMap_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIMap_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIMap_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIMap_2_HSTRING_HSTRING_Lookup(This,key,value)	\
-    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_HasKey(This,key,found)	\
-    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_GetView(This,view)	\
-    ( (This)->lpVtbl -> GetView(This,view) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Insert(This,key,value,replaced)	\
-    ( (This)->lpVtbl -> Insert(This,key,value,replaced) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Remove(This,key)	\
-    ( (This)->lpVtbl -> Remove(This,key) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Clear(This)	\
-    ( (This)->lpVtbl -> Clear(This) ) 
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
 
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -14388,6 +13887,62 @@ interface __FIReference_1_Windows__CFoundation__CDateTime
 #endif // ____FIReference_1_Windows__CFoundation__CDateTime_INTERFACE_DEFINED__
 
 
+#if !defined(____FIReference_1_UINT32_INTERFACE_DEFINED__)
+#define ____FIReference_1_UINT32_INTERFACE_DEFINED__
+
+typedef interface __FIReference_1_UINT32 __FIReference_1_UINT32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIReference_1_UINT32;
+
+typedef struct __FIReference_1_UINT32Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_UINT32 * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_UINT32 * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_UINT32 * This );
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_UINT32 * This, 
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
+    END_INTERFACE
+} __FIReference_1_UINT32Vtbl;
+
+interface __FIReference_1_UINT32
+{
+    CONST_VTBL struct __FIReference_1_UINT32Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIReference_1_UINT32_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIReference_1_UINT32_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIReference_1_UINT32_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIReference_1_UINT32_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIReference_1_UINT32_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIReference_1_UINT32_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIReference_1_UINT32_get_Value(This,value)	\
+    ( (This)->lpVtbl -> get_Value(This,value) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIReference_1_UINT32_INTERFACE_DEFINED__
+
+
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpMethod __x_ABI_CWindows_CWeb_CHttp_CIHttpMethod;
@@ -14810,60 +14365,391 @@ interface __FIVector_1_Windows__CWeb__CHttp__CHttpMethod
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if !defined(____FIReference_1_UINT32_INTERFACE_DEFINED__)
-#define ____FIReference_1_UINT32_INTERFACE_DEFINED__
+#if !defined(____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
 
-typedef interface __FIReference_1_UINT32 __FIReference_1_UINT32;
+typedef interface __FIKeyValuePair_2_HSTRING_HSTRING __FIKeyValuePair_2_HSTRING_HSTRING;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIReference_1_UINT32;
+EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_HSTRING;
 
-typedef struct __FIReference_1_UINT32Vtbl
+typedef struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_UINT32 * This,
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This,
         /* [in] */ __RPC__in REFIID riid,
         /* [annotation][iid_is][out] */ 
         _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_UINT32 * This );
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_UINT32 * This );
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_UINT32 * This, 
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This,
+            /* [out] */ __RPC__out ULONG *iidCount,
+            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *key);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt HSTRING *value);
     END_INTERFACE
-} __FIReference_1_UINT32Vtbl;
+} __FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
 
-interface __FIReference_1_UINT32
+interface __FIKeyValuePair_2_HSTRING_HSTRING
 {
-    CONST_VTBL struct __FIReference_1_UINT32Vtbl *lpVtbl;
+    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIReference_1_UINT32_QueryInterface(This,riid,ppvObject)	\
+#define __FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIReference_1_UINT32_AddRef(This)	\
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIReference_1_UINT32_Release(This)	\
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIReference_1_UINT32_GetIids(This,iidCount,iids)	\
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
     ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIReference_1_UINT32_GetRuntimeClassName(This,className)	\
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
     ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIReference_1_UINT32_GetTrustLevel(This,trustLevel)	\
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
     ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIReference_1_UINT32_get_Value(This,value)	\
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Key(This,key)	\
+    ( (This)->lpVtbl -> get_Key(This,key) ) 
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Value(This,value)	\
     ( (This)->lpVtbl -> get_Value(This,value) ) 
 #endif /* COBJMACROS */
 
 
-#endif // ____FIReference_1_UINT32_INTERFACE_DEFINED__
+#endif // ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out __FIKeyValuePair_2_HSTRING_HSTRING * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __FIKeyValuePair_2_HSTRING_HSTRING * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
+
+interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+typedef  struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING **first);
+
+    END_INTERFACE
+} __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
+
+interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIMapView_2_HSTRING_HSTRING __FIMapView_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIMapView_2_HSTRING_HSTRING;
+
+typedef struct __FIMapView_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
+        /* [in] */ __RPC__in HSTRING key,
+        /* [retval][out] */ __RPC__deref_out_opt HSTRING *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [in] */ __RPC__in HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **firstPartition,
+        /* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **secondPartition);
+    END_INTERFACE
+} __FIMapView_2_HSTRING_HSTRINGVtbl;
+
+interface __FIMapView_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIMapView_2_HSTRING_HSTRINGVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIMapView_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIMapView_2_HSTRING_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIMapView_2_HSTRING_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIMapView_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIMapView_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIMapView_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIMapView_2_HSTRING_HSTRING_Lookup(This,key,value)	\
+    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
+#define __FIMapView_2_HSTRING_HSTRING_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+#define __FIMapView_2_HSTRING_HSTRING_HasKey(This,key,found)	\
+    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
+#define __FIMapView_2_HSTRING_HSTRING_Split(This,firstPartition,secondPartition)	\
+    ( (This)->lpVtbl -> Split(This,firstPartition,secondPartition) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIMap_2_HSTRING_HSTRING __FIMap_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIMap_2_HSTRING_HSTRING;
+
+typedef struct __FIMap_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
+        /* [in] */ HSTRING key,
+        /* [retval][out] */ __RPC__deref_out_opt HSTRING **value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [in] */ HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **view);
+    HRESULT ( STDMETHODCALLTYPE *Insert )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
+        /* [in] */ HSTRING key,
+        /* [in] */ __RPC__in_opt HSTRING *value,
+        /* [retval][out] */ __RPC__out boolean *replaced);
+    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,/* [in] */ HSTRING key);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
+    END_INTERFACE
+} __FIMap_2_HSTRING_HSTRINGVtbl;
+
+interface __FIMap_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIMap_2_HSTRING_HSTRINGVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIMap_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIMap_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIMap_2_HSTRING_HSTRING_Lookup(This,key,value)	\
+    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_HasKey(This,key,found)	\
+    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_GetView(This,view)	\
+    ( (This)->lpVtbl -> GetView(This,view) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_Insert(This,key,value,replaced)	\
+    ( (This)->lpVtbl -> Insert(This,key,value,replaced) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_Remove(This,key)	\
+    ( (This)->lpVtbl -> Remove(This,key) ) 
+
+#define __FIMap_2_HSTRING_HSTRING_Clear(This)	\
+    ( (This)->lpVtbl -> Clear(This) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
 
 
 
@@ -15035,11 +14921,6 @@ typedef interface __x_ABI_CWindows_CStorage_CStreams_CIBuffer __x_ABI_CWindows_C
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection_INTERFACE_DEFINED__)
@@ -15118,7 +14999,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -15175,8 +15056,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCo
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCacheDirectiveHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -15304,11 +15185,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeade
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpChallengeHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpChallengeHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection_INTERFACE_DEFINED__)
@@ -15355,7 +15231,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -15388,8 +15264,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollect
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -15452,13 +15328,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromScheme )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING scheme,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue * * challengeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromSchemeWithToken )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING scheme,
         /* [in] */__RPC__in HSTRING token,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue * * challengeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue * * value
         );
     END_INTERFACE
     
@@ -15488,11 +15364,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory_CreateFromScheme(This,scheme,challengeHeaderValue) \
-    ( (This)->lpVtbl->CreateFromScheme(This,scheme,challengeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory_CreateFromScheme(This,scheme,value) \
+    ( (This)->lpVtbl->CreateFromScheme(This,scheme,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory_CreateFromSchemeWithToken(This,scheme,token,challengeHeaderValue) \
-    ( (This)->lpVtbl->CreateFromSchemeWithToken(This,scheme,token,challengeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueFactory_CreateFromSchemeWithToken(This,scheme,token,value) \
+    ( (This)->lpVtbl->CreateFromSchemeWithToken(This,scheme,token,value) )
 
 
 #endif /* COBJMACROS */
@@ -15555,7 +15431,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue * * challengeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics * This,
@@ -15591,8 +15467,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics_Parse(This,input,challengeHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,challengeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValueStatics_TryParse(This,input,challengeHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,challengeHeaderValue,succeeded) )
@@ -15709,11 +15585,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOpti
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection_INTERFACE_DEFINED__)
@@ -15760,7 +15631,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -15793,8 +15664,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -15857,7 +15728,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING token,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue * * connectionOptionHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue * * value
         );
     END_INTERFACE
     
@@ -15887,8 +15758,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory_Create(This,token,connectionOptionHeaderValue) \
-    ( (This)->lpVtbl->Create(This,token,connectionOptionHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueFactory_Create(This,token,value) \
+    ( (This)->lpVtbl->Create(This,token,value) )
 
 
 #endif /* COBJMACROS */
@@ -15951,7 +15822,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue * * connectionOptionHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics * This,
@@ -15987,8 +15858,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics_Parse(This,input,connectionOptionHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,connectionOptionHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValueStatics_TryParse(This,input,connectionOptionHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,connectionOptionHeaderValue,succeeded) )
@@ -16105,11 +15976,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingH
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpContentCodingHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection_INTERFACE_DEFINED__)
@@ -16156,7 +16022,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -16189,8 +16055,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCol
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -16253,7 +16119,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING contentCoding,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue * * contentCodingHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue * * value
         );
     END_INTERFACE
     
@@ -16283,8 +16149,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFac
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory_Create(This,contentCoding,contentCodingHeaderValue) \
-    ( (This)->lpVtbl->Create(This,contentCoding,contentCodingHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueFactory_Create(This,contentCoding,value) \
+    ( (This)->lpVtbl->Create(This,contentCoding,value) )
 
 
 #endif /* COBJMACROS */
@@ -16347,7 +16213,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue * * contentCodingHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics * This,
@@ -16383,8 +16249,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueSta
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics_Parse(This,input,contentCodingHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,contentCodingHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValueStatics_TryParse(This,input,contentCodingHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,contentCodingHeaderValue,succeeded) )
@@ -16508,11 +16374,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingW
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection_INTERFACE_DEFINED__)
@@ -16559,7 +16420,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -16592,8 +16453,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHea
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -16656,13 +16517,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromValue )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING contentCoding,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue * * contentCodingWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromValueWithQuality )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING contentCoding,
         /* [in] */DOUBLE quality,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue * * contentCodingWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue * * value
         );
     END_INTERFACE
     
@@ -16692,11 +16553,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHea
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory_CreateFromValue(This,contentCoding,contentCodingWithQualityHeaderValue) \
-    ( (This)->lpVtbl->CreateFromValue(This,contentCoding,contentCodingWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory_CreateFromValue(This,contentCoding,value) \
+    ( (This)->lpVtbl->CreateFromValue(This,contentCoding,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory_CreateFromValueWithQuality(This,contentCoding,quality,contentCodingWithQualityHeaderValue) \
-    ( (This)->lpVtbl->CreateFromValueWithQuality(This,contentCoding,quality,contentCodingWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueFactory_CreateFromValueWithQuality(This,contentCoding,quality,value) \
+    ( (This)->lpVtbl->CreateFromValueWithQuality(This,contentCoding,quality,value) )
 
 
 #endif /* COBJMACROS */
@@ -16759,7 +16620,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue * * contentCodingWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics * This,
@@ -16795,8 +16656,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHea
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics_Parse(This,input,contentCodingWithQualityHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,contentCodingWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValueStatics_TryParse(This,input,contentCodingWithQualityHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,contentCodingWithQualityHeaderValue,succeeded) )
@@ -17025,7 +16886,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING dispositionType,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue * * contentDispositionHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue * * value
         );
     END_INTERFACE
     
@@ -17055,8 +16916,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderVal
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory_Create(This,dispositionType,contentDispositionHeaderValue) \
-    ( (This)->lpVtbl->Create(This,dispositionType,contentDispositionHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueFactory_Create(This,dispositionType,value) \
+    ( (This)->lpVtbl->Create(This,dispositionType,value) )
 
 
 #endif /* COBJMACROS */
@@ -17119,7 +16980,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue * * contentDispositionHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics * This,
@@ -17155,8 +17016,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderVal
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics_Parse(This,input,contentDispositionHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,contentDispositionHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValueStatics_TryParse(This,input,contentDispositionHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,contentDispositionHeaderValue,succeeded) )
@@ -17178,11 +17039,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDisposi
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpContentHeaderCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *
  *
  */
@@ -17305,7 +17161,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection * This,
         /* [in] */__RPC__in HSTRING name,
         /* [in] */__RPC__in HSTRING value,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -17392,8 +17248,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_Append(This,name,value) \
     ( (This)->lpVtbl->Append(This,name,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_TryAppendWithoutValidation(This,name,value,succeeded) \
-    ( (This)->lpVtbl->TryAppendWithoutValidation(This,name,value,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_TryAppendWithoutValidation(This,name,value,result) \
+    ( (This)->lpVtbl->TryAppendWithoutValidation(This,name,value,result) )
 
 
 #endif /* COBJMACROS */
@@ -17577,20 +17433,20 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromLength )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory * This,
         /* [in] */UINT64 length,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * contentRangeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromRange )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory * This,
         /* [in] */UINT64 from,
         /* [in] */UINT64 to,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * contentRangeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromRangeWithLength )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory * This,
         /* [in] */UINT64 from,
         /* [in] */UINT64 to,
         /* [in] */UINT64 length,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * contentRangeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * value
         );
     END_INTERFACE
     
@@ -17620,14 +17476,14 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFact
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_CreateFromLength(This,length,contentRangeHeaderValue) \
-    ( (This)->lpVtbl->CreateFromLength(This,length,contentRangeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_CreateFromLength(This,length,value) \
+    ( (This)->lpVtbl->CreateFromLength(This,length,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_CreateFromRange(This,from,to,contentRangeHeaderValue) \
-    ( (This)->lpVtbl->CreateFromRange(This,from,to,contentRangeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_CreateFromRange(This,from,to,value) \
+    ( (This)->lpVtbl->CreateFromRange(This,from,to,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_CreateFromRangeWithLength(This,from,to,length,contentRangeHeaderValue) \
-    ( (This)->lpVtbl->CreateFromRangeWithLength(This,from,to,length,contentRangeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueFactory_CreateFromRangeWithLength(This,from,to,length,value) \
+    ( (This)->lpVtbl->CreateFromRangeWithLength(This,from,to,length,value) )
 
 
 #endif /* COBJMACROS */
@@ -17690,7 +17546,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * contentRangeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics * This,
@@ -17726,8 +17582,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStat
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics_Parse(This,input,contentRangeHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,contentRangeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValueStatics_TryParse(This,input,contentRangeHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,contentRangeHeaderValue,succeeded) )
@@ -17858,11 +17714,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHead
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpCookiePairHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpCookiePairHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection_INTERFACE_DEFINED__)
@@ -17909,7 +17760,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -17942,8 +17793,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollec
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -18006,7 +17857,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromName )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING name,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue * * cookiePairHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromNameWithValue )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory * This,
@@ -18042,8 +17893,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactor
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory_CreateFromName(This,name,cookiePairHeaderValue) \
-    ( (This)->lpVtbl->CreateFromName(This,name,cookiePairHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory_CreateFromName(This,name,value) \
+    ( (This)->lpVtbl->CreateFromName(This,name,value) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueFactory_CreateFromNameWithValue(This,name,value,cookiePairHeaderValue) \
     ( (This)->lpVtbl->CreateFromNameWithValue(This,name,value,cookiePairHeaderValue) )
@@ -18109,7 +17960,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue * * cookiePairHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics * This,
@@ -18145,8 +17996,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatic
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics_Parse(This,input,cookiePairHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,cookiePairHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValueStatics_TryParse(This,input,cookiePairHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,cookiePairHeaderValue,succeeded) )
@@ -18319,13 +18170,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromScheme )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING scheme,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue * * credentialsHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromSchemeWithToken )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING scheme,
         /* [in] */__RPC__in HSTRING token,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue * * credentialsHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue * * value
         );
     END_INTERFACE
     
@@ -18355,11 +18206,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFacto
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory_CreateFromScheme(This,scheme,credentialsHeaderValue) \
-    ( (This)->lpVtbl->CreateFromScheme(This,scheme,credentialsHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory_CreateFromScheme(This,scheme,value) \
+    ( (This)->lpVtbl->CreateFromScheme(This,scheme,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory_CreateFromSchemeWithToken(This,scheme,token,credentialsHeaderValue) \
-    ( (This)->lpVtbl->CreateFromSchemeWithToken(This,scheme,token,credentialsHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueFactory_CreateFromSchemeWithToken(This,scheme,token,value) \
+    ( (This)->lpVtbl->CreateFromSchemeWithToken(This,scheme,token,value) )
 
 
 #endif /* COBJMACROS */
@@ -18422,7 +18273,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue * * credentialsHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics * This,
@@ -18458,8 +18309,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStati
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics_Parse(This,input,credentialsHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,credentialsHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValueStatics_TryParse(This,input,credentialsHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,credentialsHeaderValue,succeeded) )
@@ -18625,7 +18476,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue * * dateOrDeltaHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics * This,
@@ -18661,8 +18512,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStati
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics_Parse(This,input,dateOrDeltaHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,dateOrDeltaHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValueStatics_TryParse(This,input,dateOrDeltaHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,dateOrDeltaHeaderValue,succeeded) )
@@ -18800,11 +18651,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHea
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpExpectationHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpExpectationHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection_INTERFACE_DEFINED__)
@@ -18851,7 +18697,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -18884,8 +18730,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueColle
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -18948,7 +18794,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromName )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING name,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue * * expectationHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromNameWithValue )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory * This,
@@ -18984,8 +18830,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFacto
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory_CreateFromName(This,name,expectationHeaderValue) \
-    ( (This)->lpVtbl->CreateFromName(This,name,expectationHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory_CreateFromName(This,name,value) \
+    ( (This)->lpVtbl->CreateFromName(This,name,value) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueFactory_CreateFromNameWithValue(This,name,value,expectationHeaderValue) \
     ( (This)->lpVtbl->CreateFromNameWithValue(This,name,value,expectationHeaderValue) )
@@ -19051,7 +18897,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue * * expectationHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics * This,
@@ -19087,8 +18933,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStati
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics_Parse(This,input,expectationHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,expectationHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValueStatics_TryParse(This,input,expectationHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,expectationHeaderValue,succeeded) )
@@ -19110,11 +18956,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHea
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Globalization.Language
- *     Windows.Foundation.Collections.IIterable_1_Windows.Globalization.Language
  *
  *
  */
@@ -19163,7 +19004,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -19196,8 +19037,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollecti
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -19259,7 +19100,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_LanguageRange )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * languageRange
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
         );
     /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Quality )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * This,
@@ -19293,8 +19134,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHea
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue_get_LanguageRange(This,languageRange) \
-    ( (This)->lpVtbl->get_LanguageRange(This,languageRange) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue_get_LanguageRange(This,value) \
+    ( (This)->lpVtbl->get_LanguageRange(This,value) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue_get_Quality(This,value) \
     ( (This)->lpVtbl->get_Quality(This,value) )
@@ -19316,11 +19157,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeW
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
  *
  *
  */
@@ -19369,7 +19205,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -19402,8 +19238,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHea
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -19466,13 +19302,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromLanguageRange )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING languageRange,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * * languageRangeWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromLanguageRangeWithQuality )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING languageRange,
         /* [in] */DOUBLE quality,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * * languageRangeWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * * value
         );
     END_INTERFACE
     
@@ -19502,11 +19338,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHea
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory_CreateFromLanguageRange(This,languageRange,languageRangeWithQualityHeaderValue) \
-    ( (This)->lpVtbl->CreateFromLanguageRange(This,languageRange,languageRangeWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory_CreateFromLanguageRange(This,languageRange,value) \
+    ( (This)->lpVtbl->CreateFromLanguageRange(This,languageRange,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory_CreateFromLanguageRangeWithQuality(This,languageRange,quality,languageRangeWithQualityHeaderValue) \
-    ( (This)->lpVtbl->CreateFromLanguageRangeWithQuality(This,languageRange,quality,languageRangeWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueFactory_CreateFromLanguageRangeWithQuality(This,languageRange,quality,value) \
+    ( (This)->lpVtbl->CreateFromLanguageRangeWithQuality(This,languageRange,quality,value) )
 
 
 #endif /* COBJMACROS */
@@ -19569,7 +19405,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * * languageRangeWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics * This,
@@ -19605,8 +19441,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHea
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics_Parse(This,input,languageRangeWithQualityHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,languageRangeWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValueStatics_TryParse(This,input,languageRangeWithQualityHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,languageRangeWithQualityHeaderValue,succeeded) )
@@ -19793,7 +19629,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING mediaType,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue * * mediaTypeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue * * value
         );
     END_INTERFACE
     
@@ -19823,8 +19659,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory_Create(This,mediaType,mediaTypeHeaderValue) \
-    ( (This)->lpVtbl->Create(This,mediaType,mediaTypeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueFactory_Create(This,mediaType,value) \
+    ( (This)->lpVtbl->Create(This,mediaType,value) )
 
 
 #endif /* COBJMACROS */
@@ -19887,7 +19723,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue * * mediaTypeHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics * This,
@@ -19923,8 +19759,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics_Parse(This,input,mediaTypeHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,mediaTypeHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValueStatics_TryParse(This,input,mediaTypeHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,mediaTypeHeaderValue,succeeded) )
@@ -20083,11 +19919,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQ
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection_INTERFACE_DEFINED__)
@@ -20134,7 +19965,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -20167,8 +19998,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderV
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -20231,13 +20062,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromMediaType )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING mediaType,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue * * mediaTypeWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromMediaTypeWithQuality )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING mediaType,
         /* [in] */DOUBLE quality,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue * * mediaTypeWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue * * value
         );
     END_INTERFACE
     
@@ -20267,11 +20098,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderV
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory_CreateFromMediaType(This,mediaType,mediaTypeWithQualityHeaderValue) \
-    ( (This)->lpVtbl->CreateFromMediaType(This,mediaType,mediaTypeWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory_CreateFromMediaType(This,mediaType,value) \
+    ( (This)->lpVtbl->CreateFromMediaType(This,mediaType,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory_CreateFromMediaTypeWithQuality(This,mediaType,quality,mediaTypeWithQualityHeaderValue) \
-    ( (This)->lpVtbl->CreateFromMediaTypeWithQuality(This,mediaType,quality,mediaTypeWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueFactory_CreateFromMediaTypeWithQuality(This,mediaType,quality,value) \
+    ( (This)->lpVtbl->CreateFromMediaTypeWithQuality(This,mediaType,quality,value) )
 
 
 #endif /* COBJMACROS */
@@ -20334,7 +20165,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue * * mediaTypeWithQualityHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics * This,
@@ -20370,8 +20201,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderV
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics_Parse(This,input,mediaTypeWithQualityHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,mediaTypeWithQualityHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValueStatics_TryParse(This,input,mediaTypeWithQualityHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,mediaTypeWithQualityHeaderValue,succeeded) )
@@ -20393,11 +20224,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQ
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpMethodHeaderValueCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.HttpMethod
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.HttpMethod
  *
  *
  */
@@ -20446,7 +20272,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -20479,8 +20305,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpMethodHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -20650,7 +20476,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromName )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING name,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue * * nameValueHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromNameWithValue )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory * This,
@@ -20686,8 +20512,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory_CreateFromName(This,name,nameValueHeaderValue) \
-    ( (This)->lpVtbl->CreateFromName(This,name,nameValueHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory_CreateFromName(This,name,value) \
+    ( (This)->lpVtbl->CreateFromName(This,name,value) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueFactory_CreateFromNameWithValue(This,name,value,nameValueHeaderValue) \
     ( (This)->lpVtbl->CreateFromNameWithValue(This,name,value,nameValueHeaderValue) )
@@ -20753,7 +20579,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue * * nameValueHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics * This,
@@ -20789,8 +20615,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics_Parse(This,input,nameValueHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,nameValueHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValueStatics_TryParse(This,input,nameValueHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,nameValueHeaderValue,succeeded) )
@@ -20956,13 +20782,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromName )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING productName,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue * * productHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromNameWithVersion )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING productName,
         /* [in] */__RPC__in HSTRING productVersion,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue * * productHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue * * value
         );
     END_INTERFACE
     
@@ -20992,11 +20818,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory_CreateFromName(This,productName,productHeaderValue) \
-    ( (This)->lpVtbl->CreateFromName(This,productName,productHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory_CreateFromName(This,productName,value) \
+    ( (This)->lpVtbl->CreateFromName(This,productName,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory_CreateFromNameWithVersion(This,productName,productVersion,productHeaderValue) \
-    ( (This)->lpVtbl->CreateFromNameWithVersion(This,productName,productVersion,productHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueFactory_CreateFromNameWithVersion(This,productName,productVersion,value) \
+    ( (This)->lpVtbl->CreateFromNameWithVersion(This,productName,productVersion,value) )
 
 
 #endif /* COBJMACROS */
@@ -21059,7 +20885,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue * * productHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics * This,
@@ -21095,8 +20921,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics_Parse(This,input,productHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,productHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValueStatics_TryParse(This,input,productHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,productHeaderValue,succeeded) )
@@ -21220,11 +21046,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHea
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpProductInfoHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpProductInfoHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection_INTERFACE_DEFINED__)
@@ -21271,7 +21092,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -21304,8 +21125,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueColle
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -21368,13 +21189,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromComment )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING productComment,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue * * productInfoHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromNameWithVersion )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING productName,
         /* [in] */__RPC__in HSTRING productVersion,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue * * productInfoHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue * * value
         );
     END_INTERFACE
     
@@ -21404,11 +21225,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFacto
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory_CreateFromComment(This,productComment,productInfoHeaderValue) \
-    ( (This)->lpVtbl->CreateFromComment(This,productComment,productInfoHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory_CreateFromComment(This,productComment,value) \
+    ( (This)->lpVtbl->CreateFromComment(This,productComment,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory_CreateFromNameWithVersion(This,productName,productVersion,productInfoHeaderValue) \
-    ( (This)->lpVtbl->CreateFromNameWithVersion(This,productName,productVersion,productInfoHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueFactory_CreateFromNameWithVersion(This,productName,productVersion,value) \
+    ( (This)->lpVtbl->CreateFromNameWithVersion(This,productName,productVersion,value) )
 
 
 #endif /* COBJMACROS */
@@ -21471,7 +21292,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue * * productInfoHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics * This,
@@ -21507,8 +21328,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStati
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics_Parse(This,input,productInfoHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,productInfoHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValueStatics_TryParse(This,input,productInfoHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,productInfoHeaderValue,succeeded) )
@@ -21530,11 +21351,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHea
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpRequestHeaderCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *
  *
  */
@@ -21693,7 +21509,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection * This,
         /* [in] */__RPC__in HSTRING name,
         /* [in] */__RPC__in HSTRING value,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -21807,8 +21623,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_Append(This,name,value) \
     ( (This)->lpVtbl->Append(This,name,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_TryAppendWithoutValidation(This,name,value,succeeded) \
-    ( (This)->lpVtbl->TryAppendWithoutValidation(This,name,value,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_TryAppendWithoutValidation(This,name,value,result) \
+    ( (This)->lpVtbl->TryAppendWithoutValidation(This,name,value,result) )
 
 
 #endif /* COBJMACROS */
@@ -21827,11 +21643,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderC
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpResponseHeaderCollection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *
  *
  */
@@ -21938,7 +21749,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection * This,
         /* [in] */__RPC__in HSTRING name,
         /* [in] */__RPC__in HSTRING value,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -22013,8 +21824,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_Append(This,name,value) \
     ( (This)->lpVtbl->Append(This,name,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_TryAppendWithoutValidation(This,name,value,succeeded) \
-    ( (This)->lpVtbl->TryAppendWithoutValidation(This,name,value,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_TryAppendWithoutValidation(This,name,value,result) \
+    ( (This)->lpVtbl->TryAppendWithoutValidation(This,name,value,result) )
 
 
 #endif /* COBJMACROS */
@@ -22135,11 +21946,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCoding
  * Interface is a part of the implementation of type Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection_INTERFACE_DEFINED__)
@@ -22186,7 +21992,7 @@ HRESULT ( STDMETHODCALLTYPE *ParseAdd )(
     HRESULT ( STDMETHODCALLTYPE *TryParseAdd )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__out boolean * succeeded
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -22219,8 +22025,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCo
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection_ParseAdd(This,input) \
     ( (This)->lpVtbl->ParseAdd(This,input) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection_TryParseAdd(This,input,succeeded) \
-    ( (This)->lpVtbl->TryParseAdd(This,input,succeeded) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueCollection_TryParseAdd(This,input,result) \
+    ( (This)->lpVtbl->TryParseAdd(This,input,result) )
 
 
 #endif /* COBJMACROS */
@@ -22283,7 +22089,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue * * transferCodingHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue * * value
         );
     END_INTERFACE
     
@@ -22313,8 +22119,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFa
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory_Create(This,input,transferCodingHeaderValue) \
-    ( (This)->lpVtbl->Create(This,input,transferCodingHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueFactory_Create(This,input,value) \
+    ( (This)->lpVtbl->Create(This,input,value) )
 
 
 #endif /* COBJMACROS */
@@ -22377,7 +22183,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Parse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics * This,
         /* [in] */__RPC__in HSTRING input,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue * * transferCodingHeaderValue
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue * * result
         );
     HRESULT ( STDMETHODCALLTYPE *TryParse )(
         __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics * This,
@@ -22413,8 +22219,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueSt
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics_Parse(This,input,transferCodingHeaderValue) \
-    ( (This)->lpVtbl->Parse(This,input,transferCodingHeaderValue) )
+#define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics_Parse(This,input,result) \
+    ( (This)->lpVtbl->Parse(This,input,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValueStatics_TryParse(This,input,transferCodingHeaderValue,succeeded) \
     ( (This)->lpVtbl->TryParse(This,input,transferCodingHeaderValue,succeeded) )
@@ -22440,8 +22246,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCoding
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpNameValueHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -22499,8 +22303,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpChallengeHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -22556,8 +22358,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -22615,8 +22415,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -22672,8 +22470,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -22823,8 +22619,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpCookiePairHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -22940,8 +22734,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpExpectationHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -22966,8 +22758,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Globalization.Language
  *    Windows.Foundation.Collections.IIterable_1_Windows.Globalization.Language
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -23024,8 +22814,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -23114,8 +22902,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -23140,8 +22926,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.HttpMethod
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.HttpMethod
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -23261,8 +23045,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpProductInfoHeaderValue
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -23288,8 +23070,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -23314,8 +23094,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IMap_2_HSTRING,HSTRING
  *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -23372,8 +23150,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVector_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

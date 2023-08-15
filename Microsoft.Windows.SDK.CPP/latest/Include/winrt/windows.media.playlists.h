@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.playlists.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Media {
             namespace Playlists {
                 interface IPlaylist;
-            } /* Windows */
+            } /* Playlists */
         } /* Media */
-    } /* Playlists */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlaylists_CIPlaylist ABI::Windows::Media::Playlists::IPlaylist
 
 #endif // ____x_ABI_CWindows_CMedia_CPlaylists_CIPlaylist_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Media {
             namespace Playlists {
                 interface IPlaylistStatics;
-            } /* Windows */
+            } /* Playlists */
         } /* Media */
-    } /* Playlists */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlaylists_CIPlaylistStatics ABI::Windows::Media::Playlists::IPlaylistStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CPlaylists_CIPlaylistStatics_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace Media {
             namespace Playlists {
                 class Playlist;
-            } /* Windows */
+            } /* Playlists */
         } /* Media */
-    } /* Playlists */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_MEDIA_PLAYLISTS_PLAYLISTSCONTRACT_VERSION >= 0x10000
@@ -335,7 +331,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Playlists::Playlist*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Playlists::Playlist*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CPlaylists__CPlaylist_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CPlaylists__CPlaylist ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CPlaylists__CPlaylist_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CPlaylists__CPlaylist ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Playlists::IPlaylist*>
@@ -367,7 +363,7 @@ IAsyncOperation<ABI::Windows::Media::Playlists::Playlist*> : IAsyncOperation_imp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Playlists::Playlist*> __FIAsyncOperation_1_Windows__CMedia__CPlaylists__CPlaylist_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CPlaylists__CPlaylist ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CPlaylists__CPlaylist_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CPlaylists__CPlaylist ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Playlists::IPlaylist*>
@@ -382,8 +378,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -391,8 +387,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -418,7 +414,7 @@ IIterator<ABI::Windows::Storage::StorageFile*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFile*> __FIIterator_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFile*>
@@ -450,7 +446,7 @@ IIterable<ABI::Windows::Storage::StorageFile*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFile*> __FIIterable_1_Windows__CStorage__CStorageFile_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFile*>
@@ -482,7 +478,7 @@ IVectorView<ABI::Windows::Storage::StorageFile*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFile*> __FIVectorView_1_Windows__CStorage__CStorageFile_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFile*>
@@ -514,7 +510,7 @@ IVector<ABI::Windows::Storage::StorageFile*> : IVector_impl<ABI::Windows::Founda
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::StorageFile*> __FIVector_1_Windows__CStorage__CStorageFile_t;
 #define __FIVector_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::IStorageFile*>
@@ -546,7 +542,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFile*>
@@ -578,7 +574,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFile*> : IAsyncOperation_impl<ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFile*> __FIAsyncOperation_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFile*>
@@ -597,8 +593,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -613,8 +609,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -626,8 +622,8 @@ namespace ABI {
             
             typedef enum NameCollisionOption : int NameCollisionOption;
             
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -640,9 +636,9 @@ namespace ABI {
                 
                 typedef enum PlaylistFormat : int PlaylistFormat;
                 
-            } /* Windows */
+            } /* Playlists */
         } /* Media */
-    } /* Playlists */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -678,9 +674,9 @@ namespace ABI {
                     PlaylistFormat_M3u = 2,
                 };
                 
-            } /* Windows */
+            } /* Playlists */
         } /* Media */
-    } /* Playlists */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_PLAYLISTS_PLAYLISTSCONTRACT_VERSION >= 0x10000
 
 
@@ -732,9 +728,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaylist=_uuidof(IPlaylist);
                 
-            } /* Windows */
+            } /* Playlists */
         } /* Media */
-    } /* Playlists */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlaylists_CIPlaylist;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlaylists_CIPlaylist_INTERFACE_DEFINED__) */
@@ -774,9 +770,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaylistStatics=_uuidof(IPlaylistStatics);
                 
-            } /* Windows */
+            } /* Playlists */
         } /* Media */
-    } /* Playlists */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlaylists_CIPlaylistStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlaylists_CIPlaylistStatics_INTERFACE_DEFINED__) */

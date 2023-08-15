@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.xboxlive.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveDeviceAddress;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress ABI::Windows::Networking::XboxLive::IXboxLiveDeviceAddress
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveDeviceAddressStatics;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddressStatics ABI::Windows::Networking::XboxLive::IXboxLiveDeviceAddressStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddressStatics_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveEndpointPair;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPair
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveEndpointPairCreationResult;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairCreationResult ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairCreationResult
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairCreationResult_FWD_DEFINED__
@@ -338,9 +334,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveEndpointPairStateChangedEventArgs;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStateChangedEventArgs ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStateChangedEventArgs_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveEndpointPairStatics;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStatics ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStatics_FWD_DEFINED__
@@ -366,9 +362,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveEndpointPairTemplate;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplate
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate_FWD_DEFINED__
@@ -380,9 +376,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveEndpointPairTemplateStatics;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplateStatics ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplateStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplateStatics_FWD_DEFINED__
@@ -394,9 +390,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveInboundEndpointPairCreatedEventArgs;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveInboundEndpointPairCreatedEventArgs ABI::Windows::Networking::XboxLive::IXboxLiveInboundEndpointPairCreatedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveInboundEndpointPairCreatedEventArgs_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveQualityOfServiceMeasurement;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurement ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServiceMeasurement
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurement_FWD_DEFINED__
@@ -422,9 +418,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveQualityOfServiceMeasurementStatics;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurementStatics ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServiceMeasurementStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurementStatics_FWD_DEFINED__
@@ -436,9 +432,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveQualityOfServiceMetricResult;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMetricResult ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServiceMetricResult
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMetricResult_FWD_DEFINED__
@@ -450,9 +446,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 interface IXboxLiveQualityOfServicePrivatePayloadResult;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServicePrivatePayloadResult ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServicePrivatePayloadResult
 
 #endif // ____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServicePrivatePayloadResult_FWD_DEFINED__
@@ -465,9 +461,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveDeviceAddress;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -490,7 +486,7 @@ IIterator<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t;
 #define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::XboxLive::IXboxLiveDeviceAddress*>
@@ -522,7 +518,7 @@ IIterable<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t;
 #define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::XboxLive::IXboxLiveDeviceAddress*>
@@ -538,9 +534,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveEndpointPair;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -563,7 +559,7 @@ IIterator<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*> __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_t;
 #define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPair*>
@@ -595,7 +591,7 @@ IIterable<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*> __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_t;
 #define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPair*>
@@ -611,9 +607,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveEndpointPairTemplate;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -636,7 +632,7 @@ IIterator<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate*> : I
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate*> __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_t;
 #define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplate*>
@@ -668,7 +664,7 @@ IIterable<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate*> : I
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate*> __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_t;
 #define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplate*>
@@ -684,9 +680,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 enum XboxLiveQualityOfServiceMetric : int;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_USE
@@ -707,7 +703,7 @@ IIterator<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetri
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric> __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t;
 #define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>
@@ -737,7 +733,7 @@ IIterable<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetri
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric> __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t;
 #define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>
@@ -752,9 +748,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveQualityOfServiceMetricResult;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -777,7 +773,7 @@ IIterator<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResu
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult*> __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult_t;
 #define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServiceMetricResult*>
@@ -809,7 +805,7 @@ IIterable<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResu
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult*> __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult_t;
 #define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServiceMetricResult*>
@@ -825,9 +821,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveQualityOfServicePrivatePayloadResult;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -850,7 +846,7 @@ IIterator<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePay
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult*> __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult_t;
 #define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServicePrivatePayloadResult*>
@@ -882,7 +878,7 @@ IIterable<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePay
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult*> __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult_t;
 #define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServicePrivatePayloadResult*>
@@ -914,7 +910,7 @@ IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t;
 #define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::XboxLive::IXboxLiveDeviceAddress*>
@@ -946,7 +942,7 @@ IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*> __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_t;
 #define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPair*>
@@ -978,7 +974,7 @@ IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate*> :
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate*> __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_t;
 #define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplate*>
@@ -1009,7 +1005,7 @@ IVectorView<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMet
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric> __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t;
 #define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>
@@ -1040,7 +1036,7 @@ IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricRe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult*> __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult_t;
 #define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetricResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServiceMetricResult*>
@@ -1072,7 +1068,7 @@ IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivateP
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult*> __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult_t;
 #define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServicePrivatePayloadResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::XboxLive::IXboxLiveQualityOfServicePrivatePayloadResult*>
@@ -1104,7 +1100,7 @@ IVector<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> : IVector_im
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*> __FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t;
 #define __FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::XboxLive::IXboxLiveDeviceAddress*>
@@ -1135,7 +1131,7 @@ IVector<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric> __FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t;
 #define __FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveQualityOfServiceMetric ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>
@@ -1150,9 +1146,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveEndpointPairCreationResult;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -1175,7 +1171,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::XboxLive::XboxLiveEndp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairCreationResult*>
@@ -1207,7 +1203,7 @@ IAsyncOperation<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairCreation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult*> __FIAsyncOperation_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairCreationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairCreationResult*>
@@ -1240,7 +1236,7 @@ ITypedEventHandler<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*,II
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::XboxLive::XboxLiveDeviceAddress*,IInspectable*> __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::XboxLive::IXboxLiveDeviceAddress*,IInspectable*>
@@ -1257,9 +1253,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveEndpointPairStateChangedEventArgs;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -1283,7 +1279,7 @@ ITypedEventHandler<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPair*,ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPair*,ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairStateChangedEventArgs*>
@@ -1301,9 +1297,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveInboundEndpointPairCreatedEventArgs;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
@@ -1327,7 +1323,7 @@ ITypedEventHandler<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTempl
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate*,ABI::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplate*,ABI::Windows::Networking::XboxLive::IXboxLiveInboundEndpointPairCreatedEventArgs*>
@@ -1347,8 +1343,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1360,8 +1356,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1369,8 +1365,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1385,9 +1381,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1404,9 +1400,9 @@ namespace ABI {
                 
                 typedef enum XboxLiveEndpointPairCreationBehaviors : unsigned int XboxLiveEndpointPairCreationBehaviors;
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1415,9 +1411,9 @@ namespace ABI {
                 
                 typedef enum XboxLiveEndpointPairCreationStatus : int XboxLiveEndpointPairCreationStatus;
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1426,9 +1422,9 @@ namespace ABI {
                 
                 typedef enum XboxLiveEndpointPairState : int XboxLiveEndpointPairState;
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1437,9 +1433,9 @@ namespace ABI {
                 
                 typedef enum XboxLiveNetworkAccessKind : int XboxLiveNetworkAccessKind;
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1448,9 +1444,9 @@ namespace ABI {
                 
                 typedef enum XboxLiveQualityOfServiceMeasurementStatus : int XboxLiveQualityOfServiceMeasurementStatus;
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1459,9 +1455,9 @@ namespace ABI {
                 
                 typedef enum XboxLiveQualityOfServiceMetric : int XboxLiveQualityOfServiceMetric;
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1470,9 +1466,9 @@ namespace ABI {
                 
                 typedef enum XboxLiveSocketKind : int XboxLiveSocketKind;
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1498,9 +1494,9 @@ namespace ABI {
         namespace Networking {
             namespace XboxLive {
                 class XboxLiveQualityOfServiceMeasurement;
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1537,9 +1533,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(XboxLiveEndpointPairCreationBehaviors)
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
 
 
@@ -1571,9 +1567,9 @@ namespace ABI {
                     XboxLiveEndpointPairCreationStatus_UnexpectedInternalError = 8,
                 };
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
 
 
@@ -1603,9 +1599,9 @@ namespace ABI {
                     XboxLiveEndpointPairState_Deleted = 6,
                 };
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
 
 
@@ -1631,9 +1627,9 @@ namespace ABI {
                     XboxLiveNetworkAccessKind_Strict = 2,
                 };
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
 
 
@@ -1668,9 +1664,9 @@ namespace ABI {
                     XboxLiveQualityOfServiceMeasurementStatus_UnexpectedInternalError = 11,
                 };
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
 
 
@@ -1702,9 +1698,9 @@ namespace ABI {
                     XboxLiveQualityOfServiceMetric_MaxInboundBitsPerSecond = 8,
                 };
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
 
 
@@ -1730,9 +1726,9 @@ namespace ABI {
                     XboxLiveSocketKind_Stream = 2,
                 };
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_XBOXLIVE_XBOXLIVESECURESOCKETSCONTRACT_VERSION >= 0x10000
 
 
@@ -1783,10 +1779,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsValid(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLocal(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NetworkAccessKind(
                         /* [retval, out] */__RPC__out ABI::Windows::Networking::XboxLive::XboxLiveNetworkAccessKind * value
@@ -1796,9 +1792,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveDeviceAddress=_uuidof(IXboxLiveDeviceAddress);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress_INTERFACE_DEFINED__) */
@@ -1853,9 +1849,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveDeviceAddressStatics=_uuidof(IXboxLiveDeviceAddressStatics);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddressStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddressStatics_INTERFACE_DEFINED__) */
@@ -1930,9 +1926,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveEndpointPair=_uuidof(IXboxLiveEndpointPair);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair_INTERFACE_DEFINED__) */
@@ -1970,7 +1966,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationStatus * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsExistingPathEvaluation(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EndpointPair(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::XboxLive::IXboxLiveEndpointPair * * value
@@ -1980,9 +1976,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveEndpointPairCreationResult=_uuidof(IXboxLiveEndpointPairCreationResult);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairCreationResult;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairCreationResult_INTERFACE_DEFINED__) */
@@ -2024,9 +2020,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveEndpointPairStateChangedEventArgs=_uuidof(IXboxLiveEndpointPairStateChangedEventArgs);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2076,9 +2072,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveEndpointPairStatics=_uuidof(IXboxLiveEndpointPairStatics);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStatics_INTERFACE_DEFINED__) */
@@ -2164,9 +2160,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveEndpointPairTemplate=_uuidof(IXboxLiveEndpointPairTemplate);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate_INTERFACE_DEFINED__) */
@@ -2209,9 +2205,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveEndpointPairTemplateStatics=_uuidof(IXboxLiveEndpointPairTemplateStatics);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplateStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplateStatics_INTERFACE_DEFINED__) */
@@ -2250,9 +2246,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveInboundEndpointPairCreatedEventArgs=_uuidof(IXboxLiveInboundEndpointPairCreatedEventArgs);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveInboundEndpointPairCreatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveInboundEndpointPairCreatedEventArgs_INTERFACE_DEFINED__) */
@@ -2310,10 +2306,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldRequestPrivatePayloads(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShouldRequestPrivatePayloads(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TimeoutInMilliseconds(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -2341,9 +2337,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveQualityOfServiceMeasurement=_uuidof(IXboxLiveQualityOfServiceMeasurement);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurement;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurement_INTERFACE_DEFINED__) */
@@ -2386,16 +2382,16 @@ namespace ABI {
                         /* [in] */UINT32 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSystemOutboundBandwidthConstrained(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSystemOutboundBandwidthConstrained(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSystemInboundBandwidthConstrained(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSystemInboundBandwidthConstrained(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PublishedPrivatePayload(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * value
@@ -2411,9 +2407,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveQualityOfServiceMeasurementStatics=_uuidof(IXboxLiveQualityOfServiceMeasurementStatics);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurementStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMeasurementStatics_INTERFACE_DEFINED__) */
@@ -2461,9 +2457,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveQualityOfServiceMetricResult=_uuidof(IXboxLiveQualityOfServiceMetricResult);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMetricResult;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServiceMetricResult_INTERFACE_DEFINED__) */
@@ -2508,9 +2504,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IXboxLiveQualityOfServicePrivatePayloadResult=_uuidof(IXboxLiveQualityOfServicePrivatePayloadResult);
                 
-            } /* Windows */
+            } /* XboxLive */
         } /* Networking */
-    } /* XboxLive */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServicePrivatePayloadResult;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveQualityOfServicePrivatePayloadResult_INTERFACE_DEFINED__) */
@@ -4885,7 +4881,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveDeviceAddress_IInspectableVtbl;
 
@@ -4937,7 +4933,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPair_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairStateChangedEventArgsVtbl;
 
@@ -4990,7 +4986,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveInboundEndpointPairCreatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CXboxLive_CIXboxLiveInboundEndpointPairCreatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CXboxLive__CXboxLiveEndpointPairTemplate_Windows__CNetworking__CXboxLive__CXboxLiveInboundEndpointPairCreatedEventArgsVtbl;
 

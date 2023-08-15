@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -56,6 +56,13 @@ struct WINRT_EBO IRemoteSystem5 :
     IRemoteSystem5(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IRemoteSystem6 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IRemoteSystem6>
+{
+    IRemoteSystem6(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IRemoteSystemAddedEventArgs :
     Windows::Foundation::IInspectable,
     impl::consume_t<IRemoteSystemAddedEventArgs>
@@ -68,6 +75,13 @@ struct WINRT_EBO IRemoteSystemApp :
     impl::consume_t<IRemoteSystemApp>
 {
     IRemoteSystemApp(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IRemoteSystemApp2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IRemoteSystemApp2>
+{
+    IRemoteSystemApp2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IRemoteSystemAppRegistration :
@@ -126,6 +140,13 @@ struct WINRT_EBO IRemoteSystemConnectionRequest2 :
     IRemoteSystemConnectionRequest2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IRemoteSystemConnectionRequest3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IRemoteSystemConnectionRequest3>
+{
+    IRemoteSystemConnectionRequest3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IRemoteSystemConnectionRequestFactory :
     Windows::Foundation::IInspectable,
     impl::consume_t<IRemoteSystemConnectionRequestFactory>
@@ -138,6 +159,13 @@ struct WINRT_EBO IRemoteSystemConnectionRequestStatics :
     impl::consume_t<IRemoteSystemConnectionRequestStatics>
 {
     IRemoteSystemConnectionRequestStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IRemoteSystemConnectionRequestStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IRemoteSystemConnectionRequestStatics2>
+{
+    IRemoteSystemConnectionRequestStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IRemoteSystemDiscoveryTypeFilter :
@@ -392,6 +420,13 @@ struct WINRT_EBO IRemoteSystemStatics2 :
     IRemoteSystemStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IRemoteSystemStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IRemoteSystemStatics3>
+{
+    IRemoteSystemStatics3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IRemoteSystemStatusTypeFilter :
     Windows::Foundation::IInspectable,
     impl::consume_t<IRemoteSystemStatusTypeFilter>
@@ -425,6 +460,13 @@ struct WINRT_EBO IRemoteSystemWatcher2 :
     impl::consume_t<IRemoteSystemWatcher2>
 {
     IRemoteSystemWatcher2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IRemoteSystemWatcher3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IRemoteSystemWatcher3>
+{
+    IRemoteSystemWatcher3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IRemoteSystemWatcherErrorOccurredEventArgs :

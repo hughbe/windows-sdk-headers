@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -15,6 +15,12 @@ struct Uri;
 WINRT_EXPORT namespace winrt::Windows::Security::Credentials {
 
 struct WebAccount;
+
+}
+
+WINRT_EXPORT namespace winrt::Windows::System {
+
+struct User;
 
 }
 
@@ -47,6 +53,7 @@ struct IUserActivityChannel;
 struct IUserActivityChannel2;
 struct IUserActivityChannelStatics;
 struct IUserActivityChannelStatics2;
+struct IUserActivityChannelStatics3;
 struct IUserActivityContentInfo;
 struct IUserActivityContentInfoStatics;
 struct IUserActivityFactory;
@@ -83,6 +90,7 @@ template <> struct category<Windows::ApplicationModel::UserActivities::IUserActi
 template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>{ using type = interface_category; };
+template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityFactory>{ using type = interface_category; };
@@ -115,6 +123,7 @@ template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivity
 template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>{ static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannel2" }; };
 template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>{ static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics" }; };
 template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>{ static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2" }; };
+template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>{ static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3" }; };
 template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>{ static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfo" }; };
 template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>{ static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics" }; };
 template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityFactory>{ static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityFactory" }; };
@@ -147,6 +156,7 @@ template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUser
 template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>{ static constexpr guid value{ 0x1698E35B,0xEB7E,0x4EA0,{ 0xBF,0x17,0xA4,0x59,0xE8,0xBE,0x70,0x6C } }; };
 template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>{ static constexpr guid value{ 0xC8C005AB,0x198D,0x4D80,{ 0xAB,0xB2,0xC9,0x77,0x5E,0xC4,0xA7,0x29 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>{ static constexpr guid value{ 0x8E87DE30,0xAA4F,0x4624,{ 0x9A,0xD0,0xD4,0x0F,0x3B,0xA0,0x31,0x7C } }; };
+template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>{ static constexpr guid value{ 0x53BC4DDB,0xBBDF,0x5984,{ 0x80,0x2A,0x53,0x05,0x87,0x4E,0x20,0x5C } }; };
 template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>{ static constexpr guid value{ 0xB399E5AD,0x137F,0x409D,{ 0x82,0x2D,0xE1,0xAF,0x27,0xCE,0x08,0xDC } }; };
 template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>{ static constexpr guid value{ 0x9988C34B,0x0386,0x4BC9,{ 0x96,0x8A,0x82,0x00,0xB0,0x04,0x14,0x4F } }; };
 template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityFactory>{ static constexpr guid value{ 0x7C385758,0x361D,0x4A67,{ 0x8A,0x3B,0x34,0xCA,0x29,0x78,0xF9,0xA3 } }; };
@@ -237,6 +247,11 @@ template <> struct abi<Windows::ApplicationModel::UserActivities::IUserActivityC
 {
     virtual int32_t WINRT_CALL DisableAutoSessionCreation() noexcept = 0;
     virtual int32_t WINRT_CALL TryGetForWebAccount(void* account, void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetForUser(void* user, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>{ struct type : IInspectable
@@ -401,6 +416,13 @@ struct consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStati
     Windows::ApplicationModel::UserActivities::UserActivityChannel TryGetForWebAccount(Windows::Security::Credentials::WebAccount const& account) const;
 };
 template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> { template <typename D> using type = consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics2<D>; };
+
+template <typename D>
+struct consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3
+{
+    Windows::ApplicationModel::UserActivities::UserActivityChannel GetForUser(Windows::System::User const& user) const;
+};
+template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> { template <typename D> using type = consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3<D>; };
 
 template <typename D>
 struct consume_Windows_ApplicationModel_UserActivities_IUserActivityContentInfo

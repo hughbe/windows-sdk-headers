@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,6 +11,7 @@
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.ApplicationModel.Background.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.Security.Credentials.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.UI.Popups.2.h"
@@ -430,6 +431,11 @@ template <typename D> Windows::Foundation::Deferral consume_Windows_Devices_Enum
     Windows::Foundation::Deferral result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs)->GetDeferral(put_abi(result)));
     return result;
+}
+
+template <typename D> void consume_Windows_Devices_Enumeration_IDevicePairingRequestedEventArgs2<D>::AcceptWithPasswordCredential(Windows::Security::Credentials::PasswordCredential const& passwordCredential) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2)->AcceptWithPasswordCredential(get_abi(passwordCredential)));
 }
 
 template <typename D> Windows::Devices::Enumeration::DevicePairingResultStatus consume_Windows_Devices_Enumeration_IDevicePairingResult<D>::Status() const
@@ -1642,6 +1648,22 @@ struct produce<D, Windows::Devices::Enumeration::IDevicePairingRequestedEventArg
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2> : produce_base<D, Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2>
+{
+    int32_t WINRT_CALL AcceptWithPasswordCredential(void* passwordCredential) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(AcceptWithPasswordCredential, WINRT_WRAP(void), Windows::Security::Credentials::PasswordCredential const&);
+            this->shim().AcceptWithPasswordCredential(*reinterpret_cast<Windows::Security::Credentials::PasswordCredential const*>(&passwordCredential));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::Enumeration::IDevicePairingResult> : produce_base<D, Windows::Devices::Enumeration::IDevicePairingResult>
 {
     int32_t WINRT_CALL get_Status(Windows::Devices::Enumeration::DevicePairingResultStatus* status) noexcept final
@@ -2483,6 +2505,7 @@ template<> struct hash<winrt::Windows::Devices::Enumeration::IDeviceInformationS
 template<> struct hash<winrt::Windows::Devices::Enumeration::IDeviceInformationUpdate> : winrt::impl::hash_base<winrt::Windows::Devices::Enumeration::IDeviceInformationUpdate> {};
 template<> struct hash<winrt::Windows::Devices::Enumeration::IDeviceInformationUpdate2> : winrt::impl::hash_base<winrt::Windows::Devices::Enumeration::IDeviceInformationUpdate2> {};
 template<> struct hash<winrt::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs> {};
+template<> struct hash<winrt::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2> : winrt::impl::hash_base<winrt::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2> {};
 template<> struct hash<winrt::Windows::Devices::Enumeration::IDevicePairingResult> : winrt::impl::hash_base<winrt::Windows::Devices::Enumeration::IDevicePairingResult> {};
 template<> struct hash<winrt::Windows::Devices::Enumeration::IDevicePairingSettings> : winrt::impl::hash_base<winrt::Windows::Devices::Enumeration::IDevicePairingSettings> {};
 template<> struct hash<winrt::Windows::Devices::Enumeration::IDevicePicker> : winrt::impl::hash_base<winrt::Windows::Devices::Enumeration::IDevicePicker> {};

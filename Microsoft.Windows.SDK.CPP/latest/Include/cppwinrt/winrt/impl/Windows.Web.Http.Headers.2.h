@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -24,7 +24,7 @@ WINRT_EXPORT namespace winrt::Windows::Web::Http::Headers {
 
 struct WINRT_EBO HttpCacheDirectiveHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderValueCollection,
-    impl::require<HttpCacheDirectiveHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpCacheDirectiveHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpNameValueHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpNameValueHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpCacheDirectiveHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -42,7 +42,7 @@ struct WINRT_EBO HttpChallengeHeaderValue :
 
 struct WINRT_EBO HttpChallengeHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollection,
-    impl::require<HttpChallengeHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpChallengeHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpChallengeHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpChallengeHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpChallengeHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -59,7 +59,7 @@ struct WINRT_EBO HttpConnectionOptionHeaderValue :
 
 struct WINRT_EBO HttpConnectionOptionHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueCollection,
-    impl::require<HttpConnectionOptionHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpConnectionOptionHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpConnectionOptionHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -76,7 +76,7 @@ struct WINRT_EBO HttpContentCodingHeaderValue :
 
 struct WINRT_EBO HttpContentCodingHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpContentCodingHeaderValueCollection,
-    impl::require<HttpContentCodingHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpContentCodingHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpContentCodingHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -94,7 +94,7 @@ struct WINRT_EBO HttpContentCodingWithQualityHeaderValue :
 
 struct WINRT_EBO HttpContentCodingWithQualityHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueCollection,
-    impl::require<HttpContentCodingWithQualityHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpContentCodingWithQualityHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpContentCodingWithQualityHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -111,7 +111,7 @@ struct WINRT_EBO HttpContentDispositionHeaderValue :
 
 struct WINRT_EBO HttpContentHeaderCollection :
     Windows::Web::Http::Headers::IHttpContentHeaderCollection,
-    impl::require<HttpContentHeaderCollection, Windows::Foundation::IStringable>
+    impl::require<HttpContentHeaderCollection, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>, Windows::Foundation::Collections::IMap<hstring, hstring>, Windows::Foundation::IStringable>
 {
     HttpContentHeaderCollection(std::nullptr_t) noexcept {}
     HttpContentHeaderCollection();
@@ -142,7 +142,7 @@ struct WINRT_EBO HttpCookiePairHeaderValue :
 
 struct WINRT_EBO HttpCookiePairHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollection,
-    impl::require<HttpCookiePairHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpCookiePairHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpCookiePairHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -180,14 +180,14 @@ struct WINRT_EBO HttpExpectationHeaderValue :
 
 struct WINRT_EBO HttpExpectationHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollection,
-    impl::require<HttpExpectationHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpExpectationHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpExpectationHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpExpectationHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpExpectationHeaderValueCollection(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO HttpLanguageHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollection,
-    impl::require<HttpLanguageHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpLanguageHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Globalization::Language>, Windows::Foundation::Collections::IVector<Windows::Globalization::Language>, Windows::Foundation::IStringable>
 {
     HttpLanguageHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -205,7 +205,7 @@ struct WINRT_EBO HttpLanguageRangeWithQualityHeaderValue :
 
 struct WINRT_EBO HttpLanguageRangeWithQualityHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueCollection,
-    impl::require<HttpLanguageRangeWithQualityHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpLanguageRangeWithQualityHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpLanguageRangeWithQualityHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -233,14 +233,14 @@ struct WINRT_EBO HttpMediaTypeWithQualityHeaderValue :
 
 struct WINRT_EBO HttpMediaTypeWithQualityHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueCollection,
-    impl::require<HttpMediaTypeWithQualityHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpMediaTypeWithQualityHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpMediaTypeWithQualityHeaderValueCollection(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO HttpMethodHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpMethodHeaderValueCollection,
-    impl::require<HttpMethodHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpMethodHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::HttpMethod>, Windows::Foundation::Collections::IVector<Windows::Web::Http::HttpMethod>, Windows::Foundation::IStringable>
 {
     HttpMethodHeaderValueCollection(std::nullptr_t) noexcept {}
 };
@@ -280,21 +280,21 @@ struct WINRT_EBO HttpProductInfoHeaderValue :
 
 struct WINRT_EBO HttpProductInfoHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollection,
-    impl::require<HttpProductInfoHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpProductInfoHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpProductInfoHeaderValueCollection(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO HttpRequestHeaderCollection :
     Windows::Web::Http::Headers::IHttpRequestHeaderCollection,
-    impl::require<HttpRequestHeaderCollection, Windows::Foundation::IStringable>
+    impl::require<HttpRequestHeaderCollection, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>, Windows::Foundation::Collections::IMap<hstring, hstring>, Windows::Foundation::IStringable>
 {
     HttpRequestHeaderCollection(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO HttpResponseHeaderCollection :
     Windows::Web::Http::Headers::IHttpResponseHeaderCollection,
-    impl::require<HttpResponseHeaderCollection, Windows::Foundation::IStringable>
+    impl::require<HttpResponseHeaderCollection, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>, Windows::Foundation::Collections::IMap<hstring, hstring>, Windows::Foundation::IStringable>
 {
     HttpResponseHeaderCollection(std::nullptr_t) noexcept {}
 };
@@ -311,7 +311,7 @@ struct WINRT_EBO HttpTransferCodingHeaderValue :
 
 struct WINRT_EBO HttpTransferCodingHeaderValueCollection :
     Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCollection,
-    impl::require<HttpTransferCodingHeaderValueCollection, Windows::Foundation::IStringable>
+    impl::require<HttpTransferCodingHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>, Windows::Foundation::IStringable>
 {
     HttpTransferCodingHeaderValueCollection(std::nullptr_t) noexcept {}
 };

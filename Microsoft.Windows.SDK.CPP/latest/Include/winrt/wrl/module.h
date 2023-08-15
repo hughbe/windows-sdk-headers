@@ -1424,6 +1424,7 @@ private:
             __WRL_ASSERT__(name != nullptr && ::wcslen(name) != 0);
         }
 
+#ifdef _DEBUG
         Details::CheckForDuplicateEntries((GetFirstEntryPointer() + 1), GetMidEntryPointer(),
             [](const Details::CreatorMap* entry, const Details::CreatorMap* entry2) -> void {
                 __WRL_ASSERT__(entry->activationId.clsid != entry2->activationId.clsid && "Duplicate CLSID!");
@@ -1435,6 +1436,7 @@ private:
                 __WRL_ASSERT__(::wcscmp((entry->activationId.getRuntimeName)(), (entry2->activationId.getRuntimeName)()) != 0 && "Duplicate runtime class name!");
             }
         );
+#endif
     }
 
 // If static initialization is not available there is no need

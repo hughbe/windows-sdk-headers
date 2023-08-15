@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.globalization.datetimeformatting.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace Globalization {
             namespace DateTimeFormatting {
                 interface IDateTimeFormatter;
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter ABI::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter
 
 #endif // ____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace Globalization {
             namespace DateTimeFormatting {
                 interface IDateTimeFormatter2;
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter2 ABI::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter2_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace Globalization {
             namespace DateTimeFormatting {
                 interface IDateTimeFormatterFactory;
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterFactory ABI::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterFactory_FWD_DEFINED__
@@ -182,9 +182,9 @@ namespace ABI {
         namespace Globalization {
             namespace DateTimeFormatting {
                 interface IDateTimeFormatterStatics;
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterStatics ABI::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterStatics_FWD_DEFINED__
@@ -211,7 +211,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -240,7 +240,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -269,7 +269,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -287,8 +287,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -300,9 +300,9 @@ namespace ABI {
                 
                 typedef enum DayFormat : int DayFormat;
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -311,9 +311,9 @@ namespace ABI {
                 
                 typedef enum DayOfWeekFormat : int DayOfWeekFormat;
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -322,9 +322,9 @@ namespace ABI {
                 
                 typedef enum HourFormat : int HourFormat;
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -333,9 +333,9 @@ namespace ABI {
                 
                 typedef enum MinuteFormat : int MinuteFormat;
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -344,9 +344,9 @@ namespace ABI {
                 
                 typedef enum MonthFormat : int MonthFormat;
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -355,9 +355,9 @@ namespace ABI {
                 
                 typedef enum SecondFormat : int SecondFormat;
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -366,9 +366,9 @@ namespace ABI {
                 
                 typedef enum YearFormat : int YearFormat;
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -379,9 +379,9 @@ namespace ABI {
         namespace Globalization {
             namespace DateTimeFormatting {
                 class DateTimeFormatter;
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -409,9 +409,9 @@ namespace ABI {
                     DayFormat_Default = 1,
                 };
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -438,9 +438,9 @@ namespace ABI {
                     DayOfWeekFormat_Full = 3,
                 };
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -465,9 +465,9 @@ namespace ABI {
                     HourFormat_Default = 1,
                 };
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -492,9 +492,9 @@ namespace ABI {
                     MinuteFormat_Default = 1,
                 };
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -522,9 +522,9 @@ namespace ABI {
                     MonthFormat_Numeric = 4,
                 };
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -549,9 +549,9 @@ namespace ABI {
                     SecondFormat_Default = 1,
                 };
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -578,9 +578,9 @@ namespace ABI {
                     YearFormat_Full = 3,
                 };
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -668,9 +668,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDateTimeFormatter=_uuidof(IDateTimeFormatter);
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter_INTERFACE_DEFINED__) */
@@ -711,9 +711,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDateTimeFormatter2=_uuidof(IDateTimeFormatter2);
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatter2_INTERFACE_DEFINED__) */
@@ -804,9 +804,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDateTimeFormatterFactory=_uuidof(IDateTimeFormatterFactory);
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterFactory_INTERFACE_DEFINED__) */
@@ -854,9 +854,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDateTimeFormatterStatics=_uuidof(IDateTimeFormatterStatics);
                 
-            } /* Windows */
+            } /* DateTimeFormatting */
         } /* Globalization */
-    } /* DateTimeFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CDateTimeFormatting_CIDateTimeFormatterStatics_INTERFACE_DEFINED__) */

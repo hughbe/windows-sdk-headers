@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.capture.frames.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -287,10 +283,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IAudioMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIAudioMediaFrame ABI::Windows::Media::Capture::Frames::IAudioMediaFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIAudioMediaFrame_FWD_DEFINED__
@@ -303,10 +299,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IBufferMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIBufferMediaFrame ABI::Windows::Media::Capture::Frames::IBufferMediaFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIBufferMediaFrame_FWD_DEFINED__
@@ -319,10 +315,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IDepthMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame ABI::Windows::Media::Capture::Frames::IDepthMediaFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame_FWD_DEFINED__
@@ -335,10 +331,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IDepthMediaFrame2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame2 ABI::Windows::Media::Capture::Frames::IDepthMediaFrame2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame2_FWD_DEFINED__
@@ -351,10 +347,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IDepthMediaFrameFormat;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrameFormat ABI::Windows::Media::Capture::Frames::IDepthMediaFrameFormat
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrameFormat_FWD_DEFINED__
@@ -367,10 +363,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IInfraredMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIInfraredMediaFrame ABI::Windows::Media::Capture::Frames::IInfraredMediaFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIInfraredMediaFrame_FWD_DEFINED__
@@ -383,10 +379,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameArrivedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameArrivedEventArgs ABI::Windows::Media::Capture::Frames::IMediaFrameArrivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameArrivedEventArgs_FWD_DEFINED__
@@ -399,10 +395,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameFormat;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat ABI::Windows::Media::Capture::Frames::IMediaFrameFormat
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat_FWD_DEFINED__
@@ -415,10 +411,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameFormat2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat2 ABI::Windows::Media::Capture::Frames::IMediaFrameFormat2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat2_FWD_DEFINED__
@@ -431,10 +427,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameReader;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader ABI::Windows::Media::Capture::Frames::IMediaFrameReader
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader_FWD_DEFINED__
@@ -447,10 +443,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameReader2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader2 ABI::Windows::Media::Capture::Frames::IMediaFrameReader2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader2_FWD_DEFINED__
@@ -463,10 +459,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameReference;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference ABI::Windows::Media::Capture::Frames::IMediaFrameReference
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference_FWD_DEFINED__
@@ -479,10 +475,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameReference2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference2 ABI::Windows::Media::Capture::Frames::IMediaFrameReference2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference2_FWD_DEFINED__
@@ -495,10 +491,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSource;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSource ABI::Windows::Media::Capture::Frames::IMediaFrameSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSource_FWD_DEFINED__
@@ -511,10 +507,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceController;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController ABI::Windows::Media::Capture::Frames::IMediaFrameSourceController
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController_FWD_DEFINED__
@@ -527,10 +523,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceController2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController2 ABI::Windows::Media::Capture::Frames::IMediaFrameSourceController2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController2_FWD_DEFINED__
@@ -543,10 +539,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceController3;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController3 ABI::Windows::Media::Capture::Frames::IMediaFrameSourceController3
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController3_FWD_DEFINED__
@@ -559,10 +555,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceGetPropertyResult;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGetPropertyResult ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGetPropertyResult_FWD_DEFINED__
@@ -575,10 +571,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceGroup;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroup ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroup_FWD_DEFINED__
@@ -591,10 +587,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceGroupStatics;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroupStatics ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroupStatics_FWD_DEFINED__
@@ -607,10 +603,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceInfo;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo ABI::Windows::Media::Capture::Frames::IMediaFrameSourceInfo
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo_FWD_DEFINED__
@@ -623,10 +619,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMediaFrameSourceInfo2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo2 ABI::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo2_FWD_DEFINED__
@@ -639,10 +635,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMultiSourceMediaFrameArrivedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameArrivedEventArgs ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameArrivedEventArgs_FWD_DEFINED__
@@ -655,10 +651,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMultiSourceMediaFrameReader;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader_FWD_DEFINED__
@@ -671,10 +667,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMultiSourceMediaFrameReader2;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader2 ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader2_FWD_DEFINED__
@@ -687,10 +683,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IMultiSourceMediaFrameReference;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReference ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReference_FWD_DEFINED__
@@ -703,10 +699,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IVideoMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrame ABI::Windows::Media::Capture::Frames::IVideoMediaFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrame_FWD_DEFINED__
@@ -719,10 +715,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     interface IVideoMediaFrameFormat;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrameFormat ABI::Windows::Media::Capture::Frames::IVideoMediaFrameFormat
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrameFormat_FWD_DEFINED__
@@ -736,10 +732,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameSource;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -762,7 +758,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Media::Capture::Frames::MediaFrameSource*> :
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Media::Capture::Frames::MediaFrameSource*> __FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Media::Capture::Frames::IMediaFrameSource*>
@@ -794,7 +790,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaF
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Media::Capture::Frames::IMediaFrameSource*>*>
@@ -826,7 +822,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaF
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Media::Capture::Frames::IMediaFrameSource*>*>
@@ -843,10 +839,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameFormat;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -869,7 +865,7 @@ IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameFormat*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameFormat*> __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat_t;
 #define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Capture::Frames::IMediaFrameFormat*>
@@ -901,7 +897,7 @@ IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameFormat*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameFormat*> __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat_t;
 #define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Capture::Frames::IMediaFrameFormat*>
@@ -933,7 +929,7 @@ IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameSource*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameSource*> __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t;
 #define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Capture::Frames::IMediaFrameSource*>
@@ -965,7 +961,7 @@ IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameSource*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameSource*> __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t;
 #define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Capture::Frames::IMediaFrameSource*>
@@ -982,10 +978,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameSourceGroup;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1008,7 +1004,7 @@ IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t;
 #define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup*>
@@ -1040,7 +1036,7 @@ IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t;
 #define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup*>
@@ -1057,10 +1053,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameSourceInfo;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1083,7 +1079,7 @@ IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameSourceInfo*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Capture::Frames::MediaFrameSourceInfo*> __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo_t;
 #define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceInfo*>
@@ -1115,7 +1111,7 @@ IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameSourceInfo*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Capture::Frames::MediaFrameSourceInfo*> __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo_t;
 #define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceInfo*>
@@ -1147,7 +1143,7 @@ IMapView<HSTRING,ABI::Windows::Media::Capture::Frames::MediaFrameSource*> : IMap
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Media::Capture::Frames::MediaFrameSource*> __FIMapView_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t;
 #define __FIMapView_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CMedia__CCapture__CFrames__CMediaFrameSource ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Media::Capture::Frames::IMediaFrameSource*>
@@ -1179,7 +1175,7 @@ IVectorView<ABI::Windows::Media::Capture::Frames::MediaFrameFormat*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Capture::Frames::MediaFrameFormat*> __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat_t;
 #define __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Capture::Frames::IMediaFrameFormat*>
@@ -1211,7 +1207,7 @@ IVectorView<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t;
 #define __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup*>
@@ -1243,7 +1239,7 @@ IVectorView<ABI::Windows::Media::Capture::Frames::MediaFrameSourceInfo*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Capture::Frames::MediaFrameSourceInfo*> __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo_t;
 #define __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceInfo*>
@@ -1275,7 +1271,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CMedia__CCapture__CFra
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup*>*>
@@ -1307,7 +1303,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrame
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup*> __FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup*>*>
@@ -1324,10 +1320,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameReader;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1350,7 +1346,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrame
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrameReader*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::IMediaFrameReader*>
@@ -1382,7 +1378,7 @@ IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameReader*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameReader*> __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReader ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Frames::IMediaFrameReader*>
@@ -1399,10 +1395,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     enum MediaFrameReaderStartStatus : int;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus_USE
@@ -1423,7 +1419,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Capture::Frames::Media
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>
@@ -1453,7 +1449,7 @@ IAsyncOperation<enum ABI::Windows::Media::Capture::Frames::MediaFrameReaderStart
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus> __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameReaderStartStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>
@@ -1469,10 +1465,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameSourceGetPropertyResult;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1495,7 +1491,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrame
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult*>
@@ -1527,7 +1523,7 @@ IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGetPropert
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult*> __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGetPropertyResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult*>
@@ -1559,7 +1555,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrame
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup*>
@@ -1591,7 +1587,7 @@ IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameSourceGroup*> __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceGroup ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Frames::IMediaFrameSourceGroup*>
@@ -1608,10 +1604,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     enum MediaFrameSourceSetPropertyStatus : int;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus_USE
@@ -1632,7 +1628,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Capture::Frames::Media
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>
@@ -1662,7 +1658,7 @@ IAsyncOperation<enum ABI::Windows::Media::Capture::Frames::MediaFrameSourceSetPr
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus> __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMediaFrameSourceSetPropertyStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>
@@ -1678,10 +1674,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MultiSourceMediaFrameReader;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1704,7 +1700,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MultiSourc
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader*>
@@ -1736,7 +1732,7 @@ IAsyncOperation<ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReade
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader*> __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader*>
@@ -1753,10 +1749,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     enum MultiSourceMediaFrameReaderStartStatus : int;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus_USE
@@ -1777,7 +1773,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Capture::Frames::Multi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>
@@ -1807,7 +1803,7 @@ IAsyncOperation<enum ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrame
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus> __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReaderStartStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>
@@ -1824,10 +1820,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameArrivedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1851,7 +1847,7 @@ ITypedEventHandler<ABI::Windows::Media::Capture::Frames::MediaFrameReader*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Capture::Frames::MediaFrameReader*,ABI::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Capture::Frames::IMediaFrameReader*,ABI::Windows::Media::Capture::Frames::IMediaFrameArrivedEventArgs*>
@@ -1885,7 +1881,7 @@ ITypedEventHandler<ABI::Windows::Media::Capture::Frames::MediaFrameSource*,IInsp
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Capture::Frames::MediaFrameSource*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Capture::Frames::IMediaFrameSource*,IInspectable*>
@@ -1903,10 +1899,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MultiSourceMediaFrameArrivedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1930,7 +1926,7 @@ ITypedEventHandler<ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameRe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader*,ABI::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader*,ABI::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs*>
@@ -1962,7 +1958,7 @@ IKeyValuePair<GUID,IInspectable*> : IKeyValuePair_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<GUID,IInspectable*> __FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>
@@ -1992,7 +1988,7 @@ IIterator<__FIKeyValuePair_2_GUID_IInspectable*> : IIterator_impl<__FIKeyValuePa
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_GUID_IInspectable*> __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>*>
@@ -2022,7 +2018,7 @@ IIterable<__FIKeyValuePair_2_GUID_IInspectable*> : IIterable_impl<__FIKeyValuePa
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_GUID_IInspectable*> __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>*>
@@ -2052,7 +2048,7 @@ IMapView<GUID,IInspectable*> : IMapView_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<GUID,IInspectable*> __FIMapView_2_GUID_IInspectable_t;
 #define __FIMapView_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IMapView<GUID,IInspectable*>
@@ -2067,8 +2063,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -2089,7 +2085,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -2118,7 +2114,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -2133,9 +2129,9 @@ namespace ABI {
         namespace Media {
             namespace Capture {
                 class MediaCaptureVideoProfileMediaDescription;
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCapture_CIMediaCaptureVideoProfileMediaDescription_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCapture_CIMediaCaptureVideoProfileMediaDescription_FWD_DEFINED__
@@ -2144,9 +2140,9 @@ namespace ABI {
         namespace Media {
             namespace Capture {
                 interface IMediaCaptureVideoProfileMediaDescription;
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCapture_CIMediaCaptureVideoProfileMediaDescription ABI::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription
 
 #endif // ____x_ABI_CWindows_CMedia_CCapture_CIMediaCaptureVideoProfileMediaDescription_FWD_DEFINED__
@@ -2172,7 +2168,7 @@ IIterator<ABI::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription*> __FIIterator_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription_t;
 #define __FIIterator_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription*>
@@ -2204,7 +2200,7 @@ IIterable<ABI::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription*> __FIIterable_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription_t;
 #define __FIIterable_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription*>
@@ -2236,7 +2232,7 @@ IVectorView<ABI::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescripti
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription*> __FIVectorView_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription_t;
 #define __FIVectorView_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCapture__CMediaCaptureVideoProfileMediaDescription ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription*>
@@ -2254,9 +2250,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -2265,9 +2261,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -2282,8 +2278,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2295,8 +2291,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2308,8 +2304,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2322,10 +2318,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -2340,9 +2336,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -2351,9 +2347,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -2366,8 +2362,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class AudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
@@ -2375,8 +2371,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IAudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIAudioFrame ABI::Windows::Media::IAudioFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
@@ -2392,9 +2388,9 @@ namespace ABI {
                 
                 typedef enum MediaStreamType : int MediaStreamType;
                 
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2404,9 +2400,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class AudioDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
@@ -2415,9 +2411,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IAudioDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController ABI::Windows::Media::Devices::IAudioDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
@@ -2432,10 +2428,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class CameraIntrinsics;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_FWD_DEFINED__
@@ -2445,10 +2441,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface ICameraIntrinsics;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics ABI::Windows::Media::Devices::Core::ICameraIntrinsics
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_FWD_DEFINED__
@@ -2460,10 +2456,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class DepthCorrelatedCoordinateMapper;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper_FWD_DEFINED__
@@ -2473,10 +2469,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IDepthCorrelatedCoordinateMapper;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper ABI::Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper_FWD_DEFINED__
@@ -2491,9 +2487,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class VideoDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController_FWD_DEFINED__
@@ -2502,9 +2498,9 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 interface IVideoDeviceController;
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController ABI::Windows::Media::Devices::IVideoDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIVideoDeviceController_FWD_DEFINED__
@@ -2518,9 +2514,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class AudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -2529,9 +2525,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties ABI::Windows::Media::MediaProperties::IAudioEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -2542,9 +2538,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -2553,9 +2549,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio ABI::Windows::Media::MediaProperties::IMediaRatio
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -2568,8 +2564,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -2577,8 +2573,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -2591,9 +2587,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -2602,9 +2598,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -2620,9 +2616,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -2639,10 +2635,10 @@ namespace ABI {
                     
                     typedef enum MediaFrameReaderAcquisitionMode : int MediaFrameReaderAcquisitionMode;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2652,10 +2648,10 @@ namespace ABI {
                     
                     typedef enum MediaFrameReaderStartStatus : int MediaFrameReaderStartStatus;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2665,10 +2661,10 @@ namespace ABI {
                     
                     typedef enum MediaFrameSourceGetPropertyStatus : int MediaFrameSourceGetPropertyStatus;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2678,10 +2674,10 @@ namespace ABI {
                     
                     typedef enum MediaFrameSourceKind : int MediaFrameSourceKind;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2691,10 +2687,10 @@ namespace ABI {
                     
                     typedef enum MediaFrameSourceSetPropertyStatus : int MediaFrameSourceSetPropertyStatus;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2704,10 +2700,10 @@ namespace ABI {
                     
                     typedef enum MultiSourceMediaFrameReaderStartStatus : int MultiSourceMediaFrameReaderStartStatus;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2743,10 +2739,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class AudioMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2755,10 +2751,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class BufferMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2767,10 +2763,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class DepthMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2779,10 +2775,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class DepthMediaFrameFormat;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2791,10 +2787,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class InfraredMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2806,10 +2802,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameReference;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2819,10 +2815,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MediaFrameSourceController;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2836,10 +2832,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class MultiSourceMediaFrameReference;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2848,10 +2844,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class VideoMediaFrame;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2860,10 +2856,10 @@ namespace ABI {
             namespace Capture {
                 namespace Frames {
                     class VideoMediaFrameFormat;
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2898,10 +2894,10 @@ namespace ABI {
                         MediaFrameReaderAcquisitionMode_Buffered = 1,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -2934,10 +2930,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2975,10 +2971,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3016,10 +3012,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3049,10 +3045,10 @@ namespace ABI {
                         MediaFrameSourceSetPropertyStatus_NotInControl = 5,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3081,10 +3077,10 @@ namespace ABI {
                         MultiSourceMediaFrameReaderStartStatus_UnknownFailure = 4,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3127,10 +3123,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAudioMediaFrame=_uuidof(IAudioMediaFrame);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIAudioMediaFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIAudioMediaFrame_INTERFACE_DEFINED__) */
@@ -3173,10 +3169,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBufferMediaFrame=_uuidof(IBufferMediaFrame);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIBufferMediaFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIBufferMediaFrame_INTERFACE_DEFINED__) */
@@ -3227,10 +3223,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDepthMediaFrame=_uuidof(IDepthMediaFrame);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame_INTERFACE_DEFINED__) */
@@ -3273,10 +3269,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDepthMediaFrame2=_uuidof(IDepthMediaFrame2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrame2_INTERFACE_DEFINED__) */
@@ -3319,10 +3315,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDepthMediaFrameFormat=_uuidof(IDepthMediaFrameFormat);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrameFormat;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIDepthMediaFrameFormat_INTERFACE_DEFINED__) */
@@ -3361,17 +3357,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Capture::Frames::IVideoMediaFrame * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIlluminated(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInfraredMediaFrame=_uuidof(IInfraredMediaFrame);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIInfraredMediaFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIInfraredMediaFrame_INTERFACE_DEFINED__) */
@@ -3408,10 +3404,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameArrivedEventArgs=_uuidof(IMediaFrameArrivedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameArrivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameArrivedEventArgs_INTERFACE_DEFINED__) */
@@ -3463,10 +3459,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameFormat=_uuidof(IMediaFrameFormat);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat_INTERFACE_DEFINED__) */
@@ -3506,10 +3502,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameFormat2=_uuidof(IMediaFrameFormat2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameFormat2_INTERFACE_DEFINED__) */
@@ -3566,10 +3562,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameReader=_uuidof(IMediaFrameReader);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader_INTERFACE_DEFINED__) */
@@ -3612,10 +3608,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameReader2=_uuidof(IMediaFrameReader2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader2_INTERFACE_DEFINED__) */
@@ -3680,10 +3676,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameReference=_uuidof(IMediaFrameReference);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference_INTERFACE_DEFINED__) */
@@ -3723,10 +3719,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameReference2=_uuidof(IMediaFrameReference2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReference2_INTERFACE_DEFINED__) */
@@ -3790,10 +3786,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSource=_uuidof(IMediaFrameSource);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSource_INTERFACE_DEFINED__) */
@@ -3842,10 +3838,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceController=_uuidof(IMediaFrameSourceController);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController_INTERFACE_DEFINED__) */
@@ -3895,10 +3891,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceController2=_uuidof(IMediaFrameSourceController2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController2_INTERFACE_DEFINED__) */
@@ -3938,10 +3934,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceController3=_uuidof(IMediaFrameSourceController3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceController3_INTERFACE_DEFINED__) */
@@ -3984,10 +3980,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceGetPropertyResult=_uuidof(IMediaFrameSourceGetPropertyResult);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGetPropertyResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGetPropertyResult_INTERFACE_DEFINED__) */
@@ -4033,10 +4029,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceGroup=_uuidof(IMediaFrameSourceGroup);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroup;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroup_INTERFACE_DEFINED__) */
@@ -4083,10 +4079,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceGroupStatics=_uuidof(IMediaFrameSourceGroupStatics);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroupStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceGroupStatics_INTERFACE_DEFINED__) */
@@ -4144,10 +4140,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceInfo=_uuidof(IMediaFrameSourceInfo);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo_INTERFACE_DEFINED__) */
@@ -4190,10 +4186,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaFrameSourceInfo2=_uuidof(IMediaFrameSourceInfo2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSourceInfo2_INTERFACE_DEFINED__) */
@@ -4230,10 +4226,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMultiSourceMediaFrameArrivedEventArgs=_uuidof(IMultiSourceMediaFrameArrivedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameArrivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameArrivedEventArgs_INTERFACE_DEFINED__) */
@@ -4290,10 +4286,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMultiSourceMediaFrameReader=_uuidof(IMultiSourceMediaFrameReader);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader_INTERFACE_DEFINED__) */
@@ -4336,10 +4332,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMultiSourceMediaFrameReader2=_uuidof(IMultiSourceMediaFrameReader2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader2_INTERFACE_DEFINED__) */
@@ -4384,10 +4380,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMultiSourceMediaFrameReference=_uuidof(IMultiSourceMediaFrameReference);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReference;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReference_INTERFACE_DEFINED__) */
@@ -4448,10 +4444,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVideoMediaFrame=_uuidof(IVideoMediaFrame);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrame_INTERFACE_DEFINED__) */
@@ -4500,10 +4496,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVideoMediaFrameFormat=_uuidof(IVideoMediaFrameFormat);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Capture */
-    } /* Frames */} /* ABI */
+                } /* Frames */
+            } /* Capture */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrameFormat;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CCapture_CFrames_CIVideoMediaFrameFormat_INTERFACE_DEFINED__) */
@@ -7373,7 +7369,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMedi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameArrivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameArrivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMediaFrameArrivedEventArgsVtbl;
 
@@ -7425,7 +7421,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMedi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMediaFrameSource * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMediaFrameSource_IInspectableVtbl;
 
@@ -7477,7 +7473,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMult
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameArrivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CCapture_CFrames_CIMultiSourceMediaFrameArrivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameReader_Windows__CMedia__CCapture__CFrames__CMultiSourceMediaFrameArrivedEventArgsVtbl;
 
@@ -7887,7 +7883,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.diagnostics.tracereporting.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,10 +141,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace TraceReporting {
                     interface IPlatformDiagnosticActionsStatics;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticActionsStatics ABI::Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticActionsStatics_FWD_DEFINED__
@@ -157,10 +157,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace TraceReporting {
                     interface IPlatformDiagnosticTraceInfo;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceInfo ABI::Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceInfo_FWD_DEFINED__
@@ -173,10 +173,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace TraceReporting {
                     interface IPlatformDiagnosticTraceRuntimeInfo;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceRuntimeInfo ABI::Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceRuntimeInfo_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace TraceReporting {
                     class PlatformDiagnosticTraceInfo;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -216,7 +216,7 @@ IIterator<ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticT
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo*> __FIIterator_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo_t;
 #define __FIIterator_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo*>
@@ -248,7 +248,7 @@ IIterable<ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticT
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo*> __FIIterable_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo_t;
 #define __FIIterable_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo*>
@@ -280,7 +280,7 @@ IVectorView<ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosti
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo*> __FIVectorView_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo_t;
 #define __FIVectorView_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CDiagnostics__CTraceReporting__CPlatformDiagnosticTraceInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo*>
@@ -310,7 +310,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -340,7 +340,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -370,7 +370,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -399,7 +399,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -428,7 +428,7 @@ IIterator<GUID> : IIterator_impl<GUID>
 // correct parameterized interface specialization.
 typedef IIterator<GUID> __FIIterator_1_GUID_t;
 #define __FIIterator_1_GUID ABI::Windows::Foundation::Collections::__FIIterator_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_GUID ABI::Windows::Foundation::Collections::IIterator<GUID>
@@ -457,7 +457,7 @@ IIterable<GUID> : IIterable_impl<GUID>
 // correct parameterized interface specialization.
 typedef IIterable<GUID> __FIIterable_1_GUID_t;
 #define __FIIterable_1_GUID ABI::Windows::Foundation::Collections::__FIIterable_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_GUID ABI::Windows::Foundation::Collections::IIterable<GUID>
@@ -486,7 +486,7 @@ IVectorView<GUID> : IVectorView_impl<GUID>
 // correct parameterized interface specialization.
 typedef IVectorView<GUID> __FIVectorView_1_GUID_t;
 #define __FIVectorView_1_GUID ABI::Windows::Foundation::Collections::__FIVectorView_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_GUID ABI::Windows::Foundation::Collections::IVectorView<GUID>
@@ -509,10 +509,10 @@ namespace ABI {
                     
                     typedef enum PlatformDiagnosticActionState : int PlatformDiagnosticActionState;
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -522,10 +522,10 @@ namespace ABI {
                     
                     typedef enum PlatformDiagnosticEscalationType : int PlatformDiagnosticEscalationType;
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -535,10 +535,10 @@ namespace ABI {
                     
                     typedef enum PlatformDiagnosticEventBufferLatencies : unsigned int PlatformDiagnosticEventBufferLatencies;
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -548,10 +548,10 @@ namespace ABI {
                     
                     typedef enum PlatformDiagnosticTracePriority : int PlatformDiagnosticTracePriority;
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -561,10 +561,10 @@ namespace ABI {
                     
                     typedef enum PlatformDiagnosticTraceSlotState : int PlatformDiagnosticTraceSlotState;
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -574,10 +574,10 @@ namespace ABI {
                     
                     typedef enum PlatformDiagnosticTraceSlotType : int PlatformDiagnosticTraceSlotType;
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -590,10 +590,10 @@ namespace ABI {
             namespace Diagnostics {
                 namespace TraceReporting {
                     class PlatformDiagnosticTraceRuntimeInfo;
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -629,10 +629,10 @@ namespace ABI {
                         PlatformDiagnosticActionState_ACPowerNotAvailable = 2,
                     };
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -658,10 +658,10 @@ namespace ABI {
                         PlatformDiagnosticEscalationType_OnFailure = 1,
                     };
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -690,10 +690,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(PlatformDiagnosticEventBufferLatencies)
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -719,10 +719,10 @@ namespace ABI {
                         PlatformDiagnosticTracePriority_UserElevated = 1,
                     };
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -749,10 +749,10 @@ namespace ABI {
                         PlatformDiagnosticTraceSlotState_Throttled = 2,
                     };
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -779,10 +779,10 @@ namespace ABI {
                         PlatformDiagnosticTraceSlotType_Mini = 2,
                     };
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -813,23 +813,23 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE IsScenarioEnabled(
                             /* [in] */GUID scenarioId,
-                            /* [retval, out] */__RPC__out boolean * isActive
+                            /* [retval, out] */__RPC__out ::boolean * isActive
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TryEscalateScenario(
                             /* [in] */GUID scenarioId,
                             /* [in] */ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType escalationType,
                             /* [in] */__RPC__in HSTRING outputDirectory,
-                            /* [in] */boolean timestampOutputDirectory,
-                            /* [in] */boolean forceEscalationUpload,
+                            /* [in] */::boolean timestampOutputDirectory,
+                            /* [in] */::boolean forceEscalationUpload,
                             /* [in] */__RPC__in_opt __FIMapView_2_HSTRING_HSTRING * triggers,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE DownloadLatestSettingsForNamespace(
                             /* [in] */__RPC__in HSTRING partner,
                             /* [in] */__RPC__in HSTRING feature,
-                            /* [in] */boolean isScenarioNamespace,
-                            /* [in] */boolean downloadOverCostedNetwork,
-                            /* [in] */boolean downloadOverBattery,
+                            /* [in] */::boolean isScenarioNamespace,
+                            /* [in] */::boolean downloadOverCostedNetwork,
+                            /* [in] */::boolean downloadOverBattery,
                             /* [retval, out] */__RPC__out ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetActiveScenarioList(
@@ -837,8 +837,8 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ForceUpload(
                             /* [in] */ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies latency,
-                            /* [in] */boolean uploadOverCostedNetwork,
-                            /* [in] */boolean uploadOverBattery,
+                            /* [in] */::boolean uploadOverCostedNetwork,
+                            /* [in] */::boolean uploadOverBattery,
                             /* [retval, out] */__RPC__out ABI::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE IsTraceRunning(
@@ -860,10 +860,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlatformDiagnosticActionsStatics=_uuidof(IPlatformDiagnosticActionsStatics);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticActionsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticActionsStatics_INTERFACE_DEFINED__) */
@@ -902,10 +902,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__out UINT64 * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsExclusive(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAutoLogger(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxTraceDurationFileTime(
                             /* [retval, out] */__RPC__out INT64 * value
@@ -918,10 +918,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlatformDiagnosticTraceInfo=_uuidof(IPlatformDiagnosticTraceInfo);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceInfo_INTERFACE_DEFINED__) */
@@ -964,10 +964,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlatformDiagnosticTraceRuntimeInfo=_uuidof(IPlatformDiagnosticTraceRuntimeInfo);
                     
-                } /* Windows */
-            } /* System */
-        } /* Diagnostics */
-    } /* TraceReporting */} /* ABI */
+                } /* TraceReporting */
+            } /* Diagnostics */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceRuntimeInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CTraceReporting_CIPlatformDiagnosticTraceRuntimeInfo_INTERFACE_DEFINED__) */

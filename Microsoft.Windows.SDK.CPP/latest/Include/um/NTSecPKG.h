@@ -1016,7 +1016,7 @@ typedef SECURITY_USER_DATA SecurityUserData, * PSecurityUserData;
 
 //
 // the message types defined here are applied to all the packages. the minimum
-// message type value is set to 1024 to avoid conflict with any existing per 
+// message type value is set to 1024 to avoid conflict with any existing per
 // package message type.
 //
 
@@ -1076,7 +1076,7 @@ typedef NTSTATUS
         ULONG SessionId,
         const LUID* LogonId
         );
-        
+
 // Used to send credential use requests to the server. The call information
 // is packaged up inside of Buffer, and ReturnBuffer contains the response.
 // The format of Buffer and ReturnBuffer are AP/SSP-specific, and are simply
@@ -1089,7 +1089,7 @@ typedef NTSTATUS
         PVOID* ReturnBuffer,
         ULONG* ReturnBufferLength
         );
-        
+
 // Cleans up after a redirected logon is no longer needed. After this point,
 // the remote credentials are no longer usable.
 typedef VOID
@@ -1107,7 +1107,7 @@ typedef NTSTATUS
         );
 
 // The authentication package should use this to retrieve the supplemental
-// credentials passed over a remote credential guard connection. These 
+// credentials passed over a remote credential guard connection. These
 // credentials are used to light up remoting for other security packages.
 typedef NTSTATUS
 (NTAPI LSA_REDIRECTED_LOGON_GET_SUPP_CREDS)(
@@ -1136,7 +1136,7 @@ typedef struct _SECPKG_REDIRECTED_LOGON_BUFFER {
     PLSA_REDIRECTED_LOGON_GET_SUPP_CREDS GetSupplementalCreds;
 } SECPKG_REDIRECTED_LOGON_BUFFER, *PSECPKG_REDIRECTED_LOGON_BUFFER;
 
-typedef struct _SECPKG_POST_LOGON_USER_INFO 
+typedef struct _SECPKG_POST_LOGON_USER_INFO
 {
     ULONG  Flags;        // reserved
     LUID   LogonId;
@@ -1327,8 +1327,8 @@ typedef BOOLEAN
     _In_ PVOID SharedMem
     );
 
-typedef NTSTATUS 
-(NTAPI LSA_GET_APP_MODE_INFO)( 
+typedef NTSTATUS
+(NTAPI LSA_GET_APP_MODE_INFO)(
     _Out_opt_  PULONG      UserFunction,
     _Out_opt_  PULONG_PTR  Argument1,
     _Out_opt_  PULONG_PTR  Argument2,
@@ -1336,8 +1336,8 @@ typedef NTSTATUS
     _Out_opt_  PBOOLEAN    ReturnToLsa
     );
 
-typedef NTSTATUS 
-(NTAPI LSA_SET_APP_MODE_INFO)( 
+typedef NTSTATUS
+(NTAPI LSA_SET_APP_MODE_INFO)(
     _In_      ULONG      UserFunction,
     _In_opt_  ULONG_PTR  Argument1,
     _In_opt_  ULONG_PTR  Argument2,
@@ -1533,9 +1533,9 @@ NTSTATUS
     _Out_ PULONG ExpandedAuthDataSize
     );
 
-typedef enum _CRED_FETCH { 
-    CredFetchDefault = 0,      
-    CredFetchDPAPI,    
+typedef enum _CRED_FETCH {
+    CredFetchDefault = 0,
+    CredFetchDPAPI,
     CredFetchForced
 } CRED_FETCH, *PCRED_FETCH;
 
@@ -1568,14 +1568,14 @@ typedef NTSTATUS
     _In_  HANDLE   UserToken,
     _Out_ PBOOLEAN ProtectedUser
     );
-    
+
 typedef NTSTATUS
 (NTAPI LSA_QUERY_CLIENT_REQUEST) (
     _In_ PLSA_CLIENT_REQUEST ClientRequest,
     _In_ ULONG QueryType,
     _Out_ PVOID* ReplyBuffer
     );
-    
+
 #define LSA_QUERY_CLIENT_PRELOGON_SESSION_ID 1
 
 typedef LSA_IMPERSONATE_CLIENT * PLSA_IMPERSONATE_CLIENT;
@@ -2127,6 +2127,13 @@ typedef NTSTATUS
     _Outptr_result_bytebuffer_(*SupplementalCredsSize) PVOID * SupplementalCreds
     );
 
+typedef NTSTATUS
+(NTAPI SpGetTbalSupplementalCredsFn) (
+    _In_ LUID LogonId,
+    _Out_ PULONG SupplementalCredsSize,
+    _Outptr_result_bytebuffer_(*SupplementalCredsSize) PVOID * SupplementalCreds
+    );
+
 typedef struct _SECPKG_FUNCTION_TABLE {
     PLSA_AP_INITIALIZE_PACKAGE InitializePackage;                           // SECPKG_INTERFACE_VERSION
     PLSA_AP_LOGON_USER LogonUser;                                           // SECPKG_INTERFACE_VERSION
@@ -2173,6 +2180,8 @@ typedef struct _SECPKG_FUNCTION_TABLE {
 
     SpGetRemoteCredGuardLogonBufferFn* GetRemoteCredGuardLogonBuffer;       // SECPKG_INTERFACE_VERSION_8
     SpGetRemoteCredGuardSupplementalCredsFn* GetRemoteCredGuardSupplementalCreds; // SECPKG_INTERFACE_VERSION_8
+
+    SpGetTbalSupplementalCredsFn* GetTbalSupplementalCreds;                 // SECPKG_INTERFACE_VERSION_9
 } SECPKG_FUNCTION_TABLE, *PSECPKG_FUNCTION_TABLE;
 
 //
@@ -2327,6 +2336,7 @@ typedef NTSTATUS
 //      SECPKG_INTERFACE_VERSION_6 indicates all fields through ValidateTargetInfo are defined (potentially to NULL)
 //      SECPKG_INTERFACE_VERSION_7 indicates all fields through PostLogonUserInfo are defined (potentially to NULL)
 //      SECPKG_INTERFACE_VERSION_8 indicates all fields through GetRemoteSupplementalCreds are defined (potentially to NULL)
+//      SECPKG_INTERFACE_VERSION_9 indicates all fields through GetTbalSupplementalCreds are defined (potentially to NULL)
 //
 // * Returned from SpUserModeInitializeFn to indicate the version of the auth package.
 //      All packages currently return SECPKG_INTERFACE_VERSION
@@ -2340,6 +2350,7 @@ typedef NTSTATUS
 #define SECPKG_INTERFACE_VERSION_6  0x00200000
 #define SECPKG_INTERFACE_VERSION_7  0x00400000
 #define SECPKG_INTERFACE_VERSION_8  0x00800000
+#define SECPKG_INTERFACE_VERSION_9  0x01000000
 
 typedef enum _KSEC_CONTEXT_TYPE {
     KSecPaged,

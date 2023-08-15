@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -570,7 +570,7 @@ struct WINRT_EBO ExceptionRoutedEventArgs :
 struct WINRT_EBO FrameworkElement :
     Windows::UI::Xaml::IFrameworkElement,
     impl::base<FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<FrameworkElement, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9>
+    impl::require<FrameworkElement, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9>
 {
     FrameworkElement(std::nullptr_t) noexcept {}
     static Windows::UI::Xaml::DependencyProperty TagProperty();
@@ -844,7 +844,7 @@ struct WINRT_EBO TriggerCollection :
 struct WINRT_EBO UIElement :
     Windows::UI::Xaml::IUIElement,
     impl::base<UIElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<UIElement, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9>
+    impl::require<UIElement, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9>
 {
     UIElement(std::nullptr_t) noexcept {}
     static Windows::UI::Xaml::RoutedEvent KeyDownEvent();
@@ -887,6 +887,7 @@ struct WINRT_EBO UIElement :
     static Windows::UI::Xaml::DependencyProperty IsHoldingEnabledProperty();
     static Windows::UI::Xaml::DependencyProperty ManipulationModeProperty();
     static Windows::UI::Xaml::DependencyProperty PointerCapturesProperty();
+    static Windows::UI::Xaml::DependencyProperty ShadowProperty();
     static Windows::UI::Xaml::DependencyProperty CompositeModeProperty();
     static Windows::UI::Xaml::DependencyProperty Transform3DProperty();
     static Windows::UI::Xaml::DependencyProperty CanDragProperty();
@@ -920,6 +921,14 @@ struct WINRT_EBO UIElement :
     static Windows::UI::Xaml::DependencyProperty KeyboardAcceleratorPlacementModeProperty();
     static void RegisterAsScrollPort(Windows::UI::Xaml::UIElement const& element);
     static Windows::UI::Xaml::DependencyProperty CanBeScrollAnchorProperty();
+};
+
+struct WINRT_EBO UIElementWeakCollection :
+    Windows::UI::Xaml::IUIElementWeakCollection,
+    impl::require<UIElementWeakCollection, Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::UIElement>, Windows::Foundation::Collections::IVector<Windows::UI::Xaml::UIElement>>
+{
+    UIElementWeakCollection(std::nullptr_t) noexcept {}
+    UIElementWeakCollection();
 };
 
 struct WINRT_EBO UnhandledExceptionEventArgs :
@@ -985,7 +994,7 @@ struct WINRT_EBO VisualTransition :
 
 struct WINRT_EBO Window :
     Windows::UI::Xaml::IWindow,
-    impl::require<Window, Windows::UI::Xaml::IWindow2, Windows::UI::Xaml::IWindow3>
+    impl::require<Window, Windows::UI::Xaml::IWindow2, Windows::UI::Xaml::IWindow3, Windows::UI::Xaml::IWindow4>
 {
     Window(std::nullptr_t) noexcept {}
     static Windows::UI::Xaml::Window Current();
@@ -995,6 +1004,18 @@ struct WINRT_EBO WindowCreatedEventArgs :
     Windows::UI::Xaml::IWindowCreatedEventArgs
 {
     WindowCreatedEventArgs(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO XamlRoot :
+    Windows::UI::Xaml::IXamlRoot
+{
+    XamlRoot(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO XamlRootChangedEventArgs :
+    Windows::UI::Xaml::IXamlRootChangedEventArgs
+{
+    XamlRootChangedEventArgs(std::nullptr_t) noexcept {}
 };
 
 template <typename D>

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #pragma once
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.System.1.h"
+#include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.UI.Input.1.h"
 #include "winrt/impl/Windows.UI.Popups.1.h"
 #include "winrt/impl/Windows.UI.Core.1.h"
@@ -145,7 +146,7 @@ struct WINRT_EBO CoreIndependentInputSource :
 
 struct WINRT_EBO CoreWindow :
     Windows::UI::Core::ICoreWindow,
-    impl::require<CoreWindow, Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::ICoreWindow2, Windows::UI::Core::ICoreWindow3, Windows::UI::Core::ICoreWindow4, Windows::UI::Core::ICoreWindow5>
+    impl::require<CoreWindow, Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::ICoreWindow2, Windows::UI::Core::ICoreWindow3, Windows::UI::Core::ICoreWindow4, Windows::UI::Core::ICoreWindow5, Windows::UI::Core::ICoreWindowWithContext>
 {
     CoreWindow(std::nullptr_t) noexcept {}
     using impl::consume_t<CoreWindow, Windows::UI::Core::ICoreWindow2>::PointerPosition;

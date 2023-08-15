@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.perception.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -137,8 +137,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             interface IPerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CIPerceptionTimestamp ABI::Windows::Perception::IPerceptionTimestamp
 
 #endif // ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
@@ -149,8 +149,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             interface IPerceptionTimestamp2;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CIPerceptionTimestamp2 ABI::Windows::Perception::IPerceptionTimestamp2
 
 #endif // ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp2_FWD_DEFINED__
@@ -161,8 +161,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             interface IPerceptionTimestampHelperStatics;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics ABI::Windows::Perception::IPerceptionTimestampHelperStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics_FWD_DEFINED__
@@ -173,8 +173,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             interface IPerceptionTimestampHelperStatics2;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics2 ABI::Windows::Perception::IPerceptionTimestampHelperStatics2
 
 #endif // ____x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics2_FWD_DEFINED__
@@ -186,8 +186,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -195,8 +195,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -209,8 +209,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             class PerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
 
@@ -251,8 +251,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPerceptionTimestamp=_uuidof(IPerceptionTimestamp);
             
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CIPerceptionTimestamp;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_INTERFACE_DEFINED__) */
@@ -290,8 +290,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPerceptionTimestamp2=_uuidof(IPerceptionTimestamp2);
             
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CIPerceptionTimestamp2;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CIPerceptionTimestamp2_INTERFACE_DEFINED__) */
@@ -330,8 +330,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPerceptionTimestampHelperStatics=_uuidof(IPerceptionTimestampHelperStatics);
             
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics_INTERFACE_DEFINED__) */
@@ -370,8 +370,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPerceptionTimestampHelperStatics2=_uuidof(IPerceptionTimestampHelperStatics2);
             
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics2;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CIPerceptionTimestampHelperStatics2_INTERFACE_DEFINED__) */

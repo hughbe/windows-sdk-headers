@@ -10,6 +10,7 @@ import "AsyncInfo.idl";
 import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
+import "Windows.UI.idl";
 
 // Forward Declare
 namespace Windows
@@ -19,6 +20,13 @@ namespace Windows
         apicontract UniversalApiContract;
 
         runtimeclass Uri;
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
+        runtimeclass UIContext;
     }
 }
 namespace Windows
@@ -36,6 +44,8 @@ namespace Windows
             interface IResourceLoaderStatics;
 
             interface IResourceLoaderStatics2;
+
+            interface IResourceLoaderStatics3;
 
             runtimeclass ResourceLoader;
         }
@@ -94,12 +104,21 @@ namespace Windows
                 [overload("GetForViewIndependentUse")] HRESULT GetForViewIndependentUseWithName([in] HSTRING name, [out] [retval] Windows.ApplicationModel.Resources.ResourceLoader** loader);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.ApplicationModel.Resources.ResourceLoader)]
+            [uuid(64609DFB-64AC-491B-8100-0E558D61C1D0)]
+            interface IResourceLoaderStatics3 : IInspectable
+            {
+                HRESULT GetForUIContext([in] Windows.UI.UIContext* context, [out] [retval] Windows.ApplicationModel.Resources.ResourceLoader** result);
+            }
+
             [activatable(Windows.ApplicationModel.Resources.IResourceLoaderFactory, Windows.Foundation.UniversalApiContract, 1.0)]
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.ApplicationModel.Resources.IResourceLoaderStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.ApplicationModel.Resources.IResourceLoaderStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
+            [static(Windows.ApplicationModel.Resources.IResourceLoaderStatics3, Windows.Foundation.UniversalApiContract, 8.0)]
             [threading(both)]
             runtimeclass ResourceLoader
             {

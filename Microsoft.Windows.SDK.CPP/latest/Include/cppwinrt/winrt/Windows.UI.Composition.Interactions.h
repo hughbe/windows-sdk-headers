@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -359,10 +359,24 @@ template <typename D> int32_t consume_Windows_UI_Composition_Interactions_IInter
     return value;
 }
 
+template <typename D> bool consume_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs2<D>::IsFromBinding() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2)->get_IsFromBinding(&value));
+    return value;
+}
+
 template <typename D> int32_t consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs<D>::RequestId() const
 {
     int32_t value{};
     check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs)->get_RequestId(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs2<D>::IsFromBinding() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2)->get_IsFromBinding(&value));
     return value;
 }
 
@@ -515,10 +529,24 @@ template <typename D> bool consume_Windows_UI_Composition_Interactions_IInteract
     return value;
 }
 
+template <typename D> bool consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs3<D>::IsFromBinding() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3)->get_IsFromBinding(&value));
+    return value;
+}
+
 template <typename D> int32_t consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs<D>::RequestId() const
 {
     int32_t value{};
     check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs)->get_RequestId(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs2<D>::IsFromBinding() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2)->get_IsFromBinding(&value));
     return value;
 }
 
@@ -570,6 +598,18 @@ template <typename D> Windows::UI::Composition::Interactions::InteractionTracker
 {
     Windows::UI::Composition::Interactions::InteractionTracker result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerStatics)->CreateWithOwner(get_abi(compositor), get_abi(owner), put_abi(result)));
+    return result;
+}
+
+template <typename D> void consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics2<D>::SetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes const& axisMode) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerStatics2)->SetBindingMode(get_abi(boundTracker1), get_abi(boundTracker2), get_abi(axisMode)));
+}
+
+template <typename D> Windows::UI::Composition::Interactions::InteractionBindingAxisModes consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics2<D>::GetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2) const
+{
+    Windows::UI::Composition::Interactions::InteractionBindingAxisModes result{};
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IInteractionTrackerStatics2)->GetBindingMode(get_abi(boundTracker1), get_abi(boundTracker2), put_abi(result)));
     return result;
 }
 
@@ -823,6 +863,13 @@ template <typename D> Windows::UI::Composition::Interactions::VisualInteractionS
 {
     Windows::UI::Composition::Interactions::VisualInteractionSource result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics)->Create(get_abi(source), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::UI::Composition::Interactions::VisualInteractionSource consume_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics2<D>::CreateFromIVisualElement(Windows::UI::Composition::IVisualElement const& source) const
+{
+    Windows::UI::Composition::Interactions::VisualInteractionSource result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2)->CreateFromIVisualElement(get_abi(source), put_abi(result)));
     return result;
 }
 
@@ -1534,6 +1581,22 @@ struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerCus
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2> : produce_base<D, Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>
+{
+    int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsFromBinding, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsFromBinding());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs> : produce_base<D, Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs>
 {
     int32_t WINRT_CALL get_RequestId(int32_t* value) noexcept final
@@ -1543,6 +1606,22 @@ struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerIdl
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(RequestId, WINRT_WRAP(int32_t));
             *value = detach_from<int32_t>(this->shim().RequestId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2> : produce_base<D, Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>
+{
+    int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsFromBinding, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsFromBinding());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1877,6 +1956,22 @@ struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerIne
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3> : produce_base<D, Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>
+{
+    int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsFromBinding, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsFromBinding());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs> : produce_base<D, Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs>
 {
     int32_t WINRT_CALL get_RequestId(int32_t* value) noexcept final
@@ -1886,6 +1981,22 @@ struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerInt
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(RequestId, WINRT_WRAP(int32_t));
             *value = detach_from<int32_t>(this->shim().RequestId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2> : produce_base<D, Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>
+{
+    int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsFromBinding, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsFromBinding());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2008,6 +2119,34 @@ struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerSta
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateWithOwner, WINRT_WRAP(Windows::UI::Composition::Interactions::InteractionTracker), Windows::UI::Composition::Compositor const&, Windows::UI::Composition::Interactions::IInteractionTrackerOwner const&);
             *result = detach_from<Windows::UI::Composition::Interactions::InteractionTracker>(this->shim().CreateWithOwner(*reinterpret_cast<Windows::UI::Composition::Compositor const*>(&compositor), *reinterpret_cast<Windows::UI::Composition::Interactions::IInteractionTrackerOwner const*>(&owner)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Composition::Interactions::IInteractionTrackerStatics2> : produce_base<D, Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>
+{
+    int32_t WINRT_CALL SetBindingMode(void* boundTracker1, void* boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes axisMode) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SetBindingMode, WINRT_WRAP(void), Windows::UI::Composition::Interactions::InteractionTracker const&, Windows::UI::Composition::Interactions::InteractionTracker const&, Windows::UI::Composition::Interactions::InteractionBindingAxisModes const&);
+            this->shim().SetBindingMode(*reinterpret_cast<Windows::UI::Composition::Interactions::InteractionTracker const*>(&boundTracker1), *reinterpret_cast<Windows::UI::Composition::Interactions::InteractionTracker const*>(&boundTracker2), *reinterpret_cast<Windows::UI::Composition::Interactions::InteractionBindingAxisModes const*>(&axisMode));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetBindingMode(void* boundTracker1, void* boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes* result) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetBindingMode, WINRT_WRAP(Windows::UI::Composition::Interactions::InteractionBindingAxisModes), Windows::UI::Composition::Interactions::InteractionTracker const&, Windows::UI::Composition::Interactions::InteractionTracker const&);
+            *result = detach_from<Windows::UI::Composition::Interactions::InteractionBindingAxisModes>(this->shim().GetBindingMode(*reinterpret_cast<Windows::UI::Composition::Interactions::InteractionTracker const*>(&boundTracker1), *reinterpret_cast<Windows::UI::Composition::Interactions::InteractionTracker const*>(&boundTracker2)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2552,6 +2691,23 @@ struct produce<D, Windows::UI::Composition::Interactions::IVisualInteractionSour
     }
 };
 
+template <typename D>
+struct produce<D, Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2> : produce_base<D, Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2>
+{
+    int32_t WINRT_CALL CreateFromIVisualElement(void* source, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateFromIVisualElement, WINRT_WRAP(Windows::UI::Composition::Interactions::VisualInteractionSource), Windows::UI::Composition::IVisualElement const&);
+            *result = detach_from<Windows::UI::Composition::Interactions::VisualInteractionSource>(this->shim().CreateFromIVisualElement(*reinterpret_cast<Windows::UI::Composition::IVisualElement const*>(&source)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::UI::Composition::Interactions {
@@ -2569,6 +2725,16 @@ inline Windows::UI::Composition::Interactions::InteractionTracker InteractionTra
 inline Windows::UI::Composition::Interactions::InteractionTracker InteractionTracker::CreateWithOwner(Windows::UI::Composition::Compositor const& compositor, Windows::UI::Composition::Interactions::IInteractionTrackerOwner const& owner)
 {
     return impl::call_factory<InteractionTracker, Windows::UI::Composition::Interactions::IInteractionTrackerStatics>([&](auto&& f) { return f.CreateWithOwner(compositor, owner); });
+}
+
+inline void InteractionTracker::SetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes const& axisMode)
+{
+    impl::call_factory<InteractionTracker, Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>([&](auto&& f) { return f.SetBindingMode(boundTracker1, boundTracker2, axisMode); });
+}
+
+inline Windows::UI::Composition::Interactions::InteractionBindingAxisModes InteractionTracker::GetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2)
+{
+    return impl::call_factory<InteractionTracker, Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>([&](auto&& f) { return f.GetBindingMode(boundTracker1, boundTracker2); });
 }
 
 inline Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion InteractionTrackerInertiaMotion::Create(Windows::UI::Composition::Compositor const& compositor)
@@ -2596,6 +2762,11 @@ inline Windows::UI::Composition::Interactions::VisualInteractionSource VisualInt
     return impl::call_factory<VisualInteractionSource, Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics>([&](auto&& f) { return f.Create(source); });
 }
 
+inline Windows::UI::Composition::Interactions::VisualInteractionSource VisualInteractionSource::CreateFromIVisualElement(Windows::UI::Composition::IVisualElement const& source)
+{
+    return impl::call_factory<VisualInteractionSource, Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2>([&](auto&& f) { return f.CreateFromIVisualElement(source); });
+}
+
 }
 
 WINRT_EXPORT namespace std {
@@ -2610,7 +2781,9 @@ template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteracti
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTracker3> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTracker3> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTracker4> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTracker4> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs> {};
+template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs> {};
+template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifierFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifierFactory> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotion> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotion> {};
@@ -2621,10 +2794,13 @@ template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteracti
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValueStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValueStatics> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2> {};
+template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs> {};
+template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerRequestIgnoredArgs> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerRequestIgnoredArgs> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerStatics> {};
+template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerStatics2> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifierFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifierFactory> {};
@@ -2635,6 +2811,7 @@ template<> struct hash<winrt::Windows::UI::Composition::Interactions::IVisualInt
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSource3> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSource3> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceObjectFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceObjectFactory> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics> {};
+template<> struct hash<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection> {};
 template<> struct hash<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration> {};

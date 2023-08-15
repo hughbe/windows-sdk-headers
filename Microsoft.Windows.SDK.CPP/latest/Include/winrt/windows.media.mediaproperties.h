@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.mediaproperties.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties ABI::Windows::Media::MediaProperties::IAudioEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingProperties2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties2 ABI::Windows::Media::MediaProperties::IAudioEncodingProperties2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties2_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingProperties3;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties3 ABI::Windows::Media::MediaProperties::IAudioEncodingProperties3
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties3_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingPropertiesStatics;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics ABI::Windows::Media::MediaProperties::IAudioEncodingPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingPropertiesStatics2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics2 ABI::Windows::Media::MediaProperties::IAudioEncodingPropertiesStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics2_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingPropertiesWithFormatUserData;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData ABI::Windows::Media::MediaProperties::IAudioEncodingPropertiesWithFormatUserData
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IContainerEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties ABI::Windows::Media::MediaProperties::IContainerEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IContainerEncodingProperties2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties2 ABI::Windows::Media::MediaProperties::IContainerEncodingProperties2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties2_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IH264ProfileIdsStatics;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics ABI::Windows::Media::MediaProperties::IH264ProfileIdsStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IImageEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties ABI::Windows::Media::MediaProperties::IImageEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IImageEncodingProperties2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties2 ABI::Windows::Media::MediaProperties::IImageEncodingProperties2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties2_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IImageEncodingPropertiesStatics;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics ABI::Windows::Media::MediaProperties::IImageEncodingPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IImageEncodingPropertiesStatics2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics2 ABI::Windows::Media::MediaProperties::IImageEncodingPropertiesStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics2_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IImageEncodingPropertiesStatics3;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics3 ABI::Windows::Media::MediaProperties::IImageEncodingPropertiesStatics3
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics3_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile ABI::Windows::Media::MediaProperties::IMediaEncodingProfile
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfile2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile2 ABI::Windows::Media::MediaProperties::IMediaEncodingProfile2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile2_FWD_DEFINED__
@@ -503,9 +499,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfile3;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile3 ABI::Windows::Media::MediaProperties::IMediaEncodingProfile3
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile3_FWD_DEFINED__
@@ -517,9 +513,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfileStatics;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics ABI::Windows::Media::MediaProperties::IMediaEncodingProfileStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfileStatics2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics2 ABI::Windows::Media::MediaProperties::IMediaEncodingProfileStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics2_FWD_DEFINED__
@@ -545,9 +541,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfileStatics3;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3 ABI::Windows::Media::MediaProperties::IMediaEncodingProfileStatics3
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties ABI::Windows::Media::MediaProperties::IMediaEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_FWD_DEFINED__
@@ -573,9 +569,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingSubtypesStatics;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics ABI::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics_FWD_DEFINED__
@@ -587,9 +583,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingSubtypesStatics2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics2 ABI::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics2_FWD_DEFINED__
@@ -601,9 +597,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingSubtypesStatics3;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics3 ABI::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics3
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics3_FWD_DEFINED__
@@ -615,9 +611,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingSubtypesStatics4;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics4 ABI::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics4
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics4_FWD_DEFINED__
@@ -629,9 +625,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingSubtypesStatics5;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics5 ABI::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics5
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics5_FWD_DEFINED__
@@ -643,9 +639,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio ABI::Windows::Media::MediaProperties::IMediaRatio
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -657,9 +653,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMpeg2ProfileIdsStatics;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMpeg2ProfileIdsStatics ABI::Windows::Media::MediaProperties::IMpeg2ProfileIdsStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMpeg2ProfileIdsStatics_FWD_DEFINED__
@@ -671,9 +667,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface ITimedMetadataEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CITimedMetadataEncodingProperties ABI::Windows::Media::MediaProperties::ITimedMetadataEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CITimedMetadataEncodingProperties_FWD_DEFINED__
@@ -685,9 +681,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties ABI::Windows::Media::MediaProperties::IVideoEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_FWD_DEFINED__
@@ -699,9 +695,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingProperties2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties2 ABI::Windows::Media::MediaProperties::IVideoEncodingProperties2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties2_FWD_DEFINED__
@@ -713,9 +709,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingProperties3;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties3 ABI::Windows::Media::MediaProperties::IVideoEncodingProperties3
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties3_FWD_DEFINED__
@@ -727,9 +723,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingProperties4;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties4 ABI::Windows::Media::MediaProperties::IVideoEncodingProperties4
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties4_FWD_DEFINED__
@@ -741,9 +737,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingProperties5;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties5 ABI::Windows::Media::MediaProperties::IVideoEncodingProperties5
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties5_FWD_DEFINED__
@@ -755,9 +751,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingPropertiesStatics;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics ABI::Windows::Media::MediaProperties::IVideoEncodingPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics_FWD_DEFINED__
@@ -769,9 +765,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingPropertiesStatics2;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2 ABI::Windows::Media::MediaProperties::IVideoEncodingPropertiesStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2_FWD_DEFINED__
@@ -784,9 +780,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class AudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -809,7 +805,7 @@ IIterator<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> __FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t;
 #define __FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaProperties::IAudioEncodingProperties*>
@@ -841,7 +837,7 @@ IIterable<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> __FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t;
 #define __FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaProperties::IAudioEncodingProperties*>
@@ -873,7 +869,7 @@ IIterator<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> __FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t;
 #define __FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*>
@@ -905,7 +901,7 @@ IIterable<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> __FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t;
 #define __FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*>
@@ -921,9 +917,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class VideoEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -946,7 +942,7 @@ IIterator<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> __FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t;
 #define __FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaProperties::IVideoEncodingProperties*>
@@ -978,7 +974,7 @@ IIterable<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> __FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t;
 #define __FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaProperties::IVideoEncodingProperties*>
@@ -1010,7 +1006,7 @@ IVectorView<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> __FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaProperties::IAudioEncodingProperties*>
@@ -1042,7 +1038,7 @@ IVectorView<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*> __FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaProperties__CIMediaEncodingProperties ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaProperties::IMediaEncodingProperties*>
@@ -1074,7 +1070,7 @@ IVectorView<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> __FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaProperties::IVideoEncodingProperties*>
@@ -1090,9 +1086,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1115,7 +1111,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::MediaProperties::MediaEncod
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::MediaProperties::MediaEncodingProfile*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::MediaProperties::IMediaEncodingProfile*>
@@ -1147,7 +1143,7 @@ IAsyncOperation<ABI::Windows::Media::MediaProperties::MediaEncodingProfile*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::MediaProperties::MediaEncodingProfile*> __FIAsyncOperation_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CMediaProperties__CMediaEncodingProfile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::MediaProperties::IMediaEncodingProfile*>
@@ -1163,9 +1159,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class AudioStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor_FWD_DEFINED__
@@ -1174,9 +1170,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IAudioStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor ABI::Windows::Media::Core::IAudioStreamDescriptor
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIAudioStreamDescriptor_FWD_DEFINED__
@@ -1202,7 +1198,7 @@ IIterator<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1234,7 +1230,7 @@ IIterable<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1266,7 +1262,7 @@ IVectorView<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1298,7 +1294,7 @@ IVector<ABI::Windows::Media::Core::AudioStreamDescriptor*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Core::AudioStreamDescriptor*> __FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t;
 #define __FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CCore__CAudioStreamDescriptor ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Core::IAudioStreamDescriptor*>
@@ -1314,9 +1310,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class VideoStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor_FWD_DEFINED__
@@ -1325,9 +1321,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IVideoStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor ABI::Windows::Media::Core::IVideoStreamDescriptor
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIVideoStreamDescriptor_FWD_DEFINED__
@@ -1353,7 +1349,7 @@ IIterator<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -1385,7 +1381,7 @@ IIterable<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -1417,7 +1413,7 @@ IVectorView<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -1449,7 +1445,7 @@ IVector<ABI::Windows::Media::Core::VideoStreamDescriptor*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Core::VideoStreamDescriptor*> __FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t;
 #define __FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CCore__CVideoStreamDescriptor ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Core::IVideoStreamDescriptor*>
@@ -1465,9 +1461,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class TimedMetadataStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamDescriptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamDescriptor_FWD_DEFINED__
@@ -1476,9 +1472,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaStreamDescriptor;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaStreamDescriptor ABI::Windows::Media::Core::IMediaStreamDescriptor
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamDescriptor_FWD_DEFINED__
@@ -1504,7 +1500,7 @@ IIterator<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> __FIIterator_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::IMediaStreamDescriptor*>
@@ -1536,7 +1532,7 @@ IIterable<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> __FIIterable_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::IMediaStreamDescriptor*>
@@ -1568,7 +1564,7 @@ IVectorView<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::IMediaStreamDescriptor*>
@@ -1600,7 +1596,7 @@ IVector<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Core::TimedMetadataStreamDescriptor*> __FIVector_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t;
 #define __FIVector_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CCore__CTimedMetadataStreamDescriptor ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Core::IMediaStreamDescriptor*>
@@ -1631,7 +1627,7 @@ IKeyValuePair<GUID,IInspectable*> : IKeyValuePair_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<GUID,IInspectable*> __FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>
@@ -1661,7 +1657,7 @@ IIterator<__FIKeyValuePair_2_GUID_IInspectable*> : IIterator_impl<__FIKeyValuePa
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_GUID_IInspectable*> __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>*>
@@ -1691,7 +1687,7 @@ IIterable<__FIKeyValuePair_2_GUID_IInspectable*> : IIterable_impl<__FIKeyValuePa
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_GUID_IInspectable*> __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,IInspectable*>*>
@@ -1721,7 +1717,7 @@ IMapView<GUID,IInspectable*> : IMapView_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<GUID,IInspectable*> __FIMapView_2_GUID_IInspectable_t;
 #define __FIMapView_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IMapView<GUID,IInspectable*>
@@ -1751,7 +1747,7 @@ IMap<GUID,IInspectable*> : IMap_impl<GUID,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<GUID,IInspectable*> __FIMap_2_GUID_IInspectable_t;
 #define __FIMap_2_GUID_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_GUID_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_GUID_IInspectable ABI::Windows::Foundation::Collections::IMap<GUID,IInspectable*>
@@ -1778,8 +1774,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1794,9 +1790,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1812,9 +1808,9 @@ namespace ABI {
                 
                 typedef enum AudioEncodingQuality : int AudioEncodingQuality;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1823,9 +1819,9 @@ namespace ABI {
                 
                 typedef enum MediaMirroringOptions : unsigned int MediaMirroringOptions;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1834,9 +1830,9 @@ namespace ABI {
                 
                 typedef enum MediaPixelFormat : int MediaPixelFormat;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1845,9 +1841,9 @@ namespace ABI {
                 
                 typedef enum MediaRotation : int MediaRotation;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1856,9 +1852,9 @@ namespace ABI {
                 
                 typedef enum MediaThumbnailFormat : int MediaThumbnailFormat;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1867,9 +1863,9 @@ namespace ABI {
                 
                 typedef enum SphericalVideoFrameFormat : int SphericalVideoFrameFormat;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1878,9 +1874,9 @@ namespace ABI {
                 
                 typedef enum StereoscopicVideoPackingMode : int StereoscopicVideoPackingMode;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1889,9 +1885,9 @@ namespace ABI {
                 
                 typedef enum VideoEncodingQuality : int VideoEncodingQuality;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1935,9 +1931,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class ContainerEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1946,9 +1942,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class ImageEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1958,9 +1954,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaPropertySet;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1968,9 +1964,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1979,9 +1975,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class TimedMetadataEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2016,9 +2012,9 @@ namespace ABI {
                     AudioEncodingQuality_Low = 3,
                 };
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2046,9 +2042,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(MediaMirroringOptions)
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2078,9 +2074,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2107,9 +2103,9 @@ namespace ABI {
                     MediaRotation_Clockwise270Degrees = 3,
                 };
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2134,9 +2130,9 @@ namespace ABI {
                     MediaThumbnailFormat_Bgra8 = 1,
                 };
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2162,9 +2158,9 @@ namespace ABI {
                     SphericalVideoFrameFormat_Equirectangular = 2,
                 };
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2190,9 +2186,9 @@ namespace ABI {
                     StereoscopicVideoPackingMode_TopBottom = 2,
                 };
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2233,9 +2229,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2296,9 +2292,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEncodingProperties=_uuidof(IAudioEncodingProperties);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_INTERFACE_DEFINED__) */
@@ -2330,16 +2326,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSpatial(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAudioEncodingProperties2=_uuidof(IAudioEncodingProperties2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties2_INTERFACE_DEFINED__) */
@@ -2378,9 +2374,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEncodingProperties3=_uuidof(IAudioEncodingProperties3);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties3_INTERFACE_DEFINED__) */
@@ -2446,9 +2442,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEncodingPropertiesStatics=_uuidof(IAudioEncodingPropertiesStatics);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics_INTERFACE_DEFINED__) */
@@ -2496,9 +2492,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEncodingPropertiesStatics2=_uuidof(IAudioEncodingPropertiesStatics2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesStatics2_INTERFACE_DEFINED__) */
@@ -2542,9 +2538,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEncodingPropertiesWithFormatUserData=_uuidof(IAudioEncodingPropertiesWithFormatUserData);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData_INTERFACE_DEFINED__) */
@@ -2584,9 +2580,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContainerEncodingProperties=_uuidof(IContainerEncodingProperties);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties_INTERFACE_DEFINED__) */
@@ -2625,9 +2621,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContainerEncodingProperties2=_uuidof(IContainerEncodingProperties2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties2_INTERFACE_DEFINED__) */
@@ -2693,9 +2689,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IH264ProfileIdsStatics=_uuidof(IH264ProfileIdsStatics);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics_INTERFACE_DEFINED__) */
@@ -2747,9 +2743,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageEncodingProperties=_uuidof(IImageEncodingProperties);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties_INTERFACE_DEFINED__) */
@@ -2788,9 +2784,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageEncodingProperties2=_uuidof(IImageEncodingProperties2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties2_INTERFACE_DEFINED__) */
@@ -2835,9 +2831,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageEncodingPropertiesStatics=_uuidof(IImageEncodingPropertiesStatics);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics_INTERFACE_DEFINED__) */
@@ -2880,9 +2876,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageEncodingPropertiesStatics2=_uuidof(IImageEncodingPropertiesStatics2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics2_INTERFACE_DEFINED__) */
@@ -2921,9 +2917,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageEncodingPropertiesStatics3=_uuidof(IImageEncodingPropertiesStatics3);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingPropertiesStatics3_INTERFACE_DEFINED__) */
@@ -2977,9 +2973,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingProfile=_uuidof(IMediaEncodingProfile);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_INTERFACE_DEFINED__) */
@@ -3027,9 +3023,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingProfile2=_uuidof(IMediaEncodingProfile2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile2_INTERFACE_DEFINED__) */
@@ -3071,9 +3067,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingProfile3=_uuidof(IMediaEncodingProfile3);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile3_INTERFACE_DEFINED__) */
@@ -3137,9 +3133,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingProfileStatics=_uuidof(IMediaEncodingProfileStatics);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics_INTERFACE_DEFINED__) */
@@ -3183,9 +3179,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingProfileStatics2=_uuidof(IMediaEncodingProfileStatics2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics2_INTERFACE_DEFINED__) */
@@ -3233,9 +3229,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingProfileStatics3=_uuidof(IMediaEncodingProfileStatics3);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3_INTERFACE_DEFINED__) */
@@ -3280,9 +3276,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingProperties=_uuidof(IMediaEncodingProperties);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_INTERFACE_DEFINED__) */
@@ -3438,9 +3434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingSubtypesStatics=_uuidof(IMediaEncodingSubtypesStatics);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics_INTERFACE_DEFINED__) */
@@ -3488,9 +3484,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingSubtypesStatics2=_uuidof(IMediaEncodingSubtypesStatics2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics2_INTERFACE_DEFINED__) */
@@ -3532,9 +3528,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingSubtypesStatics3=_uuidof(IMediaEncodingSubtypesStatics3);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics3_INTERFACE_DEFINED__) */
@@ -3573,9 +3569,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingSubtypesStatics4=_uuidof(IMediaEncodingSubtypesStatics4);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics4;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics4_INTERFACE_DEFINED__) */
@@ -3614,9 +3610,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEncodingSubtypesStatics5=_uuidof(IMediaEncodingSubtypesStatics5);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics5;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics5_INTERFACE_DEFINED__) */
@@ -3664,9 +3660,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaRatio=_uuidof(IMediaRatio);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_INTERFACE_DEFINED__) */
@@ -3717,9 +3713,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMpeg2ProfileIdsStatics=_uuidof(IMpeg2ProfileIdsStatics);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMpeg2ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMpeg2ProfileIdsStatics_INTERFACE_DEFINED__) */
@@ -3766,9 +3762,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITimedMetadataEncodingProperties=_uuidof(ITimedMetadataEncodingProperties);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CITimedMetadataEncodingProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CITimedMetadataEncodingProperties_INTERFACE_DEFINED__) */
@@ -3832,9 +3828,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEncodingProperties=_uuidof(IVideoEncodingProperties);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_INTERFACE_DEFINED__) */
@@ -3884,9 +3880,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEncodingProperties2=_uuidof(IVideoEncodingProperties2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties2_INTERFACE_DEFINED__) */
@@ -3925,9 +3921,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEncodingProperties3=_uuidof(IVideoEncodingProperties3);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties3_INTERFACE_DEFINED__) */
@@ -3966,9 +3962,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEncodingProperties4=_uuidof(IVideoEncodingProperties4);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties4;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties4_INTERFACE_DEFINED__) */
@@ -4007,9 +4003,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEncodingProperties5=_uuidof(IVideoEncodingProperties5);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties5;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties5_INTERFACE_DEFINED__) */
@@ -4057,9 +4053,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEncodingPropertiesStatics=_uuidof(IVideoEncodingPropertiesStatics);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics_INTERFACE_DEFINED__) */
@@ -4098,9 +4094,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEncodingPropertiesStatics2=_uuidof(IVideoEncodingPropertiesStatics2);
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2_INTERFACE_DEFINED__) */

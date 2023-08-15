@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #pragma once
 #include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.Security.Credentials.0.h"
+#include "winrt/impl/Windows.System.0.h"
 #include "winrt/impl/Windows.UI.0.h"
 #include "winrt/impl/Windows.UI.Shell.0.h"
 #include "winrt/impl/Windows.ApplicationModel.UserActivities.0.h"
@@ -73,6 +74,13 @@ struct WINRT_EBO IUserActivityChannelStatics2 :
     impl::consume_t<IUserActivityChannelStatics2>
 {
     IUserActivityChannelStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUserActivityChannelStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUserActivityChannelStatics3>
+{
+    IUserActivityChannelStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IUserActivityContentInfo :

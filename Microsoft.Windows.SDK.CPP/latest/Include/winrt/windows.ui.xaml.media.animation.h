@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.media.animation.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,11 +279,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IAddDeleteThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IAddDeleteThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition_FWD_DEFINED__
@@ -301,11 +297,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBackEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase ABI::Windows::UI::Xaml::Media::Animation::IBackEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase_FWD_DEFINED__
@@ -319,11 +315,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBackEaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics ABI::Windows::UI::Xaml::Media::Animation::IBackEaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics_FWD_DEFINED__
@@ -337,11 +333,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBasicConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration ABI::Windows::UI::Xaml::Media::Animation::IBasicConnectedAnimationConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration_FWD_DEFINED__
@@ -355,11 +351,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBasicConnectedAnimationConfigurationFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory ABI::Windows::UI::Xaml::Media::Animation::IBasicConnectedAnimationConfigurationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory_FWD_DEFINED__
@@ -373,11 +369,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBeginStoryboard;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard ABI::Windows::UI::Xaml::Media::Animation::IBeginStoryboard
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard_FWD_DEFINED__
@@ -391,11 +387,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBeginStoryboardStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics ABI::Windows::UI::Xaml::Media::Animation::IBeginStoryboardStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics_FWD_DEFINED__
@@ -409,11 +405,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBounceEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase ABI::Windows::UI::Xaml::Media::Animation::IBounceEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase_FWD_DEFINED__
@@ -427,11 +423,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IBounceEaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics ABI::Windows::UI::Xaml::Media::Animation::IBounceEaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics_FWD_DEFINED__
@@ -445,11 +441,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ICircleEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase ABI::Windows::UI::Xaml::Media::Animation::ICircleEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase_FWD_DEFINED__
@@ -463,11 +459,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IColorAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation ABI::Windows::UI::Xaml::Media::Animation::IColorAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation_FWD_DEFINED__
@@ -481,11 +477,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IColorAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IColorAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics_FWD_DEFINED__
@@ -499,11 +495,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IColorAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames ABI::Windows::UI::Xaml::Media::Animation::IColorAnimationUsingKeyFrames
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames_FWD_DEFINED__
@@ -517,11 +513,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IColorAnimationUsingKeyFramesStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics ABI::Windows::UI::Xaml::Media::Animation::IColorAnimationUsingKeyFramesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics_FWD_DEFINED__
@@ -535,11 +531,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IColorKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame_FWD_DEFINED__
@@ -553,11 +549,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IColorKeyFrameFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory ABI::Windows::UI::Xaml::Media::Animation::IColorKeyFrameFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory_FWD_DEFINED__
@@ -571,11 +567,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IColorKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::IColorKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics_FWD_DEFINED__
@@ -589,11 +585,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ICommonNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::ICommonNavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo_FWD_DEFINED__
@@ -607,11 +603,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ICommonNavigationTransitionInfoStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics ABI::Windows::UI::Xaml::Media::Animation::ICommonNavigationTransitionInfoStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics_FWD_DEFINED__
@@ -625,11 +621,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IConnectedAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation_FWD_DEFINED__
@@ -643,11 +639,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IConnectedAnimation2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimation2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2_FWD_DEFINED__
@@ -661,11 +657,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IConnectedAnimation3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimation3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3_FWD_DEFINED__
@@ -679,11 +675,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimationConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration_FWD_DEFINED__
@@ -697,11 +693,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IConnectedAnimationConfigurationFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimationConfigurationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory_FWD_DEFINED__
@@ -715,11 +711,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IConnectedAnimationService;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimationService
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService_FWD_DEFINED__
@@ -733,11 +729,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IConnectedAnimationServiceStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimationServiceStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics_FWD_DEFINED__
@@ -751,11 +747,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IContentThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IContentThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition_FWD_DEFINED__
@@ -769,11 +765,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IContentThemeTransitionStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics ABI::Windows::UI::Xaml::Media::Animation::IContentThemeTransitionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics_FWD_DEFINED__
@@ -787,11 +783,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IContinuumNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::IContinuumNavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo_FWD_DEFINED__
@@ -805,11 +801,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IContinuumNavigationTransitionInfoStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics ABI::Windows::UI::Xaml::Media::Animation::IContinuumNavigationTransitionInfoStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics_FWD_DEFINED__
@@ -823,11 +819,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ICubicEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase ABI::Windows::UI::Xaml::Media::Animation::ICubicEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase_FWD_DEFINED__
@@ -841,11 +837,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDirectConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration ABI::Windows::UI::Xaml::Media::Animation::IDirectConnectedAnimationConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration_FWD_DEFINED__
@@ -859,11 +855,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDirectConnectedAnimationConfigurationFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory ABI::Windows::UI::Xaml::Media::Animation::IDirectConnectedAnimationConfigurationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory_FWD_DEFINED__
@@ -877,11 +873,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDiscreteColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IDiscreteColorKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame_FWD_DEFINED__
@@ -895,11 +891,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDiscreteDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IDiscreteDoubleKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame_FWD_DEFINED__
@@ -913,11 +909,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDiscreteObjectKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IDiscreteObjectKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame_FWD_DEFINED__
@@ -931,11 +927,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDiscretePointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IDiscretePointKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame_FWD_DEFINED__
@@ -949,11 +945,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDoubleAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation ABI::Windows::UI::Xaml::Media::Animation::IDoubleAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation_FWD_DEFINED__
@@ -967,11 +963,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDoubleAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IDoubleAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics_FWD_DEFINED__
@@ -985,11 +981,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDoubleAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames ABI::Windows::UI::Xaml::Media::Animation::IDoubleAnimationUsingKeyFrames
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames_FWD_DEFINED__
@@ -1003,11 +999,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDoubleAnimationUsingKeyFramesStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics ABI::Windows::UI::Xaml::Media::Animation::IDoubleAnimationUsingKeyFramesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics_FWD_DEFINED__
@@ -1021,11 +1017,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IDoubleKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame_FWD_DEFINED__
@@ -1039,11 +1035,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDoubleKeyFrameFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory ABI::Windows::UI::Xaml::Media::Animation::IDoubleKeyFrameFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory_FWD_DEFINED__
@@ -1057,11 +1053,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDoubleKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::IDoubleKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics_FWD_DEFINED__
@@ -1075,11 +1071,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDragItemThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IDragItemThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation_FWD_DEFINED__
@@ -1093,11 +1089,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDragItemThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IDragItemThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics_FWD_DEFINED__
@@ -1111,11 +1107,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDragOverThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IDragOverThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation_FWD_DEFINED__
@@ -1129,11 +1125,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDragOverThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IDragOverThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics_FWD_DEFINED__
@@ -1147,11 +1143,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDrillInNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::IDrillInNavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo_FWD_DEFINED__
@@ -1165,11 +1161,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDrillInThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IDrillInThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation_FWD_DEFINED__
@@ -1183,11 +1179,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDrillInThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IDrillInThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics_FWD_DEFINED__
@@ -1201,11 +1197,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDrillOutThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IDrillOutThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation_FWD_DEFINED__
@@ -1219,11 +1215,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDrillOutThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IDrillOutThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics_FWD_DEFINED__
@@ -1237,11 +1233,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDropTargetItemThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IDropTargetItemThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation_FWD_DEFINED__
@@ -1255,11 +1251,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IDropTargetItemThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IDropTargetItemThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics_FWD_DEFINED__
@@ -1273,11 +1269,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IEasingColorKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame_FWD_DEFINED__
@@ -1291,11 +1287,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingColorKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::IEasingColorKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics_FWD_DEFINED__
@@ -1309,11 +1305,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IEasingDoubleKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame_FWD_DEFINED__
@@ -1327,11 +1323,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingDoubleKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::IEasingDoubleKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics_FWD_DEFINED__
@@ -1345,11 +1341,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingFunctionBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase ABI::Windows::UI::Xaml::Media::Animation::IEasingFunctionBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase_FWD_DEFINED__
@@ -1363,11 +1359,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingFunctionBaseFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory ABI::Windows::UI::Xaml::Media::Animation::IEasingFunctionBaseFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory_FWD_DEFINED__
@@ -1381,11 +1377,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingFunctionBaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics ABI::Windows::UI::Xaml::Media::Animation::IEasingFunctionBaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics_FWD_DEFINED__
@@ -1399,11 +1395,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingPointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IEasingPointKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame_FWD_DEFINED__
@@ -1417,11 +1413,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEasingPointKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::IEasingPointKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics_FWD_DEFINED__
@@ -1435,11 +1431,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEdgeUIThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IEdgeUIThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition_FWD_DEFINED__
@@ -1453,11 +1449,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEdgeUIThemeTransitionStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics ABI::Windows::UI::Xaml::Media::Animation::IEdgeUIThemeTransitionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics_FWD_DEFINED__
@@ -1471,11 +1467,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IElasticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase ABI::Windows::UI::Xaml::Media::Animation::IElasticEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase_FWD_DEFINED__
@@ -1489,11 +1485,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IElasticEaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics ABI::Windows::UI::Xaml::Media::Animation::IElasticEaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics_FWD_DEFINED__
@@ -1507,11 +1503,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEntranceNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::IEntranceNavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo_FWD_DEFINED__
@@ -1525,11 +1521,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEntranceNavigationTransitionInfoStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics ABI::Windows::UI::Xaml::Media::Animation::IEntranceNavigationTransitionInfoStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics_FWD_DEFINED__
@@ -1543,11 +1539,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEntranceThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IEntranceThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition_FWD_DEFINED__
@@ -1561,11 +1557,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IEntranceThemeTransitionStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics ABI::Windows::UI::Xaml::Media::Animation::IEntranceThemeTransitionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics_FWD_DEFINED__
@@ -1579,11 +1575,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IExponentialEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase ABI::Windows::UI::Xaml::Media::Animation::IExponentialEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase_FWD_DEFINED__
@@ -1597,11 +1593,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IExponentialEaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics ABI::Windows::UI::Xaml::Media::Animation::IExponentialEaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics_FWD_DEFINED__
@@ -1615,11 +1611,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IFadeInThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IFadeInThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation_FWD_DEFINED__
@@ -1633,11 +1629,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IFadeInThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IFadeInThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics_FWD_DEFINED__
@@ -1651,11 +1647,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IFadeOutThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation_FWD_DEFINED__
@@ -1669,11 +1665,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IFadeOutThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics_FWD_DEFINED__
@@ -1687,14 +1683,32 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IGravityConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration ABI::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    namespace Animation {
+                        interface IGravityConnectedAnimationConfiguration2;
+                    } /* Animation */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 ABI::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory_FWD_DEFINED__
@@ -1705,11 +1719,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IGravityConnectedAnimationConfigurationFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory ABI::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory_FWD_DEFINED__
@@ -1723,11 +1737,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IKeySpline;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline ABI::Windows::UI::Xaml::Media::Animation::IKeySpline
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline_FWD_DEFINED__
@@ -1741,11 +1755,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IKeyTimeHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper ABI::Windows::UI::Xaml::Media::Animation::IKeyTimeHelper
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper_FWD_DEFINED__
@@ -1759,11 +1773,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IKeyTimeHelperStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics ABI::Windows::UI::Xaml::Media::Animation::IKeyTimeHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics_FWD_DEFINED__
@@ -1777,11 +1791,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ILinearColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame ABI::Windows::UI::Xaml::Media::Animation::ILinearColorKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame_FWD_DEFINED__
@@ -1795,11 +1809,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ILinearDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame ABI::Windows::UI::Xaml::Media::Animation::ILinearDoubleKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame_FWD_DEFINED__
@@ -1813,11 +1827,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ILinearPointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame ABI::Windows::UI::Xaml::Media::Animation::ILinearPointKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame_FWD_DEFINED__
@@ -1831,11 +1845,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface INavigationThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition ABI::Windows::UI::Xaml::Media::Animation::INavigationThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition_FWD_DEFINED__
@@ -1849,11 +1863,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface INavigationThemeTransitionStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics ABI::Windows::UI::Xaml::Media::Animation::INavigationThemeTransitionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics_FWD_DEFINED__
@@ -1867,11 +1881,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface INavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo_FWD_DEFINED__
@@ -1885,11 +1899,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface INavigationTransitionInfoFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory ABI::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfoFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory_FWD_DEFINED__
@@ -1903,11 +1917,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface INavigationTransitionInfoOverrides;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides ABI::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfoOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides_FWD_DEFINED__
@@ -1921,11 +1935,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IObjectAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames ABI::Windows::UI::Xaml::Media::Animation::IObjectAnimationUsingKeyFrames
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames_FWD_DEFINED__
@@ -1939,11 +1953,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IObjectAnimationUsingKeyFramesStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics ABI::Windows::UI::Xaml::Media::Animation::IObjectAnimationUsingKeyFramesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics_FWD_DEFINED__
@@ -1957,11 +1971,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IObjectKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IObjectKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame_FWD_DEFINED__
@@ -1975,11 +1989,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IObjectKeyFrameFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory ABI::Windows::UI::Xaml::Media::Animation::IObjectKeyFrameFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory_FWD_DEFINED__
@@ -1993,11 +2007,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IObjectKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::IObjectKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics_FWD_DEFINED__
@@ -2011,11 +2025,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPaneThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IPaneThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition_FWD_DEFINED__
@@ -2029,11 +2043,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPaneThemeTransitionStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics ABI::Windows::UI::Xaml::Media::Animation::IPaneThemeTransitionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics_FWD_DEFINED__
@@ -2047,11 +2061,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation ABI::Windows::UI::Xaml::Media::Animation::IPointAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation_FWD_DEFINED__
@@ -2065,11 +2079,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IPointAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics_FWD_DEFINED__
@@ -2083,11 +2097,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames ABI::Windows::UI::Xaml::Media::Animation::IPointAnimationUsingKeyFrames
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames_FWD_DEFINED__
@@ -2101,11 +2115,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointAnimationUsingKeyFramesStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics ABI::Windows::UI::Xaml::Media::Animation::IPointAnimationUsingKeyFramesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics_FWD_DEFINED__
@@ -2119,11 +2133,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame ABI::Windows::UI::Xaml::Media::Animation::IPointKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame_FWD_DEFINED__
@@ -2137,11 +2151,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointKeyFrameFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory ABI::Windows::UI::Xaml::Media::Animation::IPointKeyFrameFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory_FWD_DEFINED__
@@ -2155,11 +2169,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::IPointKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics_FWD_DEFINED__
@@ -2173,11 +2187,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointerDownThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IPointerDownThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation_FWD_DEFINED__
@@ -2191,11 +2205,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointerDownThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IPointerDownThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics_FWD_DEFINED__
@@ -2209,11 +2223,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointerUpThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IPointerUpThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation_FWD_DEFINED__
@@ -2227,11 +2241,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPointerUpThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IPointerUpThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics_FWD_DEFINED__
@@ -2245,11 +2259,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPopInThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IPopInThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation_FWD_DEFINED__
@@ -2263,11 +2277,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPopInThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IPopInThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics_FWD_DEFINED__
@@ -2281,11 +2295,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPopOutThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IPopOutThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation_FWD_DEFINED__
@@ -2299,11 +2313,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPopOutThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IPopOutThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics_FWD_DEFINED__
@@ -2317,11 +2331,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPopupThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IPopupThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition_FWD_DEFINED__
@@ -2335,11 +2349,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPopupThemeTransitionStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics ABI::Windows::UI::Xaml::Media::Animation::IPopupThemeTransitionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics_FWD_DEFINED__
@@ -2353,11 +2367,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPowerEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase ABI::Windows::UI::Xaml::Media::Animation::IPowerEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase_FWD_DEFINED__
@@ -2371,11 +2385,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IPowerEaseStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics ABI::Windows::UI::Xaml::Media::Animation::IPowerEaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics_FWD_DEFINED__
@@ -2389,11 +2403,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IQuadraticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase ABI::Windows::UI::Xaml::Media::Animation::IQuadraticEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase_FWD_DEFINED__
@@ -2407,11 +2421,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IQuarticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase ABI::Windows::UI::Xaml::Media::Animation::IQuarticEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase_FWD_DEFINED__
@@ -2425,11 +2439,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IQuinticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase ABI::Windows::UI::Xaml::Media::Animation::IQuinticEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase_FWD_DEFINED__
@@ -2443,11 +2457,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IReorderThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IReorderThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition_FWD_DEFINED__
@@ -2461,11 +2475,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IRepeatBehaviorHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper ABI::Windows::UI::Xaml::Media::Animation::IRepeatBehaviorHelper
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper_FWD_DEFINED__
@@ -2479,11 +2493,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IRepeatBehaviorHelperStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics ABI::Windows::UI::Xaml::Media::Animation::IRepeatBehaviorHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics_FWD_DEFINED__
@@ -2497,11 +2511,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IRepositionThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::IRepositionThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation_FWD_DEFINED__
@@ -2515,11 +2529,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IRepositionThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::IRepositionThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics_FWD_DEFINED__
@@ -2533,11 +2547,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IRepositionThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition ABI::Windows::UI::Xaml::Media::Animation::IRepositionThemeTransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition_FWD_DEFINED__
@@ -2551,11 +2565,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IRepositionThemeTransition2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 ABI::Windows::UI::Xaml::Media::Animation::IRepositionThemeTransition2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2_FWD_DEFINED__
@@ -2569,11 +2583,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IRepositionThemeTransitionStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 ABI::Windows::UI::Xaml::Media::Animation::IRepositionThemeTransitionStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2_FWD_DEFINED__
@@ -2587,11 +2601,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISineEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase ABI::Windows::UI::Xaml::Media::Animation::ISineEase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase_FWD_DEFINED__
@@ -2605,11 +2619,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISlideNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::ISlideNavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo_FWD_DEFINED__
@@ -2623,11 +2637,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISlideNavigationTransitionInfo2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 ABI::Windows::UI::Xaml::Media::Animation::ISlideNavigationTransitionInfo2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2_FWD_DEFINED__
@@ -2641,11 +2655,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISlideNavigationTransitionInfoStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 ABI::Windows::UI::Xaml::Media::Animation::ISlideNavigationTransitionInfoStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2_FWD_DEFINED__
@@ -2659,11 +2673,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplineColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame ABI::Windows::UI::Xaml::Media::Animation::ISplineColorKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame_FWD_DEFINED__
@@ -2677,11 +2691,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplineColorKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::ISplineColorKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics_FWD_DEFINED__
@@ -2695,11 +2709,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplineDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame ABI::Windows::UI::Xaml::Media::Animation::ISplineDoubleKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame_FWD_DEFINED__
@@ -2713,11 +2727,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplineDoubleKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::ISplineDoubleKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics_FWD_DEFINED__
@@ -2731,11 +2745,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplinePointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame ABI::Windows::UI::Xaml::Media::Animation::ISplinePointKeyFrame
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame_FWD_DEFINED__
@@ -2749,11 +2763,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplinePointKeyFrameStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics ABI::Windows::UI::Xaml::Media::Animation::ISplinePointKeyFrameStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics_FWD_DEFINED__
@@ -2767,11 +2781,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplitCloseThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::ISplitCloseThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation_FWD_DEFINED__
@@ -2785,11 +2799,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplitCloseThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::ISplitCloseThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics_FWD_DEFINED__
@@ -2803,11 +2817,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplitOpenThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::ISplitOpenThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation_FWD_DEFINED__
@@ -2821,11 +2835,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISplitOpenThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::ISplitOpenThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics_FWD_DEFINED__
@@ -2839,11 +2853,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IStoryboard;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard ABI::Windows::UI::Xaml::Media::Animation::IStoryboard
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard_FWD_DEFINED__
@@ -2857,11 +2871,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface IStoryboardStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics ABI::Windows::UI::Xaml::Media::Animation::IStoryboardStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics_FWD_DEFINED__
@@ -2875,11 +2889,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISuppressNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo ABI::Windows::UI::Xaml::Media::Animation::ISuppressNavigationTransitionInfo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo_FWD_DEFINED__
@@ -2893,11 +2907,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISwipeBackThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::ISwipeBackThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation_FWD_DEFINED__
@@ -2911,11 +2925,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISwipeBackThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::ISwipeBackThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics_FWD_DEFINED__
@@ -2929,11 +2943,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISwipeHintThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation ABI::Windows::UI::Xaml::Media::Animation::ISwipeHintThemeAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation_FWD_DEFINED__
@@ -2947,11 +2961,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ISwipeHintThemeAnimationStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics ABI::Windows::UI::Xaml::Media::Animation::ISwipeHintThemeAnimationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics_FWD_DEFINED__
@@ -2965,11 +2979,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ITimeline;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline ABI::Windows::UI::Xaml::Media::Animation::ITimeline
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline_FWD_DEFINED__
@@ -2983,11 +2997,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ITimelineFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory ABI::Windows::UI::Xaml::Media::Animation::ITimelineFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory_FWD_DEFINED__
@@ -3001,11 +3015,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ITimelineStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics ABI::Windows::UI::Xaml::Media::Animation::ITimelineStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics_FWD_DEFINED__
@@ -3019,11 +3033,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ITransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition ABI::Windows::UI::Xaml::Media::Animation::ITransition
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition_FWD_DEFINED__
@@ -3037,11 +3051,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         interface ITransitionFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory ABI::Windows::UI::Xaml::Media::Animation::ITransitionFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory_FWD_DEFINED__
@@ -3056,11 +3070,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3083,7 +3097,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::Animation::IColorKeyFrame*>
@@ -3115,7 +3129,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::Animation::IColorKeyFrame*>
@@ -3133,11 +3147,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3160,7 +3174,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::Animation::IDoubleKeyFrame*>
@@ -3192,7 +3206,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::Animation::IDoubleKeyFrame*>
@@ -3210,11 +3224,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ObjectKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3237,7 +3251,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::Animation::IObjectKeyFrame*>
@@ -3269,7 +3283,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::Animation::IObjectKeyFrame*>
@@ -3287,11 +3301,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3314,7 +3328,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::Animation::IPointKeyFrame*>
@@ -3346,7 +3360,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::Animation::IPointKeyFrame*>
@@ -3364,11 +3378,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class Timeline;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3391,7 +3405,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::Animation::ITimeline*>
@@ -3423,7 +3437,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::Animation::ITimeline*>
@@ -3441,11 +3455,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class Transition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3468,7 +3482,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3500,7 +3514,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3532,7 +3546,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::Animation::IColorKeyFrame*>
@@ -3564,7 +3578,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::Animation::IDoubleKeyFrame*>
@@ -3596,7 +3610,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::Animation::IObjectKeyFrame*>
@@ -3628,7 +3642,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::Animation::IPointKeyFrame*>
@@ -3660,7 +3674,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::Animation::ITimeline*>
@@ -3692,7 +3706,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3724,7 +3738,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> : IVector_impl
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Animation::ColorKeyFrame*> __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::Animation::IColorKeyFrame*>
@@ -3756,7 +3770,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame*> __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::Animation::IDoubleKeyFrame*>
@@ -3788,7 +3802,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame*> __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::Animation::IObjectKeyFrame*>
@@ -3820,7 +3834,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> : IVector_impl
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Animation::PointKeyFrame*> __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::Animation::IPointKeyFrame*>
@@ -3852,7 +3866,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> : IVector_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Animation::Timeline*> __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::Animation::ITimeline*>
@@ -3884,7 +3898,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Animation::Transition*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Animation::Transition*> __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::Animation::ITransition*>
@@ -3902,11 +3916,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ConnectedAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3930,7 +3944,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Animation::ConnectedAnimation*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Animation::ConnectedAnimation*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Media::Animation::IConnectedAnimation*,IInspectable*>
@@ -3946,8 +3960,8 @@ namespace ABI {
         namespace UI {
             struct Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CColor_USE
@@ -3968,7 +3982,7 @@ IReference<struct ABI::Windows::UI::Color> : IReference_impl<struct ABI::Windows
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::UI::Color> __FIReference_1_Windows__CUI__CColor_t;
 #define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CColor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::IReference<ABI::Windows::UI::Color>
@@ -3983,9 +3997,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -3994,9 +4008,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -4022,7 +4036,7 @@ IIterator<ABI::Windows::UI::Xaml::UIElement*> : IIterator_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::UIElement*> __FIIterator_1_Windows__CUI__CXaml__CUIElement_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CUIElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::IUIElement*>
@@ -4054,7 +4068,7 @@ IIterable<ABI::Windows::UI::Xaml::UIElement*> : IIterable_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::UIElement*> __FIIterable_1_Windows__CUI__CXaml__CUIElement_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CUIElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::IUIElement*>
@@ -4084,7 +4098,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -4099,8 +4113,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CPoint_USE
@@ -4121,7 +4135,7 @@ IReference<struct ABI::Windows::Foundation::Point> : IReference_impl<struct ABI:
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Point> __FIReference_1_Windows__CFoundation__CPoint_t;
 #define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Point>
@@ -4136,8 +4150,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -4158,7 +4172,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -4188,7 +4202,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -4206,8 +4220,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4215,8 +4229,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4227,8 +4241,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4237,9 +4251,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class CompositionEasingFunction;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction_FWD_DEFINED__
@@ -4248,9 +4262,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionEasingFunction;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction ABI::Windows::UI::Composition::ICompositionEasingFunction
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction_FWD_DEFINED__
@@ -4263,9 +4277,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionAnimationBase;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionAnimationBase ABI::Windows::UI::Composition::ICompositionAnimationBase
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionAnimationBase_FWD_DEFINED__
@@ -4280,10 +4294,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class ListViewBase;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase_FWD_DEFINED__
@@ -4293,10 +4307,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IListViewBase;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase ABI::Windows::UI::Xaml::Controls::IListViewBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase_FWD_DEFINED__
@@ -4315,11 +4329,11 @@ namespace ABI {
                         
                         typedef enum AnimationDirection : int AnimationDirection;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4330,11 +4344,11 @@ namespace ABI {
                         
                         typedef enum EdgeTransitionLocation : int EdgeTransitionLocation;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4346,9 +4360,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -4357,9 +4371,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyObject ABI::Windows::UI::Xaml::IDependencyObject
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -4370,9 +4384,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -4381,9 +4395,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -4396,9 +4410,9 @@ namespace ABI {
                 
                 typedef struct Duration Duration;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4413,11 +4427,11 @@ namespace ABI {
                         
                         typedef enum ClockState : int ClockState;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4428,11 +4442,11 @@ namespace ABI {
                         
                         typedef enum ConnectedAnimationComponent : int ConnectedAnimationComponent;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4443,11 +4457,11 @@ namespace ABI {
                         
                         typedef enum EasingMode : int EasingMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4458,11 +4472,11 @@ namespace ABI {
                         
                         typedef enum FillBehavior : int FillBehavior;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4473,11 +4487,11 @@ namespace ABI {
                         
                         typedef enum RepeatBehaviorType : int RepeatBehaviorType;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4488,11 +4502,11 @@ namespace ABI {
                         
                         typedef enum SlideNavigationTransitionEffect : int SlideNavigationTransitionEffect;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4503,11 +4517,11 @@ namespace ABI {
                         
                         typedef struct KeyTime KeyTime;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4518,11 +4532,12 @@ namespace ABI {
                         
                         typedef struct RepeatBehavior RepeatBehavior;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -4685,11 +4700,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class AddDeleteThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4699,11 +4714,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class BackEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4713,11 +4728,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class BasicConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4727,11 +4742,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class BeginStoryboard;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4741,11 +4756,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class BounceEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4755,11 +4770,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class CircleEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4769,11 +4784,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ColorAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4783,11 +4798,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ColorAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4798,11 +4813,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ColorKeyFrameCollection;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4812,11 +4827,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class CommonNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4827,11 +4842,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4841,11 +4856,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ConnectedAnimationService;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4855,11 +4870,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ContentThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4869,11 +4884,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ContinuumNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4883,11 +4898,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class CubicEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4897,11 +4912,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DirectConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4911,11 +4926,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DiscreteColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4925,11 +4940,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DiscreteDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4939,11 +4954,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DiscreteObjectKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4953,11 +4968,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DiscretePointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4967,11 +4982,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DoubleAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4981,11 +4996,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DoubleAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4996,11 +5011,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DoubleKeyFrameCollection;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5010,11 +5025,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DragItemThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5024,11 +5039,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DragOverThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5038,11 +5053,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DrillInNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5052,11 +5067,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DrillInThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5066,11 +5081,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DrillOutThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5080,11 +5095,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class DropTargetItemThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5094,11 +5109,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class EasingColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5108,11 +5123,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class EasingDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5122,11 +5137,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class EasingFunctionBase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5136,11 +5151,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class EasingPointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5150,11 +5165,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class EdgeUIThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5164,11 +5179,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ElasticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5178,11 +5193,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class EntranceNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5192,11 +5207,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class EntranceThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5206,11 +5221,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ExponentialEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5220,11 +5235,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class FadeInThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5234,11 +5249,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class FadeOutThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5248,11 +5263,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class GravityConnectedAnimationConfiguration;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5262,11 +5277,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class KeySpline;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5276,11 +5291,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class KeyTimeHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5290,11 +5305,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class LinearColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5304,11 +5319,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class LinearDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5318,11 +5333,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class LinearPointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5332,11 +5347,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class NavigationThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5346,11 +5361,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class NavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5360,11 +5375,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ObjectAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5375,11 +5390,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ObjectKeyFrameCollection;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5389,11 +5404,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PaneThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5403,11 +5418,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PointAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5417,11 +5432,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PointAnimationUsingKeyFrames;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5432,11 +5447,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PointKeyFrameCollection;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5446,11 +5461,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PointerDownThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5460,11 +5475,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PointerUpThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5474,11 +5489,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PopInThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5488,11 +5503,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PopOutThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5502,11 +5517,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PopupThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5516,11 +5531,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class PowerEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5530,11 +5545,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class QuadraticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5544,11 +5559,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class QuarticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5558,11 +5573,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class QuinticEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5572,11 +5587,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class ReorderThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5586,11 +5601,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class RepeatBehaviorHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5600,11 +5615,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class RepositionThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5614,11 +5629,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class RepositionThemeTransition;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5628,11 +5643,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SineEase;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5642,11 +5657,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SlideNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5656,11 +5671,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SplineColorKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5670,11 +5685,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SplineDoubleKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5684,11 +5699,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SplinePointKeyFrame;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5698,11 +5713,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SplitCloseThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5712,11 +5727,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SplitOpenThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5726,11 +5741,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class Storyboard;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5740,11 +5755,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SuppressNavigationTransitionInfo;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5754,11 +5769,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SwipeBackThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5768,11 +5783,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class SwipeHintThemeAnimation;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5783,11 +5798,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class TimelineCollection;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5798,11 +5813,11 @@ namespace ABI {
                 namespace Media {
                     namespace Animation {
                         class TransitionCollection;
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5841,11 +5856,11 @@ namespace ABI {
                             ClockState_Stopped = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5874,11 +5889,11 @@ namespace ABI {
                             ConnectedAnimationComponent_Scale = 3,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -5906,11 +5921,11 @@ namespace ABI {
                             EasingMode_EaseInOut = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5937,11 +5952,11 @@ namespace ABI {
                             FillBehavior_Stop = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5969,11 +5984,11 @@ namespace ABI {
                             RepeatBehaviorType_Forever = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6001,11 +6016,11 @@ namespace ABI {
                             SlideNavigationTransitionEffect_FromRight = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -6031,11 +6046,11 @@ namespace ABI {
                             ABI::Windows::Foundation::TimeSpan TimeSpan;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6063,11 +6078,11 @@ namespace ABI {
                             ABI::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType Type;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6102,11 +6117,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IAddDeleteThemeTransition=_uuidof(IAddDeleteThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition_INTERFACE_DEFINED__) */
@@ -6150,11 +6165,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBackEase=_uuidof(IBackEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase_INTERFACE_DEFINED__) */
@@ -6195,11 +6210,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBackEaseStatics=_uuidof(IBackEaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics_INTERFACE_DEFINED__) */
@@ -6237,11 +6252,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBasicConnectedAnimationConfiguration=_uuidof(IBasicConnectedAnimationConfiguration);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration_INTERFACE_DEFINED__) */
@@ -6284,11 +6299,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBasicConnectedAnimationConfigurationFactory=_uuidof(IBasicConnectedAnimationConfigurationFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory_INTERFACE_DEFINED__) */
@@ -6332,11 +6347,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBeginStoryboard=_uuidof(IBeginStoryboard);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard_INTERFACE_DEFINED__) */
@@ -6377,11 +6392,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBeginStoryboardStatics=_uuidof(IBeginStoryboardStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics_INTERFACE_DEFINED__) */
@@ -6431,11 +6446,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBounceEase=_uuidof(IBounceEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase_INTERFACE_DEFINED__) */
@@ -6479,11 +6494,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IBounceEaseStatics=_uuidof(IBounceEaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics_INTERFACE_DEFINED__) */
@@ -6521,11 +6536,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICircleEase=_uuidof(ICircleEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase_INTERFACE_DEFINED__) */
@@ -6583,21 +6598,21 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Media::Animation::IEasingFunctionBase * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnableDependentAnimation(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnableDependentAnimation(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IColorAnimation=_uuidof(IColorAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation_INTERFACE_DEFINED__) */
@@ -6650,11 +6665,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorAnimationStatics=_uuidof(IColorAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics_INTERFACE_DEFINED__) */
@@ -6691,21 +6706,21 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnableDependentAnimation(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnableDependentAnimation(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IColorAnimationUsingKeyFrames=_uuidof(IColorAnimationUsingKeyFrames);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames_INTERFACE_DEFINED__) */
@@ -6746,11 +6761,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorAnimationUsingKeyFramesStatics=_uuidof(IColorAnimationUsingKeyFramesStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics_INTERFACE_DEFINED__) */
@@ -6800,11 +6815,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorKeyFrame=_uuidof(IColorKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame_INTERFACE_DEFINED__) */
@@ -6847,11 +6862,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorKeyFrameFactory=_uuidof(IColorKeyFrameFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory_INTERFACE_DEFINED__) */
@@ -6895,11 +6910,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IColorKeyFrameStatics=_uuidof(IColorKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -6933,21 +6948,21 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStaggeringEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsStaggeringEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_ICommonNavigationTransitionInfo=_uuidof(ICommonNavigationTransitionInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo_INTERFACE_DEFINED__) */
@@ -6988,22 +7003,22 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetIsStaggerElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetIsStaggerElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_ICommonNavigationTransitionInfoStatics=_uuidof(ICommonNavigationTransitionInfoStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics_INTERFACE_DEFINED__) */
@@ -7045,7 +7060,7 @@ namespace ABI {
                                 ) = 0;
                             /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryStart(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * destination,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Cancel(void) = 0;
                             
@@ -7053,11 +7068,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IConnectedAnimation=_uuidof(IConnectedAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation_INTERFACE_DEFINED__) */
@@ -7091,15 +7106,15 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsScaleAnimationEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsScaleAnimationEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryStartWithCoordinatedElements(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * destination,
                                 /* [in] */__RPC__in_opt __FIIterable_1_Windows__CUI__CXaml__CUIElement * coordinatedElements,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetAnimationComponent(
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Animation::ConnectedAnimationComponent component,
@@ -7110,11 +7125,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IConnectedAnimation2=_uuidof(IConnectedAnimation2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2_INTERFACE_DEFINED__) */
@@ -7158,11 +7173,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IConnectedAnimation3=_uuidof(IConnectedAnimation3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3_INTERFACE_DEFINED__) */
@@ -7200,11 +7215,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IConnectedAnimationConfiguration=_uuidof(IConnectedAnimationConfiguration);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration_INTERFACE_DEFINED__) */
@@ -7242,11 +7257,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IConnectedAnimationConfigurationFactory=_uuidof(IConnectedAnimationConfigurationFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory_INTERFACE_DEFINED__) */
@@ -7305,11 +7320,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IConnectedAnimationService=_uuidof(IConnectedAnimationService);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService_INTERFACE_DEFINED__) */
@@ -7350,11 +7365,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IConnectedAnimationServiceStatics=_uuidof(IConnectedAnimationServiceStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics_INTERFACE_DEFINED__) */
@@ -7404,11 +7419,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IContentThemeTransition=_uuidof(IContentThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition_INTERFACE_DEFINED__) */
@@ -7452,11 +7467,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IContentThemeTransitionStatics=_uuidof(IContentThemeTransitionStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics_INTERFACE_DEFINED__) */
@@ -7500,11 +7515,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IContinuumNavigationTransitionInfo=_uuidof(IContinuumNavigationTransitionInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo_INTERFACE_DEFINED__) */
@@ -7545,44 +7560,44 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetIsEntranceElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetIsEntranceElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsExitElementProperty(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetIsExitElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetIsExitElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExitElementContainerProperty(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetExitElementContainer(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Controls::IListViewBase * element,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetExitElementContainer(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Controls::IListViewBase * element,
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IContinuumNavigationTransitionInfoStatics=_uuidof(IContinuumNavigationTransitionInfoStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics_INTERFACE_DEFINED__) */
@@ -7620,11 +7635,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICubicEase=_uuidof(ICubicEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase_INTERFACE_DEFINED__) */
@@ -7662,11 +7677,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDirectConnectedAnimationConfiguration=_uuidof(IDirectConnectedAnimationConfiguration);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration_INTERFACE_DEFINED__) */
@@ -7709,11 +7724,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDirectConnectedAnimationConfigurationFactory=_uuidof(IDirectConnectedAnimationConfigurationFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory_INTERFACE_DEFINED__) */
@@ -7751,11 +7766,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDiscreteColorKeyFrame=_uuidof(IDiscreteColorKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame_INTERFACE_DEFINED__) */
@@ -7793,11 +7808,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDiscreteDoubleKeyFrame=_uuidof(IDiscreteDoubleKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame_INTERFACE_DEFINED__) */
@@ -7835,11 +7850,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDiscreteObjectKeyFrame=_uuidof(IDiscreteObjectKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame_INTERFACE_DEFINED__) */
@@ -7877,11 +7892,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDiscretePointKeyFrame=_uuidof(IDiscretePointKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame_INTERFACE_DEFINED__) */
@@ -7939,21 +7954,21 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Media::Animation::IEasingFunctionBase * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnableDependentAnimation(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnableDependentAnimation(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IDoubleAnimation=_uuidof(IDoubleAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation_INTERFACE_DEFINED__) */
@@ -8006,11 +8021,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDoubleAnimationStatics=_uuidof(IDoubleAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics_INTERFACE_DEFINED__) */
@@ -8047,21 +8062,21 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnableDependentAnimation(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnableDependentAnimation(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IDoubleAnimationUsingKeyFrames=_uuidof(IDoubleAnimationUsingKeyFrames);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames_INTERFACE_DEFINED__) */
@@ -8102,11 +8117,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDoubleAnimationUsingKeyFramesStatics=_uuidof(IDoubleAnimationUsingKeyFramesStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics_INTERFACE_DEFINED__) */
@@ -8156,11 +8171,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDoubleKeyFrame=_uuidof(IDoubleKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame_INTERFACE_DEFINED__) */
@@ -8203,11 +8218,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDoubleKeyFrameFactory=_uuidof(IDoubleKeyFrameFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory_INTERFACE_DEFINED__) */
@@ -8251,11 +8266,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDoubleKeyFrameStatics=_uuidof(IDoubleKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -8299,11 +8314,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragItemThemeAnimation=_uuidof(IDragItemThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation_INTERFACE_DEFINED__) */
@@ -8344,11 +8359,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragItemThemeAnimationStatics=_uuidof(IDragItemThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -8404,11 +8419,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragOverThemeAnimation=_uuidof(IDragOverThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation_INTERFACE_DEFINED__) */
@@ -8455,11 +8470,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDragOverThemeAnimationStatics=_uuidof(IDragOverThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -8497,11 +8512,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDrillInNavigationTransitionInfo=_uuidof(IDrillInNavigationTransitionInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo_INTERFACE_DEFINED__) */
@@ -8563,11 +8578,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDrillInThemeAnimation=_uuidof(IDrillInThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation_INTERFACE_DEFINED__) */
@@ -8617,11 +8632,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDrillInThemeAnimationStatics=_uuidof(IDrillInThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -8683,11 +8698,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDrillOutThemeAnimation=_uuidof(IDrillOutThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation_INTERFACE_DEFINED__) */
@@ -8737,11 +8752,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDrillOutThemeAnimationStatics=_uuidof(IDrillOutThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -8785,11 +8800,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDropTargetItemThemeAnimation=_uuidof(IDropTargetItemThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation_INTERFACE_DEFINED__) */
@@ -8830,11 +8845,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IDropTargetItemThemeAnimationStatics=_uuidof(IDropTargetItemThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -8878,11 +8893,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingColorKeyFrame=_uuidof(IEasingColorKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame_INTERFACE_DEFINED__) */
@@ -8923,11 +8938,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingColorKeyFrameStatics=_uuidof(IEasingColorKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -8971,11 +8986,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingDoubleKeyFrame=_uuidof(IEasingDoubleKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame_INTERFACE_DEFINED__) */
@@ -9016,11 +9031,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingDoubleKeyFrameStatics=_uuidof(IEasingDoubleKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -9068,11 +9083,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingFunctionBase=_uuidof(IEasingFunctionBase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase_INTERFACE_DEFINED__) */
@@ -9110,11 +9125,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingFunctionBaseFactory=_uuidof(IEasingFunctionBaseFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory_INTERFACE_DEFINED__) */
@@ -9155,11 +9170,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingFunctionBaseStatics=_uuidof(IEasingFunctionBaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics_INTERFACE_DEFINED__) */
@@ -9203,11 +9218,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingPointKeyFrame=_uuidof(IEasingPointKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame_INTERFACE_DEFINED__) */
@@ -9248,11 +9263,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEasingPointKeyFrameStatics=_uuidof(IEasingPointKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -9296,11 +9311,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEdgeUIThemeTransition=_uuidof(IEdgeUIThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition_INTERFACE_DEFINED__) */
@@ -9341,11 +9356,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEdgeUIThemeTransitionStatics=_uuidof(IEdgeUIThemeTransitionStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics_INTERFACE_DEFINED__) */
@@ -9395,11 +9410,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IElasticEase=_uuidof(IElasticEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase_INTERFACE_DEFINED__) */
@@ -9443,11 +9458,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IElasticEaseStatics=_uuidof(IElasticEaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics_INTERFACE_DEFINED__) */
@@ -9485,11 +9500,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEntranceNavigationTransitionInfo=_uuidof(IEntranceNavigationTransitionInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo_INTERFACE_DEFINED__) */
@@ -9527,22 +9542,22 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetIsTargetElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetIsTargetElement(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IEntranceNavigationTransitionInfoStatics=_uuidof(IEntranceNavigationTransitionInfoStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics_INTERFACE_DEFINED__) */
@@ -9588,21 +9603,21 @@ namespace ABI {
                                 /* [in] */DOUBLE value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStaggeringEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsStaggeringEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IEntranceThemeTransition=_uuidof(IEntranceThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition_INTERFACE_DEFINED__) */
@@ -9649,11 +9664,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IEntranceThemeTransitionStatics=_uuidof(IEntranceThemeTransitionStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics_INTERFACE_DEFINED__) */
@@ -9697,11 +9712,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IExponentialEase=_uuidof(IExponentialEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase_INTERFACE_DEFINED__) */
@@ -9742,11 +9757,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IExponentialEaseStatics=_uuidof(IExponentialEaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics_INTERFACE_DEFINED__) */
@@ -9790,11 +9805,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFadeInThemeAnimation=_uuidof(IFadeInThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation_INTERFACE_DEFINED__) */
@@ -9835,11 +9850,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFadeInThemeAnimationStatics=_uuidof(IFadeInThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -9883,11 +9898,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFadeOutThemeAnimation=_uuidof(IFadeOutThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation_INTERFACE_DEFINED__) */
@@ -9928,11 +9943,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFadeOutThemeAnimationStatics=_uuidof(IFadeOutThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -9970,15 +9985,63 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGravityConnectedAnimationConfiguration=_uuidof(IGravityConnectedAnimationConfiguration);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration2[] = L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    namespace Animation {
+                        /* [object, uuid("62333ADD-AED4-5FED-95FF-D128ACCE8BE4"), exclusiveto, contract] */
+                        MIDL_INTERFACE("62333ADD-AED4-5FED-95FF-D128ACCE8BE4")
+                        IGravityConnectedAnimationConfiguration2 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsShadowEnabled(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsShadowEnabled(
+                                /* [in] */::boolean value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IGravityConnectedAnimationConfiguration2=_uuidof(IGravityConnectedAnimationConfiguration2);
+                        
+                    } /* Animation */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -10017,11 +10080,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IGravityConnectedAnimationConfigurationFactory=_uuidof(IGravityConnectedAnimationConfigurationFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory_INTERFACE_DEFINED__) */
@@ -10071,11 +10134,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IKeySpline=_uuidof(IKeySpline);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline_INTERFACE_DEFINED__) */
@@ -10113,11 +10176,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IKeyTimeHelper=_uuidof(IKeyTimeHelper);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper_INTERFACE_DEFINED__) */
@@ -10159,11 +10222,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IKeyTimeHelperStatics=_uuidof(IKeyTimeHelperStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics_INTERFACE_DEFINED__) */
@@ -10201,11 +10264,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILinearColorKeyFrame=_uuidof(ILinearColorKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame_INTERFACE_DEFINED__) */
@@ -10243,11 +10306,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILinearDoubleKeyFrame=_uuidof(ILinearDoubleKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame_INTERFACE_DEFINED__) */
@@ -10285,11 +10348,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILinearPointKeyFrame=_uuidof(ILinearPointKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame_INTERFACE_DEFINED__) */
@@ -10333,11 +10396,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationThemeTransition=_uuidof(INavigationThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition_INTERFACE_DEFINED__) */
@@ -10378,11 +10441,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationThemeTransitionStatics=_uuidof(INavigationThemeTransitionStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics_INTERFACE_DEFINED__) */
@@ -10420,11 +10483,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationTransitionInfo=_uuidof(INavigationTransitionInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo_INTERFACE_DEFINED__) */
@@ -10467,11 +10530,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationTransitionInfoFactory=_uuidof(INavigationTransitionInfoFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory_INTERFACE_DEFINED__) */
@@ -10515,11 +10578,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_INavigationTransitionInfoOverrides=_uuidof(INavigationTransitionInfoOverrides);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides_INTERFACE_DEFINED__) */
@@ -10556,21 +10619,21 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnableDependentAnimation(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnableDependentAnimation(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IObjectAnimationUsingKeyFrames=_uuidof(IObjectAnimationUsingKeyFrames);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames_INTERFACE_DEFINED__) */
@@ -10611,11 +10674,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IObjectAnimationUsingKeyFramesStatics=_uuidof(IObjectAnimationUsingKeyFramesStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics_INTERFACE_DEFINED__) */
@@ -10665,11 +10728,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IObjectKeyFrame=_uuidof(IObjectKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame_INTERFACE_DEFINED__) */
@@ -10712,11 +10775,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IObjectKeyFrameFactory=_uuidof(IObjectKeyFrameFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory_INTERFACE_DEFINED__) */
@@ -10760,11 +10823,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IObjectKeyFrameStatics=_uuidof(IObjectKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -10808,11 +10871,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPaneThemeTransition=_uuidof(IPaneThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition_INTERFACE_DEFINED__) */
@@ -10853,11 +10916,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPaneThemeTransitionStatics=_uuidof(IPaneThemeTransitionStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics_INTERFACE_DEFINED__) */
@@ -10915,21 +10978,21 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Media::Animation::IEasingFunctionBase * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnableDependentAnimation(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnableDependentAnimation(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IPointAnimation=_uuidof(IPointAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation_INTERFACE_DEFINED__) */
@@ -10982,11 +11045,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointAnimationStatics=_uuidof(IPointAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics_INTERFACE_DEFINED__) */
@@ -11023,21 +11086,21 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnableDependentAnimation(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnableDependentAnimation(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IPointAnimationUsingKeyFrames=_uuidof(IPointAnimationUsingKeyFrames);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames_INTERFACE_DEFINED__) */
@@ -11078,11 +11141,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointAnimationUsingKeyFramesStatics=_uuidof(IPointAnimationUsingKeyFramesStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics_INTERFACE_DEFINED__) */
@@ -11132,11 +11195,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointKeyFrame=_uuidof(IPointKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame_INTERFACE_DEFINED__) */
@@ -11179,11 +11242,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointKeyFrameFactory=_uuidof(IPointKeyFrameFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory_INTERFACE_DEFINED__) */
@@ -11227,11 +11290,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointKeyFrameStatics=_uuidof(IPointKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -11275,11 +11338,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointerDownThemeAnimation=_uuidof(IPointerDownThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation_INTERFACE_DEFINED__) */
@@ -11320,11 +11383,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointerDownThemeAnimationStatics=_uuidof(IPointerDownThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -11368,11 +11431,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointerUpThemeAnimation=_uuidof(IPointerUpThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation_INTERFACE_DEFINED__) */
@@ -11413,11 +11476,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPointerUpThemeAnimationStatics=_uuidof(IPointerUpThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -11473,11 +11536,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopInThemeAnimation=_uuidof(IPopInThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation_INTERFACE_DEFINED__) */
@@ -11524,11 +11587,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopInThemeAnimationStatics=_uuidof(IPopInThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -11572,11 +11635,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopOutThemeAnimation=_uuidof(IPopOutThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation_INTERFACE_DEFINED__) */
@@ -11617,11 +11680,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopOutThemeAnimationStatics=_uuidof(IPopOutThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -11671,11 +11734,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopupThemeTransition=_uuidof(IPopupThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition_INTERFACE_DEFINED__) */
@@ -11719,11 +11782,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPopupThemeTransitionStatics=_uuidof(IPopupThemeTransitionStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics_INTERFACE_DEFINED__) */
@@ -11767,11 +11830,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPowerEase=_uuidof(IPowerEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase_INTERFACE_DEFINED__) */
@@ -11812,11 +11875,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IPowerEaseStatics=_uuidof(IPowerEaseStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics_INTERFACE_DEFINED__) */
@@ -11854,11 +11917,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IQuadraticEase=_uuidof(IQuadraticEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase_INTERFACE_DEFINED__) */
@@ -11896,11 +11959,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IQuarticEase=_uuidof(IQuarticEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase_INTERFACE_DEFINED__) */
@@ -11938,11 +12001,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IQuinticEase=_uuidof(IQuinticEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase_INTERFACE_DEFINED__) */
@@ -11980,11 +12043,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IReorderThemeTransition=_uuidof(IReorderThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition_INTERFACE_DEFINED__) */
@@ -12022,11 +12085,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRepeatBehaviorHelper=_uuidof(IRepeatBehaviorHelper);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper_INTERFACE_DEFINED__) */
@@ -12072,27 +12135,27 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetHasCount(
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Animation::RepeatBehavior target,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetHasDuration(
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Animation::RepeatBehavior target,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE Equals(
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Animation::RepeatBehavior target,
                                 /* [in] */ABI::Windows::UI::Xaml::Media::Animation::RepeatBehavior value,
-                                /* [retval, out] */__RPC__out boolean * result
+                                /* [retval, out] */__RPC__out ::boolean * result
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IRepeatBehaviorHelperStatics=_uuidof(IRepeatBehaviorHelperStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics_INTERFACE_DEFINED__) */
@@ -12148,11 +12211,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRepositionThemeAnimation=_uuidof(IRepositionThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation_INTERFACE_DEFINED__) */
@@ -12199,11 +12262,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRepositionThemeAnimationStatics=_uuidof(IRepositionThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -12241,11 +12304,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRepositionThemeTransition=_uuidof(IRepositionThemeTransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition_INTERFACE_DEFINED__) */
@@ -12279,21 +12342,21 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStaggeringEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsStaggeringEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IRepositionThemeTransition2=_uuidof(IRepositionThemeTransition2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2_INTERFACE_DEFINED__) */
@@ -12334,11 +12397,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IRepositionThemeTransitionStatics2=_uuidof(IRepositionThemeTransitionStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2_INTERFACE_DEFINED__) */
@@ -12376,11 +12439,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISineEase=_uuidof(ISineEase);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase_INTERFACE_DEFINED__) */
@@ -12418,11 +12481,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISlideNavigationTransitionInfo=_uuidof(ISlideNavigationTransitionInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo_INTERFACE_DEFINED__) */
@@ -12466,11 +12529,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISlideNavigationTransitionInfo2=_uuidof(ISlideNavigationTransitionInfo2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2_INTERFACE_DEFINED__) */
@@ -12511,11 +12574,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISlideNavigationTransitionInfoStatics2=_uuidof(ISlideNavigationTransitionInfoStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2_INTERFACE_DEFINED__) */
@@ -12559,11 +12622,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplineColorKeyFrame=_uuidof(ISplineColorKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame_INTERFACE_DEFINED__) */
@@ -12604,11 +12667,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplineColorKeyFrameStatics=_uuidof(ISplineColorKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -12652,11 +12715,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplineDoubleKeyFrame=_uuidof(ISplineDoubleKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame_INTERFACE_DEFINED__) */
@@ -12697,11 +12760,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplineDoubleKeyFrameStatics=_uuidof(ISplineDoubleKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -12745,11 +12808,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplinePointKeyFrame=_uuidof(ISplinePointKeyFrame);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame_INTERFACE_DEFINED__) */
@@ -12790,11 +12853,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplinePointKeyFrameStatics=_uuidof(ISplinePointKeyFrameStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics_INTERFACE_DEFINED__) */
@@ -12898,11 +12961,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplitCloseThemeAnimation=_uuidof(ISplitCloseThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation_INTERFACE_DEFINED__) */
@@ -12973,11 +13036,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplitCloseThemeAnimationStatics=_uuidof(ISplitCloseThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -13081,11 +13144,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplitOpenThemeAnimation=_uuidof(ISplitOpenThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation_INTERFACE_DEFINED__) */
@@ -13156,11 +13219,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISplitOpenThemeAnimationStatics=_uuidof(ISplitOpenThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -13218,11 +13281,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IStoryboard=_uuidof(IStoryboard);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard_INTERFACE_DEFINED__) */
@@ -13286,11 +13349,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IStoryboardStatics=_uuidof(IStoryboardStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics_INTERFACE_DEFINED__) */
@@ -13328,11 +13391,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISuppressNavigationTransitionInfo=_uuidof(ISuppressNavigationTransitionInfo);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo_INTERFACE_DEFINED__) */
@@ -13388,11 +13451,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISwipeBackThemeAnimation=_uuidof(ISwipeBackThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation_INTERFACE_DEFINED__) */
@@ -13439,11 +13502,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISwipeBackThemeAnimationStatics=_uuidof(ISwipeBackThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -13499,11 +13562,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISwipeHintThemeAnimation=_uuidof(ISwipeHintThemeAnimation);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation_INTERFACE_DEFINED__) */
@@ -13550,11 +13613,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISwipeHintThemeAnimationStatics=_uuidof(ISwipeHintThemeAnimationStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics_INTERFACE_DEFINED__) */
@@ -13588,10 +13651,10 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoReverse(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoReverse(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BeginTime(
                                 /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CTimeSpan * * value
@@ -13635,11 +13698,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITimeline=_uuidof(ITimeline);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline_INTERFACE_DEFINED__) */
@@ -13682,11 +13745,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITimelineFactory=_uuidof(ITimelineFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory_INTERFACE_DEFINED__) */
@@ -13720,10 +13783,10 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowDependentAnimations(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowDependentAnimations(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoReverseProperty(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
@@ -13748,11 +13811,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITimelineStatics=_uuidof(ITimelineStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics_INTERFACE_DEFINED__) */
@@ -13790,11 +13853,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITransition=_uuidof(ITransition);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition_INTERFACE_DEFINED__) */
@@ -13832,11 +13895,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ITransitionFactory=_uuidof(ITransitionFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Animation */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Animation */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory_INTERFACE_DEFINED__) */
@@ -15078,6 +15141,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration ** Default Interface **
+ *    Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -16800,6 +16864,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAni
 typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory_FWD_DEFINED__
@@ -19771,7 +19841,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectableVtbl;
 
@@ -20341,6 +20411,7 @@ typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime __x_ABI_CWi
 
 
 typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior;
+
 
 
 
@@ -28894,6 +28965,106 @@ interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimati
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration2[] = L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2";
+/* [object, uuid("62333ADD-AED4-5FED-95FF-D128ACCE8BE4"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsShadowEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_IsShadowEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+        /* [in] */boolean value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_get_IsShadowEnabled(This,value) \
+    ( (This)->lpVtbl->get_IsShadowEnabled(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_put_IsShadowEnabled(This,value) \
+    ( (This)->lpVtbl->put_IsShadowEnabled(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -38230,6 +38401,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration ** Default Interface **
+ *    Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

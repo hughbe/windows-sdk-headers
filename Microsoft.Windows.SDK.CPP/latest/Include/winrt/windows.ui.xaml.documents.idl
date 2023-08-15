@@ -165,6 +165,8 @@ namespace Windows
             typedef struct Thickness Thickness;
 
             runtimeclass UIElement;
+
+            runtimeclass XamlRoot;
         }
     }
 }
@@ -269,6 +271,8 @@ namespace Windows
                 interface ITextElement3;
 
                 interface ITextElement4;
+
+                interface ITextElement5;
 
                 interface ITextElementFactory;
 
@@ -967,6 +971,15 @@ namespace Windows
                     [eventremove] HRESULT AccessKeyInvoked([in] EventRegistrationToken token);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Documents.TextElement)]
+                [uuid(BD9552F3-540D-58BF-B6A8-07556AEDA2EA)]
+                interface ITextElement5 : IInspectable
+                {
+                    [propget] HRESULT XamlRoot([out] [retval] Windows.UI.Xaml.XamlRoot** value);
+                    [propput] HRESULT XamlRoot([in] Windows.UI.Xaml.XamlRoot* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Xaml.Documents.TextElement)]
                 [uuid(35007285-CF47-4BFE-B1BC-39C93AF4AE80)]
@@ -1443,6 +1456,7 @@ namespace Windows
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.Xaml.Documents.ITextElement2;
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Xaml.Documents.ITextElement3;
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Xaml.Documents.ITextElement4;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Documents.ITextElement5;
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)] [overridable] interface Windows.UI.Xaml.Documents.ITextElementOverrides;
                 }
 

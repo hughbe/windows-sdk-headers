@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.userdataaccounts.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     interface IUserDataAccountPartnerAccountInfo;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountPartnerAccountInfo ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountPartnerAccountInfo_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     interface IUserDataAccountProviderAddAccountOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderAddAccountOperation ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderAddAccountOperation_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     interface IUserDataAccountProviderOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderOperation ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderOperation_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     interface IUserDataAccountProviderResolveErrorsOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderResolveErrorsOperation ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderResolveErrorsOperation_FWD_DEFINED__
@@ -342,10 +338,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     interface IUserDataAccountProviderSettingsOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderSettingsOperation ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderSettingsOperation_FWD_DEFINED__
@@ -359,10 +355,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     class UserDataAccountPartnerAccountInfo;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -385,7 +381,7 @@ IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAc
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo*> __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo*>
@@ -417,7 +413,7 @@ IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAc
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo*> __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo*>
@@ -449,7 +445,7 @@ IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::UserData
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo*> __FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CProvider__CUserDataAccountPartnerAccountInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo*>
@@ -469,9 +465,9 @@ namespace ABI {
                 
                 typedef enum UserDataAccountContentKinds : unsigned int UserDataAccountContentKinds;
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -487,10 +483,10 @@ namespace ABI {
                     
                     typedef enum UserDataAccountProviderOperationKind : int UserDataAccountProviderOperationKind;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -500,10 +496,10 @@ namespace ABI {
                     
                     typedef enum UserDataAccountProviderPartnerAccountKind : int UserDataAccountProviderPartnerAccountKind;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -517,10 +513,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     class UserDataAccountProviderAddAccountOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -529,10 +525,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     class UserDataAccountProviderResolveErrorsOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -541,10 +537,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace Provider {
                     class UserDataAccountProviderSettingsOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -580,10 +576,10 @@ namespace ABI {
                         UserDataAccountProviderOperationKind_ResolveErrors = 2,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -609,10 +605,10 @@ namespace ABI {
                         UserDataAccountProviderPartnerAccountKind_PopOrImap = 1,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -655,10 +651,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserDataAccountPartnerAccountInfo=_uuidof(IUserDataAccountPartnerAccountInfo);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountPartnerAccountInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountPartnerAccountInfo_INTERFACE_DEFINED__) */
@@ -708,10 +704,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserDataAccountProviderAddAccountOperation=_uuidof(IUserDataAccountProviderAddAccountOperation);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderAddAccountOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderAddAccountOperation_INTERFACE_DEFINED__) */
@@ -748,10 +744,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserDataAccountProviderOperation=_uuidof(IUserDataAccountProviderOperation);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderOperation_INTERFACE_DEFINED__) */
@@ -796,10 +792,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserDataAccountProviderResolveErrorsOperation=_uuidof(IUserDataAccountProviderResolveErrorsOperation);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderResolveErrorsOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderResolveErrorsOperation_INTERFACE_DEFINED__) */
@@ -844,10 +840,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserDataAccountProviderSettingsOperation=_uuidof(IUserDataAccountProviderSettingsOperation);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderSettingsOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CProvider_CIUserDataAccountProviderSettingsOperation_INTERFACE_DEFINED__) */

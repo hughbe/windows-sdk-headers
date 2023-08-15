@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.documents.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,10 +279,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IBlock;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock ABI::Windows::UI::Xaml::Documents::IBlock
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock_FWD_DEFINED__
@@ -299,10 +295,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IBlock2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock2 ABI::Windows::UI::Xaml::Documents::IBlock2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock2_FWD_DEFINED__
@@ -315,10 +311,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IBlockFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockFactory ABI::Windows::UI::Xaml::Documents::IBlockFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockFactory_FWD_DEFINED__
@@ -331,10 +327,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IBlockStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics ABI::Windows::UI::Xaml::Documents::IBlockStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics_FWD_DEFINED__
@@ -347,10 +343,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IBlockStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics2 ABI::Windows::UI::Xaml::Documents::IBlockStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics2_FWD_DEFINED__
@@ -363,10 +359,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IBold;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIBold ABI::Windows::UI::Xaml::Documents::IBold
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBold_FWD_DEFINED__
@@ -379,10 +375,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IContactContentLinkProvider;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContactContentLinkProvider ABI::Windows::UI::Xaml::Documents::IContactContentLinkProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContactContentLinkProvider_FWD_DEFINED__
@@ -395,10 +391,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IContentLink;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLink ABI::Windows::UI::Xaml::Documents::IContentLink
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLink_FWD_DEFINED__
@@ -411,10 +407,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IContentLinkInvokedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs ABI::Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs_FWD_DEFINED__
@@ -427,10 +423,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IContentLinkProvider;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProvider ABI::Windows::UI::Xaml::Documents::IContentLinkProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProvider_FWD_DEFINED__
@@ -443,10 +439,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IContentLinkProviderCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderCollection ABI::Windows::UI::Xaml::Documents::IContentLinkProviderCollection
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderCollection_FWD_DEFINED__
@@ -459,10 +455,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IContentLinkProviderFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderFactory ABI::Windows::UI::Xaml::Documents::IContentLinkProviderFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderFactory_FWD_DEFINED__
@@ -475,10 +471,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IContentLinkStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkStatics ABI::Windows::UI::Xaml::Documents::IContentLinkStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkStatics_FWD_DEFINED__
@@ -491,10 +487,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IGlyphs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs ABI::Windows::UI::Xaml::Documents::IGlyphs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs_FWD_DEFINED__
@@ -507,10 +503,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IGlyphs2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs2 ABI::Windows::UI::Xaml::Documents::IGlyphs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs2_FWD_DEFINED__
@@ -523,10 +519,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IGlyphsStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics ABI::Windows::UI::Xaml::Documents::IGlyphsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics_FWD_DEFINED__
@@ -539,10 +535,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IGlyphsStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics2 ABI::Windows::UI::Xaml::Documents::IGlyphsStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics2_FWD_DEFINED__
@@ -555,10 +551,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlink;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink ABI::Windows::UI::Xaml::Documents::IHyperlink
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink_FWD_DEFINED__
@@ -571,10 +567,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlink2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink2 ABI::Windows::UI::Xaml::Documents::IHyperlink2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink2_FWD_DEFINED__
@@ -587,10 +583,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlink3;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink3 ABI::Windows::UI::Xaml::Documents::IHyperlink3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink3_FWD_DEFINED__
@@ -603,10 +599,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlink4;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink4 ABI::Windows::UI::Xaml::Documents::IHyperlink4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink4_FWD_DEFINED__
@@ -619,10 +615,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlink5;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink5 ABI::Windows::UI::Xaml::Documents::IHyperlink5
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink5_FWD_DEFINED__
@@ -635,10 +631,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlinkClickEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkClickEventArgs ABI::Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkClickEventArgs_FWD_DEFINED__
@@ -651,10 +647,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlinkStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics ABI::Windows::UI::Xaml::Documents::IHyperlinkStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics_FWD_DEFINED__
@@ -667,10 +663,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlinkStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics2 ABI::Windows::UI::Xaml::Documents::IHyperlinkStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics2_FWD_DEFINED__
@@ -683,10 +679,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlinkStatics3;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics3 ABI::Windows::UI::Xaml::Documents::IHyperlinkStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics3_FWD_DEFINED__
@@ -699,10 +695,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlinkStatics4;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics4 ABI::Windows::UI::Xaml::Documents::IHyperlinkStatics4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics4_FWD_DEFINED__
@@ -715,10 +711,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IHyperlinkStatics5;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics5 ABI::Windows::UI::Xaml::Documents::IHyperlinkStatics5
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics5_FWD_DEFINED__
@@ -731,10 +727,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IInline;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIInline ABI::Windows::UI::Xaml::Documents::IInline
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIInline_FWD_DEFINED__
@@ -747,10 +743,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IInlineFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineFactory ABI::Windows::UI::Xaml::Documents::IInlineFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineFactory_FWD_DEFINED__
@@ -763,10 +759,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IInlineUIContainer;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineUIContainer ABI::Windows::UI::Xaml::Documents::IInlineUIContainer
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineUIContainer_FWD_DEFINED__
@@ -779,10 +775,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IItalic;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIItalic ABI::Windows::UI::Xaml::Documents::IItalic
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIItalic_FWD_DEFINED__
@@ -795,10 +791,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ILineBreak;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CILineBreak ABI::Windows::UI::Xaml::Documents::ILineBreak
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CILineBreak_FWD_DEFINED__
@@ -811,10 +807,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IParagraph;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraph ABI::Windows::UI::Xaml::Documents::IParagraph
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraph_FWD_DEFINED__
@@ -827,10 +823,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IParagraphStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraphStatics ABI::Windows::UI::Xaml::Documents::IParagraphStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraphStatics_FWD_DEFINED__
@@ -843,10 +839,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IPlaceContentLinkProvider;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIPlaceContentLinkProvider ABI::Windows::UI::Xaml::Documents::IPlaceContentLinkProvider
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIPlaceContentLinkProvider_FWD_DEFINED__
@@ -859,10 +855,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IRun;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIRun ABI::Windows::UI::Xaml::Documents::IRun
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIRun_FWD_DEFINED__
@@ -875,10 +871,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IRunStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIRunStatics ABI::Windows::UI::Xaml::Documents::IRunStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIRunStatics_FWD_DEFINED__
@@ -891,10 +887,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ISpan;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CISpan ABI::Windows::UI::Xaml::Documents::ISpan
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CISpan_FWD_DEFINED__
@@ -907,10 +903,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ISpanFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CISpanFactory ABI::Windows::UI::Xaml::Documents::ISpanFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CISpanFactory_FWD_DEFINED__
@@ -923,10 +919,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElement;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement ABI::Windows::UI::Xaml::Documents::ITextElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement_FWD_DEFINED__
@@ -939,10 +935,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElement2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement2 ABI::Windows::UI::Xaml::Documents::ITextElement2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement2_FWD_DEFINED__
@@ -955,10 +951,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElement3;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement3 ABI::Windows::UI::Xaml::Documents::ITextElement3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement3_FWD_DEFINED__
@@ -971,13 +967,29 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElement4;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4 ABI::Windows::UI::Xaml::Documents::ITextElement4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Documents {
+                    interface ITextElement5;
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 ABI::Windows::UI::Xaml::Documents::ITextElement5
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory_FWD_DEFINED__
@@ -987,10 +999,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElementFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory ABI::Windows::UI::Xaml::Documents::ITextElementFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory_FWD_DEFINED__
@@ -1003,10 +1015,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElementOverrides;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementOverrides ABI::Windows::UI::Xaml::Documents::ITextElementOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementOverrides_FWD_DEFINED__
@@ -1019,10 +1031,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElementStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics ABI::Windows::UI::Xaml::Documents::ITextElementStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics_FWD_DEFINED__
@@ -1035,10 +1047,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElementStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics2 ABI::Windows::UI::Xaml::Documents::ITextElementStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics2_FWD_DEFINED__
@@ -1051,10 +1063,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElementStatics3;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics3 ABI::Windows::UI::Xaml::Documents::ITextElementStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics3_FWD_DEFINED__
@@ -1067,10 +1079,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextElementStatics4;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics4 ABI::Windows::UI::Xaml::Documents::ITextElementStatics4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics4_FWD_DEFINED__
@@ -1083,10 +1095,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextHighlighter;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighter ABI::Windows::UI::Xaml::Documents::ITextHighlighter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighter_FWD_DEFINED__
@@ -1099,10 +1111,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextHighlighterBase;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBase ABI::Windows::UI::Xaml::Documents::ITextHighlighterBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBase_FWD_DEFINED__
@@ -1115,10 +1127,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextHighlighterBaseFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBaseFactory ABI::Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBaseFactory_FWD_DEFINED__
@@ -1131,10 +1143,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextHighlighterFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterFactory ABI::Windows::UI::Xaml::Documents::ITextHighlighterFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterFactory_FWD_DEFINED__
@@ -1147,10 +1159,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextHighlighterStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterStatics ABI::Windows::UI::Xaml::Documents::ITextHighlighterStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterStatics_FWD_DEFINED__
@@ -1163,10 +1175,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITextPointer;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextPointer ABI::Windows::UI::Xaml::Documents::ITextPointer
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextPointer_FWD_DEFINED__
@@ -1179,10 +1191,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITypography;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITypography ABI::Windows::UI::Xaml::Documents::ITypography
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITypography_FWD_DEFINED__
@@ -1195,10 +1207,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface ITypographyStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITypographyStatics ABI::Windows::UI::Xaml::Documents::ITypographyStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITypographyStatics_FWD_DEFINED__
@@ -1211,10 +1223,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     interface IUnderline;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CDocuments_CIUnderline ABI::Windows::UI::Xaml::Documents::IUnderline
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CIUnderline_FWD_DEFINED__
@@ -1228,10 +1240,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Block;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1254,7 +1266,7 @@ IIterator<ABI::Windows::UI::Xaml::Documents::Block*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Documents::Block*> __FIIterator_1_Windows__CUI__CXaml__CDocuments__CBlock_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CDocuments__CBlock_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Documents::IBlock*>
@@ -1286,7 +1298,7 @@ IIterable<ABI::Windows::UI::Xaml::Documents::Block*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Documents::Block*> __FIIterable_1_Windows__CUI__CXaml__CDocuments__CBlock_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CDocuments__CBlock_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Documents::IBlock*>
@@ -1303,10 +1315,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class ContentLinkProvider;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1329,7 +1341,7 @@ IIterator<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> __FIIterator_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Documents::IContentLinkProvider*>
@@ -1361,7 +1373,7 @@ IIterable<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> __FIIterable_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Documents::IContentLinkProvider*>
@@ -1378,10 +1390,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Inline;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1404,7 +1416,7 @@ IIterator<ABI::Windows::UI::Xaml::Documents::Inline*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Documents::Inline*> __FIIterator_1_Windows__CUI__CXaml__CDocuments__CInline_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CDocuments__CInline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Documents::IInline*>
@@ -1436,7 +1448,7 @@ IIterable<ABI::Windows::UI::Xaml::Documents::Inline*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Documents::Inline*> __FIIterable_1_Windows__CUI__CXaml__CDocuments__CInline_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CDocuments__CInline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Documents::IInline*>
@@ -1453,10 +1465,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class TextHighlighter;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1479,7 +1491,7 @@ IIterator<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> __FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Documents::ITextHighlighter*>
@@ -1511,7 +1523,7 @@ IIterable<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> __FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Documents::ITextHighlighter*>
@@ -1529,10 +1541,10 @@ namespace ABI {
                 namespace Documents {
                     struct TextRange;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextRange_USE
@@ -1553,7 +1565,7 @@ IIterator<struct ABI::Windows::UI::Xaml::Documents::TextRange> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::UI::Xaml::Documents::TextRange> __FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextRange_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Documents::TextRange>
@@ -1583,7 +1595,7 @@ IIterable<struct ABI::Windows::UI::Xaml::Documents::TextRange> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::UI::Xaml::Documents::TextRange> __FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextRange_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Documents::TextRange>
@@ -1614,7 +1626,7 @@ IVectorView<ABI::Windows::UI::Xaml::Documents::Block*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Documents::Block*> __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CBlock_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CDocuments__CBlock_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Documents::IBlock*>
@@ -1646,7 +1658,7 @@ IVectorView<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Documents::IContentLinkProvider*>
@@ -1678,7 +1690,7 @@ IVectorView<ABI::Windows::UI::Xaml::Documents::Inline*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Documents::Inline*> __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CInline_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CDocuments__CInline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Documents::IInline*>
@@ -1710,7 +1722,7 @@ IVectorView<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Documents::ITextHighlighter*>
@@ -1741,7 +1753,7 @@ IVectorView<struct ABI::Windows::UI::Xaml::Documents::TextRange> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::UI::Xaml::Documents::TextRange> __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextRange_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Documents::TextRange>
@@ -1772,7 +1784,7 @@ IVector<ABI::Windows::UI::Xaml::Documents::Block*> : IVector_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Documents::Block*> __FIVector_1_Windows__CUI__CXaml__CDocuments__CBlock_t;
 #define __FIVector_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CDocuments__CBlock_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CDocuments__CBlock ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Documents::IBlock*>
@@ -1804,7 +1816,7 @@ IVector<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> : IVector_impl<
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Documents::ContentLinkProvider*> __FIVector_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t;
 #define __FIVector_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CDocuments__CContentLinkProvider ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Documents::IContentLinkProvider*>
@@ -1836,7 +1848,7 @@ IVector<ABI::Windows::UI::Xaml::Documents::Inline*> : IVector_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Documents::Inline*> __FIVector_1_Windows__CUI__CXaml__CDocuments__CInline_t;
 #define __FIVector_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CDocuments__CInline_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CDocuments__CInline ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Documents::IInline*>
@@ -1868,7 +1880,7 @@ IVector<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> : IVector_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Documents::TextHighlighter*> __FIVector_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t;
 #define __FIVector_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CDocuments__CTextHighlighter ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Documents::ITextHighlighter*>
@@ -1899,7 +1911,7 @@ IVector<struct ABI::Windows::UI::Xaml::Documents::TextRange> : IVector_impl<stru
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::UI::Xaml::Documents::TextRange> __FIVector_1_Windows__CUI__CXaml__CDocuments__CTextRange_t;
 #define __FIVector_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CDocuments__CTextRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CDocuments__CTextRange ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Documents::TextRange>
@@ -1915,10 +1927,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class RichEditBox;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIRichEditBox_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIRichEditBox_FWD_DEFINED__
@@ -1928,10 +1940,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IRichEditBox;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIRichEditBox ABI::Windows::UI::Xaml::Controls::IRichEditBox
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIRichEditBox_FWD_DEFINED__
@@ -1943,10 +1955,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class ContentLinkInvokedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1970,7 +1982,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::RichEditBox*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::RichEditBox*,ABI::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::IRichEditBox*,ABI::Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs*>
@@ -1988,10 +2000,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class ContentLink;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2016,7 +2028,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::ContentLink*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::ContentLink*,ABI::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::IContentLink*,ABI::Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs*>
@@ -2034,10 +2046,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Hyperlink;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2046,10 +2058,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class HyperlinkClickEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2073,7 +2085,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::Hyperlink*,ABI::Windows::U
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::Hyperlink*,ABI::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::IHyperlink*,ABI::Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs*>
@@ -2091,10 +2103,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class TextElement;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2103,10 +2115,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     class AccessKeyDisplayRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs_FWD_DEFINED__
@@ -2116,10 +2128,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     interface IAccessKeyDisplayRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs ABI::Windows::UI::Xaml::Input::IAccessKeyDisplayRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs_FWD_DEFINED__
@@ -2146,7 +2158,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::TextElement*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::TextElement*,ABI::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::ITextElement*,ABI::Windows::UI::Xaml::Input::IAccessKeyDisplayRequestedEventArgs*>
@@ -2165,10 +2177,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     class AccessKeyDisplayDismissedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs_FWD_DEFINED__
@@ -2178,10 +2190,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     interface IAccessKeyDisplayDismissedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs ABI::Windows::UI::Xaml::Input::IAccessKeyDisplayDismissedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs_FWD_DEFINED__
@@ -2208,7 +2220,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::TextElement*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::TextElement*,ABI::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::ITextElement*,ABI::Windows::UI::Xaml::Input::IAccessKeyDisplayDismissedEventArgs*>
@@ -2227,10 +2239,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     class AccessKeyInvokedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs_FWD_DEFINED__
@@ -2240,10 +2252,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Input {
                     interface IAccessKeyInvokedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs ABI::Windows::UI::Xaml::Input::IAccessKeyInvokedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs_FWD_DEFINED__
@@ -2270,7 +2282,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::TextElement*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::TextElement*,ABI::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Documents::ITextElement*,ABI::Windows::UI::Xaml::Input::IAccessKeyInvokedEventArgs*>
@@ -2290,16 +2302,16 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2307,8 +2319,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2323,9 +2335,9 @@ namespace ABI {
                 
                 typedef enum CoreCursorType : int CoreCursorType;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2335,9 +2347,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 class ContentLinkInfo;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CText_CIContentLinkInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CText_CIContentLinkInfo_FWD_DEFINED__
@@ -2346,9 +2358,9 @@ namespace ABI {
         namespace UI {
             namespace Text {
                 interface IContentLinkInfo;
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CText_CIContentLinkInfo ABI::Windows::UI::Text::IContentLinkInfo
 
 #endif // ____x_ABI_CWindows_CUI_CText_CIContentLinkInfo_FWD_DEFINED__
@@ -2361,9 +2373,9 @@ namespace ABI {
                 
                 typedef enum FontStretch : int FontStretch;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2372,9 +2384,9 @@ namespace ABI {
                 
                 typedef enum FontStyle : int FontStyle;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2383,9 +2395,9 @@ namespace ABI {
                 
                 typedef struct FontWeight FontWeight;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2394,9 +2406,9 @@ namespace ABI {
                 
                 typedef enum TextDecorations : unsigned int TextDecorations;
                 
-            } /* Windows */
+            } /* Text */
         } /* UI */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2411,9 +2423,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -2422,9 +2434,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyObject ABI::Windows::UI::Xaml::IDependencyObject
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -2435,9 +2447,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -2446,9 +2458,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -2461,9 +2473,9 @@ namespace ABI {
                 
                 typedef enum ElementSoundMode : int ElementSoundMode;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2472,9 +2484,9 @@ namespace ABI {
                 
                 typedef enum FlowDirection : int FlowDirection;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2483,9 +2495,9 @@ namespace ABI {
                 
                 typedef enum FocusState : int FocusState;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2494,9 +2506,9 @@ namespace ABI {
                 
                 typedef enum FontCapitals : int FontCapitals;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2505,9 +2517,9 @@ namespace ABI {
                 
                 typedef enum FontEastAsianLanguage : int FontEastAsianLanguage;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2516,9 +2528,9 @@ namespace ABI {
                 
                 typedef enum FontEastAsianWidths : int FontEastAsianWidths;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2527,9 +2539,9 @@ namespace ABI {
                 
                 typedef enum FontFraction : int FontFraction;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2538,9 +2550,9 @@ namespace ABI {
                 
                 typedef enum FontNumeralAlignment : int FontNumeralAlignment;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2549,9 +2561,9 @@ namespace ABI {
                 
                 typedef enum FontNumeralStyle : int FontNumeralStyle;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2560,18 +2572,18 @@ namespace ABI {
                 
                 typedef enum FontVariants : int FontVariants;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 class FrameworkElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
@@ -2580,9 +2592,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IFrameworkElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIFrameworkElement ABI::Windows::UI::Xaml::IFrameworkElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
@@ -2602,10 +2614,10 @@ namespace ABI {
                     
                     typedef enum KeyTipPlacementMode : int KeyTipPlacementMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2615,10 +2627,10 @@ namespace ABI {
                     
                     typedef enum XYFocusNavigationStrategy : int XYFocusNavigationStrategy;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Input */} /* ABI */
+                } /* Input */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2631,9 +2643,9 @@ namespace ABI {
                 
                 typedef enum LineStackingStrategy : int LineStackingStrategy;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2644,10 +2656,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class Brush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_FWD_DEFINED__
@@ -2657,10 +2669,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush ABI::Windows::UI::Xaml::Media::IBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_FWD_DEFINED__
@@ -2672,10 +2684,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class FontFamily;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily_FWD_DEFINED__
@@ -2685,10 +2697,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IFontFamily;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily ABI::Windows::UI::Xaml::Media::IFontFamily
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily_FWD_DEFINED__
@@ -2702,10 +2714,10 @@ namespace ABI {
                     
                     typedef enum StyleSimulations : int StyleSimulations;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2718,9 +2730,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IRoutedEventHandler;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler ABI::Windows::UI::Xaml::IRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler_FWD_DEFINED__
@@ -2733,9 +2745,9 @@ namespace ABI {
                 
                 typedef enum TextAlignment : int TextAlignment;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2744,18 +2756,18 @@ namespace ABI {
                 
                 typedef struct Thickness Thickness;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -2764,12 +2776,36 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                class XamlRoot;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                interface IXamlRoot;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CIXamlRoot ABI::Windows::UI::Xaml::IXamlRoot
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
 
 
 
@@ -2783,10 +2819,10 @@ namespace ABI {
                     
                     typedef enum LogicalDirection : int LogicalDirection;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2796,10 +2832,10 @@ namespace ABI {
                     
                     typedef enum UnderlineStyle : int UnderlineStyle;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2809,10 +2845,11 @@ namespace ABI {
                     
                     typedef struct TextRange TextRange;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -2880,10 +2917,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class BlockCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2892,10 +2929,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Bold;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2904,10 +2941,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class ContactContentLinkProvider;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2919,10 +2956,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class ContentLinkProviderCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2931,10 +2968,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Glyphs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2946,10 +2983,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class InlineCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2958,10 +2995,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class InlineUIContainer;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2970,10 +3007,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Italic;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2982,10 +3019,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class LineBreak;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2994,10 +3031,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Paragraph;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3006,10 +3043,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class PlaceContentLinkProvider;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3018,10 +3055,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Run;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3030,10 +3067,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Span;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3044,10 +3081,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class TextHighlighterBase;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3056,10 +3093,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class TextPointer;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3068,10 +3105,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Typography;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3080,10 +3117,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Documents {
                     class Underline;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3118,10 +3155,10 @@ namespace ABI {
                         LogicalDirection_Forward = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3147,10 +3184,10 @@ namespace ABI {
                         UnderlineStyle_Single = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3176,10 +3213,10 @@ namespace ABI {
                         INT32 Length;
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -3237,10 +3274,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBlock=_uuidof(IBlock);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock_INTERFACE_DEFINED__) */
@@ -3283,10 +3320,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBlock2=_uuidof(IBlock2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlock2_INTERFACE_DEFINED__) */
@@ -3328,10 +3365,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBlockFactory=_uuidof(IBlockFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockFactory_INTERFACE_DEFINED__) */
@@ -3380,10 +3417,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBlockStatics=_uuidof(IBlockStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics_INTERFACE_DEFINED__) */
@@ -3423,10 +3460,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBlockStatics2=_uuidof(IBlockStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBlockStatics2_INTERFACE_DEFINED__) */
@@ -3463,10 +3500,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBold=_uuidof(IBold);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIBold;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIBold_INTERFACE_DEFINED__) */
@@ -3503,10 +3540,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactContentLinkProvider=_uuidof(IContactContentLinkProvider);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIContactContentLinkProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContactContentLinkProvider_INTERFACE_DEFINED__) */
@@ -3614,10 +3651,10 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Xaml::Input::XYFocusNavigationStrategy value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTabStop(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsTabStop(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TabIndex(
                             /* [retval, out] */__RPC__out INT32 * value
@@ -3648,17 +3685,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE Focus(
                             /* [in] */ABI::Windows::UI::Xaml::FocusState value,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IContentLink=_uuidof(IContentLink);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLink;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLink_INTERFACE_DEFINED__) */
@@ -3694,20 +3731,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Text::IContentLinkInfo * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IContentLinkInvokedEventArgs=_uuidof(IContentLinkInvokedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs_INTERFACE_DEFINED__) */
@@ -3744,10 +3781,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContentLinkProvider=_uuidof(IContentLinkProvider);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProvider_INTERFACE_DEFINED__) */
@@ -3784,10 +3821,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContentLinkProviderCollection=_uuidof(IContentLinkProviderCollection);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderCollection;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderCollection_INTERFACE_DEFINED__) */
@@ -3829,10 +3866,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContentLinkProviderFactory=_uuidof(IContentLinkProviderFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkProviderFactory_INTERFACE_DEFINED__) */
@@ -3911,10 +3948,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContentLinkStatics=_uuidof(IContentLinkStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkStatics_INTERFACE_DEFINED__) */
@@ -3999,10 +4036,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGlyphs=_uuidof(IGlyphs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs_INTERFACE_DEFINED__) */
@@ -4035,10 +4072,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsColorFontEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsColorFontEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ColorFontPaletteIndex(
                             /* [retval, out] */__RPC__out INT32 * value
@@ -4051,10 +4088,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGlyphs2=_uuidof(IGlyphs2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphs2_INTERFACE_DEFINED__) */
@@ -4115,10 +4152,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGlyphsStatics=_uuidof(IGlyphsStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics_INTERFACE_DEFINED__) */
@@ -4161,10 +4198,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGlyphsStatics2=_uuidof(IGlyphsStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIGlyphsStatics2_INTERFACE_DEFINED__) */
@@ -4214,10 +4251,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlink=_uuidof(IHyperlink);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink_INTERFACE_DEFINED__) */
@@ -4260,10 +4297,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlink2=_uuidof(IHyperlink2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink2_INTERFACE_DEFINED__) */
@@ -4330,10 +4367,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlink3=_uuidof(IHyperlink3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink3_INTERFACE_DEFINED__) */
@@ -4408,17 +4445,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE Focus(
                             /* [in] */ABI::Windows::UI::Xaml::FocusState value,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHyperlink4=_uuidof(IHyperlink4);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink4_INTERFACE_DEFINED__) */
@@ -4451,10 +4488,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTabStop(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsTabStop(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TabIndex(
                             /* [retval, out] */__RPC__out INT32 * value
@@ -4467,10 +4504,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlink5=_uuidof(IHyperlink5);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink5_INTERFACE_DEFINED__) */
@@ -4507,10 +4544,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlinkClickEventArgs=_uuidof(IHyperlinkClickEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkClickEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkClickEventArgs_INTERFACE_DEFINED__) */
@@ -4550,10 +4587,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlinkStatics=_uuidof(IHyperlinkStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics_INTERFACE_DEFINED__) */
@@ -4593,10 +4630,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlinkStatics2=_uuidof(IHyperlinkStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics2_INTERFACE_DEFINED__) */
@@ -4648,10 +4685,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlinkStatics3=_uuidof(IHyperlinkStatics3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics3_INTERFACE_DEFINED__) */
@@ -4703,10 +4740,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlinkStatics4=_uuidof(IHyperlinkStatics4);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics4_INTERFACE_DEFINED__) */
@@ -4749,10 +4786,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHyperlinkStatics5=_uuidof(IHyperlinkStatics5);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkStatics5_INTERFACE_DEFINED__) */
@@ -4789,10 +4826,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInline=_uuidof(IInline);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIInline;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIInline_INTERFACE_DEFINED__) */
@@ -4834,10 +4871,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInlineFactory=_uuidof(IInlineFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineFactory_INTERFACE_DEFINED__) */
@@ -4880,10 +4917,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInlineUIContainer=_uuidof(IInlineUIContainer);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineUIContainer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIInlineUIContainer_INTERFACE_DEFINED__) */
@@ -4920,10 +4957,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IItalic=_uuidof(IItalic);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIItalic;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIItalic_INTERFACE_DEFINED__) */
@@ -4960,10 +4997,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILineBreak=_uuidof(ILineBreak);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CILineBreak;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CILineBreak_INTERFACE_DEFINED__) */
@@ -5009,10 +5046,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IParagraph=_uuidof(IParagraph);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraph;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraph_INTERFACE_DEFINED__) */
@@ -5052,10 +5089,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IParagraphStatics=_uuidof(IParagraphStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraphStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIParagraphStatics_INTERFACE_DEFINED__) */
@@ -5092,10 +5129,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlaceContentLinkProvider=_uuidof(IPlaceContentLinkProvider);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIPlaceContentLinkProvider;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIPlaceContentLinkProvider_INTERFACE_DEFINED__) */
@@ -5144,10 +5181,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRun=_uuidof(IRun);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIRun;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIRun_INTERFACE_DEFINED__) */
@@ -5187,10 +5224,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRunStatics=_uuidof(IRunStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIRunStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIRunStatics_INTERFACE_DEFINED__) */
@@ -5233,10 +5270,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpan=_uuidof(ISpan);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CISpan;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CISpan_INTERFACE_DEFINED__) */
@@ -5278,10 +5315,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpanFactory=_uuidof(ISpanFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CISpanFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CISpanFactory_INTERFACE_DEFINED__) */
@@ -5385,10 +5422,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElement=_uuidof(ITextElement);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement_INTERFACE_DEFINED__) */
@@ -5421,20 +5458,20 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTextScaleFactorEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsTextScaleFactorEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ITextElement2=_uuidof(ITextElement2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement2_INTERFACE_DEFINED__) */
@@ -5467,10 +5504,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowFocusOnInteraction(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowFocusOnInteraction(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AccessKey(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -5479,20 +5516,20 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExitDisplayModeOnAccessKeyInvoked(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ExitDisplayModeOnAccessKeyInvoked(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ITextElement3=_uuidof(ITextElement3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement3_INTERFACE_DEFINED__) */
@@ -5531,10 +5568,10 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Text::TextDecorations value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAccessKeyScope(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAccessKeyScope(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AccessKeyScopeOwner(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyObject * * value
@@ -5586,14 +5623,60 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElement4=_uuidof(ITextElement4);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Documents.ITextElement5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Documents.TextElement
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Documents_ITextElement5[] = L"Windows.UI.Xaml.Documents.ITextElement5";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Documents {
+                    /* [object, uuid("BD9552F3-540D-58BF-B6A8-07556AEDA2EA"), exclusiveto, contract] */
+                    MIDL_INTERFACE("BD9552F3-540D-58BF-B6A8-07556AEDA2EA")
+                    ITextElement5 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_XamlRoot(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IXamlRoot * * value
+                            ) = 0;
+                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_XamlRoot(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IXamlRoot * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ITextElement5=_uuidof(ITextElement5);
+                    
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -5626,10 +5709,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElementFactory=_uuidof(ITextElementFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory_INTERFACE_DEFINED__) */
@@ -5667,10 +5750,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElementOverrides=_uuidof(ITextElementOverrides);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementOverrides_INTERFACE_DEFINED__) */
@@ -5731,10 +5814,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElementStatics=_uuidof(ITextElementStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics_INTERFACE_DEFINED__) */
@@ -5774,10 +5857,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElementStatics2=_uuidof(ITextElementStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics2_INTERFACE_DEFINED__) */
@@ -5823,10 +5906,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElementStatics3=_uuidof(ITextElementStatics3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics3_INTERFACE_DEFINED__) */
@@ -5881,10 +5964,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextElementStatics4=_uuidof(ITextElementStatics4);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementStatics4_INTERFACE_DEFINED__) */
@@ -5936,10 +6019,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextHighlighter=_uuidof(ITextHighlighter);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighter_INTERFACE_DEFINED__) */
@@ -5976,10 +6059,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextHighlighterBase=_uuidof(ITextHighlighterBase);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBase_INTERFACE_DEFINED__) */
@@ -6016,10 +6099,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextHighlighterBaseFactory=_uuidof(ITextHighlighterBaseFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBaseFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterBaseFactory_INTERFACE_DEFINED__) */
@@ -6061,10 +6144,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextHighlighterFactory=_uuidof(ITextHighlighterFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterFactory_INTERFACE_DEFINED__) */
@@ -6107,10 +6190,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextHighlighterStatics=_uuidof(ITextHighlighterStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextHighlighterStatics_INTERFACE_DEFINED__) */
@@ -6168,10 +6251,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITextPointer=_uuidof(ITextPointer);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextPointer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextPointer_INTERFACE_DEFINED__) */
@@ -6208,10 +6291,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITypography=_uuidof(ITypography);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITypography;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITypography_INTERFACE_DEFINED__) */
@@ -6259,11 +6342,11 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetEastAsianExpertForms(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetEastAsianExpertForms(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EastAsianLanguageProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
@@ -6292,44 +6375,44 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStandardLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStandardLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ContextualLigaturesProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetContextualLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetContextualLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DiscretionaryLigaturesProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDiscretionaryLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetDiscretionaryLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HistoricalLigaturesProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetHistoricalLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetHistoricalLigatures(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StandardSwashesProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
@@ -6358,11 +6441,11 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetContextualAlternates(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetContextualAlternates(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticAlternatesProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
@@ -6380,220 +6463,220 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet1(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet1(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet2Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet2(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet2(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet3Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet3(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet3(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet4Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet4(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet4(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet5Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet5(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet5(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet6Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet6(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet6(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet7Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet7(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet7(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet8Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet8(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet8(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet9Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet9(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet9(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet10Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet10(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet10(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet11Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet11(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet11(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet12Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet12(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet12(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet13Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet13(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet13(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet14Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet14(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet14(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet15Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet15(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet15(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet16Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet16(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet16(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet17Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet17(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet17(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet18Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet18(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet18(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet19Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet19(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet19(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StylisticSet20Property(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStylisticSet20(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStylisticSet20(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CapitalsProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
@@ -6611,44 +6694,44 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetCapitalSpacing(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetCapitalSpacing(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KerningProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetKerning(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetKerning(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CaseSensitiveFormsProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetCaseSensitiveForms(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetCaseSensitiveForms(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HistoricalFormsProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetHistoricalForms(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetHistoricalForms(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FractionProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
@@ -6688,22 +6771,22 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetSlashedZero(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetSlashedZero(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MathematicalGreekProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetMathematicalGreek(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetMathematicalGreek(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IDependencyObject * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_VariantsProperty(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
@@ -6721,10 +6804,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITypographyStatics=_uuidof(ITypographyStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITypographyStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITypographyStatics_INTERFACE_DEFINED__) */
@@ -6761,10 +6844,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUnderline=_uuidof(IUnderline);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Documents */} /* ABI */
+                } /* Documents */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CIUnderline;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CIUnderline_INTERFACE_DEFINED__) */
@@ -7333,6 +7416,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Documents.ITextElement2
  *    Windows.UI.Xaml.Documents.ITextElement3
  *    Windows.UI.Xaml.Documents.ITextElement4
+ *    Windows.UI.Xaml.Documents.ITextElement5
  *    Windows.UI.Xaml.Documents.ITextElementOverrides
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -7744,6 +7828,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement3 __x_ABI_C
 typedef interface __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4 __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElementFactory_FWD_DEFINED__
@@ -9939,7 +10029,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEdit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIRichEditBox * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIRichEditBox * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CRichEditBox_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgsVtbl;
 
@@ -9992,7 +10082,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContent
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLink * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLink * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIContentLinkInvokedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CContentLink_Windows__CUI__CXaml__CDocuments__CContentLinkInvokedEventArgsVtbl;
 
@@ -10045,7 +10135,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperli
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkClickEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlink * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CIHyperlinkClickEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CHyperlink_Windows__CUI__CXaml__CDocuments__CHyperlinkClickEventArgsVtbl;
 
@@ -10104,7 +10194,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextEle
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayRequestedEventArgsVtbl;
 
@@ -10163,7 +10253,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextEle
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyDisplayDismissedEventArgsVtbl;
 
@@ -10222,7 +10312,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextEle
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CDocuments__CTextElement_Windows__CUI__CXaml__CInput__CAccessKeyInvokedEventArgsVtbl;
 
@@ -10414,6 +10504,13 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CIUIElement __x_ABI_CWindows_CUI_CX
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CIXamlRoot __x_ABI_CWindows_CUI_CXaml_CIXamlRoot;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+
+
 
 
 
@@ -10425,6 +10522,7 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CDocuments_CUnderlineStyle __x_ABI_CWind
 
 
 typedef struct __x_ABI_CWindows_CUI_CXaml_CDocuments_CTextRange __x_ABI_CWindows_CUI_CXaml_CDocuments_CTextRange;
+
 
 
 
@@ -15861,6 +15959,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement4;
 
 /*
  *
+ * Interface Windows.UI.Xaml.Documents.ITextElement5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Documents.TextElement
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Documents_ITextElement5[] = L"Windows.UI.Xaml.Documents.ITextElement5";
+/* [object, uuid("BD9552F3-540D-58BF-B6A8-07556AEDA2EA"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_XamlRoot )(
+        __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIXamlRoot * * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_XamlRoot )(
+        __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIXamlRoot * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_get_XamlRoot(This,value) \
+    ( (This)->lpVtbl->get_XamlRoot(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_put_XamlRoot(This,value) \
+    ( (This)->lpVtbl->put_XamlRoot(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CDocuments_CITextElement5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Documents.ITextElementFactory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -18935,6 +19133,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Documents.ITextElement2
  *    Windows.UI.Xaml.Documents.ITextElement3
  *    Windows.UI.Xaml.Documents.ITextElement4
+ *    Windows.UI.Xaml.Documents.ITextElement5
  *    Windows.UI.Xaml.Documents.ITextElementOverrides
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment

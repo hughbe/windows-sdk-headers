@@ -361,6 +361,34 @@ typedef interface IBDA_UserActivityService IBDA_UserActivityService;
 #endif 	/* __IBDA_UserActivityService_FWD_DEFINED__ */
 
 
+#ifndef __IESEvent_FWD_DEFINED__
+#define __IESEvent_FWD_DEFINED__
+typedef interface IESEvent IESEvent;
+
+#endif 	/* __IESEvent_FWD_DEFINED__ */
+
+
+#ifndef __IESEvents_FWD_DEFINED__
+#define __IESEvents_FWD_DEFINED__
+typedef interface IESEvents IESEvents;
+
+#endif 	/* __IESEvents_FWD_DEFINED__ */
+
+
+#ifndef __IBroadcastEvent_FWD_DEFINED__
+#define __IBroadcastEvent_FWD_DEFINED__
+typedef interface IBroadcastEvent IBroadcastEvent;
+
+#endif 	/* __IBroadcastEvent_FWD_DEFINED__ */
+
+
+#ifndef __IBroadcastEventEx_FWD_DEFINED__
+#define __IBroadcastEventEx_FWD_DEFINED__
+typedef interface IBroadcastEventEx IBroadcastEventEx;
+
+#endif 	/* __IBroadcastEventEx_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "unknwn.h"
 #include "strmif.h"
@@ -6644,12 +6672,400 @@ EXTERN_C const IID IID_IBDA_UserActivityService;
 /* [local] */ 
 
 #define SID_BDA_UserActivityService __uuidof(IBDA_UserActivityService)
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
 
 
 extern RPC_IF_HANDLE __MIDL_itf_bdaiface_0000_0046_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_bdaiface_0000_0046_v0_0_s_ifspec;
+
+#ifndef __IESEvent_INTERFACE_DEFINED__
+#define __IESEvent_INTERFACE_DEFINED__
+
+/* interface IESEvent */
+/* [unique][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IESEvent;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("1F0E5357-AF43-44e6-8547-654C645145D2")
+    IESEvent : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetEventId( 
+            /* [retval][out] */ __RPC__out DWORD *pdwEventId) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetEventType( 
+            /* [retval][out] */ __RPC__out GUID *pguidEventType) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SetCompletionStatus( 
+            /* [in] */ DWORD dwResult) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetData( 
+            /* [retval][out] */ __RPC__deref_out_opt SAFEARRAY * *pbData) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetStringData( 
+            /* [retval][out] */ __RPC__deref_out_opt BSTR *pbstrData) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IESEventVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IESEvent * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IESEvent * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IESEvent * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetEventId )( 
+            __RPC__in IESEvent * This,
+            /* [retval][out] */ __RPC__out DWORD *pdwEventId);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetEventType )( 
+            __RPC__in IESEvent * This,
+            /* [retval][out] */ __RPC__out GUID *pguidEventType);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetCompletionStatus )( 
+            __RPC__in IESEvent * This,
+            /* [in] */ DWORD dwResult);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetData )( 
+            __RPC__in IESEvent * This,
+            /* [retval][out] */ __RPC__deref_out_opt SAFEARRAY * *pbData);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetStringData )( 
+            __RPC__in IESEvent * This,
+            /* [retval][out] */ __RPC__deref_out_opt BSTR *pbstrData);
+        
+        END_INTERFACE
+    } IESEventVtbl;
+
+    interface IESEvent
+    {
+        CONST_VTBL struct IESEventVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IESEvent_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IESEvent_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IESEvent_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IESEvent_GetEventId(This,pdwEventId)	\
+    ( (This)->lpVtbl -> GetEventId(This,pdwEventId) ) 
+
+#define IESEvent_GetEventType(This,pguidEventType)	\
+    ( (This)->lpVtbl -> GetEventType(This,pguidEventType) ) 
+
+#define IESEvent_SetCompletionStatus(This,dwResult)	\
+    ( (This)->lpVtbl -> SetCompletionStatus(This,dwResult) ) 
+
+#define IESEvent_GetData(This,pbData)	\
+    ( (This)->lpVtbl -> GetData(This,pbData) ) 
+
+#define IESEvent_GetStringData(This,pbstrData)	\
+    ( (This)->lpVtbl -> GetStringData(This,pbstrData) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IESEvent_INTERFACE_DEFINED__ */
+
+
+#ifndef __IESEvents_INTERFACE_DEFINED__
+#define __IESEvents_INTERFACE_DEFINED__
+
+/* interface IESEvents */
+/* [unique][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IESEvents;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("ABD414BF-CFE5-4e5e-AF5B-4B4E49C5BFEB")
+    IESEvents : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE OnESEventReceived( 
+            /* [in] */ GUID guidEventType,
+            /* [in] */ __RPC__in_opt IESEvent *pESEvent) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IESEventsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IESEvents * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IESEvents * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IESEvents * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *OnESEventReceived )( 
+            __RPC__in IESEvents * This,
+            /* [in] */ GUID guidEventType,
+            /* [in] */ __RPC__in_opt IESEvent *pESEvent);
+        
+        END_INTERFACE
+    } IESEventsVtbl;
+
+    interface IESEvents
+    {
+        CONST_VTBL struct IESEventsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IESEvents_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IESEvents_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IESEvents_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IESEvents_OnESEventReceived(This,guidEventType,pESEvent)	\
+    ( (This)->lpVtbl -> OnESEventReceived(This,guidEventType,pESEvent) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IESEvents_INTERFACE_DEFINED__ */
+
+
+#ifndef __IBroadcastEvent_INTERFACE_DEFINED__
+#define __IBroadcastEvent_INTERFACE_DEFINED__
+
+/* interface IBroadcastEvent */
+/* [unique][helpstring][uuid][nonextensible][hidden][object] */ 
+
+
+EXTERN_C const IID IID_IBroadcastEvent;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("3B21263F-26E8-489d-AAC4-924F7EFD9511")
+    IBroadcastEvent : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE Fire( 
+            /* [in] */ GUID EventID) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IBroadcastEventVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IBroadcastEvent * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IBroadcastEvent * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IBroadcastEvent * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *Fire )( 
+            __RPC__in IBroadcastEvent * This,
+            /* [in] */ GUID EventID);
+        
+        END_INTERFACE
+    } IBroadcastEventVtbl;
+
+    interface IBroadcastEvent
+    {
+        CONST_VTBL struct IBroadcastEventVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IBroadcastEvent_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IBroadcastEvent_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IBroadcastEvent_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IBroadcastEvent_Fire(This,EventID)	\
+    ( (This)->lpVtbl -> Fire(This,EventID) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IBroadcastEvent_INTERFACE_DEFINED__ */
+
+
+#ifndef __IBroadcastEventEx_INTERFACE_DEFINED__
+#define __IBroadcastEventEx_INTERFACE_DEFINED__
+
+/* interface IBroadcastEventEx */
+/* [unique][helpstring][uuid][nonextensible][hidden][object] */ 
+
+
+EXTERN_C const IID IID_IBroadcastEventEx;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("3d9e3887-1929-423f-8021-43682de95448")
+    IBroadcastEventEx : public IBroadcastEvent
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE FireEx( 
+            /* [in] */ GUID EventID,
+            /* [in] */ ULONG Param1,
+            /* [in] */ ULONG Param2,
+            /* [in] */ ULONG Param3,
+            /* [in] */ ULONG Param4) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IBroadcastEventExVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IBroadcastEventEx * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IBroadcastEventEx * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IBroadcastEventEx * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *Fire )( 
+            __RPC__in IBroadcastEventEx * This,
+            /* [in] */ GUID EventID);
+        
+        HRESULT ( STDMETHODCALLTYPE *FireEx )( 
+            __RPC__in IBroadcastEventEx * This,
+            /* [in] */ GUID EventID,
+            /* [in] */ ULONG Param1,
+            /* [in] */ ULONG Param2,
+            /* [in] */ ULONG Param3,
+            /* [in] */ ULONG Param4);
+        
+        END_INTERFACE
+    } IBroadcastEventExVtbl;
+
+    interface IBroadcastEventEx
+    {
+        CONST_VTBL struct IBroadcastEventExVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IBroadcastEventEx_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IBroadcastEventEx_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IBroadcastEventEx_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IBroadcastEventEx_Fire(This,EventID)	\
+    ( (This)->lpVtbl -> Fire(This,EventID) ) 
+
+
+#define IBroadcastEventEx_FireEx(This,EventID,Param1,Param2,Param3,Param4)	\
+    ( (This)->lpVtbl -> FireEx(This,EventID,Param1,Param2,Param3,Param4) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IBroadcastEventEx_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_bdaiface_0000_0050 */
+/* [local] */ 
+
+DEFINE_GUID(CLSID_BroadcastEventService, 0x0B3FFB92, 0x0919, 0x4934, 0x9D, 0x5B, 0x61, 0x9C, 0x71, 0x9D, 0x02, 0x02);
+#define SID_SBroadcastEventService CLSID_BroadcastEventService
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+
+extern RPC_IF_HANDLE __MIDL_itf_bdaiface_0000_0050_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_bdaiface_0000_0050_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 
@@ -6658,10 +7074,20 @@ unsigned char * __RPC_USER  BSTR_UserMarshal(  __RPC__in unsigned long *, __RPC_
 unsigned char * __RPC_USER  BSTR_UserUnmarshal(__RPC__in unsigned long *, __RPC__in_xcount(0) unsigned char *, __RPC__out BSTR * ); 
 void                      __RPC_USER  BSTR_UserFree(     __RPC__in unsigned long *, __RPC__in BSTR * ); 
 
+unsigned long             __RPC_USER  LPSAFEARRAY_UserSize(     __RPC__in unsigned long *, unsigned long            , __RPC__in LPSAFEARRAY * ); 
+unsigned char * __RPC_USER  LPSAFEARRAY_UserMarshal(  __RPC__in unsigned long *, __RPC__inout_xcount(0) unsigned char *, __RPC__in LPSAFEARRAY * ); 
+unsigned char * __RPC_USER  LPSAFEARRAY_UserUnmarshal(__RPC__in unsigned long *, __RPC__in_xcount(0) unsigned char *, __RPC__out LPSAFEARRAY * ); 
+void                      __RPC_USER  LPSAFEARRAY_UserFree(     __RPC__in unsigned long *, __RPC__in LPSAFEARRAY * ); 
+
 unsigned long             __RPC_USER  BSTR_UserSize64(     __RPC__in unsigned long *, unsigned long            , __RPC__in BSTR * ); 
 unsigned char * __RPC_USER  BSTR_UserMarshal64(  __RPC__in unsigned long *, __RPC__inout_xcount(0) unsigned char *, __RPC__in BSTR * ); 
 unsigned char * __RPC_USER  BSTR_UserUnmarshal64(__RPC__in unsigned long *, __RPC__in_xcount(0) unsigned char *, __RPC__out BSTR * ); 
 void                      __RPC_USER  BSTR_UserFree64(     __RPC__in unsigned long *, __RPC__in BSTR * ); 
+
+unsigned long             __RPC_USER  LPSAFEARRAY_UserSize64(     __RPC__in unsigned long *, unsigned long            , __RPC__in LPSAFEARRAY * ); 
+unsigned char * __RPC_USER  LPSAFEARRAY_UserMarshal64(  __RPC__in unsigned long *, __RPC__inout_xcount(0) unsigned char *, __RPC__in LPSAFEARRAY * ); 
+unsigned char * __RPC_USER  LPSAFEARRAY_UserUnmarshal64(__RPC__in unsigned long *, __RPC__in_xcount(0) unsigned char *, __RPC__out LPSAFEARRAY * ); 
+void                      __RPC_USER  LPSAFEARRAY_UserFree64(     __RPC__in unsigned long *, __RPC__in LPSAFEARRAY * ); 
 
 /* end of Additional Prototypes */
 

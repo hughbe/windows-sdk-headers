@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -163,6 +163,7 @@ struct IFadeInThemeAnimationStatics;
 struct IFadeOutThemeAnimation;
 struct IFadeOutThemeAnimationStatics;
 struct IGravityConnectedAnimationConfiguration;
+struct IGravityConnectedAnimationConfiguration2;
 struct IGravityConnectedAnimationConfigurationFactory;
 struct IKeySpline;
 struct IKeyTimeHelper;
@@ -411,6 +412,7 @@ template <> struct category<Windows::UI::Xaml::Media::Animation::IFadeInThemeAni
 template <> struct category<Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimation>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::Animation::IKeySpline>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::Animation::IKeyTimeHelper>{ using type = interface_category; };
@@ -660,6 +662,7 @@ template <> struct name<Windows::UI::Xaml::Media::Animation::IFadeInThemeAnimati
 template <> struct name<Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimation>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Animation.IFadeOutThemeAnimation" }; };
 template <> struct name<Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Animation.IFadeOutThemeAnimationStatics" }; };
 template <> struct name<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration" }; };
+template <> struct name<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2" }; };
 template <> struct name<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory" }; };
 template <> struct name<Windows::UI::Xaml::Media::Animation::IKeySpline>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Animation.IKeySpline" }; };
 template <> struct name<Windows::UI::Xaml::Media::Animation::IKeyTimeHelper>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Animation.IKeyTimeHelper" }; };
@@ -909,6 +912,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IFadeInThem
 template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimation>{ static constexpr guid value{ 0x89276BA9,0xFFD4,0x45B6,{ 0x9B,0x9A,0xCE,0xD4,0x89,0x51,0xE7,0x12 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationStatics>{ static constexpr guid value{ 0xFE17A81A,0x4168,0x4F68,{ 0xA2,0x8C,0xE5,0xDD,0x98,0xCF,0x68,0x0F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration>{ static constexpr guid value{ 0xC751A4B7,0x0459,0x5142,{ 0xB8,0x91,0xAE,0xAA,0xC1,0xD4,0x18,0x22 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2>{ static constexpr guid value{ 0x62333ADD,0xAED4,0x5FED,{ 0x95,0xFF,0xD1,0x28,0xAC,0xCE,0x8B,0xE4 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory>{ static constexpr guid value{ 0xE822C41F,0x3656,0x5090,{ 0x92,0xF5,0xC2,0x17,0xEA,0xAC,0xB6,0x82 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IKeySpline>{ static constexpr guid value{ 0x77A163BB,0xD5CA,0x4A32,{ 0xBA,0x0B,0x7D,0xFF,0x98,0x8E,0x58,0xA0 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::Animation::IKeyTimeHelper>{ static constexpr guid value{ 0x3643E480,0x4823,0x466A,{ 0xAB,0xE5,0x5E,0x79,0xC8,0xED,0x77,0xED } }; };
@@ -1575,6 +1579,12 @@ template <> struct abi<Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimati
 
 template <> struct abi<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration>{ struct type : IInspectable
 {
+};};
+
+template <> struct abi<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsShadowEnabled(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_IsShadowEnabled(bool value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory>{ struct type : IInspectable
@@ -2774,6 +2784,14 @@ struct consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfigu
 {
 };
 template <> struct consume<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration> { template <typename D> using type = consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration2
+{
+    bool IsShadowEnabled() const;
+    void IsShadowEnabled(bool value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2> { template <typename D> using type = consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfigurationFactory

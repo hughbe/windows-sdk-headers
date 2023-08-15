@@ -547,8 +547,11 @@ cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN8)")
 cpp_quote("#define FWP_CALLOUT_FLAG_RESERVED1                   (0x00000020)")
 cpp_quote("#define FWP_CALLOUT_FLAG_ALLOW_RSC                   (0x00000040)")
 cpp_quote("#define FWP_CALLOUT_FLAG_ALLOW_L2_BATCH_CLASSIFY     (0x00000080)")
-cpp_quote("#endif")
-cpp_quote("#endif")
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)")
+cpp_quote("#define FWP_CALLOUT_FLAG_ALLOW_USO                   (0x00000100)")
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)")
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN8)")
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN7)")
 
 // Stores an optional friendly name and description for an object. In order to
 // support MUI, both strings may contain indirect strings (see

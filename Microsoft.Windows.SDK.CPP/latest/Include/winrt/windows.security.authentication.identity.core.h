@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.authentication.identity.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,11 +142,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         interface IMicrosoftAccountMultiFactorAuthenticationManager;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_FWD_DEFINED__
@@ -160,11 +160,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         interface IMicrosoftAccountMultiFactorAuthenticatorStatics;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_FWD_DEFINED__
@@ -178,11 +178,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         interface IMicrosoftAccountMultiFactorGetSessionsResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_FWD_DEFINED__
@@ -196,11 +196,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         interface IMicrosoftAccountMultiFactorOneTimeCodedInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_FWD_DEFINED__
@@ -214,11 +214,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         interface IMicrosoftAccountMultiFactorSessionInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_FWD_DEFINED__
@@ -232,11 +232,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         interface IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_FWD_DEFINED__
@@ -251,11 +251,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         class MicrosoftAccountMultiFactorSessionInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -278,7 +278,7 @@ IIterator<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccou
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
 #define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
@@ -310,7 +310,7 @@ IIterable<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccou
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
 #define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
@@ -342,7 +342,7 @@ IVectorView<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAcc
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
 #define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
@@ -360,11 +360,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         class MicrosoftAccountMultiFactorGetSessionsResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -387,7 +387,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>
@@ -419,7 +419,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::Microsof
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>
@@ -437,11 +437,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         class MicrosoftAccountMultiFactorOneTimeCodedInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -464,7 +464,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>
@@ -496,7 +496,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::Microsof
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>
@@ -514,11 +514,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         enum MicrosoftAccountMultiFactorServiceResponse : int;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE
@@ -539,7 +539,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Ide
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
@@ -569,7 +569,7 @@ IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Core::Mic
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
@@ -586,11 +586,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         class MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -613,7 +613,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>
@@ -645,7 +645,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::Microsof
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>
@@ -675,7 +675,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -704,7 +704,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -733,7 +733,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -751,8 +751,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -760,8 +760,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -775,11 +775,11 @@ namespace ABI {
                         
                         typedef enum MicrosoftAccountMultiFactorAuthenticationType : int MicrosoftAccountMultiFactorAuthenticationType;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -790,11 +790,11 @@ namespace ABI {
                         
                         typedef enum MicrosoftAccountMultiFactorServiceResponse : int MicrosoftAccountMultiFactorServiceResponse;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -805,11 +805,11 @@ namespace ABI {
                         
                         typedef enum MicrosoftAccountMultiFactorSessionApprovalStatus : int MicrosoftAccountMultiFactorSessionApprovalStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -820,11 +820,11 @@ namespace ABI {
                         
                         typedef enum MicrosoftAccountMultiFactorSessionAuthenticationStatus : int MicrosoftAccountMultiFactorSessionAuthenticationStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -839,11 +839,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Core {
                         class MicrosoftAccountMultiFactorAuthenticationManager;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -885,11 +885,11 @@ namespace ABI {
                             MicrosoftAccountMultiFactorAuthenticationType_Device = 1,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -936,11 +936,11 @@ namespace ABI {
                             MicrosoftAccountMultiFactorServiceResponse_DeviceIdChanged = 21,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -968,11 +968,11 @@ namespace ABI {
                             MicrosoftAccountMultiFactorSessionApprovalStatus_Denied = 2,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -999,11 +999,11 @@ namespace ABI {
                             MicrosoftAccountMultiFactorSessionAuthenticationStatus_Unauthenticated = 1,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1088,11 +1088,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorAuthenticationManager=_uuidof(IMicrosoftAccountMultiFactorAuthenticationManager);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_INTERFACE_DEFINED__) */
@@ -1133,11 +1133,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorAuthenticatorStatics=_uuidof(IMicrosoftAccountMultiFactorAuthenticatorStatics);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_INTERFACE_DEFINED__) */
@@ -1181,11 +1181,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorGetSessionsResult=_uuidof(IMicrosoftAccountMultiFactorGetSessionsResult);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__) */
@@ -1235,11 +1235,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorOneTimeCodedInfo=_uuidof(IMicrosoftAccountMultiFactorOneTimeCodedInfo);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__) */
@@ -1298,11 +1298,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorSessionInfo=_uuidof(IMicrosoftAccountMultiFactorSessionInfo);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__) */
@@ -1349,11 +1349,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo=_uuidof(IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__) */

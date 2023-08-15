@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.transcoding.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 interface IMediaTranscoder;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder ABI::Windows::Media::Transcoding::IMediaTranscoder
 
 #endif // ____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 interface IMediaTranscoder2;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 ABI::Windows::Media::Transcoding::IMediaTranscoder2
 
 #endif // ____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 interface IPrepareTranscodeResult;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult ABI::Windows::Media::Transcoding::IPrepareTranscodeResult
 
 #endif // ____x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 enum TranscodeFailureReason : int;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
@@ -346,7 +342,7 @@ IAsyncOperationProgressHandler<enum ABI::Windows::Media::Transcoding::TranscodeF
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
@@ -376,7 +372,7 @@ IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Transcodin
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
@@ -406,7 +402,7 @@ IAsyncOperationWithProgress<enum ABI::Windows::Media::Transcoding::TranscodeFail
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
@@ -421,9 +417,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 class PrepareTranscodeResult;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -446,7 +442,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::PrepareTransco
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>
@@ -478,7 +474,7 @@ IAsyncOperation<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>
@@ -509,7 +505,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Transcoding::Transcode
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
@@ -539,7 +535,7 @@ IAsyncOperation<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
@@ -568,7 +564,7 @@ IAsyncActionProgressHandler<double> : IAsyncActionProgressHandler_impl<double>
 // correct parameterized interface specialization.
 typedef IAsyncActionProgressHandler<double> __FIAsyncActionProgressHandler_1_double_t;
 #define __FIAsyncActionProgressHandler_1_double ABI::Windows::Foundation::__FIAsyncActionProgressHandler_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionProgressHandler_1_double ABI::Windows::Foundation::IAsyncActionProgressHandler<DOUBLE>
@@ -597,7 +593,7 @@ IAsyncActionWithProgressCompletedHandler<double> : IAsyncActionWithProgressCompl
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgressCompletedHandler<double> __FIAsyncActionWithProgressCompletedHandler_1_double_t;
 #define __FIAsyncActionWithProgressCompletedHandler_1_double ABI::Windows::Foundation::__FIAsyncActionWithProgressCompletedHandler_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgressCompletedHandler_1_double ABI::Windows::Foundation::IAsyncActionWithProgressCompletedHandler<DOUBLE>
@@ -626,7 +622,7 @@ IAsyncActionWithProgress<double> : IAsyncActionWithProgress_impl<double>
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgress<double> __FIAsyncActionWithProgress_1_double_t;
 #define __FIAsyncActionWithProgress_1_double ABI::Windows::Foundation::__FIAsyncActionWithProgress_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncActionWithProgress_1_double ABI::Windows::Foundation::IAsyncActionWithProgress<DOUBLE>
@@ -645,9 +641,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -662,8 +658,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -675,9 +671,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaSource ABI::Windows::Media::Core::IMediaSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
@@ -691,9 +687,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -702,9 +698,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile ABI::Windows::Media::MediaProperties::IMediaEncodingProfile
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -719,8 +715,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -735,9 +731,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -753,9 +749,9 @@ namespace ABI {
                 
                 typedef enum MediaVideoProcessingAlgorithm : int MediaVideoProcessingAlgorithm;
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -764,9 +760,9 @@ namespace ABI {
                 
                 typedef enum TranscodeFailureReason : int TranscodeFailureReason;
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -776,9 +772,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 class MediaTranscoder;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -811,9 +807,9 @@ namespace ABI {
                     MediaVideoProcessingAlgorithm_MrfCrf444 = 1,
                 };
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -840,9 +836,9 @@ namespace ABI {
                     TranscodeFailureReason_CodecNotFound = 3,
                 };
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -883,23 +879,23 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlwaysReencode(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlwaysReencode(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_HardwareAccelerationEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HardwareAccelerationEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddAudioEffect(
                         /* [in] */__RPC__in HSTRING activatableClassId
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddAudioEffectWithSettings(
                         /* [in] */__RPC__in HSTRING activatableClassId,
-                        /* [in] */boolean effectRequired,
+                        /* [in] */::boolean effectRequired,
                         /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * configuration
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddVideoEffect(
@@ -907,7 +903,7 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddVideoEffectWithSettings(
                         /* [in] */__RPC__in HSTRING activatableClassId,
-                        /* [in] */boolean effectRequired,
+                        /* [in] */::boolean effectRequired,
                         /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * configuration
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ClearEffects(void) = 0;
@@ -928,9 +924,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaTranscoder=_uuidof(IMediaTranscoder);
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_INTERFACE_DEFINED__) */
@@ -978,9 +974,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaTranscoder2=_uuidof(IMediaTranscoder2);
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_INTERFACE_DEFINED__) */
@@ -1012,7 +1008,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTranscode(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FailureReason(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Transcoding::TranscodeFailureReason * value
@@ -1025,9 +1021,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrepareTranscodeResult=_uuidof(IPrepareTranscodeResult);
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_INTERFACE_DEFINED__) */
@@ -1133,7 +1129,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *asyncInfo, /* [in] */ double progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl;
 

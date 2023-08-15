@@ -1106,6 +1106,15 @@ Notes:
 //
 #define EVENT_TCPIP_OUT_OF_ORDER_FRAGMENTS_EXCEEDED 0x8000106EL
 
+//
+// MessageId: EVENT_TCPIP_INTERFACE_BIND_FAILURE
+//
+// MessageText:
+//
+// The %2 TCP/IP interface with index %3 failed to bind to its provider.
+//
+#define EVENT_TCPIP_INTERFACE_BIND_FAILURE 0xC000106FL
+
 
 //
 // TCP messages

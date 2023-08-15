@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,8 +277,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IAudioBuffer;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIAudioBuffer ABI::Windows::Media::IAudioBuffer
 
 #endif // ____x_ABI_CWindows_CMedia_CIAudioBuffer_FWD_DEFINED__
@@ -293,8 +289,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IAudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIAudioFrame ABI::Windows::Media::IAudioFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
@@ -305,8 +301,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IAudioFrameFactory;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIAudioFrameFactory ABI::Windows::Media::IAudioFrameFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CIAudioFrameFactory_FWD_DEFINED__
@@ -317,8 +313,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IAutoRepeatModeChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIAutoRepeatModeChangeRequestedEventArgs ABI::Windows::Media::IAutoRepeatModeChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CIAutoRepeatModeChangeRequestedEventArgs_FWD_DEFINED__
@@ -329,8 +325,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IImageDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIImageDisplayProperties ABI::Windows::Media::IImageDisplayProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CIImageDisplayProperties_FWD_DEFINED__
@@ -341,8 +337,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaControl;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaControl ABI::Windows::Media::IMediaControl
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaControl_FWD_DEFINED__
@@ -353,8 +349,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaExtension;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaExtension ABI::Windows::Media::IMediaExtension
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaExtension_FWD_DEFINED__
@@ -365,8 +361,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaExtensionManager;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaExtensionManager ABI::Windows::Media::IMediaExtensionManager
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaExtensionManager_FWD_DEFINED__
@@ -377,8 +373,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaExtensionManager2;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaExtensionManager2 ABI::Windows::Media::IMediaExtensionManager2
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaExtensionManager2_FWD_DEFINED__
@@ -389,8 +385,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaFrame ABI::Windows::Media::IMediaFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaFrame_FWD_DEFINED__
@@ -401,8 +397,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaMarker;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaMarker ABI::Windows::Media::IMediaMarker
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaMarker_FWD_DEFINED__
@@ -413,8 +409,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaMarkerTypesStatics;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaMarkerTypesStatics ABI::Windows::Media::IMediaMarkerTypesStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaMarkerTypesStatics_FWD_DEFINED__
@@ -425,8 +421,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaMarkers;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaMarkers ABI::Windows::Media::IMediaMarkers
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaMarkers_FWD_DEFINED__
@@ -437,8 +433,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaProcessingTriggerDetails;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaProcessingTriggerDetails ABI::Windows::Media::IMediaProcessingTriggerDetails
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaProcessingTriggerDetails_FWD_DEFINED__
@@ -449,8 +445,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaTimelineController;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaTimelineController ABI::Windows::Media::IMediaTimelineController
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaTimelineController_FWD_DEFINED__
@@ -461,8 +457,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaTimelineController2;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaTimelineController2 ABI::Windows::Media::IMediaTimelineController2
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaTimelineController2_FWD_DEFINED__
@@ -473,8 +469,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaTimelineControllerFailedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaTimelineControllerFailedEventArgs ABI::Windows::Media::IMediaTimelineControllerFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaTimelineControllerFailedEventArgs_FWD_DEFINED__
@@ -485,8 +481,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMusicDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMusicDisplayProperties ABI::Windows::Media::IMusicDisplayProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CIMusicDisplayProperties_FWD_DEFINED__
@@ -497,8 +493,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMusicDisplayProperties2;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMusicDisplayProperties2 ABI::Windows::Media::IMusicDisplayProperties2
 
 #endif // ____x_ABI_CWindows_CMedia_CIMusicDisplayProperties2_FWD_DEFINED__
@@ -509,8 +505,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMusicDisplayProperties3;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMusicDisplayProperties3 ABI::Windows::Media::IMusicDisplayProperties3
 
 #endif // ____x_ABI_CWindows_CMedia_CIMusicDisplayProperties3_FWD_DEFINED__
@@ -521,8 +517,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IPlaybackPositionChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIPlaybackPositionChangeRequestedEventArgs ABI::Windows::Media::IPlaybackPositionChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CIPlaybackPositionChangeRequestedEventArgs_FWD_DEFINED__
@@ -533,8 +529,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IPlaybackRateChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIPlaybackRateChangeRequestedEventArgs ABI::Windows::Media::IPlaybackRateChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CIPlaybackRateChangeRequestedEventArgs_FWD_DEFINED__
@@ -545,8 +541,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IShuffleEnabledChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIShuffleEnabledChangeRequestedEventArgs ABI::Windows::Media::IShuffleEnabledChangeRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CIShuffleEnabledChangeRequestedEventArgs_FWD_DEFINED__
@@ -557,8 +553,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControls;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControls ABI::Windows::Media::ISystemMediaTransportControls
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControls_FWD_DEFINED__
@@ -569,8 +565,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControls2;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControls2 ABI::Windows::Media::ISystemMediaTransportControls2
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControls2_FWD_DEFINED__
@@ -581,8 +577,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControlsButtonPressedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsButtonPressedEventArgs ABI::Windows::Media::ISystemMediaTransportControlsButtonPressedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsButtonPressedEventArgs_FWD_DEFINED__
@@ -593,8 +589,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControlsDisplayUpdater;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsDisplayUpdater ABI::Windows::Media::ISystemMediaTransportControlsDisplayUpdater
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsDisplayUpdater_FWD_DEFINED__
@@ -605,8 +601,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControlsPropertyChangedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsPropertyChangedEventArgs ABI::Windows::Media::ISystemMediaTransportControlsPropertyChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsPropertyChangedEventArgs_FWD_DEFINED__
@@ -617,8 +613,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControlsStatics;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsStatics ABI::Windows::Media::ISystemMediaTransportControlsStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsStatics_FWD_DEFINED__
@@ -629,8 +625,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControlsTimelineProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsTimelineProperties ABI::Windows::Media::ISystemMediaTransportControlsTimelineProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsTimelineProperties_FWD_DEFINED__
@@ -641,8 +637,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoDisplayProperties ABI::Windows::Media::IVideoDisplayProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoDisplayProperties_FWD_DEFINED__
@@ -653,8 +649,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoDisplayProperties2;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoDisplayProperties2 ABI::Windows::Media::IVideoDisplayProperties2
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoDisplayProperties2_FWD_DEFINED__
@@ -665,8 +661,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoEffectsStatics;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoEffectsStatics ABI::Windows::Media::IVideoEffectsStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoEffectsStatics_FWD_DEFINED__
@@ -677,8 +673,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -689,8 +685,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame2;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame2 ABI::Windows::Media::IVideoFrame2
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame2_FWD_DEFINED__
@@ -701,8 +697,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrameFactory;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrameFactory ABI::Windows::Media::IVideoFrameFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrameFactory_FWD_DEFINED__
@@ -713,8 +709,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrameStatics;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrameStatics ABI::Windows::Media::IVideoFrameStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrameStatics_FWD_DEFINED__
@@ -743,7 +739,7 @@ IIterator<ABI::Windows::Media::IMediaMarker*> : IIterator_impl<ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::IMediaMarker*> __FIIterator_1_Windows__CMedia__CIMediaMarker_t;
 #define __FIIterator_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CIMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::IMediaMarker*>
@@ -775,7 +771,7 @@ IIterable<ABI::Windows::Media::IMediaMarker*> : IIterable_impl<ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::IMediaMarker*> __FIIterable_1_Windows__CMedia__CIMediaMarker_t;
 #define __FIIterable_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CIMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::IMediaMarker*>
@@ -791,8 +787,8 @@ namespace ABI {
         namespace Media {
             struct MediaTimeRange;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CMediaTimeRange_USE
@@ -813,7 +809,7 @@ IIterator<struct ABI::Windows::Media::MediaTimeRange> : IIterator_impl<struct AB
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Media::MediaTimeRange> __FIIterator_1_Windows__CMedia__CMediaTimeRange_t;
 #define __FIIterator_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaTimeRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaTimeRange>
@@ -843,7 +839,7 @@ IIterable<struct ABI::Windows::Media::MediaTimeRange> : IIterable_impl<struct AB
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Media::MediaTimeRange> __FIIterable_1_Windows__CMedia__CMediaTimeRange_t;
 #define __FIIterable_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaTimeRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaTimeRange>
@@ -874,7 +870,7 @@ IVectorView<ABI::Windows::Media::IMediaMarker*> : IVectorView_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::IMediaMarker*> __FIVectorView_1_Windows__CMedia__CIMediaMarker_t;
 #define __FIVectorView_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CIMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::IMediaMarker*>
@@ -905,7 +901,7 @@ IVectorView<struct ABI::Windows::Media::MediaTimeRange> : IVectorView_impl<struc
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Media::MediaTimeRange> __FIVectorView_1_Windows__CMedia__CMediaTimeRange_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaTimeRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaTimeRange>
@@ -936,7 +932,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::IMediaExtension*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::IMediaExtension*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CIMediaExtension_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CIMediaExtension ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CIMediaExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CIMediaExtension ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::IMediaExtension*>
@@ -968,7 +964,7 @@ IAsyncOperation<ABI::Windows::Media::IMediaExtension*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::IMediaExtension*> __FIAsyncOperation_1_Windows__CMedia__CIMediaExtension_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CIMediaExtension ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CIMediaExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CIMediaExtension ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::IMediaExtension*>
@@ -983,8 +979,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1007,7 +1003,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::VideoFrame*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::VideoFrame*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CVideoFrame_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CVideoFrame ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CVideoFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CVideoFrame ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::IVideoFrame*>
@@ -1039,7 +1035,7 @@ IAsyncOperation<ABI::Windows::Media::VideoFrame*> : IAsyncOperation_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::VideoFrame*> __FIAsyncOperation_1_Windows__CMedia__CVideoFrame_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CVideoFrame ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CVideoFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CVideoFrame ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::IVideoFrame*>
@@ -1054,8 +1050,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             enum MediaPlaybackAutoRepeatMode : int;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CMedia__CMediaPlaybackAutoRepeatMode_USE
@@ -1076,7 +1072,7 @@ IReference<enum ABI::Windows::Media::MediaPlaybackAutoRepeatMode> : IReference_i
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::MediaPlaybackAutoRepeatMode> __FIReference_1_Windows__CMedia__CMediaPlaybackAutoRepeatMode_t;
 #define __FIReference_1_Windows__CMedia__CMediaPlaybackAutoRepeatMode ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CMediaPlaybackAutoRepeatMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CMedia__CMediaPlaybackAutoRepeatMode ABI::Windows::Foundation::IReference<ABI::Windows::Media::MediaPlaybackAutoRepeatMode>
@@ -1090,8 +1086,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             enum MediaPlaybackType : int;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CMedia__CMediaPlaybackType_USE
@@ -1112,7 +1108,7 @@ IReference<enum ABI::Windows::Media::MediaPlaybackType> : IReference_impl<enum A
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::MediaPlaybackType> __FIReference_1_Windows__CMedia__CMediaPlaybackType_t;
 #define __FIReference_1_Windows__CMedia__CMediaPlaybackType ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CMediaPlaybackType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CMedia__CMediaPlaybackType ABI::Windows::Foundation::IReference<ABI::Windows::Media::MediaPlaybackType>
@@ -1126,8 +1122,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class MediaTimelineController;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1151,7 +1147,7 @@ ITypedEventHandler<ABI::Windows::Media::MediaTimelineController*,IInspectable*> 
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::MediaTimelineController*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::IMediaTimelineController*,IInspectable*>
@@ -1167,8 +1163,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class MediaTimelineControllerFailedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1192,7 +1188,7 @@ ITypedEventHandler<ABI::Windows::Media::MediaTimelineController*,ABI::Windows::M
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::MediaTimelineController*,ABI::Windows::Media::MediaTimelineControllerFailedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::IMediaTimelineController*,ABI::Windows::Media::IMediaTimelineControllerFailedEventArgs*>
@@ -1208,16 +1204,16 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class SystemMediaTransportControls;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             class AutoRepeatModeChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1241,7 +1237,7 @@ ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windows::Media::AutoRepeatModeChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::ISystemMediaTransportControls*,ABI::Windows::Media::IAutoRepeatModeChangeRequestedEventArgs*>
@@ -1258,8 +1254,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class PlaybackPositionChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1283,7 +1279,7 @@ ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windows::Media::PlaybackPositionChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::ISystemMediaTransportControls*,ABI::Windows::Media::IPlaybackPositionChangeRequestedEventArgs*>
@@ -1300,8 +1296,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class PlaybackRateChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1325,7 +1321,7 @@ ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windows::Media::PlaybackRateChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::ISystemMediaTransportControls*,ABI::Windows::Media::IPlaybackRateChangeRequestedEventArgs*>
@@ -1342,8 +1338,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class ShuffleEnabledChangeRequestedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1367,7 +1363,7 @@ ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windows::Media::ShuffleEnabledChangeRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::ISystemMediaTransportControls*,ABI::Windows::Media::IShuffleEnabledChangeRequestedEventArgs*>
@@ -1384,8 +1380,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class SystemMediaTransportControlsButtonPressedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1409,7 +1405,7 @@ ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windows::Media::SystemMediaTransportControlsButtonPressedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::ISystemMediaTransportControls*,ABI::Windows::Media::ISystemMediaTransportControlsButtonPressedEventArgs*>
@@ -1426,8 +1422,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class SystemMediaTransportControlsPropertyChangedEventArgs;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1451,7 +1447,7 @@ ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::SystemMediaTransportControls*,ABI::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::ISystemMediaTransportControls*,ABI::Windows::Media::ISystemMediaTransportControlsPropertyChangedEventArgs*>
@@ -1483,7 +1479,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -1498,8 +1494,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -1520,7 +1516,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -1550,7 +1546,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1580,7 +1576,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1610,7 +1606,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1640,7 +1636,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1670,7 +1666,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1699,7 +1695,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -1729,7 +1725,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -1759,7 +1755,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -1788,7 +1784,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1817,7 +1813,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1846,7 +1842,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1875,7 +1871,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1904,7 +1900,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1933,7 +1929,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1949,9 +1945,9 @@ namespace ABI {
             namespace Imaging {
                 struct BitmapBounds;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds_USE
@@ -1972,7 +1968,7 @@ IReference<struct ABI::Windows::Graphics::Imaging::BitmapBounds> : IReference_im
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Graphics::Imaging::BitmapBounds> __FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds_t;
 #define __FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds ABI::Windows::Foundation::__FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds ABI::Windows::Foundation::IReference<ABI::Windows::Graphics::Imaging::BitmapBounds>
@@ -1989,9 +1985,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceConnection;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
@@ -2000,9 +1996,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceConnection;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection ABI::Windows::ApplicationModel::AppService::IAppServiceConnection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
@@ -2018,9 +2014,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2031,9 +2027,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2045,8 +2041,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2058,8 +2054,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2071,8 +2067,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IMemoryBuffer;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIMemoryBuffer ABI::Windows::Foundation::IMemoryBuffer
 
 #endif // ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
@@ -2084,16 +2080,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2101,8 +2097,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2118,10 +2114,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DDevice;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_FWD_DEFINED__
@@ -2135,10 +2131,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -2155,9 +2151,9 @@ namespace ABI {
                 
                 typedef enum DirectXPixelFormat : int DirectXPixelFormat;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2169,9 +2165,9 @@ namespace ABI {
                 
                 typedef enum BitmapAlphaMode : int BitmapAlphaMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2180,9 +2176,9 @@ namespace ABI {
                 
                 typedef struct BitmapBounds BitmapBounds;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2191,18 +2187,18 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -2211,9 +2207,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -2226,8 +2222,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2235,8 +2231,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2249,9 +2245,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2260,9 +2256,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2278,8 +2274,8 @@ namespace ABI {
             
             typedef enum AudioBufferAccessMode : int AudioBufferAccessMode;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2287,8 +2283,8 @@ namespace ABI {
             
             typedef enum AudioProcessing : int AudioProcessing;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2296,8 +2292,8 @@ namespace ABI {
             
             typedef enum MediaPlaybackAutoRepeatMode : int MediaPlaybackAutoRepeatMode;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2305,8 +2301,8 @@ namespace ABI {
             
             typedef enum MediaPlaybackStatus : int MediaPlaybackStatus;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2314,8 +2310,8 @@ namespace ABI {
             
             typedef enum MediaPlaybackType : int MediaPlaybackType;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2323,8 +2319,8 @@ namespace ABI {
             
             typedef enum MediaTimelineControllerState : int MediaTimelineControllerState;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2332,8 +2328,8 @@ namespace ABI {
             
             typedef enum SoundLevel : int SoundLevel;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2341,8 +2337,8 @@ namespace ABI {
             
             typedef enum SystemMediaTransportControlsButton : int SystemMediaTransportControlsButton;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2350,8 +2346,8 @@ namespace ABI {
             
             typedef enum SystemMediaTransportControlsProperty : int SystemMediaTransportControlsProperty;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2359,8 +2355,8 @@ namespace ABI {
             
             typedef struct MediaTimeRange MediaTimeRange;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2403,16 +2399,16 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class AudioBuffer;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             class AudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2420,8 +2416,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class ImageDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2429,8 +2425,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class MediaExtensionManager;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2438,8 +2434,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class MediaProcessingTriggerDetails;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2448,8 +2444,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class MusicDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2461,8 +2457,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class SystemMediaTransportControlsDisplayUpdater;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2470,16 +2466,16 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class SystemMediaTransportControlsTimelineProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2512,8 +2508,8 @@ namespace ABI {
                 AudioBufferAccessMode_Write = 2,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2537,8 +2533,8 @@ namespace ABI {
                 AudioProcessing_Raw = 1,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2563,8 +2559,8 @@ namespace ABI {
                 MediaPlaybackAutoRepeatMode_List = 2,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2591,8 +2587,8 @@ namespace ABI {
                 MediaPlaybackStatus_Paused = 4,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2618,8 +2614,8 @@ namespace ABI {
                 MediaPlaybackType_Image = 3,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2653,8 +2649,8 @@ namespace ABI {
                 
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2679,8 +2675,8 @@ namespace ABI {
                 SoundLevel_Full = 2,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2712,8 +2708,8 @@ namespace ABI {
                 SystemMediaTransportControlsButton_ChannelDown = 9,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2736,8 +2732,8 @@ namespace ABI {
                 SystemMediaTransportControlsProperty_SoundLevel = 0,
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2761,8 +2757,8 @@ namespace ABI {
                 ABI::Windows::Foundation::TimeSpan End;
             };
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2808,8 +2804,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAudioBuffer=_uuidof(IAudioBuffer);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIAudioBuffer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIAudioBuffer_INTERFACE_DEFINED__) */
@@ -2853,8 +2849,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAudioFrame=_uuidof(IAudioFrame);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIAudioFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIAudioFrame_INTERFACE_DEFINED__) */
@@ -2893,8 +2889,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAudioFrameFactory=_uuidof(IAudioFrameFactory);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIAudioFrameFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIAudioFrameFactory_INTERFACE_DEFINED__) */
@@ -2932,8 +2928,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAutoRepeatModeChangeRequestedEventArgs=_uuidof(IAutoRepeatModeChangeRequestedEventArgs);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIAutoRepeatModeChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIAutoRepeatModeChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2980,8 +2976,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IImageDisplayProperties=_uuidof(IImageDisplayProperties);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIImageDisplayProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIImageDisplayProperties_INTERFACE_DEFINED__) */
@@ -3235,14 +3231,14 @@ namespace ABI {
                 DEPRECATED("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
                 #endif // WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION >= 0x10000
                 /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_IsPlaying(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 
                 #if WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION >= 0x10000
                 DEPRECATED("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
                 #endif // WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION >= 0x10000
                 /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsPlaying(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
                 #if WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION >= 0x10000
@@ -3263,8 +3259,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaControl=_uuidof(IMediaControl);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaControl_INTERFACE_DEFINED__) */
@@ -3299,8 +3295,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaExtension=_uuidof(IMediaExtension);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaExtension;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaExtension_INTERFACE_DEFINED__) */
@@ -3399,8 +3395,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaExtensionManager=_uuidof(IMediaExtensionManager);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaExtensionManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaExtensionManager_INTERFACE_DEFINED__) */
@@ -3443,8 +3439,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaExtensionManager2=_uuidof(IMediaExtensionManager2);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaExtensionManager2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaExtensionManager2_INTERFACE_DEFINED__) */
@@ -3479,7 +3475,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadOnly(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RelativeTime(
                     /* [in] */__RPC__in_opt __FIReference_1_Windows__CFoundation__CTimeSpan * value
@@ -3500,10 +3496,10 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CTimeSpan * * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDiscontinuous(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDiscontinuous(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedProperties(
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
@@ -3513,8 +3509,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaFrame=_uuidof(IMediaFrame);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaFrame_INTERFACE_DEFINED__) */
@@ -3555,8 +3551,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaMarker=_uuidof(IMediaMarker);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaMarker;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaMarker_INTERFACE_DEFINED__) */
@@ -3594,8 +3590,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaMarkerTypesStatics=_uuidof(IMediaMarkerTypesStatics);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaMarkerTypesStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaMarkerTypesStatics_INTERFACE_DEFINED__) */
@@ -3630,8 +3626,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaMarkers=_uuidof(IMediaMarkers);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaMarkers;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaMarkers_INTERFACE_DEFINED__) */
@@ -3669,8 +3665,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaProcessingTriggerDetails=_uuidof(IMediaProcessingTriggerDetails);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaProcessingTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaProcessingTriggerDetails_INTERFACE_DEFINED__) */
@@ -3737,8 +3733,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaTimelineController=_uuidof(IMediaTimelineController);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaTimelineController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaTimelineController_INTERFACE_DEFINED__) */
@@ -3775,10 +3771,10 @@ namespace ABI {
                     /* [in] */__RPC__in_opt __FIReference_1_Windows__CFoundation__CTimeSpan * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLoopingEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsLoopingEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Failed(
                     /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs * eventHandler,
@@ -3799,8 +3795,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaTimelineController2=_uuidof(IMediaTimelineController2);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaTimelineController2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaTimelineController2_INTERFACE_DEFINED__) */
@@ -3838,8 +3834,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMediaTimelineControllerFailedEventArgs=_uuidof(IMediaTimelineControllerFailedEventArgs);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMediaTimelineControllerFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMediaTimelineControllerFailedEventArgs_INTERFACE_DEFINED__) */
@@ -3892,8 +3888,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMusicDisplayProperties=_uuidof(IMusicDisplayProperties);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMusicDisplayProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMusicDisplayProperties_INTERFACE_DEFINED__) */
@@ -3943,8 +3939,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMusicDisplayProperties2=_uuidof(IMusicDisplayProperties2);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMusicDisplayProperties2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMusicDisplayProperties2_INTERFACE_DEFINED__) */
@@ -3985,8 +3981,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMusicDisplayProperties3=_uuidof(IMusicDisplayProperties3);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIMusicDisplayProperties3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIMusicDisplayProperties3_INTERFACE_DEFINED__) */
@@ -4024,8 +4020,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPlaybackPositionChangeRequestedEventArgs=_uuidof(IPlaybackPositionChangeRequestedEventArgs);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIPlaybackPositionChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIPlaybackPositionChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -4063,8 +4059,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPlaybackRateChangeRequestedEventArgs=_uuidof(IPlaybackRateChangeRequestedEventArgs);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIPlaybackRateChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIPlaybackRateChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -4095,15 +4091,15 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequestedShuffleEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IShuffleEnabledChangeRequestedEventArgs=_uuidof(IShuffleEnabledChangeRequestedEventArgs);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIShuffleEnabledChangeRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIShuffleEnabledChangeRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -4146,70 +4142,70 @@ namespace ABI {
                     /* [retval, out] */__RPC__out ABI::Windows::Media::SoundLevel * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlayEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPlayEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStopEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsStopEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPauseEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPauseEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRecordEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRecordEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFastForwardEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsFastForwardEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRewindEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRewindEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPreviousEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPreviousEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNextEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsNextEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsChannelUpEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsChannelUpEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsChannelDownEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsChannelDownEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ButtonPressed(
                     /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs * handler,
@@ -4230,8 +4226,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISystemMediaTransportControls=_uuidof(ISystemMediaTransportControls);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CISystemMediaTransportControls;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CISystemMediaTransportControls_INTERFACE_DEFINED__) */
@@ -4268,10 +4264,10 @@ namespace ABI {
                     /* [in] */ABI::Windows::Media::MediaPlaybackAutoRepeatMode value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShuffleEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShuffleEnabled(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PlaybackRate(
                     /* [retval, out] */__RPC__out DOUBLE * value
@@ -4315,8 +4311,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISystemMediaTransportControls2=_uuidof(ISystemMediaTransportControls2);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CISystemMediaTransportControls2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CISystemMediaTransportControls2_INTERFACE_DEFINED__) */
@@ -4354,8 +4350,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISystemMediaTransportControlsButtonPressedEventArgs=_uuidof(ISystemMediaTransportControlsButtonPressedEventArgs);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CISystemMediaTransportControlsButtonPressedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsButtonPressedEventArgs_INTERFACE_DEFINED__) */
@@ -4424,8 +4420,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISystemMediaTransportControlsDisplayUpdater=_uuidof(ISystemMediaTransportControlsDisplayUpdater);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CISystemMediaTransportControlsDisplayUpdater;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsDisplayUpdater_INTERFACE_DEFINED__) */
@@ -4463,8 +4459,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISystemMediaTransportControlsPropertyChangedEventArgs=_uuidof(ISystemMediaTransportControlsPropertyChangedEventArgs);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CISystemMediaTransportControlsPropertyChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsPropertyChangedEventArgs_INTERFACE_DEFINED__) */
@@ -4502,8 +4498,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISystemMediaTransportControlsStatics=_uuidof(ISystemMediaTransportControlsStatics);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CISystemMediaTransportControlsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsStatics_INTERFACE_DEFINED__) */
@@ -4568,8 +4564,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISystemMediaTransportControlsTimelineProperties=_uuidof(ISystemMediaTransportControlsTimelineProperties);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CISystemMediaTransportControlsTimelineProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CISystemMediaTransportControlsTimelineProperties_INTERFACE_DEFINED__) */
@@ -4616,8 +4612,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IVideoDisplayProperties=_uuidof(IVideoDisplayProperties);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIVideoDisplayProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIVideoDisplayProperties_INTERFACE_DEFINED__) */
@@ -4655,8 +4651,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IVideoDisplayProperties2=_uuidof(IVideoDisplayProperties2);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIVideoDisplayProperties2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIVideoDisplayProperties2_INTERFACE_DEFINED__) */
@@ -4694,8 +4690,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IVideoEffectsStatics=_uuidof(IVideoEffectsStatics);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIVideoEffectsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIVideoEffectsStatics_INTERFACE_DEFINED__) */
@@ -4745,8 +4741,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IVideoFrame=_uuidof(IVideoFrame);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIVideoFrame;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIVideoFrame_INTERFACE_DEFINED__) */
@@ -4787,8 +4783,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IVideoFrame2=_uuidof(IVideoFrame2);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIVideoFrame2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIVideoFrame2_INTERFACE_DEFINED__) */
@@ -4836,8 +4832,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IVideoFrameFactory=_uuidof(IVideoFrameFactory);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIVideoFrameFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIVideoFrameFactory_INTERFACE_DEFINED__) */
@@ -4893,8 +4889,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IVideoFrameStatics=_uuidof(IVideoFrameStatics);
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CIVideoFrameStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CIVideoFrameStatics_INTERFACE_DEFINED__) */
@@ -6584,7 +6580,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIMediaTimelineController * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIMediaTimelineController * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_IInspectableVtbl;
 
@@ -6636,7 +6632,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIMediaTimelineController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIMediaTimelineControllerFailedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIMediaTimelineController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIMediaTimelineControllerFailedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CMediaTimelineController_Windows__CMedia__CMediaTimelineControllerFailedEventArgsVtbl;
 
@@ -6689,7 +6685,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIAutoRepeatModeChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIAutoRepeatModeChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CAutoRepeatModeChangeRequestedEventArgsVtbl;
 
@@ -6742,7 +6738,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIPlaybackPositionChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIPlaybackPositionChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackPositionChangeRequestedEventArgsVtbl;
 
@@ -6795,7 +6791,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIPlaybackRateChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIPlaybackRateChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CPlaybackRateChangeRequestedEventArgsVtbl;
 
@@ -6848,7 +6844,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIShuffleEnabledChangeRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CIShuffleEnabledChangeRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CShuffleEnabledChangeRequestedEventArgsVtbl;
 
@@ -6901,7 +6897,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsButtonPressedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsButtonPressedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsButtonPressedEventArgsVtbl;
 
@@ -6954,7 +6950,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportCon
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsPropertyChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CISystemMediaTransportControlsPropertyChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CSystemMediaTransportControls_Windows__CMedia__CSystemMediaTransportControlsPropertyChangedEventArgsVtbl;
 

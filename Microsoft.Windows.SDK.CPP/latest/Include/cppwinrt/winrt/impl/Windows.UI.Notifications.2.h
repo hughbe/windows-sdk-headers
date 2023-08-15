@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -208,7 +208,8 @@ struct WINRT_EBO TileUpdater :
 };
 
 struct WINRT_EBO ToastActivatedEventArgs :
-    Windows::UI::Notifications::IToastActivatedEventArgs
+    Windows::UI::Notifications::IToastActivatedEventArgs,
+    impl::require<ToastActivatedEventArgs, Windows::UI::Notifications::IToastActivatedEventArgs2>
 {
     ToastActivatedEventArgs(std::nullptr_t) noexcept {}
 };
@@ -240,7 +241,7 @@ struct WINRT_EBO ToastFailedEventArgs :
 
 struct WINRT_EBO ToastNotification :
     Windows::UI::Notifications::IToastNotification,
-    impl::require<ToastNotification, Windows::UI::Notifications::IToastNotification2, Windows::UI::Notifications::IToastNotification3, Windows::UI::Notifications::IToastNotification4>
+    impl::require<ToastNotification, Windows::UI::Notifications::IToastNotification2, Windows::UI::Notifications::IToastNotification3, Windows::UI::Notifications::IToastNotification4, Windows::UI::Notifications::IToastNotification6>
 {
     ToastNotification(std::nullptr_t) noexcept {}
     ToastNotification(Windows::Data::Xml::Dom::XmlDocument const& content);

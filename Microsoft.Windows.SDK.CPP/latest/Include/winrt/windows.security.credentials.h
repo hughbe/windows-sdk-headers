@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.credentials.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface ICredentialFactory;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CICredentialFactory ABI::Windows::Security::Credentials::ICredentialFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CICredentialFactory_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IKeyCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredential ABI::Windows::Security::Credentials::IKeyCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredential_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IKeyCredentialAttestationResult;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialAttestationResult ABI::Windows::Security::Credentials::IKeyCredentialAttestationResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialAttestationResult_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IKeyCredentialManagerStatics;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialManagerStatics ABI::Windows::Security::Credentials::IKeyCredentialManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialManagerStatics_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IKeyCredentialOperationResult;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialOperationResult ABI::Windows::Security::Credentials::IKeyCredentialOperationResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialOperationResult_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IKeyCredentialRetrievalResult;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialRetrievalResult ABI::Windows::Security::Credentials::IKeyCredentialRetrievalResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialRetrievalResult_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordVault;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordVault ABI::Windows::Security::Credentials::IPasswordVault
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordVault_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount ABI::Windows::Security::Credentials::IWebAccount
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccount2;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount2 ABI::Windows::Security::Credentials::IWebAccount2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount2_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountFactory;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountFactory ABI::Windows::Security::Credentials::IWebAccountFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountFactory_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountProvider;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider ABI::Windows::Security::Credentials::IWebAccountProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountProvider2;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider2 ABI::Windows::Security::Credentials::IWebAccountProvider2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider2_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountProvider3;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider3 ABI::Windows::Security::Credentials::IWebAccountProvider3
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider3_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountProvider4;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider4 ABI::Windows::Security::Credentials::IWebAccountProvider4
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider4_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountProviderFactory;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProviderFactory ABI::Windows::Security::Credentials::IWebAccountProviderFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProviderFactory_FWD_DEFINED__
@@ -504,9 +500,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -529,7 +525,7 @@ IIterator<ABI::Windows::Security::Credentials::PasswordCredential*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Credentials::PasswordCredential*> __FIIterator_1_Windows__CSecurity__CCredentials__CPasswordCredential_t;
 #define __FIIterator_1_Windows__CSecurity__CCredentials__CPasswordCredential ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCredentials__CPasswordCredential_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCredentials__CPasswordCredential ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Credentials::IPasswordCredential*>
@@ -561,7 +557,7 @@ IIterable<ABI::Windows::Security::Credentials::PasswordCredential*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Credentials::PasswordCredential*> __FIIterable_1_Windows__CSecurity__CCredentials__CPasswordCredential_t;
 #define __FIIterable_1_Windows__CSecurity__CCredentials__CPasswordCredential ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCredentials__CPasswordCredential_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCredentials__CPasswordCredential ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Credentials::IPasswordCredential*>
@@ -577,9 +573,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -602,7 +598,7 @@ IIterator<ABI::Windows::Security::Credentials::WebAccount*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Credentials::WebAccount*> __FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -634,7 +630,7 @@ IIterable<ABI::Windows::Security::Credentials::WebAccount*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Credentials::WebAccount*> __FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -666,7 +662,7 @@ IVectorView<ABI::Windows::Security::Credentials::PasswordCredential*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Credentials::PasswordCredential*> __FIVectorView_1_Windows__CSecurity__CCredentials__CPasswordCredential_t;
 #define __FIVectorView_1_Windows__CSecurity__CCredentials__CPasswordCredential ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCredentials__CPasswordCredential_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCredentials__CPasswordCredential ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Credentials::IPasswordCredential*>
@@ -698,7 +694,7 @@ IVectorView<ABI::Windows::Security::Credentials::WebAccount*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Credentials::WebAccount*> __FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -730,7 +726,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CCredential
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Credentials::IWebAccount*>*>
@@ -762,7 +758,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount*> __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Credentials::IWebAccount*>*>
@@ -778,9 +774,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class KeyCredentialAttestationResult;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -803,7 +799,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::KeyCredenti
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::KeyCredentialAttestationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::IKeyCredentialAttestationResult*>
@@ -835,7 +831,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::KeyCredentialAttestationRes
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::KeyCredentialAttestationResult*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialAttestationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::IKeyCredentialAttestationResult*>
@@ -851,9 +847,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class KeyCredentialOperationResult;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -876,7 +872,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::KeyCredenti
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::KeyCredentialOperationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::IKeyCredentialOperationResult*>
@@ -908,7 +904,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::KeyCredentialOperationResul
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::KeyCredentialOperationResult*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialOperationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::IKeyCredentialOperationResult*>
@@ -924,9 +920,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class KeyCredentialRetrievalResult;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -949,7 +945,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::KeyCredenti
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::KeyCredentialRetrievalResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::IKeyCredentialRetrievalResult*>
@@ -981,7 +977,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::KeyCredentialRetrievalResul
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::KeyCredentialRetrievalResult*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CKeyCredentialRetrievalResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::IKeyCredentialRetrievalResult*>
@@ -1013,7 +1009,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccount*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccount*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -1045,7 +1041,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::WebAccount*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::WebAccount*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -1061,9 +1057,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccountProvider;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1086,7 +1082,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccountP
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccountProvider*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::IWebAccountProvider*>
@@ -1118,7 +1114,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::WebAccountProvider*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::WebAccountProvider*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::IWebAccountProvider*>
@@ -1148,7 +1144,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1177,7 +1173,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1206,7 +1202,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1236,7 +1232,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1266,7 +1262,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1295,7 +1291,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1312,9 +1308,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1340,7 +1336,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -1372,7 +1368,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStream*>
@@ -1403,7 +1399,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1433,7 +1429,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1463,7 +1459,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1493,7 +1489,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1523,7 +1519,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1552,7 +1548,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -1582,7 +1578,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -1612,7 +1608,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -1631,9 +1627,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1648,8 +1644,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1660,8 +1656,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1669,8 +1665,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1686,10 +1682,10 @@ namespace ABI {
                     
                     typedef enum CryptographicPublicKeyBlobType : int CryptographicPublicKeyBlobType;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1702,9 +1698,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1718,8 +1714,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1727,8 +1723,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1743,9 +1739,9 @@ namespace ABI {
                 
                 typedef enum KeyCredentialAttestationStatus : int KeyCredentialAttestationStatus;
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1754,9 +1750,9 @@ namespace ABI {
                 
                 typedef enum KeyCredentialCreationOption : int KeyCredentialCreationOption;
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1765,9 +1761,9 @@ namespace ABI {
                 
                 typedef enum KeyCredentialStatus : int KeyCredentialStatus;
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1776,9 +1772,9 @@ namespace ABI {
                 
                 typedef enum WebAccountPictureSize : int WebAccountPictureSize;
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1787,9 +1783,9 @@ namespace ABI {
                 
                 typedef enum WebAccountState : int WebAccountState;
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1812,9 +1808,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class KeyCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1827,9 +1823,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredentialPropertyStore;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1837,9 +1833,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordVault;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1875,9 +1871,9 @@ namespace ABI {
                     KeyCredentialAttestationStatus_TemporaryFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1902,9 +1898,9 @@ namespace ABI {
                     KeyCredentialCreationOption_FailIfExists = 1,
                 };
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1934,9 +1930,9 @@ namespace ABI {
                     KeyCredentialStatus_SecurityDeviceLocked = 6,
                 };
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1963,9 +1959,9 @@ namespace ABI {
                     WebAccountPictureSize_Size1080x1080 = 1080,
                 };
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1991,9 +1987,9 @@ namespace ABI {
                     WebAccountState_Error = 2,
                 };
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2032,9 +2028,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICredentialFactory=_uuidof(ICredentialFactory);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CICredentialFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CICredentialFactory_INTERFACE_DEFINED__) */
@@ -2087,9 +2083,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyCredential=_uuidof(IKeyCredential);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredential;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredential_INTERFACE_DEFINED__) */
@@ -2134,9 +2130,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyCredentialAttestationResult=_uuidof(IKeyCredentialAttestationResult);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialAttestationResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialAttestationResult_INTERFACE_DEFINED__) */
@@ -2191,9 +2187,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyCredentialManagerStatics=_uuidof(IKeyCredentialManagerStatics);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialManagerStatics_INTERFACE_DEFINED__) */
@@ -2235,9 +2231,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyCredentialOperationResult=_uuidof(IKeyCredentialOperationResult);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialOperationResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialOperationResult_INTERFACE_DEFINED__) */
@@ -2279,9 +2275,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyCredentialRetrievalResult=_uuidof(IKeyCredentialRetrievalResult);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialRetrievalResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIKeyCredentialRetrievalResult_INTERFACE_DEFINED__) */
@@ -2339,9 +2335,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPasswordCredential=_uuidof(IPasswordCredential);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_INTERFACE_DEFINED__) */
@@ -2399,9 +2395,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPasswordVault=_uuidof(IPasswordVault);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIPasswordVault;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordVault_INTERFACE_DEFINED__) */
@@ -2443,9 +2439,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccount=_uuidof(IWebAccount);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_INTERFACE_DEFINED__) */
@@ -2502,9 +2498,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccount2=_uuidof(IWebAccount2);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount2_INTERFACE_DEFINED__) */
@@ -2546,9 +2542,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountFactory=_uuidof(IWebAccountFactory);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountFactory_INTERFACE_DEFINED__) */
@@ -2597,9 +2593,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProvider=_uuidof(IWebAccountProvider);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_INTERFACE_DEFINED__) */
@@ -2645,9 +2641,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProvider2=_uuidof(IWebAccountProvider2);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider2_INTERFACE_DEFINED__) */
@@ -2691,9 +2687,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProvider3=_uuidof(IWebAccountProvider3);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider3_INTERFACE_DEFINED__) */
@@ -2725,16 +2721,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSystemProvider(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProvider4=_uuidof(IWebAccountProvider4);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider4;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider4_INTERFACE_DEFINED__) */
@@ -2776,9 +2772,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProviderFactory=_uuidof(IWebAccountProviderFactory);
                 
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProviderFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProviderFactory_INTERFACE_DEFINED__) */

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.enumeration.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -265,6 +261,7 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.ApplicationModel.Background.h"
+#include "Windows.Security.Credentials.h"
 #include "Windows.Storage.Streams.h"
 #include "Windows.UI.h"
 #include "Windows.UI.Popups.h"
@@ -280,9 +277,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceAccessChangedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs ABI::Windows::Devices::Enumeration::IDeviceAccessChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs_FWD_DEFINED__
@@ -294,9 +291,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceAccessChangedEventArgs2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs2 ABI::Windows::Devices::Enumeration::IDeviceAccessChangedEventArgs2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs2_FWD_DEFINED__
@@ -308,9 +305,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceAccessInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation ABI::Windows::Devices::Enumeration::IDeviceAccessInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation_FWD_DEFINED__
@@ -322,9 +319,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceAccessInformationStatics;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformationStatics ABI::Windows::Devices::Enumeration::IDeviceAccessInformationStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformationStatics_FWD_DEFINED__
@@ -336,9 +333,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceConnectionChangeTriggerDetails;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceConnectionChangeTriggerDetails ABI::Windows::Devices::Enumeration::IDeviceConnectionChangeTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceConnectionChangeTriggerDetails_FWD_DEFINED__
@@ -350,9 +347,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceDisconnectButtonClickedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceDisconnectButtonClickedEventArgs ABI::Windows::Devices::Enumeration::IDeviceDisconnectButtonClickedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceDisconnectButtonClickedEventArgs_FWD_DEFINED__
@@ -364,9 +361,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -378,9 +375,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation2 ABI::Windows::Devices::Enumeration::IDeviceInformation2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation2_FWD_DEFINED__
@@ -392,9 +389,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationCustomPairing;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationCustomPairing ABI::Windows::Devices::Enumeration::IDeviceInformationCustomPairing
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationCustomPairing_FWD_DEFINED__
@@ -406,9 +403,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationPairing;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing ABI::Windows::Devices::Enumeration::IDeviceInformationPairing
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing_FWD_DEFINED__
@@ -420,9 +417,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationPairing2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing2 ABI::Windows::Devices::Enumeration::IDeviceInformationPairing2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing2_FWD_DEFINED__
@@ -434,9 +431,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationPairingStatics;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics ABI::Windows::Devices::Enumeration::IDeviceInformationPairingStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics_FWD_DEFINED__
@@ -448,9 +445,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationPairingStatics2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics2 ABI::Windows::Devices::Enumeration::IDeviceInformationPairingStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics2_FWD_DEFINED__
@@ -462,9 +459,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationStatics;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics ABI::Windows::Devices::Enumeration::IDeviceInformationStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics_FWD_DEFINED__
@@ -476,9 +473,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationStatics2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics2 ABI::Windows::Devices::Enumeration::IDeviceInformationStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics2_FWD_DEFINED__
@@ -490,9 +487,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationUpdate;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate ABI::Windows::Devices::Enumeration::IDeviceInformationUpdate
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate_FWD_DEFINED__
@@ -504,9 +501,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformationUpdate2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate2 ABI::Windows::Devices::Enumeration::IDeviceInformationUpdate2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate2_FWD_DEFINED__
@@ -518,12 +515,26 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePairingRequestedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs ABI::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Enumeration {
+                interface IDevicePairingRequestedEventArgs2;
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 ABI::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2
+
+#endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult_FWD_DEFINED__
@@ -532,9 +543,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePairingResult;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult ABI::Windows::Devices::Enumeration::IDevicePairingResult
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult_FWD_DEFINED__
@@ -546,9 +557,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePairingSettings;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingSettings ABI::Windows::Devices::Enumeration::IDevicePairingSettings
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingSettings_FWD_DEFINED__
@@ -560,9 +571,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePicker;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker ABI::Windows::Devices::Enumeration::IDevicePicker
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker_FWD_DEFINED__
@@ -574,9 +585,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePickerAppearance;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance ABI::Windows::Devices::Enumeration::IDevicePickerAppearance
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_FWD_DEFINED__
@@ -588,9 +599,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDevicePickerFilter;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerFilter ABI::Windows::Devices::Enumeration::IDevicePickerFilter
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerFilter_FWD_DEFINED__
@@ -602,9 +613,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceSelectedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceSelectedEventArgs ABI::Windows::Devices::Enumeration::IDeviceSelectedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceSelectedEventArgs_FWD_DEFINED__
@@ -616,9 +627,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceUnpairingResult;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceUnpairingResult ABI::Windows::Devices::Enumeration::IDeviceUnpairingResult
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceUnpairingResult_FWD_DEFINED__
@@ -630,9 +641,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceWatcher;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher ABI::Windows::Devices::Enumeration::IDeviceWatcher
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher_FWD_DEFINED__
@@ -644,9 +655,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceWatcher2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher2 ABI::Windows::Devices::Enumeration::IDeviceWatcher2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher2_FWD_DEFINED__
@@ -658,9 +669,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceWatcherEvent;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherEvent ABI::Windows::Devices::Enumeration::IDeviceWatcherEvent
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherEvent_FWD_DEFINED__
@@ -672,9 +683,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceWatcherTriggerDetails;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherTriggerDetails ABI::Windows::Devices::Enumeration::IDeviceWatcherTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherTriggerDetails_FWD_DEFINED__
@@ -686,9 +697,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IEnclosureLocation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation ABI::Windows::Devices::Enumeration::IEnclosureLocation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation_FWD_DEFINED__
@@ -700,9 +711,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IEnclosureLocation2;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation2 ABI::Windows::Devices::Enumeration::IEnclosureLocation2
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation2_FWD_DEFINED__
@@ -715,9 +726,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 enum DeviceClass : int;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CEnumeration__CDeviceClass_USE
@@ -738,7 +749,7 @@ IIterator<enum ABI::Windows::Devices::Enumeration::DeviceClass> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::Enumeration::DeviceClass> __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceClass_t;
 #define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CEnumeration__CDeviceClass_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Enumeration::DeviceClass>
@@ -768,7 +779,7 @@ IIterable<enum ABI::Windows::Devices::Enumeration::DeviceClass> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::Enumeration::DeviceClass> __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceClass_t;
 #define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CEnumeration__CDeviceClass_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Enumeration::DeviceClass>
@@ -783,9 +794,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -808,7 +819,7 @@ IIterator<ABI::Windows::Devices::Enumeration::DeviceInformation*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Enumeration::DeviceInformation*> __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceInformation_t;
 #define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CEnumeration__CDeviceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Enumeration::IDeviceInformation*>
@@ -840,7 +851,7 @@ IIterable<ABI::Windows::Devices::Enumeration::DeviceInformation*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Enumeration::DeviceInformation*> __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceInformation_t;
 #define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CEnumeration__CDeviceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Enumeration::IDeviceInformation*>
@@ -856,9 +867,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceWatcherEvent;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -881,7 +892,7 @@ IIterator<ABI::Windows::Devices::Enumeration::DeviceWatcherEvent*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Enumeration::DeviceWatcherEvent*> __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent_t;
 #define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Enumeration::IDeviceWatcherEvent*>
@@ -913,7 +924,7 @@ IIterable<ABI::Windows::Devices::Enumeration::DeviceWatcherEvent*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Enumeration::DeviceWatcherEvent*> __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent_t;
 #define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Enumeration::IDeviceWatcherEvent*>
@@ -929,9 +940,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 enum DeviceWatcherEventKind : int;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind_USE
@@ -952,7 +963,7 @@ IIterator<enum ABI::Windows::Devices::Enumeration::DeviceWatcherEventKind> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::Enumeration::DeviceWatcherEventKind> __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind_t;
 #define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Enumeration::DeviceWatcherEventKind>
@@ -982,7 +993,7 @@ IIterable<enum ABI::Windows::Devices::Enumeration::DeviceWatcherEventKind> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::Enumeration::DeviceWatcherEventKind> __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind_t;
 #define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CEnumeration__CDeviceWatcherEventKind ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Enumeration::DeviceWatcherEventKind>
@@ -1012,7 +1023,7 @@ IVectorView<enum ABI::Windows::Devices::Enumeration::DeviceClass> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::Enumeration::DeviceClass> __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceClass_t;
 #define __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceClass_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Enumeration::DeviceClass>
@@ -1043,7 +1054,7 @@ IVectorView<ABI::Windows::Devices::Enumeration::DeviceInformation*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Enumeration::DeviceInformation*> __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceInformation_t;
 #define __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Enumeration::IDeviceInformation*>
@@ -1075,7 +1086,7 @@ IVectorView<ABI::Windows::Devices::Enumeration::DeviceWatcherEvent*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Enumeration::DeviceWatcherEvent*> __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent_t;
 #define __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceWatcherEvent ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Enumeration::IDeviceWatcherEvent*>
@@ -1106,7 +1117,7 @@ IVector<enum ABI::Windows::Devices::Enumeration::DeviceClass> : IVector_impl<enu
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Devices::Enumeration::DeviceClass> __FIVector_1_Windows__CDevices__CEnumeration__CDeviceClass_t;
 #define __FIVector_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CEnumeration__CDeviceClass_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CEnumeration__CDeviceClass ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Enumeration::DeviceClass>
@@ -1121,9 +1132,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 enum DeviceAccessStatus : int;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_USE
@@ -1144,7 +1155,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Enumeration::DeviceA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Enumeration::DeviceAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceAccessStatus>
@@ -1174,7 +1185,7 @@ IAsyncOperation<enum ABI::Windows::Devices::Enumeration::DeviceAccessStatus> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::Enumeration::DeviceAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceAccessStatus>
@@ -1205,7 +1216,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceInform
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceInformation*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::IDeviceInformation*>
@@ -1237,7 +1248,7 @@ IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceInformation*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceInformation*> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformation_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Enumeration::IDeviceInformation*>
@@ -1253,9 +1264,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformationCollection;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1278,7 +1289,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceInform
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceInformationCollection*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection ABI::Windows::Foundation::IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceInformation*>
@@ -1310,7 +1321,7 @@ IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceInformationCollection*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceInformationCollection*> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceInformationCollection ABI::Windows::Foundation::IAsyncOperation<__FIVectorView_1_Windows__CDevices__CEnumeration__CDeviceInformation*>
@@ -1326,9 +1337,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DevicePairingResult;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1351,7 +1362,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DevicePairin
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DevicePairingResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDevicePairingResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDevicePairingResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDevicePairingResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDevicePairingResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::IDevicePairingResult*>
@@ -1383,7 +1394,7 @@ IAsyncOperation<ABI::Windows::Devices::Enumeration::DevicePairingResult*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Enumeration::DevicePairingResult*> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDevicePairingResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDevicePairingResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDevicePairingResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDevicePairingResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Enumeration::IDevicePairingResult*>
@@ -1399,9 +1410,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceThumbnail;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1410,9 +1421,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1438,7 +1449,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceThumbn
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceThumbnail*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceThumbnail_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceThumbnail ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceThumbnail ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1470,7 +1481,7 @@ IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceThumbnail*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceThumbnail*> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceThumbnail_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceThumbnail ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceThumbnail_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceThumbnail ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1486,9 +1497,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceUnpairingResult;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1511,7 +1522,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceUnpair
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceUnpairingResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::IDeviceUnpairingResult*>
@@ -1543,7 +1554,7 @@ IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceUnpairingResult*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceUnpairingResult*> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceUnpairingResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Enumeration::IDeviceUnpairingResult*>
@@ -1559,9 +1570,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceAccessInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1569,9 +1580,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceAccessChangedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1595,7 +1606,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceAccessInformation*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceAccessInformation*,ABI::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDeviceAccessInformation*,ABI::Windows::Devices::Enumeration::IDeviceAccessChangedEventArgs*>
@@ -1612,9 +1623,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformationCustomPairing;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1622,9 +1633,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DevicePairingRequestedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1648,7 +1659,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceInformationCustomPa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceInformationCustomPairing*,ABI::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDeviceInformationCustomPairing*,ABI::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs*>
@@ -1665,9 +1676,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DevicePicker;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1691,7 +1702,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DevicePicker*,IInspectabl
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DevicePicker*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDevicePicker*,IInspectable*>
@@ -1708,9 +1719,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceDisconnectButtonClickedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1734,7 +1745,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DevicePicker*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DevicePicker*,ABI::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDevicePicker*,ABI::Windows::Devices::Enumeration::IDeviceDisconnectButtonClickedEventArgs*>
@@ -1752,9 +1763,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceSelectedEventArgs;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1778,7 +1789,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DevicePicker*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DevicePicker*,ABI::Windows::Devices::Enumeration::DeviceSelectedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDevicePicker*,ABI::Windows::Devices::Enumeration::IDeviceSelectedEventArgs*>
@@ -1795,9 +1806,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceWatcher;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1821,7 +1832,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceWatcher*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDeviceWatcher*,IInspectable*>
@@ -1855,7 +1866,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceWatcher*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceWatcher*,ABI::Windows::Devices::Enumeration::DeviceInformation*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDeviceWatcher*,ABI::Windows::Devices::Enumeration::IDeviceInformation*>
@@ -1873,9 +1884,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformationUpdate;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1899,7 +1910,7 @@ ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceWatcher*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Enumeration::DeviceWatcher*,ABI::Windows::Devices::Enumeration::DeviceInformationUpdate*> __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Enumeration::IDeviceWatcher*,ABI::Windows::Devices::Enumeration::IDeviceInformationUpdate*>
@@ -1931,7 +1942,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1961,7 +1972,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1991,7 +2002,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2021,7 +2032,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -2050,7 +2061,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2079,7 +2090,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2108,7 +2119,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -2137,7 +2148,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -2154,9 +2165,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 class DeviceWatcherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger_FWD_DEFINED__
@@ -2165,9 +2176,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IDeviceWatcherTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger ABI::Windows::ApplicationModel::Background::IDeviceWatcherTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIDeviceWatcherTrigger_FWD_DEFINED__
@@ -2180,8 +2191,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2189,8 +2200,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2202,8 +2213,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2215,8 +2226,35 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Security {
+            namespace Credentials {
+                class PasswordCredential;
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Security {
+            namespace Credentials {
+                interface IPasswordCredential;
+            } /* Credentials */
+        } /* Security */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
+
+#endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
+
 
 
 
@@ -2228,9 +2266,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IContentTypeProvider;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider ABI::Windows::Storage::Streams::IContentTypeProvider
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_FWD_DEFINED__
@@ -2243,9 +2281,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -2258,9 +2296,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -2273,9 +2311,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -2291,8 +2329,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2303,9 +2341,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2317,9 +2355,9 @@ namespace ABI {
                 
                 typedef enum DeviceAccessStatus : int DeviceAccessStatus;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2328,9 +2366,9 @@ namespace ABI {
                 
                 typedef enum DeviceClass : int DeviceClass;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2339,9 +2377,9 @@ namespace ABI {
                 
                 typedef enum DeviceInformationKind : int DeviceInformationKind;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2350,9 +2388,9 @@ namespace ABI {
                 
                 typedef enum DevicePairingKinds : unsigned int DevicePairingKinds;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2361,9 +2399,9 @@ namespace ABI {
                 
                 typedef enum DevicePairingProtectionLevel : int DevicePairingProtectionLevel;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2372,9 +2410,9 @@ namespace ABI {
                 
                 typedef enum DevicePairingResultStatus : int DevicePairingResultStatus;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2383,9 +2421,9 @@ namespace ABI {
                 
                 typedef enum DevicePickerDisplayStatusOptions : unsigned int DevicePickerDisplayStatusOptions;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2394,9 +2432,9 @@ namespace ABI {
                 
                 typedef enum DeviceUnpairingResultStatus : int DeviceUnpairingResultStatus;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2405,9 +2443,9 @@ namespace ABI {
                 
                 typedef enum DeviceWatcherEventKind : int DeviceWatcherEventKind;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2416,9 +2454,9 @@ namespace ABI {
                 
                 typedef enum DeviceWatcherStatus : int DeviceWatcherStatus;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2427,9 +2465,10 @@ namespace ABI {
                 
                 typedef enum Panel : int Panel;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -2469,9 +2508,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceConnectionChangeTriggerDetails;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2483,9 +2522,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformationPairing;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2497,9 +2536,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DevicePickerAppearance;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2507,9 +2546,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DevicePickerFilter;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2522,9 +2561,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceWatcherTriggerDetails;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2532,9 +2571,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class EnclosureLocation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2568,9 +2607,9 @@ namespace ABI {
                     DeviceAccessStatus_DeniedBySystem = 3,
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2608,9 +2647,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2646,9 +2685,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2674,13 +2713,18 @@ namespace ABI {
                     DevicePairingKinds_DisplayPin = 0x2,
                     DevicePairingKinds_ProvidePin = 0x4,
                     DevicePairingKinds_ConfirmPinMatch = 0x8,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                    
+                    DevicePairingKinds_ProvidePasswordCredential = 0x10,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                    
                 };
                 
                 DEFINE_ENUM_FLAG_OPERATORS(DevicePairingKinds)
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2707,9 +2751,9 @@ namespace ABI {
                     DevicePairingProtectionLevel_EncryptionAndAuthentication = 3,
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2776,9 +2820,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2807,9 +2851,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(DevicePickerDisplayStatusOptions)
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2837,9 +2881,9 @@ namespace ABI {
                     DeviceUnpairingResultStatus_Failed = 4,
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2865,9 +2909,9 @@ namespace ABI {
                     DeviceWatcherEventKind_Remove = 2,
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2896,9 +2940,9 @@ namespace ABI {
                     DeviceWatcherStatus_Aborted = 5,
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2928,9 +2972,9 @@ namespace ABI {
                     Panel_Right = 6,
                 };
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2966,9 +3010,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceAccessChangedEventArgs=_uuidof(IDeviceAccessChangedEventArgs);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3011,9 +3055,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceAccessChangedEventArgs2=_uuidof(IDeviceAccessChangedEventArgs2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs2_INTERFACE_DEFINED__) */
@@ -3059,9 +3103,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceAccessInformation=_uuidof(IDeviceAccessInformation);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation_INTERFACE_DEFINED__) */
@@ -3109,9 +3153,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceAccessInformationStatics=_uuidof(IDeviceAccessInformationStatics);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformationStatics_INTERFACE_DEFINED__) */
@@ -3150,9 +3194,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceConnectionChangeTriggerDetails=_uuidof(IDeviceConnectionChangeTriggerDetails);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceConnectionChangeTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceConnectionChangeTriggerDetails_INTERFACE_DEFINED__) */
@@ -3191,9 +3235,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceDisconnectButtonClickedEventArgs=_uuidof(IDeviceDisconnectButtonClickedEventArgs);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceDisconnectButtonClickedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceDisconnectButtonClickedEventArgs_INTERFACE_DEFINED__) */
@@ -3231,10 +3275,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDefault(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnclosureLocation(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Enumeration::IEnclosureLocation * * value
@@ -3256,9 +3300,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformation=_uuidof(IDeviceInformation);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_INTERFACE_DEFINED__) */
@@ -3300,9 +3344,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformation2=_uuidof(IDeviceInformation2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation2_INTERFACE_DEFINED__) */
@@ -3360,9 +3404,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationCustomPairing=_uuidof(IDeviceInformationCustomPairing);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationCustomPairing;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationCustomPairing_INTERFACE_DEFINED__) */
@@ -3394,10 +3438,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPaired(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanPair(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE PairAsync(
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDevicePairingResult * * result
@@ -3411,9 +3455,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationPairing=_uuidof(IDeviceInformationPairing);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing_INTERFACE_DEFINED__) */
@@ -3463,9 +3507,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationPairing2=_uuidof(IDeviceInformationPairing2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairing2_INTERFACE_DEFINED__) */
@@ -3498,16 +3542,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE TryRegisterForAllInboundPairingRequests(
                         /* [in] */ABI::Windows::Devices::Enumeration::DevicePairingKinds pairingKindsSupported,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationPairingStatics=_uuidof(IDeviceInformationPairingStatics);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics_INTERFACE_DEFINED__) */
@@ -3541,16 +3585,16 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryRegisterForAllInboundPairingRequestsWithProtectionLevel(
                         /* [in] */ABI::Windows::Devices::Enumeration::DevicePairingKinds pairingKindsSupported,
                         /* [in] */ABI::Windows::Devices::Enumeration::DevicePairingProtectionLevel minProtectionLevel,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationPairingStatics2=_uuidof(IDeviceInformationPairingStatics2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationPairingStatics2_INTERFACE_DEFINED__) */
@@ -3627,9 +3671,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationStatics=_uuidof(IDeviceInformationStatics);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics_INTERFACE_DEFINED__) */
@@ -3687,9 +3731,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationStatics2=_uuidof(IDeviceInformationStatics2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationStatics2_INTERFACE_DEFINED__) */
@@ -3731,9 +3775,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationUpdate=_uuidof(IDeviceInformationUpdate);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate_INTERFACE_DEFINED__) */
@@ -3772,9 +3816,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceInformationUpdate2=_uuidof(IDeviceInformationUpdate2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate2_INTERFACE_DEFINED__) */
@@ -3826,13 +3870,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePairingRequestedEventArgs=_uuidof(IDevicePairingRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Interface Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.Enumeration.DevicePairingRequestedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Enumeration_IDevicePairingRequestedEventArgs2[] = L"Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Enumeration {
+                /* [object, uuid("C83752D9-E4D3-4DB0-A360-A105E437DBDC"), exclusiveto, contract] */
+                MIDL_INTERFACE("C83752D9-E4D3-4DB0-A360-A105E437DBDC")
+                IDevicePairingRequestedEventArgs2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE AcceptWithPasswordCredential(
+                        /* [in] */__RPC__in_opt ABI::Windows::Security::Credentials::IPasswordCredential * passwordCredential
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IDevicePairingRequestedEventArgs2=_uuidof(IDevicePairingRequestedEventArgs2);
+                
+            } /* Enumeration */
+        } /* Devices */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3870,9 +3955,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePairingResult=_uuidof(IDevicePairingResult);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult_INTERFACE_DEFINED__) */
@@ -3905,9 +3990,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePairingSettings=_uuidof(IDevicePairingSettings);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingSettings;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingSettings_INTERFACE_DEFINED__) */
@@ -3995,9 +4080,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePicker=_uuidof(IDevicePicker);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker_INTERFACE_DEFINED__) */
@@ -4075,9 +4160,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePickerAppearance=_uuidof(IDevicePickerAppearance);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerAppearance_INTERFACE_DEFINED__) */
@@ -4119,9 +4204,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDevicePickerFilter=_uuidof(IDevicePickerFilter);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerFilter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePickerFilter_INTERFACE_DEFINED__) */
@@ -4160,9 +4245,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceSelectedEventArgs=_uuidof(IDeviceSelectedEventArgs);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceSelectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceSelectedEventArgs_INTERFACE_DEFINED__) */
@@ -4201,9 +4286,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceUnpairingResult=_uuidof(IDeviceUnpairingResult);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceUnpairingResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceUnpairingResult_INTERFACE_DEFINED__) */
@@ -4279,9 +4364,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceWatcher=_uuidof(IDeviceWatcher);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher_INTERFACE_DEFINED__) */
@@ -4321,9 +4406,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceWatcher2=_uuidof(IDeviceWatcher2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher2_INTERFACE_DEFINED__) */
@@ -4368,9 +4453,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceWatcherEvent=_uuidof(IDeviceWatcherEvent);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherEvent;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherEvent_INTERFACE_DEFINED__) */
@@ -4409,9 +4494,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeviceWatcherTriggerDetails=_uuidof(IDeviceWatcherTriggerDetails);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcherTriggerDetails_INTERFACE_DEFINED__) */
@@ -4443,10 +4528,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InDock(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InLid(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Panel(
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::Enumeration::Panel * value
@@ -4456,9 +4541,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEnclosureLocation=_uuidof(IEnclosureLocation);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation_INTERFACE_DEFINED__) */
@@ -4501,9 +4586,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEnclosureLocation2=_uuidof(IEnclosureLocation2);
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIEnclosureLocation2_INTERFACE_DEFINED__) */
@@ -4745,6 +4830,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs ** Default Interface **
+ *    Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5137,6 +5223,12 @@ typedef interface __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpda
 typedef interface __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs;
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2;
+
+#endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingResult_FWD_DEFINED__
@@ -7045,7 +7137,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceAccessInformation_Windows__CDevices__CEnumeration__CDeviceAccessChangedEventArgsVtbl;
 
@@ -7098,7 +7190,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceI
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationCustomPairing * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationCustomPairing * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceInformationCustomPairing_Windows__CDevices__CEnumeration__CDevicePairingRequestedEventArgsVtbl;
 
@@ -7150,7 +7242,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_IInspectableVtbl;
 
@@ -7202,7 +7294,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceDisconnectButtonClickedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceDisconnectButtonClickedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceDisconnectButtonClickedEventArgsVtbl;
 
@@ -7255,7 +7347,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceSelectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePicker * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceSelectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDevicePicker_Windows__CDevices__CEnumeration__CDeviceSelectedEventArgsVtbl;
 
@@ -7307,7 +7399,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceW
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_IInspectableVtbl;
 
@@ -7359,7 +7451,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceW
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformation * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationVtbl;
 
@@ -7412,7 +7504,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceW
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdate * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformationUpdate * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CEnumeration__CDeviceWatcher_Windows__CDevices__CEnumeration__CDeviceInformationUpdateVtbl;
 
@@ -8175,6 +8267,16 @@ typedef struct __x_ABI_CWindows_CFoundation_CRect __x_ABI_CWindows_CFoundation_C
 
 
 
+#ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential;
+
+#endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
+
+
+
+
+
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider __x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider;
@@ -8250,6 +8352,7 @@ typedef enum __x_ABI_CWindows_CDevices_CEnumeration_CDeviceWatcherStatus __x_ABI
 
 
 typedef enum __x_ABI_CWindows_CDevices_CEnumeration_CPanel __x_ABI_CWindows_CDevices_CEnumeration_CPanel;
+
 
 
 
@@ -8412,6 +8515,11 @@ enum __x_ABI_CWindows_CDevices_CEnumeration_CDevicePairingKinds
     DevicePairingKinds_DisplayPin = 0x2,
     DevicePairingKinds_ProvidePin = 0x4,
     DevicePairingKinds_ConfirmPinMatch = 0x8,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
+    DevicePairingKinds_ProvidePasswordCredential = 0x10,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
@@ -10612,6 +10720,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingReq
 
 /*
  *
+ * Interface Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Devices.Enumeration.DevicePairingRequestedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Enumeration_IDevicePairingRequestedEventArgs2[] = L"Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2";
+/* [object, uuid("C83752D9-E4D3-4DB0-A360-A105E437DBDC"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *AcceptWithPasswordCredential )(
+        __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential * passwordCredential
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2Vtbl;
+
+interface __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_AcceptWithPasswordCredential(This,passwordCredential) \
+    ( (This)->lpVtbl->AcceptWithPasswordCredential(This,passwordCredential) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CEnumeration_CIDevicePairingRequestedEventArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Devices.Enumeration.IDevicePairingResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -12375,6 +12576,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs ** Default Interface **
+ *    Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

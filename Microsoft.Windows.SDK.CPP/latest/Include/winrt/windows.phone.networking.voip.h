@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.phone.networking.voip.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,10 +142,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface ICallAnswerEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs ABI::Windows::Phone::Networking::Voip::ICallAnswerEventArgs
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs_FWD_DEFINED__
@@ -158,10 +158,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface ICallRejectEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs ABI::Windows::Phone::Networking::Voip::ICallRejectEventArgs
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs_FWD_DEFINED__
@@ -174,10 +174,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface ICallStateChangeEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallStateChangeEventArgs ABI::Windows::Phone::Networking::Voip::ICallStateChangeEventArgs
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallStateChangeEventArgs_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IMuteChangeEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIMuteChangeEventArgs ABI::Windows::Phone::Networking::Voip::IMuteChangeEventArgs
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIMuteChangeEventArgs_FWD_DEFINED__
@@ -206,10 +206,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IQuerySeamlessUpgradeSupportOperation;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIQuerySeamlessUpgradeSupportOperation ABI::Windows::Phone::Networking::Voip::IQuerySeamlessUpgradeSupportOperation
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIQuerySeamlessUpgradeSupportOperation_FWD_DEFINED__
@@ -222,10 +222,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipCallCoordinator;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator ABI::Windows::Phone::Networking::Voip::IVoipCallCoordinator
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator_FWD_DEFINED__
@@ -238,10 +238,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipCallCoordinator2;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator2 ABI::Windows::Phone::Networking::Voip::IVoipCallCoordinator2
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator2_FWD_DEFINED__
@@ -254,10 +254,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipCallCoordinator3;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator3 ABI::Windows::Phone::Networking::Voip::IVoipCallCoordinator3
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator3_FWD_DEFINED__
@@ -270,10 +270,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipCallCoordinatorStatics;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorStatics ABI::Windows::Phone::Networking::Voip::IVoipCallCoordinatorStatics
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorStatics_FWD_DEFINED__
@@ -286,10 +286,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipCallCoordinatorWithAppDeterminedUpgrade;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithAppDeterminedUpgrade ABI::Windows::Phone::Networking::Voip::IVoipCallCoordinatorWithAppDeterminedUpgrade
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithAppDeterminedUpgrade_FWD_DEFINED__
@@ -302,10 +302,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipCallCoordinatorWithUpgrade;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithUpgrade ABI::Windows::Phone::Networking::Voip::IVoipCallCoordinatorWithUpgrade
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithUpgrade_FWD_DEFINED__
@@ -318,10 +318,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipOperation;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperation ABI::Windows::Phone::Networking::Voip::IVoipOperation
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperation_FWD_DEFINED__
@@ -334,10 +334,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipOperationsManager;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperationsManager ABI::Windows::Phone::Networking::Voip::IVoipOperationsManager
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperationsManager_FWD_DEFINED__
@@ -350,10 +350,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipPhoneCall;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall ABI::Windows::Phone::Networking::Voip::IVoipPhoneCall
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall_FWD_DEFINED__
@@ -366,10 +366,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipPhoneCall2;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall2 ABI::Windows::Phone::Networking::Voip::IVoipPhoneCall2
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall2_FWD_DEFINED__
@@ -382,10 +382,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipPhoneCall3;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall3 ABI::Windows::Phone::Networking::Voip::IVoipPhoneCall3
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall3_FWD_DEFINED__
@@ -398,10 +398,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     interface IVoipPhoneCallReady;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCallReady ABI::Windows::Phone::Networking::Voip::IVoipPhoneCallReady
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCallReady_FWD_DEFINED__
@@ -415,10 +415,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     class VoipCallCoordinator;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -427,10 +427,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     class MuteChangeEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
@@ -454,7 +454,7 @@ ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipCallCoordinator*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipCallCoordinator*,ABI::Windows::Phone::Networking::Voip::MuteChangeEventArgs*> __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::IVoipCallCoordinator*,ABI::Windows::Phone::Networking::Voip::IMuteChangeEventArgs*>
@@ -472,10 +472,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     class VoipPhoneCall;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -484,10 +484,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     class CallAnswerEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
@@ -511,7 +511,7 @@ ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipPhoneCall*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipPhoneCall*,ABI::Windows::Phone::Networking::Voip::CallAnswerEventArgs*> __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::IVoipPhoneCall*,ABI::Windows::Phone::Networking::Voip::ICallAnswerEventArgs*>
@@ -530,10 +530,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     class CallRejectEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
@@ -557,7 +557,7 @@ ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipPhoneCall*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipPhoneCall*,ABI::Windows::Phone::Networking::Voip::CallRejectEventArgs*> __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::IVoipPhoneCall*,ABI::Windows::Phone::Networking::Voip::ICallRejectEventArgs*>
@@ -576,10 +576,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     class CallStateChangeEventArgs;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
@@ -603,7 +603,7 @@ ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipPhoneCall*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::VoipPhoneCall*,ABI::Windows::Phone::Networking::Voip::CallStateChangeEventArgs*> __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Phone::Networking::Voip::IVoipPhoneCall*,ABI::Windows::Phone::Networking::Voip::ICallStateChangeEventArgs*>
@@ -623,8 +623,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -632,15 +632,15 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -648,8 +648,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -668,10 +668,10 @@ namespace ABI {
                     
                     typedef enum SeamlessCallUpgradeSupport : int SeamlessCallUpgradeSupport;
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -681,10 +681,10 @@ namespace ABI {
                     
                     typedef enum VoipCallMedia : unsigned int VoipCallMedia;
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -694,10 +694,10 @@ namespace ABI {
                     
                     typedef enum VoipCallRejectReason : int VoipCallRejectReason;
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -707,10 +707,10 @@ namespace ABI {
                     
                     typedef enum VoipCallState : int VoipCallState;
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -720,10 +720,10 @@ namespace ABI {
                     
                     typedef enum VoipOperationType : int VoipOperationType;
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 
@@ -752,10 +752,10 @@ namespace ABI {
             namespace Networking {
                 namespace Voip {
                     class QuerySeamlessUpgradeSupportOperation;
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 
 
@@ -793,10 +793,10 @@ namespace ABI {
                         SeamlessCallUpgradeSupport_Supported = 2,
                     };
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 
@@ -825,10 +825,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(VoipCallMedia)
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 
@@ -857,10 +857,10 @@ namespace ABI {
                         VoipCallRejectReason_InvalidCallState = 4,
                     };
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 
@@ -889,10 +889,10 @@ namespace ABI {
                         VoipCallState_Outgoing = 4,
                     };
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 
@@ -917,10 +917,10 @@ namespace ABI {
                         VoipOperationType_QueryRemotePartySeamless = 0,
                     };
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 
@@ -957,10 +957,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICallAnswerEventArgs=_uuidof(ICallAnswerEventArgs);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs_INTERFACE_DEFINED__) */
@@ -1000,10 +1000,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICallRejectEventArgs=_uuidof(ICallRejectEventArgs);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs_INTERFACE_DEFINED__) */
@@ -1043,10 +1043,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICallStateChangeEventArgs=_uuidof(ICallStateChangeEventArgs);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallStateChangeEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallStateChangeEventArgs_INTERFACE_DEFINED__) */
@@ -1079,17 +1079,17 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Muted(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IMuteChangeEventArgs=_uuidof(IMuteChangeEventArgs);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIMuteChangeEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIMuteChangeEventArgs_INTERFACE_DEFINED__) */
@@ -1129,7 +1129,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE NotifyCompletion(
-                            /* [in] */boolean succeeded,
+                            /* [in] */::boolean succeeded,
                             /* [in] */ABI::Windows::Phone::Networking::Voip::SeamlessCallUpgradeSupport seamlessCallUpgradeSupport
                             ) = 0;
                         
@@ -1137,10 +1137,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IQuerySeamlessUpgradeSupportOperation=_uuidof(IQuerySeamlessUpgradeSupportOperation);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIQuerySeamlessUpgradeSupportOperation;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIQuerySeamlessUpgradeSupportOperation_INTERFACE_DEFINED__) */
@@ -1213,10 +1213,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipCallCoordinator=_uuidof(IVoipCallCoordinator);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator_INTERFACE_DEFINED__) */
@@ -1265,10 +1265,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipCallCoordinator2=_uuidof(IVoipCallCoordinator2);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator2;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator2_INTERFACE_DEFINED__) */
@@ -1331,10 +1331,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipCallCoordinator3=_uuidof(IVoipCallCoordinator3);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator3;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator3_INTERFACE_DEFINED__) */
@@ -1374,10 +1374,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipCallCoordinatorStatics=_uuidof(IVoipCallCoordinatorStatics);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorStatics_INTERFACE_DEFINED__) */
@@ -1420,10 +1420,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipCallCoordinatorWithAppDeterminedUpgrade=_uuidof(IVoipCallCoordinatorWithAppDeterminedUpgrade);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithAppDeterminedUpgrade;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithAppDeterminedUpgrade_INTERFACE_DEFINED__) */
@@ -1479,10 +1479,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipCallCoordinatorWithUpgrade=_uuidof(IVoipCallCoordinatorWithUpgrade);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithUpgrade;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinatorWithUpgrade_INTERFACE_DEFINED__) */
@@ -1522,10 +1522,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipOperation=_uuidof(IVoipOperation);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperation;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperation_INTERFACE_DEFINED__) */
@@ -1565,10 +1565,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipOperationsManager=_uuidof(IVoipOperationsManager);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperationsManager;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipOperationsManager_INTERFACE_DEFINED__) */
@@ -1661,10 +1661,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipPhoneCall=_uuidof(IVoipPhoneCall);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall_INTERFACE_DEFINED__) */
@@ -1706,10 +1706,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipPhoneCall2=_uuidof(IVoipPhoneCall2);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall2;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall2_INTERFACE_DEFINED__) */
@@ -1754,10 +1754,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipPhoneCall3=_uuidof(IVoipPhoneCall3);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall3;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall3_INTERFACE_DEFINED__) */
@@ -1795,10 +1795,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVoipPhoneCallReady=_uuidof(IVoipPhoneCallReady);
                     
-                } /* Windows */
-            } /* Phone */
-        } /* Networking */
-    } /* Voip */} /* ABI */
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCallReady;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCallReady_INTERFACE_DEFINED__) */
@@ -2103,7 +2103,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIMuteChangeEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipCallCoordinator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIMuteChangeEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipCallCoordinator_Windows__CPhone__CNetworking__CVoip__CMuteChangeEventArgsVtbl;
 
@@ -2156,7 +2156,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallAnswerEventArgsVtbl;
 
@@ -2209,7 +2209,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallRejectEventArgsVtbl;
 
@@ -2262,7 +2262,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallStateChangeEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CIVoipPhoneCall * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallStateChangeEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPhone__CNetworking__CVoip__CVoipPhoneCall_Windows__CPhone__CNetworking__CVoip__CCallStateChangeEventArgsVtbl;
 

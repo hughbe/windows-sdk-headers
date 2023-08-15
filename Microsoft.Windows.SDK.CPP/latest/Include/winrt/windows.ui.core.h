@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -265,6 +261,7 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.System.h"
+#include "Windows.UI.h"
 #include "Windows.UI.Input.h"
 #include "Windows.UI.Input.Inking.h"
 #include "Windows.UI.Input.Inking.Core.h"
@@ -281,9 +278,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IDispatchedHandler;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIDispatchedHandler ABI::Windows::UI::Core::IDispatchedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIDispatchedHandler_FWD_DEFINED__
@@ -295,9 +292,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IIdleDispatchedHandler;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandler ABI::Windows::UI::Core::IIdleDispatchedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandler_FWD_DEFINED__
@@ -309,9 +306,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IAcceleratorKeyEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs ABI::Windows::UI::Core::IAcceleratorKeyEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs_FWD_DEFINED__
@@ -323,9 +320,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IAcceleratorKeyEventArgs2;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs2 ABI::Windows::UI::Core::IAcceleratorKeyEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs2_FWD_DEFINED__
@@ -337,9 +334,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IAutomationProviderRequestedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIAutomationProviderRequestedEventArgs ABI::Windows::UI::Core::IAutomationProviderRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIAutomationProviderRequestedEventArgs_FWD_DEFINED__
@@ -351,9 +348,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IBackRequestedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIBackRequestedEventArgs ABI::Windows::UI::Core::IBackRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIBackRequestedEventArgs_FWD_DEFINED__
@@ -365,9 +362,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICharacterReceivedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs ABI::Windows::UI::Core::ICharacterReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs_FWD_DEFINED__
@@ -379,9 +376,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IClosestInteractiveBoundsRequestedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs ABI::Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs_FWD_DEFINED__
@@ -393,9 +390,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreAcceleratorKeys;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreAcceleratorKeys ABI::Windows::UI::Core::ICoreAcceleratorKeys
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreAcceleratorKeys_FWD_DEFINED__
@@ -407,9 +404,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreClosestInteractiveBoundsRequested;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreClosestInteractiveBoundsRequested ABI::Windows::UI::Core::ICoreClosestInteractiveBoundsRequested
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreClosestInteractiveBoundsRequested_FWD_DEFINED__
@@ -421,9 +418,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreComponentFocusable;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreComponentFocusable ABI::Windows::UI::Core::ICoreComponentFocusable
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreComponentFocusable_FWD_DEFINED__
@@ -435,9 +432,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreCursor;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreCursor ABI::Windows::UI::Core::ICoreCursor
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreCursor_FWD_DEFINED__
@@ -449,9 +446,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreCursorFactory;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreCursorFactory ABI::Windows::UI::Core::ICoreCursorFactory
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreCursorFactory_FWD_DEFINED__
@@ -463,9 +460,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreDispatcher;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreDispatcher ABI::Windows::UI::Core::ICoreDispatcher
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreDispatcher_FWD_DEFINED__
@@ -477,9 +474,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreDispatcher2;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreDispatcher2 ABI::Windows::UI::Core::ICoreDispatcher2
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreDispatcher2_FWD_DEFINED__
@@ -491,9 +488,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreDispatcherWithTaskPriority;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreDispatcherWithTaskPriority ABI::Windows::UI::Core::ICoreDispatcherWithTaskPriority
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreDispatcherWithTaskPriority_FWD_DEFINED__
@@ -505,9 +502,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreInputSourceBase;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreInputSourceBase ABI::Windows::UI::Core::ICoreInputSourceBase
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreInputSourceBase_FWD_DEFINED__
@@ -519,9 +516,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreKeyboardInputSource;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource ABI::Windows::UI::Core::ICoreKeyboardInputSource
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource_FWD_DEFINED__
@@ -533,9 +530,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreKeyboardInputSource2;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource2 ABI::Windows::UI::Core::ICoreKeyboardInputSource2
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource2_FWD_DEFINED__
@@ -547,9 +544,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICorePointerInputSource;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICorePointerInputSource ABI::Windows::UI::Core::ICorePointerInputSource
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICorePointerInputSource_FWD_DEFINED__
@@ -561,9 +558,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICorePointerInputSource2;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICorePointerInputSource2 ABI::Windows::UI::Core::ICorePointerInputSource2
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICorePointerInputSource2_FWD_DEFINED__
@@ -575,9 +572,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICorePointerRedirector;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICorePointerRedirector ABI::Windows::UI::Core::ICorePointerRedirector
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICorePointerRedirector_FWD_DEFINED__
@@ -589,9 +586,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreTouchHitTesting;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreTouchHitTesting ABI::Windows::UI::Core::ICoreTouchHitTesting
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreTouchHitTesting_FWD_DEFINED__
@@ -603,9 +600,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindow;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindow ABI::Windows::UI::Core::ICoreWindow
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindow_FWD_DEFINED__
@@ -617,9 +614,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindow2;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindow2 ABI::Windows::UI::Core::ICoreWindow2
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindow2_FWD_DEFINED__
@@ -631,9 +628,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindow3;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindow3 ABI::Windows::UI::Core::ICoreWindow3
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindow3_FWD_DEFINED__
@@ -645,9 +642,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindow4;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindow4 ABI::Windows::UI::Core::ICoreWindow4
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindow4_FWD_DEFINED__
@@ -659,9 +656,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindow5;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindow5 ABI::Windows::UI::Core::ICoreWindow5
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindow5_FWD_DEFINED__
@@ -673,9 +670,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowDialog;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowDialog ABI::Windows::UI::Core::ICoreWindowDialog
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowDialog_FWD_DEFINED__
@@ -687,9 +684,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowDialogFactory;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowDialogFactory ABI::Windows::UI::Core::ICoreWindowDialogFactory
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowDialogFactory_FWD_DEFINED__
@@ -701,9 +698,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs ABI::Windows::UI::Core::ICoreWindowEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs_FWD_DEFINED__
@@ -715,9 +712,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowFlyout;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowFlyout ABI::Windows::UI::Core::ICoreWindowFlyout
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowFlyout_FWD_DEFINED__
@@ -729,9 +726,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowFlyoutFactory;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowFlyoutFactory ABI::Windows::UI::Core::ICoreWindowFlyoutFactory
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowFlyoutFactory_FWD_DEFINED__
@@ -743,9 +740,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowPopupShowingEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowPopupShowingEventArgs ABI::Windows::UI::Core::ICoreWindowPopupShowingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowPopupShowingEventArgs_FWD_DEFINED__
@@ -757,9 +754,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowResizeManager;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManager ABI::Windows::UI::Core::ICoreWindowResizeManager
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManager_FWD_DEFINED__
@@ -771,9 +768,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowResizeManagerLayoutCapability;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerLayoutCapability ABI::Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerLayoutCapability_FWD_DEFINED__
@@ -785,9 +782,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowResizeManagerStatics;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerStatics ABI::Windows::UI::Core::ICoreWindowResizeManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerStatics_FWD_DEFINED__
@@ -799,12 +796,26 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindowStatic;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindowStatic ABI::Windows::UI::Core::ICoreWindowStatic
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowStatic_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Core {
+                interface ICoreWindowWithContext;
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext ABI::Windows::UI::Core::ICoreWindowWithContext
+
+#endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs_FWD_DEFINED__
@@ -813,9 +824,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IIdleDispatchedHandlerArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs ABI::Windows::UI::Core::IIdleDispatchedHandlerArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs_FWD_DEFINED__
@@ -827,9 +838,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IInitializeWithCoreWindow;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIInitializeWithCoreWindow ABI::Windows::UI::Core::IInitializeWithCoreWindow
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIInitializeWithCoreWindow_FWD_DEFINED__
@@ -841,9 +852,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IInputEnabledEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs ABI::Windows::UI::Core::IInputEnabledEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs_FWD_DEFINED__
@@ -855,9 +866,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IKeyEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs ABI::Windows::UI::Core::IKeyEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIKeyEventArgs_FWD_DEFINED__
@@ -869,9 +880,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IKeyEventArgs2;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs2 ABI::Windows::UI::Core::IKeyEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIKeyEventArgs2_FWD_DEFINED__
@@ -883,9 +894,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IPointerEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs ABI::Windows::UI::Core::IPointerEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIPointerEventArgs_FWD_DEFINED__
@@ -897,9 +908,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ISystemNavigationManager;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CISystemNavigationManager ABI::Windows::UI::Core::ISystemNavigationManager
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CISystemNavigationManager_FWD_DEFINED__
@@ -911,9 +922,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ISystemNavigationManager2;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CISystemNavigationManager2 ABI::Windows::UI::Core::ISystemNavigationManager2
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CISystemNavigationManager2_FWD_DEFINED__
@@ -925,9 +936,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ISystemNavigationManagerStatics;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CISystemNavigationManagerStatics ABI::Windows::UI::Core::ISystemNavigationManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CISystemNavigationManagerStatics_FWD_DEFINED__
@@ -939,9 +950,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ITouchHitTestingEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs ABI::Windows::UI::Core::ITouchHitTestingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs_FWD_DEFINED__
@@ -953,9 +964,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IVisibilityChangedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIVisibilityChangedEventArgs ABI::Windows::UI::Core::IVisibilityChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIVisibilityChangedEventArgs_FWD_DEFINED__
@@ -967,9 +978,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IWindowActivatedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIWindowActivatedEventArgs ABI::Windows::UI::Core::IWindowActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIWindowActivatedEventArgs_FWD_DEFINED__
@@ -981,9 +992,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IWindowSizeChangedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIWindowSizeChangedEventArgs ABI::Windows::UI::Core::IWindowSizeChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIWindowSizeChangedEventArgs_FWD_DEFINED__
@@ -996,9 +1007,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class BackRequestedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1021,7 +1032,7 @@ IEventHandler<ABI::Windows::UI::Core::BackRequestedEventArgs*> : IEventHandler_i
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::UI::Core::BackRequestedEventArgs*> __FIEventHandler_1_Windows__CUI__CCore__CBackRequestedEventArgs_t;
 #define __FIEventHandler_1_Windows__CUI__CCore__CBackRequestedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CUI__CCore__CBackRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CUI__CCore__CBackRequestedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::UI::Core::IBackRequestedEventArgs*>
@@ -1038,9 +1049,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CharacterReceivedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1063,7 +1074,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::CharacterReceivedEventA
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::CharacterReceivedEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::ICharacterReceivedEventArgs*>
@@ -1080,9 +1091,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreWindowEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1105,7 +1116,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::CoreWindowEventArgs*> :
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::CoreWindowEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::ICoreWindowEventArgs*>
@@ -1122,9 +1133,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class InputEnabledEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1147,7 +1158,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::InputEnabledEventArgs*>
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::InputEnabledEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::IInputEnabledEventArgs*>
@@ -1164,9 +1175,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class KeyEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1189,7 +1200,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::KeyEventArgs*> : ITyped
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::KeyEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::IKeyEventArgs*>
@@ -1206,9 +1217,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class PointerEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1231,7 +1242,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::PointerEventArgs*> : IT
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -1248,9 +1259,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class TouchHitTestingEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1273,7 +1284,7 @@ ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::TouchHitTestingEventArg
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::TouchHitTestingEventArgs*> __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs_t;
 #define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs ABI::Windows::Foundation::ITypedEventHandler<IInspectable*,ABI::Windows::UI::Core::ITouchHitTestingEventArgs*>
@@ -1289,9 +1300,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreComponentInputSource;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1299,9 +1310,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class ClosestInteractiveBoundsRequestedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1325,7 +1336,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreComponentInputSource*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreComponentInputSource*,ABI::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreInputSourceBase*,ABI::Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs*>
@@ -1342,9 +1353,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreDispatcher;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1352,9 +1363,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class AcceleratorKeyEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1378,7 +1389,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreDispatcher*,ABI::Windows::UI::Cor
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreDispatcher*,ABI::Windows::UI::Core::AcceleratorKeyEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreDispatcher*,ABI::Windows::UI::Core::IAcceleratorKeyEventArgs*>
@@ -1395,9 +1406,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreWindow;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1421,7 +1432,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,IInspectable*> : ITypedEv
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,IInspectable*>
@@ -1438,9 +1449,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class AutomationProviderRequestedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1464,7 +1475,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::AutomationProviderRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IAutomationProviderRequestedEventArgs*>
@@ -1499,7 +1510,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::C
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::CharacterReceivedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::ICharacterReceivedEventArgs*>
@@ -1534,7 +1545,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::C
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs*>
@@ -1569,7 +1580,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::C
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::CoreWindowEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::ICoreWindowEventArgs*>
@@ -1587,9 +1598,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreWindowPopupShowingEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1613,7 +1624,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::C
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::CoreWindowPopupShowingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::ICoreWindowPopupShowingEventArgs*>
@@ -1648,7 +1659,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::I
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::InputEnabledEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IInputEnabledEventArgs*>
@@ -1683,7 +1694,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::K
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::KeyEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IKeyEventArgs*>
@@ -1718,7 +1729,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::P
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -1753,7 +1764,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::T
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::TouchHitTestingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::ITouchHitTestingEventArgs*>
@@ -1771,9 +1782,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class VisibilityChangedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1797,7 +1808,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::V
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::VisibilityChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IVisibilityChangedEventArgs*>
@@ -1815,9 +1826,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class WindowActivatedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1841,7 +1852,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::WindowActivatedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IWindowActivatedEventArgs*>
@@ -1859,9 +1870,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class WindowSizeChangedEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1885,7 +1896,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::CoreWindow*,ABI::Windows::UI::Core::WindowSizeChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICoreWindow*,ABI::Windows::UI::Core::IWindowSizeChangedEventArgs*>
@@ -1920,7 +1931,7 @@ ITypedEventHandler<ABI::Windows::UI::Core::ICorePointerRedirector*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Core::ICorePointerRedirector*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Core::ICorePointerRedirector*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -1939,11 +1950,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Core {
                         class CoreInkIndependentInputSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Core */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Core */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CCore_CICoreInkIndependentInputSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CCore_CICoreInkIndependentInputSource_FWD_DEFINED__
@@ -1954,11 +1965,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Core {
                         interface ICoreInkIndependentInputSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Core */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Core */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CCore_CICoreInkIndependentInputSource ABI::Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CCore_CICoreInkIndependentInputSource_FWD_DEFINED__
@@ -1986,7 +1997,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Inking::Core::CoreInkIndependentInpu
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -2004,10 +2015,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStrokeInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput_FWD_DEFINED__
@@ -2017,10 +2028,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStrokeInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput ABI::Windows::UI::Input::Inking::IInkStrokeInput
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput_FWD_DEFINED__
@@ -2048,7 +2059,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkStrokeInput*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkStrokeInput*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Inking::IInkStrokeInput*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -2066,10 +2077,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkUnprocessedInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput_FWD_DEFINED__
@@ -2079,10 +2090,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkUnprocessedInput;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput ABI::Windows::UI::Input::Inking::IInkUnprocessedInput
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput_FWD_DEFINED__
@@ -2110,7 +2121,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkUnprocessedInput*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Inking::InkUnprocessedInput*,ABI::Windows::UI::Core::PointerEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Inking::IInkUnprocessedInput*,ABI::Windows::UI::Core::IPointerEventArgs*>
@@ -2127,9 +2138,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class KeyboardDeliveryInterceptor;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
@@ -2138,9 +2149,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IKeyboardDeliveryInterceptor;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor ABI::Windows::UI::Input::IKeyboardDeliveryInterceptor
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
@@ -2168,7 +2179,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::KeyboardDeliveryInterceptor*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::KeyboardDeliveryInterceptor*,ABI::Windows::UI::Core::KeyEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IKeyboardDeliveryInterceptor*,ABI::Windows::UI::Core::IKeyEventArgs*>
@@ -2199,7 +2210,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -2228,7 +2239,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -2245,9 +2256,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IUICommand;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIUICommand ABI::Windows::UI::Popups::IUICommand
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIUICommand_FWD_DEFINED__
@@ -2273,7 +2284,7 @@ IIterator<ABI::Windows::UI::Popups::IUICommand*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Popups::IUICommand*> __FIIterator_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIIterator_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Popups::IUICommand*>
@@ -2305,7 +2316,7 @@ IIterable<ABI::Windows::UI::Popups::IUICommand*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Popups::IUICommand*> __FIIterable_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIIterable_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Popups::IUICommand*>
@@ -2337,7 +2348,7 @@ IVectorView<ABI::Windows::UI::Popups::IUICommand*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Popups::IUICommand*> __FIVectorView_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIVectorView_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Popups::IUICommand*>
@@ -2369,7 +2380,7 @@ IVector<ABI::Windows::UI::Popups::IUICommand*> : IVector_impl<ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Popups::IUICommand*> __FIVector_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIVector_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Popups::IUICommand*>
@@ -2401,7 +2412,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Popups::IUICommand*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Popups::IUICommand*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Popups::IUICommand*>
@@ -2433,7 +2444,7 @@ IAsyncOperation<ABI::Windows::UI::Popups::IUICommand*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Popups::IUICommand*> __FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Popups::IUICommand*>
@@ -2449,9 +2460,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class PointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
@@ -2460,9 +2471,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPoint ABI::Windows::UI::Input::IPointerPoint
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
@@ -2488,7 +2499,7 @@ IIterator<ABI::Windows::UI::Input::PointerPoint*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::PointerPoint*> __FIIterator_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIIterator_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::IPointerPoint*>
@@ -2520,7 +2531,7 @@ IIterable<ABI::Windows::UI::Input::PointerPoint*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::PointerPoint*> __FIIterable_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIIterable_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::IPointerPoint*>
@@ -2552,7 +2563,7 @@ IVectorView<ABI::Windows::UI::Input::PointerPoint*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::PointerPoint*> __FIVectorView_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::IPointerPoint*>
@@ -2584,7 +2595,7 @@ IVector<ABI::Windows::UI::Input::PointerPoint*> : IVector_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Input::PointerPoint*> __FIVector_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIVector_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Input::IPointerPoint*>
@@ -2604,9 +2615,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2621,8 +2632,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2634,8 +2645,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2643,8 +2654,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2652,8 +2663,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2662,8 +2673,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class DispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
@@ -2671,8 +2682,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueue ABI::Windows::System::IDispatcherQueue
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
@@ -2684,8 +2695,8 @@ namespace ABI {
             
             typedef enum VirtualKey : int VirtualKey;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2693,8 +2704,8 @@ namespace ABI {
             
             typedef enum VirtualKeyModifiers : unsigned int VirtualKeyModifiers;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2723,13 +2734,35 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IUICommandInvokedHandler;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler ABI::Windows::UI::Popups::IUICommandInvokedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler_FWD_DEFINED__
 
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            class UIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            interface IUIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CIUIContext ABI::Windows::UI::IUIContext
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
 
 
 
@@ -2742,9 +2775,9 @@ namespace ABI {
                 
                 typedef enum AppViewBackButtonVisibility : int AppViewBackButtonVisibility;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2753,9 +2786,9 @@ namespace ABI {
                 
                 typedef enum CoreAcceleratorKeyEventType : int CoreAcceleratorKeyEventType;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2764,9 +2797,9 @@ namespace ABI {
                 
                 typedef enum CoreCursorType : int CoreCursorType;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2775,9 +2808,9 @@ namespace ABI {
                 
                 typedef enum CoreDispatcherPriority : int CoreDispatcherPriority;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2786,9 +2819,9 @@ namespace ABI {
                 
                 typedef enum CoreInputDeviceTypes : unsigned int CoreInputDeviceTypes;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2797,9 +2830,9 @@ namespace ABI {
                 
                 typedef enum CoreProcessEventsOption : int CoreProcessEventsOption;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2808,9 +2841,9 @@ namespace ABI {
                 
                 typedef enum CoreProximityEvaluationScore : int CoreProximityEvaluationScore;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2819,9 +2852,9 @@ namespace ABI {
                 
                 typedef enum CoreVirtualKeyStates : unsigned int CoreVirtualKeyStates;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2830,9 +2863,9 @@ namespace ABI {
                 
                 typedef enum CoreWindowActivationMode : int CoreWindowActivationMode;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2841,9 +2874,9 @@ namespace ABI {
                 
                 typedef enum CoreWindowActivationState : int CoreWindowActivationState;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2852,9 +2885,9 @@ namespace ABI {
                 
                 typedef enum CoreWindowFlowDirection : int CoreWindowFlowDirection;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2863,9 +2896,9 @@ namespace ABI {
                 
                 typedef struct CorePhysicalKeyStatus CorePhysicalKeyStatus;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2874,9 +2907,10 @@ namespace ABI {
                 
                 typedef struct CoreProximityEvaluation CoreProximityEvaluation;
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -2939,9 +2973,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreAcceleratorKeys;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2950,9 +2984,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreCursor;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2961,9 +2995,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreIndependentInputSource;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2972,9 +3006,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreWindowDialog;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2983,9 +3017,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreWindowFlyout;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2994,9 +3028,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreWindowResizeManager;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3004,9 +3038,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class IdleDispatchedHandlerArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3017,9 +3051,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class SystemNavigationManager;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3061,9 +3095,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3095,9 +3129,9 @@ namespace ABI {
                     CoreAcceleratorKeyEventType_UnicodeCharacter = 8,
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3144,9 +3178,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3177,9 +3211,9 @@ namespace ABI {
                     CoreDispatcherPriority_High = 1,
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3208,9 +3242,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(CoreInputDeviceTypes)
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3237,9 +3271,9 @@ namespace ABI {
                     CoreProcessEventsOption_ProcessAllIfPresent = 3,
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3264,9 +3298,9 @@ namespace ABI {
                     CoreProximityEvaluationScore_Farthest = 2147483647,
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3294,9 +3328,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(CoreVirtualKeyStates)
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3323,9 +3357,9 @@ namespace ABI {
                     CoreWindowActivationMode_ActivatedInForeground = 3,
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -3351,9 +3385,9 @@ namespace ABI {
                     CoreWindowActivationState_PointerActivated = 2,
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3378,9 +3412,9 @@ namespace ABI {
                     CoreWindowFlowDirection_RightToLeft = 1,
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3403,15 +3437,15 @@ namespace ABI {
                 {
                     UINT32 RepeatCount;
                     UINT32 ScanCode;
-                    boolean IsExtendedKey;
-                    boolean IsMenuKeyDown;
-                    boolean WasKeyDown;
-                    boolean IsKeyReleased;
+                    ::boolean IsExtendedKey;
+                    ::boolean IsMenuKeyDown;
+                    ::boolean WasKeyDown;
+                    ::boolean IsKeyReleased;
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3436,9 +3470,9 @@ namespace ABI {
                     ABI::Windows::Foundation::Point AdjustedPoint;
                 };
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3468,9 +3502,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDispatchedHandler=_uuidof(IDispatchedHandler);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIDispatchedHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIDispatchedHandler_INTERFACE_DEFINED__) */
@@ -3505,9 +3539,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IIdleDispatchedHandler=_uuidof(IIdleDispatchedHandler);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandler_INTERFACE_DEFINED__) */
@@ -3556,9 +3590,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAcceleratorKeyEventArgs=_uuidof(IAcceleratorKeyEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs_INTERFACE_DEFINED__) */
@@ -3601,9 +3635,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAcceleratorKeyEventArgs2=_uuidof(IAcceleratorKeyEventArgs2);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs2_INTERFACE_DEFINED__) */
@@ -3649,9 +3683,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAutomationProviderRequestedEventArgs=_uuidof(IAutomationProviderRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIAutomationProviderRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIAutomationProviderRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3683,19 +3717,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IBackRequestedEventArgs=_uuidof(IBackRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIBackRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIBackRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3741,9 +3775,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICharacterReceivedEventArgs=_uuidof(ICharacterReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -3791,9 +3825,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClosestInteractiveBoundsRequestedEventArgs=_uuidof(IClosestInteractiveBoundsRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3833,9 +3867,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreAcceleratorKeys=_uuidof(ICoreAcceleratorKeys);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreAcceleratorKeys;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreAcceleratorKeys_INTERFACE_DEFINED__) */
@@ -3878,9 +3912,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreClosestInteractiveBoundsRequested=_uuidof(ICoreClosestInteractiveBoundsRequested);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreClosestInteractiveBoundsRequested;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreClosestInteractiveBoundsRequested_INTERFACE_DEFINED__) */
@@ -3912,7 +3946,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasFocus(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_GotFocus(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs * handler,
@@ -3933,9 +3967,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreComponentFocusable=_uuidof(ICoreComponentFocusable);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreComponentFocusable;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreComponentFocusable_INTERFACE_DEFINED__) */
@@ -3977,9 +4011,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreCursor=_uuidof(ICoreCursor);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreCursor;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreCursor_INTERFACE_DEFINED__) */
@@ -4020,9 +4054,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreCursorFactory=_uuidof(ICoreCursorFactory);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreCursorFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreCursorFactory_INTERFACE_DEFINED__) */
@@ -4058,7 +4092,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasThreadAccess(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ProcessEvents(
                         /* [in] */ABI::Windows::UI::Core::CoreProcessEventsOption options
@@ -4077,9 +4111,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreDispatcher=_uuidof(ICoreDispatcher);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreDispatcher;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreDispatcher_INTERFACE_DEFINED__) */
@@ -4124,9 +4158,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreDispatcher2=_uuidof(ICoreDispatcher2);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreDispatcher2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreDispatcher2_INTERFACE_DEFINED__) */
@@ -4164,11 +4198,11 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::Core::CoreDispatcherPriority value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE ShouldYield(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE ShouldYieldToPriority(
                         /* [in] */ABI::Windows::UI::Core::CoreDispatcherPriority priority,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE StopProcessEvents(void) = 0;
                     
@@ -4176,9 +4210,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreDispatcherWithTaskPriority=_uuidof(ICoreDispatcherWithTaskPriority);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreDispatcherWithTaskPriority;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreDispatcherWithTaskPriority_INTERFACE_DEFINED__) */
@@ -4210,10 +4244,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Core::ICoreDispatcher * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInputEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsInputEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_InputEnabled(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs * handler,
@@ -4227,9 +4261,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreInputSourceBase=_uuidof(ICoreInputSourceBase);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreInputSourceBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreInputSourceBase_INTERFACE_DEFINED__) */
@@ -4290,9 +4324,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreKeyboardInputSource=_uuidof(ICoreKeyboardInputSource);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource_INTERFACE_DEFINED__) */
@@ -4331,9 +4365,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreKeyboardInputSource2=_uuidof(ICoreKeyboardInputSource2);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreKeyboardInputSource2_INTERFACE_DEFINED__) */
@@ -4364,7 +4398,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE ReleasePointerCapture(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetPointerCapture(void) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasCapture(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PointerPosition(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Point * value
@@ -4429,9 +4463,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICorePointerInputSource=_uuidof(ICorePointerInputSource);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICorePointerInputSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICorePointerInputSource_INTERFACE_DEFINED__) */
@@ -4471,9 +4505,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICorePointerInputSource2=_uuidof(ICorePointerInputSource2);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICorePointerInputSource2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICorePointerInputSource2_INTERFACE_DEFINED__) */
@@ -4527,9 +4561,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICorePointerRedirector=_uuidof(ICorePointerRedirector);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICorePointerRedirector;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICorePointerRedirector_INTERFACE_DEFINED__) */
@@ -4572,9 +4606,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreTouchHitTesting=_uuidof(ICoreTouchHitTesting);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreTouchHitTesting;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreTouchHitTesting_INTERFACE_DEFINED__) */
@@ -4621,10 +4655,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::Core::CoreWindowFlowDirection value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInputEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsInputEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PointerCursor(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Core::ICoreCursor * * value
@@ -4636,7 +4670,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Point * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Activate(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Close(void) = 0;
@@ -4774,9 +4808,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindow=_uuidof(ICoreWindow);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindow;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindow_INTERFACE_DEFINED__) */
@@ -4815,9 +4849,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindow2=_uuidof(ICoreWindow2);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindow2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindow2_INTERFACE_DEFINED__) */
@@ -4863,9 +4897,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindow3=_uuidof(ICoreWindow3);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindow3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindow3_INTERFACE_DEFINED__) */
@@ -4915,9 +4949,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindow4=_uuidof(ICoreWindow4);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindow4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindow4_INTERFACE_DEFINED__) */
@@ -4959,9 +4993,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindow5=_uuidof(ICoreWindow5);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindow5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindow5_INTERFACE_DEFINED__) */
@@ -5046,9 +5080,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowDialog=_uuidof(ICoreWindowDialog);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowDialog;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowDialog_INTERFACE_DEFINED__) */
@@ -5088,9 +5122,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowDialogFactory=_uuidof(ICoreWindowDialogFactory);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowDialogFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowDialogFactory_INTERFACE_DEFINED__) */
@@ -5119,19 +5153,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowEventArgs=_uuidof(ICoreWindowEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs_INTERFACE_DEFINED__) */
@@ -5210,9 +5244,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowFlyout=_uuidof(ICoreWindowFlyout);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowFlyout;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowFlyout_INTERFACE_DEFINED__) */
@@ -5257,9 +5291,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowFlyoutFactory=_uuidof(ICoreWindowFlyoutFactory);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowFlyoutFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowFlyoutFactory_INTERFACE_DEFINED__) */
@@ -5298,9 +5332,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowPopupShowingEventArgs=_uuidof(ICoreWindowPopupShowingEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowPopupShowingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowPopupShowingEventArgs_INTERFACE_DEFINED__) */
@@ -5337,9 +5371,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowResizeManager=_uuidof(ICoreWindowResizeManager);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManager_INTERFACE_DEFINED__) */
@@ -5371,19 +5405,19 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShouldWaitForLayoutCompletion(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldWaitForLayoutCompletion(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowResizeManagerLayoutCapability=_uuidof(ICoreWindowResizeManagerLayoutCapability);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerLayoutCapability;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerLayoutCapability_INTERFACE_DEFINED__) */
@@ -5422,9 +5456,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowResizeManagerStatics=_uuidof(ICoreWindowResizeManagerStatics);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowResizeManagerStatics_INTERFACE_DEFINED__) */
@@ -5463,13 +5497,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICoreWindowStatic=_uuidof(ICoreWindowStatic);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowStatic;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowStatic_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Core.ICoreWindowWithContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Core.CoreWindow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Core_ICoreWindowWithContext[] = L"Windows.UI.Core.ICoreWindowWithContext";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Core {
+                /* [object, uuid("9AC40241-3575-4C3B-AF66-E8C529D4D06C"), exclusiveto, contract] */
+                MIDL_INTERFACE("9AC40241-3575-4C3B-AF66-E8C529D4D06C")
+                ICoreWindowWithContext : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UIContext(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::IUIContext * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ICoreWindowWithContext=_uuidof(ICoreWindowWithContext);
+                
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext;
+#endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -5497,16 +5572,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDispatcherIdle(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IIdleDispatchedHandlerArgs=_uuidof(IIdleDispatchedHandlerArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs_INTERFACE_DEFINED__) */
@@ -5542,9 +5617,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInitializeWithCoreWindow=_uuidof(IInitializeWithCoreWindow);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIInitializeWithCoreWindow;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIInitializeWithCoreWindow_INTERFACE_DEFINED__) */
@@ -5580,16 +5655,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InputEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IInputEnabledEventArgs=_uuidof(IInputEnabledEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs_INTERFACE_DEFINED__) */
@@ -5635,9 +5710,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyEventArgs=_uuidof(IKeyEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIKeyEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIKeyEventArgs_INTERFACE_DEFINED__) */
@@ -5680,9 +5755,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyEventArgs2=_uuidof(IKeyEventArgs2);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIKeyEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIKeyEventArgs2_INTERFACE_DEFINED__) */
@@ -5731,9 +5806,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPointerEventArgs=_uuidof(IPointerEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIPointerEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIPointerEventArgs_INTERFACE_DEFINED__) */
@@ -5776,9 +5851,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemNavigationManager=_uuidof(ISystemNavigationManager);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CISystemNavigationManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CISystemNavigationManager_INTERFACE_DEFINED__) */
@@ -5820,9 +5895,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemNavigationManager2=_uuidof(ISystemNavigationManager2);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CISystemNavigationManager2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CISystemNavigationManager2_INTERFACE_DEFINED__) */
@@ -5861,9 +5936,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemNavigationManagerStatics=_uuidof(ISystemNavigationManagerStatics);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CISystemNavigationManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CISystemNavigationManagerStatics_INTERFACE_DEFINED__) */
@@ -5924,9 +5999,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITouchHitTestingEventArgs=_uuidof(ITouchHitTestingEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs_INTERFACE_DEFINED__) */
@@ -5962,16 +6037,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVisibilityChangedEventArgs=_uuidof(IVisibilityChangedEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIVisibilityChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIVisibilityChangedEventArgs_INTERFACE_DEFINED__) */
@@ -6014,9 +6089,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWindowActivatedEventArgs=_uuidof(IWindowActivatedEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIWindowActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIWindowActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -6059,9 +6134,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWindowSizeChangedEventArgs=_uuidof(IWindowSizeChangedEventArgs);
                 
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CIWindowSizeChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CIWindowSizeChangedEventArgs_INTERFACE_DEFINED__) */
@@ -6324,6 +6399,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Core.ICoreWindow3
  *    Windows.UI.Core.ICoreWindow4
  *    Windows.UI.Core.ICoreWindow5
+ *    Windows.UI.Core.ICoreWindowWithContext
  *
  * Class Marshaling Behavior:  Standard - Class marshals using the standard marshaler
  *
@@ -6900,6 +6976,12 @@ typedef interface __x_ABI_CWindows_CUI_CCore_CICoreWindowStatic __x_ABI_CWindows
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowStatic_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext;
+
+#endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs __x_ABI_CWindows_CUI_CCore_CIIdleDispatchedHandlerArgs;
@@ -7048,7 +7130,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCharacterReceivedEventArgsVtbl;
 
@@ -7099,7 +7181,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CCoreWindowEventArgsVtbl;
 
@@ -7150,7 +7232,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputE
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CInputEnabledEventArgsVtbl;
 
@@ -7201,7 +7283,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEve
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CKeyEventArgsVtbl;
 
@@ -7252,7 +7334,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CPointerEventArgsVtbl;
 
@@ -7303,7 +7385,7 @@ typedef struct __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchH
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgs * This,/* [in] */ __RPC__in_opt IInspectable * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_IInspectable_Windows__CUI__CCore__CTouchHitTestingEventArgsVtbl;
 
@@ -7355,7 +7437,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputS
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreInputSourceBase * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreInputSourceBase * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreComponentInputSource_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgsVtbl;
 
@@ -7408,7 +7490,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Wind
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreDispatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreDispatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIAcceleratorKeyEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreDispatcher_Windows__CUI__CCore__CAcceleratorKeyEventArgsVtbl;
 
@@ -7460,7 +7542,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspect
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_IInspectableVtbl;
 
@@ -7512,7 +7594,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIAutomationProviderRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIAutomationProviderRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CAutomationProviderRequestedEventArgsVtbl;
 
@@ -7565,7 +7647,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICharacterReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCharacterReceivedEventArgsVtbl;
 
@@ -7618,7 +7700,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIClosestInteractiveBoundsRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CClosestInteractiveBoundsRequestedEventArgsVtbl;
 
@@ -7671,7 +7753,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindowEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowEventArgsVtbl;
 
@@ -7724,7 +7806,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindowPopupShowingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindowPopupShowingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CCoreWindowPopupShowingEventArgsVtbl;
 
@@ -7777,7 +7859,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIInputEnabledEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CInputEnabledEventArgsVtbl;
 
@@ -7830,7 +7912,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CKeyEventArgsVtbl;
 
@@ -7883,7 +7965,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CPointerEventArgsVtbl;
 
@@ -7936,7 +8018,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CITouchHitTestingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CTouchHitTestingEventArgsVtbl;
 
@@ -7989,7 +8071,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIVisibilityChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIVisibilityChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CVisibilityChangedEventArgsVtbl;
 
@@ -8042,7 +8124,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIWindowActivatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIWindowActivatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowActivatedEventArgsVtbl;
 
@@ -8095,7 +8177,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIWindowSizeChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICoreWindow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIWindowSizeChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CCoreWindow_Windows__CUI__CCore__CWindowSizeChangedEventArgsVtbl;
 
@@ -8148,7 +8230,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirec
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICorePointerRedirector * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CICorePointerRedirector * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CCore__CICorePointerRedirector_Windows__CUI__CCore__CPointerEventArgsVtbl;
 
@@ -8207,7 +8289,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CCore_CICoreInkIndependentInputSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CCore_CICoreInkIndependentInputSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CCore__CCoreInkIndependentInputSource_Windows__CUI__CCore__CPointerEventArgsVtbl;
 
@@ -8266,7 +8348,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStroke
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkStrokeInput_Windows__CUI__CCore__CPointerEventArgsVtbl;
 
@@ -8325,7 +8407,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnproc
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIPointerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CInking__CInkUnprocessedInput_Windows__CUI__CCore__CPointerEventArgsVtbl;
 
@@ -8384,7 +8466,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryIn
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgsVtbl;
 
@@ -9556,6 +9638,15 @@ typedef interface __x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler __x_ABI
 
 
 
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CIUIContext __x_ABI_CWindows_CUI_CIUIContext;
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+
+
+
+
 
 
 typedef enum __x_ABI_CWindows_CUI_CCore_CAppViewBackButtonVisibility __x_ABI_CWindows_CUI_CCore_CAppViewBackButtonVisibility;
@@ -9595,6 +9686,7 @@ typedef struct __x_ABI_CWindows_CUI_CCore_CCorePhysicalKeyStatus __x_ABI_CWindow
 
 
 typedef struct __x_ABI_CWindows_CUI_CCore_CCoreProximityEvaluation __x_ABI_CWindows_CUI_CCore_CCoreProximityEvaluation;
+
 
 
 
@@ -14525,6 +14617,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowStatic;
 
 /*
  *
+ * Interface Windows.UI.Core.ICoreWindowWithContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Core.CoreWindow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Core_ICoreWindowWithContext[] = L"Windows.UI.Core.ICoreWindowWithContext";
+/* [object, uuid("9AC40241-3575-4C3B-AF66-E8C529D4D06C"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContextVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_UIContext )(
+        __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CIUIContext * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContextVtbl;
+
+interface __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContextVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_get_UIContext(This,value) \
+    ( (This)->lpVtbl->get_UIContext(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext;
+#endif /* !defined(____x_ABI_CWindows_CUI_CCore_CICoreWindowWithContext_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Core.IIdleDispatchedHandlerArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -16091,6 +16276,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Core.ICoreWindow3
  *    Windows.UI.Core.ICoreWindow4
  *    Windows.UI.Core.ICoreWindow5
+ *    Windows.UI.Core.ICoreWindowWithContext
  *
  * Class Marshaling Behavior:  Standard - Class marshals using the standard marshaler
  *

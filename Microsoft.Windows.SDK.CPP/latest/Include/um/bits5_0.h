@@ -114,8 +114,8 @@ extern "C"{
 #define BITS_COST_STATE_TRANSFER_STANDARD     (BITS_COST_OPTION_IGNORE_CONGESTION|BITS_COST_STATE_USAGE_BASED|BITS_COST_STATE_OVERCAP_THROTTLED|BITS_COST_STATE_BELOW_CAP|BITS_COST_STATE_CAPPED_USAGE_UNKNOWN|BITS_COST_STATE_UNRESTRICTED)
 #define BITS_COST_STATE_TRANSFER_UNRESTRICTED (BITS_COST_OPTION_IGNORE_CONGESTION|BITS_COST_STATE_OVERCAP_THROTTLED|BITS_COST_STATE_UNRESTRICTED)
 #define BITS_COST_STATE_TRANSFER_ALWAYS       (BITS_COST_OPTION_IGNORE_CONGESTION|BITS_COST_STATE_ROAMING|BITS_COST_STATE_USAGE_BASED|BITS_COST_STATE_OVERCAP_THROTTLED|BITS_COST_STATE_OVERCAP_CHARGED|BITS_COST_STATE_NEAR_CAP|BITS_COST_STATE_BELOW_CAP|BITS_COST_STATE_CAPPED_USAGE_UNKNOWN|BITS_COST_STATE_UNRESTRICTED)
-typedef /* [public] */ 
-enum __MIDL___MIDL_itf_bits5_0_0000_0000_0001
+typedef 
+enum BITS_JOB_TRANSFER_POLICY
     {
         BITS_JOB_TRANSFER_POLICY_ALWAYS	= 0x800000ff,
         BITS_JOB_TRANSFER_POLICY_NOT_ROAMING	= 0x8000007f,
@@ -124,8 +124,8 @@ enum __MIDL___MIDL_itf_bits5_0_0000_0000_0001
         BITS_JOB_TRANSFER_POLICY_UNRESTRICTED	= 0x80000021
     } 	BITS_JOB_TRANSFER_POLICY;
 
-typedef /* [public][public][public] */ 
-enum __MIDL___MIDL_itf_bits5_0_0000_0000_0002
+typedef 
+enum BITS_JOB_PROPERTY_ID
     {
         BITS_JOB_PROPERTY_ID_COST_FLAGS	= 1,
         BITS_JOB_PROPERTY_NOTIFICATION_CLSID	= 2,
@@ -137,7 +137,7 @@ enum __MIDL___MIDL_itf_bits5_0_0000_0000_0002
         BITS_JOB_PROPERTY_ON_DEMAND_MODE	= 10
     } 	BITS_JOB_PROPERTY_ID;
 
-typedef /* [public][public][public][switch_type] */ union __MIDL___MIDL_itf_bits5_0_0000_0000_0003
+typedef /* [public][public][public][switch_type] */ union __MIDL___MIDL_itf_bits5_0_0000_0000_0001
     {
     /* [case()] */ DWORD Dword;
     /* [case()] */ GUID ClsID;
@@ -146,13 +146,13 @@ typedef /* [public][public][public][switch_type] */ union __MIDL___MIDL_itf_bits
     /* [case()] */ BG_AUTH_TARGET Target;
     } 	BITS_JOB_PROPERTY_VALUE;
 
-typedef /* [public][public][public] */ 
-enum __MIDL___MIDL_itf_bits5_0_0000_0000_0004
+typedef 
+enum BITS_FILE_PROPERTY_ID
     {
         BITS_FILE_PROPERTY_ID_HTTP_RESPONSE_HEADERS	= 1
     } 	BITS_FILE_PROPERTY_ID;
 
-typedef /* [public][public][public][switch_type] */ union __MIDL___MIDL_itf_bits5_0_0000_0000_0005
+typedef /* [public][public][public][switch_type] */ union __MIDL___MIDL_itf_bits5_0_0000_0000_0002
     {
     /* [case()] */ LPWSTR String;
     } 	BITS_FILE_PROPERTY_VALUE;

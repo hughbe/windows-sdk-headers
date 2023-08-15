@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -177,9 +177,9 @@ template <typename D> Windows::Devices::PointOfService::UnifiedPosErrorData cons
 
 template <typename D> Windows::Storage::Streams::IRandomAccessStreamWithContentType consume_Windows_Devices_PointOfService_IBarcodeScannerImagePreviewReceivedEventArgs<D>::Preview() const
 {
-    Windows::Storage::Streams::IRandomAccessStreamWithContentType preview{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs)->get_Preview(put_abi(preview)));
-    return preview;
+    Windows::Storage::Streams::IRandomAccessStreamWithContentType value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs)->get_Preview(put_abi(value)));
+    return value;
 }
 
 template <typename D> uint32_t consume_Windows_Devices_PointOfService_IBarcodeScannerReport<D>::ScanDataType() const
@@ -1221,9 +1221,9 @@ template <typename D> void consume_Windows_Devices_PointOfService_ICashDrawerEve
 
 template <typename D> Windows::Devices::PointOfService::CashDrawer consume_Windows_Devices_PointOfService_ICashDrawerEventSourceEventArgs<D>::CashDrawer() const
 {
-    Windows::Devices::PointOfService::CashDrawer drawer{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs)->get_CashDrawer(put_abi(drawer)));
-    return drawer;
+    Windows::Devices::PointOfService::CashDrawer value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs)->get_CashDrawer(put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer> consume_Windows_Devices_PointOfService_ICashDrawerStatics<D>::GetDefaultAsync() const
@@ -2680,6 +2680,63 @@ template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Dev
     return value;
 }
 
+template <typename D> void consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrintJob)->Print(get_abi(data), get_abi(printOptions)));
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::FeedPaperByLine(int32_t lineCount) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrintJob)->FeedPaperByLine(lineCount));
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::FeedPaperByMapModeUnit(int32_t distance) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrintJob)->FeedPaperByMapModeUnit(distance));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReverseVideoSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsReverseVideoSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsStrikethroughSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsStrikethroughSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsSuperscriptSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsSuperscriptSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsSubscriptSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsSubscriptSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsReversePaperFeedByLineSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsReversePaperFeedByMapModeUnitSupported(&value));
+    return value;
+}
+
 template <typename D> hstring consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceId() const
 {
     hstring value{};
@@ -3200,9 +3257,9 @@ template <typename D> Windows::Devices::PointOfService::LineDisplayPowerStatus c
 
 template <typename D> hstring consume_Windows_Devices_PointOfService_ILineDisplayStoredBitmap<D>::EscapeSequence() const
 {
-    hstring escapeSequence{};
-    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ILineDisplayStoredBitmap)->get_EscapeSequence(put_abi(escapeSequence)));
-    return escapeSequence;
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ILineDisplayStoredBitmap)->get_EscapeSequence(put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<bool> consume_Windows_Devices_PointOfService_ILineDisplayStoredBitmap<D>::TryDeleteAsync() const
@@ -3979,6 +4036,20 @@ template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinter<D>
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinter)->remove_StatusUpdated(get_abi(token)));
 }
 
+template <typename D> Windows::Foundation::Collections::IVectorView<uint32_t> consume_Windows_Devices_PointOfService_IPosPrinter2<D>::SupportedBarcodeSymbologies() const
+{
+    Windows::Foundation::Collections::IVectorView<uint32_t> value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinter2)->get_SupportedBarcodeSymbologies(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Devices::PointOfService::PosPrinterFontProperty consume_Windows_Devices_PointOfService_IPosPrinter2<D>::GetFontProperty(param::hstring const& typeface) const
+{
+    Windows::Devices::PointOfService::PosPrinterFontProperty result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinter2)->GetFontProperty(get_abi(typeface), put_abi(result)));
+    return result;
+}
+
 template <typename D> Windows::Devices::PointOfService::UnifiedPosPowerReportingType consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::PowerReportingType() const
 {
     Windows::Devices::PointOfService::UnifiedPosPowerReportingType value{};
@@ -4070,6 +4141,27 @@ template <typename D> uint32_t consume_Windows_Devices_PointOfService_IPosPrinte
     return value;
 }
 
+template <typename D> hstring consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::TypeFace() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterFontProperty)->get_TypeFace(put_abi(value)));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::IsScalableToAnySize() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterFontProperty)->get_IsScalableToAnySize(&value));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::SizeUInt32> consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::CharacterSizes() const
+{
+    Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::SizeUInt32> value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterFontProperty)->get_CharacterSizes(put_abi(value)));
+    return value;
+}
+
 template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::Print(param::hstring const& data) const
 {
     check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterJob)->Print(get_abi(data)));
@@ -4090,6 +4182,162 @@ template <typename D> Windows::Foundation::IAsyncOperation<bool> consume_Windows
     Windows::Foundation::IAsyncOperation<bool> operation{ nullptr };
     check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterJob)->ExecuteAsync(put_abi(operation)));
     return operation;
+}
+
+template <typename D> hstring consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::TypeFace() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_TypeFace(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::TypeFace(param::hstring const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_TypeFace(get_abi(value)));
+}
+
+template <typename D> uint32_t consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterHeight() const
+{
+    uint32_t value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_CharacterHeight(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterHeight(uint32_t value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_CharacterHeight(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Bold() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Bold(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Bold(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Bold(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Italic() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Italic(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Italic(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Italic(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Underline() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Underline(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Underline(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Underline(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::ReverseVideo() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_ReverseVideo(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::ReverseVideo(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_ReverseVideo(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Strikethrough() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Strikethrough(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Strikethrough(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Strikethrough(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Superscript() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Superscript(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Superscript(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Superscript(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Subscript() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Subscript(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Subscript(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Subscript(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleWide() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_DoubleWide(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleWide(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_DoubleWide(value));
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleHigh() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_DoubleHigh(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleHigh(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_DoubleHigh(value));
+}
+
+template <typename D> Windows::Devices::PointOfService::PosPrinterAlignment consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Alignment() const
+{
+    Windows::Devices::PointOfService::PosPrinterAlignment value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Alignment(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Alignment(Windows::Devices::PointOfService::PosPrinterAlignment const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Alignment(get_abi(value)));
+}
+
+template <typename D> uint32_t consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterSet() const
+{
+    uint32_t value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_CharacterSet(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterSet(uint32_t value) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_CharacterSet(value));
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter> consume_Windows_Devices_PointOfService_IPosPrinterStatics<D>::GetDefaultAsync() const
@@ -4231,6 +4479,26 @@ template <typename D> void consume_Windows_Devices_PointOfService_IReceiptPrintJ
     check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob)->CutPaperDefault());
 }
 
+template <typename D> void consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::StampPaper() const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->StampPaper());
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->Print(get_abi(data), get_abi(printOptions)));
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::FeedPaperByLine(int32_t lineCount) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->FeedPaperByLine(lineCount));
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::FeedPaperByMapModeUnit(int32_t distance) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->FeedPaperByMapModeUnit(distance));
+}
+
 template <typename D> bool consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>::CanCutPaper() const
 {
     bool value{};
@@ -4252,6 +4520,63 @@ template <typename D> Windows::Devices::PointOfService::PosPrinterMarkFeedCapabi
     return value;
 }
 
+template <typename D> bool consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReverseVideoSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsReverseVideoSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsStrikethroughSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsStrikethroughSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsSuperscriptSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsSuperscriptSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsSubscriptSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsSubscriptSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsReversePaperFeedByLineSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsReversePaperFeedByMapModeUnitSupported(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrintJob)->Print(get_abi(data), get_abi(printOptions)));
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::FeedPaperByLine(int32_t lineCount) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrintJob)->FeedPaperByLine(lineCount));
+}
+
+template <typename D> void consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::FeedPaperByMapModeUnit(int32_t distance) const
+{
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrintJob)->FeedPaperByMapModeUnit(distance));
+}
+
 template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities<D>::IsFullLengthSupported() const
 {
     bool value{};
@@ -4263,6 +4588,48 @@ template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCa
 {
     bool value{};
     check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities)->get_IsBothSidesPrintingSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReverseVideoSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsReverseVideoSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsStrikethroughSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsStrikethroughSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsSuperscriptSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsSuperscriptSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsSubscriptSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsSubscriptSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsReversePaperFeedByLineSupported(&value));
+    return value;
+}
+
+template <typename D> bool consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsReversePaperFeedByMapModeUnitSupported(&value));
     return value;
 }
 
@@ -4604,14 +4971,14 @@ struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerErrorOccurred
 template <typename D>
 struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs>
 {
-    int32_t WINRT_CALL get_Preview(void** preview) noexcept final
+    int32_t WINRT_CALL get_Preview(void** value) noexcept final
     {
         try
         {
-            *preview = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Preview, WINRT_WRAP(Windows::Storage::Streams::IRandomAccessStreamWithContentType));
-            *preview = detach_from<Windows::Storage::Streams::IRandomAccessStreamWithContentType>(this->shim().Preview());
+            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamWithContentType>(this->shim().Preview());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6457,14 +6824,14 @@ struct produce<D, Windows::Devices::PointOfService::ICashDrawerEventSource> : pr
 template <typename D>
 struct produce<D, Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>
 {
-    int32_t WINRT_CALL get_CashDrawer(void** drawer) noexcept final
+    int32_t WINRT_CALL get_CashDrawer(void** value) noexcept final
     {
         try
         {
-            *drawer = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CashDrawer, WINRT_WRAP(Windows::Devices::PointOfService::CashDrawer));
-            *drawer = detach_from<Windows::Devices::PointOfService::CashDrawer>(this->shim().CashDrawer());
+            *value = detach_from<Windows::Devices::PointOfService::CashDrawer>(this->shim().CashDrawer());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -9060,8 +9427,124 @@ struct produce<D, Windows::Devices::PointOfService::ICommonReceiptSlipCapabiliti
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::PointOfService::IJournalPrintJob> : produce_base<D, Windows::Devices::PointOfService::IJournalPrintJob>
+{
+    int32_t WINRT_CALL Print(void* data, void* printOptions) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Print, WINRT_WRAP(void), hstring const&, Windows::Devices::PointOfService::PosPrinterPrintOptions const&);
+            this->shim().Print(*reinterpret_cast<hstring const*>(&data), *reinterpret_cast<Windows::Devices::PointOfService::PosPrinterPrintOptions const*>(&printOptions));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL FeedPaperByLine(int32_t lineCount) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(FeedPaperByLine, WINRT_WRAP(void), int32_t);
+            this->shim().FeedPaperByLine(lineCount);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL FeedPaperByMapModeUnit(int32_t distance) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(FeedPaperByMapModeUnit, WINRT_WRAP(void), int32_t);
+            this->shim().FeedPaperByMapModeUnit(distance);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities>
 {};
+
+template <typename D>
+struct produce<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities2> : produce_base<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities2>
+{
+    int32_t WINRT_CALL get_IsReverseVideoSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReverseVideoSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReverseVideoSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsStrikethroughSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsStrikethroughSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsStrikethroughSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsSuperscriptSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSuperscriptSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSuperscriptSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsSubscriptSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSubscriptSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSubscriptSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsReversePaperFeedByLineSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReversePaperFeedByLineSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReversePaperFeedByLineSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsReversePaperFeedByMapModeUnitSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReversePaperFeedByMapModeUnitSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReversePaperFeedByMapModeUnitSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
 
 template <typename D>
 struct produce<D, Windows::Devices::PointOfService::ILineDisplay> : produce_base<D, Windows::Devices::PointOfService::ILineDisplay>
@@ -10074,14 +10557,14 @@ struct produce<D, Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEve
 template <typename D>
 struct produce<D, Windows::Devices::PointOfService::ILineDisplayStoredBitmap> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayStoredBitmap>
 {
-    int32_t WINRT_CALL get_EscapeSequence(void** escapeSequence) noexcept final
+    int32_t WINRT_CALL get_EscapeSequence(void** value) noexcept final
     {
         try
         {
-            *escapeSequence = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(EscapeSequence, WINRT_WRAP(hstring));
-            *escapeSequence = detach_from<hstring>(this->shim().EscapeSequence());
+            *value = detach_from<hstring>(this->shim().EscapeSequence());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -11542,6 +12025,36 @@ struct produce<D, Windows::Devices::PointOfService::IPosPrinter> : produce_base<
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::PointOfService::IPosPrinter2> : produce_base<D, Windows::Devices::PointOfService::IPosPrinter2>
+{
+    int32_t WINRT_CALL get_SupportedBarcodeSymbologies(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SupportedBarcodeSymbologies, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<uint32_t>));
+            *value = detach_from<Windows::Foundation::Collections::IVectorView<uint32_t>>(this->shim().SupportedBarcodeSymbologies());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetFontProperty(void* typeface, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetFontProperty, WINRT_WRAP(Windows::Devices::PointOfService::PosPrinterFontProperty), hstring const&);
+            *result = detach_from<Windows::Devices::PointOfService::PosPrinterFontProperty>(this->shim().GetFontProperty(*reinterpret_cast<hstring const*>(&typeface)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::PointOfService::IPosPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterCapabilities>
 {
     int32_t WINRT_CALL get_PowerReportingType(Windows::Devices::PointOfService::UnifiedPosPowerReportingType* value) noexcept final
@@ -11709,6 +12222,48 @@ struct produce<D, Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsSt
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::PointOfService::IPosPrinterFontProperty> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterFontProperty>
+{
+    int32_t WINRT_CALL get_TypeFace(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TypeFace, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().TypeFace());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsScalableToAnySize(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsScalableToAnySize, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsScalableToAnySize());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CharacterSizes(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CharacterSizes, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::SizeUInt32>));
+            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::SizeUInt32>>(this->shim().CharacterSizes());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::PointOfService::IPosPrinterJob> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterJob>
 {
     int32_t WINRT_CALL Print(void* data) noexcept final
@@ -11755,6 +12310,323 @@ struct produce<D, Windows::Devices::PointOfService::IPosPrinterJob> : produce_ba
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(ExecuteAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<bool>));
             *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().ExecuteAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Devices::PointOfService::IPosPrinterPrintOptions> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterPrintOptions>
+{
+    int32_t WINRT_CALL get_TypeFace(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TypeFace, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().TypeFace());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_TypeFace(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(TypeFace, WINRT_WRAP(void), hstring const&);
+            this->shim().TypeFace(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CharacterHeight(uint32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CharacterHeight, WINRT_WRAP(uint32_t));
+            *value = detach_from<uint32_t>(this->shim().CharacterHeight());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_CharacterHeight(uint32_t value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CharacterHeight, WINRT_WRAP(void), uint32_t);
+            this->shim().CharacterHeight(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Bold(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Bold, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().Bold());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Bold(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Bold, WINRT_WRAP(void), bool);
+            this->shim().Bold(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Italic(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Italic, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().Italic());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Italic(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Italic, WINRT_WRAP(void), bool);
+            this->shim().Italic(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Underline(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Underline, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().Underline());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Underline(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Underline, WINRT_WRAP(void), bool);
+            this->shim().Underline(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_ReverseVideo(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ReverseVideo, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().ReverseVideo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_ReverseVideo(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ReverseVideo, WINRT_WRAP(void), bool);
+            this->shim().ReverseVideo(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Strikethrough(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Strikethrough, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().Strikethrough());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Strikethrough(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Strikethrough, WINRT_WRAP(void), bool);
+            this->shim().Strikethrough(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Superscript(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Superscript, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().Superscript());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Superscript(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Superscript, WINRT_WRAP(void), bool);
+            this->shim().Superscript(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Subscript(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Subscript, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().Subscript());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Subscript(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Subscript, WINRT_WRAP(void), bool);
+            this->shim().Subscript(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_DoubleWide(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(DoubleWide, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().DoubleWide());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_DoubleWide(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(DoubleWide, WINRT_WRAP(void), bool);
+            this->shim().DoubleWide(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_DoubleHigh(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(DoubleHigh, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().DoubleHigh());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_DoubleHigh(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(DoubleHigh, WINRT_WRAP(void), bool);
+            this->shim().DoubleHigh(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Alignment(Windows::Devices::PointOfService::PosPrinterAlignment* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Alignment, WINRT_WRAP(Windows::Devices::PointOfService::PosPrinterAlignment));
+            *value = detach_from<Windows::Devices::PointOfService::PosPrinterAlignment>(this->shim().Alignment());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_Alignment(Windows::Devices::PointOfService::PosPrinterAlignment value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Alignment, WINRT_WRAP(void), Windows::Devices::PointOfService::PosPrinterAlignment const&);
+            this->shim().Alignment(*reinterpret_cast<Windows::Devices::PointOfService::PosPrinterAlignment const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_CharacterSet(uint32_t* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CharacterSet, WINRT_WRAP(uint32_t));
+            *value = detach_from<uint32_t>(this->shim().CharacterSet());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_CharacterSet(uint32_t value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CharacterSet, WINRT_WRAP(void), uint32_t);
+            this->shim().CharacterSet(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -12095,6 +12967,58 @@ struct produce<D, Windows::Devices::PointOfService::IReceiptPrintJob> : produce_
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::PointOfService::IReceiptPrintJob2> : produce_base<D, Windows::Devices::PointOfService::IReceiptPrintJob2>
+{
+    int32_t WINRT_CALL StampPaper() noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(StampPaper, WINRT_WRAP(void));
+            this->shim().StampPaper();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL Print(void* data, void* printOptions) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Print, WINRT_WRAP(void), hstring const&, Windows::Devices::PointOfService::PosPrinterPrintOptions const&);
+            this->shim().Print(*reinterpret_cast<hstring const*>(&data), *reinterpret_cast<Windows::Devices::PointOfService::PosPrinterPrintOptions const*>(&printOptions));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL FeedPaperByLine(int32_t lineCount) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(FeedPaperByLine, WINRT_WRAP(void), int32_t);
+            this->shim().FeedPaperByLine(lineCount);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL FeedPaperByMapModeUnit(int32_t distance) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(FeedPaperByMapModeUnit, WINRT_WRAP(void), int32_t);
+            this->shim().FeedPaperByMapModeUnit(distance);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities>
 {
     int32_t WINRT_CALL get_CanCutPaper(bool* value) noexcept final
@@ -12135,6 +13059,122 @@ struct produce<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities>
 };
 
 template <typename D>
+struct produce<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> : produce_base<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>
+{
+    int32_t WINRT_CALL get_IsReverseVideoSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReverseVideoSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReverseVideoSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsStrikethroughSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsStrikethroughSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsStrikethroughSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsSuperscriptSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSuperscriptSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSuperscriptSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsSubscriptSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSubscriptSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSubscriptSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsReversePaperFeedByLineSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReversePaperFeedByLineSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReversePaperFeedByLineSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsReversePaperFeedByMapModeUnitSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReversePaperFeedByMapModeUnitSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReversePaperFeedByMapModeUnitSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Devices::PointOfService::ISlipPrintJob> : produce_base<D, Windows::Devices::PointOfService::ISlipPrintJob>
+{
+    int32_t WINRT_CALL Print(void* data, void* printOptions) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Print, WINRT_WRAP(void), hstring const&, Windows::Devices::PointOfService::PosPrinterPrintOptions const&);
+            this->shim().Print(*reinterpret_cast<hstring const*>(&data), *reinterpret_cast<Windows::Devices::PointOfService::PosPrinterPrintOptions const*>(&printOptions));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL FeedPaperByLine(int32_t lineCount) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(FeedPaperByLine, WINRT_WRAP(void), int32_t);
+            this->shim().FeedPaperByLine(lineCount);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL FeedPaperByMapModeUnit(int32_t distance) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(FeedPaperByMapModeUnit, WINRT_WRAP(void), int32_t);
+            this->shim().FeedPaperByMapModeUnit(distance);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities>
 {
     int32_t WINRT_CALL get_IsFullLengthSupported(bool* value) noexcept final
@@ -12156,6 +13196,82 @@ struct produce<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities> : 
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(IsBothSidesPrintingSupported, WINRT_WRAP(bool));
             *value = detach_from<bool>(this->shim().IsBothSidesPrintingSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities2> : produce_base<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities2>
+{
+    int32_t WINRT_CALL get_IsReverseVideoSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReverseVideoSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReverseVideoSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsStrikethroughSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsStrikethroughSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsStrikethroughSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsSuperscriptSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSuperscriptSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSuperscriptSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsSubscriptSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsSubscriptSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsSubscriptSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsReversePaperFeedByLineSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReversePaperFeedByLineSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReversePaperFeedByLineSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_IsReversePaperFeedByMapModeUnitSupported(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsReversePaperFeedByMapModeUnitSupported, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsReversePaperFeedByMapModeUnitSupported());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -12885,6 +14001,10 @@ inline uint32_t PosPrinterCharacterSetIds::Ansi()
     return impl::call_factory<PosPrinterCharacterSetIds, Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>([&](auto&& f) { return f.Ansi(); });
 }
 
+inline PosPrinterPrintOptions::PosPrinterPrintOptions() :
+    PosPrinterPrintOptions(impl::call_factory<PosPrinterPrintOptions>([](auto&& f) { return f.template ActivateInstance<PosPrinterPrintOptions>(); }))
+{}
+
 inline UnifiedPosErrorData::UnifiedPosErrorData(param::hstring const& message, Windows::Devices::PointOfService::UnifiedPosErrorSeverity const& severity, Windows::Devices::PointOfService::UnifiedPosErrorReason const& reason, uint32_t extendedReason) :
     UnifiedPosErrorData(impl::call_factory<UnifiedPosErrorData, Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory>([&](auto&& f) { return f.CreateInstance(message, severity, reason, extendedReason); }))
 {}
@@ -12944,7 +14064,9 @@ template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedSlipPrin
 template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IJournalPrintJob> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplay> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplay> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplay2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplay2> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayAttributes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayAttributes> {};
@@ -12974,9 +14096,12 @@ template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeR
 template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderTrackData> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderTrackData> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinter> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinter2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinter2> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterCapabilities> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterFontProperty> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterFontProperty> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterJob> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterPrintOptions> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterPrintOptions> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterStatics> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterStatics2> {};
@@ -12984,8 +14109,12 @@ template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatu
 template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrintJob> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ISlipPrintJob> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorData> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorData> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScanner> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScanner> {};
@@ -13045,6 +14174,8 @@ template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeRe
 template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinter> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty> {};
+template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterStatus> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterStatus> {};
 template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs> {};

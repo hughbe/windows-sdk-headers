@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.input.spatial.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -284,10 +280,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialGestureRecognizer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer_FWD_DEFINED__
@@ -300,10 +296,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialGestureRecognizerFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizerFactory ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizerFactory
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizerFactory_FWD_DEFINED__
@@ -316,10 +312,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialHoldCanceledEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCanceledEventArgs ABI::Windows::UI::Input::Spatial::ISpatialHoldCanceledEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCanceledEventArgs_FWD_DEFINED__
@@ -332,10 +328,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialHoldCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCompletedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialHoldCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCompletedEventArgs_FWD_DEFINED__
@@ -348,10 +344,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialHoldStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldStartedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialHoldStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldStartedEventArgs_FWD_DEFINED__
@@ -364,10 +360,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteraction;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteraction ABI::Windows::UI::Input::Spatial::ISpatialInteraction
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteraction_FWD_DEFINED__
@@ -380,10 +376,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionController;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController ABI::Windows::UI::Input::Spatial::ISpatialInteractionController
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController_FWD_DEFINED__
@@ -396,10 +392,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionController2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController2 ABI::Windows::UI::Input::Spatial::ISpatialInteractionController2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController2_FWD_DEFINED__
@@ -412,10 +408,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionController3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController3 ABI::Windows::UI::Input::Spatial::ISpatialInteractionController3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController3_FWD_DEFINED__
@@ -428,10 +424,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionControllerProperties;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionControllerProperties ABI::Windows::UI::Input::Spatial::ISpatialInteractionControllerProperties
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionControllerProperties_FWD_DEFINED__
@@ -444,10 +440,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionDetectedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs_FWD_DEFINED__
@@ -460,10 +456,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionDetectedEventArgs2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs2 ABI::Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs2_FWD_DEFINED__
@@ -476,10 +472,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionManager;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager ABI::Windows::UI::Input::Spatial::ISpatialInteractionManager
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager_FWD_DEFINED__
@@ -492,13 +488,29 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionManagerStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics ABI::Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    interface ISpatialInteractionManagerStatics2;
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 ABI::Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource_FWD_DEFINED__
@@ -508,10 +520,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSource;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource ABI::Windows::UI::Input::Spatial::ISpatialInteractionSource
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource_FWD_DEFINED__
@@ -524,10 +536,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSource2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource2 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSource2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource2_FWD_DEFINED__
@@ -540,13 +552,29 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSource3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSource3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    interface ISpatialInteractionSource4;
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSource4
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs_FWD_DEFINED__
@@ -556,10 +584,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs_FWD_DEFINED__
@@ -572,10 +600,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceEventArgs2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs2 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs2_FWD_DEFINED__
@@ -588,10 +616,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceLocation;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation_FWD_DEFINED__
@@ -604,10 +632,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceLocation2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation2 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation2_FWD_DEFINED__
@@ -620,10 +648,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceLocation3;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation3 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceLocation3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation3_FWD_DEFINED__
@@ -636,10 +664,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceProperties;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceProperties ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceProperties
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceProperties_FWD_DEFINED__
@@ -652,10 +680,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceState;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceState
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState_FWD_DEFINED__
@@ -668,13 +696,29 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialInteractionSourceState2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceState2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    interface ISpatialInteractionSourceState3;
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceState3
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs_FWD_DEFINED__
@@ -684,10 +728,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialManipulationCanceledEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs ABI::Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs_FWD_DEFINED__
@@ -700,10 +744,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialManipulationCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCompletedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialManipulationCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCompletedEventArgs_FWD_DEFINED__
@@ -716,10 +760,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialManipulationDelta;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationDelta ABI::Windows::UI::Input::Spatial::ISpatialManipulationDelta
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationDelta_FWD_DEFINED__
@@ -732,10 +776,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialManipulationStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationStartedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialManipulationStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationStartedEventArgs_FWD_DEFINED__
@@ -748,10 +792,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialManipulationUpdatedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationUpdatedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialManipulationUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationUpdatedEventArgs_FWD_DEFINED__
@@ -764,10 +808,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialNavigationCanceledEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCanceledEventArgs ABI::Windows::UI::Input::Spatial::ISpatialNavigationCanceledEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCanceledEventArgs_FWD_DEFINED__
@@ -780,10 +824,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialNavigationCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCompletedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialNavigationCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCompletedEventArgs_FWD_DEFINED__
@@ -796,10 +840,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialNavigationStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationStartedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialNavigationStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationStartedEventArgs_FWD_DEFINED__
@@ -812,10 +856,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialNavigationUpdatedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationUpdatedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialNavigationUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationUpdatedEventArgs_FWD_DEFINED__
@@ -828,10 +872,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialPointerInteractionSourcePose;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose ABI::Windows::UI::Input::Spatial::ISpatialPointerInteractionSourcePose
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose_FWD_DEFINED__
@@ -844,10 +888,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialPointerInteractionSourcePose2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose2 ABI::Windows::UI::Input::Spatial::ISpatialPointerInteractionSourcePose2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose2_FWD_DEFINED__
@@ -860,10 +904,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialPointerPose;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose ABI::Windows::UI::Input::Spatial::ISpatialPointerPose
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose_FWD_DEFINED__
@@ -876,13 +920,29 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialPointerPose2;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose2 ABI::Windows::UI::Input::Spatial::ISpatialPointerPose2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    interface ISpatialPointerPose3;
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 ABI::Windows::UI::Input::Spatial::ISpatialPointerPose3
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics_FWD_DEFINED__
@@ -892,10 +952,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialPointerPoseStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics ABI::Windows::UI::Input::Spatial::ISpatialPointerPoseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics_FWD_DEFINED__
@@ -908,10 +968,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialRecognitionEndedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionEndedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialRecognitionEndedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionEndedEventArgs_FWD_DEFINED__
@@ -924,10 +984,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialRecognitionStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionStartedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialRecognitionStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionStartedEventArgs_FWD_DEFINED__
@@ -940,10 +1000,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     interface ISpatialTappedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialTappedEventArgs ABI::Windows::UI::Input::Spatial::ISpatialTappedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialTappedEventArgs_FWD_DEFINED__
@@ -957,10 +1017,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionSourceState;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -983,7 +1043,7 @@ IIterator<ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceState*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceState*> __FIIterator_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState_t;
 #define __FIIterator_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceState*>
@@ -1015,7 +1075,7 @@ IIterable<ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceState*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceState*> __FIIterable_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState_t;
 #define __FIIterable_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceState*>
@@ -1047,7 +1107,7 @@ IVectorView<ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceState*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceState*> __FIVectorView_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceState ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceState*>
@@ -1064,10 +1124,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialGestureRecognizer;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1076,10 +1136,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialHoldCanceledEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1103,7 +1163,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialHoldCanceledEventArgs*>
@@ -1122,10 +1182,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialHoldCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1149,7 +1209,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialHoldCompletedEventArgs*>
@@ -1168,10 +1228,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialHoldStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1195,7 +1255,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialHoldStartedEventArgs*>
@@ -1214,10 +1274,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialManipulationCanceledEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1241,7 +1301,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialManipulationCanceledEventArgs*>
@@ -1260,10 +1320,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialManipulationCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1287,7 +1347,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialManipulationCompletedEventArgs*>
@@ -1306,10 +1366,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialManipulationStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1333,7 +1393,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialManipulationStartedEventArgs*>
@@ -1352,10 +1412,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialManipulationUpdatedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1379,7 +1439,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialManipulationUpdatedEventArgs*>
@@ -1398,10 +1458,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialNavigationCanceledEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1425,7 +1485,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialNavigationCanceledEventArgs*>
@@ -1444,10 +1504,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialNavigationCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1471,7 +1531,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialNavigationCompletedEventArgs*>
@@ -1490,10 +1550,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialNavigationStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1517,7 +1577,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialNavigationStartedEventArgs*>
@@ -1536,10 +1596,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialNavigationUpdatedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1563,7 +1623,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialNavigationUpdatedEventArgs*>
@@ -1582,10 +1642,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialRecognitionEndedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1609,7 +1669,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialRecognitionEndedEventArgs*>
@@ -1628,10 +1688,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialRecognitionStartedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1655,7 +1715,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialRecognitionStartedEventArgs*>
@@ -1674,10 +1734,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialTappedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1701,7 +1761,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::SpatialTappedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialGestureRecognizer*,ABI::Windows::UI::Input::Spatial::ISpatialTappedEventArgs*>
@@ -1719,10 +1779,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionManager;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1731,10 +1791,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionDetectedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1758,7 +1818,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialInteractionManager*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialInteractionManager*,ABI::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialInteractionManager*,ABI::Windows::UI::Input::Spatial::ISpatialInteractionDetectedEventArgs*>
@@ -1777,10 +1837,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionSourceEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1804,7 +1864,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialInteractionManager*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::Spatial::SpatialInteractionManager*,ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::Spatial::ISpatialInteractionManager*,ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceEventArgs*>
@@ -1823,9 +1883,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1851,7 +1911,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1883,7 +1943,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentTy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1896,13 +1956,100 @@ typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithC
 
 namespace ABI {
     namespace Windows {
+        namespace Perception {
+            namespace People {
+                class HandMeshObserver;
+            } /* People */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace People {
+                interface IHandMeshObserver;
+            } /* People */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver ABI::Windows::Perception::People::IHandMeshObserver
+
+#endif // ____x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver_FWD_DEFINED__
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("75e7a8a7-b66d-5e6b-a060-eef7002d9e62"))
+IAsyncOperationCompletedHandler<ABI::Windows::Perception::People::HandMeshObserver*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Perception::People::HandMeshObserver*, ABI::Windows::Perception::People::IHandMeshObserver*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Perception.People.HandMeshObserver>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Perception::People::HandMeshObserver*> __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::People::IHandMeshObserver*>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::People::IHandMeshObserver*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_USE
+#define DEF___FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("0bfeea40-9b97-5abf-af9e-2e6367a50bf8"))
+IAsyncOperation<ABI::Windows::Perception::People::HandMeshObserver*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Perception::People::HandMeshObserver*, ABI::Windows::Perception::People::IHandMeshObserver*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Perception.People.HandMeshObserver>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Perception::People::HandMeshObserver*> __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_t;
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::People::IHandMeshObserver*>
+//#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::People::IHandMeshObserver*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
         namespace Foundation {
             namespace Numerics {
                 struct Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CNumerics__CVector3_USE
@@ -1923,7 +2070,7 @@ IReference<struct ABI::Windows::Foundation::Numerics::Vector3> : IReference_impl
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Numerics::Vector3> __FIReference_1_Windows__CFoundation__CNumerics__CVector3_t;
 #define __FIReference_1_Windows__CFoundation__CNumerics__CVector3 ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CNumerics__CVector3_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CNumerics__CVector3 ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Numerics::Vector3>
@@ -1939,9 +2086,9 @@ namespace ABI {
             namespace Numerics {
                 struct Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CNumerics__CQuaternion_USE
@@ -1962,7 +2109,7 @@ IReference<struct ABI::Windows::Foundation::Numerics::Quaternion> : IReference_i
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Numerics::Quaternion> __FIReference_1_Windows__CFoundation__CNumerics__CQuaternion_t;
 #define __FIReference_1_Windows__CFoundation__CNumerics__CQuaternion ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CNumerics__CQuaternion_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CNumerics__CQuaternion ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Numerics::Quaternion>
@@ -1979,9 +2126,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 class SimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -1990,9 +2137,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface ISimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController ABI::Windows::Devices::Haptics::ISimpleHapticsController
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -2006,9 +2153,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 class BatteryReport;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_FWD_DEFINED__
@@ -2017,9 +2164,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 interface IBatteryReport;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPower_CIBatteryReport ABI::Windows::Devices::Power::IBatteryReport
 
 #endif // ____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_FWD_DEFINED__
@@ -2035,9 +2182,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2046,9 +2193,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2060,10 +2207,59 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             namespace People {
-                class HeadPose;
-            } /* Windows */
+                class EyesPose;
+            } /* People */
         } /* Perception */
-    } /* People */} /* ABI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CPerception_CPeople_CIEyesPose_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CPeople_CIEyesPose_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace People {
+                interface IEyesPose;
+            } /* People */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CPerception_CPeople_CIEyesPose ABI::Windows::Perception::People::IEyesPose
+
+#endif // ____x_ABI_CWindows_CPerception_CPeople_CIEyesPose_FWD_DEFINED__
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace People {
+                class HandPose;
+            } /* People */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CPerception_CPeople_CIHandPose_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CPeople_CIHandPose_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace People {
+                interface IHandPose;
+            } /* People */
+        } /* Perception */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CPerception_CPeople_CIHandPose ABI::Windows::Perception::People::IHandPose
+
+#endif // ____x_ABI_CWindows_CPerception_CPeople_CIHandPose_FWD_DEFINED__
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Perception {
+            namespace People {
+                class HeadPose;
+            } /* People */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CPeople_CIHeadPose_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CPeople_CIHeadPose_FWD_DEFINED__
@@ -2072,9 +2268,9 @@ namespace ABI {
         namespace Perception {
             namespace People {
                 interface IHeadPose;
-            } /* Windows */
+            } /* People */
         } /* Perception */
-    } /* People */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CPeople_CIHeadPose ABI::Windows::Perception::People::IHeadPose
 
 #endif // ____x_ABI_CWindows_CPerception_CPeople_CIHeadPose_FWD_DEFINED__
@@ -2087,8 +2283,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             class PerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
@@ -2096,8 +2292,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             interface IPerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CIPerceptionTimestamp ABI::Windows::Perception::IPerceptionTimestamp
 
 #endif // ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
@@ -2110,9 +2306,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -2121,9 +2317,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -2144,10 +2340,10 @@ namespace ABI {
                     
                     typedef enum SpatialGestureSettings : unsigned int SpatialGestureSettings;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2157,10 +2353,10 @@ namespace ABI {
                     
                     typedef enum SpatialInteractionPressKind : int SpatialInteractionPressKind;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2170,10 +2366,10 @@ namespace ABI {
                     
                     typedef enum SpatialInteractionSourceHandedness : int SpatialInteractionSourceHandedness;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2183,10 +2379,10 @@ namespace ABI {
                     
                     typedef enum SpatialInteractionSourceKind : int SpatialInteractionSourceKind;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2196,10 +2392,14 @@ namespace ABI {
                     
                     typedef enum SpatialInteractionSourcePositionAccuracy : int SpatialInteractionSourcePositionAccuracy;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+
+
 
 
 
@@ -2253,10 +2453,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteraction;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2265,10 +2465,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionController;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2277,10 +2477,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionControllerProperties;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2291,10 +2491,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionSource;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2304,10 +2504,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionSourceLocation;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2316,10 +2516,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialInteractionSourceProperties;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2331,10 +2531,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialManipulationDelta;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2349,10 +2549,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialPointerInteractionSourcePose;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2361,10 +2561,10 @@ namespace ABI {
             namespace Input {
                 namespace Spatial {
                     class SpatialPointerPose;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2413,10 +2613,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(SpatialGestureSettings)
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2446,10 +2646,10 @@ namespace ABI {
                         SpatialInteractionPressKind_Thumbstick = 5,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2476,10 +2676,10 @@ namespace ABI {
                         SpatialInteractionSourceHandedness_Right = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -2507,10 +2707,10 @@ namespace ABI {
                         SpatialInteractionSourceKind_Controller = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2536,10 +2736,10 @@ namespace ABI {
                         SpatialInteractionSourcePositionAccuracy_Approximate = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -2672,7 +2872,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE CancelPendingGestures(void) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TrySetGestureSettings(
                             /* [in] */ABI::Windows::UI::Input::Spatial::SpatialGestureSettings settings,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_GestureSettings(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Input::Spatial::SpatialGestureSettings * value
@@ -2682,10 +2882,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialGestureRecognizer=_uuidof(ISpatialGestureRecognizer);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer_INTERFACE_DEFINED__) */
@@ -2726,10 +2926,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialGestureRecognizerFactory=_uuidof(ISpatialGestureRecognizerFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizerFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizerFactory_INTERFACE_DEFINED__) */
@@ -2769,10 +2969,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialHoldCanceledEventArgs=_uuidof(ISpatialHoldCanceledEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCanceledEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCanceledEventArgs_INTERFACE_DEFINED__) */
@@ -2812,10 +3012,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialHoldCompletedEventArgs=_uuidof(ISpatialHoldCompletedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -2859,10 +3059,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialHoldStartedEventArgs=_uuidof(ISpatialHoldStartedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldStartedEventArgs_INTERFACE_DEFINED__) */
@@ -2902,10 +3102,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteraction=_uuidof(ISpatialInteraction);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteraction;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteraction_INTERFACE_DEFINED__) */
@@ -2938,10 +3138,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasTouchpad(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasThumbstick(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Haptics::ISimpleHapticsController * * value
@@ -2960,10 +3160,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionController=_uuidof(ISpatialInteractionController);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController_INTERFACE_DEFINED__) */
@@ -3007,10 +3207,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionController2=_uuidof(ISpatialInteractionController2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController2_INTERFACE_DEFINED__) */
@@ -3055,10 +3255,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionController3=_uuidof(ISpatialInteractionController3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionController3_INTERFACE_DEFINED__) */
@@ -3091,13 +3291,13 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTouchpadTouched(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTouchpadPressed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsThumbstickPressed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ThumbstickX(
                             /* [retval, out] */__RPC__out DOUBLE * value
@@ -3116,10 +3316,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionControllerProperties=_uuidof(ISpatialInteractionControllerProperties);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionControllerProperties;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionControllerProperties_INTERFACE_DEFINED__) */
@@ -3166,10 +3366,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionDetectedEventArgs=_uuidof(ISpatialInteractionDetectedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs_INTERFACE_DEFINED__) */
@@ -3213,10 +3413,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionDetectedEventArgs2=_uuidof(ISpatialInteractionDetectedEventArgs2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs2_INTERFACE_DEFINED__) */
@@ -3299,10 +3499,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionManager=_uuidof(ISpatialInteractionManager);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager_INTERFACE_DEFINED__) */
@@ -3342,14 +3542,58 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionManagerStatics=_uuidof(ISpatialInteractionManagerStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialInteractionManager
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialInteractionManagerStatics2[] = L"Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    /* [object, uuid("93F16C52-B88A-5929-8D7C-48CB948B081C"), exclusiveto, contract] */
+                    MIDL_INTERFACE("93F16C52-B88A-5929-8D7C-48CB948B081C")
+                    ISpatialInteractionManagerStatics2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE IsSourceKindSupported(
+                            /* [in] */ABI::Windows::UI::Input::Spatial::SpatialInteractionSourceKind kind,
+                            /* [retval, out] */__RPC__out ::boolean * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ISpatialInteractionManagerStatics2=_uuidof(ISpatialInteractionManagerStatics2);
+                    
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3388,10 +3632,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSource=_uuidof(ISpatialInteractionSource);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource_INTERFACE_DEFINED__) */
@@ -3428,13 +3672,13 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPointingSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMenuSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGraspSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Controller(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::Spatial::ISpatialInteractionController * * value
@@ -3448,10 +3692,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSource2=_uuidof(ISpatialInteractionSource2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource2_INTERFACE_DEFINED__) */
@@ -3496,14 +3740,60 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSource3=_uuidof(ISpatialInteractionSource3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.Spatial.ISpatialInteractionSource4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialInteractionSource
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialInteractionSource4[] = L"Windows.UI.Input.Spatial.ISpatialInteractionSource4";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    /* [object, uuid("0073BC4D-DF66-5A91-A2BA-CEA3E5C58A19"), exclusiveto, contract] */
+                    MIDL_INTERFACE("0073BC4D-DF66-5A91-A2BA-CEA3E5C58A19")
+                    ISpatialInteractionSource4 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE TryCreateHandMeshObserver(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::People::IHandMeshObserver * * result
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE TryCreateHandMeshObserverAsync(
+                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * * operation
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ISpatialInteractionSource4=_uuidof(ISpatialInteractionSource4);
+                    
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3539,10 +3829,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceEventArgs=_uuidof(ISpatialInteractionSourceEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs_INTERFACE_DEFINED__) */
@@ -3586,10 +3876,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceEventArgs2=_uuidof(ISpatialInteractionSourceEventArgs2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs2_INTERFACE_DEFINED__) */
@@ -3632,10 +3922,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceLocation=_uuidof(ISpatialInteractionSourceLocation);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation_INTERFACE_DEFINED__) */
@@ -3675,10 +3965,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceLocation2=_uuidof(ISpatialInteractionSourceLocation2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation2_INTERFACE_DEFINED__) */
@@ -3728,10 +4018,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceLocation3=_uuidof(ISpatialInteractionSourceLocation3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceLocation3_INTERFACE_DEFINED__) */
@@ -3779,10 +4069,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceProperties=_uuidof(ISpatialInteractionSourceProperties);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceProperties;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceProperties_INTERFACE_DEFINED__) */
@@ -3821,7 +4111,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::Spatial::ISpatialInteractionSourceProperties * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPressed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Timestamp(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::IPerceptionTimestamp * * value
@@ -3835,10 +4125,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceState=_uuidof(ISpatialInteractionSourceState);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState_INTERFACE_DEFINED__) */
@@ -3875,13 +4165,13 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSelectPressed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMenuPressed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGrasped(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SelectPressedValue(
                             /* [retval, out] */__RPC__out DOUBLE * value
@@ -3894,14 +4184,62 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceState2=_uuidof(ISpatialInteractionSourceState2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.Spatial.ISpatialInteractionSourceState3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialInteractionSourceState
+ *
+ *
+ * Any object which implements this interface must also implement the following interfaces:
+ *     Windows.UI.Input.Spatial.ISpatialInteractionSourceState2
+ *     Windows.UI.Input.Spatial.ISpatialInteractionSourceState
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialInteractionSourceState3[] = L"Windows.UI.Input.Spatial.ISpatialInteractionSourceState3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    /* [object, uuid("F2F00BC2-BD2B-4A01-A8FB-323E0158527C"), exclusiveto, contract] */
+                    MIDL_INTERFACE("F2F00BC2-BD2B-4A01-A8FB-323E0158527C")
+                    ISpatialInteractionSourceState3 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE TryGetHandPose(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::People::IHandPose * * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ISpatialInteractionSourceState3=_uuidof(ISpatialInteractionSourceState3);
+                    
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3937,10 +4275,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialManipulationCanceledEventArgs=_uuidof(ISpatialManipulationCanceledEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs_INTERFACE_DEFINED__) */
@@ -3984,10 +4322,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialManipulationCompletedEventArgs=_uuidof(ISpatialManipulationCompletedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -4027,10 +4365,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialManipulationDelta=_uuidof(ISpatialManipulationDelta);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationDelta;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationDelta_INTERFACE_DEFINED__) */
@@ -4074,10 +4412,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialManipulationStartedEventArgs=_uuidof(ISpatialManipulationStartedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationStartedEventArgs_INTERFACE_DEFINED__) */
@@ -4121,10 +4459,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialManipulationUpdatedEventArgs=_uuidof(ISpatialManipulationUpdatedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -4164,10 +4502,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialNavigationCanceledEventArgs=_uuidof(ISpatialNavigationCanceledEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCanceledEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCanceledEventArgs_INTERFACE_DEFINED__) */
@@ -4210,10 +4548,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialNavigationCompletedEventArgs=_uuidof(ISpatialNavigationCompletedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -4253,23 +4591,23 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::Spatial::ISpatialPointerPose * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNavigatingX(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNavigatingY(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsNavigatingZ(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ISpatialNavigationStartedEventArgs=_uuidof(ISpatialNavigationStartedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationStartedEventArgs_INTERFACE_DEFINED__) */
@@ -4312,10 +4650,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialNavigationUpdatedEventArgs=_uuidof(ISpatialNavigationUpdatedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -4361,10 +4699,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialPointerInteractionSourcePose=_uuidof(ISpatialPointerInteractionSourcePose);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose_INTERFACE_DEFINED__) */
@@ -4411,10 +4749,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialPointerInteractionSourcePose2=_uuidof(ISpatialPointerInteractionSourcePose2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerInteractionSourcePose2_INTERFACE_DEFINED__) */
@@ -4457,10 +4795,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialPointerPose=_uuidof(ISpatialPointerPose);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose_INTERFACE_DEFINED__) */
@@ -4505,14 +4843,60 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialPointerPose2=_uuidof(ISpatialPointerPose2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.Spatial.ISpatialPointerPose3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialPointerPose
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialPointerPose3[] = L"Windows.UI.Input.Spatial.ISpatialPointerPose3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Spatial {
+                    /* [object, uuid("6342F3F0-EC49-5B4B-B8D1-D16CBB16BE84"), exclusiveto, contract] */
+                    MIDL_INTERFACE("6342F3F0-EC49-5B4B-B8D1-D16CBB16BE84")
+                    ISpatialPointerPose3 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Eyes(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Perception::People::IEyesPose * * value
+                            ) = 0;
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHeadCapturedBySystem(
+                            /* [retval, out] */__RPC__out ::boolean * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ISpatialPointerPose3=_uuidof(ISpatialPointerPose3);
+                    
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4550,10 +4934,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialPointerPoseStatics=_uuidof(ISpatialPointerPoseStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics_INTERFACE_DEFINED__) */
@@ -4593,10 +4977,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialRecognitionEndedEventArgs=_uuidof(ISpatialRecognitionEndedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionEndedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionEndedEventArgs_INTERFACE_DEFINED__) */
@@ -4637,17 +5021,17 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE IsGesturePossible(
                             /* [in] */ABI::Windows::UI::Input::Spatial::SpatialGestureSettings gesture,
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ISpatialRecognitionStartedEventArgs=_uuidof(ISpatialRecognitionStartedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionStartedEventArgs_INTERFACE_DEFINED__) */
@@ -4694,10 +5078,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialTappedEventArgs=_uuidof(ISpatialTappedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Spatial */} /* ABI */
+                } /* Spatial */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialTappedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialTappedEventArgs_INTERFACE_DEFINED__) */
@@ -4910,6 +5294,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -4940,6 +5325,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Input.Spatial.ISpatialInteractionSource ** Default Interface **
  *    Windows.UI.Input.Spatial.ISpatialInteractionSource2
  *    Windows.UI.Input.Spatial.ISpatialInteractionSource3
+ *    Windows.UI.Input.Spatial.ISpatialInteractionSource4
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5040,6 +5426,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Input.Spatial.ISpatialInteractionSourceState ** Default Interface **
  *    Windows.UI.Input.Spatial.ISpatialInteractionSourceState2
+ *    Windows.UI.Input.Spatial.ISpatialInteractionSourceState3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5309,6 +5696,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Input.Spatial.ISpatialPointerPose ** Default Interface **
  *    Windows.UI.Input.Spatial.ISpatialPointerPose2
+ *    Windows.UI.Input.Spatial.ISpatialPointerPose3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5485,6 +5873,12 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManag
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource;
@@ -5502,6 +5896,12 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourc
 typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3 __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3;
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs_FWD_DEFINED__
@@ -5550,6 +5950,12 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourc
 typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2 __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2;
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs_FWD_DEFINED__
@@ -5628,6 +6034,12 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose __x_
 typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose2 __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose2;
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPoseStatics_FWD_DEFINED__
@@ -5951,7 +6363,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCanceledEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCanceledEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCanceledEventArgsVtbl;
 
@@ -6004,7 +6416,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldCompletedEventArgsVtbl;
 
@@ -6057,7 +6469,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialHoldStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialHoldStartedEventArgsVtbl;
 
@@ -6110,7 +6522,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCanceledEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCanceledEventArgsVtbl;
 
@@ -6163,7 +6575,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationCompletedEventArgsVtbl;
 
@@ -6216,7 +6628,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationStartedEventArgsVtbl;
 
@@ -6269,7 +6681,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialManipulationUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialManipulationUpdatedEventArgsVtbl;
 
@@ -6322,7 +6734,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCanceledEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCanceledEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCanceledEventArgsVtbl;
 
@@ -6375,7 +6787,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationCompletedEventArgsVtbl;
 
@@ -6428,7 +6840,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationStartedEventArgsVtbl;
 
@@ -6481,7 +6893,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialNavigationUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialNavigationUpdatedEventArgsVtbl;
 
@@ -6534,7 +6946,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionEndedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionEndedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionEndedEventArgsVtbl;
 
@@ -6587,7 +6999,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialRecognitionStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialRecognitionStartedEventArgsVtbl;
 
@@ -6640,7 +7052,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialG
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialTappedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialTappedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialGestureRecognizer_Windows__CUI__CInput__CSpatial__CSpatialTappedEventArgsVtbl;
 
@@ -6693,7 +7105,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialI
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionDetectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionDetectedEventArgsVtbl;
 
@@ -6746,7 +7158,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialI
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CSpatial__CSpatialInteractionManager_Windows__CUI__CInput__CSpatial__CSpatialInteractionSourceEventArgsVtbl;
 
@@ -6898,6 +7310,127 @@ interface __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStream
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#ifndef ____x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver __x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver;
+
+#endif // ____x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver_FWD_DEFINED__
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserverVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserverVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserverVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver;
+
+typedef struct __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserverVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CPeople__CHandMeshObserver **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver * *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserverVtbl;
+
+interface __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserverVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
 struct __x_ABI_CWindows_CFoundation_CNumerics_CVector3;
 
 #if !defined(____FIReference_1_Windows__CFoundation__CNumerics__CVector3_INTERFACE_DEFINED__)
@@ -7047,6 +7580,21 @@ typedef struct __x_ABI_CWindows_CFoundation_CNumerics_CVector3 __x_ABI_CWindows_
 
 
 
+#ifndef ____x_ABI_CWindows_CPerception_CPeople_CIEyesPose_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CPeople_CIEyesPose_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CPerception_CPeople_CIEyesPose __x_ABI_CWindows_CPerception_CPeople_CIEyesPose;
+
+#endif // ____x_ABI_CWindows_CPerception_CPeople_CIEyesPose_FWD_DEFINED__
+
+
+
+#ifndef ____x_ABI_CWindows_CPerception_CPeople_CIHandPose_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPerception_CPeople_CIHandPose_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CPerception_CPeople_CIHandPose __x_ABI_CWindows_CPerception_CPeople_CIHandPose;
+
+#endif // ____x_ABI_CWindows_CPerception_CPeople_CIHandPose_FWD_DEFINED__
+
+
 #ifndef ____x_ABI_CWindows_CPerception_CPeople_CIHeadPose_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CPeople_CIHeadPose_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CPerception_CPeople_CIHeadPose __x_ABI_CWindows_CPerception_CPeople_CIHeadPose;
@@ -7094,6 +7642,10 @@ typedef enum __x_ABI_CWindows_CUI_CInput_CSpatial_CSpatialInteractionSourceKind 
 
 
 typedef enum __x_ABI_CWindows_CUI_CInput_CSpatial_CSpatialInteractionSourcePositionAccuracy __x_ABI_CWindows_CUI_CInput_CSpatial_CSpatialInteractionSourcePositionAccuracy;
+
+
+
+
 
 
 
@@ -9026,6 +9578,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteraction
 
 /*
  *
+ * Interface Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialInteractionManager
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialInteractionManagerStatics2[] = L"Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2";
+/* [object, uuid("93F16C52-B88A-5929-8D7C-48CB948B081C"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *IsSourceKindSupported )(
+        __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2 * This,
+        /* [in] */__x_ABI_CWindows_CUI_CInput_CSpatial_CSpatialInteractionSourceKind kind,
+        /* [retval, out] */__RPC__out boolean * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_IsSourceKindSupported(This,kind,result) \
+    ( (This)->lpVtbl->IsSourceKindSupported(This,kind,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionManagerStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Input.Spatial.ISpatialInteractionSource
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
@@ -9346,6 +9992,106 @@ interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.Spatial.ISpatialInteractionSource4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialInteractionSource
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialInteractionSource4[] = L"Windows.UI.Input.Spatial.ISpatialInteractionSource4";
+/* [object, uuid("0073BC4D-DF66-5A91-A2BA-CEA3E5C58A19"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *TryCreateHandMeshObserver )(
+        __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CPerception_CPeople_CIHandMeshObserver * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *TryCreateHandMeshObserverAsync )(
+        __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4 * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CPerception__CPeople__CHandMeshObserver * * operation
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4Vtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_TryCreateHandMeshObserver(This,result) \
+    ( (This)->lpVtbl->TryCreateHandMeshObserver(This,result) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_TryCreateHandMeshObserverAsync(This,operation) \
+    ( (This)->lpVtbl->TryCreateHandMeshObserverAsync(This,operation) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSource4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -10196,6 +10942,104 @@ interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.Spatial.ISpatialInteractionSourceState3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialInteractionSourceState
+ *
+ *
+ * Any object which implements this interface must also implement the following interfaces:
+ *     Windows.UI.Input.Spatial.ISpatialInteractionSourceState2
+ *     Windows.UI.Input.Spatial.ISpatialInteractionSourceState
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialInteractionSourceState3[] = L"Windows.UI.Input.Spatial.ISpatialInteractionSourceState3";
+/* [object, uuid("F2F00BC2-BD2B-4A01-A8FB-323E0158527C"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *TryGetHandPose )(
+        __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CPerception_CPeople_CIHandPose * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_TryGetHandPose(This,value) \
+    ( (This)->lpVtbl->TryGetHandPose(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialInteractionSourceState3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11513,6 +12357,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose
 
 /*
  *
+ * Interface Windows.UI.Input.Spatial.ISpatialPointerPose3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Spatial.SpatialPointerPose
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Spatial_ISpatialPointerPose3[] = L"Windows.UI.Input.Spatial.ISpatialPointerPose3";
+/* [object, uuid("6342F3F0-EC49-5B4B-B8D1-D16CBB16BE84"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Eyes )(
+        __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CPerception_CPeople_CIEyesPose * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsHeadCapturedBySystem )(
+        __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_get_Eyes(This,value) \
+    ( (This)->lpVtbl->get_Eyes(This,value) )
+
+#define __x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_get_IsHeadCapturedBySystem(This,value) \
+    ( (This)->lpVtbl->get_IsHeadCapturedBySystem(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CSpatial_CISpatialPointerPose3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Input.Spatial.ISpatialPointerPoseStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
@@ -12122,6 +13066,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -12152,6 +13097,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Input.Spatial.ISpatialInteractionSource ** Default Interface **
  *    Windows.UI.Input.Spatial.ISpatialInteractionSource2
  *    Windows.UI.Input.Spatial.ISpatialInteractionSource3
+ *    Windows.UI.Input.Spatial.ISpatialInteractionSource4
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -12252,6 +13198,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Input.Spatial.ISpatialInteractionSourceState ** Default Interface **
  *    Windows.UI.Input.Spatial.ISpatialInteractionSourceState2
+ *    Windows.UI.Input.Spatial.ISpatialInteractionSourceState3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -12521,6 +13468,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Input.Spatial.ISpatialPointerPose ** Default Interface **
  *    Windows.UI.Input.Spatial.ISpatialPointerPose2
+ *    Windows.UI.Input.Spatial.ISpatialPointerPose3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

@@ -60,13 +60,6 @@ typedef interface IAppxPackageReader IAppxPackageReader;
 #endif 	/* __IAppxPackageReader_FWD_DEFINED__ */
 
 
-#ifndef __IAppxPackageReader2_FWD_DEFINED__
-#define __IAppxPackageReader2_FWD_DEFINED__
-typedef interface IAppxPackageReader2 IAppxPackageReader2;
-
-#endif 	/* __IAppxPackageReader2_FWD_DEFINED__ */
-
-
 #ifndef __IAppxPackageWriter_FWD_DEFINED__
 #define __IAppxPackageWriter_FWD_DEFINED__
 typedef interface IAppxPackageWriter IAppxPackageWriter;
@@ -380,6 +373,13 @@ typedef interface IAppxBundleManifestPackageInfo IAppxBundleManifestPackageInfo;
 typedef interface IAppxBundleManifestPackageInfo2 IAppxBundleManifestPackageInfo2;
 
 #endif 	/* __IAppxBundleManifestPackageInfo2_FWD_DEFINED__ */
+
+
+#ifndef __IAppxBundleManifestPackageInfo3_FWD_DEFINED__
+#define __IAppxBundleManifestPackageInfo3_FWD_DEFINED__
+typedef interface IAppxBundleManifestPackageInfo3 IAppxBundleManifestPackageInfo3;
+
+#endif 	/* __IAppxBundleManifestPackageInfo3_FWD_DEFINED__ */
 
 
 #ifndef __IAppxBundleManifestOptionalBundleInfoEnumerator_FWD_DEFINED__
@@ -717,6 +717,7 @@ enum APPX_PACKAGING_CONTEXT_CHANGE_TYPE
         APPX_PACKAGING_CONTEXT_CHANGE_TYPE_DETAILS	= 2,
         APPX_PACKAGING_CONTEXT_CHANGE_TYPE_END	= 3
     } 	APPX_PACKAGING_CONTEXT_CHANGE_TYPE;
+
 
 
 
@@ -1147,124 +1148,6 @@ EXTERN_C const IID IID_IAppxPackageReader;
 
 
 #endif 	/* __IAppxPackageReader_INTERFACE_DEFINED__ */
-
-
-#ifndef __IAppxPackageReader2_INTERFACE_DEFINED__
-#define __IAppxPackageReader2_INTERFACE_DEFINED__
-
-/* interface IAppxPackageReader2 */
-/* [ref][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IAppxPackageReader2;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("37e8d3d5-1aea-4204-9c50-ff715932c249")
-    IAppxPackageReader2 : public IAppxPackageReader
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE GetContentGroupMap( 
-            /* [retval][out] */ __RPC__deref_out_opt IAppxContentGroupMapReader **contentGroupMapReader) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IAppxPackageReader2Vtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IAppxPackageReader2 * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IAppxPackageReader2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IAppxPackageReader2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetBlockMap )( 
-            __RPC__in IAppxPackageReader2 * This,
-            /* [retval][out] */ __RPC__deref_out_opt IAppxBlockMapReader **blockMapReader);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetFootprintFile )( 
-            __RPC__in IAppxPackageReader2 * This,
-            /* [in] */ APPX_FOOTPRINT_FILE_TYPE type,
-            /* [retval][out] */ __RPC__deref_out_opt IAppxFile **file);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetPayloadFile )( 
-            __RPC__in IAppxPackageReader2 * This,
-            /* [string][in] */ __RPC__in_string LPCWSTR fileName,
-            /* [retval][out] */ __RPC__deref_out_opt IAppxFile **file);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetPayloadFiles )( 
-            __RPC__in IAppxPackageReader2 * This,
-            /* [retval][out] */ __RPC__deref_out_opt IAppxFilesEnumerator **filesEnumerator);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetManifest )( 
-            __RPC__in IAppxPackageReader2 * This,
-            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestReader **manifestReader);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetContentGroupMap )( 
-            __RPC__in IAppxPackageReader2 * This,
-            /* [retval][out] */ __RPC__deref_out_opt IAppxContentGroupMapReader **contentGroupMapReader);
-        
-        END_INTERFACE
-    } IAppxPackageReader2Vtbl;
-
-    interface IAppxPackageReader2
-    {
-        CONST_VTBL struct IAppxPackageReader2Vtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IAppxPackageReader2_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IAppxPackageReader2_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IAppxPackageReader2_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IAppxPackageReader2_GetBlockMap(This,blockMapReader)	\
-    ( (This)->lpVtbl -> GetBlockMap(This,blockMapReader) ) 
-
-#define IAppxPackageReader2_GetFootprintFile(This,type,file)	\
-    ( (This)->lpVtbl -> GetFootprintFile(This,type,file) ) 
-
-#define IAppxPackageReader2_GetPayloadFile(This,fileName,file)	\
-    ( (This)->lpVtbl -> GetPayloadFile(This,fileName,file) ) 
-
-#define IAppxPackageReader2_GetPayloadFiles(This,filesEnumerator)	\
-    ( (This)->lpVtbl -> GetPayloadFiles(This,filesEnumerator) ) 
-
-#define IAppxPackageReader2_GetManifest(This,manifestReader)	\
-    ( (This)->lpVtbl -> GetManifest(This,manifestReader) ) 
-
-
-#define IAppxPackageReader2_GetContentGroupMap(This,contentGroupMapReader)	\
-    ( (This)->lpVtbl -> GetContentGroupMap(This,contentGroupMapReader) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IAppxPackageReader2_INTERFACE_DEFINED__ */
 
 
 #ifndef __IAppxPackageWriter_INTERFACE_DEFINED__
@@ -6060,6 +5943,86 @@ EXTERN_C const IID IID_IAppxBundleManifestPackageInfo2;
 
 
 #endif 	/* __IAppxBundleManifestPackageInfo2_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxBundleManifestPackageInfo3_INTERFACE_DEFINED__
+#define __IAppxBundleManifestPackageInfo3_INTERFACE_DEFINED__
+
+/* interface IAppxBundleManifestPackageInfo3 */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxBundleManifestPackageInfo3;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("6BA74B98-BB74-4296-80D0-5F4256A99675")
+    IAppxBundleManifestPackageInfo3 : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetTargetDeviceFamilies( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestTargetDeviceFamiliesEnumerator **targetDeviceFamilies) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxBundleManifestPackageInfo3Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxBundleManifestPackageInfo3 * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxBundleManifestPackageInfo3 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxBundleManifestPackageInfo3 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTargetDeviceFamilies )( 
+            __RPC__in IAppxBundleManifestPackageInfo3 * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestTargetDeviceFamiliesEnumerator **targetDeviceFamilies);
+        
+        END_INTERFACE
+    } IAppxBundleManifestPackageInfo3Vtbl;
+
+    interface IAppxBundleManifestPackageInfo3
+    {
+        CONST_VTBL struct IAppxBundleManifestPackageInfo3Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxBundleManifestPackageInfo3_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxBundleManifestPackageInfo3_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxBundleManifestPackageInfo3_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxBundleManifestPackageInfo3_GetTargetDeviceFamilies(This,targetDeviceFamilies)	\
+    ( (This)->lpVtbl -> GetTargetDeviceFamilies(This,targetDeviceFamilies) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxBundleManifestPackageInfo3_INTERFACE_DEFINED__ */
 
 
 #ifndef __IAppxBundleManifestOptionalBundleInfoEnumerator_INTERFACE_DEFINED__

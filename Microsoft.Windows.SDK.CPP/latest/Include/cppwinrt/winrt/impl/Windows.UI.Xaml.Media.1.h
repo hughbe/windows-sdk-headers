@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -23,6 +23,13 @@ struct WINRT_EBO IAcrylicBrush :
     IAcrylicBrush(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IAcrylicBrush2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAcrylicBrush2>
+{
+    IAcrylicBrush2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IAcrylicBrushFactory :
     Windows::Foundation::IInspectable,
     impl::consume_t<IAcrylicBrushFactory>
@@ -35,6 +42,13 @@ struct WINRT_EBO IAcrylicBrushStatics :
     impl::consume_t<IAcrylicBrushStatics>
 {
     IAcrylicBrushStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IAcrylicBrushStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAcrylicBrushStatics2>
+{
+    IAcrylicBrushStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IArcSegment :
@@ -674,6 +688,20 @@ struct WINRT_EBO IScaleTransformStatics :
     IScaleTransformStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IShadow :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IShadow>
+{
+    IShadow(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IShadowFactory :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IShadowFactory>
+{
+    IShadowFactory(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ISkewTransform :
     Windows::Foundation::IInspectable,
     impl::consume_t<ISkewTransform>
@@ -707,6 +735,20 @@ struct WINRT_EBO ISolidColorBrushStatics :
     impl::consume_t<ISolidColorBrushStatics>
 {
     ISolidColorBrushStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IThemeShadow :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IThemeShadow>
+{
+    IThemeShadow(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IThemeShadowFactory :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IThemeShadowFactory>
+{
+    IThemeShadowFactory(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ITileBrush :
@@ -812,6 +854,13 @@ struct WINRT_EBO IVisualTreeHelperStatics2 :
     impl::consume_t<IVisualTreeHelperStatics2>
 {
     IVisualTreeHelperStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IVisualTreeHelperStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IVisualTreeHelperStatics3>
+{
+    IVisualTreeHelperStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IXamlCompositionBrushBase :

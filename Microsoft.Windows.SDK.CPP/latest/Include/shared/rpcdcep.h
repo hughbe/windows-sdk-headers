@@ -35,8 +35,8 @@ extern "C" {
 #pragma warning(disable:4820) // padding added after data member
 #endif
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 typedef struct _RPC_VERSION {
     unsigned short MajorVersion;
@@ -63,7 +63,7 @@ typedef struct _RPC_MESSAGE
     unsigned long RpcFlags;
 } RPC_MESSAGE, __RPC_FAR * PRPC_MESSAGE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -92,8 +92,8 @@ RPC_ENTRY RPC_ADDRESS_CHANGE_FN(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 /*
 *  New context handle flavors.
@@ -107,6 +107,9 @@ RPC_ENTRY RPC_ADDRESS_CHANGE_FN(
 #if (NTDDI_VERSION >= NTDDI_VISTA)
 #define RPC_TYPE_STRICT_CONTEXT_HANDLE      0x40000000UL
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+#define RPC_TYPE_DISCONNECT_EVENT_CONTEXT_HANDLE  0x80000000UL
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
 /*
  * Types of function calls for datagram rpc
@@ -226,7 +229,7 @@ typedef struct _RPC_CLIENT_INTERFACE
     unsigned int Flags ;
 } RPC_CLIENT_INTERFACE, __RPC_FAR * PRPC_CLIENT_INTERFACE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -1276,15 +1279,15 @@ I_RpcBindingSetPrivateOption (
 RPC_STATUS
 RPC_ENTRY
 I_RpcServerSubscribeForDisconnectNotification (
-    _In_ RPC_BINDING_HANDLE Binding,
-    _In_ void * hEvent
+    _In_opt_ RPC_BINDING_HANDLE Binding,
+    _In_opt_ void *hEvent
     );
 
 RPC_STATUS
 RPC_ENTRY
 I_RpcServerGetAssociationID (
-    _In_ RPC_BINDING_HANDLE Binding,
-    _Out_ unsigned long * AssociationID
+    _In_opt_ RPC_BINDING_HANDLE Binding,
+    _Out_ unsigned long *AssociationID
     );
 
 RPCRTAPI
@@ -1295,6 +1298,24 @@ I_RpcServerDisableExceptionFilter (
     );
 
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+RPC_STATUS
+RPC_ENTRY
+I_RpcServerSubscribeForDisconnectNotification2 (
+    _In_opt_ RPC_BINDING_HANDLE Binding,
+    _In_ void *hEvent,
+    _Out_ UUID *SubscriptionId
+    );
+
+RPC_STATUS
+RPC_ENTRY
+I_RpcServerUnsubscribeForDisconnectNotification (
+    _In_opt_ RPC_BINDING_HANDLE Binding,
+    _In_ UUID SubscriptionId
+    );
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion

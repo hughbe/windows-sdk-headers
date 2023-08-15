@@ -178,8 +178,8 @@ typedef enum _WER_REPORT_UI
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 //
 // The type of the registered files
@@ -191,7 +191,7 @@ typedef enum _WER_REGISTER_FILE_TYPE
     WerRegFileTypeMax
 } WER_REGISTER_FILE_TYPE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family

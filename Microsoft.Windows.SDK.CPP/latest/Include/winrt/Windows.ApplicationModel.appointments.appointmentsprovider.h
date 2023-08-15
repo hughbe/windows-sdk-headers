@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.appointments.appointmentsprovider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IAddAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAddAppointmentOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IAppointmentsProviderLaunchActionVerbsStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAppointmentsProviderLaunchActionVerbsStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IAppointmentsProviderLaunchActionVerbsStatics2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics2 ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAppointmentsProviderLaunchActionVerbsStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics2_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IRemoveAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IRemoveAppointmentOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation_FWD_DEFINED__
@@ -342,10 +338,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     interface IReplaceAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation ABI::Windows::ApplicationModel::Appointments::AppointmentsProvider::IReplaceAppointmentOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation_FWD_DEFINED__
@@ -358,8 +354,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -380,7 +376,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -397,9 +393,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class Appointment;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointment;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment ABI::Windows::ApplicationModel::Appointments::IAppointment
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointment_FWD_DEFINED__
@@ -425,8 +421,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -442,10 +438,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     class AddAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     class RemoveAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -467,10 +463,10 @@ namespace ABI {
             namespace Appointments {
                 namespace AppointmentsProvider {
                     class ReplaceAppointmentOperation;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -522,10 +518,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAddAppointmentOperation=_uuidof(IAddAppointmentOperation);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAddAppointmentOperation_INTERFACE_DEFINED__) */
@@ -574,10 +570,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAppointmentsProviderLaunchActionVerbsStatics=_uuidof(IAppointmentsProviderLaunchActionVerbsStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics_INTERFACE_DEFINED__) */
@@ -617,10 +613,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAppointmentsProviderLaunchActionVerbsStatics2=_uuidof(IAppointmentsProviderLaunchActionVerbsStatics2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIAppointmentsProviderLaunchActionVerbsStatics2_INTERFACE_DEFINED__) */
@@ -672,10 +668,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRemoveAppointmentOperation=_uuidof(IRemoveAppointmentOperation);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIRemoveAppointmentOperation_INTERFACE_DEFINED__) */
@@ -732,10 +728,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IReplaceAppointmentOperation=_uuidof(IReplaceAppointmentOperation);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Appointments */
-    } /* AppointmentsProvider */} /* ABI */
+                } /* AppointmentsProvider */
+            } /* Appointments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CAppointments_CAppointmentsProvider_CIReplaceAppointmentOperation_INTERFACE_DEFINED__) */

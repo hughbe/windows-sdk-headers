@@ -126,6 +126,8 @@ namespace Windows
 
             typedef enum HolographicSpaceUserPresence HolographicSpaceUserPresence;
 
+            typedef enum HolographicViewConfigurationKind HolographicViewConfigurationKind;
+
             typedef struct HolographicAdapterId HolographicAdapterId;
 
             typedef struct HolographicStereoTransform HolographicStereoTransform;
@@ -139,6 +141,8 @@ namespace Windows
             interface IHolographicCamera4;
 
             interface IHolographicCamera5;
+
+            interface IHolographicCamera6;
 
             interface IHolographicCameraPose;
 
@@ -155,6 +159,8 @@ namespace Windows
             interface IHolographicDisplay;
 
             interface IHolographicDisplay2;
+
+            interface IHolographicDisplay3;
 
             interface IHolographicDisplayStatics;
 
@@ -190,6 +196,8 @@ namespace Windows
 
             interface IHolographicSpaceStatics3;
 
+            interface IHolographicViewConfiguration;
+
             runtimeclass HolographicCamera;
 
             runtimeclass HolographicCameraPose;
@@ -217,6 +225,8 @@ namespace Windows
             runtimeclass HolographicSpaceCameraAddedEventArgs;
 
             runtimeclass HolographicSpaceCameraRemovedEventArgs;
+
+            runtimeclass HolographicViewConfiguration;
         }
     }
 }
@@ -305,6 +315,13 @@ namespace Windows
                 PresentActive  = 2
             };
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            enum HolographicViewConfigurationKind
+            {
+                Display          = 0,
+                PhotoVideoCamera = 1
+            };
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             struct HolographicAdapterId
             {
@@ -375,6 +392,14 @@ namespace Windows
                 [propget] HRESULT IsHardwareContentProtectionSupported([out] [retval] boolean* value);
                 [propget] HRESULT IsHardwareContentProtectionEnabled([out] [retval] boolean* value);
                 [propput] HRESULT IsHardwareContentProtectionEnabled([in] boolean value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicCamera)]
+            [uuid(0209194F-632D-5154-AB52-0B5D15B12505)]
+            interface IHolographicCamera6 : IInspectable
+            {
+                [propget] HRESULT ViewConfiguration([out] [retval] Windows.Graphics.Holographic.HolographicViewConfiguration** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -466,6 +491,14 @@ namespace Windows
             interface IHolographicDisplay2 : IInspectable
             {
                 [propget] HRESULT RefreshRate([out] [retval] DOUBLE* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicDisplay)]
+            [uuid(FC4C6AC6-6480-5008-B29E-157D77C843F7)]
+            interface IHolographicDisplay3 : IInspectable
+            {
+                HRESULT TryGetViewConfiguration([in] Windows.Graphics.Holographic.HolographicViewConfigurationKind kind, [out] [retval] Windows.Graphics.Holographic.HolographicViewConfiguration** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
@@ -644,6 +677,25 @@ namespace Windows
                 [propget] HRESULT IsConfigured([out] [retval] boolean* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicViewConfiguration)]
+            [uuid(5C1DE6E6-67E9-5004-B02C-67A3A122B576)]
+            interface IHolographicViewConfiguration : IInspectable
+            {
+                [propget] HRESULT NativeRenderTargetSize([out] [retval] Windows.Foundation.Size* value);
+                [propget] HRESULT RenderTargetSize([out] [retval] Windows.Foundation.Size* value);
+                HRESULT RequestRenderTargetSize([in] Windows.Foundation.Size size, [out] [retval] Windows.Foundation.Size* result);
+                [propget] HRESULT SupportedPixelFormats([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat>** value);
+                [propget] HRESULT PixelFormat([out] [retval] Windows.Graphics.DirectX.DirectXPixelFormat* value);
+                [propput] HRESULT PixelFormat([in] Windows.Graphics.DirectX.DirectXPixelFormat value);
+                [propget] HRESULT IsStereo([out] [retval] boolean* value);
+                [propget] HRESULT RefreshRate([out] [retval] DOUBLE* value);
+                [propget] HRESULT Kind([out] [retval] Windows.Graphics.Holographic.HolographicViewConfigurationKind* value);
+                [propget] HRESULT Display([out] [retval] Windows.Graphics.Holographic.HolographicDisplay** value);
+                [propget] HRESULT IsEnabled([out] [retval] boolean* value);
+                [propput] HRESULT IsEnabled([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
@@ -654,6 +706,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Graphics.Holographic.IHolographicCamera3;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Graphics.Holographic.IHolographicCamera4;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.Graphics.Holographic.IHolographicCamera5;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Graphics.Holographic.IHolographicCamera6;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -691,6 +744,7 @@ namespace Windows
             {
                 [default] interface Windows.Graphics.Holographic.IHolographicDisplay;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Graphics.Holographic.IHolographicDisplay2;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Graphics.Holographic.IHolographicDisplay3;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -770,6 +824,13 @@ namespace Windows
             runtimeclass HolographicSpaceCameraRemovedEventArgs
             {
                 [default] interface Windows.Graphics.Holographic.IHolographicSpaceCameraRemovedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass HolographicViewConfiguration
+            {
+                [default] interface Windows.Graphics.Holographic.IHolographicViewConfiguration;
             }
         }
     }

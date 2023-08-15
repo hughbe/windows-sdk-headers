@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -120,7 +120,7 @@ struct WINRT_EBO MapContextRequestedEventArgs :
 struct WINRT_EBO MapControl :
     Windows::UI::Xaml::Controls::Maps::IMapControl,
     impl::base<MapControl, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<MapControl, Windows::UI::Composition::IAnimationObject, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::Maps::IMapControl2, Windows::UI::Xaml::Controls::Maps::IMapControl3, Windows::UI::Xaml::Controls::Maps::IMapControl4, Windows::UI::Xaml::Controls::Maps::IMapControl5, Windows::UI::Xaml::Controls::Maps::IMapControl6, Windows::UI::Xaml::Controls::Maps::IMapControl7, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9>
+    impl::require<MapControl, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::Maps::IMapControl2, Windows::UI::Xaml::Controls::Maps::IMapControl3, Windows::UI::Xaml::Controls::Maps::IMapControl4, Windows::UI::Xaml::Controls::Maps::IMapControl5, Windows::UI::Xaml::Controls::Maps::IMapControl6, Windows::UI::Xaml::Controls::Maps::IMapControl7, Windows::UI::Xaml::Controls::Maps::IMapControl8, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9>
 {
     MapControl(std::nullptr_t) noexcept {}
     MapControl();
@@ -170,6 +170,10 @@ struct WINRT_EBO MapControl :
     static Windows::UI::Xaml::DependencyProperty ViewPaddingProperty();
     static Windows::UI::Xaml::DependencyProperty LayersProperty();
     static Windows::UI::Xaml::DependencyProperty RegionProperty();
+    static Windows::UI::Xaml::DependencyProperty CanTiltDownProperty();
+    static Windows::UI::Xaml::DependencyProperty CanTiltUpProperty();
+    static Windows::UI::Xaml::DependencyProperty CanZoomInProperty();
+    static Windows::UI::Xaml::DependencyProperty CanZoomOutProperty();
 };
 
 struct WINRT_EBO MapControlBusinessLandmarkClickEventArgs :

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -334,7 +334,8 @@ struct WINRT_EBO GattServiceProviderAdvertisementStatusChangedEventArgs :
 };
 
 struct WINRT_EBO GattServiceProviderAdvertisingParameters :
-    Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters
+    Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters,
+    impl::require<GattServiceProviderAdvertisingParameters, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2>
 {
     GattServiceProviderAdvertisingParameters(std::nullptr_t) noexcept {}
     GattServiceProviderAdvertisingParameters();

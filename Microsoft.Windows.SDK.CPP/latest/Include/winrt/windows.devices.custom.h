@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.custom.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Devices {
             namespace Custom {
                 interface ICustomDevice;
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CCustom_CICustomDevice ABI::Windows::Devices::Custom::ICustomDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CCustom_CICustomDevice_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Devices {
             namespace Custom {
                 interface ICustomDeviceStatics;
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CCustom_CICustomDeviceStatics ABI::Windows::Devices::Custom::ICustomDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CCustom_CICustomDeviceStatics_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Devices {
             namespace Custom {
                 interface IIOControlCode;
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CCustom_CIIOControlCode ABI::Windows::Devices::Custom::IIOControlCode
 
 #endif // ____x_ABI_CWindows_CDevices_CCustom_CIIOControlCode_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Devices {
             namespace Custom {
                 interface IIOControlCodeFactory;
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CCustom_CIIOControlCodeFactory ABI::Windows::Devices::Custom::IIOControlCodeFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CCustom_CIIOControlCodeFactory_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Devices {
             namespace Custom {
                 interface IKnownDeviceTypesStatics;
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CCustom_CIKnownDeviceTypesStatics ABI::Windows::Devices::Custom::IKnownDeviceTypesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CCustom_CIKnownDeviceTypesStatics_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace Devices {
             namespace Custom {
                 class CustomDevice;
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_CUSTOM_CUSTOMDEVICECONTRACT_VERSION >= 0x10000
@@ -377,7 +373,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Custom::CustomDevice*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Custom::CustomDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CCustom__CCustomDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CCustom__CCustomDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CCustom__CCustomDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CCustom__CCustomDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Custom::ICustomDevice*>
@@ -409,7 +405,7 @@ IAsyncOperation<ABI::Windows::Devices::Custom::CustomDevice*> : IAsyncOperation_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Custom::CustomDevice*> __FIAsyncOperation_1_Windows__CDevices__CCustom__CCustomDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CCustom__CCustomDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CCustom__CCustomDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CCustom__CCustomDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Custom::ICustomDevice*>
@@ -439,7 +435,7 @@ IAsyncOperationCompletedHandler<UINT32> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT32> __FIAsyncOperationCompletedHandler_1_UINT32_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT32 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT32>
@@ -468,7 +464,7 @@ IAsyncOperation<UINT32> : IAsyncOperation_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT32> __FIAsyncOperation_1_UINT32_t;
 #define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT32 ABI::Windows::Foundation::IAsyncOperation<UINT32>
@@ -497,7 +493,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -526,7 +522,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -545,9 +541,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -560,9 +556,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -575,9 +571,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -594,9 +590,9 @@ namespace ABI {
                 
                 typedef enum DeviceAccessMode : int DeviceAccessMode;
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -605,9 +601,9 @@ namespace ABI {
                 
                 typedef enum DeviceSharingMode : int DeviceSharingMode;
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -616,9 +612,9 @@ namespace ABI {
                 
                 typedef enum IOControlAccessMode : int IOControlAccessMode;
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -627,9 +623,9 @@ namespace ABI {
                 
                 typedef enum IOControlBufferingMethod : int IOControlBufferingMethod;
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -642,9 +638,9 @@ namespace ABI {
         namespace Devices {
             namespace Custom {
                 class IOControlCode;
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -679,9 +675,9 @@ namespace ABI {
                     DeviceAccessMode_ReadWrite = 2,
                 };
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_CUSTOM_CUSTOMDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -706,9 +702,9 @@ namespace ABI {
                     DeviceSharingMode_Exclusive = 1,
                 };
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_CUSTOM_CUSTOMDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -735,9 +731,9 @@ namespace ABI {
                     IOControlAccessMode_ReadWrite = 3,
                 };
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_CUSTOM_CUSTOMDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -764,9 +760,9 @@ namespace ABI {
                     IOControlBufferingMethod_Neither = 3,
                 };
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_CUSTOM_CUSTOMDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -817,9 +813,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICustomDevice=_uuidof(ICustomDevice);
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CCustom_CICustomDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CCustom_CICustomDevice_INTERFACE_DEFINED__) */
@@ -865,9 +861,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICustomDeviceStatics=_uuidof(ICustomDeviceStatics);
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CCustom_CICustomDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CCustom_CICustomDeviceStatics_INTERFACE_DEFINED__) */
@@ -915,9 +911,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IIOControlCode=_uuidof(IIOControlCode);
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CCustom_CIIOControlCode;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CCustom_CIIOControlCode_INTERFACE_DEFINED__) */
@@ -960,9 +956,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IIOControlCodeFactory=_uuidof(IIOControlCodeFactory);
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CCustom_CIIOControlCodeFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CCustom_CIIOControlCodeFactory_INTERFACE_DEFINED__) */
@@ -1001,9 +997,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownDeviceTypesStatics=_uuidof(IKnownDeviceTypesStatics);
                 
-            } /* Windows */
+            } /* Custom */
         } /* Devices */
-    } /* Custom */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CCustom_CIKnownDeviceTypesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CCustom_CIKnownDeviceTypesStatics_INTERFACE_DEFINED__) */
@@ -1310,7 +1306,7 @@ typedef struct __FIAsyncOperation_1_UINT32Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT32Vtbl;
 

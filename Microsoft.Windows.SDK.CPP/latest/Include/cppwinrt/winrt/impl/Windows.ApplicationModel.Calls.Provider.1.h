@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -45,6 +45,13 @@ struct WINRT_EBO IPhoneCallOriginManagerStatics2 :
     impl::require<IPhoneCallOriginManagerStatics2, Windows::ApplicationModel::Calls::Provider::IPhoneCallOriginManagerStatics>
 {
     IPhoneCallOriginManagerStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPhoneCallOriginManagerStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPhoneCallOriginManagerStatics3>
+{
+    IPhoneCallOriginManagerStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
 }

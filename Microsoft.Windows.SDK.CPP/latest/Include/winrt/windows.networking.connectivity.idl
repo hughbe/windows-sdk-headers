@@ -347,7 +347,11 @@ namespace Windows
                 WpaNone        = 6,
                 Rsna           = 7,
                 RsnaPsk        = 8,
-                Ihv            = 9
+                Ihv            = 9,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                Wpa3           = 10,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                Wpa3Sae        = 11
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

@@ -25,9 +25,9 @@ extern "C" {
 
 #pragma region Application Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS3)
+#if ((_WIN32_WINNT >= _WIN32_WINNT_WIN10) && (NTDDI_VERSION >= NTDDI_WIN10_RS3))
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 CopyFileFromAppW(
@@ -37,7 +37,7 @@ CopyFileFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 CreateDirectoryFromAppW(
@@ -46,7 +46,7 @@ CreateDirectoryFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 HANDLE
 WINAPI
 CreateFileFromAppW(
@@ -60,7 +60,7 @@ CreateFileFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 HANDLE
 WINAPI
 CreateFile2FromAppW(
@@ -72,7 +72,7 @@ CreateFile2FromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 DeleteFileFromAppW(
@@ -80,7 +80,7 @@ DeleteFileFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 HANDLE
 WINAPI
 FindFirstFileExFromAppW(
@@ -93,7 +93,7 @@ FindFirstFileExFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 GetFileAttributesExFromAppW(
@@ -103,7 +103,7 @@ GetFileAttributesExFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 MoveFileFromAppW(
@@ -112,7 +112,7 @@ MoveFileFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 RemoveDirectoryFromAppW(
@@ -120,7 +120,7 @@ RemoveDirectoryFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 ReplaceFileFromAppW(
@@ -133,7 +133,7 @@ ReplaceFileFromAppW(
     );
 
 
-WINBASEAPI
+WINSTORAGEAPI
 BOOL
 WINAPI
 SetFileAttributesFromAppW(
@@ -142,8 +142,8 @@ SetFileAttributesFromAppW(
     );
 
 
-#endif // (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS3)
- #endif/* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif // Version check
+#endif/* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #ifdef __cplusplus

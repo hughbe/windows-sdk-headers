@@ -398,6 +398,7 @@ typedef enum _ATTACH_VIRTUAL_DISK_VERSION
 {
     ATTACH_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
     ATTACH_VIRTUAL_DISK_VERSION_1           = 1,
+    ATTACH_VIRTUAL_DISK_VERSION_2           = 2,
 
 } ATTACH_VIRTUAL_DISK_VERSION;
 
@@ -412,6 +413,12 @@ typedef struct _ATTACH_VIRTUAL_DISK_PARAMETERS
         {
             ULONG Reserved;
         } Version1;
+
+        struct
+        {
+            ULONGLONG RestrictedOffset;
+            ULONGLONG RestrictedLength;
+        } Version2;
     };
 } ATTACH_VIRTUAL_DISK_PARAMETERS, *PATTACH_VIRTUAL_DISK_PARAMETERS;
 
@@ -445,6 +452,18 @@ typedef enum _ATTACH_VIRTUAL_DISK_FLAG
     // Default volume encryption policies should not be applied to the
     // disk when attached to the local system.
     ATTACH_VIRTUAL_DISK_FLAG_BYPASS_DEFAULT_ENCRYPTION_POLICY = 0x00000020,
+
+    // Attach the disk as a non-PnP device.
+    ATTACH_VIRTUAL_DISK_FLAG_NON_PNP                        = 0x00000040,
+
+    // Restrict the disk's view to the specified offset and length.
+    ATTACH_VIRTUAL_DISK_FLAG_RESTRICTED_RANGE               = 0x00000080,
+
+    // Restrict the disk's view to the unique data partition.
+    ATTACH_VIRTUAL_DISK_FLAG_SINGLE_PARTITION               = 0x00000100,
+
+    // Register the non-PnP disk as a volume with mount manager.
+    ATTACH_VIRTUAL_DISK_FLAG_REGISTER_VOLUME                = 0x00000200,
 
 } ATTACH_VIRTUAL_DISK_FLAG;
 

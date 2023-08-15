@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.applicationsettings.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,9 +279,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ICredentialCommandCredentialDeletedHandler;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandCredentialDeletedHandler ABI::Windows::UI::ApplicationSettings::ICredentialCommandCredentialDeletedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandCredentialDeletedHandler_FWD_DEFINED__
@@ -297,9 +293,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IWebAccountCommandInvokedHandler;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandInvokedHandler ABI::Windows::UI::ApplicationSettings::IWebAccountCommandInvokedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandInvokedHandler_FWD_DEFINED__
@@ -311,9 +307,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IWebAccountProviderCommandInvokedHandler;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandInvokedHandler ABI::Windows::UI::ApplicationSettings::IWebAccountProviderCommandInvokedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandInvokedHandler_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IAccountsSettingsPane;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPane ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPane
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPane_FWD_DEFINED__
@@ -339,9 +335,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IAccountsSettingsPaneCommandsRequestedEventArgs;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPaneCommandsRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs_FWD_DEFINED__
@@ -353,9 +349,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IAccountsSettingsPaneCommandsRequestedEventArgs2;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs2 ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPaneCommandsRequestedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs2_FWD_DEFINED__
@@ -367,9 +363,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IAccountsSettingsPaneEventDeferral;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneEventDeferral ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPaneEventDeferral
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneEventDeferral_FWD_DEFINED__
@@ -381,9 +377,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IAccountsSettingsPaneStatics;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics_FWD_DEFINED__
@@ -395,9 +391,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IAccountsSettingsPaneStatics2;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics2 ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics2_FWD_DEFINED__
@@ -409,9 +405,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IAccountsSettingsPaneStatics3;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics3 ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics3_FWD_DEFINED__
@@ -423,9 +419,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ICredentialCommand;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommand ABI::Windows::UI::ApplicationSettings::ICredentialCommand
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommand_FWD_DEFINED__
@@ -437,9 +433,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ICredentialCommandFactory;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandFactory ABI::Windows::UI::ApplicationSettings::ICredentialCommandFactory
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandFactory_FWD_DEFINED__
@@ -451,9 +447,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ISettingsCommandFactory;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandFactory ABI::Windows::UI::ApplicationSettings::ISettingsCommandFactory
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandFactory_FWD_DEFINED__
@@ -465,9 +461,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ISettingsCommandStatics;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandStatics ABI::Windows::UI::ApplicationSettings::ISettingsCommandStatics
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandStatics_FWD_DEFINED__
@@ -479,9 +475,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ISettingsPane;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPane ABI::Windows::UI::ApplicationSettings::ISettingsPane
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPane_FWD_DEFINED__
@@ -493,9 +489,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ISettingsPaneCommandsRequest;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequest ABI::Windows::UI::ApplicationSettings::ISettingsPaneCommandsRequest
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequest_FWD_DEFINED__
@@ -507,9 +503,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ISettingsPaneCommandsRequestedEventArgs;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequestedEventArgs ABI::Windows::UI::ApplicationSettings::ISettingsPaneCommandsRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequestedEventArgs_FWD_DEFINED__
@@ -521,9 +517,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface ISettingsPaneStatics;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneStatics ABI::Windows::UI::ApplicationSettings::ISettingsPaneStatics
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneStatics_FWD_DEFINED__
@@ -535,9 +531,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IWebAccountCommand;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommand ABI::Windows::UI::ApplicationSettings::IWebAccountCommand
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommand_FWD_DEFINED__
@@ -549,9 +545,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IWebAccountCommandFactory;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandFactory ABI::Windows::UI::ApplicationSettings::IWebAccountCommandFactory
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandFactory_FWD_DEFINED__
@@ -563,9 +559,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IWebAccountInvokedArgs;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountInvokedArgs ABI::Windows::UI::ApplicationSettings::IWebAccountInvokedArgs
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountInvokedArgs_FWD_DEFINED__
@@ -577,9 +573,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IWebAccountProviderCommand;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommand ABI::Windows::UI::ApplicationSettings::IWebAccountProviderCommand
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommand_FWD_DEFINED__
@@ -591,9 +587,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 interface IWebAccountProviderCommandFactory;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandFactory ABI::Windows::UI::ApplicationSettings::IWebAccountProviderCommandFactory
 
 #endif // ____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandFactory_FWD_DEFINED__
@@ -606,9 +602,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class CredentialCommand;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -631,7 +627,7 @@ IIterator<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> __FIIterator_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t;
 #define __FIIterator_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::ApplicationSettings::ICredentialCommand*>
@@ -663,7 +659,7 @@ IIterable<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> __FIIterable_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t;
 #define __FIIterable_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::ApplicationSettings::ICredentialCommand*>
@@ -679,9 +675,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class SettingsCommand;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CPopups_CIUICommand_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CPopups_CIUICommand_FWD_DEFINED__
@@ -690,9 +686,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IUICommand;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIUICommand ABI::Windows::UI::Popups::IUICommand
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIUICommand_FWD_DEFINED__
@@ -718,7 +714,7 @@ IIterator<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> __FIIterator_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t;
 #define __FIIterator_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Popups::IUICommand*>
@@ -750,7 +746,7 @@ IIterable<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> __FIIterable_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t;
 #define __FIIterable_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Popups::IUICommand*>
@@ -766,9 +762,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class WebAccountCommand;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -791,7 +787,7 @@ IIterator<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> __FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t;
 #define __FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::ApplicationSettings::IWebAccountCommand*>
@@ -823,7 +819,7 @@ IIterable<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> __FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t;
 #define __FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::ApplicationSettings::IWebAccountCommand*>
@@ -839,9 +835,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class WebAccountProviderCommand;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -864,7 +860,7 @@ IIterator<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> : I
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> __FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t;
 #define __FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::ApplicationSettings::IWebAccountProviderCommand*>
@@ -896,7 +892,7 @@ IIterable<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> : I
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> __FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t;
 #define __FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::ApplicationSettings::IWebAccountProviderCommand*>
@@ -928,7 +924,7 @@ IVectorView<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> __FIVectorView_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t;
 #define __FIVectorView_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::ApplicationSettings::ICredentialCommand*>
@@ -960,7 +956,7 @@ IVectorView<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> __FIVectorView_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t;
 #define __FIVectorView_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Popups::IUICommand*>
@@ -992,7 +988,7 @@ IVectorView<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> __FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t;
 #define __FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::ApplicationSettings::IWebAccountCommand*>
@@ -1024,7 +1020,7 @@ IVectorView<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> :
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> __FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t;
 #define __FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::ApplicationSettings::IWebAccountProviderCommand*>
@@ -1056,7 +1052,7 @@ IVector<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::ApplicationSettings::CredentialCommand*> __FIVector_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t;
 #define __FIVector_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CApplicationSettings__CCredentialCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CApplicationSettings__CCredentialCommand ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::ApplicationSettings::ICredentialCommand*>
@@ -1088,7 +1084,7 @@ IVector<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> : IVector_impl<
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::ApplicationSettings::SettingsCommand*> __FIVector_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t;
 #define __FIVector_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CApplicationSettings__CSettingsCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CApplicationSettings__CSettingsCommand ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Popups::IUICommand*>
@@ -1120,7 +1116,7 @@ IVector<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::ApplicationSettings::WebAccountCommand*> __FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t;
 #define __FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountCommand ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::ApplicationSettings::IWebAccountCommand*>
@@ -1152,7 +1148,7 @@ IVector<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> : IVe
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::ApplicationSettings::WebAccountProviderCommand*> __FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t;
 #define __FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CApplicationSettings__CWebAccountProviderCommand ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::ApplicationSettings::IWebAccountProviderCommand*>
@@ -1168,9 +1164,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class AccountsSettingsPane;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1178,9 +1174,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class AccountsSettingsPaneCommandsRequestedEventArgs;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1204,7 +1200,7 @@ ITypedEventHandler<ABI::Windows::UI::ApplicationSettings::AccountsSettingsPane*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ApplicationSettings::AccountsSettingsPane*,ABI::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPane*,ABI::Windows::UI::ApplicationSettings::IAccountsSettingsPaneCommandsRequestedEventArgs*>
@@ -1221,9 +1217,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class SettingsPane;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1231,9 +1227,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class SettingsPaneCommandsRequestedEventArgs;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_UI_APPLICATIONSETTINGS_APPLICATIONSSETTINGSCONTRACT_VERSION >= 0x10000
@@ -1257,7 +1253,7 @@ ITypedEventHandler<ABI::Windows::UI::ApplicationSettings::SettingsPane*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ApplicationSettings::SettingsPane*,ABI::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ApplicationSettings::ISettingsPane*,ABI::Windows::UI::ApplicationSettings::ISettingsPaneCommandsRequestedEventArgs*>
@@ -1277,8 +1273,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1292,9 +1288,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -1303,9 +1299,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -1316,9 +1312,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -1327,9 +1323,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount ABI::Windows::Security::Credentials::IWebAccount
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -1340,9 +1336,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccountProvider;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_FWD_DEFINED__
@@ -1351,9 +1347,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountProvider;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider ABI::Windows::Security::Credentials::IWebAccountProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_FWD_DEFINED__
@@ -1366,8 +1362,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1375,8 +1371,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1392,9 +1388,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IUICommandInvokedHandler;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler ABI::Windows::UI::Popups::IUICommandInvokedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler_FWD_DEFINED__
@@ -1411,9 +1407,9 @@ namespace ABI {
                 
                 typedef enum SettingsEdgeLocation : int SettingsEdgeLocation;
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1422,9 +1418,9 @@ namespace ABI {
                 
                 typedef enum SupportedWebAccountActions : unsigned int SupportedWebAccountActions;
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1433,9 +1429,9 @@ namespace ABI {
                 
                 typedef enum WebAccountAction : int WebAccountAction;
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1467,9 +1463,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class AccountsSettingsPaneEventDeferral;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1480,9 +1476,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class SettingsPaneCommandsRequest;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1492,9 +1488,9 @@ namespace ABI {
         namespace UI {
             namespace ApplicationSettings {
                 class WebAccountInvokedArgs;
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1532,9 +1528,9 @@ namespace ABI {
                     SettingsEdgeLocation_Left = 1,
                 };
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_APPLICATIONSETTINGS_APPLICATIONSSETTINGSCONTRACT_VERSION >= 0x10000
 
 
@@ -1565,9 +1561,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(SupportedWebAccountActions)
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1595,9 +1591,9 @@ namespace ABI {
                     WebAccountAction_More = 4,
                 };
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1629,9 +1625,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICredentialCommandCredentialDeletedHandler=_uuidof(ICredentialCommandCredentialDeletedHandler);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandCredentialDeletedHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandCredentialDeletedHandler_INTERFACE_DEFINED__) */
@@ -1667,9 +1663,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountCommandInvokedHandler=_uuidof(IWebAccountCommandInvokedHandler);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandInvokedHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandInvokedHandler_INTERFACE_DEFINED__) */
@@ -1704,9 +1700,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProviderCommandInvokedHandler=_uuidof(IWebAccountProviderCommandInvokedHandler);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandInvokedHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandInvokedHandler_INTERFACE_DEFINED__) */
@@ -1749,9 +1745,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccountsSettingsPane=_uuidof(IAccountsSettingsPane);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPane;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPane_INTERFACE_DEFINED__) */
@@ -1808,9 +1804,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccountsSettingsPaneCommandsRequestedEventArgs=_uuidof(IAccountsSettingsPaneCommandsRequestedEventArgs);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1849,9 +1845,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccountsSettingsPaneCommandsRequestedEventArgs2=_uuidof(IAccountsSettingsPaneCommandsRequestedEventArgs2);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs2_INTERFACE_DEFINED__) */
@@ -1888,9 +1884,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccountsSettingsPaneEventDeferral=_uuidof(IAccountsSettingsPaneEventDeferral);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneEventDeferral;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneEventDeferral_INTERFACE_DEFINED__) */
@@ -1930,9 +1926,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccountsSettingsPaneStatics=_uuidof(IAccountsSettingsPaneStatics);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics_INTERFACE_DEFINED__) */
@@ -1978,9 +1974,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccountsSettingsPaneStatics2=_uuidof(IAccountsSettingsPaneStatics2);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics2_INTERFACE_DEFINED__) */
@@ -2024,9 +2020,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccountsSettingsPaneStatics3=_uuidof(IAccountsSettingsPaneStatics3);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneStatics3_INTERFACE_DEFINED__) */
@@ -2068,9 +2064,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICredentialCommand=_uuidof(ICredentialCommand);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommand;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommand_INTERFACE_DEFINED__) */
@@ -2115,9 +2111,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICredentialCommandFactory=_uuidof(ICredentialCommandFactory);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CICredentialCommandFactory_INTERFACE_DEFINED__) */
@@ -2159,9 +2155,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISettingsCommandFactory=_uuidof(ISettingsCommandFactory);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandFactory_INTERFACE_DEFINED__) */
@@ -2200,9 +2196,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISettingsCommandStatics=_uuidof(ISettingsCommandStatics);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsCommandStatics_INTERFACE_DEFINED__) */
@@ -2257,9 +2253,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISettingsPane=_uuidof(ISettingsPane);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPane;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPane_INTERFACE_DEFINED__) */
@@ -2306,9 +2302,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISettingsPaneCommandsRequest=_uuidof(ISettingsPaneCommandsRequest);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequest_INTERFACE_DEFINED__) */
@@ -2355,9 +2351,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISettingsPaneCommandsRequestedEventArgs=_uuidof(ISettingsPaneCommandsRequestedEventArgs);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2416,9 +2412,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISettingsPaneStatics=_uuidof(ISettingsPaneStatics);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneStatics_INTERFACE_DEFINED__) */
@@ -2463,9 +2459,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountCommand=_uuidof(IWebAccountCommand);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommand;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommand_INTERFACE_DEFINED__) */
@@ -2507,9 +2503,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountCommandFactory=_uuidof(IWebAccountCommandFactory);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountCommandFactory_INTERFACE_DEFINED__) */
@@ -2548,9 +2544,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountInvokedArgs=_uuidof(IWebAccountInvokedArgs);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountInvokedArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountInvokedArgs_INTERFACE_DEFINED__) */
@@ -2592,9 +2588,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProviderCommand=_uuidof(IWebAccountProviderCommand);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommand;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommand_INTERFACE_DEFINED__) */
@@ -2635,9 +2631,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebAccountProviderCommandFactory=_uuidof(IWebAccountProviderCommandFactory);
                 
-            } /* Windows */
+            } /* ApplicationSettings */
         } /* UI */
-    } /* ApplicationSettings */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CApplicationSettings_CIWebAccountProviderCommandFactory_INTERFACE_DEFINED__) */
@@ -4759,7 +4755,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAcco
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CIAccountsSettingsPaneCommandsRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CAccountsSettingsPane_Windows__CUI__CApplicationSettings__CAccountsSettingsPaneCommandsRequestedEventArgsVtbl;
 
@@ -4812,7 +4808,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSett
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CApplicationSettings_CISettingsPaneCommandsRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CApplicationSettings__CSettingsPane_Windows__CUI__CApplicationSettings__CSettingsPaneCommandsRequestedEventArgsVtbl;
 

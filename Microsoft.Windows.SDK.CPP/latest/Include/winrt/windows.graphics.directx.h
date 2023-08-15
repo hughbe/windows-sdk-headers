@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.directx.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,9 +141,9 @@ namespace ABI {
         namespace Graphics {
             namespace DirectX {
                 enum DirectXPixelFormat : int;
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
@@ -164,7 +164,7 @@ IIterator<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
 #define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
@@ -194,7 +194,7 @@ IIterable<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
 #define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
@@ -224,7 +224,7 @@ IVectorView<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
 #define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
@@ -246,9 +246,9 @@ namespace ABI {
                 
                 typedef enum DirectXAlphaMode : int DirectXAlphaMode;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -257,9 +257,9 @@ namespace ABI {
                 
                 typedef enum DirectXColorSpace : int DirectXColorSpace;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -268,9 +268,20 @@ namespace ABI {
                 
                 typedef enum DirectXPixelFormat : int DirectXPixelFormat;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace DirectX {
+                
+                typedef enum DirectXPrimitiveTopology : int DirectXPrimitiveTopology;
+                
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -303,9 +314,9 @@ namespace ABI {
                     DirectXAlphaMode_Ignore = 3,
                 };
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -353,9 +364,9 @@ namespace ABI {
                     DirectXColorSpace_YccStudioG24TopLeftP2020 = 24,
                 };
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -497,10 +508,41 @@ namespace ABI {
                     DirectXPixelFormat_V408 = 132,
                 };
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.Graphics.DirectX.DirectXPrimitiveTopology
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace DirectX {
+                /* [v1_enum, contract] */
+                enum DirectXPrimitiveTopology : int
+                {
+                    DirectXPrimitiveTopology_Undefined = 0,
+                    DirectXPrimitiveTopology_PointList = 1,
+                    DirectXPrimitiveTopology_LineList = 2,
+                    DirectXPrimitiveTopology_LineStrip = 3,
+                    DirectXPrimitiveTopology_TriangleList = 4,
+                    DirectXPrimitiveTopology_TriangleStrip = 5,
+                };
+                
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 
@@ -791,6 +833,9 @@ typedef enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXColorSpace __x_ABI_CWin
 typedef enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat;
 
 
+typedef enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPrimitiveTopology __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPrimitiveTopology;
+
+
 
 
 
@@ -995,6 +1040,29 @@ enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat
     DirectXPixelFormat_V408 = 132,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.Graphics.DirectX.DirectXPrimitiveTopology
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, contract] */
+enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPrimitiveTopology
+{
+    DirectXPrimitiveTopology_Undefined = 0,
+    DirectXPrimitiveTopology_PointList = 1,
+    DirectXPrimitiveTopology_LineList = 2,
+    DirectXPrimitiveTopology_LineStrip = 3,
+    DirectXPrimitiveTopology_TriangleList = 4,
+    DirectXPrimitiveTopology_TriangleStrip = 5,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 

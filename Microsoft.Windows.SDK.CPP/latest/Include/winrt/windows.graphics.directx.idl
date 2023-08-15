@@ -30,6 +30,8 @@ namespace Windows
             typedef enum DirectXColorSpace DirectXColorSpace;
 
             typedef enum DirectXPixelFormat DirectXPixelFormat;
+
+            typedef enum DirectXPrimitiveTopology DirectXPrimitiveTopology;
         }
     }
 }
@@ -221,6 +223,17 @@ namespace Windows
                 P208                            = 130,
                 V208                            = 131,
                 V408                            = 132
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            enum DirectXPrimitiveTopology
+            {
+                Undefined     = 0,
+                PointList     = 1,
+                LineList      = 2,
+                LineStrip     = 3,
+                TriangleList  = 4,
+                TriangleStrip = 5
             };
         }
     }

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.playback.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -288,9 +284,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IBackgroundMediaPlayerStatics;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIBackgroundMediaPlayerStatics ABI::Windows::Media::Playback::IBackgroundMediaPlayerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIBackgroundMediaPlayerStatics_FWD_DEFINED__
@@ -302,9 +298,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface ICurrentMediaPlaybackItemChangedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs ABI::Windows::Media::Playback::ICurrentMediaPlaybackItemChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs_FWD_DEFINED__
@@ -316,9 +312,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface ICurrentMediaPlaybackItemChangedEventArgs2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs2 ABI::Windows::Media::Playback::ICurrentMediaPlaybackItemChangedEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs2_FWD_DEFINED__
@@ -330,9 +326,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreak;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreak ABI::Windows::Media::Playback::IMediaBreak
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreak_FWD_DEFINED__
@@ -344,9 +340,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreakEndedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakEndedEventArgs ABI::Windows::Media::Playback::IMediaBreakEndedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakEndedEventArgs_FWD_DEFINED__
@@ -358,9 +354,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreakFactory;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakFactory ABI::Windows::Media::Playback::IMediaBreakFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakFactory_FWD_DEFINED__
@@ -372,9 +368,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreakManager;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager ABI::Windows::Media::Playback::IMediaBreakManager
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager_FWD_DEFINED__
@@ -386,9 +382,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreakSchedule;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSchedule ABI::Windows::Media::Playback::IMediaBreakSchedule
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSchedule_FWD_DEFINED__
@@ -400,9 +396,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreakSeekedOverEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSeekedOverEventArgs ABI::Windows::Media::Playback::IMediaBreakSeekedOverEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSeekedOverEventArgs_FWD_DEFINED__
@@ -414,9 +410,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreakSkippedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSkippedEventArgs ABI::Windows::Media::Playback::IMediaBreakSkippedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSkippedEventArgs_FWD_DEFINED__
@@ -428,9 +424,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaBreakStartedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakStartedEventArgs ABI::Windows::Media::Playback::IMediaBreakStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakStartedEventArgs_FWD_DEFINED__
@@ -442,9 +438,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaEnginePlaybackSource;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaEnginePlaybackSource ABI::Windows::Media::Playback::IMediaEnginePlaybackSource
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaEnginePlaybackSource_FWD_DEFINED__
@@ -456,9 +452,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaItemDisplayProperties;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaItemDisplayProperties ABI::Windows::Media::Playback::IMediaItemDisplayProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaItemDisplayProperties_FWD_DEFINED__
@@ -470,9 +466,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManager;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager ABI::Windows::Media::Playback::IMediaPlaybackCommandManager
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager_FWD_DEFINED__
@@ -484,9 +480,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs_FWD_DEFINED__
@@ -498,9 +494,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerCommandBehavior;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerCommandBehavior ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerCommandBehavior
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerCommandBehavior_FWD_DEFINED__
@@ -512,9 +508,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerFastForwardReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerFastForwardReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerFastForwardReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerFastForwardReceivedEventArgs_FWD_DEFINED__
@@ -526,9 +522,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerNextReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerNextReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerNextReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerNextReceivedEventArgs_FWD_DEFINED__
@@ -540,9 +536,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerPauseReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPauseReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPauseReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPauseReceivedEventArgs_FWD_DEFINED__
@@ -554,9 +550,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerPlayReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPlayReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPlayReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPlayReceivedEventArgs_FWD_DEFINED__
@@ -568,9 +564,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerPositionReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPositionReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPositionReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPositionReceivedEventArgs_FWD_DEFINED__
@@ -582,9 +578,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerPreviousReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPreviousReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPreviousReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPreviousReceivedEventArgs_FWD_DEFINED__
@@ -596,9 +592,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerRateReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRateReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerRateReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRateReceivedEventArgs_FWD_DEFINED__
@@ -610,9 +606,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerRewindReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRewindReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerRewindReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRewindReceivedEventArgs_FWD_DEFINED__
@@ -624,9 +620,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackCommandManagerShuffleReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerShuffleReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerShuffleReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerShuffleReceivedEventArgs_FWD_DEFINED__
@@ -638,9 +634,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItem;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem ABI::Windows::Media::Playback::IMediaPlaybackItem
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
@@ -652,9 +648,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItem2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem2 ABI::Windows::Media::Playback::IMediaPlaybackItem2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem2_FWD_DEFINED__
@@ -666,9 +662,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItem3;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem3 ABI::Windows::Media::Playback::IMediaPlaybackItem3
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem3_FWD_DEFINED__
@@ -680,9 +676,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItemError;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemError ABI::Windows::Media::Playback::IMediaPlaybackItemError
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemError_FWD_DEFINED__
@@ -694,9 +690,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItemFactory;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory ABI::Windows::Media::Playback::IMediaPlaybackItemFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory_FWD_DEFINED__
@@ -708,9 +704,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItemFactory2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory2 ABI::Windows::Media::Playback::IMediaPlaybackItemFactory2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory2_FWD_DEFINED__
@@ -722,9 +718,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItemFailedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFailedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackItemFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFailedEventArgs_FWD_DEFINED__
@@ -736,9 +732,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItemOpenedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemOpenedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackItemOpenedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemOpenedEventArgs_FWD_DEFINED__
@@ -750,9 +746,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackItemStatics;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemStatics ABI::Windows::Media::Playback::IMediaPlaybackItemStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemStatics_FWD_DEFINED__
@@ -764,9 +760,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackList;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList ABI::Windows::Media::Playback::IMediaPlaybackList
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList_FWD_DEFINED__
@@ -778,9 +774,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackList2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList2 ABI::Windows::Media::Playback::IMediaPlaybackList2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList2_FWD_DEFINED__
@@ -792,9 +788,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackList3;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList3 ABI::Windows::Media::Playback::IMediaPlaybackList3
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList3_FWD_DEFINED__
@@ -806,9 +802,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackSession;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession ABI::Windows::Media::Playback::IMediaPlaybackSession
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession_FWD_DEFINED__
@@ -820,9 +816,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackSession2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession2 ABI::Windows::Media::Playback::IMediaPlaybackSession2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession2_FWD_DEFINED__
@@ -834,9 +830,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackSession3;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession3 ABI::Windows::Media::Playback::IMediaPlaybackSession3
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession3_FWD_DEFINED__
@@ -848,9 +844,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackSessionBufferingStartedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionBufferingStartedEventArgs ABI::Windows::Media::Playback::IMediaPlaybackSessionBufferingStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionBufferingStartedEventArgs_FWD_DEFINED__
@@ -862,9 +858,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackSessionOutputDegradationPolicyState;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionOutputDegradationPolicyState ABI::Windows::Media::Playback::IMediaPlaybackSessionOutputDegradationPolicyState
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionOutputDegradationPolicyState_FWD_DEFINED__
@@ -876,9 +872,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackSource;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSource ABI::Windows::Media::Playback::IMediaPlaybackSource
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSource_FWD_DEFINED__
@@ -890,9 +886,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackSphericalVideoProjection;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSphericalVideoProjection ABI::Windows::Media::Playback::IMediaPlaybackSphericalVideoProjection
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSphericalVideoProjection_FWD_DEFINED__
@@ -904,9 +900,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlaybackTimedMetadataTrackList;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackTimedMetadataTrackList ABI::Windows::Media::Playback::IMediaPlaybackTimedMetadataTrackList
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackTimedMetadataTrackList_FWD_DEFINED__
@@ -918,9 +914,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayer;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer ABI::Windows::Media::Playback::IMediaPlayer
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer_FWD_DEFINED__
@@ -932,9 +928,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayer2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer2 ABI::Windows::Media::Playback::IMediaPlayer2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer2_FWD_DEFINED__
@@ -946,9 +942,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayer3;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer3 ABI::Windows::Media::Playback::IMediaPlayer3
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer3_FWD_DEFINED__
@@ -960,9 +956,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayer4;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer4 ABI::Windows::Media::Playback::IMediaPlayer4
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer4_FWD_DEFINED__
@@ -974,9 +970,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayer5;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer5 ABI::Windows::Media::Playback::IMediaPlayer5
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer5_FWD_DEFINED__
@@ -988,9 +984,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayer6;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer6 ABI::Windows::Media::Playback::IMediaPlayer6
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer6_FWD_DEFINED__
@@ -1002,9 +998,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayer7;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer7 ABI::Windows::Media::Playback::IMediaPlayer7
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer7_FWD_DEFINED__
@@ -1016,9 +1012,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerDataReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerDataReceivedEventArgs ABI::Windows::Media::Playback::IMediaPlayerDataReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerDataReceivedEventArgs_FWD_DEFINED__
@@ -1030,9 +1026,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerEffects;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects ABI::Windows::Media::Playback::IMediaPlayerEffects
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects_FWD_DEFINED__
@@ -1044,9 +1040,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerEffects2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects2 ABI::Windows::Media::Playback::IMediaPlayerEffects2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects2_FWD_DEFINED__
@@ -1058,9 +1054,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerFailedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerFailedEventArgs ABI::Windows::Media::Playback::IMediaPlayerFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerFailedEventArgs_FWD_DEFINED__
@@ -1072,9 +1068,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerRateChangedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerRateChangedEventArgs ABI::Windows::Media::Playback::IMediaPlayerRateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerRateChangedEventArgs_FWD_DEFINED__
@@ -1086,9 +1082,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerSource;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource ABI::Windows::Media::Playback::IMediaPlayerSource
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource_FWD_DEFINED__
@@ -1100,9 +1096,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerSource2;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource2 ABI::Windows::Media::Playback::IMediaPlayerSource2
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource2_FWD_DEFINED__
@@ -1114,9 +1110,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IMediaPlayerSurface;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSurface ABI::Windows::Media::Playback::IMediaPlayerSurface
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSurface_FWD_DEFINED__
@@ -1128,9 +1124,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IPlaybackMediaMarker;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarker ABI::Windows::Media::Playback::IPlaybackMediaMarker
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarker_FWD_DEFINED__
@@ -1142,9 +1138,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IPlaybackMediaMarkerFactory;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerFactory ABI::Windows::Media::Playback::IPlaybackMediaMarkerFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerFactory_FWD_DEFINED__
@@ -1156,9 +1152,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IPlaybackMediaMarkerReachedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerReachedEventArgs ABI::Windows::Media::Playback::IPlaybackMediaMarkerReachedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerReachedEventArgs_FWD_DEFINED__
@@ -1170,9 +1166,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface IPlaybackMediaMarkerSequence;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerSequence ABI::Windows::Media::Playback::IPlaybackMediaMarkerSequence
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerSequence_FWD_DEFINED__
@@ -1184,9 +1180,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 interface ITimedMetadataPresentationModeChangedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CITimedMetadataPresentationModeChangedEventArgs ABI::Windows::Media::Playback::ITimedMetadataPresentationModeChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CITimedMetadataPresentationModeChangedEventArgs_FWD_DEFINED__
@@ -1199,9 +1195,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaBreak;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1224,7 +1220,7 @@ IIterator<ABI::Windows::Media::Playback::MediaBreak*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Playback::MediaBreak*> __FIIterator_1_Windows__CMedia__CPlayback__CMediaBreak_t;
 #define __FIIterator_1_Windows__CMedia__CPlayback__CMediaBreak ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CPlayback__CMediaBreak_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CPlayback__CMediaBreak ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Playback::IMediaBreak*>
@@ -1256,7 +1252,7 @@ IIterable<ABI::Windows::Media::Playback::MediaBreak*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Playback::MediaBreak*> __FIIterable_1_Windows__CMedia__CPlayback__CMediaBreak_t;
 #define __FIIterable_1_Windows__CMedia__CPlayback__CMediaBreak ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CPlayback__CMediaBreak_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CPlayback__CMediaBreak ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Playback::IMediaBreak*>
@@ -1272,9 +1268,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackItem;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1297,7 +1293,7 @@ IIterator<ABI::Windows::Media::Playback::MediaPlaybackItem*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Playback::MediaPlaybackItem*> __FIIterator_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t;
 #define __FIIterator_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Playback::IMediaPlaybackItem*>
@@ -1329,7 +1325,7 @@ IIterable<ABI::Windows::Media::Playback::MediaPlaybackItem*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Playback::MediaPlaybackItem*> __FIIterable_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t;
 #define __FIIterable_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Playback::IMediaPlaybackItem*>
@@ -1345,9 +1341,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class PlaybackMediaMarker;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1370,7 +1366,7 @@ IIterator<ABI::Windows::Media::Playback::PlaybackMediaMarker*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Playback::PlaybackMediaMarker*> __FIIterator_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker_t;
 #define __FIIterator_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Playback::IPlaybackMediaMarker*>
@@ -1402,7 +1398,7 @@ IIterable<ABI::Windows::Media::Playback::PlaybackMediaMarker*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Playback::PlaybackMediaMarker*> __FIIterable_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker_t;
 #define __FIIterable_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CPlayback__CPlaybackMediaMarker ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Playback::IPlaybackMediaMarker*>
@@ -1434,7 +1430,7 @@ IVectorView<ABI::Windows::Media::Playback::MediaPlaybackItem*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Playback::MediaPlaybackItem*> __FIVectorView_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t;
 #define __FIVectorView_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Playback::IMediaPlaybackItem*>
@@ -1466,7 +1462,7 @@ IVector<ABI::Windows::Media::Playback::MediaPlaybackItem*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Playback::MediaPlaybackItem*> __FIVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t;
 #define __FIVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Playback::IMediaPlaybackItem*>
@@ -1498,7 +1494,7 @@ VectorChangedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackItem*> : V
 // correct parameterized interface specialization.
 typedef VectorChangedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackItem*> __FVectorChangedEventHandler_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t;
 #define __FVectorChangedEventHandler_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::__FVectorChangedEventHandler_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FVectorChangedEventHandler_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::VectorChangedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackItem*>
@@ -1530,7 +1526,7 @@ IObservableVector<ABI::Windows::Media::Playback::MediaPlaybackItem*> : IObservab
 // correct parameterized interface specialization.
 typedef IObservableVector<ABI::Windows::Media::Playback::MediaPlaybackItem*> __FIObservableVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t;
 #define __FIObservableVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::__FIObservableVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem ABI::Windows::Foundation::Collections::IObservableVector<ABI::Windows::Media::Playback::IMediaPlaybackItem*>
@@ -1562,7 +1558,7 @@ IVectorView<ABI::Windows::Media::Playback::MediaBreak*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Playback::MediaBreak*> __FIVectorView_1_Windows__CMedia__CPlayback__CMediaBreak_t;
 #define __FIVectorView_1_Windows__CMedia__CPlayback__CMediaBreak ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CPlayback__CMediaBreak_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CPlayback__CMediaBreak ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Playback::IMediaBreak*>
@@ -1578,9 +1574,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlayerDataReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1603,7 +1599,7 @@ IEventHandler<ABI::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs*> 
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs*> __FIEventHandler_1_Windows__CMedia__CPlayback__CMediaPlayerDataReceivedEventArgs_t;
 #define __FIEventHandler_1_Windows__CMedia__CPlayback__CMediaPlayerDataReceivedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CMedia__CPlayback__CMediaPlayerDataReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CMedia__CPlayback__CMediaPlayerDataReceivedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::Media::Playback::IMediaPlayerDataReceivedEventArgs*>
@@ -1619,9 +1615,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaBreakManager;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1629,9 +1625,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaBreakEndedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1655,7 +1651,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Windows::Media::Playback::MediaBreakEndedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaBreakManager*,ABI::Windows::Media::Playback::IMediaBreakEndedEventArgs*>
@@ -1673,9 +1669,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaBreakSeekedOverEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1699,7 +1695,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Windows::Media::Playback::MediaBreakSeekedOverEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaBreakManager*,ABI::Windows::Media::Playback::IMediaBreakSeekedOverEventArgs*>
@@ -1717,9 +1713,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaBreakSkippedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1743,7 +1739,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Windows::Media::Playback::MediaBreakSkippedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaBreakManager*,ABI::Windows::Media::Playback::IMediaBreakSkippedEventArgs*>
@@ -1761,9 +1757,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaBreakStartedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1787,7 +1783,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakManager*,ABI::Windows::Media::Playback::MediaBreakStartedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaBreakManager*,ABI::Windows::Media::Playback::IMediaBreakStartedEventArgs*>
@@ -1804,9 +1800,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaBreakSchedule;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1830,7 +1826,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakSchedule*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaBreakSchedule*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaBreakSchedule*,IInspectable*>
@@ -1846,9 +1842,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManager;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1856,9 +1852,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1882,7 +1878,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs*>
@@ -1900,9 +1896,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerFastForwardReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1926,7 +1922,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerFastForwardReceivedEventArgs*>
@@ -1944,9 +1940,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerNextReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1970,7 +1966,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerNextReceivedEventArgs*>
@@ -1988,9 +1984,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerPauseReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2014,7 +2010,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPauseReceivedEventArgs*>
@@ -2032,9 +2028,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerPlayReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2058,7 +2054,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPlayReceivedEventArgs*>
@@ -2076,9 +2072,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerPositionReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2102,7 +2098,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPositionReceivedEventArgs*>
@@ -2120,9 +2116,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerPreviousReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2146,7 +2142,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerPreviousReceivedEventArgs*>
@@ -2164,9 +2160,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerRateReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2190,7 +2186,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerRateReceivedEventArgs*>
@@ -2208,9 +2204,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerRewindReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2234,7 +2230,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerRewindReceivedEventArgs*>
@@ -2252,9 +2248,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerShuffleReceivedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2278,7 +2274,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManager*,ABI::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManager*,ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerShuffleReceivedEventArgs*>
@@ -2295,9 +2291,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackCommandManagerCommandBehavior;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2321,7 +2317,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManagerCom
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackCommandManagerCommandBehavior*,IInspectable*>
@@ -2337,9 +2333,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackList;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2347,9 +2343,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class CurrentMediaPlaybackItemChangedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2373,7 +2369,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackList*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackList*,ABI::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackList*,ABI::Windows::Media::Playback::ICurrentMediaPlaybackItemChangedEventArgs*>
@@ -2391,9 +2387,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackItemFailedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2417,7 +2413,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackList*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackList*,ABI::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackList*,ABI::Windows::Media::Playback::IMediaPlaybackItemFailedEventArgs*>
@@ -2435,9 +2431,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackItemOpenedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2461,7 +2457,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackList*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackList*,ABI::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackList*,ABI::Windows::Media::Playback::IMediaPlaybackItemOpenedEventArgs*>
@@ -2478,9 +2474,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackSession;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2504,7 +2500,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackSession*,IInspect
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackSession*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackSession*,IInspectable*>
@@ -2520,9 +2516,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class TimedMetadataTrack;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CITimedMetadataTrack_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CITimedMetadataTrack_FWD_DEFINED__
@@ -2531,9 +2527,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface ITimedMetadataTrack;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CITimedMetadataTrack ABI::Windows::Media::Core::ITimedMetadataTrack
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CITimedMetadataTrack_FWD_DEFINED__
@@ -2559,7 +2555,7 @@ IIterator<ABI::Windows::Media::Core::TimedMetadataTrack*> : IIterator_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::TimedMetadataTrack*> __FIIterator_1_Windows__CMedia__CCore__CTimedMetadataTrack_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CTimedMetadataTrack ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CTimedMetadataTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CTimedMetadataTrack ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::ITimedMetadataTrack*>
@@ -2591,7 +2587,7 @@ IIterable<ABI::Windows::Media::Core::TimedMetadataTrack*> : IIterable_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::TimedMetadataTrack*> __FIIterable_1_Windows__CMedia__CCore__CTimedMetadataTrack_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CTimedMetadataTrack ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CTimedMetadataTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CTimedMetadataTrack ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::ITimedMetadataTrack*>
@@ -2623,7 +2619,7 @@ IVectorView<ABI::Windows::Media::Core::TimedMetadataTrack*> : IVectorView_impl<A
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::TimedMetadataTrack*> __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataTrack_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataTrack ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataTrack ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::ITimedMetadataTrack*>
@@ -2639,9 +2635,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackTimedMetadataTrackList;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2649,9 +2645,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class TimedMetadataPresentationModeChangedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2675,7 +2671,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackTimedMetadataTrac
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList*,ABI::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<__FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataTrack*,ABI::Windows::Media::Playback::ITimedMetadataPresentationModeChangedEventArgs*>
@@ -2692,9 +2688,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlayer;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2718,7 +2714,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,IInspectable*> : 
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlayer*,IInspectable*>
@@ -2735,9 +2731,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlayerFailedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2761,7 +2757,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,ABI::Windows::Media::Playback::MediaPlayerFailedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlayer*,ABI::Windows::Media::Playback::IMediaPlayerFailedEventArgs*>
@@ -2779,9 +2775,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlayerRateChangedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2805,7 +2801,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,ABI::Windows::Media::Playback::MediaPlayerRateChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlayer*,ABI::Windows::Media::Playback::IMediaPlayerRateChangedEventArgs*>
@@ -2823,9 +2819,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class PlaybackMediaMarkerReachedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2849,7 +2845,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlayer*,ABI::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlayer*,ABI::Windows::Media::Playback::IPlaybackMediaMarkerReachedEventArgs*>
@@ -2881,7 +2877,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -2911,7 +2907,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2941,7 +2937,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2971,7 +2967,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -3001,7 +2997,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -3030,7 +3026,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -3060,7 +3056,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -3090,7 +3086,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -3105,8 +3101,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -3127,7 +3123,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -3145,9 +3141,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IVectorChangedEventArgs;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs ABI::Windows::Foundation::Collections::IVectorChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs_FWD_DEFINED__
@@ -3174,7 +3170,7 @@ ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackItem*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Playback::MediaPlaybackItem*,ABI::Windows::Foundation::Collections::IVectorChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Playback::IMediaPlaybackItem*,ABI::Windows::Foundation::Collections::IVectorChangedEventArgs*>
@@ -3191,9 +3187,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class AudioTrack;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaTrack_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaTrack_FWD_DEFINED__
@@ -3202,9 +3198,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaTrack;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaTrack ABI::Windows::Media::Core::IMediaTrack
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaTrack_FWD_DEFINED__
@@ -3230,7 +3226,7 @@ IIterator<ABI::Windows::Media::Core::AudioTrack*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::AudioTrack*> __FIIterator_1_Windows__CMedia__CCore__CAudioTrack_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CAudioTrack ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CAudioTrack ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::IMediaTrack*>
@@ -3262,7 +3258,7 @@ IIterable<ABI::Windows::Media::Core::AudioTrack*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::AudioTrack*> __FIIterable_1_Windows__CMedia__CCore__CAudioTrack_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CAudioTrack ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CAudioTrack ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::IMediaTrack*>
@@ -3294,7 +3290,7 @@ IVectorView<ABI::Windows::Media::Core::AudioTrack*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::AudioTrack*> __FIVectorView_1_Windows__CMedia__CCore__CAudioTrack_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CAudioTrack ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CAudioTrack ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::IMediaTrack*>
@@ -3310,9 +3306,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class VideoTrack;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3335,7 +3331,7 @@ IIterator<ABI::Windows::Media::Core::VideoTrack*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Core::VideoTrack*> __FIIterator_1_Windows__CMedia__CCore__CVideoTrack_t;
 #define __FIIterator_1_Windows__CMedia__CCore__CVideoTrack ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CCore__CVideoTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CCore__CVideoTrack ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Core::IMediaTrack*>
@@ -3367,7 +3363,7 @@ IIterable<ABI::Windows::Media::Core::VideoTrack*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Core::VideoTrack*> __FIIterable_1_Windows__CMedia__CCore__CVideoTrack_t;
 #define __FIIterable_1_Windows__CMedia__CCore__CVideoTrack ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CCore__CVideoTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CCore__CVideoTrack ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Core::IMediaTrack*>
@@ -3399,7 +3395,7 @@ IVectorView<ABI::Windows::Media::Core::VideoTrack*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Core::VideoTrack*> __FIVectorView_1_Windows__CMedia__CCore__CVideoTrack_t;
 #define __FIVectorView_1_Windows__CMedia__CCore__CVideoTrack ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CCore__CVideoTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CCore__CVideoTrack ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Core::IMediaTrack*>
@@ -3429,7 +3425,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -3444,8 +3440,8 @@ namespace ABI {
         namespace Media {
             struct MediaTimeRange;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CMediaTimeRange_USE
@@ -3466,7 +3462,7 @@ IIterator<struct ABI::Windows::Media::MediaTimeRange> : IIterator_impl<struct AB
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Media::MediaTimeRange> __FIIterator_1_Windows__CMedia__CMediaTimeRange_t;
 #define __FIIterator_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaTimeRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaTimeRange>
@@ -3496,7 +3492,7 @@ IIterable<struct ABI::Windows::Media::MediaTimeRange> : IIterable_impl<struct AB
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Media::MediaTimeRange> __FIIterable_1_Windows__CMedia__CMediaTimeRange_t;
 #define __FIIterable_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaTimeRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaTimeRange>
@@ -3526,7 +3522,7 @@ IVectorView<struct ABI::Windows::Media::MediaTimeRange> : IVectorView_impl<struc
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Media::MediaTimeRange> __FIVectorView_1_Windows__CMedia__CMediaTimeRange_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaTimeRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaTimeRange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaTimeRange>
@@ -3543,9 +3539,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -3554,9 +3550,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -3572,9 +3568,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3586,9 +3582,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3598,8 +3594,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -3607,8 +3603,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -3620,8 +3616,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -3636,9 +3632,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3649,8 +3645,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3658,8 +3654,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3667,16 +3663,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3684,8 +3680,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3701,10 +3697,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -3719,9 +3715,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioStateMonitor;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor_FWD_DEFINED__
@@ -3730,9 +3726,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioStateMonitor;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor ABI::Windows::Media::Audio::IAudioStateMonitor
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor_FWD_DEFINED__
@@ -3746,9 +3742,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 class CastingSource;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCasting_CICastingSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCasting_CICastingSource_FWD_DEFINED__
@@ -3757,9 +3753,9 @@ namespace ABI {
         namespace Media {
             namespace Casting {
                 interface ICastingSource;
-            } /* Windows */
+            } /* Casting */
         } /* Media */
-    } /* Casting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCasting_CICastingSource ABI::Windows::Media::Casting::ICastingSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCasting_CICastingSource_FWD_DEFINED__
@@ -3776,9 +3772,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaSource ABI::Windows::Media::Core::IMediaSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
@@ -3791,9 +3787,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface ISingleSelectMediaTrackList;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CISingleSelectMediaTrackList ABI::Windows::Media::Core::ISingleSelectMediaTrackList
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CISingleSelectMediaTrackList_FWD_DEFINED__
@@ -3804,9 +3800,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class MediaSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaSource2_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaSource2_FWD_DEFINED__
@@ -3815,9 +3811,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaSource2;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaSource2 ABI::Windows::Media::Core::IMediaSource2
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaSource2_FWD_DEFINED__
@@ -3834,8 +3830,8 @@ namespace ABI {
             
             typedef enum MediaPlaybackAutoRepeatMode : int MediaPlaybackAutoRepeatMode;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3843,8 +3839,8 @@ namespace ABI {
             
             typedef enum MediaPlaybackType : int MediaPlaybackType;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3855,9 +3851,9 @@ namespace ABI {
                 
                 typedef enum MediaRotation : int MediaRotation;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3866,9 +3862,9 @@ namespace ABI {
                 
                 typedef enum SphericalVideoFrameFormat : int SphericalVideoFrameFormat;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3877,9 +3873,9 @@ namespace ABI {
                 
                 typedef enum StereoscopicVideoPackingMode : int StereoscopicVideoPackingMode;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3890,15 +3886,15 @@ namespace ABI {
             
             typedef struct MediaTimeRange MediaTimeRange;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             class MediaTimelineController;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIMediaTimelineController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIMediaTimelineController_FWD_DEFINED__
@@ -3906,8 +3902,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaTimelineController;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaTimelineController ABI::Windows::Media::IMediaTimelineController
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaTimelineController_FWD_DEFINED__
@@ -3917,8 +3913,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class MusicDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIMusicDisplayProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIMusicDisplayProperties_FWD_DEFINED__
@@ -3926,8 +3922,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMusicDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMusicDisplayProperties ABI::Windows::Media::IMusicDisplayProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CIMusicDisplayProperties_FWD_DEFINED__
@@ -3940,9 +3936,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 class MediaProtectionManager;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
@@ -3951,9 +3947,9 @@ namespace ABI {
         namespace Media {
             namespace Protection {
                 interface IMediaProtectionManager;
-            } /* Windows */
+            } /* Protection */
         } /* Media */
-    } /* Protection */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager ABI::Windows::Media::Protection::IMediaProtectionManager
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
@@ -3966,8 +3962,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class SystemMediaTransportControls;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CISystemMediaTransportControls_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CISystemMediaTransportControls_FWD_DEFINED__
@@ -3975,8 +3971,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface ISystemMediaTransportControls;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CISystemMediaTransportControls ABI::Windows::Media::ISystemMediaTransportControls
 
 #endif // ____x_ABI_CWindows_CMedia_CISystemMediaTransportControls_FWD_DEFINED__
@@ -3986,8 +3982,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoDisplayProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoDisplayProperties_FWD_DEFINED__
@@ -3995,8 +3991,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoDisplayProperties;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoDisplayProperties ABI::Windows::Media::IVideoDisplayProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoDisplayProperties_FWD_DEFINED__
@@ -4010,8 +4006,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -4026,9 +4022,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -4039,9 +4035,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -4050,9 +4046,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -4066,9 +4062,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Compositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -4077,9 +4073,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositor ABI::Windows::UI::Composition::ICompositor
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -4092,9 +4088,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionSurface;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionSurface ABI::Windows::UI::Composition::ICompositionSurface
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionSurface_FWD_DEFINED__
@@ -4110,9 +4106,9 @@ namespace ABI {
                 
                 typedef enum AutoLoadedDisplayPropertyKind : int AutoLoadedDisplayPropertyKind;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4121,9 +4117,9 @@ namespace ABI {
                 
                 typedef enum FailedMediaStreamKind : int FailedMediaStreamKind;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4132,9 +4128,9 @@ namespace ABI {
                 
                 typedef enum MediaBreakInsertionMethod : int MediaBreakInsertionMethod;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4143,9 +4139,9 @@ namespace ABI {
                 
                 typedef enum MediaCommandEnablingRule : int MediaCommandEnablingRule;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4154,9 +4150,9 @@ namespace ABI {
                 
                 typedef enum MediaPlaybackItemChangedReason : int MediaPlaybackItemChangedReason;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4165,9 +4161,9 @@ namespace ABI {
                 
                 typedef enum MediaPlaybackItemErrorCode : int MediaPlaybackItemErrorCode;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4176,9 +4172,9 @@ namespace ABI {
                 
                 typedef enum MediaPlaybackSessionVideoConstrictionReason : int MediaPlaybackSessionVideoConstrictionReason;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4187,9 +4183,9 @@ namespace ABI {
                 
                 typedef enum MediaPlaybackState : int MediaPlaybackState;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4198,9 +4194,9 @@ namespace ABI {
                 
                 typedef enum MediaPlayerAudioCategory : int MediaPlayerAudioCategory;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4209,9 +4205,9 @@ namespace ABI {
                 
                 typedef enum MediaPlayerAudioDeviceType : int MediaPlayerAudioDeviceType;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4220,9 +4216,9 @@ namespace ABI {
                 
                 typedef enum MediaPlayerError : int MediaPlayerError;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4231,9 +4227,9 @@ namespace ABI {
                 
                 typedef enum MediaPlayerState : int MediaPlayerState;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4242,9 +4238,9 @@ namespace ABI {
                 
                 typedef enum SphericalVideoProjectionMode : int SphericalVideoProjectionMode;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4253,9 +4249,9 @@ namespace ABI {
                 
                 typedef enum StereoscopicVideoRenderMode : int StereoscopicVideoRenderMode;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4264,9 +4260,9 @@ namespace ABI {
                 
                 typedef enum TimedMetadataTrackPresentationMode : int TimedMetadataTrackPresentationMode;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4347,9 +4343,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaItemDisplayProperties;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4357,9 +4353,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackAudioTrackList;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4380,9 +4376,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackItemError;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4394,9 +4390,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackSessionBufferingStartedEventArgs;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4404,9 +4400,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackSessionOutputDegradationPolicyState;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4414,9 +4410,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackSphericalVideoProjection;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4425,9 +4421,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlaybackVideoTrackList;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4439,9 +4435,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class MediaPlayerSurface;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4451,9 +4447,9 @@ namespace ABI {
         namespace Media {
             namespace Playback {
                 class PlaybackMediaMarkerSequence;
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4488,9 +4484,9 @@ namespace ABI {
                     AutoLoadedDisplayPropertyKind_Video = 3,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -4516,9 +4512,9 @@ namespace ABI {
                     FailedMediaStreamKind_Video = 2,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4543,9 +4539,9 @@ namespace ABI {
                     MediaBreakInsertionMethod_Replace = 1,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -4571,9 +4567,9 @@ namespace ABI {
                     MediaCommandEnablingRule_Never = 2,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -4600,9 +4596,9 @@ namespace ABI {
                     MediaPlaybackItemChangedReason_AppRequested = 3,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -4631,9 +4627,9 @@ namespace ABI {
                     MediaPlaybackItemErrorCode_EncryptionError = 5,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4663,9 +4659,9 @@ namespace ABI {
                     MediaPlaybackSessionVideoConstrictionReason_Unknown = 6,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -4693,9 +4689,9 @@ namespace ABI {
                     MediaPlaybackState_Paused = 4,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -4728,9 +4724,9 @@ namespace ABI {
                     MediaPlayerAudioCategory_Media = 11,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4756,9 +4752,9 @@ namespace ABI {
                     MediaPlayerAudioDeviceType_Communications = 2,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4786,9 +4782,9 @@ namespace ABI {
                     MediaPlayerError_SourceNotSupported = 4,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4821,9 +4817,9 @@ namespace ABI {
                     MediaPlayerState_Stopped = 5,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4848,9 +4844,9 @@ namespace ABI {
                     SphericalVideoProjectionMode_Flat = 1,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -4875,9 +4871,9 @@ namespace ABI {
                     StereoscopicVideoRenderMode_Stereo = 1,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -4904,9 +4900,9 @@ namespace ABI {
                     TimedMetadataTrackPresentationMode_PlatformPresented = 3,
                 };
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4994,7 +4990,7 @@ namespace ABI {
                     DEPRECATED("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE IsMediaPlaying(
-                        /* [retval, out] */__RPC__out boolean * isMediaPlaying
+                        /* [retval, out] */__RPC__out ::boolean * isMediaPlaying
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5006,9 +5002,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundMediaPlayerStatics=_uuidof(IBackgroundMediaPlayerStatics);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIBackgroundMediaPlayerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIBackgroundMediaPlayerStatics_INTERFACE_DEFINED__) */
@@ -5050,9 +5046,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICurrentMediaPlaybackItemChangedEventArgs=_uuidof(ICurrentMediaPlaybackItemChangedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5095,9 +5091,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICurrentMediaPlaybackItemChangedEventArgs2=_uuidof(ICurrentMediaPlaybackItemChangedEventArgs2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs2_INTERFACE_DEFINED__) */
@@ -5141,19 +5137,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanStart(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanStart(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreak=_uuidof(IMediaBreak);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreak;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreak_INTERFACE_DEFINED__) */
@@ -5192,9 +5188,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreakEndedEventArgs=_uuidof(IMediaBreakEndedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakEndedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakEndedEventArgs_INTERFACE_DEFINED__) */
@@ -5239,9 +5235,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreakFactory=_uuidof(IMediaBreakFactory);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakFactory_INTERFACE_DEFINED__) */
@@ -5315,9 +5311,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreakManager=_uuidof(IMediaBreakManager);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager_INTERFACE_DEFINED__) */
@@ -5384,9 +5380,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreakSchedule=_uuidof(IMediaBreakSchedule);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSchedule;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSchedule_INTERFACE_DEFINED__) */
@@ -5431,9 +5427,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreakSeekedOverEventArgs=_uuidof(IMediaBreakSeekedOverEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSeekedOverEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSeekedOverEventArgs_INTERFACE_DEFINED__) */
@@ -5472,9 +5468,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreakSkippedEventArgs=_uuidof(IMediaBreakSkippedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSkippedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSkippedEventArgs_INTERFACE_DEFINED__) */
@@ -5513,9 +5509,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaBreakStartedEventArgs=_uuidof(IMediaBreakStartedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakStartedEventArgs_INTERFACE_DEFINED__) */
@@ -5566,9 +5562,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaEnginePlaybackSource=_uuidof(IMediaEnginePlaybackSource);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaEnginePlaybackSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaEnginePlaybackSource_INTERFACE_DEFINED__) */
@@ -5623,9 +5619,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaItemDisplayProperties=_uuidof(IMediaItemDisplayProperties);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaItemDisplayProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaItemDisplayProperties_INTERFACE_DEFINED__) */
@@ -5657,10 +5653,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaPlayer(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Playback::IMediaPlayer * * value
@@ -5770,9 +5766,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManager=_uuidof(IMediaPlaybackCommandManager);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager_INTERFACE_DEFINED__) */
@@ -5804,10 +5800,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoRepeatMode(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::MediaPlaybackAutoRepeatMode * value
@@ -5820,9 +5816,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -5857,7 +5853,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Playback::IMediaPlaybackCommandManager * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnablingRule(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Playback::MediaCommandEnablingRule * value
@@ -5877,9 +5873,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerCommandBehavior=_uuidof(IMediaPlaybackCommandManagerCommandBehavior);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerCommandBehavior;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerCommandBehavior_INTERFACE_DEFINED__) */
@@ -5911,10 +5907,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -5924,9 +5920,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerFastForwardReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerFastForwardReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerFastForwardReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerFastForwardReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -5958,10 +5954,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -5971,9 +5967,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerNextReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerNextReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerNextReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerNextReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6005,10 +6001,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -6018,9 +6014,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerPauseReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerPauseReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPauseReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPauseReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6052,10 +6048,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -6065,9 +6061,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerPlayReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerPlayReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPlayReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPlayReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6099,10 +6095,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Position(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
@@ -6115,9 +6111,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerPositionReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerPositionReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPositionReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPositionReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6149,10 +6145,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -6162,9 +6158,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerPreviousReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerPreviousReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPreviousReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPreviousReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6196,10 +6192,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PlaybackRate(
                         /* [retval, out] */__RPC__out DOUBLE * value
@@ -6212,9 +6208,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerRateReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerRateReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRateReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRateReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6246,10 +6242,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -6259,9 +6255,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerRewindReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerRewindReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRewindReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRewindReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6293,13 +6289,13 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsShuffleRequested(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
@@ -6309,9 +6305,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackCommandManagerShuffleReceivedEventArgs=_uuidof(IMediaPlaybackCommandManagerShuffleReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerShuffleReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerShuffleReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6384,9 +6380,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItem=_uuidof(IMediaPlaybackItem);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_INTERFACE_DEFINED__) */
@@ -6432,10 +6428,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CTimeSpan * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanSkip(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanSkip(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDisplayProperties(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Playback::IMediaItemDisplayProperties * * value
@@ -6448,9 +6444,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItem2=_uuidof(IMediaPlaybackItem2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem2_INTERFACE_DEFINED__) */
@@ -6488,10 +6484,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledInPlaybackList(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDisabledInPlaybackList(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TotalDownloadProgress(
                         /* [retval, out] */__RPC__out DOUBLE * value
@@ -6507,9 +6503,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItem3=_uuidof(IMediaPlaybackItem3);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem3_INTERFACE_DEFINED__) */
@@ -6551,9 +6547,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItemError=_uuidof(IMediaPlaybackItemError);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemError;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemError_INTERFACE_DEFINED__) */
@@ -6593,9 +6589,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItemFactory=_uuidof(IMediaPlaybackItemFactory);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory_INTERFACE_DEFINED__) */
@@ -6646,9 +6642,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItemFactory2=_uuidof(IMediaPlaybackItemFactory2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFactory2_INTERFACE_DEFINED__) */
@@ -6690,9 +6686,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItemFailedEventArgs=_uuidof(IMediaPlaybackItemFailedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFailedEventArgs_INTERFACE_DEFINED__) */
@@ -6731,9 +6727,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItemOpenedEventArgs=_uuidof(IMediaPlaybackItemOpenedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemOpenedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemOpenedEventArgs_INTERFACE_DEFINED__) */
@@ -6773,9 +6769,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackItemStatics=_uuidof(IMediaPlaybackItemStatics);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemStatics_INTERFACE_DEFINED__) */
@@ -6835,16 +6831,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIObservableVector_1_Windows__CMedia__CPlayback__CMediaPlaybackItem * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoRepeatEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoRepeatEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShuffleEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShuffleEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentItem(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Playback::IMediaPlaybackItem * * value
@@ -6867,9 +6863,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackList=_uuidof(IMediaPlaybackList);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList_INTERFACE_DEFINED__) */
@@ -6928,9 +6924,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackList2=_uuidof(IMediaPlaybackList2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList2_INTERFACE_DEFINED__) */
@@ -6978,9 +6974,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackList3=_uuidof(IMediaPlaybackList3);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList3_INTERFACE_DEFINED__) */
@@ -7097,13 +7093,13 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Playback::MediaPlaybackState * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanSeek(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanPause(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsProtected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PlaybackRate(
                         /* [retval, out] */__RPC__out DOUBLE * value
@@ -7140,9 +7136,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackSession=_uuidof(IMediaPlaybackSession);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession_INTERFACE_DEFINED__) */
@@ -7205,10 +7201,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Playback::IMediaPlaybackSphericalVideoProjection * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMirroring(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsMirroring(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetBufferedRanges(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CMediaTimeRange * * value
@@ -7222,16 +7218,16 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE IsSupportedPlaybackRateRange(
                         /* [in] */DOUBLE rate1,
                         /* [in] */DOUBLE rate2,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackSession2=_uuidof(IMediaPlaybackSession2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession2_INTERFACE_DEFINED__) */
@@ -7276,9 +7272,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackSession3=_uuidof(IMediaPlaybackSession3);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession3_INTERFACE_DEFINED__) */
@@ -7310,16 +7306,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlaybackInterruption(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackSessionBufferingStartedEventArgs=_uuidof(IMediaPlaybackSessionBufferingStartedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionBufferingStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionBufferingStartedEventArgs_INTERFACE_DEFINED__) */
@@ -7358,9 +7354,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackSessionOutputDegradationPolicyState=_uuidof(IMediaPlaybackSessionOutputDegradationPolicyState);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionOutputDegradationPolicyState;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSessionOutputDegradationPolicyState_INTERFACE_DEFINED__) */
@@ -7393,9 +7389,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackSource=_uuidof(IMediaPlaybackSource);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSource_INTERFACE_DEFINED__) */
@@ -7427,10 +7423,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FrameFormat(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::MediaProperties::SphericalVideoFrameFormat * value
@@ -7461,9 +7457,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackSphericalVideoProjection=_uuidof(IMediaPlaybackSphericalVideoProjection);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSphericalVideoProjection;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSphericalVideoProjection_INTERFACE_DEFINED__) */
@@ -7514,9 +7510,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlaybackTimedMetadataTrackList=_uuidof(IMediaPlaybackTimedMetadataTrackList);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackTimedMetadataTrackList;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackTimedMetadataTrackList_INTERFACE_DEFINED__) */
@@ -7548,10 +7544,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoPlay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoPlay(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -7593,33 +7589,33 @@ namespace ABI {
                     DEPRECATED("Use PlaybackSession.CanSeek instead of CanSeek.  For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_CanSeek(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                     DEPRECATED("Use PlaybackSession.CanPause instead of CanPause.  For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_CanPause(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLoopingEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsLoopingEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                     DEPRECATED("Use PlaybackSession.IsProtected instead of IsProtected.  For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsProtected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMuted(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsMuted(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -7780,9 +7776,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayer=_uuidof(IMediaPlayer);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer_INTERFACE_DEFINED__) */
@@ -7833,9 +7829,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayer2=_uuidof(IMediaPlayer2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer2_INTERFACE_DEFINED__) */
@@ -7887,10 +7883,10 @@ namespace ABI {
                         /* [in] */DOUBLE value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RealTimePlayback(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RealTimePlayback(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StereoscopicVideoRenderMode(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Playback::StereoscopicVideoRenderMode * value
@@ -7935,9 +7931,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayer3=_uuidof(IMediaPlayer3);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer3_INTERFACE_DEFINED__) */
@@ -7980,9 +7976,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayer4=_uuidof(IMediaPlayer4);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer4;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer4_INTERFACE_DEFINED__) */
@@ -8021,10 +8017,10 @@ namespace ABI {
                         /* [in] */EventRegistrationToken token
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVideoFrameServerEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsVideoFrameServerEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE CopyFrameToVideoSurface(
                         /* [in] */__RPC__in_opt ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface * destination
@@ -8042,9 +8038,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayer5=_uuidof(IMediaPlayer5);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer5;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer5_INTERFACE_DEFINED__) */
@@ -8084,21 +8080,21 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE RenderSubtitlesToSurface(
                         /* [in] */__RPC__in_opt ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface * destination,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE RenderSubtitlesToSurfaceWithTargetRectangle(
                         /* [in] */__RPC__in_opt ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface * destination,
                         /* [in] */ABI::Windows::Foundation::Rect targetRectangle,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayer6=_uuidof(IMediaPlayer6);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer6;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer6_INTERFACE_DEFINED__) */
@@ -8137,9 +8133,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayer7=_uuidof(IMediaPlayer7);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer7;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer7_INTERFACE_DEFINED__) */
@@ -8178,9 +8174,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerDataReceivedEventArgs=_uuidof(IMediaPlayerDataReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerDataReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerDataReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -8213,7 +8209,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE AddAudioEffect(
                         /* [in] */__RPC__in HSTRING activatableClassId,
-                        /* [in] */boolean effectOptional,
+                        /* [in] */::boolean effectOptional,
                         /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * configuration
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE RemoveAllEffects(void) = 0;
@@ -8222,9 +8218,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerEffects=_uuidof(IMediaPlayerEffects);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects_INTERFACE_DEFINED__) */
@@ -8257,7 +8253,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE AddVideoEffect(
                         /* [in] */__RPC__in HSTRING activatableClassId,
-                        /* [in] */boolean effectOptional,
+                        /* [in] */::boolean effectOptional,
                         /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * effectConfiguration
                         ) = 0;
                     
@@ -8265,9 +8261,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerEffects2=_uuidof(IMediaPlayerEffects2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerEffects2_INTERFACE_DEFINED__) */
@@ -8312,9 +8308,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerFailedEventArgs=_uuidof(IMediaPlayerFailedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerFailedEventArgs_INTERFACE_DEFINED__) */
@@ -8353,9 +8349,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerRateChangedEventArgs=_uuidof(IMediaPlayerRateChangedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerRateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerRateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -8418,9 +8414,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerSource=_uuidof(IMediaPlayerSource);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource_INTERFACE_DEFINED__) */
@@ -8462,9 +8458,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerSource2=_uuidof(IMediaPlayerSource2);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSource2_INTERFACE_DEFINED__) */
@@ -8509,9 +8505,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaPlayerSurface=_uuidof(IMediaPlayerSurface);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSurface;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerSurface_INTERFACE_DEFINED__) */
@@ -8556,9 +8552,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaybackMediaMarker=_uuidof(IPlaybackMediaMarker);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarker;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarker_INTERFACE_DEFINED__) */
@@ -8604,9 +8600,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaybackMediaMarkerFactory=_uuidof(IPlaybackMediaMarkerFactory);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerFactory_INTERFACE_DEFINED__) */
@@ -8645,9 +8641,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaybackMediaMarkerReachedEventArgs=_uuidof(IPlaybackMediaMarkerReachedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerReachedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerReachedEventArgs_INTERFACE_DEFINED__) */
@@ -8694,9 +8690,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaybackMediaMarkerSequence=_uuidof(IPlaybackMediaMarkerSequence);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerSequence;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerSequence_INTERFACE_DEFINED__) */
@@ -8741,9 +8737,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITimedMetadataPresentationModeChangedEventArgs=_uuidof(ITimedMetadataPresentationModeChangedEventArgs);
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CPlayback_CITimedMetadataPresentationModeChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CPlayback_CITimedMetadataPresentationModeChangedEventArgs_INTERFACE_DEFINED__) */
@@ -11228,7 +11224,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakMa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakEndedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakEndedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakEndedEventArgsVtbl;
 
@@ -11281,7 +11277,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakMa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSeekedOverEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSeekedOverEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSeekedOverEventArgsVtbl;
 
@@ -11334,7 +11330,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakMa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSkippedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSkippedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakSkippedEventArgsVtbl;
 
@@ -11387,7 +11383,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakMa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakManager_Windows__CMedia__CPlayback__CMediaBreakStartedEventArgsVtbl;
 
@@ -11439,7 +11435,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSc
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSchedule * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaBreakSchedule * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaBreakSchedule_IInspectableVtbl;
 
@@ -11491,7 +11487,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgsVtbl;
 
@@ -11544,7 +11540,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerFastForwardReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerFastForwardReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerFastForwardReceivedEventArgsVtbl;
 
@@ -11597,7 +11593,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerNextReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerNextReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerNextReceivedEventArgsVtbl;
 
@@ -11650,7 +11646,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPauseReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPauseReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPauseReceivedEventArgsVtbl;
 
@@ -11703,7 +11699,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPlayReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPlayReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPlayReceivedEventArgsVtbl;
 
@@ -11756,7 +11752,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPositionReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPositionReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPositionReceivedEventArgsVtbl;
 
@@ -11809,7 +11805,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPreviousReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerPreviousReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerPreviousReceivedEventArgsVtbl;
 
@@ -11862,7 +11858,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRateReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRateReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRateReceivedEventArgsVtbl;
 
@@ -11915,7 +11911,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRewindReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerRewindReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerRewindReceivedEventArgsVtbl;
 
@@ -11968,7 +11964,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerShuffleReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerShuffleReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManager_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerShuffleReceivedEventArgsVtbl;
 
@@ -12020,7 +12016,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerCommandBehavior * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackCommandManagerCommandBehavior * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackCommandManagerCommandBehavior_IInspectableVtbl;
 
@@ -12072,7 +12068,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CICurrentMediaPlaybackItemChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CCurrentMediaPlaybackItemChangedEventArgsVtbl;
 
@@ -12125,7 +12121,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFailedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemFailedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemFailedEventArgsVtbl;
 
@@ -12178,7 +12174,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemOpenedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItemOpenedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackList_Windows__CMedia__CPlayback__CMediaPlaybackItemOpenedEventArgsVtbl;
 
@@ -12230,7 +12226,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackSession * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackSession_IInspectableVtbl;
 
@@ -12561,7 +12557,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs * This,/* [in] */ __RPC__in_opt __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataTrack * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CITimedMetadataPresentationModeChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgs * This,/* [in] */ __RPC__in_opt __FIVectorView_1_Windows__CMedia__CCore__CTimedMetadataTrack * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CITimedMetadataPresentationModeChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackTimedMetadataTrackList_Windows__CMedia__CPlayback__CTimedMetadataPresentationModeChangedEventArgsVtbl;
 
@@ -12613,7 +12609,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_IInspectableVtbl;
 
@@ -12665,7 +12661,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerFailedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerFailedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerFailedEventArgsVtbl;
 
@@ -12718,7 +12714,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerRateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayerRateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CMediaPlayerRateChangedEventArgsVtbl;
 
@@ -12771,7 +12767,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerReachedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIPlaybackMediaMarkerReachedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlayer_Windows__CMedia__CPlayback__CPlaybackMediaMarkerReachedEventArgsVtbl;
 
@@ -13454,7 +13450,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybac
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CPlayback__CMediaPlaybackItem___F__CIVectorChangedEventArgsVtbl;
 
@@ -14061,7 +14057,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

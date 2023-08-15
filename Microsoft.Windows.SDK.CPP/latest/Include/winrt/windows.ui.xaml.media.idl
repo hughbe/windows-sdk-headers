@@ -169,7 +169,11 @@ namespace Windows
 
             runtimeclass UIElement;
 
+            runtimeclass UIElementWeakCollection;
+
             runtimeclass Window;
+
+            runtimeclass XamlRoot;
         }
     }
 }
@@ -233,9 +237,13 @@ namespace Windows
 
                 interface IAcrylicBrush;
 
+                interface IAcrylicBrush2;
+
                 interface IAcrylicBrushFactory;
 
                 interface IAcrylicBrushStatics;
+
+                interface IAcrylicBrushStatics2;
 
                 interface IArcSegment;
 
@@ -419,6 +427,10 @@ namespace Windows
 
                 interface IScaleTransformStatics;
 
+                interface IShadow;
+
+                interface IShadowFactory;
+
                 interface ISkewTransform;
 
                 interface ISkewTransformStatics;
@@ -428,6 +440,10 @@ namespace Windows
                 interface ISolidColorBrushFactory;
 
                 interface ISolidColorBrushStatics;
+
+                interface IThemeShadow;
+
+                interface IThemeShadowFactory;
 
                 interface ITileBrush;
 
@@ -458,6 +474,8 @@ namespace Windows
                 interface IVisualTreeHelperStatics;
 
                 interface IVisualTreeHelperStatics2;
+
+                interface IVisualTreeHelperStatics3;
 
                 interface IXamlCompositionBrushBase;
 
@@ -583,9 +601,13 @@ namespace Windows
 
                 runtimeclass ScaleTransform;
 
+                runtimeclass Shadow;
+
                 runtimeclass SkewTransform;
 
                 runtimeclass SolidColorBrush;
+
+                runtimeclass ThemeShadow;
 
                 runtimeclass TileBrush;
 
@@ -940,6 +962,15 @@ namespace Windows
                     [propput] HRESULT AlwaysUseFallback([in] boolean value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Media.AcrylicBrush)]
+                [uuid(C9645383-B19E-5AC0-86FF-3D90506DBCDA)]
+                interface IAcrylicBrush2 : IInspectable
+                {
+                    [propget] HRESULT TintLuminosityOpacity([out] [retval] Windows.Foundation.IReference<DOUBLE>** value);
+                    [propput] HRESULT TintLuminosityOpacity([in] Windows.Foundation.IReference<DOUBLE>* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)]
                 [exclusiveto(Windows.UI.Xaml.Media.AcrylicBrush)]
                 [uuid(81A32568-F6CC-4013-8363-928AE23B7A61)]
@@ -958,6 +989,14 @@ namespace Windows
                     [propget] HRESULT TintOpacityProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT TintTransitionDurationProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT AlwaysUseFallbackProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Media.AcrylicBrush)]
+                [uuid(129188A8-BF11-5BBC-8445-8C510E5926C0)]
+                interface IAcrylicBrushStatics2 : IInspectable
+                {
+                    [propget] HRESULT TintLuminosityOpacityProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1877,6 +1916,20 @@ namespace Windows
                     [propget] HRESULT ScaleYProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Media.Shadow)]
+                [uuid(6813A583-F3B4-5FCF-8694-2CD0AEFC2FAD)]
+                interface IShadow : IInspectable
+                {
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Media.Shadow)]
+                [uuid(19899F25-D28B-51E6-94B0-D7E709686305)]
+                interface IShadowFactory : IInspectable
+                {
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Xaml.Media.SkewTransform)]
                 [uuid(4E8A3B15-7A0F-4617-9E98-1E65BDC92115)]
@@ -1926,6 +1979,22 @@ namespace Windows
                 interface ISolidColorBrushStatics : IInspectable
                 {
                     [propget] HRESULT ColorProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Media.ThemeShadow)]
+                [uuid(3ECCAD09-7985-5F39-8B62-6C10696DCA6F)]
+                interface IThemeShadow : IInspectable
+                {
+                    [propget] HRESULT Receivers([out] [retval] Windows.UI.Xaml.UIElementWeakCollection** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Media.ThemeShadow)]
+                [uuid(2E71465D-0F67-590E-831B-7E5E2A32B778)]
+                interface IThemeShadowFactory : IInspectable
+                {
+                    HRESULT CreateInstance([in] IInspectable* baseInterface, [out] IInspectable** innerInterface, [out] [retval] Windows.UI.Xaml.Media.ThemeShadow** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2073,6 +2142,14 @@ namespace Windows
                     HRESULT GetOpenPopups([in] Windows.UI.Xaml.Window* window, [out] [retval] Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Primitives.Popup*>** result);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Xaml.Media.VisualTreeHelper)]
+                [uuid(40420D50-CA16-57DA-8AAC-944C8AF577FD)]
+                interface IVisualTreeHelperStatics3 : IInspectable
+                {
+                    HRESULT GetOpenPopupsForXamlRoot([in] Windows.UI.Xaml.XamlRoot* xamlRoot, [out] [retval] Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Primitives.Popup*>** result);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
                 [exclusiveto(Windows.UI.Xaml.Media.XamlCompositionBrushBase)]
                 [uuid(03E432D9-B35C-4A79-811C-C5652004DA0E)]
@@ -2165,10 +2242,12 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Xaml.Media.IAcrylicBrushStatics, Windows.Foundation.UniversalApiContract, 5.0)]
+                [static(Windows.UI.Xaml.Media.IAcrylicBrushStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass AcrylicBrush : Windows.UI.Xaml.Media.XamlCompositionBrushBase
                 {
                     [default] interface Windows.UI.Xaml.Media.IAcrylicBrush;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Media.IAcrylicBrush2;
                 }
 
                 [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2664,6 +2743,15 @@ namespace Windows
                     [default] interface Windows.UI.Xaml.Media.IScaleTransform;
                 }
 
+                [composable(Windows.UI.Xaml.Media.IShadowFactory, public, Windows.Foundation.UniversalApiContract, 8.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [marshaling_behavior(agile)]
+                [threading(both)]
+                runtimeclass Shadow : Windows.UI.Xaml.DependencyObject
+                {
+                    [default] interface Windows.UI.Xaml.Media.IShadow;
+                }
+
                 [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [marshaling_behavior(agile)]
@@ -2683,6 +2771,15 @@ namespace Windows
                 runtimeclass SolidColorBrush : Windows.UI.Xaml.Media.Brush
                 {
                     [default] interface Windows.UI.Xaml.Media.ISolidColorBrush;
+                }
+
+                [composable(Windows.UI.Xaml.Media.IThemeShadowFactory, public, Windows.Foundation.UniversalApiContract, 8.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [marshaling_behavior(agile)]
+                [threading(both)]
+                runtimeclass ThemeShadow : Windows.UI.Xaml.Media.Shadow
+                {
+                    [default] interface Windows.UI.Xaml.Media.IThemeShadow;
                 }
 
                 [composable(Windows.UI.Xaml.Media.ITileBrushFactory, protected, Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2767,6 +2864,7 @@ namespace Windows
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Xaml.Media.IVisualTreeHelperStatics, Windows.Foundation.UniversalApiContract, 1.0)]
                 [static(Windows.UI.Xaml.Media.IVisualTreeHelperStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
+                [static(Windows.UI.Xaml.Media.IVisualTreeHelperStatics3, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass VisualTreeHelper
                 {

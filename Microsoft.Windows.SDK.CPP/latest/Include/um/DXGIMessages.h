@@ -341,6 +341,7 @@ typedef enum
     DXGI_MSG_Phone_IDXGISwapChain_Present1_RequiresOverlays,
     DXGI_MSG_Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired,
     DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired,
+    DXGI_MSG_IDXGISwapChain_Present_11On12_Released_Resource,
 
 } DXGI_Message_Id;
 

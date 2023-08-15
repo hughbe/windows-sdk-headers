@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.vpn.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnAppId;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnAppId ABI::Windows::Networking::Vpn::IVpnAppId
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnAppId_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnAppIdFactory;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnAppIdFactory ABI::Windows::Networking::Vpn::IVpnAppIdFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnAppIdFactory_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannel;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel ABI::Windows::Networking::Vpn::IVpnChannel
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannel2;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel2 ABI::Windows::Networking::Vpn::IVpnChannel2
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel2_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannel4;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4 ABI::Windows::Networking::Vpn::IVpnChannel4
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannelActivityEventArgs;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs ABI::Windows::Networking::Vpn::IVpnChannelActivityEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannelActivityStateChangedArgs;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityStateChangedArgs ABI::Windows::Networking::Vpn::IVpnChannelActivityStateChangedArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityStateChangedArgs_FWD_DEFINED__
@@ -379,9 +375,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannelConfiguration;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration ABI::Windows::Networking::Vpn::IVpnChannelConfiguration
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration_FWD_DEFINED__
@@ -393,9 +389,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannelConfiguration2;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration2 ABI::Windows::Networking::Vpn::IVpnChannelConfiguration2
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration2_FWD_DEFINED__
@@ -407,9 +403,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnChannelStatics;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelStatics ABI::Windows::Networking::Vpn::IVpnChannelStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelStatics_FWD_DEFINED__
@@ -421,9 +417,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCredential;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCredential ABI::Windows::Networking::Vpn::IVpnCredential
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCredential_FWD_DEFINED__
@@ -435,9 +431,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomCheckBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomCheckBox ABI::Windows::Networking::Vpn::IVpnCustomCheckBox
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomCheckBox_FWD_DEFINED__
@@ -449,9 +445,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomComboBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomComboBox ABI::Windows::Networking::Vpn::IVpnCustomComboBox
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomComboBox_FWD_DEFINED__
@@ -463,9 +459,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomEditBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomEditBox ABI::Windows::Networking::Vpn::IVpnCustomEditBox
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomEditBox_FWD_DEFINED__
@@ -477,9 +473,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomErrorBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomErrorBox ABI::Windows::Networking::Vpn::IVpnCustomErrorBox
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomErrorBox_FWD_DEFINED__
@@ -491,9 +487,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomPrompt;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPrompt ABI::Windows::Networking::Vpn::IVpnCustomPrompt
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPrompt_FWD_DEFINED__
@@ -505,9 +501,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomPromptBooleanInput;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptBooleanInput ABI::Windows::Networking::Vpn::IVpnCustomPromptBooleanInput
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptBooleanInput_FWD_DEFINED__
@@ -519,9 +515,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomPromptElement;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptElement ABI::Windows::Networking::Vpn::IVpnCustomPromptElement
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptElement_FWD_DEFINED__
@@ -533,9 +529,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomPromptOptionSelector;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptOptionSelector ABI::Windows::Networking::Vpn::IVpnCustomPromptOptionSelector
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptOptionSelector_FWD_DEFINED__
@@ -547,9 +543,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomPromptText;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptText ABI::Windows::Networking::Vpn::IVpnCustomPromptText
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptText_FWD_DEFINED__
@@ -561,9 +557,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomPromptTextInput;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptTextInput ABI::Windows::Networking::Vpn::IVpnCustomPromptTextInput
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptTextInput_FWD_DEFINED__
@@ -575,9 +571,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnCustomTextBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomTextBox ABI::Windows::Networking::Vpn::IVpnCustomTextBox
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomTextBox_FWD_DEFINED__
@@ -589,9 +585,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnDomainNameAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameAssignment ABI::Windows::Networking::Vpn::IVpnDomainNameAssignment
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameAssignment_FWD_DEFINED__
@@ -603,9 +599,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnDomainNameInfo;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo ABI::Windows::Networking::Vpn::IVpnDomainNameInfo
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo_FWD_DEFINED__
@@ -617,9 +613,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnDomainNameInfo2;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo2 ABI::Windows::Networking::Vpn::IVpnDomainNameInfo2
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo2_FWD_DEFINED__
@@ -631,9 +627,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnDomainNameInfoFactory;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfoFactory ABI::Windows::Networking::Vpn::IVpnDomainNameInfoFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfoFactory_FWD_DEFINED__
@@ -645,9 +641,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnInterfaceId;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceId ABI::Windows::Networking::Vpn::IVpnInterfaceId
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceId_FWD_DEFINED__
@@ -659,9 +655,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnInterfaceIdFactory;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceIdFactory ABI::Windows::Networking::Vpn::IVpnInterfaceIdFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceIdFactory_FWD_DEFINED__
@@ -673,9 +669,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnManagementAgent;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnManagementAgent ABI::Windows::Networking::Vpn::IVpnManagementAgent
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnManagementAgent_FWD_DEFINED__
@@ -687,9 +683,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnNamespaceAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceAssignment ABI::Windows::Networking::Vpn::IVpnNamespaceAssignment
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceAssignment_FWD_DEFINED__
@@ -701,9 +697,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnNamespaceInfo;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfo ABI::Windows::Networking::Vpn::IVpnNamespaceInfo
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfo_FWD_DEFINED__
@@ -715,9 +711,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnNamespaceInfoFactory;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfoFactory ABI::Windows::Networking::Vpn::IVpnNamespaceInfoFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfoFactory_FWD_DEFINED__
@@ -729,9 +725,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnNativeProfile;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile ABI::Windows::Networking::Vpn::IVpnNativeProfile
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile_FWD_DEFINED__
@@ -743,9 +739,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnNativeProfile2;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile2 ABI::Windows::Networking::Vpn::IVpnNativeProfile2
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile2_FWD_DEFINED__
@@ -757,9 +753,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPacketBuffer;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer ABI::Windows::Networking::Vpn::IVpnPacketBuffer
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer_FWD_DEFINED__
@@ -771,9 +767,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPacketBuffer2;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer2 ABI::Windows::Networking::Vpn::IVpnPacketBuffer2
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer2_FWD_DEFINED__
@@ -785,9 +781,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPacketBuffer3;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer3 ABI::Windows::Networking::Vpn::IVpnPacketBuffer3
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer3_FWD_DEFINED__
@@ -799,9 +795,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPacketBufferFactory;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferFactory ABI::Windows::Networking::Vpn::IVpnPacketBufferFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferFactory_FWD_DEFINED__
@@ -813,9 +809,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPacketBufferList;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList ABI::Windows::Networking::Vpn::IVpnPacketBufferList
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList_FWD_DEFINED__
@@ -827,9 +823,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPacketBufferList2;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList2 ABI::Windows::Networking::Vpn::IVpnPacketBufferList2
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList2_FWD_DEFINED__
@@ -841,9 +837,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPickedCredential;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPickedCredential ABI::Windows::Networking::Vpn::IVpnPickedCredential
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPickedCredential_FWD_DEFINED__
@@ -855,9 +851,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPlugIn;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugIn ABI::Windows::Networking::Vpn::IVpnPlugIn
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugIn_FWD_DEFINED__
@@ -869,9 +865,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPlugInProfile;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile ABI::Windows::Networking::Vpn::IVpnPlugInProfile
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile_FWD_DEFINED__
@@ -883,9 +879,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnPlugInProfile2;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2 ABI::Windows::Networking::Vpn::IVpnPlugInProfile2
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2_FWD_DEFINED__
@@ -897,9 +893,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnProfile;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile ABI::Windows::Networking::Vpn::IVpnProfile
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile_FWD_DEFINED__
@@ -911,9 +907,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnRoute;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnRoute ABI::Windows::Networking::Vpn::IVpnRoute
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnRoute_FWD_DEFINED__
@@ -925,9 +921,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnRouteAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteAssignment ABI::Windows::Networking::Vpn::IVpnRouteAssignment
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteAssignment_FWD_DEFINED__
@@ -939,9 +935,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnRouteFactory;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteFactory ABI::Windows::Networking::Vpn::IVpnRouteFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteFactory_FWD_DEFINED__
@@ -953,9 +949,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnSystemHealth;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnSystemHealth ABI::Windows::Networking::Vpn::IVpnSystemHealth
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnSystemHealth_FWD_DEFINED__
@@ -967,9 +963,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnTrafficFilter;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilter ABI::Windows::Networking::Vpn::IVpnTrafficFilter
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilter_FWD_DEFINED__
@@ -981,9 +977,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnTrafficFilterAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterAssignment ABI::Windows::Networking::Vpn::IVpnTrafficFilterAssignment
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterAssignment_FWD_DEFINED__
@@ -995,9 +991,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 interface IVpnTrafficFilterFactory;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterFactory ABI::Windows::Networking::Vpn::IVpnTrafficFilterFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterFactory_FWD_DEFINED__
@@ -1026,7 +1022,7 @@ IIterator<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*> __FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*>
@@ -1058,7 +1054,7 @@ IIterable<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*> __FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*>
@@ -1090,7 +1086,7 @@ IIterator<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*> __FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*>
@@ -1122,7 +1118,7 @@ IIterable<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*> __FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*>
@@ -1154,7 +1150,7 @@ IIterator<ABI::Windows::Networking::Vpn::IVpnProfile*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::IVpnProfile*> __FIIterator_1_Windows__CNetworking__CVpn__CIVpnProfile_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CIVpnProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnProfile*>
@@ -1186,7 +1182,7 @@ IIterable<ABI::Windows::Networking::Vpn::IVpnProfile*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::IVpnProfile*> __FIIterable_1_Windows__CNetworking__CVpn__CIVpnProfile_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CIVpnProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnProfile*>
@@ -1202,9 +1198,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnAppId;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1227,7 +1223,7 @@ IIterator<ABI::Windows::Networking::Vpn::VpnAppId*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::VpnAppId*> __FIIterator_1_Windows__CNetworking__CVpn__CVpnAppId_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CVpnAppId_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnAppId*>
@@ -1259,7 +1255,7 @@ IIterable<ABI::Windows::Networking::Vpn::VpnAppId*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::VpnAppId*> __FIIterable_1_Windows__CNetworking__CVpn__CVpnAppId_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CVpnAppId_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnAppId*>
@@ -1275,9 +1271,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnDomainNameInfo;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1300,7 +1296,7 @@ IIterator<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> __FIIterator_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnDomainNameInfo*>
@@ -1332,7 +1328,7 @@ IIterable<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> __FIIterable_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnDomainNameInfo*>
@@ -1348,9 +1344,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnNamespaceInfo;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1373,7 +1369,7 @@ IIterator<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> __FIIterator_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnNamespaceInfo*>
@@ -1405,7 +1401,7 @@ IIterable<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> __FIIterable_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnNamespaceInfo*>
@@ -1421,9 +1417,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnPacketBuffer;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1446,7 +1442,7 @@ IIterator<ABI::Windows::Networking::Vpn::VpnPacketBuffer*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::VpnPacketBuffer*> __FIIterator_1_Windows__CNetworking__CVpn__CVpnPacketBuffer_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CVpnPacketBuffer ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CVpnPacketBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CVpnPacketBuffer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnPacketBuffer*>
@@ -1478,7 +1474,7 @@ IIterable<ABI::Windows::Networking::Vpn::VpnPacketBuffer*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::VpnPacketBuffer*> __FIIterable_1_Windows__CNetworking__CVpn__CVpnPacketBuffer_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CVpnPacketBuffer ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CVpnPacketBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CVpnPacketBuffer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnPacketBuffer*>
@@ -1494,9 +1490,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnRoute;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1519,7 +1515,7 @@ IIterator<ABI::Windows::Networking::Vpn::VpnRoute*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::VpnRoute*> __FIIterator_1_Windows__CNetworking__CVpn__CVpnRoute_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CVpnRoute_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnRoute*>
@@ -1551,7 +1547,7 @@ IIterable<ABI::Windows::Networking::Vpn::VpnRoute*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::VpnRoute*> __FIIterable_1_Windows__CNetworking__CVpn__CVpnRoute_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CVpnRoute_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnRoute*>
@@ -1567,9 +1563,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnTrafficFilter;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1592,7 +1588,7 @@ IIterator<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> __FIIterator_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t;
 #define __FIIterator_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::Vpn::IVpnTrafficFilter*>
@@ -1624,7 +1620,7 @@ IIterable<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> __FIIterable_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t;
 #define __FIIterable_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::Vpn::IVpnTrafficFilter*>
@@ -1656,7 +1652,7 @@ IVectorView<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*> __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPrompt ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnCustomPrompt*>
@@ -1688,7 +1684,7 @@ IVectorView<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*> __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnCustomPromptElement ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnCustomPromptElement*>
@@ -1720,7 +1716,7 @@ IVectorView<ABI::Windows::Networking::Vpn::IVpnProfile*> : IVectorView_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::IVpnProfile*> __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnProfile*>
@@ -1752,7 +1748,7 @@ IVectorView<ABI::Windows::Networking::Vpn::VpnAppId*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::VpnAppId*> __FIVectorView_1_Windows__CNetworking__CVpn__CVpnAppId_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CVpnAppId_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnAppId*>
@@ -1784,7 +1780,7 @@ IVectorView<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> __FIVectorView_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnDomainNameInfo*>
@@ -1816,7 +1812,7 @@ IVectorView<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> __FIVectorView_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnNamespaceInfo*>
@@ -1848,7 +1844,7 @@ IVectorView<ABI::Windows::Networking::Vpn::VpnRoute*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::VpnRoute*> __FIVectorView_1_Windows__CNetworking__CVpn__CVpnRoute_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CVpnRoute_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnRoute*>
@@ -1880,7 +1876,7 @@ IVectorView<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> __FIVectorView_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t;
 #define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnTrafficFilter*>
@@ -1912,7 +1908,7 @@ IVector<ABI::Windows::Networking::Vpn::VpnAppId*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::Vpn::VpnAppId*> __FIVector_1_Windows__CNetworking__CVpn__CVpnAppId_t;
 #define __FIVector_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CVpn__CVpnAppId_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CVpn__CVpnAppId ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::Vpn::IVpnAppId*>
@@ -1944,7 +1940,7 @@ IVector<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::Vpn::VpnDomainNameInfo*> __FIVector_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t;
 #define __FIVector_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CVpn__CVpnDomainNameInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::Vpn::IVpnDomainNameInfo*>
@@ -1976,7 +1972,7 @@ IVector<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> : IVector_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::Vpn::VpnNamespaceInfo*> __FIVector_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t;
 #define __FIVector_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CVpn__CVpnNamespaceInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::Vpn::IVpnNamespaceInfo*>
@@ -2008,7 +2004,7 @@ IVector<ABI::Windows::Networking::Vpn::VpnRoute*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::Vpn::VpnRoute*> __FIVector_1_Windows__CNetworking__CVpn__CVpnRoute_t;
 #define __FIVector_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CVpn__CVpnRoute_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CVpn__CVpnRoute ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::Vpn::IVpnRoute*>
@@ -2040,7 +2036,7 @@ IVector<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> : IVector_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::Vpn::VpnTrafficFilter*> __FIVector_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t;
 #define __FIVector_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CVpn__CVpnTrafficFilter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CVpn__CVpnTrafficFilter ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::Vpn::IVpnTrafficFilter*>
@@ -2072,7 +2068,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CVpn__CIV
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnProfile*>*>
@@ -2104,7 +2100,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile*> __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CVpn__CIVpnProfile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::Vpn::IVpnProfile*>*>
@@ -2120,9 +2116,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCredential;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2145,7 +2141,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::Vpn::VpnCredential*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::Vpn::VpnCredential*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnCredential_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnCredential ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnCredential_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnCredential ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::Vpn::IVpnCredential*>
@@ -2177,7 +2173,7 @@ IAsyncOperation<ABI::Windows::Networking::Vpn::VpnCredential*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::Vpn::VpnCredential*> __FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnCredential_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnCredential ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnCredential_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnCredential ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::Vpn::IVpnCredential*>
@@ -2193,9 +2189,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 enum VpnManagementErrorStatus : int;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus_USE
@@ -2216,7 +2212,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Networking::Vpn::VpnManagemen
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Networking::Vpn::VpnManagementErrorStatus> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::Vpn::VpnManagementErrorStatus>
@@ -2246,7 +2242,7 @@ IAsyncOperation<enum ABI::Windows::Networking::Vpn::VpnManagementErrorStatus> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Networking::Vpn::VpnManagementErrorStatus> __FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CVpn__CVpnManagementErrorStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::Vpn::VpnManagementErrorStatus>
@@ -2261,9 +2257,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnChannel;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2271,9 +2267,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnChannelActivityEventArgs;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2297,7 +2293,7 @@ ITypedEventHandler<ABI::Windows::Networking::Vpn::VpnChannel*,ABI::Windows::Netw
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Vpn::VpnChannel*,ABI::Windows::Networking::Vpn::VpnChannelActivityEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Vpn::IVpnChannel*,ABI::Windows::Networking::Vpn::IVpnChannelActivityEventArgs*>
@@ -2315,9 +2311,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnChannelActivityStateChangedArgs;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2341,7 +2337,7 @@ ITypedEventHandler<ABI::Windows::Networking::Vpn::VpnChannel*,ABI::Windows::Netw
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Vpn::VpnChannel*,ABI::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs*> __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Vpn::IVpnChannel*,ABI::Windows::Networking::Vpn::IVpnChannelActivityStateChangedArgs*>
@@ -2357,8 +2353,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2366,8 +2362,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2393,7 +2389,7 @@ IIterator<ABI::Windows::Networking::HostName*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::HostName*> __FIIterator_1_Windows__CNetworking__CHostName_t;
 #define __FIIterator_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::IHostName*>
@@ -2425,7 +2421,7 @@ IIterable<ABI::Windows::Networking::HostName*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::HostName*> __FIIterable_1_Windows__CNetworking__CHostName_t;
 #define __FIIterable_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::IHostName*>
@@ -2457,7 +2453,7 @@ IVectorView<ABI::Windows::Networking::HostName*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::HostName*> __FIVectorView_1_Windows__CNetworking__CHostName_t;
 #define __FIVectorView_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IHostName*>
@@ -2488,7 +2484,7 @@ IIterator<IInspectable*> : IIterator_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IIterator<IInspectable*> __FIIterator_1_IInspectable_t;
 #define __FIIterator_1_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_IInspectable ABI::Windows::Foundation::Collections::IIterator<IInspectable*>
@@ -2518,7 +2514,7 @@ IIterable<IInspectable*> : IIterable_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IIterable<IInspectable*> __FIIterable_1_IInspectable_t;
 #define __FIIterable_1_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_IInspectable ABI::Windows::Foundation::Collections::IIterable<IInspectable*>
@@ -2532,8 +2528,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2541,8 +2537,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2568,7 +2564,7 @@ IIterator<ABI::Windows::Foundation::Uri*> : IIterator_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::Uri*> __FIIterator_1_Windows__CFoundation__CUri_t;
 #define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2600,7 +2596,7 @@ IIterable<ABI::Windows::Foundation::Uri*> : IIterable_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::Uri*> __FIIterable_1_Windows__CFoundation__CUri_t;
 #define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2632,7 +2628,7 @@ IVectorView<ABI::Windows::Foundation::Uri*> : IVectorView_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Foundation::Uri*> __FIVectorView_1_Windows__CFoundation__CUri_t;
 #define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2662,7 +2658,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2691,7 +2687,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2720,7 +2716,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -2749,7 +2745,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -2780,7 +2776,7 @@ IVector<ABI::Windows::Networking::HostName*> : IVector_impl<ABI::Windows::Founda
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Networking::HostName*> __FIVector_1_Windows__CNetworking__CHostName_t;
 #define __FIVector_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Networking::IHostName*>
@@ -2812,7 +2808,7 @@ IVector<ABI::Windows::Foundation::Uri*> : IVector_impl<ABI::Windows::Foundation:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Foundation::Uri*> __FIVector_1_Windows__CFoundation__CUri_t;
 #define __FIVector_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2831,8 +2827,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2852,9 +2848,9 @@ namespace ABI {
                 
                 typedef enum ControlChannelTriggerStatus : int ControlChannelTriggerStatus;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2864,9 +2860,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2875,9 +2871,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2892,10 +2888,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2905,10 +2901,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2923,9 +2919,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class Buffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -2934,9 +2930,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -2952,9 +2948,9 @@ namespace ABI {
                 
                 typedef enum VpnAppIdType : int VpnAppIdType;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2963,9 +2959,9 @@ namespace ABI {
                 
                 typedef enum VpnAuthenticationMethod : int VpnAuthenticationMethod;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2974,9 +2970,9 @@ namespace ABI {
                 
                 typedef enum VpnChannelActivityEventType : int VpnChannelActivityEventType;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2985,9 +2981,9 @@ namespace ABI {
                 
                 typedef enum VpnChannelRequestCredentialsOptions : unsigned int VpnChannelRequestCredentialsOptions;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2996,9 +2992,9 @@ namespace ABI {
                 
                 typedef enum VpnCredentialType : int VpnCredentialType;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3007,9 +3003,9 @@ namespace ABI {
                 
                 typedef enum VpnDataPathType : int VpnDataPathType;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3018,9 +3014,9 @@ namespace ABI {
                 
                 typedef enum VpnDomainNameType : int VpnDomainNameType;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3029,9 +3025,9 @@ namespace ABI {
                 
                 typedef enum VpnIPProtocol : int VpnIPProtocol;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3040,9 +3036,9 @@ namespace ABI {
                 
                 typedef enum VpnManagementConnectionStatus : int VpnManagementConnectionStatus;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3051,9 +3047,9 @@ namespace ABI {
                 
                 typedef enum VpnManagementErrorStatus : int VpnManagementErrorStatus;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3062,9 +3058,9 @@ namespace ABI {
                 
                 typedef enum VpnNativeProtocolType : int VpnNativeProtocolType;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3073,9 +3069,9 @@ namespace ABI {
                 
                 typedef enum VpnPacketBufferStatus : int VpnPacketBufferStatus;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3084,9 +3080,9 @@ namespace ABI {
                 
                 typedef enum VpnRoutingPolicyType : int VpnRoutingPolicyType;
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3149,9 +3145,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnChannelConfiguration;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3160,9 +3156,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomCheckBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3170,9 +3166,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomComboBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3180,9 +3176,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomEditBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3190,9 +3186,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomErrorBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3200,9 +3196,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomPromptBooleanInput;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3210,9 +3206,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomPromptOptionSelector;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3220,9 +3216,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomPromptText;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3230,9 +3226,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomPromptTextInput;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3240,9 +3236,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnCustomTextBox;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3250,9 +3246,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnDomainNameAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3261,9 +3257,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnInterfaceId;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3271,9 +3267,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnManagementAgent;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3281,9 +3277,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnNamespaceAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3292,9 +3288,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnNativeProfile;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3303,9 +3299,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnPacketBufferList;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3313,9 +3309,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnPickedCredential;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3323,9 +3319,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnPlugInProfile;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3334,9 +3330,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnRouteAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3344,9 +3340,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnSystemHealth;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3355,9 +3351,9 @@ namespace ABI {
         namespace Networking {
             namespace Vpn {
                 class VpnTrafficFilterAssignment;
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3390,9 +3386,9 @@ namespace ABI {
                     VpnAppIdType_FilePath = 2,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3419,9 +3415,9 @@ namespace ABI {
                     VpnAuthenticationMethod_PresharedKey = 3,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3446,9 +3442,9 @@ namespace ABI {
                     VpnChannelActivityEventType_Active = 1,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3476,9 +3472,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(VpnChannelRequestCredentialsOptions)
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3508,9 +3504,9 @@ namespace ABI {
                     VpnCredentialType_UnProtectedCertificate = 6,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3535,9 +3531,9 @@ namespace ABI {
                     VpnDataPathType_Receive = 1,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3563,9 +3559,9 @@ namespace ABI {
                     VpnDomainNameType_Reserved = 65535,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3595,9 +3591,9 @@ namespace ABI {
                     VpnIPProtocol_Pgm = 113,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3624,9 +3620,9 @@ namespace ABI {
                     VpnManagementConnectionStatus_Connecting = 3,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3720,9 +3716,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3748,9 +3744,9 @@ namespace ABI {
                     VpnNativeProtocolType_IpsecIkev2 = 2,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3775,9 +3771,9 @@ namespace ABI {
                     VpnPacketBufferStatus_InvalidBufferSize = 1,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3802,9 +3798,9 @@ namespace ABI {
                     VpnRoutingPolicyType_ForceAllTrafficOverVpn = 1,
                 };
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3849,9 +3845,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnAppId=_uuidof(IVpnAppId);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnAppId;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnAppId_INTERFACE_DEFINED__) */
@@ -3892,9 +3888,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnAppIdFactory=_uuidof(IVpnAppIdFactory);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnAppIdFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnAppIdFactory_INTERFACE_DEFINED__) */
@@ -3937,15 +3933,15 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::Networking::Vpn::IVpnNamespaceAssignment * namespaceScope,
                         /* [in] */UINT32 mtuSize,
                         /* [in] */UINT32 maxFrameSize,
-                        /* [in] */boolean optimizeForLowCostNetwork,
+                        /* [in] */::boolean optimizeForLowCostNetwork,
                         /* [in] */__RPC__in_opt IInspectable * mainOuterTunnelTransport,
                         /* [in] */__RPC__in_opt IInspectable * optionalOuterTunnelTransport
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE RequestCredentials(
                         /* [in] */ABI::Windows::Networking::Vpn::VpnCredentialType credType,
-                        /* [in] */boolean isRetry,
-                        /* [in] */boolean isSingleSignOnCredential,
+                        /* [in] */::boolean isRetry,
+                        /* [in] */::boolean isSingleSignOnCredential,
                         /* [in] */__RPC__in_opt ABI::Windows::Security::Cryptography::Certificates::ICertificate * certificate,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::Vpn::IVpnPickedCredential * * credential
                         ) = 0;
@@ -3986,16 +3982,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetAllowedSslTlsVersions(
                         /* [in] */__RPC__in_opt IInspectable * tunnelTransport,
-                        /* [in] */boolean useTls12
+                        /* [in] */::boolean useTls12
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannel=_uuidof(IVpnChannel);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel_INTERFACE_DEFINED__) */
@@ -4034,7 +4030,7 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::Networking::Vpn::IVpnDomainNameAssignment * assignedDomainName,
                         /* [in] */UINT32 mtuSize,
                         /* [in] */UINT32 maxFrameSize,
-                        /* [in] */boolean Reserved,
+                        /* [in] */::boolean Reserved,
                         /* [in] */__RPC__in_opt IInspectable * mainOuterTunnelTransport
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE StartExistingTransports(
@@ -4045,7 +4041,7 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::Networking::Vpn::IVpnDomainNameAssignment * assignedDomainName,
                         /* [in] */UINT32 mtuSize,
                         /* [in] */UINT32 maxFrameSize,
-                        /* [in] */boolean Reserved
+                        /* [in] */::boolean Reserved
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ActivityStateChange(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs * handler,
@@ -4090,7 +4086,7 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::Networking::Vpn::IVpnDomainNameAssignment * assignedNamespace,
                         /* [in] */UINT32 mtuSize,
                         /* [in] */UINT32 maxFrameSize,
-                        /* [in] */boolean reserved,
+                        /* [in] */::boolean reserved,
                         /* [in] */__RPC__in_opt IInspectable * mainOuterTunnelTransport,
                         /* [in] */__RPC__in_opt IInspectable * optionalOuterTunnelTransport,
                         /* [in] */__RPC__in_opt ABI::Windows::Networking::Vpn::IVpnTrafficFilterAssignment * assignedTrafficFilters
@@ -4100,9 +4096,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannel2=_uuidof(IVpnChannel2);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel2_INTERFACE_DEFINED__) */
@@ -4145,7 +4141,7 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::Networking::Vpn::IVpnDomainNameAssignment * assignedNamespace,
                         /* [in] */UINT32 mtuSize,
                         /* [in] */UINT32 maxFrameSize,
-                        /* [in] */boolean reserved,
+                        /* [in] */::boolean reserved,
                         /* [in] */__RPC__in_opt __FIIterable_1_IInspectable * transports,
                         /* [in] */__RPC__in_opt ABI::Windows::Networking::Vpn::IVpnTrafficFilterAssignment * assignedTrafficFilters
                         ) = 0;
@@ -4169,9 +4165,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannel4=_uuidof(IVpnChannel4);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4_INTERFACE_DEFINED__) */
@@ -4210,9 +4206,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannelActivityEventArgs=_uuidof(IVpnChannelActivityEventArgs);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs_INTERFACE_DEFINED__) */
@@ -4251,9 +4247,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannelActivityStateChangedArgs=_uuidof(IVpnChannelActivityStateChangedArgs);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityStateChangedArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityStateChangedArgs_INTERFACE_DEFINED__) */
@@ -4298,9 +4294,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannelConfiguration=_uuidof(IVpnChannelConfiguration);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration_INTERFACE_DEFINED__) */
@@ -4339,9 +4335,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannelConfiguration2=_uuidof(IVpnChannelConfiguration2);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelConfiguration2_INTERFACE_DEFINED__) */
@@ -4378,9 +4374,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnChannelStatics=_uuidof(IVpnChannelStatics);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelStatics_INTERFACE_DEFINED__) */
@@ -4425,9 +4421,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCredential=_uuidof(IVpnCredential);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCredential;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCredential_INTERFACE_DEFINED__) */
@@ -4463,22 +4459,22 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_InitialCheckState(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InitialCheckState(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Checked(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomCheckBox=_uuidof(IVpnCustomCheckBox);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomCheckBox;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomCheckBox_INTERFACE_DEFINED__) */
@@ -4527,9 +4523,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomComboBox=_uuidof(IVpnCustomComboBox);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomComboBox;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomComboBox_INTERFACE_DEFINED__) */
@@ -4571,10 +4567,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_NoEcho(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NoEcho(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Text(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -4584,9 +4580,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomEditBox=_uuidof(IVpnCustomEditBox);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomEditBox;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomEditBox_INTERFACE_DEFINED__) */
@@ -4626,9 +4622,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomErrorBox=_uuidof(IVpnCustomErrorBox);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomErrorBox;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomErrorBox_INTERFACE_DEFINED__) */
@@ -4663,25 +4659,25 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Compulsory(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Compulsory(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Bordered(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Bordered(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomPrompt=_uuidof(IVpnCustomPrompt);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPrompt;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPrompt_INTERFACE_DEFINED__) */
@@ -4717,22 +4713,22 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_InitialValue(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InitialValue(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomPromptBooleanInput=_uuidof(IVpnCustomPromptBooleanInput);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptBooleanInput;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptBooleanInput_INTERFACE_DEFINED__) */
@@ -4767,25 +4763,25 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Compulsory(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Compulsory(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Emphasized(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Emphasized(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomPromptElement=_uuidof(IVpnCustomPromptElement);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptElement;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptElement_INTERFACE_DEFINED__) */
@@ -4831,9 +4827,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomPromptOptionSelector=_uuidof(IVpnCustomPromptOptionSelector);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptOptionSelector;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptOptionSelector_INTERFACE_DEFINED__) */
@@ -4879,9 +4875,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomPromptText=_uuidof(IVpnCustomPromptText);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptText;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptText_INTERFACE_DEFINED__) */
@@ -4923,10 +4919,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsTextHidden(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTextHidden(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Text(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -4936,9 +4932,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomPromptTextInput=_uuidof(IVpnCustomPromptTextInput);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptTextInput;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomPromptTextInput_INTERFACE_DEFINED__) */
@@ -4984,9 +4980,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnCustomTextBox=_uuidof(IVpnCustomTextBox);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomTextBox;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnCustomTextBox_INTERFACE_DEFINED__) */
@@ -5031,9 +5027,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnDomainNameAssignment=_uuidof(IVpnDomainNameAssignment);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameAssignment;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameAssignment_INTERFACE_DEFINED__) */
@@ -5087,9 +5083,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnDomainNameInfo=_uuidof(IVpnDomainNameInfo);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo_INTERFACE_DEFINED__) */
@@ -5128,9 +5124,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnDomainNameInfo2=_uuidof(IVpnDomainNameInfo2);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo2_INTERFACE_DEFINED__) */
@@ -5170,9 +5166,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnDomainNameInfoFactory=_uuidof(IVpnDomainNameInfoFactory);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnDomainNameInfoFactory_INTERFACE_DEFINED__) */
@@ -5212,9 +5208,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnInterfaceId=_uuidof(IVpnInterfaceId);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceId;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceId_INTERFACE_DEFINED__) */
@@ -5252,9 +5248,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnInterfaceIdFactory=_uuidof(IVpnInterfaceIdFactory);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceIdFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnInterfaceIdFactory_INTERFACE_DEFINED__) */
@@ -5326,9 +5322,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnManagementAgent=_uuidof(IVpnManagementAgent);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnManagementAgent;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnManagementAgent_INTERFACE_DEFINED__) */
@@ -5376,9 +5372,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnNamespaceAssignment=_uuidof(IVpnNamespaceAssignment);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceAssignment;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceAssignment_INTERFACE_DEFINED__) */
@@ -5432,9 +5428,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnNamespaceInfo=_uuidof(IVpnNamespaceInfo);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfo;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfo_INTERFACE_DEFINED__) */
@@ -5473,9 +5469,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnNamespaceInfoFactory=_uuidof(IVpnNamespaceInfoFactory);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnNamespaceInfoFactory_INTERFACE_DEFINED__) */
@@ -5548,9 +5544,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnNativeProfile=_uuidof(IVpnNativeProfile);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile_INTERFACE_DEFINED__) */
@@ -5582,10 +5578,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequireVpnClientAppUI(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RequireVpnClientAppUI(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ConnectionStatus(
                         /* [retval, out] */__RPC__out ABI::Windows::Networking::Vpn::VpnManagementConnectionStatus * value
@@ -5595,9 +5591,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnNativeProfile2=_uuidof(IVpnNativeProfile2);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnNativeProfile2_INTERFACE_DEFINED__) */
@@ -5648,9 +5644,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPacketBuffer=_uuidof(IVpnPacketBuffer);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer_INTERFACE_DEFINED__) */
@@ -5689,9 +5685,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPacketBuffer2=_uuidof(IVpnPacketBuffer2);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer2_INTERFACE_DEFINED__) */
@@ -5733,9 +5729,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPacketBuffer3=_uuidof(IVpnPacketBuffer3);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer3_INTERFACE_DEFINED__) */
@@ -5774,9 +5770,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPacketBufferFactory=_uuidof(IVpnPacketBufferFactory);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferFactory_INTERFACE_DEFINED__) */
@@ -5838,9 +5834,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPacketBufferList=_uuidof(IVpnPacketBufferList);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList_INTERFACE_DEFINED__) */
@@ -5892,9 +5888,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPacketBufferList2=_uuidof(IVpnPacketBufferList2);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBufferList2_INTERFACE_DEFINED__) */
@@ -5939,9 +5935,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPickedCredential=_uuidof(IVpnPickedCredential);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPickedCredential;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPickedCredential_INTERFACE_DEFINED__) */
@@ -5995,9 +5991,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPlugIn=_uuidof(IVpnPlugIn);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugIn;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugIn_INTERFACE_DEFINED__) */
@@ -6052,9 +6048,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPlugInProfile=_uuidof(IVpnPlugInProfile);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile_INTERFACE_DEFINED__) */
@@ -6090,10 +6086,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequireVpnClientAppUI(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RequireVpnClientAppUI(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ConnectionStatus(
                         /* [retval, out] */__RPC__out ABI::Windows::Networking::Vpn::VpnManagementConnectionStatus * value
@@ -6103,9 +6099,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnPlugInProfile2=_uuidof(IVpnPlugInProfile2);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2_INTERFACE_DEFINED__) */
@@ -6152,25 +6148,25 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CNetworking__CVpn__CVpnTrafficFilter * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RememberCredentials(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RememberCredentials(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlwaysOn(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlwaysOn(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnProfile=_uuidof(IVpnProfile);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile_INTERFACE_DEFINED__) */
@@ -6218,9 +6214,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnRoute=_uuidof(IVpnRoute);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnRoute;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnRoute_INTERFACE_DEFINED__) */
@@ -6276,19 +6272,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CNetworking__CVpn__CVpnRoute * * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ExcludeLocalSubnets(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExcludeLocalSubnets(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnRouteAssignment=_uuidof(IVpnRouteAssignment);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteAssignment;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteAssignment_INTERFACE_DEFINED__) */
@@ -6326,9 +6322,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnRouteFactory=_uuidof(IVpnRouteFactory);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnRouteFactory_INTERFACE_DEFINED__) */
@@ -6367,9 +6363,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnSystemHealth=_uuidof(IVpnSystemHealth);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnSystemHealth;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnSystemHealth_INTERFACE_DEFINED__) */
@@ -6438,9 +6434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnTrafficFilter=_uuidof(IVpnTrafficFilter);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilter;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilter_INTERFACE_DEFINED__) */
@@ -6475,25 +6471,25 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CNetworking__CVpn__CVpnTrafficFilter * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowOutbound(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowOutbound(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowInbound(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowInbound(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IVpnTrafficFilterAssignment=_uuidof(IVpnTrafficFilterAssignment);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterAssignment;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterAssignment_INTERFACE_DEFINED__) */
@@ -6533,9 +6529,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVpnTrafficFilterFactory=_uuidof(IVpnTrafficFilterFactory);
                 
-            } /* Windows */
+            } /* Vpn */
         } /* Networking */
-    } /* Vpn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnTrafficFilterFactory_INTERFACE_DEFINED__) */
@@ -11121,7 +11117,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityEventArgsVtbl;
 
@@ -11174,7 +11170,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityStateChangedArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityStateChangedArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CVpn__CVpnChannel_Windows__CNetworking__CVpn__CVpnChannelActivityStateChangedArgsVtbl;
 

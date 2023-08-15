@@ -170,13 +170,11 @@ DiUninstallDevice(
 //
 // Flags for DiUninstallDriver
 //
-#define DIURFLAG_NO_REMOVE_INF      0x00000001   // Do not remove inf from the system
-#define DIURFLAG_UNCONFIGURE_INF    0x00000002   // Unconfigure inf, if possible
+#define DIURFLAG_NO_REMOVE_INF      (0x00000001)   // Do not remove inf from the system
+#define DIURFLAG_RESERVED           (0x00000002)   // DIURFLAG_UNCONFIGURE_INF is obsolete.
 
-#define DIURFLAG_BITS               (DIURFLAG_NO_REMOVE_INF |\
-                                     DIURFLAG_UNCONFIGURE_INF)
-
-#define DIURFLAG_SYSTEM_BITS        (DIURFLAG_BITS)
+#define DIURFLAG_VALID              (DIURFLAG_NO_REMOVE_INF |\
+                                     DIURFLAG_RESERVED      )
 
 BOOL
 WINAPI

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.startscreen.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IJumpList;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIJumpList ABI::Windows::UI::StartScreen::IJumpList
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIJumpList_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IJumpListItem;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIJumpListItem ABI::Windows::UI::StartScreen::IJumpListItem
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIJumpListItem_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IJumpListItemStatics;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIJumpListItemStatics ABI::Windows::UI::StartScreen::IJumpListItemStatics
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIJumpListItemStatics_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IJumpListStatics;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIJumpListStatics ABI::Windows::UI::StartScreen::IJumpListStatics
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIJumpListStatics_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTile;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile ABI::Windows::UI::StartScreen::ISecondaryTile
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTile2;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile2 ABI::Windows::UI::StartScreen::ISecondaryTile2
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile2_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTileFactory;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory ABI::Windows::UI::StartScreen::ISecondaryTileFactory
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory_FWD_DEFINED__
@@ -379,9 +375,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTileFactory2;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory2 ABI::Windows::UI::StartScreen::ISecondaryTileFactory2
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory2_FWD_DEFINED__
@@ -393,9 +389,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTileStatics;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileStatics ABI::Windows::UI::StartScreen::ISecondaryTileStatics
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileStatics_FWD_DEFINED__
@@ -407,9 +403,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTileVisualElements;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements_FWD_DEFINED__
@@ -421,9 +417,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTileVisualElements2;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements2 ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements2
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements2_FWD_DEFINED__
@@ -435,9 +431,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTileVisualElements3;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements3 ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements3
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements3_FWD_DEFINED__
@@ -449,9 +445,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTileVisualElements4;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements4 ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements4
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements4_FWD_DEFINED__
@@ -463,9 +459,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IStartScreenManager;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager ABI::Windows::UI::StartScreen::IStartScreenManager
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager_FWD_DEFINED__
@@ -477,9 +473,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IStartScreenManager2;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager2 ABI::Windows::UI::StartScreen::IStartScreenManager2
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager2_FWD_DEFINED__
@@ -491,9 +487,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IStartScreenManagerStatics;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManagerStatics ABI::Windows::UI::StartScreen::IStartScreenManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManagerStatics_FWD_DEFINED__
@@ -505,9 +501,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ITileMixedRealityModel;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel ABI::Windows::UI::StartScreen::ITileMixedRealityModel
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel_FWD_DEFINED__
@@ -519,9 +515,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ITileMixedRealityModel2;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel2 ABI::Windows::UI::StartScreen::ITileMixedRealityModel2
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel2_FWD_DEFINED__
@@ -533,9 +529,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IVisualElementsRequest;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequest ABI::Windows::UI::StartScreen::IVisualElementsRequest
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequest_FWD_DEFINED__
@@ -547,9 +543,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IVisualElementsRequestDeferral;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestDeferral ABI::Windows::UI::StartScreen::IVisualElementsRequestDeferral
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestDeferral_FWD_DEFINED__
@@ -561,9 +557,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface IVisualElementsRequestedEventArgs;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestedEventArgs ABI::Windows::UI::StartScreen::IVisualElementsRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestedEventArgs_FWD_DEFINED__
@@ -576,9 +572,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class JumpListItem;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -601,7 +597,7 @@ IIterator<ABI::Windows::UI::StartScreen::JumpListItem*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::StartScreen::JumpListItem*> __FIIterator_1_Windows__CUI__CStartScreen__CJumpListItem_t;
 #define __FIIterator_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CStartScreen__CJumpListItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::StartScreen::IJumpListItem*>
@@ -633,7 +629,7 @@ IIterable<ABI::Windows::UI::StartScreen::JumpListItem*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::StartScreen::JumpListItem*> __FIIterable_1_Windows__CUI__CStartScreen__CJumpListItem_t;
 #define __FIIterable_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CStartScreen__CJumpListItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::StartScreen::IJumpListItem*>
@@ -649,9 +645,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class SecondaryTile;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -674,7 +670,7 @@ IIterator<ABI::Windows::UI::StartScreen::SecondaryTile*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::StartScreen::SecondaryTile*> __FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTile_t;
 #define __FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::StartScreen::ISecondaryTile*>
@@ -706,7 +702,7 @@ IIterable<ABI::Windows::UI::StartScreen::SecondaryTile*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::StartScreen::SecondaryTile*> __FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTile_t;
 #define __FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::StartScreen::ISecondaryTile*>
@@ -722,9 +718,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class SecondaryTileVisualElements;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -747,7 +743,7 @@ IIterator<ABI::Windows::UI::StartScreen::SecondaryTileVisualElements*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::StartScreen::SecondaryTileVisualElements*> __FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements_t;
 #define __FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements*>
@@ -779,7 +775,7 @@ IIterable<ABI::Windows::UI::StartScreen::SecondaryTileVisualElements*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::StartScreen::SecondaryTileVisualElements*> __FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements_t;
 #define __FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements*>
@@ -811,7 +807,7 @@ IVectorView<ABI::Windows::UI::StartScreen::JumpListItem*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::StartScreen::JumpListItem*> __FIVectorView_1_Windows__CUI__CStartScreen__CJumpListItem_t;
 #define __FIVectorView_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CStartScreen__CJumpListItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::StartScreen::IJumpListItem*>
@@ -843,7 +839,7 @@ IVectorView<ABI::Windows::UI::StartScreen::SecondaryTile*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::StartScreen::SecondaryTile*> __FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile_t;
 #define __FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::StartScreen::ISecondaryTile*>
@@ -875,7 +871,7 @@ IVectorView<ABI::Windows::UI::StartScreen::SecondaryTileVisualElements*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::StartScreen::SecondaryTileVisualElements*> __FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements_t;
 #define __FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTileVisualElements ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements*>
@@ -907,7 +903,7 @@ IVector<ABI::Windows::UI::StartScreen::JumpListItem*> : IVector_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::StartScreen::JumpListItem*> __FIVector_1_Windows__CUI__CStartScreen__CJumpListItem_t;
 #define __FIVector_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CStartScreen__CJumpListItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CStartScreen__CJumpListItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::StartScreen::IJumpListItem*>
@@ -939,7 +935,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CStartScreen__CSe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::StartScreen::ISecondaryTile*>*>
@@ -971,7 +967,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile*> __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::StartScreen::ISecondaryTile*>*>
@@ -987,9 +983,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class JumpList;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1012,7 +1008,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::StartScreen::JumpList*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::StartScreen::JumpList*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CStartScreen__CJumpList_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CStartScreen__CJumpList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CStartScreen__CJumpList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CStartScreen__CJumpList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::StartScreen::IJumpList*>
@@ -1044,7 +1040,7 @@ IAsyncOperation<ABI::Windows::UI::StartScreen::JumpList*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::StartScreen::JumpList*> __FIAsyncOperation_1_Windows__CUI__CStartScreen__CJumpList_t;
 #define __FIAsyncOperation_1_Windows__CUI__CStartScreen__CJumpList ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CStartScreen__CJumpList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CStartScreen__CJumpList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::StartScreen::IJumpList*>
@@ -1061,9 +1057,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class VisualElementsRequestedEventArgs;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1087,7 +1083,7 @@ ITypedEventHandler<ABI::Windows::UI::StartScreen::SecondaryTile*,ABI::Windows::U
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::StartScreen::SecondaryTile*,ABI::Windows::UI::StartScreen::VisualElementsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::StartScreen::ISecondaryTile*,ABI::Windows::UI::StartScreen::IVisualElementsRequestedEventArgs*>
@@ -1118,7 +1114,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1147,7 +1143,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1163,9 +1159,9 @@ namespace ABI {
             namespace Spatial {
                 struct SpatialBoundingBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox_USE
@@ -1186,7 +1182,7 @@ IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingBox> : IRefe
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingBox> __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox_t;
 #define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox ABI::Windows::Foundation::__FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingBox ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialBoundingBox>
@@ -1203,9 +1199,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 class AppListEntry;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
@@ -1214,9 +1210,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 interface IAppListEntry;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry ABI::Windows::ApplicationModel::Core::IAppListEntry
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
@@ -1231,8 +1227,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1240,8 +1236,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1253,8 +1249,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1262,16 +1258,16 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1279,8 +1275,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1295,9 +1291,9 @@ namespace ABI {
                 
                 typedef struct SpatialBoundingBox SpatialBoundingBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1306,8 +1302,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1315,8 +1311,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1330,8 +1326,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1342,9 +1338,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1356,9 +1352,9 @@ namespace ABI {
                 
                 typedef enum ForegroundText : int ForegroundText;
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1367,9 +1363,9 @@ namespace ABI {
                 
                 typedef enum JumpListItemKind : int JumpListItemKind;
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1378,9 +1374,9 @@ namespace ABI {
                 
                 typedef enum JumpListSystemGroupKind : int JumpListSystemGroupKind;
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1389,9 +1385,9 @@ namespace ABI {
                 
                 typedef enum TileMixedRealityModelActivationBehavior : int TileMixedRealityModelActivationBehavior;
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1400,9 +1396,9 @@ namespace ABI {
                 
                 typedef enum TileOptions : unsigned int TileOptions;
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1411,9 +1407,9 @@ namespace ABI {
                 
                 typedef enum TileSize : int TileSize;
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1445,9 +1441,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class StartScreenManager;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1455,9 +1451,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class TileMixedRealityModel;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1465,9 +1461,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class VisualElementsRequest;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1475,9 +1471,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class VisualElementsRequestDeferral;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1510,9 +1506,9 @@ namespace ABI {
                     ForegroundText_Light = 1,
                 };
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1537,9 +1533,9 @@ namespace ABI {
                     JumpListItemKind_Separator = 1,
                 };
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -1565,9 +1561,9 @@ namespace ABI {
                     JumpListSystemGroupKind_Recent = 2,
                 };
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -1592,9 +1588,9 @@ namespace ABI {
                     TileMixedRealityModelActivationBehavior_None = 1,
                 };
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1639,9 +1635,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(TileOptions)
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1688,9 +1684,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1735,9 +1731,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJumpList=_uuidof(IJumpList);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIJumpList;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIJumpList_INTERFACE_DEFINED__) */
@@ -1775,7 +1771,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RemovedByUser(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Description(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1806,9 +1802,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJumpListItem=_uuidof(IJumpListItem);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIJumpListItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIJumpListItem_INTERFACE_DEFINED__) */
@@ -1852,9 +1848,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJumpListItemStatics=_uuidof(IJumpListItemStatics);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIJumpListItemStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIJumpListItemStatics_INTERFACE_DEFINED__) */
@@ -1889,16 +1885,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CUI__CStartScreen__CJumpList * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IJumpListStatics=_uuidof(IJumpListStatics);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIJumpListStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIJumpListStatics_INTERFACE_DEFINED__) */
@@ -2010,10 +2006,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IUriRuntimeClass * * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_LockScreenDisplayBadgeAndTileText(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LockScreenDisplayBadgeAndTileText(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2097,9 +2093,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTile=_uuidof(ISecondaryTile);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile_INTERFACE_DEFINED__) */
@@ -2144,10 +2140,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::StartScreen::ISecondaryTileVisualElements * * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RoamingEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RoamingEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_VisualElementsRequested(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs * handler,
@@ -2161,9 +2157,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTile2=_uuidof(ISecondaryTile2);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile2_INTERFACE_DEFINED__) */
@@ -2230,9 +2226,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTileFactory=_uuidof(ISecondaryTileFactory);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory_INTERFACE_DEFINED__) */
@@ -2280,9 +2276,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTileFactory2=_uuidof(ISecondaryTileFactory2);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileFactory2_INTERFACE_DEFINED__) */
@@ -2315,7 +2311,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Exists(
                         /* [in] */__RPC__in HSTRING tileId,
-                        /* [retval, out] */__RPC__out boolean * exists
+                        /* [retval, out] */__RPC__out ::boolean * exists
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE FindAllAsync(
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CUI__CStartScreen__CSecondaryTile * * operation
@@ -2332,9 +2328,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTileStatics=_uuidof(ISecondaryTileStatics);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileStatics_INTERFACE_DEFINED__) */
@@ -2424,31 +2420,31 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::UI::Color * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowNameOnSquare150x150Logo(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowNameOnSquare150x150Logo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowNameOnWide310x150Logo(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowNameOnWide310x150Logo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowNameOnSquare310x310Logo(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowNameOnSquare310x310Logo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTileVisualElements=_uuidof(ISecondaryTileVisualElements);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements_INTERFACE_DEFINED__) */
@@ -2490,9 +2486,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTileVisualElements2=_uuidof(ISecondaryTileVisualElements2);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements2_INTERFACE_DEFINED__) */
@@ -2534,9 +2530,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTileVisualElements3=_uuidof(ISecondaryTileVisualElements3);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements3_INTERFACE_DEFINED__) */
@@ -2575,9 +2571,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecondaryTileVisualElements4=_uuidof(ISecondaryTileVisualElements4);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTileVisualElements4_INTERFACE_DEFINED__) */
@@ -2613,7 +2609,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SupportsAppListEntry(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Core::IAppListEntry * appListEntry,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ContainsAppListEntryAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Core::IAppListEntry * appListEntry,
@@ -2628,9 +2624,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStartScreenManager=_uuidof(IStartScreenManager);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager_INTERFACE_DEFINED__) */
@@ -2678,9 +2674,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStartScreenManager2=_uuidof(IStartScreenManager2);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManager2_INTERFACE_DEFINED__) */
@@ -2723,9 +2719,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStartScreenManagerStatics=_uuidof(IStartScreenManagerStatics);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIStartScreenManagerStatics_INTERFACE_DEFINED__) */
@@ -2773,9 +2769,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileMixedRealityModel=_uuidof(ITileMixedRealityModel);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel_INTERFACE_DEFINED__) */
@@ -2817,9 +2813,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITileMixedRealityModel2=_uuidof(ITileMixedRealityModel2);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CITileMixedRealityModel2_INTERFACE_DEFINED__) */
@@ -2867,9 +2863,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVisualElementsRequest=_uuidof(IVisualElementsRequest);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequest_INTERFACE_DEFINED__) */
@@ -2906,9 +2902,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVisualElementsRequestDeferral=_uuidof(IVisualElementsRequestDeferral);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestDeferral_INTERFACE_DEFINED__) */
@@ -2947,9 +2943,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVisualElementsRequestedEventArgs=_uuidof(IVisualElementsRequestedEventArgs);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -4524,7 +4520,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTil
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CStartScreen_CIVisualElementsRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CStartScreen__CSecondaryTile_Windows__CUI__CStartScreen__CVisualElementsRequestedEventArgsVtbl;
 

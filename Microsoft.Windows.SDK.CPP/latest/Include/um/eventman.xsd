@@ -583,10 +583,9 @@
               Defined attributes include:
               FILE=Filename of source code associated with event;
               LINE=Line number of source code associated with event;
-              COL=Column of source code associated with event;
               FUNC=Function name associated with event;
-              MJ=Major component associated with event;
-              MN=Minor component associated with event.
+              MJ=Major component associated with event (component name);
+              MN=Minor component associated with event (subcomponent name).
               Values containing semicolons or double-quotes should be quoted using
               double-quotes; double-quotes within the value should be doubled. Example:
               attributes='FILE=source.cpp;LINE=123;MJ="Value; ""Quoted"""'

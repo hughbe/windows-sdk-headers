@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.import.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportDeleteImportedItemsFromSourceResult;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportDeleteImportedItemsFromSourceResult ABI::Windows::Media::Import::IPhotoImportDeleteImportedItemsFromSourceResult
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportDeleteImportedItemsFromSourceResult_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportFindItemsResult;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult ABI::Windows::Media::Import::IPhotoImportFindItemsResult
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportFindItemsResult2;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult2 ABI::Windows::Media::Import::IPhotoImportFindItemsResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult2_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportImportItemsResult;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportImportItemsResult ABI::Windows::Media::Import::IPhotoImportImportItemsResult
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportImportItemsResult_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportItem;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem ABI::Windows::Media::Import::IPhotoImportItem
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportItem2;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem2 ABI::Windows::Media::Import::IPhotoImportItem2
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem2_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportItemImportedEventArgs;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportItemImportedEventArgs ABI::Windows::Media::Import::IPhotoImportItemImportedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportItemImportedEventArgs_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportManagerStatics;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportManagerStatics ABI::Windows::Media::Import::IPhotoImportManagerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportManagerStatics_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportOperation;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportOperation ABI::Windows::Media::Import::IPhotoImportOperation
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportOperation_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportSelectionChangedEventArgs;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSelectionChangedEventArgs ABI::Windows::Media::Import::IPhotoImportSelectionChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSelectionChangedEventArgs_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportSession;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession ABI::Windows::Media::Import::IPhotoImportSession
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportSession2;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession2 ABI::Windows::Media::Import::IPhotoImportSession2
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession2_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportSidecar;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSidecar ABI::Windows::Media::Import::IPhotoImportSidecar
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSidecar_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportSource;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSource ABI::Windows::Media::Import::IPhotoImportSource
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSource_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportSourceStatics;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSourceStatics ABI::Windows::Media::Import::IPhotoImportSourceStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSourceStatics_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportStorageMedium;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportStorageMedium ABI::Windows::Media::Import::IPhotoImportStorageMedium
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportStorageMedium_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 interface IPhotoImportVideoSegment;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CImport_CIPhotoImportVideoSegment ABI::Windows::Media::Import::IPhotoImportVideoSegment
 
 #endif // ____x_ABI_CWindows_CMedia_CImport_CIPhotoImportVideoSegment_FWD_DEFINED__
@@ -517,9 +513,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportItem;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -542,7 +538,7 @@ IIterator<ABI::Windows::Media::Import::PhotoImportItem*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Import::PhotoImportItem*> __FIIterator_1_Windows__CMedia__CImport__CPhotoImportItem_t;
 #define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CImport__CPhotoImportItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Import::IPhotoImportItem*>
@@ -574,7 +570,7 @@ IIterable<ABI::Windows::Media::Import::PhotoImportItem*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Import::PhotoImportItem*> __FIIterable_1_Windows__CMedia__CImport__CPhotoImportItem_t;
 #define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CImport__CPhotoImportItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Import::IPhotoImportItem*>
@@ -590,9 +586,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportOperation;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -615,7 +611,7 @@ IIterator<ABI::Windows::Media::Import::PhotoImportOperation*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Import::PhotoImportOperation*> __FIIterator_1_Windows__CMedia__CImport__CPhotoImportOperation_t;
 #define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportOperation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CImport__CPhotoImportOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportOperation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Import::IPhotoImportOperation*>
@@ -647,7 +643,7 @@ IIterable<ABI::Windows::Media::Import::PhotoImportOperation*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Import::PhotoImportOperation*> __FIIterable_1_Windows__CMedia__CImport__CPhotoImportOperation_t;
 #define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportOperation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CImport__CPhotoImportOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportOperation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Import::IPhotoImportOperation*>
@@ -663,9 +659,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportSidecar;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -688,7 +684,7 @@ IIterator<ABI::Windows::Media::Import::PhotoImportSidecar*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Import::PhotoImportSidecar*> __FIIterator_1_Windows__CMedia__CImport__CPhotoImportSidecar_t;
 #define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportSidecar ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CImport__CPhotoImportSidecar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportSidecar ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Import::IPhotoImportSidecar*>
@@ -720,7 +716,7 @@ IIterable<ABI::Windows::Media::Import::PhotoImportSidecar*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Import::PhotoImportSidecar*> __FIIterable_1_Windows__CMedia__CImport__CPhotoImportSidecar_t;
 #define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportSidecar ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CImport__CPhotoImportSidecar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportSidecar ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Import::IPhotoImportSidecar*>
@@ -736,9 +732,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportSource;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -761,7 +757,7 @@ IIterator<ABI::Windows::Media::Import::PhotoImportSource*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Import::PhotoImportSource*> __FIIterator_1_Windows__CMedia__CImport__CPhotoImportSource_t;
 #define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CImport__CPhotoImportSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Import::IPhotoImportSource*>
@@ -793,7 +789,7 @@ IIterable<ABI::Windows::Media::Import::PhotoImportSource*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Import::PhotoImportSource*> __FIIterable_1_Windows__CMedia__CImport__CPhotoImportSource_t;
 #define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CImport__CPhotoImportSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Import::IPhotoImportSource*>
@@ -809,9 +805,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportStorageMedium;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -834,7 +830,7 @@ IIterator<ABI::Windows::Media::Import::PhotoImportStorageMedium*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Import::PhotoImportStorageMedium*> __FIIterator_1_Windows__CMedia__CImport__CPhotoImportStorageMedium_t;
 #define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportStorageMedium ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CImport__CPhotoImportStorageMedium_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportStorageMedium ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Import::IPhotoImportStorageMedium*>
@@ -866,7 +862,7 @@ IIterable<ABI::Windows::Media::Import::PhotoImportStorageMedium*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Import::PhotoImportStorageMedium*> __FIIterable_1_Windows__CMedia__CImport__CPhotoImportStorageMedium_t;
 #define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportStorageMedium ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CImport__CPhotoImportStorageMedium_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportStorageMedium ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Import::IPhotoImportStorageMedium*>
@@ -882,9 +878,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportVideoSegment;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -907,7 +903,7 @@ IIterator<ABI::Windows::Media::Import::PhotoImportVideoSegment*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Import::PhotoImportVideoSegment*> __FIIterator_1_Windows__CMedia__CImport__CPhotoImportVideoSegment_t;
 #define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportVideoSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CImport__CPhotoImportVideoSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CImport__CPhotoImportVideoSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Import::IPhotoImportVideoSegment*>
@@ -939,7 +935,7 @@ IIterable<ABI::Windows::Media::Import::PhotoImportVideoSegment*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Import::PhotoImportVideoSegment*> __FIIterable_1_Windows__CMedia__CImport__CPhotoImportVideoSegment_t;
 #define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportVideoSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CImport__CPhotoImportVideoSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CImport__CPhotoImportVideoSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Import::IPhotoImportVideoSegment*>
@@ -971,7 +967,7 @@ IVectorView<ABI::Windows::Media::Import::PhotoImportItem*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Import::PhotoImportItem*> __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportItem_t;
 #define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportItem*>
@@ -1003,7 +999,7 @@ IVectorView<ABI::Windows::Media::Import::PhotoImportOperation*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Import::PhotoImportOperation*> __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportOperation_t;
 #define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportOperation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportOperation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportOperation*>
@@ -1035,7 +1031,7 @@ IVectorView<ABI::Windows::Media::Import::PhotoImportSidecar*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Import::PhotoImportSidecar*> __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSidecar_t;
 #define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSidecar ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSidecar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSidecar ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportSidecar*>
@@ -1067,7 +1063,7 @@ IVectorView<ABI::Windows::Media::Import::PhotoImportSource*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Import::PhotoImportSource*> __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource_t;
 #define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportSource*>
@@ -1099,7 +1095,7 @@ IVectorView<ABI::Windows::Media::Import::PhotoImportStorageMedium*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Import::PhotoImportStorageMedium*> __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportStorageMedium_t;
 #define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportStorageMedium ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportStorageMedium_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportStorageMedium ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportStorageMedium*>
@@ -1131,7 +1127,7 @@ IVectorView<ABI::Windows::Media::Import::PhotoImportVideoSegment*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Import::PhotoImportVideoSegment*> __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportVideoSegment_t;
 #define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportVideoSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportVideoSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportVideoSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportVideoSegment*>
@@ -1147,9 +1143,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportDeleteImportedItemsFromSourceResult;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1172,7 +1168,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Media::Import::PhotoImportDeleteImp
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult*,double> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Import::IPhotoImportDeleteImportedItemsFromSourceResult*,DOUBLE>
@@ -1204,7 +1200,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::PhotoIm
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult*,double> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::IPhotoImportDeleteImportedItemsFromSourceResult*,DOUBLE>
@@ -1236,7 +1232,7 @@ IAsyncOperationWithProgress<ABI::Windows::Media::Import::PhotoImportDeleteImport
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult*,double> __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Import::IPhotoImportDeleteImportedItemsFromSourceResult*,DOUBLE>
@@ -1252,9 +1248,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportFindItemsResult;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1277,7 +1273,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Media::Import::PhotoImportFindItems
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Media::Import::PhotoImportFindItemsResult*,UINT32> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Import::IPhotoImportFindItemsResult*,UINT32>
@@ -1309,7 +1305,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::PhotoIm
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::PhotoImportFindItemsResult*,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::IPhotoImportFindItemsResult*,UINT32>
@@ -1341,7 +1337,7 @@ IAsyncOperationWithProgress<ABI::Windows::Media::Import::PhotoImportFindItemsRes
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Media::Import::PhotoImportFindItemsResult*,UINT32> __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Import::IPhotoImportFindItemsResult*,UINT32>
@@ -1357,9 +1353,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportImportItemsResult;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1368,9 +1364,9 @@ namespace ABI {
             namespace Import {
                 struct PhotoImportProgress;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -1392,7 +1388,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Media::Import::PhotoImportImportIte
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Media::Import::PhotoImportImportItemsResult*,struct ABI::Windows::Media::Import::PhotoImportProgress> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Import::IPhotoImportImportItemsResult*,ABI::Windows::Media::Import::PhotoImportProgress>
@@ -1425,7 +1421,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::PhotoIm
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::PhotoImportImportItemsResult*,struct ABI::Windows::Media::Import::PhotoImportProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Import::IPhotoImportImportItemsResult*,ABI::Windows::Media::Import::PhotoImportProgress>
@@ -1458,7 +1454,7 @@ IAsyncOperationWithProgress<ABI::Windows::Media::Import::PhotoImportImportItemsR
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Media::Import::PhotoImportImportItemsResult*,struct ABI::Windows::Media::Import::PhotoImportProgress> __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Import::IPhotoImportImportItemsResult*,ABI::Windows::Media::Import::PhotoImportProgress>
@@ -1490,7 +1486,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CMedia__CImport__CPhot
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportSource*>*>
@@ -1522,7 +1518,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource*> __FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Import::IPhotoImportSource*>*>
@@ -1554,7 +1550,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Import::PhotoImportSource*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Import::PhotoImportSource*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CImport__CPhotoImportSource_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CImport__CPhotoImportSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Import::IPhotoImportSource*>
@@ -1586,7 +1582,7 @@ IAsyncOperation<ABI::Windows::Media::Import::PhotoImportSource*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Import::PhotoImportSource*> __FIAsyncOperation_1_Windows__CMedia__CImport__CPhotoImportSource_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CImport__CPhotoImportSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CImport__CPhotoImportSource ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Import::IPhotoImportSource*>
@@ -1603,9 +1599,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportItemImportedEventArgs;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1629,7 +1625,7 @@ ITypedEventHandler<ABI::Windows::Media::Import::PhotoImportFindItemsResult*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Import::PhotoImportFindItemsResult*,ABI::Windows::Media::Import::PhotoImportItemImportedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Import::IPhotoImportFindItemsResult*,ABI::Windows::Media::Import::IPhotoImportItemImportedEventArgs*>
@@ -1647,9 +1643,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportSelectionChangedEventArgs;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1673,7 +1669,7 @@ ITypedEventHandler<ABI::Windows::Media::Import::PhotoImportFindItemsResult*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Import::PhotoImportFindItemsResult*,ABI::Windows::Media::Import::PhotoImportSelectionChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Import::IPhotoImportFindItemsResult*,ABI::Windows::Media::Import::IPhotoImportSelectionChangedEventArgs*>
@@ -1704,7 +1700,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1733,7 +1729,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1762,7 +1758,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1791,7 +1787,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1820,7 +1816,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1849,7 +1845,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -1864,8 +1860,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1886,7 +1882,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1915,7 +1911,7 @@ IReference<bool> : IReference_impl<ABI::Windows::Foundation::Internal::Aggregate
 // correct parameterized interface specialization.
 typedef IReference<bool> __FIReference_1_boolean_t;
 #define __FIReference_1_boolean ABI::Windows::Foundation::__FIReference_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_boolean ABI::Windows::Foundation::IReference<boolean>
@@ -1933,8 +1929,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1942,8 +1938,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1955,8 +1951,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1968,8 +1964,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1980,8 +1976,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1996,9 +1992,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2014,9 +2010,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportAccessMode : int PhotoImportAccessMode;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2025,9 +2021,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportConnectionTransport : int PhotoImportConnectionTransport;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2036,9 +2032,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportContentType : int PhotoImportContentType;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2047,9 +2043,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportContentTypeFilter : int PhotoImportContentTypeFilter;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2058,9 +2054,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportImportMode : int PhotoImportImportMode;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2069,9 +2065,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportItemSelectionMode : int PhotoImportItemSelectionMode;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2080,9 +2076,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportPowerSource : int PhotoImportPowerSource;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2091,9 +2087,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportSourceType : int PhotoImportSourceType;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2102,9 +2098,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportStage : int PhotoImportStage;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2113,9 +2109,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportStorageMediumType : int PhotoImportStorageMediumType;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2124,9 +2120,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportSubfolderCreationMode : int PhotoImportSubfolderCreationMode;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2135,9 +2131,9 @@ namespace ABI {
                 
                 typedef enum PhotoImportSubfolderDateFormat : int PhotoImportSubfolderDateFormat;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2146,9 +2142,9 @@ namespace ABI {
                 
                 typedef struct PhotoImportProgress PhotoImportProgress;
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2180,9 +2176,9 @@ namespace ABI {
         namespace Media {
             namespace Import {
                 class PhotoImportSession;
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2219,9 +2215,9 @@ namespace ABI {
                     PhotoImportAccessMode_ReadAndDelete = 2,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2248,9 +2244,9 @@ namespace ABI {
                     PhotoImportConnectionTransport_Bluetooth = 3,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2276,9 +2272,9 @@ namespace ABI {
                     PhotoImportContentType_Video = 2,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2309,9 +2305,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2338,9 +2334,9 @@ namespace ABI {
                     PhotoImportImportMode_IgnoreSidecarsAndSiblings = 3,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2366,9 +2362,9 @@ namespace ABI {
                     PhotoImportItemSelectionMode_SelectNew = 2,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2394,9 +2390,9 @@ namespace ABI {
                     PhotoImportPowerSource_External = 2,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2426,9 +2422,9 @@ namespace ABI {
                     PhotoImportSourceType_AudioRecorder = 6,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2455,9 +2451,9 @@ namespace ABI {
                     PhotoImportStage_DeletingImportedItemsFromSource = 3,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2483,9 +2479,9 @@ namespace ABI {
                     PhotoImportStorageMediumType_Removable = 2,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2512,9 +2508,9 @@ namespace ABI {
                     PhotoImportSubfolderCreationMode_KeepOriginalFolderStructure = 3,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2540,9 +2536,9 @@ namespace ABI {
                     PhotoImportSubfolderDateFormat_YearMonthDay = 2,
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2570,9 +2566,9 @@ namespace ABI {
                     DOUBLE ImportProgress;
                 };
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2604,7 +2600,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Import::IPhotoImportSession * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasSucceeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DeletedItems(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportItem * * value
@@ -2644,9 +2640,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportDeleteImportedItemsFromSourceResult=_uuidof(IPhotoImportDeleteImportedItemsFromSourceResult);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportDeleteImportedItemsFromSourceResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportDeleteImportedItemsFromSourceResult_INTERFACE_DEFINED__) */
@@ -2681,7 +2677,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Import::IPhotoImportSession * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasSucceeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FoundItems(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportItem * * value
@@ -2779,9 +2775,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportFindItemsResult=_uuidof(IPhotoImportFindItemsResult);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult_INTERFACE_DEFINED__) */
@@ -2821,9 +2817,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportFindItemsResult2=_uuidof(IPhotoImportFindItemsResult2);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult2_INTERFACE_DEFINED__) */
@@ -2858,7 +2854,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Import::IPhotoImportSession * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasSucceeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ImportedItems(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportItem * * value
@@ -2901,9 +2897,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportImportItemsResult=_uuidof(IPhotoImportImportItemsResult);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportImportItemsResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportImportItemsResult_INTERFACE_DEFINED__) */
@@ -2959,10 +2955,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CImport__CPhotoImportVideoSegment * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSelected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSelected(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Thumbnail(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStreamReference * * value
@@ -2978,9 +2974,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportItem=_uuidof(IPhotoImportItem);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem_INTERFACE_DEFINED__) */
@@ -3019,9 +3015,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportItem2=_uuidof(IPhotoImportItem2);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportItem2_INTERFACE_DEFINED__) */
@@ -3060,9 +3056,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportItemImportedEventArgs=_uuidof(IPhotoImportItemImportedEventArgs);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportItemImportedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportItemImportedEventArgs_INTERFACE_DEFINED__) */
@@ -3107,9 +3103,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportManagerStatics=_uuidof(IPhotoImportManagerStatics);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportManagerStatics_INTERFACE_DEFINED__) */
@@ -3160,9 +3156,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportOperation=_uuidof(IPhotoImportOperation);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportOperation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportOperation_INTERFACE_DEFINED__) */
@@ -3194,16 +3190,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSelectionEmpty(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportSelectionChangedEventArgs=_uuidof(IPhotoImportSelectionChangedEventArgs);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportSelectionChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSelectionChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3251,10 +3247,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::IStorageFolder * * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AppendSessionDateToDestinationFolder(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AppendSessionDateToDestinationFolder(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SubfolderCreationMode(
                         /* [in] */ABI::Windows::Media::Import::PhotoImportSubfolderCreationMode value
@@ -3278,9 +3274,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportSession=_uuidof(IPhotoImportSession);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession_INTERFACE_DEFINED__) */
@@ -3318,19 +3314,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Import::PhotoImportSubfolderDateFormat * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RememberDeselectedItems(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RememberDeselectedItems(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportSession2=_uuidof(IPhotoImportSession2);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSession2_INTERFACE_DEFINED__) */
@@ -3375,9 +3371,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportSidecar=_uuidof(IPhotoImportSidecar);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportSidecar;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSidecar_INTERFACE_DEFINED__) */
@@ -3451,7 +3447,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIReference_1_boolean * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMassStorage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Thumbnail(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStreamReference * * value
@@ -3464,9 +3460,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportSource=_uuidof(IPhotoImportSource);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSource_INTERFACE_DEFINED__) */
@@ -3510,9 +3506,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportSourceStatics=_uuidof(IPhotoImportSourceStatics);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportSourceStatics_INTERFACE_DEFINED__) */
@@ -3570,9 +3566,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportStorageMedium=_uuidof(IPhotoImportStorageMedium);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportStorageMedium;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportStorageMedium_INTERFACE_DEFINED__) */
@@ -3623,9 +3619,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhotoImportVideoSegment=_uuidof(IPhotoImportVideoSegment);
                 
-            } /* Windows */
+            } /* Import */
         } /* Media */
-    } /* Import */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CImport_CIPhotoImportVideoSegment;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CImport_CIPhotoImportVideoSegment_INTERFACE_DEFINED__) */
@@ -5696,7 +5692,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPh
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_double *asyncInfo, /* [in] */ double progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportDeleteImportedItemsFromSourceResult_doubleVtbl;
 
@@ -5869,7 +5865,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPh
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_UINT32Vtbl;
 
@@ -6044,7 +6040,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPh
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CMedia_CImport_CPhotoImportProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CMedia__CImport__CPhotoImportImportItemsResult_Windows__CMedia__CImport__CPhotoImportProgressVtbl;
 
@@ -6448,7 +6444,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFin
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportItemImportedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportItemImportedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportItemImportedEventArgsVtbl;
 
@@ -6501,7 +6497,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFin
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSelectionChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportFindItemsResult * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CImport_CIPhotoImportSelectionChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CImport__CPhotoImportFindItemsResult_Windows__CMedia__CImport__CPhotoImportSelectionChangedEventArgsVtbl;
 
@@ -6929,7 +6925,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

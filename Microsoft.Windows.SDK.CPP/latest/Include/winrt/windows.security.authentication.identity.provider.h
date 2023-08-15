@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.authentication.identity.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,11 +275,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorAuthentication;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthentication ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthentication
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthentication_FWD_DEFINED__
@@ -297,11 +293,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorAuthenticationResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationResult ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationResult_FWD_DEFINED__
@@ -315,11 +311,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs_FWD_DEFINED__
@@ -333,11 +329,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorAuthenticationStageInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageInfo ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStageInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageInfo_FWD_DEFINED__
@@ -351,11 +347,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorAuthenticationStatics;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStatics ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStatics_FWD_DEFINED__
@@ -369,11 +365,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics_FWD_DEFINED__
@@ -387,11 +383,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo_FWD_DEFINED__
@@ -405,11 +401,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorInfo2;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo2 ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo2
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo2_FWD_DEFINED__
@@ -423,11 +419,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorRegistration;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistration ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorRegistration
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistration_FWD_DEFINED__
@@ -441,11 +437,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorRegistrationResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationResult ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorRegistrationResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationResult_FWD_DEFINED__
@@ -459,11 +455,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         interface ISecondaryAuthenticationFactorRegistrationStatics;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationStatics ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorRegistrationStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationStatics_FWD_DEFINED__
@@ -478,11 +474,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         class SecondaryAuthenticationFactorInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -505,7 +501,7 @@ IIterator<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryA
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo*> __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t;
 #define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo*>
@@ -537,7 +533,7 @@ IIterable<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryA
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo*> __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t;
 #define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo*>
@@ -569,7 +565,7 @@ IVectorView<ABI::Windows::Security::Authentication::Identity::Provider::Secondar
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo*> __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t;
 #define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo*>
@@ -587,11 +583,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         class SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -614,7 +610,7 @@ IEventHandler<ABI::Windows::Security::Authentication::Identity::Provider::Second
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs*> __FIEventHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageChangedEventArgs_t;
 #define __FIEventHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageChangedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageChangedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs*>
@@ -646,7 +642,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CAuthentica
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo*>*>
@@ -678,7 +674,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo*> __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo*>*>
@@ -696,11 +692,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         class SecondaryAuthenticationFactorAuthenticationResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -723,7 +719,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationResult*>
@@ -755,7 +751,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::Seco
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationResult*>
@@ -773,11 +769,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         class SecondaryAuthenticationFactorAuthenticationStageInfo;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -800,7 +796,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStageInfo*>
@@ -832,7 +828,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::Seco
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorAuthenticationStageInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStageInfo*>
@@ -850,11 +846,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         enum SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus : int;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus_USE
@@ -875,7 +871,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Ide
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus>
@@ -905,7 +901,7 @@ IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Provider:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus>
@@ -922,11 +918,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         enum SecondaryAuthenticationFactorFinishAuthenticationStatus : int;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus_USE
@@ -947,7 +943,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Ide
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorFinishAuthenticationStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorFinishAuthenticationStatus>
@@ -977,7 +973,7 @@ IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Provider:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorFinishAuthenticationStatus> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorFinishAuthenticationStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorFinishAuthenticationStatus>
@@ -994,11 +990,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         class SecondaryAuthenticationFactorRegistrationResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1021,7 +1017,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorRegistrationResult*>
@@ -1053,7 +1049,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::Seco
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CProvider__CSecondaryAuthenticationFactorRegistrationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorRegistrationResult*>
@@ -1072,8 +1068,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1089,9 +1085,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1109,11 +1105,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorAuthenticationMessage : int SecondaryAuthenticationFactorAuthenticationMessage;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1124,11 +1120,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorAuthenticationScenario : int SecondaryAuthenticationFactorAuthenticationScenario;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1139,11 +1135,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorAuthenticationStage : int SecondaryAuthenticationFactorAuthenticationStage;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1154,11 +1150,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorAuthenticationStatus : int SecondaryAuthenticationFactorAuthenticationStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1169,11 +1165,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorDeviceCapabilities : unsigned int SecondaryAuthenticationFactorDeviceCapabilities;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1184,11 +1180,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorDeviceFindScope : int SecondaryAuthenticationFactorDeviceFindScope;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1199,11 +1195,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorDevicePresence : int SecondaryAuthenticationFactorDevicePresence;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1214,11 +1210,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorDevicePresenceMonitoringMode : int SecondaryAuthenticationFactorDevicePresenceMonitoringMode;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1229,11 +1225,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus : int SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1244,11 +1240,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorFinishAuthenticationStatus : int SecondaryAuthenticationFactorFinishAuthenticationStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1259,11 +1255,11 @@ namespace ABI {
                         
                         typedef enum SecondaryAuthenticationFactorRegistrationStatus : int SecondaryAuthenticationFactorRegistrationStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1283,11 +1279,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         class SecondaryAuthenticationFactorAuthentication;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1301,11 +1297,11 @@ namespace ABI {
                 namespace Identity {
                     namespace Provider {
                         class SecondaryAuthenticationFactorRegistration;
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1407,11 +1403,11 @@ namespace ABI {
                             
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1438,11 +1434,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorAuthenticationScenario_CredentialPrompt = 1,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1484,11 +1480,11 @@ namespace ABI {
                             
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1518,11 +1514,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorAuthenticationStatus_InvalidAuthenticationStage = 4,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1565,11 +1561,11 @@ namespace ABI {
                         
                         DEFINE_ENUM_FLAG_OPERATORS(SecondaryAuthenticationFactorDeviceCapabilities)
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1596,11 +1592,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorDeviceFindScope_AllUsers = 1,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1631,11 +1627,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorDevicePresence_Present = 1,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1667,11 +1663,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorDevicePresenceMonitoringMode_SystemManaged = 2,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1703,11 +1699,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus_DisabledByPolicy = 2,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1735,11 +1731,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorFinishAuthenticationStatus_NonceExpired = 2,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1769,11 +1765,11 @@ namespace ABI {
                             SecondaryAuthenticationFactorRegistrationStatus_DisabledByPolicy = 4,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1829,11 +1825,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorAuthentication=_uuidof(ISecondaryAuthenticationFactorAuthentication);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthentication;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthentication_INTERFACE_DEFINED__) */
@@ -1877,11 +1873,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorAuthenticationResult=_uuidof(ISecondaryAuthenticationFactorAuthenticationResult);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationResult_INTERFACE_DEFINED__) */
@@ -1922,11 +1918,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs=_uuidof(ISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs_INTERFACE_DEFINED__) */
@@ -1973,11 +1969,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorAuthenticationStageInfo=_uuidof(ISecondaryAuthenticationFactorAuthenticationStageInfo);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStageInfo_INTERFACE_DEFINED__) */
@@ -2035,11 +2031,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorAuthenticationStatics=_uuidof(ISecondaryAuthenticationFactorAuthenticationStatics);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorAuthenticationStatics_INTERFACE_DEFINED__) */
@@ -2108,18 +2104,18 @@ namespace ABI {
                             DEPRECATED("IsDevicePresenceMonitoringSupported is deprecated and might not work on all platforms. For more info, see MSDN.")
                             #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
                             /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE IsDevicePresenceMonitoringSupported(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics=_uuidof(ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics_INTERFACE_DEFINED__) */
@@ -2169,11 +2165,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorInfo=_uuidof(ISecondaryAuthenticationFactorInfo);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo_INTERFACE_DEFINED__) */
@@ -2230,18 +2226,18 @@ namespace ABI {
                             DEPRECATED("IsAuthenticationSupported is deprecated and might not work on all platforms. For more info, see MSDN.")
                             #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
                             /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsAuthenticationSupported(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorInfo2=_uuidof(ISecondaryAuthenticationFactorInfo2);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorInfo2_INTERFACE_DEFINED__) */
@@ -2287,11 +2283,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorRegistration=_uuidof(ISecondaryAuthenticationFactorRegistration);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistration;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistration_INTERFACE_DEFINED__) */
@@ -2335,11 +2331,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorRegistrationResult=_uuidof(ISecondaryAuthenticationFactorRegistrationResult);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationResult_INTERFACE_DEFINED__) */
@@ -2399,11 +2395,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ISecondaryAuthenticationFactorRegistrationStatics=_uuidof(ISecondaryAuthenticationFactorRegistrationStatics);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Provider */
+                } /* Identity */
             } /* Authentication */
-        } /* Identity */
-    } /* Provider */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CProvider_CISecondaryAuthenticationFactorRegistrationStatics_INTERFACE_DEFINED__) */

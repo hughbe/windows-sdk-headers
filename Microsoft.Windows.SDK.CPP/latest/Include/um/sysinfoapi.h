@@ -121,6 +121,15 @@ GetLocalTime(
     );
 
 
+WINBASEAPI
+BOOL
+WINAPI
+GetSystemLeapSecondInformation(
+    _Out_ PBOOL Enabled,
+    _Out_ PDWORD Flags
+    );
+
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 

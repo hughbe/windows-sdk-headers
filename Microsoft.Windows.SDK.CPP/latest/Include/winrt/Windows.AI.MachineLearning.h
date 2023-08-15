@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ai.machinelearning.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION)
-#define WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION 0x10000
+#define WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
@@ -116,11 +116,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -286,9 +282,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface IImageFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureDescriptor ABI::Windows::AI::MachineLearning::IImageFeatureDescriptor
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureDescriptor_FWD_DEFINED__
@@ -300,9 +296,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface IImageFeatureValue;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValue ABI::Windows::AI::MachineLearning::IImageFeatureValue
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValue_FWD_DEFINED__
@@ -314,9 +310,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface IImageFeatureValueStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValueStatics ABI::Windows::AI::MachineLearning::IImageFeatureValueStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValueStatics_FWD_DEFINED__
@@ -328,9 +324,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModel;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModel ABI::Windows::AI::MachineLearning::ILearningModel
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModel_FWD_DEFINED__
@@ -342,9 +338,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelBinding;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBinding ABI::Windows::AI::MachineLearning::ILearningModelBinding
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBinding_FWD_DEFINED__
@@ -356,9 +352,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelBindingFactory;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBindingFactory ABI::Windows::AI::MachineLearning::ILearningModelBindingFactory
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBindingFactory_FWD_DEFINED__
@@ -370,9 +366,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelDevice;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDevice ABI::Windows::AI::MachineLearning::ILearningModelDevice
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDevice_FWD_DEFINED__
@@ -384,9 +380,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelDeviceFactory;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceFactory ABI::Windows::AI::MachineLearning::ILearningModelDeviceFactory
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceFactory_FWD_DEFINED__
@@ -398,9 +394,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelDeviceStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceStatics ABI::Windows::AI::MachineLearning::ILearningModelDeviceStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceStatics_FWD_DEFINED__
@@ -412,9 +408,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelEvaluationResult;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelEvaluationResult ABI::Windows::AI::MachineLearning::ILearningModelEvaluationResult
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelEvaluationResult_FWD_DEFINED__
@@ -426,9 +422,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureDescriptor ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureDescriptor_FWD_DEFINED__
@@ -440,9 +436,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelFeatureValue;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureValue ABI::Windows::AI::MachineLearning::ILearningModelFeatureValue
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureValue_FWD_DEFINED__
@@ -454,9 +450,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelOperatorProvider;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelOperatorProvider ABI::Windows::AI::MachineLearning::ILearningModelOperatorProvider
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelOperatorProvider_FWD_DEFINED__
@@ -468,9 +464,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelSession;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSession ABI::Windows::AI::MachineLearning::ILearningModelSession
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSession_FWD_DEFINED__
@@ -482,12 +478,40 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelSessionFactory;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory ABI::Windows::AI::MachineLearning::ILearningModelSessionFactory
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ILearningModelSessionFactory2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 ABI::Windows::AI::MachineLearning::ILearningModelSessionFactory2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ILearningModelSessionOptions;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions ABI::Windows::AI::MachineLearning::ILearningModelSessionOptions
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
@@ -496,9 +520,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ILearningModelStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics ABI::Windows::AI::MachineLearning::ILearningModelStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
@@ -510,9 +534,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface IMapFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CIMapFeatureDescriptor ABI::Windows::AI::MachineLearning::IMapFeatureDescriptor
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CIMapFeatureDescriptor_FWD_DEFINED__
@@ -524,9 +548,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ISequenceFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CISequenceFeatureDescriptor ABI::Windows::AI::MachineLearning::ISequenceFeatureDescriptor
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CISequenceFeatureDescriptor_FWD_DEFINED__
@@ -538,9 +562,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensor ABI::Windows::AI::MachineLearning::ITensor
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensor_FWD_DEFINED__
@@ -552,9 +576,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorBoolean;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBoolean ABI::Windows::AI::MachineLearning::ITensorBoolean
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBoolean_FWD_DEFINED__
@@ -566,12 +590,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorBooleanStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics ABI::Windows::AI::MachineLearning::ITensorBooleanStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorBooleanStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 ABI::Windows::AI::MachineLearning::ITensorBooleanStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble_FWD_DEFINED__
@@ -580,9 +618,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorDouble;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble ABI::Windows::AI::MachineLearning::ITensorDouble
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble_FWD_DEFINED__
@@ -594,12 +632,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorDoubleStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics ABI::Windows::AI::MachineLearning::ITensorDoubleStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorDoubleStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 ABI::Windows::AI::MachineLearning::ITensorDoubleStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor_FWD_DEFINED__
@@ -608,9 +660,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor ABI::Windows::AI::MachineLearning::ITensorFeatureDescriptor
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor_FWD_DEFINED__
@@ -622,9 +674,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorFloat;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat ABI::Windows::AI::MachineLearning::ITensorFloat
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat_FWD_DEFINED__
@@ -636,9 +688,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorFloat16Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16Bit ABI::Windows::AI::MachineLearning::ITensorFloat16Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16Bit_FWD_DEFINED__
@@ -650,12 +702,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorFloat16BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics ABI::Windows::AI::MachineLearning::ITensorFloat16BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorFloat16BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 ABI::Windows::AI::MachineLearning::ITensorFloat16BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_FWD_DEFINED__
@@ -664,12 +730,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorFloatStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics ABI::Windows::AI::MachineLearning::ITensorFloatStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorFloatStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 ABI::Windows::AI::MachineLearning::ITensorFloatStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit_FWD_DEFINED__
@@ -678,9 +758,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt16Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit ABI::Windows::AI::MachineLearning::ITensorInt16Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit_FWD_DEFINED__
@@ -692,12 +772,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt16BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics ABI::Windows::AI::MachineLearning::ITensorInt16BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorInt16BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 ABI::Windows::AI::MachineLearning::ITensorInt16BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit_FWD_DEFINED__
@@ -706,9 +800,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt32Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit ABI::Windows::AI::MachineLearning::ITensorInt32Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit_FWD_DEFINED__
@@ -720,12 +814,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt32BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics ABI::Windows::AI::MachineLearning::ITensorInt32BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorInt32BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 ABI::Windows::AI::MachineLearning::ITensorInt32BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit_FWD_DEFINED__
@@ -734,9 +842,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt64Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit ABI::Windows::AI::MachineLearning::ITensorInt64Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit_FWD_DEFINED__
@@ -748,12 +856,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt64BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics ABI::Windows::AI::MachineLearning::ITensorInt64BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorInt64BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 ABI::Windows::AI::MachineLearning::ITensorInt64BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit_FWD_DEFINED__
@@ -762,9 +884,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt8Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit ABI::Windows::AI::MachineLearning::ITensorInt8Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit_FWD_DEFINED__
@@ -776,12 +898,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorInt8BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics ABI::Windows::AI::MachineLearning::ITensorInt8BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorInt8BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 ABI::Windows::AI::MachineLearning::ITensorInt8BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorString_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorString_FWD_DEFINED__
@@ -790,9 +926,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorString;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorString ABI::Windows::AI::MachineLearning::ITensorString
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorString_FWD_DEFINED__
@@ -804,12 +940,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorStringStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics ABI::Windows::AI::MachineLearning::ITensorStringStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorStringStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 ABI::Windows::AI::MachineLearning::ITensorStringStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit_FWD_DEFINED__
@@ -818,9 +968,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt16Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit ABI::Windows::AI::MachineLearning::ITensorUInt16Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit_FWD_DEFINED__
@@ -832,12 +982,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt16BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics ABI::Windows::AI::MachineLearning::ITensorUInt16BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorUInt16BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 ABI::Windows::AI::MachineLearning::ITensorUInt16BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit_FWD_DEFINED__
@@ -846,9 +1010,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt32Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit ABI::Windows::AI::MachineLearning::ITensorUInt32Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit_FWD_DEFINED__
@@ -860,12 +1024,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt32BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics ABI::Windows::AI::MachineLearning::ITensorUInt32BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorUInt32BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 ABI::Windows::AI::MachineLearning::ITensorUInt32BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit_FWD_DEFINED__
@@ -874,9 +1052,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt64Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit ABI::Windows::AI::MachineLearning::ITensorUInt64Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit_FWD_DEFINED__
@@ -888,12 +1066,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt64BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics ABI::Windows::AI::MachineLearning::ITensorUInt64BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorUInt64BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 ABI::Windows::AI::MachineLearning::ITensorUInt64BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit_FWD_DEFINED__
@@ -902,9 +1094,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt8Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit ABI::Windows::AI::MachineLearning::ITensorUInt8Bit
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit_FWD_DEFINED__
@@ -916,12 +1108,26 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 interface ITensorUInt8BitStatics;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics ABI::Windows::AI::MachineLearning::ITensorUInt8BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ITensorUInt8BitStatics2;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 ABI::Windows::AI::MachineLearning::ITensorUInt8BitStatics2
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -947,7 +1153,7 @@ IIterator<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*> __FIIterator_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor_t;
 #define __FIIterator_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*>
@@ -979,7 +1185,7 @@ IIterable<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*> __FIIterable_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor_t;
 #define __FIIterable_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*>
@@ -1011,7 +1217,7 @@ IVectorView<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*> __FIVectorView_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor_t;
 #define __FIVectorView_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CAI__CMachineLearning__CILearningModelFeatureDescriptor ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor*>
@@ -1027,9 +1233,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class LearningModel;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
@@ -1052,7 +1258,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::LearningModel
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::LearningModel*> __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModel_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModel ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModel ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::ILearningModel*>
@@ -1084,7 +1290,7 @@ IAsyncOperation<ABI::Windows::AI::MachineLearning::LearningModel*> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::AI::MachineLearning::LearningModel*> __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModel_t;
 #define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModel ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModel ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::AI::MachineLearning::ILearningModel*>
@@ -1100,9 +1306,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class LearningModelEvaluationResult;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
@@ -1125,7 +1331,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::LearningModel
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::LearningModelEvaluationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::ILearningModelEvaluationResult*>
@@ -1157,7 +1363,7 @@ IAsyncOperation<ABI::Windows::AI::MachineLearning::LearningModelEvaluationResult
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::AI::MachineLearning::LearningModelEvaluationResult*> __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult_t;
 #define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CLearningModelEvaluationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::AI::MachineLearning::ILearningModelEvaluationResult*>
@@ -1187,7 +1393,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1217,7 +1423,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1247,7 +1453,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1276,7 +1482,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1306,7 +1512,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1336,7 +1542,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1366,7 +1572,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1396,7 +1602,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1426,7 +1632,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1455,7 +1661,7 @@ IIterator<__int64> : IIterator_impl<__int64>
 // correct parameterized interface specialization.
 typedef IIterator<__int64> __FIIterator_1___z__zint64_t;
 #define __FIIterator_1___z__zint64 ABI::Windows::Foundation::Collections::__FIIterator_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___z__zint64 ABI::Windows::Foundation::Collections::IIterator<INT64>
@@ -1484,7 +1690,7 @@ IIterable<__int64> : IIterable_impl<__int64>
 // correct parameterized interface specialization.
 typedef IIterable<__int64> __FIIterable_1___z__zint64_t;
 #define __FIIterable_1___z__zint64 ABI::Windows::Foundation::Collections::__FIIterable_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___z__zint64 ABI::Windows::Foundation::Collections::IIterable<INT64>
@@ -1513,7 +1719,7 @@ IVectorView<__int64> : IVectorView_impl<__int64>
 // correct parameterized interface specialization.
 typedef IVectorView<__int64> __FIVectorView_1___z__zint64_t;
 #define __FIVectorView_1___z__zint64 ABI::Windows::Foundation::Collections::__FIVectorView_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1___z__zint64 ABI::Windows::Foundation::Collections::IVectorView<INT64>
@@ -1542,7 +1748,7 @@ IIterator<bool> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateTy
 // correct parameterized interface specialization.
 typedef IIterator<bool> __FIIterator_1_boolean_t;
 #define __FIIterator_1_boolean ABI::Windows::Foundation::Collections::__FIIterator_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_boolean ABI::Windows::Foundation::Collections::IIterator<boolean>
@@ -1571,7 +1777,7 @@ IIterable<bool> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateTy
 // correct parameterized interface specialization.
 typedef IIterable<bool> __FIIterable_1_boolean_t;
 #define __FIIterable_1_boolean ABI::Windows::Foundation::Collections::__FIIterable_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_boolean ABI::Windows::Foundation::Collections::IIterable<boolean>
@@ -1600,7 +1806,7 @@ IVectorView<bool> : IVectorView_impl<ABI::Windows::Foundation::Internal::Aggrega
 // correct parameterized interface specialization.
 typedef IVectorView<bool> __FIVectorView_1_boolean_t;
 #define __FIVectorView_1_boolean ABI::Windows::Foundation::Collections::__FIVectorView_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_boolean ABI::Windows::Foundation::Collections::IVectorView<boolean>
@@ -1629,7 +1835,7 @@ IIterator<double> : IIterator_impl<double>
 // correct parameterized interface specialization.
 typedef IIterator<double> __FIIterator_1_double_t;
 #define __FIIterator_1_double ABI::Windows::Foundation::Collections::__FIIterator_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_double ABI::Windows::Foundation::Collections::IIterator<DOUBLE>
@@ -1658,7 +1864,7 @@ IIterable<double> : IIterable_impl<double>
 // correct parameterized interface specialization.
 typedef IIterable<double> __FIIterable_1_double_t;
 #define __FIIterable_1_double ABI::Windows::Foundation::Collections::__FIIterable_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_double ABI::Windows::Foundation::Collections::IIterable<DOUBLE>
@@ -1687,7 +1893,7 @@ IVectorView<double> : IVectorView_impl<double>
 // correct parameterized interface specialization.
 typedef IVectorView<double> __FIVectorView_1_double_t;
 #define __FIVectorView_1_double ABI::Windows::Foundation::Collections::__FIVectorView_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_double ABI::Windows::Foundation::Collections::IVectorView<DOUBLE>
@@ -1716,7 +1922,7 @@ IIterator<float> : IIterator_impl<float>
 // correct parameterized interface specialization.
 typedef IIterator<float> __FIIterator_1_float_t;
 #define __FIIterator_1_float ABI::Windows::Foundation::Collections::__FIIterator_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_float ABI::Windows::Foundation::Collections::IIterator<FLOAT>
@@ -1745,7 +1951,7 @@ IIterable<float> : IIterable_impl<float>
 // correct parameterized interface specialization.
 typedef IIterable<float> __FIIterable_1_float_t;
 #define __FIIterable_1_float ABI::Windows::Foundation::Collections::__FIIterable_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_float ABI::Windows::Foundation::Collections::IIterable<FLOAT>
@@ -1774,7 +1980,7 @@ IVectorView<float> : IVectorView_impl<float>
 // correct parameterized interface specialization.
 typedef IVectorView<float> __FIVectorView_1_float_t;
 #define __FIVectorView_1_float ABI::Windows::Foundation::Collections::__FIVectorView_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_float ABI::Windows::Foundation::Collections::IVectorView<FLOAT>
@@ -1803,7 +2009,7 @@ IIterator<short> : IIterator_impl<short>
 // correct parameterized interface specialization.
 typedef IIterator<short> __FIIterator_1_short_t;
 #define __FIIterator_1_short ABI::Windows::Foundation::Collections::__FIIterator_1_short_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_short ABI::Windows::Foundation::Collections::IIterator<INT16>
@@ -1832,7 +2038,7 @@ IIterable<short> : IIterable_impl<short>
 // correct parameterized interface specialization.
 typedef IIterable<short> __FIIterable_1_short_t;
 #define __FIIterable_1_short ABI::Windows::Foundation::Collections::__FIIterable_1_short_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_short ABI::Windows::Foundation::Collections::IIterable<INT16>
@@ -1861,7 +2067,7 @@ IVectorView<short> : IVectorView_impl<short>
 // correct parameterized interface specialization.
 typedef IVectorView<short> __FIVectorView_1_short_t;
 #define __FIVectorView_1_short ABI::Windows::Foundation::Collections::__FIVectorView_1_short_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_short ABI::Windows::Foundation::Collections::IVectorView<INT16>
@@ -1890,7 +2096,7 @@ IIterator<int> : IIterator_impl<int>
 // correct parameterized interface specialization.
 typedef IIterator<int> __FIIterator_1_int_t;
 #define __FIIterator_1_int ABI::Windows::Foundation::Collections::__FIIterator_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_int ABI::Windows::Foundation::Collections::IIterator<INT32>
@@ -1919,7 +2125,7 @@ IIterable<int> : IIterable_impl<int>
 // correct parameterized interface specialization.
 typedef IIterable<int> __FIIterable_1_int_t;
 #define __FIIterable_1_int ABI::Windows::Foundation::Collections::__FIIterable_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_int ABI::Windows::Foundation::Collections::IIterable<INT32>
@@ -1948,7 +2154,7 @@ IVectorView<int> : IVectorView_impl<int>
 // correct parameterized interface specialization.
 typedef IVectorView<int> __FIVectorView_1_int_t;
 #define __FIVectorView_1_int ABI::Windows::Foundation::Collections::__FIVectorView_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_int ABI::Windows::Foundation::Collections::IVectorView<INT32>
@@ -1965,7 +2171,7 @@ typedef IVectorView<int> __FIVectorView_1_int_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("40556131-a2a1-5fab-aaee-5f35268ca26b"))
-IIterator<byte> : IIterator_impl<byte> 
+IIterator<::byte> : IIterator_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -1975,9 +2181,9 @@ IIterator<byte> : IIterator_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterator<byte> __FIIterator_1_byte_t;
+typedef IIterator<::byte> __FIIterator_1_byte_t;
 #define __FIIterator_1_byte ABI::Windows::Foundation::Collections::__FIIterator_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_byte ABI::Windows::Foundation::Collections::IIterator<BYTE>
@@ -1994,7 +2200,7 @@ typedef IIterator<byte> __FIIterator_1_byte_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("88318266-f3fd-50fc-8f08-b823a41b60c1"))
-IIterable<byte> : IIterable_impl<byte> 
+IIterable<::byte> : IIterable_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -2004,9 +2210,9 @@ IIterable<byte> : IIterable_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterable<byte> __FIIterable_1_byte_t;
+typedef IIterable<::byte> __FIIterable_1_byte_t;
 #define __FIIterable_1_byte ABI::Windows::Foundation::Collections::__FIIterable_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_byte ABI::Windows::Foundation::Collections::IIterable<BYTE>
@@ -2023,7 +2229,7 @@ typedef IIterable<byte> __FIIterable_1_byte_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("6d05fb29-7885-544e-9382-a1ad391a3fa4"))
-IVectorView<byte> : IVectorView_impl<byte> 
+IVectorView<::byte> : IVectorView_impl<::byte> 
 {
     static const wchar_t* z_get_rc_name_impl() 
     {
@@ -2033,9 +2239,9 @@ IVectorView<byte> : IVectorView_impl<byte>
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IVectorView<byte> __FIVectorView_1_byte_t;
+typedef IVectorView<::byte> __FIVectorView_1_byte_t;
 #define __FIVectorView_1_byte ABI::Windows::Foundation::Collections::__FIVectorView_1_byte_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_byte ABI::Windows::Foundation::Collections::IVectorView<BYTE>
@@ -2064,7 +2270,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2093,7 +2299,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2122,7 +2328,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -2151,7 +2357,7 @@ IIterator<UINT16> : IIterator_impl<UINT16>
 // correct parameterized interface specialization.
 typedef IIterator<UINT16> __FIIterator_1_UINT16_t;
 #define __FIIterator_1_UINT16 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT16_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT16 ABI::Windows::Foundation::Collections::IIterator<UINT16>
@@ -2180,7 +2386,7 @@ IIterable<UINT16> : IIterable_impl<UINT16>
 // correct parameterized interface specialization.
 typedef IIterable<UINT16> __FIIterable_1_UINT16_t;
 #define __FIIterable_1_UINT16 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT16_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT16 ABI::Windows::Foundation::Collections::IIterable<UINT16>
@@ -2209,7 +2415,7 @@ IVectorView<UINT16> : IVectorView_impl<UINT16>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT16> __FIVectorView_1_UINT16_t;
 #define __FIVectorView_1_UINT16 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT16_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT16 ABI::Windows::Foundation::Collections::IVectorView<UINT16>
@@ -2238,7 +2444,7 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
@@ -2267,7 +2473,7 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
@@ -2296,7 +2502,7 @@ IVectorView<UINT32> : IVectorView_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
 #define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
@@ -2325,7 +2531,7 @@ IIterator<UINT64> : IIterator_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IIterator<UINT64> __FIIterator_1_UINT64_t;
 #define __FIIterator_1_UINT64 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT64 ABI::Windows::Foundation::Collections::IIterator<UINT64>
@@ -2354,7 +2560,7 @@ IIterable<UINT64> : IIterable_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IIterable<UINT64> __FIIterable_1_UINT64_t;
 #define __FIIterable_1_UINT64 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT64 ABI::Windows::Foundation::Collections::IIterable<UINT64>
@@ -2383,7 +2589,7 @@ IVectorView<UINT64> : IVectorView_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT64> __FIVectorView_1_UINT64_t;
 #define __FIVectorView_1_UINT64 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT64 ABI::Windows::Foundation::Collections::IVectorView<UINT64>
@@ -2402,9 +2608,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2419,11 +2625,24 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+
+
+#ifndef ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            interface IMemoryBuffer;
+        } /* Foundation */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CFoundation_CIMemoryBuffer ABI::Windows::Foundation::IMemoryBuffer
+
+#endif // ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
 
 
 
@@ -2436,10 +2655,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DDevice;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_FWD_DEFINED__
@@ -2455,8 +2674,8 @@ namespace ABI {
             
             typedef struct DisplayAdapterId DisplayAdapterId;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2467,9 +2686,9 @@ namespace ABI {
                 
                 typedef enum BitmapAlphaMode : int BitmapAlphaMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2478,9 +2697,9 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2489,8 +2708,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -2498,8 +2717,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -2513,13 +2732,28 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 
 
+
+
+#ifndef ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Streams {
+                interface IBuffer;
+            } /* Streams */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
+
+#endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
 
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2529,9 +2763,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2548,9 +2782,9 @@ namespace ABI {
                 
                 typedef enum LearningModelDeviceKind : int LearningModelDeviceKind;
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2559,9 +2793,9 @@ namespace ABI {
                 
                 typedef enum LearningModelFeatureKind : int LearningModelFeatureKind;
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2570,9 +2804,24 @@ namespace ABI {
                 
                 typedef enum TensorKind : int TensorKind;
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2625,9 +2874,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class ImageFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2635,9 +2884,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class ImageFeatureValue;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2646,9 +2895,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class LearningModelBinding;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2656,9 +2905,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class LearningModelDevice;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2667,9 +2916,19 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class LearningModelSession;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                class LearningModelSessionOptions;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2677,9 +2936,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class MapFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2687,9 +2946,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class SequenceFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2697,9 +2956,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorBoolean;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2707,9 +2966,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorDouble;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2717,9 +2976,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorFeatureDescriptor;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2727,9 +2986,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorFloat;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2737,9 +2996,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorFloat16Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2747,9 +3006,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorInt16Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2757,9 +3016,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorInt32Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2767,9 +3026,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorInt64Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2777,9 +3036,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorInt8Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2787,9 +3046,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorString;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2797,9 +3056,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorUInt16Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2807,9 +3066,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorUInt32Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2817,9 +3076,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorUInt64Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2827,9 +3086,9 @@ namespace ABI {
         namespace AI {
             namespace MachineLearning {
                 class TensorUInt8Bit;
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2865,9 +3124,9 @@ namespace ABI {
                     LearningModelDeviceKind_DirectXMinPower = 4,
                 };
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2894,9 +3153,9 @@ namespace ABI {
                     LearningModelFeatureKind_Image = 3,
                 };
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2935,9 +3194,9 @@ namespace ABI {
                     TensorKind_Complex128 = 15,
                 };
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2982,9 +3241,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageFeatureDescriptor=_uuidof(IImageFeatureDescriptor);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureDescriptor_INTERFACE_DEFINED__) */
@@ -3023,9 +3282,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageFeatureValue=_uuidof(IImageFeatureValue);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValue;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValue_INTERFACE_DEFINED__) */
@@ -3065,9 +3324,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IImageFeatureValueStatics=_uuidof(IImageFeatureValueStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CIImageFeatureValueStatics_INTERFACE_DEFINED__) */
@@ -3127,9 +3386,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModel=_uuidof(ILearningModel);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModel;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModel_INTERFACE_DEFINED__) */
@@ -3175,9 +3434,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelBinding=_uuidof(ILearningModelBinding);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBinding;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBinding_INTERFACE_DEFINED__) */
@@ -3217,9 +3476,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelBindingFactory=_uuidof(ILearningModelBindingFactory);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBindingFactory;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelBindingFactory_INTERFACE_DEFINED__) */
@@ -3261,9 +3520,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelDevice=_uuidof(ILearningModelDevice);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDevice;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDevice_INTERFACE_DEFINED__) */
@@ -3303,9 +3562,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelDeviceFactory=_uuidof(ILearningModelDeviceFactory);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceFactory;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceFactory_INTERFACE_DEFINED__) */
@@ -3345,9 +3604,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelDeviceStatics=_uuidof(ILearningModelDeviceStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDeviceStatics_INTERFACE_DEFINED__) */
@@ -3385,7 +3644,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Outputs(
                         /* [retval, out] */__RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable * * value
@@ -3395,9 +3654,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelEvaluationResult=_uuidof(ILearningModelEvaluationResult);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelEvaluationResult;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelEvaluationResult_INTERFACE_DEFINED__) */
@@ -3435,16 +3694,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::AI::MachineLearning::LearningModelFeatureKind * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRequired(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelFeatureDescriptor=_uuidof(ILearningModelFeatureDescriptor);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureDescriptor_INTERFACE_DEFINED__) */
@@ -3480,9 +3739,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelFeatureValue=_uuidof(ILearningModelFeatureValue);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureValue;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelFeatureValue_INTERFACE_DEFINED__) */
@@ -3515,9 +3774,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelOperatorProvider=_uuidof(ILearningModelOperatorProvider);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelOperatorProvider;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelOperatorProvider_INTERFACE_DEFINED__) */
@@ -3582,9 +3841,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelSession=_uuidof(ILearningModelSession);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSession;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSession_INTERFACE_DEFINED__) */
@@ -3629,13 +3888,101 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelSessionFactory=_uuidof(ILearningModelSessionFactory);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ILearningModelSessionFactory2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.LearningModelSession
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ILearningModelSessionFactory2[] = L"Windows.AI.MachineLearning.ILearningModelSessionFactory2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("4E5C88BF-0A1F-5FEC-ADE0-2FD91E4EF29B"), exclusiveto, contract] */
+                MIDL_INTERFACE("4E5C88BF-0A1F-5FEC-ADE0-2FD91E4EF29B")
+                ILearningModelSessionFactory2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromModelOnDeviceWithSessionOptions(
+                        /* [in] */__RPC__in_opt ABI::Windows::AI::MachineLearning::ILearningModel * model,
+                        /* [in] */__RPC__in_opt ABI::Windows::AI::MachineLearning::ILearningModelDevice * deviceToRunOn,
+                        /* [in] */__RPC__in_opt ABI::Windows::AI::MachineLearning::ILearningModelSessionOptions * learningModelSessionOptions,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ILearningModelSession * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ILearningModelSessionFactory2=_uuidof(ILearningModelSessionFactory2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ILearningModelSessionOptions
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.LearningModelSessionOptions
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ILearningModelSessionOptions[] = L"Windows.AI.MachineLearning.ILearningModelSessionOptions";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("B8F63FA1-134D-5133-8CFF-3A5C3C263BEB"), exclusiveto, contract] */
+                MIDL_INTERFACE("B8F63FA1-134D-5133-8CFF-3A5C3C263BEB")
+                ILearningModelSessionOptions : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BatchSizeOverride(
+                        /* [retval, out] */__RPC__out UINT32 * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_BatchSizeOverride(
+                        /* [in] */UINT32 value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ILearningModelSessionOptions=_uuidof(ILearningModelSessionOptions);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -3703,9 +4050,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILearningModelStatics=_uuidof(ILearningModelStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_INTERFACE_DEFINED__) */
@@ -3747,9 +4094,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapFeatureDescriptor=_uuidof(IMapFeatureDescriptor);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CIMapFeatureDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CIMapFeatureDescriptor_INTERFACE_DEFINED__) */
@@ -3788,9 +4135,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISequenceFeatureDescriptor=_uuidof(ISequenceFeatureDescriptor);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CISequenceFeatureDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CISequenceFeatureDescriptor_INTERFACE_DEFINED__) */
@@ -3833,9 +4180,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensor=_uuidof(ITensor);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensor;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensor_INTERFACE_DEFINED__) */
@@ -3874,9 +4221,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorBoolean=_uuidof(ITensorBoolean);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorBoolean;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorBoolean_INTERFACE_DEFINED__) */
@@ -3917,7 +4264,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE CreateFromArray(
                         /* [in] */__RPC__in_opt __FIIterable_1___z__zint64 * shape,
                         /* [in] */UINT32 __dataSize,
-                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) boolean * data,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) ::boolean * data,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorBoolean * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateFromIterable(
@@ -3930,13 +4277,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorBooleanStatics=_uuidof(ITensorBooleanStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorBooleanStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorBoolean
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorBooleanStatics2[] = L"Windows.AI.MachineLearning.ITensorBooleanStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("A3A4A501-6A2D-52D7-B04B-C435BAEE0115"), exclusiveto, contract] */
+                MIDL_INTERFACE("A3A4A501-6A2D-52D7-B04B-C435BAEE0115")
+                ITensorBooleanStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) ::boolean * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorBoolean * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorBoolean * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorBooleanStatics2=_uuidof(ITensorBooleanStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -3971,9 +4369,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorDouble=_uuidof(ITensorDouble);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble_INTERFACE_DEFINED__) */
@@ -4027,13 +4425,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorDoubleStatics=_uuidof(ITensorDoubleStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorDoubleStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorDouble
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorDoubleStatics2[] = L"Windows.AI.MachineLearning.ITensorDoubleStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("93A570DE-5E9A-5094-85C8-592C655E68AC"), exclusiveto, contract] */
+                MIDL_INTERFACE("93A570DE-5E9A-5094-85C8-592C655E68AC")
+                ITensorDoubleStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) DOUBLE * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorDouble * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorDouble * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorDoubleStatics2=_uuidof(ITensorDoubleStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4071,9 +4520,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorFeatureDescriptor=_uuidof(ITensorFeatureDescriptor);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor_INTERFACE_DEFINED__) */
@@ -4112,9 +4561,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorFloat=_uuidof(ITensorFloat);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat_INTERFACE_DEFINED__) */
@@ -4153,9 +4602,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorFloat16Bit=_uuidof(ITensorFloat16Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16Bit_INTERFACE_DEFINED__) */
@@ -4209,13 +4658,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorFloat16BitStatics=_uuidof(ITensorFloat16BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorFloat16BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorFloat16Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorFloat16BitStatics2[] = L"Windows.AI.MachineLearning.ITensorFloat16BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("68545726-2DC7-51BF-B470-0B344CC2A1BC"), exclusiveto, contract] */
+                MIDL_INTERFACE("68545726-2DC7-51BF-B470-0B344CC2A1BC")
+                ITensorFloat16BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) FLOAT * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorFloat16Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorFloat16Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorFloat16BitStatics2=_uuidof(ITensorFloat16BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4265,13 +4765,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorFloatStatics=_uuidof(ITensorFloatStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorFloatStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorFloat
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorFloatStatics2[] = L"Windows.AI.MachineLearning.ITensorFloatStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("24610BC1-5E44-5713-B281-8F4AD4D555E8"), exclusiveto, contract] */
+                MIDL_INTERFACE("24610BC1-5E44-5713-B281-8F4AD4D555E8")
+                ITensorFloatStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) FLOAT * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorFloat * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorFloat * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorFloatStatics2=_uuidof(ITensorFloatStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4306,9 +4857,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt16Bit=_uuidof(ITensorInt16Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit_INTERFACE_DEFINED__) */
@@ -4362,13 +4913,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt16BitStatics=_uuidof(ITensorInt16BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorInt16BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt16Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt16BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt16BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("0CD70CF4-696C-5E5F-95D8-5EBF9670148B"), exclusiveto, contract] */
+                MIDL_INTERFACE("0CD70CF4-696C-5E5F-95D8-5EBF9670148B")
+                ITensorInt16BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) INT16 * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt16Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt16Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorInt16BitStatics2=_uuidof(ITensorInt16BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4403,9 +5005,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt32Bit=_uuidof(ITensorInt32Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit_INTERFACE_DEFINED__) */
@@ -4459,13 +5061,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt32BitStatics=_uuidof(ITensorInt32BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorInt32BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt32Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt32BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt32BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("7C4B079A-E956-5CE0-A3BD-157D9D79B5EC"), exclusiveto, contract] */
+                MIDL_INTERFACE("7C4B079A-E956-5CE0-A3BD-157D9D79B5EC")
+                ITensorInt32BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) INT32 * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt32Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt32Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorInt32BitStatics2=_uuidof(ITensorInt32BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4500,9 +5153,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt64Bit=_uuidof(ITensorInt64Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit_INTERFACE_DEFINED__) */
@@ -4556,13 +5209,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt64BitStatics=_uuidof(ITensorInt64BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorInt64BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt64Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt64BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt64BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("6D3D9DCB-FF40-5EC2-89FE-084E2B6BC6DB"), exclusiveto, contract] */
+                MIDL_INTERFACE("6D3D9DCB-FF40-5EC2-89FE-084E2B6BC6DB")
+                ITensorInt64BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) INT64 * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt64Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt64Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorInt64BitStatics2=_uuidof(ITensorInt64BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4597,9 +5301,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt8Bit=_uuidof(ITensorInt8Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit_INTERFACE_DEFINED__) */
@@ -4653,13 +5357,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorInt8BitStatics=_uuidof(ITensorInt8BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorInt8BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt8Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt8BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt8BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("C0D59637-C468-56FB-9535-C052BDB93DC0"), exclusiveto, contract] */
+                MIDL_INTERFACE("C0D59637-C468-56FB-9535-C052BDB93DC0")
+                ITensorInt8BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) BYTE * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt8Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorInt8Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorInt8BitStatics2=_uuidof(ITensorInt8BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4694,9 +5449,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorString=_uuidof(ITensorString);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorString;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorString_INTERFACE_DEFINED__) */
@@ -4750,13 +5505,58 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorStringStatics=_uuidof(ITensorStringStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorStringStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorString
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorStringStatics2[] = L"Windows.AI.MachineLearning.ITensorStringStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("9E355ED0-C8E2-5254-9137-0193A3668FD8"), exclusiveto, contract] */
+                MIDL_INTERFACE("9E355ED0-C8E2-5254-9137-0193A3668FD8")
+                ITensorStringStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) HSTRING * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorString * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorStringStatics2=_uuidof(ITensorStringStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4791,9 +5591,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt16Bit=_uuidof(ITensorUInt16Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit_INTERFACE_DEFINED__) */
@@ -4847,13 +5647,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt16BitStatics=_uuidof(ITensorUInt16BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorUInt16BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt16Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt16BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt16BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("8AF40C64-D69F-5315-9348-490877BBD642"), exclusiveto, contract] */
+                MIDL_INTERFACE("8AF40C64-D69F-5315-9348-490877BBD642")
+                ITensorUInt16BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) UINT16 * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt16Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt16Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorUInt16BitStatics2=_uuidof(ITensorUInt16BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4888,9 +5739,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt32Bit=_uuidof(ITensorUInt32Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit_INTERFACE_DEFINED__) */
@@ -4944,13 +5795,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt32BitStatics=_uuidof(ITensorUInt32BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorUInt32BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt32Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt32BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt32BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("EF1A1F1C-314E-569D-B496-5C8447D20CD2"), exclusiveto, contract] */
+                MIDL_INTERFACE("EF1A1F1C-314E-569D-B496-5C8447D20CD2")
+                ITensorUInt32BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) UINT32 * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt32Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt32Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorUInt32BitStatics2=_uuidof(ITensorUInt32BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -4985,9 +5887,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt64Bit=_uuidof(ITensorUInt64Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit_INTERFACE_DEFINED__) */
@@ -5041,13 +5943,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt64BitStatics=_uuidof(ITensorUInt64BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorUInt64BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt64Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt64BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt64BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("085A687D-67E1-5B1E-B232-4FABE9CA20B3"), exclusiveto, contract] */
+                MIDL_INTERFACE("085A687D-67E1-5B1E-B232-4FABE9CA20B3")
+                ITensorUInt64BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) UINT64 * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt64Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt64Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorUInt64BitStatics2=_uuidof(ITensorUInt64BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -5082,9 +6035,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt8Bit=_uuidof(ITensorUInt8Bit);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit_INTERFACE_DEFINED__) */
@@ -5138,13 +6091,64 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITensorUInt8BitStatics=_uuidof(ITensorUInt8BitStatics);
                 
-            } /* Windows */
+            } /* MachineLearning */
         } /* AI */
-    } /* MachineLearning */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorUInt8BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt8Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt8BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt8BitStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                /* [object, uuid("2BA042D6-373E-5A3A-A2FC-A6C41BD52789"), exclusiveto, contract] */
+                MIDL_INTERFACE("2BA042D6-373E-5A3A-A2FC-A6C41BD52789")
+                ITensorUInt8BitStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromShapeArrayAndDataArray(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */UINT32 __dataSize,
+                        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) BYTE * data,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt8Bit * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
+                        /* [in] */UINT32 __shapeSize,
+                        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * buffer,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::AI::MachineLearning::ITensorUInt8Bit * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_ITensorUInt8BitStatics2=_uuidof(ITensorUInt8BitStatics2);
+                
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -5315,6 +6319,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass can be activated.
+ *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
@@ -5333,6 +6338,33 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_AI_MachineLearning_LearningModelSession[] = L"Windows.AI.MachineLearning.LearningModelSession";
 #endif
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.AI.MachineLearning.LearningModelSessionOptions
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.AI.MachineLearning.ILearningModelSessionOptions ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+#ifndef RUNTIMECLASS_Windows_AI_MachineLearning_LearningModelSessionOptions_DEFINED
+#define RUNTIMECLASS_Windows_AI_MachineLearning_LearningModelSessionOptions_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_AI_MachineLearning_LearningModelSessionOptions[] = L"Windows.AI.MachineLearning.LearningModelSessionOptions";
+#endif
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -5389,12 +6421,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorBoolean ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5418,12 +6453,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorDouble ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5470,12 +6508,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloatStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloatStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorFloat ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5499,12 +6540,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloat16BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloat16BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorFloat16Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5528,12 +6572,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt16BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt16BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt16Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5557,12 +6604,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt32BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt32Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5586,12 +6636,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt64BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt64BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt64Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5615,12 +6668,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt8Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5644,12 +6700,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorString ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5673,12 +6732,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt16BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt16BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt16Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5702,12 +6764,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt32Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5731,12 +6796,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt64BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt64BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt64Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5760,12 +6828,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt8BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt8Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5875,6 +6946,18 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFa
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics;
@@ -5911,6 +6994,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics _
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble __x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble;
@@ -5922,6 +7011,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble __x_ABI_C
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics;
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFeatureDescriptor_FWD_DEFINED__
@@ -5947,11 +7042,23 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatic
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics;
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit_FWD_DEFINED__
@@ -5965,6 +7072,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics 
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit;
@@ -5976,6 +7089,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit __x_ABI
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics;
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit_FWD_DEFINED__
@@ -5989,6 +7108,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics 
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit;
@@ -6000,6 +7125,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit __x_ABI_
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics;
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorString_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorString_FWD_DEFINED__
@@ -6013,6 +7144,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics __
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit;
@@ -6024,6 +7161,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit __x_AB
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics;
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit_FWD_DEFINED__
@@ -6037,6 +7180,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit;
@@ -6049,6 +7198,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit;
@@ -6060,6 +7215,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit __x_ABI
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics;
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -9390,12 +10551,12 @@ typedef struct __FIIterator_1_UINT16Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT16 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT16 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out short *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out unsigned short *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT16 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT16 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) short *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned short *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -9557,7 +10718,7 @@ typedef struct __FIVectorView_1_UINT16Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT16 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out short *item);
+                                         /* [retval][out] */ __RPC__out unsigned short *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT16 * This,
@@ -9565,7 +10726,7 @@ typedef struct __FIVectorView_1_UINT16Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT16 * This,
-            /* [in] */ short item,
+            /* [in] */ unsigned short item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -9573,7 +10734,7 @@ typedef struct __FIVectorView_1_UINT16Vtbl
                                                __RPC__in __FIVectorView_1_UINT16 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) short *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned short *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -9654,12 +10815,12 @@ typedef struct __FIIterator_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out int *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -9821,7 +10982,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT32 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out int *item);
+                                         /* [retval][out] */ __RPC__out unsigned int *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT32 * This,
@@ -9829,7 +10990,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ int item,
+            /* [in] */ unsigned int item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -9837,7 +10998,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
                                                __RPC__in __FIVectorView_1_UINT32 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -9918,12 +11079,12 @@ typedef struct __FIIterator_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT64 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT64 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __int64 *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned __int64 *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -10085,7 +11246,7 @@ typedef struct __FIVectorView_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT64 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __int64 *item);
+                                         /* [retval][out] */ __RPC__out unsigned __int64 *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT64 * This,
@@ -10093,7 +11254,7 @@ typedef struct __FIVectorView_1_UINT64Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT64 * This,
-            /* [in] */ __int64 item,
+            /* [in] */ unsigned __int64 item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -10101,7 +11262,7 @@ typedef struct __FIVectorView_1_UINT64Vtbl
                                                __RPC__in __FIVectorView_1_UINT64 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __int64 *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned __int64 *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -10174,6 +11335,13 @@ typedef interface __x_ABI_CWindows_CFoundation_CIClosable __x_ABI_CWindows_CFoun
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
 
+#ifndef ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CFoundation_CIMemoryBuffer __x_ABI_CWindows_CFoundation_CIMemoryBuffer;
+
+#endif // ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
+
+
 
 
 #ifndef ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_FWD_DEFINED__
@@ -10219,6 +11387,13 @@ typedef interface __x_ABI_CWindows_CStorage_CIStorageFile __x_ABI_CWindows_CStor
 
 
 
+#ifndef ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CStreams_CIBuffer __x_ABI_CWindows_CStorage_CStreams_CIBuffer;
+
+#endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
+
+
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference;
@@ -10238,6 +11413,22 @@ typedef enum __x_ABI_CWindows_CAI_CMachineLearning_CLearningModelFeatureKind __x
 
 
 typedef enum __x_ABI_CWindows_CAI_CMachineLearning_CTensorKind __x_ABI_CWindows_CAI_CMachineLearning_CTensorKind;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11973,6 +13164,202 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSess
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ILearningModelSessionFactory2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.LearningModelSession
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ILearningModelSessionFactory2[] = L"Windows.AI.MachineLearning.ILearningModelSessionFactory2";
+/* [object, uuid("4E5C88BF-0A1F-5FEC-ADE0-2FD91E4EF29B"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromModelOnDeviceWithSessionOptions )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CAI_CMachineLearning_CILearningModel * model,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelDevice * deviceToRunOn,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * learningModelSessionOptions,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSession * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_CreateFromModelOnDeviceWithSessionOptions(This,model,deviceToRunOn,learningModelSessionOptions,value) \
+    ( (This)->lpVtbl->CreateFromModelOnDeviceWithSessionOptions(This,model,deviceToRunOn,learningModelSessionOptions,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionFactory2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ILearningModelSessionOptions
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.LearningModelSessionOptions
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ILearningModelSessionOptions[] = L"Windows.AI.MachineLearning.ILearningModelSessionOptions";
+/* [object, uuid("B8F63FA1-134D-5133-8CFF-3A5C3C263BEB"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptionsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_BatchSizeOverride )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_BatchSizeOverride )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions * This,
+        /* [in] */UINT32 value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptionsVtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptionsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_get_BatchSizeOverride(This,value) \
+    ( (This)->lpVtbl->get_BatchSizeOverride(This,value) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_put_BatchSizeOverride(This,value) \
+    ( (This)->lpVtbl->put_BatchSizeOverride(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ILearningModelStatics
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -12634,6 +14021,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStat
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ITensorBooleanStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorBoolean
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorBooleanStatics2[] = L"Windows.AI.MachineLearning.ITensorBooleanStatics2";
+/* [object, uuid("A3A4A501-6A2D-52D7-B04B-C435BAEE0115"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) boolean * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorBoolean * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorBoolean * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorBooleanStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ITensorDouble
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -12843,6 +14337,113 @@ interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorDoubleStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorDouble
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorDoubleStatics2[] = L"Windows.AI.MachineLearning.ITensorDoubleStatics2";
+/* [object, uuid("93A570DE-5E9A-5094-85C8-592C655E68AC"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) DOUBLE * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorDouble * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorDoubleStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -13253,6 +14854,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitS
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ITensorFloat16BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorFloat16Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorFloat16BitStatics2[] = L"Windows.AI.MachineLearning.ITensorFloat16BitStatics2";
+/* [object, uuid("68545726-2DC7-51BF-B470-0B344CC2A1BC"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) FLOAT * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat16BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ITensorFloatStatics
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -13369,6 +15077,113 @@ interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorFloatStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorFloat
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorFloatStatics2[] = L"Windows.AI.MachineLearning.ITensorFloatStatics2";
+/* [object, uuid("24610BC1-5E44-5713-B281-8F4AD4D555E8"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) FLOAT * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloat * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorFloatStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -13586,6 +15401,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitSta
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ITensorInt16BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt16Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt16BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt16BitStatics2";
+/* [object, uuid("0CD70CF4-696C-5E5F-95D8-5EBF9670148B"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) INT16 * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt16BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ITensorInt32Bit
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -13795,6 +15717,113 @@ interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorInt32BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt32Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt32BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt32BitStatics2";
+/* [object, uuid("7C4B079A-E956-5CE0-A3BD-157D9D79B5EC"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) INT32 * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt32BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -14012,6 +16041,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitSta
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ITensorInt64BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt64Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt64BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt64BitStatics2";
+/* [object, uuid("6D3D9DCB-FF40-5EC2-89FE-084E2B6BC6DB"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) INT64 * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt64BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ITensorInt8Bit
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -14221,6 +16357,113 @@ interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorInt8BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorInt8Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorInt8BitStatics2[] = L"Windows.AI.MachineLearning.ITensorInt8BitStatics2";
+/* [object, uuid("C0D59637-C468-56FB-9535-C052BDB93DC0"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) BYTE * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorInt8BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -14438,6 +16681,103 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStati
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ITensorStringStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorString
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorStringStatics2[] = L"Windows.AI.MachineLearning.ITensorStringStatics2";
+/* [object, uuid("9E355ED0-C8E2-5254-9137-0193A3668FD8"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) HSTRING * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorString * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorStringStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ITensorUInt16Bit
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -14647,6 +16987,113 @@ interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorUInt16BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt16Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt16BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt16BitStatics2";
+/* [object, uuid("8AF40C64-D69F-5315-9348-490877BBD642"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) UINT16 * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt16BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -14864,6 +17311,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitSt
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ITensorUInt32BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt32Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt32BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt32BitStatics2";
+/* [object, uuid("EF1A1F1C-314E-569D-B496-5C8447D20CD2"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) UINT32 * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt32BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ITensorUInt64Bit
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -15073,6 +17627,113 @@ interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.AI.MachineLearning.ITensorUInt64BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt64Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt64BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt64BitStatics2";
+/* [object, uuid("085A687D-67E1-5B1E-B232-4FABE9CA20B3"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) UINT64 * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt64BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -15290,6 +17951,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitSta
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ITensorUInt8BitStatics2
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.TensorUInt8Bit
+ *
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ITensorUInt8BitStatics2[] = L"Windows.AI.MachineLearning.ITensorUInt8BitStatics2";
+/* [object, uuid("2BA042D6-373E-5A3A-A2FC-A6C41BD52789"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromShapeArrayAndDataArray )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */UINT32 __dataSize,
+        /* [size_is(__dataSize), in] */__RPC__in_ecount_full(__dataSize) BYTE * data,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
+        __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2 * This,
+        /* [in] */UINT32 __shapeSize,
+        /* [size_is(__shapeSize), in] */__RPC__in_ecount_full(__shapeSize) INT64 * shape,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * buffer,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8Bit * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) \
+    ( (This)->lpVtbl->CreateFromShapeArrayAndDataArray(This,__shapeSize,shape,__dataSize,data,result) )
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_CreateFromBuffer(This,__shapeSize,shape,buffer,result) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,__shapeSize,shape,buffer,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CITensorUInt8BitStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
  * Class Windows.AI.MachineLearning.ImageFeatureDescriptor
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -15456,6 +18224,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass can be activated.
+ *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
@@ -15474,6 +18243,33 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_AI_MachineLearning_LearningModelSession[] = L"Windows.AI.MachineLearning.LearningModelSession";
 #endif
 #endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.AI.MachineLearning.LearningModelSessionOptions
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 2.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.AI.MachineLearning.ILearningModelSessionOptions ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
+
+#ifndef RUNTIMECLASS_Windows_AI_MachineLearning_LearningModelSessionOptions_DEFINED
+#define RUNTIMECLASS_Windows_AI_MachineLearning_LearningModelSessionOptions_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_AI_MachineLearning_LearningModelSessionOptions[] = L"Windows.AI.MachineLearning.LearningModelSessionOptions";
+#endif
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x20000
 
 
 /*
@@ -15530,12 +18326,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorBoolean ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15559,12 +18358,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorDouble ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15611,12 +18413,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloatStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloatStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorFloat ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15640,12 +18445,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloat16BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorFloat16BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorFloat16Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15669,12 +18477,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt16BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt16BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt16Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15698,12 +18509,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt32BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt32Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15727,12 +18541,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt64BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt64BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt64Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15756,12 +18573,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt8Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15785,12 +18605,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorString ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15814,12 +18637,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt16BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt16BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt16Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15843,12 +18669,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt32Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15872,12 +18701,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt64BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt64BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt64Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15901,12 +18733,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt8BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt8Bit ** Default Interface **
  *    Windows.AI.MachineLearning.ITensor
  *    Windows.AI.MachineLearning.ILearningModelFeatureValue
+ *    Windows.Foundation.IMemoryBuffer
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

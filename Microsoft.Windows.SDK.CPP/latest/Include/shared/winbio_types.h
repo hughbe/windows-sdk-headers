@@ -1972,6 +1972,15 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
                 POINT PupilCenter_1;
                 POINT PupilCenter_2;
                 LONG Distance;
+                ULONG GridPointCompletionPercent;
+                UINT16 GridPointIndex;
+                struct
+                {
+                    double X;
+                    double Y;
+                    double Z;
+                } Point3D;
+                BOOL StopCaptureAndShowCriticalFeedback;
             } Iris;
 
         [case(WINBIO_TYPE_VOICE)]
@@ -2018,6 +2027,15 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
             POINT PupilCenter_1;
             POINT PupilCenter_2;
             LONG Distance;
+            ULONG GridPointCompletionPercent;
+            UINT16 GridPointIndex;
+            struct
+            {
+                double X;
+                double Y;
+                double Z;
+            } Point3D;
+            BOOL StopCaptureAndShowCriticalFeedback;
         } Iris;
 
         struct {
@@ -2082,6 +2100,39 @@ typedef struct _WINBIO_EXTENDED_UNIT_STATUS {
 #define WINBIO_PROPERTY_UNIT_SECURITY_LEVEL         ((WINBIO_PROPERTY_ID)7)
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// WINBIO_PROPERTY_FP_BU_STATE
+//
+// Description:
+//      Returns information on whether a FP sensor is currently
+//      attached to the machine, in addition to any relevant FP
+//      biometric unit (BU) creation error codes.
+//
+// Access:
+//      Read-only
+//
+// Inputs:
+//      SessionHandle - must be valid
+//      UnitId - must be zero
+//      Identity - must be NULL
+//      SubFactor - must be WINBIO_SUBTYPE_NO_INFORMATION
+//
+// Outputs:
+//      PropertyBuffer - points to buffer containing a WINBIO_FP_BU_STATE structure
+//      PropertyBufferSize - points to a SIZE_T variable containing sizeof(WINBIO_FP_BU_STATE)
+//
+#define WINBIO_PROPERTY_FP_BU_STATE        ((WINBIO_PROPERTY_ID)8)
+
+typedef struct _WINBIO_FP_BU_STATE {
+    BOOL SensorAttached;
+    HRESULT CreationResult;
+} WINBIO_FP_BU_STATE, *PWINBIO_FP_BU_STATE;
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
 ///////////////////////////////////////////////////////////////////////////
 //

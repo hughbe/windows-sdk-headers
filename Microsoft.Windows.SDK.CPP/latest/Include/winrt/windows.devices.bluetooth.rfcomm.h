@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.bluetooth.rfcomm.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,10 +278,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommDeviceService;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService_FWD_DEFINED__
@@ -298,10 +294,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommDeviceService2;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService2 ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService2_FWD_DEFINED__
@@ -314,10 +310,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommDeviceService3;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService3 ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService3_FWD_DEFINED__
@@ -330,10 +326,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommDeviceServiceStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics_FWD_DEFINED__
@@ -346,10 +342,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommDeviceServiceStatics2;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics2 ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics2_FWD_DEFINED__
@@ -362,10 +358,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommDeviceServicesResult;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServicesResult ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServicesResult_FWD_DEFINED__
@@ -378,10 +374,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommServiceId;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceId ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceId_FWD_DEFINED__
@@ -394,10 +390,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommServiceIdStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceIdStatics ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceIdStatics_FWD_DEFINED__
@@ -410,10 +406,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommServiceProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider_FWD_DEFINED__
@@ -426,10 +422,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommServiceProvider2;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider2 ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider2_FWD_DEFINED__
@@ -442,10 +438,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     interface IRfcommServiceProviderStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProviderStatics ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProviderStatics_FWD_DEFINED__
@@ -459,10 +455,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     class RfcommDeviceService;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -485,7 +481,7 @@ IIterator<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> __FIIterator_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t;
 #define __FIIterator_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService*>
@@ -517,7 +513,7 @@ IIterable<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> __FIIterable_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t;
 #define __FIIterable_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService*>
@@ -549,7 +545,7 @@ IVectorView<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> __FIVectorView_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t;
 #define __FIVectorView_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService*>
@@ -581,7 +577,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::Rfcomm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService*>
@@ -613,7 +609,7 @@ IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService*> __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceService ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService*>
@@ -630,10 +626,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     class RfcommDeviceServicesResult;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -656,7 +652,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::Rfcomm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult*>
@@ -688,7 +684,7 @@ IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesRe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult*> __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommDeviceServicesResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult*>
@@ -705,10 +701,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     class RfcommServiceProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -731,7 +727,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::Rfcomm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider*>
@@ -763,7 +759,7 @@ IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider*> __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CBluetooth__CRfcomm__CRfcommServiceProvider ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider*>
@@ -781,9 +777,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -809,7 +805,7 @@ IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*> : IKeyValuePair_i
 // correct parameterized interface specialization.
 typedef IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*> __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*>
@@ -841,7 +837,7 @@ IIterator<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> : II
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -873,7 +869,7 @@ IIterable<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> : II
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -905,7 +901,7 @@ IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*> : IMapView_impl<UINT32
 // correct parameterized interface specialization.
 typedef IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*> __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*>
@@ -937,7 +933,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_UINT32_Windows__CStorage__CStreams
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -969,7 +965,7 @@ IAsyncOperation<__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer*> __FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<UINT32,ABI::Windows::Storage::Streams::IBuffer*>*>
@@ -985,9 +981,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 enum DeviceAccessStatus : int;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_USE
@@ -1008,7 +1004,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Enumeration::DeviceA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Enumeration::DeviceAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Enumeration::DeviceAccessStatus>
@@ -1038,7 +1034,7 @@ IAsyncOperation<enum ABI::Windows::Devices::Enumeration::DeviceAccessStatus> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::Enumeration::DeviceAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CEnumeration__CDeviceAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Enumeration::DeviceAccessStatus>
@@ -1069,7 +1065,7 @@ IMap<UINT32,ABI::Windows::Storage::Streams::IBuffer*> : IMap_impl<UINT32,ABI::Wi
 // correct parameterized interface specialization.
 typedef IMap<UINT32,ABI::Windows::Storage::Streams::IBuffer*> __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::__FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::Collections::IMap<UINT32,ABI::Windows::Storage::Streams::IBuffer*>
@@ -1089,18 +1085,18 @@ namespace ABI {
                 
                 typedef enum BluetoothCacheMode : int BluetoothCacheMode;
                 
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Bluetooth {
                 class BluetoothDevice;
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothDevice_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothDevice_FWD_DEFINED__
@@ -1109,9 +1105,9 @@ namespace ABI {
         namespace Devices {
             namespace Bluetooth {
                 interface IBluetoothDevice;
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothDevice ABI::Windows::Devices::Bluetooth::IBluetoothDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothDevice_FWD_DEFINED__
@@ -1124,9 +1120,9 @@ namespace ABI {
                 
                 typedef enum BluetoothError : int BluetoothError;
                 
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1136,9 +1132,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceAccessInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation_FWD_DEFINED__
@@ -1147,9 +1143,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceAccessInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation ABI::Windows::Devices::Enumeration::IDeviceAccessInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceAccessInformation_FWD_DEFINED__
@@ -1162,9 +1158,9 @@ namespace ABI {
                 
                 typedef enum DeviceAccessStatus : int DeviceAccessStatus;
                 
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1175,8 +1171,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1189,8 +1185,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1198,8 +1194,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1214,18 +1210,18 @@ namespace ABI {
                 
                 typedef enum SocketProtectionLevel : int SocketProtectionLevel;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -1234,9 +1230,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener ABI::Windows::Networking::Sockets::IStreamSocketListener
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -1268,10 +1264,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Rfcomm {
                     class RfcommServiceId;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1337,10 +1333,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommDeviceService=_uuidof(IRfcommDeviceService);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService_INTERFACE_DEFINED__) */
@@ -1384,10 +1380,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommDeviceService2=_uuidof(IRfcommDeviceService2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService2_INTERFACE_DEFINED__) */
@@ -1435,10 +1431,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommDeviceService3=_uuidof(IRfcommDeviceService3);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService3;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceService3_INTERFACE_DEFINED__) */
@@ -1483,10 +1479,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommDeviceServiceStatics=_uuidof(IRfcommDeviceServiceStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics_INTERFACE_DEFINED__) */
@@ -1547,10 +1543,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommDeviceServiceStatics2=_uuidof(IRfcommDeviceServiceStatics2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServiceStatics2_INTERFACE_DEFINED__) */
@@ -1593,10 +1589,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommDeviceServicesResult=_uuidof(IRfcommDeviceServicesResult);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServicesResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommDeviceServicesResult_INTERFACE_DEFINED__) */
@@ -1642,10 +1638,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommServiceId=_uuidof(IRfcommServiceId);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceId;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceId_INTERFACE_DEFINED__) */
@@ -1708,10 +1704,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommServiceIdStatics=_uuidof(IRfcommServiceIdStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceIdStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceIdStatics_INTERFACE_DEFINED__) */
@@ -1758,10 +1754,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommServiceProvider=_uuidof(IRfcommServiceProvider);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider_INTERFACE_DEFINED__) */
@@ -1799,17 +1795,17 @@ namespace ABI {
                     public:
                         /* [overload] */virtual HRESULT STDMETHODCALLTYPE StartAdvertisingWithRadioDiscoverability(
                             /* [in] */__RPC__in_opt ABI::Windows::Networking::Sockets::IStreamSocketListener * listener,
-                            /* [in] */boolean radioDiscoverable
+                            /* [in] */::boolean radioDiscoverable
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IRfcommServiceProvider2=_uuidof(IRfcommServiceProvider2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProvider2_INTERFACE_DEFINED__) */
@@ -1850,10 +1846,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRfcommServiceProviderStatics=_uuidof(IRfcommServiceProviderStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Rfcomm */} /* ABI */
+                } /* Rfcomm */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CRfcomm_CIRfcommServiceProviderStatics_INTERFACE_DEFINED__) */
@@ -2694,7 +2690,7 @@ typedef struct __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBufferVt
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out int *key);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out unsigned int *key);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * *value);
     END_INTERFACE
 } __FIKeyValuePair_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl;
@@ -2929,10 +2925,10 @@ typedef struct __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
 
     HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,
-        /* [in] */ __RPC__in int key,
+        /* [in] */ __RPC__in unsigned int key,
         /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * *value);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ __RPC__in int key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ __RPC__in unsigned int key, /* [retval][out] */ __RPC__out boolean *found);
     HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer **firstPartition,
         /* [out] */ __RPC__deref_out_opt __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer **secondPartition);
     END_INTERFACE
@@ -3226,16 +3222,16 @@ typedef struct __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
     HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,
-        /* [in] */ int key,
+        /* [in] */ unsigned int key,
         /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * **value);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ int key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [in] */ unsigned int key, /* [retval][out] */ __RPC__out boolean *found);
     HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This, /* [retval][out] */ __RPC__deref_out_opt __FIMapView_2_UINT32_Windows__CStorage__CStreams__CIBuffer **view);
     HRESULT ( STDMETHODCALLTYPE *Insert )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,
-        /* [in] */ int key,
+        /* [in] */ unsigned int key,
         /* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * *value,
         /* [retval][out] */ __RPC__out boolean *replaced);
-    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [in] */ int key);
+    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This,/* [in] */ unsigned int key);
     HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBuffer * This);
     END_INTERFACE
 } __FIMap_2_UINT32_Windows__CStorage__CStreams__CIBufferVtbl;

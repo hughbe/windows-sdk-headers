@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.enterprisedata.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IBufferProtectUnprotectResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIBufferProtectUnprotectResult ABI::Windows::Security::EnterpriseData::IBufferProtectUnprotectResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIBufferProtectUnprotectResult_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IDataProtectionInfo;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionInfo ABI::Windows::Security::EnterpriseData::IDataProtectionInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionInfo_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IDataProtectionManagerStatics;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionManagerStatics ABI::Windows::Security::EnterpriseData::IDataProtectionManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionManagerStatics_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileProtectionInfo;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo ABI::Windows::Security::EnterpriseData::IFileProtectionInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileProtectionInfo2;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo2 ABI::Windows::Security::EnterpriseData::IFileProtectionInfo2
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo2_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileProtectionManagerStatics;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics ABI::Windows::Security::EnterpriseData::IFileProtectionManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileProtectionManagerStatics2;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics2 ABI::Windows::Security::EnterpriseData::IFileProtectionManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics2_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileProtectionManagerStatics3;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics3 ABI::Windows::Security::EnterpriseData::IFileProtectionManagerStatics3
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics3_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileRevocationManagerStatics;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileRevocationManagerStatics ABI::Windows::Security::EnterpriseData::IFileRevocationManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileRevocationManagerStatics_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileUnprotectOptions;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptions ABI::Windows::Security::EnterpriseData::IFileUnprotectOptions
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptions_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IFileUnprotectOptionsFactory;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptionsFactory ABI::Windows::Security::EnterpriseData::IFileUnprotectOptionsFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptionsFactory_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectedAccessResumedEventArgs;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessResumedEventArgs ABI::Windows::Security::EnterpriseData::IProtectedAccessResumedEventArgs
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessResumedEventArgs_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectedAccessSuspendingEventArgs;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessSuspendingEventArgs ABI::Windows::Security::EnterpriseData::IProtectedAccessSuspendingEventArgs
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessSuspendingEventArgs_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectedContainerExportResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerExportResult ABI::Windows::Security::EnterpriseData::IProtectedContainerExportResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerExportResult_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectedContainerImportResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerImportResult ABI::Windows::Security::EnterpriseData::IProtectedContainerImportResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerImportResult_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectedContentRevokedEventArgs;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContentRevokedEventArgs ABI::Windows::Security::EnterpriseData::IProtectedContentRevokedEventArgs
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContentRevokedEventArgs_FWD_DEFINED__
@@ -503,9 +499,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectedFileCreateResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedFileCreateResult ABI::Windows::Security::EnterpriseData::IProtectedFileCreateResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedFileCreateResult_FWD_DEFINED__
@@ -517,9 +513,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyAuditInfo;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfo ABI::Windows::Security::EnterpriseData::IProtectionPolicyAuditInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfo_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyAuditInfoFactory;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfoFactory ABI::Windows::Security::EnterpriseData::IProtectionPolicyAuditInfoFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfoFactory_FWD_DEFINED__
@@ -545,9 +541,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyManager;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager ABI::Windows::Security::EnterpriseData::IProtectionPolicyManager
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyManager2;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager2 ABI::Windows::Security::EnterpriseData::IProtectionPolicyManager2
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager2_FWD_DEFINED__
@@ -573,9 +569,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyManagerStatics;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics ABI::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics_FWD_DEFINED__
@@ -587,9 +583,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyManagerStatics2;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics2 ABI::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics2_FWD_DEFINED__
@@ -601,9 +597,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyManagerStatics3;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics3 ABI::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics3
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics3_FWD_DEFINED__
@@ -615,9 +611,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IProtectionPolicyManagerStatics4;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics4 ABI::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics4
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics4_FWD_DEFINED__
@@ -629,9 +625,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 interface IThreadNetworkContext;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CEnterpriseData_CIThreadNetworkContext ABI::Windows::Security::EnterpriseData::IThreadNetworkContext
 
 #endif // ____x_ABI_CWindows_CSecurity_CEnterpriseData_CIThreadNetworkContext_FWD_DEFINED__
@@ -644,9 +640,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectedAccessResumedEventArgs;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -669,7 +665,7 @@ IEventHandler<ABI::Windows::Security::EnterpriseData::ProtectedAccessResumedEven
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs*> __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessResumedEventArgs_t;
 #define __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessResumedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessResumedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessResumedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::Security::EnterpriseData::IProtectedAccessResumedEventArgs*>
@@ -685,9 +681,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectedAccessSuspendingEventArgs;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -710,7 +706,7 @@ IEventHandler<ABI::Windows::Security::EnterpriseData::ProtectedAccessSuspendingE
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs*> __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessSuspendingEventArgs_t;
 #define __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessSuspendingEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessSuspendingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedAccessSuspendingEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::Security::EnterpriseData::IProtectedAccessSuspendingEventArgs*>
@@ -726,9 +722,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectedContentRevokedEventArgs;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -751,7 +747,7 @@ IEventHandler<ABI::Windows::Security::EnterpriseData::ProtectedContentRevokedEve
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs*> __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContentRevokedEventArgs_t;
 #define __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContentRevokedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContentRevokedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContentRevokedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::Security::EnterpriseData::IProtectedContentRevokedEventArgs*>
@@ -767,9 +763,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class BufferProtectUnprotectResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -792,7 +788,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::BufferPr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::BufferProtectUnprotectResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::IBufferProtectUnprotectResult*>
@@ -824,7 +820,7 @@ IAsyncOperation<ABI::Windows::Security::EnterpriseData::BufferProtectUnprotectRe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::EnterpriseData::BufferProtectUnprotectResult*> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CBufferProtectUnprotectResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::IBufferProtectUnprotectResult*>
@@ -840,9 +836,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class DataProtectionInfo;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -865,7 +861,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::DataProt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::DataProtectionInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::IDataProtectionInfo*>
@@ -897,7 +893,7 @@ IAsyncOperation<ABI::Windows::Security::EnterpriseData::DataProtectionInfo*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::EnterpriseData::DataProtectionInfo*> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CDataProtectionInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::IDataProtectionInfo*>
@@ -913,9 +909,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class FileProtectionInfo;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -938,7 +934,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::FileProt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::FileProtectionInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::IFileProtectionInfo*>
@@ -970,7 +966,7 @@ IAsyncOperation<ABI::Windows::Security::EnterpriseData::FileProtectionInfo*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::EnterpriseData::FileProtectionInfo*> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::IFileProtectionInfo*>
@@ -986,9 +982,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 enum FileProtectionStatus : int;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus_USE
@@ -1009,7 +1005,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::EnterpriseData::Fil
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::EnterpriseData::FileProtectionStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::FileProtectionStatus>
@@ -1039,7 +1035,7 @@ IAsyncOperation<enum ABI::Windows::Security::EnterpriseData::FileProtectionStatu
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::EnterpriseData::FileProtectionStatus> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CFileProtectionStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::FileProtectionStatus>
@@ -1054,9 +1050,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectedContainerExportResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -1079,7 +1075,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::Protecte
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::ProtectedContainerExportResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::IProtectedContainerExportResult*>
@@ -1111,7 +1107,7 @@ IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectedContainerExport
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectedContainerExportResult*> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerExportResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::IProtectedContainerExportResult*>
@@ -1127,9 +1123,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectedContainerImportResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -1152,7 +1148,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::Protecte
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::ProtectedContainerImportResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::IProtectedContainerImportResult*>
@@ -1184,7 +1180,7 @@ IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectedContainerImport
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectedContainerImportResult*> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedContainerImportResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::IProtectedContainerImportResult*>
@@ -1200,9 +1196,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectedFileCreateResult;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
@@ -1225,7 +1221,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::Protecte
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::ProtectedFileCreateResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::IProtectedFileCreateResult*>
@@ -1257,7 +1253,7 @@ IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectedFileCreateResul
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectedFileCreateResult*> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectedFileCreateResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::IProtectedFileCreateResult*>
@@ -1273,9 +1269,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 enum ProtectionPolicyEvaluationResult : int;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_USE
@@ -1296,7 +1292,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::EnterpriseData::Pro
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>
@@ -1326,7 +1322,7 @@ IAsyncOperation<enum ABI::Windows::Security::EnterpriseData::ProtectionPolicyEva
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>
@@ -1355,7 +1351,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1384,7 +1380,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1413,7 +1409,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1442,7 +1438,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1471,7 +1467,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1500,7 +1496,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -1529,7 +1525,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -1559,7 +1555,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -1575,8 +1571,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -1602,7 +1598,7 @@ IIterator<ABI::Windows::Storage::IStorageItem*> : IIterator_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::IStorageItem*> __FIIterator_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageItem*>
@@ -1634,7 +1630,7 @@ IIterable<ABI::Windows::Storage::IStorageItem*> : IIterable_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::IStorageItem*> __FIIterable_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageItem*>
@@ -1653,15 +1649,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1669,8 +1665,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1682,8 +1678,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1696,8 +1692,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1705,8 +1701,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -1720,8 +1716,8 @@ namespace ABI {
             
             typedef enum CreationCollisionOption : int CreationCollisionOption;
             
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1729,8 +1725,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1742,8 +1738,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1756,15 +1752,15 @@ namespace ABI {
             
             typedef enum NameCollisionOption : int NameCollisionOption;
             
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1776,9 +1772,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1791,9 +1787,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -1806,9 +1802,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -1821,9 +1817,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1840,9 +1836,9 @@ namespace ABI {
                 
                 typedef enum DataProtectionStatus : int DataProtectionStatus;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1851,9 +1847,9 @@ namespace ABI {
                 
                 typedef enum EnforcementLevel : int EnforcementLevel;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1862,9 +1858,9 @@ namespace ABI {
                 
                 typedef enum FileProtectionStatus : int FileProtectionStatus;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1873,9 +1869,9 @@ namespace ABI {
                 
                 typedef enum ProtectedImportExportStatus : int ProtectedImportExportStatus;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1884,9 +1880,9 @@ namespace ABI {
                 
                 typedef enum ProtectionPolicyAuditAction : int ProtectionPolicyAuditAction;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1895,9 +1891,9 @@ namespace ABI {
                 
                 typedef enum ProtectionPolicyEvaluationResult : int ProtectionPolicyEvaluationResult;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1906,9 +1902,9 @@ namespace ABI {
                 
                 typedef enum ProtectionPolicyRequestAccessBehavior : int ProtectionPolicyRequestAccessBehavior;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1947,9 +1943,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class FileUnprotectOptions;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1963,9 +1959,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectionPolicyAuditInfo;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1973,9 +1969,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ProtectionPolicyManager;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1983,9 +1979,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 class ThreadNetworkContext;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2030,9 +2026,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
 
 
@@ -2059,9 +2055,9 @@ namespace ABI {
                     EnforcementLevel_Block = 3,
                 };
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x20000
 
 
@@ -2140,9 +2136,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
 
 
@@ -2181,9 +2177,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x10000
 
 
@@ -2210,9 +2206,9 @@ namespace ABI {
                     ProtectionPolicyAuditAction_Other = 3,
                 };
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x30000
 
 
@@ -2238,9 +2234,9 @@ namespace ABI {
                     ProtectionPolicyEvaluationResult_ConsentRequired = 2,
                 };
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2265,9 +2261,9 @@ namespace ABI {
                     ProtectionPolicyRequestAccessBehavior_TreatOverridePolicyAsBlock = 1,
                 };
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION >= 0x30000
 
 
@@ -2306,9 +2302,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBufferProtectUnprotectResult=_uuidof(IBufferProtectUnprotectResult);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIBufferProtectUnprotectResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIBufferProtectUnprotectResult_INTERFACE_DEFINED__) */
@@ -2350,9 +2346,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataProtectionInfo=_uuidof(IDataProtectionInfo);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionInfo_INTERFACE_DEFINED__) */
@@ -2416,9 +2412,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataProtectionManagerStatics=_uuidof(IDataProtectionManagerStatics);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIDataProtectionManagerStatics_INTERFACE_DEFINED__) */
@@ -2453,7 +2449,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Security::EnterpriseData::FileProtectionStatus * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRoamable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Identity(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2463,9 +2459,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileProtectionInfo=_uuidof(IFileProtectionInfo);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo_INTERFACE_DEFINED__) */
@@ -2497,16 +2493,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsProtectWhileOpenSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFileProtectionInfo2=_uuidof(IFileProtectionInfo2);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionInfo2_INTERFACE_DEFINED__) */
@@ -2576,9 +2572,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileProtectionManagerStatics=_uuidof(IFileProtectionManagerStatics);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics_INTERFACE_DEFINED__) */
@@ -2629,9 +2625,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileProtectionManagerStatics2=_uuidof(IFileProtectionManagerStatics2);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics2_INTERFACE_DEFINED__) */
@@ -2676,9 +2672,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileProtectionManagerStatics3=_uuidof(IFileProtectionManagerStatics3);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileProtectionManagerStatics3_INTERFACE_DEFINED__) */
@@ -2751,9 +2747,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileRevocationManagerStatics=_uuidof(IFileRevocationManagerStatics);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileRevocationManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileRevocationManagerStatics_INTERFACE_DEFINED__) */
@@ -2785,19 +2781,19 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Audit(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Audit(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFileUnprotectOptions=_uuidof(IFileUnprotectOptions);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptions;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptions_INTERFACE_DEFINED__) */
@@ -2829,7 +2825,7 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
-                        /* [in] */boolean audit,
+                        /* [in] */::boolean audit,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Security::EnterpriseData::IFileUnprotectOptions * * result
                         ) = 0;
                     
@@ -2837,9 +2833,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileUnprotectOptionsFactory=_uuidof(IFileUnprotectOptionsFactory);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIFileUnprotectOptionsFactory_INTERFACE_DEFINED__) */
@@ -2878,9 +2874,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectedAccessResumedEventArgs=_uuidof(IProtectedAccessResumedEventArgs);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessResumedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessResumedEventArgs_INTERFACE_DEFINED__) */
@@ -2925,9 +2921,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectedAccessSuspendingEventArgs=_uuidof(IProtectedAccessSuspendingEventArgs);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessSuspendingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedAccessSuspendingEventArgs_INTERFACE_DEFINED__) */
@@ -2969,9 +2965,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectedContainerExportResult=_uuidof(IProtectedContainerExportResult);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerExportResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerExportResult_INTERFACE_DEFINED__) */
@@ -3013,9 +3009,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectedContainerImportResult=_uuidof(IProtectedContainerImportResult);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerImportResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContainerImportResult_INTERFACE_DEFINED__) */
@@ -3054,9 +3050,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectedContentRevokedEventArgs=_uuidof(IProtectedContentRevokedEventArgs);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContentRevokedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedContentRevokedEventArgs_INTERFACE_DEFINED__) */
@@ -3101,9 +3097,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectedFileCreateResult=_uuidof(IProtectedFileCreateResult);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedFileCreateResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectedFileCreateResult_INTERFACE_DEFINED__) */
@@ -3163,9 +3159,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyAuditInfo=_uuidof(IProtectionPolicyAuditInfo);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfo_INTERFACE_DEFINED__) */
@@ -3213,9 +3209,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyAuditInfoFactory=_uuidof(IProtectionPolicyAuditInfoFactory);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyAuditInfoFactory_INTERFACE_DEFINED__) */
@@ -3257,9 +3253,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyManager=_uuidof(IProtectionPolicyManager);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager_INTERFACE_DEFINED__) */
@@ -3291,19 +3287,19 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowEnterpriseIndicator(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowEnterpriseIndicator(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyManager2=_uuidof(IProtectionPolicyManager2);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManager2_INTERFACE_DEFINED__) */
@@ -3336,11 +3332,11 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsIdentityManaged(
                         /* [in] */__RPC__in HSTRING identity,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryApplyProcessUIPolicy(
                         /* [in] */__RPC__in HSTRING identity,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ClearProcessUIPolicy(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateCurrentThreadNetworkContext(
@@ -3393,9 +3389,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyManagerStatics=_uuidof(IProtectionPolicyManagerStatics);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics_INTERFACE_DEFINED__) */
@@ -3429,7 +3425,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE HasContentBeenRevokedSince(
                         /* [in] */__RPC__in HSTRING identity,
                         /* [in] */ABI::Windows::Foundation::DateTime since,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CheckAccessForApp(
                         /* [in] */__RPC__in HSTRING sourceIdentity,
@@ -3447,11 +3443,11 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsUserDecryptionAllowed(
                         /* [in] */__RPC__in HSTRING identity,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsProtectionUnderLockRequired(
                         /* [in] */__RPC__in HSTRING identity,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_PolicyChanged(
                         /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
@@ -3461,16 +3457,16 @@ namespace ABI {
                         /* [in] */EventRegistrationToken token
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsProtectionEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyManagerStatics2=_uuidof(IProtectionPolicyManagerStatics2);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics2_INTERFACE_DEFINED__) */
@@ -3537,9 +3533,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyManagerStatics3=_uuidof(IProtectionPolicyManagerStatics3);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics3_INTERFACE_DEFINED__) */
@@ -3572,7 +3568,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsRoamableProtectionEnabled(
                         /* [in] */__RPC__in HSTRING identity,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE RequestAccessWithBehaviorAsync(
                         /* [in] */__RPC__in HSTRING sourceIdentity,
@@ -3641,9 +3637,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProtectionPolicyManagerStatics4=_uuidof(IProtectionPolicyManagerStatics4);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics4;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIProtectionPolicyManagerStatics4_INTERFACE_DEFINED__) */
@@ -3679,9 +3675,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IThreadNetworkContext=_uuidof(IThreadNetworkContext);
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CEnterpriseData_CIThreadNetworkContext;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CEnterpriseData_CIThreadNetworkContext_INTERFACE_DEFINED__) */

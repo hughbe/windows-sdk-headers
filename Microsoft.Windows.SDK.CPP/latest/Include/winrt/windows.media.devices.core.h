@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.devices.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface ICameraIntrinsics;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics ABI::Windows::Media::Devices::Core::ICameraIntrinsics
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface ICameraIntrinsics2;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics2 ABI::Windows::Media::Devices::Core::ICameraIntrinsics2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics2_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface ICameraIntrinsicsFactory;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsicsFactory ABI::Windows::Media::Devices::Core::ICameraIntrinsicsFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsicsFactory_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IDepthCorrelatedCoordinateMapper;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper ABI::Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameControlCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities ABI::Windows::Media::Devices::Core::IFrameControlCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameControlCapabilities2;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities2 ABI::Windows::Media::Devices::Core::IFrameControlCapabilities2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities2_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameController;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController ABI::Windows::Media::Devices::Core::IFrameController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameController2;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController2 ABI::Windows::Media::Devices::Core::IFrameController2
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController2_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameExposureCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCapabilities ABI::Windows::Media::Devices::Core::IFrameExposureCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCapabilities_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameExposureCompensationCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationCapabilities ABI::Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationCapabilities_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameExposureCompensationControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationControl ABI::Windows::Media::Devices::Core::IFrameExposureCompensationControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationControl_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameExposureControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureControl ABI::Windows::Media::Devices::Core::IFrameExposureControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureControl_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameFlashCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashCapabilities ABI::Windows::Media::Devices::Core::IFrameFlashCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashCapabilities_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameFlashControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashControl ABI::Windows::Media::Devices::Core::IFrameFlashControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashControl_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameFocusCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusCapabilities ABI::Windows::Media::Devices::Core::IFrameFocusCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusCapabilities_FWD_DEFINED__
@@ -520,10 +516,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameFocusControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusControl ABI::Windows::Media::Devices::Core::IFrameFocusControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusControl_FWD_DEFINED__
@@ -536,10 +532,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameIsoSpeedCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedCapabilities ABI::Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedCapabilities_FWD_DEFINED__
@@ -552,10 +548,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IFrameIsoSpeedControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedControl ABI::Windows::Media::Devices::Core::IFrameIsoSpeedControl
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedControl_FWD_DEFINED__
@@ -568,10 +564,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     interface IVariablePhotoSequenceController;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController ABI::Windows::Media::Devices::Core::IVariablePhotoSequenceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController_FWD_DEFINED__
@@ -585,10 +581,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameController;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -611,7 +607,7 @@ IIterator<ABI::Windows::Media::Devices::Core::FrameController*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Devices::Core::FrameController*> __FIIterator_1_Windows__CMedia__CDevices__CCore__CFrameController_t;
 #define __FIIterator_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CCore__CFrameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Devices::Core::IFrameController*>
@@ -643,7 +639,7 @@ IIterable<ABI::Windows::Media::Devices::Core::FrameController*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Devices::Core::FrameController*> __FIIterable_1_Windows__CMedia__CDevices__CCore__CFrameController_t;
 #define __FIIterable_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CCore__CFrameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Devices::Core::IFrameController*>
@@ -675,7 +671,7 @@ IVectorView<ABI::Windows::Media::Devices::Core::FrameController*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Devices::Core::FrameController*> __FIVectorView_1_Windows__CMedia__CDevices__CCore__CFrameController_t;
 #define __FIVectorView_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CCore__CFrameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Devices::Core::IFrameController*>
@@ -707,7 +703,7 @@ IVector<ABI::Windows::Media::Devices::Core::FrameController*> : IVector_impl<ABI
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Devices::Core::FrameController*> __FIVector_1_Windows__CMedia__CDevices__CCore__CFrameController_t;
 #define __FIVector_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CDevices__CCore__CFrameController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CDevices__CCore__CFrameController ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Devices::Core::IFrameController*>
@@ -737,7 +733,7 @@ IReference<bool> : IReference_impl<ABI::Windows::Foundation::Internal::Aggregate
 // correct parameterized interface specialization.
 typedef IReference<bool> __FIReference_1_boolean_t;
 #define __FIReference_1_boolean ABI::Windows::Foundation::__FIReference_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_boolean ABI::Windows::Foundation::IReference<boolean>
@@ -766,7 +762,7 @@ IReference<float> : IReference_impl<float>
 // correct parameterized interface specialization.
 typedef IReference<float> __FIReference_1_float_t;
 #define __FIReference_1_float ABI::Windows::Foundation::__FIReference_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_float ABI::Windows::Foundation::IReference<FLOAT>
@@ -781,8 +777,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -803,7 +799,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -832,7 +828,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -850,8 +846,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -866,9 +862,9 @@ namespace ABI {
                 
                 typedef struct Matrix4x4 Matrix4x4;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -877,9 +873,9 @@ namespace ABI {
                 
                 typedef struct Vector2 Vector2;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -888,9 +884,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -901,8 +897,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -910,8 +906,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -923,9 +919,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties ABI::Windows::Media::MediaProperties::IMediaEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_FWD_DEFINED__
@@ -936,9 +932,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -947,9 +943,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaRatio;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio ABI::Windows::Media::MediaProperties::IMediaRatio
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -963,9 +959,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -974,9 +970,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -993,10 +989,10 @@ namespace ABI {
                     
                     typedef enum FrameFlashMode : int FrameFlashMode;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1023,10 +1019,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class CameraIntrinsics;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1035,10 +1031,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class DepthCorrelatedCoordinateMapper;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1047,10 +1043,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameControlCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1060,10 +1056,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameExposureCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1072,10 +1068,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameExposureCompensationCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1084,10 +1080,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameExposureCompensationControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1096,10 +1092,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameExposureControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1108,10 +1104,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameFlashCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1120,10 +1116,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameFlashControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1132,10 +1128,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameFocusCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1144,10 +1140,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameFocusControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1156,10 +1152,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameIsoSpeedCapabilities;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1168,10 +1164,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class FrameIsoSpeedControl;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1180,10 +1176,10 @@ namespace ABI {
             namespace Devices {
                 namespace Core {
                     class VariablePhotoSequenceController;
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1219,10 +1215,10 @@ namespace ABI {
                         FrameFlashMode_Global = 2,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1294,10 +1290,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICameraIntrinsics=_uuidof(ICameraIntrinsics);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics_INTERFACE_DEFINED__) */
@@ -1357,10 +1353,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICameraIntrinsics2=_uuidof(ICameraIntrinsics2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsics2_INTERFACE_DEFINED__) */
@@ -1406,10 +1402,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICameraIntrinsicsFactory=_uuidof(ICameraIntrinsicsFactory);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsicsFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CICameraIntrinsicsFactory_INTERFACE_DEFINED__) */
@@ -1476,10 +1472,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDepthCorrelatedCoordinateMapper=_uuidof(IDepthCorrelatedCoordinateMapper);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIDepthCorrelatedCoordinateMapper_INTERFACE_DEFINED__) */
@@ -1524,17 +1520,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Devices::Core::IFrameFocusCapabilities * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PhotoConfirmationSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IFrameControlCapabilities=_uuidof(IFrameControlCapabilities);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities_INTERFACE_DEFINED__) */
@@ -1574,10 +1570,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameControlCapabilities2=_uuidof(IFrameControlCapabilities2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameControlCapabilities2_INTERFACE_DEFINED__) */
@@ -1632,10 +1628,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameController=_uuidof(IFrameController);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController_INTERFACE_DEFINED__) */
@@ -1675,10 +1671,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameController2=_uuidof(IFrameController2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameController2_INTERFACE_DEFINED__) */
@@ -1711,7 +1707,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
@@ -1727,10 +1723,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameExposureCapabilities=_uuidof(IFrameExposureCapabilities);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCapabilities_INTERFACE_DEFINED__) */
@@ -1763,7 +1759,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
                             /* [retval, out] */__RPC__out FLOAT * value
@@ -1779,10 +1775,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameExposureCompensationCapabilities=_uuidof(IFrameExposureCompensationCapabilities);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationCapabilities_INTERFACE_DEFINED__) */
@@ -1825,10 +1821,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameExposureCompensationControl=_uuidof(IFrameExposureCompensationControl);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureCompensationControl_INTERFACE_DEFINED__) */
@@ -1861,10 +1857,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Auto(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Auto(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
                             /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CTimeSpan * * value
@@ -1877,10 +1873,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameExposureControl=_uuidof(IFrameExposureControl);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameExposureControl_INTERFACE_DEFINED__) */
@@ -1913,23 +1909,23 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RedEyeReductionSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IFrameFlashCapabilities=_uuidof(IFrameFlashCapabilities);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashCapabilities_INTERFACE_DEFINED__) */
@@ -1968,16 +1964,16 @@ namespace ABI {
                             /* [in] */ABI::Windows::Media::Devices::Core::FrameFlashMode value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Auto(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Auto(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RedEyeReduction(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RedEyeReduction(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerPercent(
                             /* [retval, out] */__RPC__out FLOAT * value
@@ -1990,10 +1986,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameFlashControl=_uuidof(IFrameFlashControl);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFlashControl_INTERFACE_DEFINED__) */
@@ -2026,7 +2022,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
                             /* [retval, out] */__RPC__out UINT32 * value
@@ -2042,10 +2038,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameFocusCapabilities=_uuidof(IFrameFocusCapabilities);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusCapabilities_INTERFACE_DEFINED__) */
@@ -2088,10 +2084,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameFocusControl=_uuidof(IFrameFocusControl);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameFocusControl_INTERFACE_DEFINED__) */
@@ -2124,7 +2120,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Min(
                             /* [retval, out] */__RPC__out UINT32 * value
@@ -2140,10 +2136,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameIsoSpeedCapabilities=_uuidof(IFrameIsoSpeedCapabilities);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedCapabilities_INTERFACE_DEFINED__) */
@@ -2176,10 +2172,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Auto(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Auto(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
                             /* [retval, out] */__RPC__deref_out_opt __FIReference_1_UINT32 * * value
@@ -2192,10 +2188,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFrameIsoSpeedControl=_uuidof(IFrameIsoSpeedControl);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedControl;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIFrameIsoSpeedControl_INTERFACE_DEFINED__) */
@@ -2228,7 +2224,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Supported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxPhotosPerSecond(
                             /* [retval, out] */__RPC__out FLOAT * value
@@ -2257,10 +2253,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVariablePhotoSequenceController=_uuidof(IVariablePhotoSequenceController);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Devices */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Devices */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CCore_CIVariablePhotoSequenceController_INTERFACE_DEFINED__) */
@@ -3369,7 +3365,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

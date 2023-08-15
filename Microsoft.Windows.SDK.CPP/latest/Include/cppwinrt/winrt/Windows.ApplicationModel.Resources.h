@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,6 +10,7 @@
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Resources.2.h"
 #include "winrt/Windows.ApplicationModel.h"
 
@@ -69,6 +70,13 @@ template <typename D> Windows::ApplicationModel::Resources::ResourceLoader consu
     Windows::ApplicationModel::Resources::ResourceLoader loader{ nullptr };
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::Resources::IResourceLoaderStatics2)->GetForViewIndependentUseWithName(get_abi(name), put_abi(loader)));
     return loader;
+}
+
+template <typename D> Windows::ApplicationModel::Resources::ResourceLoader consume_Windows_ApplicationModel_Resources_IResourceLoaderStatics3<D>::GetForUIContext(Windows::UI::UIContext const& context) const
+{
+    Windows::ApplicationModel::Resources::ResourceLoader result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Resources::IResourceLoaderStatics3)->GetForUIContext(get_abi(context), put_abi(result)));
+    return result;
 }
 
 template <typename D>
@@ -195,6 +203,23 @@ struct produce<D, Windows::ApplicationModel::Resources::IResourceLoaderStatics2>
     }
 };
 
+template <typename D>
+struct produce<D, Windows::ApplicationModel::Resources::IResourceLoaderStatics3> : produce_base<D, Windows::ApplicationModel::Resources::IResourceLoaderStatics3>
+{
+    int32_t WINRT_CALL GetForUIContext(void* context, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetForUIContext, WINRT_WRAP(Windows::ApplicationModel::Resources::ResourceLoader), Windows::UI::UIContext const&);
+            *result = detach_from<Windows::ApplicationModel::Resources::ResourceLoader>(this->shim().GetForUIContext(*reinterpret_cast<Windows::UI::UIContext const*>(&context)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Resources {
@@ -232,6 +257,11 @@ inline Windows::ApplicationModel::Resources::ResourceLoader ResourceLoader::GetF
     return impl::call_factory<ResourceLoader, Windows::ApplicationModel::Resources::IResourceLoaderStatics2>([&](auto&& f) { return f.GetForViewIndependentUse(name); });
 }
 
+inline Windows::ApplicationModel::Resources::ResourceLoader ResourceLoader::GetForUIContext(Windows::UI::UIContext const& context)
+{
+    return impl::call_factory<ResourceLoader, Windows::ApplicationModel::Resources::IResourceLoaderStatics3>([&](auto&& f) { return f.GetForUIContext(context); });
+}
+
 }
 
 WINRT_EXPORT namespace std {
@@ -241,6 +271,7 @@ template<> struct hash<winrt::Windows::ApplicationModel::Resources::IResourceLoa
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::IResourceLoaderFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::IResourceLoaderFactory> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics2> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics3> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::ResourceLoader> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::ResourceLoader> {};
 
 }

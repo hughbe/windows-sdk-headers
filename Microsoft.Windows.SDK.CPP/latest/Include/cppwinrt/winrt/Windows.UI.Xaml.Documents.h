@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -1392,6 +1392,18 @@ template <typename D> typename consume_Windows_UI_Xaml_Documents_ITextElement4<D
 template <typename D> void consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyInvoked(winrt::event_token const& token) const noexcept
 {
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->remove_AccessKeyInvoked(get_abi(token)));
+}
+
+template <typename D> Windows::UI::Xaml::XamlRoot consume_Windows_UI_Xaml_Documents_ITextElement5<D>::XamlRoot() const
+{
+    Windows::UI::Xaml::XamlRoot value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Documents::ITextElement5)->get_XamlRoot(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Documents_ITextElement5<D>::XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Documents::ITextElement5)->put_XamlRoot(get_abi(value)));
 }
 
 template <typename D> void consume_Windows_UI_Xaml_Documents_ITextElementOverrides<D>::OnDisconnectVisualChildren() const
@@ -5201,6 +5213,35 @@ struct produce<D, Windows::UI::Xaml::Documents::ITextElement4> : produce_base<D,
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Xaml::Documents::ITextElement5> : produce_base<D, Windows::UI::Xaml::Documents::ITextElement5>
+{
+    int32_t WINRT_CALL get_XamlRoot(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(XamlRoot, WINRT_WRAP(Windows::UI::Xaml::XamlRoot));
+            *value = detach_from<Windows::UI::Xaml::XamlRoot>(this->shim().XamlRoot());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_XamlRoot(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(XamlRoot, WINRT_WRAP(void), Windows::UI::Xaml::XamlRoot const&);
+            this->shim().XamlRoot(*reinterpret_cast<Windows::UI::Xaml::XamlRoot const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Xaml::Documents::ITextElementFactory> : produce_base<D, Windows::UI::Xaml::Documents::ITextElementFactory>
 {};
 
@@ -8337,7 +8378,7 @@ template <typename D> void ITextElementOverridesT<D>::OnDisconnectVisualChildren
 template <typename D, typename... Interfaces>
 struct BlockT :
     implements<D, Windows::UI::Xaml::Documents::ITextElementOverrides, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Documents::IBlock, Windows::UI::Xaml::Documents::IBlock2, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
+    impl::require<D, Windows::UI::Xaml::Documents::IBlock, Windows::UI::Xaml::Documents::IBlock2, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
     impl::base<D, Windows::UI::Xaml::Documents::Block, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Documents::ITextElementOverridesT<D>
 {
@@ -8368,7 +8409,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct InlineT :
     implements<D, Windows::UI::Xaml::Documents::ITextElementOverrides, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
+    impl::require<D, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
     impl::base<D, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Documents::ITextElementOverridesT<D>
 {
@@ -8384,7 +8425,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct SpanT :
     implements<D, Windows::UI::Xaml::Documents::ITextElementOverrides, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
+    impl::require<D, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
     impl::base<D, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
     Windows::UI::Xaml::Documents::ITextElementOverridesT<D>
 {
@@ -8460,6 +8501,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement> : winr
 template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement3> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement4> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement5> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementOverrides> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementStatics> {};

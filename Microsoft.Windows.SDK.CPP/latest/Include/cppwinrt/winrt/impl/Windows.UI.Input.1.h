@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,6 +12,20 @@
 #include "winrt/impl/Windows.UI.Input.0.h"
 
 WINRT_EXPORT namespace winrt::Windows::UI::Input {
+
+struct WINRT_EBO IAttachableInputObject :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAttachableInputObject>
+{
+    IAttachableInputObject(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IAttachableInputObjectFactory :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAttachableInputObjectFactory>
+{
+    IAttachableInputObjectFactory(std::nullptr_t = nullptr) noexcept {}
+};
 
 struct WINRT_EBO ICrossSlidingEventArgs :
     Windows::Foundation::IInspectable,
@@ -60,6 +74,20 @@ struct WINRT_EBO IHoldingEventArgs :
     impl::consume_t<IHoldingEventArgs>
 {
     IHoldingEventArgs(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInputActivationListener :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInputActivationListener>
+{
+    IInputActivationListener(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInputActivationListenerActivationChangedEventArgs :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInputActivationListenerActivationChangedEventArgs>
+{
+    IInputActivationListenerActivationChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IKeyboardDeliveryInterceptor :

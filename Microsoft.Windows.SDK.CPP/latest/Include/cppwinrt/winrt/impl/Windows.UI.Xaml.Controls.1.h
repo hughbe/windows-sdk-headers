@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -1372,6 +1372,20 @@ struct WINRT_EBO IDatePickerFlyoutPresenter :
     IDatePickerFlyoutPresenter(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IDatePickerFlyoutPresenter2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IDatePickerFlyoutPresenter2>
+{
+    IDatePickerFlyoutPresenter2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IDatePickerFlyoutPresenterStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IDatePickerFlyoutPresenterStatics2>
+{
+    IDatePickerFlyoutPresenterStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IDatePickerFlyoutStatics :
     Windows::Foundation::IInspectable,
     impl::consume_t<IDatePickerFlyoutStatics>
@@ -1533,11 +1547,25 @@ struct WINRT_EBO IFlyoutPresenter :
     IFlyoutPresenter(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IFlyoutPresenter2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IFlyoutPresenter2>
+{
+    IFlyoutPresenter2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IFlyoutPresenterFactory :
     Windows::Foundation::IInspectable,
     impl::consume_t<IFlyoutPresenterFactory>
 {
     IFlyoutPresenterFactory(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IFlyoutPresenterStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IFlyoutPresenterStatics2>
+{
+    IFlyoutPresenterStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IFlyoutStatics :
@@ -2086,6 +2114,13 @@ struct WINRT_EBO IInkToolbar2 :
     IInkToolbar2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IInkToolbar3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInkToolbar3>
+{
+    IInkToolbar3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IInkToolbarBallpointPenButton :
     Windows::Foundation::IInspectable,
     impl::consume_t<IInkToolbarBallpointPenButton>
@@ -2364,6 +2399,13 @@ struct WINRT_EBO IInkToolbarStatics2 :
     impl::consume_t<IInkToolbarStatics2>
 {
     IInkToolbarStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInkToolbarStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInkToolbarStatics3>
+{
+    IInkToolbarStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IInkToolbarStencilButton :
@@ -3129,11 +3171,25 @@ struct WINRT_EBO IMenuFlyoutPresenter2 :
     IMenuFlyoutPresenter2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IMenuFlyoutPresenter3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IMenuFlyoutPresenter3>
+{
+    IMenuFlyoutPresenter3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IMenuFlyoutPresenterFactory :
     Windows::Foundation::IInspectable,
     impl::consume_t<IMenuFlyoutPresenterFactory>
 {
     IMenuFlyoutPresenterFactory(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IMenuFlyoutPresenterStatics3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IMenuFlyoutPresenterStatics3>
+{
+    IMenuFlyoutPresenterStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IMenuFlyoutSeparator :
@@ -5180,6 +5236,20 @@ struct WINRT_EBO ITimePickerFlyoutPresenter :
     ITimePickerFlyoutPresenter(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ITimePickerFlyoutPresenter2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITimePickerFlyoutPresenter2>
+{
+    ITimePickerFlyoutPresenter2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITimePickerFlyoutPresenterStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITimePickerFlyoutPresenterStatics2>
+{
+    ITimePickerFlyoutPresenterStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ITimePickerFlyoutStatics :
     Windows::Foundation::IInspectable,
     impl::consume_t<ITimePickerFlyoutStatics>
@@ -5521,6 +5591,27 @@ struct WINRT_EBO ITreeViewStatics2 :
     impl::consume_t<ITreeViewStatics2>
 {
     ITreeViewStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITwoPaneView :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITwoPaneView>
+{
+    ITwoPaneView(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITwoPaneViewFactory :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITwoPaneViewFactory>
+{
+    ITwoPaneViewFactory(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ITwoPaneViewStatics :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ITwoPaneViewStatics>
+{
+    ITwoPaneViewStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IUIElementCollection :

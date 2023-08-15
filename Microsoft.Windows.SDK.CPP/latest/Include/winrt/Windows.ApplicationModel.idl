@@ -138,6 +138,8 @@ namespace Windows
 
         interface IPackage6;
 
+        interface IPackage7;
+
         interface IPackageCatalog;
 
         interface IPackageCatalog2;
@@ -609,6 +611,15 @@ namespace Windows
             HRESULT CheckUpdateAvailabilityAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult*>** operation);
         }
 
+        [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+        [exclusiveto(Windows.ApplicationModel.Package)]
+        [uuid(86FF8D31-A2E4-45E0-9732-283A6D88FDE1)]
+        interface IPackage7 : IInspectable
+        {
+            [propget] HRESULT MutableLocation([out] [retval] Windows.Storage.StorageFolder** value);
+            [propget] HRESULT EffectiveLocation([out] [retval] Windows.Storage.StorageFolder** value);
+        }
+
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]
         [exclusiveto(Windows.ApplicationModel.PackageCatalog)]
         [uuid(230A3751-9DE3-4445-BE74-91FB325ABEFE)]
@@ -1001,6 +1012,7 @@ namespace Windows
             [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.ApplicationModel.IPackage4;
             [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.ApplicationModel.IPackage5;
             [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.ApplicationModel.IPackage6;
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.ApplicationModel.IPackage7;
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]

@@ -178,7 +178,8 @@ typedef _Return_type_success_(return >= 0) LONG NTSTATUS, *PNTSTATUS;
         (_Status) == ERROR_DOWNGRADE_DETECTED || \
         (_Status) == __HRESULT_FROM_WIN32( ERROR_DOWNGRADE_DETECTED ) || \
         (_Status) == STATUS_DOWNGRADE_DETECTED || \
-        (_Status) == HRESULT_FROM_NT( STATUS_DOWNGRADE_DETECTED ) \
+        (_Status) == HRESULT_FROM_NT( STATUS_DOWNGRADE_DETECTED ) || \
+        (_Status) == SEC_E_DOWNGRADE_DETECTED \
 )
 
 #define CREDUIP_IS_EXPIRED_ERROR( _Status ) ( \

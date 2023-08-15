@@ -323,6 +323,7 @@ typedef struct _DISK_COPY_DATA_PARAMETERS {
 #define PARTITION_DM                    0x54      // OnTrack Disk Manager partition
 #define PARTITION_EZDRIVE               0x55      // EZ-Drive partition
 #define PARTITION_UNIX                  0x63      // Unix
+#define PARTITION_SPACES_DATA           0xD7      // Storage Spaces protective partition
 #define PARTITION_SPACES                0xE7      // Storage Spaces protective partition
 #define PARTITION_GPT                   0xEE      // Gpt protective partition
 #define PARTITION_SYSTEM                0xEF      // System partition

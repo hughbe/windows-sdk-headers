@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.globalization.numberformatting.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface ICurrencyFormatter;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter ABI::Windows::Globalization::NumberFormatting::ICurrencyFormatter
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface ICurrencyFormatter2;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter2 ABI::Windows::Globalization::NumberFormatting::ICurrencyFormatter2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter2_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface ICurrencyFormatterFactory;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatterFactory ABI::Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatterFactory_FWD_DEFINED__
@@ -182,9 +182,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface IDecimalFormatterFactory;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CIDecimalFormatterFactory ABI::Windows::Globalization::NumberFormatting::IDecimalFormatterFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIDecimalFormatterFactory_FWD_DEFINED__
@@ -196,9 +196,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface IIncrementNumberRounder;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CIIncrementNumberRounder ABI::Windows::Globalization::NumberFormatting::IIncrementNumberRounder
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIIncrementNumberRounder_FWD_DEFINED__
@@ -210,9 +210,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumberFormatter;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter ABI::Windows::Globalization::NumberFormatting::INumberFormatter
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter_FWD_DEFINED__
@@ -224,9 +224,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumberFormatter2;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter2 ABI::Windows::Globalization::NumberFormatting::INumberFormatter2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter2_FWD_DEFINED__
@@ -238,9 +238,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumberFormatterOptions;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatterOptions ABI::Windows::Globalization::NumberFormatting::INumberFormatterOptions
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatterOptions_FWD_DEFINED__
@@ -252,9 +252,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumberParser;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberParser ABI::Windows::Globalization::NumberFormatting::INumberParser
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberParser_FWD_DEFINED__
@@ -266,9 +266,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumberRounder;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounder ABI::Windows::Globalization::NumberFormatting::INumberRounder
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounder_FWD_DEFINED__
@@ -280,9 +280,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumberRounderOption;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounderOption ABI::Windows::Globalization::NumberFormatting::INumberRounderOption
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounderOption_FWD_DEFINED__
@@ -294,9 +294,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumeralSystemTranslator;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslator ABI::Windows::Globalization::NumberFormatting::INumeralSystemTranslator
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslator_FWD_DEFINED__
@@ -308,9 +308,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface INumeralSystemTranslatorFactory;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslatorFactory ABI::Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslatorFactory_FWD_DEFINED__
@@ -322,9 +322,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface IPercentFormatterFactory;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPercentFormatterFactory ABI::Windows::Globalization::NumberFormatting::IPercentFormatterFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPercentFormatterFactory_FWD_DEFINED__
@@ -336,9 +336,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface IPermilleFormatterFactory;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPermilleFormatterFactory ABI::Windows::Globalization::NumberFormatting::IPermilleFormatterFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPermilleFormatterFactory_FWD_DEFINED__
@@ -350,9 +350,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface ISignedZeroOption;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignedZeroOption ABI::Windows::Globalization::NumberFormatting::ISignedZeroOption
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignedZeroOption_FWD_DEFINED__
@@ -364,9 +364,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface ISignificantDigitsNumberRounder;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsNumberRounder ABI::Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsNumberRounder_FWD_DEFINED__
@@ -378,9 +378,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 interface ISignificantDigitsOption;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsOption ABI::Windows::Globalization::NumberFormatting::ISignificantDigitsOption
 
 #endif // ____x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsOption_FWD_DEFINED__
@@ -407,7 +407,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -436,7 +436,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -465,7 +465,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -494,7 +494,7 @@ IReference<__int64> : IReference_impl<__int64>
 // correct parameterized interface specialization.
 typedef IReference<__int64> __FIReference_1___z__zint64_t;
 #define __FIReference_1___z__zint64 ABI::Windows::Foundation::__FIReference_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1___z__zint64 ABI::Windows::Foundation::IReference<INT64>
@@ -523,7 +523,7 @@ IReference<UINT64> : IReference_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IReference<UINT64> __FIReference_1_UINT64_t;
 #define __FIReference_1_UINT64 ABI::Windows::Foundation::__FIReference_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT64 ABI::Windows::Foundation::IReference<UINT64>
@@ -552,7 +552,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -574,9 +574,9 @@ namespace ABI {
                 
                 typedef enum CurrencyFormatterMode : int CurrencyFormatterMode;
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -585,9 +585,9 @@ namespace ABI {
                 
                 typedef enum RoundingAlgorithm : int RoundingAlgorithm;
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -612,9 +612,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 class CurrencyFormatter;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -622,9 +622,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 class DecimalFormatter;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -632,9 +632,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 class IncrementNumberRounder;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -642,9 +642,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 class NumeralSystemTranslator;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -652,9 +652,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 class PercentFormatter;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -662,9 +662,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 class PermilleFormatter;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -672,9 +672,9 @@ namespace ABI {
         namespace Globalization {
             namespace NumberFormatting {
                 class SignificantDigitsNumberRounder;
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -702,9 +702,9 @@ namespace ABI {
                     CurrencyFormatterMode_UseCurrencyCode = 1,
                 };
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -738,9 +738,9 @@ namespace ABI {
                     RoundingAlgorithm_RoundHalfToOdd = 10,
                 };
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -790,9 +790,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICurrencyFormatter=_uuidof(ICurrencyFormatter);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter_INTERFACE_DEFINED__) */
@@ -837,9 +837,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICurrencyFormatter2=_uuidof(ICurrencyFormatter2);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatter2_INTERFACE_DEFINED__) */
@@ -885,9 +885,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICurrencyFormatterFactory=_uuidof(ICurrencyFormatterFactory);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatterFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CICurrencyFormatterFactory_INTERFACE_DEFINED__) */
@@ -928,9 +928,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDecimalFormatterFactory=_uuidof(IDecimalFormatterFactory);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CIDecimalFormatterFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIDecimalFormatterFactory_INTERFACE_DEFINED__) */
@@ -978,9 +978,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IIncrementNumberRounder=_uuidof(IIncrementNumberRounder);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CIIncrementNumberRounder;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIIncrementNumberRounder_INTERFACE_DEFINED__) */
@@ -1025,9 +1025,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumberFormatter=_uuidof(INumberFormatter);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter_INTERFACE_DEFINED__) */
@@ -1072,9 +1072,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumberFormatter2=_uuidof(INumberFormatter2);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatter2_INTERFACE_DEFINED__) */
@@ -1121,16 +1121,16 @@ namespace ABI {
                         /* [in] */INT32 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGrouped(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsGrouped(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDecimalPointAlwaysDisplayed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDecimalPointAlwaysDisplayed(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NumeralSystem(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1149,9 +1149,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumberFormatterOptions=_uuidof(INumberFormatterOptions);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatterOptions;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberFormatterOptions_INTERFACE_DEFINED__) */
@@ -1196,9 +1196,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumberParser=_uuidof(INumberParser);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberParser;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberParser_INTERFACE_DEFINED__) */
@@ -1255,9 +1255,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumberRounder=_uuidof(INumberRounder);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounder;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounder_INTERFACE_DEFINED__) */
@@ -1296,9 +1296,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumberRounderOption=_uuidof(INumberRounderOption);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounderOption;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumberRounderOption_INTERFACE_DEFINED__) */
@@ -1350,9 +1350,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumeralSystemTranslator=_uuidof(INumeralSystemTranslator);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslator;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslator_INTERFACE_DEFINED__) */
@@ -1392,9 +1392,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_INumeralSystemTranslatorFactory=_uuidof(INumeralSystemTranslatorFactory);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslatorFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CINumeralSystemTranslatorFactory_INTERFACE_DEFINED__) */
@@ -1435,9 +1435,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPercentFormatterFactory=_uuidof(IPercentFormatterFactory);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPercentFormatterFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPercentFormatterFactory_INTERFACE_DEFINED__) */
@@ -1478,9 +1478,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPermilleFormatterFactory=_uuidof(IPermilleFormatterFactory);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPermilleFormatterFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CIPermilleFormatterFactory_INTERFACE_DEFINED__) */
@@ -1509,19 +1509,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsZeroSigned(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsZeroSigned(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISignedZeroOption=_uuidof(ISignedZeroOption);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignedZeroOption;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignedZeroOption_INTERFACE_DEFINED__) */
@@ -1569,9 +1569,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISignificantDigitsNumberRounder=_uuidof(ISignificantDigitsNumberRounder);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsNumberRounder;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsNumberRounder_INTERFACE_DEFINED__) */
@@ -1610,9 +1610,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISignificantDigitsOption=_uuidof(ISignificantDigitsOption);
                 
-            } /* Windows */
+            } /* NumberFormatting */
         } /* Globalization */
-    } /* NumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsOption;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CNumberFormatting_CISignificantDigitsOption_INTERFACE_DEFINED__) */
@@ -2299,7 +2299,7 @@ typedef struct __FIReference_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *value);
     END_INTERFACE
 } __FIReference_1_UINT64Vtbl;
 

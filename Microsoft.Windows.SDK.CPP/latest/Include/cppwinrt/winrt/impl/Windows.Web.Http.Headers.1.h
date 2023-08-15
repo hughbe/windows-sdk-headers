@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -16,8 +16,7 @@ WINRT_EXPORT namespace winrt::Windows::Web::Http::Headers {
 
 struct WINRT_EBO IHttpCacheDirectiveHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpCacheDirectiveHeaderValueCollection>,
-    impl::require<IHttpCacheDirectiveHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpNameValueHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpNameValueHeaderValue>>
+    impl::consume_t<IHttpCacheDirectiveHeaderValueCollection>
 {
     IHttpCacheDirectiveHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -31,8 +30,7 @@ struct WINRT_EBO IHttpChallengeHeaderValue :
 
 struct WINRT_EBO IHttpChallengeHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpChallengeHeaderValueCollection>,
-    impl::require<IHttpChallengeHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpChallengeHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpChallengeHeaderValue>>
+    impl::consume_t<IHttpChallengeHeaderValueCollection>
 {
     IHttpChallengeHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -60,8 +58,7 @@ struct WINRT_EBO IHttpConnectionOptionHeaderValue :
 
 struct WINRT_EBO IHttpConnectionOptionHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpConnectionOptionHeaderValueCollection>,
-    impl::require<IHttpConnectionOptionHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>
+    impl::consume_t<IHttpConnectionOptionHeaderValueCollection>
 {
     IHttpConnectionOptionHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -89,8 +86,7 @@ struct WINRT_EBO IHttpContentCodingHeaderValue :
 
 struct WINRT_EBO IHttpContentCodingHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpContentCodingHeaderValueCollection>,
-    impl::require<IHttpContentCodingHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>
+    impl::consume_t<IHttpContentCodingHeaderValueCollection>
 {
     IHttpContentCodingHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -118,8 +114,7 @@ struct WINRT_EBO IHttpContentCodingWithQualityHeaderValue :
 
 struct WINRT_EBO IHttpContentCodingWithQualityHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpContentCodingWithQualityHeaderValueCollection>,
-    impl::require<IHttpContentCodingWithQualityHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>
+    impl::consume_t<IHttpContentCodingWithQualityHeaderValueCollection>
 {
     IHttpContentCodingWithQualityHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -161,8 +156,7 @@ struct WINRT_EBO IHttpContentDispositionHeaderValueStatics :
 
 struct WINRT_EBO IHttpContentHeaderCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpContentHeaderCollection>,
-    impl::require<IHttpContentHeaderCollection, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>, Windows::Foundation::Collections::IMap<hstring, hstring>>
+    impl::consume_t<IHttpContentHeaderCollection>
 {
     IHttpContentHeaderCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -197,8 +191,7 @@ struct WINRT_EBO IHttpCookiePairHeaderValue :
 
 struct WINRT_EBO IHttpCookiePairHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpCookiePairHeaderValueCollection>,
-    impl::require<IHttpCookiePairHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>
+    impl::consume_t<IHttpCookiePairHeaderValueCollection>
 {
     IHttpCookiePairHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -261,8 +254,7 @@ struct WINRT_EBO IHttpExpectationHeaderValue :
 
 struct WINRT_EBO IHttpExpectationHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpExpectationHeaderValueCollection>,
-    impl::require<IHttpExpectationHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpExpectationHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpExpectationHeaderValue>>
+    impl::consume_t<IHttpExpectationHeaderValueCollection>
 {
     IHttpExpectationHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -283,8 +275,7 @@ struct WINRT_EBO IHttpExpectationHeaderValueStatics :
 
 struct WINRT_EBO IHttpLanguageHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpLanguageHeaderValueCollection>,
-    impl::require<IHttpLanguageHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Globalization::Language>, Windows::Foundation::Collections::IVector<Windows::Globalization::Language>>
+    impl::consume_t<IHttpLanguageHeaderValueCollection>
 {
     IHttpLanguageHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -298,8 +289,7 @@ struct WINRT_EBO IHttpLanguageRangeWithQualityHeaderValue :
 
 struct WINRT_EBO IHttpLanguageRangeWithQualityHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpLanguageRangeWithQualityHeaderValueCollection>,
-    impl::require<IHttpLanguageRangeWithQualityHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>
+    impl::consume_t<IHttpLanguageRangeWithQualityHeaderValueCollection>
 {
     IHttpLanguageRangeWithQualityHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -348,8 +338,7 @@ struct WINRT_EBO IHttpMediaTypeWithQualityHeaderValue :
 
 struct WINRT_EBO IHttpMediaTypeWithQualityHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpMediaTypeWithQualityHeaderValueCollection>,
-    impl::require<IHttpMediaTypeWithQualityHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>
+    impl::consume_t<IHttpMediaTypeWithQualityHeaderValueCollection>
 {
     IHttpMediaTypeWithQualityHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -370,8 +359,7 @@ struct WINRT_EBO IHttpMediaTypeWithQualityHeaderValueStatics :
 
 struct WINRT_EBO IHttpMethodHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpMethodHeaderValueCollection>,
-    impl::require<IHttpMethodHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::HttpMethod>, Windows::Foundation::Collections::IVector<Windows::Web::Http::HttpMethod>>
+    impl::consume_t<IHttpMethodHeaderValueCollection>
 {
     IHttpMethodHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -427,8 +415,7 @@ struct WINRT_EBO IHttpProductInfoHeaderValue :
 
 struct WINRT_EBO IHttpProductInfoHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpProductInfoHeaderValueCollection>,
-    impl::require<IHttpProductInfoHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>
+    impl::consume_t<IHttpProductInfoHeaderValueCollection>
 {
     IHttpProductInfoHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -449,16 +436,14 @@ struct WINRT_EBO IHttpProductInfoHeaderValueStatics :
 
 struct WINRT_EBO IHttpRequestHeaderCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpRequestHeaderCollection>,
-    impl::require<IHttpRequestHeaderCollection, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>, Windows::Foundation::Collections::IMap<hstring, hstring>>
+    impl::consume_t<IHttpRequestHeaderCollection>
 {
     IHttpRequestHeaderCollection(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IHttpResponseHeaderCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpResponseHeaderCollection>,
-    impl::require<IHttpResponseHeaderCollection, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>, Windows::Foundation::Collections::IMap<hstring, hstring>>
+    impl::consume_t<IHttpResponseHeaderCollection>
 {
     IHttpResponseHeaderCollection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -472,8 +457,7 @@ struct WINRT_EBO IHttpTransferCodingHeaderValue :
 
 struct WINRT_EBO IHttpTransferCodingHeaderValueCollection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IHttpTransferCodingHeaderValueCollection>,
-    impl::require<IHttpTransferCodingHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>
+    impl::consume_t<IHttpTransferCodingHeaderValueCollection>
 {
     IHttpTransferCodingHeaderValueCollection(std::nullptr_t = nullptr) noexcept {}
 };

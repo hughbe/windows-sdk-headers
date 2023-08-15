@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -49,6 +49,13 @@ struct WINRT_EBO IHolographicCamera5 :
     impl::consume_t<IHolographicCamera5>
 {
     IHolographicCamera5(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IHolographicCamera6 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHolographicCamera6>
+{
+    IHolographicCamera6(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IHolographicCameraPose :
@@ -107,6 +114,13 @@ struct WINRT_EBO IHolographicDisplay2 :
     impl::consume_t<IHolographicDisplay2>
 {
     IHolographicDisplay2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IHolographicDisplay3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHolographicDisplay3>
+{
+    IHolographicDisplay3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IHolographicDisplayStatics :
@@ -228,6 +242,13 @@ struct WINRT_EBO IHolographicSpaceStatics3 :
     impl::consume_t<IHolographicSpaceStatics3>
 {
     IHolographicSpaceStatics3(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IHolographicViewConfiguration :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IHolographicViewConfiguration>
+{
+    IHolographicViewConfiguration(std::nullptr_t = nullptr) noexcept {}
 };
 
 }

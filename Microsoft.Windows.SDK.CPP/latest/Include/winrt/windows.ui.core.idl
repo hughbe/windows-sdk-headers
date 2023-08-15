@@ -11,6 +11,7 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.System.idl";
+import "Windows.UI.idl";
 import "Windows.UI.Input.idl";
 import "Windows.UI.Input.Inking.idl";
 import "Windows.UI.Input.Inking.Core.idl";
@@ -106,6 +107,13 @@ namespace Windows
 
             delegate UICommandInvokedHandler;
         }
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
+        runtimeclass UIContext;
     }
 }
 namespace Windows
@@ -217,6 +225,8 @@ namespace Windows
             interface ICoreWindowResizeManagerStatics;
 
             interface ICoreWindowStatic;
+
+            interface ICoreWindowWithContext;
 
             interface IIdleDispatchedHandlerArgs;
 
@@ -958,6 +968,14 @@ namespace Windows
                 HRESULT GetForCurrentThread([out] [retval] Windows.UI.Core.CoreWindow** ppWindow);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Core.CoreWindow)]
+            [uuid(9AC40241-3575-4C3B-AF66-E8C529D4D06C)]
+            interface ICoreWindowWithContext : IInspectable
+            {
+                [propget] HRESULT UIContext([out] [retval] Windows.UI.UIContext** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Core.IdleDispatchedHandlerArgs)]
             [uuid(98BB6A24-DC1C-43CB-B4ED-D1C0EB2391F3)]
@@ -1185,6 +1203,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Core.ICoreWindow3;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Core.ICoreWindow4;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Core.ICoreWindow5;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Core.ICoreWindowWithContext;
             }
 
             [activatable(Windows.UI.Core.CoreWindowDialogsContract, 1.0)]

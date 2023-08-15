@@ -177,6 +177,7 @@
                  <xmlType name="win:Utf8" value="35" symbol="WINEVENT_OUT_TYPE_UTF8"/>
                  <xmlType name="win:Pkcs7WithTypeInfo" value="36" symbol="WINEVENT_OUT_TYPE_PKCS7_WITH_TYPE_INFO"/>
                  <xmlType name="win:CodePointer" value="37" symbol="WINEVENT_OUT_TYPE_CODE_POINTER"/>
+                 <xmlType name="win:DateTimeUtc" value="38" symbol="WINEVENT_OUT_TYPE_DATE_TIME_UTC"/>
             </xmlTypes>
             <inTypes>
                 <inType name="win:UnicodeString" value="1" symbol="WINEVENT_TYPE_NULL_TERMINATED_STRING">
@@ -277,12 +278,14 @@
                 <inType name="win:FILETIME" value="17" symbol="WINEVENT_TYPE_FILETIME">
                     <description> A Windows FILETIME struct. </description>
                     <outType default="true" xmlType="xs:dateTime" />
-                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture. Ex) Left-To-Right</outType>
+                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture (no Left-To-Right markers)</outType>
+                    <outType xmlType="win:DateTimeUtc"> DateTime string formatted assuming the FILETIME is UTC. </outType>
                 </inType>
                 <inType name="win:SYSTEMTIME" value="18" symbol="WINEVENT_TYPE_SYSTEMTIME">
                     <description> A Windows SYSTEMTIME struct.</description>
                     <outType default="true" xmlType="xs:dateTime" />
-                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture. Ex) Left-To-Right</outType>
+                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture (no Left-To-Right markers)</outType>
+                    <outType xmlType="win:DateTimeUtc"> DateTime string formatted assuming the SYSTEMTIME is UTC. </outType>
                 </inType>
                 <inType name="win:SID" value="19" symbol="WINEVENT_TYPE_SID">
                     <description> A self-relative Windows SID structure. XML spec: S-1-0-0.</description>

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -919,6 +919,13 @@ struct WINRT_EBO IUIElement :
     IUIElement(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IUIElement10 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUIElement10>
+{
+    IUIElement10(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IUIElement2 :
     Windows::Foundation::IInspectable,
     impl::consume_t<IUIElement2>
@@ -1010,6 +1017,13 @@ struct WINRT_EBO IUIElementStatics :
     IUIElementStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IUIElementStatics10 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUIElementStatics10>
+{
+    IUIElementStatics10(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IUIElementStatics2 :
     Windows::Foundation::IInspectable,
     impl::consume_t<IUIElementStatics2>
@@ -1064,6 +1078,20 @@ struct WINRT_EBO IUIElementStatics9 :
     impl::consume_t<IUIElementStatics9>
 {
     IUIElementStatics9(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUIElementWeakCollection :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUIElementWeakCollection>
+{
+    IUIElementWeakCollection(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUIElementWeakCollectionFactory :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUIElementWeakCollectionFactory>
+{
+    IUIElementWeakCollectionFactory(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IUnhandledExceptionEventArgs :
@@ -1185,6 +1213,13 @@ struct WINRT_EBO IWindow3 :
     IWindow3(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IWindow4 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IWindow4>
+{
+    IWindow4(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IWindowCreatedEventArgs :
     Windows::Foundation::IInspectable,
     impl::consume_t<IWindowCreatedEventArgs>
@@ -1197,6 +1232,20 @@ struct WINRT_EBO IWindowStatics :
     impl::consume_t<IWindowStatics>
 {
     IWindowStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IXamlRoot :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IXamlRoot>
+{
+    IXamlRoot(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IXamlRootChangedEventArgs :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IXamlRootChangedEventArgs>
+{
+    IXamlRootChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
 };
 
 }

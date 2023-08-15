@@ -1881,6 +1881,18 @@ typedef enum FWPS_FIELDS_INBOUND_RESERVED2_
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED10,
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED11,
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED12,
+
+//
+// TODO: This needs to be changed to NTDDI version for 19H1 when it is defined.
+// #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+//
+
+   FWPS_FIELD_INBOUND_RESERVED2_RESERVED13,
+   FWPS_FIELD_INBOUND_RESERVED2_RESERVED14,
+   FWPS_FIELD_INBOUND_RESERVED2_RESERVED15,
+
+// #endif
+
    FWPS_FIELD_INBOUND_RESERVED2_MAX,
 } FWPS_FIELDS_INBOUND_RESERVED2;
 
@@ -1958,6 +1970,7 @@ typedef enum {
     IpDiscardInspectionDrop,  // Blocked by firewall, ICMP should not be sent.
     IpDiscardTooManyDecapsulations,
     IpDiscardAdministrativelyProhibited, // Blocked, ICMP should be sent.
+    IpDiscardBadChecksum,
 
     IpDiscardReceivePathMax = 127,
 

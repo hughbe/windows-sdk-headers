@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.email.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailAttachment;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment ABI::Windows::ApplicationModel::Email::IEmailAttachment
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailAttachment2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment2 ABI::Windows::ApplicationModel::Email::IEmailAttachment2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment2_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailAttachmentFactory;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory ABI::Windows::ApplicationModel::Email::IEmailAttachmentFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailAttachmentFactory2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory2 ABI::Windows::ApplicationModel::Email::IEmailAttachmentFactory2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory2_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailConversation;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversation ABI::Windows::ApplicationModel::Email::IEmailConversation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversation_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailConversationBatch;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationBatch ABI::Windows::ApplicationModel::Email::IEmailConversationBatch
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationBatch_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailConversationReader;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationReader ABI::Windows::ApplicationModel::Email::IEmailConversationReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationReader_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailFolder;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder ABI::Windows::ApplicationModel::Email::IEmailFolder
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailIrmInfo;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfo ABI::Windows::ApplicationModel::Email::IEmailIrmInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfo_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailIrmInfoFactory;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfoFactory ABI::Windows::ApplicationModel::Email::IEmailIrmInfoFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfoFactory_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailIrmTemplate;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplate ABI::Windows::ApplicationModel::Email::IEmailIrmTemplate
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplate_FWD_DEFINED__
@@ -434,9 +430,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailIrmTemplateFactory;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplateFactory ABI::Windows::ApplicationModel::Email::IEmailIrmTemplateFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplateFactory_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailItemCounts;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailItemCounts ABI::Windows::ApplicationModel::Email::IEmailItemCounts
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailItemCounts_FWD_DEFINED__
@@ -462,9 +458,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailbox;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox ABI::Windows::ApplicationModel::Email::IEmailMailbox
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox_FWD_DEFINED__
@@ -476,9 +472,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailbox2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox2 ABI::Windows::ApplicationModel::Email::IEmailMailbox2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox2_FWD_DEFINED__
@@ -490,9 +486,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailbox3;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox3 ABI::Windows::ApplicationModel::Email::IEmailMailbox3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox3_FWD_DEFINED__
@@ -504,9 +500,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailbox4;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox4 ABI::Windows::ApplicationModel::Email::IEmailMailbox4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox4_FWD_DEFINED__
@@ -518,9 +514,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailbox5;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox5 ABI::Windows::ApplicationModel::Email::IEmailMailbox5
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox5_FWD_DEFINED__
@@ -532,9 +528,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxAction;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAction ABI::Windows::ApplicationModel::Email::IEmailMailboxAction
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAction_FWD_DEFINED__
@@ -546,9 +542,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxAutoReply;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReply ABI::Windows::ApplicationModel::Email::IEmailMailboxAutoReply
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReply_FWD_DEFINED__
@@ -560,9 +556,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxAutoReplySettings;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings ABI::Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings_FWD_DEFINED__
@@ -574,9 +570,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxCapabilities;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities ABI::Windows::ApplicationModel::Email::IEmailMailboxCapabilities
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities_FWD_DEFINED__
@@ -588,9 +584,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxCapabilities2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities2 ABI::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities2_FWD_DEFINED__
@@ -602,9 +598,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxCapabilities3;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities3 ABI::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities3_FWD_DEFINED__
@@ -616,9 +612,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxChange;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChange ABI::Windows::ApplicationModel::Email::IEmailMailboxChange
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChange_FWD_DEFINED__
@@ -630,9 +626,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxChangeReader;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeReader ABI::Windows::ApplicationModel::Email::IEmailMailboxChangeReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeReader_FWD_DEFINED__
@@ -644,9 +640,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxChangeTracker;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeTracker ABI::Windows::ApplicationModel::Email::IEmailMailboxChangeTracker
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeTracker_FWD_DEFINED__
@@ -658,9 +654,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxChangedDeferral;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedDeferral ABI::Windows::ApplicationModel::Email::IEmailMailboxChangedDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedDeferral_FWD_DEFINED__
@@ -672,9 +668,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxChangedEventArgs;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedEventArgs ABI::Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedEventArgs_FWD_DEFINED__
@@ -686,9 +682,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxCreateFolderResult;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCreateFolderResult ABI::Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCreateFolderResult_FWD_DEFINED__
@@ -700,9 +696,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxPolicies;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies ABI::Windows::ApplicationModel::Email::IEmailMailboxPolicies
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies_FWD_DEFINED__
@@ -714,9 +710,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxPolicies2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies2 ABI::Windows::ApplicationModel::Email::IEmailMailboxPolicies2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies2_FWD_DEFINED__
@@ -728,9 +724,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxPolicies3;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies3 ABI::Windows::ApplicationModel::Email::IEmailMailboxPolicies3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies3_FWD_DEFINED__
@@ -742,9 +738,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxSyncManager;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager ABI::Windows::ApplicationModel::Email::IEmailMailboxSyncManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager_FWD_DEFINED__
@@ -756,9 +752,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailboxSyncManager2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager2 ABI::Windows::ApplicationModel::Email::IEmailMailboxSyncManager2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager2_FWD_DEFINED__
@@ -770,9 +766,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailManagerForUser;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerForUser ABI::Windows::ApplicationModel::Email::IEmailManagerForUser
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerForUser_FWD_DEFINED__
@@ -784,9 +780,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailManagerStatics;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics ABI::Windows::ApplicationModel::Email::IEmailManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics_FWD_DEFINED__
@@ -798,9 +794,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailManagerStatics2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics2 ABI::Windows::ApplicationModel::Email::IEmailManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics2_FWD_DEFINED__
@@ -812,9 +808,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailManagerStatics3;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics3 ABI::Windows::ApplicationModel::Email::IEmailManagerStatics3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics3_FWD_DEFINED__
@@ -826,9 +822,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMeetingInfo;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo ABI::Windows::ApplicationModel::Email::IEmailMeetingInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo_FWD_DEFINED__
@@ -840,9 +836,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMeetingInfo2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo2 ABI::Windows::ApplicationModel::Email::IEmailMeetingInfo2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo2_FWD_DEFINED__
@@ -854,9 +850,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMessage;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage ABI::Windows::ApplicationModel::Email::IEmailMessage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage_FWD_DEFINED__
@@ -868,9 +864,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMessage2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage2 ABI::Windows::ApplicationModel::Email::IEmailMessage2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage2_FWD_DEFINED__
@@ -882,9 +878,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMessage3;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage3 ABI::Windows::ApplicationModel::Email::IEmailMessage3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage3_FWD_DEFINED__
@@ -896,9 +892,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMessage4;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage4 ABI::Windows::ApplicationModel::Email::IEmailMessage4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage4_FWD_DEFINED__
@@ -910,9 +906,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMessageBatch;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageBatch ABI::Windows::ApplicationModel::Email::IEmailMessageBatch
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageBatch_FWD_DEFINED__
@@ -924,9 +920,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMessageReader;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageReader ABI::Windows::ApplicationModel::Email::IEmailMessageReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageReader_FWD_DEFINED__
@@ -938,9 +934,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailQueryOptions;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions ABI::Windows::ApplicationModel::Email::IEmailQueryOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions_FWD_DEFINED__
@@ -952,9 +948,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailQueryOptionsFactory;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptionsFactory ABI::Windows::ApplicationModel::Email::IEmailQueryOptionsFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptionsFactory_FWD_DEFINED__
@@ -966,9 +962,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailQueryTextSearch;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryTextSearch ABI::Windows::ApplicationModel::Email::IEmailQueryTextSearch
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryTextSearch_FWD_DEFINED__
@@ -980,9 +976,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailRecipient;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient ABI::Windows::ApplicationModel::Email::IEmailRecipient
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient_FWD_DEFINED__
@@ -994,9 +990,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailRecipientFactory;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientFactory ABI::Windows::ApplicationModel::Email::IEmailRecipientFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientFactory_FWD_DEFINED__
@@ -1008,9 +1004,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailRecipientResolutionResult;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult_FWD_DEFINED__
@@ -1022,9 +1018,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailRecipientResolutionResult2;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult2 ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult2_FWD_DEFINED__
@@ -1036,9 +1032,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailStore;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStore ABI::Windows::ApplicationModel::Email::IEmailStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStore_FWD_DEFINED__
@@ -1050,9 +1046,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailStoreNotificationTriggerDetails;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStoreNotificationTriggerDetails ABI::Windows::ApplicationModel::Email::IEmailStoreNotificationTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStoreNotificationTriggerDetails_FWD_DEFINED__
@@ -1065,9 +1061,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailAttachment;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1090,7 +1086,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailAttachment*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailAttachment*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailAttachment*>
@@ -1122,7 +1118,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailAttachment*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailAttachment*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailAttachment*>
@@ -1138,9 +1134,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 enum EmailCertificateValidationStatus : int;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_USE
@@ -1161,7 +1157,7 @@ IIterator<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidation
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>
@@ -1191,7 +1187,7 @@ IIterable<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidation
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>
@@ -1206,9 +1202,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailConversation;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1231,7 +1227,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailConversation*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailConversation*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailConversation_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailConversation*>
@@ -1263,7 +1259,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailConversation*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailConversation*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailConversation_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailConversation*>
@@ -1279,9 +1275,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailFolder;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1304,7 +1300,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailFolder*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailFolder*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailFolder_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailFolder*>
@@ -1336,7 +1332,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailFolder*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailFolder*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailFolder_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailFolder*>
@@ -1352,9 +1348,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailbox;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1377,7 +1373,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailMailbox*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -1409,7 +1405,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailMailbox*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -1425,9 +1421,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxAction;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1450,7 +1446,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailMailboxAction*>
@@ -1482,7 +1478,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailMailboxAction*>
@@ -1498,9 +1494,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxChange;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1523,7 +1519,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailMailboxChange*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailMailboxChange*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailMailboxChange*>
@@ -1555,7 +1551,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailMailboxChange*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailMailboxChange*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailMailboxChange*>
@@ -1571,9 +1567,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMessage;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1596,7 +1592,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailMessage*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailMessage*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMessage_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailMessage*>
@@ -1628,7 +1624,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailMessage*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailMessage*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMessage_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailMessage*>
@@ -1644,9 +1640,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailRecipient;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1669,7 +1665,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipient*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipient*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailRecipient*>
@@ -1701,7 +1697,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipient*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipient*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailRecipient*>
@@ -1717,9 +1713,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailRecipientResolutionResult;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1742,7 +1738,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult*>
@@ -1774,7 +1770,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult*>
@@ -1806,7 +1802,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailAttachment*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailAttachment*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailAttachment*>
@@ -1837,7 +1833,7 @@ IVectorView<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidati
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>
@@ -1868,7 +1864,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailConversation*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailConversation*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailConversation_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailConversation*>
@@ -1900,7 +1896,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailFolder*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailFolder*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailFolder*>
@@ -1932,7 +1928,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailbox*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -1964,7 +1960,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailboxAction*>
@@ -1996,7 +1992,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailboxChange*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailboxChange*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailboxChange*>
@@ -2028,7 +2024,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailMessage*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailMessage*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMessage*>
@@ -2060,7 +2056,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailRecipient*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailRecipient*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailRecipient*>
@@ -2092,7 +2088,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResul
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailRecipientResolutionResult*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult*>
@@ -2124,7 +2120,7 @@ IVector<ABI::Windows::ApplicationModel::Email::EmailAttachment*> : IVector_impl<
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Email::EmailAttachment*> __FIVector_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t;
 #define __FIVector_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CEmail__CEmailAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CEmail__CEmailAttachment ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Email::IEmailAttachment*>
@@ -2156,7 +2152,7 @@ IVector<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> : IVector_im
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Email::EmailMailboxAction*> __FIVector_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t;
 #define __FIVector_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CEmail__CEmailMailboxAction ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Email::IEmailMailboxAction*>
@@ -2188,7 +2184,7 @@ IVector<ABI::Windows::ApplicationModel::Email::EmailRecipient*> : IVector_impl<A
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Email::EmailRecipient*> __FIVector_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t;
 #define __FIVector_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CEmail__CEmailRecipient_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CEmail__CEmailRecipient ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Email::IEmailRecipient*>
@@ -2220,7 +2216,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailConv
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailConversation*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailConversation*>
@@ -2252,7 +2248,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailConversation*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailConversation*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversation_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailConversation*>
@@ -2268,9 +2264,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailConversationBatch;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2293,7 +2289,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailConv
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailConversationBatch*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailConversationBatch*>
@@ -2325,7 +2321,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailConversationBatch*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailConversationBatch*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailConversationBatch ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailConversationBatch*>
@@ -2357,7 +2353,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailFold
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailFolder*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailFolder_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailFolder*>
@@ -2389,7 +2385,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailFolder*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailFolder*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailFolder_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailFolder*>
@@ -2405,9 +2401,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailItemCounts;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2430,7 +2426,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailItem
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailItemCounts*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailItemCounts_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailItemCounts ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailItemCounts_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailItemCounts ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailItemCounts*>
@@ -2462,7 +2458,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailItemCounts*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailItemCounts*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailItemCounts_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailItemCounts ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailItemCounts_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailItemCounts ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailItemCounts*>
@@ -2494,7 +2490,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMail
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -2526,7 +2522,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailbox*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -2542,9 +2538,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxAutoReplySettings;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2567,7 +2563,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMail
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings*>
@@ -2599,7 +2595,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailboxAutoReplySett
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxAutoReplySettings ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings*>
@@ -2615,9 +2611,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxCreateFolderResult;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -2640,7 +2636,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMail
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult*>
@@ -2672,7 +2668,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailboxCreateFolderR
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxCreateFolderResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult*>
@@ -2688,9 +2684,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 enum EmailMailboxDeleteFolderStatus : int;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus_USE
@@ -2711,7 +2707,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Email::Emai
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus>
@@ -2741,7 +2737,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::Email::EmailMailboxDeleteFo
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxDeleteFolderStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus>
@@ -2756,9 +2752,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 enum EmailMailboxEmptyFolderStatus : int;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus_USE
@@ -2779,7 +2775,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Email::Emai
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus>
@@ -2809,7 +2805,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::Email::EmailMailboxEmptyFol
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMailboxEmptyFolderStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus>
@@ -2840,7 +2836,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMess
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMessage*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessage_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailMessage*>
@@ -2872,7 +2868,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMessage*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMessage*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessage_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailMessage*>
@@ -2888,9 +2884,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMessageBatch;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2913,7 +2909,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMess
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailMessageBatch*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailMessageBatch*>
@@ -2945,7 +2941,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMessageBatch*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailMessageBatch*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailMessageBatch ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailMessageBatch*>
@@ -2961,9 +2957,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailStore;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2986,7 +2982,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailStor
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::EmailStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CEmail__CEmailStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Email::IEmailStore*>
@@ -3018,7 +3014,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailStore*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Email::EmailStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CEmail__CEmailStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Email::IEmailStore*>
@@ -3049,7 +3045,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>*>
@@ -3079,7 +3075,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCerti
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailCertificateValidationStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>*>
@@ -3110,7 +3106,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailFolder*>*>
@@ -3142,7 +3138,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolde
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailFolder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailFolder*>*>
@@ -3174,7 +3170,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>*>
@@ -3206,7 +3202,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailb
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>*>
@@ -3238,7 +3234,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailboxChange*>*>
@@ -3270,7 +3266,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailb
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailboxChange ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailboxChange*>*>
@@ -3302,7 +3298,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMessage*>*>
@@ -3334,7 +3330,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessa
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMessage ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMessage*>*>
@@ -3366,7 +3362,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult*>*>
@@ -3398,7 +3394,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecip
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailRecipientResolutionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult*>*>
@@ -3414,9 +3410,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 enum EmailMailboxSmimeEncryptionAlgorithm : int;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeEncryptionAlgorithm_USE
@@ -3437,7 +3433,7 @@ IReference<enum ABI::Windows::ApplicationModel::Email::EmailMailboxSmimeEncrypti
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm> __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeEncryptionAlgorithm_t;
 #define __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeEncryptionAlgorithm ABI::Windows::Foundation::__FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeEncryptionAlgorithm_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeEncryptionAlgorithm ABI::Windows::Foundation::IReference<ABI::Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm>
@@ -3452,9 +3448,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 enum EmailMailboxSmimeSigningAlgorithm : int;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeSigningAlgorithm_USE
@@ -3475,7 +3471,7 @@ IReference<enum ABI::Windows::ApplicationModel::Email::EmailMailboxSmimeSigningA
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm> __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeSigningAlgorithm_t;
 #define __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeSigningAlgorithm ABI::Windows::Foundation::__FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeSigningAlgorithm_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeSigningAlgorithm ABI::Windows::Foundation::IReference<ABI::Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm>
@@ -3491,9 +3487,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxChangedEventArgs;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3517,7 +3513,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::EmailMailbox*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::EmailMailbox*,ABI::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::IEmailMailbox*,ABI::Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs*>
@@ -3534,9 +3530,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxSyncManager;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3560,7 +3556,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Email::EmailMailboxSyncManage
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Email::EmailMailboxSyncManager*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Email::IEmailMailboxSyncManager*,IInspectable*>
@@ -3590,7 +3586,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -3619,7 +3615,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -3648,7 +3644,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -3677,7 +3673,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -3706,7 +3702,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -3735,7 +3731,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -3751,10 +3747,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -3764,10 +3760,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -3793,7 +3789,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -3825,7 +3821,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -3841,8 +3837,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -3863,7 +3859,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -3878,8 +3874,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -3900,7 +3896,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -3931,7 +3927,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -3949,9 +3945,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentRecurrence;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence_FWD_DEFINED__
@@ -3960,9 +3956,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentRecurrence;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence ABI::Windows::ApplicationModel::Appointments::IAppointmentRecurrence
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentRecurrence_FWD_DEFINED__
@@ -3977,8 +3973,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3986,8 +3982,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3999,8 +3995,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4017,9 +4013,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -4032,8 +4028,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -4041,8 +4037,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -4057,9 +4053,9 @@ namespace ABI {
                 
                 typedef enum EmailAttachmentDownloadState : int EmailAttachmentDownloadState;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4068,9 +4064,9 @@ namespace ABI {
                 
                 typedef enum EmailBatchStatus : int EmailBatchStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4079,9 +4075,9 @@ namespace ABI {
                 
                 typedef enum EmailCertificateValidationStatus : int EmailCertificateValidationStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4090,9 +4086,9 @@ namespace ABI {
                 
                 typedef enum EmailFlagState : int EmailFlagState;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4101,9 +4097,9 @@ namespace ABI {
                 
                 typedef enum EmailImportance : int EmailImportance;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4112,9 +4108,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxActionKind : int EmailMailboxActionKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4123,9 +4119,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation : int EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4134,9 +4130,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxAutoReplyMessageResponseKind : int EmailMailboxAutoReplyMessageResponseKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4145,9 +4141,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxChangeType : int EmailMailboxChangeType;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4156,9 +4152,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxCreateFolderStatus : int EmailMailboxCreateFolderStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4167,9 +4163,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxDeleteFolderStatus : int EmailMailboxDeleteFolderStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4178,9 +4174,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxEmptyFolderStatus : int EmailMailboxEmptyFolderStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4189,9 +4185,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxOtherAppReadAccess : int EmailMailboxOtherAppReadAccess;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4200,9 +4196,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxOtherAppWriteAccess : int EmailMailboxOtherAppWriteAccess;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4211,9 +4207,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxSmimeEncryptionAlgorithm : int EmailMailboxSmimeEncryptionAlgorithm;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4222,9 +4218,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxSmimeSigningAlgorithm : int EmailMailboxSmimeSigningAlgorithm;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4233,9 +4229,9 @@ namespace ABI {
                 
                 typedef enum EmailMailboxSyncStatus : int EmailMailboxSyncStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4244,9 +4240,9 @@ namespace ABI {
                 
                 typedef enum EmailMeetingResponseType : int EmailMeetingResponseType;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4255,9 +4251,9 @@ namespace ABI {
                 
                 typedef enum EmailMessageBodyKind : int EmailMessageBodyKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4266,9 +4262,9 @@ namespace ABI {
                 
                 typedef enum EmailMessageDownloadState : int EmailMessageDownloadState;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4277,9 +4273,9 @@ namespace ABI {
                 
                 typedef enum EmailMessageResponseKind : int EmailMessageResponseKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4288,9 +4284,9 @@ namespace ABI {
                 
                 typedef enum EmailMessageSmimeKind : int EmailMessageSmimeKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4299,9 +4295,9 @@ namespace ABI {
                 
                 typedef enum EmailQueryKind : int EmailQueryKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4310,9 +4306,9 @@ namespace ABI {
                 
                 typedef enum EmailQuerySearchFields : unsigned int EmailQuerySearchFields;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4321,9 +4317,9 @@ namespace ABI {
                 
                 typedef enum EmailQuerySearchScope : int EmailQuerySearchScope;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4332,9 +4328,9 @@ namespace ABI {
                 
                 typedef enum EmailQuerySortDirection : int EmailQuerySortDirection;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4343,9 +4339,9 @@ namespace ABI {
                 
                 typedef enum EmailQuerySortProperty : int EmailQuerySortProperty;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4354,9 +4350,9 @@ namespace ABI {
                 
                 typedef enum EmailRecipientResolutionStatus : int EmailRecipientResolutionStatus;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4365,9 +4361,9 @@ namespace ABI {
                 
                 typedef enum EmailSpecialFolderKind : int EmailSpecialFolderKind;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4376,9 +4372,9 @@ namespace ABI {
                 
                 typedef enum EmailStoreAccessType : int EmailStoreAccessType;
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4444,9 +4440,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailConversationReader;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4455,9 +4451,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailIrmInfo;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4465,9 +4461,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailIrmTemplate;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4478,9 +4474,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxAutoReply;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4489,9 +4485,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxCapabilities;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4500,9 +4496,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxChangeReader;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4510,9 +4506,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxChangeTracker;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4520,9 +4516,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxChangedDeferral;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4532,9 +4528,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailboxPolicies;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4544,9 +4540,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailManagerForUser;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4554,9 +4550,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMeetingInfo;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4566,9 +4562,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMessageReader;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4576,9 +4572,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailQueryOptions;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4586,9 +4582,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailQueryTextSearch;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4599,9 +4595,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailStoreNotificationTriggerDetails;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4635,9 +4631,9 @@ namespace ABI {
                     EmailAttachmentDownloadState_Failed = 3,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4663,9 +4659,9 @@ namespace ABI {
                     EmailBatchStatus_ServerSearchUnknownError = 2,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4699,9 +4695,9 @@ namespace ABI {
                     EmailCertificateValidationStatus_UnknownFailure = 10,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -4728,9 +4724,9 @@ namespace ABI {
                     EmailFlagState_Cleared = 3,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4756,9 +4752,9 @@ namespace ABI {
                     EmailImportance_Low = 2,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4792,9 +4788,9 @@ namespace ABI {
                     EmailMailboxActionKind_MarkFolderForSyncEnabled = 10,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4820,9 +4816,9 @@ namespace ABI {
                     EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation_AnyAlgorithm = 2,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4847,9 +4843,9 @@ namespace ABI {
                     EmailMailboxAutoReplyMessageResponseKind_PlainText = 1,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4879,9 +4875,9 @@ namespace ABI {
                     EmailMailboxChangeType_ChangeTrackingLost = 6,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4911,9 +4907,9 @@ namespace ABI {
                     EmailMailboxCreateFolderStatus_ServerRejected = 6,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -4942,9 +4938,9 @@ namespace ABI {
                     EmailMailboxDeleteFolderStatus_CouldNotDeleteEverything = 5,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -4973,9 +4969,9 @@ namespace ABI {
                     EmailMailboxEmptyFolderStatus_CouldNotDeleteEverything = 5,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -5005,9 +5001,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5032,9 +5028,9 @@ namespace ABI {
                     EmailMailboxOtherAppWriteAccess_Limited = 1,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5063,9 +5059,9 @@ namespace ABI {
                     EmailMailboxSmimeEncryptionAlgorithm_RC240Bit = 5,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5091,9 +5087,9 @@ namespace ABI {
                     EmailMailboxSmimeSigningAlgorithm_MD5 = 2,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5127,9 +5123,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5155,9 +5151,9 @@ namespace ABI {
                     EmailMeetingResponseType_Tentative = 2,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5182,9 +5178,9 @@ namespace ABI {
                     EmailMessageBodyKind_PlainText = 1,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5211,9 +5207,9 @@ namespace ABI {
                     EmailMessageDownloadState_Failed = 3,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5240,9 +5236,9 @@ namespace ABI {
                     EmailMessageResponseKind_Forward = 3,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5269,9 +5265,9 @@ namespace ABI {
                     EmailMessageSmimeKind_Encrypted = 3,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -5300,9 +5296,9 @@ namespace ABI {
                     EmailQueryKind_Unseen = 5,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5333,9 +5329,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(EmailQuerySearchFields)
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5360,9 +5356,9 @@ namespace ABI {
                     EmailQuerySearchScope_Server = 1,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5387,9 +5383,9 @@ namespace ABI {
                     EmailQuerySortDirection_Ascending = 1,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5413,9 +5409,9 @@ namespace ABI {
                     EmailQuerySortProperty_Date = 0,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5446,9 +5442,9 @@ namespace ABI {
                     EmailRecipientResolutionStatus_UnknownFailure = 7,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -5478,9 +5474,9 @@ namespace ABI {
                     EmailSpecialFolderKind_Sent = 6,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5505,9 +5501,9 @@ namespace ABI {
                     EmailStoreAccessType_AllMailboxesLimitedReadWrite = 1,
                 };
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5552,9 +5548,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailAttachment=_uuidof(IEmailAttachment);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment_INTERFACE_DEFINED__) */
@@ -5613,13 +5609,13 @@ namespace ABI {
                         /* [in] */UINT64 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFromBaseMessage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInline(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsInline(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MimeType(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -5632,9 +5628,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailAttachment2=_uuidof(IEmailAttachment2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachment2_INTERFACE_DEFINED__) */
@@ -5675,9 +5671,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailAttachmentFactory=_uuidof(IEmailAttachmentFactory);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory_INTERFACE_DEFINED__) */
@@ -5719,9 +5715,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailAttachmentFactory2=_uuidof(IEmailAttachmentFactory2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailAttachmentFactory2_INTERFACE_DEFINED__) */
@@ -5762,7 +5758,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Email::EmailFlagState * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasAttachment(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Importance(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Email::EmailImportance * value
@@ -5803,9 +5799,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailConversation=_uuidof(IEmailConversation);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversation_INTERFACE_DEFINED__) */
@@ -5847,9 +5843,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailConversationBatch=_uuidof(IEmailConversationBatch);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationBatch;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationBatch_INTERFACE_DEFINED__) */
@@ -5888,9 +5884,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailConversationReader=_uuidof(IEmailConversationReader);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailConversationReader_INTERFACE_DEFINED__) */
@@ -5943,10 +5939,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSyncEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSyncEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LastSuccessfulSyncTime(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -6009,9 +6005,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailFolder=_uuidof(IEmailFolder);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailFolder_INTERFACE_DEFINED__) */
@@ -6043,52 +6039,52 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanEdit(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanEdit(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanExtractData(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanExtractData(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanForward(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanForward(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanModifyRecipientsOnResponse(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanModifyRecipientsOnResponse(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanPrintData(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanPrintData(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRemoveIrmOnResponse(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanRemoveIrmOnResponse(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanReply(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanReply(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanReplyAll(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanReplyAll(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpirationDate(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -6097,16 +6093,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::Foundation::DateTime value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIrmOriginator(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsIrmOriginator(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsProgramaticAccessAllowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsProgramaticAccessAllowed(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Template(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Email::IEmailIrmTemplate * * value
@@ -6119,9 +6115,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailIrmInfo=_uuidof(IEmailIrmInfo);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfo_INTERFACE_DEFINED__) */
@@ -6162,9 +6158,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailIrmInfoFactory=_uuidof(IEmailIrmInfoFactory);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmInfoFactory_INTERFACE_DEFINED__) */
@@ -6218,9 +6214,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailIrmTemplate=_uuidof(IEmailIrmTemplate);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplate;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplate_INTERFACE_DEFINED__) */
@@ -6262,9 +6258,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailIrmTemplateFactory=_uuidof(IEmailIrmTemplateFactory);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplateFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailIrmTemplateFactory_INTERFACE_DEFINED__) */
@@ -6312,9 +6308,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailItemCounts=_uuidof(IEmailItemCounts);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailItemCounts;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailItemCounts_INTERFACE_DEFINED__) */
@@ -6361,10 +6357,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOwnedByCurrentApp(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDataEncryptedUnderLock(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MailAddress(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -6445,7 +6441,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE MarkMessageReadAsync(
                         /* [in] */__RPC__in HSTRING messageId,
-                        /* [in] */boolean isRead,
+                        /* [in] */::boolean isRead,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ChangeMessageFlagStateAsync(
@@ -6475,7 +6471,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE MarkFolderSyncEnabledAsync(
                         /* [in] */__RPC__in HSTRING folderId,
-                        /* [in] */boolean isSyncEnabled,
+                        /* [in] */::boolean isSyncEnabled,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SendMessageAsync(
@@ -6507,7 +6503,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::ApplicationModel::Email::EmailMeetingResponseType response,
                         /* [in] */__RPC__in HSTRING subject,
                         /* [in] */__RPC__in HSTRING comment,
-                        /* [in] */boolean sendUpdate,
+                        /* [in] */::boolean sendUpdate,
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryForwardMeetingAsync(
@@ -6536,7 +6532,7 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SmartSendMessageAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Email::IEmailMessage * message,
-                        /* [in] */boolean smartSend,
+                        /* [in] */::boolean smartSend,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetAutoReplySettingsAsync(
@@ -6552,9 +6548,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailbox=_uuidof(IEmailMailbox);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox_INTERFACE_DEFINED__) */
@@ -6603,9 +6599,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailbox2=_uuidof(IEmailMailbox2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox2_INTERFACE_DEFINED__) */
@@ -6667,9 +6663,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailbox3=_uuidof(IEmailMailbox3);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox3_INTERFACE_DEFINED__) */
@@ -6708,9 +6704,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailbox4=_uuidof(IEmailMailbox4);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox4_INTERFACE_DEFINED__) */
@@ -6750,9 +6746,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailbox5=_uuidof(IEmailMailbox5);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox5;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox5_INTERFACE_DEFINED__) */
@@ -6794,9 +6790,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxAction=_uuidof(IEmailMailboxAction);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAction;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAction_INTERFACE_DEFINED__) */
@@ -6828,10 +6824,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Response(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -6844,9 +6840,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxAutoReply=_uuidof(IEmailMailboxAutoReply);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReply;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReply_INTERFACE_DEFINED__) */
@@ -6878,10 +6874,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ResponseKind(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind * value
@@ -6915,9 +6911,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxAutoReplySettings=_uuidof(IEmailMailboxAutoReplySettings);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxAutoReplySettings_INTERFACE_DEFINED__) */
@@ -6949,37 +6945,37 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanForwardMeetings(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanGetAndSetExternalAutoReplies(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanGetAndSetInternalAutoReplies(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanUpdateMeetingResponses(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanServerSearchFolders(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanServerSearchMailbox(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanProposeNewTimeForMeetings(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanSmartSend(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxCapabilities=_uuidof(IEmailMailboxCapabilities);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities_INTERFACE_DEFINED__) */
@@ -7011,31 +7007,31 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanResolveRecipients(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanValidateCertificates(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanEmptyFolder(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanCreateFolder(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanDeleteFolder(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanMoveFolder(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxCapabilities2=_uuidof(IEmailMailboxCapabilities2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities2_INTERFACE_DEFINED__) */
@@ -7067,55 +7063,55 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanForwardMeetings(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanGetAndSetExternalAutoReplies(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanGetAndSetInternalAutoReplies(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanUpdateMeetingResponses(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanServerSearchFolders(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanServerSearchMailbox(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanProposeNewTimeForMeetings(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanSmartSend(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanResolveRecipients(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanValidateCertificates(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanEmptyFolder(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanCreateFolder(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanDeleteFolder(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanMoveFolder(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxCapabilities3=_uuidof(IEmailMailboxCapabilities3);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCapabilities3_INTERFACE_DEFINED__) */
@@ -7163,9 +7159,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxChange=_uuidof(IEmailMailboxChange);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChange;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChange_INTERFACE_DEFINED__) */
@@ -7208,9 +7204,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxChangeReader=_uuidof(IEmailMailboxChangeReader);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeReader_INTERFACE_DEFINED__) */
@@ -7242,7 +7238,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTracking(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Enable(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetChangeReader(
@@ -7254,9 +7250,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxChangeTracker=_uuidof(IEmailMailboxChangeTracker);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeTracker;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangeTracker_INTERFACE_DEFINED__) */
@@ -7293,9 +7289,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxChangedDeferral=_uuidof(IEmailMailboxChangedDeferral);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedDeferral_INTERFACE_DEFINED__) */
@@ -7334,9 +7330,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxChangedEventArgs=_uuidof(IEmailMailboxChangedEventArgs);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedEventArgs_INTERFACE_DEFINED__) */
@@ -7378,9 +7374,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxCreateFolderResult=_uuidof(IEmailMailboxCreateFolderResult);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCreateFolderResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxCreateFolderResult_INTERFACE_DEFINED__) */
@@ -7415,7 +7411,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowSmimeSoftCertificates(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequiredSmimeEncryptionAlgorithm(
                         /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeEncryptionAlgorithm * * value
@@ -7428,9 +7424,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxPolicies=_uuidof(IEmailMailboxPolicies);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies_INTERFACE_DEFINED__) */
@@ -7462,19 +7458,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MustEncryptSmimeMessages(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MustSignSmimeMessages(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxPolicies2=_uuidof(IEmailMailboxPolicies2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies2_INTERFACE_DEFINED__) */
@@ -7509,7 +7505,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowSmimeSoftCertificates(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RequiredSmimeEncryptionAlgorithm(
                         /* [in] */__RPC__in_opt __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeEncryptionAlgorithm * value
@@ -7518,19 +7514,19 @@ namespace ABI {
                         /* [in] */__RPC__in_opt __FIReference_1_Windows__CApplicationModel__CEmail__CEmailMailboxSmimeSigningAlgorithm * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MustEncryptSmimeMessages(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MustSignSmimeMessages(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxPolicies3=_uuidof(IEmailMailboxPolicies3);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxPolicies3_INTERFACE_DEFINED__) */
@@ -7585,9 +7581,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxSyncManager=_uuidof(IEmailMailboxSyncManager);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager_INTERFACE_DEFINED__) */
@@ -7632,9 +7628,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMailboxSyncManager2=_uuidof(IEmailMailboxSyncManager2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager2_INTERFACE_DEFINED__) */
@@ -7681,9 +7677,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailManagerForUser=_uuidof(IEmailManagerForUser);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerForUser_INTERFACE_DEFINED__) */
@@ -7723,9 +7719,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailManagerStatics=_uuidof(IEmailManagerStatics);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics_INTERFACE_DEFINED__) */
@@ -7765,9 +7761,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailManagerStatics2=_uuidof(IEmailManagerStatics2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics2_INTERFACE_DEFINED__) */
@@ -7807,9 +7803,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailManagerStatics3=_uuidof(IEmailManagerStatics3);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailManagerStatics3_INTERFACE_DEFINED__) */
@@ -7841,10 +7837,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowNewTimeProposal(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowNewTimeProposal(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AppointmentRoamingId(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -7865,16 +7861,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::Foundation::TimeSpan value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAllDay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAllDay(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsResponseRequested(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsResponseRequested(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Location(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -7923,9 +7919,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMeetingInfo=_uuidof(IEmailMeetingInfo);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo_INTERFACE_DEFINED__) */
@@ -7957,16 +7953,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReportedOutOfDateByServer(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IEmailMeetingInfo2=_uuidof(IEmailMeetingInfo2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMeetingInfo2_INTERFACE_DEFINED__) */
@@ -8026,9 +8022,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMessage=_uuidof(IEmailMessage);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage_INTERFACE_DEFINED__) */
@@ -8078,10 +8074,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowInternetImages(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowInternetImages(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ChangeNumber(
                         /* [retval, out] */__RPC__out UINT64 * value
@@ -8105,7 +8101,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::ApplicationModel::Email::EmailFlagState value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasPartialBodies(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Importance(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Email::EmailImportance * value
@@ -8123,25 +8119,25 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Email::IEmailIrmInfo * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDraftMessage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRead(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRead(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSeen(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSeen(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsServerSearchMessage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSmartSendable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MessageClass(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -8201,9 +8197,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMessage2=_uuidof(IEmailMessage2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage2_INTERFACE_DEFINED__) */
@@ -8251,9 +8247,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMessage3=_uuidof(IEmailMessage3);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage3_INTERFACE_DEFINED__) */
@@ -8298,9 +8294,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMessage4=_uuidof(IEmailMessage4);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessage4_INTERFACE_DEFINED__) */
@@ -8342,9 +8338,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMessageBatch=_uuidof(IEmailMessageBatch);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageBatch;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageBatch_INTERFACE_DEFINED__) */
@@ -8383,9 +8379,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailMessageReader=_uuidof(IEmailMessageReader);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMessageReader_INTERFACE_DEFINED__) */
@@ -8445,9 +8441,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailQueryOptions=_uuidof(IEmailQueryOptions);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptions_INTERFACE_DEFINED__) */
@@ -8492,9 +8488,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailQueryOptionsFactory=_uuidof(IEmailQueryOptionsFactory);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryOptionsFactory_INTERFACE_DEFINED__) */
@@ -8548,9 +8544,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailQueryTextSearch=_uuidof(IEmailQueryTextSearch);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryTextSearch;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailQueryTextSearch_INTERFACE_DEFINED__) */
@@ -8598,9 +8594,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailRecipient=_uuidof(IEmailRecipient);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipient_INTERFACE_DEFINED__) */
@@ -8645,9 +8641,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailRecipientFactory=_uuidof(IEmailRecipientFactory);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientFactory_INTERFACE_DEFINED__) */
@@ -8689,9 +8685,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailRecipientResolutionResult=_uuidof(IEmailRecipientResolutionResult);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult_INTERFACE_DEFINED__) */
@@ -8733,9 +8729,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailRecipientResolutionResult2=_uuidof(IEmailRecipientResolutionResult2);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailRecipientResolutionResult2_INTERFACE_DEFINED__) */
@@ -8815,9 +8811,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailStore=_uuidof(IEmailStore);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStore_INTERFACE_DEFINED__) */
@@ -8853,9 +8849,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmailStoreNotificationTriggerDetails=_uuidof(IEmailStoreNotificationTriggerDetails);
                 
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStoreNotificationTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailStoreNotificationTriggerDetails_INTERFACE_DEFINED__) */
@@ -15391,7 +15387,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailbox_Windows__CApplicationModel__CEmail__CEmailMailboxChangedEventArgsVtbl;
 
@@ -15443,7 +15439,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmai
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailboxSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CEmail__CEmailMailboxSyncManager_IInspectableVtbl;
 

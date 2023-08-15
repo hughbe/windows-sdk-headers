@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.resources.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -139,10 +139,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoader;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_FWD_DEFINED__
@@ -155,10 +155,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoaderFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_FWD_DEFINED__
@@ -171,10 +171,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoaderOverrides;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_FWD_DEFINED__
@@ -187,10 +187,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoaderStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_FWD_DEFINED__
@@ -209,10 +209,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     class CustomXamlResourceLoader;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -250,10 +250,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoader=_uuidof(ICustomXamlResourceLoader);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_INTERFACE_DEFINED__) */
@@ -295,10 +295,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoaderFactory=_uuidof(ICustomXamlResourceLoaderFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_INTERFACE_DEFINED__) */
@@ -342,10 +342,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoaderOverrides=_uuidof(ICustomXamlResourceLoaderOverrides);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_INTERFACE_DEFINED__) */
@@ -388,10 +388,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoaderStatics=_uuidof(ICustomXamlResourceLoaderStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Resources */} /* ABI */
+                } /* Resources */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_INTERFACE_DEFINED__) */

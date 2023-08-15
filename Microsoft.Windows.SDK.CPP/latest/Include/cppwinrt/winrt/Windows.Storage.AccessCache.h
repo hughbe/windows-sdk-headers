@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,6 +10,7 @@
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.Storage.2.h"
+#include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.Storage.AccessCache.2.h"
 #include "winrt/Windows.Storage.h"
 
@@ -33,6 +34,20 @@ template <typename D> Windows::Storage::AccessCache::StorageItemMostRecentlyUsed
 {
     Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics)->get_MostRecentlyUsedList(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Storage::AccessCache::StorageItemAccessList consume_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics2<D>::GetFutureAccessListForUser(Windows::System::User const& user) const
+{
+    Windows::Storage::AccessCache::StorageItemAccessList value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2)->GetFutureAccessListForUser(get_abi(user), put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList consume_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics2<D>::GetMostRecentlyUsedListForUser(Windows::System::User const& user) const
+{
+    Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2)->GetMostRecentlyUsedListForUser(get_abi(user), put_abi(value)));
     return value;
 }
 
@@ -209,6 +224,36 @@ struct produce<D, Windows::Storage::AccessCache::IStorageApplicationPermissionsS
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(MostRecentlyUsedList, WINRT_WRAP(Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList));
             *value = detach_from<Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>(this->shim().MostRecentlyUsedList());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2> : produce_base<D, Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2>
+{
+    int32_t WINRT_CALL GetFutureAccessListForUser(void* user, void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetFutureAccessListForUser, WINRT_WRAP(Windows::Storage::AccessCache::StorageItemAccessList), Windows::System::User const&);
+            *value = detach_from<Windows::Storage::AccessCache::StorageItemAccessList>(this->shim().GetFutureAccessListForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetMostRecentlyUsedListForUser(void* user, void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetMostRecentlyUsedListForUser, WINRT_WRAP(Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList), Windows::System::User const&);
+            *value = detach_from<Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>(this->shim().GetMostRecentlyUsedListForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -487,12 +532,23 @@ inline Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList StorageApp
     return impl::call_factory<StorageApplicationPermissions, Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics>([&](auto&& f) { return f.MostRecentlyUsedList(); });
 }
 
+inline Windows::Storage::AccessCache::StorageItemAccessList StorageApplicationPermissions::GetFutureAccessListForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<StorageApplicationPermissions, Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2>([&](auto&& f) { return f.GetFutureAccessListForUser(user); });
+}
+
+inline Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList StorageApplicationPermissions::GetMostRecentlyUsedListForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<StorageApplicationPermissions, Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2>([&](auto&& f) { return f.GetMostRecentlyUsedListForUser(user); });
+}
+
 }
 
 WINRT_EXPORT namespace std {
 
 template<> struct hash<winrt::Windows::Storage::AccessCache::IItemRemovedEventArgs> : winrt::impl::hash_base<winrt::Windows::Storage::AccessCache::IItemRemovedEventArgs> {};
 template<> struct hash<winrt::Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics> : winrt::impl::hash_base<winrt::Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics> {};
+template<> struct hash<winrt::Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2> : winrt::impl::hash_base<winrt::Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2> {};
 template<> struct hash<winrt::Windows::Storage::AccessCache::IStorageItemAccessList> : winrt::impl::hash_base<winrt::Windows::Storage::AccessCache::IStorageItemAccessList> {};
 template<> struct hash<winrt::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList> : winrt::impl::hash_base<winrt::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList> {};
 template<> struct hash<winrt::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2> : winrt::impl::hash_base<winrt::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2> {};

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.preview.notes.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,10 +279,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     interface INotePlacementChangedPreviewEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotePlacementChangedPreviewEventArgs ABI::Windows::ApplicationModel::Preview::Notes::INotePlacementChangedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotePlacementChangedPreviewEventArgs_FWD_DEFINED__
@@ -299,10 +295,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     interface INoteVisibilityChangedPreviewEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINoteVisibilityChangedPreviewEventArgs ABI::Windows::ApplicationModel::Preview::Notes::INoteVisibilityChangedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINoteVisibilityChangedPreviewEventArgs_FWD_DEFINED__
@@ -315,10 +311,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     interface INotesWindowManagerPreview;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview ABI::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview_FWD_DEFINED__
@@ -331,10 +327,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     interface INotesWindowManagerPreview2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview2 ABI::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview2_FWD_DEFINED__
@@ -347,10 +343,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     interface INotesWindowManagerPreviewShowNoteOptions;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewShowNoteOptions ABI::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreviewShowNoteOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewShowNoteOptions_FWD_DEFINED__
@@ -363,10 +359,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     interface INotesWindowManagerPreviewStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewStatics ABI::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreviewStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewStatics_FWD_DEFINED__
@@ -380,10 +376,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     class NotesWindowManagerPreview;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -407,7 +403,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::NotesWindowMa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview*,IInspectable*>
@@ -425,10 +421,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     class NotePlacementChangedPreviewEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_NOTES_PREVIEWNOTESCONTRACT_VERSION >= 0x10000
@@ -452,7 +448,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::NotesWindowMa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview*,ABI::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview*,ABI::Windows::ApplicationModel::Preview::Notes::INotePlacementChangedPreviewEventArgs*>
@@ -471,10 +467,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     class NoteVisibilityChangedPreviewEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_NOTES_PREVIEWNOTESCONTRACT_VERSION >= 0x10000
@@ -498,7 +494,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::NotesWindowMa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview*,ABI::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview*,ABI::Windows::ApplicationModel::Preview::Notes::INoteVisibilityChangedPreviewEventArgs*>
@@ -518,8 +514,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -531,8 +527,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -541,9 +537,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -552,9 +548,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -570,9 +566,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -597,10 +593,10 @@ namespace ABI {
             namespace Preview {
                 namespace Notes {
                     class NotesWindowManagerPreviewShowNoteOptions;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -647,10 +643,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotePlacementChangedPreviewEventArgs=_uuidof(INotePlacementChangedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotePlacementChangedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotePlacementChangedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -686,17 +682,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__out INT32 * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsVisible(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_INoteVisibilityChangedPreviewEventArgs=_uuidof(INoteVisibilityChangedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINoteVisibilityChangedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINoteVisibilityChangedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -729,7 +725,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsScreenLocked(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ShowNote(
                             /* [in] */INT32 noteViewId
@@ -752,7 +748,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE TrySetNoteSize(
                             /* [in] */INT32 noteViewId,
                             /* [in] */ABI::Windows::Foundation::Size size,
-                            /* [retval, out] */__RPC__out boolean * succeeded
+                            /* [retval, out] */__RPC__out ::boolean * succeeded
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetFocusToNextView(void) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetNotesThumbnailAsync(
@@ -785,10 +781,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotesWindowManagerPreview=_uuidof(INotesWindowManagerPreview);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview_INTERFACE_DEFINED__) */
@@ -840,10 +836,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotesWindowManagerPreview2=_uuidof(INotesWindowManagerPreview2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview2_INTERFACE_DEFINED__) */
@@ -876,20 +872,20 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowWithFocus(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowWithFocus(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_INotesWindowManagerPreviewShowNoteOptions=_uuidof(INotesWindowManagerPreviewShowNoteOptions);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewShowNoteOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewShowNoteOptions_INTERFACE_DEFINED__) */
@@ -929,10 +925,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotesWindowManagerPreviewStatics=_uuidof(INotesWindowManagerPreviewStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Preview */
-    } /* Notes */} /* ABI */
+                } /* Notes */
+            } /* Preview */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreviewStatics_INTERFACE_DEFINED__) */
@@ -1107,7 +1103,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_IInspectableVtbl;
 
@@ -1159,7 +1155,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotePlacementChangedPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotePlacementChangedPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNotePlacementChangedPreviewEventArgsVtbl;
 
@@ -1212,7 +1208,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINoteVisibilityChangedPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINotesWindowManagerPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CPreview_CNotes_CINoteVisibilityChangedPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPreview__CNotes__CNotesWindowManagerPreview_Windows__CApplicationModel__CPreview__CNotes__CNoteVisibilityChangedPreviewEventArgsVtbl;
 

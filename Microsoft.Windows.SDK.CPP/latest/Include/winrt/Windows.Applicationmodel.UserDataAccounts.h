@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.userdataaccounts.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccount;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccount2;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount2 ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount2_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccount3;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount3 ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount3_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccount4;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount4 ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount4_FWD_DEFINED__
@@ -338,9 +334,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccountManagerForUser;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerForUser ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerForUser_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccountManagerStatics;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics_FWD_DEFINED__
@@ -366,9 +362,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccountManagerStatics2;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics2 ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics2_FWD_DEFINED__
@@ -380,9 +376,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccountStore;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore_FWD_DEFINED__
@@ -394,9 +390,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccountStore2;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore2 ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore2_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccountStore3;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore3 ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore3_FWD_DEFINED__
@@ -422,9 +418,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 interface IUserDataAccountStoreChangedEventArgs;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStoreChangedEventArgs ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStoreChangedEventArgs_FWD_DEFINED__
@@ -437,9 +433,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 class UserDataAccount;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -462,7 +458,7 @@ IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount*>
@@ -494,7 +490,7 @@ IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount*>
@@ -526,7 +522,7 @@ IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> __FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount*>
@@ -558,7 +554,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount*>
@@ -590,7 +586,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccoun
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccount*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount*>
@@ -606,9 +602,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 class UserDataAccountStore;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -631,7 +627,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore*>
@@ -663,7 +659,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccoun
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore*>
@@ -695,7 +691,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CUs
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount*>*>
@@ -727,7 +723,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccount ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount*>*>
@@ -744,9 +740,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 class UserDataAccountStoreChangedEventArgs;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -770,7 +766,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAcc
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore*,ABI::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore*,ABI::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs*>
@@ -787,9 +783,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 class AppointmentCalendar;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar_FWD_DEFINED__
@@ -798,9 +794,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Appointments {
                 interface IAppointmentCalendar;
-            } /* Windows */
+            } /* Appointments */
         } /* ApplicationModel */
-    } /* Appointments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppointments_CIAppointmentCalendar_FWD_DEFINED__
@@ -826,7 +822,7 @@ IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -858,7 +854,7 @@ IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -890,7 +886,7 @@ IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Appointments::AppointmentCalendar*> __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>
@@ -922,7 +918,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>*>
@@ -954,7 +950,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CApp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppointments__CAppointmentCalendar ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Appointments::IAppointmentCalendar*>*>
@@ -970,9 +966,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 class EmailMailbox;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox_FWD_DEFINED__
@@ -981,9 +977,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Email {
                 interface IEmailMailbox;
-            } /* Windows */
+            } /* Email */
         } /* ApplicationModel */
-    } /* Email */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox ABI::Windows::ApplicationModel::Email::IEmailMailbox
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CEmail_CIEmailMailbox_FWD_DEFINED__
@@ -1009,7 +1005,7 @@ IIterator<ABI::Windows::ApplicationModel::Email::EmailMailbox*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -1041,7 +1037,7 @@ IIterable<ABI::Windows::ApplicationModel::Email::EmailMailbox*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -1073,7 +1069,7 @@ IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailbox*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Email::EmailMailbox*> __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>
@@ -1105,7 +1101,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEm
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>*>
@@ -1137,7 +1133,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailb
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CEmail__CEmailMailbox ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Email::IEmailMailbox*>*>
@@ -1153,9 +1149,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList_FWD_DEFINED__
@@ -1164,9 +1160,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactList ABI::Windows::ApplicationModel::Contacts::IContactList
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList_FWD_DEFINED__
@@ -1192,7 +1188,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactList*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -1224,7 +1220,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactList*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -1256,7 +1252,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactList*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -1288,7 +1284,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactList*>*>
@@ -1320,7 +1316,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactList*>*>
@@ -1336,9 +1332,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactAnnotationList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList_FWD_DEFINED__
@@ -1347,9 +1343,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAnnotationList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList_FWD_DEFINED__
@@ -1375,7 +1371,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -1407,7 +1403,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -1439,7 +1435,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -1471,7 +1467,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>*>
@@ -1503,7 +1499,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>*>
@@ -1533,7 +1529,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1562,7 +1558,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1591,7 +1587,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1620,7 +1616,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1635,9 +1631,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 class UserDataTaskList;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList_FWD_DEFINED__
@@ -1646,9 +1642,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataTasks {
                 interface IUserDataTaskList;
-            } /* Windows */
+            } /* UserDataTasks */
         } /* ApplicationModel */
-    } /* UserDataTasks */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataTasks_CIUserDataTaskList_FWD_DEFINED__
@@ -1674,7 +1670,7 @@ IIterator<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -1706,7 +1702,7 @@ IIterable<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -1738,7 +1734,7 @@ IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::UserDataTaskList*> __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>
@@ -1770,7 +1766,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CUs
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>*>
@@ -1802,7 +1798,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CUserDataTasks__CUserDataTaskList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserDataTasks::IUserDataTaskList*>*>
@@ -1818,9 +1814,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactGroup;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup_FWD_DEFINED__
@@ -1829,9 +1825,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactGroup;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup ABI::Windows::ApplicationModel::Contacts::IContactGroup
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup_FWD_DEFINED__
@@ -1857,7 +1853,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>
@@ -1889,7 +1885,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>
@@ -1921,7 +1917,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>
@@ -1953,7 +1949,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>*>
@@ -1985,7 +1981,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>*>
@@ -2015,7 +2011,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -2044,7 +2040,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -2081,9 +2077,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -2096,8 +2092,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2105,8 +2101,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2118,8 +2114,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2135,9 +2131,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2150,8 +2146,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2159,8 +2155,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -2175,9 +2171,9 @@ namespace ABI {
                 
                 typedef enum UserDataAccountContentKinds : unsigned int UserDataAccountContentKinds;
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2186,9 +2182,9 @@ namespace ABI {
                 
                 typedef enum UserDataAccountOtherAppReadAccess : int UserDataAccountOtherAppReadAccess;
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2197,9 +2193,9 @@ namespace ABI {
                 
                 typedef enum UserDataAccountStoreAccessType : int UserDataAccountStoreAccessType;
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2219,9 +2215,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserDataAccounts {
                 class UserDataAccountManagerForUser;
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2258,9 +2254,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(UserDataAccountContentKinds)
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2290,9 +2286,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2317,9 +2313,9 @@ namespace ABI {
                     UserDataAccountStoreAccessType_AppAccountsReadWrite = 1,
                 };
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2394,9 +2390,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccount=_uuidof(IUserDataAccount);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount_INTERFACE_DEFINED__) */
@@ -2435,16 +2431,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsProtectedUnderLock(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccount2=_uuidof(IUserDataAccount2);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount2_INTERFACE_DEFINED__) */
@@ -2489,9 +2485,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccount3=_uuidof(IUserDataAccount3);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount3_INTERFACE_DEFINED__) */
@@ -2523,10 +2519,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanShowCreateContactGroup(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanShowCreateContactGroup(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProviderProperties(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
@@ -2541,7 +2537,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsProtectedUnderLock(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Icon(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStreamReference * value
@@ -2551,9 +2547,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccount4=_uuidof(IUserDataAccount4);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccount4_INTERFACE_DEFINED__) */
@@ -2596,9 +2592,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountManagerForUser=_uuidof(IUserDataAccountManagerForUser);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerForUser_INTERFACE_DEFINED__) */
@@ -2650,9 +2646,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountManagerStatics=_uuidof(IUserDataAccountManagerStatics);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics_INTERFACE_DEFINED__) */
@@ -2692,9 +2688,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountManagerStatics2=_uuidof(IUserDataAccountManagerStatics2);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountManagerStatics2_INTERFACE_DEFINED__) */
@@ -2741,9 +2737,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountStore=_uuidof(IUserDataAccountStore);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore_INTERFACE_DEFINED__) */
@@ -2795,9 +2791,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountStore2=_uuidof(IUserDataAccountStore2);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore2_INTERFACE_DEFINED__) */
@@ -2843,9 +2839,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountStore3=_uuidof(IUserDataAccountStore3);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore3_INTERFACE_DEFINED__) */
@@ -2884,9 +2880,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserDataAccountStoreChangedEventArgs=_uuidof(IUserDataAccountStoreChangedEventArgs);
                 
-            } /* Windows */
+            } /* UserDataAccounts */
         } /* ApplicationModel */
-    } /* UserDataAccounts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStoreChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStoreChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3729,7 +3725,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAcco
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStoreChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CIUserDataAccountStoreChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStore_Windows__CApplicationModel__CUserDataAccounts__CUserDataAccountStoreChangedEventArgsVtbl;
 

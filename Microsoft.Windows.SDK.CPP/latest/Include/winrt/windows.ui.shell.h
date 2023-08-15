@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.shell.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 interface IAdaptiveCard;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CShell_CIAdaptiveCard ABI::Windows::UI::Shell::IAdaptiveCard
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CIAdaptiveCard_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 interface IAdaptiveCardBuilderStatics;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics ABI::Windows::UI::Shell::IAdaptiveCardBuilderStatics
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 interface ISecurityAppManager;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CShell_CISecurityAppManager ABI::Windows::UI::Shell::ISecurityAppManager
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CISecurityAppManager_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 interface ITaskbarManager;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CShell_CITaskbarManager ABI::Windows::UI::Shell::ITaskbarManager
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CITaskbarManager_FWD_DEFINED__
@@ -338,9 +334,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 interface ITaskbarManager2;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CShell_CITaskbarManager2 ABI::Windows::UI::Shell::ITaskbarManager2
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CITaskbarManager2_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 interface ITaskbarManagerStatics;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics ABI::Windows::UI::Shell::ITaskbarManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics_FWD_DEFINED__
@@ -381,7 +377,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -410,7 +406,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -427,9 +423,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 class AppListEntry;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
@@ -438,9 +434,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 interface IAppListEntry;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry ABI::Windows::ApplicationModel::Core::IAppListEntry
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
@@ -454,8 +450,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -463,8 +459,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -477,9 +473,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 class SecondaryTile;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace UI {
             namespace StartScreen {
                 interface ISecondaryTile;
-            } /* Windows */
+            } /* StartScreen */
         } /* UI */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile ABI::Windows::UI::StartScreen::ISecondaryTile
 
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile_FWD_DEFINED__
@@ -507,9 +503,9 @@ namespace ABI {
                 
                 typedef enum SecurityAppKind : int SecurityAppKind;
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -518,9 +514,9 @@ namespace ABI {
                 
                 typedef enum SecurityAppState : int SecurityAppState;
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -529,9 +525,9 @@ namespace ABI {
                 
                 typedef enum SecurityAppSubstatus : int SecurityAppSubstatus;
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -545,9 +541,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 class SecurityAppManager;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -555,9 +551,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 class TaskbarManager;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -585,9 +581,9 @@ namespace ABI {
                     SecurityAppKind_WebProtection = 0,
                 };
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_SHELL_SECURITYAPPMANAGERCONTRACT_VERSION >= 0x10000
 
 
@@ -612,9 +608,9 @@ namespace ABI {
                     SecurityAppState_Enabled = 1,
                 };
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_SHELL_SECURITYAPPMANAGERCONTRACT_VERSION >= 0x10000
 
 
@@ -641,9 +637,9 @@ namespace ABI {
                     SecurityAppSubstatus_ActionNeeded = 3,
                 };
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_SHELL_SECURITYAPPMANAGERCONTRACT_VERSION >= 0x10000
 
 
@@ -676,9 +672,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdaptiveCard=_uuidof(IAdaptiveCard);
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIAdaptiveCard;
 #endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIAdaptiveCard_INTERFACE_DEFINED__) */
@@ -715,9 +711,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAdaptiveCardBuilderStatics=_uuidof(IAdaptiveCardBuilderStatics);
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics_INTERFACE_DEFINED__) */
@@ -752,7 +748,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::Shell::SecurityAppKind kind,
                         /* [in] */__RPC__in HSTRING displayName,
                         /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * detailsUri,
-                        /* [in] */boolean registerPerUser,
+                        /* [in] */::boolean registerPerUser,
                         /* [retval, out] */__RPC__out GUID * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Unregister(
@@ -771,9 +767,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISecurityAppManager=_uuidof(ISecurityAppManager);
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CISecurityAppManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CShell_CISecurityAppManager_INTERFACE_DEFINED__) */
@@ -805,10 +801,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPinningAllowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsCurrentAppPinnedAsync(
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
@@ -829,9 +825,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITaskbarManager=_uuidof(ITaskbarManager);
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CITaskbarManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CShell_CITaskbarManager_INTERFACE_DEFINED__) */
@@ -883,9 +879,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITaskbarManager2=_uuidof(ITaskbarManager2);
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CITaskbarManager2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CShell_CITaskbarManager2_INTERFACE_DEFINED__) */
@@ -924,9 +920,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITaskbarManagerStatics=_uuidof(ITaskbarManagerStatics);
                 
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics_INTERFACE_DEFINED__) */

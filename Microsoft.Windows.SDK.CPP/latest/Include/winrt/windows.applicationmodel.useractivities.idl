@@ -11,6 +11,7 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.Security.Credentials.idl";
+import "Windows.System.idl";
 import "Windows.UI.idl";
 import "Windows.UI.Shell.idl";
 
@@ -40,6 +41,13 @@ namespace Windows
         {
             runtimeclass WebAccount;
         }
+    }
+}
+namespace Windows
+{
+    namespace System
+    {
+        runtimeclass User;
     }
 }
 namespace Windows
@@ -84,6 +92,8 @@ namespace Windows
             interface IUserActivityChannelStatics;
 
             interface IUserActivityChannelStatics2;
+
+            interface IUserActivityChannelStatics3;
 
             interface IUserActivityContentInfo;
 
@@ -277,6 +287,14 @@ namespace Windows
                 HRESULT TryGetForWebAccount([in] Windows.Security.Credentials.WebAccount* account, [out] [retval] Windows.ApplicationModel.UserActivities.UserActivityChannel** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.ApplicationModel.UserActivities.UserActivityChannel)]
+            [uuid(53BC4DDB-BBDF-5984-802A-5305874E205C)]
+            interface IUserActivityChannelStatics3 : IInspectable
+            {
+                HRESULT GetForUser([in] Windows.System.User* user, [out] [retval] Windows.ApplicationModel.UserActivities.UserActivityChannel** result);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [uuid(B399E5AD-137F-409D-822D-E1AF27CE08DC)]
             interface IUserActivityContentInfo : IInspectable
@@ -414,6 +432,7 @@ namespace Windows
             [marshaling_behavior(agile)]
             [static(Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics, Windows.Foundation.UniversalApiContract, 5.0)]
             [static(Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2, Windows.Foundation.UniversalApiContract, 6.0)]
+            [static(Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3, Windows.Foundation.UniversalApiContract, 8.0)]
             [threading(both)]
             runtimeclass UserActivityChannel
             {

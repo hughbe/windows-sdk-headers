@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -255,6 +255,7 @@ struct WINRT_EBO FocusManager :
     using LosingFocus_revoker = impl::factory_event_revoker<Windows::UI::Xaml::Input::IFocusManagerStatics6, &impl::abi_t<Windows::UI::Xaml::Input::IFocusManagerStatics6>::remove_LosingFocus>;
     static LosingFocus_revoker LosingFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler);
     static void LosingFocus(winrt::event_token const& token);
+    static Windows::Foundation::IInspectable GetFocusedElement(Windows::UI::Xaml::XamlRoot const& xamlRoot);
 };
 
 struct WINRT_EBO FocusManagerGotFocusEventArgs :
@@ -458,11 +459,13 @@ struct WINRT_EBO RightTappedRoutedEventArgs :
 struct WINRT_EBO StandardUICommand :
     Windows::UI::Xaml::Input::IStandardUICommand,
     impl::base<StandardUICommand, Windows::UI::Xaml::Input::XamlUICommand, Windows::UI::Xaml::DependencyObject>,
-    impl::require<StandardUICommand, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Input::ICommand, Windows::UI::Xaml::Input::IXamlUICommand>
+    impl::require<StandardUICommand, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::Input::ICommand, Windows::UI::Xaml::Input::IStandardUICommand2, Windows::UI::Xaml::Input::IXamlUICommand>
 {
     StandardUICommand(std::nullptr_t) noexcept {}
     StandardUICommand();
     StandardUICommand(Windows::UI::Xaml::Input::StandardUICommandKind const& kind);
+    using impl::consume_t<StandardUICommand, Windows::UI::Xaml::Input::IStandardUICommand2>::Kind;
+    using Windows::UI::Xaml::Input::IStandardUICommand::Kind;
     static Windows::UI::Xaml::DependencyProperty KindProperty();
 };
 

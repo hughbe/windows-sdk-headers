@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.contacts.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IAggregateContactManager;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager ABI::Windows::ApplicationModel::Contacts::IAggregateContactManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IAggregateContactManager2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager2 ABI::Windows::ApplicationModel::Contacts::IAggregateContactManager2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager2_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContact ABI::Windows::ApplicationModel::Contacts::IContact
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContact2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContact2 ABI::Windows::ApplicationModel::Contacts::IContact2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact2_FWD_DEFINED__
@@ -338,9 +334,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContact3;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContact3 ABI::Windows::ApplicationModel::Contacts::IContact3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact3_FWD_DEFINED__
@@ -352,9 +348,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAddress;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress ABI::Windows::ApplicationModel::Contacts::IContactAddress
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress_FWD_DEFINED__
@@ -366,9 +362,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAnnotation;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation ABI::Windows::ApplicationModel::Contacts::IContactAnnotation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation_FWD_DEFINED__
@@ -380,9 +376,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAnnotation2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation2 ABI::Windows::ApplicationModel::Contacts::IContactAnnotation2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation2_FWD_DEFINED__
@@ -394,9 +390,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAnnotationList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAnnotationStore;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore ABI::Windows::ApplicationModel::Contacts::IContactAnnotationStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore_FWD_DEFINED__
@@ -422,9 +418,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactAnnotationStore2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore2 ABI::Windows::ApplicationModel::Contacts::IContactAnnotationStore2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore2_FWD_DEFINED__
@@ -436,9 +432,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactBatch;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactBatch ABI::Windows::ApplicationModel::Contacts::IContactBatch
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactBatch_FWD_DEFINED__
@@ -450,9 +446,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactCardDelayedDataLoader;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardDelayedDataLoader ABI::Windows::ApplicationModel::Contacts::IContactCardDelayedDataLoader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardDelayedDataLoader_FWD_DEFINED__
@@ -464,9 +460,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactCardOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions ABI::Windows::ApplicationModel::Contacts::IContactCardOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions_FWD_DEFINED__
@@ -478,9 +474,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactCardOptions2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions2 ABI::Windows::ApplicationModel::Contacts::IContactCardOptions2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions2_FWD_DEFINED__
@@ -492,9 +488,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactChange;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChange ABI::Windows::ApplicationModel::Contacts::IContactChange
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChange_FWD_DEFINED__
@@ -506,9 +502,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactChangeReader;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeReader ABI::Windows::ApplicationModel::Contacts::IContactChangeReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeReader_FWD_DEFINED__
@@ -520,9 +516,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactChangeTracker;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker ABI::Windows::ApplicationModel::Contacts::IContactChangeTracker
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker_FWD_DEFINED__
@@ -534,9 +530,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactChangeTracker2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker2 ABI::Windows::ApplicationModel::Contacts::IContactChangeTracker2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker2_FWD_DEFINED__
@@ -548,9 +544,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactChangedDeferral;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedDeferral ABI::Windows::ApplicationModel::Contacts::IContactChangedDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedDeferral_FWD_DEFINED__
@@ -562,9 +558,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactChangedEventArgs;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs ABI::Windows::ApplicationModel::Contacts::IContactChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs_FWD_DEFINED__
@@ -576,9 +572,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactConnectedServiceAccount;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactConnectedServiceAccount ABI::Windows::ApplicationModel::Contacts::IContactConnectedServiceAccount
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactConnectedServiceAccount_FWD_DEFINED__
@@ -590,9 +586,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactDate;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactDate ABI::Windows::ApplicationModel::Contacts::IContactDate
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactDate_FWD_DEFINED__
@@ -604,9 +600,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactEmail;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactEmail ABI::Windows::ApplicationModel::Contacts::IContactEmail
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactEmail_FWD_DEFINED__
@@ -618,9 +614,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactField;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactField ABI::Windows::ApplicationModel::Contacts::IContactField
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactField_FWD_DEFINED__
@@ -632,9 +628,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactFieldFactory;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactFieldFactory ABI::Windows::ApplicationModel::Contacts::IContactFieldFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactFieldFactory_FWD_DEFINED__
@@ -646,9 +642,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactGroup;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup ABI::Windows::ApplicationModel::Contacts::IContactGroup
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup_FWD_DEFINED__
@@ -660,9 +656,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactInformation;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactInformation ABI::Windows::ApplicationModel::Contacts::IContactInformation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactInformation_FWD_DEFINED__
@@ -674,9 +670,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactInstantMessageField;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageField ABI::Windows::ApplicationModel::Contacts::IContactInstantMessageField
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageField_FWD_DEFINED__
@@ -688,9 +684,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactInstantMessageFieldFactory;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageFieldFactory ABI::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageFieldFactory_FWD_DEFINED__
@@ -702,9 +698,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactJobInfo;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactJobInfo ABI::Windows::ApplicationModel::Contacts::IContactJobInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactJobInfo_FWD_DEFINED__
@@ -716,9 +712,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactLaunchActionVerbsStatics;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactLaunchActionVerbsStatics ABI::Windows::ApplicationModel::Contacts::IContactLaunchActionVerbsStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactLaunchActionVerbsStatics_FWD_DEFINED__
@@ -730,9 +726,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactList ABI::Windows::ApplicationModel::Contacts::IContactList
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList_FWD_DEFINED__
@@ -744,9 +740,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactList2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactList2 ABI::Windows::ApplicationModel::Contacts::IContactList2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList2_FWD_DEFINED__
@@ -758,9 +754,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactList3;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactList3 ABI::Windows::ApplicationModel::Contacts::IContactList3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList3_FWD_DEFINED__
@@ -772,9 +768,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactListLimitedWriteOperations;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactListLimitedWriteOperations ABI::Windows::ApplicationModel::Contacts::IContactListLimitedWriteOperations
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListLimitedWriteOperations_FWD_DEFINED__
@@ -786,9 +782,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactListSyncConstraints;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncConstraints ABI::Windows::ApplicationModel::Contacts::IContactListSyncConstraints
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncConstraints_FWD_DEFINED__
@@ -800,9 +796,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactListSyncManager;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager ABI::Windows::ApplicationModel::Contacts::IContactListSyncManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager_FWD_DEFINED__
@@ -814,9 +810,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactListSyncManager2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager2 ABI::Windows::ApplicationModel::Contacts::IContactListSyncManager2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager2_FWD_DEFINED__
@@ -828,9 +824,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactLocationField;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationField ABI::Windows::ApplicationModel::Contacts::IContactLocationField
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationField_FWD_DEFINED__
@@ -842,9 +838,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactLocationFieldFactory;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationFieldFactory ABI::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationFieldFactory_FWD_DEFINED__
@@ -856,9 +852,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactManagerForUser;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser ABI::Windows::ApplicationModel::Contacts::IContactManagerForUser
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser_FWD_DEFINED__
@@ -870,9 +866,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactManagerForUser2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser2 ABI::Windows::ApplicationModel::Contacts::IContactManagerForUser2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser2_FWD_DEFINED__
@@ -884,9 +880,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactManagerStatics;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics ABI::Windows::ApplicationModel::Contacts::IContactManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics_FWD_DEFINED__
@@ -898,9 +894,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactManagerStatics2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics2 ABI::Windows::ApplicationModel::Contacts::IContactManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics2_FWD_DEFINED__
@@ -912,9 +908,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactManagerStatics3;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics3 ABI::Windows::ApplicationModel::Contacts::IContactManagerStatics3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics3_FWD_DEFINED__
@@ -926,9 +922,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactManagerStatics4;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics4 ABI::Windows::ApplicationModel::Contacts::IContactManagerStatics4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics4_FWD_DEFINED__
@@ -940,9 +936,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactManagerStatics5;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics5 ABI::Windows::ApplicationModel::Contacts::IContactManagerStatics5
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics5_FWD_DEFINED__
@@ -954,9 +950,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactMatchReason;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactMatchReason ABI::Windows::ApplicationModel::Contacts::IContactMatchReason
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactMatchReason_FWD_DEFINED__
@@ -968,9 +964,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactName;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactName ABI::Windows::ApplicationModel::Contacts::IContactName
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactName_FWD_DEFINED__
@@ -982,9 +978,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPanel;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel ABI::Windows::ApplicationModel::Contacts::IContactPanel
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel_FWD_DEFINED__
@@ -996,9 +992,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPanelClosingEventArgs;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelClosingEventArgs ABI::Windows::ApplicationModel::Contacts::IContactPanelClosingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelClosingEventArgs_FWD_DEFINED__
@@ -1010,9 +1006,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPanelLaunchFullAppRequestedEventArgs;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelLaunchFullAppRequestedEventArgs ABI::Windows::ApplicationModel::Contacts::IContactPanelLaunchFullAppRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelLaunchFullAppRequestedEventArgs_FWD_DEFINED__
@@ -1024,9 +1020,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPhone;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPhone ABI::Windows::ApplicationModel::Contacts::IContactPhone
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPhone_FWD_DEFINED__
@@ -1038,9 +1034,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPicker;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker ABI::Windows::ApplicationModel::Contacts::IContactPicker
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker_FWD_DEFINED__
@@ -1052,9 +1048,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPicker2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker2 ABI::Windows::ApplicationModel::Contacts::IContactPicker2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker2_FWD_DEFINED__
@@ -1066,9 +1062,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPicker3;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker3 ABI::Windows::ApplicationModel::Contacts::IContactPicker3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker3_FWD_DEFINED__
@@ -1080,9 +1076,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactPickerStatics;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPickerStatics ABI::Windows::ApplicationModel::Contacts::IContactPickerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPickerStatics_FWD_DEFINED__
@@ -1094,9 +1090,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactQueryOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions ABI::Windows::ApplicationModel::Contacts::IContactQueryOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions_FWD_DEFINED__
@@ -1108,9 +1104,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactQueryOptionsFactory;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptionsFactory ABI::Windows::ApplicationModel::Contacts::IContactQueryOptionsFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptionsFactory_FWD_DEFINED__
@@ -1122,9 +1118,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactQueryTextSearch;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryTextSearch ABI::Windows::ApplicationModel::Contacts::IContactQueryTextSearch
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryTextSearch_FWD_DEFINED__
@@ -1136,9 +1132,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactReader;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactReader ABI::Windows::ApplicationModel::Contacts::IContactReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactReader_FWD_DEFINED__
@@ -1150,9 +1146,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactSignificantOther;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther ABI::Windows::ApplicationModel::Contacts::IContactSignificantOther
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther_FWD_DEFINED__
@@ -1164,9 +1160,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactSignificantOther2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther2 ABI::Windows::ApplicationModel::Contacts::IContactSignificantOther2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther2_FWD_DEFINED__
@@ -1178,9 +1174,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactStore;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore ABI::Windows::ApplicationModel::Contacts::IContactStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore_FWD_DEFINED__
@@ -1192,9 +1188,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactStore2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore2 ABI::Windows::ApplicationModel::Contacts::IContactStore2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore2_FWD_DEFINED__
@@ -1206,9 +1202,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactStore3;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore3 ABI::Windows::ApplicationModel::Contacts::IContactStore3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore3_FWD_DEFINED__
@@ -1220,9 +1216,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactStoreNotificationTriggerDetails;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactStoreNotificationTriggerDetails ABI::Windows::ApplicationModel::Contacts::IContactStoreNotificationTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStoreNotificationTriggerDetails_FWD_DEFINED__
@@ -1234,9 +1230,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactWebsite;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite ABI::Windows::ApplicationModel::Contacts::IContactWebsite
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite_FWD_DEFINED__
@@ -1248,9 +1244,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContactWebsite2;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite2 ABI::Windows::ApplicationModel::Contacts::IContactWebsite2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite2_FWD_DEFINED__
@@ -1262,9 +1258,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IFullContactCardOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIFullContactCardOptions ABI::Windows::ApplicationModel::Contacts::IFullContactCardOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIFullContactCardOptions_FWD_DEFINED__
@@ -1276,9 +1272,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IKnownContactFieldStatics;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIKnownContactFieldStatics ABI::Windows::ApplicationModel::Contacts::IKnownContactFieldStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIKnownContactFieldStatics_FWD_DEFINED__
@@ -1290,9 +1286,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IPinnedContactIdsQueryResult;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactIdsQueryResult ABI::Windows::ApplicationModel::Contacts::IPinnedContactIdsQueryResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactIdsQueryResult_FWD_DEFINED__
@@ -1304,9 +1300,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IPinnedContactManager;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManager ABI::Windows::ApplicationModel::Contacts::IPinnedContactManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManager_FWD_DEFINED__
@@ -1318,9 +1314,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IPinnedContactManagerStatics;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManagerStatics ABI::Windows::ApplicationModel::Contacts::IPinnedContactManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManagerStatics_FWD_DEFINED__
@@ -1333,9 +1329,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class Contact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1358,7 +1354,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::Contact*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::Contact*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContact*>
@@ -1390,7 +1386,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::Contact*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::Contact*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContact*>
@@ -1406,9 +1402,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactAddress;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1431,7 +1427,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAddress_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactAddress*>
@@ -1463,7 +1459,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAddress_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactAddress*>
@@ -1479,9 +1475,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactAnnotation;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1504,7 +1500,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactAnnotation*>
@@ -1536,7 +1532,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactAnnotation*>
@@ -1552,9 +1548,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactAnnotationList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1577,7 +1573,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -1609,7 +1605,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -1625,9 +1621,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactChange;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1650,7 +1646,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactChange*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactChange*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactChange_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactChange*>
@@ -1682,7 +1678,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactChange*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactChange*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactChange_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactChange*>
@@ -1698,9 +1694,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactConnectedServiceAccount;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1723,7 +1719,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccou
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactConnectedServiceAccount*>
@@ -1755,7 +1751,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccou
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactConnectedServiceAccount*>
@@ -1771,9 +1767,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactDate;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1796,7 +1792,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactDate*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactDate*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactDate_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactDate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactDate*>
@@ -1828,7 +1824,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactDate*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactDate*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactDate_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactDate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactDate*>
@@ -1844,9 +1840,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactEmail;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1869,7 +1865,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactEmail_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactEmail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactEmail*>
@@ -1901,7 +1897,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactEmail_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactEmail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactEmail*>
@@ -1917,9 +1913,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactField;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1942,7 +1938,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactField*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactField*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactField_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactField ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactField ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactField*>
@@ -1974,7 +1970,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactField*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactField*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactField_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactField ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactField ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactField*>
@@ -1990,9 +1986,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 enum ContactFieldType : int;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType_USE
@@ -2013,7 +2009,7 @@ IIterator<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -2043,7 +2039,7 @@ IIterable<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -2058,9 +2054,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactGroup;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2083,7 +2079,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>
@@ -2115,7 +2111,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>
@@ -2131,9 +2127,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactInformation;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2156,7 +2152,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactInformation_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactInformation*>
@@ -2188,7 +2184,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactInformation_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactInformation*>
@@ -2204,9 +2200,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactInstantMessageField;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2229,7 +2225,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactInstantMessageField*>
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactInstantMessageField*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactInstantMessageField*>
@@ -2261,7 +2257,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactInstantMessageField*>
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactInstantMessageField*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactInstantMessageField*>
@@ -2277,9 +2273,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactJobInfo;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2302,7 +2298,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactJobInfo*>
@@ -2334,7 +2330,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactJobInfo*>
@@ -2350,9 +2346,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactList;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2375,7 +2371,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactList*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -2407,7 +2403,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactList*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -2423,9 +2419,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactLocationField;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2448,7 +2444,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactLocationField*> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactLocationField*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactLocationField_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactLocationField ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactLocationField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactLocationField ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactLocationField*>
@@ -2480,7 +2476,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactLocationField*> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactLocationField*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactLocationField_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactLocationField ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactLocationField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactLocationField ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactLocationField*>
@@ -2496,9 +2492,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactMatchReason;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2521,7 +2517,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactMatchReason*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactMatchReason*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactMatchReason_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactMatchReason ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactMatchReason_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactMatchReason ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactMatchReason*>
@@ -2553,7 +2549,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactMatchReason*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactMatchReason*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactMatchReason_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactMatchReason ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactMatchReason_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactMatchReason ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactMatchReason*>
@@ -2569,9 +2565,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactPhone;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2594,7 +2590,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactPhone_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactPhone_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactPhone*>
@@ -2626,7 +2622,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactPhone_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactPhone_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactPhone*>
@@ -2642,9 +2638,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactSignificantOther;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2667,7 +2663,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactSignificantOther*>
@@ -2699,7 +2695,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactSignificantOther*>
@@ -2715,9 +2711,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactWebsite;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2740,7 +2736,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactWebsite_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactWebsite_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactWebsite*>
@@ -2772,7 +2768,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactWebsite_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactWebsite_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactWebsite*>
@@ -2804,7 +2800,7 @@ IIterator<ABI::Windows::ApplicationModel::Contacts::IContactField*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Contacts::IContactField*> __FIIterator_1_Windows__CApplicationModel__CContacts__CIContactField_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CIContactField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::IContactField*>
@@ -2836,7 +2832,7 @@ IIterable<ABI::Windows::ApplicationModel::Contacts::IContactField*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Contacts::IContactField*> __FIIterable_1_Windows__CApplicationModel__CContacts__CIContactField_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CIContactField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::IContactField*>
@@ -2868,7 +2864,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::Contact*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::Contact*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContact*>
@@ -2900,7 +2896,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAddress_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAddress*>
@@ -2932,7 +2928,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotation*>
@@ -2964,7 +2960,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -2996,7 +2992,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactChange*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactChange*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactChange*>
@@ -3028,7 +3024,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAcc
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactConnectedServiceAccount*>
@@ -3060,7 +3056,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactDate*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactDate*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactDate_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactDate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactDate*>
@@ -3092,7 +3088,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactEmail_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactEmail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactEmail*>
@@ -3124,7 +3120,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactField*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactField*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactField_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactField ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactField ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactField*>
@@ -3155,7 +3151,7 @@ IVectorView<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : I
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -3186,7 +3182,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactGroup*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>
@@ -3218,7 +3214,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactInformation*>
@@ -3250,7 +3246,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactInstantMessageField
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactInstantMessageField*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInstantMessageField ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactInstantMessageField*>
@@ -3282,7 +3278,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactJobInfo*>
@@ -3314,7 +3310,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactList*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -3346,7 +3342,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactLocationField*> : I
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactLocationField*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactLocationField_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactLocationField ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactLocationField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactLocationField ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactLocationField*>
@@ -3378,7 +3374,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactMatchReason*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactMatchReason*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactMatchReason_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactMatchReason ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactMatchReason_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactMatchReason ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactMatchReason*>
@@ -3410,7 +3406,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactPhone_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactPhone_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactPhone*>
@@ -3442,7 +3438,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactSignificantOther*>
@@ -3474,7 +3470,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactWebsite_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactWebsite_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactWebsite*>
@@ -3506,7 +3502,7 @@ IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactField*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactField*> __FIVectorView_1_Windows__CApplicationModel__CContacts__CIContactField_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CIContactField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactField*>
@@ -3538,7 +3534,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::Contact*> : IVector_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::Contact*> __FIVector_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContact*>
@@ -3570,7 +3566,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactAddress*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactAddress_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactAddress_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactAddress ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactAddress*>
@@ -3602,7 +3598,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactConnectedServiceAccount ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactConnectedServiceAccount*>
@@ -3634,7 +3630,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactDate*> : IVector_impl<A
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactDate*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactDate_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactDate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactDate ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactDate*>
@@ -3666,7 +3662,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> : IVector_impl<
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactEmail*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactEmail_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactEmail_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactEmail ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactEmail*>
@@ -3697,7 +3693,7 @@ IVector<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : IVect
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -3728,7 +3724,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactJobInfo*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactJobInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactJobInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactJobInfo*>
@@ -3760,7 +3756,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> : IVector_impl<
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactPhone*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactPhone_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactPhone_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactPhone ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactPhone*>
@@ -3792,7 +3788,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> : IV
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactSignificantOther*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactSignificantOther_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactSignificantOther ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactSignificantOther*>
@@ -3824,7 +3820,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::ContactWebsite*> __FIVector_1_Windows__CApplicationModel__CContacts__CContactWebsite_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactWebsite_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactWebsite ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactWebsite*>
@@ -3856,7 +3852,7 @@ IVector<ABI::Windows::ApplicationModel::Contacts::IContactField*> : IVector_impl
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Contacts::IContactField*> __FIVector_1_Windows__CApplicationModel__CContacts__CIContactField_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CIContactField_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CIContactField ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContactField*>
@@ -3888,7 +3884,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contact*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContact*>
@@ -3920,7 +3916,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::Contact*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::Contact*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContact*>
@@ -3952,7 +3948,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContactAnnotation*>
@@ -3984,7 +3980,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactAnnotation*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContactAnnotation*>
@@ -4016,7 +4012,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -4048,7 +4044,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationList*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>
@@ -4064,9 +4060,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactAnnotationStore;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4089,7 +4085,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationStore*>
@@ -4121,7 +4117,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationStore
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactAnnotationStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationStore*>
@@ -4137,9 +4133,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactBatch;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4162,7 +4158,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::ContactBatch*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactBatch_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactBatch ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactBatch ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContactBatch*>
@@ -4194,7 +4190,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactBatch*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactBatch*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactBatch_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactBatch ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactBatch_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactBatch ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContactBatch*>
@@ -4226,7 +4222,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactInformation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContactInformation*>
@@ -4258,7 +4254,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactInformation*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactInformation_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContactInformation*>
@@ -4290,7 +4286,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -4322,7 +4318,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactList*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactList*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContactList*>
@@ -4338,9 +4334,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactStore;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4363,7 +4359,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Contac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::ContactStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CContactStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IContactStore*>
@@ -4395,7 +4391,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactStore*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::ContactStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IContactStore*>
@@ -4411,9 +4407,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class PinnedContactIdsQueryResult;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -4436,7 +4432,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::Pinned
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Contacts::IPinnedContactIdsQueryResult*>
@@ -4468,7 +4464,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryR
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CPinnedContactIdsQueryResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Contacts::IPinnedContactIdsQueryResult*>
@@ -4500,7 +4496,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContact*>*>
@@ -4532,7 +4528,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContact*>*>
@@ -4564,7 +4560,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotation*>*>
@@ -4596,7 +4592,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotation*>*>
@@ -4628,7 +4624,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>*>
@@ -4660,7 +4656,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactAnnotationList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactAnnotationList*>*>
@@ -4692,7 +4688,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactChange*>*>
@@ -4724,7 +4720,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactChange ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactChange*>*>
@@ -4756,7 +4752,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>*>
@@ -4788,7 +4784,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactGroup ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactGroup*>*>
@@ -4820,7 +4816,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactInformation*>*>
@@ -4852,7 +4848,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactInformation*>*>
@@ -4884,7 +4880,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactList*>*>
@@ -4916,7 +4912,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContact
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CContacts__CContactList ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::IContactList*>*>
@@ -4948,7 +4944,7 @@ IAsyncOperationCompletedHandler<__FIVector_1_Windows__CApplicationModel__CContac
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CApplicationModel__CContacts__CContact*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContact*>*>
@@ -4980,7 +4976,7 @@ IAsyncOperation<__FIVector_1_Windows__CApplicationModel__CContacts__CContact*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_Windows__CApplicationModel__CContacts__CContact*> __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact_t;
 #define __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CContacts__CContact ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::IContact*>*>
@@ -4997,9 +4993,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactChangedEventArgs;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -5023,7 +5019,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactList*,ABI::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactList*,ABI::Windows::ApplicationModel::Contacts::ContactChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::IContactList*,ABI::Windows::ApplicationModel::Contacts::IContactChangedEventArgs*>
@@ -5040,9 +5036,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactListSyncManager;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5066,7 +5062,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactListSyncMana
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactListSyncManager*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::IContactListSyncManager*,IInspectable*>
@@ -5082,9 +5078,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactPanel;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5092,9 +5088,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactPanelClosingEventArgs;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5118,7 +5114,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactPanel*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactPanel*,ABI::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::IContactPanel*,ABI::Windows::ApplicationModel::Contacts::IContactPanelClosingEventArgs*>
@@ -5136,9 +5132,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactPanelLaunchFullAppRequestedEventArgs;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -5162,7 +5158,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactPanel*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactPanel*,ABI::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::IContactPanel*,ABI::Windows::ApplicationModel::Contacts::IContactPanelLaunchFullAppRequestedEventArgs*>
@@ -5197,7 +5193,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactStore*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::ContactStore*,ABI::Windows::ApplicationModel::Contacts::ContactChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::IContactStore*,ABI::Windows::ApplicationModel::Contacts::IContactChangedEventArgs*>
@@ -5228,7 +5224,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -5257,7 +5253,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -5286,7 +5282,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -5315,7 +5311,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -5344,7 +5340,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -5373,7 +5369,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -5403,7 +5399,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -5433,7 +5429,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -5463,7 +5459,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -5493,7 +5489,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -5523,7 +5519,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -5552,7 +5548,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -5582,7 +5578,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -5612,7 +5608,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -5642,7 +5638,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> : IAsyncOperationComp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -5672,7 +5668,7 @@ IAsyncOperation<__FIVectorView_1_HSTRING*> : IAsyncOperation_impl<__FIVectorView
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_HSTRING*> __FIAsyncOperation_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -5701,7 +5697,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -5730,7 +5726,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -5747,9 +5743,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -5775,7 +5771,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -5807,7 +5803,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentTy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -5823,9 +5819,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -5834,9 +5830,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -5862,7 +5858,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::RandomAccessStre
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -5894,7 +5890,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -5911,9 +5907,9 @@ namespace ABI {
             namespace Text {
                 struct TextSegment;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CData__CText__CTextSegment_USE
@@ -5934,7 +5930,7 @@ IIterator<struct ABI::Windows::Data::Text::TextSegment> : IIterator_impl<struct 
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Data::Text::TextSegment> __FIIterator_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterator_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Text::TextSegment>
@@ -5964,7 +5960,7 @@ IIterable<struct ABI::Windows::Data::Text::TextSegment> : IIterable_impl<struct 
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Data::Text::TextSegment> __FIIterable_1_Windows__CData__CText__CTextSegment_t;
 #define __FIIterable_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Text::TextSegment>
@@ -5994,7 +5990,7 @@ IVectorView<struct ABI::Windows::Data::Text::TextSegment> : IVectorView_impl<str
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Data::Text::TextSegment> __FIVectorView_1_Windows__CData__CText__CTextSegment_t;
 #define __FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CText__CTextSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CText__CTextSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Text::TextSegment>
@@ -6009,8 +6005,8 @@ namespace ABI {
         namespace UI {
             struct Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CColor_USE
@@ -6031,7 +6027,7 @@ IReference<struct ABI::Windows::UI::Color> : IReference_impl<struct ABI::Windows
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::UI::Color> __FIReference_1_Windows__CUI__CColor_t;
 #define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CColor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::IReference<ABI::Windows::UI::Color>
@@ -6050,9 +6046,9 @@ namespace ABI {
                 
                 typedef struct TextSegment TextSegment;
                 
-            } /* Windows */
+            } /* Text */
         } /* Data */
-    } /* Text */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6064,9 +6060,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -6077,9 +6073,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6091,15 +6087,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -6107,8 +6103,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -6120,8 +6116,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -6133,8 +6129,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -6146,16 +6142,16 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -6163,8 +6159,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -6182,8 +6178,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -6191,8 +6187,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -6206,8 +6202,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6218,9 +6214,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6232,9 +6228,9 @@ namespace ABI {
                 
                 typedef enum ViewSizePreference : int ViewSizePreference;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6246,9 +6242,9 @@ namespace ABI {
                 
                 typedef enum ContactAddressKind : int ContactAddressKind;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6257,9 +6253,9 @@ namespace ABI {
                 
                 typedef enum ContactAnnotationOperations : unsigned int ContactAnnotationOperations;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6268,9 +6264,9 @@ namespace ABI {
                 
                 typedef enum ContactAnnotationStoreAccessType : int ContactAnnotationStoreAccessType;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6279,9 +6275,9 @@ namespace ABI {
                 
                 typedef enum ContactBatchStatus : int ContactBatchStatus;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6290,9 +6286,9 @@ namespace ABI {
                 
                 typedef enum ContactCardHeaderKind : int ContactCardHeaderKind;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6301,9 +6297,9 @@ namespace ABI {
                 
                 typedef enum ContactCardTabKind : int ContactCardTabKind;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6312,9 +6308,9 @@ namespace ABI {
                 
                 typedef enum ContactChangeType : int ContactChangeType;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6323,9 +6319,9 @@ namespace ABI {
                 
                 typedef enum ContactDateKind : int ContactDateKind;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6334,9 +6330,9 @@ namespace ABI {
                 
                 typedef enum ContactEmailKind : int ContactEmailKind;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6345,9 +6341,9 @@ namespace ABI {
                 
                 typedef enum ContactFieldCategory : int ContactFieldCategory;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6356,9 +6352,9 @@ namespace ABI {
                 
                 typedef enum ContactFieldType : int ContactFieldType;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6367,9 +6363,9 @@ namespace ABI {
                 
                 typedef enum ContactListOtherAppReadAccess : int ContactListOtherAppReadAccess;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6378,9 +6374,9 @@ namespace ABI {
                 
                 typedef enum ContactListOtherAppWriteAccess : int ContactListOtherAppWriteAccess;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6389,9 +6385,9 @@ namespace ABI {
                 
                 typedef enum ContactListSyncStatus : int ContactListSyncStatus;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6400,9 +6396,9 @@ namespace ABI {
                 
                 typedef enum ContactMatchReasonKind : int ContactMatchReasonKind;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6411,9 +6407,9 @@ namespace ABI {
                 
                 typedef enum ContactNameOrder : int ContactNameOrder;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6422,9 +6418,9 @@ namespace ABI {
                 
                 typedef enum ContactPhoneKind : int ContactPhoneKind;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6433,9 +6429,9 @@ namespace ABI {
                 
                 typedef enum ContactQueryDesiredFields : unsigned int ContactQueryDesiredFields;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6444,9 +6440,9 @@ namespace ABI {
                 
                 typedef enum ContactQuerySearchFields : unsigned int ContactQuerySearchFields;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6455,9 +6451,9 @@ namespace ABI {
                 
                 typedef enum ContactQuerySearchScope : int ContactQuerySearchScope;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6466,9 +6462,9 @@ namespace ABI {
                 
                 typedef enum ContactRelationship : int ContactRelationship;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6477,9 +6473,9 @@ namespace ABI {
                 
                 typedef enum ContactSelectionMode : int ContactSelectionMode;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6488,9 +6484,9 @@ namespace ABI {
                 
                 typedef enum ContactStoreAccessType : int ContactStoreAccessType;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -6499,9 +6495,9 @@ namespace ABI {
                 
                 typedef enum PinnedContactSurface : int PinnedContactSurface;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6583,9 +6579,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class AggregateContactManager;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6599,9 +6595,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactCardDelayedDataLoader;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6609,9 +6605,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactCardOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6620,9 +6616,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactChangeReader;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6630,9 +6626,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactChangeTracker;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6640,9 +6636,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactChangedDeferral;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6655,9 +6651,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactFieldFactory;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6671,9 +6667,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactListLimitedWriteOperations;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6681,9 +6677,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactListSyncConstraints;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6694,9 +6690,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactManagerForUser;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6709,9 +6705,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactPicker;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6719,9 +6715,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactQueryOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6729,9 +6725,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactQueryTextSearch;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6739,9 +6735,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactReader;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6751,9 +6747,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class ContactStoreNotificationTriggerDetails;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6762,9 +6758,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class FullContactCardOptions;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6774,9 +6770,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class PinnedContactManager;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6809,9 +6805,9 @@ namespace ABI {
                     ContactAddressKind_Other = 2,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6847,9 +6843,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(ContactAnnotationOperations)
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6874,9 +6870,9 @@ namespace ABI {
                     ContactAnnotationStoreAccessType_AllAnnotationsReadWrite = 1,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6902,9 +6898,9 @@ namespace ABI {
                     ContactBatchStatus_ServerSearchUnknownError = 2,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6930,9 +6926,9 @@ namespace ABI {
                     ContactCardHeaderKind_Enterprise = 2,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6965,9 +6961,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6994,9 +6990,9 @@ namespace ABI {
                     ContactChangeType_ChangeTrackingLost = 3,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7022,9 +7018,9 @@ namespace ABI {
                     ContactDateKind_Other = 2,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7050,9 +7046,9 @@ namespace ABI {
                     ContactEmailKind_Other = 2,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7080,9 +7076,9 @@ namespace ABI {
                     ContactFieldCategory_Other = 4,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7169,9 +7165,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7202,9 +7198,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7234,9 +7230,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7270,9 +7266,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7301,9 +7297,9 @@ namespace ABI {
                     ContactMatchReasonKind_Other = 5,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7328,9 +7324,9 @@ namespace ABI {
                     ContactNameOrder_LastNameFirstName = 1,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7387,9 +7383,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7418,9 +7414,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(ContactQueryDesiredFields)
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7450,9 +7446,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(ContactQuerySearchFields)
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7477,9 +7473,9 @@ namespace ABI {
                     ContactQuerySearchScope_Server = 1,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7508,9 +7504,9 @@ namespace ABI {
                     ContactRelationship_Child = 5,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7535,9 +7531,9 @@ namespace ABI {
                     ContactSelectionMode_Fields = 1,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7563,9 +7559,9 @@ namespace ABI {
                     ContactStoreAccessType_AllContactsReadWrite = 2,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -7590,9 +7586,9 @@ namespace ABI {
                     PinnedContactSurface_Taskbar = 1,
                 };
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -7643,9 +7639,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAggregateContactManager=_uuidof(IAggregateContactManager);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager_INTERFACE_DEFINED__) */
@@ -7687,9 +7683,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAggregateContactManager2=_uuidof(IAggregateContactManager2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIAggregateContactManager2_INTERFACE_DEFINED__) */
@@ -7740,9 +7736,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContact=_uuidof(IContact);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContact;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_INTERFACE_DEFINED__) */
@@ -7824,9 +7820,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContact2=_uuidof(IContact2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContact2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContact2_INTERFACE_DEFINED__) */
@@ -7872,7 +7868,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::Foundation::DateTime value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMe(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AggregateId(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -7890,7 +7886,7 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisplayPictureManuallySet(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LargeDisplayPicture(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStreamReference * * value
@@ -7911,7 +7907,7 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAggregate(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FullName(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -7936,9 +7932,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContact3=_uuidof(IContact3);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContact3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContact3_INTERFACE_DEFINED__) */
@@ -8016,9 +8012,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactAddress=_uuidof(IContactAddress);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAddress_INTERFACE_DEFINED__) */
@@ -8074,7 +8070,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::ApplicationModel::Contacts::ContactAnnotationOperations value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProviderProperties(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
@@ -8084,9 +8080,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactAnnotation=_uuidof(IContactAnnotation);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation_INTERFACE_DEFINED__) */
@@ -8128,9 +8124,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactAnnotation2=_uuidof(IContactAnnotation2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotation2_INTERFACE_DEFINED__) */
@@ -8197,9 +8193,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactAnnotationList=_uuidof(IContactAnnotationList);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationList_INTERFACE_DEFINED__) */
@@ -8265,9 +8261,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactAnnotationStore=_uuidof(IContactAnnotationStore);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore_INTERFACE_DEFINED__) */
@@ -8307,9 +8303,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactAnnotationStore2=_uuidof(IContactAnnotationStore2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactAnnotationStore2_INTERFACE_DEFINED__) */
@@ -8351,9 +8347,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactBatch=_uuidof(IContactBatch);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactBatch;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactBatch_INTERFACE_DEFINED__) */
@@ -8396,9 +8392,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactCardDelayedDataLoader=_uuidof(IContactCardDelayedDataLoader);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardDelayedDataLoader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardDelayedDataLoader_INTERFACE_DEFINED__) */
@@ -8446,9 +8442,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactCardOptions=_uuidof(IContactCardOptions);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions_INTERFACE_DEFINED__) */
@@ -8491,9 +8487,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactCardOptions2=_uuidof(IContactCardOptions2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactCardOptions2_INTERFACE_DEFINED__) */
@@ -8535,9 +8531,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactChange=_uuidof(IContactChange);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactChange;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChange_INTERFACE_DEFINED__) */
@@ -8580,9 +8576,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactChangeReader=_uuidof(IContactChangeReader);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeReader_INTERFACE_DEFINED__) */
@@ -8623,9 +8619,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactChangeTracker=_uuidof(IContactChangeTracker);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker_INTERFACE_DEFINED__) */
@@ -8657,16 +8653,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTracking(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IContactChangeTracker2=_uuidof(IContactChangeTracker2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangeTracker2_INTERFACE_DEFINED__) */
@@ -8703,9 +8699,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactChangedDeferral=_uuidof(IContactChangedDeferral);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedDeferral_INTERFACE_DEFINED__) */
@@ -8744,9 +8740,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactChangedEventArgs=_uuidof(IContactChangedEventArgs);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs_INTERFACE_DEFINED__) */
@@ -8794,9 +8790,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactConnectedServiceAccount=_uuidof(IContactConnectedServiceAccount);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactConnectedServiceAccount;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactConnectedServiceAccount_INTERFACE_DEFINED__) */
@@ -8862,9 +8858,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactDate=_uuidof(IContactDate);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactDate;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactDate_INTERFACE_DEFINED__) */
@@ -8918,9 +8914,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactEmail=_uuidof(IContactEmail);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactEmail;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactEmail_INTERFACE_DEFINED__) */
@@ -8965,9 +8961,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactField=_uuidof(IContactField);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactField;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactField_INTERFACE_DEFINED__) */
@@ -9018,9 +9014,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactFieldFactory=_uuidof(IContactFieldFactory);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactFieldFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactFieldFactory_INTERFACE_DEFINED__) */
@@ -9056,9 +9052,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactGroup=_uuidof(IContactGroup);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactGroup_INTERFACE_DEFINED__) */
@@ -9119,9 +9115,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactInformation=_uuidof(IContactInformation);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactInformation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactInformation_INTERFACE_DEFINED__) */
@@ -9173,9 +9169,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactInstantMessageField=_uuidof(IContactInstantMessageField);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageField;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageField_INTERFACE_DEFINED__) */
@@ -9225,9 +9221,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactInstantMessageFieldFactory=_uuidof(IContactInstantMessageFieldFactory);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageFieldFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactInstantMessageFieldFactory_INTERFACE_DEFINED__) */
@@ -9311,9 +9307,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactJobInfo=_uuidof(IContactJobInfo);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactJobInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactJobInfo_INTERFACE_DEFINED__) */
@@ -9364,9 +9360,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactLaunchActionVerbsStatics=_uuidof(IContactLaunchActionVerbsStatics);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactLaunchActionVerbsStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactLaunchActionVerbsStatics_INTERFACE_DEFINED__) */
@@ -9410,10 +9406,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHidden(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsHidden(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OtherAppReadAccess(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Contacts::ContactListOtherAppReadAccess * value
@@ -9434,7 +9430,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Contacts::IContactListSyncManager * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsServerSearch(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UserDataAccountId(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -9483,9 +9479,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactList=_uuidof(IContactList);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactList;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList_INTERFACE_DEFINED__) */
@@ -9520,7 +9516,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SupportsServerSearch(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SyncConstraints(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Contacts::IContactListSyncConstraints * * value
@@ -9530,9 +9526,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactList2=_uuidof(IContactList2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactList2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList2_INTERFACE_DEFINED__) */
@@ -9575,9 +9571,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactList3=_uuidof(IContactList3);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactList3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactList3_INTERFACE_DEFINED__) */
@@ -9621,9 +9617,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactListLimitedWriteOperations=_uuidof(IContactListLimitedWriteOperations);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactListLimitedWriteOperations;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListLimitedWriteOperations_INTERFACE_DEFINED__) */
@@ -9655,10 +9651,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanSyncDescriptions(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanSyncDescriptions(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxHomePhoneNumbers(
                         /* [retval, out] */__RPC__deref_out_opt __FIReference_1_int * * value
@@ -9827,9 +9823,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactListSyncConstraints=_uuidof(IContactListSyncConstraints);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncConstraints;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncConstraints_INTERFACE_DEFINED__) */
@@ -9884,9 +9880,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactListSyncManager=_uuidof(IContactListSyncManager);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager_INTERFACE_DEFINED__) */
@@ -9931,9 +9927,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactListSyncManager2=_uuidof(IContactListSyncManager2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager2_INTERFACE_DEFINED__) */
@@ -9991,9 +9987,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactLocationField=_uuidof(IContactLocationField);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationField;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationField_INTERFACE_DEFINED__) */
@@ -10045,9 +10041,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactLocationFieldFactory=_uuidof(IContactLocationFieldFactory);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationFieldFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactLocationFieldFactory_INTERFACE_DEFINED__) */
@@ -10119,9 +10115,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactManagerForUser=_uuidof(IContactManagerForUser);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser_INTERFACE_DEFINED__) */
@@ -10161,9 +10157,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactManagerForUser2=_uuidof(IContactManagerForUser2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerForUser2_INTERFACE_DEFINED__) */
@@ -10214,9 +10210,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactManagerStatics=_uuidof(IContactManagerStatics);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics_INTERFACE_DEFINED__) */
@@ -10259,9 +10255,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactManagerStatics2=_uuidof(IContactManagerStatics2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics2_INTERFACE_DEFINED__) */
@@ -10319,7 +10315,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CApplicationModel__CContacts__CContactAnnotationStore * * store
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsShowContactCardSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE ShowContactCardWithOptions(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Contacts::IContact * contact,
@@ -10328,7 +10324,7 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Contacts::IContactCardOptions * contactCardOptions
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsShowDelayLoadedContactCardSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE ShowDelayLoadedContactCardWithOptions(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Contacts::IContact * contact,
@@ -10358,9 +10354,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactManagerStatics3=_uuidof(IContactManagerStatics3);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics3_INTERFACE_DEFINED__) */
@@ -10400,9 +10396,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactManagerStatics4=_uuidof(IContactManagerStatics4);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics4_INTERFACE_DEFINED__) */
@@ -10437,19 +10433,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeMiddleNameInSystemDisplayAndSort(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeMiddleNameInSystemDisplayAndSort(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IContactManagerStatics5=_uuidof(IContactManagerStatics5);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics5;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactManagerStatics5_INTERFACE_DEFINED__) */
@@ -10494,9 +10490,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactMatchReason=_uuidof(IContactMatchReason);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactMatchReason;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactMatchReason_INTERFACE_DEFINED__) */
@@ -10580,9 +10576,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactName=_uuidof(IContactName);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactName;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactName_INTERFACE_DEFINED__) */
@@ -10639,9 +10635,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPanel=_uuidof(IContactPanel);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel_INTERFACE_DEFINED__) */
@@ -10680,9 +10676,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPanelClosingEventArgs=_uuidof(IContactPanelClosingEventArgs);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelClosingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelClosingEventArgs_INTERFACE_DEFINED__) */
@@ -10714,19 +10710,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IContactPanelLaunchFullAppRequestedEventArgs=_uuidof(IContactPanelLaunchFullAppRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelLaunchFullAppRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelLaunchFullAppRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -10780,9 +10776,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPhone=_uuidof(IContactPhone);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPhone;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPhone_INTERFACE_DEFINED__) */
@@ -10839,9 +10835,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPicker=_uuidof(IContactPicker);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker_INTERFACE_DEFINED__) */
@@ -10886,9 +10882,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPicker2=_uuidof(IContactPicker2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker2_INTERFACE_DEFINED__) */
@@ -10927,9 +10923,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPicker3=_uuidof(IContactPicker3);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPicker3_INTERFACE_DEFINED__) */
@@ -10972,9 +10968,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactPickerStatics=_uuidof(IContactPickerStatics);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactPickerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactPickerStatics_INTERFACE_DEFINED__) */
@@ -11012,10 +11008,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeContactsFromHiddenLists(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeContactsFromHiddenLists(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DesiredFields(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Contacts::ContactQueryDesiredFields * value
@@ -11037,9 +11033,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactQueryOptions=_uuidof(IContactQueryOptions);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptions_INTERFACE_DEFINED__) */
@@ -11084,9 +11080,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactQueryOptionsFactory=_uuidof(IContactQueryOptionsFactory);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryOptionsFactory_INTERFACE_DEFINED__) */
@@ -11140,9 +11136,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactQueryTextSearch=_uuidof(IContactQueryTextSearch);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryTextSearch;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactQueryTextSearch_INTERFACE_DEFINED__) */
@@ -11185,9 +11181,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactReader=_uuidof(IContactReader);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactReader_INTERFACE_DEFINED__) */
@@ -11235,9 +11231,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactSignificantOther=_uuidof(IContactSignificantOther);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther_INTERFACE_DEFINED__) */
@@ -11283,9 +11279,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactSignificantOther2=_uuidof(IContactSignificantOther2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactSignificantOther2_INTERFACE_DEFINED__) */
@@ -11332,9 +11328,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactStore=_uuidof(IContactStore);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore_INTERFACE_DEFINED__) */
@@ -11413,9 +11409,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactStore2=_uuidof(IContactStore2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore2_INTERFACE_DEFINED__) */
@@ -11455,9 +11451,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactStore3=_uuidof(IContactStore3);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore3_INTERFACE_DEFINED__) */
@@ -11493,9 +11489,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactStoreNotificationTriggerDetails=_uuidof(IContactStoreNotificationTriggerDetails);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactStoreNotificationTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactStoreNotificationTriggerDetails_INTERFACE_DEFINED__) */
@@ -11543,9 +11539,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactWebsite=_uuidof(IContactWebsite);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite_INTERFACE_DEFINED__) */
@@ -11591,9 +11587,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IContactWebsite2=_uuidof(IContactWebsite2);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIContactWebsite2_INTERFACE_DEFINED__) */
@@ -11635,9 +11631,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFullContactCardOptions=_uuidof(IFullContactCardOptions);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIFullContactCardOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIFullContactCardOptions_INTERFACE_DEFINED__) */
@@ -11721,9 +11717,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownContactFieldStatics=_uuidof(IKnownContactFieldStatics);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIKnownContactFieldStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIKnownContactFieldStatics_INTERFACE_DEFINED__) */
@@ -11762,9 +11758,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPinnedContactIdsQueryResult=_uuidof(IPinnedContactIdsQueryResult);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactIdsQueryResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactIdsQueryResult_INTERFACE_DEFINED__) */
@@ -11800,12 +11796,12 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsPinSurfaceSupported(
                         /* [in] */ABI::Windows::ApplicationModel::Contacts::PinnedContactSurface surface,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsContactPinned(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Contacts::IContact * contact,
                         /* [in] */ABI::Windows::ApplicationModel::Contacts::PinnedContactSurface surface,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE RequestPinContactAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Contacts::IContact * contact,
@@ -11833,9 +11829,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPinnedContactManager=_uuidof(IPinnedContactManager);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManager_INTERFACE_DEFINED__) */
@@ -11874,16 +11870,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Contacts::IPinnedContactManager * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPinnedContactManagerStatics=_uuidof(IPinnedContactManagerStatics);
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CIPinnedContactManagerStatics_INTERFACE_DEFINED__) */
@@ -22789,7 +22785,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CC
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactList_Windows__CApplicationModel__CContacts__CContactChangedEventArgsVtbl;
 
@@ -22841,7 +22837,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CC
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactListSyncManager * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactListSyncManager_IInspectableVtbl;
 
@@ -22893,7 +22889,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CC
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelClosingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelClosingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelClosingEventArgsVtbl;
 
@@ -22946,7 +22942,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CC
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelLaunchFullAppRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactPanelLaunchFullAppRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactPanel_Windows__CApplicationModel__CContacts__CContactPanelLaunchFullAppRequestedEventArgsVtbl;
 
@@ -22999,7 +22995,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CC
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CIContactChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CContactStore_Windows__CApplicationModel__CContacts__CContactChangedEventArgsVtbl;
 
@@ -24244,7 +24240,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

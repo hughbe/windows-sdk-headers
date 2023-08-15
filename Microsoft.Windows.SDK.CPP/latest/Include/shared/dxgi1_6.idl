@@ -6,7 +6,7 @@ import "dxgi1_5.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 cpp_quote( "HRESULT WINAPI DXGIDeclareAdapterRemovalSupport();" )
 
@@ -180,7 +180,7 @@ interface IDXGIFactory7 :
 
 //--------------------------------------------------------------------------------------------------------
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote( "DEFINE_GUID(IID_IDXGIAdapter4,0x3c8d99d1,0x4fbf,0x4181,0xa8,0x2c,0xaf,0x66,0xbf,0x7b,0xd2,0x4e);" )

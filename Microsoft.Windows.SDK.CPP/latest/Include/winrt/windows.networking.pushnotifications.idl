@@ -183,7 +183,7 @@ namespace Windows
             [uuid(4701FEFE-0EDE-4A3F-AE78-BFA471496925)]
             interface IPushNotificationChannelManagerStatics3 : IInspectable
             {
-                HRESULT GetDefault([out] [retval] Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser** value);
+                HRESULT GetDefault([out] [retval] Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -218,12 +218,14 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [marshaling_behavior(agile)]
             runtimeclass PushNotificationChannel
             {
                 [default] interface Windows.Networking.PushNotifications.IPushNotificationChannel;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [marshaling_behavior(agile)]
             [static(Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2, Windows.Foundation.UniversalApiContract, 3.0)]
             [static(Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3, Windows.Foundation.UniversalApiContract, 4.0)]
@@ -234,7 +236,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass PushNotificationChannelManagerForUser
             {
                 [default] interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser;
@@ -242,12 +243,14 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [marshaling_behavior(agile)]
             runtimeclass PushNotificationReceivedEventArgs
             {
                 [default] interface Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [marshaling_behavior(agile)]
             runtimeclass RawNotification
             {
                 [default] interface Windows.Networking.PushNotifications.IRawNotification;

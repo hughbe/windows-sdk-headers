@@ -1,7 +1,7 @@
 cpp_quote("#include <winapifamily.h>")
 
-#pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+#pragma region Desktop or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 
 //------------------------------------------------------------------------------
 // File: MFTransform.idl
@@ -14,11 +14,11 @@ cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 
 import "mfobjects.idl";
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 // Per-buffer flags that apply to input buffers
 enum _MFT_INPUT_DATA_BUFFER_FLAGS {
@@ -468,7 +468,7 @@ interface IMFTransform : IUnknown
 
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 
@@ -515,8 +515,8 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 cpp_quote( "//" )
 cpp_quote( "// Define the MFT methods back so we don't accidentally hose the IMediaObject interface." )
@@ -612,7 +612,7 @@ cpp_quote(" EXTERN_C const DECLSPEC_SELECTANY GUID MFT_AUDIO_DECODER_SPATIAL_MET
 #endif //(NTDDI_VERSION >= NTDDI_WIN10_RS2)
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
@@ -779,8 +779,8 @@ cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN10 ) ")
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN8) ")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 // MF_SA_REQUIRED_SAMPLE_COUNT_PROGRESSIVE
 // Data type: UINT32
@@ -906,15 +906,15 @@ cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_ENCODER_SUPPORTS_CONFIG_E
 // that the HMFT is using for processing. This is only for reference and
 // is not used/verified by the topology
 cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_ENUM_HARDWARE_VENDOR_ID_Attribute =  { 0x3aecb0cc, 0x35b, 0x4bcc, { 0x81, 0x85, 0x2b, 0x8d, 0x55, 0x1e, 0xf3, 0xaf } };")
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN8) ")
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN7) ")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 // MF_TRANSFORM_ASYNC
 // Data type: UINT32
@@ -1051,7 +1051,7 @@ cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_CODEC_MERIT_Attribute = {
 cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_ENUM_TRANSCODE_ONLY_ATTRIBUTE = { 0x111ea8cd, 0xb62a, 0x4bdb, { 0x89, 0xf6, 0x67, 0xff, 0xcd, 0xc2, 0x45, 0x8b } };" )
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 ///////////////////////////////////////////////////////////////////////////////

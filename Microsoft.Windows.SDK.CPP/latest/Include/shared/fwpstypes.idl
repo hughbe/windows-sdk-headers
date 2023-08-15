@@ -281,6 +281,7 @@ cpp_quote("#define FWPS_L2_INCOMING_FLAG_IS_RAW_IPV6_FRAMING             (0x0000
 cpp_quote("#define FWPS_L2_INCOMING_FLAG_RECLASSIFY_MULTI_DESTINATION    (0x00000008)")
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN8)")
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN7)")
+cpp_quote("#define FWPS_INCOMING_FLAG_RESERVED0                          (0x00000100)")
 
 cpp_quote("#define FWPS_RIGHT_ACTION_WRITE          (0x00000001)")
 

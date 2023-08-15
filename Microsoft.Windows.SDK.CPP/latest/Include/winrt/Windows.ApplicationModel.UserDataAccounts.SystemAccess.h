@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.userdataaccounts.systemaccess.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace SystemAccess {
                     interface IDeviceAccountConfiguration;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace SystemAccess {
                     interface IDeviceAccountConfiguration2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration2 ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration2_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace SystemAccess {
                     interface IUserDataAccountSystemAccessManagerStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace SystemAccess {
                     interface IUserDataAccountSystemAccessManagerStatics2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics2 ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics2_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace UserDataAccounts {
                 namespace SystemAccess {
                     class DeviceAccountConfiguration;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -369,7 +365,7 @@ IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::Device
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration*> __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration*>
@@ -401,7 +397,7 @@ IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::Device
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration*> __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration*>
@@ -433,7 +429,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration*>
@@ -465,7 +461,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserDataAccounts__CSystemAccess__CDeviceAccountConfiguration ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration*>
@@ -495,7 +491,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -524,7 +520,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -553,7 +549,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -583,7 +579,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> : IAsyncOperationComp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_HSTRING*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -613,7 +609,7 @@ IAsyncOperation<__FIVectorView_1_HSTRING*> : IAsyncOperation_impl<__FIVectorView
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_HSTRING*> __FIAsyncOperation_1___FIVectorView_1_HSTRING_t;
 #define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<HSTRING>*>
@@ -642,7 +638,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -671,7 +667,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -689,8 +685,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -701,8 +697,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -710,8 +706,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -724,9 +720,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -735,9 +731,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -754,10 +750,10 @@ namespace ABI {
                     
                     typedef enum DeviceAccountAuthenticationType : int DeviceAccountAuthenticationType;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -767,10 +763,10 @@ namespace ABI {
                     
                     typedef enum DeviceAccountIconId : int DeviceAccountIconId;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -780,10 +776,10 @@ namespace ABI {
                     
                     typedef enum DeviceAccountMailAgeFilter : int DeviceAccountMailAgeFilter;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -793,10 +789,10 @@ namespace ABI {
                     
                     typedef enum DeviceAccountServerType : int DeviceAccountServerType;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -806,10 +802,10 @@ namespace ABI {
                     
                     typedef enum DeviceAccountSyncScheduleKind : int DeviceAccountSyncScheduleKind;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -850,10 +846,10 @@ namespace ABI {
                         DeviceAccountAuthenticationType_SingleSignOn = 2,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -881,10 +877,10 @@ namespace ABI {
                         DeviceAccountIconId_Generic = 3,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -915,10 +911,10 @@ namespace ABI {
                         DeviceAccountMailAgeFilter_Last90Days = 6,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -945,10 +941,10 @@ namespace ABI {
                         DeviceAccountServerType_Imap = 2,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -979,10 +975,10 @@ namespace ABI {
                         DeviceAccountSyncScheduleKind_AsItemsArrive = 6,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1042,22 +1038,22 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EmailSyncEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EmailSyncEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ContactsSyncEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ContactsSyncEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CalendarSyncEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CalendarSyncEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncomingServerAddress(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1072,10 +1068,10 @@ namespace ABI {
                             /* [in] */INT32 value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncomingServerRequiresSsl(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncomingServerRequiresSsl(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncomingServerUsername(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1096,10 +1092,10 @@ namespace ABI {
                             /* [in] */INT32 value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OutgoingServerRequiresSsl(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_OutgoingServerRequiresSsl(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OutgoingServerUsername(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1112,10 +1108,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDeviceAccountConfiguration=_uuidof(IDeviceAccountConfiguration);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration_INTERFACE_DEFINED__) */
@@ -1166,10 +1162,10 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsExternallyManaged(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsExternallyManaged(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AccountIconId(
                             /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId * value
@@ -1184,7 +1180,7 @@ namespace ABI {
                             /* [in] */ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSsoAuthenticationSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SsoAccountId(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1193,13 +1189,13 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlwaysDownloadFullMessage(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlwaysDownloadFullMessage(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DoesPolicyAllowMailSync(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SyncScheduleKind(
                             /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind * value
@@ -1214,16 +1210,16 @@ namespace ABI {
                             /* [in] */ABI::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsClientAuthenticationCertificateRequired(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsClientAuthenticationCertificateRequired(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoSelectAuthenticationCertificate(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoSelectAuthenticationCertificate(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AuthenticationCertificateId(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1250,10 +1246,10 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CardDavRequiresSsl(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CardDavRequiresSsl(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CalDavServerUrl(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IUriRuntimeClass * * value
@@ -1262,22 +1258,22 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CalDavRequiresSsl(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CalDavRequiresSsl(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WasModifiedByUser(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_WasModifiedByUser(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WasIncomingServerCertificateHashConfirmed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_WasIncomingServerCertificateHashConfirmed(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncomingServerCertificateHash(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1286,22 +1282,22 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOutgoingServerAuthenticationRequired(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsOutgoingServerAuthenticationRequired(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOutgoingServerAuthenticationEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsOutgoingServerAuthenticationEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WasOutgoingServerCertificateHashConfirmed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_WasOutgoingServerCertificateHashConfirmed(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OutgoingServerCertificateHash(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1310,20 +1306,20 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSyncScheduleManagedBySystem(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSyncScheduleManagedBySystem(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IDeviceAccountConfiguration2=_uuidof(IDeviceAccountConfiguration2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIDeviceAccountConfiguration2_INTERFACE_DEFINED__) */
@@ -1364,10 +1360,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserDataAccountSystemAccessManagerStatics=_uuidof(IUserDataAccountSystemAccessManagerStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics_INTERFACE_DEFINED__) */
@@ -1420,10 +1416,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserDataAccountSystemAccessManagerStatics2=_uuidof(IUserDataAccountSystemAccessManagerStatics2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* UserDataAccounts */
-    } /* SystemAccess */} /* ABI */
+                } /* SystemAccess */
+            } /* UserDataAccounts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserDataAccounts_CSystemAccess_CIUserDataAccountSystemAccessManagerStatics2_INTERFACE_DEFINED__) */

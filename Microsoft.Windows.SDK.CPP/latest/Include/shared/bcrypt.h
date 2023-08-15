@@ -951,6 +951,30 @@ typedef struct _BCRYPT_MULTI_OBJECT_LENGTH_STRUCT
 #endif
 
 //
+// The TLS_CBC_HMAC_VERIFY flag provides a side-channel safe way of verifying TLS data records
+// from the CBC-HMAC cipher suites. See RFC 5246 section 6.2.3.2.
+// This flag is used in BCryptOpenAlgorithmProvider and in BCryptHashData.
+// For BCryptOpenAlgorithmProvider it ensures that you get a provider that supports this feature.
+// For BCryptHashData is changes the functionality.
+// The Input buffer now contains the whole TLS data record, consisting of the plaintext,
+// followed by the MAC value, followed by the padding, followed by the padding_length.
+// The function will compute the HMAC over the data already hashed plus the plaintext,
+// compare it to the MAC value, and verify that the padding is correct.
+// If all works out, it returns a success value; if anything fails it returns an error.
+// What makes this special is that the code path or the memory access pattern used to
+// do this verification does not depend on padding_length to stop attacks on the CBC encryption
+// that was used to decrypt this data.
+// This flag is only useful for TLS implementations, other callers should not use it.
+// This flag is only valid for HMAC-SHA1, HMAC-SHA256, and HMAC-SHA384.
+// This flag implies the BCRYPT_HASH_REUSABLE_FLAG.
+//
+// This flag is available staring in Windows 10 19H1, but we define it for all
+// NTDDI values to allow applications to dynamically test wethere the OS supports the
+// feature, and adjust accordingly.
+//
+#define BCRYPT_TLS_CBC_HMAC_VERIFY_FLAG          0x00000004
+
+//
 // The BUFFERS_LOCKED flag used in BCryptEncrypt/BCryptDecrypt signals that
 // the pbInput and pbOutput buffers have been locked (see MmProbeAndLockPages)
 // and CNG may not lock the buffers again.

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -178,6 +178,13 @@ struct WINRT_EBO IMapControl7 :
     IMapControl7(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IMapControl8 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IMapControl8>
+{
+    IMapControl8(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IMapControlBusinessLandmarkClickEventArgs :
     Windows::Foundation::IInspectable,
     impl::consume_t<IMapControlBusinessLandmarkClickEventArgs>
@@ -274,6 +281,13 @@ struct WINRT_EBO IMapControlStatics7 :
     impl::consume_t<IMapControlStatics7>
 {
     IMapControlStatics7(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IMapControlStatics8 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IMapControlStatics8>
+{
+    IMapControlStatics8(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IMapControlTransitFeatureClickEventArgs :

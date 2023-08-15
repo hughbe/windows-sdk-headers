@@ -15,6 +15,7 @@ import "Windows.Phone.idl";
 import "Windows.UI.idl";
 import "Windows.UI.Core.idl";
 import "Windows.UI.Popups.idl";
+import "Windows.UI.WindowManagement.idl";
 
 // Forward Declare
 namespace Windows
@@ -78,6 +79,25 @@ namespace Windows
 {
     namespace UI
     {
+        runtimeclass UIContext;
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
+        namespace WindowManagement
+        {
+            runtimeclass DisplayRegion;
+
+            runtimeclass WindowingEnvironment;
+        }
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
         namespace ViewManagement
         {
             apicontract ViewManagementViewScalingContract;
@@ -118,6 +138,10 @@ namespace Windows
 
             interface IApplicationView4;
 
+            interface IApplicationView7;
+
+            interface IApplicationView9;
+
             interface IApplicationViewConsolidatedEventArgs;
 
             interface IApplicationViewConsolidatedEventArgs2;
@@ -136,6 +160,8 @@ namespace Windows
 
             interface IApplicationViewStatics3;
 
+            interface IApplicationViewStatics4;
+
             interface IApplicationViewSwitcherStatics;
 
             interface IApplicationViewSwitcherStatics2;
@@ -148,6 +174,8 @@ namespace Windows
 
             interface IApplicationViewTransferContextStatics;
 
+            interface IApplicationViewWithContext;
+
             interface IInputPane;
 
             interface IInputPane2;
@@ -155,6 +183,8 @@ namespace Windows
             interface IInputPaneControl;
 
             interface IInputPaneStatics;
+
+            interface IInputPaneStatics2;
 
             interface IInputPaneVisibilityEventArgs;
 
@@ -175,6 +205,10 @@ namespace Windows
             interface IUISettings3;
 
             interface IUISettings4;
+
+            interface IUISettings5;
+
+            interface IUISettingsAutoHideScrollBarsChangedEventArgs;
 
             interface IUIViewSettings;
 
@@ -212,6 +246,8 @@ namespace Windows
 
             runtimeclass UISettings;
 
+            runtimeclass UISettingsAutoHideScrollBarsChangedEventArgs;
+
             runtimeclass UIViewSettings;
 
             runtimeclass ViewModePreferences;
@@ -241,6 +277,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.StatusBar*, IInspectable*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, IInspectable*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs*>;
             }
         }
     }
@@ -485,6 +523,24 @@ namespace Windows
                 HRESULT TryConsolidateAsync([out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.ViewManagement.ApplicationView)]
+            [uuid(A0369647-5FAF-5AA6-9C38-BEFBB12A071E)]
+            interface IApplicationView7 : IInspectable
+            {
+                [propget] HRESULT PersistedStateId([out] [retval] HSTRING* value);
+                [propput] HRESULT PersistedStateId([in] HSTRING value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.ViewManagement.ApplicationView)]
+            [uuid(9C6516F9-021A-5F01-93E5-9BDAD2647574)]
+            interface IApplicationView9 : IInspectable
+            {
+                [propget] HRESULT WindowingEnvironment([out] [retval] Windows.UI.WindowManagement.WindowingEnvironment** value);
+                HRESULT GetDisplayRegions([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.DisplayRegion*>** result);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs)]
             [uuid(514449EC-7EA2-4DE7-A6A6-7DFBAAEBB6FB)]
@@ -563,6 +619,15 @@ namespace Windows
                 [propput] HRESULT PreferredLaunchWindowingMode([in] Windows.UI.ViewManagement.ApplicationViewWindowingMode value);
                 [propget] HRESULT PreferredLaunchViewSize([out] [retval] Windows.Foundation.Size* value);
                 [propput] HRESULT PreferredLaunchViewSize([in] Windows.Foundation.Size value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.ViewManagement.ApplicationView)]
+            [uuid(08FD8D33-2611-5336-A315-D98E6366C9DB)]
+            interface IApplicationViewStatics4 : IInspectable
+            {
+                HRESULT ClearAllPersistedState();
+                HRESULT ClearPersistedState([in] HSTRING key);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -645,6 +710,14 @@ namespace Windows
                 [propget] HRESULT DataPackageFormatId([out] [retval] HSTRING* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.ViewManagement.ApplicationView)]
+            [uuid(BD55D512-9DC1-44FC-8501-666625DF60DC)]
+            interface IApplicationViewWithContext : IInspectable
+            {
+                [propget] HRESULT UIContext([out] [retval] Windows.UI.UIContext** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.ViewManagement.InputPane)]
             [uuid(640ADA70-06F3-4C87-A678-9829C9127C28)]
@@ -681,6 +754,14 @@ namespace Windows
             interface IInputPaneStatics : IInspectable
             {
                 HRESULT GetForCurrentView([out] [retval] Windows.UI.ViewManagement.InputPane** inputPane);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.ViewManagement.InputPane)]
+            [uuid(1B63529B-D9EC-4531-8445-71BAB9FB828E)]
+            interface IInputPaneStatics2 : IInspectable
+            {
+                HRESULT GetForUIContext([in] Windows.UI.UIContext* context, [out] [retval] Windows.UI.ViewManagement.InputPane** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -809,6 +890,23 @@ namespace Windows
                 [eventremove] HRESULT AdvancedEffectsEnabledChanged([in] EventRegistrationToken cookie);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.ViewManagement.UISettings)]
+            [uuid(5349D588-0CB5-5F05-BD34-706B3231F0BD)]
+            interface IUISettings5 : IInspectable
+            {
+                [propget] HRESULT AutoHideScrollBars([out] [retval] boolean* value);
+                [eventadd] HRESULT AutoHideScrollBarsChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT AutoHideScrollBarsChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs)]
+            [uuid(87AFD4B2-9146-5F02-8F6B-06D454174C0F)]
+            interface IUISettingsAutoHideScrollBarsChangedEventArgs : IInspectable
+            {
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.ViewManagement.UIViewSettings)]
             [uuid(C63657F6-8850-470D-88F8-455E16EA2C26)]
@@ -866,6 +964,7 @@ namespace Windows
             [static(Windows.UI.ViewManagement.IApplicationViewStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.UI.ViewManagement.IApplicationViewStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.UI.ViewManagement.IApplicationViewStatics3, Windows.Foundation.UniversalApiContract, 1.0)]
+            [static(Windows.UI.ViewManagement.IApplicationViewStatics4, Windows.Foundation.UniversalApiContract, 8.0)]
             [threading(both)]
             runtimeclass ApplicationView
             {
@@ -873,6 +972,9 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.ViewManagement.IApplicationView2;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.ViewManagement.IApplicationView3;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.ViewManagement.IApplicationView4;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationView7;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationView9;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationViewWithContext;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -918,6 +1020,7 @@ namespace Windows
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(standard)]
             [static(Windows.UI.ViewManagement.IInputPaneStatics, Windows.Foundation.UniversalApiContract, 1.0)]
+            [static(Windows.UI.ViewManagement.IInputPaneStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
             runtimeclass InputPane
             {
                 [default] interface Windows.UI.ViewManagement.IInputPane;
@@ -965,6 +1068,14 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.ViewManagement.IUISettings2;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.ViewManagement.IUISettings3;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.ViewManagement.IUISettings4;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IUISettings5;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass UISettingsAutoHideScrollBarsChangedEventArgs
+            {
+                [default] interface Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

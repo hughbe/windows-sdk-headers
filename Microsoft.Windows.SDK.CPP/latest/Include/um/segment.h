@@ -8185,6 +8185,19 @@ EXTERN_C const IID IID_IMSVidWebDVD2;
 
 
 
+/* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE IMSVidWebDVD2_put_Bookmark_Proxy( 
+    __RPC__in IMSVidWebDVD2 * This,
+    /* [in] */ __RPC__in BYTE *pData,
+    /* [in] */ DWORD dwDataLength);
+
+
+void __RPC_STUB IMSVidWebDVD2_put_Bookmark_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
 
 #endif 	/* __IMSVidWebDVD2_INTERFACE_DEFINED__ */
 

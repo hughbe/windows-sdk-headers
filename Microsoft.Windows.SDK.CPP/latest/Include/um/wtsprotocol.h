@@ -1532,6 +1532,7 @@ EXTERN_C const IID IID_IWRdsRemoteFXGraphicsConnection;
 /* interface __MIDL_itf_wtsprotocol_0000_0010 */
 /* [local] */ 
 
+#pragma deprecated(IWRdsRemoteFXGraphicsConnection)
 
 
 

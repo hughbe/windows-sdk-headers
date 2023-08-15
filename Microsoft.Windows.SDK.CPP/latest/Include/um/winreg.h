@@ -1389,6 +1389,7 @@ InitiateSystemShutdownExW(
 #define SHUTDOWN_RESTART_BOOTOPTIONS    0x00000400
 #define SHUTDOWN_SOFT_REBOOT            0x00000800
 #define SHUTDOWN_MOBILE_UI              0x00001000
+#define SHUTDOWN_ARSO                   0x00002000
 
 WINADVAPI
 DWORD

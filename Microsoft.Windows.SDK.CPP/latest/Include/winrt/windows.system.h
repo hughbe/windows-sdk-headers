@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -284,8 +280,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueueHandler;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueueHandler ABI::Windows::System::IDispatcherQueueHandler
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueueHandler_FWD_DEFINED__
@@ -296,8 +292,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppActivationResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppActivationResult ABI::Windows::System::IAppActivationResult
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppActivationResult_FWD_DEFINED__
@@ -308,8 +304,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfo;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfo ABI::Windows::System::IAppDiagnosticInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo_FWD_DEFINED__
@@ -320,8 +316,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfo2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfo2 ABI::Windows::System::IAppDiagnosticInfo2
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo2_FWD_DEFINED__
@@ -332,8 +328,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfo3;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfo3 ABI::Windows::System::IAppDiagnosticInfo3
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo3_FWD_DEFINED__
@@ -344,8 +340,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfoStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics ABI::Windows::System::IAppDiagnosticInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics_FWD_DEFINED__
@@ -356,8 +352,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfoStatics2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics2 ABI::Windows::System::IAppDiagnosticInfoStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics2_FWD_DEFINED__
@@ -368,8 +364,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfoWatcher;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher ABI::Windows::System::IAppDiagnosticInfoWatcher
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher_FWD_DEFINED__
@@ -380,8 +376,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfoWatcherEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcherEventArgs ABI::Windows::System::IAppDiagnosticInfoWatcherEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcherEventArgs_FWD_DEFINED__
@@ -392,8 +388,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppExecutionStateChangeResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppExecutionStateChangeResult ABI::Windows::System::IAppExecutionStateChangeResult
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppExecutionStateChangeResult_FWD_DEFINED__
@@ -404,8 +400,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppMemoryReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppMemoryReport ABI::Windows::System::IAppMemoryReport
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppMemoryReport_FWD_DEFINED__
@@ -416,8 +412,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppMemoryReport2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppMemoryReport2 ABI::Windows::System::IAppMemoryReport2
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppMemoryReport2_FWD_DEFINED__
@@ -428,8 +424,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppMemoryUsageLimitChangingEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppMemoryUsageLimitChangingEventArgs ABI::Windows::System::IAppMemoryUsageLimitChangingEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppMemoryUsageLimitChangingEventArgs_FWD_DEFINED__
@@ -440,8 +436,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupBackgroundTaskReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupBackgroundTaskReport ABI::Windows::System::IAppResourceGroupBackgroundTaskReport
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupBackgroundTaskReport_FWD_DEFINED__
@@ -452,8 +448,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupInfo;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupInfo ABI::Windows::System::IAppResourceGroupInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupInfo_FWD_DEFINED__
@@ -464,8 +460,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupInfo2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupInfo2 ABI::Windows::System::IAppResourceGroupInfo2
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupInfo2_FWD_DEFINED__
@@ -476,8 +472,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupInfoWatcher;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher ABI::Windows::System::IAppResourceGroupInfoWatcher
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher_FWD_DEFINED__
@@ -488,8 +484,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupInfoWatcherEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherEventArgs ABI::Windows::System::IAppResourceGroupInfoWatcherEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherEventArgs_FWD_DEFINED__
@@ -500,8 +496,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherExecutionStateChangedEventArgs ABI::Windows::System::IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherExecutionStateChangedEventArgs_FWD_DEFINED__
@@ -512,8 +508,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupMemoryReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupMemoryReport ABI::Windows::System::IAppResourceGroupMemoryReport
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupMemoryReport_FWD_DEFINED__
@@ -524,8 +520,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppResourceGroupStateReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppResourceGroupStateReport ABI::Windows::System::IAppResourceGroupStateReport
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppResourceGroupStateReport_FWD_DEFINED__
@@ -536,8 +532,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppUriHandlerHost;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppUriHandlerHost ABI::Windows::System::IAppUriHandlerHost
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppUriHandlerHost_FWD_DEFINED__
@@ -548,8 +544,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppUriHandlerHostFactory;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppUriHandlerHostFactory ABI::Windows::System::IAppUriHandlerHostFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppUriHandlerHostFactory_FWD_DEFINED__
@@ -560,8 +556,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppUriHandlerRegistration;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppUriHandlerRegistration ABI::Windows::System::IAppUriHandlerRegistration
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppUriHandlerRegistration_FWD_DEFINED__
@@ -572,8 +568,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppUriHandlerRegistrationManager;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManager ABI::Windows::System::IAppUriHandlerRegistrationManager
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManager_FWD_DEFINED__
@@ -584,8 +580,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppUriHandlerRegistrationManagerStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManagerStatics ABI::Windows::System::IAppUriHandlerRegistrationManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManagerStatics_FWD_DEFINED__
@@ -596,8 +592,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDateTimeSettingsStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDateTimeSettingsStatics ABI::Windows::System::IDateTimeSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIDateTimeSettingsStatics_FWD_DEFINED__
@@ -608,11 +604,23 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueue ABI::Windows::System::IDispatcherQueue
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            interface IDispatcherQueue2;
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2 ABI::Windows::System::IDispatcherQueue2
+
+#endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CIDispatcherQueueController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIDispatcherQueueController_FWD_DEFINED__
@@ -620,8 +628,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueueController;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueueController ABI::Windows::System::IDispatcherQueueController
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueueController_FWD_DEFINED__
@@ -632,8 +640,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueueControllerStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueueControllerStatics ABI::Windows::System::IDispatcherQueueControllerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueueControllerStatics_FWD_DEFINED__
@@ -644,8 +652,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueueShutdownStartingEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs ABI::Windows::System::IDispatcherQueueShutdownStartingEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs_FWD_DEFINED__
@@ -656,8 +664,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueueStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueueStatics ABI::Windows::System::IDispatcherQueueStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueueStatics_FWD_DEFINED__
@@ -668,8 +676,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueueTimer;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueueTimer ABI::Windows::System::IDispatcherQueueTimer
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueueTimer_FWD_DEFINED__
@@ -680,8 +688,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IFolderLauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIFolderLauncherOptions ABI::Windows::System::IFolderLauncherOptions
 
 #endif // ____x_ABI_CWindows_CSystem_CIFolderLauncherOptions_FWD_DEFINED__
@@ -692,8 +700,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IKnownUserPropertiesStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIKnownUserPropertiesStatics ABI::Windows::System::IKnownUserPropertiesStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIKnownUserPropertiesStatics_FWD_DEFINED__
@@ -704,8 +712,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILaunchUriResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILaunchUriResult ABI::Windows::System::ILaunchUriResult
 
 #endif // ____x_ABI_CWindows_CSystem_CILaunchUriResult_FWD_DEFINED__
@@ -716,8 +724,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherOptions ABI::Windows::System::ILauncherOptions
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherOptions_FWD_DEFINED__
@@ -728,8 +736,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherOptions2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherOptions2 ABI::Windows::System::ILauncherOptions2
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherOptions2_FWD_DEFINED__
@@ -740,8 +748,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherOptions3;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherOptions3 ABI::Windows::System::ILauncherOptions3
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherOptions3_FWD_DEFINED__
@@ -752,8 +760,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherOptions4;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherOptions4 ABI::Windows::System::ILauncherOptions4
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherOptions4_FWD_DEFINED__
@@ -764,8 +772,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherStatics ABI::Windows::System::ILauncherStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherStatics_FWD_DEFINED__
@@ -776,8 +784,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherStatics2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherStatics2 ABI::Windows::System::ILauncherStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherStatics2_FWD_DEFINED__
@@ -788,8 +796,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherStatics3;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherStatics3 ABI::Windows::System::ILauncherStatics3
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherStatics3_FWD_DEFINED__
@@ -800,8 +808,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherStatics4;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherStatics4 ABI::Windows::System::ILauncherStatics4
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherStatics4_FWD_DEFINED__
@@ -812,8 +820,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherStatics5;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherStatics5 ABI::Windows::System::ILauncherStatics5
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherStatics5_FWD_DEFINED__
@@ -824,8 +832,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherUIOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherUIOptions ABI::Windows::System::ILauncherUIOptions
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherUIOptions_FWD_DEFINED__
@@ -836,8 +844,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ILauncherViewOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CILauncherViewOptions ABI::Windows::System::ILauncherViewOptions
 
 #endif // ____x_ABI_CWindows_CSystem_CILauncherViewOptions_FWD_DEFINED__
@@ -848,8 +856,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IMemoryManagerStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIMemoryManagerStatics ABI::Windows::System::IMemoryManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIMemoryManagerStatics_FWD_DEFINED__
@@ -860,8 +868,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IMemoryManagerStatics2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIMemoryManagerStatics2 ABI::Windows::System::IMemoryManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CIMemoryManagerStatics2_FWD_DEFINED__
@@ -872,8 +880,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IMemoryManagerStatics3;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIMemoryManagerStatics3 ABI::Windows::System::IMemoryManagerStatics3
 
 #endif // ____x_ABI_CWindows_CSystem_CIMemoryManagerStatics3_FWD_DEFINED__
@@ -884,8 +892,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IMemoryManagerStatics4;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIMemoryManagerStatics4 ABI::Windows::System::IMemoryManagerStatics4
 
 #endif // ____x_ABI_CWindows_CSystem_CIMemoryManagerStatics4_FWD_DEFINED__
@@ -896,8 +904,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IProcessLauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIProcessLauncherOptions ABI::Windows::System::IProcessLauncherOptions
 
 #endif // ____x_ABI_CWindows_CSystem_CIProcessLauncherOptions_FWD_DEFINED__
@@ -908,8 +916,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IProcessLauncherResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIProcessLauncherResult ABI::Windows::System::IProcessLauncherResult
 
 #endif // ____x_ABI_CWindows_CSystem_CIProcessLauncherResult_FWD_DEFINED__
@@ -920,8 +928,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IProcessLauncherStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIProcessLauncherStatics ABI::Windows::System::IProcessLauncherStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIProcessLauncherStatics_FWD_DEFINED__
@@ -932,8 +940,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IProcessMemoryReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIProcessMemoryReport ABI::Windows::System::IProcessMemoryReport
 
 #endif // ____x_ABI_CWindows_CSystem_CIProcessMemoryReport_FWD_DEFINED__
@@ -944,8 +952,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IProtocolForResultsOperation;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIProtocolForResultsOperation ABI::Windows::System::IProtocolForResultsOperation
 
 #endif // ____x_ABI_CWindows_CSystem_CIProtocolForResultsOperation_FWD_DEFINED__
@@ -956,8 +964,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IRemoteLauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIRemoteLauncherOptions ABI::Windows::System::IRemoteLauncherOptions
 
 #endif // ____x_ABI_CWindows_CSystem_CIRemoteLauncherOptions_FWD_DEFINED__
@@ -968,8 +976,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IRemoteLauncherStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIRemoteLauncherStatics ABI::Windows::System::IRemoteLauncherStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIRemoteLauncherStatics_FWD_DEFINED__
@@ -980,8 +988,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IShutdownManagerStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIShutdownManagerStatics ABI::Windows::System::IShutdownManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIShutdownManagerStatics_FWD_DEFINED__
@@ -992,8 +1000,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IShutdownManagerStatics2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIShutdownManagerStatics2 ABI::Windows::System::IShutdownManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CIShutdownManagerStatics2_FWD_DEFINED__
@@ -1004,8 +1012,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ITimeZoneSettingsStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics ABI::Windows::System::ITimeZoneSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics_FWD_DEFINED__
@@ -1016,8 +1024,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface ITimeZoneSettingsStatics2;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics2 ABI::Windows::System::ITimeZoneSettingsStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics2_FWD_DEFINED__
@@ -1028,8 +1036,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1040,8 +1048,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserAuthenticationStatusChangeDeferral;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangeDeferral ABI::Windows::System::IUserAuthenticationStatusChangeDeferral
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangeDeferral_FWD_DEFINED__
@@ -1052,8 +1060,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserAuthenticationStatusChangingEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs ABI::Windows::System::IUserAuthenticationStatusChangingEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs_FWD_DEFINED__
@@ -1064,8 +1072,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserChangedEventArgs ABI::Windows::System::IUserChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserChangedEventArgs_FWD_DEFINED__
@@ -1076,8 +1084,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserDeviceAssociationChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserDeviceAssociationChangedEventArgs ABI::Windows::System::IUserDeviceAssociationChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserDeviceAssociationChangedEventArgs_FWD_DEFINED__
@@ -1088,8 +1096,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserDeviceAssociationStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserDeviceAssociationStatics ABI::Windows::System::IUserDeviceAssociationStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserDeviceAssociationStatics_FWD_DEFINED__
@@ -1100,8 +1108,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserPicker;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserPicker ABI::Windows::System::IUserPicker
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserPicker_FWD_DEFINED__
@@ -1112,8 +1120,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserPickerStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserPickerStatics ABI::Windows::System::IUserPickerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserPickerStatics_FWD_DEFINED__
@@ -1124,8 +1132,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserStatics;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserStatics ABI::Windows::System::IUserStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserStatics_FWD_DEFINED__
@@ -1136,8 +1144,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUserWatcher;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUserWatcher ABI::Windows::System::IUserWatcher
 
 #endif // ____x_ABI_CWindows_CSystem_CIUserWatcher_FWD_DEFINED__
@@ -1149,8 +1157,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppDiagnosticInfo;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1173,7 +1181,7 @@ IIterator<ABI::Windows::System::AppDiagnosticInfo*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::AppDiagnosticInfo*> __FIIterator_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIIterator_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1205,7 +1213,7 @@ IIterable<ABI::Windows::System::AppDiagnosticInfo*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::AppDiagnosticInfo*> __FIIterable_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIIterable_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1220,8 +1228,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppResourceGroupBackgroundTaskReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1244,7 +1252,7 @@ IIterator<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> __FIIterator_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t;
 #define __FIIterator_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::IAppResourceGroupBackgroundTaskReport*>
@@ -1276,7 +1284,7 @@ IIterable<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> __FIIterable_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t;
 #define __FIIterable_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::IAppResourceGroupBackgroundTaskReport*>
@@ -1291,8 +1299,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppResourceGroupInfo;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1315,7 +1323,7 @@ IIterator<ABI::Windows::System::AppResourceGroupInfo*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::AppResourceGroupInfo*> __FIIterator_1_Windows__CSystem__CAppResourceGroupInfo_t;
 #define __FIIterator_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CAppResourceGroupInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::IAppResourceGroupInfo*>
@@ -1347,7 +1355,7 @@ IIterable<ABI::Windows::System::AppResourceGroupInfo*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::AppResourceGroupInfo*> __FIIterable_1_Windows__CSystem__CAppResourceGroupInfo_t;
 #define __FIIterable_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CAppResourceGroupInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::IAppResourceGroupInfo*>
@@ -1362,8 +1370,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppUriHandlerHost;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1386,7 +1394,7 @@ IIterator<ABI::Windows::System::AppUriHandlerHost*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::AppUriHandlerHost*> __FIIterator_1_Windows__CSystem__CAppUriHandlerHost_t;
 #define __FIIterator_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CAppUriHandlerHost_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::IAppUriHandlerHost*>
@@ -1418,7 +1426,7 @@ IIterable<ABI::Windows::System::AppUriHandlerHost*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::AppUriHandlerHost*> __FIIterable_1_Windows__CSystem__CAppUriHandlerHost_t;
 #define __FIIterable_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CAppUriHandlerHost_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::IAppUriHandlerHost*>
@@ -1433,8 +1441,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1457,7 +1465,7 @@ IIterator<ABI::Windows::System::User*> : IIterator_impl<ABI::Windows::Foundation
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::User*> __FIIterator_1_Windows__CSystem__CUser_t;
 #define __FIIterator_1_Windows__CSystem__CUser ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CUser_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CUser ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::IUser*>
@@ -1489,7 +1497,7 @@ IIterable<ABI::Windows::System::User*> : IIterable_impl<ABI::Windows::Foundation
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::User*> __FIIterable_1_Windows__CSystem__CUser_t;
 #define __FIIterable_1_Windows__CSystem__CUser ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CUser_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CUser ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::IUser*>
@@ -1521,7 +1529,7 @@ IVectorView<ABI::Windows::System::AppDiagnosticInfo*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::AppDiagnosticInfo*> __FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1553,7 +1561,7 @@ IVectorView<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> __FIVectorView_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t;
 #define __FIVectorView_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IAppResourceGroupBackgroundTaskReport*>
@@ -1585,7 +1593,7 @@ IVectorView<ABI::Windows::System::AppResourceGroupInfo*> : IVectorView_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::AppResourceGroupInfo*> __FIVectorView_1_Windows__CSystem__CAppResourceGroupInfo_t;
 #define __FIVectorView_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CAppResourceGroupInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IAppResourceGroupInfo*>
@@ -1617,7 +1625,7 @@ IVectorView<ABI::Windows::System::AppUriHandlerHost*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::AppUriHandlerHost*> __FIVectorView_1_Windows__CSystem__CAppUriHandlerHost_t;
 #define __FIVectorView_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CAppUriHandlerHost_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IAppUriHandlerHost*>
@@ -1649,7 +1657,7 @@ IVectorView<ABI::Windows::System::User*> : IVectorView_impl<ABI::Windows::Founda
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::User*> __FIVectorView_1_Windows__CSystem__CUser_t;
 #define __FIVectorView_1_Windows__CSystem__CUser ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CUser_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CUser ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IUser*>
@@ -1681,7 +1689,7 @@ IVector<ABI::Windows::System::AppDiagnosticInfo*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::System::AppDiagnosticInfo*> __FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1713,7 +1721,7 @@ IVector<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> : IVector_i
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::System::AppResourceGroupBackgroundTaskReport*> __FIVector_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t;
 #define __FIVector_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppResourceGroupBackgroundTaskReport*>
@@ -1745,7 +1753,7 @@ IVector<ABI::Windows::System::AppResourceGroupInfo*> : IVector_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::System::AppResourceGroupInfo*> __FIVector_1_Windows__CSystem__CAppResourceGroupInfo_t;
 #define __FIVector_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CAppResourceGroupInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSystem__CAppResourceGroupInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppResourceGroupInfo*>
@@ -1777,7 +1785,7 @@ IVector<ABI::Windows::System::AppUriHandlerHost*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::System::AppUriHandlerHost*> __FIVector_1_Windows__CSystem__CAppUriHandlerHost_t;
 #define __FIVector_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CAppUriHandlerHost_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppUriHandlerHost*>
@@ -1792,8 +1800,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppMemoryUsageLimitChangingEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1816,7 +1824,7 @@ IEventHandler<ABI::Windows::System::AppMemoryUsageLimitChangingEventArgs*> : IEv
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::System::AppMemoryUsageLimitChangingEventArgs*> __FIEventHandler_1_Windows__CSystem__CAppMemoryUsageLimitChangingEventArgs_t;
 #define __FIEventHandler_1_Windows__CSystem__CAppMemoryUsageLimitChangingEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CSystem__CAppMemoryUsageLimitChangingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CSystem__CAppMemoryUsageLimitChangingEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::System::IAppMemoryUsageLimitChangingEventArgs*>
@@ -1831,8 +1839,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class UserDeviceAssociationChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1855,7 +1863,7 @@ IEventHandler<ABI::Windows::System::UserDeviceAssociationChangedEventArgs*> : IE
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::System::UserDeviceAssociationChangedEventArgs*> __FIEventHandler_1_Windows__CSystem__CUserDeviceAssociationChangedEventArgs_t;
 #define __FIEventHandler_1_Windows__CSystem__CUserDeviceAssociationChangedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CSystem__CUserDeviceAssociationChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CSystem__CUserDeviceAssociationChangedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::System::IUserDeviceAssociationChangedEventArgs*>
@@ -1887,7 +1895,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSystem__CUser*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSystem__CUser*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CUser_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CUser ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CUser_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSystem__CUser ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IUser*>*>
@@ -1919,7 +1927,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CSystem__CUser*> : IAsyncOperation_imp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CSystem__CUser*> __FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CUser_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CUser ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CUser_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CUser ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IUser*>*>
@@ -1951,7 +1959,7 @@ IAsyncOperationCompletedHandler<__FIVector_1_Windows__CSystem__CAppDiagnosticInf
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CSystem__CAppDiagnosticInfo*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppDiagnosticInfo*>*>
@@ -1983,7 +1991,7 @@ IAsyncOperation<__FIVector_1_Windows__CSystem__CAppDiagnosticInfo*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_Windows__CSystem__CAppDiagnosticInfo*> __FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppDiagnosticInfo*>*>
@@ -2015,7 +2023,7 @@ IAsyncOperationCompletedHandler<__FIVector_1_Windows__CSystem__CAppUriHandlerHos
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CSystem__CAppUriHandlerHost*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppUriHandlerHost*>*>
@@ -2047,7 +2055,7 @@ IAsyncOperation<__FIVector_1_Windows__CSystem__CAppUriHandlerHost*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_Windows__CSystem__CAppUriHandlerHost*> __FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost_t;
 #define __FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVector_1_Windows__CSystem__CAppUriHandlerHost ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppUriHandlerHost*>*>
@@ -2062,8 +2070,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppActivationResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -2086,7 +2094,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::AppActivationResult*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::AppActivationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppActivationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppActivationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppActivationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppActivationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::IAppActivationResult*>
@@ -2118,7 +2126,7 @@ IAsyncOperation<ABI::Windows::System::AppActivationResult*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::AppActivationResult*> __FIAsyncOperation_1_Windows__CSystem__CAppActivationResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CAppActivationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CAppActivationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CAppActivationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::IAppActivationResult*>
@@ -2133,8 +2141,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppExecutionStateChangeResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -2157,7 +2165,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::AppExecutionStateChangeRes
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::AppExecutionStateChangeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppExecutionStateChangeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppExecutionStateChangeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppExecutionStateChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAppExecutionStateChangeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::IAppExecutionStateChangeResult*>
@@ -2189,7 +2197,7 @@ IAsyncOperation<ABI::Windows::System::AppExecutionStateChangeResult*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::AppExecutionStateChangeResult*> __FIAsyncOperation_1_Windows__CSystem__CAppExecutionStateChangeResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CAppExecutionStateChangeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CAppExecutionStateChangeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CAppExecutionStateChangeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::IAppExecutionStateChangeResult*>
@@ -2204,8 +2212,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             enum AutoUpdateTimeZoneStatus : int;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAutoUpdateTimeZoneStatus_USE
@@ -2226,7 +2234,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::AutoUpdateTimeZoneSta
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::AutoUpdateTimeZoneStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAutoUpdateTimeZoneStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAutoUpdateTimeZoneStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAutoUpdateTimeZoneStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CAutoUpdateTimeZoneStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::AutoUpdateTimeZoneStatus>
@@ -2256,7 +2264,7 @@ IAsyncOperation<enum ABI::Windows::System::AutoUpdateTimeZoneStatus> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::AutoUpdateTimeZoneStatus> __FIAsyncOperation_1_Windows__CSystem__CAutoUpdateTimeZoneStatus_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CAutoUpdateTimeZoneStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CAutoUpdateTimeZoneStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CAutoUpdateTimeZoneStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::AutoUpdateTimeZoneStatus>
@@ -2270,8 +2278,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             enum DiagnosticAccessStatus : int;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CDiagnosticAccessStatus_USE
@@ -2292,7 +2300,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::DiagnosticAccessStatu
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::DiagnosticAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CDiagnosticAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CDiagnosticAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CDiagnosticAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CDiagnosticAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::DiagnosticAccessStatus>
@@ -2322,7 +2330,7 @@ IAsyncOperation<enum ABI::Windows::System::DiagnosticAccessStatus> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::DiagnosticAccessStatus> __FIAsyncOperation_1_Windows__CSystem__CDiagnosticAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CDiagnosticAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CDiagnosticAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CDiagnosticAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::DiagnosticAccessStatus>
@@ -2336,8 +2344,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             enum LaunchQuerySupportStatus : int;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchQuerySupportStatus_USE
@@ -2358,7 +2366,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::LaunchQuerySupportSta
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::LaunchQuerySupportStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchQuerySupportStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchQuerySupportStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchQuerySupportStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchQuerySupportStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::LaunchQuerySupportStatus>
@@ -2388,7 +2396,7 @@ IAsyncOperation<enum ABI::Windows::System::LaunchQuerySupportStatus> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::LaunchQuerySupportStatus> __FIAsyncOperation_1_Windows__CSystem__CLaunchQuerySupportStatus_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CLaunchQuerySupportStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CLaunchQuerySupportStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CLaunchQuerySupportStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::LaunchQuerySupportStatus>
@@ -2402,8 +2410,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class LaunchUriResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2426,7 +2434,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::LaunchUriResult*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::LaunchUriResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::ILaunchUriResult*>
@@ -2458,7 +2466,7 @@ IAsyncOperation<ABI::Windows::System::LaunchUriResult*> : IAsyncOperation_impl<A
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::LaunchUriResult*> __FIAsyncOperation_1_Windows__CSystem__CLaunchUriResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CLaunchUriResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CLaunchUriResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CLaunchUriResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::ILaunchUriResult*>
@@ -2473,8 +2481,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             enum LaunchUriStatus : int;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriStatus_USE
@@ -2495,7 +2503,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::LaunchUriStatus> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::LaunchUriStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CLaunchUriStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::LaunchUriStatus>
@@ -2525,7 +2533,7 @@ IAsyncOperation<enum ABI::Windows::System::LaunchUriStatus> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::LaunchUriStatus> __FIAsyncOperation_1_Windows__CSystem__CLaunchUriStatus_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CLaunchUriStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CLaunchUriStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CLaunchUriStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::LaunchUriStatus>
@@ -2539,8 +2547,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class ProcessLauncherResult;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x20000
@@ -2563,7 +2571,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::ProcessLauncherResult*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::ProcessLauncherResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CProcessLauncherResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CProcessLauncherResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CProcessLauncherResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CProcessLauncherResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::IProcessLauncherResult*>
@@ -2595,7 +2603,7 @@ IAsyncOperation<ABI::Windows::System::ProcessLauncherResult*> : IAsyncOperation_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::ProcessLauncherResult*> __FIAsyncOperation_1_Windows__CSystem__CProcessLauncherResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CProcessLauncherResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CProcessLauncherResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CProcessLauncherResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::IProcessLauncherResult*>
@@ -2610,8 +2618,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             enum RemoteLaunchUriStatus : int;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteLaunchUriStatus_USE
@@ -2632,7 +2640,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::RemoteLaunchUriStatus
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::RemoteLaunchUriStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteLaunchUriStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteLaunchUriStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteLaunchUriStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteLaunchUriStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteLaunchUriStatus>
@@ -2662,7 +2670,7 @@ IAsyncOperation<enum ABI::Windows::System::RemoteLaunchUriStatus> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::RemoteLaunchUriStatus> __FIAsyncOperation_1_Windows__CSystem__CRemoteLaunchUriStatus_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CRemoteLaunchUriStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CRemoteLaunchUriStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CRemoteLaunchUriStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::RemoteLaunchUriStatus>
@@ -2693,7 +2701,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::User*> : IAsyncOperationCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::User*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUser_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUser ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUser_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUser ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::IUser*>
@@ -2725,7 +2733,7 @@ IAsyncOperation<ABI::Windows::System::User*> : IAsyncOperation_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::User*> __FIAsyncOperation_1_Windows__CSystem__CUser_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CUser ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CUser_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CUser ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::IUser*>
@@ -2743,9 +2751,9 @@ namespace ABI {
         namespace Gaming {
             namespace Input {
                 interface IGameController;
-            } /* Windows */
+            } /* Input */
         } /* Gaming */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CInput_CIGameController ABI::Windows::Gaming::Input::IGameController
 
 #endif // ____x_ABI_CWindows_CGaming_CInput_CIGameController_FWD_DEFINED__
@@ -2755,8 +2763,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class UserChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2780,7 +2788,7 @@ ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::S
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::System::UserChangedEventArgs*> __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Gaming::Input::IGameController*,ABI::Windows::System::IUserChangedEventArgs*>
@@ -2796,8 +2804,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppDiagnosticInfoWatcher;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2821,7 +2829,7 @@ ITypedEventHandler<ABI::Windows::System::AppDiagnosticInfoWatcher*,IInspectable*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::AppDiagnosticInfoWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IAppDiagnosticInfoWatcher*,IInspectable*>
@@ -2837,8 +2845,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppDiagnosticInfoWatcherEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -2862,7 +2870,7 @@ ITypedEventHandler<ABI::Windows::System::AppDiagnosticInfoWatcher*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::AppDiagnosticInfoWatcher*,ABI::Windows::System::AppDiagnosticInfoWatcherEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IAppDiagnosticInfoWatcher*,ABI::Windows::System::IAppDiagnosticInfoWatcherEventArgs*>
@@ -2878,8 +2886,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppResourceGroupInfoWatcher;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2903,7 +2911,7 @@ ITypedEventHandler<ABI::Windows::System::AppResourceGroupInfoWatcher*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::AppResourceGroupInfoWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IAppResourceGroupInfoWatcher*,IInspectable*>
@@ -2919,8 +2927,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppResourceGroupInfoWatcherEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -2944,7 +2952,7 @@ ITypedEventHandler<ABI::Windows::System::AppResourceGroupInfoWatcher*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::AppResourceGroupInfoWatcher*,ABI::Windows::System::AppResourceGroupInfoWatcherEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IAppResourceGroupInfoWatcher*,ABI::Windows::System::IAppResourceGroupInfoWatcherEventArgs*>
@@ -2961,8 +2969,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppResourceGroupInfoWatcherExecutionStateChangedEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -2986,7 +2994,7 @@ ITypedEventHandler<ABI::Windows::System::AppResourceGroupInfoWatcher*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::AppResourceGroupInfoWatcher*,ABI::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IAppResourceGroupInfoWatcher*,ABI::Windows::System::IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs*>
@@ -3002,8 +3010,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class DispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3027,7 +3035,7 @@ ITypedEventHandler<ABI::Windows::System::DispatcherQueue*,IInspectable*> : IType
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::DispatcherQueue*,IInspectable*> __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IDispatcherQueue*,IInspectable*>
@@ -3043,8 +3051,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class DispatcherQueueShutdownStartingEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -3068,7 +3076,7 @@ ITypedEventHandler<ABI::Windows::System::DispatcherQueue*,ABI::Windows::System::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::DispatcherQueue*,ABI::Windows::System::DispatcherQueueShutdownStartingEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IDispatcherQueue*,ABI::Windows::System::IDispatcherQueueShutdownStartingEventArgs*>
@@ -3084,8 +3092,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class DispatcherQueueTimer;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3109,7 +3117,7 @@ ITypedEventHandler<ABI::Windows::System::DispatcherQueueTimer*,IInspectable*> : 
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::DispatcherQueueTimer*,IInspectable*> __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IDispatcherQueueTimer*,IInspectable*>
@@ -3124,8 +3132,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class UserWatcher;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3149,7 +3157,7 @@ ITypedEventHandler<ABI::Windows::System::UserWatcher*,IInspectable*> : ITypedEve
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::UserWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IUserWatcher*,IInspectable*>
@@ -3165,8 +3173,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class UserAuthenticationStatusChangingEventArgs;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3190,7 +3198,7 @@ ITypedEventHandler<ABI::Windows::System::UserWatcher*,ABI::Windows::System::User
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::UserWatcher*,ABI::Windows::System::UserAuthenticationStatusChangingEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IUserWatcher*,ABI::Windows::System::IUserAuthenticationStatusChangingEventArgs*>
@@ -3225,7 +3233,7 @@ ITypedEventHandler<ABI::Windows::System::UserWatcher*,ABI::Windows::System::User
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::UserWatcher*,ABI::Windows::System::UserChangedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::IUserWatcher*,ABI::Windows::System::IUserChangedEventArgs*>
@@ -3242,9 +3250,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_FWD_DEFINED__
@@ -3253,9 +3261,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_FWD_DEFINED__
@@ -3281,7 +3289,7 @@ IIterator<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -3313,7 +3321,7 @@ IIterable<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -3345,7 +3353,7 @@ IVectorView<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -3377,7 +3385,7 @@ IVector<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -3394,8 +3402,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -3421,7 +3429,7 @@ IIterator<ABI::Windows::Storage::IStorageItem*> : IIterator_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::IStorageItem*> __FIIterator_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageItem*>
@@ -3453,7 +3461,7 @@ IIterable<ABI::Windows::Storage::IStorageItem*> : IIterable_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::IStorageItem*> __FIIterable_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageItem*>
@@ -3485,7 +3493,7 @@ IVectorView<ABI::Windows::Storage::IStorageItem*> : IVectorView_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::IStorageItem*> __FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>
@@ -3517,7 +3525,7 @@ IVector<ABI::Windows::Storage::IStorageItem*> : IVector_impl<ABI::Windows::Stora
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::IStorageItem*> __FIVector_1_Windows__CStorage__CIStorageItem_t;
 #define __FIVector_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::IStorageItem*>
@@ -3548,7 +3556,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -3578,7 +3586,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -3608,7 +3616,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -3638,7 +3646,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -3668,7 +3676,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -3697,7 +3705,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -3727,7 +3735,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -3757,7 +3765,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -3786,7 +3794,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -3815,7 +3823,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -3829,8 +3837,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -3838,8 +3846,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInfo ABI::Windows::ApplicationModel::IAppInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -3865,7 +3873,7 @@ IIterator<ABI::Windows::ApplicationModel::AppInfo*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::AppInfo*> __FIIterator_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -3897,7 +3905,7 @@ IIterable<ABI::Windows::ApplicationModel::AppInfo*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::AppInfo*> __FIIterable_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -3929,7 +3937,7 @@ IVectorView<ABI::Windows::ApplicationModel::AppInfo*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::AppInfo*> __FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -3961,7 +3969,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>*>
@@ -3993,7 +4001,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>*>
@@ -4009,8 +4017,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CPoint_USE
@@ -4031,7 +4039,7 @@ IReference<struct ABI::Windows::Foundation::Point> : IReference_impl<struct ABI:
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Point> __FIReference_1_Windows__CFoundation__CPoint_t;
 #define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Point>
@@ -4046,8 +4054,8 @@ namespace ABI {
         namespace Foundation {
             struct Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CRect_USE
@@ -4068,7 +4076,7 @@ IReference<struct ABI::Windows::Foundation::Rect> : IReference_impl<struct ABI::
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Rect> __FIReference_1_Windows__CFoundation__CRect_t;
 #define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CRect_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Rect>
@@ -4098,7 +4106,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -4127,7 +4135,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -4156,7 +4164,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -4185,7 +4193,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -4214,7 +4222,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -4244,7 +4252,7 @@ IAsyncOperationCompletedHandler<IInspectable*> : IAsyncOperationCompletedHandler
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<IInspectable*> __FIAsyncOperationCompletedHandler_1_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<IInspectable*>
@@ -4274,7 +4282,7 @@ IAsyncOperation<IInspectable*> : IAsyncOperation_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<IInspectable*> __FIAsyncOperation_1_IInspectable_t;
 #define __FIAsyncOperation_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_IInspectable ABI::Windows::Foundation::IAsyncOperation<IInspectable*>
@@ -4291,9 +4299,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -4319,7 +4327,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IProperty
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IPropertySet*> __FIAsyncOperationCompletedHandler_1___F__CIPropertySet_t;
 #define __FIAsyncOperationCompletedHandler_1___F__CIPropertySet ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___F__CIPropertySet ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IPropertySet*>
@@ -4351,7 +4359,7 @@ IAsyncOperation<ABI::Windows::Foundation::Collections::IPropertySet*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Foundation::Collections::IPropertySet*> __FIAsyncOperation_1___F__CIPropertySet_t;
 #define __FIAsyncOperation_1___F__CIPropertySet ABI::Windows::Foundation::__FIAsyncOperation_1___F__CIPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___F__CIPropertySet ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IPropertySet*>
@@ -4369,9 +4377,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -4397,7 +4405,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -4429,7 +4437,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -4451,9 +4459,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4465,15 +4473,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -4481,8 +4489,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -4494,8 +4502,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -4507,8 +4515,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4516,8 +4524,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4525,16 +4533,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -4542,8 +4550,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -4561,8 +4569,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -4574,8 +4582,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -4589,9 +4597,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 class StorageFileQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_FWD_DEFINED__
@@ -4600,9 +4608,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageFileQueryResult;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult ABI::Windows::Storage::Search::IStorageFileQueryResult
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageFileQueryResult_FWD_DEFINED__
@@ -4615,8 +4623,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4628,9 +4636,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -4643,9 +4651,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -4664,9 +4672,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemConnectionRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_FWD_DEFINED__
@@ -4675,9 +4683,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_FWD_DEFINED__
@@ -4693,9 +4701,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4707,10 +4715,9 @@ namespace ABI {
                 
                 typedef enum ViewSizePreference : int ViewSizePreference;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
-
+    } /* Windows */} /* ABI */
 
 
 
@@ -4722,8 +4729,8 @@ namespace ABI {
             
             typedef enum AppDiagnosticInfoWatcherStatus : int AppDiagnosticInfoWatcherStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4731,8 +4738,8 @@ namespace ABI {
             
             typedef enum AppMemoryUsageLevel : int AppMemoryUsageLevel;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4740,8 +4747,8 @@ namespace ABI {
             
             typedef enum AppResourceGroupEnergyQuotaState : int AppResourceGroupEnergyQuotaState;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4749,8 +4756,8 @@ namespace ABI {
             
             typedef enum AppResourceGroupExecutionState : int AppResourceGroupExecutionState;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4758,8 +4765,8 @@ namespace ABI {
             
             typedef enum AppResourceGroupInfoWatcherStatus : int AppResourceGroupInfoWatcherStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4767,8 +4774,8 @@ namespace ABI {
             
             typedef enum AutoUpdateTimeZoneStatus : int AutoUpdateTimeZoneStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4776,8 +4783,8 @@ namespace ABI {
             
             typedef enum DiagnosticAccessStatus : int DiagnosticAccessStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4785,8 +4792,8 @@ namespace ABI {
             
             typedef enum DispatcherQueuePriority : int DispatcherQueuePriority;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4794,8 +4801,8 @@ namespace ABI {
             
             typedef enum LaunchFileStatus : int LaunchFileStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4803,8 +4810,8 @@ namespace ABI {
             
             typedef enum LaunchQuerySupportStatus : int LaunchQuerySupportStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4812,8 +4819,8 @@ namespace ABI {
             
             typedef enum LaunchQuerySupportType : int LaunchQuerySupportType;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4821,8 +4828,8 @@ namespace ABI {
             
             typedef enum LaunchUriStatus : int LaunchUriStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4830,8 +4837,8 @@ namespace ABI {
             
             typedef enum PowerState : int PowerState;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4839,8 +4846,8 @@ namespace ABI {
             
             typedef enum ProcessorArchitecture : int ProcessorArchitecture;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4848,8 +4855,8 @@ namespace ABI {
             
             typedef enum RemoteLaunchUriStatus : int RemoteLaunchUriStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4857,8 +4864,8 @@ namespace ABI {
             
             typedef enum ShutdownKind : int ShutdownKind;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4866,8 +4873,8 @@ namespace ABI {
             
             typedef enum UserAuthenticationStatus : int UserAuthenticationStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4875,8 +4882,8 @@ namespace ABI {
             
             typedef enum UserPictureSize : int UserPictureSize;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4884,8 +4891,8 @@ namespace ABI {
             
             typedef enum UserType : int UserType;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4893,8 +4900,8 @@ namespace ABI {
             
             typedef enum UserWatcherStatus : int UserWatcherStatus;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4902,8 +4909,8 @@ namespace ABI {
             
             typedef enum VirtualKey : int VirtualKey;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4911,8 +4918,9 @@ namespace ABI {
             
             typedef enum VirtualKeyModifiers : unsigned int VirtualKeyModifiers;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -4995,8 +5003,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppMemoryReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5009,16 +5017,16 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppResourceGroupMemoryReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace System {
             class AppResourceGroupStateReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5026,16 +5034,16 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppUriHandlerRegistration;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace System {
             class AppUriHandlerRegistrationManager;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5044,8 +5052,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class DispatcherQueueController;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5054,8 +5062,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class FolderLauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5065,16 +5073,16 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class LauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace System {
             class LauncherUIOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5083,8 +5091,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class ProcessLauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5092,16 +5100,16 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class ProcessMemoryReport;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace System {
             class ProtocolForResultsOperation;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5109,8 +5117,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class RemoteLauncherOptions;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5120,8 +5128,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class UserAuthenticationStatusChangeDeferral;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5132,9 +5140,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class UserPicker;
-        } /* Windows */
-    } /* System */} /* ABI */
-
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5169,8 +5176,8 @@ namespace ABI {
                 AppDiagnosticInfoWatcherStatus_Aborted = 5,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5200,8 +5207,8 @@ namespace ABI {
                 
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5226,8 +5233,8 @@ namespace ABI {
                 AppResourceGroupEnergyQuotaState_Under = 2,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5254,8 +5261,8 @@ namespace ABI {
                 AppResourceGroupExecutionState_NotRunning = 4,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5283,8 +5290,8 @@ namespace ABI {
                 AppResourceGroupInfoWatcherStatus_Aborted = 5,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5309,8 +5316,8 @@ namespace ABI {
                 AutoUpdateTimeZoneStatus_Failed = 2,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x50000
 
 
@@ -5336,8 +5343,8 @@ namespace ABI {
                 DiagnosticAccessStatus_Allowed = 3,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5362,8 +5369,8 @@ namespace ABI {
                 DispatcherQueuePriority_High = 10,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5390,8 +5397,8 @@ namespace ABI {
                 LaunchFileStatus_Unknown = 4,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -5418,8 +5425,8 @@ namespace ABI {
                 LaunchQuerySupportStatus_Unknown = 4,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5443,8 +5450,8 @@ namespace ABI {
                 LaunchQuerySupportType_UriForResults = 1,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5470,8 +5477,8 @@ namespace ABI {
                 LaunchUriStatus_Unknown = 3,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5495,8 +5502,8 @@ namespace ABI {
                 PowerState_SleepS3 = 1,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x30000
 
 
@@ -5520,11 +5527,21 @@ namespace ABI {
                 ProcessorArchitecture_Arm = 5,
                 ProcessorArchitecture_X64 = 9,
                 ProcessorArchitecture_Neutral = 11,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                
+                ProcessorArchitecture_Arm64 = 12,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                
+                ProcessorArchitecture_X86OnArm64 = 14,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                
                 ProcessorArchitecture_Unknown = 65535,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5554,8 +5571,8 @@ namespace ABI {
                 RemoteLaunchUriStatus_DeniedByRemoteSystem = 7,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -5579,8 +5596,8 @@ namespace ABI {
                 ShutdownKind_Restart = 1,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x10000
 
 
@@ -5605,8 +5622,8 @@ namespace ABI {
                 UserAuthenticationStatus_RemotelyAuthenticated = 2,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5632,8 +5649,8 @@ namespace ABI {
                 UserPictureSize_Size1080x1080 = 3,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5659,8 +5676,8 @@ namespace ABI {
                 UserType_RemoteGuest = 3,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5688,8 +5705,8 @@ namespace ABI {
                 UserWatcherStatus_Aborted = 5,
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6037,8 +6054,8 @@ namespace ABI {
                 
             };
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6067,8 +6084,8 @@ namespace ABI {
             
             DEFINE_ENUM_FLAG_OPERATORS(VirtualKeyModifiers)
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6097,8 +6114,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDispatcherQueueHandler=_uuidof(IDispatcherQueueHandler);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueueHandler;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueueHandler_INTERFACE_DEFINED__) */
@@ -6139,8 +6156,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppActivationResult=_uuidof(IAppActivationResult);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppActivationResult;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppActivationResult_INTERFACE_DEFINED__) */
@@ -6178,8 +6195,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDiagnosticInfo=_uuidof(IAppDiagnosticInfo);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppDiagnosticInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo_INTERFACE_DEFINED__) */
@@ -6220,8 +6237,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDiagnosticInfo2=_uuidof(IAppDiagnosticInfo2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppDiagnosticInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo2_INTERFACE_DEFINED__) */
@@ -6259,8 +6276,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDiagnosticInfo3=_uuidof(IAppDiagnosticInfo3);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppDiagnosticInfo3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo3_INTERFACE_DEFINED__) */
@@ -6298,8 +6315,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDiagnosticInfoStatics=_uuidof(IAppDiagnosticInfoStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics_INTERFACE_DEFINED__) */
@@ -6351,8 +6368,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDiagnosticInfoStatics2=_uuidof(IAppDiagnosticInfoStatics2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoStatics2_INTERFACE_DEFINED__) */
@@ -6420,8 +6437,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDiagnosticInfoWatcher=_uuidof(IAppDiagnosticInfoWatcher);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher_INTERFACE_DEFINED__) */
@@ -6459,8 +6476,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDiagnosticInfoWatcherEventArgs=_uuidof(IAppDiagnosticInfoWatcherEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcherEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcherEventArgs_INTERFACE_DEFINED__) */
@@ -6498,8 +6515,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppExecutionStateChangeResult=_uuidof(IAppExecutionStateChangeResult);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppExecutionStateChangeResult;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppExecutionStateChangeResult_INTERFACE_DEFINED__) */
@@ -6546,8 +6563,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppMemoryReport=_uuidof(IAppMemoryReport);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppMemoryReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppMemoryReport_INTERFACE_DEFINED__) */
@@ -6585,8 +6602,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppMemoryReport2=_uuidof(IAppMemoryReport2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppMemoryReport2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppMemoryReport2_INTERFACE_DEFINED__) */
@@ -6627,8 +6644,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppMemoryUsageLimitChangingEventArgs=_uuidof(IAppMemoryUsageLimitChangingEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppMemoryUsageLimitChangingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppMemoryUsageLimitChangingEventArgs_INTERFACE_DEFINED__) */
@@ -6675,8 +6692,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupBackgroundTaskReport=_uuidof(IAppResourceGroupBackgroundTaskReport);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupBackgroundTaskReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupBackgroundTaskReport_INTERFACE_DEFINED__) */
@@ -6710,7 +6727,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out GUID * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsShared(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE GetBackgroundTaskReports(
                     /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CSystem__CAppResourceGroupBackgroundTaskReport * * result
@@ -6729,8 +6746,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupInfo=_uuidof(IAppResourceGroupInfo);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupInfo_INTERFACE_DEFINED__) */
@@ -6774,8 +6791,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupInfo2=_uuidof(IAppResourceGroupInfo2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupInfo2_INTERFACE_DEFINED__) */
@@ -6850,8 +6867,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupInfoWatcher=_uuidof(IAppResourceGroupInfoWatcher);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher_INTERFACE_DEFINED__) */
@@ -6892,8 +6909,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupInfoWatcherEventArgs=_uuidof(IAppResourceGroupInfoWatcherEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherEventArgs_INTERFACE_DEFINED__) */
@@ -6934,8 +6951,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs=_uuidof(IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherExecutionStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherExecutionStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -6982,8 +6999,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupMemoryReport=_uuidof(IAppResourceGroupMemoryReport);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupMemoryReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupMemoryReport_INTERFACE_DEFINED__) */
@@ -7024,8 +7041,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppResourceGroupStateReport=_uuidof(IAppResourceGroupStateReport);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppResourceGroupStateReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppResourceGroupStateReport_INTERFACE_DEFINED__) */
@@ -7066,8 +7083,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppUriHandlerHost=_uuidof(IAppUriHandlerHost);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppUriHandlerHost;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppUriHandlerHost_INTERFACE_DEFINED__) */
@@ -7106,8 +7123,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppUriHandlerHostFactory=_uuidof(IAppUriHandlerHostFactory);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppUriHandlerHostFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppUriHandlerHostFactory_INTERFACE_DEFINED__) */
@@ -7155,8 +7172,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppUriHandlerRegistration=_uuidof(IAppUriHandlerRegistration);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppUriHandlerRegistration;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppUriHandlerRegistration_INTERFACE_DEFINED__) */
@@ -7198,8 +7215,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppUriHandlerRegistrationManager=_uuidof(IAppUriHandlerRegistrationManager);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManager;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManager_INTERFACE_DEFINED__) */
@@ -7241,8 +7258,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppUriHandlerRegistrationManagerStatics=_uuidof(IAppUriHandlerRegistrationManagerStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIAppUriHandlerRegistrationManagerStatics_INTERFACE_DEFINED__) */
@@ -7280,8 +7297,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDateTimeSettingsStatics=_uuidof(IDateTimeSettingsStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDateTimeSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDateTimeSettingsStatics_INTERFACE_DEFINED__) */
@@ -7316,12 +7333,12 @@ namespace ABI {
                     ) = 0;
                 /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryEnqueue(
                     /* [in] */__RPC__in_opt ABI::Windows::System::IDispatcherQueueHandler  * callback,
-                    /* [retval, out] */__RPC__out boolean * result
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryEnqueueWithPriority(
                     /* [in] */ABI::Windows::System::DispatcherQueuePriority priority,
                     /* [in] */__RPC__in_opt ABI::Windows::System::IDispatcherQueueHandler  * callback,
-                    /* [retval, out] */__RPC__out boolean * result
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ShutdownStarting(
                     /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs * handler,
@@ -7342,12 +7359,51 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDispatcherQueue=_uuidof(IDispatcherQueue);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueue;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueue_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.System.IDispatcherQueue2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.DispatcherQueue
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueue2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_IDispatcherQueue2[] = L"Windows.System.IDispatcherQueue2";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            /* [object, uuid("C822C647-30EF-506E-BD1E-A647AE6675FF"), exclusiveto, contract] */
+            MIDL_INTERFACE("C822C647-30EF-506E-BD1E-A647AE6675FF")
+            IDispatcherQueue2 : public IInspectable
+            {
+            public:
+                /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasThreadAccess(
+                    /* [retval, out] */__RPC__out ::boolean * value
+                    ) = 0;
+                
+            };
+
+            extern MIDL_CONST_ID IID & IID_IDispatcherQueue2=_uuidof(IDispatcherQueue2);
+            
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueue2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueue2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -7384,8 +7440,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDispatcherQueueController=_uuidof(IDispatcherQueueController);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueueController;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueueController_INTERFACE_DEFINED__) */
@@ -7423,8 +7479,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDispatcherQueueControllerStatics=_uuidof(IDispatcherQueueControllerStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueueControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueueControllerStatics_INTERFACE_DEFINED__) */
@@ -7455,15 +7511,15 @@ namespace ABI {
             {
             public:
                 virtual HRESULT STDMETHODCALLTYPE GetDeferral(
-                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * value
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * result
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IDispatcherQueueShutdownStartingEventArgs=_uuidof(IDispatcherQueueShutdownStartingEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs_INTERFACE_DEFINED__) */
@@ -7501,8 +7557,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDispatcherQueueStatics=_uuidof(IDispatcherQueueStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueueStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueueStatics_INTERFACE_DEFINED__) */
@@ -7539,13 +7595,13 @@ namespace ABI {
                     /* [in] */ABI::Windows::Foundation::TimeSpan value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRunning(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRepeating(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRepeating(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                 virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
@@ -7561,8 +7617,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDispatcherQueueTimer=_uuidof(IDispatcherQueueTimer);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueueTimer;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueueTimer_INTERFACE_DEFINED__) */
@@ -7600,8 +7656,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IFolderLauncherOptions=_uuidof(IFolderLauncherOptions);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIFolderLauncherOptions;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIFolderLauncherOptions_INTERFACE_DEFINED__) */
@@ -7663,8 +7719,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IKnownUserPropertiesStatics=_uuidof(IKnownUserPropertiesStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIKnownUserPropertiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIKnownUserPropertiesStatics_INTERFACE_DEFINED__) */
@@ -7705,8 +7761,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILaunchUriResult=_uuidof(ILaunchUriResult);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILaunchUriResult;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILaunchUriResult_INTERFACE_DEFINED__) */
@@ -7737,16 +7793,16 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TreatAsUntrusted(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TreatAsUntrusted(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplayApplicationPicker(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DisplayApplicationPicker(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UI(
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::ILauncherUIOptions * * value
@@ -7780,8 +7836,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherOptions=_uuidof(ILauncherOptions);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherOptions;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherOptions_INTERFACE_DEFINED__) */
@@ -7828,8 +7884,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherOptions2=_uuidof(ILauncherOptions2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherOptions2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherOptions2_INTERFACE_DEFINED__) */
@@ -7860,18 +7916,18 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IgnoreAppUriHandlers(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IgnoreAppUriHandlers(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_ILauncherOptions3=_uuidof(ILauncherOptions3);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherOptions3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherOptions3_INTERFACE_DEFINED__) */
@@ -7902,18 +7958,18 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LimitPickerToCurrentAppAndAppUriHandlers(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_LimitPickerToCurrentAppAndAppUriHandlers(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_ILauncherOptions4=_uuidof(ILauncherOptions4);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherOptions4;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherOptions4_INTERFACE_DEFINED__) */
@@ -7966,8 +8022,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherStatics=_uuidof(ILauncherStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherStatics_INTERFACE_DEFINED__) */
@@ -8052,8 +8108,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherStatics2=_uuidof(ILauncherStatics2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherStatics2_INTERFACE_DEFINED__) */
@@ -8097,8 +8153,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherStatics3=_uuidof(ILauncherStatics3);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherStatics3_INTERFACE_DEFINED__) */
@@ -8177,8 +8233,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherStatics4=_uuidof(ILauncherStatics4);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherStatics4;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherStatics4_INTERFACE_DEFINED__) */
@@ -8233,8 +8289,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherStatics5=_uuidof(ILauncherStatics5);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherStatics5;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherStatics5_INTERFACE_DEFINED__) */
@@ -8287,8 +8343,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherUIOptions=_uuidof(ILauncherUIOptions);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherUIOptions;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherUIOptions_INTERFACE_DEFINED__) */
@@ -8326,8 +8382,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILauncherViewOptions=_uuidof(ILauncherViewOptions);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CILauncherViewOptions;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CILauncherViewOptions_INTERFACE_DEFINED__) */
@@ -8392,8 +8448,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMemoryManagerStatics=_uuidof(IMemoryManagerStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIMemoryManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIMemoryManagerStatics_INTERFACE_DEFINED__) */
@@ -8434,8 +8490,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMemoryManagerStatics2=_uuidof(IMemoryManagerStatics2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIMemoryManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIMemoryManagerStatics2_INTERFACE_DEFINED__) */
@@ -8467,15 +8523,15 @@ namespace ABI {
             public:
                 virtual HRESULT STDMETHODCALLTYPE TrySetAppMemoryUsageLimit(
                     /* [in] */UINT64 value,
-                    /* [retval, out] */__RPC__out boolean * result
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IMemoryManagerStatics3=_uuidof(IMemoryManagerStatics3);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIMemoryManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIMemoryManagerStatics3_INTERFACE_DEFINED__) */
@@ -8513,8 +8569,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IMemoryManagerStatics4=_uuidof(IMemoryManagerStatics4);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIMemoryManagerStatics4;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIMemoryManagerStatics4_INTERFACE_DEFINED__) */
@@ -8573,8 +8629,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IProcessLauncherOptions=_uuidof(IProcessLauncherOptions);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIProcessLauncherOptions;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIProcessLauncherOptions_INTERFACE_DEFINED__) */
@@ -8612,8 +8668,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IProcessLauncherResult=_uuidof(IProcessLauncherResult);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIProcessLauncherResult;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIProcessLauncherResult_INTERFACE_DEFINED__) */
@@ -8659,8 +8715,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IProcessLauncherStatics=_uuidof(IProcessLauncherStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIProcessLauncherStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIProcessLauncherStatics_INTERFACE_DEFINED__) */
@@ -8701,8 +8757,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IProcessMemoryReport=_uuidof(IProcessMemoryReport);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIProcessMemoryReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIProcessMemoryReport_INTERFACE_DEFINED__) */
@@ -8740,8 +8796,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IProtocolForResultsOperation=_uuidof(IProtocolForResultsOperation);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIProtocolForResultsOperation;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIProtocolForResultsOperation_INTERFACE_DEFINED__) */
@@ -8785,8 +8841,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IRemoteLauncherOptions=_uuidof(IRemoteLauncherOptions);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIRemoteLauncherOptions;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIRemoteLauncherOptions_INTERFACE_DEFINED__) */
@@ -8839,8 +8895,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IRemoteLauncherStatics=_uuidof(IRemoteLauncherStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIRemoteLauncherStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIRemoteLauncherStatics_INTERFACE_DEFINED__) */
@@ -8880,8 +8936,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IShutdownManagerStatics=_uuidof(IShutdownManagerStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIShutdownManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIShutdownManagerStatics_INTERFACE_DEFINED__) */
@@ -8917,7 +8973,7 @@ namespace ABI {
             public:
                 virtual HRESULT STDMETHODCALLTYPE IsPowerStateSupported(
                     /* [in] */ABI::Windows::System::PowerState powerState,
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [overload] */virtual HRESULT STDMETHODCALLTYPE EnterPowerState(
                     /* [in] */ABI::Windows::System::PowerState powerState
@@ -8931,8 +8987,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IShutdownManagerStatics2=_uuidof(IShutdownManagerStatics2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIShutdownManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIShutdownManagerStatics2_INTERFACE_DEFINED__) */
@@ -8969,7 +9025,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanChangeTimeZone(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE ChangeTimeZoneByDisplayName(
                     /* [in] */__RPC__in HSTRING timeZoneDisplayName
@@ -8979,8 +9035,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ITimeZoneSettingsStatics=_uuidof(ITimeZoneSettingsStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics_INTERFACE_DEFINED__) */
@@ -9019,8 +9075,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ITimeZoneSettingsStatics2=_uuidof(ITimeZoneSettingsStatics2);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CITimeZoneSettingsStatics2_INTERFACE_DEFINED__) */
@@ -9076,8 +9132,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUser=_uuidof(IUser);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUser;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUser_INTERFACE_DEFINED__) */
@@ -9113,8 +9169,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUserAuthenticationStatusChangeDeferral=_uuidof(IUserAuthenticationStatusChangeDeferral);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangeDeferral;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangeDeferral_INTERFACE_DEFINED__) */
@@ -9145,7 +9201,7 @@ namespace ABI {
             {
             public:
                 virtual HRESULT STDMETHODCALLTYPE GetDeferral(
-                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUserAuthenticationStatusChangeDeferral * * deferral
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUserAuthenticationStatusChangeDeferral * * result
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
@@ -9161,8 +9217,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUserAuthenticationStatusChangingEventArgs=_uuidof(IUserAuthenticationStatusChangingEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs_INTERFACE_DEFINED__) */
@@ -9200,8 +9256,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUserChangedEventArgs=_uuidof(IUserChangedEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserChangedEventArgs_INTERFACE_DEFINED__) */
@@ -9245,8 +9301,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUserDeviceAssociationChangedEventArgs=_uuidof(IUserDeviceAssociationChangedEventArgs);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserDeviceAssociationChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserDeviceAssociationChangedEventArgs_INTERFACE_DEFINED__) */
@@ -9292,8 +9348,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUserDeviceAssociationStatics=_uuidof(IUserDeviceAssociationStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserDeviceAssociationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserDeviceAssociationStatics_INTERFACE_DEFINED__) */
@@ -9324,10 +9380,10 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowGuestAccounts(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowGuestAccounts(
-                    /* [in] */boolean value
+                    /* [in] */::boolean value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SuggestedSelectedUser(
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
@@ -9336,15 +9392,15 @@ namespace ABI {
                     /* [in] */__RPC__in_opt ABI::Windows::System::IUser * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE PickSingleUserAsync(
-                    /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUser * * pickSingleUserOperation
+                    /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUser * * operation
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IUserPicker=_uuidof(IUserPicker);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserPicker;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserPicker_INTERFACE_DEFINED__) */
@@ -9375,15 +9431,15 @@ namespace ABI {
             {
             public:
                 virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IUserPickerStatics=_uuidof(IUserPickerStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserPickerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserPickerStatics_INTERFACE_DEFINED__) */
@@ -9414,7 +9470,7 @@ namespace ABI {
             {
             public:
                 virtual HRESULT STDMETHODCALLTYPE CreateWatcher(
-                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUserWatcher * * watcher
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUserWatcher * * result
                     ) = 0;
                 /* [overload, default_overload] */virtual HRESULT STDMETHODCALLTYPE FindAllAsync(
                     /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CSystem__CUser * * operation
@@ -9430,15 +9486,15 @@ namespace ABI {
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE GetFromId(
                     /* [in] */__RPC__in HSTRING nonRoamableId,
-                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * result
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IUserStatics=_uuidof(IUserStatics);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserStatics_INTERFACE_DEFINED__) */
@@ -9527,8 +9583,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IUserWatcher=_uuidof(IUserWatcher);
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIUserWatcher;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CIUserWatcher_INTERFACE_DEFINED__) */
@@ -9987,6 +10043,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.IDispatcherQueue ** Default Interface **
+ *    Windows.System.IDispatcherQueue2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -10039,8 +10096,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.System.IDispatcherQueueShutdownStartingEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -10062,8 +10117,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.IDispatcherQueueTimer ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -10114,6 +10167,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.IKnownUserPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -10475,6 +10530,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.System.IUser ** Default Interface **
  *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -10615,6 +10672,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.IUserPicker ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -10820,6 +10879,12 @@ typedef interface __x_ABI_CWindows_CSystem_CIDateTimeSettingsStatics __x_ABI_CWi
 typedef interface __x_ABI_CWindows_CSystem_CIDispatcherQueue __x_ABI_CWindows_CSystem_CIDispatcherQueue;
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CIDispatcherQueue2 __x_ABI_CWindows_CSystem_CIDispatcherQueue2;
+
+#endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CIDispatcherQueueController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIDispatcherQueueController_FWD_DEFINED__
@@ -14620,7 +14685,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameControlle
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIGameController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CInput_CIGameController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGaming__CInput__CIGameController_Windows__CSystem__CUserChangedEventArgsVtbl;
 
@@ -14672,7 +14737,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatch
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_IInspectableVtbl;
 
@@ -14724,7 +14789,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatch
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcherEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppDiagnosticInfoWatcherEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CAppDiagnosticInfoWatcher_Windows__CSystem__CAppDiagnosticInfoWatcherEventArgsVtbl;
 
@@ -14776,7 +14841,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_IInspectableVtbl;
 
@@ -14828,7 +14893,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherEventArgsVtbl;
 
@@ -14881,7 +14946,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherExecutionStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIAppResourceGroupInfoWatcherExecutionStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CAppResourceGroupInfoWatcher_Windows__CSystem__CAppResourceGroupInfoWatcherExecutionStateChangedEventArgsVtbl;
 
@@ -14933,7 +14998,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueue * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueue * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_IInspectableVtbl;
 
@@ -14985,7 +15050,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Window
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueue * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueue * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueue_Windows__CSystem__CDispatcherQueueShutdownStartingEventArgsVtbl;
 
@@ -15037,7 +15102,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_I
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueueTimer * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIDispatcherQueueTimer * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CDispatcherQueueTimer_IInspectableVtbl;
 
@@ -15088,7 +15153,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectab
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_IInspectableVtbl;
 
@@ -15140,7 +15205,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserAuthenticationStatusChangingEventArgsVtbl;
 
@@ -15193,7 +15258,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CIUserChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CUserWatcher_Windows__CSystem__CUserChangedEventArgsVtbl;
 
@@ -18179,7 +18244,6 @@ typedef enum __x_ABI_CWindows_CUI_CViewManagement_CViewSizePreference __x_ABI_CW
 
 
 
-
 typedef enum __x_ABI_CWindows_CSystem_CAppDiagnosticInfoWatcherStatus __x_ABI_CWindows_CSystem_CAppDiagnosticInfoWatcherStatus;
 
 
@@ -18665,6 +18729,16 @@ enum __x_ABI_CWindows_CSystem_CProcessorArchitecture
     ProcessorArchitecture_Arm = 5,
     ProcessorArchitecture_X64 = 9,
     ProcessorArchitecture_Neutral = 11,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
+    ProcessorArchitecture_Arm64 = 12,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
+    ProcessorArchitecture_X86OnArm64 = 14,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
     ProcessorArchitecture_Unknown = 65535,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -22173,6 +22247,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueue;
 
 /*
  *
+ * Interface Windows.System.IDispatcherQueue2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.DispatcherQueue
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueue2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CIDispatcherQueue2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_IDispatcherQueue2[] = L"Windows.System.IDispatcherQueue2";
+/* [object, uuid("C822C647-30EF-506E-BD1E-A647AE6675FF"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CIDispatcherQueue2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CIDispatcherQueue2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CIDispatcherQueue2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CIDispatcherQueue2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CIDispatcherQueue2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CIDispatcherQueue2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CIDispatcherQueue2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HasThreadAccess )(
+        __x_ABI_CWindows_CSystem_CIDispatcherQueue2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CIDispatcherQueue2Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CIDispatcherQueue2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CIDispatcherQueue2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueue2_get_HasThreadAccess(This,value) \
+    ( (This)->lpVtbl->get_HasThreadAccess(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CIDispatcherQueue2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CIDispatcherQueue2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.System.IDispatcherQueueController
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
@@ -22415,7 +22582,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 HRESULT ( STDMETHODCALLTYPE *GetDeferral )(
         __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIDeferral * * value
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIDeferral * * result
         );
     END_INTERFACE
     
@@ -22445,8 +22612,8 @@ interface __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs_GetDeferral(This,value) \
-    ( (This)->lpVtbl->GetDeferral(This,value) )
+#define __x_ABI_CWindows_CSystem_CIDispatcherQueueShutdownStartingEventArgs_GetDeferral(This,result) \
+    ( (This)->lpVtbl->GetDeferral(This,result) )
 
 
 #endif /* COBJMACROS */
@@ -26329,7 +26496,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 HRESULT ( STDMETHODCALLTYPE *GetDeferral )(
         __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangeDeferral * * deferral
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangeDeferral * * result
         );
     /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
         __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs * This,
@@ -26371,8 +26538,8 @@ interface __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs
 #define __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs_GetDeferral(This,deferral) \
-    ( (This)->lpVtbl->GetDeferral(This,deferral) )
+#define __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs_GetDeferral(This,result) \
+    ( (This)->lpVtbl->GetDeferral(This,result) )
 
 #define __x_ABI_CWindows_CSystem_CIUserAuthenticationStatusChangingEventArgs_get_User(This,value) \
     ( (This)->lpVtbl->get_User(This,value) )
@@ -26768,7 +26935,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         );
     HRESULT ( STDMETHODCALLTYPE *PickSingleUserAsync )(
         __x_ABI_CWindows_CSystem_CIUserPicker * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUser * * pickSingleUserOperation
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUser * * operation
         );
     END_INTERFACE
     
@@ -26810,8 +26977,8 @@ interface __x_ABI_CWindows_CSystem_CIUserPicker
 #define __x_ABI_CWindows_CSystem_CIUserPicker_put_SuggestedSelectedUser(This,value) \
     ( (This)->lpVtbl->put_SuggestedSelectedUser(This,value) )
 
-#define __x_ABI_CWindows_CSystem_CIUserPicker_PickSingleUserAsync(This,pickSingleUserOperation) \
-    ( (This)->lpVtbl->PickSingleUserAsync(This,pickSingleUserOperation) )
+#define __x_ABI_CWindows_CSystem_CIUserPicker_PickSingleUserAsync(This,operation) \
+    ( (This)->lpVtbl->PickSingleUserAsync(This,operation) )
 
 
 #endif /* COBJMACROS */
@@ -26873,7 +27040,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 HRESULT ( STDMETHODCALLTYPE *IsSupported )(
         __x_ABI_CWindows_CSystem_CIUserPickerStatics * This,
-        /* [retval, out] */__RPC__out boolean * value
+        /* [retval, out] */__RPC__out boolean * result
         );
     END_INTERFACE
     
@@ -26903,8 +27070,8 @@ interface __x_ABI_CWindows_CSystem_CIUserPickerStatics
 #define __x_ABI_CWindows_CSystem_CIUserPickerStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CSystem_CIUserPickerStatics_IsSupported(This,value) \
-    ( (This)->lpVtbl->IsSupported(This,value) )
+#define __x_ABI_CWindows_CSystem_CIUserPickerStatics_IsSupported(This,result) \
+    ( (This)->lpVtbl->IsSupported(This,result) )
 
 
 #endif /* COBJMACROS */
@@ -26966,7 +27133,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 HRESULT ( STDMETHODCALLTYPE *CreateWatcher )(
         __x_ABI_CWindows_CSystem_CIUserStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUserWatcher * * watcher
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUserWatcher * * result
         );
     /* [overload, default_overload] */HRESULT ( STDMETHODCALLTYPE *FindAllAsync )(
         __x_ABI_CWindows_CSystem_CIUserStatics * This,
@@ -26986,7 +27153,7 @@ HRESULT ( STDMETHODCALLTYPE *CreateWatcher )(
     HRESULT ( STDMETHODCALLTYPE *GetFromId )(
         __x_ABI_CWindows_CSystem_CIUserStatics * This,
         /* [in] */__RPC__in HSTRING nonRoamableId,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * result
         );
     END_INTERFACE
     
@@ -27016,8 +27183,8 @@ interface __x_ABI_CWindows_CSystem_CIUserStatics
 #define __x_ABI_CWindows_CSystem_CIUserStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CSystem_CIUserStatics_CreateWatcher(This,watcher) \
-    ( (This)->lpVtbl->CreateWatcher(This,watcher) )
+#define __x_ABI_CWindows_CSystem_CIUserStatics_CreateWatcher(This,result) \
+    ( (This)->lpVtbl->CreateWatcher(This,result) )
 
 #define __x_ABI_CWindows_CSystem_CIUserStatics_FindAllAsync(This,operation) \
     ( (This)->lpVtbl->FindAllAsync(This,operation) )
@@ -27028,8 +27195,8 @@ interface __x_ABI_CWindows_CSystem_CIUserStatics
 #define __x_ABI_CWindows_CSystem_CIUserStatics_FindAllAsyncByTypeAndStatus(This,type,status,operation) \
     ( (This)->lpVtbl->FindAllAsyncByTypeAndStatus(This,type,status,operation) )
 
-#define __x_ABI_CWindows_CSystem_CIUserStatics_GetFromId(This,nonRoamableId,value) \
-    ( (This)->lpVtbl->GetFromId(This,nonRoamableId,value) )
+#define __x_ABI_CWindows_CSystem_CIUserStatics_GetFromId(This,nonRoamableId,result) \
+    ( (This)->lpVtbl->GetFromId(This,nonRoamableId,result) )
 
 
 #endif /* COBJMACROS */
@@ -27702,6 +27869,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.IDispatcherQueue ** Default Interface **
+ *    Windows.System.IDispatcherQueue2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -27754,8 +27922,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.System.IDispatcherQueueShutdownStartingEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -27777,8 +27943,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.IDispatcherQueueTimer ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -27829,6 +27993,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.IKnownUserPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -28190,6 +28356,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.System.IUser ** Default Interface **
  *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -28330,6 +28498,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.IUserPicker ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

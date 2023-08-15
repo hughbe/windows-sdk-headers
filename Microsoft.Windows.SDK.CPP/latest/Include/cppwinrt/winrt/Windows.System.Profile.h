@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -49,6 +49,13 @@ template <typename D> hstring consume_Windows_System_Profile_IAnalyticsVersionIn
     hstring value{};
     check_hresult(WINRT_SHIM(Windows::System::Profile::IAnalyticsVersionInfo)->get_DeviceFamilyVersion(put_abi(value)));
     return value;
+}
+
+template <typename D> Windows::Foundation::Collections::IVectorView<Windows::System::Profile::UnsupportedAppRequirement> consume_Windows_System_Profile_IAppApplicabilityStatics<D>::GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities) const
+{
+    Windows::Foundation::Collections::IVectorView<Windows::System::Profile::UnsupportedAppRequirement> result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::System::Profile::IAppApplicabilityStatics)->GetUnsupportedAppRequirements(get_abi(capabilities), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_System_Profile_IEducationSettingsStatics<D>::IsEducationEnvironment() const
@@ -351,6 +358,20 @@ template <typename D> void consume_Windows_System_Profile_ISystemSetupInfoStatic
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::System::Profile::ISystemSetupInfoStatics)->remove_OutOfBoxExperienceStateChanged(get_abi(token)));
 }
 
+template <typename D> hstring consume_Windows_System_Profile_IUnsupportedAppRequirement<D>::Requirement() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::System::Profile::IUnsupportedAppRequirement)->get_Requirement(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::System::Profile::UnsupportedAppRequirementReasons consume_Windows_System_Profile_IUnsupportedAppRequirement<D>::Reasons() const
+{
+    Windows::System::Profile::UnsupportedAppRequirementReasons value{};
+    check_hresult(WINRT_SHIM(Windows::System::Profile::IUnsupportedAppRequirement)->get_Reasons(put_abi(value)));
+    return value;
+}
+
 template <typename D> bool consume_Windows_System_Profile_IWindowsIntegrityPolicyStatics<D>::IsEnabled() const
 {
     bool value{};
@@ -467,6 +488,23 @@ struct produce<D, Windows::System::Profile::IAnalyticsVersionInfo> : produce_bas
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(DeviceFamilyVersion, WINRT_WRAP(hstring));
             *value = detach_from<hstring>(this->shim().DeviceFamilyVersion());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::System::Profile::IAppApplicabilityStatics> : produce_base<D, Windows::System::Profile::IAppApplicabilityStatics>
+{
+    int32_t WINRT_CALL GetUnsupportedAppRequirements(void* capabilities, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetUnsupportedAppRequirements, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::System::Profile::UnsupportedAppRequirement>), Windows::Foundation::Collections::IIterable<hstring> const&);
+            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::System::Profile::UnsupportedAppRequirement>>(this->shim().GetUnsupportedAppRequirements(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&capabilities)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1044,6 +1082,35 @@ struct produce<D, Windows::System::Profile::ISystemSetupInfoStatics> : produce_b
 };
 
 template <typename D>
+struct produce<D, Windows::System::Profile::IUnsupportedAppRequirement> : produce_base<D, Windows::System::Profile::IUnsupportedAppRequirement>
+{
+    int32_t WINRT_CALL get_Requirement(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Requirement, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().Requirement());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Reasons(Windows::System::Profile::UnsupportedAppRequirementReasons* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Reasons, WINRT_WRAP(Windows::System::Profile::UnsupportedAppRequirementReasons));
+            *value = detach_from<Windows::System::Profile::UnsupportedAppRequirementReasons>(this->shim().Reasons());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::System::Profile::IWindowsIntegrityPolicyStatics> : produce_base<D, Windows::System::Profile::IWindowsIntegrityPolicyStatics>
 {
     int32_t WINRT_CALL get_IsEnabled(bool* value) noexcept final
@@ -1132,6 +1199,11 @@ inline hstring AnalyticsInfo::DeviceForm()
 inline Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<hstring, hstring>> AnalyticsInfo::GetSystemPropertiesAsync(param::async_iterable<hstring> const& attributeNames)
 {
     return impl::call_factory<AnalyticsInfo, Windows::System::Profile::IAnalyticsInfoStatics2>([&](auto&& f) { return f.GetSystemPropertiesAsync(attributeNames); });
+}
+
+inline Windows::Foundation::Collections::IVectorView<Windows::System::Profile::UnsupportedAppRequirement> AppApplicability::GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities)
+{
+    return impl::call_factory<AppApplicability, Windows::System::Profile::IAppApplicabilityStatics>([&](auto&& f) { return f.GetUnsupportedAppRequirements(capabilities); });
 }
 
 inline bool EducationSettings::IsEducationEnvironment()
@@ -1374,6 +1446,7 @@ WINRT_EXPORT namespace std {
 template<> struct hash<winrt::Windows::System::Profile::IAnalyticsInfoStatics> : winrt::impl::hash_base<winrt::Windows::System::Profile::IAnalyticsInfoStatics> {};
 template<> struct hash<winrt::Windows::System::Profile::IAnalyticsInfoStatics2> : winrt::impl::hash_base<winrt::Windows::System::Profile::IAnalyticsInfoStatics2> {};
 template<> struct hash<winrt::Windows::System::Profile::IAnalyticsVersionInfo> : winrt::impl::hash_base<winrt::Windows::System::Profile::IAnalyticsVersionInfo> {};
+template<> struct hash<winrt::Windows::System::Profile::IAppApplicabilityStatics> : winrt::impl::hash_base<winrt::Windows::System::Profile::IAppApplicabilityStatics> {};
 template<> struct hash<winrt::Windows::System::Profile::IEducationSettingsStatics> : winrt::impl::hash_base<winrt::Windows::System::Profile::IEducationSettingsStatics> {};
 template<> struct hash<winrt::Windows::System::Profile::IHardwareIdentificationStatics> : winrt::impl::hash_base<winrt::Windows::System::Profile::IHardwareIdentificationStatics> {};
 template<> struct hash<winrt::Windows::System::Profile::IHardwareToken> : winrt::impl::hash_base<winrt::Windows::System::Profile::IHardwareToken> {};
@@ -1385,9 +1458,11 @@ template<> struct hash<winrt::Windows::System::Profile::ISharedModeSettingsStati
 template<> struct hash<winrt::Windows::System::Profile::ISystemIdentificationInfo> : winrt::impl::hash_base<winrt::Windows::System::Profile::ISystemIdentificationInfo> {};
 template<> struct hash<winrt::Windows::System::Profile::ISystemIdentificationStatics> : winrt::impl::hash_base<winrt::Windows::System::Profile::ISystemIdentificationStatics> {};
 template<> struct hash<winrt::Windows::System::Profile::ISystemSetupInfoStatics> : winrt::impl::hash_base<winrt::Windows::System::Profile::ISystemSetupInfoStatics> {};
+template<> struct hash<winrt::Windows::System::Profile::IUnsupportedAppRequirement> : winrt::impl::hash_base<winrt::Windows::System::Profile::IUnsupportedAppRequirement> {};
 template<> struct hash<winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics> : winrt::impl::hash_base<winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics> {};
 template<> struct hash<winrt::Windows::System::Profile::AnalyticsInfo> : winrt::impl::hash_base<winrt::Windows::System::Profile::AnalyticsInfo> {};
 template<> struct hash<winrt::Windows::System::Profile::AnalyticsVersionInfo> : winrt::impl::hash_base<winrt::Windows::System::Profile::AnalyticsVersionInfo> {};
+template<> struct hash<winrt::Windows::System::Profile::AppApplicability> : winrt::impl::hash_base<winrt::Windows::System::Profile::AppApplicability> {};
 template<> struct hash<winrt::Windows::System::Profile::EducationSettings> : winrt::impl::hash_base<winrt::Windows::System::Profile::EducationSettings> {};
 template<> struct hash<winrt::Windows::System::Profile::HardwareIdentification> : winrt::impl::hash_base<winrt::Windows::System::Profile::HardwareIdentification> {};
 template<> struct hash<winrt::Windows::System::Profile::HardwareToken> : winrt::impl::hash_base<winrt::Windows::System::Profile::HardwareToken> {};
@@ -1398,6 +1473,7 @@ template<> struct hash<winrt::Windows::System::Profile::SharedModeSettings> : wi
 template<> struct hash<winrt::Windows::System::Profile::SystemIdentification> : winrt::impl::hash_base<winrt::Windows::System::Profile::SystemIdentification> {};
 template<> struct hash<winrt::Windows::System::Profile::SystemIdentificationInfo> : winrt::impl::hash_base<winrt::Windows::System::Profile::SystemIdentificationInfo> {};
 template<> struct hash<winrt::Windows::System::Profile::SystemSetupInfo> : winrt::impl::hash_base<winrt::Windows::System::Profile::SystemSetupInfo> {};
+template<> struct hash<winrt::Windows::System::Profile::UnsupportedAppRequirement> : winrt::impl::hash_base<winrt::Windows::System::Profile::UnsupportedAppRequirement> {};
 template<> struct hash<winrt::Windows::System::Profile::WindowsIntegrityPolicy> : winrt::impl::hash_base<winrt::Windows::System::Profile::WindowsIntegrityPolicy> {};
 
 }

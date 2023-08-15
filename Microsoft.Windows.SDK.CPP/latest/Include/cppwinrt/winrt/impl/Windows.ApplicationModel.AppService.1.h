@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -29,8 +29,7 @@ struct WINRT_EBO IAppServiceClosedEventArgs :
 
 struct WINRT_EBO IAppServiceConnection :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IAppServiceConnection>,
-    impl::require<IAppServiceConnection, Windows::Foundation::IClosable>
+    impl::consume_t<IAppServiceConnection>
 {
     IAppServiceConnection(std::nullptr_t = nullptr) noexcept {}
 };
@@ -40,6 +39,13 @@ struct WINRT_EBO IAppServiceConnection2 :
     impl::consume_t<IAppServiceConnection2>
 {
     IAppServiceConnection2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IAppServiceConnectionStatics :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAppServiceConnectionStatics>
+{
+    IAppServiceConnectionStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IAppServiceDeferral :
@@ -89,6 +95,20 @@ struct WINRT_EBO IAppServiceTriggerDetails3 :
     impl::consume_t<IAppServiceTriggerDetails3>
 {
     IAppServiceTriggerDetails3(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IAppServiceTriggerDetails4 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAppServiceTriggerDetails4>
+{
+    IAppServiceTriggerDetails4(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IStatelessAppServiceResponse :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IStatelessAppServiceResponse>
+{
+    IStatelessAppServiceResponse(std::nullptr_t = nullptr) noexcept {}
 };
 
 }

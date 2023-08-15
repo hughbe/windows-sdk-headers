@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.holographic.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -282,9 +278,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCamera;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera ABI::Windows::Graphics::Holographic::IHolographicCamera
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera_FWD_DEFINED__
@@ -296,9 +292,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCamera2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera2 ABI::Windows::Graphics::Holographic::IHolographicCamera2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera2_FWD_DEFINED__
@@ -310,9 +306,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCamera3;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera3 ABI::Windows::Graphics::Holographic::IHolographicCamera3
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera3_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCamera4;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera4 ABI::Windows::Graphics::Holographic::IHolographicCamera4
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera4_FWD_DEFINED__
@@ -338,12 +334,26 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCamera5;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5 ABI::Windows::Graphics::Holographic::IHolographicCamera5
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                interface IHolographicCamera6;
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 ABI::Windows::Graphics::Holographic::IHolographicCamera6
+
+#endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose_FWD_DEFINED__
@@ -352,9 +362,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCameraPose;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose ABI::Windows::Graphics::Holographic::IHolographicCameraPose
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose_FWD_DEFINED__
@@ -366,9 +376,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCameraPose2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose2 ABI::Windows::Graphics::Holographic::IHolographicCameraPose2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose2_FWD_DEFINED__
@@ -380,9 +390,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCameraRenderingParameters;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters ABI::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters_FWD_DEFINED__
@@ -394,9 +404,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCameraRenderingParameters2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters2 ABI::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters2_FWD_DEFINED__
@@ -408,9 +418,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCameraRenderingParameters3;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters3 ABI::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters3
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters3_FWD_DEFINED__
@@ -422,9 +432,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicCameraViewportParameters;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraViewportParameters ABI::Windows::Graphics::Holographic::IHolographicCameraViewportParameters
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraViewportParameters_FWD_DEFINED__
@@ -436,9 +446,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicDisplay;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay ABI::Windows::Graphics::Holographic::IHolographicDisplay
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay_FWD_DEFINED__
@@ -450,12 +460,26 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicDisplay2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2 ABI::Windows::Graphics::Holographic::IHolographicDisplay2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                interface IHolographicDisplay3;
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 ABI::Windows::Graphics::Holographic::IHolographicDisplay3
+
+#endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics_FWD_DEFINED__
@@ -464,9 +488,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicDisplayStatics;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics ABI::Windows::Graphics::Holographic::IHolographicDisplayStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics_FWD_DEFINED__
@@ -478,9 +502,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicFrame;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame ABI::Windows::Graphics::Holographic::IHolographicFrame
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame_FWD_DEFINED__
@@ -492,9 +516,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicFrame2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame2 ABI::Windows::Graphics::Holographic::IHolographicFrame2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame2_FWD_DEFINED__
@@ -506,9 +530,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicFramePrediction;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePrediction ABI::Windows::Graphics::Holographic::IHolographicFramePrediction
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePrediction_FWD_DEFINED__
@@ -520,9 +544,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicFramePresentationMonitor;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationMonitor ABI::Windows::Graphics::Holographic::IHolographicFramePresentationMonitor
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationMonitor_FWD_DEFINED__
@@ -534,9 +558,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicFramePresentationReport;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationReport ABI::Windows::Graphics::Holographic::IHolographicFramePresentationReport
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationReport_FWD_DEFINED__
@@ -548,9 +572,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicQuadLayer;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayer ABI::Windows::Graphics::Holographic::IHolographicQuadLayer
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayer_FWD_DEFINED__
@@ -562,9 +586,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicQuadLayerFactory;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerFactory ABI::Windows::Graphics::Holographic::IHolographicQuadLayerFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerFactory_FWD_DEFINED__
@@ -576,9 +600,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicQuadLayerUpdateParameters;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters ABI::Windows::Graphics::Holographic::IHolographicQuadLayerUpdateParameters
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters_FWD_DEFINED__
@@ -590,9 +614,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicQuadLayerUpdateParameters2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters2 ABI::Windows::Graphics::Holographic::IHolographicQuadLayerUpdateParameters2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters2_FWD_DEFINED__
@@ -604,9 +628,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicSpace;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace ABI::Windows::Graphics::Holographic::IHolographicSpace
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace_FWD_DEFINED__
@@ -618,9 +642,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicSpace2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace2 ABI::Windows::Graphics::Holographic::IHolographicSpace2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace2_FWD_DEFINED__
@@ -632,9 +656,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicSpaceCameraAddedEventArgs;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraAddedEventArgs ABI::Windows::Graphics::Holographic::IHolographicSpaceCameraAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraAddedEventArgs_FWD_DEFINED__
@@ -646,9 +670,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicSpaceCameraRemovedEventArgs;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraRemovedEventArgs ABI::Windows::Graphics::Holographic::IHolographicSpaceCameraRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraRemovedEventArgs_FWD_DEFINED__
@@ -660,9 +684,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicSpaceStatics;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics ABI::Windows::Graphics::Holographic::IHolographicSpaceStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics_FWD_DEFINED__
@@ -674,9 +698,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicSpaceStatics2;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics2 ABI::Windows::Graphics::Holographic::IHolographicSpaceStatics2
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics2_FWD_DEFINED__
@@ -688,12 +712,26 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 interface IHolographicSpaceStatics3;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics3 ABI::Windows::Graphics::Holographic::IHolographicSpaceStatics3
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                interface IHolographicViewConfiguration;
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration ABI::Windows::Graphics::Holographic::IHolographicViewConfiguration
+
+#endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -703,9 +741,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicCamera;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -728,7 +766,7 @@ IIterator<ABI::Windows::Graphics::Holographic::HolographicCamera*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Holographic::HolographicCamera*> __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCamera_t;
 #define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCamera ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCamera_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCamera ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Holographic::IHolographicCamera*>
@@ -760,7 +798,7 @@ IIterable<ABI::Windows::Graphics::Holographic::HolographicCamera*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Holographic::HolographicCamera*> __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCamera_t;
 #define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCamera ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCamera_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCamera ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Holographic::IHolographicCamera*>
@@ -776,9 +814,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicCameraPose;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -801,7 +839,7 @@ IIterator<ABI::Windows::Graphics::Holographic::HolographicCameraPose*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Holographic::HolographicCameraPose*> __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCameraPose_t;
 #define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCameraPose ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCameraPose_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicCameraPose ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Holographic::IHolographicCameraPose*>
@@ -833,7 +871,7 @@ IIterable<ABI::Windows::Graphics::Holographic::HolographicCameraPose*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Holographic::HolographicCameraPose*> __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCameraPose_t;
 #define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCameraPose ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCameraPose_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicCameraPose ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Holographic::IHolographicCameraPose*>
@@ -849,9 +887,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicFramePresentationReport;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -874,7 +912,7 @@ IIterator<ABI::Windows::Graphics::Holographic::HolographicFramePresentationRepor
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Holographic::HolographicFramePresentationReport*> __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport_t;
 #define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Holographic::IHolographicFramePresentationReport*>
@@ -906,7 +944,7 @@ IIterable<ABI::Windows::Graphics::Holographic::HolographicFramePresentationRepor
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Holographic::HolographicFramePresentationReport*> __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport_t;
 #define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Holographic::IHolographicFramePresentationReport*>
@@ -922,9 +960,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicQuadLayer;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -947,7 +985,7 @@ IIterator<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t;
 #define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Holographic::IHolographicQuadLayer*>
@@ -979,7 +1017,7 @@ IIterable<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t;
 #define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Holographic::IHolographicQuadLayer*>
@@ -1011,7 +1049,7 @@ IVectorView<ABI::Windows::Graphics::Holographic::HolographicCamera*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Holographic::HolographicCamera*> __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCamera_t;
 #define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCamera ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCamera_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCamera ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Holographic::IHolographicCamera*>
@@ -1043,7 +1081,7 @@ IVectorView<ABI::Windows::Graphics::Holographic::HolographicCameraPose*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Holographic::HolographicCameraPose*> __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCameraPose_t;
 #define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCameraPose ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCameraPose_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicCameraPose ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Holographic::IHolographicCameraPose*>
@@ -1075,7 +1113,7 @@ IVectorView<ABI::Windows::Graphics::Holographic::HolographicFramePresentationRep
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Holographic::HolographicFramePresentationReport*> __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport_t;
 #define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicFramePresentationReport ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Holographic::IHolographicFramePresentationReport*>
@@ -1107,7 +1145,7 @@ IVectorView<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t;
 #define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Holographic::IHolographicQuadLayer*>
@@ -1139,7 +1177,7 @@ IVector<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> : IVector_im
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Holographic::HolographicQuadLayer*> __FIVector_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t;
 #define __FIVector_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CHolographic__CHolographicQuadLayer ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Holographic::IHolographicQuadLayer*>
@@ -1156,9 +1194,9 @@ namespace ABI {
             namespace Holographic {
                 struct HolographicStereoTransform;
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CGraphics__CHolographic__CHolographicStereoTransform_USE
@@ -1179,7 +1217,7 @@ IReference<struct ABI::Windows::Graphics::Holographic::HolographicStereoTransfor
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Graphics::Holographic::HolographicStereoTransform> __FIReference_1_Windows__CGraphics__CHolographic__CHolographicStereoTransform_t;
 #define __FIReference_1_Windows__CGraphics__CHolographic__CHolographicStereoTransform ABI::Windows::Foundation::__FIReference_1_Windows__CGraphics__CHolographic__CHolographicStereoTransform_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CGraphics__CHolographic__CHolographicStereoTransform ABI::Windows::Foundation::IReference<ABI::Windows::Graphics::Holographic::HolographicStereoTransform>
@@ -1194,9 +1232,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicSpace;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1220,7 +1258,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Holographic::HolographicSpace*,IInspe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Holographic::HolographicSpace*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Holographic::IHolographicSpace*,IInspectable*>
@@ -1237,9 +1275,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicSpaceCameraAddedEventArgs;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1263,7 +1301,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Holographic::HolographicSpace*,ABI::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Holographic::HolographicSpace*,ABI::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Holographic::IHolographicSpace*,ABI::Windows::Graphics::Holographic::IHolographicSpaceCameraAddedEventArgs*>
@@ -1281,9 +1319,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicSpaceCameraRemovedEventArgs;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1307,7 +1345,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Holographic::HolographicSpace*,ABI::W
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Holographic::HolographicSpace*,ABI::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Holographic::IHolographicSpace*,ABI::Windows::Graphics::Holographic::IHolographicSpaceCameraRemovedEventArgs*>
@@ -1325,9 +1363,9 @@ namespace ABI {
             namespace Spatial {
                 struct SpatialBoundingFrustum;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum_USE
@@ -1348,7 +1386,7 @@ IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingFrustum> : I
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingFrustum> __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum_t;
 #define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum ABI::Windows::Foundation::__FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingFrustum ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialBoundingFrustum>
@@ -1378,7 +1416,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -1388,14 +1426,112 @@ typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 
 
 
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace DirectX {
+                enum DirectXPixelFormat : int;
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+
+
+#ifndef DEF___FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
+#define DEF___FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("ea016190-ac80-5840-8f58-ff434c7b2907"))
+IIterator<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IIterator_impl<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Graphics.DirectX.DirectXPixelFormat>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
+//#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE */
+
+
+
+
+
+#ifndef DEF___FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
+#define DEF___FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("3908f2c6-1aee-5129-b9a6-2a6e01d9507e"))
+IIterable<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IIterable_impl<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Graphics.DirectX.DirectXPixelFormat>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
+//#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE */
+
+
+
+
+
+#ifndef DEF___FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
+#define DEF___FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("1edda1c2-0f6e-516c-80b8-7687dcd1280e"))
+IVectorView<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IVectorView_impl<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.DirectX.DirectXPixelFormat>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
+//#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE */
+
+
+
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1403,8 +1539,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1416,8 +1552,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1432,9 +1568,9 @@ namespace ABI {
                 
                 typedef struct Matrix4x4 Matrix4x4;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1443,9 +1579,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1454,9 +1590,9 @@ namespace ABI {
                 
                 typedef struct Vector2 Vector2;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1465,9 +1601,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1478,8 +1614,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1487,8 +1623,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1496,8 +1632,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1510,10 +1646,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DDevice;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_FWD_DEFINED__
@@ -1527,10 +1663,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -1547,9 +1683,9 @@ namespace ABI {
                 
                 typedef enum DirectXPixelFormat : int DirectXPixelFormat;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1558,8 +1694,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             class PerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
@@ -1567,8 +1703,8 @@ namespace ABI {
     namespace Windows {
         namespace Perception {
             interface IPerceptionTimestamp;
-        } /* Windows */
-    } /* Perception */} /* ABI */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CIPerceptionTimestamp ABI::Windows::Perception::IPerceptionTimestamp
 
 #endif // ____x_ABI_CWindows_CPerception_CIPerceptionTimestamp_FWD_DEFINED__
@@ -1583,18 +1719,18 @@ namespace ABI {
                 
                 typedef struct SpatialBoundingFrustum SpatialBoundingFrustum;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Perception {
             namespace Spatial {
                 class SpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -1603,9 +1739,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -1616,9 +1752,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialLocator;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_FWD_DEFINED__
@@ -1627,9 +1763,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialLocator;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator ABI::Windows::Perception::Spatial::ISpatialLocator
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialLocator_FWD_DEFINED__
@@ -1643,9 +1779,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class CoreWindow;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CCore_CICoreWindow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CICoreWindow_FWD_DEFINED__
@@ -1654,9 +1790,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindow;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindow ABI::Windows::UI::Core::ICoreWindow
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindow_FWD_DEFINED__
@@ -1672,9 +1808,9 @@ namespace ABI {
                 
                 typedef enum HolographicFramePresentResult : int HolographicFramePresentResult;
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1683,9 +1819,9 @@ namespace ABI {
                 
                 typedef enum HolographicFramePresentWaitBehavior : int HolographicFramePresentWaitBehavior;
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1694,9 +1830,9 @@ namespace ABI {
                 
                 typedef enum HolographicReprojectionMode : int HolographicReprojectionMode;
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1705,9 +1841,20 @@ namespace ABI {
                 
                 typedef enum HolographicSpaceUserPresence : int HolographicSpaceUserPresence;
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                
+                typedef enum HolographicViewConfigurationKind : int HolographicViewConfigurationKind;
+                
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1716,9 +1863,9 @@ namespace ABI {
                 
                 typedef struct HolographicAdapterId HolographicAdapterId;
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1727,9 +1874,12 @@ namespace ABI {
                 
                 typedef struct HolographicStereoTransform HolographicStereoTransform;
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
 
 
 
@@ -1768,9 +1918,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicCameraRenderingParameters;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1778,9 +1928,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicCameraViewportParameters;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1788,9 +1938,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicDisplay;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1798,9 +1948,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicFrame;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1808,9 +1958,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicFramePrediction;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1818,9 +1968,9 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicFramePresentationMonitor;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1830,12 +1980,22 @@ namespace ABI {
         namespace Graphics {
             namespace Holographic {
                 class HolographicQuadLayerUpdateParameters;
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                class HolographicViewConfiguration;
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1867,9 +2027,9 @@ namespace ABI {
                     HolographicFramePresentResult_DeviceRemoved = 1,
                 };
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -1894,9 +2054,9 @@ namespace ABI {
                     HolographicFramePresentWaitBehavior_DoNotWaitForFrameToFinish = 1,
                 };
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -1922,9 +2082,9 @@ namespace ABI {
                     HolographicReprojectionMode_Disabled = 2,
                 };
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1950,10 +2110,37 @@ namespace ABI {
                     HolographicSpaceUserPresence_PresentActive = 2,
                 };
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Struct Windows.Graphics.Holographic.HolographicViewConfigurationKind
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                /* [v1_enum, contract] */
+                enum HolographicViewConfigurationKind : int
+                {
+                    HolographicViewConfigurationKind_Display = 0,
+                    HolographicViewConfigurationKind_PhotoVideoCamera = 1,
+                };
+                
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1977,9 +2164,9 @@ namespace ABI {
                     INT32 HighPart;
                 };
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2004,9 +2191,9 @@ namespace ABI {
                     ABI::Windows::Foundation::Numerics::Matrix4x4 Right;
                 };
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -2044,7 +2231,7 @@ namespace ABI {
                         /* [in] */DOUBLE value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStereo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Id(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -2060,9 +2247,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCamera=_uuidof(IHolographicCamera);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera_INTERFACE_DEFINED__) */
@@ -2111,9 +2298,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCamera2=_uuidof(IHolographicCamera2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera2_INTERFACE_DEFINED__) */
@@ -2150,10 +2337,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrimaryLayerEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPrimaryLayerEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxQuadLayerCount(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -2166,9 +2353,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCamera3=_uuidof(IHolographicCamera3);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera3_INTERFACE_DEFINED__) */
@@ -2200,16 +2387,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanOverrideViewport(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCamera4=_uuidof(IHolographicCamera4);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera4;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera4_INTERFACE_DEFINED__) */
@@ -2241,26 +2428,67 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHardwareContentProtectionSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHardwareContentProtectionEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsHardwareContentProtectionEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCamera5=_uuidof(IHolographicCamera5);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.Graphics.Holographic.IHolographicCamera6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Graphics.Holographic.HolographicCamera
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Holographic_IHolographicCamera6[] = L"Windows.Graphics.Holographic.IHolographicCamera6";
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                /* [object, uuid("0209194F-632D-5154-AB52-0B5D15B12505"), exclusiveto, contract] */
+                MIDL_INTERFACE("0209194F-632D-5154-AB52-0B5D15B12505")
+                IHolographicCamera6 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ViewConfiguration(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Holographic::IHolographicViewConfiguration * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHolographicCamera6=_uuidof(IHolographicCamera6);
+                
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6;
+#endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2319,9 +2547,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCameraPose=_uuidof(IHolographicCameraPose);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose_INTERFACE_DEFINED__) */
@@ -2368,9 +2596,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCameraPose2=_uuidof(IHolographicCameraPose2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose2_INTERFACE_DEFINED__) */
@@ -2427,9 +2655,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCameraRenderingParameters=_uuidof(IHolographicCameraRenderingParameters);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters_INTERFACE_DEFINED__) */
@@ -2478,9 +2706,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCameraRenderingParameters2=_uuidof(IHolographicCameraRenderingParameters2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters2_INTERFACE_DEFINED__) */
@@ -2517,19 +2745,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsContentProtectionEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsContentProtectionEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCameraRenderingParameters3=_uuidof(IHolographicCameraRenderingParameters3);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraRenderingParameters3_INTERFACE_DEFINED__) */
@@ -2573,9 +2801,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicCameraViewportParameters=_uuidof(IHolographicCameraViewportParameters);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraViewportParameters;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraViewportParameters_INTERFACE_DEFINED__) */
@@ -2613,10 +2841,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Size * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStereo(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOpaque(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AdapterId(
                         /* [retval, out] */__RPC__out ABI::Windows::Graphics::Holographic::HolographicAdapterId * value
@@ -2629,9 +2857,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicDisplay=_uuidof(IHolographicDisplay);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay_INTERFACE_DEFINED__) */
@@ -2670,13 +2898,55 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicDisplay2=_uuidof(IHolographicDisplay2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.Graphics.Holographic.IHolographicDisplay3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Graphics.Holographic.HolographicDisplay
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Holographic_IHolographicDisplay3[] = L"Windows.Graphics.Holographic.IHolographicDisplay3";
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                /* [object, uuid("FC4C6AC6-6480-5008-B29E-157D77C843F7"), exclusiveto, contract] */
+                MIDL_INTERFACE("FC4C6AC6-6480-5008-B29E-157D77C843F7")
+                IHolographicDisplay3 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE TryGetViewConfiguration(
+                        /* [in] */ABI::Windows::Graphics::Holographic::HolographicViewConfigurationKind kind,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Holographic::IHolographicViewConfiguration * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHolographicDisplay3=_uuidof(IHolographicDisplay3);
+                
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3;
+#endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2711,9 +2981,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicDisplayStatics=_uuidof(IHolographicDisplayStatics);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics_INTERFACE_DEFINED__) */
@@ -2774,9 +3044,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicFrame=_uuidof(IHolographicFrame);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame_INTERFACE_DEFINED__) */
@@ -2820,9 +3090,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicFrame2=_uuidof(IHolographicFrame2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFrame2_INTERFACE_DEFINED__) */
@@ -2864,9 +3134,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicFramePrediction=_uuidof(IHolographicFramePrediction);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePrediction;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePrediction_INTERFACE_DEFINED__) */
@@ -2909,9 +3179,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicFramePresentationMonitor=_uuidof(IHolographicFramePresentationMonitor);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationMonitor;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationMonitor_INTERFACE_DEFINED__) */
@@ -2962,9 +3232,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicFramePresentationReport=_uuidof(IHolographicFramePresentationReport);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationReport;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicFramePresentationReport_INTERFACE_DEFINED__) */
@@ -3006,9 +3276,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicQuadLayer=_uuidof(IHolographicQuadLayer);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayer;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayer_INTERFACE_DEFINED__) */
@@ -3053,9 +3323,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicQuadLayerFactory=_uuidof(IHolographicQuadLayerFactory);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerFactory_INTERFACE_DEFINED__) */
@@ -3093,7 +3363,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::Foundation::Rect value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE UpdateContentProtectionEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE UpdateExtents(
                         /* [in] */ABI::Windows::Foundation::Numerics::Vector2 value
@@ -3112,9 +3382,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicQuadLayerUpdateParameters=_uuidof(IHolographicQuadLayerUpdateParameters);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters_INTERFACE_DEFINED__) */
@@ -3146,7 +3416,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanAcquireWithHardwareProtection(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE AcquireBufferToUpdateContentWithHardwareProtection(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface * * value
@@ -3156,9 +3426,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicQuadLayerUpdateParameters2=_uuidof(IHolographicQuadLayerUpdateParameters2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicQuadLayerUpdateParameters2_INTERFACE_DEFINED__) */
@@ -3217,9 +3487,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicSpace=_uuidof(IHolographicSpace);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace_INTERFACE_DEFINED__) */
@@ -3273,9 +3543,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicSpace2=_uuidof(IHolographicSpace2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace2_INTERFACE_DEFINED__) */
@@ -3317,9 +3587,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicSpaceCameraAddedEventArgs=_uuidof(IHolographicSpaceCameraAddedEventArgs);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraAddedEventArgs_INTERFACE_DEFINED__) */
@@ -3358,9 +3628,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicSpaceCameraRemovedEventArgs=_uuidof(IHolographicSpaceCameraRemovedEventArgs);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -3400,9 +3670,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicSpaceStatics=_uuidof(IHolographicSpaceStatics);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics_INTERFACE_DEFINED__) */
@@ -3434,10 +3704,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_IsAvailableChanged(
                         /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
@@ -3451,9 +3721,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHolographicSpaceStatics2=_uuidof(IHolographicSpaceStatics2);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics2_INTERFACE_DEFINED__) */
@@ -3485,20 +3755,95 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsConfigured(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHolographicSpaceStatics3=_uuidof(IHolographicSpaceStatics3);
                 
-            } /* Windows */
+            } /* Holographic */
         } /* Graphics */
-    } /* Holographic */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.Graphics.Holographic.IHolographicViewConfiguration
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Graphics.Holographic.HolographicViewConfiguration
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Holographic_IHolographicViewConfiguration[] = L"Windows.Graphics.Holographic.IHolographicViewConfiguration";
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Holographic {
+                /* [object, uuid("5C1DE6E6-67E9-5004-B02C-67A3A122B576"), exclusiveto, contract] */
+                MIDL_INTERFACE("5C1DE6E6-67E9-5004-B02C-67A3A122B576")
+                IHolographicViewConfiguration : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NativeRenderTargetSize(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::Size * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RenderTargetSize(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::Size * value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE RequestRenderTargetSize(
+                        /* [in] */ABI::Windows::Foundation::Size size,
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::Size * result
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedPixelFormats(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PixelFormat(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::DirectX::DirectXPixelFormat * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PixelFormat(
+                        /* [in] */ABI::Windows::Graphics::DirectX::DirectXPixelFormat value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStereo(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RefreshRate(
+                        /* [retval, out] */__RPC__out DOUBLE * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Kind(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Holographic::HolographicViewConfigurationKind * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Display(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Holographic::IHolographicDisplay * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
+                        /* [in] */::boolean value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHolographicViewConfiguration=_uuidof(IHolographicViewConfiguration);
+                
+            } /* Holographic */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration;
+#endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3514,6 +3859,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpac
  *    Windows.Graphics.Holographic.IHolographicCamera3
  *    Windows.Graphics.Holographic.IHolographicCamera4
  *    Windows.Graphics.Holographic.IHolographicCamera5
+ *    Windows.Graphics.Holographic.IHolographicCamera6
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -3617,6 +3963,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Graphics.Holographic.IHolographicDisplay ** Default Interface **
  *    Windows.Graphics.Holographic.IHolographicDisplay2
+ *    Windows.Graphics.Holographic.IHolographicDisplay3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -3857,6 +4204,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
+/*
+ *
+ * Class Windows.Graphics.Holographic.HolographicViewConfiguration
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Graphics.Holographic.IHolographicViewConfiguration ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Graphics_Holographic_HolographicViewConfiguration_DEFINED
+#define RUNTIMECLASS_Windows_Graphics_Holographic_HolographicViewConfiguration_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Holographic_HolographicViewConfiguration[] = L"Windows.Graphics.Holographic.HolographicViewConfiguration";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
 
 
 #else // !defined(__cplusplus)
@@ -3890,6 +4259,12 @@ typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera4 _
 typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5 __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5;
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6;
+
+#endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCameraPose_FWD_DEFINED__
@@ -3938,6 +4313,12 @@ typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay _
 typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2 __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2;
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3;
+
+#endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplayStatics_FWD_DEFINED__
@@ -4040,6 +4421,12 @@ typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStat
 typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics3 __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics3;
 
 #endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceStatics3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration;
+
+#endif // ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -5358,7 +5745,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHologr
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_IInspectableVtbl;
 
@@ -5410,7 +5797,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHologr
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraAddedEventArgsVtbl;
 
@@ -5463,7 +5850,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHologr
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpace * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpaceCameraRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CHolographic__CHolographicSpace_Windows__CGraphics__CHolographic__CHolographicSpaceCameraRemovedEventArgsVtbl;
 
@@ -5596,6 +5983,273 @@ interface __FIEventHandler_1_IInspectable
 #endif // ____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__
 
 
+enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat;
+#if !defined(____FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat;
+
+typedef struct __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl;
+
+interface __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat;
+
+typedef  struct __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl;
+
+interface __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat;
+
+typedef struct __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+            /* [in] */ enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl;
+
+interface __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormatVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_INTERFACE_DEFINED__
+
+
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -5716,10 +6370,17 @@ typedef enum __x_ABI_CWindows_CGraphics_CHolographic_CHolographicReprojectionMod
 typedef enum __x_ABI_CWindows_CGraphics_CHolographic_CHolographicSpaceUserPresence __x_ABI_CWindows_CGraphics_CHolographic_CHolographicSpaceUserPresence;
 
 
+typedef enum __x_ABI_CWindows_CGraphics_CHolographic_CHolographicViewConfigurationKind __x_ABI_CWindows_CGraphics_CHolographic_CHolographicViewConfigurationKind;
+
+
 typedef struct __x_ABI_CWindows_CGraphics_CHolographic_CHolographicAdapterId __x_ABI_CWindows_CGraphics_CHolographic_CHolographicAdapterId;
 
 
 typedef struct __x_ABI_CWindows_CGraphics_CHolographic_CHolographicStereoTransform __x_ABI_CWindows_CGraphics_CHolographic_CHolographicStereoTransform;
+
+
+
+
 
 
 
@@ -5849,6 +6510,25 @@ enum __x_ABI_CWindows_CGraphics_CHolographic_CHolographicSpaceUserPresence
     HolographicSpaceUserPresence_PresentActive = 2,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Struct Windows.Graphics.Holographic.HolographicViewConfigurationKind
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, contract] */
+enum __x_ABI_CWindows_CGraphics_CHolographic_CHolographicViewConfigurationKind
+{
+    HolographicViewConfigurationKind_Display = 0,
+    HolographicViewConfigurationKind_PhotoVideoCamera = 1,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6452,6 +7132,99 @@ interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.Graphics.Holographic.IHolographicCamera6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Graphics.Holographic.HolographicCamera
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Holographic_IHolographicCamera6[] = L"Windows.Graphics.Holographic.IHolographicCamera6";
+/* [object, uuid("0209194F-632D-5154-AB52-0B5D15B12505"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ViewConfiguration )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6Vtbl;
+
+interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6
+{
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_get_ViewConfiguration(This,value) \
+    ( (This)->lpVtbl->get_ViewConfiguration(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6;
+#endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicCamera6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -7372,6 +8145,100 @@ interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.Graphics.Holographic.IHolographicDisplay3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Graphics.Holographic.HolographicDisplay
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Holographic_IHolographicDisplay3[] = L"Windows.Graphics.Holographic.IHolographicDisplay3";
+/* [object, uuid("FC4C6AC6-6480-5008-B29E-157D77C843F7"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *TryGetViewConfiguration )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3 * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CHolographic_CHolographicViewConfigurationKind kind,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3Vtbl;
+
+interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_TryGetViewConfiguration(This,kind,result) \
+    ( (This)->lpVtbl->TryGetViewConfiguration(This,kind,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3;
+#endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9229,6 +10096,177 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpac
 
 /*
  *
+ * Interface Windows.Graphics.Holographic.IHolographicViewConfiguration
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Graphics.Holographic.HolographicViewConfiguration
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Holographic_IHolographicViewConfiguration[] = L"Windows.Graphics.Holographic.IHolographicViewConfiguration";
+/* [object, uuid("5C1DE6E6-67E9-5004-B02C-67A3A122B576"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfigurationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NativeRenderTargetSize )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CSize * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RenderTargetSize )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CSize * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *RequestRenderTargetSize )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [in] */__x_ABI_CWindows_CFoundation_CSize size,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CSize * result
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SupportedPixelFormats )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PixelFormat )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_PixelFormat )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CDirectX_CDirectXPixelFormat value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsStereo )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RefreshRate )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__out DOUBLE * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Kind )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CHolographic_CHolographicViewConfigurationKind * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Display )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicDisplay * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsEnabled )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_IsEnabled )(
+        __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration * This,
+        /* [in] */boolean value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfigurationVtbl;
+
+interface __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration
+{
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfigurationVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_NativeRenderTargetSize(This,value) \
+    ( (This)->lpVtbl->get_NativeRenderTargetSize(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_RenderTargetSize(This,value) \
+    ( (This)->lpVtbl->get_RenderTargetSize(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_RequestRenderTargetSize(This,size,result) \
+    ( (This)->lpVtbl->RequestRenderTargetSize(This,size,result) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_SupportedPixelFormats(This,value) \
+    ( (This)->lpVtbl->get_SupportedPixelFormats(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_PixelFormat(This,value) \
+    ( (This)->lpVtbl->get_PixelFormat(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_put_PixelFormat(This,value) \
+    ( (This)->lpVtbl->put_PixelFormat(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_IsStereo(This,value) \
+    ( (This)->lpVtbl->get_IsStereo(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_RefreshRate(This,value) \
+    ( (This)->lpVtbl->get_RefreshRate(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_Kind(This,value) \
+    ( (This)->lpVtbl->get_Kind(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_Display(This,value) \
+    ( (This)->lpVtbl->get_Display(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_get_IsEnabled(This,value) \
+    ( (This)->lpVtbl->get_IsEnabled(This,value) )
+
+#define __x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_put_IsEnabled(This,value) \
+    ( (This)->lpVtbl->put_IsEnabled(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration;
+#endif /* !defined(____x_ABI_CWindows_CGraphics_CHolographic_CIHolographicViewConfiguration_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.Graphics.Holographic.HolographicCamera
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
@@ -9240,6 +10278,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CHolographic_CIHolographicSpac
  *    Windows.Graphics.Holographic.IHolographicCamera3
  *    Windows.Graphics.Holographic.IHolographicCamera4
  *    Windows.Graphics.Holographic.IHolographicCamera5
+ *    Windows.Graphics.Holographic.IHolographicCamera6
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -9343,6 +10382,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Graphics.Holographic.IHolographicDisplay ** Default Interface **
  *    Windows.Graphics.Holographic.IHolographicDisplay2
+ *    Windows.Graphics.Holographic.IHolographicDisplay3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -9581,6 +10621,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Holographic_HolographicSpaceCameraRemovedEventArgs[] = L"Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Class Windows.Graphics.Holographic.HolographicViewConfiguration
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Graphics.Holographic.IHolographicViewConfiguration ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Graphics_Holographic_HolographicViewConfiguration_DEFINED
+#define RUNTIMECLASS_Windows_Graphics_Holographic_HolographicViewConfiguration_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Holographic_HolographicViewConfiguration[] = L"Windows.Graphics.Holographic.HolographicViewConfiguration";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 

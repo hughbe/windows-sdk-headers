@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.perception.spatial.surfaces.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,10 +277,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceInfo;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceInfo ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceInfo_FWD_DEFINED__
@@ -297,10 +293,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceMesh;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMesh ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMesh_FWD_DEFINED__
@@ -313,10 +309,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceMeshBuffer;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshBuffer ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshBuffer
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshBuffer_FWD_DEFINED__
@@ -329,10 +325,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceMeshOptions;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptions ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshOptions
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptions_FWD_DEFINED__
@@ -345,10 +341,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceMeshOptionsStatics;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptionsStatics ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshOptionsStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptionsStatics_FWD_DEFINED__
@@ -361,10 +357,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceObserver;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserver ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserver_FWD_DEFINED__
@@ -377,10 +373,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceObserverStatics;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserverStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics_FWD_DEFINED__
@@ -393,10 +389,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     interface ISpatialSurfaceObserverStatics2;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics2 ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserverStatics2
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics2_FWD_DEFINED__
@@ -410,10 +406,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     class SpatialSurfaceInfo;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -436,7 +432,7 @@ IKeyValuePair<GUID,ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceIn
 // correct parameterized interface specialization.
 typedef IKeyValuePair<GUID,ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo*> __FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t;
 #define __FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo*>
@@ -468,7 +464,7 @@ IIterator<__FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSp
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo*> __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t;
 #define __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo*>*>
@@ -500,7 +496,7 @@ IIterable<__FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSp
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo*> __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t;
 #define __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<GUID,ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo*>*>
@@ -532,7 +528,7 @@ IMapView<GUID,ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo*> 
 // correct parameterized interface specialization.
 typedef IMapView<GUID,ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo*> __FIMapView_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t;
 #define __FIMapView_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::__FIMapView_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_GUID_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceInfo ABI::Windows::Foundation::Collections::IMapView<GUID,ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo*>
@@ -549,10 +545,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     class SpatialSurfaceMesh;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -575,7 +571,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::Surfaces::Spa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh*> __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh*>
@@ -607,7 +603,7 @@ IAsyncOperation<ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh*> __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh_t;
 #define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceMesh ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh*>
@@ -624,10 +620,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     class SpatialSurfaceObserver;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
 
@@ -651,7 +647,7 @@ ITypedEventHandler<ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceOb
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver*,IInspectable*> __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver*,IInspectable*>
@@ -668,9 +664,9 @@ namespace ABI {
             namespace Spatial {
                 struct SpatialBoundingOrientedBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox_USE
@@ -691,7 +687,7 @@ IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Perception::Spatial::SpatialBoundingOrientedBox> __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox_t;
 #define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox ABI::Windows::Foundation::__FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CPerception__CSpatial__CSpatialBoundingOrientedBox ABI::Windows::Foundation::IReference<ABI::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
@@ -706,9 +702,9 @@ namespace ABI {
         namespace Graphics {
             namespace DirectX {
                 enum DirectXPixelFormat : int;
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_USE
@@ -729,7 +725,7 @@ IIterator<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
 #define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
@@ -759,7 +755,7 @@ IIterable<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
 #define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
@@ -789,7 +785,7 @@ IVectorView<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Graphics::DirectX::DirectXPixelFormat> __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t;
 #define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirectXPixelFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::DirectX::DirectXPixelFormat>
@@ -804,9 +800,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialBoundingVolume;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume_FWD_DEFINED__
@@ -815,9 +811,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialBoundingVolume;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume ABI::Windows::Perception::Spatial::ISpatialBoundingVolume
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialBoundingVolume_FWD_DEFINED__
@@ -843,7 +839,7 @@ IIterator<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> __FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t;
 #define __FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Perception::Spatial::ISpatialBoundingVolume*>
@@ -875,7 +871,7 @@ IIterable<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Perception::Spatial::SpatialBoundingVolume*> __FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t;
 #define __FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CPerception__CSpatial__CSpatialBoundingVolume ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Perception::Spatial::ISpatialBoundingVolume*>
@@ -891,9 +887,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 enum SpatialPerceptionAccessStatus : int;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_USE
@@ -914,7 +910,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Perception::Spatial::SpatialP
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>
@@ -944,7 +940,7 @@ IAsyncOperation<enum ABI::Windows::Perception::Spatial::SpatialPerceptionAccessS
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus> __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CPerception__CSpatial__CSpatialPerceptionAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>
@@ -962,8 +958,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -974,9 +970,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -991,9 +987,9 @@ namespace ABI {
                 
                 typedef enum DirectXPixelFormat : int DirectXPixelFormat;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1005,9 +1001,9 @@ namespace ABI {
                 
                 typedef struct SpatialBoundingOrientedBox SpatialBoundingOrientedBox;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1015,9 +1011,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 class SpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -1026,9 +1022,9 @@ namespace ABI {
         namespace Perception {
             namespace Spatial {
                 interface ISpatialCoordinateSystem;
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem ABI::Windows::Perception::Spatial::ISpatialCoordinateSystem
 
 #endif // ____x_ABI_CWindows_CPerception_CSpatial_CISpatialCoordinateSystem_FWD_DEFINED__
@@ -1041,9 +1037,9 @@ namespace ABI {
                 
                 typedef enum SpatialPerceptionAccessStatus : int SpatialPerceptionAccessStatus;
                 
-            } /* Windows */
+            } /* Spatial */
         } /* Perception */
-    } /* Spatial */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1055,9 +1051,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1082,10 +1078,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     class SpatialSurfaceMeshBuffer;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1094,10 +1090,10 @@ namespace ABI {
             namespace Spatial {
                 namespace Surfaces {
                     class SpatialSurfaceMeshOptions;
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1160,10 +1156,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceInfo=_uuidof(ISpatialSurfaceInfo);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceInfo;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceInfo_INTERFACE_DEFINED__) */
@@ -1218,10 +1214,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceMesh=_uuidof(ISpatialSurfaceMesh);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMesh;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMesh_INTERFACE_DEFINED__) */
@@ -1270,10 +1266,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceMeshBuffer=_uuidof(ISpatialSurfaceMeshBuffer);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshBuffer;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshBuffer_INTERFACE_DEFINED__) */
@@ -1324,20 +1320,20 @@ namespace ABI {
                             /* [in] */ABI::Windows::Graphics::DirectX::DirectXPixelFormat value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeVertexNormals(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeVertexNormals(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceMeshOptions=_uuidof(ISpatialSurfaceMeshOptions);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptions;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptions_INTERFACE_DEFINED__) */
@@ -1383,10 +1379,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceMeshOptionsStatics=_uuidof(ISpatialSurfaceMeshOptionsStatics);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptionsStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceMeshOptionsStatics_INTERFACE_DEFINED__) */
@@ -1439,10 +1435,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceObserver=_uuidof(ISpatialSurfaceObserver);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserver;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserver_INTERFACE_DEFINED__) */
@@ -1482,10 +1478,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceObserverStatics=_uuidof(ISpatialSurfaceObserverStatics);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics_INTERFACE_DEFINED__) */
@@ -1522,17 +1518,17 @@ namespace ABI {
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ISpatialSurfaceObserverStatics2=_uuidof(ISpatialSurfaceObserverStatics2);
                     
-                } /* Windows */
-            } /* Perception */
-        } /* Spatial */
-    } /* Surfaces */} /* ABI */
+                } /* Surfaces */
+            } /* Spatial */
+        } /* Perception */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics2;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserverStatics2_INTERFACE_DEFINED__) */
@@ -2169,7 +2165,7 @@ typedef struct __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserver * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CPerception_CSpatial_CSurfaces_CISpatialSurfaceObserver * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CPerception__CSpatial__CSurfaces__CSpatialSurfaceObserver_IInspectableVtbl;
 

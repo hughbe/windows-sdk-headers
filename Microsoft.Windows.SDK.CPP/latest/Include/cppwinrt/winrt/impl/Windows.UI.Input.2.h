@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -74,6 +74,13 @@ namespace winrt::impl {
 
 WINRT_EXPORT namespace winrt::Windows::UI::Input {
 
+struct WINRT_EBO AttachableInputObject :
+    Windows::UI::Input::IAttachableInputObject,
+    impl::require<AttachableInputObject, Windows::Foundation::IClosable>
+{
+    AttachableInputObject(std::nullptr_t) noexcept {}
+};
+
 struct WINRT_EBO CrossSlidingEventArgs :
     Windows::UI::Input::ICrossSlidingEventArgs
 {
@@ -110,6 +117,20 @@ struct WINRT_EBO HoldingEventArgs :
     Windows::UI::Input::IHoldingEventArgs
 {
     HoldingEventArgs(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO InputActivationListener :
+    Windows::UI::Input::IInputActivationListener,
+    impl::base<InputActivationListener, Windows::UI::Input::AttachableInputObject>,
+    impl::require<InputActivationListener, Windows::Foundation::IClosable, Windows::UI::Input::IAttachableInputObject>
+{
+    InputActivationListener(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO InputActivationListenerActivationChangedEventArgs :
+    Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs
+{
+    InputActivationListenerActivationChangedEventArgs(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO KeyboardDeliveryInterceptor :

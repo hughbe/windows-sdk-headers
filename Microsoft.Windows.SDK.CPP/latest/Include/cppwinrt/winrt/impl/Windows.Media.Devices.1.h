@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -66,6 +66,13 @@ struct WINRT_EBO IAdvancedVideoCaptureDeviceController6 :
     impl::consume_t<IAdvancedVideoCaptureDeviceController6>
 {
     IAdvancedVideoCaptureDeviceController6(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IAdvancedVideoCaptureDeviceController7 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAdvancedVideoCaptureDeviceController7>
+{
+    IAdvancedVideoCaptureDeviceController7(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IAudioDeviceController :
@@ -193,6 +200,13 @@ struct WINRT_EBO IHdrVideoControl :
     impl::consume_t<IHdrVideoControl>
 {
     IHdrVideoControl(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInfraredTorchControl :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInfraredTorchControl>
+{
+    IInfraredTorchControl(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IIsoSpeedControl :

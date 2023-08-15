@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.power.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,9 +141,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 interface IBattery;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPower_CIBattery ABI::Windows::Devices::Power::IBattery
 
 #endif // ____x_ABI_CWindows_CDevices_CPower_CIBattery_FWD_DEFINED__
@@ -155,9 +155,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 interface IBatteryReport;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPower_CIBatteryReport ABI::Windows::Devices::Power::IBatteryReport
 
 #endif // ____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_FWD_DEFINED__
@@ -169,9 +169,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 interface IBatteryStatics;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPower_CIBatteryStatics ABI::Windows::Devices::Power::IBatteryStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPower_CIBatteryStatics_FWD_DEFINED__
@@ -184,9 +184,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 class Battery;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -209,7 +209,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Power::Battery*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Power::Battery*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPower__CBattery_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPower__CBattery ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPower__CBattery_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPower__CBattery ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Power::IBattery*>
@@ -241,7 +241,7 @@ IAsyncOperation<ABI::Windows::Devices::Power::Battery*> : IAsyncOperation_impl<A
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Power::Battery*> __FIAsyncOperation_1_Windows__CDevices__CPower__CBattery_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPower__CBattery ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPower__CBattery_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPower__CBattery ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Power::IBattery*>
@@ -274,7 +274,7 @@ ITypedEventHandler<ABI::Windows::Devices::Power::Battery*,IInspectable*> : IType
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Power::Battery*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Power::IBattery*,IInspectable*>
@@ -304,7 +304,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -326,9 +326,9 @@ namespace ABI {
                 
                 typedef enum BatteryStatus : int BatteryStatus;
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -342,9 +342,9 @@ namespace ABI {
         namespace Devices {
             namespace Power {
                 class BatteryReport;
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -397,9 +397,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBattery=_uuidof(IBattery);
                 
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPower_CIBattery;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPower_CIBattery_INTERFACE_DEFINED__) */
@@ -450,9 +450,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBatteryReport=_uuidof(IBatteryReport);
                 
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPower_CIBatteryReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPower_CIBatteryReport_INTERFACE_DEFINED__) */
@@ -498,9 +498,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBatteryStatics=_uuidof(IBatteryStatics);
                 
-            } /* Windows */
+            } /* Power */
         } /* Devices */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPower_CIBatteryStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPower_CIBatteryStatics_INTERFACE_DEFINED__) */
@@ -719,7 +719,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInsp
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPower_CIBattery * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPower_CIBattery * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPower__CBattery_IInspectableVtbl;
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.store.licensemanagement.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Store {
                 namespace LicenseManagement {
                     interface ILicenseManagerStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Store {
                 namespace LicenseManagement {
                     interface ILicenseManagerStatics2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics2 ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics2_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Store {
                 namespace LicenseManagement {
                     interface ILicenseSatisfactionInfo;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionInfo ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionInfo_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Store {
                 namespace LicenseManagement {
                     interface ILicenseSatisfactionResult;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionResult ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionResult_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Store {
                 namespace LicenseManagement {
                     class LicenseSatisfactionInfo;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -369,7 +365,7 @@ IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo*> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionInfo*>
@@ -401,7 +397,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicens
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionInfo*>*>
@@ -433,7 +429,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicens
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionInfo*>*>
@@ -465,7 +461,7 @@ IMapView<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::Licen
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo*> __FIMapView_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionInfo ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionInfo*>
@@ -482,10 +478,10 @@ namespace ABI {
             namespace Store {
                 namespace LicenseManagement {
                     class LicenseSatisfactionResult;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -508,7 +504,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::LicenseMa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionResult*>
@@ -540,7 +536,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Store::LicenseManagement::Licens
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CLicenseManagement__CLicenseSatisfactionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Store::LicenseManagement::ILicenseSatisfactionResult*>
@@ -570,7 +566,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -599,7 +595,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -617,8 +613,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -634,9 +630,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -653,10 +649,10 @@ namespace ABI {
                     
                     typedef enum LicenseRefreshOption : int LicenseRefreshOption;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -697,10 +693,10 @@ namespace ABI {
                         LicenseRefreshOption_AllLicenses = 1,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -743,10 +739,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILicenseManagerStatics=_uuidof(ILicenseManagerStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics_INTERFACE_DEFINED__) */
@@ -787,10 +783,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILicenseManagerStatics2=_uuidof(ILicenseManagerStatics2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseManagerStatics2_INTERFACE_DEFINED__) */
@@ -823,35 +819,35 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SatisfiedByDevice(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SatisfiedByOpenLicense(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SatisfiedByTrial(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SatisfiedByPass(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SatisfiedByInstallMedia(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SatisfiedBySignedInUser(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSatisfied(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ILicenseSatisfactionInfo=_uuidof(ILicenseSatisfactionInfo);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionInfo_INTERFACE_DEFINED__) */
@@ -894,10 +890,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILicenseSatisfactionResult=_uuidof(ILicenseSatisfactionResult);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Store */
-    } /* LicenseManagement */} /* ABI */
+                } /* LicenseManagement */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CLicenseManagement_CILicenseSatisfactionResult_INTERFACE_DEFINED__) */

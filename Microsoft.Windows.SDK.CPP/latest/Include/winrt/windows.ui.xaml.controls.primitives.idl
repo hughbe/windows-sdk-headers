@@ -179,6 +179,8 @@ namespace Windows
             typedef enum VerticalAlignment VerticalAlignment;
 
             typedef enum Visibility Visibility;
+
+            runtimeclass XamlRoot;
         }
     }
 }
@@ -238,6 +240,8 @@ namespace Windows
 
                     interface IAppBarTemplateSettings;
 
+                    interface IAppBarTemplateSettings2;
+
                     interface IAppBarToggleButtonTemplateSettings;
 
                     interface IButtonBase;
@@ -282,6 +286,8 @@ namespace Windows
 
                     interface ICommandBarTemplateSettings3;
 
+                    interface ICommandBarTemplateSettings4;
+
                     interface IDragCompletedEventArgs;
 
                     interface IDragCompletedEventArgsFactory;
@@ -304,6 +310,8 @@ namespace Windows
 
                     interface IFlyoutBase5;
 
+                    interface IFlyoutBase6;
+
                     interface IFlyoutBaseClosingEventArgs;
 
                     interface IFlyoutBaseFactory;
@@ -319,6 +327,8 @@ namespace Windows
                     interface IFlyoutBaseStatics3;
 
                     interface IFlyoutBaseStatics5;
+
+                    interface IFlyoutBaseStatics6;
 
                     interface IFlyoutShowOptions;
 
@@ -410,9 +420,13 @@ namespace Windows
 
                     interface IPopup2;
 
+                    interface IPopup3;
+
                     interface IPopupStatics;
 
                     interface IPopupStatics2;
+
+                    interface IPopupStatics3;
 
                     interface IProgressBarTemplateSettings;
 
@@ -830,6 +844,16 @@ namespace Windows
                         [propget] HRESULT HiddenRootMargin([out] [retval] Windows.UI.Xaml.Thickness* value);
                     }
 
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings)]
+                    [uuid(CBE66259-0399-5BCC-B925-4D5F5C9A4568)]
+                    interface IAppBarTemplateSettings2 : IInspectable
+                    {
+                        [propget] HRESULT NegativeCompactVerticalDelta([out] [retval] DOUBLE* value);
+                        [propget] HRESULT NegativeMinimalVerticalDelta([out] [retval] DOUBLE* value);
+                        [propget] HRESULT NegativeHiddenVerticalDelta([out] [retval] DOUBLE* value);
+                    }
+
                     [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                     [exclusiveto(Windows.UI.Xaml.Controls.Primitives.AppBarToggleButtonTemplateSettings)]
                     [uuid(AAF99C48-D8F4-40D9-9FA3-3A64F0FEC5D8)]
@@ -1117,6 +1141,16 @@ namespace Windows
                         [propget] HRESULT EffectiveOverflowButtonVisibility([out] [retval] Windows.UI.Xaml.Visibility* value);
                     }
 
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings)]
+                    [uuid(F2562DD3-AA58-59C5-853B-828A19D1214E)]
+                    interface ICommandBarTemplateSettings4 : IInspectable
+                    {
+                        [propget] HRESULT OverflowContentCompactYTranslation([out] [retval] DOUBLE* value);
+                        [propget] HRESULT OverflowContentMinimalYTranslation([out] [retval] DOUBLE* value);
+                        [propget] HRESULT OverflowContentHiddenYTranslation([out] [retval] DOUBLE* value);
+                    }
+
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                     [exclusiveto(Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs)]
                     [uuid(B04F29A1-BD16-48F6-A511-9C2763641331)]
@@ -1235,6 +1269,18 @@ namespace Windows
                         HRESULT ShowAt([in] Windows.UI.Xaml.DependencyObject* placementTarget, [in] Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions* showOptions);
                     }
 
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Primitives.FlyoutBase)]
+                    [uuid(5399DE8C-06CC-5B52-B65A-FF9322D1C940)]
+                    interface IFlyoutBase6 : IInspectable
+                    {
+                        [propget] HRESULT ShouldConstrainToRootBounds([out] [retval] boolean* value);
+                        [propput] HRESULT ShouldConstrainToRootBounds([in] boolean value);
+                        [propget] HRESULT IsConstrainedToRootBounds([out] [retval] boolean* value);
+                        [propget] HRESULT XamlRoot([out] [retval] Windows.UI.Xaml.XamlRoot** value);
+                        [propput] HRESULT XamlRoot([in] Windows.UI.Xaml.XamlRoot* value);
+                    }
+
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                     [exclusiveto(Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs)]
                     [uuid(D075852D-B09A-4FD1-B005-DB2BA01206FB)]
@@ -1309,6 +1355,14 @@ namespace Windows
                         [propget] HRESULT InputDevicePrefersPrimaryCommandsProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                         [propget] HRESULT AreOpenCloseAnimationsEnabledProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                         [propget] HRESULT IsOpenProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    }
+
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Primitives.FlyoutBase)]
+                    [uuid(96D49254-C91B-5246-8B39-AFC2A2C50CF8)]
+                    interface IFlyoutBaseStatics6 : IInspectable
+                    {
+                        [propget] HRESULT ShouldConstrainToRootBoundsProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -1903,6 +1957,16 @@ namespace Windows
                         [propput] HRESULT LightDismissOverlayMode([in] Windows.UI.Xaml.Controls.LightDismissOverlayMode value);
                     }
 
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Primitives.Popup)]
+                    [uuid(F9C46915-A65C-5F68-9F54-310A1B51095F)]
+                    interface IPopup3 : IInspectable
+                    {
+                        [propget] HRESULT ShouldConstrainToRootBounds([out] [retval] boolean* value);
+                        [propput] HRESULT ShouldConstrainToRootBounds([in] boolean value);
+                        [propget] HRESULT IsConstrainedToRootBounds([out] [retval] boolean* value);
+                    }
+
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                     [exclusiveto(Windows.UI.Xaml.Controls.Primitives.Popup)]
                     [uuid(5AE3BF1A-6E34-40D6-8A7F-CA822AAF59E3)]
@@ -1922,6 +1986,14 @@ namespace Windows
                     interface IPopupStatics2 : IInspectable
                     {
                         [propget] HRESULT LightDismissOverlayModeProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    }
+
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Controls.Primitives.Popup)]
+                    [uuid(00789589-C580-558F-945A-7D02EE004D3E)]
+                    interface IPopupStatics3 : IInspectable
+                    {
+                        [propget] HRESULT ShouldConstrainToRootBoundsProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2284,6 +2356,7 @@ namespace Windows
                     runtimeclass AppBarTemplateSettings : Windows.UI.Xaml.DependencyObject
                     {
                         [default] interface Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings;
+                        [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2;
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -2385,6 +2458,7 @@ namespace Windows
                         [default] interface Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings;
                         [contract(Windows.Foundation.UniversalApiContract, 2.0)] interface Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings2;
                         [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings3;
+                        [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4;
                     }
 
                     [composable(Windows.UI.Xaml.Controls.Primitives.IDragCompletedEventArgsFactory, public, Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2421,6 +2495,7 @@ namespace Windows
                     [static(Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics2, Windows.Foundation.UniversalApiContract, 3.0)]
                     [static(Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics3, Windows.Foundation.UniversalApiContract, 4.0)]
                     [static(Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics5, Windows.Foundation.UniversalApiContract, 7.0)]
+                    [static(Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6, Windows.Foundation.UniversalApiContract, 8.0)]
                     [threading(both)]
                     runtimeclass FlyoutBase : Windows.UI.Xaml.DependencyObject
                     {
@@ -2429,6 +2504,7 @@ namespace Windows
                         [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBase3;
                         [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBase4;
                         [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBase5;
+                        [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6;
                         [contract(Windows.Foundation.UniversalApiContract, 1.0)] [overridable] interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides;
                         [contract(Windows.Foundation.UniversalApiContract, 5.0)] [overridable] interface Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides4;
                     }
@@ -2644,11 +2720,13 @@ namespace Windows
                     [marshaling_behavior(agile)]
                     [static(Windows.UI.Xaml.Controls.Primitives.IPopupStatics, Windows.Foundation.UniversalApiContract, 1.0)]
                     [static(Windows.UI.Xaml.Controls.Primitives.IPopupStatics2, Windows.Foundation.UniversalApiContract, 3.0)]
+                    [static(Windows.UI.Xaml.Controls.Primitives.IPopupStatics3, Windows.Foundation.UniversalApiContract, 8.0)]
                     [threading(both)]
                     runtimeclass Popup : Windows.UI.Xaml.FrameworkElement
                     {
                         [default] interface Windows.UI.Xaml.Controls.Primitives.IPopup;
                         [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Xaml.Controls.Primitives.IPopup2;
+                        [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Controls.Primitives.IPopup3;
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)]

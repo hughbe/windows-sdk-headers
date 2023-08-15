@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.interop.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -139,10 +139,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface IBindableVectorChangedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorChangedEventHandler ABI::Windows::UI::Xaml::Interop::IBindableVectorChangedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorChangedEventHandler_FWD_DEFINED__
@@ -155,10 +155,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface INotifyCollectionChangedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventHandler ABI::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventHandler_FWD_DEFINED__
@@ -171,10 +171,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface IBindableIterable;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterable ABI::Windows::UI::Xaml::Interop::IBindableIterable
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterable_FWD_DEFINED__
@@ -187,10 +187,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface IBindableIterator;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterator ABI::Windows::UI::Xaml::Interop::IBindableIterator
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterator_FWD_DEFINED__
@@ -203,10 +203,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface IBindableObservableVector;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableObservableVector ABI::Windows::UI::Xaml::Interop::IBindableObservableVector
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableObservableVector_FWD_DEFINED__
@@ -219,10 +219,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface IBindableVector;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVector ABI::Windows::UI::Xaml::Interop::IBindableVector
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVector_FWD_DEFINED__
@@ -235,10 +235,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface IBindableVectorView;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorView ABI::Windows::UI::Xaml::Interop::IBindableVectorView
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorView_FWD_DEFINED__
@@ -251,10 +251,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface INotifyCollectionChanged;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChanged ABI::Windows::UI::Xaml::Interop::INotifyCollectionChanged
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChanged_FWD_DEFINED__
@@ -267,10 +267,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface INotifyCollectionChangedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgs ABI::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgs_FWD_DEFINED__
@@ -283,10 +283,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     interface INotifyCollectionChangedEventArgsFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgsFactory ABI::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgsFactory_FWD_DEFINED__
@@ -303,10 +303,10 @@ namespace ABI {
                     
                     typedef enum NotifyCollectionChangedAction : int NotifyCollectionChangedAction;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -316,10 +316,10 @@ namespace ABI {
                     
                     typedef enum TypeKind : int TypeKind;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -329,10 +329,10 @@ namespace ABI {
                     
                     typedef struct TypeName TypeName;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -350,10 +350,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Interop {
                     class NotifyCollectionChangedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -386,10 +386,10 @@ namespace ABI {
                         NotifyCollectionChangedAction_Reset = 4,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -416,10 +416,10 @@ namespace ABI {
                         TypeKind_Custom = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -445,10 +445,10 @@ namespace ABI {
                         ABI::Windows::UI::Xaml::Interop::TypeKind Kind;
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -482,10 +482,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBindableVectorChangedEventHandler=_uuidof(IBindableVectorChangedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorChangedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorChangedEventHandler_INTERFACE_DEFINED__) */
@@ -522,10 +522,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotifyCollectionChangedEventHandler=_uuidof(INotifyCollectionChangedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventHandler_INTERFACE_DEFINED__) */
@@ -562,10 +562,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBindableIterable=_uuidof(IBindableIterable);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterable;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterable_INTERFACE_DEFINED__) */
@@ -598,20 +598,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt IInspectable * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasCurrent(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE MoveNext(
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IBindableIterator=_uuidof(IBindableIterator);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterator;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableIterator_INTERFACE_DEFINED__) */
@@ -657,10 +657,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBindableObservableVector=_uuidof(IBindableObservableVector);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableObservableVector;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableObservableVector_INTERFACE_DEFINED__) */
@@ -706,7 +706,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE IndexOf(
                             /* [in] */__RPC__in_opt IInspectable * value,
                             /* [out] */__RPC__out UINT32 * index,
-                            /* [retval, out] */__RPC__out boolean * returnValue
+                            /* [retval, out] */__RPC__out ::boolean * returnValue
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetAt(
                             /* [in] */UINT32 index,
@@ -729,10 +729,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBindableVector=_uuidof(IBindableVector);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVector;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVector_INTERFACE_DEFINED__) */
@@ -775,17 +775,17 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE IndexOf(
                             /* [in] */__RPC__in_opt IInspectable * value,
                             /* [out] */__RPC__out UINT32 * index,
-                            /* [retval, out] */__RPC__out boolean * returnValue
+                            /* [retval, out] */__RPC__out ::boolean * returnValue
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IBindableVectorView=_uuidof(IBindableVectorView);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorView;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CIBindableVectorView_INTERFACE_DEFINED__) */
@@ -826,10 +826,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotifyCollectionChanged=_uuidof(INotifyCollectionChanged);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChanged;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChanged_INTERFACE_DEFINED__) */
@@ -881,10 +881,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotifyCollectionChangedEventArgs=_uuidof(INotifyCollectionChangedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgs_INTERFACE_DEFINED__) */
@@ -931,10 +931,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_INotifyCollectionChangedEventArgsFactory=_uuidof(INotifyCollectionChangedEventArgsFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Interop */} /* ABI */
+                } /* Interop */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CInterop_CINotifyCollectionChangedEventArgsFactory_INTERFACE_DEFINED__) */

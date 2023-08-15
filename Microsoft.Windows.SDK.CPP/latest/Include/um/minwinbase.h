@@ -208,6 +208,8 @@ typedef enum _FILE_INFO_BY_HANDLE_CLASS {
     FileDispositionInfoEx,
     FileRenameInfoEx,
 #endif
+    FileCaseSensitiveInfo,
+    FileNormalizedNameInfo,
     MaximumFileInfoByHandleClass
 } FILE_INFO_BY_HANDLE_CLASS, *PFILE_INFO_BY_HANDLE_CLASS;
 #endif

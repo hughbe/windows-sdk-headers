@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.pushnotifications.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IPushNotificationChannel;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannel ABI::Windows::Networking::PushNotifications::IPushNotificationChannel
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannel_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IPushNotificationChannelManagerForUser;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser ABI::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IPushNotificationChannelManagerForUser2;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser2 ABI::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser2_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IPushNotificationChannelManagerStatics;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics ABI::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IPushNotificationChannelManagerStatics2;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics2 ABI::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics2_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IPushNotificationChannelManagerStatics3;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3 ABI::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IPushNotificationReceivedEventArgs;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationReceivedEventArgs ABI::Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationReceivedEventArgs_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IRawNotification;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification ABI::Windows::Networking::PushNotifications::IRawNotification
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 interface IRawNotification2;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification2 ABI::Windows::Networking::PushNotifications::IRawNotification2
 
 #endif // ____x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification2_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 class PushNotificationChannel;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -431,7 +427,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::PushNotifications::Pus
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::PushNotifications::PushNotificationChannel*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::PushNotifications::IPushNotificationChannel*>
@@ -463,7 +459,7 @@ IAsyncOperation<ABI::Windows::Networking::PushNotifications::PushNotificationCha
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::PushNotifications::PushNotificationChannel*> __FIAsyncOperation_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CPushNotifications__CPushNotificationChannel ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::PushNotifications::IPushNotificationChannel*>
@@ -480,9 +476,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 class PushNotificationReceivedEventArgs;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -506,7 +502,7 @@ ITypedEventHandler<ABI::Windows::Networking::PushNotifications::PushNotification
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::PushNotifications::PushNotificationChannel*,ABI::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::PushNotifications::IPushNotificationChannel*,ABI::Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs*>
@@ -537,7 +533,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -567,7 +563,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -597,7 +593,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -626,7 +622,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -644,8 +640,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -657,9 +653,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -672,8 +668,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -681,8 +677,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -695,9 +691,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class BadgeNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification_FWD_DEFINED__
@@ -706,9 +702,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification ABI::Windows::UI::Notifications::IBadgeNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeNotification_FWD_DEFINED__
@@ -719,9 +715,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CITileNotification_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CITileNotification_FWD_DEFINED__
@@ -730,9 +726,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileNotification ABI::Windows::UI::Notifications::ITileNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileNotification_FWD_DEFINED__
@@ -743,9 +739,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_FWD_DEFINED__
@@ -754,9 +750,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotification;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotification ABI::Windows::UI::Notifications::IToastNotification
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotification_FWD_DEFINED__
@@ -772,9 +768,9 @@ namespace ABI {
                 
                 typedef enum PushNotificationType : int PushNotificationType;
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -792,9 +788,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 class PushNotificationChannelManagerForUser;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -803,9 +799,9 @@ namespace ABI {
         namespace Networking {
             namespace PushNotifications {
                 class RawNotification;
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -840,9 +836,9 @@ namespace ABI {
                     PushNotificationType_TileFlyout = 4,
                 };
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -889,9 +885,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationChannel=_uuidof(IPushNotificationChannel);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannel;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannel_INTERFACE_DEFINED__) */
@@ -941,9 +937,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationChannelManagerForUser=_uuidof(IPushNotificationChannelManagerForUser);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser_INTERFACE_DEFINED__) */
@@ -990,9 +986,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationChannelManagerForUser2=_uuidof(IPushNotificationChannelManagerForUser2);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser2_INTERFACE_DEFINED__) */
@@ -1039,9 +1035,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationChannelManagerStatics=_uuidof(IPushNotificationChannelManagerStatics);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics_INTERFACE_DEFINED__) */
@@ -1081,9 +1077,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationChannelManagerStatics2=_uuidof(IPushNotificationChannelManagerStatics2);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics2_INTERFACE_DEFINED__) */
@@ -1115,16 +1111,16 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser * * value
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser * * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationChannelManagerStatics3=_uuidof(IPushNotificationChannelManagerStatics3);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3_INTERFACE_DEFINED__) */
@@ -1156,10 +1152,10 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Cancel(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Cancel(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NotificationType(
                         /* [retval, out] */__RPC__out ABI::Windows::Networking::PushNotifications::PushNotificationType * value
@@ -1181,9 +1177,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPushNotificationReceivedEventArgs=_uuidof(IPushNotificationReceivedEventArgs);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -1222,9 +1218,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRawNotification=_uuidof(IRawNotification);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification_INTERFACE_DEFINED__) */
@@ -1266,9 +1262,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRawNotification2=_uuidof(IRawNotification2);
                 
-            } /* Windows */
+            } /* PushNotifications */
         } /* Networking */
-    } /* PushNotifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNotification2_INTERFACE_DEFINED__) */
@@ -1284,6 +1280,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNoti
  *
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IPushNotificationChannel ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1309,6 +1307,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Networking_PushNotifications_PushNotificationChannelManager_DEFINED
@@ -1328,8 +1328,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser ** Default Interface **
  *    Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -1353,6 +1351,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs ** Default Interface **
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -1373,6 +1373,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IRawNotification ** Default Interface **
  *    Windows.Networking.PushNotifications.IRawNotification2
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1582,7 +1584,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CPushNotifications__CPushNotificationChannel_Windows__CNetworking__CPushNotifications__CPushNotificationReceivedEventArgsVtbl;
 
@@ -2601,7 +2603,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     );
 HRESULT ( STDMETHODCALLTYPE *GetDefault )(
         __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3 * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser * * value
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser * * result
         );
     END_INTERFACE
     
@@ -2631,8 +2633,8 @@ interface __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChan
 #define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3_GetDefault(This,value) \
-    ( (This)->lpVtbl->GetDefault(This,value) )
+#define __x_ABI_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3_GetDefault(This,result) \
+    ( (This)->lpVtbl->GetDefault(This,result) )
 
 
 #endif /* COBJMACROS */
@@ -2981,6 +2983,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CPushNotifications_CIRawNoti
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IPushNotificationChannel ** Default Interface **
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -3005,6 +3009,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Networking_PushNotifications_PushNotificationChannelManager_DEFINED
@@ -3024,8 +3030,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser ** Default Interface **
  *    Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3049,6 +3053,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs ** Default Interface **
  *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -3069,6 +3075,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.PushNotifications.IRawNotification ** Default Interface **
  *    Windows.Networking.PushNotifications.IRawNotification2
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000

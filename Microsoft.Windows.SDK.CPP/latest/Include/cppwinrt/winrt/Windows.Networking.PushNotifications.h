@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -125,9 +125,9 @@ template <typename D> Windows::Networking::PushNotifications::PushNotificationCh
 
 template <typename D> Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics3<D>::GetDefault() const
 {
-    Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser value{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3)->GetDefault(put_abi(value)));
-    return value;
+    Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3)->GetDefault(put_abi(result)));
+    return result;
 }
 
 template <typename D> void consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::Cancel(bool value) const
@@ -408,14 +408,14 @@ struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChann
 template <typename D>
 struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3>
 {
-    int32_t WINRT_CALL GetDefault(void** value) noexcept final
+    int32_t WINRT_CALL GetDefault(void** result) noexcept final
     {
         try
         {
-            *value = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetDefault, WINRT_WRAP(Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser));
-            *value = detach_from<Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>(this->shim().GetDefault());
+            *result = detach_from<Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>(this->shim().GetDefault());
             return 0;
         }
         catch (...) { return to_hresult(); }

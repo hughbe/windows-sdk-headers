@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -79,6 +79,13 @@ struct WINRT_EBO MouseEventArgs :
     Windows::Devices::Input::IMouseEventArgs
 {
     MouseEventArgs(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO PenDevice :
+    Windows::Devices::Input::IPenDevice
+{
+    PenDevice(std::nullptr_t) noexcept {}
+    static Windows::Devices::Input::PenDevice GetFromPointerId(uint32_t pointerId);
 };
 
 struct WINRT_EBO PointerDevice :

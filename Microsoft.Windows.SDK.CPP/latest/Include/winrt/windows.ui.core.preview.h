@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.core.preview.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -91,17 +91,129 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 #define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+
+#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
 #define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
@@ -114,6 +226,26 @@
 #if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
 #define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
+#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 #define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
@@ -128,11 +260,44 @@
 #include "EventToken.h"
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
+#include "Windows.UI.WindowManagement.h"
 // Importing Collections header
 #include <windows.foundation.collections.h>
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Core {
+                namespace Preview {
+                    interface ICoreAppWindowPreview;
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview ABI::Windows::UI::Core::Preview::ICoreAppWindowPreview
+
+#endif // ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Core {
+                namespace Preview {
+                    interface ICoreAppWindowPreviewStatics;
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics ABI::Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics
+
+#endif // ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs_FWD_DEFINED__
 namespace ABI {
@@ -141,10 +306,10 @@ namespace ABI {
             namespace Core {
                 namespace Preview {
                     interface ISystemNavigationCloseRequestedPreviewEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs ABI::Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs_FWD_DEFINED__
@@ -157,10 +322,10 @@ namespace ABI {
             namespace Core {
                 namespace Preview {
                     interface ISystemNavigationManagerPreview;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreview ABI::Windows::UI::Core::Preview::ISystemNavigationManagerPreview
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreview_FWD_DEFINED__
@@ -173,10 +338,10 @@ namespace ABI {
             namespace Core {
                 namespace Preview {
                     interface ISystemNavigationManagerPreviewStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreviewStatics ABI::Windows::UI::Core::Preview::ISystemNavigationManagerPreviewStatics
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreviewStatics_FWD_DEFINED__
@@ -190,10 +355,10 @@ namespace ABI {
             namespace Core {
                 namespace Preview {
                     class SystemNavigationCloseRequestedPreviewEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -216,7 +381,7 @@ IEventHandler<ABI::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPre
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs*> __FIEventHandler_1_Windows__CUI__CCore__CPreview__CSystemNavigationCloseRequestedPreviewEventArgs_t;
 #define __FIEventHandler_1_Windows__CUI__CCore__CPreview__CSystemNavigationCloseRequestedPreviewEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CUI__CCore__CPreview__CSystemNavigationCloseRequestedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CUI__CCore__CPreview__CSystemNavigationCloseRequestedPreviewEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs*>
@@ -233,8 +398,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -242,11 +407,39 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
+
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace WindowManagement {
+                class AppWindow;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace WindowManagement {
+                interface IAppWindow;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow ABI::Windows::UI::WindowManagement::IAppWindow
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+
 
 
 
@@ -261,11 +454,24 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 namespace Preview {
+                    class CoreAppWindowPreview;
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Core {
+                namespace Preview {
                     class SystemNavigationManagerPreview;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -276,6 +482,90 @@ namespace ABI {
 
 
 
+
+
+/*
+ *
+ * Interface Windows.UI.Core.Preview.ICoreAppWindowPreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Core.Preview.CoreAppWindowPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Core_Preview_ICoreAppWindowPreview[] = L"Windows.UI.Core.Preview.ICoreAppWindowPreview";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Core {
+                namespace Preview {
+                    /* [object, uuid("A4F6E665-365E-5FDE-87A5-9543C3A15AA8"), exclusiveto, contract] */
+                    MIDL_INTERFACE("A4F6E665-365E-5FDE-87A5-9543C3A15AA8")
+                    ICoreAppWindowPreview : public IInspectable
+                    {
+                    public:
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ICoreAppWindowPreview=_uuidof(ICoreAppWindowPreview);
+                    
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview;
+#endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Core.Preview.CoreAppWindowPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Core_Preview_ICoreAppWindowPreviewStatics[] = L"Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Core {
+                namespace Preview {
+                    /* [object, uuid("33AC21BE-423B-5DB6-8A8E-4DC87353B75B"), exclusiveto, contract] */
+                    MIDL_INTERFACE("33AC21BE-423B-5DB6-8A8E-4DC87353B75B")
+                    ICoreAppWindowPreviewStatics : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE GetIdFromWindow(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::WindowManagement::IAppWindow * window,
+                            /* [retval, out] */__RPC__out INT32 * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_ICoreAppWindowPreviewStatics=_uuidof(ICoreAppWindowPreviewStatics);
+                    
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -304,10 +594,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IDeferral * * result
@@ -317,10 +607,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISystemNavigationCloseRequestedPreviewEventArgs=_uuidof(ISystemNavigationCloseRequestedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -364,10 +654,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISystemNavigationManagerPreview=_uuidof(ISystemNavigationManagerPreview);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreview;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreview_INTERFACE_DEFINED__) */
@@ -407,14 +697,41 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISystemNavigationManagerPreviewStatics=_uuidof(ISystemNavigationManagerPreviewStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreviewStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Class Windows.UI.Core.Preview.CoreAppWindowPreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Core.Preview.ICoreAppWindowPreview ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Core_Preview_CoreAppWindowPreview_DEFINED
+#define RUNTIMECLASS_Windows_UI_Core_Preview_CoreAppWindowPreview_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Core_Preview_CoreAppWindowPreview[] = L"Windows.UI.Core.Preview.CoreAppWindowPreview";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -469,6 +786,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview;
+
+#endif // ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics;
+
+#endif // ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs __x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationCloseRequestedPreviewEventArgs;
@@ -547,6 +876,11 @@ typedef interface __x_ABI_CWindows_CFoundation_CIDeferral __x_ABI_CWindows_CFoun
 
 
 
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow;
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
 
 
 
@@ -560,6 +894,194 @@ typedef interface __x_ABI_CWindows_CFoundation_CIDeferral __x_ABI_CWindows_CFoun
 
 
 
+
+
+
+
+
+
+
+
+
+
+/*
+ *
+ * Interface Windows.UI.Core.Preview.ICoreAppWindowPreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Core.Preview.CoreAppWindowPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Core_Preview_ICoreAppWindowPreview[] = L"Windows.UI.Core.Preview.ICoreAppWindowPreview";
+/* [object, uuid("A4F6E665-365E-5FDE-87A5-9543C3A15AA8"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewVtbl;
+
+interface __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview;
+#endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreview_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Core.Preview.CoreAppWindowPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Core_Preview_ICoreAppWindowPreviewStatics[] = L"Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics";
+/* [object, uuid("33AC21BE-423B-5DB6-8A8E-4DC87353B75B"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIdFromWindow )(
+        __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow * window,
+        /* [retval, out] */__RPC__out INT32 * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStaticsVtbl;
+
+interface __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStaticsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_GetIdFromWindow(This,window,result) \
+    ( (This)->lpVtbl->GetIdFromWindow(This,window,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CICoreAppWindowPreviewStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -861,6 +1383,33 @@ interface __x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreviewSt
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CPreview_CISystemNavigationManagerPreviewStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Class Windows.UI.Core.Preview.CoreAppWindowPreview
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Core.Preview.ICoreAppWindowPreview ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Core_Preview_CoreAppWindowPreview_DEFINED
+#define RUNTIMECLASS_Windows_UI_Core_Preview_CoreAppWindowPreview_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Core_Preview_CoreAppWindowPreview[] = L"Windows.UI.Core.Preview.CoreAppWindowPreview";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*

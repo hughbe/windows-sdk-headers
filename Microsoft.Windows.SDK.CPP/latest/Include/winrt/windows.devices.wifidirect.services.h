@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.wifidirect.services.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,10 +277,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectService;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectService ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectService
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectService_FWD_DEFINED__
@@ -297,10 +293,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceAdvertiser;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceAdvertiser
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser_FWD_DEFINED__
@@ -313,10 +309,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceAdvertiserFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiserFactory ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceAdvertiserFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiserFactory_FWD_DEFINED__
@@ -329,10 +325,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAutoAcceptSessionConnectedEventArgs ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAutoAcceptSessionConnectedEventArgs_FWD_DEFINED__
@@ -345,10 +341,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceProvisioningInfo;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceProvisioningInfo ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceProvisioningInfo
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceProvisioningInfo_FWD_DEFINED__
@@ -361,10 +357,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceRemotePortAddedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceRemotePortAddedEventArgs ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceRemotePortAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceRemotePortAddedEventArgs_FWD_DEFINED__
@@ -377,10 +373,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceSession;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSession
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession_FWD_DEFINED__
@@ -393,10 +389,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceSessionDeferredEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionDeferredEventArgs ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSessionDeferredEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionDeferredEventArgs_FWD_DEFINED__
@@ -409,10 +405,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceSessionRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequest ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSessionRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequest_FWD_DEFINED__
@@ -425,10 +421,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceSessionRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequestedEventArgs ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSessionRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequestedEventArgs_FWD_DEFINED__
@@ -441,10 +437,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     interface IWiFiDirectServiceStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceStatics ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceStatics_FWD_DEFINED__
@@ -458,10 +454,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     enum WiFiDirectServiceConfigurationMethod : int;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_USE
@@ -482,7 +478,7 @@ IIterator<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceCon
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod> __FIIterator_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t;
 #define __FIIterator_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod>
@@ -512,7 +508,7 @@ IIterable<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceCon
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod> __FIIterable_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t;
 #define __FIIterable_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod>
@@ -542,7 +538,7 @@ IVectorView<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceC
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod> __FIVectorView_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t;
 #define __FIVectorView_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod>
@@ -572,7 +568,7 @@ IVector<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfi
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod> __FIVector_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t;
 #define __FIVector_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod>
@@ -588,10 +584,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectService;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -614,7 +610,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::WiF
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectService*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectService*>
@@ -646,7 +642,7 @@ IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectService*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectService*> __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectService*>
@@ -663,10 +659,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceProvisioningInfo;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -689,7 +685,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::WiF
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceProvisioningInfo*>
@@ -721,7 +717,7 @@ IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServicePr
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo*> __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceProvisioningInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceProvisioningInfo*>
@@ -738,10 +734,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceSession;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -764,7 +760,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::WiF
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSession*>
@@ -796,7 +792,7 @@ IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession*> __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSession*>
@@ -814,10 +810,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceSessionDeferredEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -841,7 +837,7 @@ ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServic
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectService*,ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionDeferredEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectService*,ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSessionDeferredEventArgs*>
@@ -859,10 +855,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceAdvertiser;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -886,7 +882,7 @@ ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServic
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceAdvertiser*,IInspectable*>
@@ -904,10 +900,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -931,7 +927,7 @@ ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServic
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser*,ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAutoAcceptSessionConnectedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceAdvertiser*,ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs*>
@@ -950,10 +946,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceSessionRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -977,7 +973,7 @@ ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServic
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser*,ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceAdvertiser*,ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSessionRequestedEventArgs*>
@@ -1011,7 +1007,7 @@ ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServic
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSession*,IInspectable*>
@@ -1029,10 +1025,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceRemotePortAddedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1056,7 +1052,7 @@ ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServic
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession*,ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceRemotePortAddedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceSession*,ABI::Windows::Devices::WiFiDirect::Services::IWiFiDirectServiceRemotePortAddedEventArgs*>
@@ -1087,7 +1083,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1116,7 +1112,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1145,7 +1141,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1174,7 +1170,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1188,8 +1184,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class EndpointPair;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIEndpointPair_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIEndpointPair_FWD_DEFINED__
@@ -1197,8 +1193,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IEndpointPair;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIEndpointPair ABI::Windows::Networking::IEndpointPair
 
 #endif // ____x_ABI_CWindows_CNetworking_CIEndpointPair_FWD_DEFINED__
@@ -1224,7 +1220,7 @@ IIterator<ABI::Windows::Networking::EndpointPair*> : IIterator_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::EndpointPair*> __FIIterator_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIIterator_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::IEndpointPair*>
@@ -1256,7 +1252,7 @@ IIterable<ABI::Windows::Networking::EndpointPair*> : IIterable_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::EndpointPair*> __FIIterable_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIIterable_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::IEndpointPair*>
@@ -1288,7 +1284,7 @@ IVectorView<ABI::Windows::Networking::EndpointPair*> : IVectorView_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::EndpointPair*> __FIVectorView_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IEndpointPair*>
@@ -1306,9 +1302,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1317,9 +1313,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1334,8 +1330,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1347,8 +1343,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1365,9 +1361,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class DatagramSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
@@ -1376,9 +1372,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket ABI::Windows::Networking::Sockets::IDatagramSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
@@ -1389,9 +1385,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -1400,9 +1396,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener ABI::Windows::Networking::Sockets::IStreamSocketListener
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -1418,9 +1414,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1437,10 +1433,10 @@ namespace ABI {
                     
                     typedef enum WiFiDirectServiceAdvertisementStatus : int WiFiDirectServiceAdvertisementStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1450,10 +1446,10 @@ namespace ABI {
                     
                     typedef enum WiFiDirectServiceConfigurationMethod : int WiFiDirectServiceConfigurationMethod;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1463,10 +1459,10 @@ namespace ABI {
                     
                     typedef enum WiFiDirectServiceError : int WiFiDirectServiceError;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1476,10 +1472,10 @@ namespace ABI {
                     
                     typedef enum WiFiDirectServiceIPProtocol : int WiFiDirectServiceIPProtocol;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1489,10 +1485,10 @@ namespace ABI {
                     
                     typedef enum WiFiDirectServiceSessionErrorStatus : int WiFiDirectServiceSessionErrorStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1502,10 +1498,10 @@ namespace ABI {
                     
                     typedef enum WiFiDirectServiceSessionStatus : int WiFiDirectServiceSessionStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1515,10 +1511,10 @@ namespace ABI {
                     
                     typedef enum WiFiDirectServiceStatus : int WiFiDirectServiceStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1544,10 +1540,10 @@ namespace ABI {
             namespace WiFiDirect {
                 namespace Services {
                     class WiFiDirectServiceSessionRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1585,10 +1581,10 @@ namespace ABI {
                         WiFiDirectServiceAdvertisementStatus_Aborted = 3,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1615,10 +1611,10 @@ namespace ABI {
                         WiFiDirectServiceConfigurationMethod_PinEntry = 2,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1647,10 +1643,10 @@ namespace ABI {
                         WiFiDirectServiceError_NoHardware = 4,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1676,10 +1672,10 @@ namespace ABI {
                         WiFiDirectServiceIPProtocol_Udp = 17,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1709,10 +1705,10 @@ namespace ABI {
                         WiFiDirectServiceSessionErrorStatus_NoResponseFromRemote = 5,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1740,10 +1736,10 @@ namespace ABI {
                         WiFiDirectServiceSessionStatus_Open = 3,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1770,10 +1766,10 @@ namespace ABI {
                         WiFiDirectServiceStatus_Custom = 2,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1809,10 +1805,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PreferGroupOwnerMode(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PreferGroupOwnerMode(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SessionInfo(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * value
@@ -1846,10 +1842,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectService=_uuidof(IWiFiDirectService);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectService;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectService_INTERFACE_DEFINED__) */
@@ -1894,16 +1890,16 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoAcceptSession(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoAcceptSession(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PreferGroupOwnerMode(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PreferGroupOwnerMode(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PreferredConfigurationMethods(
                             /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceConfigurationMethod * * value
@@ -1969,10 +1965,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceAdvertiser=_uuidof(IWiFiDirectServiceAdvertiser);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser_INTERFACE_DEFINED__) */
@@ -2013,10 +2009,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceAdvertiserFactory=_uuidof(IWiFiDirectServiceAdvertiserFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiserFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiserFactory_INTERFACE_DEFINED__) */
@@ -2059,10 +2055,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs=_uuidof(IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAutoAcceptSessionConnectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAutoAcceptSessionConnectedEventArgs_INTERFACE_DEFINED__) */
@@ -2098,17 +2094,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGroupFormationNeeded(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceProvisioningInfo=_uuidof(IWiFiDirectServiceProvisioningInfo);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceProvisioningInfo;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceProvisioningInfo_INTERFACE_DEFINED__) */
@@ -2151,10 +2147,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceRemotePortAddedEventArgs=_uuidof(IWiFiDirectServiceRemotePortAddedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceRemotePortAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceRemotePortAddedEventArgs_INTERFACE_DEFINED__) */
@@ -2241,10 +2237,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceSession=_uuidof(IWiFiDirectServiceSession);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession_INTERFACE_DEFINED__) */
@@ -2284,10 +2280,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceSessionDeferredEventArgs=_uuidof(IWiFiDirectServiceSessionDeferredEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionDeferredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionDeferredEventArgs_INTERFACE_DEFINED__) */
@@ -2337,10 +2333,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceSessionRequest=_uuidof(IWiFiDirectServiceSessionRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequest_INTERFACE_DEFINED__) */
@@ -2380,10 +2376,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceSessionRequestedEventArgs=_uuidof(IWiFiDirectServiceSessionRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2433,10 +2429,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWiFiDirectServiceStatics=_uuidof(IWiFiDirectServiceStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* WiFiDirect */
-    } /* Services */} /* ABI */
+                } /* Services */
+            } /* WiFiDirect */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceStatics_INTERFACE_DEFINED__) */
@@ -3498,7 +3494,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectService * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionDeferredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectService * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionDeferredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectService_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionDeferredEventArgsVtbl;
 
@@ -3550,7 +3546,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_IInspectableVtbl;
 
@@ -3602,7 +3598,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAutoAcceptSessionConnectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAutoAcceptSessionConnectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAutoAcceptSessionConnectedEventArgsVtbl;
 
@@ -3655,7 +3651,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceAdvertiser * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSessionRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceAdvertiser_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSessionRequestedEventArgsVtbl;
 
@@ -3707,7 +3703,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_IInspectableVtbl;
 
@@ -3759,7 +3755,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceRemotePortAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFiDirect_CServices_CIWiFiDirectServiceRemotePortAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceSession_Windows__CDevices__CWiFiDirect__CServices__CWiFiDirectServiceRemotePortAddedEventArgsVtbl;
 

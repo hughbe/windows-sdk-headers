@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -47,7 +47,9 @@ struct DependencyProperty;
 struct ExceptionRoutedEventHandler;
 struct RoutedEventHandler;
 struct UIElement;
+struct UIElementWeakCollection;
 struct Window;
+struct XamlRoot;
 
 }
 
@@ -230,8 +232,10 @@ enum class SweepDirection : int32_t
 };
 
 struct IAcrylicBrush;
+struct IAcrylicBrush2;
 struct IAcrylicBrushFactory;
 struct IAcrylicBrushStatics;
+struct IAcrylicBrushStatics2;
 struct IArcSegment;
 struct IArcSegmentStatics;
 struct IBezierSegment;
@@ -323,11 +327,15 @@ struct IRotateTransform;
 struct IRotateTransformStatics;
 struct IScaleTransform;
 struct IScaleTransformStatics;
+struct IShadow;
+struct IShadowFactory;
 struct ISkewTransform;
 struct ISkewTransformStatics;
 struct ISolidColorBrush;
 struct ISolidColorBrushFactory;
 struct ISolidColorBrushStatics;
+struct IThemeShadow;
+struct IThemeShadowFactory;
 struct ITileBrush;
 struct ITileBrushFactory;
 struct ITileBrushStatics;
@@ -343,6 +351,7 @@ struct ITranslateTransformStatics;
 struct IVisualTreeHelper;
 struct IVisualTreeHelperStatics;
 struct IVisualTreeHelperStatics2;
+struct IVisualTreeHelperStatics3;
 struct IXamlCompositionBrushBase;
 struct IXamlCompositionBrushBaseFactory;
 struct IXamlCompositionBrushBaseOverrides;
@@ -405,8 +414,10 @@ struct RevealBorderBrush;
 struct RevealBrush;
 struct RotateTransform;
 struct ScaleTransform;
+struct Shadow;
 struct SkewTransform;
 struct SolidColorBrush;
+struct ThemeShadow;
 struct TileBrush;
 struct TimelineMarker;
 struct TimelineMarkerCollection;
@@ -427,8 +438,10 @@ struct TimelineMarkerRoutedEventHandler;
 namespace winrt::impl {
 
 template <> struct category<Windows::UI::Xaml::Media::IAcrylicBrush>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::IAcrylicBrush2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IAcrylicBrushFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IAcrylicBrushStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::IAcrylicBrushStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IArcSegment>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IArcSegmentStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IBezierSegment>{ using type = interface_category; };
@@ -520,11 +533,15 @@ template <> struct category<Windows::UI::Xaml::Media::IRotateTransform>{ using t
 template <> struct category<Windows::UI::Xaml::Media::IRotateTransformStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IScaleTransform>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IScaleTransformStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::IShadow>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::IShadowFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ISkewTransform>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ISkewTransformStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ISolidColorBrush>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ISolidColorBrushFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ISolidColorBrushStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::IThemeShadow>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::IThemeShadowFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ITileBrush>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ITileBrushFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::ITileBrushStatics>{ using type = interface_category; };
@@ -540,6 +557,7 @@ template <> struct category<Windows::UI::Xaml::Media::ITranslateTransformStatics
 template <> struct category<Windows::UI::Xaml::Media::IVisualTreeHelper>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IVisualTreeHelperStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IVisualTreeHelperStatics2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Media::IVisualTreeHelperStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IXamlCompositionBrushBase>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IXamlCompositionBrushBaseFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>{ using type = interface_category; };
@@ -602,8 +620,10 @@ template <> struct category<Windows::UI::Xaml::Media::RevealBorderBrush>{ using 
 template <> struct category<Windows::UI::Xaml::Media::RevealBrush>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Media::RotateTransform>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Media::ScaleTransform>{ using type = class_category; };
+template <> struct category<Windows::UI::Xaml::Media::Shadow>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Media::SkewTransform>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Media::SolidColorBrush>{ using type = class_category; };
+template <> struct category<Windows::UI::Xaml::Media::ThemeShadow>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Media::TileBrush>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Media::TimelineMarker>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Media::TimelineMarkerCollection>{ using type = class_category; };
@@ -641,8 +661,10 @@ template <> struct category<Windows::UI::Xaml::Media::Matrix>{ using type = stru
 template <> struct category<Windows::UI::Xaml::Media::RateChangedRoutedEventHandler>{ using type = delegate_category; };
 template <> struct category<Windows::UI::Xaml::Media::TimelineMarkerRoutedEventHandler>{ using type = delegate_category; };
 template <> struct name<Windows::UI::Xaml::Media::IAcrylicBrush>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IAcrylicBrush" }; };
+template <> struct name<Windows::UI::Xaml::Media::IAcrylicBrush2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IAcrylicBrush2" }; };
 template <> struct name<Windows::UI::Xaml::Media::IAcrylicBrushFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IAcrylicBrushFactory" }; };
 template <> struct name<Windows::UI::Xaml::Media::IAcrylicBrushStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IAcrylicBrushStatics" }; };
+template <> struct name<Windows::UI::Xaml::Media::IAcrylicBrushStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IAcrylicBrushStatics2" }; };
 template <> struct name<Windows::UI::Xaml::Media::IArcSegment>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IArcSegment" }; };
 template <> struct name<Windows::UI::Xaml::Media::IArcSegmentStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IArcSegmentStatics" }; };
 template <> struct name<Windows::UI::Xaml::Media::IBezierSegment>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IBezierSegment" }; };
@@ -734,11 +756,15 @@ template <> struct name<Windows::UI::Xaml::Media::IRotateTransform>{ static cons
 template <> struct name<Windows::UI::Xaml::Media::IRotateTransformStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IRotateTransformStatics" }; };
 template <> struct name<Windows::UI::Xaml::Media::IScaleTransform>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IScaleTransform" }; };
 template <> struct name<Windows::UI::Xaml::Media::IScaleTransformStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IScaleTransformStatics" }; };
+template <> struct name<Windows::UI::Xaml::Media::IShadow>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IShadow" }; };
+template <> struct name<Windows::UI::Xaml::Media::IShadowFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IShadowFactory" }; };
 template <> struct name<Windows::UI::Xaml::Media::ISkewTransform>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ISkewTransform" }; };
 template <> struct name<Windows::UI::Xaml::Media::ISkewTransformStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ISkewTransformStatics" }; };
 template <> struct name<Windows::UI::Xaml::Media::ISolidColorBrush>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ISolidColorBrush" }; };
 template <> struct name<Windows::UI::Xaml::Media::ISolidColorBrushFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ISolidColorBrushFactory" }; };
 template <> struct name<Windows::UI::Xaml::Media::ISolidColorBrushStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ISolidColorBrushStatics" }; };
+template <> struct name<Windows::UI::Xaml::Media::IThemeShadow>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IThemeShadow" }; };
+template <> struct name<Windows::UI::Xaml::Media::IThemeShadowFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IThemeShadowFactory" }; };
 template <> struct name<Windows::UI::Xaml::Media::ITileBrush>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ITileBrush" }; };
 template <> struct name<Windows::UI::Xaml::Media::ITileBrushFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ITileBrushFactory" }; };
 template <> struct name<Windows::UI::Xaml::Media::ITileBrushStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ITileBrushStatics" }; };
@@ -754,6 +780,7 @@ template <> struct name<Windows::UI::Xaml::Media::ITranslateTransformStatics>{ s
 template <> struct name<Windows::UI::Xaml::Media::IVisualTreeHelper>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IVisualTreeHelper" }; };
 template <> struct name<Windows::UI::Xaml::Media::IVisualTreeHelperStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IVisualTreeHelperStatics" }; };
 template <> struct name<Windows::UI::Xaml::Media::IVisualTreeHelperStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IVisualTreeHelperStatics2" }; };
+template <> struct name<Windows::UI::Xaml::Media::IVisualTreeHelperStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IVisualTreeHelperStatics3" }; };
 template <> struct name<Windows::UI::Xaml::Media::IXamlCompositionBrushBase>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IXamlCompositionBrushBase" }; };
 template <> struct name<Windows::UI::Xaml::Media::IXamlCompositionBrushBaseFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IXamlCompositionBrushBaseFactory" }; };
 template <> struct name<Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides" }; };
@@ -816,8 +843,10 @@ template <> struct name<Windows::UI::Xaml::Media::RevealBorderBrush>{ static con
 template <> struct name<Windows::UI::Xaml::Media::RevealBrush>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.RevealBrush" }; };
 template <> struct name<Windows::UI::Xaml::Media::RotateTransform>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.RotateTransform" }; };
 template <> struct name<Windows::UI::Xaml::Media::ScaleTransform>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ScaleTransform" }; };
+template <> struct name<Windows::UI::Xaml::Media::Shadow>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.Shadow" }; };
 template <> struct name<Windows::UI::Xaml::Media::SkewTransform>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.SkewTransform" }; };
 template <> struct name<Windows::UI::Xaml::Media::SolidColorBrush>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.SolidColorBrush" }; };
+template <> struct name<Windows::UI::Xaml::Media::ThemeShadow>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.ThemeShadow" }; };
 template <> struct name<Windows::UI::Xaml::Media::TileBrush>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.TileBrush" }; };
 template <> struct name<Windows::UI::Xaml::Media::TimelineMarker>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.TimelineMarker" }; };
 template <> struct name<Windows::UI::Xaml::Media::TimelineMarkerCollection>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.TimelineMarkerCollection" }; };
@@ -855,8 +884,10 @@ template <> struct name<Windows::UI::Xaml::Media::Matrix>{ static constexpr auto
 template <> struct name<Windows::UI::Xaml::Media::RateChangedRoutedEventHandler>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.RateChangedRoutedEventHandler" }; };
 template <> struct name<Windows::UI::Xaml::Media::TimelineMarkerRoutedEventHandler>{ static constexpr auto & value{ L"Windows.UI.Xaml.Media.TimelineMarkerRoutedEventHandler" }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IAcrylicBrush>{ static constexpr guid value{ 0x79BBCF4E,0xCD66,0x4F1B,{ 0xA8,0xB6,0xCD,0x6D,0x29,0x77,0xC1,0x8D } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::IAcrylicBrush2>{ static constexpr guid value{ 0xC9645383,0xB19E,0x5AC0,{ 0x86,0xFF,0x3D,0x90,0x50,0x6D,0xBC,0xDA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IAcrylicBrushFactory>{ static constexpr guid value{ 0x81A32568,0xF6CC,0x4013,{ 0x83,0x63,0x92,0x8A,0xE2,0x3B,0x7A,0x61 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IAcrylicBrushStatics>{ static constexpr guid value{ 0x2787FD79,0xA3DA,0x423F,{ 0xB8,0x1A,0x59,0x91,0x47,0x97,0x15,0x23 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::IAcrylicBrushStatics2>{ static constexpr guid value{ 0x129188A8,0xBF11,0x5BBC,{ 0x84,0x45,0x8C,0x51,0x0E,0x59,0x26,0xC0 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IArcSegment>{ static constexpr guid value{ 0x07940C5F,0x63FB,0x4469,{ 0x91,0xBE,0xF1,0x09,0x7C,0x16,0x80,0x52 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IArcSegmentStatics>{ static constexpr guid value{ 0x82348F6E,0x8A69,0x4204,{ 0x9C,0x12,0x72,0x07,0xDF,0x31,0x76,0x43 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IBezierSegment>{ static constexpr guid value{ 0xAF4BB9EE,0x8984,0x49B7,{ 0x81,0xDF,0x3F,0x35,0x99,0x4B,0x95,0xEB } }; };
@@ -948,11 +979,15 @@ template <> struct guid_storage<Windows::UI::Xaml::Media::IRotateTransform>{ sta
 template <> struct guid_storage<Windows::UI::Xaml::Media::IRotateTransformStatics>{ static constexpr guid value{ 0xA131EB8A,0x51A3,0x41B6,{ 0xB9,0xD3,0xA1,0x0E,0x42,0x90,0x54,0xAB } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IScaleTransform>{ static constexpr guid value{ 0xED67F18D,0x936E,0x43AB,{ 0x92,0x9A,0xE9,0xCD,0x0A,0x51,0x1E,0x52 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IScaleTransformStatics>{ static constexpr guid value{ 0x9D9436F4,0x40A7,0x46DD,{ 0x97,0x5A,0x07,0xD3,0x37,0xCD,0x85,0x2E } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::IShadow>{ static constexpr guid value{ 0x6813A583,0xF3B4,0x5FCF,{ 0x86,0x94,0x2C,0xD0,0xAE,0xFC,0x2F,0xAD } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::IShadowFactory>{ static constexpr guid value{ 0x19899F25,0xD28B,0x51E6,{ 0x94,0xB0,0xD7,0xE7,0x09,0x68,0x63,0x05 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ISkewTransform>{ static constexpr guid value{ 0x4E8A3B15,0x7A0F,0x4617,{ 0x9E,0x98,0x1E,0x65,0xBD,0xC9,0x21,0x15 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ISkewTransformStatics>{ static constexpr guid value{ 0xECD11D73,0x5614,0x4B31,{ 0xB6,0xAF,0xBE,0xAE,0x10,0x10,0x56,0x24 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ISolidColorBrush>{ static constexpr guid value{ 0x9D850850,0x66F3,0x48DF,{ 0x9A,0x8F,0x82,0x4B,0xD5,0xE0,0x70,0xAF } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ISolidColorBrushFactory>{ static constexpr guid value{ 0xD935CE0C,0x86F5,0x4DA6,{ 0x8A,0x27,0xB1,0x61,0x9E,0xF7,0xF9,0x2B } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ISolidColorBrushStatics>{ static constexpr guid value{ 0xE1A65EFA,0x2B23,0x41BA,{ 0xB9,0xBA,0x70,0x94,0xEC,0x8E,0x4E,0x9F } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::IThemeShadow>{ static constexpr guid value{ 0x3ECCAD09,0x7985,0x5F39,{ 0x8B,0x62,0x6C,0x10,0x69,0x6D,0xCA,0x6F } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::IThemeShadowFactory>{ static constexpr guid value{ 0x2E71465D,0x0F67,0x590E,{ 0x83,0x1B,0x7E,0x5E,0x2A,0x32,0xB7,0x78 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ITileBrush>{ static constexpr guid value{ 0xC201CF06,0xCD84,0x48A5,{ 0x96,0x07,0x66,0x4D,0x73,0x61,0xCD,0x61 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ITileBrushFactory>{ static constexpr guid value{ 0xAA159F7C,0xED6A,0x4FB3,{ 0xB0,0x14,0xB5,0xC7,0xE3,0x79,0xA4,0xDE } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::ITileBrushStatics>{ static constexpr guid value{ 0x3497C25B,0xB562,0x4E68,{ 0x84,0x35,0x23,0x99,0xF6,0xEB,0x94,0xD5 } }; };
@@ -968,6 +1003,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Media::ITranslateTransformSta
 template <> struct guid_storage<Windows::UI::Xaml::Media::IVisualTreeHelper>{ static constexpr guid value{ 0x24B935E3,0x52C7,0x4141,{ 0x8B,0xAC,0xA7,0x3D,0x06,0x13,0x05,0x69 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IVisualTreeHelperStatics>{ static constexpr guid value{ 0xE75758C4,0xD25D,0x4B1D,{ 0x97,0x1F,0x59,0x6F,0x17,0xF1,0x2B,0xAA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IVisualTreeHelperStatics2>{ static constexpr guid value{ 0x07BCD176,0x869F,0x44A7,{ 0x87,0x97,0x21,0x03,0xA4,0xC3,0xE4,0x7A } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Media::IVisualTreeHelperStatics3>{ static constexpr guid value{ 0x40420D50,0xCA16,0x57DA,{ 0x8A,0xAC,0x94,0x4C,0x8A,0xF5,0x77,0xFD } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IXamlCompositionBrushBase>{ static constexpr guid value{ 0x03E432D9,0xB35C,0x4A79,{ 0x81,0x1C,0xC5,0x65,0x20,0x04,0xDA,0x0E } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IXamlCompositionBrushBaseFactory>{ static constexpr guid value{ 0x394F0823,0x2451,0x4ED8,{ 0xBD,0x24,0x48,0x81,0x49,0xB3,0x42,0x8D } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>{ static constexpr guid value{ 0xD19127F1,0x38B4,0x4EA1,{ 0x8F,0x33,0x84,0x96,0x29,0xA4,0xC9,0xC1 } }; };
@@ -1032,8 +1068,10 @@ template <> struct default_interface<Windows::UI::Xaml::Media::RevealBorderBrush
 template <> struct default_interface<Windows::UI::Xaml::Media::RevealBrush>{ using type = Windows::UI::Xaml::Media::IRevealBrush; };
 template <> struct default_interface<Windows::UI::Xaml::Media::RotateTransform>{ using type = Windows::UI::Xaml::Media::IRotateTransform; };
 template <> struct default_interface<Windows::UI::Xaml::Media::ScaleTransform>{ using type = Windows::UI::Xaml::Media::IScaleTransform; };
+template <> struct default_interface<Windows::UI::Xaml::Media::Shadow>{ using type = Windows::UI::Xaml::Media::IShadow; };
 template <> struct default_interface<Windows::UI::Xaml::Media::SkewTransform>{ using type = Windows::UI::Xaml::Media::ISkewTransform; };
 template <> struct default_interface<Windows::UI::Xaml::Media::SolidColorBrush>{ using type = Windows::UI::Xaml::Media::ISolidColorBrush; };
+template <> struct default_interface<Windows::UI::Xaml::Media::ThemeShadow>{ using type = Windows::UI::Xaml::Media::IThemeShadow; };
 template <> struct default_interface<Windows::UI::Xaml::Media::TileBrush>{ using type = Windows::UI::Xaml::Media::ITileBrush; };
 template <> struct default_interface<Windows::UI::Xaml::Media::TimelineMarker>{ using type = Windows::UI::Xaml::Media::ITimelineMarker; };
 template <> struct default_interface<Windows::UI::Xaml::Media::TimelineMarkerCollection>{ using type = Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Media::TimelineMarker>; };
@@ -1060,6 +1098,12 @@ template <> struct abi<Windows::UI::Xaml::Media::IAcrylicBrush>{ struct type : I
     virtual int32_t WINRT_CALL put_AlwaysUseFallback(bool value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Media::IAcrylicBrush2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_TintLuminosityOpacity(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_TintLuminosityOpacity(void* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Media::IAcrylicBrushFactory>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept = 0;
@@ -1072,6 +1116,11 @@ template <> struct abi<Windows::UI::Xaml::Media::IAcrylicBrushStatics>{ struct t
     virtual int32_t WINRT_CALL get_TintOpacityProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_TintTransitionDurationProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_AlwaysUseFallbackProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Media::IAcrylicBrushStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_TintLuminosityOpacityProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Media::IArcSegment>{ struct type : IInspectable
@@ -1718,6 +1767,14 @@ template <> struct abi<Windows::UI::Xaml::Media::IScaleTransformStatics>{ struct
     virtual int32_t WINRT_CALL get_ScaleYProperty(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Media::IShadow>{ struct type : IInspectable
+{
+};};
+
+template <> struct abi<Windows::UI::Xaml::Media::IShadowFactory>{ struct type : IInspectable
+{
+};};
+
 template <> struct abi<Windows::UI::Xaml::Media::ISkewTransform>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_CenterX(double* value) noexcept = 0;
@@ -1752,6 +1809,16 @@ template <> struct abi<Windows::UI::Xaml::Media::ISolidColorBrushFactory>{ struc
 template <> struct abi<Windows::UI::Xaml::Media::ISolidColorBrushStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_ColorProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Media::IThemeShadow>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Receivers(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Media::IThemeShadowFactory>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Media::ITileBrush>{ struct type : IInspectable
@@ -1854,6 +1921,11 @@ template <> struct abi<Windows::UI::Xaml::Media::IVisualTreeHelperStatics2>{ str
     virtual int32_t WINRT_CALL GetOpenPopups(void* window, void** result) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Media::IVisualTreeHelperStatics3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetOpenPopupsForXamlRoot(void* xamlRoot, void** result) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Media::IXamlCompositionBrushBase>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_FallbackColor(struct struct_Windows_UI_Color* value) noexcept = 0;
@@ -1939,6 +2011,14 @@ struct consume_Windows_UI_Xaml_Media_IAcrylicBrush
 template <> struct consume<Windows::UI::Xaml::Media::IAcrylicBrush> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IAcrylicBrush<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Media_IAcrylicBrush2
+{
+    Windows::Foundation::IReference<double> TintLuminosityOpacity() const;
+    void TintLuminosityOpacity(optional<double> const& value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Media::IAcrylicBrush2> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IAcrylicBrush2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Media_IAcrylicBrushFactory
 {
     Windows::UI::Xaml::Media::AcrylicBrush CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
@@ -1955,6 +2035,13 @@ struct consume_Windows_UI_Xaml_Media_IAcrylicBrushStatics
     Windows::UI::Xaml::DependencyProperty AlwaysUseFallbackProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::Media::IAcrylicBrushStatics> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IAcrylicBrushStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Media_IAcrylicBrushStatics2
+{
+    Windows::UI::Xaml::DependencyProperty TintLuminosityOpacityProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Media::IAcrylicBrushStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IAcrylicBrushStatics2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Media_IArcSegment
@@ -2795,6 +2882,18 @@ struct consume_Windows_UI_Xaml_Media_IScaleTransformStatics
 template <> struct consume<Windows::UI::Xaml::Media::IScaleTransformStatics> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IScaleTransformStatics<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Media_IShadow
+{
+};
+template <> struct consume<Windows::UI::Xaml::Media::IShadow> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IShadow<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Media_IShadowFactory
+{
+};
+template <> struct consume<Windows::UI::Xaml::Media::IShadowFactory> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IShadowFactory<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Media_ISkewTransform
 {
     double CenterX() const;
@@ -2839,6 +2938,20 @@ struct consume_Windows_UI_Xaml_Media_ISolidColorBrushStatics
     Windows::UI::Xaml::DependencyProperty ColorProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::Media::ISolidColorBrushStatics> { template <typename D> using type = consume_Windows_UI_Xaml_Media_ISolidColorBrushStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Media_IThemeShadow
+{
+    Windows::UI::Xaml::UIElementWeakCollection Receivers() const;
+};
+template <> struct consume<Windows::UI::Xaml::Media::IThemeShadow> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IThemeShadow<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Media_IThemeShadowFactory
+{
+    Windows::UI::Xaml::Media::ThemeShadow CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+};
+template <> struct consume<Windows::UI::Xaml::Media::IThemeShadowFactory> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IThemeShadowFactory<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Media_ITileBrush
@@ -2969,6 +3082,13 @@ struct consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics2
     Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> GetOpenPopups(Windows::UI::Xaml::Window const& window) const;
 };
 template <> struct consume<Windows::UI::Xaml::Media::IVisualTreeHelperStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics3
+{
+    Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Controls::Primitives::Popup> GetOpenPopupsForXamlRoot(Windows::UI::Xaml::XamlRoot const& xamlRoot) const;
+};
+template <> struct consume<Windows::UI::Xaml::Media::IVisualTreeHelperStatics3> { template <typename D> using type = consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics3<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Media_IXamlCompositionBrushBase

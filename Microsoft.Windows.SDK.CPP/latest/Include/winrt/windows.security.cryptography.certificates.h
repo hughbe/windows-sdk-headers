@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.cryptography.certificates.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,10 +275,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate2 ABI::Windows::Security::Cryptography::Certificates::ICertificate2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate2_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate3;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate3 ABI::Windows::Security::Cryptography::Certificates::ICertificate3
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate3_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateChain;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateChain ABI::Windows::Security::Cryptography::Certificates::ICertificateChain
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateChain_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateEnrollmentManagerStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics ABI::Windows::Security::Cryptography::Certificates::ICertificateEnrollmentManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics_FWD_DEFINED__
@@ -359,10 +355,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateEnrollmentManagerStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics2 ABI::Windows::Security::Cryptography::Certificates::ICertificateEnrollmentManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics2_FWD_DEFINED__
@@ -375,10 +371,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateEnrollmentManagerStatics3;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics3 ABI::Windows::Security::Cryptography::Certificates::ICertificateEnrollmentManagerStatics3
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics3_FWD_DEFINED__
@@ -391,10 +387,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateExtension;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateExtension ABI::Windows::Security::Cryptography::Certificates::ICertificateExtension
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateExtension_FWD_DEFINED__
@@ -407,10 +403,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateFactory;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateFactory ABI::Windows::Security::Cryptography::Certificates::ICertificateFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateFactory_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateKeyUsages;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateKeyUsages ABI::Windows::Security::Cryptography::Certificates::ICertificateKeyUsages
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateKeyUsages_FWD_DEFINED__
@@ -439,10 +435,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateQuery;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery ABI::Windows::Security::Cryptography::Certificates::ICertificateQuery
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateQuery2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery2 ABI::Windows::Security::Cryptography::Certificates::ICertificateQuery2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery2_FWD_DEFINED__
@@ -471,10 +467,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateRequestProperties;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties ABI::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties_FWD_DEFINED__
@@ -487,10 +483,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateRequestProperties2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties2 ABI::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties2_FWD_DEFINED__
@@ -503,10 +499,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateRequestProperties3;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties3 ABI::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties3_FWD_DEFINED__
@@ -519,10 +515,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateRequestProperties4;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties4 ABI::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties4
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties4_FWD_DEFINED__
@@ -535,10 +531,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateStore;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore ABI::Windows::Security::Cryptography::Certificates::ICertificateStore
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore_FWD_DEFINED__
@@ -551,10 +547,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateStore2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore2 ABI::Windows::Security::Cryptography::Certificates::ICertificateStore2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore2_FWD_DEFINED__
@@ -567,10 +563,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateStoresStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics ABI::Windows::Security::Cryptography::Certificates::ICertificateStoresStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics_FWD_DEFINED__
@@ -583,10 +579,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificateStoresStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics2 ABI::Windows::Security::Cryptography::Certificates::ICertificateStoresStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics2_FWD_DEFINED__
@@ -599,10 +595,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IChainBuildingParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainBuildingParameters ABI::Windows::Security::Cryptography::Certificates::IChainBuildingParameters
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainBuildingParameters_FWD_DEFINED__
@@ -615,10 +611,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IChainValidationParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainValidationParameters ABI::Windows::Security::Cryptography::Certificates::IChainValidationParameters
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainValidationParameters_FWD_DEFINED__
@@ -631,10 +627,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsAttachedSignature;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignature ABI::Windows::Security::Cryptography::Certificates::ICmsAttachedSignature
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignature_FWD_DEFINED__
@@ -647,10 +643,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsAttachedSignatureFactory;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureFactory ABI::Windows::Security::Cryptography::Certificates::ICmsAttachedSignatureFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureFactory_FWD_DEFINED__
@@ -663,10 +659,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsAttachedSignatureStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureStatics ABI::Windows::Security::Cryptography::Certificates::ICmsAttachedSignatureStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureStatics_FWD_DEFINED__
@@ -679,10 +675,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsDetachedSignature;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignature ABI::Windows::Security::Cryptography::Certificates::ICmsDetachedSignature
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignature_FWD_DEFINED__
@@ -695,10 +691,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsDetachedSignatureFactory;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureFactory ABI::Windows::Security::Cryptography::Certificates::ICmsDetachedSignatureFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureFactory_FWD_DEFINED__
@@ -711,10 +707,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsDetachedSignatureStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureStatics ABI::Windows::Security::Cryptography::Certificates::ICmsDetachedSignatureStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureStatics_FWD_DEFINED__
@@ -727,10 +723,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsSignerInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsSignerInfo ABI::Windows::Security::Cryptography::Certificates::ICmsSignerInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsSignerInfo_FWD_DEFINED__
@@ -743,10 +739,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICmsTimestampInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsTimestampInfo ABI::Windows::Security::Cryptography::Certificates::ICmsTimestampInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsTimestampInfo_FWD_DEFINED__
@@ -759,10 +755,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IKeyAlgorithmNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics ABI::Windows::Security::Cryptography::Certificates::IKeyAlgorithmNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics_FWD_DEFINED__
@@ -775,10 +771,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IKeyAlgorithmNamesStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics2 ABI::Windows::Security::Cryptography::Certificates::IKeyAlgorithmNamesStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics2_FWD_DEFINED__
@@ -791,10 +787,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IKeyAttestationHelperStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics ABI::Windows::Security::Cryptography::Certificates::IKeyAttestationHelperStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics_FWD_DEFINED__
@@ -807,10 +803,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IKeyAttestationHelperStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics2 ABI::Windows::Security::Cryptography::Certificates::IKeyAttestationHelperStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics2_FWD_DEFINED__
@@ -823,10 +819,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IKeyStorageProviderNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics ABI::Windows::Security::Cryptography::Certificates::IKeyStorageProviderNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics_FWD_DEFINED__
@@ -839,10 +835,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IKeyStorageProviderNamesStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics2 ABI::Windows::Security::Cryptography::Certificates::IKeyStorageProviderNamesStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics2_FWD_DEFINED__
@@ -855,10 +851,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IPfxImportParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIPfxImportParameters ABI::Windows::Security::Cryptography::Certificates::IPfxImportParameters
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIPfxImportParameters_FWD_DEFINED__
@@ -871,10 +867,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IStandardCertificateStoreNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIStandardCertificateStoreNamesStatics ABI::Windows::Security::Cryptography::Certificates::IStandardCertificateStoreNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIStandardCertificateStoreNamesStatics_FWD_DEFINED__
@@ -887,10 +883,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ISubjectAlternativeNameInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo ABI::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo_FWD_DEFINED__
@@ -903,10 +899,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ISubjectAlternativeNameInfo2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo2 ABI::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo2_FWD_DEFINED__
@@ -919,10 +915,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IUserCertificateEnrollmentManager;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager ABI::Windows::Security::Cryptography::Certificates::IUserCertificateEnrollmentManager
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager_FWD_DEFINED__
@@ -935,10 +931,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IUserCertificateEnrollmentManager2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager2 ABI::Windows::Security::Cryptography::Certificates::IUserCertificateEnrollmentManager2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager2_FWD_DEFINED__
@@ -951,10 +947,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface IUserCertificateStore;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateStore ABI::Windows::Security::Cryptography::Certificates::IUserCertificateStore
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateStore_FWD_DEFINED__
@@ -968,10 +964,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -994,7 +990,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -1026,7 +1022,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -1043,10 +1039,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CertificateExtension;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1069,7 +1065,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::CertificateExtensi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::CertificateExtension*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificateExtension*>
@@ -1101,7 +1097,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::CertificateExtensi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::CertificateExtension*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificateExtension*>
@@ -1118,10 +1114,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     enum ChainValidationResult : int;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_USE
@@ -1142,7 +1138,7 @@ IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -1172,7 +1168,7 @@ IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -1188,10 +1184,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CmsSignerInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1214,7 +1210,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::CmsSignerInfo*> : 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::CmsSignerInfo*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICmsSignerInfo*>
@@ -1246,7 +1242,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::CmsSignerInfo*> : 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::CmsSignerInfo*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICmsSignerInfo*>
@@ -1278,7 +1274,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -1310,7 +1306,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::CertificateExten
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::CertificateExtension*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificateExtension*>
@@ -1341,7 +1337,7 @@ IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValida
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -1372,7 +1368,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::CmsSignerInfo*> 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::CmsSignerInfo*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCmsSignerInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICmsSignerInfo*>
@@ -1404,7 +1400,7 @@ IVector<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : IVec
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -1436,7 +1432,7 @@ IVector<ABI::Windows::Security::Cryptography::Certificates::CertificateExtension
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Security::Cryptography::Certificates::CertificateExtension*> __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t;
 #define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateExtension ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Security::Cryptography::Certificates::ICertificateExtension*>
@@ -1467,7 +1463,7 @@ IVector<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidation
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -1498,7 +1494,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CCryptograp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>*>
@@ -1530,7 +1526,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificate
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate*> __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>*>
@@ -1547,10 +1543,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CertificateChain;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1573,7 +1569,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Cryptography::Certificat
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Cryptography::Certificates::CertificateChain*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Cryptography::Certificates::ICertificateChain*>
@@ -1605,7 +1601,7 @@ IAsyncOperation<ABI::Windows::Security::Cryptography::Certificates::CertificateC
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Cryptography::Certificates::CertificateChain*> __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CCertificateChain ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Cryptography::Certificates::ICertificateChain*>
@@ -1622,10 +1618,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     enum SignatureValidationResult : int;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult_USE
@@ -1646,7 +1642,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Cryptography::Certi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Cryptography::Certificates::SignatureValidationResult> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Cryptography::Certificates::SignatureValidationResult>
@@ -1676,7 +1672,7 @@ IAsyncOperation<enum ABI::Windows::Security::Cryptography::Certificates::Signatu
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::Cryptography::Certificates::SignatureValidationResult> __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCertificates__CSignatureValidationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Cryptography::Certificates::SignatureValidationResult>
@@ -1705,7 +1701,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1734,7 +1730,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1763,7 +1759,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1792,7 +1788,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -1821,7 +1817,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -1850,7 +1846,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1867,9 +1863,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1895,7 +1891,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1927,7 +1923,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -1957,7 +1953,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1986,7 +1982,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -2004,8 +2000,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2013,8 +2009,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2027,8 +2023,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2036,8 +2032,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2053,9 +2049,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -2072,10 +2068,10 @@ namespace ABI {
                     
                     typedef enum CertificateChainPolicy : int CertificateChainPolicy;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2085,10 +2081,10 @@ namespace ABI {
                     
                     typedef enum ChainValidationResult : int ChainValidationResult;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2098,10 +2094,10 @@ namespace ABI {
                     
                     typedef enum EnrollKeyUsages : unsigned int EnrollKeyUsages;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2111,10 +2107,10 @@ namespace ABI {
                     
                     typedef enum ExportOption : int ExportOption;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2124,10 +2120,10 @@ namespace ABI {
                     
                     typedef enum InstallOptions : unsigned int InstallOptions;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2137,10 +2133,10 @@ namespace ABI {
                     
                     typedef enum KeyProtectionLevel : int KeyProtectionLevel;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2150,10 +2146,10 @@ namespace ABI {
                     
                     typedef enum KeySize : int KeySize;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2163,10 +2159,10 @@ namespace ABI {
                     
                     typedef enum SignatureValidationResult : int SignatureValidationResult;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2221,10 +2217,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CertificateKeyUsages;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2233,10 +2229,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CertificateQuery;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2245,10 +2241,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CertificateRequestProperties;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2257,10 +2253,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CertificateStore;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2270,10 +2266,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class ChainBuildingParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2282,10 +2278,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class ChainValidationParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2294,10 +2290,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CmsAttachedSignature;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2306,10 +2302,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CmsDetachedSignature;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2319,10 +2315,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class CmsTimestampInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2334,10 +2330,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class PfxImportParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2347,10 +2343,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class SubjectAlternativeNameInfo;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2359,10 +2355,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class UserCertificateEnrollmentManager;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2371,10 +2367,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class UserCertificateStore;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2411,10 +2407,10 @@ namespace ABI {
                         CertificateChainPolicy_MicrosoftRoot = 3,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2452,10 +2448,10 @@ namespace ABI {
                         ChainValidationResult_OtherErrors = 13,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2486,10 +2482,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(EnrollKeyUsages)
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2515,10 +2511,10 @@ namespace ABI {
                         ExportOption_Exportable = 1,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2546,10 +2542,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(InstallOptions)
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2581,10 +2577,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2611,10 +2607,10 @@ namespace ABI {
                         KeySize_Rsa4096 = 4096,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2643,10 +2639,10 @@ namespace ABI {
                         SignatureValidationResult_OtherErrors = 4,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2707,10 +2703,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasPrivateKey(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStronglyProtected(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ValidFrom(
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -2732,10 +2728,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificate=_uuidof(ICertificate);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_INTERFACE_DEFINED__) */
@@ -2768,7 +2764,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSecurityDeviceBound(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeyUsages(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Security::Cryptography::Certificates::ICertificateKeyUsages * * value
@@ -2790,10 +2786,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificate2=_uuidof(ICertificate2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate2_INTERFACE_DEFINED__) */
@@ -2826,7 +2822,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPerUser(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StoreName(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2839,10 +2835,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificate3=_uuidof(ICertificate3);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate3_INTERFACE_DEFINED__) */
@@ -2882,7 +2878,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult * status
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetCertificates(
-                            /* [in] */boolean includeRoot,
+                            /* [in] */::boolean includeRoot,
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate * * certificates
                             ) = 0;
                         
@@ -2890,10 +2886,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateChain=_uuidof(ICertificateChain);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateChain;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateChain_INTERFACE_DEFINED__) */
@@ -2948,10 +2944,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateEnrollmentManagerStatics=_uuidof(ICertificateEnrollmentManagerStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics_INTERFACE_DEFINED__) */
@@ -3001,10 +2997,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateEnrollmentManagerStatics2=_uuidof(ICertificateEnrollmentManagerStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics2_INTERFACE_DEFINED__) */
@@ -3047,10 +3043,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateEnrollmentManagerStatics3=_uuidof(ICertificateEnrollmentManagerStatics3);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateEnrollmentManagerStatics3_INTERFACE_DEFINED__) */
@@ -3089,10 +3085,10 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCritical(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCritical(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE EncodeValue(
                             /* [in] */__RPC__in HSTRING value
@@ -3110,10 +3106,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateExtension=_uuidof(ICertificateExtension);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateExtension;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateExtension_INTERFACE_DEFINED__) */
@@ -3154,10 +3150,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateFactory=_uuidof(ICertificateFactory);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateFactory_INTERFACE_DEFINED__) */
@@ -3190,62 +3186,62 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EncipherOnly(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EncipherOnly(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CrlSign(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CrlSign(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeyCertificateSign(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_KeyCertificateSign(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeyAgreement(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_KeyAgreement(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DataEncipherment(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DataEncipherment(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeyEncipherment(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_KeyEncipherment(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NonRepudiation(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_NonRepudiation(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DigitalSignature(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DigitalSignature(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICertificateKeyUsages=_uuidof(ICertificateKeyUsages);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateKeyUsages;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateKeyUsages_INTERFACE_DEFINED__) */
@@ -3301,20 +3297,20 @@ namespace ABI {
                             /* [size_is(__valueSize), in] */__RPC__in_ecount_full(__valueSize) BYTE * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HardwareOnly(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_HardwareOnly(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICertificateQuery=_uuidof(ICertificateQuery);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery_INTERFACE_DEFINED__) */
@@ -3347,16 +3343,16 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeDuplicates(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeDuplicates(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeExpiredCertificates(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeExpiredCertificates(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StoreName(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -3369,10 +3365,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateQuery2=_uuidof(ICertificateQuery2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateQuery2_INTERFACE_DEFINED__) */
@@ -3463,10 +3459,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateRequestProperties=_uuidof(ICertificateRequestProperties);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties_INTERFACE_DEFINED__) */
@@ -3521,10 +3517,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateRequestProperties2=_uuidof(ICertificateRequestProperties2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties2_INTERFACE_DEFINED__) */
@@ -3583,20 +3579,20 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UseExistingKey(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_UseExistingKey(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ICertificateRequestProperties3=_uuidof(ICertificateRequestProperties3);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties3_INTERFACE_DEFINED__) */
@@ -3642,10 +3638,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateRequestProperties4=_uuidof(ICertificateRequestProperties4);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties4;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateRequestProperties4_INTERFACE_DEFINED__) */
@@ -3688,10 +3684,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateStore=_uuidof(ICertificateStore);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore_INTERFACE_DEFINED__) */
@@ -3731,10 +3727,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateStore2=_uuidof(ICertificateStore2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStore2_INTERFACE_DEFINED__) */
@@ -3788,10 +3784,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateStoresStatics=_uuidof(ICertificateStoresStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics_INTERFACE_DEFINED__) */
@@ -3832,10 +3828,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICertificateStoresStatics2=_uuidof(ICertificateStoresStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificateStoresStatics2_INTERFACE_DEFINED__) */
@@ -3877,28 +3873,28 @@ namespace ABI {
                             /* [in] */ABI::Windows::Foundation::DateTime value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RevocationCheckEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RevocationCheckEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NetworkRetrievalEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_NetworkRetrievalEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AuthorityInformationAccessEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AuthorityInformationAccessEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentTimeValidationEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CurrentTimeValidationEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExclusiveTrustRoots(
                             /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate * * certificates
@@ -3908,10 +3904,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IChainBuildingParameters=_uuidof(IChainBuildingParameters);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainBuildingParameters;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainBuildingParameters_INTERFACE_DEFINED__) */
@@ -3960,10 +3956,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IChainValidationParameters=_uuidof(IChainValidationParameters);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainValidationParameters;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIChainValidationParameters_INTERFACE_DEFINED__) */
@@ -4013,10 +4009,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsAttachedSignature=_uuidof(ICmsAttachedSignature);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignature;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignature_INTERFACE_DEFINED__) */
@@ -4057,10 +4053,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsAttachedSignatureFactory=_uuidof(ICmsAttachedSignatureFactory);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureFactory_INTERFACE_DEFINED__) */
@@ -4103,10 +4099,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsAttachedSignatureStatics=_uuidof(ICmsAttachedSignatureStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsAttachedSignatureStatics_INTERFACE_DEFINED__) */
@@ -4153,10 +4149,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsDetachedSignature=_uuidof(ICmsDetachedSignature);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignature;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignature_INTERFACE_DEFINED__) */
@@ -4197,10 +4193,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsDetachedSignatureFactory=_uuidof(ICmsDetachedSignatureFactory);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureFactory_INTERFACE_DEFINED__) */
@@ -4243,10 +4239,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsDetachedSignatureStatics=_uuidof(ICmsDetachedSignatureStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsDetachedSignatureStatics_INTERFACE_DEFINED__) */
@@ -4298,10 +4294,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsSignerInfo=_uuidof(ICmsSignerInfo);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsSignerInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsSignerInfo_INTERFACE_DEFINED__) */
@@ -4347,10 +4343,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICmsTimestampInfo=_uuidof(ICmsTimestampInfo);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsTimestampInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICmsTimestampInfo_INTERFACE_DEFINED__) */
@@ -4411,10 +4407,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyAlgorithmNamesStatics=_uuidof(IKeyAlgorithmNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics_INTERFACE_DEFINED__) */
@@ -4457,10 +4453,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyAlgorithmNamesStatics2=_uuidof(IKeyAlgorithmNamesStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAlgorithmNamesStatics2_INTERFACE_DEFINED__) */
@@ -4505,10 +4501,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyAttestationHelperStatics=_uuidof(IKeyAttestationHelperStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics_INTERFACE_DEFINED__) */
@@ -4550,10 +4546,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyAttestationHelperStatics2=_uuidof(IKeyAttestationHelperStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyAttestationHelperStatics2_INTERFACE_DEFINED__) */
@@ -4599,10 +4595,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyStorageProviderNamesStatics=_uuidof(IKeyStorageProviderNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics_INTERFACE_DEFINED__) */
@@ -4642,10 +4638,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyStorageProviderNamesStatics2=_uuidof(IKeyStorageProviderNamesStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIKeyStorageProviderNamesStatics2_INTERFACE_DEFINED__) */
@@ -4724,10 +4720,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPfxImportParameters=_uuidof(IPfxImportParameters);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIPfxImportParameters;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIPfxImportParameters_INTERFACE_DEFINED__) */
@@ -4773,10 +4769,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IStandardCertificateStoreNamesStatics=_uuidof(IStandardCertificateStoreNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIStandardCertificateStoreNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIStandardCertificateStoreNamesStatics_INTERFACE_DEFINED__) */
@@ -4831,10 +4827,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISubjectAlternativeNameInfo=_uuidof(ISubjectAlternativeNameInfo);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo_INTERFACE_DEFINED__) */
@@ -4892,10 +4888,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISubjectAlternativeNameInfo2=_uuidof(ISubjectAlternativeNameInfo2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CISubjectAlternativeNameInfo2_INTERFACE_DEFINED__) */
@@ -4960,10 +4956,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserCertificateEnrollmentManager=_uuidof(IUserCertificateEnrollmentManager);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager_INTERFACE_DEFINED__) */
@@ -5006,10 +5002,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserCertificateEnrollmentManager2=_uuidof(IUserCertificateEnrollmentManager2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateEnrollmentManager2_INTERFACE_DEFINED__) */
@@ -5057,10 +5053,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IUserCertificateStore=_uuidof(IUserCertificateStore);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateStore;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CIUserCertificateStore_INTERFACE_DEFINED__) */

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.cryptography.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,10 +275,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IAsymmetricAlgorithmNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics ABI::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IAsymmetricAlgorithmNamesStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics2 ABI::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics2_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IAsymmetricKeyAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider ABI::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IAsymmetricKeyAlgorithmProvider2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider2 ABI::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider2_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IAsymmetricKeyAlgorithmProviderStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProviderStatics ABI::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProviderStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProviderStatics_FWD_DEFINED__
@@ -359,10 +355,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface ICryptographicEngineStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics ABI::Windows::Security::Cryptography::Core::ICryptographicEngineStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics_FWD_DEFINED__
@@ -375,10 +371,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface ICryptographicEngineStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics2 ABI::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics2_FWD_DEFINED__
@@ -391,10 +387,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface ICryptographicKey;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicKey ABI::Windows::Security::Cryptography::Core::ICryptographicKey
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicKey_FWD_DEFINED__
@@ -407,10 +403,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IEccCurveNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEccCurveNamesStatics ABI::Windows::Security::Cryptography::Core::IEccCurveNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEccCurveNamesStatics_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IEncryptedAndAuthenticatedData;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEncryptedAndAuthenticatedData ABI::Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEncryptedAndAuthenticatedData_FWD_DEFINED__
@@ -439,10 +435,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IHashAlgorithmNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmNamesStatics ABI::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmNamesStatics_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IHashAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProvider ABI::Windows::Security::Cryptography::Core::IHashAlgorithmProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProvider_FWD_DEFINED__
@@ -471,10 +467,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IHashAlgorithmProviderStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProviderStatics ABI::Windows::Security::Cryptography::Core::IHashAlgorithmProviderStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProviderStatics_FWD_DEFINED__
@@ -487,10 +483,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IHashComputation;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashComputation ABI::Windows::Security::Cryptography::Core::IHashComputation
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashComputation_FWD_DEFINED__
@@ -503,10 +499,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationAlgorithmNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics ABI::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics_FWD_DEFINED__
@@ -519,10 +515,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationAlgorithmNamesStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics2 ABI::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics2_FWD_DEFINED__
@@ -535,10 +531,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProvider ABI::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProvider_FWD_DEFINED__
@@ -551,10 +547,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationAlgorithmProviderStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProviderStatics ABI::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProviderStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProviderStatics_FWD_DEFINED__
@@ -567,10 +563,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters ABI::Windows::Security::Cryptography::Core::IKeyDerivationParameters
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters_FWD_DEFINED__
@@ -583,10 +579,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationParameters2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters2 ABI::Windows::Security::Cryptography::Core::IKeyDerivationParameters2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters2_FWD_DEFINED__
@@ -599,10 +595,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationParametersStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics ABI::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics_FWD_DEFINED__
@@ -615,10 +611,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IKeyDerivationParametersStatics2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics2 ABI::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics2_FWD_DEFINED__
@@ -631,10 +627,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IMacAlgorithmNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmNamesStatics ABI::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmNamesStatics_FWD_DEFINED__
@@ -647,10 +643,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IMacAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider ABI::Windows::Security::Cryptography::Core::IMacAlgorithmProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider_FWD_DEFINED__
@@ -663,10 +659,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IMacAlgorithmProvider2;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider2 ABI::Windows::Security::Cryptography::Core::IMacAlgorithmProvider2
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider2_FWD_DEFINED__
@@ -679,10 +675,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IMacAlgorithmProviderStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProviderStatics ABI::Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProviderStatics_FWD_DEFINED__
@@ -695,10 +691,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface IPersistedKeyProviderStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CIPersistedKeyProviderStatics ABI::Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIPersistedKeyProviderStatics_FWD_DEFINED__
@@ -711,10 +707,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface ISymmetricAlgorithmNamesStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricAlgorithmNamesStatics ABI::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricAlgorithmNamesStatics_FWD_DEFINED__
@@ -727,10 +723,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface ISymmetricKeyAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProvider ABI::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProvider_FWD_DEFINED__
@@ -743,10 +739,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     interface ISymmetricKeyAlgorithmProviderStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProviderStatics ABI::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProviderStatics_FWD_DEFINED__
@@ -760,10 +756,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class CryptographicKey;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -786,7 +782,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Cryptography::Core::Cryp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Cryptography::Core::CryptographicKey*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Cryptography::Core::ICryptographicKey*>
@@ -818,7 +814,7 @@ IAsyncOperation<ABI::Windows::Security::Cryptography::Core::CryptographicKey*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Cryptography::Core::CryptographicKey*> __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCryptography__CCore__CCryptographicKey ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Cryptography::Core::ICryptographicKey*>
@@ -836,9 +832,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -864,7 +860,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*>
@@ -896,7 +892,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIBuffer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IBuffer*>
@@ -926,7 +922,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -955,7 +951,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -984,7 +980,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1005,10 +1001,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -1018,10 +1014,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -1043,10 +1039,10 @@ namespace ABI {
                     
                     typedef enum Capi1KdfTargetAlgorithm : int Capi1KdfTargetAlgorithm;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1056,10 +1052,10 @@ namespace ABI {
                     
                     typedef enum CryptographicPadding : int CryptographicPadding;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1069,10 +1065,10 @@ namespace ABI {
                     
                     typedef enum CryptographicPrivateKeyBlobType : int CryptographicPrivateKeyBlobType;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1082,10 +1078,10 @@ namespace ABI {
                     
                     typedef enum CryptographicPublicKeyBlobType : int CryptographicPublicKeyBlobType;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1124,10 +1120,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class AsymmetricKeyAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1137,10 +1133,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class CryptographicHash;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1151,10 +1147,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class EncryptedAndAuthenticatedData;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1164,10 +1160,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class HashAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1177,10 +1173,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class KeyDerivationAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1189,10 +1185,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class KeyDerivationParameters;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1202,10 +1198,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class MacAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1216,10 +1212,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Core {
                     class SymmetricKeyAlgorithmProvider;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1254,10 +1250,10 @@ namespace ABI {
                         Capi1KdfTargetAlgorithm_Aes = 1,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1285,10 +1281,10 @@ namespace ABI {
                         CryptographicPadding_RsaPss = 3,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1321,10 +1317,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1357,10 +1353,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1448,10 +1444,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAsymmetricAlgorithmNamesStatics=_uuidof(IAsymmetricAlgorithmNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics_INTERFACE_DEFINED__) */
@@ -1497,10 +1493,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAsymmetricAlgorithmNamesStatics2=_uuidof(IAsymmetricAlgorithmNamesStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricAlgorithmNamesStatics2_INTERFACE_DEFINED__) */
@@ -1562,10 +1558,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAsymmetricKeyAlgorithmProvider=_uuidof(IAsymmetricKeyAlgorithmProvider);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider_INTERFACE_DEFINED__) */
@@ -1611,10 +1607,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAsymmetricKeyAlgorithmProvider2=_uuidof(IAsymmetricKeyAlgorithmProvider2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProvider2_INTERFACE_DEFINED__) */
@@ -1655,10 +1651,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAsymmetricKeyAlgorithmProviderStatics=_uuidof(IAsymmetricKeyAlgorithmProviderStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIAsymmetricKeyAlgorithmProviderStatics_INTERFACE_DEFINED__) */
@@ -1726,7 +1722,7 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::Security::Cryptography::Core::ICryptographicKey * key,
                             /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * data,
                             /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * signature,
-                            /* [retval, out] */__RPC__out boolean * isAuthenticated
+                            /* [retval, out] */__RPC__out ::boolean * isAuthenticated
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE DeriveKeyMaterial(
                             /* [in] */__RPC__in_opt ABI::Windows::Security::Cryptography::Core::ICryptographicKey * key,
@@ -1739,10 +1735,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICryptographicEngineStatics=_uuidof(ICryptographicEngineStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics_INTERFACE_DEFINED__) */
@@ -1783,7 +1779,7 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::Security::Cryptography::Core::ICryptographicKey * key,
                             /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * data,
                             /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * signature,
-                            /* [retval, out] */__RPC__out boolean * isAuthenticated
+                            /* [retval, out] */__RPC__out ::boolean * isAuthenticated
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE DecryptAsync(
                             /* [in] */__RPC__in_opt ABI::Windows::Security::Cryptography::Core::ICryptographicKey * key,
@@ -1806,10 +1802,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICryptographicEngineStatics2=_uuidof(ICryptographicEngineStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicEngineStatics2_INTERFACE_DEFINED__) */
@@ -1863,10 +1859,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICryptographicKey=_uuidof(ICryptographicKey);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicKey;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CICryptographicKey_INTERFACE_DEFINED__) */
@@ -2041,10 +2037,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEccCurveNamesStatics=_uuidof(IEccCurveNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEccCurveNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEccCurveNamesStatics_INTERFACE_DEFINED__) */
@@ -2087,10 +2083,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEncryptedAndAuthenticatedData=_uuidof(IEncryptedAndAuthenticatedData);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEncryptedAndAuthenticatedData;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIEncryptedAndAuthenticatedData_INTERFACE_DEFINED__) */
@@ -2142,10 +2138,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHashAlgorithmNamesStatics=_uuidof(IHashAlgorithmNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmNamesStatics_INTERFACE_DEFINED__) */
@@ -2195,10 +2191,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHashAlgorithmProvider=_uuidof(IHashAlgorithmProvider);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProvider;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProvider_INTERFACE_DEFINED__) */
@@ -2239,10 +2235,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHashAlgorithmProviderStatics=_uuidof(IHashAlgorithmProviderStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashAlgorithmProviderStatics_INTERFACE_DEFINED__) */
@@ -2285,10 +2281,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHashComputation=_uuidof(IHashComputation);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashComputation;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIHashComputation_INTERFACE_DEFINED__) */
@@ -2370,10 +2366,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationAlgorithmNamesStatics=_uuidof(IKeyDerivationAlgorithmNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics_INTERFACE_DEFINED__) */
@@ -2425,10 +2421,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationAlgorithmNamesStatics2=_uuidof(IKeyDerivationAlgorithmNamesStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmNamesStatics2_INTERFACE_DEFINED__) */
@@ -2472,10 +2468,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationAlgorithmProvider=_uuidof(IKeyDerivationAlgorithmProvider);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProvider;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProvider_INTERFACE_DEFINED__) */
@@ -2516,10 +2512,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationAlgorithmProviderStatics=_uuidof(IKeyDerivationAlgorithmProviderStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationAlgorithmProviderStatics_INTERFACE_DEFINED__) */
@@ -2565,10 +2561,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationParameters=_uuidof(IKeyDerivationParameters);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters_INTERFACE_DEFINED__) */
@@ -2611,10 +2607,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationParameters2=_uuidof(IKeyDerivationParameters2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParameters2_INTERFACE_DEFINED__) */
@@ -2669,10 +2665,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationParametersStatics=_uuidof(IKeyDerivationParametersStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics_INTERFACE_DEFINED__) */
@@ -2713,10 +2709,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IKeyDerivationParametersStatics2=_uuidof(IKeyDerivationParametersStatics2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIKeyDerivationParametersStatics2_INTERFACE_DEFINED__) */
@@ -2771,10 +2767,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMacAlgorithmNamesStatics=_uuidof(IMacAlgorithmNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmNamesStatics_INTERFACE_DEFINED__) */
@@ -2821,10 +2817,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMacAlgorithmProvider=_uuidof(IMacAlgorithmProvider);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider_INTERFACE_DEFINED__) */
@@ -2865,10 +2861,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMacAlgorithmProvider2=_uuidof(IMacAlgorithmProvider2);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProvider2_INTERFACE_DEFINED__) */
@@ -2909,10 +2905,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMacAlgorithmProviderStatics=_uuidof(IMacAlgorithmProviderStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIMacAlgorithmProviderStatics_INTERFACE_DEFINED__) */
@@ -2961,10 +2957,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPersistedKeyProviderStatics=_uuidof(IPersistedKeyProviderStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CIPersistedKeyProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CIPersistedKeyProviderStatics_INTERFACE_DEFINED__) */
@@ -3058,10 +3054,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISymmetricAlgorithmNamesStatics=_uuidof(ISymmetricAlgorithmNamesStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricAlgorithmNamesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricAlgorithmNamesStatics_INTERFACE_DEFINED__) */
@@ -3108,10 +3104,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISymmetricKeyAlgorithmProvider=_uuidof(ISymmetricKeyAlgorithmProvider);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProvider;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProvider_INTERFACE_DEFINED__) */
@@ -3152,10 +3148,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISymmetricKeyAlgorithmProviderStatics=_uuidof(ISymmetricKeyAlgorithmProviderStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProviderStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CCryptography_CCore_CISymmetricKeyAlgorithmProviderStatics_INTERFACE_DEFINED__) */

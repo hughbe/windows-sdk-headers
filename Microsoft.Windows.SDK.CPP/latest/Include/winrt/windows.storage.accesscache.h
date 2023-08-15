@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.accesscache.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -265,6 +261,7 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.Storage.h"
+#include "Windows.System.h"
 // Importing Collections header
 #include <windows.foundation.collections.h>
 
@@ -277,9 +274,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 interface IItemRemovedEventArgs;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CAccessCache_CIItemRemovedEventArgs ABI::Windows::Storage::AccessCache::IItemRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIItemRemovedEventArgs_FWD_DEFINED__
@@ -291,12 +288,26 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 interface IStorageApplicationPermissionsStatics;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics ABI::Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics
 
 #endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace AccessCache {
+                interface IStorageApplicationPermissionsStatics2;
+            } /* AccessCache */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 ABI::Windows::Storage::AccessCache::IStorageApplicationPermissionsStatics2
+
+#endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList_FWD_DEFINED__
@@ -305,9 +316,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 interface IStorageItemAccessList;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList ABI::Windows::Storage::AccessCache::IStorageItemAccessList
 
 #endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList_FWD_DEFINED__
@@ -319,9 +330,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 interface IStorageItemMostRecentlyUsedList;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList ABI::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList
 
 #endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList_FWD_DEFINED__
@@ -333,9 +344,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 interface IStorageItemMostRecentlyUsedList2;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList2 ABI::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2
 
 #endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList2_FWD_DEFINED__
@@ -349,9 +360,9 @@ namespace ABI {
             namespace AccessCache {
                 struct AccessListEntry;
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CStorage__CAccessCache__CAccessListEntry_USE
@@ -372,7 +383,7 @@ IIterator<struct ABI::Windows::Storage::AccessCache::AccessListEntry> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Storage::AccessCache::AccessListEntry> __FIIterator_1_Windows__CStorage__CAccessCache__CAccessListEntry_t;
 #define __FIIterator_1_Windows__CStorage__CAccessCache__CAccessListEntry ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CAccessCache__CAccessListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CAccessCache__CAccessListEntry ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::AccessCache::AccessListEntry>
@@ -402,7 +413,7 @@ IIterable<struct ABI::Windows::Storage::AccessCache::AccessListEntry> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Storage::AccessCache::AccessListEntry> __FIIterable_1_Windows__CStorage__CAccessCache__CAccessListEntry_t;
 #define __FIIterable_1_Windows__CStorage__CAccessCache__CAccessListEntry ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CAccessCache__CAccessListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CAccessCache__CAccessListEntry ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::AccessCache::AccessListEntry>
@@ -432,7 +443,7 @@ IVectorView<struct ABI::Windows::Storage::AccessCache::AccessListEntry> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Storage::AccessCache::AccessListEntry> __FIVectorView_1_Windows__CStorage__CAccessCache__CAccessListEntry_t;
 #define __FIVectorView_1_Windows__CStorage__CAccessCache__CAccessListEntry ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CAccessCache__CAccessListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CAccessCache__CAccessListEntry ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::AccessCache::AccessListEntry>
@@ -447,9 +458,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 class StorageItemMostRecentlyUsedList;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -457,9 +468,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 class ItemRemovedEventArgs;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -483,7 +494,7 @@ ITypedEventHandler<ABI::Windows::Storage::AccessCache::StorageItemMostRecentlyUs
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList*,ABI::Windows::Storage::AccessCache::ItemRemovedEventArgs*> __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList*,ABI::Windows::Storage::AccessCache::IItemRemovedEventArgs*>
@@ -501,8 +512,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -528,7 +539,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageItem*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageItem*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CIStorageItem_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageItem*>
@@ -560,7 +571,7 @@ IAsyncOperation<ABI::Windows::Storage::IStorageItem*> : IAsyncOperation_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::IStorageItem*> __FIAsyncOperation_1_Windows__CStorage__CIStorageItem_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageItem*>
@@ -575,8 +586,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -584,8 +595,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -611,7 +622,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFile*>
@@ -643,7 +654,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFile*> : IAsyncOperation_impl<ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFile*> __FIAsyncOperation_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFile*>
@@ -658,8 +669,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -667,8 +678,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -694,7 +705,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFolder*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFolder*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFolder*>
@@ -726,7 +737,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFolder*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFolder*> __FIAsyncOperation_1_Windows__CStorage__CStorageFolder_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFolder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFolder*>
@@ -749,14 +760,36 @@ typedef IAsyncOperation<ABI::Windows::Storage::StorageFolder*> __FIAsyncOperatio
 
 namespace ABI {
     namespace Windows {
+        namespace System {
+            class User;
+        } /* System */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            interface IUser;
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+
+
+
+
+namespace ABI {
+    namespace Windows {
         namespace Storage {
             namespace AccessCache {
                 
                 typedef enum AccessCacheOptions : unsigned int AccessCacheOptions;
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -765,9 +798,9 @@ namespace ABI {
                 
                 typedef enum RecentStorageItemVisibility : int RecentStorageItemVisibility;
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -776,9 +809,10 @@ namespace ABI {
                 
                 typedef struct AccessListEntry AccessListEntry;
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -790,9 +824,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 class AccessListEntryView;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -802,9 +836,9 @@ namespace ABI {
         namespace Storage {
             namespace AccessCache {
                 class StorageItemAccessList;
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -842,9 +876,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(AccessCacheOptions)
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -869,9 +903,9 @@ namespace ABI {
                     RecentStorageItemVisibility_AppAndSystem = 1,
                 };
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -896,9 +930,9 @@ namespace ABI {
                     HSTRING Metadata;
                 };
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -934,9 +968,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IItemRemovedEventArgs=_uuidof(IItemRemovedEventArgs);
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIItemRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIItemRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -978,13 +1012,59 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageApplicationPermissionsStatics=_uuidof(IStorageApplicationPermissionsStatics);
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.AccessCache.StorageApplicationPermissions
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics2[] = L"Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace AccessCache {
+                /* [object, uuid("072716EC-AA05-4294-9A11-1A3D04519AD0"), exclusiveto, contract] */
+                MIDL_INTERFACE("072716EC-AA05-4294-9A11-1A3D04519AD0")
+                IStorageApplicationPermissionsStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetFutureAccessListForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::AccessCache::IStorageItemAccessList * * value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE GetMostRecentlyUsedListForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IStorageApplicationPermissionsStatics2=_uuidof(IStorageApplicationPermissionsStatics2);
+                
+            } /* AccessCache */
+        } /* Storage */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1058,12 +1138,12 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ContainsItem(
                         /* [in] */__RPC__in HSTRING token,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Clear(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CheckAccess(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageItem * file,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Entries(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CStorage__CAccessCache__CAccessListEntry * * entries
@@ -1076,9 +1156,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageItemAccessList=_uuidof(IStorageItemAccessList);
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList_INTERFACE_DEFINED__) */
@@ -1125,9 +1205,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageItemMostRecentlyUsedList=_uuidof(IStorageItemMostRecentlyUsedList);
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList_INTERFACE_DEFINED__) */
@@ -1180,9 +1260,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageItemMostRecentlyUsedList2=_uuidof(IStorageItemMostRecentlyUsedList2);
                 
-            } /* Windows */
+            } /* AccessCache */
         } /* Storage */
-    } /* AccessCache */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList2;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList2_INTERFACE_DEFINED__) */
@@ -1238,6 +1318,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  */
@@ -1306,6 +1387,12 @@ typedef interface __x_ABI_CWindows_CStorage_CAccessCache_CIItemRemovedEventArgs 
 typedef interface __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics;
 
 #endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2;
+
+#endif // ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList_FWD_DEFINED__
@@ -1618,7 +1705,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorage
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CAccessCache_CIItemRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CAccessCache_CIItemRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CAccessCache__CStorageItemMostRecentlyUsedList_Windows__CStorage__CAccessCache__CItemRemovedEventArgsVtbl;
 
@@ -2021,6 +2108,15 @@ interface __FIAsyncOperation_1_Windows__CStorage__CStorageFolder
 
 
 
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CIUser __x_ABI_CWindows_CSystem_CIUser;
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+
+
+
+
 
 typedef enum __x_ABI_CWindows_CStorage_CAccessCache_CAccessCacheOptions __x_ABI_CWindows_CStorage_CAccessCache_CAccessCacheOptions;
 
@@ -2029,6 +2125,7 @@ typedef enum __x_ABI_CWindows_CStorage_CAccessCache_CRecentStorageItemVisibility
 
 
 typedef struct __x_ABI_CWindows_CStorage_CAccessCache_CAccessListEntry __x_ABI_CWindows_CStorage_CAccessCache_CAccessListEntry;
+
 
 
 
@@ -2299,6 +2396,108 @@ interface __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissions
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Storage.AccessCache.StorageApplicationPermissions
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Storage_AccessCache_IStorageApplicationPermissionsStatics2[] = L"Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2";
+/* [object, uuid("072716EC-AA05-4294-9A11-1A3D04519AD0"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetFutureAccessListForUser )(
+        __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemAccessList * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetMostRecentlyUsedListForUser )(
+        __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2Vtbl;
+
+interface __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_GetFutureAccessListForUser(This,user,value) \
+    ( (This)->lpVtbl->GetFutureAccessListForUser(This,user,value) )
+
+#define __x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_GetMostRecentlyUsedListForUser(This,user,value) \
+    ( (This)->lpVtbl->GetMostRecentlyUsedListForUser(This,user,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2;
+#endif /* !defined(____x_ABI_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2777,6 +2976,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  */

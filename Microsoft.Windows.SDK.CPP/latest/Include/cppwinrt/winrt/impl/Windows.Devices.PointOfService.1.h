@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -189,24 +189,21 @@ struct WINRT_EBO ICashDrawerStatusUpdatedEventArgs :
 
 struct WINRT_EBO IClaimedBarcodeScanner :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedBarcodeScanner>,
-    impl::require<IClaimedBarcodeScanner, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedBarcodeScanner>
 {
     IClaimedBarcodeScanner(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IClaimedBarcodeScanner1 :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedBarcodeScanner1>,
-    impl::require<IClaimedBarcodeScanner1, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedBarcodeScanner1>
 {
     IClaimedBarcodeScanner1(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IClaimedBarcodeScanner2 :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedBarcodeScanner2>,
-    impl::require<IClaimedBarcodeScanner2, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedBarcodeScanner2>
 {
     IClaimedBarcodeScanner2(std::nullptr_t = nullptr) noexcept {}
 };
@@ -234,8 +231,7 @@ struct WINRT_EBO IClaimedBarcodeScannerClosedEventArgs :
 
 struct WINRT_EBO IClaimedCashDrawer :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedCashDrawer>,
-    impl::require<IClaimedCashDrawer, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedCashDrawer>
 {
     IClaimedCashDrawer(std::nullptr_t = nullptr) noexcept {}
 };
@@ -256,24 +252,21 @@ struct WINRT_EBO IClaimedCashDrawerClosedEventArgs :
 
 struct WINRT_EBO IClaimedJournalPrinter :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedJournalPrinter>,
-    impl::require<IClaimedJournalPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
+    impl::consume_t<IClaimedJournalPrinter>
 {
     IClaimedJournalPrinter(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IClaimedLineDisplay :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedLineDisplay>,
-    impl::require<IClaimedLineDisplay, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedLineDisplay>
 {
     IClaimedLineDisplay(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IClaimedLineDisplay2 :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedLineDisplay2>,
-    impl::require<IClaimedLineDisplay2, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedLineDisplay2>
 {
     IClaimedLineDisplay2(std::nullptr_t = nullptr) noexcept {}
 };
@@ -301,8 +294,7 @@ struct WINRT_EBO IClaimedLineDisplayStatics :
 
 struct WINRT_EBO IClaimedMagneticStripeReader :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedMagneticStripeReader>,
-    impl::require<IClaimedMagneticStripeReader, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedMagneticStripeReader>
 {
     IClaimedMagneticStripeReader(std::nullptr_t = nullptr) noexcept {}
 };
@@ -323,8 +315,7 @@ struct WINRT_EBO IClaimedMagneticStripeReaderClosedEventArgs :
 
 struct WINRT_EBO IClaimedPosPrinter :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedPosPrinter>,
-    impl::require<IClaimedPosPrinter, Windows::Foundation::IClosable>
+    impl::consume_t<IClaimedPosPrinter>
 {
     IClaimedPosPrinter(std::nullptr_t = nullptr) noexcept {}
 };
@@ -345,16 +336,14 @@ struct WINRT_EBO IClaimedPosPrinterClosedEventArgs :
 
 struct WINRT_EBO IClaimedReceiptPrinter :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedReceiptPrinter>,
-    impl::require<IClaimedReceiptPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
+    impl::consume_t<IClaimedReceiptPrinter>
 {
     IClaimedReceiptPrinter(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IClaimedSlipPrinter :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IClaimedSlipPrinter>,
-    impl::require<IClaimedSlipPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
+    impl::consume_t<IClaimedSlipPrinter>
 {
     IClaimedSlipPrinter(std::nullptr_t = nullptr) noexcept {}
 };
@@ -381,26 +370,37 @@ struct WINRT_EBO ICommonReceiptSlipCapabilities :
     ICommonReceiptSlipCapabilities(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IJournalPrintJob :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IJournalPrintJob>
+{
+    IJournalPrintJob(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IJournalPrinterCapabilities :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IJournalPrinterCapabilities>,
-    impl::require<IJournalPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>
+    impl::consume_t<IJournalPrinterCapabilities>
 {
     IJournalPrinterCapabilities(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IJournalPrinterCapabilities2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IJournalPrinterCapabilities2>
+{
+    IJournalPrinterCapabilities2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ILineDisplay :
     Windows::Foundation::IInspectable,
-    impl::consume_t<ILineDisplay>,
-    impl::require<ILineDisplay, Windows::Foundation::IClosable>
+    impl::consume_t<ILineDisplay>
 {
     ILineDisplay(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ILineDisplay2 :
     Windows::Foundation::IInspectable,
-    impl::consume_t<ILineDisplay2>,
-    impl::require<ILineDisplay2, Windows::Foundation::IClosable>
+    impl::consume_t<ILineDisplay2>
 {
     ILineDisplay2(std::nullptr_t = nullptr) noexcept {}
 };
@@ -484,16 +484,14 @@ struct WINRT_EBO ILineDisplayStoredBitmap :
 
 struct WINRT_EBO ILineDisplayWindow :
     Windows::Foundation::IInspectable,
-    impl::consume_t<ILineDisplayWindow>,
-    impl::require<ILineDisplayWindow, Windows::Foundation::IClosable>
+    impl::consume_t<ILineDisplayWindow>
 {
     ILineDisplayWindow(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ILineDisplayWindow2 :
     Windows::Foundation::IInspectable,
-    impl::consume_t<ILineDisplayWindow2>,
-    impl::require<ILineDisplayWindow2, Windows::Foundation::IClosable>
+    impl::consume_t<ILineDisplayWindow2>
 {
     ILineDisplayWindow2(std::nullptr_t = nullptr) noexcept {}
 };
@@ -596,6 +594,13 @@ struct WINRT_EBO IPosPrinter :
     IPosPrinter(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IPosPrinter2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPosPrinter2>
+{
+    IPosPrinter2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IPosPrinterCapabilities :
     Windows::Foundation::IInspectable,
     impl::consume_t<IPosPrinterCapabilities>
@@ -610,11 +615,25 @@ struct WINRT_EBO IPosPrinterCharacterSetIdsStatics :
     IPosPrinterCharacterSetIdsStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IPosPrinterFontProperty :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPosPrinterFontProperty>
+{
+    IPosPrinterFontProperty(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IPosPrinterJob :
     Windows::Foundation::IInspectable,
     impl::consume_t<IPosPrinterJob>
 {
     IPosPrinterJob(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPosPrinterPrintOptions :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPosPrinterPrintOptions>
+{
+    IPosPrinterPrintOptions(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IPosPrinterReleaseDeviceRequestedEventArgs :
@@ -662,26 +681,51 @@ struct WINRT_EBO IReceiptOrSlipJob :
 
 struct WINRT_EBO IReceiptPrintJob :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IReceiptPrintJob>,
-    impl::require<IReceiptPrintJob, Windows::Devices::PointOfService::IPosPrinterJob, Windows::Devices::PointOfService::IReceiptOrSlipJob>
+    impl::consume_t<IReceiptPrintJob>
 {
     IReceiptPrintJob(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IReceiptPrintJob2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IReceiptPrintJob2>
+{
+    IReceiptPrintJob2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IReceiptPrinterCapabilities :
     Windows::Foundation::IInspectable,
-    impl::consume_t<IReceiptPrinterCapabilities>,
-    impl::require<IReceiptPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
+    impl::consume_t<IReceiptPrinterCapabilities>
 {
     IReceiptPrinterCapabilities(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IReceiptPrinterCapabilities2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IReceiptPrinterCapabilities2>
+{
+    IReceiptPrinterCapabilities2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ISlipPrintJob :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ISlipPrintJob>
+{
+    ISlipPrintJob(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ISlipPrinterCapabilities :
     Windows::Foundation::IInspectable,
-    impl::consume_t<ISlipPrinterCapabilities>,
-    impl::require<ISlipPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
+    impl::consume_t<ISlipPrinterCapabilities>
 {
     ISlipPrinterCapabilities(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ISlipPrinterCapabilities2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ISlipPrinterCapabilities2>
+{
+    ISlipPrinterCapabilities2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IUnifiedPosErrorData :

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.globalization.phonenumberformatting.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -138,9 +138,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberFormatter;
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FWD_DEFINED__
@@ -152,9 +152,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberFormatterStatics;
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_FWD_DEFINED__
@@ -166,9 +166,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberInfo;
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_FWD_DEFINED__
@@ -180,9 +180,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberInfoFactory;
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_FWD_DEFINED__
@@ -194,9 +194,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberInfoStatics;
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_FWD_DEFINED__
@@ -208,8 +208,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -225,9 +225,9 @@ namespace ABI {
                 
                 typedef enum PhoneNumberFormat : int PhoneNumberFormat;
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -236,9 +236,9 @@ namespace ABI {
                 
                 typedef enum PhoneNumberMatchResult : int PhoneNumberMatchResult;
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -247,9 +247,9 @@ namespace ABI {
                 
                 typedef enum PhoneNumberParseResult : int PhoneNumberParseResult;
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -258,9 +258,9 @@ namespace ABI {
                 
                 typedef enum PredictedPhoneNumberKind : int PredictedPhoneNumberKind;
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -272,9 +272,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 class PhoneNumberFormatter;
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -282,9 +282,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 class PhoneNumberInfo;
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -314,9 +314,9 @@ namespace ABI {
                     PhoneNumberFormat_Rfc3966 = 3,
                 };
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -343,9 +343,9 @@ namespace ABI {
                     PhoneNumberMatchResult_ExactMatch = 3,
                 };
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -373,9 +373,9 @@ namespace ABI {
                     PhoneNumberParseResult_TooLong = 4,
                 };
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -410,9 +410,9 @@ namespace ABI {
                     PredictedPhoneNumberKind_Unknown = 11,
                 };
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -466,9 +466,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhoneNumberFormatter=_uuidof(IPhoneNumberFormatter);
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_INTERFACE_DEFINED__) */
@@ -509,7 +509,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetNationalDirectDialingPrefixForRegion(
                         /* [in] */__RPC__in HSTRING regionCode,
-                        /* [in] */boolean stripNonDigit,
+                        /* [in] */::boolean stripNonDigit,
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE WrapWithLeftToRightMarkers(
@@ -521,9 +521,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhoneNumberFormatterStatics=_uuidof(IPhoneNumberFormatterStatics);
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_INTERFACE_DEFINED__) */
@@ -584,9 +584,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhoneNumberInfo=_uuidof(IPhoneNumberInfo);
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_INTERFACE_DEFINED__) */
@@ -626,9 +626,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhoneNumberInfoFactory=_uuidof(IPhoneNumberInfoFactory);
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_INTERFACE_DEFINED__) */
@@ -675,9 +675,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPhoneNumberInfoStatics=_uuidof(IPhoneNumberInfoStatics);
                 
-            } /* Windows */
+            } /* PhoneNumberFormatting */
         } /* Globalization */
-    } /* PhoneNumberFormatting */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_INTERFACE_DEFINED__) */

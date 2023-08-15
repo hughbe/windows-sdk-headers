@@ -117,6 +117,8 @@ namespace Windows
         {
             typedef struct Matrix4x4 Matrix4x4;
 
+            typedef struct Vector2 Vector2;
+
             typedef struct Vector3 Vector3;
         }
     }
@@ -168,6 +170,8 @@ namespace Windows
             interface IAnimationObject;
 
             interface ICompositionAnimationBase;
+
+            interface IVisualElement;
         }
     }
 }
@@ -199,6 +203,13 @@ namespace Windows
         {
             runtimeclass PointerPoint;
         }
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
+        runtimeclass UIContext;
     }
 }
 namespace Windows
@@ -442,6 +453,8 @@ namespace Windows
                 runtimeclass Projection;
 
                 runtimeclass RectangleGeometry;
+
+                runtimeclass Shadow;
 
                 runtimeclass Transform;
 
@@ -822,6 +835,8 @@ namespace Windows
 
             interface IUIElement;
 
+            interface IUIElement10;
+
             interface IUIElement2;
 
             interface IUIElement3;
@@ -848,6 +863,8 @@ namespace Windows
 
             interface IUIElementStatics;
 
+            interface IUIElementStatics10;
+
             interface IUIElementStatics2;
 
             interface IUIElementStatics3;
@@ -863,6 +880,10 @@ namespace Windows
             interface IUIElementStatics8;
 
             interface IUIElementStatics9;
+
+            interface IUIElementWeakCollection;
+
+            interface IUIElementWeakCollectionFactory;
 
             interface IUnhandledExceptionEventArgs;
 
@@ -898,9 +919,15 @@ namespace Windows
 
             interface IWindow3;
 
+            interface IWindow4;
+
             interface IWindowCreatedEventArgs;
 
             interface IWindowStatics;
+
+            interface IXamlRoot;
+
+            interface IXamlRootChangedEventArgs;
 
             runtimeclass AdaptiveTrigger;
 
@@ -1022,6 +1049,8 @@ namespace Windows
 
             runtimeclass UIElement;
 
+            runtimeclass UIElementWeakCollection;
+
             runtimeclass UnhandledExceptionEventArgs;
 
             runtimeclass Vector3Transition;
@@ -1039,6 +1068,10 @@ namespace Windows
             runtimeclass Window;
 
             runtimeclass WindowCreatedEventArgs;
+
+            runtimeclass XamlRoot;
+
+            runtimeclass XamlRootChangedEventArgs;
         }
     }
 }
@@ -1151,6 +1184,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement*, Windows.UI.Xaml.DropCompletedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement*, Windows.UI.Xaml.RoutedEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.XamlRoot*, Windows.UI.Xaml.XamlRootChangedEventArgs*>;
             }
         }
     }
@@ -3054,6 +3089,20 @@ namespace Windows
                 HRESULT UpdateLayout();
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Xaml.UIElement)]
+            [uuid(D531C629-AD2C-5F6B-ADCF-FB87287D18D7)]
+            interface IUIElement10 : IInspectable
+            {
+                [propget] HRESULT ActualOffset([out] [retval] Windows.Foundation.Numerics.Vector3* value);
+                [propget] HRESULT ActualSize([out] [retval] Windows.Foundation.Numerics.Vector2* value);
+                [propget] HRESULT XamlRoot([out] [retval] Windows.UI.Xaml.XamlRoot** value);
+                [propput] HRESULT XamlRoot([in] Windows.UI.Xaml.XamlRoot* value);
+                [propget] HRESULT UIContext([out] [retval] Windows.UI.UIContext** value);
+                [propget] HRESULT Shadow([out] [retval] Windows.UI.Xaml.Media.Shadow** value);
+                [propput] HRESULT Shadow([in] Windows.UI.Xaml.Media.Shadow* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Xaml.UIElement)]
             [uuid(676D0BF9-B66C-41D6-BA50-58CF87F201D1)]
@@ -3296,6 +3345,14 @@ namespace Windows
                 [propget] HRESULT PointerCapturesProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Xaml.UIElement)]
+            [uuid(60D25362-4B3E-53DA-8B78-38DB94AE8F26)]
+            interface IUIElementStatics10 : IInspectable
+            {
+                [propget] HRESULT ShadowProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Xaml.UIElement)]
             [uuid(58D3574B-F53C-45BE-989B-A5869564874C)]
@@ -3383,6 +3440,21 @@ namespace Windows
             interface IUIElementStatics9 : IInspectable
             {
                 [propget] HRESULT CanBeScrollAnchorProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Xaml.UIElementWeakCollection)]
+            [uuid(10341223-E66D-519E-ACF8-556BD244EAC3)]
+            interface IUIElementWeakCollection : IInspectable
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Xaml.UIElementWeakCollection)]
+            [uuid(57242561-188A-5304-8792-A43F35D90F99)]
+            interface IUIElementWeakCollectionFactory : IInspectable
+            {
+                HRESULT CreateInstance([in] IInspectable* baseInterface, [out] IInspectable** innerInterface, [out] [retval] Windows.UI.Xaml.UIElementWeakCollection** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -3570,6 +3642,14 @@ namespace Windows
                 [propget] HRESULT Compositor([out] [retval] Windows.UI.Composition.Compositor** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Xaml.Window)]
+            [uuid(BFE1B8CE-6C40-50F9-854C-7021D2BC9DE6)]
+            interface IWindow4 : IInspectable
+            {
+                [propget] HRESULT UIContext([out] [retval] Windows.UI.UIContext** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Xaml.WindowCreatedEventArgs)]
             [uuid(31B71470-FEFF-4654-AF48-9B398AB5772B)]
@@ -3584,6 +3664,27 @@ namespace Windows
             interface IWindowStatics : IInspectable
             {
                 [propget] HRESULT Current([out] [retval] Windows.UI.Xaml.Window** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Xaml.XamlRoot)]
+            [uuid(34B50756-1696-5B6D-8E9B-C71464CCAD5A)]
+            interface IXamlRoot : IInspectable
+            {
+                [propget] HRESULT Content([out] [retval] Windows.UI.Xaml.UIElement** value);
+                [propget] HRESULT Size([out] [retval] Windows.Foundation.Size* value);
+                [propget] HRESULT RasterizationScale([out] [retval] DOUBLE* value);
+                [propget] HRESULT IsHostVisible([out] [retval] boolean* value);
+                [propget] HRESULT UIContext([out] [retval] Windows.UI.UIContext** value);
+                [eventadd] HRESULT Changed([in] Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.XamlRoot*, Windows.UI.Xaml.XamlRootChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Changed([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Xaml.XamlRootChangedEventArgs)]
+            [uuid(92D71C21-D23C-5A17-BCB8-001504B6BB19)]
+            interface IXamlRootChangedEventArgs : IInspectable
+            {
             }
 
             [composable(Windows.UI.Xaml.IAdaptiveTriggerFactory, public, Windows.Foundation.UniversalApiContract, 1.0)]
@@ -4140,6 +4241,7 @@ namespace Windows
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.UI.Xaml.IUIElementStatics, Windows.Foundation.UniversalApiContract, 1.0)]
+            [static(Windows.UI.Xaml.IUIElementStatics10, Windows.Foundation.UniversalApiContract, 8.0)]
             [static(Windows.UI.Xaml.IUIElementStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.UI.Xaml.IUIElementStatics3, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.UI.Xaml.IUIElementStatics4, Windows.Foundation.UniversalApiContract, 3.0)]
@@ -4159,11 +4261,24 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Xaml.IUIElement7;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.UI.Xaml.IUIElement8;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.UI.Xaml.IUIElement9;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.IUIElement10;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] [overridable] interface Windows.UI.Xaml.IUIElementOverrides;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] [overridable] interface Windows.UI.Xaml.IUIElementOverrides7;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] [overridable] interface Windows.UI.Xaml.IUIElementOverrides8;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] [overridable] interface Windows.UI.Xaml.IUIElementOverrides9;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.UI.Composition.IAnimationObject;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.IVisualElement;
+            }
+
+            [composable(Windows.UI.Xaml.IUIElementWeakCollectionFactory, public, Windows.Foundation.UniversalApiContract, 8.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass UIElementWeakCollection
+            {
+                [default] interface Windows.UI.Xaml.IUIElementWeakCollection;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.UIElement*>;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement*>;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -4240,6 +4355,7 @@ namespace Windows
                 [default] interface Windows.UI.Xaml.IWindow;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.Xaml.IWindow2;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Xaml.IWindow3;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.IWindow4;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -4247,6 +4363,20 @@ namespace Windows
             runtimeclass WindowCreatedEventArgs
             {
                 [default] interface Windows.UI.Xaml.IWindowCreatedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass XamlRoot
+            {
+                [default] interface Windows.UI.Xaml.IXamlRoot;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass XamlRootChangedEventArgs
+            {
+                [default] interface Windows.UI.Xaml.IXamlRootChangedEventArgs;
             }
         }
     }

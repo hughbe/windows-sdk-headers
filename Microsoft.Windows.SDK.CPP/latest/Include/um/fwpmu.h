@@ -2350,6 +2350,39 @@ DEFINE_GUID(
     0x93, 0xda, 0xe8, 0xc3, 0x3f, 0xc9, 0x23, 0xc7
 );
 
+//
+// TODO: This needs to be changed to NTDDI version for 19H1 when it is defined.
+// #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+//
+
+// 335a3e90-84aa-42f5-9e6f-59309536a44c
+DEFINE_GUID(
+    FWPM_CONDITION_RESERVED13,
+    0x335a3e90,
+    0x84aa,
+    0x42f5,
+    0x9e, 0x6f, 0x59, 0x30, 0x95, 0x36, 0xa4, 0x4c
+);
+
+// 30e44da2-2f1a-4116-a559-f907de83604a
+DEFINE_GUID(
+    FWPM_CONDITION_RESERVED14,
+    0x30e44da2,
+    0x2f1a,
+    0x4116,
+    0xa5, 0x59, 0xf9, 0x07, 0xde, 0x83, 0x60, 0x4a
+);
+
+// bab8340f-afe0-43d1-80d8-5ca456962de3
+DEFINE_GUID(
+    FWPM_CONDITION_RESERVED15,
+    0xbab8340f,
+    0xafe0,
+    0x43d1,
+    0x80, 0xd8, 0x5c, 0xa4, 0x56, 0x96, 0x2d, 0xe3
+);
+
+// #endif
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.input.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -273,6 +269,34 @@
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                interface IAttachableInputObject;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject ABI::Windows::UI::Input::IAttachableInputObject
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                interface IAttachableInputObjectFactory;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory ABI::Windows::UI::Input::IAttachableInputObjectFactory
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs_FWD_DEFINED__
 namespace ABI {
@@ -280,9 +304,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface ICrossSlidingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs ABI::Windows::UI::Input::ICrossSlidingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs_FWD_DEFINED__
@@ -294,9 +318,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IDraggingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIDraggingEventArgs ABI::Windows::UI::Input::IDraggingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIDraggingEventArgs_FWD_DEFINED__
@@ -308,9 +332,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IEdgeGesture;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIEdgeGesture ABI::Windows::UI::Input::IEdgeGesture
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIEdgeGesture_FWD_DEFINED__
@@ -322,9 +346,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IEdgeGestureEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIEdgeGestureEventArgs ABI::Windows::UI::Input::IEdgeGestureEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIEdgeGestureEventArgs_FWD_DEFINED__
@@ -336,9 +360,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IEdgeGestureStatics;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIEdgeGestureStatics ABI::Windows::UI::Input::IEdgeGestureStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIEdgeGestureStatics_FWD_DEFINED__
@@ -350,9 +374,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IGestureRecognizer;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer ABI::Windows::UI::Input::IGestureRecognizer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIGestureRecognizer_FWD_DEFINED__
@@ -364,12 +388,40 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IHoldingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs ABI::Windows::UI::Input::IHoldingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                interface IInputActivationListener;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener ABI::Windows::UI::Input::IInputActivationListener
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                interface IInputActivationListenerActivationChangedEventArgs;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs ABI::Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
@@ -378,9 +430,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IKeyboardDeliveryInterceptor;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor ABI::Windows::UI::Input::IKeyboardDeliveryInterceptor
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
@@ -392,9 +444,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IKeyboardDeliveryInterceptorStatics;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptorStatics ABI::Windows::UI::Input::IKeyboardDeliveryInterceptorStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptorStatics_FWD_DEFINED__
@@ -406,9 +458,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IManipulationCompletedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIManipulationCompletedEventArgs ABI::Windows::UI::Input::IManipulationCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIManipulationCompletedEventArgs_FWD_DEFINED__
@@ -420,9 +472,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IManipulationInertiaStartingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIManipulationInertiaStartingEventArgs ABI::Windows::UI::Input::IManipulationInertiaStartingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIManipulationInertiaStartingEventArgs_FWD_DEFINED__
@@ -434,9 +486,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IManipulationStartedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIManipulationStartedEventArgs ABI::Windows::UI::Input::IManipulationStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIManipulationStartedEventArgs_FWD_DEFINED__
@@ -448,9 +500,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IManipulationUpdatedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIManipulationUpdatedEventArgs ABI::Windows::UI::Input::IManipulationUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIManipulationUpdatedEventArgs_FWD_DEFINED__
@@ -462,9 +514,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IMouseWheelParameters;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIMouseWheelParameters ABI::Windows::UI::Input::IMouseWheelParameters
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIMouseWheelParameters_FWD_DEFINED__
@@ -476,9 +528,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPoint ABI::Windows::UI::Input::IPointerPoint
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
@@ -490,9 +542,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPointProperties;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPointProperties ABI::Windows::UI::Input::IPointerPointProperties
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPointProperties_FWD_DEFINED__
@@ -504,9 +556,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPointProperties2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPointProperties2 ABI::Windows::UI::Input::IPointerPointProperties2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPointProperties2_FWD_DEFINED__
@@ -518,9 +570,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPointStatics;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPointStatics ABI::Windows::UI::Input::IPointerPointStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPointStatics_FWD_DEFINED__
@@ -532,9 +584,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPointTransform;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPointTransform ABI::Windows::UI::Input::IPointerPointTransform
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPointTransform_FWD_DEFINED__
@@ -546,9 +598,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerVisualizationSettings;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettings ABI::Windows::UI::Input::IPointerVisualizationSettings
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettings_FWD_DEFINED__
@@ -560,9 +612,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerVisualizationSettingsStatics;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettingsStatics ABI::Windows::UI::Input::IPointerVisualizationSettingsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettingsStatics_FWD_DEFINED__
@@ -574,9 +626,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialController;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialController ABI::Windows::UI::Input::IRadialController
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialController_FWD_DEFINED__
@@ -588,9 +640,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialController2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialController2 ABI::Windows::UI::Input::IRadialController2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialController2_FWD_DEFINED__
@@ -602,9 +654,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerButtonClickedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs ABI::Windows::UI::Input::IRadialControllerButtonClickedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs_FWD_DEFINED__
@@ -616,9 +668,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerButtonClickedEventArgs2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs2 ABI::Windows::UI::Input::IRadialControllerButtonClickedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs2_FWD_DEFINED__
@@ -630,9 +682,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerButtonHoldingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonHoldingEventArgs ABI::Windows::UI::Input::IRadialControllerButtonHoldingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonHoldingEventArgs_FWD_DEFINED__
@@ -644,9 +696,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerButtonPressedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonPressedEventArgs ABI::Windows::UI::Input::IRadialControllerButtonPressedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonPressedEventArgs_FWD_DEFINED__
@@ -658,9 +710,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerButtonReleasedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonReleasedEventArgs ABI::Windows::UI::Input::IRadialControllerButtonReleasedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonReleasedEventArgs_FWD_DEFINED__
@@ -672,9 +724,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerConfiguration;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration ABI::Windows::UI::Input::IRadialControllerConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration_FWD_DEFINED__
@@ -686,9 +738,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerConfiguration2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration2 ABI::Windows::UI::Input::IRadialControllerConfiguration2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration2_FWD_DEFINED__
@@ -700,9 +752,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerConfigurationStatics;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics ABI::Windows::UI::Input::IRadialControllerConfigurationStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics_FWD_DEFINED__
@@ -714,9 +766,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerConfigurationStatics2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics2 ABI::Windows::UI::Input::IRadialControllerConfigurationStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics2_FWD_DEFINED__
@@ -728,9 +780,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerControlAcquiredEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs ABI::Windows::UI::Input::IRadialControllerControlAcquiredEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs_FWD_DEFINED__
@@ -742,9 +794,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerControlAcquiredEventArgs2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs2 ABI::Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs2_FWD_DEFINED__
@@ -756,9 +808,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerMenu;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerMenu ABI::Windows::UI::Input::IRadialControllerMenu
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenu_FWD_DEFINED__
@@ -770,9 +822,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerMenuItem;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItem ABI::Windows::UI::Input::IRadialControllerMenuItem
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItem_FWD_DEFINED__
@@ -784,9 +836,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerMenuItemStatics;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics ABI::Windows::UI::Input::IRadialControllerMenuItemStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics_FWD_DEFINED__
@@ -798,9 +850,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerMenuItemStatics2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics2 ABI::Windows::UI::Input::IRadialControllerMenuItemStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics2_FWD_DEFINED__
@@ -812,9 +864,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerRotationChangedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs ABI::Windows::UI::Input::IRadialControllerRotationChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs_FWD_DEFINED__
@@ -826,9 +878,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerRotationChangedEventArgs2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs2 ABI::Windows::UI::Input::IRadialControllerRotationChangedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs2_FWD_DEFINED__
@@ -840,9 +892,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerScreenContact;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContact ABI::Windows::UI::Input::IRadialControllerScreenContact
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContact_FWD_DEFINED__
@@ -854,9 +906,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerScreenContactContinuedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs ABI::Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs_FWD_DEFINED__
@@ -868,9 +920,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerScreenContactContinuedEventArgs2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs2 ABI::Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs2_FWD_DEFINED__
@@ -882,9 +934,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerScreenContactEndedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactEndedEventArgs ABI::Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactEndedEventArgs_FWD_DEFINED__
@@ -896,9 +948,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerScreenContactStartedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs ABI::Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs_FWD_DEFINED__
@@ -910,9 +962,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerScreenContactStartedEventArgs2;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs2 ABI::Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs2_FWD_DEFINED__
@@ -924,9 +976,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRadialControllerStatics;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRadialControllerStatics ABI::Windows::UI::Input::IRadialControllerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRadialControllerStatics_FWD_DEFINED__
@@ -938,9 +990,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IRightTappedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIRightTappedEventArgs ABI::Windows::UI::Input::IRightTappedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIRightTappedEventArgs_FWD_DEFINED__
@@ -952,9 +1004,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface ITappedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CITappedEventArgs ABI::Windows::UI::Input::ITappedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CITappedEventArgs_FWD_DEFINED__
@@ -967,9 +1019,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class PointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -992,7 +1044,7 @@ IIterator<ABI::Windows::UI::Input::PointerPoint*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::PointerPoint*> __FIIterator_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIIterator_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::IPointerPoint*>
@@ -1024,7 +1076,7 @@ IIterable<ABI::Windows::UI::Input::PointerPoint*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::PointerPoint*> __FIIterable_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIIterable_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::IPointerPoint*>
@@ -1040,9 +1092,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerMenuItem;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1065,7 +1117,7 @@ IIterator<ABI::Windows::UI::Input::RadialControllerMenuItem*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::RadialControllerMenuItem*> __FIIterator_1_Windows__CUI__CInput__CRadialControllerMenuItem_t;
 #define __FIIterator_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CRadialControllerMenuItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::IRadialControllerMenuItem*>
@@ -1097,7 +1149,7 @@ IIterable<ABI::Windows::UI::Input::RadialControllerMenuItem*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::RadialControllerMenuItem*> __FIIterable_1_Windows__CUI__CInput__CRadialControllerMenuItem_t;
 #define __FIIterable_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CRadialControllerMenuItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::IRadialControllerMenuItem*>
@@ -1113,9 +1165,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 enum RadialControllerSystemMenuItemKind : int;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind_USE
@@ -1136,7 +1188,7 @@ IIterator<enum ABI::Windows::UI::Input::RadialControllerSystemMenuItemKind> : II
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::UI::Input::RadialControllerSystemMenuItemKind> __FIIterator_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind_t;
 #define __FIIterator_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::RadialControllerSystemMenuItemKind>
@@ -1166,7 +1218,7 @@ IIterable<enum ABI::Windows::UI::Input::RadialControllerSystemMenuItemKind> : II
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::UI::Input::RadialControllerSystemMenuItemKind> __FIIterable_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind_t;
 #define __FIIterable_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CRadialControllerSystemMenuItemKind ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::RadialControllerSystemMenuItemKind>
@@ -1197,7 +1249,7 @@ IVectorView<ABI::Windows::UI::Input::PointerPoint*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::PointerPoint*> __FIVectorView_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::IPointerPoint*>
@@ -1229,7 +1281,7 @@ IVectorView<ABI::Windows::UI::Input::RadialControllerMenuItem*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::RadialControllerMenuItem*> __FIVectorView_1_Windows__CUI__CInput__CRadialControllerMenuItem_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CRadialControllerMenuItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::IRadialControllerMenuItem*>
@@ -1261,7 +1313,7 @@ IVector<ABI::Windows::UI::Input::PointerPoint*> : IVector_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Input::PointerPoint*> __FIVector_1_Windows__CUI__CInput__CPointerPoint_t;
 #define __FIVector_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CInput__CPointerPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CInput__CPointerPoint ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Input::IPointerPoint*>
@@ -1293,7 +1345,7 @@ IVector<ABI::Windows::UI::Input::RadialControllerMenuItem*> : IVector_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Input::RadialControllerMenuItem*> __FIVector_1_Windows__CUI__CInput__CRadialControllerMenuItem_t;
 #define __FIVector_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CInput__CRadialControllerMenuItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CInput__CRadialControllerMenuItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Input::IRadialControllerMenuItem*>
@@ -1308,10 +1360,78 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Input {
-                class EdgeGesture;
-            } /* Windows */
+                enum GazeInputAccessStatus : int;
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("27a0f2c4-461f-50ab-af8f-d9d99f30b67d"))
+IAsyncOperationCompletedHandler<enum ABI::Windows::UI::Input::GazeInputAccessStatus> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::UI::Input::GazeInputAccessStatus> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.UI.Input.GazeInputAccessStatus>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<enum ABI::Windows::UI::Input::GazeInputAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::GazeInputAccessStatus>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::GazeInputAccessStatus>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_USE */
+
+
+
+
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_USE
+#define DEF___FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("5764eb43-db4f-5fea-9bc5-af0158f26929"))
+IAsyncOperation<enum ABI::Windows::UI::Input::GazeInputAccessStatus> : IAsyncOperation_impl<enum ABI::Windows::UI::Input::GazeInputAccessStatus> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.UI.Input.GazeInputAccessStatus>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<enum ABI::Windows::UI::Input::GazeInputAccessStatus> __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_t;
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Input::GazeInputAccessStatus>
+//#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Input::GazeInputAccessStatus>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_USE */
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                class EdgeGesture;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1319,9 +1439,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class EdgeGestureEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1345,7 +1465,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::EdgeGesture*,ABI::Windows::UI::Input
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::EdgeGesture*,ABI::Windows::UI::Input::EdgeGestureEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IEdgeGesture*,ABI::Windows::UI::Input::IEdgeGestureEventArgs*>
@@ -1362,9 +1482,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class GestureRecognizer;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1372,9 +1492,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class CrossSlidingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1398,7 +1518,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::CrossSlidingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::ICrossSlidingEventArgs*>
@@ -1416,9 +1536,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class DraggingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1442,7 +1562,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::DraggingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::IDraggingEventArgs*>
@@ -1460,9 +1580,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class HoldingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1486,7 +1606,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::HoldingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::IHoldingEventArgs*>
@@ -1504,9 +1624,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class ManipulationCompletedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1530,7 +1650,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::ManipulationCompletedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::IManipulationCompletedEventArgs*>
@@ -1548,9 +1668,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class ManipulationInertiaStartingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1574,7 +1694,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::ManipulationInertiaStartingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::IManipulationInertiaStartingEventArgs*>
@@ -1592,9 +1712,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class ManipulationStartedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1618,7 +1738,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::ManipulationStartedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::IManipulationStartedEventArgs*>
@@ -1636,9 +1756,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class ManipulationUpdatedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1662,7 +1782,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::ManipulationUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::IManipulationUpdatedEventArgs*>
@@ -1680,9 +1800,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RightTappedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1706,7 +1826,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::RightTappedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::IRightTappedEventArgs*>
@@ -1724,9 +1844,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class TappedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1750,7 +1870,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::GestureRecognizer*,ABI::Windows::UI::Input::TappedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IGestureRecognizer*,ABI::Windows::UI::Input::ITappedEventArgs*>
@@ -1766,10 +1886,63 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Input {
-                class RadialController;
-            } /* Windows */
+                class InputActivationListener;
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                class InputActivationListenerActivationChangedEventArgs;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("27256541-ca03-5192-bb2e-8ef1daf0bdeb"))
+ITypedEventHandler<ABI::Windows::UI::Input::InputActivationListener*,ABI::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::InputActivationListener*, ABI::Windows::UI::Input::IInputActivationListener*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs*, ABI::Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.InputActivationListener, Windows.UI.Input.InputActivationListenerActivationChangedEventArgs>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::UI::Input::InputActivationListener*,ABI::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IInputActivationListener*,ABI::Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IInputActivationListener*,ABI::Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                class RadialController;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1793,7 +1966,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,IInspectable*> : I
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,IInspectable*>
@@ -1810,9 +1983,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerButtonClickedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1836,7 +2009,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerButtonClickedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerButtonClickedEventArgs*>
@@ -1854,9 +2027,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerButtonHoldingEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1880,7 +2053,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerButtonHoldingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerButtonHoldingEventArgs*>
@@ -1898,9 +2071,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerButtonPressedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1924,7 +2097,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerButtonPressedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerButtonPressedEventArgs*>
@@ -1942,9 +2115,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerButtonReleasedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1968,7 +2141,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerButtonReleasedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerButtonReleasedEventArgs*>
@@ -1986,9 +2159,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerControlAcquiredEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2012,7 +2185,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerControlAcquiredEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerControlAcquiredEventArgs*>
@@ -2030,9 +2203,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerRotationChangedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2056,7 +2229,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerRotationChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerRotationChangedEventArgs*>
@@ -2074,9 +2247,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerScreenContactContinuedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2100,7 +2273,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs*>
@@ -2118,9 +2291,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerScreenContactStartedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2144,7 +2317,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialController*,ABI::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialController*,ABI::Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs*>
@@ -2178,7 +2351,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::RadialControllerMenuItem*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::RadialControllerMenuItem*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IRadialControllerMenuItem*,IInspectable*>
@@ -2194,9 +2367,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class KeyboardDeliveryInterceptor;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2204,9 +2377,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 class KeyEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CCore_CIKeyEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CCore_CIKeyEventArgs_FWD_DEFINED__
@@ -2215,9 +2388,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface IKeyEventArgs;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs ABI::Windows::UI::Core::IKeyEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CIKeyEventArgs_FWD_DEFINED__
@@ -2244,7 +2417,7 @@ ITypedEventHandler<ABI::Windows::UI::Input::KeyboardDeliveryInterceptor*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Input::KeyboardDeliveryInterceptor*,ABI::Windows::UI::Core::KeyEventArgs*> __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Input::IKeyboardDeliveryInterceptor*,ABI::Windows::UI::Core::IKeyEventArgs*>
@@ -2275,7 +2448,7 @@ IReference<float> : IReference_impl<float>
 // correct parameterized interface specialization.
 typedef IReference<float> __FIReference_1_float_t;
 #define __FIReference_1_float ABI::Windows::Foundation::__FIReference_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_float ABI::Windows::Foundation::IReference<FLOAT>
@@ -2292,9 +2465,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 class SimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -2303,9 +2476,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface ISimpleHapticsController;
-            } /* Windows */
+            } /* Haptics */
         } /* Devices */
-    } /* Haptics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController ABI::Windows::Devices::Haptics::ISimpleHapticsController
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -2319,9 +2492,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 class PointerDevice;
-            } /* Windows */
+            } /* Input */
         } /* Devices */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
@@ -2330,9 +2503,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IPointerDevice;
-            } /* Windows */
+            } /* Input */
         } /* Devices */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice ABI::Windows::Devices::Input::IPointerDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
@@ -2345,11 +2518,24 @@ namespace ABI {
                 
                 typedef enum PointerDeviceType : int PointerDeviceType;
                 
-            } /* Windows */
+            } /* Input */
         } /* Devices */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
+
+
+#ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            interface IClosable;
+        } /* Foundation */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
+
+#endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
 
 namespace ABI {
@@ -2358,8 +2544,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2367,16 +2553,16 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2384,8 +2570,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2398,9 +2584,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2409,9 +2595,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2431,9 +2617,9 @@ namespace ABI {
                 
                 typedef enum CrossSlidingState : int CrossSlidingState;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2442,9 +2628,9 @@ namespace ABI {
                 
                 typedef enum DraggingState : int DraggingState;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2453,9 +2639,20 @@ namespace ABI {
                 
                 typedef enum EdgeGestureKind : int EdgeGestureKind;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                
+                typedef enum GazeInputAccessStatus : int GazeInputAccessStatus;
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2464,9 +2661,9 @@ namespace ABI {
                 
                 typedef enum GestureSettings : unsigned int GestureSettings;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2475,9 +2672,20 @@ namespace ABI {
                 
                 typedef enum HoldingState : int HoldingState;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                
+                typedef enum InputActivationState : int InputActivationState;
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2486,9 +2694,9 @@ namespace ABI {
                 
                 typedef enum PointerUpdateKind : int PointerUpdateKind;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2497,9 +2705,9 @@ namespace ABI {
                 
                 typedef enum RadialControllerMenuKnownIcon : int RadialControllerMenuKnownIcon;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2508,9 +2716,9 @@ namespace ABI {
                 
                 typedef enum RadialControllerSystemMenuItemKind : int RadialControllerSystemMenuItemKind;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2519,9 +2727,9 @@ namespace ABI {
                 
                 typedef struct CrossSlideThresholds CrossSlideThresholds;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2530,9 +2738,9 @@ namespace ABI {
                 
                 typedef struct ManipulationDelta ManipulationDelta;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2541,9 +2749,9 @@ namespace ABI {
                 
                 typedef struct ManipulationVelocities ManipulationVelocities;
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2590,6 +2798,22 @@ namespace ABI {
 
 
 
+
+
+
+
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                class AttachableInputObject;
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2610,9 +2834,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class MouseWheelParameters;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2621,9 +2845,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class PointerPointProperties;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2631,9 +2855,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class PointerVisualizationSettings;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2646,9 +2870,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerConfiguration;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2657,9 +2881,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerMenu;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2669,9 +2893,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerScreenContact;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2680,9 +2904,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class RadialControllerScreenContactEndedEventArgs;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2722,9 +2946,9 @@ namespace ABI {
                     CrossSlidingState_Completed = 6,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2750,9 +2974,9 @@ namespace ABI {
                     DraggingState_Completed = 2,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2778,10 +3002,39 @@ namespace ABI {
                     EdgeGestureKind_Mouse = 2,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.UI.Input.GazeInputAccessStatus
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                /* [v1_enum, contract] */
+                enum GazeInputAccessStatus : int
+                {
+                    GazeInputAccessStatus_Unspecified = 0,
+                    GazeInputAccessStatus_Allowed = 1,
+                    GazeInputAccessStatus_DeniedByUser = 2,
+                    GazeInputAccessStatus_DeniedBySystem = 3,
+                };
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2827,9 +3080,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(GestureSettings)
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2855,10 +3108,39 @@ namespace ABI {
                     HoldingState_Canceled = 2,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.UI.Input.InputActivationState
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                /* [v1_enum, contract] */
+                enum InputActivationState : int
+                {
+                    InputActivationState_None = 0,
+                    InputActivationState_Deactivated = 1,
+                    InputActivationState_ActivatedNotForeground = 2,
+                    InputActivationState_ActivatedInForeground = 3,
+                };
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2891,9 +3173,9 @@ namespace ABI {
                     PointerUpdateKind_XButton2Released = 10,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2925,9 +3207,9 @@ namespace ABI {
                     RadialControllerMenuKnownIcon_PenType = 8,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2955,9 +3237,9 @@ namespace ABI {
                     RadialControllerSystemMenuItemKind_NextPreviousTrack = 4,
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2984,9 +3266,9 @@ namespace ABI {
                     FLOAT RearrangeStart;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3013,9 +3295,9 @@ namespace ABI {
                     FLOAT Expansion;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3041,10 +3323,86 @@ namespace ABI {
                     FLOAT Expansion;
                 };
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IAttachableInputObject
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.AttachableInputObject
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IAttachableInputObject[] = L"Windows.UI.Input.IAttachableInputObject";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                /* [object, uuid("9B822734-A3C1-542A-B2F4-0E32B773FB07"), exclusiveto, contract] */
+                MIDL_INTERFACE("9B822734-A3C1-542A-B2F4-0E32B773FB07")
+                IAttachableInputObject : public IInspectable
+                {
+                public:
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IAttachableInputObject=_uuidof(IAttachableInputObject);
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIAttachableInputObject;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IAttachableInputObjectFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.AttachableInputObject
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IAttachableInputObjectFactory[] = L"Windows.UI.Input.IAttachableInputObjectFactory";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                /* [object, uuid("A4C54C4E-42BC-58FA-A640-EA1516F4C06B"), exclusiveto, contract] */
+                MIDL_INTERFACE("A4C54C4E-42BC-58FA-A640-EA1516F4C06B")
+                IAttachableInputObjectFactory : public IInspectable
+                {
+                public:
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IAttachableInputObjectFactory=_uuidof(IAttachableInputObjectFactory);
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3085,9 +3443,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICrossSlidingEventArgs=_uuidof(ICrossSlidingEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs_INTERFACE_DEFINED__) */
@@ -3132,9 +3490,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDraggingEventArgs=_uuidof(IDraggingEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIDraggingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIDraggingEventArgs_INTERFACE_DEFINED__) */
@@ -3191,9 +3549,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEdgeGesture=_uuidof(IEdgeGesture);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIEdgeGesture;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIEdgeGesture_INTERFACE_DEFINED__) */
@@ -3232,9 +3590,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEdgeGestureEventArgs=_uuidof(IEdgeGestureEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIEdgeGestureEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIEdgeGestureEventArgs_INTERFACE_DEFINED__) */
@@ -3273,9 +3631,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEdgeGestureStatics=_uuidof(IEdgeGestureStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIEdgeGestureStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIEdgeGestureStatics_INTERFACE_DEFINED__) */
@@ -3313,16 +3671,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::Input::GestureSettings value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInertial(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShowGestureFeedback(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShowGestureFeedback(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PivotCenter(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Point * value
@@ -3373,10 +3731,10 @@ namespace ABI {
                         /* [in] */FLOAT value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ManipulationExact(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ManipulationExact(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CrossSlideThresholds(
                         /* [retval, out] */__RPC__out ABI::Windows::UI::Input::CrossSlideThresholds * value
@@ -3385,29 +3743,29 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::Input::CrossSlideThresholds value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CrossSlideHorizontally(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CrossSlideHorizontally(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CrossSlideExact(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CrossSlideExact(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoProcessInertia(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoProcessInertia(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MouseWheelParameters(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::IMouseWheelParameters * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CanBeDoubleTap(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Input::IPointerPoint * value,
-                        /* [retval, out] */__RPC__out boolean * canBeDoubleTap
+                        /* [retval, out] */__RPC__out ::boolean * canBeDoubleTap
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ProcessDownEvent(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Input::IPointerPoint * value
@@ -3420,8 +3778,8 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ProcessMouseWheelEvent(
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Input::IPointerPoint * value,
-                        /* [in] */boolean isShiftKeyDown,
-                        /* [in] */boolean isControlKeyDown
+                        /* [in] */::boolean isShiftKeyDown,
+                        /* [in] */::boolean isControlKeyDown
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ProcessInertia(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CompleteGesture(void) = 0;
@@ -3493,9 +3851,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGestureRecognizer=_uuidof(IGestureRecognizer);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIGestureRecognizer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIGestureRecognizer_INTERFACE_DEFINED__) */
@@ -3540,13 +3898,102 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHoldingEventArgs=_uuidof(IHoldingEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IInputActivationListener
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.InputActivationListener
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IInputActivationListener[] = L"Windows.UI.Input.IInputActivationListener";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                /* [object, uuid("5D6D4ED2-28C7-5AE3-AA74-C918A9F243CA"), exclusiveto, contract] */
+                MIDL_INTERFACE("5D6D4ED2-28C7-5AE3-AA74-C918A9F243CA")
+                IInputActivationListener : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_State(
+                        /* [retval, out] */__RPC__out ABI::Windows::UI::Input::InputActivationState * value
+                        ) = 0;
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_InputActivationChanged(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
+                        ) = 0;
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_InputActivationChanged(
+                        /* [in] */EventRegistrationToken token
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IInputActivationListener=_uuidof(IInputActivationListener);
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIInputActivationListener;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.InputActivationListenerActivationChangedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IInputActivationListenerActivationChangedEventArgs[] = L"Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                /* [object, uuid("7699B465-1DCF-5791-B4B9-6CAFBEED2056"), exclusiveto, contract] */
+                MIDL_INTERFACE("7699B465-1DCF-5791-B4B9-6CAFBEED2056")
+                IInputActivationListenerActivationChangedEventArgs : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_State(
+                        /* [retval, out] */__RPC__out ABI::Windows::UI::Input::InputActivationState * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IInputActivationListenerActivationChangedEventArgs=_uuidof(IInputActivationListenerActivationChangedEventArgs);
+                
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3574,10 +4021,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInterceptionEnabledWhenInForeground(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsInterceptionEnabledWhenInForeground(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_KeyDown(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * handler,
@@ -3598,9 +4045,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyboardDeliveryInterceptor=_uuidof(IKeyboardDeliveryInterceptor);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_INTERFACE_DEFINED__) */
@@ -3639,9 +4086,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKeyboardDeliveryInterceptorStatics=_uuidof(IKeyboardDeliveryInterceptorStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptorStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptorStatics_INTERFACE_DEFINED__) */
@@ -3689,9 +4136,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IManipulationCompletedEventArgs=_uuidof(IManipulationCompletedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIManipulationCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIManipulationCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -3742,9 +4189,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IManipulationInertiaStartingEventArgs=_uuidof(IManipulationInertiaStartingEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIManipulationInertiaStartingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIManipulationInertiaStartingEventArgs_INTERFACE_DEFINED__) */
@@ -3789,9 +4236,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IManipulationStartedEventArgs=_uuidof(IManipulationStartedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIManipulationStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIManipulationStartedEventArgs_INTERFACE_DEFINED__) */
@@ -3842,9 +4289,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IManipulationUpdatedEventArgs=_uuidof(IManipulationUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIManipulationUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIManipulationUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -3904,9 +4351,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMouseWheelParameters=_uuidof(IMouseWheelParameters);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIMouseWheelParameters;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIMouseWheelParameters_INTERFACE_DEFINED__) */
@@ -3956,7 +4403,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT64 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInContact(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Properties(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::IPointerPointProperties * * value
@@ -3966,9 +4413,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPointerPoint=_uuidof(IPointerPoint);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIPointerPoint;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIPointerPoint_INTERFACE_DEFINED__) */
@@ -4003,10 +4450,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out FLOAT * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInverted(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEraser(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Orientation(
                         /* [retval, out] */__RPC__out FLOAT * value
@@ -4027,40 +4474,40 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TouchConfidence(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLeftButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRightButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMiddleButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MouseWheelDelta(
                         /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsHorizontalMouseWheel(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrimary(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInRange(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBarrelButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsXButton1Pressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsXButton2Pressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PointerUpdateKind(
                         /* [retval, out] */__RPC__out ABI::Windows::UI::Input::PointerUpdateKind * value
@@ -4068,7 +4515,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE HasUsage(
                         /* [in] */UINT32 usagePage,
                         /* [in] */UINT32 usageId,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetUsageValue(
                         /* [in] */UINT32 usagePage,
@@ -4080,9 +4527,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPointerPointProperties=_uuidof(IPointerPointProperties);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIPointerPointProperties;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIPointerPointProperties_INTERFACE_DEFINED__) */
@@ -4121,9 +4568,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPointerPointProperties2=_uuidof(IPointerPointProperties2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIPointerPointProperties2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIPointerPointProperties2_INTERFACE_DEFINED__) */
@@ -4177,9 +4624,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPointerPointStatics=_uuidof(IPointerPointStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIPointerPointStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIPointerPointStatics_INTERFACE_DEFINED__) */
@@ -4213,7 +4660,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryTransform(
                         /* [in] */ABI::Windows::Foundation::Point inPoint,
                         /* [out] */__RPC__out ABI::Windows::Foundation::Point * outPoint,
-                        /* [retval, out] */__RPC__out boolean * returnValue
+                        /* [retval, out] */__RPC__out ::boolean * returnValue
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TransformBounds(
                         /* [in] */ABI::Windows::Foundation::Rect rect,
@@ -4224,9 +4671,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPointerPointTransform=_uuidof(IPointerPointTransform);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIPointerPointTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIPointerPointTransform_INTERFACE_DEFINED__) */
@@ -4258,25 +4705,25 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsContactFeedbackEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsContactFeedbackEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsBarrelButtonFeedbackEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBarrelButtonFeedbackEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPointerVisualizationSettings=_uuidof(IPointerVisualizationSettings);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettings_INTERFACE_DEFINED__) */
@@ -4315,9 +4762,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPointerVisualizationSettingsStatics=_uuidof(IPointerVisualizationSettingsStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIPointerVisualizationSettingsStatics_INTERFACE_DEFINED__) */
@@ -4358,10 +4805,10 @@ namespace ABI {
                         /* [in] */DOUBLE value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UseAutomaticHapticFeedback(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_UseAutomaticHapticFeedback(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ScreenContactStarted(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs * handler,
@@ -4417,9 +4864,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialController=_uuidof(IRadialController);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialController;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialController_INTERFACE_DEFINED__) */
@@ -4476,9 +4923,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialController2=_uuidof(IRadialController2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialController2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialController2_INTERFACE_DEFINED__) */
@@ -4517,9 +4964,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerButtonClickedEventArgs=_uuidof(IRadialControllerButtonClickedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs_INTERFACE_DEFINED__) */
@@ -4558,9 +5005,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerButtonClickedEventArgs2=_uuidof(IRadialControllerButtonClickedEventArgs2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs2_INTERFACE_DEFINED__) */
@@ -4602,9 +5049,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerButtonHoldingEventArgs=_uuidof(IRadialControllerButtonHoldingEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonHoldingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonHoldingEventArgs_INTERFACE_DEFINED__) */
@@ -4646,9 +5093,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerButtonPressedEventArgs=_uuidof(IRadialControllerButtonPressedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonPressedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonPressedEventArgs_INTERFACE_DEFINED__) */
@@ -4690,9 +5137,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerButtonReleasedEventArgs=_uuidof(IRadialControllerButtonReleasedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonReleasedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonReleasedEventArgs_INTERFACE_DEFINED__) */
@@ -4729,16 +5176,16 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE ResetToDefaultMenuItems(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySelectDefaultMenuItem(
                         /* [in] */ABI::Windows::UI::Input::RadialControllerSystemMenuItemKind type,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerConfiguration=_uuidof(IRadialControllerConfiguration);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration_INTERFACE_DEFINED__) */
@@ -4776,19 +5223,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::IRadialController * * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsMenuSuppressed(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMenuSuppressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerConfiguration2=_uuidof(IRadialControllerConfiguration2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfiguration2_INTERFACE_DEFINED__) */
@@ -4827,9 +5274,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerConfigurationStatics=_uuidof(IRadialControllerConfigurationStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics_INTERFACE_DEFINED__) */
@@ -4867,19 +5314,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::IRadialController * * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAppControllerEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAppControllerEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerConfigurationStatics2=_uuidof(IRadialControllerConfigurationStatics2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerConfigurationStatics2_INTERFACE_DEFINED__) */
@@ -4918,9 +5365,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerControlAcquiredEventArgs=_uuidof(IRadialControllerControlAcquiredEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs_INTERFACE_DEFINED__) */
@@ -4952,7 +5399,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Haptics::ISimpleHapticsController * * value
@@ -4962,9 +5409,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerControlAcquiredEventArgs2=_uuidof(IRadialControllerControlAcquiredEventArgs2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs2_INTERFACE_DEFINED__) */
@@ -4999,10 +5446,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CUI__CInput__CRadialControllerMenuItem * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetSelectedMenuItem(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::IRadialControllerMenuItem * * result
@@ -5011,16 +5458,16 @@ namespace ABI {
                         /* [in] */__RPC__in_opt ABI::Windows::UI::Input::IRadialControllerMenuItem * menuItem
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySelectPreviouslySelectedMenuItem(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerMenu=_uuidof(IRadialControllerMenu);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerMenu;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenu_INTERFACE_DEFINED__) */
@@ -5072,9 +5519,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerMenuItem=_uuidof(IRadialControllerMenuItem);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItem_INTERFACE_DEFINED__) */
@@ -5120,9 +5567,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerMenuItemStatics=_uuidof(IRadialControllerMenuItemStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics_INTERFACE_DEFINED__) */
@@ -5171,9 +5618,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerMenuItemStatics2=_uuidof(IRadialControllerMenuItemStatics2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItemStatics2_INTERFACE_DEFINED__) */
@@ -5215,9 +5662,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerRotationChangedEventArgs=_uuidof(IRadialControllerRotationChangedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5249,7 +5696,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Haptics::ISimpleHapticsController * * value
@@ -5259,9 +5706,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerRotationChangedEventArgs2=_uuidof(IRadialControllerRotationChangedEventArgs2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs2_INTERFACE_DEFINED__) */
@@ -5303,9 +5750,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerScreenContact=_uuidof(IRadialControllerScreenContact);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContact;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContact_INTERFACE_DEFINED__) */
@@ -5344,9 +5791,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerScreenContactContinuedEventArgs=_uuidof(IRadialControllerScreenContactContinuedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs_INTERFACE_DEFINED__) */
@@ -5378,7 +5825,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Haptics::ISimpleHapticsController * * value
@@ -5388,9 +5835,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerScreenContactContinuedEventArgs2=_uuidof(IRadialControllerScreenContactContinuedEventArgs2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs2_INTERFACE_DEFINED__) */
@@ -5422,7 +5869,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Haptics::ISimpleHapticsController * * value
@@ -5432,9 +5879,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerScreenContactEndedEventArgs=_uuidof(IRadialControllerScreenContactEndedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactEndedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactEndedEventArgs_INTERFACE_DEFINED__) */
@@ -5473,9 +5920,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerScreenContactStartedEventArgs=_uuidof(IRadialControllerScreenContactStartedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs_INTERFACE_DEFINED__) */
@@ -5507,7 +5954,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsButtonPressed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Haptics::ISimpleHapticsController * * value
@@ -5517,9 +5964,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerScreenContactStartedEventArgs2=_uuidof(IRadialControllerScreenContactStartedEventArgs2);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs2_INTERFACE_DEFINED__) */
@@ -5551,7 +5998,7 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateForCurrentView(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::IRadialController * * result
@@ -5561,9 +6008,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadialControllerStatics=_uuidof(IRadialControllerStatics);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRadialControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRadialControllerStatics_INTERFACE_DEFINED__) */
@@ -5605,9 +6052,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRightTappedEventArgs=_uuidof(IRightTappedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIRightTappedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIRightTappedEventArgs_INTERFACE_DEFINED__) */
@@ -5652,13 +6099,38 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITappedEventArgs=_uuidof(ITappedEventArgs);
                 
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CITappedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CITappedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.Input.AttachableInputObject
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Input.IAttachableInputObject ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Input_AttachableInputObject_DEFINED
+#define RUNTIMECLASS_Windows_UI_Input_AttachableInputObject_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_AttachableInputObject[] = L"Windows.UI.Input.AttachableInputObject";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -5799,6 +6271,52 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_HoldingEventArgs[] = L"Windows.UI.Input.HoldingEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.Input.InputActivationListener
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Input.IInputActivationListener ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Input_InputActivationListener_DEFINED
+#define RUNTIMECLASS_Windows_UI_Input_InputActivationListener_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_InputActivationListener[] = L"Windows.UI.Input.InputActivationListener";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.UI.Input.InputActivationListenerActivationChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Input_InputActivationListenerActivationChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_UI_Input_InputActivationListenerActivationChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_InputActivationListenerActivationChangedEventArgs[] = L"Windows.UI.Input.InputActivationListenerActivationChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6383,6 +6901,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs __x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs;
@@ -6424,6 +6954,18 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer __x_ABI_CWindo
 typedef interface __x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs __x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs;
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CIInputActivationListener __x_ABI_CWindows_CUI_CInput_CIInputActivationListener;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor_FWD_DEFINED__
@@ -7670,6 +8212,117 @@ interface __FIVector_1_Windows__CUI__CInput__CRadialControllerMenuItem
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+enum __x_ABI_CWindows_CUI_CInput_CGazeInputAccessStatus;
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatusVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatusVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatusVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus;
+
+typedef struct __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatusVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CGazeInputAccessStatus **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CUI_CInput_CGazeInputAccessStatus *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatusVtbl;
+
+interface __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatusVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CUI__CInput__CGazeInputAccessStatus_INTERFACE_DEFINED__
+
+
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -7692,7 +8345,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Window
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIEdgeGesture * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIEdgeGestureEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIEdgeGesture * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIEdgeGestureEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CEdgeGesture_Windows__CUI__CInput__CEdgeGestureEventArgsVtbl;
 
@@ -7745,7 +8398,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CICrossSlidingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CCrossSlidingEventArgsVtbl;
 
@@ -7798,7 +8451,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIDraggingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIDraggingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CDraggingEventArgsVtbl;
 
@@ -7851,7 +8504,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CHoldingEventArgsVtbl;
 
@@ -7904,7 +8557,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationCompletedEventArgsVtbl;
 
@@ -7957,7 +8610,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationInertiaStartingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationInertiaStartingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationInertiaStartingEventArgsVtbl;
 
@@ -8010,7 +8663,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationStartedEventArgsVtbl;
 
@@ -8063,7 +8716,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIManipulationUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CManipulationUpdatedEventArgsVtbl;
 
@@ -8116,7 +8769,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRightTappedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRightTappedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CRightTappedEventArgsVtbl;
 
@@ -8169,7 +8822,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CITappedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIGestureRecognizer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CITappedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windows__CUI__CInput__CTappedEventArgsVtbl;
 
@@ -8202,6 +8855,59 @@ interface __FITypedEventHandler_2_Windows__CUI__CInput__CGestureRecognizer_Windo
 
 
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * e);
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable_INTERFACE_DEFINED__
@@ -8221,7 +8927,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_I
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_IInspectableVtbl;
 
@@ -8273,7 +8979,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonClickedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonClickedEventArgsVtbl;
 
@@ -8326,7 +9032,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonHoldingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonHoldingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonHoldingEventArgsVtbl;
 
@@ -8379,7 +9085,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonPressedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonPressedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonPressedEventArgsVtbl;
 
@@ -8432,7 +9138,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonReleasedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerButtonReleasedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerButtonReleasedEventArgsVtbl;
 
@@ -8485,7 +9191,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerControlAcquiredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerControlAcquiredEventArgsVtbl;
 
@@ -8538,7 +9244,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerRotationChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerRotationChangedEventArgsVtbl;
 
@@ -8591,7 +9297,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactContinuedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactContinuedEventArgsVtbl;
 
@@ -8644,7 +9350,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_W
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerScreenContactStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialController_Windows__CUI__CInput__CRadialControllerScreenContactStartedEventArgsVtbl;
 
@@ -8696,7 +9402,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItem * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIRadialControllerMenuItem * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CRadialControllerMenuItem_IInspectableVtbl;
 
@@ -8754,7 +9460,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryIn
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CInput_CIKeyboardDeliveryInterceptor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CCore_CIKeyEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CInput__CKeyboardDeliveryInterceptor_Windows__CUI__CCore__CKeyEventArgsVtbl;
 
@@ -8865,6 +9571,13 @@ typedef enum __x_ABI_CWindows_CDevices_CInput_CPointerDeviceType __x_ABI_CWindow
 
 
 
+#ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CFoundation_CIClosable __x_ABI_CWindows_CFoundation_CIClosable;
+
+#endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+
+
 
 typedef struct __x_ABI_CWindows_CFoundation_CPoint __x_ABI_CWindows_CFoundation_CPoint;
 
@@ -8905,10 +9618,16 @@ typedef enum __x_ABI_CWindows_CUI_CInput_CDraggingState __x_ABI_CWindows_CUI_CIn
 typedef enum __x_ABI_CWindows_CUI_CInput_CEdgeGestureKind __x_ABI_CWindows_CUI_CInput_CEdgeGestureKind;
 
 
+typedef enum __x_ABI_CWindows_CUI_CInput_CGazeInputAccessStatus __x_ABI_CWindows_CUI_CInput_CGazeInputAccessStatus;
+
+
 typedef enum __x_ABI_CWindows_CUI_CInput_CGestureSettings __x_ABI_CWindows_CUI_CInput_CGestureSettings;
 
 
 typedef enum __x_ABI_CWindows_CUI_CInput_CHoldingState __x_ABI_CWindows_CUI_CInput_CHoldingState;
+
+
+typedef enum __x_ABI_CWindows_CUI_CInput_CInputActivationState __x_ABI_CWindows_CUI_CInput_CInputActivationState;
 
 
 typedef enum __x_ABI_CWindows_CUI_CInput_CPointerUpdateKind __x_ABI_CWindows_CUI_CInput_CPointerUpdateKind;
@@ -8927,6 +9646,13 @@ typedef struct __x_ABI_CWindows_CUI_CInput_CManipulationDelta __x_ABI_CWindows_C
 
 
 typedef struct __x_ABI_CWindows_CUI_CInput_CManipulationVelocities __x_ABI_CWindows_CUI_CInput_CManipulationVelocities;
+
+
+
+
+
+
+
 
 
 
@@ -9082,6 +9808,27 @@ enum __x_ABI_CWindows_CUI_CInput_CEdgeGestureKind
 
 /*
  *
+ * Struct Windows.UI.Input.GazeInputAccessStatus
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, contract] */
+enum __x_ABI_CWindows_CUI_CInput_CGazeInputAccessStatus
+{
+    GazeInputAccessStatus_Unspecified = 0,
+    GazeInputAccessStatus_Allowed = 1,
+    GazeInputAccessStatus_DeniedByUser = 2,
+    GazeInputAccessStatus_DeniedBySystem = 3,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Struct Windows.UI.Input.GestureSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -9137,6 +9884,27 @@ enum __x_ABI_CWindows_CUI_CInput_CHoldingState
     HoldingState_Canceled = 2,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Struct Windows.UI.Input.InputActivationState
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, contract] */
+enum __x_ABI_CWindows_CUI_CInput_CInputActivationState
+{
+    InputActivationState_None = 0,
+    InputActivationState_Deactivated = 1,
+    InputActivationState_ActivatedNotForeground = 2,
+    InputActivationState_ActivatedInForeground = 3,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9275,6 +10043,178 @@ struct __x_ABI_CWindows_CUI_CInput_CManipulationVelocities
     FLOAT Expansion;
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IAttachableInputObject
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.AttachableInputObject
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IAttachableInputObject[] = L"Windows.UI.Input.IAttachableInputObject";
+/* [object, uuid("9B822734-A3C1-542A-B2F4-0E32B773FB07"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectVtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIAttachableInputObject;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObject_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IAttachableInputObjectFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.AttachableInputObject
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IAttachableInputObjectFactory[] = L"Windows.UI.Input.IAttachableInputObjectFactory";
+/* [object, uuid("A4C54C4E-42BC-58FA-A640-EA1516F4C06B"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactoryVtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactoryVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIAttachableInputObjectFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -10415,6 +11355,207 @@ interface __x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIHoldingEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IInputActivationListener
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.InputActivationListener
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IInputActivationListener[] = L"Windows.UI.Input.IInputActivationListener";
+/* [object, uuid("5D6D4ED2-28C7-5AE3-AA74-C918A9F243CA"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_State )(
+        __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CInput_CInputActivationState * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_InputActivationChanged )(
+        __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CInput__CInputActivationListener_Windows__CUI__CInput__CInputActivationListenerActivationChangedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_InputActivationChanged )(
+        __x_ABI_CWindows_CUI_CInput_CIInputActivationListener * This,
+        /* [in] */EventRegistrationToken token
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerVtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CIInputActivationListener
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_get_State(This,value) \
+    ( (This)->lpVtbl->get_State(This,value) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_add_InputActivationChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_InputActivationChanged(This,handler,token) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListener_remove_InputActivationChanged(This,token) \
+    ( (This)->lpVtbl->remove_InputActivationChanged(This,token) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIInputActivationListener;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListener_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.InputActivationListenerActivationChangedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_IInputActivationListenerActivationChangedEventArgs[] = L"Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs";
+/* [object, uuid("7699B465-1DCF-5791-B4B9-6CAFBEED2056"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_State )(
+        __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CInput_CInputActivationState * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgsVtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_get_State(This,value) \
+    ( (This)->lpVtbl->get_State(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CIInputActivationListenerActivationChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -15192,6 +16333,31 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CITappedEventArgs;
 
 /*
  *
+ * Class Windows.UI.Input.AttachableInputObject
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Input.IAttachableInputObject ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Input_AttachableInputObject_DEFINED
+#define RUNTIMECLASS_Windows_UI_Input_AttachableInputObject_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_AttachableInputObject[] = L"Windows.UI.Input.AttachableInputObject";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.UI.Input.CrossSlidingEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -15328,6 +16494,52 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_HoldingEventArgs[] = L"Windows.UI.Input.HoldingEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.Input.InputActivationListener
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Input.IInputActivationListener ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Input_InputActivationListener_DEFINED
+#define RUNTIMECLASS_Windows_UI_Input_InputActivationListener_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_InputActivationListener[] = L"Windows.UI.Input.InputActivationListener";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.UI.Input.InputActivationListenerActivationChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Input_InputActivationListenerActivationChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_UI_Input_InputActivationListenerActivationChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_InputActivationListenerActivationChangedEventArgs[] = L"Windows.UI.Input.InputActivationListenerActivationChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*

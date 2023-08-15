@@ -16,8 +16,8 @@
 #pragma once
 #endif
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #include <specstrings.h>    // for _In_, etc.
 
@@ -8558,16 +8558,24 @@ SSIZETMult(
 // Macros that are no longer used in this header but which clients may
 // depend on being defined here.
 //
+#ifndef LOWORD
 #define LOWORD(_dw)     ((WORD)(((DWORD_PTR)(_dw)) & 0xffff))
+#endif
+#ifndef HIWORD
 #define HIWORD(_dw)     ((WORD)((((DWORD_PTR)(_dw)) >> 16) & 0xffff))
+#endif
+#ifndef LODWORD
 #define LODWORD(_qw)    ((DWORD)(_qw))
+#endif
+#ifndef HIDWORD
 #define HIDWORD(_qw)    ((DWORD)(((_qw) >> 32) & 0xffffffff))
+#endif
 
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _INTSAFE_H_INCLUDED_

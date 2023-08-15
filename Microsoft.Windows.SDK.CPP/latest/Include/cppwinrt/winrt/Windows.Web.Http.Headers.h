@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -75,9 +75,9 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpCacheDirectiveH
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpCacheDirectiveHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpNameValueHeaderValue> consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValue<D>::Parameters() const
@@ -108,30 +108,30 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpChallengeHeader
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpChallengeHeaderValue consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueFactory<D>::CreateFromScheme(param::hstring const& scheme) const
 {
-    Windows::Web::Http::Headers::HttpChallengeHeaderValue challengeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory)->CreateFromScheme(get_abi(scheme), put_abi(challengeHeaderValue)));
-    return challengeHeaderValue;
+    Windows::Web::Http::Headers::HttpChallengeHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory)->CreateFromScheme(get_abi(scheme), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpChallengeHeaderValue consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueFactory<D>::CreateFromSchemeWithToken(param::hstring const& scheme, param::hstring const& token) const
 {
-    Windows::Web::Http::Headers::HttpChallengeHeaderValue challengeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory)->CreateFromSchemeWithToken(get_abi(scheme), get_abi(token), put_abi(challengeHeaderValue)));
-    return challengeHeaderValue;
+    Windows::Web::Http::Headers::HttpChallengeHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory)->CreateFromSchemeWithToken(get_abi(scheme), get_abi(token), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpChallengeHeaderValue consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpChallengeHeaderValue challengeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics)->Parse(get_abi(input), put_abi(challengeHeaderValue)));
-    return challengeHeaderValue;
+    Windows::Web::Http::Headers::HttpChallengeHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpChallengeHeaderValue& challengeHeaderValue) const
@@ -155,23 +155,23 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpConnectionOptio
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValueFactory<D>::Create(param::hstring const& token) const
 {
-    Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue connectionOptionHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueFactory)->Create(get_abi(token), put_abi(connectionOptionHeaderValue)));
-    return connectionOptionHeaderValue;
+    Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueFactory)->Create(get_abi(token), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue connectionOptionHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueStatics)->Parse(get_abi(input), put_abi(connectionOptionHeaderValue)));
-    return connectionOptionHeaderValue;
+    Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue& connectionOptionHeaderValue) const
@@ -195,23 +195,23 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpContentCodingHe
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentCodingHeaderValue consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValueFactory<D>::Create(param::hstring const& contentCoding) const
 {
-    Windows::Web::Http::Headers::HttpContentCodingHeaderValue contentCodingHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFactory)->Create(get_abi(contentCoding), put_abi(contentCodingHeaderValue)));
-    return contentCodingHeaderValue;
+    Windows::Web::Http::Headers::HttpContentCodingHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFactory)->Create(get_abi(contentCoding), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentCodingHeaderValue consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpContentCodingHeaderValue contentCodingHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingHeaderValueStatics)->Parse(get_abi(input), put_abi(contentCodingHeaderValue)));
-    return contentCodingHeaderValue;
+    Windows::Web::Http::Headers::HttpContentCodingHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpContentCodingHeaderValue& contentCodingHeaderValue) const
@@ -242,30 +242,30 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpContentCodingWi
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueFactory<D>::CreateFromValue(param::hstring const& contentCoding) const
 {
-    Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue contentCodingWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory)->CreateFromValue(get_abi(contentCoding), put_abi(contentCodingWithQualityHeaderValue)));
-    return contentCodingWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory)->CreateFromValue(get_abi(contentCoding), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueFactory<D>::CreateFromValueWithQuality(param::hstring const& contentCoding, double quality) const
 {
-    Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue contentCodingWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory)->CreateFromValueWithQuality(get_abi(contentCoding), quality, put_abi(contentCodingWithQualityHeaderValue)));
-    return contentCodingWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory)->CreateFromValueWithQuality(get_abi(contentCoding), quality, put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue contentCodingWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueStatics)->Parse(get_abi(input), put_abi(contentCodingWithQualityHeaderValue)));
-    return contentCodingWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue& contentCodingWithQualityHeaderValue) const
@@ -344,16 +344,16 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpContentDisposit
 
 template <typename D> Windows::Web::Http::Headers::HttpContentDispositionHeaderValue consume_Windows_Web_Http_Headers_IHttpContentDispositionHeaderValueFactory<D>::Create(param::hstring const& dispositionType) const
 {
-    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue contentDispositionHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory)->Create(get_abi(dispositionType), put_abi(contentDispositionHeaderValue)));
-    return contentDispositionHeaderValue;
+    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory)->Create(get_abi(dispositionType), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentDispositionHeaderValue consume_Windows_Web_Http_Headers_IHttpContentDispositionHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue contentDispositionHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueStatics)->Parse(get_abi(input), put_abi(contentDispositionHeaderValue)));
-    return contentDispositionHeaderValue;
+    Windows::Web::Http::Headers::HttpContentDispositionHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpContentDispositionHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpContentDispositionHeaderValue& contentDispositionHeaderValue) const
@@ -480,9 +480,9 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpContentHeaderCo
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpContentHeaderCollection<D>::TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentHeaderCollection)->TryAppendWithoutValidation(get_abi(name), get_abi(value), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentHeaderCollection)->TryAppendWithoutValidation(get_abi(name), get_abi(value), &result));
+    return result;
 }
 
 template <typename D> Windows::Foundation::IReference<uint64_t> consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValue<D>::FirstBytePosition() const
@@ -520,30 +520,30 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpContentRangeHea
 
 template <typename D> Windows::Web::Http::Headers::HttpContentRangeHeaderValue consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValueFactory<D>::CreateFromLength(uint64_t length) const
 {
-    Windows::Web::Http::Headers::HttpContentRangeHeaderValue contentRangeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory)->CreateFromLength(length, put_abi(contentRangeHeaderValue)));
-    return contentRangeHeaderValue;
+    Windows::Web::Http::Headers::HttpContentRangeHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory)->CreateFromLength(length, put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentRangeHeaderValue consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValueFactory<D>::CreateFromRange(uint64_t from, uint64_t to) const
 {
-    Windows::Web::Http::Headers::HttpContentRangeHeaderValue contentRangeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory)->CreateFromRange(from, to, put_abi(contentRangeHeaderValue)));
-    return contentRangeHeaderValue;
+    Windows::Web::Http::Headers::HttpContentRangeHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory)->CreateFromRange(from, to, put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentRangeHeaderValue consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValueFactory<D>::CreateFromRangeWithLength(uint64_t from, uint64_t to, uint64_t length) const
 {
-    Windows::Web::Http::Headers::HttpContentRangeHeaderValue contentRangeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory)->CreateFromRangeWithLength(from, to, length, put_abi(contentRangeHeaderValue)));
-    return contentRangeHeaderValue;
+    Windows::Web::Http::Headers::HttpContentRangeHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory)->CreateFromRangeWithLength(from, to, length, put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpContentRangeHeaderValue consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpContentRangeHeaderValue contentRangeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueStatics)->Parse(get_abi(input), put_abi(contentRangeHeaderValue)));
-    return contentRangeHeaderValue;
+    Windows::Web::Http::Headers::HttpContentRangeHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpContentRangeHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpContentRangeHeaderValue& contentRangeHeaderValue) const
@@ -579,16 +579,16 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpCookiePairHeade
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpCookiePairHeaderValue consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueFactory<D>::CreateFromName(param::hstring const& name) const
 {
-    Windows::Web::Http::Headers::HttpCookiePairHeaderValue cookiePairHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory)->CreateFromName(get_abi(name), put_abi(cookiePairHeaderValue)));
-    return cookiePairHeaderValue;
+    Windows::Web::Http::Headers::HttpCookiePairHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory)->CreateFromName(get_abi(name), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpCookiePairHeaderValue consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueFactory<D>::CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const
@@ -600,9 +600,9 @@ template <typename D> Windows::Web::Http::Headers::HttpCookiePairHeaderValue con
 
 template <typename D> Windows::Web::Http::Headers::HttpCookiePairHeaderValue consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpCookiePairHeaderValue cookiePairHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCookiePairHeaderValueStatics)->Parse(get_abi(input), put_abi(cookiePairHeaderValue)));
-    return cookiePairHeaderValue;
+    Windows::Web::Http::Headers::HttpCookiePairHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCookiePairHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpCookiePairHeaderValue& cookiePairHeaderValue) const
@@ -635,23 +635,23 @@ template <typename D> hstring consume_Windows_Web_Http_Headers_IHttpCredentialsH
 
 template <typename D> Windows::Web::Http::Headers::HttpCredentialsHeaderValue consume_Windows_Web_Http_Headers_IHttpCredentialsHeaderValueFactory<D>::CreateFromScheme(param::hstring const& scheme) const
 {
-    Windows::Web::Http::Headers::HttpCredentialsHeaderValue credentialsHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory)->CreateFromScheme(get_abi(scheme), put_abi(credentialsHeaderValue)));
-    return credentialsHeaderValue;
+    Windows::Web::Http::Headers::HttpCredentialsHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory)->CreateFromScheme(get_abi(scheme), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpCredentialsHeaderValue consume_Windows_Web_Http_Headers_IHttpCredentialsHeaderValueFactory<D>::CreateFromSchemeWithToken(param::hstring const& scheme, param::hstring const& token) const
 {
-    Windows::Web::Http::Headers::HttpCredentialsHeaderValue credentialsHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory)->CreateFromSchemeWithToken(get_abi(scheme), get_abi(token), put_abi(credentialsHeaderValue)));
-    return credentialsHeaderValue;
+    Windows::Web::Http::Headers::HttpCredentialsHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory)->CreateFromSchemeWithToken(get_abi(scheme), get_abi(token), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpCredentialsHeaderValue consume_Windows_Web_Http_Headers_IHttpCredentialsHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpCredentialsHeaderValue credentialsHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCredentialsHeaderValueStatics)->Parse(get_abi(input), put_abi(credentialsHeaderValue)));
-    return credentialsHeaderValue;
+    Windows::Web::Http::Headers::HttpCredentialsHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpCredentialsHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpCredentialsHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpCredentialsHeaderValue& credentialsHeaderValue) const
@@ -677,9 +677,9 @@ template <typename D> Windows::Foundation::IReference<Windows::Foundation::TimeS
 
 template <typename D> Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue consume_Windows_Web_Http_Headers_IHttpDateOrDeltaHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue dateOrDeltaHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValueStatics)->Parse(get_abi(input), put_abi(dateOrDeltaHeaderValue)));
-    return dateOrDeltaHeaderValue;
+    Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpDateOrDeltaHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue& dateOrDeltaHeaderValue) const
@@ -722,16 +722,16 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpExpectationHead
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpExpectationHeaderValue consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueFactory<D>::CreateFromName(param::hstring const& name) const
 {
-    Windows::Web::Http::Headers::HttpExpectationHeaderValue expectationHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactory)->CreateFromName(get_abi(name), put_abi(expectationHeaderValue)));
-    return expectationHeaderValue;
+    Windows::Web::Http::Headers::HttpExpectationHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactory)->CreateFromName(get_abi(name), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpExpectationHeaderValue consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueFactory<D>::CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const
@@ -743,9 +743,9 @@ template <typename D> Windows::Web::Http::Headers::HttpExpectationHeaderValue co
 
 template <typename D> Windows::Web::Http::Headers::HttpExpectationHeaderValue consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpExpectationHeaderValue expectationHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpExpectationHeaderValueStatics)->Parse(get_abi(input), put_abi(expectationHeaderValue)));
-    return expectationHeaderValue;
+    Windows::Web::Http::Headers::HttpExpectationHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpExpectationHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpExpectationHeaderValue& expectationHeaderValue) const
@@ -762,16 +762,16 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpLanguageHeaderV
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpLanguageHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> hstring consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValue<D>::LanguageRange() const
 {
-    hstring languageRange{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue)->get_LanguageRange(put_abi(languageRange)));
-    return languageRange;
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue)->get_LanguageRange(put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Foundation::IReference<double> consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValue<D>::Quality() const
@@ -788,30 +788,30 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpLanguageRangeWi
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueFactory<D>::CreateFromLanguageRange(param::hstring const& languageRange) const
 {
-    Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue languageRangeWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory)->CreateFromLanguageRange(get_abi(languageRange), put_abi(languageRangeWithQualityHeaderValue)));
-    return languageRangeWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory)->CreateFromLanguageRange(get_abi(languageRange), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueFactory<D>::CreateFromLanguageRangeWithQuality(param::hstring const& languageRange, double quality) const
 {
-    Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue languageRangeWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory)->CreateFromLanguageRangeWithQuality(get_abi(languageRange), quality, put_abi(languageRangeWithQualityHeaderValue)));
-    return languageRangeWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory)->CreateFromLanguageRangeWithQuality(get_abi(languageRange), quality, put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue languageRangeWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueStatics)->Parse(get_abi(input), put_abi(languageRangeWithQualityHeaderValue)));
-    return languageRangeWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue& languageRangeWithQualityHeaderValue) const
@@ -854,16 +854,16 @@ template <typename D> Windows::Foundation::Collections::IVector<Windows::Web::Ht
 
 template <typename D> Windows::Web::Http::Headers::HttpMediaTypeHeaderValue consume_Windows_Web_Http_Headers_IHttpMediaTypeHeaderValueFactory<D>::Create(param::hstring const& mediaType) const
 {
-    Windows::Web::Http::Headers::HttpMediaTypeHeaderValue mediaTypeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory)->Create(get_abi(mediaType), put_abi(mediaTypeHeaderValue)));
-    return mediaTypeHeaderValue;
+    Windows::Web::Http::Headers::HttpMediaTypeHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory)->Create(get_abi(mediaType), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpMediaTypeHeaderValue consume_Windows_Web_Http_Headers_IHttpMediaTypeHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpMediaTypeHeaderValue mediaTypeHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueStatics)->Parse(get_abi(input), put_abi(mediaTypeHeaderValue)));
-    return mediaTypeHeaderValue;
+    Windows::Web::Http::Headers::HttpMediaTypeHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpMediaTypeHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpMediaTypeHeaderValue& mediaTypeHeaderValue) const
@@ -923,30 +923,30 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQu
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueFactory<D>::CreateFromMediaType(param::hstring const& mediaType) const
 {
-    Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue mediaTypeWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory)->CreateFromMediaType(get_abi(mediaType), put_abi(mediaTypeWithQualityHeaderValue)));
-    return mediaTypeWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory)->CreateFromMediaType(get_abi(mediaType), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueFactory<D>::CreateFromMediaTypeWithQuality(param::hstring const& mediaType, double quality) const
 {
-    Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue mediaTypeWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory)->CreateFromMediaTypeWithQuality(get_abi(mediaType), quality, put_abi(mediaTypeWithQualityHeaderValue)));
-    return mediaTypeWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory)->CreateFromMediaTypeWithQuality(get_abi(mediaType), quality, put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue mediaTypeWithQualityHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueStatics)->Parse(get_abi(input), put_abi(mediaTypeWithQualityHeaderValue)));
-    return mediaTypeWithQualityHeaderValue;
+    Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue& mediaTypeWithQualityHeaderValue) const
@@ -963,9 +963,9 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpMethodHeaderVal
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpMethodHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMethodHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpMethodHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> hstring consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValue<D>::Name() const
@@ -989,9 +989,9 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpNameValueHeader
 
 template <typename D> Windows::Web::Http::Headers::HttpNameValueHeaderValue consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValueFactory<D>::CreateFromName(param::hstring const& name) const
 {
-    Windows::Web::Http::Headers::HttpNameValueHeaderValue nameValueHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory)->CreateFromName(get_abi(name), put_abi(nameValueHeaderValue)));
-    return nameValueHeaderValue;
+    Windows::Web::Http::Headers::HttpNameValueHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory)->CreateFromName(get_abi(name), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpNameValueHeaderValue consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValueFactory<D>::CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const
@@ -1003,9 +1003,9 @@ template <typename D> Windows::Web::Http::Headers::HttpNameValueHeaderValue cons
 
 template <typename D> Windows::Web::Http::Headers::HttpNameValueHeaderValue consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpNameValueHeaderValue nameValueHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpNameValueHeaderValueStatics)->Parse(get_abi(input), put_abi(nameValueHeaderValue)));
-    return nameValueHeaderValue;
+    Windows::Web::Http::Headers::HttpNameValueHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpNameValueHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpNameValueHeaderValue& nameValueHeaderValue) const
@@ -1031,23 +1031,23 @@ template <typename D> hstring consume_Windows_Web_Http_Headers_IHttpProductHeade
 
 template <typename D> Windows::Web::Http::Headers::HttpProductHeaderValue consume_Windows_Web_Http_Headers_IHttpProductHeaderValueFactory<D>::CreateFromName(param::hstring const& productName) const
 {
-    Windows::Web::Http::Headers::HttpProductHeaderValue productHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductHeaderValueFactory)->CreateFromName(get_abi(productName), put_abi(productHeaderValue)));
-    return productHeaderValue;
+    Windows::Web::Http::Headers::HttpProductHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductHeaderValueFactory)->CreateFromName(get_abi(productName), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpProductHeaderValue consume_Windows_Web_Http_Headers_IHttpProductHeaderValueFactory<D>::CreateFromNameWithVersion(param::hstring const& productName, param::hstring const& productVersion) const
 {
-    Windows::Web::Http::Headers::HttpProductHeaderValue productHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductHeaderValueFactory)->CreateFromNameWithVersion(get_abi(productName), get_abi(productVersion), put_abi(productHeaderValue)));
-    return productHeaderValue;
+    Windows::Web::Http::Headers::HttpProductHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductHeaderValueFactory)->CreateFromNameWithVersion(get_abi(productName), get_abi(productVersion), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpProductHeaderValue consume_Windows_Web_Http_Headers_IHttpProductHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpProductHeaderValue productHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductHeaderValueStatics)->Parse(get_abi(input), put_abi(productHeaderValue)));
-    return productHeaderValue;
+    Windows::Web::Http::Headers::HttpProductHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpProductHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpProductHeaderValue& productHeaderValue) const
@@ -1078,30 +1078,30 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpProductInfoHead
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpProductInfoHeaderValue consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueFactory<D>::CreateFromComment(param::hstring const& productComment) const
 {
-    Windows::Web::Http::Headers::HttpProductInfoHeaderValue productInfoHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory)->CreateFromComment(get_abi(productComment), put_abi(productInfoHeaderValue)));
-    return productInfoHeaderValue;
+    Windows::Web::Http::Headers::HttpProductInfoHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory)->CreateFromComment(get_abi(productComment), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpProductInfoHeaderValue consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueFactory<D>::CreateFromNameWithVersion(param::hstring const& productName, param::hstring const& productVersion) const
 {
-    Windows::Web::Http::Headers::HttpProductInfoHeaderValue productInfoHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory)->CreateFromNameWithVersion(get_abi(productName), get_abi(productVersion), put_abi(productInfoHeaderValue)));
-    return productInfoHeaderValue;
+    Windows::Web::Http::Headers::HttpProductInfoHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory)->CreateFromNameWithVersion(get_abi(productName), get_abi(productVersion), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpProductInfoHeaderValue consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpProductInfoHeaderValue productInfoHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueStatics)->Parse(get_abi(input), put_abi(productInfoHeaderValue)));
-    return productInfoHeaderValue;
+    Windows::Web::Http::Headers::HttpProductInfoHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpProductInfoHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpProductInfoHeaderValue& productInfoHeaderValue) const
@@ -1289,9 +1289,9 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpRequestHeaderCo
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpRequestHeaderCollection<D>::TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpRequestHeaderCollection)->TryAppendWithoutValidation(get_abi(name), get_abi(value), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpRequestHeaderCollection)->TryAppendWithoutValidation(get_abi(name), get_abi(value), &result));
+    return result;
 }
 
 template <typename D> Windows::Foundation::IReference<Windows::Foundation::TimeSpan> consume_Windows_Web_Http_Headers_IHttpResponseHeaderCollection<D>::Age() const
@@ -1391,9 +1391,9 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpResponseHeaderC
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpResponseHeaderCollection<D>::TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpResponseHeaderCollection)->TryAppendWithoutValidation(get_abi(name), get_abi(value), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpResponseHeaderCollection)->TryAppendWithoutValidation(get_abi(name), get_abi(value), &result));
+    return result;
 }
 
 template <typename D> Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpNameValueHeaderValue> consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValue<D>::Parameters() const
@@ -1417,23 +1417,23 @@ template <typename D> void consume_Windows_Web_Http_Headers_IHttpTransferCodingH
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValueCollection<D>::TryParseAdd(param::hstring const& input) const
 {
-    bool succeeded{};
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCollection)->TryParseAdd(get_abi(input), &succeeded));
-    return succeeded;
+    bool result{};
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCollection)->TryParseAdd(get_abi(input), &result));
+    return result;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpTransferCodingHeaderValue consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValueFactory<D>::Create(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpTransferCodingHeaderValue transferCodingHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory)->Create(get_abi(input), put_abi(transferCodingHeaderValue)));
-    return transferCodingHeaderValue;
+    Windows::Web::Http::Headers::HttpTransferCodingHeaderValue value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory)->Create(get_abi(input), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::Web::Http::Headers::HttpTransferCodingHeaderValue consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValueStatics<D>::Parse(param::hstring const& input) const
 {
-    Windows::Web::Http::Headers::HttpTransferCodingHeaderValue transferCodingHeaderValue{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueStatics)->Parse(get_abi(input), put_abi(transferCodingHeaderValue)));
-    return transferCodingHeaderValue;
+    Windows::Web::Http::Headers::HttpTransferCodingHeaderValue result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueStatics)->Parse(get_abi(input), put_abi(result)));
+    return result;
 }
 
 template <typename D> bool consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValueStatics<D>::TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpTransferCodingHeaderValue& transferCodingHeaderValue) const
@@ -1558,13 +1558,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderValueCol
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1629,13 +1629,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollecti
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1645,27 +1645,27 @@ struct produce<D, Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollecti
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromScheme(void* scheme, void** challengeHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromScheme(void* scheme, void** value) noexcept final
     {
         try
         {
-            *challengeHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromScheme, WINRT_WRAP(Windows::Web::Http::Headers::HttpChallengeHeaderValue), hstring const&);
-            *challengeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpChallengeHeaderValue>(this->shim().CreateFromScheme(*reinterpret_cast<hstring const*>(&scheme)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpChallengeHeaderValue>(this->shim().CreateFromScheme(*reinterpret_cast<hstring const*>(&scheme)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** challengeHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** value) noexcept final
     {
         try
         {
-            *challengeHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromSchemeWithToken, WINRT_WRAP(Windows::Web::Http::Headers::HttpChallengeHeaderValue), hstring const&, hstring const&);
-            *challengeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpChallengeHeaderValue>(this->shim().CreateFromSchemeWithToken(*reinterpret_cast<hstring const*>(&scheme), *reinterpret_cast<hstring const*>(&token)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpChallengeHeaderValue>(this->shim().CreateFromSchemeWithToken(*reinterpret_cast<hstring const*>(&scheme), *reinterpret_cast<hstring const*>(&token)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1675,14 +1675,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory>
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** challengeHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *challengeHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpChallengeHeaderValue), hstring const&);
-            *challengeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpChallengeHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpChallengeHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1734,13 +1734,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueC
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1750,14 +1750,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueC
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueFactory>
 {
-    int32_t WINRT_CALL Create(void* token, void** connectionOptionHeaderValue) noexcept final
+    int32_t WINRT_CALL Create(void* token, void** value) noexcept final
     {
         try
         {
-            *connectionOptionHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Create, WINRT_WRAP(Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue), hstring const&);
-            *connectionOptionHeaderValue = detach_from<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&token)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&token)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1767,14 +1767,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueF
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** connectionOptionHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *connectionOptionHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue), hstring const&);
-            *connectionOptionHeaderValue = detach_from<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1826,13 +1826,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingHeaderValueColl
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1842,14 +1842,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingHeaderValueColl
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFactory>
 {
-    int32_t WINRT_CALL Create(void* contentCoding, void** contentCodingHeaderValue) noexcept final
+    int32_t WINRT_CALL Create(void* contentCoding, void** value) noexcept final
     {
         try
         {
-            *contentCodingHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Create, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentCodingHeaderValue), hstring const&);
-            *contentCodingHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&contentCoding)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&contentCoding)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1859,14 +1859,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFact
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpContentCodingHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** contentCodingHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *contentCodingHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentCodingHeaderValue), hstring const&);
-            *contentCodingHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1931,13 +1931,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingWithQualityHead
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1947,27 +1947,27 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingWithQualityHead
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromValue(void* contentCoding, void** contentCodingWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromValue(void* contentCoding, void** value) noexcept final
     {
         try
         {
-            *contentCodingWithQualityHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromValue, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue), hstring const&);
-            *contentCodingWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(this->shim().CreateFromValue(*reinterpret_cast<hstring const*>(&contentCoding)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(this->shim().CreateFromValue(*reinterpret_cast<hstring const*>(&contentCoding)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromValueWithQuality(void* contentCoding, double quality, void** contentCodingWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromValueWithQuality(void* contentCoding, double quality, void** value) noexcept final
     {
         try
         {
-            *contentCodingWithQualityHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromValueWithQuality, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue), hstring const&, double);
-            *contentCodingWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(this->shim().CreateFromValueWithQuality(*reinterpret_cast<hstring const*>(&contentCoding), quality));
+            *value = detach_from<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(this->shim().CreateFromValueWithQuality(*reinterpret_cast<hstring const*>(&contentCoding), quality));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1977,14 +1977,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingWithQualityHead
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** contentCodingWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *contentCodingWithQualityHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue), hstring const&);
-            *contentCodingWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2149,14 +2149,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentDispositionHeaderValu
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory>
 {
-    int32_t WINRT_CALL Create(void* dispositionType, void** contentDispositionHeaderValue) noexcept final
+    int32_t WINRT_CALL Create(void* dispositionType, void** value) noexcept final
     {
         try
         {
-            *contentDispositionHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Create, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentDispositionHeaderValue), hstring const&);
-            *contentDispositionHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&dispositionType)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&dispositionType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2166,14 +2166,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentDispositionHeaderValu
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** contentDispositionHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *contentDispositionHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentDispositionHeaderValue), hstring const&);
-            *contentDispositionHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2434,13 +2434,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentHeaderCollection> : p
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryAppendWithoutValidation, WINRT_WRAP(bool), hstring const&, hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryAppendWithoutValidation(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
+            *result = detach_from<bool>(this->shim().TryAppendWithoutValidation(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2518,40 +2518,40 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentRangeHeaderValue> : p
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromLength(uint64_t length, void** contentRangeHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromLength(uint64_t length, void** value) noexcept final
     {
         try
         {
-            *contentRangeHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromLength, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentRangeHeaderValue), uint64_t);
-            *contentRangeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().CreateFromLength(length));
+            *value = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().CreateFromLength(length));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromRange(uint64_t from, uint64_t to, void** contentRangeHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromRange(uint64_t from, uint64_t to, void** value) noexcept final
     {
         try
         {
-            *contentRangeHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromRange, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentRangeHeaderValue), uint64_t, uint64_t);
-            *contentRangeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().CreateFromRange(from, to));
+            *value = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().CreateFromRange(from, to));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromRangeWithLength(uint64_t from, uint64_t to, uint64_t length, void** contentRangeHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromRangeWithLength(uint64_t from, uint64_t to, uint64_t length, void** value) noexcept final
     {
         try
         {
-            *contentRangeHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromRangeWithLength, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentRangeHeaderValue), uint64_t, uint64_t, uint64_t);
-            *contentRangeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().CreateFromRangeWithLength(from, to, length));
+            *value = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().CreateFromRangeWithLength(from, to, length));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2561,14 +2561,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFacto
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpContentRangeHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpContentRangeHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** contentRangeHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *contentRangeHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpContentRangeHeaderValue), hstring const&);
-            *contentRangeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2645,13 +2645,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollect
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2661,14 +2661,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollect
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromName(void* name, void** cookiePairHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromName(void* name, void** value) noexcept final
     {
         try
         {
-            *cookiePairHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromName, WINRT_WRAP(Windows::Web::Http::Headers::HttpCookiePairHeaderValue), hstring const&);
-            *cookiePairHeaderValue = detach_from<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&name)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2691,14 +2691,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpCookiePairHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpCookiePairHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** cookiePairHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *cookiePairHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpCookiePairHeaderValue), hstring const&);
-            *cookiePairHeaderValue = detach_from<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2764,27 +2764,27 @@ struct produce<D, Windows::Web::Http::Headers::IHttpCredentialsHeaderValue> : pr
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromScheme(void* scheme, void** credentialsHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromScheme(void* scheme, void** value) noexcept final
     {
         try
         {
-            *credentialsHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromScheme, WINRT_WRAP(Windows::Web::Http::Headers::HttpCredentialsHeaderValue), hstring const&);
-            *credentialsHeaderValue = detach_from<Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(this->shim().CreateFromScheme(*reinterpret_cast<hstring const*>(&scheme)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(this->shim().CreateFromScheme(*reinterpret_cast<hstring const*>(&scheme)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** credentialsHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromSchemeWithToken(void* scheme, void* token, void** value) noexcept final
     {
         try
         {
-            *credentialsHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromSchemeWithToken, WINRT_WRAP(Windows::Web::Http::Headers::HttpCredentialsHeaderValue), hstring const&, hstring const&);
-            *credentialsHeaderValue = detach_from<Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(this->shim().CreateFromSchemeWithToken(*reinterpret_cast<hstring const*>(&scheme), *reinterpret_cast<hstring const*>(&token)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(this->shim().CreateFromSchemeWithToken(*reinterpret_cast<hstring const*>(&scheme), *reinterpret_cast<hstring const*>(&token)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2794,14 +2794,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactor
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpCredentialsHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpCredentialsHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** credentialsHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *credentialsHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpCredentialsHeaderValue), hstring const&);
-            *credentialsHeaderValue = detach_from<Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2854,14 +2854,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValue> : pr
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** dateOrDeltaHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *dateOrDeltaHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue), hstring const&);
-            *dateOrDeltaHeaderValue = detach_from<Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2951,13 +2951,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollec
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2967,14 +2967,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollec
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromName(void* name, void** expectationHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromName(void* name, void** value) noexcept final
     {
         try
         {
-            *expectationHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromName, WINRT_WRAP(Windows::Web::Http::Headers::HttpExpectationHeaderValue), hstring const&);
-            *expectationHeaderValue = detach_from<Windows::Web::Http::Headers::HttpExpectationHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&name)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpExpectationHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2997,14 +2997,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactor
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpExpectationHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpExpectationHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** expectationHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *expectationHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpExpectationHeaderValue), hstring const&);
-            *expectationHeaderValue = detach_from<Windows::Web::Http::Headers::HttpExpectationHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpExpectationHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3039,13 +3039,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollectio
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3055,14 +3055,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollectio
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue> : produce_base<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue>
 {
-    int32_t WINRT_CALL get_LanguageRange(void** languageRange) noexcept final
+    int32_t WINRT_CALL get_LanguageRange(void** value) noexcept final
     {
         try
         {
-            *languageRange = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(LanguageRange, WINRT_WRAP(hstring));
-            *languageRange = detach_from<hstring>(this->shim().LanguageRange());
+            *value = detach_from<hstring>(this->shim().LanguageRange());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3097,13 +3097,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHead
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3113,27 +3113,27 @@ struct produce<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHead
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromLanguageRange(void* languageRange, void** languageRangeWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromLanguageRange(void* languageRange, void** value) noexcept final
     {
         try
         {
-            *languageRangeWithQualityHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromLanguageRange, WINRT_WRAP(Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue), hstring const&);
-            *languageRangeWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(this->shim().CreateFromLanguageRange(*reinterpret_cast<hstring const*>(&languageRange)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(this->shim().CreateFromLanguageRange(*reinterpret_cast<hstring const*>(&languageRange)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromLanguageRangeWithQuality(void* languageRange, double quality, void** languageRangeWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromLanguageRangeWithQuality(void* languageRange, double quality, void** value) noexcept final
     {
         try
         {
-            *languageRangeWithQualityHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromLanguageRangeWithQuality, WINRT_WRAP(Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue), hstring const&, double);
-            *languageRangeWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(this->shim().CreateFromLanguageRangeWithQuality(*reinterpret_cast<hstring const*>(&languageRange), quality));
+            *value = detach_from<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(this->shim().CreateFromLanguageRangeWithQuality(*reinterpret_cast<hstring const*>(&languageRange), quality));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3143,14 +3143,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHead
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** languageRangeWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *languageRangeWithQualityHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue), hstring const&);
-            *languageRangeWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3240,14 +3240,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue> : prod
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory>
 {
-    int32_t WINRT_CALL Create(void* mediaType, void** mediaTypeHeaderValue) noexcept final
+    int32_t WINRT_CALL Create(void* mediaType, void** value) noexcept final
     {
         try
         {
-            *mediaTypeHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Create, WINRT_WRAP(Windows::Web::Http::Headers::HttpMediaTypeHeaderValue), hstring const&);
-            *mediaTypeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&mediaType)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&mediaType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3257,14 +3257,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory>
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** mediaTypeHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *mediaTypeHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpMediaTypeHeaderValue), hstring const&);
-            *mediaTypeHeaderValue = detach_from<Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3391,13 +3391,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderVa
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3407,27 +3407,27 @@ struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderVa
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromMediaType(void* mediaType, void** mediaTypeWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromMediaType(void* mediaType, void** value) noexcept final
     {
         try
         {
-            *mediaTypeWithQualityHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromMediaType, WINRT_WRAP(Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue), hstring const&);
-            *mediaTypeWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(this->shim().CreateFromMediaType(*reinterpret_cast<hstring const*>(&mediaType)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(this->shim().CreateFromMediaType(*reinterpret_cast<hstring const*>(&mediaType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromMediaTypeWithQuality(void* mediaType, double quality, void** mediaTypeWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromMediaTypeWithQuality(void* mediaType, double quality, void** value) noexcept final
     {
         try
         {
-            *mediaTypeWithQualityHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromMediaTypeWithQuality, WINRT_WRAP(Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue), hstring const&, double);
-            *mediaTypeWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(this->shim().CreateFromMediaTypeWithQuality(*reinterpret_cast<hstring const*>(&mediaType), quality));
+            *value = detach_from<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(this->shim().CreateFromMediaTypeWithQuality(*reinterpret_cast<hstring const*>(&mediaType), quality));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3437,14 +3437,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderVa
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** mediaTypeWithQualityHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *mediaTypeWithQualityHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue), hstring const&);
-            *mediaTypeWithQualityHeaderValue = detach_from<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3479,13 +3479,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpMethodHeaderValueCollection>
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3537,14 +3537,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpNameValueHeaderValue> : prod
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromName(void* name, void** nameValueHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromName(void* name, void** value) noexcept final
     {
         try
         {
-            *nameValueHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromName, WINRT_WRAP(Windows::Web::Http::Headers::HttpNameValueHeaderValue), hstring const&);
-            *nameValueHeaderValue = detach_from<Windows::Web::Http::Headers::HttpNameValueHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&name)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpNameValueHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3567,14 +3567,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory>
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpNameValueHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpNameValueHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** nameValueHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *nameValueHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpNameValueHeaderValue), hstring const&);
-            *nameValueHeaderValue = detach_from<Windows::Web::Http::Headers::HttpNameValueHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpNameValueHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3627,27 +3627,27 @@ struct produce<D, Windows::Web::Http::Headers::IHttpProductHeaderValue> : produc
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpProductHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpProductHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromName(void* productName, void** productHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromName(void* productName, void** value) noexcept final
     {
         try
         {
-            *productHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromName, WINRT_WRAP(Windows::Web::Http::Headers::HttpProductHeaderValue), hstring const&);
-            *productHeaderValue = detach_from<Windows::Web::Http::Headers::HttpProductHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&productName)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpProductHeaderValue>(this->shim().CreateFromName(*reinterpret_cast<hstring const*>(&productName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** productHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** value) noexcept final
     {
         try
         {
-            *productHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromNameWithVersion, WINRT_WRAP(Windows::Web::Http::Headers::HttpProductHeaderValue), hstring const&, hstring const&);
-            *productHeaderValue = detach_from<Windows::Web::Http::Headers::HttpProductHeaderValue>(this->shim().CreateFromNameWithVersion(*reinterpret_cast<hstring const*>(&productName), *reinterpret_cast<hstring const*>(&productVersion)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpProductHeaderValue>(this->shim().CreateFromNameWithVersion(*reinterpret_cast<hstring const*>(&productName), *reinterpret_cast<hstring const*>(&productVersion)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3657,14 +3657,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpProductHeaderValueFactory> :
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpProductHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpProductHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** productHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *productHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpProductHeaderValue), hstring const&);
-            *productHeaderValue = detach_from<Windows::Web::Http::Headers::HttpProductHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpProductHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3729,13 +3729,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollec
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3745,27 +3745,27 @@ struct produce<D, Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollec
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory>
 {
-    int32_t WINRT_CALL CreateFromComment(void* productComment, void** productInfoHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromComment(void* productComment, void** value) noexcept final
     {
         try
         {
-            *productInfoHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromComment, WINRT_WRAP(Windows::Web::Http::Headers::HttpProductInfoHeaderValue), hstring const&);
-            *productInfoHeaderValue = detach_from<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(this->shim().CreateFromComment(*reinterpret_cast<hstring const*>(&productComment)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(this->shim().CreateFromComment(*reinterpret_cast<hstring const*>(&productComment)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** productInfoHeaderValue) noexcept final
+    int32_t WINRT_CALL CreateFromNameWithVersion(void* productName, void* productVersion, void** value) noexcept final
     {
         try
         {
-            *productInfoHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CreateFromNameWithVersion, WINRT_WRAP(Windows::Web::Http::Headers::HttpProductInfoHeaderValue), hstring const&, hstring const&);
-            *productInfoHeaderValue = detach_from<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(this->shim().CreateFromNameWithVersion(*reinterpret_cast<hstring const*>(&productName), *reinterpret_cast<hstring const*>(&productVersion)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(this->shim().CreateFromNameWithVersion(*reinterpret_cast<hstring const*>(&productName), *reinterpret_cast<hstring const*>(&productVersion)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3775,14 +3775,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactor
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpProductInfoHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpProductInfoHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** productInfoHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *productInfoHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpProductInfoHeaderValue), hstring const&);
-            *productInfoHeaderValue = detach_from<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4159,13 +4159,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpRequestHeaderCollection> : p
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryAppendWithoutValidation, WINRT_WRAP(bool), hstring const&, hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryAppendWithoutValidation(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
+            *result = detach_from<bool>(this->shim().TryAppendWithoutValidation(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4365,13 +4365,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpResponseHeaderCollection> : 
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryAppendWithoutValidation(void* name, void* value, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryAppendWithoutValidation, WINRT_WRAP(bool), hstring const&, hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryAppendWithoutValidation(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
+            *result = detach_from<bool>(this->shim().TryAppendWithoutValidation(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4423,13 +4423,13 @@ struct produce<D, Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCol
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryParseAdd(void* input, bool* succeeded) noexcept final
+    int32_t WINRT_CALL TryParseAdd(void* input, bool* result) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryParseAdd, WINRT_WRAP(bool), hstring const&);
-            *succeeded = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<bool>(this->shim().TryParseAdd(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4439,14 +4439,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCol
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory> : produce_base<D, Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory>
 {
-    int32_t WINRT_CALL Create(void* input, void** transferCodingHeaderValue) noexcept final
+    int32_t WINRT_CALL Create(void* input, void** value) noexcept final
     {
         try
         {
-            *transferCodingHeaderValue = nullptr;
+            *value = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Create, WINRT_WRAP(Windows::Web::Http::Headers::HttpTransferCodingHeaderValue), hstring const&);
-            *transferCodingHeaderValue = detach_from<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&input)));
+            *value = detach_from<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(this->shim().Create(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4456,14 +4456,14 @@ struct produce<D, Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFac
 template <typename D>
 struct produce<D, Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueStatics> : produce_base<D, Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueStatics>
 {
-    int32_t WINRT_CALL Parse(void* input, void** transferCodingHeaderValue) noexcept final
+    int32_t WINRT_CALL Parse(void* input, void** result) noexcept final
     {
         try
         {
-            *transferCodingHeaderValue = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Parse, WINRT_WRAP(Windows::Web::Http::Headers::HttpTransferCodingHeaderValue), hstring const&);
-            *transferCodingHeaderValue = detach_from<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(this->shim().Parse(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }

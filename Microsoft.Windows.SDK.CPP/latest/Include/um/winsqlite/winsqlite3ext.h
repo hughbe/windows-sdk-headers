@@ -312,6 +312,29 @@ struct sqlite3_api_routines {
   int (SQLITE_APICALL *value_nochange)(sqlite3_value*);
   const char *(SQLITE_APICALL *vtab_collation)(sqlite3_index_info*,int);
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS5 */
+#if NTDDI_VERSION >= NTDDI_WIN10_19H1
+  /* Version 3.24.0 and later */
+  int (SQLITE_APICALL *keyword_count)(void);
+  int (SQLITE_APICALL *keyword_name)(int,const char**,int*);
+  int (SQLITE_APICALL *keyword_check)(const char*,int);
+  sqlite3_str *(SQLITE_APICALL *str_new)(sqlite3*);
+  char *(SQLITE_APICALL *str_finish)(sqlite3_str*);
+  void (SQLITE_APICALL *str_appendf)(sqlite3_str*, const char *zFormat, ...);
+  void (SQLITE_APICALL *str_vappendf)(sqlite3_str*, const char *zFormat, va_list);
+  void (SQLITE_APICALL *str_append)(sqlite3_str*, const char *zIn, int N);
+  void (SQLITE_APICALL *str_appendall)(sqlite3_str*, const char *zIn);
+  void (SQLITE_APICALL *str_appendchar)(sqlite3_str*, int N, char C);
+  void (SQLITE_APICALL *str_reset)(sqlite3_str*);
+  int (SQLITE_APICALL *str_errcode)(sqlite3_str*);
+  int (SQLITE_APICALL *str_length)(sqlite3_str*);
+  char *(SQLITE_APICALL *str_value)(sqlite3_str*);
+  int (SQLITE_APICALL *create_window_function)(sqlite3*,const char*,int,int,void*,
+                            void (SQLITE_APICALL *xStep)(sqlite3_context*,int,sqlite3_value**),
+                            void (SQLITE_APICALL *xFinal)(sqlite3_context*),
+                            void (SQLITE_APICALL *xValue)(sqlite3_context*),
+                            void (SQLITE_APICALL *xInv)(sqlite3_context*,int,sqlite3_value**),
+                            void(SQLITE_APICALL *xDestroy)(void*));
+#endif /* NTDDI_VERSION >= NTDDI_WIN10_19H1 */
 };
 
 #if NTDDI_VERSION >= NTDDI_WIN10_RS2
@@ -595,6 +618,25 @@ typedef int (SQLITE_APICALL *sqlite3_loadext_entry)(
 #define sqlite3_value_nochange         sqlite3_api->value_nochange
 #define sqlite3_vtab_collation         sqlite3_api->vtab_collation
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS5 */
+#if NTDDI_VERSION >= NTDDI_WIN10_19H1
+/* Version 3.24.0 and later */
+#define sqlite3_keyword_count          sqlite3_api->keyword_count
+#define sqlite3_keyword_name           sqlite3_api->keyword_name
+#define sqlite3_keyword_check          sqlite3_api->keyword_check
+#define sqlite3_str_new                sqlite3_api->str_new
+#define sqlite3_str_finish             sqlite3_api->str_finish
+#define sqlite3_str_appendf            sqlite3_api->str_appendf
+#define sqlite3_str_vappendf           sqlite3_api->str_vappendf
+#define sqlite3_str_append             sqlite3_api->str_append
+#define sqlite3_str_appendall          sqlite3_api->str_appendall
+#define sqlite3_str_appendchar         sqlite3_api->str_appendchar
+#define sqlite3_str_reset              sqlite3_api->str_reset
+#define sqlite3_str_errcode            sqlite3_api->str_errcode
+#define sqlite3_str_length             sqlite3_api->str_length
+#define sqlite3_str_value              sqlite3_api->str_value
+/* Version 3.25.0 and later */
+#define sqlite3_create_window_function sqlite3_api->create_window_function
+#endif /* NTDDI_VERSION >= NTDDI_WIN10_19H1 */
 #endif /* !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION) */
 
 #if !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION)

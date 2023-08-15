@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -29,6 +29,13 @@ struct WINRT_EBO IAnalyticsVersionInfo :
     impl::consume_t<IAnalyticsVersionInfo>
 {
     IAnalyticsVersionInfo(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IAppApplicabilityStatics :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IAppApplicabilityStatics>
+{
+    IAppApplicabilityStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IEducationSettingsStatics :
@@ -106,6 +113,13 @@ struct WINRT_EBO ISystemSetupInfoStatics :
     impl::consume_t<ISystemSetupInfoStatics>
 {
     ISystemSetupInfoStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUnsupportedAppRequirement :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUnsupportedAppRequirement>
+{
+    IUnsupportedAppRequirement(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IWindowsIntegrityPolicyStatics :

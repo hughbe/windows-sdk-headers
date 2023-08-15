@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.geolocation.geofencing.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,10 +142,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     interface IGeofence;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofence ABI::Windows::Devices::Geolocation::Geofencing::IGeofence
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofence_FWD_DEFINED__
@@ -158,10 +158,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     interface IGeofenceFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceFactory ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceFactory_FWD_DEFINED__
@@ -174,10 +174,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     interface IGeofenceMonitor;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitor ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitor_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     interface IGeofenceMonitorStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitorStatics ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitorStatics_FWD_DEFINED__
@@ -206,10 +206,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     interface IGeofenceStateChangeReport;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceStateChangeReport ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceStateChangeReport_FWD_DEFINED__
@@ -223,10 +223,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     class Geofence;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -249,7 +249,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::Geofencing::IGeofence*>
@@ -281,7 +281,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::Geofencing::IGeofence*>
@@ -298,10 +298,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     class GeofenceStateChangeReport;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -324,7 +324,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeRep
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport*>
@@ -356,7 +356,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeRep
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport*>
@@ -388,7 +388,7 @@ IVectorView<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> __FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t;
 #define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::Geofencing::IGeofence*>
@@ -420,7 +420,7 @@ IVectorView<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeR
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport*> __FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport_t;
 #define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceStateChangeReport ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport*>
@@ -452,7 +452,7 @@ IVector<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Geolocation::Geofencing::Geofence*> __FIVector_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t;
 #define __FIVector_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CGeolocation__CGeofencing__CGeofence ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Geolocation::Geofencing::IGeofence*>
@@ -469,10 +469,10 @@ namespace ABI {
             namespace Geolocation {
                 namespace Geofencing {
                     class GeofenceMonitor;
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -496,7 +496,7 @@ ITypedEventHandler<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceMonit
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor*,IInspectable*>
@@ -514,9 +514,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geoposition;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition_FWD_DEFINED__
@@ -525,9 +525,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoposition;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition ABI::Windows::Devices::Geolocation::IGeoposition
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition_FWD_DEFINED__
@@ -540,9 +540,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoshape;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape ABI::Windows::Devices::Geolocation::IGeoshape
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape_FWD_DEFINED__
@@ -557,8 +557,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -566,8 +566,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -580,10 +580,10 @@ namespace ABI {
                     
                     typedef enum GeofenceMonitorStatus : int GeofenceMonitorStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -593,10 +593,10 @@ namespace ABI {
                     
                     typedef enum GeofenceRemovalReason : int GeofenceRemovalReason;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -606,10 +606,10 @@ namespace ABI {
                     
                     typedef enum GeofenceState : unsigned int GeofenceState;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -619,10 +619,10 @@ namespace ABI {
                     
                     typedef enum MonitoredGeofenceStates : unsigned int MonitoredGeofenceStates;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -668,10 +668,10 @@ namespace ABI {
                         GeofenceMonitorStatus_NotAvailable = 5,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -697,10 +697,10 @@ namespace ABI {
                         GeofenceRemovalReason_Expired = 1,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -730,10 +730,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(GeofenceState)
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -763,10 +763,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(MonitoredGeofenceStates)
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -814,17 +814,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Geolocation::IGeoshape * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SingleUse(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IGeofence=_uuidof(IGeofence);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofence;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofence_INTERFACE_DEFINED__) */
@@ -865,14 +865,14 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING id,
                             /* [in] */__RPC__in_opt ABI::Windows::Devices::Geolocation::IGeoshape * geoshape,
                             /* [in] */ABI::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates monitoredStates,
-                            /* [in] */boolean singleUse,
+                            /* [in] */::boolean singleUse,
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Geolocation::Geofencing::IGeofence * * geofence
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateWithMonitorStatesAndDwellTime(
                             /* [in] */__RPC__in HSTRING id,
                             /* [in] */__RPC__in_opt ABI::Windows::Devices::Geolocation::IGeoshape * geoshape,
                             /* [in] */ABI::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates monitoredStates,
-                            /* [in] */boolean singleUse,
+                            /* [in] */::boolean singleUse,
                             /* [in] */ABI::Windows::Foundation::TimeSpan dwellTime,
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Geolocation::Geofencing::IGeofence * * geofence
                             ) = 0;
@@ -880,7 +880,7 @@ namespace ABI {
                             /* [in] */__RPC__in HSTRING id,
                             /* [in] */__RPC__in_opt ABI::Windows::Devices::Geolocation::IGeoshape * geoshape,
                             /* [in] */ABI::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates monitoredStates,
-                            /* [in] */boolean singleUse,
+                            /* [in] */::boolean singleUse,
                             /* [in] */ABI::Windows::Foundation::TimeSpan dwellTime,
                             /* [in] */ABI::Windows::Foundation::DateTime startTime,
                             /* [in] */ABI::Windows::Foundation::TimeSpan duration,
@@ -891,10 +891,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeofenceFactory=_uuidof(IGeofenceFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceFactory_INTERFACE_DEFINED__) */
@@ -957,10 +957,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeofenceMonitor=_uuidof(IGeofenceMonitor);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitor_INTERFACE_DEFINED__) */
@@ -1000,10 +1000,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeofenceMonitorStatics=_uuidof(IGeofenceMonitorStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitorStatics_INTERFACE_DEFINED__) */
@@ -1052,10 +1052,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeofenceStateChangeReport=_uuidof(IGeofenceStateChangeReport);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Geolocation */
-    } /* Geofencing */} /* ABI */
+                } /* Geofencing */
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceStateChangeReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceStateChangeReport_INTERFACE_DEFINED__) */
@@ -1882,7 +1882,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofenc
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CGeofencing_CIGeofenceMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeofencing__CGeofenceMonitor_IInspectableVtbl;
 

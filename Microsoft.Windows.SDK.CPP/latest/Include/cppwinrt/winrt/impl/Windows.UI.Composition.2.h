@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -257,7 +257,7 @@ struct WINRT_EBO CompositionGradientBrush :
 struct WINRT_EBO CompositionGraphicsDevice :
     Windows::UI::Composition::ICompositionGraphicsDevice,
     impl::base<CompositionGraphicsDevice, Windows::UI::Composition::CompositionObject>,
-    impl::require<CompositionGraphicsDevice, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionGraphicsDevice2, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+    impl::require<CompositionGraphicsDevice, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionGraphicsDevice2, Windows::UI::Composition::ICompositionGraphicsDevice3, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
 {
     CompositionGraphicsDevice(std::nullptr_t) noexcept {}
 };
@@ -294,6 +294,14 @@ struct WINRT_EBO CompositionMaskBrush :
     CompositionMaskBrush(std::nullptr_t) noexcept {}
 };
 
+struct WINRT_EBO CompositionMipmapSurface :
+    Windows::UI::Composition::ICompositionMipmapSurface,
+    impl::base<CompositionMipmapSurface, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionMipmapSurface, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4, Windows::UI::Composition::ICompositionSurface>
+{
+    CompositionMipmapSurface(std::nullptr_t) noexcept {}
+};
+
 struct WINRT_EBO CompositionNineGridBrush :
     Windows::UI::Composition::ICompositionNineGridBrush,
     impl::base<CompositionNineGridBrush, Windows::UI::Composition::CompositionBrush, Windows::UI::Composition::CompositionObject>,
@@ -327,12 +335,61 @@ struct WINRT_EBO CompositionPathGeometry :
     CompositionPathGeometry(std::nullptr_t) noexcept {}
 };
 
+struct WINRT_EBO CompositionProjectedShadow :
+    Windows::UI::Composition::ICompositionProjectedShadow,
+    impl::base<CompositionProjectedShadow, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionProjectedShadow, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+{
+    CompositionProjectedShadow(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO CompositionProjectedShadowCaster :
+    Windows::UI::Composition::ICompositionProjectedShadowCaster,
+    impl::base<CompositionProjectedShadowCaster, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionProjectedShadowCaster, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+{
+    CompositionProjectedShadowCaster(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO CompositionProjectedShadowCasterCollection :
+    Windows::UI::Composition::ICompositionProjectedShadowCasterCollection,
+    impl::base<CompositionProjectedShadowCasterCollection, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionProjectedShadowCasterCollection, Windows::Foundation::Collections::IIterable<Windows::UI::Composition::CompositionProjectedShadowCaster>, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+{
+    CompositionProjectedShadowCasterCollection(std::nullptr_t) noexcept {}
+    static int32_t MaxRespectedCasters();
+};
+
+struct WINRT_EBO CompositionProjectedShadowReceiver :
+    Windows::UI::Composition::ICompositionProjectedShadowReceiver,
+    impl::base<CompositionProjectedShadowReceiver, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionProjectedShadowReceiver, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+{
+    CompositionProjectedShadowReceiver(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO CompositionProjectedShadowReceiverUnorderedCollection :
+    Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection,
+    impl::base<CompositionProjectedShadowReceiverUnorderedCollection, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionProjectedShadowReceiverUnorderedCollection, Windows::Foundation::Collections::IIterable<Windows::UI::Composition::CompositionProjectedShadowReceiver>, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+{
+    CompositionProjectedShadowReceiverUnorderedCollection(std::nullptr_t) noexcept {}
+};
+
 struct WINRT_EBO CompositionPropertySet :
     Windows::UI::Composition::ICompositionPropertySet,
     impl::base<CompositionPropertySet, Windows::UI::Composition::CompositionObject>,
     impl::require<CompositionPropertySet, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4, Windows::UI::Composition::ICompositionPropertySet2>
 {
     CompositionPropertySet(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO CompositionRadialGradientBrush :
+    Windows::UI::Composition::ICompositionRadialGradientBrush,
+    impl::base<CompositionRadialGradientBrush, Windows::UI::Composition::CompositionGradientBrush, Windows::UI::Composition::CompositionBrush, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionRadialGradientBrush, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionBrush, Windows::UI::Composition::ICompositionGradientBrush, Windows::UI::Composition::ICompositionGradientBrush2, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+{
+    CompositionRadialGradientBrush(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO CompositionRectangleGeometry :
@@ -402,7 +459,7 @@ struct WINRT_EBO CompositionStrokeDashArray :
 struct WINRT_EBO CompositionSurfaceBrush :
     Windows::UI::Composition::ICompositionSurfaceBrush,
     impl::base<CompositionSurfaceBrush, Windows::UI::Composition::CompositionBrush, Windows::UI::Composition::CompositionObject>,
-    impl::require<CompositionSurfaceBrush, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionBrush, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4, Windows::UI::Composition::ICompositionSurfaceBrush2>
+    impl::require<CompositionSurfaceBrush, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionBrush, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4, Windows::UI::Composition::ICompositionSurfaceBrush2, Windows::UI::Composition::ICompositionSurfaceBrush3>
 {
     CompositionSurfaceBrush(std::nullptr_t) noexcept {}
 };
@@ -413,6 +470,14 @@ struct WINRT_EBO CompositionTarget :
     impl::require<CompositionTarget, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
 {
     CompositionTarget(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO CompositionTransform :
+    Windows::UI::Composition::ICompositionTransform,
+    impl::base<CompositionTransform, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionTransform, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4>
+{
+    CompositionTransform(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO CompositionViewBox :
@@ -431,9 +496,17 @@ struct WINRT_EBO CompositionVirtualDrawingSurface :
     CompositionVirtualDrawingSurface(std::nullptr_t) noexcept {}
 };
 
+struct WINRT_EBO CompositionVisualSurface :
+    Windows::UI::Composition::ICompositionVisualSurface,
+    impl::base<CompositionVisualSurface, Windows::UI::Composition::CompositionObject>,
+    impl::require<CompositionVisualSurface, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4, Windows::UI::Composition::ICompositionSurface>
+{
+    CompositionVisualSurface(std::nullptr_t) noexcept {}
+};
+
 struct WINRT_EBO Compositor :
     Windows::UI::Composition::ICompositor,
-    impl::require<Compositor, Windows::Foundation::IClosable, Windows::UI::Composition::ICompositor2, Windows::UI::Composition::ICompositor3, Windows::UI::Composition::ICompositor4, Windows::UI::Composition::ICompositor5, Windows::UI::Composition::ICompositor6>
+    impl::require<Compositor, Windows::Foundation::IClosable, Windows::UI::Composition::ICompositor2, Windows::UI::Composition::ICompositor3, Windows::UI::Composition::ICompositor4, Windows::UI::Composition::ICompositor5, Windows::UI::Composition::ICompositor6, Windows::UI::Composition::ICompositorWithProjectedShadow, Windows::UI::Composition::ICompositorWithRadialGradient, Windows::UI::Composition::ICompositorWithVisualSurface>
 {
     Compositor(std::nullptr_t) noexcept {}
     Compositor();

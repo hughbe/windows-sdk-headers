@@ -3291,9 +3291,6 @@ interface DWRITE_DECLARE_INTERFACE("514039C6-4617-4064-BF8B-92EA83E506E0") IDWri
         _COM_Outptr_ IDWriteFontFamily2** fontFamily
         ) PURE;
 
-    using IDWriteFontCollection::GetFontFamily;
-    using IDWriteFontCollection1::GetFontFamily;
-
     /// <summary>
     /// Gets a list of fonts in the specified font family ranked in order of how well they match the specified axis values.
     /// </summary>
@@ -3333,6 +3330,10 @@ interface DWRITE_DECLARE_INTERFACE("514039C6-4617-4064-BF8B-92EA83E506E0") IDWri
     STDMETHOD(GetFontSet)(
         _COM_Outptr_ IDWriteFontSet1** fontSet
         ) PURE;
+
+    using IDWriteFontCollection::GetFontFamily;
+    using IDWriteFontCollection1::GetFontFamily;
+    using IDWriteFontCollection1::GetFontSet;
 };
 
 

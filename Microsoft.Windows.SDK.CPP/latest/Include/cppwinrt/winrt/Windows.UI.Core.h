@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,6 +11,7 @@
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.2.h"
+#include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.UI.Input.2.h"
 #include "winrt/impl/Windows.UI.Popups.2.h"
 #include "winrt/impl/Windows.UI.Core.2.h"
@@ -1351,6 +1352,13 @@ template <typename D> Windows::UI::Core::CoreWindow consume_Windows_UI_Core_ICor
     Windows::UI::Core::CoreWindow ppWindow{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Core::ICoreWindowStatic)->GetForCurrentThread(put_abi(ppWindow)));
     return ppWindow;
+}
+
+template <typename D> Windows::UI::UIContext consume_Windows_UI_Core_ICoreWindowWithContext<D>::UIContext() const
+{
+    Windows::UI::UIContext value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Core::ICoreWindowWithContext)->get_UIContext(put_abi(value)));
+    return value;
 }
 
 template <typename D> bool consume_Windows_UI_Core_IIdleDispatchedHandlerArgs<D>::IsDispatcherIdle() const
@@ -3750,6 +3758,23 @@ struct produce<D, Windows::UI::Core::ICoreWindowStatic> : produce_base<D, Window
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Core::ICoreWindowWithContext> : produce_base<D, Windows::UI::Core::ICoreWindowWithContext>
+{
+    int32_t WINRT_CALL get_UIContext(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UIContext, WINRT_WRAP(Windows::UI::UIContext));
+            *value = detach_from<Windows::UI::UIContext>(this->shim().UIContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Core::IIdleDispatchedHandlerArgs> : produce_base<D, Windows::UI::Core::IIdleDispatchedHandlerArgs>
 {
     int32_t WINRT_CALL get_IsDispatcherIdle(bool* value) noexcept final
@@ -4246,6 +4271,7 @@ template<> struct hash<winrt::Windows::UI::Core::ICoreWindowResizeManager> : win
 template<> struct hash<winrt::Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability> : winrt::impl::hash_base<winrt::Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability> {};
 template<> struct hash<winrt::Windows::UI::Core::ICoreWindowResizeManagerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Core::ICoreWindowResizeManagerStatics> {};
 template<> struct hash<winrt::Windows::UI::Core::ICoreWindowStatic> : winrt::impl::hash_base<winrt::Windows::UI::Core::ICoreWindowStatic> {};
+template<> struct hash<winrt::Windows::UI::Core::ICoreWindowWithContext> : winrt::impl::hash_base<winrt::Windows::UI::Core::ICoreWindowWithContext> {};
 template<> struct hash<winrt::Windows::UI::Core::IIdleDispatchedHandlerArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::IIdleDispatchedHandlerArgs> {};
 template<> struct hash<winrt::Windows::UI::Core::IInitializeWithCoreWindow> : winrt::impl::hash_base<winrt::Windows::UI::Core::IInitializeWithCoreWindow> {};
 template<> struct hash<winrt::Windows::UI::Core::IInputEnabledEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::IInputEnabledEventArgs> {};

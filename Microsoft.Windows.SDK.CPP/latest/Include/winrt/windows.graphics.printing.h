@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.printing.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskSourceRequestedHandler;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedHandler
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintDocumentSource;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource ABI::Windows::Graphics::Printing::IPrintDocumentSource
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintManager;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager ABI::Windows::Graphics::Printing::IPrintManager
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintManagerStatic;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic ABI::Windows::Graphics::Printing::IPrintManagerStatic
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintManagerStatic2;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 ABI::Windows::Graphics::Printing::IPrintManagerStatic2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintPageInfo;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo ABI::Windows::Graphics::Printing::IPrintPageInfo
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintPageRange;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange ABI::Windows::Graphics::Printing::IPrintPageRange
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintPageRangeFactory;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory ABI::Windows::Graphics::Printing::IPrintPageRangeFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintPageRangeOptions;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions ABI::Windows::Graphics::Printing::IPrintPageRangeOptions
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTask;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask ABI::Windows::Graphics::Printing::IPrintTask
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTask2;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 ABI::Windows::Graphics::Printing::IPrintTask2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskCompletedEventArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs ABI::Windows::Graphics::Printing::IPrintTaskCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptions;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions ABI::Windows::Graphics::Printing::IPrintTaskOptions
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptions2;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2 ABI::Windows::Graphics::Printing::IPrintTaskOptions2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCore;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCoreProperties;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties ABI::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCoreUIConfiguration;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration ABI::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskProgressingEventArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs ABI::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_FWD_DEFINED__
@@ -530,9 +526,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskRequest;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest ABI::Windows::Graphics::Printing::IPrintTaskRequest
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_FWD_DEFINED__
@@ -544,9 +540,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskRequestedDeferral;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral ABI::Windows::Graphics::Printing::IPrintTaskRequestedDeferral
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_FWD_DEFINED__
@@ -558,9 +554,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskRequestedEventArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs ABI::Windows::Graphics::Printing::IPrintTaskRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_FWD_DEFINED__
@@ -572,9 +568,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskSourceRequestedArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_FWD_DEFINED__
@@ -586,9 +582,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskSourceRequestedDeferral;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_FWD_DEFINED__
@@ -600,9 +596,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskTargetDeviceSupport;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport ABI::Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_FWD_DEFINED__
@@ -614,9 +610,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IStandardPrintTaskOptionsStatic;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic ABI::Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_FWD_DEFINED__
@@ -628,9 +624,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IStandardPrintTaskOptionsStatic2;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 ABI::Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_FWD_DEFINED__
@@ -642,9 +638,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IStandardPrintTaskOptionsStatic3;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3 ABI::Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_FWD_DEFINED__
@@ -657,9 +653,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintPageRange;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -682,7 +678,7 @@ IIterator<ABI::Windows::Graphics::Printing::PrintPageRange*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
 #define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Printing::IPrintPageRange*>
@@ -714,7 +710,7 @@ IIterable<ABI::Windows::Graphics::Printing::PrintPageRange*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
 #define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Printing::IPrintPageRange*>
@@ -746,7 +742,7 @@ IVectorView<ABI::Windows::Graphics::Printing::PrintPageRange*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
 #define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Printing::IPrintPageRange*>
@@ -778,7 +774,7 @@ IVector<ABI::Windows::Graphics::Printing::PrintPageRange*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
 #define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Graphics::Printing::IPrintPageRange*>
@@ -794,9 +790,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintManager;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -804,9 +800,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskRequestedEventArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -830,7 +826,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintManager*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintManager*,ABI::Windows::Graphics::Printing::PrintTaskRequestedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintManager*,ABI::Windows::Graphics::Printing::IPrintTaskRequestedEventArgs*>
@@ -847,9 +843,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTask;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -873,7 +869,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,IInspectable*> :
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,IInspectable*>
@@ -890,9 +886,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskCompletedEventArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -916,7 +912,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Gr
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Graphics::Printing::PrintTaskCompletedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,ABI::Windows::Graphics::Printing::IPrintTaskCompletedEventArgs*>
@@ -934,9 +930,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskProgressingEventArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -960,7 +956,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Gr
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Graphics::Printing::PrintTaskProgressingEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,ABI::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs*>
@@ -991,7 +987,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1020,7 +1016,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1050,7 +1046,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1080,7 +1076,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1110,7 +1106,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1140,7 +1136,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1170,7 +1166,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -1199,7 +1195,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1228,7 +1224,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1257,7 +1253,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1286,7 +1282,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1303,9 +1299,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackagePropertySet;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
@@ -1314,9 +1310,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySet;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
@@ -1331,8 +1327,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1340,8 +1336,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1349,8 +1345,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1362,9 +1358,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1380,9 +1376,9 @@ namespace ABI {
                 
                 typedef enum PrintBinding : int PrintBinding;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1391,9 +1387,9 @@ namespace ABI {
                 
                 typedef enum PrintBordering : int PrintBordering;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1402,9 +1398,9 @@ namespace ABI {
                 
                 typedef enum PrintCollation : int PrintCollation;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1413,9 +1409,9 @@ namespace ABI {
                 
                 typedef enum PrintColorMode : int PrintColorMode;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1424,9 +1420,9 @@ namespace ABI {
                 
                 typedef enum PrintDuplex : int PrintDuplex;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1435,9 +1431,9 @@ namespace ABI {
                 
                 typedef enum PrintHolePunch : int PrintHolePunch;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1446,9 +1442,9 @@ namespace ABI {
                 
                 typedef enum PrintMediaSize : int PrintMediaSize;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1457,9 +1453,9 @@ namespace ABI {
                 
                 typedef enum PrintMediaType : int PrintMediaType;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1468,9 +1464,9 @@ namespace ABI {
                 
                 typedef enum PrintOrientation : int PrintOrientation;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1479,9 +1475,9 @@ namespace ABI {
                 
                 typedef enum PrintQuality : int PrintQuality;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1490,9 +1486,9 @@ namespace ABI {
                 
                 typedef enum PrintStaple : int PrintStaple;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1501,9 +1497,9 @@ namespace ABI {
                 
                 typedef enum PrintTaskCompletion : int PrintTaskCompletion;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1512,9 +1508,9 @@ namespace ABI {
                 
                 typedef struct PrintPageDescription PrintPageDescription;
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1549,9 +1545,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintPageInfo;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1560,9 +1556,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintPageRangeOptions;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1572,9 +1568,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskOptions;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1583,9 +1579,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskRequest;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1593,9 +1589,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskRequestedDeferral;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1604,9 +1600,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskSourceRequestedArgs;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1614,9 +1610,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskSourceRequestedDeferral;
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1664,9 +1660,9 @@ namespace ABI {
                     PrintBinding_Trim = 16,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1694,9 +1690,9 @@ namespace ABI {
                     PrintBordering_Borderless = 4,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1724,9 +1720,9 @@ namespace ABI {
                     PrintCollation_Uncollated = 4,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1755,9 +1751,9 @@ namespace ABI {
                     PrintColorMode_Monochrome = 5,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1786,9 +1782,9 @@ namespace ABI {
                     PrintDuplex_TwoSidedLongEdge = 5,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1819,9 +1815,9 @@ namespace ABI {
                     PrintHolePunch_BottomEdge = 7,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2017,9 +2013,9 @@ namespace ABI {
                     PrintMediaSize_Roll54Inch = 172,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2074,9 +2070,9 @@ namespace ABI {
                     PrintMediaType_None = 31,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2106,9 +2102,9 @@ namespace ABI {
                     PrintOrientation_LandscapeFlipped = 6,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2141,9 +2137,9 @@ namespace ABI {
                     PrintQuality_Text = 9,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2179,9 +2175,9 @@ namespace ABI {
                     PrintStaple_SaddleStitch = 12,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2208,9 +2204,9 @@ namespace ABI {
                     PrintTaskCompletion_Submitted = 3,
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2237,9 +2233,9 @@ namespace ABI {
                     UINT32 DpiY;
                 };
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2271,9 +2267,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskSourceRequestedHandler=_uuidof(IPrintTaskSourceRequestedHandler);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_INTERFACE_DEFINED__) */
@@ -2306,9 +2302,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintDocumentSource=_uuidof(IPrintDocumentSource);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_INTERFACE_DEFINED__) */
@@ -2351,9 +2347,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintManager=_uuidof(IPrintManager);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_INTERFACE_DEFINED__) */
@@ -2395,9 +2391,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintManagerStatic=_uuidof(IPrintManagerStatic);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_INTERFACE_DEFINED__) */
@@ -2429,16 +2425,16 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPrintManagerStatic2=_uuidof(IPrintManagerStatic2);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_INTERFACE_DEFINED__) */
@@ -2504,9 +2500,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintPageInfo=_uuidof(IPrintPageInfo);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_INTERFACE_DEFINED__) */
@@ -2548,9 +2544,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintPageRange=_uuidof(IPrintPageRange);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_INTERFACE_DEFINED__) */
@@ -2595,9 +2591,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintPageRangeFactory=_uuidof(IPrintPageRangeFactory);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_INTERFACE_DEFINED__) */
@@ -2629,31 +2625,31 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowAllPages(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowAllPages(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowCurrentPage(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowCurrentPage(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowCustomSetOfPages(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowCustomSetOfPages(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPrintPageRangeOptions=_uuidof(IPrintPageRangeOptions);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_INTERFACE_DEFINED__) */
@@ -2726,9 +2722,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTask=_uuidof(IPrintTask);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_INTERFACE_DEFINED__) */
@@ -2760,19 +2756,19 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPreviewEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPreviewEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPrintTask2=_uuidof(IPrintTask2);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_INTERFACE_DEFINED__) */
@@ -2811,9 +2807,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskCompletedEventArgs=_uuidof(IPrintTaskCompletedEventArgs);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -2859,9 +2855,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskOptions=_uuidof(IPrintTaskOptions);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_INTERFACE_DEFINED__) */
@@ -2903,9 +2899,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskOptions2=_uuidof(IPrintTaskOptions2);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_INTERFACE_DEFINED__) */
@@ -2942,9 +2938,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskOptionsCore=_uuidof(IPrintTaskOptionsCore);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_INTERFACE_DEFINED__) */
@@ -3049,9 +3045,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskOptionsCoreProperties=_uuidof(IPrintTaskOptionsCoreProperties);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_INTERFACE_DEFINED__) */
@@ -3087,9 +3083,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskOptionsCoreUIConfiguration=_uuidof(IPrintTaskOptionsCoreUIConfiguration);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_INTERFACE_DEFINED__) */
@@ -3128,9 +3124,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskProgressingEventArgs=_uuidof(IPrintTaskProgressingEventArgs);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_INTERFACE_DEFINED__) */
@@ -3177,9 +3173,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskRequest=_uuidof(IPrintTaskRequest);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_INTERFACE_DEFINED__) */
@@ -3216,9 +3212,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskRequestedDeferral=_uuidof(IPrintTaskRequestedDeferral);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_INTERFACE_DEFINED__) */
@@ -3257,9 +3253,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskRequestedEventArgs=_uuidof(IPrintTaskRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3304,9 +3300,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskSourceRequestedArgs=_uuidof(IPrintTaskSourceRequestedArgs);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_INTERFACE_DEFINED__) */
@@ -3343,9 +3339,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskSourceRequestedDeferral=_uuidof(IPrintTaskSourceRequestedDeferral);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_INTERFACE_DEFINED__) */
@@ -3377,25 +3373,25 @@ namespace ABI {
                 {
                 public:
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPrinterTargetEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrinterTargetEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Is3DManufacturingTargetEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Is3DManufacturingTargetEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPrintTaskTargetDeviceSupport=_uuidof(IPrintTaskTargetDeviceSupport);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_INTERFACE_DEFINED__) */
@@ -3470,9 +3466,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStandardPrintTaskOptionsStatic=_uuidof(IStandardPrintTaskOptionsStatic);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_INTERFACE_DEFINED__) */
@@ -3511,9 +3507,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStandardPrintTaskOptionsStatic2=_uuidof(IStandardPrintTaskOptionsStatic2);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_INTERFACE_DEFINED__) */
@@ -3552,9 +3548,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStandardPrintTaskOptionsStatic3=_uuidof(IStandardPrintTaskOptionsStatic3);
                 
-            } /* Windows */
+            } /* Printing */
         } /* Graphics */
-    } /* Printing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_INTERFACE_DEFINED__) */
@@ -4497,7 +4493,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintMana
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgsVtbl;
 
@@ -4549,7 +4545,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectableVtbl;
 
@@ -4601,7 +4597,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgsVtbl;
 
@@ -4654,7 +4650,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgsVtbl;
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.chat.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatCapabilities;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilities ABI::Windows::ApplicationModel::Chat::IChatCapabilities
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilities_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatCapabilitiesManagerStatics;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics ABI::Windows::ApplicationModel::Chat::IChatCapabilitiesManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatCapabilitiesManagerStatics2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics2 ABI::Windows::ApplicationModel::Chat::IChatCapabilitiesManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics2_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatConversation;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation ABI::Windows::ApplicationModel::Chat::IChatConversation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatConversation2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation2 ABI::Windows::ApplicationModel::Chat::IChatConversation2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation2_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatConversationReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationReader ABI::Windows::ApplicationModel::Chat::IChatConversationReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationReader_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatConversationThreadingInfo;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationThreadingInfo ABI::Windows::ApplicationModel::Chat::IChatConversationThreadingInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationThreadingInfo_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatItem;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatItem ABI::Windows::ApplicationModel::Chat::IChatItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatItem_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessage;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage ABI::Windows::ApplicationModel::Chat::IChatMessage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage_FWD_DEFINED__
@@ -405,9 +401,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessage2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage2 ABI::Windows::ApplicationModel::Chat::IChatMessage2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage2_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessage3;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage3 ABI::Windows::ApplicationModel::Chat::IChatMessage3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage3_FWD_DEFINED__
@@ -433,9 +429,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessage4;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage4 ABI::Windows::ApplicationModel::Chat::IChatMessage4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage4_FWD_DEFINED__
@@ -447,9 +443,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageAttachment;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment ABI::Windows::ApplicationModel::Chat::IChatMessageAttachment
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment_FWD_DEFINED__
@@ -461,9 +457,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageAttachment2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment2 ABI::Windows::ApplicationModel::Chat::IChatMessageAttachment2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment2_FWD_DEFINED__
@@ -475,9 +471,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageAttachmentFactory;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachmentFactory ABI::Windows::ApplicationModel::Chat::IChatMessageAttachmentFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachmentFactory_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageBlockingStatic;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageBlockingStatic ABI::Windows::ApplicationModel::Chat::IChatMessageBlockingStatic
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageBlockingStatic_FWD_DEFINED__
@@ -503,9 +499,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageChange;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChange ABI::Windows::ApplicationModel::Chat::IChatMessageChange
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChange_FWD_DEFINED__
@@ -517,9 +513,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageChangeReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeReader ABI::Windows::ApplicationModel::Chat::IChatMessageChangeReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeReader_FWD_DEFINED__
@@ -531,9 +527,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageChangeTracker;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeTracker ABI::Windows::ApplicationModel::Chat::IChatMessageChangeTracker
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeTracker_FWD_DEFINED__
@@ -545,9 +541,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageChangedDeferral;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedDeferral ABI::Windows::ApplicationModel::Chat::IChatMessageChangedDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedDeferral_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedEventArgs ABI::Windows::ApplicationModel::Chat::IChatMessageChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedEventArgs_FWD_DEFINED__
@@ -573,9 +569,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageManager2Statics;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManager2Statics ABI::Windows::ApplicationModel::Chat::IChatMessageManager2Statics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManager2Statics_FWD_DEFINED__
@@ -587,9 +583,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageManagerStatic;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatic ABI::Windows::ApplicationModel::Chat::IChatMessageManagerStatic
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatic_FWD_DEFINED__
@@ -601,9 +597,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageManagerStatics3;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatics3 ABI::Windows::ApplicationModel::Chat::IChatMessageManagerStatics3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatics3_FWD_DEFINED__
@@ -615,9 +611,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageNotificationTriggerDetails;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails ABI::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails_FWD_DEFINED__
@@ -629,9 +625,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageNotificationTriggerDetails2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails2 ABI::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails2_FWD_DEFINED__
@@ -643,9 +639,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader ABI::Windows::ApplicationModel::Chat::IChatMessageReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader_FWD_DEFINED__
@@ -657,9 +653,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageReader2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader2 ABI::Windows::ApplicationModel::Chat::IChatMessageReader2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader2_FWD_DEFINED__
@@ -671,9 +667,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageStore;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore ABI::Windows::ApplicationModel::Chat::IChatMessageStore
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore_FWD_DEFINED__
@@ -685,9 +681,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageStore2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore2 ABI::Windows::ApplicationModel::Chat::IChatMessageStore2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore2_FWD_DEFINED__
@@ -699,9 +695,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageStore3;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore3 ABI::Windows::ApplicationModel::Chat::IChatMessageStore3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore3_FWD_DEFINED__
@@ -713,9 +709,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageStoreChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStoreChangedEventArgs ABI::Windows::ApplicationModel::Chat::IChatMessageStoreChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStoreChangedEventArgs_FWD_DEFINED__
@@ -727,9 +723,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageTransport;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport ABI::Windows::ApplicationModel::Chat::IChatMessageTransport
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport_FWD_DEFINED__
@@ -741,9 +737,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageTransport2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport2 ABI::Windows::ApplicationModel::Chat::IChatMessageTransport2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport2_FWD_DEFINED__
@@ -755,9 +751,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageTransportConfiguration;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransportConfiguration ABI::Windows::ApplicationModel::Chat::IChatMessageTransportConfiguration
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransportConfiguration_FWD_DEFINED__
@@ -769,9 +765,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatMessageValidationResult;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageValidationResult ABI::Windows::ApplicationModel::Chat::IChatMessageValidationResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageValidationResult_FWD_DEFINED__
@@ -783,9 +779,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatQueryOptions;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatQueryOptions ABI::Windows::ApplicationModel::Chat::IChatQueryOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatQueryOptions_FWD_DEFINED__
@@ -797,9 +793,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatRecipientDeliveryInfo;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatRecipientDeliveryInfo ABI::Windows::ApplicationModel::Chat::IChatRecipientDeliveryInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatRecipientDeliveryInfo_FWD_DEFINED__
@@ -811,9 +807,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatSearchReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatSearchReader ABI::Windows::ApplicationModel::Chat::IChatSearchReader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatSearchReader_FWD_DEFINED__
@@ -825,9 +821,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatSyncConfiguration;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncConfiguration ABI::Windows::ApplicationModel::Chat::IChatSyncConfiguration
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncConfiguration_FWD_DEFINED__
@@ -839,9 +835,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IChatSyncManager;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncManager ABI::Windows::ApplicationModel::Chat::IChatSyncManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncManager_FWD_DEFINED__
@@ -853,9 +849,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsEndUserMessage;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessage ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessage_FWD_DEFINED__
@@ -867,9 +863,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsEndUserMessageAction;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAction ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageAction
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAction_FWD_DEFINED__
@@ -881,9 +877,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsEndUserMessageAvailableEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableEventArgs ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageAvailableEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableEventArgs_FWD_DEFINED__
@@ -895,9 +891,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsEndUserMessageAvailableTriggerDetails;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableTriggerDetails ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageAvailableTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableTriggerDetails_FWD_DEFINED__
@@ -909,9 +905,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsEndUserMessageManager;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageManager ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageManager_FWD_DEFINED__
@@ -923,9 +919,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsManagerStatics;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics ABI::Windows::ApplicationModel::Chat::IRcsManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics_FWD_DEFINED__
@@ -937,9 +933,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsManagerStatics2;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics2 ABI::Windows::ApplicationModel::Chat::IRcsManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics2_FWD_DEFINED__
@@ -951,9 +947,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsServiceKindSupportedChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsServiceKindSupportedChangedEventArgs ABI::Windows::ApplicationModel::Chat::IRcsServiceKindSupportedChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsServiceKindSupportedChangedEventArgs_FWD_DEFINED__
@@ -965,9 +961,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsTransport;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransport ABI::Windows::ApplicationModel::Chat::IRcsTransport
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransport_FWD_DEFINED__
@@ -979,9 +975,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRcsTransportConfiguration;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransportConfiguration ABI::Windows::ApplicationModel::Chat::IRcsTransportConfiguration
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransportConfiguration_FWD_DEFINED__
@@ -993,9 +989,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 interface IRemoteParticipantComposingChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CChat_CIRemoteParticipantComposingChangedEventArgs ABI::Windows::ApplicationModel::Chat::IRemoteParticipantComposingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CChat_CIRemoteParticipantComposingChangedEventArgs_FWD_DEFINED__
@@ -1008,9 +1004,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatConversation;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1033,7 +1029,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::ChatConversation*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::ChatConversation*> __FIIterator_1_Windows__CApplicationModel__CChat__CChatConversation_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CChatConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IChatConversation*>
@@ -1065,7 +1061,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::ChatConversation*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::ChatConversation*> __FIIterable_1_Windows__CApplicationModel__CChat__CChatConversation_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CChatConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IChatConversation*>
@@ -1081,9 +1077,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessage;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1106,7 +1102,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessage*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessage*> __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessage_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CChatMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IChatMessage*>
@@ -1138,7 +1134,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessage*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessage*> __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessage_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CChatMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IChatMessage*>
@@ -1154,9 +1150,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageAttachment;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1179,7 +1175,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IChatMessageAttachment*>
@@ -1211,7 +1207,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IChatMessageAttachment*>
@@ -1227,9 +1223,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageChange;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1252,7 +1248,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessageChange*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessageChange*> __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageChange_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IChatMessageChange*>
@@ -1284,7 +1280,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessageChange*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessageChange*> __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageChange_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IChatMessageChange*>
@@ -1300,9 +1296,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageTransport;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1325,7 +1321,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IChatMessageTransport*>
@@ -1357,7 +1353,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IChatMessageTransport*>
@@ -1373,9 +1369,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatRecipientDeliveryInfo;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1398,7 +1394,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> __FIIterator_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IChatRecipientDeliveryInfo*>
@@ -1430,7 +1426,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> __FIIterable_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IChatRecipientDeliveryInfo*>
@@ -1462,7 +1458,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::IChatItem*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::IChatItem*> __FIIterator_1_Windows__CApplicationModel__CChat__CIChatItem_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CIChatItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IChatItem*>
@@ -1494,7 +1490,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::IChatItem*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::IChatItem*> __FIIterable_1_Windows__CApplicationModel__CChat__CIChatItem_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CIChatItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IChatItem*>
@@ -1510,9 +1506,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsEndUserMessageAction;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1535,7 +1531,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageAction*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageAction*> __FIIterator_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageAction*>
@@ -1567,7 +1563,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageAction*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageAction*> __FIIterable_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageAction*>
@@ -1583,9 +1579,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsTransport;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1608,7 +1604,7 @@ IIterator<ABI::Windows::ApplicationModel::Chat::RcsTransport*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Chat::RcsTransport*> __FIIterator_1_Windows__CApplicationModel__CChat__CRcsTransport_t;
 #define __FIIterator_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CChat__CRcsTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Chat::IRcsTransport*>
@@ -1640,7 +1636,7 @@ IIterable<ABI::Windows::ApplicationModel::Chat::RcsTransport*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Chat::RcsTransport*> __FIIterable_1_Windows__CApplicationModel__CChat__CRcsTransport_t;
 #define __FIIterable_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CChat__CRcsTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Chat::IRcsTransport*>
@@ -1656,9 +1652,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 enum ChatMessageStatus : int;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_USE
@@ -1679,7 +1675,7 @@ IKeyValuePair<HSTRING,enum ABI::Windows::ApplicationModel::Chat::ChatMessageStat
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,enum ABI::Windows::ApplicationModel::Chat::ChatMessageStatus> __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Chat::ChatMessageStatus>
@@ -1709,7 +1705,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMes
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Chat::ChatMessageStatus>*>
@@ -1739,7 +1735,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMes
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::ApplicationModel::Chat::ChatMessageStatus>*>
@@ -1769,7 +1765,7 @@ IMapView<HSTRING,enum ABI::Windows::ApplicationModel::Chat::ChatMessageStatus> :
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,enum ABI::Windows::ApplicationModel::Chat::ChatMessageStatus> __FIMapView_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t;
 #define __FIMapView_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CApplicationModel__CChat__CChatMessageStatus ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::ApplicationModel::Chat::ChatMessageStatus>
@@ -1800,7 +1796,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::ChatConversation*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::ChatConversation*> __FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatConversation*>
@@ -1832,7 +1828,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessage*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessage*> __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessage*>
@@ -1864,7 +1860,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessageAttachment*>
@@ -1896,7 +1892,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessageChange*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessageChange*> __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessageChange*>
@@ -1928,7 +1924,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessageTransport*>
@@ -1960,7 +1956,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> __FIVectorView_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatRecipientDeliveryInfo*>
@@ -1992,7 +1988,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::IChatItem*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::IChatItem*> __FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatItem*>
@@ -2024,7 +2020,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageAction*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageAction*> __FIVectorView_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageAction*>
@@ -2056,7 +2052,7 @@ IVectorView<ABI::Windows::ApplicationModel::Chat::RcsTransport*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Chat::RcsTransport*> __FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IRcsTransport*>
@@ -2088,7 +2084,7 @@ IVector<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> : IVector_
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Chat::ChatMessageAttachment*> __FIVector_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t;
 #define __FIVector_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CChat__CChatMessageAttachment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CChat__CChatMessageAttachment ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Chat::IChatMessageAttachment*>
@@ -2120,7 +2116,7 @@ IVector<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> : IVec
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo*> __FIVector_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t;
 #define __FIVector_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CChat__CChatRecipientDeliveryInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Chat::IChatRecipientDeliveryInfo*>
@@ -2136,9 +2132,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatCapabilities;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2161,7 +2157,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatCapabi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatCapabilities*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatCapabilities_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatCapabilities ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatCapabilities_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatCapabilities ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::IChatCapabilities*>
@@ -2193,7 +2189,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatCapabilities*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatCapabilities*> __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatCapabilities_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatCapabilities ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatCapabilities_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatCapabilities ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Chat::IChatCapabilities*>
@@ -2225,7 +2221,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatConver
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatConversation*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatConversation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::IChatConversation*>
@@ -2257,7 +2253,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatConversation*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatConversation*> __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatConversation_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Chat::IChatConversation*>
@@ -2289,7 +2285,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatMessag
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatMessage*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessage_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::IChatMessage*>
@@ -2321,7 +2317,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatMessage*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatMessage*> __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessage_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Chat::IChatMessage*>
@@ -2337,9 +2333,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageStore;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2362,7 +2358,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatMessag
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatMessageStore*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageStore_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageStore ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageStore ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::IChatMessageStore*>
@@ -2394,7 +2390,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatMessageStore*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatMessageStore*> __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageStore_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageStore ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageStore_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageStore ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Chat::IChatMessageStore*>
@@ -2426,7 +2422,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatMessag
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::IChatMessageTransport*>
@@ -2458,7 +2454,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatMessageTransport*> __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Chat::IChatMessageTransport*>
@@ -2474,9 +2470,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatSyncManager;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2499,7 +2495,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatSyncMa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::ChatSyncManager*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatSyncManager_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatSyncManager ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatSyncManager_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CChatSyncManager ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::IChatSyncManager*>
@@ -2531,7 +2527,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatSyncManager*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Chat::ChatSyncManager*> __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatSyncManager_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatSyncManager ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatSyncManager_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CChatSyncManager ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Chat::IChatSyncManager*>
@@ -2563,7 +2559,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::RcsTranspo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::RcsTransport*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CRcsTransport_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CRcsTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Chat::IRcsTransport*>
@@ -2595,7 +2591,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Chat::RcsTransport*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Chat::RcsTransport*> __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CRcsTransport_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CChat__CRcsTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Chat::IRcsTransport*>
@@ -2627,7 +2623,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCh
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatConversation*>*>
@@ -2659,7 +2655,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatConvers
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatConversation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatConversation*>*>
@@ -2691,7 +2687,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCh
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessage*>*>
@@ -2723,7 +2719,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessage*>*>
@@ -2755,7 +2751,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCh
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessageChange*>*>
@@ -2787,7 +2783,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageChange ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessageChange*>*>
@@ -2819,7 +2815,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCh
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessageTransport*>*>
@@ -2851,7 +2847,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessage
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CChatMessageTransport ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatMessageTransport*>*>
@@ -2883,7 +2879,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCh
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatItem*>*>
@@ -2915,7 +2911,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CIChatItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IChatItem*>*>
@@ -2947,7 +2943,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCh
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IRcsTransport*>*>
@@ -2979,7 +2975,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTranspor
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CChat__CRcsTransport ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Chat::IRcsTransport*>*>
@@ -2996,9 +2992,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RemoteParticipantComposingChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3022,7 +3018,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::ChatConversation*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::ChatConversation*,ABI::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::IChatConversation*,ABI::Windows::ApplicationModel::Chat::IRemoteParticipantComposingChangedEventArgs*>
@@ -3040,9 +3036,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3066,7 +3062,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::ChatMessageStore*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::ChatMessageStore*,ABI::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::IChatMessageStore*,ABI::Windows::ApplicationModel::Chat::IChatMessageChangedEventArgs*>
@@ -3084,9 +3080,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageStoreChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3110,7 +3106,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::ChatMessageStore*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::ChatMessageStore*,ABI::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::IChatMessageStore*,ABI::Windows::ApplicationModel::Chat::IChatMessageStoreChangedEventArgs*>
@@ -3127,9 +3123,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsEndUserMessageManager;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3137,9 +3133,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsEndUserMessageAvailableEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3163,7 +3159,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageManage
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageManager*,ABI::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageManager*,ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessageAvailableEventArgs*>
@@ -3181,9 +3177,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsServiceKindSupportedChangedEventArgs;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3207,7 +3203,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::RcsTransport*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::RcsTransport*,ABI::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Chat::IRcsTransport*,ABI::Windows::ApplicationModel::Chat::IRcsServiceKindSupportedChangedEventArgs*>
@@ -3238,7 +3234,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -3267,7 +3263,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -3296,7 +3292,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -3325,7 +3321,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -3354,7 +3350,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -3383,7 +3379,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -3412,7 +3408,7 @@ IAsyncOperationCompletedHandler<int> : IAsyncOperationCompletedHandler_impl<int>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<int> __FIAsyncOperationCompletedHandler_1_int_t;
 #define __FIAsyncOperationCompletedHandler_1_int ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_int ABI::Windows::Foundation::IAsyncOperationCompletedHandler<INT32>
@@ -3441,7 +3437,7 @@ IAsyncOperation<int> : IAsyncOperation_impl<int>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<int> __FIAsyncOperation_1_int_t;
 #define __FIAsyncOperation_1_int ABI::Windows::Foundation::__FIAsyncOperation_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_int ABI::Windows::Foundation::IAsyncOperation<INT32>
@@ -3470,7 +3466,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -3499,7 +3495,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -3529,7 +3525,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -3559,7 +3555,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -3589,7 +3585,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -3619,7 +3615,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -3648,7 +3644,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -3663,8 +3659,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -3685,7 +3681,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -3715,7 +3711,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -3733,8 +3729,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3742,8 +3738,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3755,8 +3751,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3766,9 +3762,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -3777,9 +3773,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile ABI::Windows::Media::MediaProperties::IMediaEncodingProfile
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -3793,9 +3789,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -3804,9 +3800,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount ABI::Windows::Security::Credentials::IWebAccount
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -3822,9 +3818,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -3840,9 +3836,9 @@ namespace ABI {
                 
                 typedef enum ChatConversationThreadingKind : int ChatConversationThreadingKind;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3851,9 +3847,9 @@ namespace ABI {
                 
                 typedef enum ChatItemKind : int ChatItemKind;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3862,9 +3858,9 @@ namespace ABI {
                 
                 typedef enum ChatMessageChangeType : int ChatMessageChangeType;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3873,9 +3869,9 @@ namespace ABI {
                 
                 typedef enum ChatMessageKind : int ChatMessageKind;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3884,9 +3880,9 @@ namespace ABI {
                 
                 typedef enum ChatMessageOperatorKind : int ChatMessageOperatorKind;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3895,9 +3891,9 @@ namespace ABI {
                 
                 typedef enum ChatMessageStatus : int ChatMessageStatus;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3906,9 +3902,9 @@ namespace ABI {
                 
                 typedef enum ChatMessageTransportKind : int ChatMessageTransportKind;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3917,9 +3913,9 @@ namespace ABI {
                 
                 typedef enum ChatMessageValidationStatus : int ChatMessageValidationStatus;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3928,9 +3924,9 @@ namespace ABI {
                 
                 typedef enum ChatRestoreHistorySpan : int ChatRestoreHistorySpan;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3939,9 +3935,9 @@ namespace ABI {
                 
                 typedef enum ChatStoreChangedEventKind : int ChatStoreChangedEventKind;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3950,9 +3946,9 @@ namespace ABI {
                 
                 typedef enum ChatTransportErrorCodeCategory : int ChatTransportErrorCodeCategory;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3961,9 +3957,9 @@ namespace ABI {
                 
                 typedef enum ChatTransportInterpretedErrorCode : int ChatTransportInterpretedErrorCode;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3972,9 +3968,9 @@ namespace ABI {
                 
                 typedef enum RcsServiceKind : int RcsServiceKind;
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4036,9 +4032,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatConversationReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4046,9 +4042,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatConversationThreadingInfo;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4060,9 +4056,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageChangeReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4070,9 +4066,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageChangeTracker;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4080,9 +4076,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageChangedDeferral;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4092,9 +4088,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageNotificationTriggerDetails;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4102,9 +4098,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4115,9 +4111,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageTransportConfiguration;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4125,9 +4121,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatMessageValidationResult;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4135,9 +4131,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatQueryOptions;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4146,9 +4142,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatSearchReader;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4156,9 +4152,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class ChatSyncConfiguration;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4167,9 +4163,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsEndUserMessage;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4179,9 +4175,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsEndUserMessageAvailableTriggerDetails;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4193,9 +4189,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Chat {
                 class RcsTransportConfiguration;
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4230,9 +4226,9 @@ namespace ABI {
                     ChatConversationThreadingKind_Custom = 3,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4257,9 +4253,9 @@ namespace ABI {
                     ChatItemKind_Conversation = 1,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4286,9 +4282,9 @@ namespace ABI {
                     ChatMessageChangeType_ChangeTrackingLost = 3,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4318,9 +4314,9 @@ namespace ABI {
                     ChatMessageKind_OtherParticipantLeftConversation = 6,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4347,9 +4343,9 @@ namespace ABI {
                     ChatMessageOperatorKind_Rcs = 3,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4402,9 +4398,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4431,9 +4427,9 @@ namespace ABI {
                     ChatMessageTransportKind_Custom = 3,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4482,9 +4478,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4510,9 +4506,9 @@ namespace ABI {
                     ChatRestoreHistorySpan_AnyTime = 2,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -4543,9 +4539,9 @@ namespace ABI {
                     ChatStoreChangedEventKind_ConversationTransportDeleted = 7,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4572,9 +4568,9 @@ namespace ABI {
                     ChatTransportErrorCodeCategory_MmsServer = 3,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4603,9 +4599,9 @@ namespace ABI {
                     ChatTransportInterpretedErrorCode_Timeout = 5,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4632,9 +4628,9 @@ namespace ABI {
                     RcsServiceKind_Capability = 3,
                 };
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -4663,28 +4659,28 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOnline(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsChatCapable(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFileTransferCapable(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGeoLocationPushCapable(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIntegratedMessagingCapable(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IChatCapabilities=_uuidof(IChatCapabilities);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilities_INTERFACE_DEFINED__) */
@@ -4728,9 +4724,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatCapabilitiesManagerStatics=_uuidof(IChatCapabilitiesManagerStatics);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics_INTERFACE_DEFINED__) */
@@ -4776,9 +4772,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatCapabilitiesManagerStatics2=_uuidof(IChatCapabilitiesManagerStatics2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatCapabilitiesManagerStatics2_INTERFACE_DEFINED__) */
@@ -4810,7 +4806,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasUnreadMessages(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Id(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * result
@@ -4822,10 +4818,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsConversationMuted(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsConversationMuted(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MostRecentMessageId(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * result
@@ -4855,12 +4851,12 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE NotifyLocalParticipantComposing(
                         /* [in] */__RPC__in HSTRING transportId,
                         /* [in] */__RPC__in HSTRING participantAddress,
-                        /* [in] */boolean isComposing
+                        /* [in] */::boolean isComposing
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE NotifyRemoteParticipantComposing(
                         /* [in] */__RPC__in HSTRING transportId,
                         /* [in] */__RPC__in HSTRING participantAddress,
-                        /* [in] */boolean isComposing
+                        /* [in] */::boolean isComposing
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RemoteParticipantComposingChanged(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs * handler,
@@ -4874,9 +4870,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatConversation=_uuidof(IChatConversation);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation_INTERFACE_DEFINED__) */
@@ -4908,19 +4904,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanModifyParticipants(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CanModifyParticipants(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IChatConversation2=_uuidof(IChatConversation2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation2_INTERFACE_DEFINED__) */
@@ -4963,9 +4959,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatConversationReader=_uuidof(IChatConversationReader);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationReader_INTERFACE_DEFINED__) */
@@ -5028,9 +5024,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatConversationThreadingInfo=_uuidof(IChatConversationThreadingInfo);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationThreadingInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatConversationThreadingInfo_INTERFACE_DEFINED__) */
@@ -5066,9 +5062,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatItem=_uuidof(IChatItem);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatItem;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatItem_INTERFACE_DEFINED__) */
@@ -5115,13 +5111,13 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsForwardingDisabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIncoming(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRead(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LocalTimestamp(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -5155,9 +5151,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessage=_uuidof(IChatMessage);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage_INTERFACE_DEFINED__) */
@@ -5203,31 +5199,31 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAutoReply(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAutoReply(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsForwardingDisabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReplyDisabled(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsIncoming(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRead(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSeen(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSeen(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSimMessage(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_LocalTimestamp(
                         /* [in] */ABI::Windows::Foundation::DateTime value
@@ -5248,10 +5244,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::Foundation::DateTime value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReceivedDuringQuietHours(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsReceivedDuringQuietHours(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_RemoteId(
                         /* [in] */__RPC__in HSTRING value
@@ -5263,10 +5259,10 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldSuppressNotification(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ShouldSuppressNotification(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ThreadingInfo(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Chat::IChatConversationThreadingInfo * * result
@@ -5282,9 +5278,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessage2=_uuidof(IChatMessage2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage2_INTERFACE_DEFINED__) */
@@ -5327,9 +5323,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessage3=_uuidof(IChatMessage3);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage3_INTERFACE_DEFINED__) */
@@ -5375,9 +5371,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessage4=_uuidof(IChatMessage4);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessage4_INTERFACE_DEFINED__) */
@@ -5437,9 +5433,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageAttachment=_uuidof(IChatMessageAttachment);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment_INTERFACE_DEFINED__) */
@@ -5497,9 +5493,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageAttachment2=_uuidof(IChatMessageAttachment2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachment2_INTERFACE_DEFINED__) */
@@ -5540,9 +5536,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageAttachmentFactory=_uuidof(IChatMessageAttachmentFactory);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachmentFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageAttachmentFactory_INTERFACE_DEFINED__) */
@@ -5575,7 +5571,7 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE MarkMessageAsBlockedAsync(
                         /* [in] */__RPC__in HSTRING localChatMessageId,
-                        /* [in] */boolean blocked,
+                        /* [in] */::boolean blocked,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * value
                         ) = 0;
                     
@@ -5583,9 +5579,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageBlockingStatic=_uuidof(IChatMessageBlockingStatic);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageBlockingStatic;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageBlockingStatic_INTERFACE_DEFINED__) */
@@ -5627,9 +5623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageChange=_uuidof(IChatMessageChange);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChange;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChange_INTERFACE_DEFINED__) */
@@ -5672,9 +5668,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageChangeReader=_uuidof(IChatMessageChangeReader);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeReader_INTERFACE_DEFINED__) */
@@ -5715,9 +5711,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageChangeTracker=_uuidof(IChatMessageChangeTracker);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeTracker;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangeTracker_INTERFACE_DEFINED__) */
@@ -5754,9 +5750,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageChangedDeferral=_uuidof(IChatMessageChangedDeferral);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedDeferral_INTERFACE_DEFINED__) */
@@ -5795,9 +5791,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageChangedEventArgs=_uuidof(IChatMessageChangedEventArgs);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5844,9 +5840,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageManager2Statics=_uuidof(IChatMessageManager2Statics);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManager2Statics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManager2Statics_INTERFACE_DEFINED__) */
@@ -5893,9 +5889,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageManagerStatic=_uuidof(IChatMessageManagerStatic);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatic;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatic_INTERFACE_DEFINED__) */
@@ -5938,9 +5934,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageManagerStatics3=_uuidof(IChatMessageManagerStatics3);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageManagerStatics3_INTERFACE_DEFINED__) */
@@ -5979,9 +5975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageNotificationTriggerDetails=_uuidof(IChatMessageNotificationTriggerDetails);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails_INTERFACE_DEFINED__) */
@@ -6017,25 +6013,25 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldDisplayToast(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldUpdateDetailText(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldUpdateBadge(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ShouldUpdateActionCenter(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageNotificationTriggerDetails2=_uuidof(IChatMessageNotificationTriggerDetails2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageNotificationTriggerDetails2_INTERFACE_DEFINED__) */
@@ -6074,9 +6070,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageReader=_uuidof(IChatMessageReader);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader_INTERFACE_DEFINED__) */
@@ -6116,9 +6112,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageReader2=_uuidof(IChatMessageReader2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageReader2_INTERFACE_DEFINED__) */
@@ -6199,9 +6195,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageStore=_uuidof(IChatMessageStore);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore_INTERFACE_DEFINED__) */
@@ -6308,9 +6304,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageStore2=_uuidof(IChatMessageStore2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore2_INTERFACE_DEFINED__) */
@@ -6354,9 +6350,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageStore3=_uuidof(IChatMessageStore3);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore3_INTERFACE_DEFINED__) */
@@ -6398,9 +6394,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageStoreChangedEventArgs=_uuidof(IChatMessageStoreChangedEventArgs);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStoreChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStoreChangedEventArgs_INTERFACE_DEFINED__) */
@@ -6432,10 +6428,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAppSetAsNotificationProvider(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TransportFriendlyName(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -6451,9 +6447,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageTransport=_uuidof(IChatMessageTransport);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport_INTERFACE_DEFINED__) */
@@ -6499,9 +6495,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageTransport2=_uuidof(IChatMessageTransport2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransport2_INTERFACE_DEFINED__) */
@@ -6552,9 +6548,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageTransportConfiguration=_uuidof(IChatMessageTransportConfiguration);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransportConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageTransportConfiguration_INTERFACE_DEFINED__) */
@@ -6602,9 +6598,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatMessageValidationResult=_uuidof(IChatMessageValidationResult);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageValidationResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageValidationResult_INTERFACE_DEFINED__) */
@@ -6646,9 +6642,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatQueryOptions=_uuidof(IChatQueryOptions);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatQueryOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatQueryOptions_INTERFACE_DEFINED__) */
@@ -6707,7 +6703,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsErrorPermanent(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Status(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Chat::ChatMessageStatus * result
@@ -6717,9 +6713,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatRecipientDeliveryInfo=_uuidof(IChatRecipientDeliveryInfo);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatRecipientDeliveryInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatRecipientDeliveryInfo_INTERFACE_DEFINED__) */
@@ -6762,9 +6758,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatSearchReader=_uuidof(IChatSearchReader);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatSearchReader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatSearchReader_INTERFACE_DEFINED__) */
@@ -6796,10 +6792,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSyncEnabled(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsSyncEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RestoreHistorySpan(
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan * result
@@ -6812,9 +6808,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatSyncConfiguration=_uuidof(IChatSyncConfiguration);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncConfiguration_INTERFACE_DEFINED__) */
@@ -6857,7 +6853,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsAccountAssociated(
                         /* [in] */__RPC__in_opt ABI::Windows::Security::Credentials::IWebAccount * webAccount,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE StartSync(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetConfigurationAsync(
@@ -6869,9 +6865,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IChatSyncManager=_uuidof(IChatSyncManager);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIChatSyncManager_INTERFACE_DEFINED__) */
@@ -6912,7 +6908,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPinRequired(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Actions(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CApplicationModel__CChat__CRcsEndUserMessageAction * * result
@@ -6931,9 +6927,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsEndUserMessage=_uuidof(IRcsEndUserMessage);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessage;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessage_INTERFACE_DEFINED__) */
@@ -6972,9 +6968,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsEndUserMessageAction=_uuidof(IRcsEndUserMessageAction);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAction;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAction_INTERFACE_DEFINED__) */
@@ -7006,7 +7002,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMessageAvailable(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Message(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Chat::IRcsEndUserMessage * * result
@@ -7016,9 +7012,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsEndUserMessageAvailableEventArgs=_uuidof(IRcsEndUserMessageAvailableEventArgs);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableEventArgs_INTERFACE_DEFINED__) */
@@ -7060,9 +7056,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsEndUserMessageAvailableTriggerDetails=_uuidof(IRcsEndUserMessageAvailableTriggerDetails);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableTriggerDetails_INTERFACE_DEFINED__) */
@@ -7105,9 +7101,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsEndUserMessageManager=_uuidof(IRcsEndUserMessageManager);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageManager_INTERFACE_DEFINED__) */
@@ -7157,9 +7153,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsManagerStatics=_uuidof(IRcsManagerStatics);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics_INTERFACE_DEFINED__) */
@@ -7202,9 +7198,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsManagerStatics2=_uuidof(IRcsManagerStatics2);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsManagerStatics2_INTERFACE_DEFINED__) */
@@ -7243,9 +7239,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsServiceKindSupportedChangedEventArgs=_uuidof(IRcsServiceKindSupportedChangedEventArgs);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsServiceKindSupportedChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsServiceKindSupportedChangedEventArgs_INTERFACE_DEFINED__) */
@@ -7280,7 +7276,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TransportFriendlyName(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -7293,11 +7289,11 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsStoreAndForwardEnabled(
                         /* [in] */ABI::Windows::ApplicationModel::Chat::RcsServiceKind serviceKind,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsServiceKindSupported(
                         /* [in] */ABI::Windows::ApplicationModel::Chat::RcsServiceKind serviceKind,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ServiceKindSupportedChanged(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs * handler,
@@ -7311,9 +7307,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsTransport=_uuidof(IRcsTransport);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransport;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransport_INTERFACE_DEFINED__) */
@@ -7367,9 +7363,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRcsTransportConfiguration=_uuidof(IRcsTransportConfiguration);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransportConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransportConfiguration_INTERFACE_DEFINED__) */
@@ -7407,16 +7403,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsComposing(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRemoteParticipantComposingChangedEventArgs=_uuidof(IRemoteParticipantComposingChangedEventArgs);
                 
-            } /* Windows */
+            } /* Chat */
         } /* ApplicationModel */
-    } /* Chat */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CChat_CIRemoteParticipantComposingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CChat_CIRemoteParticipantComposingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -13190,7 +13186,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatC
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRemoteParticipantComposingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatConversation * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRemoteParticipantComposingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatConversation_Windows__CApplicationModel__CChat__CRemoteParticipantComposingChangedEventArgsVtbl;
 
@@ -13243,7 +13239,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageChangedEventArgsVtbl;
 
@@ -13296,7 +13292,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStoreChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStore * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIChatMessageStoreChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CChatMessageStore_Windows__CApplicationModel__CChat__CChatMessageStoreChangedEventArgsVtbl;
 
@@ -13349,7 +13345,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEn
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsEndUserMessageAvailableEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsEndUserMessageManager_Windows__CApplicationModel__CChat__CRcsEndUserMessageAvailableEventArgsVtbl;
 
@@ -13402,7 +13398,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTr
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransport * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsServiceKindSupportedChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsTransport * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CChat_CIRcsServiceKindSupportedChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CChat__CRcsTransport_Windows__CApplicationModel__CChat__CRcsServiceKindSupportedChangedEventArgsVtbl;
 
@@ -14485,7 +14481,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

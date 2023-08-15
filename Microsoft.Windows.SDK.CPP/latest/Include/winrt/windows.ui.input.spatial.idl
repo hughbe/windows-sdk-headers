@@ -64,6 +64,12 @@ namespace Windows
     {
         namespace People
         {
+            runtimeclass EyesPose;
+
+            runtimeclass HandMeshObserver;
+
+            runtimeclass HandPose;
+
             runtimeclass HeadPose;
         }
     }
@@ -141,11 +147,15 @@ namespace Windows
 
                 interface ISpatialInteractionManagerStatics;
 
+                interface ISpatialInteractionManagerStatics2;
+
                 interface ISpatialInteractionSource;
 
                 interface ISpatialInteractionSource2;
 
                 interface ISpatialInteractionSource3;
+
+                interface ISpatialInteractionSource4;
 
                 interface ISpatialInteractionSourceEventArgs;
 
@@ -162,6 +172,8 @@ namespace Windows
                 interface ISpatialInteractionSourceState;
 
                 interface ISpatialInteractionSourceState2;
+
+                interface ISpatialInteractionSourceState3;
 
                 interface ISpatialManipulationCanceledEventArgs;
 
@@ -188,6 +200,8 @@ namespace Windows
                 interface ISpatialPointerPose;
 
                 interface ISpatialPointerPose2;
+
+                interface ISpatialPointerPose3;
 
                 interface ISpatialPointerPoseStatics;
 
@@ -548,6 +562,14 @@ namespace Windows
                     HRESULT GetForCurrentView([out] [retval] Windows.UI.Input.Spatial.SpatialInteractionManager** value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Input.Spatial.SpatialInteractionManager)]
+                [uuid(93F16C52-B88A-5929-8D7C-48CB948B081C)]
+                interface ISpatialInteractionManagerStatics2 : IInspectable
+                {
+                    HRESULT IsSourceKindSupported([in] Windows.UI.Input.Spatial.SpatialInteractionSourceKind kind, [out] [retval] boolean* result);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]
                 [exclusiveto(Windows.UI.Input.Spatial.SpatialInteractionSource)]
                 [uuid(FB5433BA-B0B3-3148-9F3B-E9F5DE568F5D)]
@@ -580,6 +602,15 @@ namespace Windows
                         Windows.UI.Input.Spatial.ISpatialInteractionSource
                 {
                     [propget] HRESULT Handedness([out] [retval] Windows.UI.Input.Spatial.SpatialInteractionSourceHandedness* value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Input.Spatial.SpatialInteractionSource)]
+                [uuid(0073BC4D-DF66-5A91-A2BA-CEA3E5C58A19)]
+                interface ISpatialInteractionSource4 : IInspectable
+                {
+                    HRESULT TryCreateHandMeshObserver([out] [retval] Windows.Perception.People.HandMeshObserver** result);
+                    HRESULT TryCreateHandMeshObserverAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver*>** operation);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -663,6 +694,17 @@ namespace Windows
                     [propget] HRESULT IsGrasped([out] [retval] boolean* value);
                     [propget] HRESULT SelectPressedValue([out] [retval] DOUBLE* value);
                     [propget] HRESULT ControllerProperties([out] [retval] Windows.UI.Input.Spatial.SpatialInteractionControllerProperties** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Input.Spatial.SpatialInteractionSourceState)]
+                [uuid(F2F00BC2-BD2B-4A01-A8FB-323E0158527C)]
+                interface ISpatialInteractionSourceState3 : IInspectable
+                    requires
+                        Windows.UI.Input.Spatial.ISpatialInteractionSourceState2,
+                        Windows.UI.Input.Spatial.ISpatialInteractionSourceState
+                {
+                    HRESULT TryGetHandPose([out] [retval] Windows.Perception.People.HandPose** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -786,6 +828,15 @@ namespace Windows
                     HRESULT TryGetInteractionSourcePose([in] Windows.UI.Input.Spatial.SpatialInteractionSource* source, [out] [retval] Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose** value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.Input.Spatial.SpatialPointerPose)]
+                [uuid(6342F3F0-EC49-5B4B-B8D1-D16CBB16BE84)]
+                interface ISpatialPointerPose3 : IInspectable
+                {
+                    [propget] HRESULT Eyes([out] [retval] Windows.Perception.People.EyesPose** value);
+                    [propget] HRESULT IsHeadCapturedBySystem([out] [retval] boolean* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]
                 [exclusiveto(Windows.UI.Input.Spatial.SpatialPointerPose)]
                 [uuid(A25591A9-ACA1-3EE0-9816-785CFB2E3FB8)]
@@ -893,6 +944,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics, Windows.Foundation.UniversalApiContract, 2.0)]
+                [static(Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass SpatialInteractionManager
                 {
@@ -907,6 +959,7 @@ namespace Windows
                     [default] interface Windows.UI.Input.Spatial.ISpatialInteractionSource;
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Input.Spatial.ISpatialInteractionSource2;
                     [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Input.Spatial.ISpatialInteractionSource3;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Input.Spatial.ISpatialInteractionSource4;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -943,6 +996,7 @@ namespace Windows
                 {
                     [default] interface Windows.UI.Input.Spatial.ISpatialInteractionSourceState;
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Input.Spatial.ISpatialInteractionSourceState2;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Input.Spatial.ISpatialInteractionSourceState3;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -1034,6 +1088,7 @@ namespace Windows
                 {
                     [default] interface Windows.UI.Input.Spatial.ISpatialPointerPose;
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Input.Spatial.ISpatialPointerPose2;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Input.Spatial.ISpatialPointerPose3;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 2.0)]

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -63,6 +63,14 @@ enum class EdgeGestureKind : int32_t
     Mouse = 2,
 };
 
+enum class GazeInputAccessStatus : int32_t
+{
+    Unspecified = 0,
+    Allowed = 1,
+    DeniedByUser = 2,
+    DeniedBySystem = 3,
+};
+
 enum class GestureSettings : uint32_t
 {
     None = 0x0,
@@ -90,6 +98,14 @@ enum class HoldingState : int32_t
     Started = 0,
     Completed = 1,
     Canceled = 2,
+};
+
+enum class InputActivationState : int32_t
+{
+    None = 0,
+    Deactivated = 1,
+    ActivatedNotForeground = 2,
+    ActivatedInForeground = 3,
 };
 
 enum class PointerUpdateKind : int32_t
@@ -129,6 +145,8 @@ enum class RadialControllerSystemMenuItemKind : int32_t
     NextPreviousTrack = 4,
 };
 
+struct IAttachableInputObject;
+struct IAttachableInputObjectFactory;
 struct ICrossSlidingEventArgs;
 struct IDraggingEventArgs;
 struct IEdgeGesture;
@@ -136,6 +154,8 @@ struct IEdgeGestureEventArgs;
 struct IEdgeGestureStatics;
 struct IGestureRecognizer;
 struct IHoldingEventArgs;
+struct IInputActivationListener;
+struct IInputActivationListenerActivationChangedEventArgs;
 struct IKeyboardDeliveryInterceptor;
 struct IKeyboardDeliveryInterceptorStatics;
 struct IManipulationCompletedEventArgs;
@@ -178,12 +198,15 @@ struct IRadialControllerScreenContactStartedEventArgs2;
 struct IRadialControllerStatics;
 struct IRightTappedEventArgs;
 struct ITappedEventArgs;
+struct AttachableInputObject;
 struct CrossSlidingEventArgs;
 struct DraggingEventArgs;
 struct EdgeGesture;
 struct EdgeGestureEventArgs;
 struct GestureRecognizer;
 struct HoldingEventArgs;
+struct InputActivationListener;
+struct InputActivationListenerActivationChangedEventArgs;
 struct KeyboardDeliveryInterceptor;
 struct ManipulationCompletedEventArgs;
 struct ManipulationInertiaStartingEventArgs;
@@ -218,6 +241,8 @@ struct ManipulationVelocities;
 namespace winrt::impl {
 
 template<> struct is_enum_flag<Windows::UI::Input::GestureSettings> : std::true_type {};
+template <> struct category<Windows::UI::Input::IAttachableInputObject>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::IAttachableInputObjectFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::ICrossSlidingEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IDraggingEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IEdgeGesture>{ using type = interface_category; };
@@ -225,6 +250,8 @@ template <> struct category<Windows::UI::Input::IEdgeGestureEventArgs>{ using ty
 template <> struct category<Windows::UI::Input::IEdgeGestureStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IGestureRecognizer>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IHoldingEventArgs>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::IInputActivationListener>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IKeyboardDeliveryInterceptor>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IManipulationCompletedEventArgs>{ using type = interface_category; };
@@ -267,12 +294,15 @@ template <> struct category<Windows::UI::Input::IRadialControllerScreenContactSt
 template <> struct category<Windows::UI::Input::IRadialControllerStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::IRightTappedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Input::ITappedEventArgs>{ using type = interface_category; };
+template <> struct category<Windows::UI::Input::AttachableInputObject>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::CrossSlidingEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::DraggingEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::EdgeGesture>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::EdgeGestureEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::GestureRecognizer>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::HoldingEventArgs>{ using type = class_category; };
+template <> struct category<Windows::UI::Input::InputActivationListener>{ using type = class_category; };
+template <> struct category<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::KeyboardDeliveryInterceptor>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::ManipulationCompletedEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::Input::ManipulationInertiaStartingEventArgs>{ using type = class_category; };
@@ -301,14 +331,18 @@ template <> struct category<Windows::UI::Input::TappedEventArgs>{ using type = c
 template <> struct category<Windows::UI::Input::CrossSlidingState>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::DraggingState>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::EdgeGestureKind>{ using type = enum_category; };
+template <> struct category<Windows::UI::Input::GazeInputAccessStatus>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::GestureSettings>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::HoldingState>{ using type = enum_category; };
+template <> struct category<Windows::UI::Input::InputActivationState>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::PointerUpdateKind>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::RadialControllerMenuKnownIcon>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::RadialControllerSystemMenuItemKind>{ using type = enum_category; };
 template <> struct category<Windows::UI::Input::CrossSlideThresholds>{ using type = struct_category<float,float,float,float>; };
 template <> struct category<Windows::UI::Input::ManipulationDelta>{ using type = struct_category<Windows::Foundation::Point,float,float,float>; };
 template <> struct category<Windows::UI::Input::ManipulationVelocities>{ using type = struct_category<Windows::Foundation::Point,float,float>; };
+template <> struct name<Windows::UI::Input::IAttachableInputObject>{ static constexpr auto & value{ L"Windows.UI.Input.IAttachableInputObject" }; };
+template <> struct name<Windows::UI::Input::IAttachableInputObjectFactory>{ static constexpr auto & value{ L"Windows.UI.Input.IAttachableInputObjectFactory" }; };
 template <> struct name<Windows::UI::Input::ICrossSlidingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.ICrossSlidingEventArgs" }; };
 template <> struct name<Windows::UI::Input::IDraggingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.IDraggingEventArgs" }; };
 template <> struct name<Windows::UI::Input::IEdgeGesture>{ static constexpr auto & value{ L"Windows.UI.Input.IEdgeGesture" }; };
@@ -316,6 +350,8 @@ template <> struct name<Windows::UI::Input::IEdgeGestureEventArgs>{ static const
 template <> struct name<Windows::UI::Input::IEdgeGestureStatics>{ static constexpr auto & value{ L"Windows.UI.Input.IEdgeGestureStatics" }; };
 template <> struct name<Windows::UI::Input::IGestureRecognizer>{ static constexpr auto & value{ L"Windows.UI.Input.IGestureRecognizer" }; };
 template <> struct name<Windows::UI::Input::IHoldingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.IHoldingEventArgs" }; };
+template <> struct name<Windows::UI::Input::IInputActivationListener>{ static constexpr auto & value{ L"Windows.UI.Input.IInputActivationListener" }; };
+template <> struct name<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs" }; };
 template <> struct name<Windows::UI::Input::IKeyboardDeliveryInterceptor>{ static constexpr auto & value{ L"Windows.UI.Input.IKeyboardDeliveryInterceptor" }; };
 template <> struct name<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>{ static constexpr auto & value{ L"Windows.UI.Input.IKeyboardDeliveryInterceptorStatics" }; };
 template <> struct name<Windows::UI::Input::IManipulationCompletedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.IManipulationCompletedEventArgs" }; };
@@ -358,12 +394,15 @@ template <> struct name<Windows::UI::Input::IRadialControllerScreenContactStarte
 template <> struct name<Windows::UI::Input::IRadialControllerStatics>{ static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerStatics" }; };
 template <> struct name<Windows::UI::Input::IRightTappedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.IRightTappedEventArgs" }; };
 template <> struct name<Windows::UI::Input::ITappedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.ITappedEventArgs" }; };
+template <> struct name<Windows::UI::Input::AttachableInputObject>{ static constexpr auto & value{ L"Windows.UI.Input.AttachableInputObject" }; };
 template <> struct name<Windows::UI::Input::CrossSlidingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.CrossSlidingEventArgs" }; };
 template <> struct name<Windows::UI::Input::DraggingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.DraggingEventArgs" }; };
 template <> struct name<Windows::UI::Input::EdgeGesture>{ static constexpr auto & value{ L"Windows.UI.Input.EdgeGesture" }; };
 template <> struct name<Windows::UI::Input::EdgeGestureEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.EdgeGestureEventArgs" }; };
 template <> struct name<Windows::UI::Input::GestureRecognizer>{ static constexpr auto & value{ L"Windows.UI.Input.GestureRecognizer" }; };
 template <> struct name<Windows::UI::Input::HoldingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.HoldingEventArgs" }; };
+template <> struct name<Windows::UI::Input::InputActivationListener>{ static constexpr auto & value{ L"Windows.UI.Input.InputActivationListener" }; };
+template <> struct name<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.InputActivationListenerActivationChangedEventArgs" }; };
 template <> struct name<Windows::UI::Input::KeyboardDeliveryInterceptor>{ static constexpr auto & value{ L"Windows.UI.Input.KeyboardDeliveryInterceptor" }; };
 template <> struct name<Windows::UI::Input::ManipulationCompletedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.ManipulationCompletedEventArgs" }; };
 template <> struct name<Windows::UI::Input::ManipulationInertiaStartingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Input.ManipulationInertiaStartingEventArgs" }; };
@@ -392,14 +431,18 @@ template <> struct name<Windows::UI::Input::TappedEventArgs>{ static constexpr a
 template <> struct name<Windows::UI::Input::CrossSlidingState>{ static constexpr auto & value{ L"Windows.UI.Input.CrossSlidingState" }; };
 template <> struct name<Windows::UI::Input::DraggingState>{ static constexpr auto & value{ L"Windows.UI.Input.DraggingState" }; };
 template <> struct name<Windows::UI::Input::EdgeGestureKind>{ static constexpr auto & value{ L"Windows.UI.Input.EdgeGestureKind" }; };
+template <> struct name<Windows::UI::Input::GazeInputAccessStatus>{ static constexpr auto & value{ L"Windows.UI.Input.GazeInputAccessStatus" }; };
 template <> struct name<Windows::UI::Input::GestureSettings>{ static constexpr auto & value{ L"Windows.UI.Input.GestureSettings" }; };
 template <> struct name<Windows::UI::Input::HoldingState>{ static constexpr auto & value{ L"Windows.UI.Input.HoldingState" }; };
+template <> struct name<Windows::UI::Input::InputActivationState>{ static constexpr auto & value{ L"Windows.UI.Input.InputActivationState" }; };
 template <> struct name<Windows::UI::Input::PointerUpdateKind>{ static constexpr auto & value{ L"Windows.UI.Input.PointerUpdateKind" }; };
 template <> struct name<Windows::UI::Input::RadialControllerMenuKnownIcon>{ static constexpr auto & value{ L"Windows.UI.Input.RadialControllerMenuKnownIcon" }; };
 template <> struct name<Windows::UI::Input::RadialControllerSystemMenuItemKind>{ static constexpr auto & value{ L"Windows.UI.Input.RadialControllerSystemMenuItemKind" }; };
 template <> struct name<Windows::UI::Input::CrossSlideThresholds>{ static constexpr auto & value{ L"Windows.UI.Input.CrossSlideThresholds" }; };
 template <> struct name<Windows::UI::Input::ManipulationDelta>{ static constexpr auto & value{ L"Windows.UI.Input.ManipulationDelta" }; };
 template <> struct name<Windows::UI::Input::ManipulationVelocities>{ static constexpr auto & value{ L"Windows.UI.Input.ManipulationVelocities" }; };
+template <> struct guid_storage<Windows::UI::Input::IAttachableInputObject>{ static constexpr guid value{ 0x9B822734,0xA3C1,0x542A,{ 0xB2,0xF4,0x0E,0x32,0xB7,0x73,0xFB,0x07 } }; };
+template <> struct guid_storage<Windows::UI::Input::IAttachableInputObjectFactory>{ static constexpr guid value{ 0xA4C54C4E,0x42BC,0x58FA,{ 0xA6,0x40,0xEA,0x15,0x16,0xF4,0xC0,0x6B } }; };
 template <> struct guid_storage<Windows::UI::Input::ICrossSlidingEventArgs>{ static constexpr guid value{ 0xE9374738,0x6F88,0x41D9,{ 0x87,0x20,0x78,0xE0,0x8E,0x39,0x83,0x49 } }; };
 template <> struct guid_storage<Windows::UI::Input::IDraggingEventArgs>{ static constexpr guid value{ 0x1C905384,0x083C,0x4BD3,{ 0xB5,0x59,0x17,0x9C,0xDD,0xEB,0x33,0xEC } }; };
 template <> struct guid_storage<Windows::UI::Input::IEdgeGesture>{ static constexpr guid value{ 0x580D5292,0x2AB1,0x49AA,{ 0xA7,0xF0,0x33,0xBD,0x3F,0x8D,0xF9,0xF1 } }; };
@@ -407,6 +450,8 @@ template <> struct guid_storage<Windows::UI::Input::IEdgeGestureEventArgs>{ stat
 template <> struct guid_storage<Windows::UI::Input::IEdgeGestureStatics>{ static constexpr guid value{ 0xBC6A8519,0x18EE,0x4043,{ 0x98,0x39,0x4F,0xC5,0x84,0xD6,0x0A,0x14 } }; };
 template <> struct guid_storage<Windows::UI::Input::IGestureRecognizer>{ static constexpr guid value{ 0xB47A37BF,0x3D6B,0x4F88,{ 0x83,0xE8,0x6D,0xCB,0x40,0x12,0xFF,0xB0 } }; };
 template <> struct guid_storage<Windows::UI::Input::IHoldingEventArgs>{ static constexpr guid value{ 0x2BF755C5,0xE799,0x41B4,{ 0xBB,0x40,0x24,0x2F,0x40,0x95,0x9B,0x71 } }; };
+template <> struct guid_storage<Windows::UI::Input::IInputActivationListener>{ static constexpr guid value{ 0x5D6D4ED2,0x28C7,0x5AE3,{ 0xAA,0x74,0xC9,0x18,0xA9,0xF2,0x43,0xCA } }; };
+template <> struct guid_storage<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>{ static constexpr guid value{ 0x7699B465,0x1DCF,0x5791,{ 0xB4,0xB9,0x6C,0xAF,0xBE,0xED,0x20,0x56 } }; };
 template <> struct guid_storage<Windows::UI::Input::IKeyboardDeliveryInterceptor>{ static constexpr guid value{ 0xB4BAF068,0x8F49,0x446C,{ 0x8D,0xB5,0x8C,0x0F,0xFE,0x85,0xCC,0x9E } }; };
 template <> struct guid_storage<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>{ static constexpr guid value{ 0xF9F63BA2,0xCEBA,0x4755,{ 0x8A,0x7E,0x14,0xC0,0xFF,0xEC,0xD2,0x39 } }; };
 template <> struct guid_storage<Windows::UI::Input::IManipulationCompletedEventArgs>{ static constexpr guid value{ 0xB34AB22B,0xD19B,0x46FF,{ 0x9F,0x38,0xDE,0xC7,0x75,0x4B,0xB9,0xE7 } }; };
@@ -449,12 +494,15 @@ template <> struct guid_storage<Windows::UI::Input::IRadialControllerScreenConta
 template <> struct guid_storage<Windows::UI::Input::IRadialControllerStatics>{ static constexpr guid value{ 0xFADED0B7,0xB84C,0x4894,{ 0x87,0xAA,0x8F,0x25,0xAA,0x5F,0x28,0x8B } }; };
 template <> struct guid_storage<Windows::UI::Input::IRightTappedEventArgs>{ static constexpr guid value{ 0x4CBF40BD,0xAF7A,0x4A36,{ 0x94,0x76,0xB1,0xDC,0xE1,0x41,0x70,0x9A } }; };
 template <> struct guid_storage<Windows::UI::Input::ITappedEventArgs>{ static constexpr guid value{ 0xCFA126E4,0x253A,0x4C3C,{ 0x95,0x3B,0x39,0x5C,0x37,0xAE,0xD3,0x09 } }; };
+template <> struct default_interface<Windows::UI::Input::AttachableInputObject>{ using type = Windows::UI::Input::IAttachableInputObject; };
 template <> struct default_interface<Windows::UI::Input::CrossSlidingEventArgs>{ using type = Windows::UI::Input::ICrossSlidingEventArgs; };
 template <> struct default_interface<Windows::UI::Input::DraggingEventArgs>{ using type = Windows::UI::Input::IDraggingEventArgs; };
 template <> struct default_interface<Windows::UI::Input::EdgeGesture>{ using type = Windows::UI::Input::IEdgeGesture; };
 template <> struct default_interface<Windows::UI::Input::EdgeGestureEventArgs>{ using type = Windows::UI::Input::IEdgeGestureEventArgs; };
 template <> struct default_interface<Windows::UI::Input::GestureRecognizer>{ using type = Windows::UI::Input::IGestureRecognizer; };
 template <> struct default_interface<Windows::UI::Input::HoldingEventArgs>{ using type = Windows::UI::Input::IHoldingEventArgs; };
+template <> struct default_interface<Windows::UI::Input::InputActivationListener>{ using type = Windows::UI::Input::IInputActivationListener; };
+template <> struct default_interface<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>{ using type = Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs; };
 template <> struct default_interface<Windows::UI::Input::KeyboardDeliveryInterceptor>{ using type = Windows::UI::Input::IKeyboardDeliveryInterceptor; };
 template <> struct default_interface<Windows::UI::Input::ManipulationCompletedEventArgs>{ using type = Windows::UI::Input::IManipulationCompletedEventArgs; };
 template <> struct default_interface<Windows::UI::Input::ManipulationInertiaStartingEventArgs>{ using type = Windows::UI::Input::IManipulationInertiaStartingEventArgs; };
@@ -480,6 +528,14 @@ template <> struct default_interface<Windows::UI::Input::RadialControllerScreenC
 template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>{ using type = Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs; };
 template <> struct default_interface<Windows::UI::Input::RightTappedEventArgs>{ using type = Windows::UI::Input::IRightTappedEventArgs; };
 template <> struct default_interface<Windows::UI::Input::TappedEventArgs>{ using type = Windows::UI::Input::ITappedEventArgs; };
+
+template <> struct abi<Windows::UI::Input::IAttachableInputObject>{ struct type : IInspectable
+{
+};};
+
+template <> struct abi<Windows::UI::Input::IAttachableInputObjectFactory>{ struct type : IInspectable
+{
+};};
 
 template <> struct abi<Windows::UI::Input::ICrossSlidingEventArgs>{ struct type : IInspectable
 {
@@ -582,6 +638,18 @@ template <> struct abi<Windows::UI::Input::IHoldingEventArgs>{ struct type : IIn
     virtual int32_t WINRT_CALL get_PointerDeviceType(Windows::Devices::Input::PointerDeviceType* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_Position(Windows::Foundation::Point* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_HoldingState(Windows::UI::Input::HoldingState* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Input::IInputActivationListener>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_State(Windows::UI::Input::InputActivationState* value) noexcept = 0;
+    virtual int32_t WINRT_CALL add_InputActivationChanged(void* handler, winrt::event_token* token) noexcept = 0;
+    virtual int32_t WINRT_CALL remove_InputActivationChanged(winrt::event_token token) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_State(Windows::UI::Input::InputActivationState* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Input::IKeyboardDeliveryInterceptor>{ struct type : IInspectable
@@ -914,6 +982,18 @@ template <> struct abi<Windows::UI::Input::ITappedEventArgs>{ struct type : IIns
 };};
 
 template <typename D>
+struct consume_Windows_UI_Input_IAttachableInputObject
+{
+};
+template <> struct consume<Windows::UI::Input::IAttachableInputObject> { template <typename D> using type = consume_Windows_UI_Input_IAttachableInputObject<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Input_IAttachableInputObjectFactory
+{
+};
+template <> struct consume<Windows::UI::Input::IAttachableInputObjectFactory> { template <typename D> using type = consume_Windows_UI_Input_IAttachableInputObjectFactory<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Input_ICrossSlidingEventArgs
 {
     Windows::Devices::Input::PointerDeviceType PointerDeviceType() const;
@@ -1053,6 +1133,24 @@ struct consume_Windows_UI_Input_IHoldingEventArgs
     Windows::UI::Input::HoldingState HoldingState() const;
 };
 template <> struct consume<Windows::UI::Input::IHoldingEventArgs> { template <typename D> using type = consume_Windows_UI_Input_IHoldingEventArgs<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Input_IInputActivationListener
+{
+    Windows::UI::Input::InputActivationState State() const;
+    winrt::event_token InputActivationChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
+    using InputActivationChanged_revoker = impl::event_revoker<Windows::UI::Input::IInputActivationListener, &impl::abi_t<Windows::UI::Input::IInputActivationListener>::remove_InputActivationChanged>;
+    InputActivationChanged_revoker InputActivationChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
+    void InputActivationChanged(winrt::event_token const& token) const noexcept;
+};
+template <> struct consume<Windows::UI::Input::IInputActivationListener> { template <typename D> using type = consume_Windows_UI_Input_IInputActivationListener<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Input_IInputActivationListenerActivationChangedEventArgs
+{
+    Windows::UI::Input::InputActivationState State() const;
+};
+template <> struct consume<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs> { template <typename D> using type = consume_Windows_UI_Input_IInputActivationListenerActivationChangedEventArgs<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Input_IKeyboardDeliveryInterceptor

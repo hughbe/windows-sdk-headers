@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.datatransfer.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataProviderHandler;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderHandler ABI::Windows::ApplicationModel::DataTransfer::IDataProviderHandler
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderHandler_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareProviderHandler;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderHandler ABI::Windows::ApplicationModel::DataTransfer::IShareProviderHandler
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderHandler_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IClipboardContentOptions;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardContentOptions ABI::Windows::ApplicationModel::DataTransfer::IClipboardContentOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardContentOptions_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IClipboardHistoryChangedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryChangedEventArgs ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryChangedEventArgs_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IClipboardHistoryItem;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItem ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItem_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IClipboardHistoryItemsResult;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItemsResult ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItemsResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItemsResult_FWD_DEFINED__
@@ -364,9 +360,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IClipboardStatics;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics ABI::Windows::ApplicationModel::DataTransfer::IClipboardStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics_FWD_DEFINED__
@@ -378,9 +374,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IClipboardStatics2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics2 ABI::Windows::ApplicationModel::DataTransfer::IClipboardStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics2_FWD_DEFINED__
@@ -392,9 +388,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackage;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage ABI::Windows::ApplicationModel::DataTransfer::IDataPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackage2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage2 ABI::Windows::ApplicationModel::DataTransfer::IDataPackage2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage2_FWD_DEFINED__
@@ -420,9 +416,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackage3;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage3 ABI::Windows::ApplicationModel::DataTransfer::IDataPackage3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage3_FWD_DEFINED__
@@ -434,9 +430,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySet;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
@@ -448,9 +444,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySet2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet2 ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet2_FWD_DEFINED__
@@ -462,9 +458,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySet3;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet3 ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet3_FWD_DEFINED__
@@ -476,9 +472,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySet4;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet4 ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet4_FWD_DEFINED__
@@ -490,9 +486,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySetView;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView_FWD_DEFINED__
@@ -504,9 +500,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySetView2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView2 ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView2_FWD_DEFINED__
@@ -518,9 +514,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySetView3;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView3 ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView3_FWD_DEFINED__
@@ -532,9 +528,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySetView4;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView4 ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView4_FWD_DEFINED__
@@ -546,9 +542,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySetView5;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView5 ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView5
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView5_FWD_DEFINED__
@@ -560,9 +556,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackageView;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView ABI::Windows::ApplicationModel::DataTransfer::IDataPackageView
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView_FWD_DEFINED__
@@ -574,9 +570,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackageView2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView2 ABI::Windows::ApplicationModel::DataTransfer::IDataPackageView2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView2_FWD_DEFINED__
@@ -588,9 +584,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackageView3;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView3 ABI::Windows::ApplicationModel::DataTransfer::IDataPackageView3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView3_FWD_DEFINED__
@@ -602,9 +598,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackageView4;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView4 ABI::Windows::ApplicationModel::DataTransfer::IDataPackageView4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView4_FWD_DEFINED__
@@ -616,9 +612,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataProviderDeferral;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderDeferral ABI::Windows::ApplicationModel::DataTransfer::IDataProviderDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderDeferral_FWD_DEFINED__
@@ -630,9 +626,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataProviderRequest;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderRequest ABI::Windows::ApplicationModel::DataTransfer::IDataProviderRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderRequest_FWD_DEFINED__
@@ -644,9 +640,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataRequest;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequest ABI::Windows::ApplicationModel::DataTransfer::IDataRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequest_FWD_DEFINED__
@@ -658,9 +654,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataRequestDeferral;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestDeferral ABI::Windows::ApplicationModel::DataTransfer::IDataRequestDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestDeferral_FWD_DEFINED__
@@ -672,9 +668,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataRequestedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestedEventArgs ABI::Windows::ApplicationModel::DataTransfer::IDataRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestedEventArgs_FWD_DEFINED__
@@ -686,9 +682,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataTransferManager;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager_FWD_DEFINED__
@@ -700,9 +696,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataTransferManager2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager2 ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManager2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager2_FWD_DEFINED__
@@ -714,9 +710,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataTransferManagerStatics;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics_FWD_DEFINED__
@@ -728,9 +724,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataTransferManagerStatics2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics2 ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics2_FWD_DEFINED__
@@ -742,9 +738,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataTransferManagerStatics3;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics3 ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManagerStatics3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics3_FWD_DEFINED__
@@ -756,9 +752,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IHtmlFormatHelperStatics;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIHtmlFormatHelperStatics ABI::Windows::ApplicationModel::DataTransfer::IHtmlFormatHelperStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIHtmlFormatHelperStatics_FWD_DEFINED__
@@ -770,9 +766,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IOperationCompletedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs ABI::Windows::ApplicationModel::DataTransfer::IOperationCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs_FWD_DEFINED__
@@ -784,9 +780,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IOperationCompletedEventArgs2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs2 ABI::Windows::ApplicationModel::DataTransfer::IOperationCompletedEventArgs2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs2_FWD_DEFINED__
@@ -798,9 +794,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareCompletedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareCompletedEventArgs ABI::Windows::ApplicationModel::DataTransfer::IShareCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareCompletedEventArgs_FWD_DEFINED__
@@ -812,9 +808,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareProvider;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvider ABI::Windows::ApplicationModel::DataTransfer::IShareProvider
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvider_FWD_DEFINED__
@@ -826,9 +822,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareProviderFactory;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderFactory ABI::Windows::ApplicationModel::DataTransfer::IShareProviderFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderFactory_FWD_DEFINED__
@@ -840,9 +836,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareProviderOperation;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderOperation ABI::Windows::ApplicationModel::DataTransfer::IShareProviderOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderOperation_FWD_DEFINED__
@@ -854,9 +850,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareProvidersRequestedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvidersRequestedEventArgs ABI::Windows::ApplicationModel::DataTransfer::IShareProvidersRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvidersRequestedEventArgs_FWD_DEFINED__
@@ -868,9 +864,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareTargetInfo;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareTargetInfo ABI::Windows::ApplicationModel::DataTransfer::IShareTargetInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareTargetInfo_FWD_DEFINED__
@@ -882,9 +878,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IShareUIOptions;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareUIOptions ABI::Windows::ApplicationModel::DataTransfer::IShareUIOptions
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareUIOptions_FWD_DEFINED__
@@ -896,9 +892,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface ISharedStorageAccessManagerStatics;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CISharedStorageAccessManagerStatics ABI::Windows::ApplicationModel::DataTransfer::ISharedStorageAccessManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CISharedStorageAccessManagerStatics_FWD_DEFINED__
@@ -910,9 +906,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IStandardDataFormatsStatics;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics ABI::Windows::ApplicationModel::DataTransfer::IStandardDataFormatsStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics_FWD_DEFINED__
@@ -924,9 +920,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IStandardDataFormatsStatics2;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics2 ABI::Windows::ApplicationModel::DataTransfer::IStandardDataFormatsStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics2_FWD_DEFINED__
@@ -938,9 +934,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IStandardDataFormatsStatics3;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics3 ABI::Windows::ApplicationModel::DataTransfer::IStandardDataFormatsStatics3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics3_FWD_DEFINED__
@@ -952,9 +948,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface ITargetApplicationChosenEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CITargetApplicationChosenEventArgs ABI::Windows::ApplicationModel::DataTransfer::ITargetApplicationChosenEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CITargetApplicationChosenEventArgs_FWD_DEFINED__
@@ -967,9 +963,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ClipboardHistoryItem;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -992,7 +988,7 @@ IIterator<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem*> __FIIterator_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem_t;
 #define __FIIterator_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItem*>
@@ -1024,7 +1020,7 @@ IIterable<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem*> __FIIterable_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem_t;
 #define __FIIterable_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItem*>
@@ -1040,9 +1036,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ShareProvider;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1065,7 +1061,7 @@ IIterator<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> __FIIterator_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t;
 #define __FIIterator_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::DataTransfer::IShareProvider*>
@@ -1097,7 +1093,7 @@ IIterable<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> __FIIterable_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t;
 #define __FIIterable_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::DataTransfer::IShareProvider*>
@@ -1129,7 +1125,7 @@ IVectorView<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem*> __FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItem*>
@@ -1161,7 +1157,7 @@ IVectorView<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> __FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::DataTransfer::IShareProvider*>
@@ -1193,7 +1189,7 @@ IVector<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> : IVector_
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::DataTransfer::ShareProvider*> __FIVector_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t;
 #define __FIVector_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CDataTransfer__CShareProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CDataTransfer__CShareProvider ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::DataTransfer::IShareProvider*>
@@ -1209,9 +1205,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ClipboardHistoryChangedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1234,7 +1230,7 @@ IEventHandler<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChan
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs*> __FIEventHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryChangedEventArgs_t;
 #define __FIEventHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryChangedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryChangedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryChangedEventArgs*>
@@ -1250,9 +1246,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ClipboardHistoryItemsResult;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1275,7 +1271,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::Cl
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItemsResult*>
@@ -1307,7 +1303,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryIt
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItemsResult*>
@@ -1323,9 +1319,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackage;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1348,7 +1344,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::Da
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackage_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackage ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackage ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::IDataPackage*>
@@ -1380,7 +1376,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*> __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackage_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackage ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackage ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::IDataPackage*>
@@ -1396,9 +1392,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 enum DataPackageOperation : unsigned int;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_USE
@@ -1419,7 +1415,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::DataTransfe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -1449,7 +1445,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::DataTransfer::DataPackageOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation> __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CDataPackageOperation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -1481,7 +1477,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*,II
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::IDataPackage*,IInspectable*>
@@ -1498,9 +1494,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class OperationCompletedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1524,7 +1520,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*,ABI::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::IDataPackage*,ABI::Windows::ApplicationModel::DataTransfer::IOperationCompletedEventArgs*>
@@ -1542,9 +1538,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ShareCompletedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1568,7 +1564,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataPackage*,ABI::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::IDataPackage*,ABI::Windows::ApplicationModel::DataTransfer::IShareCompletedEventArgs*>
@@ -1585,9 +1581,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataTransferManager;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1595,9 +1591,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataRequestedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1621,7 +1617,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataTransferMan
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataTransferManager*,ABI::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManager*,ABI::Windows::ApplicationModel::DataTransfer::IDataRequestedEventArgs*>
@@ -1639,9 +1635,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ShareProvidersRequestedEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1665,7 +1661,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataTransferMan
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataTransferManager*,ABI::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManager*,ABI::Windows::ApplicationModel::DataTransfer::IShareProvidersRequestedEventArgs*>
@@ -1683,9 +1679,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class TargetApplicationChosenEventArgs;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1709,7 +1705,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataTransferMan
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::DataTransferManager*,ABI::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::DataTransfer::IDataTransferManager*,ABI::Windows::ApplicationModel::DataTransfer::ITargetApplicationChosenEventArgs*>
@@ -1740,7 +1736,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1769,7 +1765,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1798,7 +1794,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1827,7 +1823,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -1857,7 +1853,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -1887,7 +1883,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1917,7 +1913,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1947,7 +1943,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1977,7 +1973,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -2007,7 +2003,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -2022,9 +2018,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2033,9 +2029,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -2061,7 +2057,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReferenc
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -2093,7 +2089,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessS
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -2125,7 +2121,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessS
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -2157,7 +2153,7 @@ IMapView<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> :
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -2189,7 +2185,7 @@ IMap<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> : IMa
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -2206,8 +2202,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -2233,7 +2229,7 @@ IIterator<ABI::Windows::Storage::IStorageItem*> : IIterator_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::IStorageItem*> __FIIterator_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageItem*>
@@ -2265,7 +2261,7 @@ IIterable<ABI::Windows::Storage::IStorageItem*> : IIterable_impl<ABI::Windows::S
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::IStorageItem*> __FIIterable_1_Windows__CStorage__CIStorageItem_t;
 #define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageItem*>
@@ -2296,7 +2292,7 @@ IAsyncOperationCompletedHandler<IInspectable*> : IAsyncOperationCompletedHandler
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<IInspectable*> __FIAsyncOperationCompletedHandler_1_IInspectable_t;
 #define __FIAsyncOperationCompletedHandler_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_IInspectable ABI::Windows::Foundation::IAsyncOperationCompletedHandler<IInspectable*>
@@ -2326,7 +2322,7 @@ IAsyncOperation<IInspectable*> : IAsyncOperation_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<IInspectable*> __FIAsyncOperation_1_IInspectable_t;
 #define __FIAsyncOperation_1_IInspectable ABI::Windows::Foundation::__FIAsyncOperation_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_IInspectable ABI::Windows::Foundation::IAsyncOperation<IInspectable*>
@@ -2355,7 +2351,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -2384,7 +2380,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -2398,8 +2394,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2407,8 +2403,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2434,7 +2430,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2466,7 +2462,7 @@ IAsyncOperation<ABI::Windows::Foundation::Uri*> : IAsyncOperation_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Foundation::Uri*> __FIAsyncOperation_1_Windows__CFoundation__CUri_t;
 #define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -2498,7 +2494,7 @@ IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_Windows__CStorage__CStream
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -2530,7 +2526,7 @@ IAsyncOperation<__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccess
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference*> __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIMapView_2_HSTRING_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>*>
@@ -2562,7 +2558,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::RandomAccessStre
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -2594,7 +2590,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::RandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
@@ -2626,7 +2622,7 @@ IVectorView<ABI::Windows::Storage::IStorageItem*> : IVectorView_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::IStorageItem*> __FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>
@@ -2658,7 +2654,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CIStorageIte
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CIStorageItem*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>*>
@@ -2690,7 +2686,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CIStorageItem*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CIStorageItem*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CIStorageItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageItem*>*>
@@ -2706,9 +2702,9 @@ namespace ABI {
         namespace Security {
             namespace EnterpriseData {
                 enum ProtectionPolicyEvaluationResult : int;
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_USE
@@ -2729,7 +2725,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Security::EnterpriseData::Pro
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>
@@ -2759,7 +2755,7 @@ IAsyncOperation<enum ABI::Windows::Security::EnterpriseData::ProtectionPolicyEva
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult> __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CEnterpriseData__CProtectionPolicyEvaluationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>
@@ -2774,8 +2770,8 @@ namespace ABI {
         namespace Foundation {
             struct Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CRect_USE
@@ -2796,7 +2792,7 @@ IReference<struct ABI::Windows::Foundation::Rect> : IReference_impl<struct ABI::
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Rect> __FIReference_1_Windows__CFoundation__CRect_t;
 #define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CRect_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CRect ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Rect>
@@ -2810,8 +2806,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2819,8 +2815,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2846,7 +2842,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::StorageFile*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::IStorageFile*>
@@ -2878,7 +2874,7 @@ IAsyncOperation<ABI::Windows::Storage::StorageFile*> : IAsyncOperation_impl<ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::StorageFile*> __FIAsyncOperation_1_Windows__CStorage__CStorageFile_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStorageFile_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStorageFile ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::IStorageFile*>
@@ -2897,15 +2893,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2913,8 +2909,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2926,8 +2922,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2940,9 +2936,9 @@ namespace ABI {
                 
                 typedef enum ProtectionPolicyEvaluationResult : int ProtectionPolicyEvaluationResult;
                 
-            } /* Windows */
+            } /* EnterpriseData */
         } /* Security */
-    } /* EnterpriseData */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2963,8 +2959,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2975,9 +2971,9 @@ namespace ABI {
                 
                 typedef enum ClipboardHistoryItemsResultStatus : int ClipboardHistoryItemsResultStatus;
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2986,9 +2982,9 @@ namespace ABI {
                 
                 typedef enum DataPackageOperation : unsigned int DataPackageOperation;
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2997,9 +2993,9 @@ namespace ABI {
                 
                 typedef enum SetHistoryItemAsContentStatus : int SetHistoryItemAsContentStatus;
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3008,9 +3004,9 @@ namespace ABI {
                 
                 typedef enum ShareUITheme : int ShareUITheme;
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3067,9 +3063,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ClipboardContentOptions;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3081,9 +3077,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackagePropertySet;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3091,9 +3087,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackagePropertySetView;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3101,9 +3097,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackageView;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3111,9 +3107,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataProviderDeferral;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3121,9 +3117,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataProviderRequest;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3131,9 +3127,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataRequest;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3141,9 +3137,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataRequestDeferral;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3157,9 +3153,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ShareProviderOperation;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3168,9 +3164,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ShareTargetInfo;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3178,9 +3174,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class ShareUIOptions;
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3216,9 +3212,9 @@ namespace ABI {
                     ClipboardHistoryItemsResultStatus_ClipboardHistoryDisabled = 2,
                 };
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -3247,9 +3243,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(DataPackageOperation)
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3275,9 +3271,9 @@ namespace ABI {
                     SetHistoryItemAsContentStatus_ItemDeleted = 2,
                 };
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -3303,9 +3299,9 @@ namespace ABI {
                     ShareUITheme_Dark = 2,
                 };
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -3337,9 +3333,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataProviderHandler=_uuidof(IDataProviderHandler);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderHandler;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderHandler_INTERFACE_DEFINED__) */
@@ -3374,9 +3370,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareProviderHandler=_uuidof(IShareProviderHandler);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderHandler;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderHandler_INTERFACE_DEFINED__) */
@@ -3408,16 +3404,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRoamable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRoamable(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAllowedInHistory(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsAllowedInHistory(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RoamingFormats(
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
@@ -3430,9 +3426,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClipboardContentOptions=_uuidof(IClipboardContentOptions);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardContentOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardContentOptions_INTERFACE_DEFINED__) */
@@ -3468,9 +3464,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClipboardHistoryChangedEventArgs=_uuidof(IClipboardHistoryChangedEventArgs);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3515,9 +3511,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClipboardHistoryItem=_uuidof(IClipboardHistoryItem);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItem;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItem_INTERFACE_DEFINED__) */
@@ -3559,9 +3555,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClipboardHistoryItemsResult=_uuidof(IClipboardHistoryItemsResult);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItemsResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardHistoryItemsResult_INTERFACE_DEFINED__) */
@@ -3612,9 +3608,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClipboardStatics=_uuidof(IClipboardStatics);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics_INTERFACE_DEFINED__) */
@@ -3649,26 +3645,26 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryItemsResult * * operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ClearHistory(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE DeleteItemFromHistory(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItem * item,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetHistoryItemAsContent(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItem * item,
                         /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::DataTransfer::SetHistoryItemAsContentStatus * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsHistoryEnabled(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsRoamingEnabled(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetContentWithOptions(
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::DataTransfer::IDataPackage * content,
                         /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::DataTransfer::IClipboardContentOptions * options,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_HistoryChanged(
                         /* [in] */__RPC__in_opt __FIEventHandler_1_Windows__CApplicationModel__CDataTransfer__CClipboardHistoryChangedEventArgs * handler,
@@ -3696,9 +3692,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IClipboardStatics2=_uuidof(IClipboardStatics2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIClipboardStatics2_INTERFACE_DEFINED__) */
@@ -3790,16 +3786,16 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SetStorageItems(
                         /* [in] */__RPC__in_opt __FIIterable_1_Windows__CStorage__CIStorageItem * value,
-                        /* [in] */boolean readOnly
+                        /* [in] */::boolean readOnly
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDataPackage=_uuidof(IDataPackage);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage_INTERFACE_DEFINED__) */
@@ -3841,9 +3837,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackage2=_uuidof(IDataPackage2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage2_INTERFACE_DEFINED__) */
@@ -3886,9 +3882,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackage3=_uuidof(IDataPackage3);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage3_INTERFACE_DEFINED__) */
@@ -3962,9 +3958,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySet=_uuidof(IDataPackagePropertySet);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_INTERFACE_DEFINED__) */
@@ -4030,9 +4026,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySet2=_uuidof(IDataPackagePropertySet2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet2_INTERFACE_DEFINED__) */
@@ -4074,9 +4070,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySet3=_uuidof(IDataPackagePropertySet3);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet3_INTERFACE_DEFINED__) */
@@ -4118,9 +4114,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySet4=_uuidof(IDataPackagePropertySet4);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet4_INTERFACE_DEFINED__) */
@@ -4174,9 +4170,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySetView=_uuidof(IDataPackagePropertySetView);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView_INTERFACE_DEFINED__) */
@@ -4227,9 +4223,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySetView2=_uuidof(IDataPackagePropertySetView2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView2_INTERFACE_DEFINED__) */
@@ -4268,9 +4264,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySetView3=_uuidof(IDataPackagePropertySetView3);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView3_INTERFACE_DEFINED__) */
@@ -4309,9 +4305,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySetView4=_uuidof(IDataPackagePropertySetView4);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView4_INTERFACE_DEFINED__) */
@@ -4343,16 +4339,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFromRoamingClipboard(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDataPackagePropertySetView5=_uuidof(IDataPackagePropertySetView5);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView5;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySetView5_INTERFACE_DEFINED__) */
@@ -4397,7 +4393,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Contains(
                         /* [in] */__RPC__in HSTRING formatId,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDataAsync(
                         /* [in] */__RPC__in HSTRING formatId,
@@ -4437,9 +4433,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackageView=_uuidof(IDataPackageView);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView_INTERFACE_DEFINED__) */
@@ -4481,9 +4477,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackageView2=_uuidof(IDataPackageView2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView2_INTERFACE_DEFINED__) */
@@ -4529,9 +4525,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackageView3=_uuidof(IDataPackageView3);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView3_INTERFACE_DEFINED__) */
@@ -4570,9 +4566,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataPackageView4=_uuidof(IDataPackageView4);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackageView4_INTERFACE_DEFINED__) */
@@ -4609,9 +4605,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataProviderDeferral=_uuidof(IDataProviderDeferral);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderDeferral_INTERFACE_DEFINED__) */
@@ -4659,9 +4655,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataProviderRequest=_uuidof(IDataProviderRequest);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataProviderRequest_INTERFACE_DEFINED__) */
@@ -4712,9 +4708,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataRequest=_uuidof(IDataRequest);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequest_INTERFACE_DEFINED__) */
@@ -4751,9 +4747,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataRequestDeferral=_uuidof(IDataRequestDeferral);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestDeferral_INTERFACE_DEFINED__) */
@@ -4792,9 +4788,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataRequestedEventArgs=_uuidof(IDataRequestedEventArgs);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -4844,9 +4840,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataTransferManager=_uuidof(IDataTransferManager);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager_INTERFACE_DEFINED__) */
@@ -4889,9 +4885,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataTransferManager2=_uuidof(IDataTransferManager2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager2_INTERFACE_DEFINED__) */
@@ -4931,9 +4927,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataTransferManagerStatics=_uuidof(IDataTransferManagerStatics);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics_INTERFACE_DEFINED__) */
@@ -4965,16 +4961,16 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDataTransferManagerStatics2=_uuidof(IDataTransferManagerStatics2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics2_INTERFACE_DEFINED__) */
@@ -5013,9 +5009,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDataTransferManagerStatics3=_uuidof(IDataTransferManagerStatics3);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManagerStatics3_INTERFACE_DEFINED__) */
@@ -5059,9 +5055,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHtmlFormatHelperStatics=_uuidof(IHtmlFormatHelperStatics);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIHtmlFormatHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIHtmlFormatHelperStatics_INTERFACE_DEFINED__) */
@@ -5100,9 +5096,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOperationCompletedEventArgs=_uuidof(IOperationCompletedEventArgs);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -5141,9 +5137,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOperationCompletedEventArgs2=_uuidof(IOperationCompletedEventArgs2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs2_INTERFACE_DEFINED__) */
@@ -5182,9 +5178,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareCompletedEventArgs=_uuidof(IShareCompletedEventArgs);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -5235,9 +5231,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareProvider=_uuidof(IShareProvider);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvider;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvider_INTERFACE_DEFINED__) */
@@ -5280,9 +5276,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareProviderFactory=_uuidof(IShareProviderFactory);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderFactory_INTERFACE_DEFINED__) */
@@ -5325,9 +5321,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareProviderOperation=_uuidof(IShareProviderOperation);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProviderOperation_INTERFACE_DEFINED__) */
@@ -5372,9 +5368,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareProvidersRequestedEventArgs=_uuidof(IShareProvidersRequestedEventArgs);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvidersRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvidersRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -5416,9 +5412,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareTargetInfo=_uuidof(IShareTargetInfo);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareTargetInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareTargetInfo_INTERFACE_DEFINED__) */
@@ -5466,9 +5462,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IShareUIOptions=_uuidof(IShareUIOptions);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareUIOptions;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareUIOptions_INTERFACE_DEFINED__) */
@@ -5515,9 +5511,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISharedStorageAccessManagerStatics=_uuidof(ISharedStorageAccessManagerStatics);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CISharedStorageAccessManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CISharedStorageAccessManagerStatics_INTERFACE_DEFINED__) */
@@ -5575,9 +5571,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStandardDataFormatsStatics=_uuidof(IStandardDataFormatsStatics);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics_INTERFACE_DEFINED__) */
@@ -5619,9 +5615,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStandardDataFormatsStatics2=_uuidof(IStandardDataFormatsStatics2);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics2_INTERFACE_DEFINED__) */
@@ -5660,9 +5656,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStandardDataFormatsStatics3=_uuidof(IStandardDataFormatsStatics3);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIStandardDataFormatsStatics3_INTERFACE_DEFINED__) */
@@ -5701,9 +5697,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ITargetApplicationChosenEventArgs=_uuidof(ITargetApplicationChosenEventArgs);
                 
-            } /* Windows */
+            } /* DataTransfer */
         } /* ApplicationModel */
-    } /* DataTransfer */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CDataTransfer_CITargetApplicationChosenEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CDataTransfer_CITargetApplicationChosenEventArgs_INTERFACE_DEFINED__) */
@@ -7718,7 +7714,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_IInspectableVtbl;
 
@@ -7770,7 +7766,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIOperationCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__COperationCompletedEventArgsVtbl;
 
@@ -7823,7 +7819,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataPackage_Windows__CApplicationModel__CDataTransfer__CShareCompletedEventArgsVtbl;
 
@@ -7876,7 +7872,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CDataRequestedEventArgsVtbl;
 
@@ -7929,7 +7925,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvidersRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIShareProvidersRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CShareProvidersRequestedEventArgsVtbl;
 
@@ -7982,7 +7978,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CITargetApplicationChosenEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataTransferManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CITargetApplicationChosenEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CDataTransfer__CDataTransferManager_Windows__CApplicationModel__CDataTransfer__CTargetApplicationChosenEventArgsVtbl;
 

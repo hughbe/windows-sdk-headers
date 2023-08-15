@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.printers.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Devices {
             namespace Printers {
                 interface IPrint3DDevice;
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDevice ABI::Windows::Devices::Printers::IPrint3DDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDevice_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Devices {
             namespace Printers {
                 interface IPrint3DDeviceStatics;
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDeviceStatics ABI::Windows::Devices::Printers::IPrint3DDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDeviceStatics_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Devices {
             namespace Printers {
                 interface IPrintSchema;
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CIPrintSchema ABI::Windows::Devices::Printers::IPrintSchema
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CIPrintSchema_FWD_DEFINED__
@@ -324,9 +320,9 @@ namespace ABI {
         namespace Devices {
             namespace Printers {
                 class Print3DDevice;
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_PRINTERS_PRINTERSCONTRACT_VERSION >= 0x10000
@@ -349,7 +345,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Printers::Print3DDevice*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Printers::Print3DDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPrinters__CPrint3DDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPrinters__CPrint3DDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPrinters__CPrint3DDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPrinters__CPrint3DDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Printers::IPrint3DDevice*>
@@ -381,7 +377,7 @@ IAsyncOperation<ABI::Windows::Devices::Printers::Print3DDevice*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Printers::Print3DDevice*> __FIAsyncOperation_1_Windows__CDevices__CPrinters__CPrint3DDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPrinters__CPrint3DDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPrinters__CPrint3DDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPrinters__CPrint3DDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Printers::IPrint3DDevice*>
@@ -399,9 +395,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -427,7 +423,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -459,7 +455,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentTy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamWithContentType ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -486,9 +482,9 @@ namespace ABI {
         namespace Devices {
             namespace Printers {
                 class PrintSchema;
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -532,9 +528,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DDevice=_uuidof(IPrint3DDevice);
                 
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDevice_INTERFACE_DEFINED__) */
@@ -577,9 +573,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrint3DDeviceStatics=_uuidof(IPrint3DDeviceStatics);
                 
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CIPrint3DDeviceStatics_INTERFACE_DEFINED__) */
@@ -626,9 +622,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPrintSchema=_uuidof(IPrintSchema);
                 
-            } /* Windows */
+            } /* Printers */
         } /* Devices */
-    } /* Printers */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CIPrintSchema;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CIPrintSchema_INTERFACE_DEFINED__) */

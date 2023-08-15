@@ -89,6 +89,20 @@ WHvSetPartitionProperty(
     );
 
 
+HRESULT
+WINAPI
+WHvSuspendPartitionTime(
+    _In_ WHV_PARTITION_HANDLE Partition
+    );
+
+
+HRESULT
+WINAPI
+WHvResumePartitionTime(
+    _In_ WHV_PARTITION_HANDLE Partition
+    );
+
+
 //
 // Memory Management
 //
@@ -285,8 +299,8 @@ WHvGetVirtualProcessorCounters(
 
 
 
-#ifndef ext_ms_win_hyperv_hvplatform_l1_1_1_query_routines
-#define ext_ms_win_hyperv_hvplatform_l1_1_1_query_routines
+#ifndef ext_ms_win_hyperv_hvplatform_l1_1_2_query_routines
+#define ext_ms_win_hyperv_hvplatform_l1_1_2_query_routines
 
 
 
@@ -331,6 +345,18 @@ IsWHvGetPartitionPropertyPresent(
 BOOLEAN
 __stdcall
 IsWHvSetPartitionPropertyPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsWHvSuspendPartitionTimePresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsWHvResumePartitionTimePresent(
     VOID
     );
 

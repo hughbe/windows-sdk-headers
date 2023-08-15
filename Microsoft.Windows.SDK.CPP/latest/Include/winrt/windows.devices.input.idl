@@ -43,6 +43,10 @@ namespace Windows
 
             interface IMouseEventArgs;
 
+            interface IPenDevice;
+
+            interface IPenDeviceStatics;
+
             interface IPointerDevice;
 
             interface IPointerDevice2;
@@ -58,6 +62,8 @@ namespace Windows
             runtimeclass MouseDevice;
 
             runtimeclass MouseEventArgs;
+
+            runtimeclass PenDevice;
 
             runtimeclass PointerDevice;
 
@@ -173,6 +179,22 @@ namespace Windows
                 [propget] HRESULT MouseDelta([out] [retval] Windows.Devices.Input.MouseDelta* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.Input.PenDevice)]
+            [uuid(31856EBA-A738-5A8C-B8F6-F97EF68D18EF)]
+            interface IPenDevice : IInspectable
+            {
+                [propget] HRESULT PenId([out] [retval] GUID* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Devices.Input.PenDevice)]
+            [uuid(9DFBBE01-0966-5180-BCB4-B85060E39479)]
+            interface IPenDeviceStatics : IInspectable
+            {
+                HRESULT GetFromPointerId([in] UINT32 pointerId, [out] [retval] Windows.Devices.Input.PenDevice** result);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Input.PointerDevice)]
             [uuid(93C9BAFC-EBCB-467E-82C6-276FEAE36B5A)]
@@ -241,6 +263,15 @@ namespace Windows
             runtimeclass MouseEventArgs
             {
                 [default] interface Windows.Devices.Input.IMouseEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.Devices.Input.IPenDeviceStatics, Windows.Foundation.UniversalApiContract, 8.0)]
+            [threading(both)]
+            runtimeclass PenDevice
+            {
+                [default] interface Windows.Devices.Input.IPenDevice;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

@@ -126,7 +126,7 @@ STDAPI
 WindowsPreallocateStringBuffer(
     UINT32 length,
     _Outptr_result_buffer_(length + 1) WCHAR** charBuffer,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING_BUFFER* bufferHandle
+    _Outptr_ _Result_nullonfailure_ HSTRING_BUFFER* bufferHandle
     );
 
 STDAPI

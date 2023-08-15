@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.streaming.adaptive.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSource;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSource2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource2_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSource3;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource3 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource3
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource3_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceAdvancedSettings;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceAdvancedSettings ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceAdvancedSettings
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceAdvancedSettings_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceCorrelatedTimes;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCorrelatedTimes ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceCorrelatedTimes
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCorrelatedTimes_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceCreationResult;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceCreationResult
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceCreationResult2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceCreationResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult2_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDiagnosticAvailableEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDiagnosticAvailableEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDiagnosticAvailableEventArgs2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDiagnosticAvailableEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs2_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDiagnosticAvailableEventArgs3;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs3 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDiagnosticAvailableEventArgs3
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs3_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDiagnostics;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnostics ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDiagnostics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnostics_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadBitrateChangedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadBitrateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs2_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadCompletedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadCompletedEventArgs2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadCompletedEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs2_FWD_DEFINED__
@@ -520,10 +516,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadCompletedEventArgs3;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs3 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadCompletedEventArgs3
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs3_FWD_DEFINED__
@@ -536,10 +532,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadFailedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs_FWD_DEFINED__
@@ -552,10 +548,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadFailedEventArgs2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadFailedEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs2_FWD_DEFINED__
@@ -568,10 +564,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadFailedEventArgs3;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs3 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadFailedEventArgs3
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs3_FWD_DEFINED__
@@ -584,10 +580,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadRequestedDeferral;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedDeferral ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadRequestedDeferral
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedDeferral_FWD_DEFINED__
@@ -600,10 +596,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadRequestedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs_FWD_DEFINED__
@@ -616,10 +612,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadRequestedEventArgs2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadRequestedEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs2_FWD_DEFINED__
@@ -632,10 +628,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadRequestedEventArgs3;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs3 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadRequestedEventArgs3
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs3_FWD_DEFINED__
@@ -648,10 +644,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadResult;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadResult
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult_FWD_DEFINED__
@@ -664,10 +660,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadResult2;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult2 ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult2_FWD_DEFINED__
@@ -680,10 +676,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceDownloadStatistics;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadStatistics ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadStatistics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadStatistics_FWD_DEFINED__
@@ -696,10 +692,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourcePlaybackBitrateChangedEventArgs ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourcePlaybackBitrateChangedEventArgs_FWD_DEFINED__
@@ -712,10 +708,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     interface IAdaptiveMediaSourceStatics;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceStatics ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceStatics_FWD_DEFINED__
@@ -729,10 +725,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceCreationResult;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -755,7 +751,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::Adaptive::Adapti
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceCreationResult*>
@@ -787,7 +783,7 @@ IAsyncOperation<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCre
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult*> __FIAsyncOperation_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceCreationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceCreationResult*>
@@ -804,10 +800,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     enum AdaptiveMediaSourceResourceType : int;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceResourceType_USE
@@ -828,7 +824,7 @@ IReference<enum ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceRes
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceResourceType> __FIReference_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceResourceType_t;
 #define __FIReference_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceResourceType ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceResourceType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceResourceType ABI::Windows::Foundation::IReference<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceResourceType>
@@ -844,10 +840,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSource;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -856,10 +852,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDownloadBitrateChangedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -883,7 +879,7 @@ ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadBitrateChangedEventArgs*>
@@ -902,10 +898,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDownloadCompletedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -929,7 +925,7 @@ ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadCompletedEventArgs*>
@@ -948,10 +944,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDownloadFailedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -975,7 +971,7 @@ ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadFailedEventArgs*>
@@ -994,10 +990,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDownloadRequestedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1021,7 +1017,7 @@ ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadRequestedEventArgs*>
@@ -1040,10 +1036,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourcePlaybackBitrateChangedEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1067,7 +1063,7 @@ ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource*,ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs*>
@@ -1085,10 +1081,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDiagnostics;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1097,10 +1093,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDiagnosticAvailableEventArgs;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1124,7 +1120,7 @@ ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics*,ABI::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDiagnostics*,ABI::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDiagnosticAvailableEventArgs*>
@@ -1155,7 +1151,7 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
@@ -1184,7 +1180,7 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
@@ -1213,7 +1209,7 @@ IVectorView<UINT32> : IVectorView_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
 #define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
@@ -1242,7 +1238,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -1257,8 +1253,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -1279,7 +1275,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -1308,7 +1304,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -1323,8 +1319,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1345,7 +1341,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1374,7 +1370,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -1403,7 +1399,7 @@ IReference<UINT64> : IReference_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IReference<UINT64> __FIReference_1_UINT64_t;
 #define __FIReference_1_UINT64 ABI::Windows::Foundation::__FIReference_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT64 ABI::Windows::Foundation::IReference<UINT64>
@@ -1421,8 +1417,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1430,8 +1426,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1443,16 +1439,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1460,8 +1456,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1476,9 +1472,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaSource ABI::Windows::Media::Core::IMediaSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
@@ -1494,9 +1490,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1509,9 +1505,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -1525,9 +1521,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpClient;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient_FWD_DEFINED__
@@ -1536,9 +1532,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpClient;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient ABI::Windows::Web::Http::IHttpClient
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient_FWD_DEFINED__
@@ -1549,9 +1545,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -1560,9 +1556,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage ABI::Windows::Web::Http::IHttpResponseMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -1579,10 +1575,10 @@ namespace ABI {
                     
                     typedef enum AdaptiveMediaSourceCreationStatus : int AdaptiveMediaSourceCreationStatus;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1592,10 +1588,10 @@ namespace ABI {
                     
                     typedef enum AdaptiveMediaSourceDiagnosticType : int AdaptiveMediaSourceDiagnosticType;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1605,10 +1601,10 @@ namespace ABI {
                     
                     typedef enum AdaptiveMediaSourceDownloadBitrateChangedReason : int AdaptiveMediaSourceDownloadBitrateChangedReason;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1618,10 +1614,10 @@ namespace ABI {
                     
                     typedef enum AdaptiveMediaSourceResourceType : int AdaptiveMediaSourceResourceType;
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1658,10 +1654,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceAdvancedSettings;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1670,10 +1666,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceCorrelatedTimes;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1688,10 +1684,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDownloadRequestedDeferral;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1701,10 +1697,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDownloadResult;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1713,10 +1709,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Adaptive {
                     class AdaptiveMediaSourceDownloadStatistics;
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1757,10 +1753,10 @@ namespace ABI {
                         AdaptiveMediaSourceCreationStatus_UnknownFailure = 6,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1797,10 +1793,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1831,10 +1827,10 @@ namespace ABI {
                         AdaptiveMediaSourceDownloadBitrateChangedReason_ErrorInPreviousBitrate = 6,
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1868,10 +1864,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1905,7 +1901,7 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLive(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DesiredLiveOffset(
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
@@ -1941,7 +1937,7 @@ namespace ABI {
                             /* [in] */__RPC__in_opt __FIReference_1_UINT32 * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AudioOnlyPlayback(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InboundBitsPerSecond(
                             /* [retval, out] */__RPC__out UINT64 * value
@@ -1992,10 +1988,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSource=_uuidof(IAdaptiveMediaSource);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource_INTERFACE_DEFINED__) */
@@ -2035,10 +2031,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSource2=_uuidof(IAdaptiveMediaSource2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource2_INTERFACE_DEFINED__) */
@@ -2093,10 +2089,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSource3=_uuidof(IAdaptiveMediaSource3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource3_INTERFACE_DEFINED__) */
@@ -2129,10 +2125,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllSegmentsIndependent(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllSegmentsIndependent(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DesiredBitrateHeadroomRatio(
                             /* [retval, out] */__RPC__deref_out_opt __FIReference_1_double * * value
@@ -2151,10 +2147,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceAdvancedSettings=_uuidof(IAdaptiveMediaSourceAdvancedSettings);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceAdvancedSettings;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceAdvancedSettings_INTERFACE_DEFINED__) */
@@ -2200,10 +2196,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceCorrelatedTimes=_uuidof(IAdaptiveMediaSourceCorrelatedTimes);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCorrelatedTimes;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCorrelatedTimes_INTERFACE_DEFINED__) */
@@ -2249,10 +2245,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceCreationResult=_uuidof(IAdaptiveMediaSourceCreationResult);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult_INTERFACE_DEFINED__) */
@@ -2292,10 +2288,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceCreationResult2=_uuidof(IAdaptiveMediaSourceCreationResult2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceCreationResult2_INTERFACE_DEFINED__) */
@@ -2359,10 +2355,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDiagnosticAvailableEventArgs=_uuidof(IAdaptiveMediaSourceDiagnosticAvailableEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs_INTERFACE_DEFINED__) */
@@ -2402,10 +2398,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDiagnosticAvailableEventArgs2=_uuidof(IAdaptiveMediaSourceDiagnosticAvailableEventArgs2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs2_INTERFACE_DEFINED__) */
@@ -2448,10 +2444,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDiagnosticAvailableEventArgs3=_uuidof(IAdaptiveMediaSourceDiagnosticAvailableEventArgs3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs3_INTERFACE_DEFINED__) */
@@ -2495,10 +2491,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDiagnostics=_uuidof(IAdaptiveMediaSourceDiagnostics);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnostics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnostics_INTERFACE_DEFINED__) */
@@ -2541,10 +2537,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadBitrateChangedEventArgs=_uuidof(IAdaptiveMediaSourceDownloadBitrateChangedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2584,10 +2580,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2=_uuidof(IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs2_INTERFACE_DEFINED__) */
@@ -2639,10 +2635,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadCompletedEventArgs=_uuidof(IAdaptiveMediaSourceDownloadCompletedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -2688,10 +2684,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadCompletedEventArgs2=_uuidof(IAdaptiveMediaSourceDownloadCompletedEventArgs2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs2_INTERFACE_DEFINED__) */
@@ -2734,10 +2730,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadCompletedEventArgs3=_uuidof(IAdaptiveMediaSourceDownloadCompletedEventArgs3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs3_INTERFACE_DEFINED__) */
@@ -2789,10 +2785,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadFailedEventArgs=_uuidof(IAdaptiveMediaSourceDownloadFailedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs_INTERFACE_DEFINED__) */
@@ -2841,10 +2837,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadFailedEventArgs2=_uuidof(IAdaptiveMediaSourceDownloadFailedEventArgs2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs2_INTERFACE_DEFINED__) */
@@ -2887,10 +2883,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadFailedEventArgs3=_uuidof(IAdaptiveMediaSourceDownloadFailedEventArgs3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs3_INTERFACE_DEFINED__) */
@@ -2928,10 +2924,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadRequestedDeferral=_uuidof(IAdaptiveMediaSourceDownloadRequestedDeferral);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedDeferral_INTERFACE_DEFINED__) */
@@ -2986,10 +2982,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadRequestedEventArgs=_uuidof(IAdaptiveMediaSourceDownloadRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3032,10 +3028,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadRequestedEventArgs2=_uuidof(IAdaptiveMediaSourceDownloadRequestedEventArgs2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs2_INTERFACE_DEFINED__) */
@@ -3078,10 +3074,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadRequestedEventArgs3=_uuidof(IAdaptiveMediaSourceDownloadRequestedEventArgs3);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs3_INTERFACE_DEFINED__) */
@@ -3148,10 +3144,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadResult=_uuidof(IAdaptiveMediaSourceDownloadResult);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult_INTERFACE_DEFINED__) */
@@ -3200,10 +3196,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadResult2=_uuidof(IAdaptiveMediaSourceDownloadResult2);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadResult2_INTERFACE_DEFINED__) */
@@ -3252,10 +3248,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceDownloadStatistics=_uuidof(IAdaptiveMediaSourceDownloadStatistics);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadStatistics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadStatistics_INTERFACE_DEFINED__) */
@@ -3294,17 +3290,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__out UINT32 * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AudioOnly(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs=_uuidof(IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourcePlaybackBitrateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourcePlaybackBitrateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3338,7 +3334,7 @@ namespace ABI {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE IsContentTypeSupported(
                             /* [in] */__RPC__in HSTRING contentType,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         /* [overload] */virtual HRESULT STDMETHODCALLTYPE CreateFromUriAsync(
                             /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
@@ -3367,10 +3363,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAdaptiveMediaSourceStatics=_uuidof(IAdaptiveMediaSourceStatics);
                     
-                } /* Windows */
-            } /* Media */
-        } /* Streaming */
-    } /* Adaptive */} /* ABI */
+                } /* Adaptive */
+            } /* Streaming */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceStatics_INTERFACE_DEFINED__) */
@@ -4101,7 +4097,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadBitrateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadBitrateChangedEventArgsVtbl;
 
@@ -4154,7 +4150,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadCompletedEventArgsVtbl;
 
@@ -4207,7 +4203,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadFailedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadFailedEventArgsVtbl;
 
@@ -4260,7 +4256,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDownloadRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDownloadRequestedEventArgsVtbl;
 
@@ -4313,7 +4309,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourcePlaybackBitrateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourcePlaybackBitrateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSource_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourcePlaybackBitrateChangedEventArgsVtbl;
 
@@ -4366,7 +4362,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnostics * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnostics * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CStreaming_CAdaptive_CIAdaptiveMediaSourceDiagnosticAvailableEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnostics_Windows__CMedia__CStreaming__CAdaptive__CAdaptiveMediaSourceDiagnosticAvailableEventArgsVtbl;
 
@@ -4423,12 +4419,12 @@ typedef struct __FIIterator_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out int *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -4590,7 +4586,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT32 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out int *item);
+                                         /* [retval][out] */ __RPC__out unsigned int *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT32 * This,
@@ -4598,7 +4594,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ int item,
+            /* [in] */ unsigned int item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -4606,7 +4602,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
                                                __RPC__in __FIVectorView_1_UINT32 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -4685,7 +4681,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 
@@ -4969,7 +4965,7 @@ typedef struct __FIReference_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *value);
     END_INTERFACE
 } __FIReference_1_UINT64Vtbl;
 

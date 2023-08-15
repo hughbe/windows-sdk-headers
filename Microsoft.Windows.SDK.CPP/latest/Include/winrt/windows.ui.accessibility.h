@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.accessibility.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace UI {
             namespace Accessibility {
                 interface IScreenReaderPositionChangedEventArgs;
-            } /* Windows */
+            } /* Accessibility */
         } /* UI */
-    } /* Accessibility */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderPositionChangedEventArgs ABI::Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderPositionChangedEventArgs_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace UI {
             namespace Accessibility {
                 interface IScreenReaderService;
-            } /* Windows */
+            } /* Accessibility */
         } /* UI */
-    } /* Accessibility */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderService ABI::Windows::UI::Accessibility::IScreenReaderService
 
 #endif // ____x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderService_FWD_DEFINED__
@@ -169,9 +169,9 @@ namespace ABI {
         namespace UI {
             namespace Accessibility {
                 class ScreenReaderService;
-            } /* Windows */
+            } /* Accessibility */
         } /* UI */
-    } /* Accessibility */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -179,9 +179,9 @@ namespace ABI {
         namespace UI {
             namespace Accessibility {
                 class ScreenReaderPositionChangedEventArgs;
-            } /* Windows */
+            } /* Accessibility */
         } /* UI */
-    } /* Accessibility */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -205,7 +205,7 @@ ITypedEventHandler<ABI::Windows::UI::Accessibility::ScreenReaderService*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Accessibility::ScreenReaderService*,ABI::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Accessibility::IScreenReaderService*,ABI::Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs*>
@@ -225,8 +225,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -271,16 +271,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadingText(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IScreenReaderPositionChangedEventArgs=_uuidof(IScreenReaderPositionChangedEventArgs);
                 
-            } /* Windows */
+            } /* Accessibility */
         } /* UI */
-    } /* Accessibility */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderPositionChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderPositionChangedEventArgs_INTERFACE_DEFINED__) */
@@ -326,9 +326,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IScreenReaderService=_uuidof(IScreenReaderService);
                 
-            } /* Windows */
+            } /* Accessibility */
         } /* UI */
-    } /* Accessibility */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderService;
 #endif /* !defined(____x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderService_INTERFACE_DEFINED__) */
@@ -425,7 +425,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenRead
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderService * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderPositionChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderService * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CAccessibility_CIScreenReaderPositionChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CAccessibility__CScreenReaderService_Windows__CUI__CAccessibility__CScreenReaderPositionChangedEventArgsVtbl;
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,8 +276,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppDisplayInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo ABI::Windows::ApplicationModel::IAppDisplayInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo_FWD_DEFINED__
@@ -292,8 +288,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInfo ABI::Windows::ApplicationModel::IAppInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo_FWD_DEFINED__
@@ -304,8 +300,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInstallerInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInstallerInfo ABI::Windows::ApplicationModel::IAppInstallerInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInstallerInfo_FWD_DEFINED__
@@ -316,8 +312,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInstance;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInstance ABI::Windows::ApplicationModel::IAppInstance
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInstance_FWD_DEFINED__
@@ -328,8 +324,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IAppInstanceStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIAppInstanceStatics ABI::Windows::ApplicationModel::IAppInstanceStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInstanceStatics_FWD_DEFINED__
@@ -340,8 +336,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IDesignModeStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIDesignModeStatics ABI::Windows::ApplicationModel::IDesignModeStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIDesignModeStatics_FWD_DEFINED__
@@ -352,8 +348,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IDesignModeStatics2;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIDesignModeStatics2 ABI::Windows::ApplicationModel::IDesignModeStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIDesignModeStatics2_FWD_DEFINED__
@@ -364,8 +360,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IEnteredBackgroundEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs ABI::Windows::ApplicationModel::IEnteredBackgroundEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs_FWD_DEFINED__
@@ -376,8 +372,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IFullTrustProcessLauncherStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIFullTrustProcessLauncherStatics ABI::Windows::ApplicationModel::IFullTrustProcessLauncherStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIFullTrustProcessLauncherStatics_FWD_DEFINED__
@@ -388,8 +384,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface ILeavingBackgroundEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CILeavingBackgroundEventArgs ABI::Windows::ApplicationModel::ILeavingBackgroundEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CILeavingBackgroundEventArgs_FWD_DEFINED__
@@ -400,8 +396,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface ILimitedAccessFeatureRequestResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CILimitedAccessFeatureRequestResult ABI::Windows::ApplicationModel::ILimitedAccessFeatureRequestResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CILimitedAccessFeatureRequestResult_FWD_DEFINED__
@@ -412,8 +408,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface ILimitedAccessFeaturesStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CILimitedAccessFeaturesStatics ABI::Windows::ApplicationModel::ILimitedAccessFeaturesStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CILimitedAccessFeaturesStatics_FWD_DEFINED__
@@ -424,8 +420,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage ABI::Windows::ApplicationModel::IPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
@@ -436,8 +432,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage2;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage2 ABI::Windows::ApplicationModel::IPackage2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage2_FWD_DEFINED__
@@ -448,8 +444,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage3;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage3 ABI::Windows::ApplicationModel::IPackage3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage3_FWD_DEFINED__
@@ -460,8 +456,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage4;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage4 ABI::Windows::ApplicationModel::IPackage4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage4_FWD_DEFINED__
@@ -472,8 +468,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage5;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage5 ABI::Windows::ApplicationModel::IPackage5
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage5_FWD_DEFINED__
@@ -484,11 +480,23 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage6;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage6 ABI::Windows::ApplicationModel::IPackage6
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage6_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIPackage7_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIPackage7_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            interface IPackage7;
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7 ABI::Windows::ApplicationModel::IPackage7
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIPackage7_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog_FWD_DEFINED__
@@ -496,8 +504,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalog;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalog ABI::Windows::ApplicationModel::IPackageCatalog
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog_FWD_DEFINED__
@@ -508,8 +516,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalog2;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalog2 ABI::Windows::ApplicationModel::IPackageCatalog2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog2_FWD_DEFINED__
@@ -520,8 +528,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalog3;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalog3 ABI::Windows::ApplicationModel::IPackageCatalog3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog3_FWD_DEFINED__
@@ -532,8 +540,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalog4;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalog4 ABI::Windows::ApplicationModel::IPackageCatalog4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog4_FWD_DEFINED__
@@ -544,8 +552,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalogAddOptionalPackageResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddOptionalPackageResult ABI::Windows::ApplicationModel::IPackageCatalogAddOptionalPackageResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddOptionalPackageResult_FWD_DEFINED__
@@ -556,8 +564,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalogAddResourcePackageResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddResourcePackageResult ABI::Windows::ApplicationModel::IPackageCatalogAddResourcePackageResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddResourcePackageResult_FWD_DEFINED__
@@ -568,8 +576,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalogRemoveOptionalPackagesResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveOptionalPackagesResult ABI::Windows::ApplicationModel::IPackageCatalogRemoveOptionalPackagesResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveOptionalPackagesResult_FWD_DEFINED__
@@ -580,8 +588,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalogRemoveResourcePackagesResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveResourcePackagesResult ABI::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveResourcePackagesResult_FWD_DEFINED__
@@ -592,8 +600,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageCatalogStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics ABI::Windows::ApplicationModel::IPackageCatalogStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics_FWD_DEFINED__
@@ -604,8 +612,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageContentGroup;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageContentGroup ABI::Windows::ApplicationModel::IPackageContentGroup
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageContentGroup_FWD_DEFINED__
@@ -616,8 +624,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageContentGroupStagingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStagingEventArgs ABI::Windows::ApplicationModel::IPackageContentGroupStagingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStagingEventArgs_FWD_DEFINED__
@@ -628,8 +636,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageContentGroupStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStatics ABI::Windows::ApplicationModel::IPackageContentGroupStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStatics_FWD_DEFINED__
@@ -640,8 +648,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageId;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageId ABI::Windows::ApplicationModel::IPackageId
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageId_FWD_DEFINED__
@@ -652,8 +660,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageIdWithMetadata;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageIdWithMetadata ABI::Windows::ApplicationModel::IPackageIdWithMetadata
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageIdWithMetadata_FWD_DEFINED__
@@ -664,8 +672,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageInstallingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageInstallingEventArgs ABI::Windows::ApplicationModel::IPackageInstallingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageInstallingEventArgs_FWD_DEFINED__
@@ -676,8 +684,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageStagingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageStagingEventArgs ABI::Windows::ApplicationModel::IPackageStagingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageStagingEventArgs_FWD_DEFINED__
@@ -688,8 +696,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageStatics ABI::Windows::ApplicationModel::IPackageStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageStatics_FWD_DEFINED__
@@ -700,8 +708,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageStatus;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageStatus ABI::Windows::ApplicationModel::IPackageStatus
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageStatus_FWD_DEFINED__
@@ -712,8 +720,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageStatus2;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageStatus2 ABI::Windows::ApplicationModel::IPackageStatus2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageStatus2_FWD_DEFINED__
@@ -724,8 +732,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageStatusChangedEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageStatusChangedEventArgs ABI::Windows::ApplicationModel::IPackageStatusChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageStatusChangedEventArgs_FWD_DEFINED__
@@ -736,8 +744,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageUninstallingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageUninstallingEventArgs ABI::Windows::ApplicationModel::IPackageUninstallingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageUninstallingEventArgs_FWD_DEFINED__
@@ -748,8 +756,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageUpdateAvailabilityResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageUpdateAvailabilityResult ABI::Windows::ApplicationModel::IPackageUpdateAvailabilityResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageUpdateAvailabilityResult_FWD_DEFINED__
@@ -760,8 +768,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageUpdatingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageUpdatingEventArgs ABI::Windows::ApplicationModel::IPackageUpdatingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageUpdatingEventArgs_FWD_DEFINED__
@@ -772,8 +780,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackageWithMetadata;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackageWithMetadata ABI::Windows::ApplicationModel::IPackageWithMetadata
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageWithMetadata_FWD_DEFINED__
@@ -784,8 +792,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IStartupTask;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIStartupTask ABI::Windows::ApplicationModel::IStartupTask
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIStartupTask_FWD_DEFINED__
@@ -796,8 +804,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IStartupTaskStatics;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIStartupTaskStatics ABI::Windows::ApplicationModel::IStartupTaskStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIStartupTaskStatics_FWD_DEFINED__
@@ -808,8 +816,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface ISuspendingDeferral;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CISuspendingDeferral ABI::Windows::ApplicationModel::ISuspendingDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CISuspendingDeferral_FWD_DEFINED__
@@ -820,8 +828,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface ISuspendingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CISuspendingEventArgs ABI::Windows::ApplicationModel::ISuspendingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CISuspendingEventArgs_FWD_DEFINED__
@@ -832,8 +840,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface ISuspendingOperation;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CISuspendingOperation ABI::Windows::ApplicationModel::ISuspendingOperation
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CISuspendingOperation_FWD_DEFINED__
@@ -845,8 +853,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -869,7 +877,7 @@ IIterator<ABI::Windows::ApplicationModel::AppInfo*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::AppInfo*> __FIIterator_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -901,7 +909,7 @@ IIterable<ABI::Windows::ApplicationModel::AppInfo*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::AppInfo*> __FIIterable_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -916,8 +924,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppInstance;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -940,7 +948,7 @@ IIterator<ABI::Windows::ApplicationModel::AppInstance*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::AppInstance*> __FIIterator_1_Windows__CApplicationModel__CAppInstance_t;
 #define __FIIterator_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CAppInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IAppInstance*>
@@ -972,7 +980,7 @@ IIterable<ABI::Windows::ApplicationModel::AppInstance*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::AppInstance*> __FIIterable_1_Windows__CApplicationModel__CAppInstance_t;
 #define __FIIterable_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CAppInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IAppInstance*>
@@ -987,8 +995,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class Package;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1011,7 +1019,7 @@ IIterator<ABI::Windows::ApplicationModel::Package*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Package*> __FIIterator_1_Windows__CApplicationModel__CPackage_t;
 #define __FIIterator_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IPackage*>
@@ -1043,7 +1051,7 @@ IIterable<ABI::Windows::ApplicationModel::Package*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Package*> __FIIterable_1_Windows__CApplicationModel__CPackage_t;
 #define __FIIterable_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IPackage*>
@@ -1058,8 +1066,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageContentGroup;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1082,7 +1090,7 @@ IIterator<ABI::Windows::ApplicationModel::PackageContentGroup*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::PackageContentGroup*> __FIIterator_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIIterator_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IPackageContentGroup*>
@@ -1114,7 +1122,7 @@ IIterable<ABI::Windows::ApplicationModel::PackageContentGroup*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::PackageContentGroup*> __FIIterable_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIIterable_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IPackageContentGroup*>
@@ -1129,8 +1137,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class StartupTask;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION >= 0x10000
@@ -1153,7 +1161,7 @@ IIterator<ABI::Windows::ApplicationModel::StartupTask*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::StartupTask*> __FIIterator_1_Windows__CApplicationModel__CStartupTask_t;
 #define __FIIterator_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CStartupTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IStartupTask*>
@@ -1185,7 +1193,7 @@ IIterable<ABI::Windows::ApplicationModel::StartupTask*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::StartupTask*> __FIIterable_1_Windows__CApplicationModel__CStartupTask_t;
 #define __FIIterable_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CStartupTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IStartupTask*>
@@ -1217,7 +1225,7 @@ IVectorView<ABI::Windows::ApplicationModel::AppInfo*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::AppInfo*> __FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>
@@ -1249,7 +1257,7 @@ IVectorView<ABI::Windows::ApplicationModel::AppInstance*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::AppInstance*> __FIVectorView_1_Windows__CApplicationModel__CAppInstance_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CAppInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInstance*>
@@ -1281,7 +1289,7 @@ IVectorView<ABI::Windows::ApplicationModel::Package*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Package*> __FIVectorView_1_Windows__CApplicationModel__CPackage_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IPackage*>
@@ -1313,7 +1321,7 @@ IVectorView<ABI::Windows::ApplicationModel::PackageContentGroup*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::PackageContentGroup*> __FIVectorView_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IPackageContentGroup*>
@@ -1345,7 +1353,7 @@ IVectorView<ABI::Windows::ApplicationModel::StartupTask*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::StartupTask*> __FIVectorView_1_Windows__CApplicationModel__CStartupTask_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CStartupTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IStartupTask*>
@@ -1377,7 +1385,7 @@ IVector<ABI::Windows::ApplicationModel::AppInstance*> : IVector_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::AppInstance*> __FIVector_1_Windows__CApplicationModel__CAppInstance_t;
 #define __FIVector_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CAppInstance_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CAppInstance ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::IAppInstance*>
@@ -1409,7 +1417,7 @@ IVector<ABI::Windows::ApplicationModel::Package*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Package*> __FIVector_1_Windows__CApplicationModel__CPackage_t;
 #define __FIVector_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::IPackage*>
@@ -1441,7 +1449,7 @@ IVector<ABI::Windows::ApplicationModel::PackageContentGroup*> : IVector_impl<ABI
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::PackageContentGroup*> __FIVector_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIVector_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::IPackageContentGroup*>
@@ -1456,8 +1464,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class EnteredBackgroundEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1480,7 +1488,7 @@ IEventHandler<ABI::Windows::ApplicationModel::EnteredBackgroundEventArgs*> : IEv
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::ApplicationModel::EnteredBackgroundEventArgs*> __FIEventHandler_1_Windows__CApplicationModel__CEnteredBackgroundEventArgs_t;
 #define __FIEventHandler_1_Windows__CApplicationModel__CEnteredBackgroundEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CApplicationModel__CEnteredBackgroundEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CApplicationModel__CEnteredBackgroundEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::ApplicationModel::IEnteredBackgroundEventArgs*>
@@ -1495,8 +1503,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class LeavingBackgroundEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1519,7 +1527,7 @@ IEventHandler<ABI::Windows::ApplicationModel::LeavingBackgroundEventArgs*> : IEv
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::ApplicationModel::LeavingBackgroundEventArgs*> __FIEventHandler_1_Windows__CApplicationModel__CLeavingBackgroundEventArgs_t;
 #define __FIEventHandler_1_Windows__CApplicationModel__CLeavingBackgroundEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CApplicationModel__CLeavingBackgroundEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CApplicationModel__CLeavingBackgroundEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::ApplicationModel::ILeavingBackgroundEventArgs*>
@@ -1534,8 +1542,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class SuspendingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1558,7 +1566,7 @@ IEventHandler<ABI::Windows::ApplicationModel::SuspendingEventArgs*> : IEventHand
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::ApplicationModel::SuspendingEventArgs*> __FIEventHandler_1_Windows__CApplicationModel__CSuspendingEventArgs_t;
 #define __FIEventHandler_1_Windows__CApplicationModel__CSuspendingEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CApplicationModel__CSuspendingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CApplicationModel__CSuspendingEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::ApplicationModel::ISuspendingEventArgs*>
@@ -1573,8 +1581,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageCatalogAddResourcePackageResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1582,8 +1590,8 @@ namespace ABI {
         namespace ApplicationModel {
             struct PackageInstallProgress;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
@@ -1605,7 +1613,7 @@ IAsyncOperationProgressHandler<ABI::Windows::ApplicationModel::PackageCatalogAdd
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult*,struct ABI::Windows::ApplicationModel::PackageInstallProgress> __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::ApplicationModel::IPackageCatalogAddResourcePackageResult*,ABI::Windows::ApplicationModel::PackageInstallProgress>
@@ -1638,7 +1646,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::ApplicationModel::Pack
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult*,struct ABI::Windows::ApplicationModel::PackageInstallProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::ApplicationModel::IPackageCatalogAddResourcePackageResult*,ABI::Windows::ApplicationModel::PackageInstallProgress>
@@ -1671,7 +1679,7 @@ IAsyncOperationWithProgress<ABI::Windows::ApplicationModel::PackageCatalogAddRes
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult*,struct ABI::Windows::ApplicationModel::PackageInstallProgress> __FIAsyncOperationWithProgress_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::ApplicationModel::IPackageCatalogAddResourcePackageResult*,ABI::Windows::ApplicationModel::PackageInstallProgress>
@@ -1686,8 +1694,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageCatalogAddOptionalPackageResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1710,7 +1718,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageCatalogAd
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::IPackageCatalogAddOptionalPackageResult*>
@@ -1742,7 +1750,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::PackageCatalogAddOptionalPackage
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogAddOptionalPackageResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::IPackageCatalogAddOptionalPackageResult*>
@@ -1757,8 +1765,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageCatalogRemoveOptionalPackagesResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1781,7 +1789,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageCatalogRe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::IPackageCatalogRemoveOptionalPackagesResult*>
@@ -1813,7 +1821,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::PackageCatalogRemoveOptionalPack
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveOptionalPackagesResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::IPackageCatalogRemoveOptionalPackagesResult*>
@@ -1828,8 +1836,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageCatalogRemoveResourcePackagesResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1852,7 +1860,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageCatalogRe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult*>
@@ -1884,7 +1892,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::PackageCatalogRemoveResourcePack
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageCatalogRemoveResourcePackagesResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult*>
@@ -1916,7 +1924,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageContentGr
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageContentGroup*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::IPackageContentGroup*>
@@ -1948,7 +1956,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::PackageContentGroup*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::PackageContentGroup*> __FIAsyncOperation_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::IPackageContentGroup*>
@@ -1963,8 +1971,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageUpdateAvailabilityResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1987,7 +1995,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageUpdateAva
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::PackageUpdateAvailabilityResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::IPackageUpdateAvailabilityResult*>
@@ -2019,7 +2027,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::PackageUpdateAvailabilityResult*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::PackageUpdateAvailabilityResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPackageUpdateAvailabilityResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::IPackageUpdateAvailabilityResult*>
@@ -2051,7 +2059,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::StartupTask*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::StartupTask*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTask_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::IStartupTask*>
@@ -2083,7 +2091,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::StartupTask*> : IAsyncOperation_
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::StartupTask*> __FIAsyncOperation_1_Windows__CApplicationModel__CStartupTask_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CStartupTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::IStartupTask*>
@@ -2098,8 +2106,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             enum StartupTaskState : int;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTaskState_USE
@@ -2120,7 +2128,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::StartupTask
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::ApplicationModel::StartupTaskState> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTaskState_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTaskState ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTaskState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStartupTaskState ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::StartupTaskState>
@@ -2150,7 +2158,7 @@ IAsyncOperation<enum ABI::Windows::ApplicationModel::StartupTaskState> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::ApplicationModel::StartupTaskState> __FIAsyncOperation_1_Windows__CApplicationModel__CStartupTaskState_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CStartupTaskState ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CStartupTaskState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CStartupTaskState ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::StartupTaskState>
@@ -2181,7 +2189,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>*>
@@ -2213,7 +2221,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CAppInfo*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CAppInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IAppInfo*>*>
@@ -2245,7 +2253,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CSt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStartupTask*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IStartupTask*>*>
@@ -2277,7 +2285,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStartupTask*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStartupTask*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStartupTask ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IStartupTask*>*>
@@ -2309,7 +2317,7 @@ IAsyncOperationCompletedHandler<__FIVector_1_Windows__CApplicationModel__CPackag
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CApplicationModel__CPackageContentGroup*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::IPackageContentGroup*>*>
@@ -2341,7 +2349,7 @@ IAsyncOperation<__FIVector_1_Windows__CApplicationModel__CPackageContentGroup*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_Windows__CApplicationModel__CPackageContentGroup*> __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup_t;
 #define __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::IPackageContentGroup*>*>
@@ -2356,16 +2364,16 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageCatalog;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageContentGroupStagingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2389,7 +2397,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows::ApplicationModel::PackageContentGroupStagingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::IPackageCatalog*,ABI::Windows::ApplicationModel::IPackageContentGroupStagingEventArgs*>
@@ -2406,8 +2414,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageInstallingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2431,7 +2439,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows::ApplicationModel::PackageInstallingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::IPackageCatalog*,ABI::Windows::ApplicationModel::IPackageInstallingEventArgs*>
@@ -2448,8 +2456,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageStagingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2473,7 +2481,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows::ApplicationModel::PackageStagingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::IPackageCatalog*,ABI::Windows::ApplicationModel::IPackageStagingEventArgs*>
@@ -2490,8 +2498,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageStatusChangedEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2515,7 +2523,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows::ApplicationModel::PackageStatusChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::IPackageCatalog*,ABI::Windows::ApplicationModel::IPackageStatusChangedEventArgs*>
@@ -2532,8 +2540,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageUninstallingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2557,7 +2565,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows::ApplicationModel::PackageUninstallingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::IPackageCatalog*,ABI::Windows::ApplicationModel::IPackageUninstallingEventArgs*>
@@ -2574,8 +2582,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageUpdatingEventArgs;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2599,7 +2607,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::PackageCatalog*,ABI::Windows::ApplicationModel::PackageUpdatingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::IPackageCatalog*,ABI::Windows::ApplicationModel::IPackageUpdatingEventArgs*>
@@ -2616,8 +2624,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -2638,7 +2646,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -2653,9 +2661,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 class AppListEntry;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
@@ -2664,9 +2672,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Core {
                 interface IAppListEntry;
-            } /* Windows */
+            } /* Core */
         } /* ApplicationModel */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry ABI::Windows::ApplicationModel::Core::IAppListEntry
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCore_CIAppListEntry_FWD_DEFINED__
@@ -2692,7 +2700,7 @@ IIterator<ABI::Windows::ApplicationModel::Core::AppListEntry*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Core::AppListEntry*> __FIIterator_1_Windows__CApplicationModel__CCore__CAppListEntry_t;
 #define __FIIterator_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CCore__CAppListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Core::IAppListEntry*>
@@ -2724,7 +2732,7 @@ IIterable<ABI::Windows::ApplicationModel::Core::AppListEntry*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Core::AppListEntry*> __FIIterable_1_Windows__CApplicationModel__CCore__CAppListEntry_t;
 #define __FIIterable_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CCore__CAppListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Core::IAppListEntry*>
@@ -2756,7 +2764,7 @@ IVectorView<ABI::Windows::ApplicationModel::Core::AppListEntry*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Core::AppListEntry*> __FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Core::IAppListEntry*>
@@ -2788,7 +2796,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Core::IAppListEntry*>*>
@@ -2820,7 +2828,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntr
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CCore__CAppListEntry ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Core::IAppListEntry*>*>
@@ -2850,7 +2858,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -2879,7 +2887,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -2908,7 +2916,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2937,7 +2945,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2956,9 +2964,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs_FWD_DEFINED__
@@ -2977,15 +2985,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2993,8 +3001,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -3006,8 +3014,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3019,16 +3027,16 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3036,8 +3044,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3049,8 +3057,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -3058,8 +3066,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -3072,9 +3080,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class RandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -3083,9 +3091,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -3100,8 +3108,8 @@ namespace ABI {
             
             typedef enum ProcessorArchitecture : int ProcessorArchitecture;
             
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3113,8 +3121,8 @@ namespace ABI {
             
             typedef enum AddResourcePackageOptions : unsigned int AddResourcePackageOptions;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3122,8 +3130,8 @@ namespace ABI {
             
             typedef enum LimitedAccessFeatureStatus : int LimitedAccessFeatureStatus;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3131,8 +3139,8 @@ namespace ABI {
             
             typedef enum PackageContentGroupState : int PackageContentGroupState;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3140,8 +3148,8 @@ namespace ABI {
             
             typedef enum PackageSignatureKind : int PackageSignatureKind;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3149,8 +3157,8 @@ namespace ABI {
             
             typedef enum PackageUpdateAvailability : int PackageUpdateAvailability;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3158,8 +3166,8 @@ namespace ABI {
             
             typedef enum StartupTaskState : int StartupTaskState;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3167,8 +3175,8 @@ namespace ABI {
             
             typedef struct PackageInstallProgress PackageInstallProgress;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3176,8 +3184,9 @@ namespace ABI {
             
             typedef struct PackageVersion PackageVersion;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -3230,8 +3239,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppDisplayInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3239,8 +3248,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class AppInstallerInfo;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3252,8 +3261,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class LimitedAccessFeatureRequestResult;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3269,8 +3278,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageId;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3279,8 +3288,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class PackageStatus;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3292,8 +3301,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class SuspendingDeferral;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3301,8 +3310,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class SuspendingOperation;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3336,8 +3345,8 @@ namespace ABI {
             
             DEFINE_ENUM_FLAG_OPERATORS(AddResourcePackageOptions)
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -3363,8 +3372,8 @@ namespace ABI {
                 LimitedAccessFeatureStatus_Unknown = 3,
             };
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -3390,8 +3399,8 @@ namespace ABI {
                 PackageContentGroupState_Staged = 3,
             };
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3418,8 +3427,8 @@ namespace ABI {
                 PackageSignatureKind_System = 4,
             };
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3446,8 +3455,8 @@ namespace ABI {
                 PackageUpdateAvailability_Error = 4,
             };
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -3482,8 +3491,8 @@ namespace ABI {
                 
             };
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION >= 0x10000
 
 
@@ -3506,8 +3515,8 @@ namespace ABI {
                 UINT32 PercentComplete;
             };
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -3533,8 +3542,8 @@ namespace ABI {
                 UINT16 Revision;
             };
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3576,8 +3585,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppDisplayInfo=_uuidof(IAppDisplayInfo);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppDisplayInfo_INTERFACE_DEFINED__) */
@@ -3624,8 +3633,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppInfo=_uuidof(IAppInfo);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo_INTERFACE_DEFINED__) */
@@ -3663,8 +3672,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppInstallerInfo=_uuidof(IAppInstallerInfo);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInstallerInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInstallerInfo_INTERFACE_DEFINED__) */
@@ -3698,7 +3707,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCurrentInstance(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE RedirectActivationTo(void) = 0;
                 
@@ -3706,8 +3715,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppInstance=_uuidof(IAppInstance);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInstance;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInstance_INTERFACE_DEFINED__) */
@@ -3756,8 +3765,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IAppInstanceStatics=_uuidof(IAppInstanceStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInstanceStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInstanceStatics_INTERFACE_DEFINED__) */
@@ -3788,15 +3797,15 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DesignModeEnabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IDesignModeStatics=_uuidof(IDesignModeStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIDesignModeStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIDesignModeStatics_INTERFACE_DEFINED__) */
@@ -3827,15 +3836,15 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DesignMode2Enabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IDesignModeStatics2=_uuidof(IDesignModeStatics2);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIDesignModeStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIDesignModeStatics2_INTERFACE_DEFINED__) */
@@ -3870,8 +3879,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IEnteredBackgroundEventArgs=_uuidof(IEnteredBackgroundEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs_INTERFACE_DEFINED__) */
@@ -3922,8 +3931,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IFullTrustProcessLauncherStatics=_uuidof(IFullTrustProcessLauncherStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIFullTrustProcessLauncherStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIFullTrustProcessLauncherStatics_INTERFACE_DEFINED__) */
@@ -3958,8 +3967,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILeavingBackgroundEventArgs=_uuidof(ILeavingBackgroundEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CILeavingBackgroundEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CILeavingBackgroundEventArgs_INTERFACE_DEFINED__) */
@@ -4003,8 +4012,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILimitedAccessFeatureRequestResult=_uuidof(ILimitedAccessFeatureRequestResult);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CILimitedAccessFeatureRequestResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CILimitedAccessFeatureRequestResult_INTERFACE_DEFINED__) */
@@ -4045,8 +4054,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILimitedAccessFeaturesStatics=_uuidof(ILimitedAccessFeaturesStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CILimitedAccessFeaturesStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CILimitedAccessFeaturesStatics_INTERFACE_DEFINED__) */
@@ -4083,7 +4092,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::IStorageFolder * * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFramework(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Dependencies(
                     /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CApplicationModel__CPackage * * value
@@ -4093,8 +4102,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackage=_uuidof(IPackage);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage_INTERFACE_DEFINED__) */
@@ -4137,21 +4146,21 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IUriRuntimeClass * * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsResourcePackage(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBundle(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDevelopmentMode(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IPackage2=_uuidof(IPackage2);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage2_INTERFACE_DEFINED__) */
@@ -4195,8 +4204,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackage3=_uuidof(IPackage3);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage3_INTERFACE_DEFINED__) */
@@ -4230,7 +4239,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::PackageSignatureKind * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOptional(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE VerifyContentIntegrityAsync(
                     /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
@@ -4240,8 +4249,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackage4=_uuidof(IPackage4);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage4_INTERFACE_DEFINED__) */
@@ -4284,11 +4293,11 @@ namespace ABI {
                     ) = 0;
                 /* [overload] */virtual HRESULT STDMETHODCALLTYPE StageContentGroupsWithPriorityAsync(
                     /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * names,
-                    /* [in] */boolean moveToHeadOfQueue,
+                    /* [in] */::boolean moveToHeadOfQueue,
                     /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CPackageContentGroup * * operation
                     ) = 0;
                 virtual HRESULT STDMETHODCALLTYPE SetInUseAsync(
-                    /* [in] */boolean inUse,
+                    /* [in] */::boolean inUse,
                     /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
                     ) = 0;
                 
@@ -4296,8 +4305,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackage5=_uuidof(IPackage5);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage5;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage5_INTERFACE_DEFINED__) */
@@ -4338,12 +4347,54 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackage6=_uuidof(IPackage6);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage6;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage6_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.IPackage7
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Package
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIPackage7_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIPackage7_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IPackage7[] = L"Windows.ApplicationModel.IPackage7";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            /* [object, uuid("86FF8D31-A2E4-45E0-9732-283A6D88FDE1"), exclusiveto, contract] */
+            MIDL_INTERFACE("86FF8D31-A2E4-45E0-9732-283A6D88FDE1")
+            IPackage7 : public IInspectable
+            {
+            public:
+                /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MutableLocation(
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::IStorageFolder * * value
+                    ) = 0;
+                /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EffectiveLocation(
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::IStorageFolder * * value
+                    ) = 0;
+                
+            };
+
+            extern MIDL_CONST_ID IID & IID_IPackage7=_uuidof(IPackage7);
+            
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage7;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage7_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4409,8 +4460,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalog=_uuidof(IPackageCatalog);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalog;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalog_INTERFACE_DEFINED__) */
@@ -4456,8 +4507,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalog2=_uuidof(IPackageCatalog2);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalog2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalog2_INTERFACE_DEFINED__) */
@@ -4496,8 +4547,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalog3=_uuidof(IPackageCatalog3);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalog3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalog3_INTERFACE_DEFINED__) */
@@ -4542,8 +4593,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalog4=_uuidof(IPackageCatalog4);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalog4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalog4_INTERFACE_DEFINED__) */
@@ -4584,8 +4635,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalogAddOptionalPackageResult=_uuidof(IPackageCatalogAddOptionalPackageResult);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddOptionalPackageResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddOptionalPackageResult_INTERFACE_DEFINED__) */
@@ -4619,7 +4670,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::IPackage * * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsComplete(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
                     /* [retval, out] */__RPC__out HRESULT * value
@@ -4629,8 +4680,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalogAddResourcePackageResult=_uuidof(IPackageCatalogAddResourcePackageResult);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddResourcePackageResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogAddResourcePackageResult_INTERFACE_DEFINED__) */
@@ -4671,8 +4722,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalogRemoveOptionalPackagesResult=_uuidof(IPackageCatalogRemoveOptionalPackagesResult);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveOptionalPackagesResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveOptionalPackagesResult_INTERFACE_DEFINED__) */
@@ -4713,8 +4764,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalogRemoveResourcePackagesResult=_uuidof(IPackageCatalogRemoveResourcePackagesResult);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveResourcePackagesResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveResourcePackagesResult_INTERFACE_DEFINED__) */
@@ -4755,8 +4806,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageCatalogStatics=_uuidof(IPackageCatalogStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics_INTERFACE_DEFINED__) */
@@ -4796,15 +4847,15 @@ namespace ABI {
                     /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::PackageContentGroupState * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRequired(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IPackageContentGroup=_uuidof(IPackageContentGroup);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageContentGroup;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageContentGroup_INTERFACE_DEFINED__) */
@@ -4844,7 +4895,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out DOUBLE * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsComplete(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ErrorCode(
                     /* [retval, out] */__RPC__out HRESULT * value
@@ -4853,15 +4904,15 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsContentGroupRequired(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IPackageContentGroupStagingEventArgs=_uuidof(IPackageContentGroupStagingEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStagingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStagingEventArgs_INTERFACE_DEFINED__) */
@@ -4899,8 +4950,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageContentGroupStatics=_uuidof(IPackageContentGroupStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStatics_INTERFACE_DEFINED__) */
@@ -4959,8 +5010,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageId=_uuidof(IPackageId);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageId;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageId_INTERFACE_DEFINED__) */
@@ -5001,8 +5052,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageIdWithMetadata=_uuidof(IPackageIdWithMetadata);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageIdWithMetadata;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageIdWithMetadata_INTERFACE_DEFINED__) */
@@ -5042,7 +5093,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out DOUBLE * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsComplete(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ErrorCode(
                     /* [retval, out] */__RPC__out HRESULT * value
@@ -5052,8 +5103,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageInstallingEventArgs=_uuidof(IPackageInstallingEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageInstallingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageInstallingEventArgs_INTERFACE_DEFINED__) */
@@ -5093,7 +5144,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out DOUBLE * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsComplete(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ErrorCode(
                     /* [retval, out] */__RPC__out HRESULT * value
@@ -5103,8 +5154,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageStagingEventArgs=_uuidof(IPackageStagingEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageStagingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageStagingEventArgs_INTERFACE_DEFINED__) */
@@ -5142,8 +5193,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageStatics=_uuidof(IPackageStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageStatics_INTERFACE_DEFINED__) */
@@ -5174,48 +5225,48 @@ namespace ABI {
             {
             public:
                 virtual HRESULT STDMETHODCALLTYPE VerifyIsOK(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NotAvailable(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PackageOffline(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DataOffline(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Disabled(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NeedsRemediation(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LicenseIssue(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Modified(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Tampered(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DependencyIssue(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Servicing(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DeploymentInProgress(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IPackageStatus=_uuidof(IPackageStatus);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageStatus;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageStatus_INTERFACE_DEFINED__) */
@@ -5246,15 +5297,15 @@ namespace ABI {
             {
             public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPartiallyStaged(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IPackageStatus2=_uuidof(IPackageStatus2);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageStatus2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageStatus2_INTERFACE_DEFINED__) */
@@ -5292,8 +5343,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageStatusChangedEventArgs=_uuidof(IPackageStatusChangedEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageStatusChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageStatusChangedEventArgs_INTERFACE_DEFINED__) */
@@ -5333,7 +5384,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out DOUBLE * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsComplete(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ErrorCode(
                     /* [retval, out] */__RPC__out HRESULT * value
@@ -5343,8 +5394,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageUninstallingEventArgs=_uuidof(IPackageUninstallingEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageUninstallingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageUninstallingEventArgs_INTERFACE_DEFINED__) */
@@ -5385,8 +5436,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageUpdateAvailabilityResult=_uuidof(IPackageUpdateAvailabilityResult);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageUpdateAvailabilityResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageUpdateAvailabilityResult_INTERFACE_DEFINED__) */
@@ -5429,7 +5480,7 @@ namespace ABI {
                     /* [retval, out] */__RPC__out DOUBLE * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsComplete(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ErrorCode(
                     /* [retval, out] */__RPC__out HRESULT * value
@@ -5439,8 +5490,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageUpdatingEventArgs=_uuidof(IPackageUpdatingEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageUpdatingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageUpdatingEventArgs_INTERFACE_DEFINED__) */
@@ -5488,8 +5539,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IPackageWithMetadata=_uuidof(IPackageWithMetadata);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageWithMetadata;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageWithMetadata_INTERFACE_DEFINED__) */
@@ -5534,8 +5585,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IStartupTask=_uuidof(IStartupTask);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIStartupTask;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIStartupTask_INTERFACE_DEFINED__) */
@@ -5577,8 +5628,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IStartupTaskStatics=_uuidof(IStartupTaskStatics);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIStartupTaskStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIStartupTaskStatics_INTERFACE_DEFINED__) */
@@ -5611,8 +5662,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISuspendingDeferral=_uuidof(ISuspendingDeferral);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CISuspendingDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CISuspendingDeferral_INTERFACE_DEFINED__) */
@@ -5647,8 +5698,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISuspendingEventArgs=_uuidof(ISuspendingEventArgs);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CISuspendingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CISuspendingEventArgs_INTERFACE_DEFINED__) */
@@ -5686,8 +5737,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ISuspendingOperation=_uuidof(ISuspendingOperation);
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CISuspendingOperation;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CISuspendingOperation_INTERFACE_DEFINED__) */
@@ -5947,6 +5998,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.ApplicationModel.IPackage4
  *    Windows.ApplicationModel.IPackage5
  *    Windows.ApplicationModel.IPackage6
+ *    Windows.ApplicationModel.IPackage7
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -6520,6 +6572,12 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CIPackage5 __x_ABI_CWindows
 typedef interface __x_ABI_CWindows_CApplicationModel_CIPackage6 __x_ABI_CWindows_CApplicationModel_CIPackage6;
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage6_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIPackage7_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIPackage7_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CIPackage7 __x_ABI_CWindows_CApplicationModel_CIPackage7;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIPackage7_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIPackageCatalog_FWD_DEFINED__
@@ -8655,7 +8713,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CApplicationModel_CPackageInstallProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CApplicationModel__CPackageCatalogAddResourcePackageResult_Windows__CApplicationModel__CPackageInstallProgressVtbl;
 
@@ -9975,7 +10033,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatal
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStagingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageContentGroupStagingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageContentGroupStagingEventArgsVtbl;
 
@@ -10028,7 +10086,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatal
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageInstallingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageInstallingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageInstallingEventArgsVtbl;
 
@@ -10081,7 +10139,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatal
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageStagingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageStagingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStagingEventArgsVtbl;
 
@@ -10134,7 +10192,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatal
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageStatusChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageStatusChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageStatusChangedEventArgsVtbl;
 
@@ -10187,7 +10245,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatal
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageUninstallingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageUninstallingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUninstallingEventArgsVtbl;
 
@@ -10240,7 +10298,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatal
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageUpdatingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageCatalog * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CIPackageUpdatingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CPackageCatalog_Windows__CApplicationModel__CPackageUpdatingEventArgsVtbl;
 
@@ -11082,6 +11140,7 @@ typedef struct __x_ABI_CWindows_CApplicationModel_CPackageInstallProgress __x_AB
 
 
 typedef struct __x_ABI_CWindows_CApplicationModel_CPackageVersion __x_ABI_CWindows_CApplicationModel_CPackageVersion;
+
 
 
 
@@ -13259,6 +13318,106 @@ interface __x_ABI_CWindows_CApplicationModel_CIPackage6
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage6;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage6_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.IPackage7
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Package
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIPackage7_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIPackage7_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IPackage7[] = L"Windows.ApplicationModel.IPackage7";
+/* [object, uuid("86FF8D31-A2E4-45E0-9732-283A6D88FDE1"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CApplicationModel_CIPackage7Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CIPackage7 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CIPackage7 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CIPackage7 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CIPackage7 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CIPackage7 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CIPackage7 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MutableLocation )(
+        __x_ABI_CWindows_CApplicationModel_CIPackage7 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CIStorageFolder * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_EffectiveLocation )(
+        __x_ABI_CWindows_CApplicationModel_CIPackage7 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CIStorageFolder * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CApplicationModel_CIPackage7Vtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CIPackage7
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CIPackage7Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_get_MutableLocation(This,value) \
+    ( (This)->lpVtbl->get_MutableLocation(This,value) )
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage7_get_EffectiveLocation(This,value) \
+    ( (This)->lpVtbl->get_EffectiveLocation(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage7;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackage7_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -16718,6 +16877,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.ApplicationModel.IPackage4
  *    Windows.ApplicationModel.IPackage5
  *    Windows.ApplicationModel.IPackage6
+ *    Windows.ApplicationModel.IPackage7
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

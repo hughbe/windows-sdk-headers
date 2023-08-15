@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.alljoyn.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynAboutData;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutData ABI::Windows::Devices::AllJoyn::IAllJoynAboutData
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutData_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynAboutDataView;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataView ABI::Windows::Devices::AllJoyn::IAllJoynAboutDataView
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataView_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynAboutDataViewStatics;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataViewStatics ABI::Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataViewStatics_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynAcceptSessionJoiner;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoiner ABI::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoiner_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynAcceptSessionJoinerEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgs_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynAcceptSessionJoinerEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgsFactory_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynAuthenticationCompleteEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAuthenticationCompleteEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAuthenticationCompleteEventArgs_FWD_DEFINED__
@@ -379,9 +375,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusAttachment;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment_FWD_DEFINED__
@@ -393,9 +389,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusAttachment2;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment2 ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment2
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment2_FWD_DEFINED__
@@ -407,9 +403,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusAttachmentFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentFactory ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentFactory_FWD_DEFINED__
@@ -421,9 +417,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusAttachmentStateChangedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStateChangedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStateChangedEventArgs_FWD_DEFINED__
@@ -435,9 +431,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusAttachmentStatics;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStatics ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStatics_FWD_DEFINED__
@@ -449,9 +445,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusObject;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObject ABI::Windows::Devices::AllJoyn::IAllJoynBusObject
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObject_FWD_DEFINED__
@@ -463,9 +459,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusObjectFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectFactory ABI::Windows::Devices::AllJoyn::IAllJoynBusObjectFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectFactory_FWD_DEFINED__
@@ -477,9 +473,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusObjectStoppedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgs_FWD_DEFINED__
@@ -491,9 +487,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynBusObjectStoppedEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgsFactory_FWD_DEFINED__
@@ -505,9 +501,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynCredentials;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentials ABI::Windows::Devices::AllJoyn::IAllJoynCredentials
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentials_FWD_DEFINED__
@@ -519,9 +515,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynCredentialsRequestedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsRequestedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsRequestedEventArgs_FWD_DEFINED__
@@ -533,9 +529,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynCredentialsVerificationRequestedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsVerificationRequestedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsVerificationRequestedEventArgs_FWD_DEFINED__
@@ -547,9 +543,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynMessageInfo;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfo ABI::Windows::Devices::AllJoyn::IAllJoynMessageInfo
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfo_FWD_DEFINED__
@@ -561,9 +557,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynMessageInfoFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfoFactory ABI::Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfoFactory_FWD_DEFINED__
@@ -575,9 +571,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynProducer;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducer ABI::Windows::Devices::AllJoyn::IAllJoynProducer
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducer_FWD_DEFINED__
@@ -589,9 +585,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynProducerStoppedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgs_FWD_DEFINED__
@@ -603,9 +599,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynProducerStoppedEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgsFactory_FWD_DEFINED__
@@ -617,9 +613,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynServiceInfo;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfo ABI::Windows::Devices::AllJoyn::IAllJoynServiceInfo
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfo_FWD_DEFINED__
@@ -631,9 +627,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynServiceInfoFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoFactory ABI::Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoFactory_FWD_DEFINED__
@@ -645,9 +641,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynServiceInfoRemovedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgs_FWD_DEFINED__
@@ -659,9 +655,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynServiceInfoRemovedEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgsFactory_FWD_DEFINED__
@@ -673,9 +669,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynServiceInfoStatics;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoStatics ABI::Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoStatics_FWD_DEFINED__
@@ -687,9 +683,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSession;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession ABI::Windows::Devices::AllJoyn::IAllJoynSession
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession_FWD_DEFINED__
@@ -701,9 +697,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionJoinedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgs_FWD_DEFINED__
@@ -715,9 +711,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionJoinedEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgsFactory_FWD_DEFINED__
@@ -729,9 +725,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionLostEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgs_FWD_DEFINED__
@@ -743,9 +739,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionLostEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgsFactory_FWD_DEFINED__
@@ -757,9 +753,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionMemberAddedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgs_FWD_DEFINED__
@@ -771,9 +767,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionMemberAddedEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgsFactory_FWD_DEFINED__
@@ -785,9 +781,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionMemberRemovedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgs_FWD_DEFINED__
@@ -799,9 +795,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionMemberRemovedEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgsFactory_FWD_DEFINED__
@@ -813,9 +809,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynSessionStatics;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionStatics ABI::Windows::Devices::AllJoyn::IAllJoynSessionStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionStatics_FWD_DEFINED__
@@ -827,9 +823,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynStatusStatics;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynStatusStatics ABI::Windows::Devices::AllJoyn::IAllJoynStatusStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynStatusStatics_FWD_DEFINED__
@@ -841,9 +837,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynWatcherStoppedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgs ABI::Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgs_FWD_DEFINED__
@@ -855,9 +851,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 interface IAllJoynWatcherStoppedEventArgsFactory;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgsFactory ABI::Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgsFactory_FWD_DEFINED__
@@ -870,9 +866,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 enum AllJoynAuthenticationMechanism : int;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_USE
@@ -893,7 +889,7 @@ IIterator<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> :
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> __FIIterator_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t;
 #define __FIIterator_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
@@ -923,7 +919,7 @@ IIterable<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> :
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> __FIIterable_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t;
 #define __FIIterable_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
@@ -953,7 +949,7 @@ IVectorView<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> __FIVectorView_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t;
 #define __FIVectorView_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
@@ -983,7 +979,7 @@ IVector<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> : I
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> __FIVector_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t;
 #define __FIVector_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationMechanism ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
@@ -998,9 +994,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynAboutDataView;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1023,7 +1019,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::AllJoynAboutData
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::AllJoynAboutDataView*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::IAllJoynAboutDataView*>
@@ -1055,7 +1051,7 @@ IAsyncOperation<ABI::Windows::Devices::AllJoyn::AllJoynAboutDataView*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::AllJoyn::AllJoynAboutDataView*> __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynAboutDataView ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::AllJoyn::IAllJoynAboutDataView*>
@@ -1071,9 +1067,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynServiceInfo;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1096,7 +1092,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::AllJoynServiceIn
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::AllJoynServiceInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::IAllJoynServiceInfo*>
@@ -1128,7 +1124,7 @@ IAsyncOperation<ABI::Windows::Devices::AllJoyn::AllJoynServiceInfo*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::AllJoyn::AllJoynServiceInfo*> __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynServiceInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::AllJoyn::IAllJoynServiceInfo*>
@@ -1144,9 +1140,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynSession;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1169,7 +1165,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynSession_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynSession ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynSession_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CAllJoyn__CAllJoynSession ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::AllJoyn::IAllJoynSession*>
@@ -1201,7 +1197,7 @@ IAsyncOperation<ABI::Windows::Devices::AllJoyn::AllJoynSession*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::AllJoyn::AllJoynSession*> __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynSession_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynSession ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynSession_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CAllJoyn__CAllJoynSession ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::AllJoyn::IAllJoynSession*>
@@ -1217,9 +1213,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynBusAttachment;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1227,9 +1223,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynAcceptSessionJoinerEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1253,7 +1249,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs*>
@@ -1271,9 +1267,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynAuthenticationCompleteEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1297,7 +1293,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs*>
@@ -1315,9 +1311,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynBusAttachmentStateChangedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1341,7 +1337,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs*>
@@ -1359,9 +1355,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynCredentialsRequestedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1385,7 +1381,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs*>
@@ -1403,9 +1399,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynCredentialsVerificationRequestedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1429,7 +1425,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs*>
@@ -1447,9 +1443,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynSessionJoinedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1473,7 +1469,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynBusAttachment*,ABI::Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs*>
@@ -1490,9 +1486,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynBusObject;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1500,9 +1496,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynBusObjectStoppedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1526,7 +1522,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusObject*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynBusObject*,ABI::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynBusObject*,ABI::Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs*>
@@ -1544,9 +1540,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynSessionLostEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1570,7 +1566,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*,ABI::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynSession*,ABI::Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs*>
@@ -1588,9 +1584,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynSessionMemberAddedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1614,7 +1610,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*,ABI::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynSession*,ABI::Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs*>
@@ -1632,9 +1628,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynSessionMemberRemovedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1658,7 +1654,7 @@ ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::AllJoyn::AllJoynSession*,ABI::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::AllJoyn::IAllJoynSession*,ABI::Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs*>
@@ -1689,7 +1685,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1719,7 +1715,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1749,7 +1745,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1778,7 +1774,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1807,7 +1803,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -1822,8 +1818,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1844,7 +1840,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1874,7 +1870,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1904,7 +1900,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1934,7 +1930,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -1964,7 +1960,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -1978,8 +1974,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Language;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -1987,8 +1983,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage ABI::Windows::Globalization::ILanguage
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -2014,7 +2010,7 @@ IIterator<ABI::Windows::Globalization::Language*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Globalization::Language*> __FIIterator_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Globalization::ILanguage*>
@@ -2046,7 +2042,7 @@ IIterable<ABI::Windows::Globalization::Language*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Globalization::Language*> __FIIterable_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Globalization::ILanguage*>
@@ -2078,7 +2074,7 @@ IVectorView<ABI::Windows::Globalization::Language*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Globalization::Language*> __FIVectorView_1_Windows__CGlobalization__CLanguage_t;
 #define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Globalization::ILanguage*>
@@ -2108,7 +2104,7 @@ IAsyncOperationCompletedHandler<int> : IAsyncOperationCompletedHandler_impl<int>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<int> __FIAsyncOperationCompletedHandler_1_int_t;
 #define __FIAsyncOperationCompletedHandler_1_int ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_int ABI::Windows::Foundation::IAsyncOperationCompletedHandler<INT32>
@@ -2137,7 +2133,7 @@ IAsyncOperation<int> : IAsyncOperation_impl<int>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<int> __FIAsyncOperation_1_int_t;
 #define __FIAsyncOperation_1_int ABI::Windows::Foundation::__FIAsyncOperation_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_int ABI::Windows::Foundation::IAsyncOperation<INT32>
@@ -2166,7 +2162,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2195,7 +2191,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2211,10 +2207,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     enum ChainValidationResult : int;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_USE
@@ -2235,7 +2231,7 @@ IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2265,7 +2261,7 @@ IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2295,7 +2291,7 @@ IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValida
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2311,10 +2307,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2324,10 +2320,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2353,7 +2349,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2385,7 +2381,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2417,7 +2413,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2435,9 +2431,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceWatcher;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher_FWD_DEFINED__
@@ -2446,9 +2442,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceWatcher;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher ABI::Windows::Devices::Enumeration::IDeviceWatcher
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceWatcher_FWD_DEFINED__
@@ -2463,15 +2459,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2479,8 +2475,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2492,16 +2488,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2509,8 +2505,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2528,9 +2524,9 @@ namespace ABI {
                 
                 typedef enum SocketSslErrorSeverity : int SocketSslErrorSeverity;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2540,9 +2536,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2551,9 +2547,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2571,10 +2567,10 @@ namespace ABI {
                     
                     typedef enum ChainValidationResult : int ChainValidationResult;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2587,9 +2583,9 @@ namespace ABI {
                 
                 typedef enum AllJoynAuthenticationMechanism : int AllJoynAuthenticationMechanism;
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2598,9 +2594,9 @@ namespace ABI {
                 
                 typedef enum AllJoynBusAttachmentState : int AllJoynBusAttachmentState;
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2609,9 +2605,9 @@ namespace ABI {
                 
                 typedef enum AllJoynSessionLostReason : int AllJoynSessionLostReason;
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2620,9 +2616,9 @@ namespace ABI {
                 
                 typedef enum AllJoynTrafficType : int AllJoynTrafficType;
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2671,9 +2667,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynAboutData;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2688,9 +2684,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynCredentials;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2700,9 +2696,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynMessageInfo;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2710,9 +2706,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynProducerStoppedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2721,9 +2717,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynServiceInfoRemovedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2737,9 +2733,9 @@ namespace ABI {
         namespace Devices {
             namespace AllJoyn {
                 class AllJoynWatcherStoppedEventArgs;
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2792,9 +2788,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2821,9 +2817,9 @@ namespace ABI {
                     AllJoynBusAttachmentState_Disconnecting = 3,
                 };
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2852,9 +2848,9 @@ namespace ABI {
                     AllJoynSessionLostReason_Other = 5,
                 };
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2881,9 +2877,9 @@ namespace ABI {
                     AllJoynTrafficType_RawReliable = 4,
                 };
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2912,10 +2908,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DefaultAppName(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2979,9 +2975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynAboutData=_uuidof(IAllJoynAboutData);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutData;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutData_INTERFACE_DEFINED__) */
@@ -3065,9 +3061,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynAboutDataView=_uuidof(IAllJoynAboutDataView);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataView;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataView_INTERFACE_DEFINED__) */
@@ -3116,9 +3112,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynAboutDataViewStatics=_uuidof(IAllJoynAboutDataViewStatics);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataViewStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAboutDataViewStatics_INTERFACE_DEFINED__) */
@@ -3152,9 +3148,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynAcceptSessionJoiner=_uuidof(IAllJoynAcceptSessionJoiner);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoiner;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoiner_INTERFACE_DEFINED__) */
@@ -3195,10 +3191,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Devices::AllJoyn::AllJoynTrafficType * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SamePhysicalNode(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SameNetwork(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Accept(void) = 0;
                     
@@ -3206,9 +3202,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynAcceptSessionJoinerEventArgs=_uuidof(IAllJoynAcceptSessionJoinerEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgs_INTERFACE_DEFINED__) */
@@ -3252,9 +3248,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynAcceptSessionJoinerEventArgsFactory=_uuidof(IAllJoynAcceptSessionJoinerEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgsFactory_INTERFACE_DEFINED__) */
@@ -3292,16 +3288,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynAuthenticationCompleteEventArgs=_uuidof(IAllJoynAuthenticationCompleteEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAuthenticationCompleteEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAuthenticationCompleteEventArgs_INTERFACE_DEFINED__) */
@@ -3386,9 +3382,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusAttachment=_uuidof(IAllJoynBusAttachment);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment_INTERFACE_DEFINED__) */
@@ -3447,9 +3443,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusAttachment2=_uuidof(IAllJoynBusAttachment2);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment2_INTERFACE_DEFINED__) */
@@ -3489,9 +3485,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusAttachmentFactory=_uuidof(IAllJoynBusAttachmentFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentFactory_INTERFACE_DEFINED__) */
@@ -3533,9 +3529,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusAttachmentStateChangedEventArgs=_uuidof(IAllJoynBusAttachmentStateChangedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3578,9 +3574,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusAttachmentStatics=_uuidof(IAllJoynBusAttachmentStatics);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStatics_INTERFACE_DEFINED__) */
@@ -3634,9 +3630,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusObject=_uuidof(IAllJoynBusObject);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObject;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObject_INTERFACE_DEFINED__) */
@@ -3681,9 +3677,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusObjectFactory=_uuidof(IAllJoynBusObjectFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectFactory_INTERFACE_DEFINED__) */
@@ -3722,9 +3718,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusObjectStoppedEventArgs=_uuidof(IAllJoynBusObjectStoppedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgs_INTERFACE_DEFINED__) */
@@ -3764,9 +3760,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynBusObjectStoppedEventArgsFactory=_uuidof(IAllJoynBusObjectStoppedEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -3823,9 +3819,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynCredentials=_uuidof(IAllJoynCredentials);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentials;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentials_INTERFACE_DEFINED__) */
@@ -3876,9 +3872,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynCredentialsRequestedEventArgs=_uuidof(IAllJoynCredentialsRequestedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3936,9 +3932,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynCredentialsVerificationRequestedEventArgs=_uuidof(IAllJoynCredentialsVerificationRequestedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsVerificationRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsVerificationRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -3977,9 +3973,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynMessageInfo=_uuidof(IAllJoynMessageInfo);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfo;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfo_INTERFACE_DEFINED__) */
@@ -4019,9 +4015,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynMessageInfoFactory=_uuidof(IAllJoynMessageInfoFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynMessageInfoFactory_INTERFACE_DEFINED__) */
@@ -4057,9 +4053,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynProducer=_uuidof(IAllJoynProducer);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducer;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducer_INTERFACE_DEFINED__) */
@@ -4098,9 +4094,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynProducerStoppedEventArgs=_uuidof(IAllJoynProducerStoppedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgs_INTERFACE_DEFINED__) */
@@ -4140,9 +4136,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynProducerStoppedEventArgsFactory=_uuidof(IAllJoynProducerStoppedEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynProducerStoppedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -4187,9 +4183,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynServiceInfo=_uuidof(IAllJoynServiceInfo);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfo;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfo_INTERFACE_DEFINED__) */
@@ -4231,9 +4227,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynServiceInfoFactory=_uuidof(IAllJoynServiceInfoFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoFactory_INTERFACE_DEFINED__) */
@@ -4272,9 +4268,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynServiceInfoRemovedEventArgs=_uuidof(IAllJoynServiceInfoRemovedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -4314,9 +4310,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynServiceInfoRemovedEventArgsFactory=_uuidof(IAllJoynServiceInfoRemovedEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoRemovedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -4356,9 +4352,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynServiceInfoStatics=_uuidof(IAllJoynServiceInfoStatics);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynServiceInfoStatics_INTERFACE_DEFINED__) */
@@ -4425,9 +4421,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSession=_uuidof(IAllJoynSession);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession_INTERFACE_DEFINED__) */
@@ -4466,9 +4462,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionJoinedEventArgs=_uuidof(IAllJoynSessionJoinedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgs_INTERFACE_DEFINED__) */
@@ -4508,9 +4504,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionJoinedEventArgsFactory=_uuidof(IAllJoynSessionJoinedEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -4549,9 +4545,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionLostEventArgs=_uuidof(IAllJoynSessionLostEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgs_INTERFACE_DEFINED__) */
@@ -4591,9 +4587,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionLostEventArgsFactory=_uuidof(IAllJoynSessionLostEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgsFactory_INTERFACE_DEFINED__) */
@@ -4632,9 +4628,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionMemberAddedEventArgs=_uuidof(IAllJoynSessionMemberAddedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgs_INTERFACE_DEFINED__) */
@@ -4674,9 +4670,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionMemberAddedEventArgsFactory=_uuidof(IAllJoynSessionMemberAddedEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -4715,9 +4711,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionMemberRemovedEventArgs=_uuidof(IAllJoynSessionMemberRemovedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -4757,9 +4753,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionMemberRemovedEventArgsFactory=_uuidof(IAllJoynSessionMemberRemovedEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -4804,9 +4800,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynSessionStatics=_uuidof(IAllJoynSessionStatics);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionStatics_INTERFACE_DEFINED__) */
@@ -4896,9 +4892,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynStatusStatics=_uuidof(IAllJoynStatusStatics);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynStatusStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynStatusStatics_INTERFACE_DEFINED__) */
@@ -4937,9 +4933,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynWatcherStoppedEventArgs=_uuidof(IAllJoynWatcherStoppedEventArgs);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgs_INTERFACE_DEFINED__) */
@@ -4979,9 +4975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAllJoynWatcherStoppedEventArgsFactory=_uuidof(IAllJoynWatcherStoppedEventArgsFactory);
                 
-            } /* Windows */
+            } /* AllJoyn */
         } /* Devices */
-    } /* AllJoyn */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynWatcherStoppedEventArgsFactory_INTERFACE_DEFINED__) */
@@ -6559,7 +6555,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAcceptSessionJoinerEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAcceptSessionJoinerEventArgsVtbl;
 
@@ -6612,7 +6608,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAuthenticationCompleteEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynAuthenticationCompleteEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynAuthenticationCompleteEventArgsVtbl;
 
@@ -6665,7 +6661,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachmentStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynBusAttachmentStateChangedEventArgsVtbl;
 
@@ -6718,7 +6714,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsRequestedEventArgsVtbl;
 
@@ -6771,7 +6767,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsVerificationRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynCredentialsVerificationRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynCredentialsVerificationRequestedEventArgsVtbl;
 
@@ -6824,7 +6820,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusAttachment * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionJoinedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusAttachment_Windows__CDevices__CAllJoyn__CAllJoynSessionJoinedEventArgsVtbl;
 
@@ -6877,7 +6873,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusO
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObject * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObject * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynBusObjectStoppedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynBusObject_Windows__CDevices__CAllJoyn__CAllJoynBusObjectStoppedEventArgsVtbl;
 
@@ -6930,7 +6926,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSess
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionLostEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionLostEventArgsVtbl;
 
@@ -6983,7 +6979,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSess
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberAddedEventArgsVtbl;
 
@@ -7036,7 +7032,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSess
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CAllJoyn_CIAllJoynSessionMemberRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CAllJoyn__CAllJoynSession_Windows__CDevices__CAllJoyn__CAllJoynSessionMemberRemovedEventArgsVtbl;
 

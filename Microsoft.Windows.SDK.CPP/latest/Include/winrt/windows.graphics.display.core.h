@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.display.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,10 +141,10 @@ namespace ABI {
             namespace Display {
                 namespace Core {
                     interface IHdmiDisplayInformation;
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformation ABI::Windows::Graphics::Display::Core::IHdmiDisplayInformation
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformation_FWD_DEFINED__
@@ -157,10 +157,10 @@ namespace ABI {
             namespace Display {
                 namespace Core {
                     interface IHdmiDisplayInformationStatics;
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformationStatics ABI::Windows::Graphics::Display::Core::IHdmiDisplayInformationStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformationStatics_FWD_DEFINED__
@@ -173,10 +173,10 @@ namespace ABI {
             namespace Display {
                 namespace Core {
                     interface IHdmiDisplayMode;
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode ABI::Windows::Graphics::Display::Core::IHdmiDisplayMode
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode_FWD_DEFINED__
@@ -189,10 +189,10 @@ namespace ABI {
             namespace Display {
                 namespace Core {
                     interface IHdmiDisplayMode2;
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode2 ABI::Windows::Graphics::Display::Core::IHdmiDisplayMode2
 
 #endif // ____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode2_FWD_DEFINED__
@@ -206,10 +206,10 @@ namespace ABI {
             namespace Display {
                 namespace Core {
                     class HdmiDisplayMode;
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -232,7 +232,7 @@ IIterator<ABI::Windows::Graphics::Display::Core::HdmiDisplayMode*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Display::Core::HdmiDisplayMode*> __FIIterator_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode_t;
 #define __FIIterator_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Display::Core::IHdmiDisplayMode*>
@@ -264,7 +264,7 @@ IIterable<ABI::Windows::Graphics::Display::Core::HdmiDisplayMode*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Display::Core::HdmiDisplayMode*> __FIIterable_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode_t;
 #define __FIIterable_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Display::Core::IHdmiDisplayMode*>
@@ -296,7 +296,7 @@ IVectorView<ABI::Windows::Graphics::Display::Core::HdmiDisplayMode*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Display::Core::HdmiDisplayMode*> __FIVectorView_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode_t;
 #define __FIVectorView_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayMode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Display::Core::IHdmiDisplayMode*>
@@ -313,10 +313,10 @@ namespace ABI {
             namespace Display {
                 namespace Core {
                     class HdmiDisplayInformation;
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -340,7 +340,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Display::Core::HdmiDisplayInformation
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Display::Core::HdmiDisplayInformation*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Display::Core::IHdmiDisplayInformation*,IInspectable*>
@@ -370,7 +370,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -399,7 +399,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -417,8 +417,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -435,10 +435,10 @@ namespace ABI {
                     
                     typedef enum HdmiDisplayColorSpace : int HdmiDisplayColorSpace;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -448,10 +448,10 @@ namespace ABI {
                     
                     typedef enum HdmiDisplayHdrOption : int HdmiDisplayHdrOption;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -461,10 +461,10 @@ namespace ABI {
                     
                     typedef enum HdmiDisplayPixelEncoding : int HdmiDisplayPixelEncoding;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -474,10 +474,10 @@ namespace ABI {
                     
                     typedef struct HdmiDisplayHdr2086Metadata HdmiDisplayHdr2086Metadata;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -519,10 +519,10 @@ namespace ABI {
                         HdmiDisplayColorSpace_BT709 = 3,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -554,10 +554,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -585,10 +585,10 @@ namespace ABI {
                         HdmiDisplayPixelEncoding_Ycc420 = 3,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -624,10 +624,10 @@ namespace ABI {
                         UINT16 MaxFrameAverageLightLevel;
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -692,10 +692,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHdmiDisplayInformation=_uuidof(IHdmiDisplayInformation);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformation;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformation_INTERFACE_DEFINED__) */
@@ -735,10 +735,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IHdmiDisplayInformationStatics=_uuidof(IHdmiDisplayInformationStatics);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformationStatics_INTERFACE_DEFINED__) */
@@ -780,14 +780,14 @@ namespace ABI {
                             /* [retval, out] */__RPC__out DOUBLE * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StereoEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BitsPerPixel(
                             /* [retval, out] */__RPC__out UINT16 * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE IsEqual(
                             /* [in] */__RPC__in_opt ABI::Windows::Graphics::Display::Core::IHdmiDisplayMode * mode,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ColorSpace(
                             /* [retval, out] */__RPC__out ABI::Windows::Graphics::Display::Core::HdmiDisplayColorSpace * value
@@ -796,23 +796,23 @@ namespace ABI {
                             /* [retval, out] */__RPC__out ABI::Windows::Graphics::Display::Core::HdmiDisplayPixelEncoding * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSdrLuminanceSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSmpte2084Supported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Is2086MetadataSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHdmiDisplayMode=_uuidof(IHdmiDisplayMode);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode_INTERFACE_DEFINED__) */
@@ -845,17 +845,17 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDolbyVisionLowLatencySupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IHdmiDisplayMode2=_uuidof(IHdmiDisplayMode2);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* Display */
-    } /* Core */} /* ABI */
+                } /* Core */
+            } /* Display */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayMode2_INTERFACE_DEFINED__) */
@@ -1240,7 +1240,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdm
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformation * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CDisplay_CCore_CIHdmiDisplayInformation * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CDisplay__CCore__CHdmiDisplayInformation_IInspectableVtbl;
 

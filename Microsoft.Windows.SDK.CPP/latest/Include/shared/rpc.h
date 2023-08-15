@@ -164,7 +164,7 @@ RpcMacSetYieldInfo(
 #endif // _KRPCENV_
 
 #pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #define RpcTryExcept \
     __try \
@@ -201,7 +201,7 @@ RpcMacSetYieldInfo(
 #define RpcExceptionCode() GetExceptionCode()
 #define RpcAbnormalTermination() AbnormalTermination()
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // __RPC_MAC__

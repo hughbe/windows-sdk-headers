@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -57,16 +57,20 @@ struct WINRT_EBO InteractionTracker :
     using Windows::UI::Composition::Interactions::IInteractionTracker::TryUpdatePositionBy;
     static Windows::UI::Composition::Interactions::InteractionTracker Create(Windows::UI::Composition::Compositor const& compositor);
     static Windows::UI::Composition::Interactions::InteractionTracker CreateWithOwner(Windows::UI::Composition::Compositor const& compositor, Windows::UI::Composition::Interactions::IInteractionTrackerOwner const& owner);
+    static void SetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes const& axisMode);
+    static Windows::UI::Composition::Interactions::InteractionBindingAxisModes GetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2);
 };
 
 struct WINRT_EBO InteractionTrackerCustomAnimationStateEnteredArgs :
-    Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs
+    Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs,
+    impl::require<InteractionTrackerCustomAnimationStateEnteredArgs, Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>
 {
     InteractionTrackerCustomAnimationStateEnteredArgs(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO InteractionTrackerIdleStateEnteredArgs :
-    Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs
+    Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs,
+    impl::require<InteractionTrackerIdleStateEnteredArgs, Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>
 {
     InteractionTrackerIdleStateEnteredArgs(std::nullptr_t) noexcept {}
 };
@@ -108,13 +112,14 @@ struct WINRT_EBO InteractionTrackerInertiaRestingValue :
 
 struct WINRT_EBO InteractionTrackerInertiaStateEnteredArgs :
     Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs,
-    impl::require<InteractionTrackerInertiaStateEnteredArgs, Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2>
+    impl::require<InteractionTrackerInertiaStateEnteredArgs, Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2, Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>
 {
     InteractionTrackerInertiaStateEnteredArgs(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO InteractionTrackerInteractingStateEnteredArgs :
-    Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs
+    Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs,
+    impl::require<InteractionTrackerInteractingStateEnteredArgs, Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>
 {
     InteractionTrackerInteractingStateEnteredArgs(std::nullptr_t) noexcept {}
 };
@@ -155,6 +160,7 @@ struct WINRT_EBO VisualInteractionSource :
 {
     VisualInteractionSource(std::nullptr_t) noexcept {}
     static Windows::UI::Composition::Interactions::VisualInteractionSource Create(Windows::UI::Composition::Visual const& source);
+    static Windows::UI::Composition::Interactions::VisualInteractionSource CreateFromIVisualElement(Windows::UI::Composition::IVisualElement const& source);
 };
 
 }

@@ -6,11 +6,13 @@
            xmlns:t="http://schemas.microsoft.com/appx/manifest/types"
            xmlns:f="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
            xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+           xmlns:uap8="http://schemas.microsoft.com/appx/manifest/uap/windows10/8"
            >
 
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/types"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/foundation/windows10"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"/>
+  <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/8"/>
 
   <xs:element name="Extension" substitutionGroup="f:ExtensionChoice">
     <xs:complexType>
@@ -47,6 +49,7 @@
     <xs:complexType>
       <xs:all>
         <xs:element name="ImportRedirectionTable" type="t:ST_DllFile" minOccurs="0"/>
+        <xs:element ref="uap8:ActiveCodePage" minOccurs="0"/>
       </xs:all>
     </xs:complexType>
   </xs:element>

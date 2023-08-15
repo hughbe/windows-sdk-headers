@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -19,6 +19,8 @@ struct IMouseCapabilities;
 struct IMouseDevice;
 struct IMouseDeviceStatics;
 struct IMouseEventArgs;
+struct IPenDevice;
+struct IPenDeviceStatics;
 struct IPointerDevice;
 struct IPointerDevice2;
 struct IPointerDeviceStatics;
@@ -27,6 +29,7 @@ struct KeyboardCapabilities;
 struct MouseCapabilities;
 struct MouseDevice;
 struct MouseEventArgs;
+struct PenDevice;
 struct PointerDevice;
 struct TouchCapabilities;
 struct MouseDelta;
@@ -41,6 +44,8 @@ template <> struct category<Windows::Devices::Input::IMouseCapabilities>{ using 
 template <> struct category<Windows::Devices::Input::IMouseDevice>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Input::IMouseDeviceStatics>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Input::IMouseEventArgs>{ using type = interface_category; };
+template <> struct category<Windows::Devices::Input::IPenDevice>{ using type = interface_category; };
+template <> struct category<Windows::Devices::Input::IPenDeviceStatics>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Input::IPointerDevice>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Input::IPointerDevice2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Input::IPointerDeviceStatics>{ using type = interface_category; };
@@ -49,6 +54,7 @@ template <> struct category<Windows::Devices::Input::KeyboardCapabilities>{ usin
 template <> struct category<Windows::Devices::Input::MouseCapabilities>{ using type = class_category; };
 template <> struct category<Windows::Devices::Input::MouseDevice>{ using type = class_category; };
 template <> struct category<Windows::Devices::Input::MouseEventArgs>{ using type = class_category; };
+template <> struct category<Windows::Devices::Input::PenDevice>{ using type = class_category; };
 template <> struct category<Windows::Devices::Input::PointerDevice>{ using type = class_category; };
 template <> struct category<Windows::Devices::Input::TouchCapabilities>{ using type = class_category; };
 template <> struct category<Windows::Devices::Input::PointerDeviceType>{ using type = enum_category; };
@@ -59,6 +65,8 @@ template <> struct name<Windows::Devices::Input::IMouseCapabilities>{ static con
 template <> struct name<Windows::Devices::Input::IMouseDevice>{ static constexpr auto & value{ L"Windows.Devices.Input.IMouseDevice" }; };
 template <> struct name<Windows::Devices::Input::IMouseDeviceStatics>{ static constexpr auto & value{ L"Windows.Devices.Input.IMouseDeviceStatics" }; };
 template <> struct name<Windows::Devices::Input::IMouseEventArgs>{ static constexpr auto & value{ L"Windows.Devices.Input.IMouseEventArgs" }; };
+template <> struct name<Windows::Devices::Input::IPenDevice>{ static constexpr auto & value{ L"Windows.Devices.Input.IPenDevice" }; };
+template <> struct name<Windows::Devices::Input::IPenDeviceStatics>{ static constexpr auto & value{ L"Windows.Devices.Input.IPenDeviceStatics" }; };
 template <> struct name<Windows::Devices::Input::IPointerDevice>{ static constexpr auto & value{ L"Windows.Devices.Input.IPointerDevice" }; };
 template <> struct name<Windows::Devices::Input::IPointerDevice2>{ static constexpr auto & value{ L"Windows.Devices.Input.IPointerDevice2" }; };
 template <> struct name<Windows::Devices::Input::IPointerDeviceStatics>{ static constexpr auto & value{ L"Windows.Devices.Input.IPointerDeviceStatics" }; };
@@ -67,6 +75,7 @@ template <> struct name<Windows::Devices::Input::KeyboardCapabilities>{ static c
 template <> struct name<Windows::Devices::Input::MouseCapabilities>{ static constexpr auto & value{ L"Windows.Devices.Input.MouseCapabilities" }; };
 template <> struct name<Windows::Devices::Input::MouseDevice>{ static constexpr auto & value{ L"Windows.Devices.Input.MouseDevice" }; };
 template <> struct name<Windows::Devices::Input::MouseEventArgs>{ static constexpr auto & value{ L"Windows.Devices.Input.MouseEventArgs" }; };
+template <> struct name<Windows::Devices::Input::PenDevice>{ static constexpr auto & value{ L"Windows.Devices.Input.PenDevice" }; };
 template <> struct name<Windows::Devices::Input::PointerDevice>{ static constexpr auto & value{ L"Windows.Devices.Input.PointerDevice" }; };
 template <> struct name<Windows::Devices::Input::TouchCapabilities>{ static constexpr auto & value{ L"Windows.Devices.Input.TouchCapabilities" }; };
 template <> struct name<Windows::Devices::Input::PointerDeviceType>{ static constexpr auto & value{ L"Windows.Devices.Input.PointerDeviceType" }; };
@@ -77,6 +86,8 @@ template <> struct guid_storage<Windows::Devices::Input::IMouseCapabilities>{ st
 template <> struct guid_storage<Windows::Devices::Input::IMouseDevice>{ static constexpr guid value{ 0x88EDF458,0xF2C8,0x49F4,{ 0xBE,0x1F,0xC2,0x56,0xB3,0x88,0xBC,0x11 } }; };
 template <> struct guid_storage<Windows::Devices::Input::IMouseDeviceStatics>{ static constexpr guid value{ 0x484A9045,0x6D70,0x49DB,{ 0x8E,0x68,0x46,0xFF,0xBD,0x17,0xD3,0x8D } }; };
 template <> struct guid_storage<Windows::Devices::Input::IMouseEventArgs>{ static constexpr guid value{ 0xF625AA5D,0x2354,0x4CC7,{ 0x92,0x30,0x96,0x94,0x1C,0x96,0x9F,0xDE } }; };
+template <> struct guid_storage<Windows::Devices::Input::IPenDevice>{ static constexpr guid value{ 0x31856EBA,0xA738,0x5A8C,{ 0xB8,0xF6,0xF9,0x7E,0xF6,0x8D,0x18,0xEF } }; };
+template <> struct guid_storage<Windows::Devices::Input::IPenDeviceStatics>{ static constexpr guid value{ 0x9DFBBE01,0x0966,0x5180,{ 0xBC,0xB4,0xB8,0x50,0x60,0xE3,0x94,0x79 } }; };
 template <> struct guid_storage<Windows::Devices::Input::IPointerDevice>{ static constexpr guid value{ 0x93C9BAFC,0xEBCB,0x467E,{ 0x82,0xC6,0x27,0x6F,0xEA,0xE3,0x6B,0x5A } }; };
 template <> struct guid_storage<Windows::Devices::Input::IPointerDevice2>{ static constexpr guid value{ 0xF8A6D2A0,0xC484,0x489F,{ 0xAE,0x3E,0x30,0xD2,0xEE,0x1F,0xFD,0x3E } }; };
 template <> struct guid_storage<Windows::Devices::Input::IPointerDeviceStatics>{ static constexpr guid value{ 0xD8B89AA1,0xD1C6,0x416E,{ 0xBD,0x8D,0x57,0x90,0x91,0x4D,0xC5,0x63 } }; };
@@ -85,6 +96,7 @@ template <> struct default_interface<Windows::Devices::Input::KeyboardCapabiliti
 template <> struct default_interface<Windows::Devices::Input::MouseCapabilities>{ using type = Windows::Devices::Input::IMouseCapabilities; };
 template <> struct default_interface<Windows::Devices::Input::MouseDevice>{ using type = Windows::Devices::Input::IMouseDevice; };
 template <> struct default_interface<Windows::Devices::Input::MouseEventArgs>{ using type = Windows::Devices::Input::IMouseEventArgs; };
+template <> struct default_interface<Windows::Devices::Input::PenDevice>{ using type = Windows::Devices::Input::IPenDevice; };
 template <> struct default_interface<Windows::Devices::Input::PointerDevice>{ using type = Windows::Devices::Input::IPointerDevice; };
 template <> struct default_interface<Windows::Devices::Input::TouchCapabilities>{ using type = Windows::Devices::Input::ITouchCapabilities; };
 
@@ -116,6 +128,16 @@ template <> struct abi<Windows::Devices::Input::IMouseDeviceStatics>{ struct typ
 template <> struct abi<Windows::Devices::Input::IMouseEventArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_MouseDelta(struct struct_Windows_Devices_Input_MouseDelta* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Devices::Input::IPenDevice>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_PenId(winrt::guid* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Devices::Input::IPenDeviceStatics>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetFromPointerId(uint32_t pointerId, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::Input::IPointerDevice>{ struct type : IInspectable
@@ -186,6 +208,20 @@ struct consume_Windows_Devices_Input_IMouseEventArgs
     Windows::Devices::Input::MouseDelta MouseDelta() const;
 };
 template <> struct consume<Windows::Devices::Input::IMouseEventArgs> { template <typename D> using type = consume_Windows_Devices_Input_IMouseEventArgs<D>; };
+
+template <typename D>
+struct consume_Windows_Devices_Input_IPenDevice
+{
+    winrt::guid PenId() const;
+};
+template <> struct consume<Windows::Devices::Input::IPenDevice> { template <typename D> using type = consume_Windows_Devices_Input_IPenDevice<D>; };
+
+template <typename D>
+struct consume_Windows_Devices_Input_IPenDeviceStatics
+{
+    Windows::Devices::Input::PenDevice GetFromPointerId(uint32_t pointerId) const;
+};
+template <> struct consume<Windows::Devices::Input::IPenDeviceStatics> { template <typename D> using type = consume_Windows_Devices_Input_IPenDeviceStatics<D>; };
 
 template <typename D>
 struct consume_Windows_Devices_Input_IPointerDevice

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -63,6 +63,7 @@ struct SoftwareBitmap;
 WINRT_EXPORT namespace winrt::Windows::UI {
 
 struct Color;
+struct UIContext;
 
 }
 
@@ -166,6 +167,7 @@ struct CacheMode;
 struct GeneralTransform;
 struct Projection;
 struct RectangleGeometry;
+struct Shadow;
 struct Transform;
 struct XamlLight;
 
@@ -612,6 +614,7 @@ struct ITriggerActionFactory;
 struct ITriggerBase;
 struct ITriggerBaseFactory;
 struct IUIElement;
+struct IUIElement10;
 struct IUIElement2;
 struct IUIElement3;
 struct IUIElement4;
@@ -625,6 +628,7 @@ struct IUIElementOverrides7;
 struct IUIElementOverrides8;
 struct IUIElementOverrides9;
 struct IUIElementStatics;
+struct IUIElementStatics10;
 struct IUIElementStatics2;
 struct IUIElementStatics3;
 struct IUIElementStatics4;
@@ -633,6 +637,8 @@ struct IUIElementStatics6;
 struct IUIElementStatics7;
 struct IUIElementStatics8;
 struct IUIElementStatics9;
+struct IUIElementWeakCollection;
+struct IUIElementWeakCollectionFactory;
 struct IUnhandledExceptionEventArgs;
 struct IVector3Transition;
 struct IVector3TransitionFactory;
@@ -650,8 +656,11 @@ struct IVisualTransitionFactory;
 struct IWindow;
 struct IWindow2;
 struct IWindow3;
+struct IWindow4;
 struct IWindowCreatedEventArgs;
 struct IWindowStatics;
+struct IXamlRoot;
+struct IXamlRootChangedEventArgs;
 struct AdaptiveTrigger;
 struct Application;
 struct ApplicationInitializationCallbackParams;
@@ -712,6 +721,7 @@ struct TriggerActionCollection;
 struct TriggerBase;
 struct TriggerCollection;
 struct UIElement;
+struct UIElementWeakCollection;
 struct UnhandledExceptionEventArgs;
 struct Vector3Transition;
 struct VisualState;
@@ -721,6 +731,8 @@ struct VisualStateManager;
 struct VisualTransition;
 struct Window;
 struct WindowCreatedEventArgs;
+struct XamlRoot;
+struct XamlRootChangedEventArgs;
 struct CornerRadius;
 struct Duration;
 struct GridLength;
@@ -879,6 +891,7 @@ template <> struct category<Windows::UI::Xaml::ITriggerActionFactory>{ using typ
 template <> struct category<Windows::UI::Xaml::ITriggerBase>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::ITriggerBaseFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElement>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::IUIElement10>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElement2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElement3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElement4>{ using type = interface_category; };
@@ -892,6 +905,7 @@ template <> struct category<Windows::UI::Xaml::IUIElementOverrides7>{ using type
 template <> struct category<Windows::UI::Xaml::IUIElementOverrides8>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElementOverrides9>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElementStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::IUIElementStatics10>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElementStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElementStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElementStatics4>{ using type = interface_category; };
@@ -900,6 +914,8 @@ template <> struct category<Windows::UI::Xaml::IUIElementStatics6>{ using type =
 template <> struct category<Windows::UI::Xaml::IUIElementStatics7>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElementStatics8>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUIElementStatics9>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::IUIElementWeakCollection>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::IUIElementWeakCollectionFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IUnhandledExceptionEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IVector3Transition>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IVector3TransitionFactory>{ using type = interface_category; };
@@ -917,8 +933,11 @@ template <> struct category<Windows::UI::Xaml::IVisualTransitionFactory>{ using 
 template <> struct category<Windows::UI::Xaml::IWindow>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IWindow2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IWindow3>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::IWindow4>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IWindowCreatedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::IWindowStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::IXamlRoot>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::IXamlRootChangedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::AdaptiveTrigger>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Application>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::ApplicationInitializationCallbackParams>{ using type = class_category; };
@@ -979,6 +998,7 @@ template <> struct category<Windows::UI::Xaml::TriggerActionCollection>{ using t
 template <> struct category<Windows::UI::Xaml::TriggerBase>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::TriggerCollection>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::UIElement>{ using type = class_category; };
+template <> struct category<Windows::UI::Xaml::UIElementWeakCollection>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::UnhandledExceptionEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Vector3Transition>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::VisualState>{ using type = class_category; };
@@ -988,6 +1008,8 @@ template <> struct category<Windows::UI::Xaml::VisualStateManager>{ using type =
 template <> struct category<Windows::UI::Xaml::VisualTransition>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::Window>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::WindowCreatedEventArgs>{ using type = class_category; };
+template <> struct category<Windows::UI::Xaml::XamlRoot>{ using type = class_category; };
+template <> struct category<Windows::UI::Xaml::XamlRootChangedEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::Xaml::ApplicationHighContrastAdjustment>{ using type = enum_category; };
 template <> struct category<Windows::UI::Xaml::ApplicationRequiresPointerMode>{ using type = enum_category; };
 template <> struct category<Windows::UI::Xaml::ApplicationTheme>{ using type = enum_category; };
@@ -1171,6 +1193,7 @@ template <> struct name<Windows::UI::Xaml::ITriggerActionFactory>{ static conste
 template <> struct name<Windows::UI::Xaml::ITriggerBase>{ static constexpr auto & value{ L"Windows.UI.Xaml.ITriggerBase" }; };
 template <> struct name<Windows::UI::Xaml::ITriggerBaseFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.ITriggerBaseFactory" }; };
 template <> struct name<Windows::UI::Xaml::IUIElement>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElement" }; };
+template <> struct name<Windows::UI::Xaml::IUIElement10>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElement10" }; };
 template <> struct name<Windows::UI::Xaml::IUIElement2>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElement2" }; };
 template <> struct name<Windows::UI::Xaml::IUIElement3>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElement3" }; };
 template <> struct name<Windows::UI::Xaml::IUIElement4>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElement4" }; };
@@ -1184,6 +1207,7 @@ template <> struct name<Windows::UI::Xaml::IUIElementOverrides7>{ static constex
 template <> struct name<Windows::UI::Xaml::IUIElementOverrides8>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementOverrides8" }; };
 template <> struct name<Windows::UI::Xaml::IUIElementOverrides9>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementOverrides9" }; };
 template <> struct name<Windows::UI::Xaml::IUIElementStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics" }; };
+template <> struct name<Windows::UI::Xaml::IUIElementStatics10>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics10" }; };
 template <> struct name<Windows::UI::Xaml::IUIElementStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics2" }; };
 template <> struct name<Windows::UI::Xaml::IUIElementStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics3" }; };
 template <> struct name<Windows::UI::Xaml::IUIElementStatics4>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics4" }; };
@@ -1192,6 +1216,8 @@ template <> struct name<Windows::UI::Xaml::IUIElementStatics6>{ static constexpr
 template <> struct name<Windows::UI::Xaml::IUIElementStatics7>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics7" }; };
 template <> struct name<Windows::UI::Xaml::IUIElementStatics8>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics8" }; };
 template <> struct name<Windows::UI::Xaml::IUIElementStatics9>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementStatics9" }; };
+template <> struct name<Windows::UI::Xaml::IUIElementWeakCollection>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementWeakCollection" }; };
+template <> struct name<Windows::UI::Xaml::IUIElementWeakCollectionFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUIElementWeakCollectionFactory" }; };
 template <> struct name<Windows::UI::Xaml::IUnhandledExceptionEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.IUnhandledExceptionEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::IVector3Transition>{ static constexpr auto & value{ L"Windows.UI.Xaml.IVector3Transition" }; };
 template <> struct name<Windows::UI::Xaml::IVector3TransitionFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.IVector3TransitionFactory" }; };
@@ -1209,8 +1235,11 @@ template <> struct name<Windows::UI::Xaml::IVisualTransitionFactory>{ static con
 template <> struct name<Windows::UI::Xaml::IWindow>{ static constexpr auto & value{ L"Windows.UI.Xaml.IWindow" }; };
 template <> struct name<Windows::UI::Xaml::IWindow2>{ static constexpr auto & value{ L"Windows.UI.Xaml.IWindow2" }; };
 template <> struct name<Windows::UI::Xaml::IWindow3>{ static constexpr auto & value{ L"Windows.UI.Xaml.IWindow3" }; };
+template <> struct name<Windows::UI::Xaml::IWindow4>{ static constexpr auto & value{ L"Windows.UI.Xaml.IWindow4" }; };
 template <> struct name<Windows::UI::Xaml::IWindowCreatedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.IWindowCreatedEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::IWindowStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.IWindowStatics" }; };
+template <> struct name<Windows::UI::Xaml::IXamlRoot>{ static constexpr auto & value{ L"Windows.UI.Xaml.IXamlRoot" }; };
+template <> struct name<Windows::UI::Xaml::IXamlRootChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.IXamlRootChangedEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::AdaptiveTrigger>{ static constexpr auto & value{ L"Windows.UI.Xaml.AdaptiveTrigger" }; };
 template <> struct name<Windows::UI::Xaml::Application>{ static constexpr auto & value{ L"Windows.UI.Xaml.Application" }; };
 template <> struct name<Windows::UI::Xaml::ApplicationInitializationCallbackParams>{ static constexpr auto & value{ L"Windows.UI.Xaml.ApplicationInitializationCallbackParams" }; };
@@ -1271,6 +1300,7 @@ template <> struct name<Windows::UI::Xaml::TriggerActionCollection>{ static cons
 template <> struct name<Windows::UI::Xaml::TriggerBase>{ static constexpr auto & value{ L"Windows.UI.Xaml.TriggerBase" }; };
 template <> struct name<Windows::UI::Xaml::TriggerCollection>{ static constexpr auto & value{ L"Windows.UI.Xaml.TriggerCollection" }; };
 template <> struct name<Windows::UI::Xaml::UIElement>{ static constexpr auto & value{ L"Windows.UI.Xaml.UIElement" }; };
+template <> struct name<Windows::UI::Xaml::UIElementWeakCollection>{ static constexpr auto & value{ L"Windows.UI.Xaml.UIElementWeakCollection" }; };
 template <> struct name<Windows::UI::Xaml::UnhandledExceptionEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.UnhandledExceptionEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Vector3Transition>{ static constexpr auto & value{ L"Windows.UI.Xaml.Vector3Transition" }; };
 template <> struct name<Windows::UI::Xaml::VisualState>{ static constexpr auto & value{ L"Windows.UI.Xaml.VisualState" }; };
@@ -1280,6 +1310,8 @@ template <> struct name<Windows::UI::Xaml::VisualStateManager>{ static constexpr
 template <> struct name<Windows::UI::Xaml::VisualTransition>{ static constexpr auto & value{ L"Windows.UI.Xaml.VisualTransition" }; };
 template <> struct name<Windows::UI::Xaml::Window>{ static constexpr auto & value{ L"Windows.UI.Xaml.Window" }; };
 template <> struct name<Windows::UI::Xaml::WindowCreatedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.WindowCreatedEventArgs" }; };
+template <> struct name<Windows::UI::Xaml::XamlRoot>{ static constexpr auto & value{ L"Windows.UI.Xaml.XamlRoot" }; };
+template <> struct name<Windows::UI::Xaml::XamlRootChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.XamlRootChangedEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::ApplicationHighContrastAdjustment>{ static constexpr auto & value{ L"Windows.UI.Xaml.ApplicationHighContrastAdjustment" }; };
 template <> struct name<Windows::UI::Xaml::ApplicationRequiresPointerMode>{ static constexpr auto & value{ L"Windows.UI.Xaml.ApplicationRequiresPointerMode" }; };
 template <> struct name<Windows::UI::Xaml::ApplicationTheme>{ static constexpr auto & value{ L"Windows.UI.Xaml.ApplicationTheme" }; };
@@ -1463,6 +1495,7 @@ template <> struct guid_storage<Windows::UI::Xaml::ITriggerActionFactory>{ stati
 template <> struct guid_storage<Windows::UI::Xaml::ITriggerBase>{ static constexpr guid value{ 0xE7EA222F,0xDEE6,0x4393,{ 0xA8,0xB2,0x89,0x23,0xD6,0x41,0xF3,0x95 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::ITriggerBaseFactory>{ static constexpr guid value{ 0x6A3B9E57,0xFC5D,0x42D0,{ 0x8C,0xB9,0xCA,0x50,0x66,0x7A,0xF7,0x46 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElement>{ static constexpr guid value{ 0x676D0BE9,0xB65C,0x41C6,{ 0xBA,0x40,0x58,0xCF,0x87,0xF2,0x01,0xC1 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::IUIElement10>{ static constexpr guid value{ 0xD531C629,0xAD2C,0x5F6B,{ 0xAD,0xCF,0xFB,0x87,0x28,0x7D,0x18,0xD7 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElement2>{ static constexpr guid value{ 0x676D0BF9,0xB66C,0x41D6,{ 0xBA,0x50,0x58,0xCF,0x87,0xF2,0x01,0xD1 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElement3>{ static constexpr guid value{ 0xBC2B28F1,0x26F2,0x4AAB,{ 0xB2,0x56,0x3B,0x53,0x50,0x88,0x1E,0x37 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElement4>{ static constexpr guid value{ 0x69145CD4,0x199A,0x4657,{ 0x9E,0x57,0xE9,0x9E,0x8F,0x13,0x67,0x12 } }; };
@@ -1476,6 +1509,7 @@ template <> struct guid_storage<Windows::UI::Xaml::IUIElementOverrides7>{ static
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementOverrides8>{ static constexpr guid value{ 0x4A5A645C,0x548D,0x48CF,{ 0xB9,0x98,0x78,0x44,0xD6,0xE2,0x35,0xA1 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementOverrides9>{ static constexpr guid value{ 0x9A6E5973,0x6D63,0x54F2,{ 0x90,0xFA,0x62,0x81,0x3B,0x20,0xB7,0xB9 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics>{ static constexpr guid value{ 0x58D3573B,0xF52C,0x45BE,{ 0x98,0x8B,0xA5,0x86,0x95,0x64,0x87,0x3C } }; };
+template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics10>{ static constexpr guid value{ 0x60D25362,0x4B3E,0x53DA,{ 0x8B,0x78,0x38,0xDB,0x94,0xAE,0x8F,0x26 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics2>{ static constexpr guid value{ 0x58D3574B,0xF53C,0x45BE,{ 0x98,0x9B,0xA5,0x86,0x95,0x64,0x87,0x4C } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics3>{ static constexpr guid value{ 0xD1F87ADE,0xECA1,0x4561,{ 0xA3,0x2B,0x64,0x60,0x1B,0x4E,0x05,0x97 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics4>{ static constexpr guid value{ 0x1D157D61,0x16AF,0x411F,{ 0xB7,0x74,0x27,0x23,0x75,0xA4,0xAC,0x2C } }; };
@@ -1484,6 +1518,8 @@ template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics6>{ static c
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics7>{ static constexpr guid value{ 0xDA9B4493,0xA695,0x4145,{ 0xAE,0x93,0x88,0x80,0x24,0x39,0x6A,0x0F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics8>{ static constexpr guid value{ 0x17BE3487,0x4875,0x4915,{ 0xB0,0xB1,0xA4,0xC0,0xF8,0x51,0xDF,0x3F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUIElementStatics9>{ static constexpr guid value{ 0x71467E77,0x8CA3,0x5ED7,{ 0x95,0xDB,0xD5,0x1C,0xDA,0xD7,0x7F,0x81 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::IUIElementWeakCollection>{ static constexpr guid value{ 0x10341223,0xE66D,0x519E,{ 0xAC,0xF8,0x55,0x6B,0xD2,0x44,0xEA,0xC3 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::IUIElementWeakCollectionFactory>{ static constexpr guid value{ 0x57242561,0x188A,0x5304,{ 0x87,0x92,0xA4,0x3F,0x35,0xD9,0x0F,0x99 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IUnhandledExceptionEventArgs>{ static constexpr guid value{ 0x7230269C,0x054E,0x4CF3,{ 0x86,0xC5,0xBE,0x90,0xEB,0x68,0x63,0xD5 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IVector3Transition>{ static constexpr guid value{ 0xD2E209DC,0xC4A2,0x5101,{ 0x9A,0x68,0xFA,0x01,0x50,0x50,0x55,0x89 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IVector3TransitionFactory>{ static constexpr guid value{ 0xC3706699,0xEE9B,0x50DC,{ 0x88,0x07,0xF5,0x1D,0x5A,0x75,0x94,0x95 } }; };
@@ -1501,8 +1537,11 @@ template <> struct guid_storage<Windows::UI::Xaml::IVisualTransitionFactory>{ st
 template <> struct guid_storage<Windows::UI::Xaml::IWindow>{ static constexpr guid value{ 0x3276167D,0xC9F6,0x462D,{ 0x9D,0xE2,0xAE,0x4C,0x1F,0xD8,0xC2,0xE5 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IWindow2>{ static constexpr guid value{ 0xD384759F,0x34F6,0x4482,{ 0x84,0x35,0xF5,0x52,0xF9,0xB2,0x4C,0xC8 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IWindow3>{ static constexpr guid value{ 0xB70BDC9D,0x1C35,0x462A,{ 0x9B,0x97,0x80,0x8D,0x5A,0xF9,0xF2,0x8E } }; };
+template <> struct guid_storage<Windows::UI::Xaml::IWindow4>{ static constexpr guid value{ 0xBFE1B8CE,0x6C40,0x50F9,{ 0x85,0x4C,0x70,0x21,0xD2,0xBC,0x9D,0xE6 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IWindowCreatedEventArgs>{ static constexpr guid value{ 0x31B71470,0xFEFF,0x4654,{ 0xAF,0x48,0x9B,0x39,0x8A,0xB5,0x77,0x2B } }; };
 template <> struct guid_storage<Windows::UI::Xaml::IWindowStatics>{ static constexpr guid value{ 0x93328409,0x4EA1,0x4AFA,{ 0x83,0xDC,0x0C,0x4E,0x73,0xE8,0x8B,0xB1 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::IXamlRoot>{ static constexpr guid value{ 0x34B50756,0x1696,0x5B6D,{ 0x8E,0x9B,0xC7,0x14,0x64,0xCC,0xAD,0x5A } }; };
+template <> struct guid_storage<Windows::UI::Xaml::IXamlRootChangedEventArgs>{ static constexpr guid value{ 0x92D71C21,0xD23C,0x5A17,{ 0xBC,0xB8,0x00,0x15,0x04,0xB6,0xBB,0x19 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::ApplicationInitializationCallback>{ static constexpr guid value{ 0xB6351C55,0xC284,0x46E4,{ 0x83,0x10,0xFB,0x09,0x67,0xFA,0xB7,0x6F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::BindingFailedEventHandler>{ static constexpr guid value{ 0x136B1782,0x54BA,0x420D,{ 0xA1,0xAA,0x82,0x82,0x87,0x21,0xCD,0xE6 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::CreateDefaultValueCallback>{ static constexpr guid value{ 0xD6ECB12C,0x15B5,0x4EC8,{ 0xB9,0x5C,0xCD,0xD2,0x08,0xF0,0x81,0x53 } }; };
@@ -1582,6 +1621,7 @@ template <> struct default_interface<Windows::UI::Xaml::TriggerActionCollection>
 template <> struct default_interface<Windows::UI::Xaml::TriggerBase>{ using type = Windows::UI::Xaml::ITriggerBase; };
 template <> struct default_interface<Windows::UI::Xaml::TriggerCollection>{ using type = Windows::Foundation::Collections::IVector<Windows::UI::Xaml::TriggerBase>; };
 template <> struct default_interface<Windows::UI::Xaml::UIElement>{ using type = Windows::UI::Xaml::IUIElement; };
+template <> struct default_interface<Windows::UI::Xaml::UIElementWeakCollection>{ using type = Windows::UI::Xaml::IUIElementWeakCollection; };
 template <> struct default_interface<Windows::UI::Xaml::UnhandledExceptionEventArgs>{ using type = Windows::UI::Xaml::IUnhandledExceptionEventArgs; };
 template <> struct default_interface<Windows::UI::Xaml::Vector3Transition>{ using type = Windows::UI::Xaml::IVector3Transition; };
 template <> struct default_interface<Windows::UI::Xaml::VisualState>{ using type = Windows::UI::Xaml::IVisualState; };
@@ -1591,6 +1631,8 @@ template <> struct default_interface<Windows::UI::Xaml::VisualStateManager>{ usi
 template <> struct default_interface<Windows::UI::Xaml::VisualTransition>{ using type = Windows::UI::Xaml::IVisualTransition; };
 template <> struct default_interface<Windows::UI::Xaml::Window>{ using type = Windows::UI::Xaml::IWindow; };
 template <> struct default_interface<Windows::UI::Xaml::WindowCreatedEventArgs>{ using type = Windows::UI::Xaml::IWindowCreatedEventArgs; };
+template <> struct default_interface<Windows::UI::Xaml::XamlRoot>{ using type = Windows::UI::Xaml::IXamlRoot; };
+template <> struct default_interface<Windows::UI::Xaml::XamlRootChangedEventArgs>{ using type = Windows::UI::Xaml::IXamlRootChangedEventArgs; };
 
 template <> struct abi<Windows::UI::Xaml::IAdaptiveTrigger>{ struct type : IInspectable
 {
@@ -2642,6 +2684,17 @@ template <> struct abi<Windows::UI::Xaml::IUIElement>{ struct type : IInspectabl
     virtual int32_t WINRT_CALL UpdateLayout() noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::IUIElement10>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ActualOffset(Windows::Foundation::Numerics::float3* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_ActualSize(Windows::Foundation::Numerics::float2* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_XamlRoot(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_XamlRoot(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_UIContext(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Shadow(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Shadow(void* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::IUIElement2>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_CompositeMode(Windows::UI::Xaml::Media::ElementCompositeMode* value) noexcept = 0;
@@ -2845,6 +2898,11 @@ template <> struct abi<Windows::UI::Xaml::IUIElementStatics>{ struct type : IIns
     virtual int32_t WINRT_CALL get_PointerCapturesProperty(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::IUIElementStatics10>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ShadowProperty(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::IUIElementStatics2>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_CompositeModeProperty(void** value) noexcept = 0;
@@ -2908,6 +2966,15 @@ template <> struct abi<Windows::UI::Xaml::IUIElementStatics8>{ struct type : IIn
 template <> struct abi<Windows::UI::Xaml::IUIElementStatics9>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_CanBeScrollAnchorProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::IUIElementWeakCollection>{ struct type : IInspectable
+{
+};};
+
+template <> struct abi<Windows::UI::Xaml::IUIElementWeakCollectionFactory>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::IUnhandledExceptionEventArgs>{ struct type : IInspectable
@@ -3044,6 +3111,11 @@ template <> struct abi<Windows::UI::Xaml::IWindow3>{ struct type : IInspectable
     virtual int32_t WINRT_CALL get_Compositor(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::IWindow4>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_UIContext(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::IWindowCreatedEventArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Window(void** value) noexcept = 0;
@@ -3052,6 +3124,21 @@ template <> struct abi<Windows::UI::Xaml::IWindowCreatedEventArgs>{ struct type 
 template <> struct abi<Windows::UI::Xaml::IWindowStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Current(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::IXamlRoot>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Content(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Size(Windows::Foundation::Size* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_RasterizationScale(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsHostVisible(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_UIContext(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL add_Changed(void* handler, winrt::event_token* token) noexcept = 0;
+    virtual int32_t WINRT_CALL remove_Changed(winrt::event_token token) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::IXamlRootChangedEventArgs>{ struct type : IInspectable
+{
 };};
 
 template <> struct abi<Windows::UI::Xaml::ApplicationInitializationCallback>{ struct type : IUnknown
@@ -4534,6 +4621,19 @@ struct consume_Windows_UI_Xaml_IUIElement
 template <> struct consume<Windows::UI::Xaml::IUIElement> { template <typename D> using type = consume_Windows_UI_Xaml_IUIElement<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_IUIElement10
+{
+    Windows::Foundation::Numerics::float3 ActualOffset() const;
+    Windows::Foundation::Numerics::float2 ActualSize() const;
+    Windows::UI::Xaml::XamlRoot XamlRoot() const;
+    void XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const;
+    Windows::UI::UIContext UIContext() const;
+    Windows::UI::Xaml::Media::Shadow Shadow() const;
+    void Shadow(Windows::UI::Xaml::Media::Shadow const& value) const;
+};
+template <> struct consume<Windows::UI::Xaml::IUIElement10> { template <typename D> using type = consume_Windows_UI_Xaml_IUIElement10<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_IUIElement2
 {
     Windows::UI::Xaml::Media::ElementCompositeMode CompositeMode() const;
@@ -4793,6 +4893,13 @@ struct consume_Windows_UI_Xaml_IUIElementStatics
 template <> struct consume<Windows::UI::Xaml::IUIElementStatics> { template <typename D> using type = consume_Windows_UI_Xaml_IUIElementStatics<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_IUIElementStatics10
+{
+    Windows::UI::Xaml::DependencyProperty ShadowProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::IUIElementStatics10> { template <typename D> using type = consume_Windows_UI_Xaml_IUIElementStatics10<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_IUIElementStatics2
 {
     Windows::UI::Xaml::DependencyProperty CompositeModeProperty() const;
@@ -4872,6 +4979,19 @@ struct consume_Windows_UI_Xaml_IUIElementStatics9
     Windows::UI::Xaml::DependencyProperty CanBeScrollAnchorProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::IUIElementStatics9> { template <typename D> using type = consume_Windows_UI_Xaml_IUIElementStatics9<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_IUIElementWeakCollection
+{
+};
+template <> struct consume<Windows::UI::Xaml::IUIElementWeakCollection> { template <typename D> using type = consume_Windows_UI_Xaml_IUIElementWeakCollection<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_IUIElementWeakCollectionFactory
+{
+    Windows::UI::Xaml::UIElementWeakCollection CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+};
+template <> struct consume<Windows::UI::Xaml::IUIElementWeakCollectionFactory> { template <typename D> using type = consume_Windows_UI_Xaml_IUIElementWeakCollectionFactory<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs
@@ -5054,6 +5174,13 @@ struct consume_Windows_UI_Xaml_IWindow3
 template <> struct consume<Windows::UI::Xaml::IWindow3> { template <typename D> using type = consume_Windows_UI_Xaml_IWindow3<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_IWindow4
+{
+    Windows::UI::UIContext UIContext() const;
+};
+template <> struct consume<Windows::UI::Xaml::IWindow4> { template <typename D> using type = consume_Windows_UI_Xaml_IWindow4<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_IWindowCreatedEventArgs
 {
     Windows::UI::Xaml::Window Window() const;
@@ -5066,6 +5193,27 @@ struct consume_Windows_UI_Xaml_IWindowStatics
     Windows::UI::Xaml::Window Current() const;
 };
 template <> struct consume<Windows::UI::Xaml::IWindowStatics> { template <typename D> using type = consume_Windows_UI_Xaml_IWindowStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_IXamlRoot
+{
+    Windows::UI::Xaml::UIElement Content() const;
+    Windows::Foundation::Size Size() const;
+    double RasterizationScale() const;
+    bool IsHostVisible() const;
+    Windows::UI::UIContext UIContext() const;
+    winrt::event_token Changed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const& handler) const;
+    using Changed_revoker = impl::event_revoker<Windows::UI::Xaml::IXamlRoot, &impl::abi_t<Windows::UI::Xaml::IXamlRoot>::remove_Changed>;
+    Changed_revoker Changed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const& handler) const;
+    void Changed(winrt::event_token const& token) const noexcept;
+};
+template <> struct consume<Windows::UI::Xaml::IXamlRoot> { template <typename D> using type = consume_Windows_UI_Xaml_IXamlRoot<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_IXamlRootChangedEventArgs
+{
+};
+template <> struct consume<Windows::UI::Xaml::IXamlRootChangedEventArgs> { template <typename D> using type = consume_Windows_UI_Xaml_IXamlRootChangedEventArgs<D>; };
 
 struct struct_Windows_UI_Xaml_CornerRadius
 {

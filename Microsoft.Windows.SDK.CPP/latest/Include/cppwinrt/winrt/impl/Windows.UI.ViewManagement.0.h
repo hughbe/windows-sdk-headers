@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,6 +14,7 @@ struct DeviceInformation;
 WINRT_EXPORT namespace winrt::Windows::UI {
 
 struct Color;
+struct UIContext;
 
 }
 
@@ -26,6 +27,13 @@ struct ICoreWindow;
 WINRT_EXPORT namespace winrt::Windows::UI::Popups {
 
 enum class Placement;
+
+}
+
+WINRT_EXPORT namespace winrt::Windows::UI::WindowManagement {
+
+struct DisplayRegion;
+struct WindowingEnvironment;
 
 }
 
@@ -152,6 +160,8 @@ struct IApplicationView;
 struct IApplicationView2;
 struct IApplicationView3;
 struct IApplicationView4;
+struct IApplicationView7;
+struct IApplicationView9;
 struct IApplicationViewConsolidatedEventArgs;
 struct IApplicationViewConsolidatedEventArgs2;
 struct IApplicationViewFullscreenStatics;
@@ -161,16 +171,19 @@ struct IApplicationViewScalingStatics;
 struct IApplicationViewStatics;
 struct IApplicationViewStatics2;
 struct IApplicationViewStatics3;
+struct IApplicationViewStatics4;
 struct IApplicationViewSwitcherStatics;
 struct IApplicationViewSwitcherStatics2;
 struct IApplicationViewSwitcherStatics3;
 struct IApplicationViewTitleBar;
 struct IApplicationViewTransferContext;
 struct IApplicationViewTransferContextStatics;
+struct IApplicationViewWithContext;
 struct IInputPane;
 struct IInputPane2;
 struct IInputPaneControl;
 struct IInputPaneStatics;
+struct IInputPaneStatics2;
 struct IInputPaneVisibilityEventArgs;
 struct IProjectionManagerStatics;
 struct IProjectionManagerStatics2;
@@ -181,6 +194,8 @@ struct IUISettings;
 struct IUISettings2;
 struct IUISettings3;
 struct IUISettings4;
+struct IUISettings5;
+struct IUISettingsAutoHideScrollBarsChangedEventArgs;
 struct IUIViewSettings;
 struct IUIViewSettingsStatics;
 struct IViewModePreferences;
@@ -199,6 +214,7 @@ struct ProjectionManager;
 struct StatusBar;
 struct StatusBarProgressIndicator;
 struct UISettings;
+struct UISettingsAutoHideScrollBarsChangedEventArgs;
 struct UIViewSettings;
 struct ViewModePreferences;
 
@@ -213,6 +229,8 @@ template <> struct category<Windows::UI::ViewManagement::IApplicationView>{ usin
 template <> struct category<Windows::UI::ViewManagement::IApplicationView2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationView3>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationView4>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::IApplicationView7>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::IApplicationView9>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewFullscreenStatics>{ using type = interface_category; };
@@ -222,16 +240,19 @@ template <> struct category<Windows::UI::ViewManagement::IApplicationViewScaling
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewStatics3>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::IApplicationViewStatics4>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewTitleBar>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewTransferContext>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IApplicationViewTransferContextStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::IApplicationViewWithContext>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IInputPane>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IInputPane2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IInputPaneControl>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IInputPaneStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::IInputPaneStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IProjectionManagerStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IProjectionManagerStatics2>{ using type = interface_category; };
@@ -242,6 +263,8 @@ template <> struct category<Windows::UI::ViewManagement::IUISettings>{ using typ
 template <> struct category<Windows::UI::ViewManagement::IUISettings2>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IUISettings3>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IUISettings4>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::IUISettings5>{ using type = interface_category; };
+template <> struct category<Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IUIViewSettings>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IUIViewSettingsStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::ViewManagement::IViewModePreferences>{ using type = interface_category; };
@@ -260,6 +283,7 @@ template <> struct category<Windows::UI::ViewManagement::ProjectionManager>{ usi
 template <> struct category<Windows::UI::ViewManagement::StatusBar>{ using type = class_category; };
 template <> struct category<Windows::UI::ViewManagement::StatusBarProgressIndicator>{ using type = class_category; };
 template <> struct category<Windows::UI::ViewManagement::UISettings>{ using type = class_category; };
+template <> struct category<Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>{ using type = class_category; };
 template <> struct category<Windows::UI::ViewManagement::UIViewSettings>{ using type = class_category; };
 template <> struct category<Windows::UI::ViewManagement::ViewModePreferences>{ using type = class_category; };
 template <> struct category<Windows::UI::ViewManagement::ApplicationViewBoundsMode>{ using type = enum_category; };
@@ -280,6 +304,8 @@ template <> struct name<Windows::UI::ViewManagement::IApplicationView>{ static c
 template <> struct name<Windows::UI::ViewManagement::IApplicationView2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationView2" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationView3>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationView3" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationView4>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationView4" }; };
+template <> struct name<Windows::UI::ViewManagement::IApplicationView7>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationView7" }; };
+template <> struct name<Windows::UI::ViewManagement::IApplicationView9>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationView9" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs2" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewFullscreenStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewFullscreenStatics" }; };
@@ -289,16 +315,19 @@ template <> struct name<Windows::UI::ViewManagement::IApplicationViewScalingStat
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewStatics" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewStatics2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewStatics2" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewStatics3>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewStatics3" }; };
+template <> struct name<Windows::UI::ViewManagement::IApplicationViewStatics4>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewStatics4" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewSwitcherStatics" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics3>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewTitleBar>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewTitleBar" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewTransferContext>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewTransferContext" }; };
 template <> struct name<Windows::UI::ViewManagement::IApplicationViewTransferContextStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewTransferContextStatics" }; };
+template <> struct name<Windows::UI::ViewManagement::IApplicationViewWithContext>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IApplicationViewWithContext" }; };
 template <> struct name<Windows::UI::ViewManagement::IInputPane>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IInputPane" }; };
 template <> struct name<Windows::UI::ViewManagement::IInputPane2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IInputPane2" }; };
 template <> struct name<Windows::UI::ViewManagement::IInputPaneControl>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IInputPaneControl" }; };
 template <> struct name<Windows::UI::ViewManagement::IInputPaneStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IInputPaneStatics" }; };
+template <> struct name<Windows::UI::ViewManagement::IInputPaneStatics2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IInputPaneStatics2" }; };
 template <> struct name<Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs" }; };
 template <> struct name<Windows::UI::ViewManagement::IProjectionManagerStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IProjectionManagerStatics" }; };
 template <> struct name<Windows::UI::ViewManagement::IProjectionManagerStatics2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IProjectionManagerStatics2" }; };
@@ -309,6 +338,8 @@ template <> struct name<Windows::UI::ViewManagement::IUISettings>{ static conste
 template <> struct name<Windows::UI::ViewManagement::IUISettings2>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IUISettings2" }; };
 template <> struct name<Windows::UI::ViewManagement::IUISettings3>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IUISettings3" }; };
 template <> struct name<Windows::UI::ViewManagement::IUISettings4>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IUISettings4" }; };
+template <> struct name<Windows::UI::ViewManagement::IUISettings5>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IUISettings5" }; };
+template <> struct name<Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs" }; };
 template <> struct name<Windows::UI::ViewManagement::IUIViewSettings>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IUIViewSettings" }; };
 template <> struct name<Windows::UI::ViewManagement::IUIViewSettingsStatics>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IUIViewSettingsStatics" }; };
 template <> struct name<Windows::UI::ViewManagement::IViewModePreferences>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.IViewModePreferences" }; };
@@ -327,6 +358,7 @@ template <> struct name<Windows::UI::ViewManagement::ProjectionManager>{ static 
 template <> struct name<Windows::UI::ViewManagement::StatusBar>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.StatusBar" }; };
 template <> struct name<Windows::UI::ViewManagement::StatusBarProgressIndicator>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.StatusBarProgressIndicator" }; };
 template <> struct name<Windows::UI::ViewManagement::UISettings>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.UISettings" }; };
+template <> struct name<Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs" }; };
 template <> struct name<Windows::UI::ViewManagement::UIViewSettings>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.UIViewSettings" }; };
 template <> struct name<Windows::UI::ViewManagement::ViewModePreferences>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.ViewModePreferences" }; };
 template <> struct name<Windows::UI::ViewManagement::ApplicationViewBoundsMode>{ static constexpr auto & value{ L"Windows.UI.ViewManagement.ApplicationViewBoundsMode" }; };
@@ -347,6 +379,8 @@ template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationView>{ 
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationView2>{ static constexpr guid value{ 0xE876B196,0xA545,0x40DC,{ 0xB5,0x94,0x45,0x0C,0xBA,0x68,0xCC,0x00 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationView3>{ static constexpr guid value{ 0x903C9CE5,0x793A,0x4FDF,{ 0xA2,0xB2,0xAF,0x1A,0xC2,0x1E,0x31,0x08 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationView4>{ static constexpr guid value{ 0x15E5CBEC,0x9E0F,0x46B5,{ 0xBC,0x3F,0x9B,0xF6,0x53,0xE7,0x4B,0x5E } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationView7>{ static constexpr guid value{ 0xA0369647,0x5FAF,0x5AA6,{ 0x9C,0x38,0xBE,0xFB,0xB1,0x2A,0x07,0x1E } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationView9>{ static constexpr guid value{ 0x9C6516F9,0x021A,0x5F01,{ 0x93,0xE5,0x9B,0xDA,0xD2,0x64,0x75,0x74 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs>{ static constexpr guid value{ 0x514449EC,0x7EA2,0x4DE7,{ 0xA6,0xA6,0x7D,0xFB,0xAA,0xEB,0xB6,0xFB } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs2>{ static constexpr guid value{ 0x1C199ECC,0x6DC1,0x40F4,{ 0xAF,0xEE,0x07,0xD9,0xEA,0x29,0x64,0x30 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewFullscreenStatics>{ static constexpr guid value{ 0xBC792EBD,0x64FE,0x4B65,{ 0xA0,0xC0,0x90,0x1C,0xE2,0xB6,0x86,0x36 } }; };
@@ -356,16 +390,19 @@ template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewSca
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewStatics>{ static constexpr guid value{ 0x010A6306,0xC433,0x44E5,{ 0xA9,0xF2,0xBD,0x84,0xD4,0x03,0x0A,0x95 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewStatics2>{ static constexpr guid value{ 0xAF338AE5,0xCF64,0x423C,{ 0x85,0xE5,0xF3,0xE7,0x24,0x48,0xFB,0x23 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewStatics3>{ static constexpr guid value{ 0xA28D7594,0x8C41,0x4E13,{ 0x97,0x19,0x51,0x64,0x79,0x6F,0xE4,0xC7 } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewStatics4>{ static constexpr guid value{ 0x08FD8D33,0x2611,0x5336,{ 0xA3,0x15,0xD9,0x8E,0x63,0x66,0xC9,0xDB } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics>{ static constexpr guid value{ 0x975F2F1E,0xE656,0x4C5E,{ 0xA0,0xA1,0x71,0x7C,0x6F,0xFA,0x7D,0x64 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics2>{ static constexpr guid value{ 0x60E995CD,0x4FC2,0x48C4,{ 0xB8,0xE3,0x39,0x5F,0x2B,0x9F,0x0F,0xC1 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics3>{ static constexpr guid value{ 0x92059420,0x80A7,0x486D,{ 0xB2,0x1F,0xC7,0xA4,0xA2,0x42,0xA3,0x83 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewTitleBar>{ static constexpr guid value{ 0x00924AC0,0x932B,0x4A6B,{ 0x9C,0x4B,0xDC,0x38,0xC8,0x24,0x78,0xCE } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewTransferContext>{ static constexpr guid value{ 0x8574BC63,0x3C17,0x408E,{ 0x94,0x08,0x8A,0x1A,0x9E,0xA8,0x1B,0xFA } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewTransferContextStatics>{ static constexpr guid value{ 0x15A89D92,0xDD79,0x4B0B,{ 0xBC,0x47,0xD5,0xF1,0x95,0xF1,0x46,0x61 } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::IApplicationViewWithContext>{ static constexpr guid value{ 0xBD55D512,0x9DC1,0x44FC,{ 0x85,0x01,0x66,0x66,0x25,0xDF,0x60,0xDC } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IInputPane>{ static constexpr guid value{ 0x640ADA70,0x06F3,0x4C87,{ 0xA6,0x78,0x98,0x29,0xC9,0x12,0x7C,0x28 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IInputPane2>{ static constexpr guid value{ 0x8A6B3F26,0x7090,0x4793,{ 0x94,0x4C,0xC3,0xF2,0xCD,0xE2,0x62,0x76 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IInputPaneControl>{ static constexpr guid value{ 0x088BB24F,0x962F,0x489D,{ 0xAA,0x6E,0xC6,0xBE,0x1A,0x0A,0x6E,0x52 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IInputPaneStatics>{ static constexpr guid value{ 0x95F4AF3A,0xEF47,0x424A,{ 0x97,0x41,0xFD,0x28,0x15,0xEB,0xA2,0xBD } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::IInputPaneStatics2>{ static constexpr guid value{ 0x1B63529B,0xD9EC,0x4531,{ 0x84,0x45,0x71,0xBA,0xB9,0xFB,0x82,0x8E } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs>{ static constexpr guid value{ 0xD243E016,0xD907,0x4FCC,{ 0xBB,0x8D,0xF7,0x7B,0xAA,0x50,0x28,0xF1 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IProjectionManagerStatics>{ static constexpr guid value{ 0xB65F913D,0xE2F0,0x4FFD,{ 0xBA,0x95,0x34,0x24,0x16,0x47,0xE4,0x5C } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IProjectionManagerStatics2>{ static constexpr guid value{ 0xF33D2F43,0x2749,0x4CDE,{ 0xB9,0x77,0xC0,0xC4,0x1E,0x74,0x15,0xD1 } }; };
@@ -376,6 +413,8 @@ template <> struct guid_storage<Windows::UI::ViewManagement::IUISettings>{ stati
 template <> struct guid_storage<Windows::UI::ViewManagement::IUISettings2>{ static constexpr guid value{ 0xBAD82401,0x2721,0x44F9,{ 0xBB,0x91,0x2B,0xB2,0x28,0xBE,0x44,0x2F } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IUISettings3>{ static constexpr guid value{ 0x03021BE4,0x5254,0x4781,{ 0x81,0x94,0x51,0x68,0xF7,0xD0,0x6D,0x7B } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IUISettings4>{ static constexpr guid value{ 0x52BB3002,0x919B,0x4D6B,{ 0x9B,0x78,0x8D,0xD6,0x6F,0xF4,0xB9,0x3B } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::IUISettings5>{ static constexpr guid value{ 0x5349D588,0x0CB5,0x5F05,{ 0xBD,0x34,0x70,0x6B,0x32,0x31,0xF0,0xBD } }; };
+template <> struct guid_storage<Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs>{ static constexpr guid value{ 0x87AFD4B2,0x9146,0x5F02,{ 0x8F,0x6B,0x06,0xD4,0x54,0x17,0x4C,0x0F } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IUIViewSettings>{ static constexpr guid value{ 0xC63657F6,0x8850,0x470D,{ 0x88,0xF8,0x45,0x5E,0x16,0xEA,0x2C,0x26 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IUIViewSettingsStatics>{ static constexpr guid value{ 0x595C97A5,0xF8F6,0x41CF,{ 0xB0,0xFB,0xAA,0xCD,0xB8,0x1F,0xD5,0xF6 } }; };
 template <> struct guid_storage<Windows::UI::ViewManagement::IViewModePreferences>{ static constexpr guid value{ 0x878FCD3A,0x0B99,0x42C9,{ 0x84,0xD0,0xD3,0xF1,0xD4,0x03,0x55,0x4B } }; };
@@ -392,6 +431,7 @@ template <> struct default_interface<Windows::UI::ViewManagement::InputPaneVisib
 template <> struct default_interface<Windows::UI::ViewManagement::StatusBar>{ using type = Windows::UI::ViewManagement::IStatusBar; };
 template <> struct default_interface<Windows::UI::ViewManagement::StatusBarProgressIndicator>{ using type = Windows::UI::ViewManagement::IStatusBarProgressIndicator; };
 template <> struct default_interface<Windows::UI::ViewManagement::UISettings>{ using type = Windows::UI::ViewManagement::IUISettings; };
+template <> struct default_interface<Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>{ using type = Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs; };
 template <> struct default_interface<Windows::UI::ViewManagement::UIViewSettings>{ using type = Windows::UI::ViewManagement::IUIViewSettings; };
 template <> struct default_interface<Windows::UI::ViewManagement::ViewModePreferences>{ using type = Windows::UI::ViewManagement::IViewModePreferences; };
 
@@ -459,6 +499,18 @@ template <> struct abi<Windows::UI::ViewManagement::IApplicationView4>{ struct t
     virtual int32_t WINRT_CALL TryConsolidateAsync(void** operation) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::ViewManagement::IApplicationView7>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_PersistedStateId(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_PersistedStateId(void* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::ViewManagement::IApplicationView9>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_WindowingEnvironment(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDisplayRegions(void** result) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_IsUserInitiated(bool* value) noexcept = 0;
@@ -508,6 +560,12 @@ template <> struct abi<Windows::UI::ViewManagement::IApplicationViewStatics3>{ s
     virtual int32_t WINRT_CALL put_PreferredLaunchWindowingMode(Windows::UI::ViewManagement::ApplicationViewWindowingMode value) noexcept = 0;
     virtual int32_t WINRT_CALL get_PreferredLaunchViewSize(Windows::Foundation::Size* value) noexcept = 0;
     virtual int32_t WINRT_CALL put_PreferredLaunchViewSize(Windows::Foundation::Size value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::ViewManagement::IApplicationViewStatics4>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL ClearAllPersistedState() noexcept = 0;
+    virtual int32_t WINRT_CALL ClearPersistedState(void* key) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::ViewManagement::IApplicationViewSwitcherStatics>{ struct type : IInspectable
@@ -572,6 +630,11 @@ template <> struct abi<Windows::UI::ViewManagement::IApplicationViewTransferCont
     virtual int32_t WINRT_CALL get_DataPackageFormatId(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::ViewManagement::IApplicationViewWithContext>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_UIContext(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::ViewManagement::IInputPane>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL add_Showing(void* handler, winrt::event_token* token) noexcept = 0;
@@ -596,6 +659,11 @@ template <> struct abi<Windows::UI::ViewManagement::IInputPaneControl>{ struct t
 template <> struct abi<Windows::UI::ViewManagement::IInputPaneStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL GetForCurrentView(void** inputPane) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::ViewManagement::IInputPaneStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetForUIContext(void* context, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs>{ struct type : IInspectable
@@ -692,6 +760,17 @@ template <> struct abi<Windows::UI::ViewManagement::IUISettings4>{ struct type :
     virtual int32_t WINRT_CALL get_AdvancedEffectsEnabled(bool* value) noexcept = 0;
     virtual int32_t WINRT_CALL add_AdvancedEffectsEnabledChanged(void* handler, winrt::event_token* cookie) noexcept = 0;
     virtual int32_t WINRT_CALL remove_AdvancedEffectsEnabledChanged(winrt::event_token cookie) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::ViewManagement::IUISettings5>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_AutoHideScrollBars(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL add_AutoHideScrollBarsChanged(void* handler, winrt::event_token* token) noexcept = 0;
+    virtual int32_t WINRT_CALL remove_AutoHideScrollBarsChanged(winrt::event_token token) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs>{ struct type : IInspectable
+{
 };};
 
 template <> struct abi<Windows::UI::ViewManagement::IUIViewSettings>{ struct type : IInspectable
@@ -800,6 +879,22 @@ struct consume_Windows_UI_ViewManagement_IApplicationView4
 template <> struct consume<Windows::UI::ViewManagement::IApplicationView4> { template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationView4<D>; };
 
 template <typename D>
+struct consume_Windows_UI_ViewManagement_IApplicationView7
+{
+    hstring PersistedStateId() const;
+    void PersistedStateId(param::hstring const& value) const;
+};
+template <> struct consume<Windows::UI::ViewManagement::IApplicationView7> { template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationView7<D>; };
+
+template <typename D>
+struct consume_Windows_UI_ViewManagement_IApplicationView9
+{
+    Windows::UI::WindowManagement::WindowingEnvironment WindowingEnvironment() const;
+    Windows::Foundation::Collections::IVectorView<Windows::UI::WindowManagement::DisplayRegion> GetDisplayRegions() const;
+};
+template <> struct consume<Windows::UI::ViewManagement::IApplicationView9> { template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationView9<D>; };
+
+template <typename D>
 struct consume_Windows_UI_ViewManagement_IApplicationViewConsolidatedEventArgs
 {
     bool IsUserInitiated() const;
@@ -867,6 +962,14 @@ struct consume_Windows_UI_ViewManagement_IApplicationViewStatics3
     void PreferredLaunchViewSize(Windows::Foundation::Size const& value) const;
 };
 template <> struct consume<Windows::UI::ViewManagement::IApplicationViewStatics3> { template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationViewStatics3<D>; };
+
+template <typename D>
+struct consume_Windows_UI_ViewManagement_IApplicationViewStatics4
+{
+    void ClearAllPersistedState() const;
+    void ClearPersistedState(param::hstring const& key) const;
+};
+template <> struct consume<Windows::UI::ViewManagement::IApplicationViewStatics4> { template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationViewStatics4<D>; };
 
 template <typename D>
 struct consume_Windows_UI_ViewManagement_IApplicationViewSwitcherStatics
@@ -943,6 +1046,13 @@ struct consume_Windows_UI_ViewManagement_IApplicationViewTransferContextStatics
 template <> struct consume<Windows::UI::ViewManagement::IApplicationViewTransferContextStatics> { template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationViewTransferContextStatics<D>; };
 
 template <typename D>
+struct consume_Windows_UI_ViewManagement_IApplicationViewWithContext
+{
+    Windows::UI::UIContext UIContext() const;
+};
+template <> struct consume<Windows::UI::ViewManagement::IApplicationViewWithContext> { template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationViewWithContext<D>; };
+
+template <typename D>
 struct consume_Windows_UI_ViewManagement_IInputPane
 {
     winrt::event_token Showing(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::InputPane, Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const;
@@ -979,6 +1089,13 @@ struct consume_Windows_UI_ViewManagement_IInputPaneStatics
     Windows::UI::ViewManagement::InputPane GetForCurrentView() const;
 };
 template <> struct consume<Windows::UI::ViewManagement::IInputPaneStatics> { template <typename D> using type = consume_Windows_UI_ViewManagement_IInputPaneStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_ViewManagement_IInputPaneStatics2
+{
+    Windows::UI::ViewManagement::InputPane GetForUIContext(Windows::UI::UIContext const& context) const;
+};
+template <> struct consume<Windows::UI::ViewManagement::IInputPaneStatics2> { template <typename D> using type = consume_Windows_UI_ViewManagement_IInputPaneStatics2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_ViewManagement_IInputPaneVisibilityEventArgs
@@ -1107,6 +1224,23 @@ struct consume_Windows_UI_ViewManagement_IUISettings4
     void AdvancedEffectsEnabledChanged(winrt::event_token const& cookie) const noexcept;
 };
 template <> struct consume<Windows::UI::ViewManagement::IUISettings4> { template <typename D> using type = consume_Windows_UI_ViewManagement_IUISettings4<D>; };
+
+template <typename D>
+struct consume_Windows_UI_ViewManagement_IUISettings5
+{
+    bool AutoHideScrollBars() const;
+    winrt::event_token AutoHideScrollBarsChanged(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::UISettings, Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const& handler) const;
+    using AutoHideScrollBarsChanged_revoker = impl::event_revoker<Windows::UI::ViewManagement::IUISettings5, &impl::abi_t<Windows::UI::ViewManagement::IUISettings5>::remove_AutoHideScrollBarsChanged>;
+    AutoHideScrollBarsChanged_revoker AutoHideScrollBarsChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::UISettings, Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const& handler) const;
+    void AutoHideScrollBarsChanged(winrt::event_token const& token) const noexcept;
+};
+template <> struct consume<Windows::UI::ViewManagement::IUISettings5> { template <typename D> using type = consume_Windows_UI_ViewManagement_IUISettings5<D>; };
+
+template <typename D>
+struct consume_Windows_UI_ViewManagement_IUISettingsAutoHideScrollBarsChangedEventArgs
+{
+};
+template <> struct consume<Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs> { template <typename D> using type = consume_Windows_UI_ViewManagement_IUISettingsAutoHideScrollBarsChangedEventArgs<D>; };
 
 template <typename D>
 struct consume_Windows_UI_ViewManagement_IUIViewSettings

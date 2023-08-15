@@ -11,6 +11,7 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.ApplicationModel.Contacts.idl";
+import "Windows.Devices.Enumeration.idl";
 import "Windows.System.idl";
 import "Windows.UI.idl";
 
@@ -24,6 +25,16 @@ namespace Windows
             runtimeclass Contact;
 
             runtimeclass ContactPhone;
+        }
+    }
+}
+namespace Windows
+{
+    namespace Devices
+    {
+        namespace Enumeration
+        {
+            typedef enum DeviceAccessStatus DeviceAccessStatus;
         }
     }
 }
@@ -154,11 +165,17 @@ namespace Windows
 
             interface IPhoneLine;
 
+            interface IPhoneLine2;
+
             interface IPhoneLineCellularDetails;
 
             interface IPhoneLineConfiguration;
 
             interface IPhoneLineStatics;
+
+            interface IPhoneLineTransportDevice;
+
+            interface IPhoneLineTransportDeviceStatics;
 
             interface IPhoneLineWatcher;
 
@@ -227,6 +244,8 @@ namespace Windows
             runtimeclass PhoneLineCellularDetails;
 
             runtimeclass PhoneLineConfiguration;
+
+            runtimeclass PhoneLineTransportDevice;
 
             runtimeclass PhoneLineWatcher;
 
@@ -392,8 +411,10 @@ namespace Windows
             [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 1.0)]
             enum PhoneLineTransport
             {
-                Cellular = 0,
-                VoipApp  = 1
+                Cellular  = 0,
+                VoipApp   = 1,
+                [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 5.0)]
+                Bluetooth = 2
             };
 
             [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 1.0)]
@@ -766,6 +787,15 @@ namespace Windows
                 HRESULT DialWithOptions([in] Windows.ApplicationModel.Calls.PhoneDialOptions* options);
             }
 
+            [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 5.0)]
+            [exclusiveto(Windows.ApplicationModel.Calls.PhoneLine)]
+            [uuid(0167F56A-5344-5D64-8AF3-A31A950E916A)]
+            interface IPhoneLine2 : IInspectable
+            {
+                HRESULT EnableTextReply([in] boolean value);
+                [propget] HRESULT TransportDeviceId([out] [retval] HSTRING* value);
+            }
+
             [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 1.0)]
             [exclusiveto(Windows.ApplicationModel.Calls.PhoneLineCellularDetails)]
             [uuid(192601D5-147C-4769-B673-98A5EC8426CB)]
@@ -793,6 +823,33 @@ namespace Windows
             interface IPhoneLineStatics : IInspectable
             {
                 HRESULT FromIdAsync([in] GUID lineId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneLine*>** result);
+            }
+
+            [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 5.0)]
+            [exclusiveto(Windows.ApplicationModel.Calls.PhoneLineTransportDevice)]
+            [uuid(EFA8F889-CFFA-59F4-97E4-74705B7DC490)]
+            interface IPhoneLineTransportDevice : IInspectable
+            {
+                [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
+                [propget] HRESULT Transport([out] [retval] Windows.ApplicationModel.Calls.PhoneLineTransport* value);
+                HRESULT RequestAccessAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus>** operation);
+                HRESULT RegisterApp();
+                HRESULT RegisterAppForUser([in] Windows.System.User* user);
+                HRESULT UnregisterApp();
+                HRESULT UnregisterAppForUser([in] Windows.System.User* user);
+                HRESULT IsRegistered([out] [retval] boolean* result);
+                HRESULT Connect([out] [retval] boolean* result);
+                HRESULT ConnectAsync([out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
+            }
+
+            [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 5.0)]
+            [exclusiveto(Windows.ApplicationModel.Calls.PhoneLineTransportDevice)]
+            [uuid(0F3121AC-D609-51A1-96F3-FB00D1819252)]
+            interface IPhoneLineTransportDeviceStatics : IInspectable
+            {
+                HRESULT FromId([in] HSTRING id, [out] [retval] Windows.ApplicationModel.Calls.PhoneLineTransportDevice** result);
+                [overload("GetDeviceSelector")] HRESULT GetDeviceSelector([out] [retval] HSTRING* result);
+                [overload("GetDeviceSelector")] HRESULT GetDeviceSelectorForPhoneLineTransport([in] Windows.ApplicationModel.Calls.PhoneLineTransport transport, [out] [retval] HSTRING* result);
             }
 
             [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 1.0)]
@@ -1105,6 +1162,7 @@ namespace Windows
             runtimeclass PhoneLine
             {
                 [default] interface Windows.ApplicationModel.Calls.IPhoneLine;
+                [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 5.0)] interface Windows.ApplicationModel.Calls.IPhoneLine2;
             }
 
             [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 1.0)]
@@ -1121,6 +1179,15 @@ namespace Windows
             runtimeclass PhoneLineConfiguration
             {
                 [default] interface Windows.ApplicationModel.Calls.IPhoneLineConfiguration;
+            }
+
+            [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 5.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics, Windows.ApplicationModel.Calls.CallsPhoneContract, 5.0)]
+            [threading(both)]
+            runtimeclass PhoneLineTransportDevice
+            {
+                [default] interface Windows.ApplicationModel.Calls.IPhoneLineTransportDevice;
             }
 
             [contract(Windows.ApplicationModel.Calls.CallsPhoneContract, 1.0)]

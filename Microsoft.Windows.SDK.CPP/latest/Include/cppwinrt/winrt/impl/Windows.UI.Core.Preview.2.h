@@ -1,10 +1,11 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
 #include "winrt/impl/Windows.Foundation.1.h"
+#include "winrt/impl/Windows.UI.WindowManagement.1.h"
 #include "winrt/impl/Windows.UI.Core.Preview.1.h"
 
 WINRT_EXPORT namespace winrt::Windows::UI::Core::Preview {
@@ -16,6 +17,13 @@ namespace winrt::impl {
 }
 
 WINRT_EXPORT namespace winrt::Windows::UI::Core::Preview {
+
+struct WINRT_EBO CoreAppWindowPreview :
+    Windows::UI::Core::Preview::ICoreAppWindowPreview
+{
+    CoreAppWindowPreview(std::nullptr_t) noexcept {}
+    static int32_t GetIdFromWindow(Windows::UI::WindowManagement::AppWindow const& window);
+};
 
 struct WINRT_EBO SystemNavigationCloseRequestedPreviewEventArgs :
     Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs

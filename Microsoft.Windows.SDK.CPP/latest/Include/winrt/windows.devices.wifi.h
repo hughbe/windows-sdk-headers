@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.wifi.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 interface IWiFiAdapter;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter ABI::Windows::Devices::WiFi::IWiFiAdapter
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 interface IWiFiAdapter2;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 ABI::Windows::Devices::WiFi::IWiFiAdapter2
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 interface IWiFiAdapterStatics;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics ABI::Windows::Devices::WiFi::IWiFiAdapterStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 interface IWiFiAvailableNetwork;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 interface IWiFiConnectionResult;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult ABI::Windows::Devices::WiFi::IWiFiConnectionResult
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 interface IWiFiNetworkReport;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport ABI::Windows::Devices::WiFi::IWiFiNetworkReport
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 interface IWiFiWpsConfigurationResult;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 class WiFiAdapter;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -402,7 +398,7 @@ IIterator<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
@@ -434,7 +430,7 @@ IIterable<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
@@ -450,9 +446,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 class WiFiAvailableNetwork;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -475,7 +471,7 @@ IIterator<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
 #define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
@@ -507,7 +503,7 @@ IIterable<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
 #define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
@@ -523,9 +519,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 enum WiFiWpsKind : int;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
@@ -546,7 +542,7 @@ IIterator<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IIterator_impl<enum A
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
 #define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::WiFiWpsKind>
@@ -576,7 +572,7 @@ IIterable<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IIterable_impl<enum A
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
 #define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::WiFiWpsKind>
@@ -607,7 +603,7 @@ IVectorView<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
@@ -639,7 +635,7 @@ IVectorView<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
 #define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
@@ -670,7 +666,7 @@ IVectorView<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IVectorView_impl<en
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
 #define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::WiFiWpsKind>
@@ -685,9 +681,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 enum WiFiAccessStatus : int;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE
@@ -708,7 +704,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::WiFi::WiFiAccessStat
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAccessStatus>
@@ -738,7 +734,7 @@ IAsyncOperation<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAccessStatus>
@@ -769,7 +765,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
@@ -801,7 +797,7 @@ IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IAsyncOperation_imp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
@@ -817,9 +813,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 class WiFiConnectionResult;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -842,7 +838,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiConnectionResul
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>
@@ -874,7 +870,7 @@ IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>
@@ -890,9 +886,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 class WiFiWpsConfigurationResult;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -915,7 +911,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiWpsConfiguratio
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>
@@ -947,7 +943,7 @@ IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>
@@ -979,7 +975,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>*>
@@ -1011,7 +1007,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>*>
@@ -1044,7 +1040,7 @@ ITypedEventHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*,IInspectable*> : IT
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFi::IWiFiAdapter*,IInspectable*>
@@ -1063,8 +1059,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1072,8 +1068,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1085,8 +1081,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1096,9 +1092,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 class NetworkAdapter;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -1107,9 +1103,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 interface INetworkAdapter;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter ABI::Windows::Networking::Connectivity::INetworkAdapter
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -1120,9 +1116,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 class NetworkSecuritySettings;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
@@ -1131,9 +1127,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 interface INetworkSecuritySettings;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings ABI::Windows::Networking::Connectivity::INetworkSecuritySettings
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
@@ -1147,9 +1143,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -1158,9 +1154,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -1176,9 +1172,9 @@ namespace ABI {
                 
                 typedef enum WiFiAccessStatus : int WiFiAccessStatus;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1187,9 +1183,9 @@ namespace ABI {
                 
                 typedef enum WiFiConnectionMethod : int WiFiConnectionMethod;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1198,9 +1194,9 @@ namespace ABI {
                 
                 typedef enum WiFiConnectionStatus : int WiFiConnectionStatus;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1209,9 +1205,9 @@ namespace ABI {
                 
                 typedef enum WiFiNetworkKind : int WiFiNetworkKind;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1220,9 +1216,9 @@ namespace ABI {
                 
                 typedef enum WiFiPhyKind : int WiFiPhyKind;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1231,9 +1227,9 @@ namespace ABI {
                 
                 typedef enum WiFiReconnectionKind : int WiFiReconnectionKind;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1242,9 +1238,9 @@ namespace ABI {
                 
                 typedef enum WiFiWpsConfigurationStatus : int WiFiWpsConfigurationStatus;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1253,9 +1249,9 @@ namespace ABI {
                 
                 typedef enum WiFiWpsKind : int WiFiWpsKind;
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1272,9 +1268,9 @@ namespace ABI {
         namespace Devices {
             namespace WiFi {
                 class WiFiNetworkReport;
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1309,9 +1305,9 @@ namespace ABI {
                     WiFiAccessStatus_DeniedBySystem = 3,
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1337,9 +1333,9 @@ namespace ABI {
                     WiFiConnectionMethod_WpsPushButton = 2,
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1369,9 +1365,9 @@ namespace ABI {
                     WiFiConnectionStatus_UnsupportedAuthenticationProtocol = 6,
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1397,9 +1393,9 @@ namespace ABI {
                     WiFiNetworkKind_Adhoc = 2,
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1441,9 +1437,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1468,9 +1464,9 @@ namespace ABI {
                     WiFiReconnectionKind_Manual = 1,
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1496,9 +1492,9 @@ namespace ABI {
                     WiFiWpsConfigurationStatus_Timeout = 2,
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1527,9 +1523,9 @@ namespace ABI {
                     WiFiWpsKind_Usb = 5,
                 };
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1597,9 +1593,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWiFiAdapter=_uuidof(IWiFiAdapter);
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_INTERFACE_DEFINED__) */
@@ -1647,9 +1643,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWiFiAdapter2=_uuidof(IWiFiAdapter2);
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_INTERFACE_DEFINED__) */
@@ -1698,9 +1694,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWiFiAdapterStatics=_uuidof(IWiFiAdapterStatics);
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_INTERFACE_DEFINED__) */
@@ -1762,16 +1758,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsWiFiDirect(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IWiFiAvailableNetwork=_uuidof(IWiFiAvailableNetwork);
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_INTERFACE_DEFINED__) */
@@ -1810,9 +1806,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWiFiConnectionResult=_uuidof(IWiFiConnectionResult);
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_INTERFACE_DEFINED__) */
@@ -1854,9 +1850,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWiFiNetworkReport=_uuidof(IWiFiNetworkReport);
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_INTERFACE_DEFINED__) */
@@ -1898,9 +1894,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWiFiWpsConfigurationResult=_uuidof(IWiFiWpsConfigurationResult);
                 
-            } /* Windows */
+            } /* WiFi */
         } /* Devices */
-    } /* WiFi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_INTERFACE_DEFINED__) */
@@ -3475,7 +3471,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_II
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectableVtbl;
 

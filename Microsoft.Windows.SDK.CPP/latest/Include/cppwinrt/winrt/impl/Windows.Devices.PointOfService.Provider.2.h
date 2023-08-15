@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -51,7 +51,8 @@ struct WINRT_EBO BarcodeScannerEnableScannerRequestEventArgs :
 };
 
 struct WINRT_EBO BarcodeScannerFrameReader :
-    Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader
+    Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader,
+    impl::require<BarcodeScannerFrameReader, Windows::Foundation::IClosable>
 {
     BarcodeScannerFrameReader(std::nullptr_t) noexcept {}
 };
@@ -94,7 +95,7 @@ struct WINRT_EBO BarcodeScannerHideVideoPreviewRequestEventArgs :
 
 struct WINRT_EBO BarcodeScannerProviderConnection :
     Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection,
-    impl::require<BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2>
+    impl::require<BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2, Windows::Foundation::IClosable>
 {
     BarcodeScannerProviderConnection(std::nullptr_t) noexcept {}
 };
@@ -166,7 +167,8 @@ struct WINRT_EBO BarcodeScannerStopSoftwareTriggerRequestEventArgs :
 };
 
 struct WINRT_EBO BarcodeScannerVideoFrame :
-    Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame
+    Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame,
+    impl::require<BarcodeScannerVideoFrame, Windows::Foundation::IClosable>
 {
     BarcodeScannerVideoFrame(std::nullptr_t) noexcept {}
 };

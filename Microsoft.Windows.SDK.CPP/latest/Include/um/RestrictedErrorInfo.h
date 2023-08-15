@@ -90,8 +90,8 @@ extern "C"{
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_restrictederrorinfo_0000_0000_v0_0_c_ifspec;
@@ -548,7 +548,7 @@ EXTERN_C const IID IID_ILanguageExceptionErrorInfo2;
 /* interface __MIDL_itf_restrictederrorinfo_0000_0005 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 

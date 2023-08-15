@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,6 +12,7 @@
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Storage.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
+#include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Resources.Core.2.h"
 #include "winrt/Windows.ApplicationModel.Resources.h"
@@ -116,6 +117,13 @@ template <typename D> Windows::Foundation::IAsyncOperation<Windows::Storage::Str
     return operation;
 }
 
+template <typename D> Windows::ApplicationModel::Resources::Core::ResourceCandidateKind consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate3<D>::Kind() const
+{
+    Windows::ApplicationModel::Resources::Core::ResourceCandidateKind value{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate3)->get_Kind(put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::Foundation::Collections::IObservableMap<hstring, hstring> consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::QualifierValues() const
 {
     Windows::Foundation::Collections::IObservableMap<hstring, hstring> value{ nullptr };
@@ -196,6 +204,13 @@ template <typename D> Windows::ApplicationModel::Resources::Core::ResourceContex
 template <typename D> void consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics3<D>::SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence) const
 {
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics3)->SetGlobalQualifierValueWithPersistence(get_abi(key), get_abi(value), get_abi(persistence)));
+}
+
+template <typename D> Windows::ApplicationModel::Resources::Core::ResourceContext consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics4<D>::GetForUIContext(Windows::UI::UIContext const& context) const
+{
+    Windows::ApplicationModel::Resources::Core::ResourceContext value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics4)->GetForUIContext(get_abi(context), put_abi(value)));
+    return value;
 }
 
 template <typename D> Windows::ApplicationModel::Resources::Core::ResourceMap consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::MainResourceMap() const
@@ -512,6 +527,22 @@ struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate
 };
 
 template <typename D>
+struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate3> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate3>
+{
+    int32_t WINRT_CALL get_Kind(Windows::ApplicationModel::Resources::Core::ResourceCandidateKind* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Kind, WINRT_WRAP(Windows::ApplicationModel::Resources::Core::ResourceCandidateKind));
+            *value = detach_from<Windows::ApplicationModel::Resources::Core::ResourceCandidateKind>(this->shim().Kind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContext> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceContext>
 {
     int32_t WINRT_CALL get_QualifierValues(void** value) noexcept final
@@ -695,6 +726,23 @@ struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContextSt
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(SetGlobalQualifierValue, WINRT_WRAP(void), hstring const&, hstring const&, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const&);
             this->shim().SetGlobalQualifierValue(*reinterpret_cast<hstring const*>(&key), *reinterpret_cast<hstring const*>(&value), *reinterpret_cast<Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const*>(&persistence));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>
+{
+    int32_t WINRT_CALL GetForUIContext(void* context, void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetForUIContext, WINRT_WRAP(Windows::ApplicationModel::Resources::Core::ResourceContext), Windows::UI::UIContext const&);
+            *value = detach_from<Windows::ApplicationModel::Resources::Core::ResourceContext>(this->shim().GetForUIContext(*reinterpret_cast<Windows::UI::UIContext const*>(&context)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -992,6 +1040,11 @@ inline void ResourceContext::SetGlobalQualifierValue(param::hstring const& key, 
     impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>([&](auto&& f) { return f.SetGlobalQualifierValue(key, value, persistence); });
 }
 
+inline Windows::ApplicationModel::Resources::Core::ResourceContext ResourceContext::GetForUIContext(Windows::UI::UIContext const& context)
+{
+    return impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>([&](auto&& f) { return f.GetForUIContext(context); });
+}
+
 inline Windows::ApplicationModel::Resources::Core::ResourceManager ResourceManager::Current()
 {
     return impl::call_factory<ResourceManager, Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>([&](auto&& f) { return f.Current(); });
@@ -1009,10 +1062,12 @@ WINRT_EXPORT namespace std {
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::INamedResource> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::INamedResource> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate2> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate3> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContext> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContext> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics2> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics3> {};
+template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2> {};
 template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceManagerStatics> {};

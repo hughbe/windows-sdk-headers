@@ -104,6 +104,8 @@ namespace Windows
 
             typedef enum ESimAuthenticationPreference ESimAuthenticationPreference;
 
+            typedef enum ESimDiscoverResultKind ESimDiscoverResultKind;
+
             typedef enum ESimOperationStatus ESimOperationStatus;
 
             typedef enum ESimProfileClass ESimProfileClass;
@@ -164,7 +166,13 @@ namespace Windows
 
             interface IESim;
 
+            interface IESim2;
+
             interface IESimAddedEventArgs;
+
+            interface IESimDiscoverEvent;
+
+            interface IESimDiscoverResult;
 
             interface IESimDownloadProfileMetadataResult;
 
@@ -362,6 +370,10 @@ namespace Windows
 
             runtimeclass ESimAddedEventArgs;
 
+            runtimeclass ESimDiscoverEvent;
+
+            runtimeclass ESimDiscoverResult;
+
             runtimeclass ESimDownloadProfileMetadataResult;
 
             runtimeclass ESimManager;
@@ -520,6 +532,8 @@ namespace Windows
         {
             declare
             {
+                interface Windows.Foundation.Collections.IIterable<Windows.Networking.NetworkOperators.ESimDiscoverEvent*>;
+
                 interface Windows.Foundation.Collections.IIterable<Windows.Networking.NetworkOperators.ESimProfile*>;
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar*>;
@@ -548,6 +562,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient*>;
 
+                interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimDiscoverEvent*>;
+
                 interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimProfile*>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar*>;
@@ -575,6 +591,8 @@ namespace Windows
                 interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp*>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient*>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimDiscoverEvent*>;
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimProfile*>;
 
@@ -605,6 +623,8 @@ namespace Windows
                 interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient*>;
 
                 interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.NetworkOperators.ESimOperationResult*, Windows.Networking.NetworkOperators.ESimProfileInstallProgress>;
+
+                interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.ESimDiscoverResult*>;
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult*>;
 
@@ -708,6 +728,14 @@ namespace Windows
                 OnEntry  = 0,
                 OnAction = 1,
                 Never    = 2
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            enum ESimDiscoverResultKind
+            {
+                None            = 0,
+                Events          = 1,
+                ProfileMetadata = 2
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -1055,12 +1083,23 @@ namespace Windows
                 [propget] HRESULT MobileBroadbandModemDeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT Policy([out] [retval] Windows.Networking.NetworkOperators.ESimPolicy** value);
                 [propget] HRESULT State([out] [retval] Windows.Networking.NetworkOperators.ESimState* value);
-                HRESULT GetProfiles([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimProfile*>** value);
+                HRESULT GetProfiles([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimProfile*>** result);
                 HRESULT DeleteProfileAsync([in] HSTRING profileId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.ESimOperationResult*>** operation);
                 HRESULT DownloadProfileMetadataAsync([in] HSTRING activationCode, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult*>** operation);
                 HRESULT ResetAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.ESimOperationResult*>** operation);
                 [eventadd] HRESULT ProfileChanged([in] Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESim*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
                 [eventremove] HRESULT ProfileChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Networking.NetworkOperators.ESim)]
+            [uuid(BD4FD0A0-C68F-56EB-B99B-8F34B8100299)]
+            interface IESim2 : IInspectable
+            {
+                [overload("Discover")] HRESULT Discover([out] [retval] Windows.Networking.NetworkOperators.ESimDiscoverResult** result);
+                [overload("Discover")] HRESULT DiscoverWithServerAddressAndMatchingId([in] HSTRING serverAddress, [in] HSTRING matchingId, [out] [retval] Windows.Networking.NetworkOperators.ESimDiscoverResult** result);
+                [overload("DiscoverAsync")] HRESULT DiscoverAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.ESimDiscoverResult*>** operation);
+                [overload("DiscoverAsync")] HRESULT DiscoverWithServerAddressAndMatchingIdAsync([in] HSTRING serverAddress, [in] HSTRING matchingId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.ESimDiscoverResult*>** operation);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -1069,6 +1108,26 @@ namespace Windows
             interface IESimAddedEventArgs : IInspectable
             {
                 [propget] HRESULT ESim([out] [retval] Windows.Networking.NetworkOperators.ESim** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Networking.NetworkOperators.ESimDiscoverEvent)]
+            [uuid(E59AC3E3-39BC-5F6F-9321-0D4A182D261B)]
+            interface IESimDiscoverEvent : IInspectable
+            {
+                [propget] HRESULT MatchingId([out] [retval] HSTRING* value);
+                [propget] HRESULT RspServerAddress([out] [retval] HSTRING* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Networking.NetworkOperators.ESimDiscoverResult)]
+            [uuid(56B4BB5E-AB2F-5AC6-B359-DD5A8E237926)]
+            interface IESimDiscoverResult : IInspectable
+            {
+                [propget] HRESULT Events([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimDiscoverEvent*>** value);
+                [propget] HRESULT Kind([out] [retval] Windows.Networking.NetworkOperators.ESimDiscoverResultKind* value);
+                [propget] HRESULT ProfileMetadata([out] [retval] Windows.Networking.NetworkOperators.ESimProfileMetadata** value);
+                [propget] HRESULT Result([out] [retval] Windows.Networking.NetworkOperators.ESimOperationResult** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -1086,7 +1145,7 @@ namespace Windows
             interface IESimManagerStatics : IInspectable
             {
                 [propget] HRESULT ServiceInfo([out] [retval] Windows.Networking.NetworkOperators.ESimServiceInfo** value);
-                HRESULT TryCreateESimWatcher([out] [retval] Windows.Networking.NetworkOperators.ESimWatcher** value);
+                HRESULT TryCreateESimWatcher([out] [retval] Windows.Networking.NetworkOperators.ESimWatcher** result);
                 [eventadd] HRESULT ServiceInfoChanged([in] Windows.Foundation.EventHandler<IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
                 [eventremove] HRESULT ServiceInfoChanged([in] EventRegistrationToken token);
             }
@@ -1185,7 +1244,7 @@ namespace Windows
             [uuid(C1F84CEB-A28D-4FBF-9771-6E31B81CCF22)]
             interface IESimWatcher : IInspectable
             {
-                [propget] HRESULT Status([out] [retval] Windows.Networking.NetworkOperators.ESimWatcherStatus* status);
+                [propget] HRESULT Status([out] [retval] Windows.Networking.NetworkOperators.ESimWatcherStatus* value);
                 HRESULT Start();
                 HRESULT Stop();
                 [eventadd] HRESULT Added([in] Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESimWatcher*, Windows.Networking.NetworkOperators.ESimAddedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
@@ -2102,23 +2161,35 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESim
             {
                 [default] interface Windows.Networking.NetworkOperators.IESim;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Networking.NetworkOperators.IESim2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimAddedEventArgs
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimAddedEventArgs;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass ESimDiscoverEvent
+            {
+                [default] interface Windows.Networking.NetworkOperators.IESimDiscoverEvent;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass ESimDiscoverResult
+            {
+                [default] interface Windows.Networking.NetworkOperators.IESimDiscoverResult;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimDownloadProfileMetadataResult
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimDownloadProfileMetadataResult;
@@ -2134,7 +2205,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimOperationResult
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimOperationResult;
@@ -2142,7 +2212,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimPolicy
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimPolicy;
@@ -2150,7 +2219,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimProfile
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimProfile;
@@ -2158,7 +2226,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimProfileMetadata
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimProfileMetadata;
@@ -2166,7 +2233,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimProfilePolicy
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimProfilePolicy;
@@ -2174,7 +2240,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimRemovedEventArgs
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimRemovedEventArgs;
@@ -2182,7 +2247,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimServiceInfo
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimServiceInfo;
@@ -2190,7 +2254,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimUpdatedEventArgs
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimUpdatedEventArgs;
@@ -2198,7 +2261,6 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
-            [threading(both)]
             runtimeclass ESimWatcher
             {
                 [default] interface Windows.Networking.NetworkOperators.IESimWatcher;

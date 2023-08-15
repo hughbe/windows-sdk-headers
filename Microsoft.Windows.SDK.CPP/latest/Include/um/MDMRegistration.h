@@ -1,4 +1,4 @@
-/*++ 
+/*++
 
 Copyright (c) Microsoft Corporation
 
@@ -8,7 +8,7 @@ Module Name:
 
 Abstract:
 
-    This file contains structures, function signatures for 3rd Party 
+    This file contains structures, function signatures for 3rd Party
     management software that intends to interact with Windows MDE
 
 Environment:
@@ -260,7 +260,7 @@ Arguments:
     pfIsDeviceRegisteredWithManagement - will be set to TRUE if device is registered, FALSE otherwise.
     cchUPN - maximum length of pszUPN
     pszUPN - string parameter to return the UPN
-    
+
 Return Value:
 
     HRESULT indicating success or failure.
@@ -291,6 +291,25 @@ Return Value:
 HRESULT WINAPI
 IsManagementRegistrationAllowed(
     _Out_ BOOL *pfIsManagementRegistrationAllowed
+    );
+
+/*++
+Routine Description:
+
+    This function is used to check if device is not already enrolled and SKU license (SLAPI) allows enrollment
+
+Arguments:
+
+    isEnrollmentAllowed - TRUE if allowed
+
+Return Value:
+
+    HRESULT indicating success or failure.
+
+--*/
+HRESULT WINAPI
+IsMdmUxWithoutAadAllowed(
+    _Out_ BOOL* isEnrollmentAllowed
     );
 
 /*++
@@ -332,8 +351,8 @@ Return Value:
 --*/
 HRESULT WINAPI
 DiscoverManagementService(
-    _In_z_              LPCWSTR                         pszUPN, 
-    _Out_               PMANAGEMENT_SERVICE_INFO*       ppMgmtInfo 
+    _In_z_              LPCWSTR                         pszUPN,
+    _Out_               PMANAGEMENT_SERVICE_INFO*       ppMgmtInfo
     );
 
 
@@ -361,6 +380,26 @@ RegisterDeviceWithManagementUsingAADCredentials(HANDLE UserToken);
 
 Routine Description:
 
+This function is used to register a device with the MDM service synchronously.
+It will get the MDM information, including authentication device token from AAD
+
+Arguments:
+
+None
+
+Return Value:
+
+HRESULT indicating success or failure.
+
+--*/
+HRESULT WINAPI
+RegisterDeviceWithManagementUsingAADDeviceCredentials();
+
+
+/*++
+
+Routine Description:
+
     This function is used to register a device with the MDM service synchronously.
 
 Arguments:
@@ -372,7 +411,7 @@ Arguments:
 Return Value:
 
     HRESULT indicating success or failure.
-    
+
 --*/
 HRESULT WINAPI
 RegisterDeviceWithManagement(
@@ -389,7 +428,7 @@ Routine Description:
 
 Arguments:
 
-    RemoveEnterpriseData - If TRUE enterprise data is removed
+    enrollmentID - enrollmentID of specific management server to unregister from. If null, then unregister from all.
 
 Return Value:
 
@@ -398,7 +437,7 @@ Return Value:
 --*/
 HRESULT WINAPI
 UnregisterDeviceWithManagement(
-    _In_ BOOL RemoveEnterpriseData
+    _In_opt_z_ LPCWSTR enrollmentID
     );
 
 /*++
@@ -461,4 +500,4 @@ DiscoverManagementServiceEx(
 
 #endif // _MDM_REG_
 
-#endif // NTDDI_VERSION >= NTDDI_WINBLUE 
+#endif // NTDDI_VERSION >= NTDDI_WINBLUE

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -377,6 +377,20 @@ template <typename D> Windows::Foundation::IAsyncOperation<Windows::ApplicationM
     Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::PackageUpdateAvailabilityResult> operation{ nullptr };
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::IPackage6)->CheckUpdateAvailabilityAsync(put_abi(operation)));
     return operation;
+}
+
+template <typename D> Windows::Storage::StorageFolder consume_Windows_ApplicationModel_IPackage7<D>::MutableLocation() const
+{
+    Windows::Storage::StorageFolder value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::IPackage7)->get_MutableLocation(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Storage::StorageFolder consume_Windows_ApplicationModel_IPackage7<D>::EffectiveLocation() const
+{
+    Windows::Storage::StorageFolder value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::IPackage7)->get_EffectiveLocation(put_abi(value)));
+    return value;
 }
 
 template <typename D> winrt::event_token consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageStaging(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::PackageCatalog, Windows::ApplicationModel::PackageStagingEventArgs> const& handler) const
@@ -1820,6 +1834,36 @@ struct produce<D, Windows::ApplicationModel::IPackage6> : produce_base<D, Window
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(CheckUpdateAvailabilityAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::PackageUpdateAvailabilityResult>));
             *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::PackageUpdateAvailabilityResult>>(this->shim().CheckUpdateAvailabilityAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::ApplicationModel::IPackage7> : produce_base<D, Windows::ApplicationModel::IPackage7>
+{
+    int32_t WINRT_CALL get_MutableLocation(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MutableLocation, WINRT_WRAP(Windows::Storage::StorageFolder));
+            *value = detach_from<Windows::Storage::StorageFolder>(this->shim().MutableLocation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_EffectiveLocation(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(EffectiveLocation, WINRT_WRAP(Windows::Storage::StorageFolder));
+            *value = detach_from<Windows::Storage::StorageFolder>(this->shim().EffectiveLocation());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3271,6 +3315,7 @@ template<> struct hash<winrt::Windows::ApplicationModel::IPackage3> : winrt::imp
 template<> struct hash<winrt::Windows::ApplicationModel::IPackage4> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::IPackage4> {};
 template<> struct hash<winrt::Windows::ApplicationModel::IPackage5> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::IPackage5> {};
 template<> struct hash<winrt::Windows::ApplicationModel::IPackage6> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::IPackage6> {};
+template<> struct hash<winrt::Windows::ApplicationModel::IPackage7> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::IPackage7> {};
 template<> struct hash<winrt::Windows::ApplicationModel::IPackageCatalog> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::IPackageCatalog> {};
 template<> struct hash<winrt::Windows::ApplicationModel::IPackageCatalog2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::IPackageCatalog2> {};
 template<> struct hash<winrt::Windows::ApplicationModel::IPackageCatalog3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::IPackageCatalog3> {};

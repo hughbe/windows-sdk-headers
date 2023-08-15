@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.communicationblocking.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -144,9 +144,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace CommunicationBlocking {
                 interface ICommunicationBlockingAccessManagerStatics;
-            } /* Windows */
+            } /* CommunicationBlocking */
         } /* ApplicationModel */
-    } /* CommunicationBlocking */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAccessManagerStatics ABI::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAccessManagerStatics_FWD_DEFINED__
@@ -158,9 +158,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace CommunicationBlocking {
                 interface ICommunicationBlockingAppManagerStatics;
-            } /* Windows */
+            } /* CommunicationBlocking */
         } /* ApplicationModel */
-    } /* CommunicationBlocking */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics ABI::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics_FWD_DEFINED__
@@ -172,9 +172,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace CommunicationBlocking {
                 interface ICommunicationBlockingAppManagerStatics2;
-            } /* Windows */
+            } /* CommunicationBlocking */
         } /* ApplicationModel */
-    } /* CommunicationBlocking */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics2 ABI::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics2_FWD_DEFINED__
@@ -201,7 +201,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -230,7 +230,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -259,7 +259,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -288,7 +288,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -336,7 +336,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBlockingActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsBlockedNumberAsync(
                         /* [in] */__RPC__in HSTRING number,
@@ -344,11 +344,11 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ShowBlockNumbersUI(
                         /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * phoneNumbers,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ShowUnblockNumbersUI(
                         /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * phoneNumbers,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ShowBlockedCallsUI(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ShowBlockedMessagesUI(void) = 0;
@@ -357,9 +357,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommunicationBlockingAccessManagerStatics=_uuidof(ICommunicationBlockingAccessManagerStatics);
                 
-            } /* Windows */
+            } /* CommunicationBlocking */
         } /* ApplicationModel */
-    } /* CommunicationBlocking */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAccessManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAccessManagerStatics_INTERFACE_DEFINED__) */
@@ -391,7 +391,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCurrentAppActiveBlockingApp(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ShowCommunicationBlockingSettingsUI(void) = 0;
                     
@@ -399,9 +399,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommunicationBlockingAppManagerStatics=_uuidof(ICommunicationBlockingAppManagerStatics);
                 
-            } /* Windows */
+            } /* CommunicationBlocking */
         } /* ApplicationModel */
-    } /* CommunicationBlocking */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics_INTERFACE_DEFINED__) */
@@ -444,9 +444,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICommunicationBlockingAppManagerStatics2=_uuidof(ICommunicationBlockingAppManagerStatics2);
                 
-            } /* Windows */
+            } /* CommunicationBlocking */
         } /* ApplicationModel */
-    } /* CommunicationBlocking */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CCommunicationBlocking_CICommunicationBlockingAppManagerStatics2_INTERFACE_DEFINED__) */

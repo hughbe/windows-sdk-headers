@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,6 +13,7 @@
 #include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.UI.Core.2.h"
 #include "winrt/impl/Windows.UI.Popups.2.h"
+#include "winrt/impl/Windows.UI.WindowManagement.2.h"
 #include "winrt/impl/Windows.UI.ViewManagement.2.h"
 #include "winrt/Windows.UI.h"
 
@@ -293,6 +294,32 @@ template <typename D> Windows::Foundation::IAsyncOperation<bool> consume_Windows
     return operation;
 }
 
+template <typename D> hstring consume_Windows_UI_ViewManagement_IApplicationView7<D>::PersistedStateId() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationView7)->get_PersistedStateId(put_abi(value)));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_ViewManagement_IApplicationView7<D>::PersistedStateId(param::hstring const& value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationView7)->put_PersistedStateId(get_abi(value)));
+}
+
+template <typename D> Windows::UI::WindowManagement::WindowingEnvironment consume_Windows_UI_ViewManagement_IApplicationView9<D>::WindowingEnvironment() const
+{
+    Windows::UI::WindowManagement::WindowingEnvironment value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationView9)->get_WindowingEnvironment(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Collections::IVectorView<Windows::UI::WindowManagement::DisplayRegion> consume_Windows_UI_ViewManagement_IApplicationView9<D>::GetDisplayRegions() const
+{
+    Windows::Foundation::Collections::IVectorView<Windows::UI::WindowManagement::DisplayRegion> result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationView9)->GetDisplayRegions(put_abi(result)));
+    return result;
+}
+
 template <typename D> bool consume_Windows_UI_ViewManagement_IApplicationViewConsolidatedEventArgs<D>::IsUserInitiated() const
 {
     bool value{};
@@ -390,6 +417,16 @@ template <typename D> Windows::Foundation::Size consume_Windows_UI_ViewManagemen
 template <typename D> void consume_Windows_UI_ViewManagement_IApplicationViewStatics3<D>::PreferredLaunchViewSize(Windows::Foundation::Size const& value) const
 {
     check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationViewStatics3)->put_PreferredLaunchViewSize(get_abi(value)));
+}
+
+template <typename D> void consume_Windows_UI_ViewManagement_IApplicationViewStatics4<D>::ClearAllPersistedState() const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationViewStatics4)->ClearAllPersistedState());
+}
+
+template <typename D> void consume_Windows_UI_ViewManagement_IApplicationViewStatics4<D>::ClearPersistedState(param::hstring const& key) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationViewStatics4)->ClearPersistedState(get_abi(key)));
 }
 
 template <typename D> void consume_Windows_UI_ViewManagement_IApplicationViewSwitcherStatics<D>::DisableShowingMainViewOnActivation() const
@@ -628,6 +665,13 @@ template <typename D> hstring consume_Windows_UI_ViewManagement_IApplicationView
     return value;
 }
 
+template <typename D> Windows::UI::UIContext consume_Windows_UI_ViewManagement_IApplicationViewWithContext<D>::UIContext() const
+{
+    Windows::UI::UIContext value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IApplicationViewWithContext)->get_UIContext(put_abi(value)));
+    return value;
+}
+
 template <typename D> winrt::event_token consume_Windows_UI_ViewManagement_IInputPane<D>::Showing(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::InputPane, Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const
 {
     winrt::event_token token{};
@@ -700,6 +744,13 @@ template <typename D> Windows::UI::ViewManagement::InputPane consume_Windows_UI_
     Windows::UI::ViewManagement::InputPane inputPane{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IInputPaneStatics)->GetForCurrentView(put_abi(inputPane)));
     return inputPane;
+}
+
+template <typename D> Windows::UI::ViewManagement::InputPane consume_Windows_UI_ViewManagement_IInputPaneStatics2<D>::GetForUIContext(Windows::UI::UIContext const& context) const
+{
+    Windows::UI::ViewManagement::InputPane result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IInputPaneStatics2)->GetForUIContext(get_abi(context), put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Foundation::Rect consume_Windows_UI_ViewManagement_IInputPaneVisibilityEventArgs<D>::OccludedRect() const
@@ -1098,6 +1149,30 @@ template <typename D> typename consume_Windows_UI_ViewManagement_IUISettings4<D>
 template <typename D> void consume_Windows_UI_ViewManagement_IUISettings4<D>::AdvancedEffectsEnabledChanged(winrt::event_token const& cookie) const noexcept
 {
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::UI::ViewManagement::IUISettings4)->remove_AdvancedEffectsEnabledChanged(get_abi(cookie)));
+}
+
+template <typename D> bool consume_Windows_UI_ViewManagement_IUISettings5<D>::AutoHideScrollBars() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IUISettings5)->get_AutoHideScrollBars(&value));
+    return value;
+}
+
+template <typename D> winrt::event_token consume_Windows_UI_ViewManagement_IUISettings5<D>::AutoHideScrollBarsChanged(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::UISettings, Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const& handler) const
+{
+    winrt::event_token token{};
+    check_hresult(WINRT_SHIM(Windows::UI::ViewManagement::IUISettings5)->add_AutoHideScrollBarsChanged(get_abi(handler), put_abi(token)));
+    return token;
+}
+
+template <typename D> typename consume_Windows_UI_ViewManagement_IUISettings5<D>::AutoHideScrollBarsChanged_revoker consume_Windows_UI_ViewManagement_IUISettings5<D>::AutoHideScrollBarsChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::UISettings, Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const& handler) const
+{
+    return impl::make_event_revoker<D, AutoHideScrollBarsChanged_revoker>(this, AutoHideScrollBarsChanged(handler));
+}
+
+template <typename D> void consume_Windows_UI_ViewManagement_IUISettings5<D>::AutoHideScrollBarsChanged(winrt::event_token const& token) const noexcept
+{
+    WINRT_VERIFY_(0, WINRT_SHIM(Windows::UI::ViewManagement::IUISettings5)->remove_AutoHideScrollBarsChanged(get_abi(token)));
 }
 
 template <typename D> Windows::UI::ViewManagement::UserInteractionMode consume_Windows_UI_ViewManagement_IUIViewSettings<D>::UserInteractionMode() const
@@ -1646,6 +1721,65 @@ struct produce<D, Windows::UI::ViewManagement::IApplicationView4> : produce_base
 };
 
 template <typename D>
+struct produce<D, Windows::UI::ViewManagement::IApplicationView7> : produce_base<D, Windows::UI::ViewManagement::IApplicationView7>
+{
+    int32_t WINRT_CALL get_PersistedStateId(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(PersistedStateId, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().PersistedStateId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_PersistedStateId(void* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(PersistedStateId, WINRT_WRAP(void), hstring const&);
+            this->shim().PersistedStateId(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::ViewManagement::IApplicationView9> : produce_base<D, Windows::UI::ViewManagement::IApplicationView9>
+{
+    int32_t WINRT_CALL get_WindowingEnvironment(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(WindowingEnvironment, WINRT_WRAP(Windows::UI::WindowManagement::WindowingEnvironment));
+            *value = detach_from<Windows::UI::WindowManagement::WindowingEnvironment>(this->shim().WindowingEnvironment());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL GetDisplayRegions(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetDisplayRegions, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::UI::WindowManagement::DisplayRegion>));
+            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::UI::WindowManagement::DisplayRegion>>(this->shim().GetDisplayRegions());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs> : produce_base<D, Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs>
 {
     int32_t WINRT_CALL get_IsUserInitiated(bool* value) noexcept final
@@ -1856,6 +1990,34 @@ struct produce<D, Windows::UI::ViewManagement::IApplicationViewStatics3> : produ
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(PreferredLaunchViewSize, WINRT_WRAP(void), Windows::Foundation::Size const&);
             this->shim().PreferredLaunchViewSize(*reinterpret_cast<Windows::Foundation::Size const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::ViewManagement::IApplicationViewStatics4> : produce_base<D, Windows::UI::ViewManagement::IApplicationViewStatics4>
+{
+    int32_t WINRT_CALL ClearAllPersistedState() noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ClearAllPersistedState, WINRT_WRAP(void));
+            this->shim().ClearAllPersistedState();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL ClearPersistedState(void* key) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ClearPersistedState, WINRT_WRAP(void), hstring const&);
+            this->shim().ClearPersistedState(*reinterpret_cast<hstring const*>(&key));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2365,6 +2527,23 @@ struct produce<D, Windows::UI::ViewManagement::IApplicationViewTransferContextSt
 };
 
 template <typename D>
+struct produce<D, Windows::UI::ViewManagement::IApplicationViewWithContext> : produce_base<D, Windows::UI::ViewManagement::IApplicationViewWithContext>
+{
+    int32_t WINRT_CALL get_UIContext(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UIContext, WINRT_WRAP(Windows::UI::UIContext));
+            *value = detach_from<Windows::UI::UIContext>(this->shim().UIContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::ViewManagement::IInputPane> : produce_base<D, Windows::UI::ViewManagement::IInputPane>
 {
     int32_t WINRT_CALL add_Showing(void* handler, winrt::event_token* token) noexcept final
@@ -2487,6 +2666,23 @@ struct produce<D, Windows::UI::ViewManagement::IInputPaneStatics> : produce_base
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetForCurrentView, WINRT_WRAP(Windows::UI::ViewManagement::InputPane));
             *inputPane = detach_from<Windows::UI::ViewManagement::InputPane>(this->shim().GetForCurrentView());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::ViewManagement::IInputPaneStatics2> : produce_base<D, Windows::UI::ViewManagement::IInputPaneStatics2>
+{
+    int32_t WINRT_CALL GetForUIContext(void* context, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetForUIContext, WINRT_WRAP(Windows::UI::ViewManagement::InputPane), Windows::UI::UIContext const&);
+            *result = detach_from<Windows::UI::ViewManagement::InputPane>(this->shim().GetForUIContext(*reinterpret_cast<Windows::UI::UIContext const*>(&context)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3199,6 +3395,46 @@ struct produce<D, Windows::UI::ViewManagement::IUISettings4> : produce_base<D, W
 };
 
 template <typename D>
+struct produce<D, Windows::UI::ViewManagement::IUISettings5> : produce_base<D, Windows::UI::ViewManagement::IUISettings5>
+{
+    int32_t WINRT_CALL get_AutoHideScrollBars(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(AutoHideScrollBars, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().AutoHideScrollBars());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL add_AutoHideScrollBarsChanged(void* handler, winrt::event_token* token) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(AutoHideScrollBarsChanged, WINRT_WRAP(winrt::event_token), Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::UISettings, Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const&);
+            *token = detach_from<winrt::event_token>(this->shim().AutoHideScrollBarsChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::UISettings, Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL remove_AutoHideScrollBarsChanged(winrt::event_token token) noexcept final
+    {
+        typename D::abi_guard guard(this->shim());
+        WINRT_ASSERT_DECLARATION(AutoHideScrollBarsChanged, WINRT_WRAP(void), winrt::event_token const&);
+        this->shim().AutoHideScrollBarsChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+        return 0;
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs> : produce_base<D, Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs>
+{};
+
+template <typename D>
 struct produce<D, Windows::UI::ViewManagement::IUIViewSettings> : produce_base<D, Windows::UI::ViewManagement::IUIViewSettings>
 {
     int32_t WINRT_CALL get_UserInteractionMode(Windows::UI::ViewManagement::UserInteractionMode* value) noexcept final
@@ -3363,6 +3599,16 @@ inline void ApplicationView::PreferredLaunchViewSize(Windows::Foundation::Size c
     impl::call_factory<ApplicationView, Windows::UI::ViewManagement::IApplicationViewStatics3>([&](auto&& f) { return f.PreferredLaunchViewSize(value); });
 }
 
+inline void ApplicationView::ClearAllPersistedState()
+{
+    impl::call_factory<ApplicationView, Windows::UI::ViewManagement::IApplicationViewStatics4>([&](auto&& f) { return f.ClearAllPersistedState(); });
+}
+
+inline void ApplicationView::ClearPersistedState(param::hstring const& key)
+{
+    impl::call_factory<ApplicationView, Windows::UI::ViewManagement::IApplicationViewStatics4>([&](auto&& f) { return f.ClearPersistedState(key); });
+}
+
 inline bool ApplicationViewScaling::DisableLayoutScaling()
 {
     return impl::call_factory<ApplicationViewScaling, Windows::UI::ViewManagement::IApplicationViewScalingStatics>([&](auto&& f) { return f.DisableLayoutScaling(); });
@@ -3440,6 +3686,11 @@ inline hstring ApplicationViewTransferContext::DataPackageFormatId()
 inline Windows::UI::ViewManagement::InputPane InputPane::GetForCurrentView()
 {
     return impl::call_factory<InputPane, Windows::UI::ViewManagement::IInputPaneStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+}
+
+inline Windows::UI::ViewManagement::InputPane InputPane::GetForUIContext(Windows::UI::UIContext const& context)
+{
+    return impl::call_factory<InputPane, Windows::UI::ViewManagement::IInputPaneStatics2>([&](auto&& f) { return f.GetForUIContext(context); });
 }
 
 inline Windows::Foundation::IAsyncAction ProjectionManager::StartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId)
@@ -3527,6 +3778,8 @@ template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationView> : w
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationView2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationView2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationView3> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationView3> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationView4> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationView4> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationView7> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationView7> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationView9> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationView9> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewFullscreenStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewFullscreenStatics> {};
@@ -3536,16 +3789,19 @@ template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewScali
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewStatics> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewStatics2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewStatics2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewStatics3> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewStatics3> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewStatics4> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewStatics4> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics3> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics3> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewTitleBar> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewTitleBar> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewTransferContext> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewTransferContext> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewTransferContextStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewTransferContextStatics> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewWithContext> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IApplicationViewWithContext> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IInputPane> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IInputPane> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IInputPane2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IInputPane2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IInputPaneControl> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IInputPaneControl> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IInputPaneStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IInputPaneStatics> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::IInputPaneStatics2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IInputPaneStatics2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics2> {};
@@ -3556,6 +3812,8 @@ template<> struct hash<winrt::Windows::UI::ViewManagement::IUISettings> : winrt:
 template<> struct hash<winrt::Windows::UI::ViewManagement::IUISettings2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IUISettings2> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IUISettings3> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IUISettings3> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IUISettings4> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IUISettings4> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::IUISettings5> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IUISettings5> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IUIViewSettings> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IUIViewSettings> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::IViewModePreferences> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::IViewModePreferences> {};
@@ -3574,6 +3832,7 @@ template<> struct hash<winrt::Windows::UI::ViewManagement::ProjectionManager> : 
 template<> struct hash<winrt::Windows::UI::ViewManagement::StatusBar> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::StatusBar> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::UISettings> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::UISettings> {};
+template<> struct hash<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::UIViewSettings> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::UIViewSettings> {};
 template<> struct hash<winrt::Windows::UI::ViewManagement::ViewModePreferences> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::ViewModePreferences> {};
 

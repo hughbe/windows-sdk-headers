@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.spi.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -146,9 +146,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 interface ISpiBusInfo;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CISpiBusInfo ABI::Windows::Devices::Spi::ISpiBusInfo
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CISpiBusInfo_FWD_DEFINED__
@@ -160,9 +160,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 interface ISpiConnectionSettings;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettings ABI::Windows::Devices::Spi::ISpiConnectionSettings
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettings_FWD_DEFINED__
@@ -174,9 +174,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 interface ISpiConnectionSettingsFactory;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettingsFactory ABI::Windows::Devices::Spi::ISpiConnectionSettingsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettingsFactory_FWD_DEFINED__
@@ -188,9 +188,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 interface ISpiController;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CISpiController ABI::Windows::Devices::Spi::ISpiController
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CISpiController_FWD_DEFINED__
@@ -202,9 +202,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 interface ISpiControllerStatics;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CISpiControllerStatics ABI::Windows::Devices::Spi::ISpiControllerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CISpiControllerStatics_FWD_DEFINED__
@@ -216,9 +216,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 interface ISpiDevice;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CISpiDevice ABI::Windows::Devices::Spi::ISpiDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CISpiDevice_FWD_DEFINED__
@@ -230,9 +230,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 interface ISpiDeviceStatics;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CISpiDeviceStatics ABI::Windows::Devices::Spi::ISpiDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CISpiDeviceStatics_FWD_DEFINED__
@@ -245,9 +245,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 class SpiController;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x20000
@@ -270,7 +270,7 @@ IIterator<ABI::Windows::Devices::Spi::SpiController*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Spi::SpiController*> __FIIterator_1_Windows__CDevices__CSpi__CSpiController_t;
 #define __FIIterator_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CSpi__CSpiController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Spi::ISpiController*>
@@ -302,7 +302,7 @@ IIterable<ABI::Windows::Devices::Spi::SpiController*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Spi::SpiController*> __FIIterable_1_Windows__CDevices__CSpi__CSpiController_t;
 #define __FIIterable_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CSpi__CSpiController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Spi::ISpiController*>
@@ -334,7 +334,7 @@ IVectorView<ABI::Windows::Devices::Spi::SpiController*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Spi::SpiController*> __FIVectorView_1_Windows__CDevices__CSpi__CSpiController_t;
 #define __FIVectorView_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CSpi__CSpiController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Spi::ISpiController*>
@@ -366,7 +366,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Spi::SpiController*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Spi::SpiController*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiController_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Spi::ISpiController*>
@@ -398,7 +398,7 @@ IAsyncOperation<ABI::Windows::Devices::Spi::SpiController*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Spi::SpiController*> __FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiController_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Spi::ISpiController*>
@@ -414,9 +414,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 class SpiDevice;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
@@ -439,7 +439,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Spi::SpiDevice*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Spi::SpiDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSpi__CSpiDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Spi::ISpiDevice*>
@@ -471,7 +471,7 @@ IAsyncOperation<ABI::Windows::Devices::Spi::SpiDevice*> : IAsyncOperation_impl<A
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Spi::SpiDevice*> __FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSpi__CSpiDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Spi::ISpiDevice*>
@@ -503,7 +503,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSpi__CSpiCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CSpi__CSpiController*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Spi::ISpiController*>*>
@@ -535,7 +535,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSpi__CSpiController*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CSpi__CSpiController*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CSpi__CSpiController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Spi::ISpiController*>*>
@@ -565,7 +565,7 @@ IIterator<int> : IIterator_impl<int>
 // correct parameterized interface specialization.
 typedef IIterator<int> __FIIterator_1_int_t;
 #define __FIIterator_1_int ABI::Windows::Foundation::Collections::__FIIterator_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_int ABI::Windows::Foundation::Collections::IIterator<INT32>
@@ -594,7 +594,7 @@ IIterable<int> : IIterable_impl<int>
 // correct parameterized interface specialization.
 typedef IIterable<int> __FIIterable_1_int_t;
 #define __FIIterable_1_int ABI::Windows::Foundation::Collections::__FIIterable_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_int ABI::Windows::Foundation::Collections::IIterable<INT32>
@@ -623,7 +623,7 @@ IVectorView<int> : IVectorView_impl<int>
 // correct parameterized interface specialization.
 typedef IVectorView<int> __FIVectorView_1_int_t;
 #define __FIVectorView_1_int ABI::Windows::Foundation::Collections::__FIVectorView_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_int ABI::Windows::Foundation::Collections::IVectorView<INT32>
@@ -646,10 +646,10 @@ namespace ABI {
             namespace Spi {
                 namespace Provider {
                     interface ISpiProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Spi */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Spi */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSpi_CProvider_CISpiProvider ABI::Windows::Devices::Spi::Provider::ISpiProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CSpi_CProvider_CISpiProvider_FWD_DEFINED__
@@ -665,8 +665,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -681,9 +681,9 @@ namespace ABI {
                 
                 typedef enum SpiMode : int SpiMode;
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -692,9 +692,9 @@ namespace ABI {
                 
                 typedef enum SpiSharingMode : int SpiSharingMode;
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -708,9 +708,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 class SpiBusInfo;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -718,9 +718,9 @@ namespace ABI {
         namespace Devices {
             namespace Spi {
                 class SpiConnectionSettings;
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -756,9 +756,9 @@ namespace ABI {
                     SpiMode_Mode3 = 3,
                 };
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -783,9 +783,9 @@ namespace ABI {
                     SpiSharingMode_Shared = 1,
                 };
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -830,9 +830,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpiBusInfo=_uuidof(ISpiBusInfo);
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSpi_CISpiBusInfo;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSpi_CISpiBusInfo_INTERFACE_DEFINED__) */
@@ -898,9 +898,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpiConnectionSettings=_uuidof(ISpiConnectionSettings);
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettings;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettings_INTERFACE_DEFINED__) */
@@ -940,9 +940,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpiConnectionSettingsFactory=_uuidof(ISpiConnectionSettingsFactory);
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettingsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSpi_CISpiConnectionSettingsFactory_INTERFACE_DEFINED__) */
@@ -982,9 +982,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpiController=_uuidof(ISpiController);
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSpi_CISpiController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSpi_CISpiController_INTERFACE_DEFINED__) */
@@ -1027,9 +1027,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpiControllerStatics=_uuidof(ISpiControllerStatics);
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSpi_CISpiControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSpi_CISpiControllerStatics_INTERFACE_DEFINED__) */
@@ -1095,9 +1095,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpiDevice=_uuidof(ISpiDevice);
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSpi_CISpiDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSpi_CISpiDevice_INTERFACE_DEFINED__) */
@@ -1146,9 +1146,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpiDeviceStatics=_uuidof(ISpiDeviceStatics);
                 
-            } /* Windows */
+            } /* Spi */
         } /* Devices */
-    } /* Spi */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSpi_CISpiDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSpi_CISpiDeviceStatics_INTERFACE_DEFINED__) */

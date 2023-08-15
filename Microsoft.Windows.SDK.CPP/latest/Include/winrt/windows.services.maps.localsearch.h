@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.services.maps.localsearch.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -243,10 +243,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -288,10 +284,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalCategoriesStatics;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalCategoriesStatics ABI::Windows::Services::Maps::LocalSearch::ILocalCategoriesStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalCategoriesStatics_FWD_DEFINED__
@@ -304,10 +300,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalLocation;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation ABI::Windows::Services::Maps::LocalSearch::ILocalLocation
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation_FWD_DEFINED__
@@ -320,10 +316,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalLocation2;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation2 ABI::Windows::Services::Maps::LocalSearch::ILocalLocation2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation2_FWD_DEFINED__
@@ -336,10 +332,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalLocationFinderResult;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderResult ABI::Windows::Services::Maps::LocalSearch::ILocalLocationFinderResult
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderResult_FWD_DEFINED__
@@ -352,10 +348,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalLocationFinderStatics;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderStatics ABI::Windows::Services::Maps::LocalSearch::ILocalLocationFinderStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderStatics_FWD_DEFINED__
@@ -368,10 +364,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalLocationHoursOfOperationItem;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationHoursOfOperationItem ABI::Windows::Services::Maps::LocalSearch::ILocalLocationHoursOfOperationItem
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationHoursOfOperationItem_FWD_DEFINED__
@@ -384,10 +380,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalLocationRatingInfo;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationRatingInfo ABI::Windows::Services::Maps::LocalSearch::ILocalLocationRatingInfo
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationRatingInfo_FWD_DEFINED__
@@ -400,10 +396,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface IPlaceInfoHelperStatics;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CIPlaceInfoHelperStatics ABI::Windows::Services::Maps::LocalSearch::IPlaceInfoHelperStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CIPlaceInfoHelperStatics_FWD_DEFINED__
@@ -417,10 +413,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     class LocalLocation;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_LOCALSEARCHCONTRACT_VERSION >= 0x10000
@@ -443,7 +439,7 @@ IIterator<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::LocalSearch::ILocalLocation*>
@@ -475,7 +471,7 @@ IIterable<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::LocalSearch::ILocalLocation*>
@@ -492,10 +488,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     class LocalLocationHoursOfOperationItem;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_LOCALSEARCHCONTRACT_VERSION >= 0x30000
@@ -518,7 +514,7 @@ IIterator<ABI::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperati
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem*> __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::LocalSearch::ILocalLocationHoursOfOperationItem*>
@@ -550,7 +546,7 @@ IIterable<ABI::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperati
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem*> __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::LocalSearch::ILocalLocationHoursOfOperationItem*>
@@ -582,7 +578,7 @@ IVectorView<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::LocalSearch::ILocalLocation*>
@@ -614,7 +610,7 @@ IVectorView<ABI::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOpera
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem*> __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationHoursOfOperationItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::LocalSearch::ILocalLocationHoursOfOperationItem*>
@@ -631,10 +627,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     class LocalLocationFinderResult;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_MAPS_LOCALSEARCHCONTRACT_VERSION >= 0x10000
@@ -657,7 +653,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::LocalSearch::Local
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::LocalSearch::ILocalLocationFinderResult*>
@@ -689,7 +685,7 @@ IAsyncOperation<ABI::Windows::Services::Maps::LocalSearch::LocalLocationFinderRe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult*> __FIAsyncOperation_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocationFinderResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Maps::LocalSearch::ILocalLocationFinderResult*>
@@ -719,7 +715,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -748,7 +744,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -765,9 +761,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geocircle;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_FWD_DEFINED__
@@ -776,9 +772,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocircle;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle ABI::Windows::Devices::Geolocation::IGeocircle
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_FWD_DEFINED__
@@ -789,9 +785,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -800,9 +796,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint ABI::Windows::Devices::Geolocation::IGeopoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -817,8 +813,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -828,8 +824,8 @@ namespace ABI {
             
             typedef enum DayOfWeek : int DayOfWeek;
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 
 
@@ -839,9 +835,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapAddress;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CServices_CMaps_CIMapAddress_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CMaps_CIMapAddress_FWD_DEFINED__
@@ -850,9 +846,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapAddress;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapAddress ABI::Windows::Services::Maps::IMapAddress
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapAddress_FWD_DEFINED__
@@ -863,9 +859,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class PlaceInfo;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CServices_CMaps_CIPlaceInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CMaps_CIPlaceInfo_FWD_DEFINED__
@@ -874,9 +870,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IPlaceInfo;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIPlaceInfo ABI::Windows::Services::Maps::IPlaceInfo
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIPlaceInfo_FWD_DEFINED__
@@ -893,10 +889,10 @@ namespace ABI {
                     
                     typedef enum LocalLocationFinderStatus : int LocalLocationFinderStatus;
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 
@@ -917,10 +913,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     class LocalLocationRatingInfo;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 
 
@@ -962,10 +958,10 @@ namespace ABI {
                         LocalLocationFinderStatus_NotSupported = 7,
                     };
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_MAPS_LOCALSEARCHCONTRACT_VERSION >= 0x10000
 
 
@@ -1023,10 +1019,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILocalCategoriesStatics=_uuidof(ILocalCategoriesStatics);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalCategoriesStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalCategoriesStatics_INTERFACE_DEFINED__) */
@@ -1084,10 +1080,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILocalLocation=_uuidof(ILocalLocation);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation_INTERFACE_DEFINED__) */
@@ -1133,10 +1129,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILocalLocation2=_uuidof(ILocalLocation2);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation2_INTERFACE_DEFINED__) */
@@ -1179,10 +1175,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILocalLocationFinderResult=_uuidof(ILocalLocationFinderResult);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderResult_INTERFACE_DEFINED__) */
@@ -1226,10 +1222,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILocalLocationFinderStatics=_uuidof(ILocalLocationFinderStatics);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationFinderStatics_INTERFACE_DEFINED__) */
@@ -1275,10 +1271,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILocalLocationHoursOfOperationItem=_uuidof(ILocalLocationHoursOfOperationItem);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationHoursOfOperationItem;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationHoursOfOperationItem_INTERFACE_DEFINED__) */
@@ -1324,10 +1320,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILocalLocationRatingInfo=_uuidof(ILocalLocationRatingInfo);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationRatingInfo;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocationRatingInfo_INTERFACE_DEFINED__) */
@@ -1368,10 +1364,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlaceInfoHelperStatics=_uuidof(IPlaceInfoHelperStatics);
                     
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CLocalSearch_CIPlaceInfoHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CIPlaceInfoHelperStatics_INTERFACE_DEFINED__) */

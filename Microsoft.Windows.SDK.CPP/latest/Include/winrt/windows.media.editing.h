@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.editing.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -284,9 +280,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IBackgroundAudioTrack;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrack ABI::Windows::Media::Editing::IBackgroundAudioTrack
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrack_FWD_DEFINED__
@@ -298,9 +294,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IBackgroundAudioTrackStatics;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrackStatics ABI::Windows::Media::Editing::IBackgroundAudioTrackStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrackStatics_FWD_DEFINED__
@@ -312,9 +308,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IEmbeddedAudioTrack;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIEmbeddedAudioTrack ABI::Windows::Media::Editing::IEmbeddedAudioTrack
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIEmbeddedAudioTrack_FWD_DEFINED__
@@ -326,9 +322,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaClip;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaClip ABI::Windows::Media::Editing::IMediaClip
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaClip_FWD_DEFINED__
@@ -340,9 +336,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaClipStatics;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics ABI::Windows::Media::Editing::IMediaClipStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics_FWD_DEFINED__
@@ -354,9 +350,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaClipStatics2;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics2 ABI::Windows::Media::Editing::IMediaClipStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics2_FWD_DEFINED__
@@ -368,9 +364,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaComposition;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaComposition ABI::Windows::Media::Editing::IMediaComposition
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaComposition_FWD_DEFINED__
@@ -382,9 +378,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaComposition2;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaComposition2 ABI::Windows::Media::Editing::IMediaComposition2
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaComposition2_FWD_DEFINED__
@@ -396,9 +392,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaCompositionStatics;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaCompositionStatics ABI::Windows::Media::Editing::IMediaCompositionStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaCompositionStatics_FWD_DEFINED__
@@ -410,9 +406,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaOverlay;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay ABI::Windows::Media::Editing::IMediaOverlay
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay_FWD_DEFINED__
@@ -424,9 +420,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaOverlayFactory;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayFactory ABI::Windows::Media::Editing::IMediaOverlayFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayFactory_FWD_DEFINED__
@@ -438,9 +434,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaOverlayLayer;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayer ABI::Windows::Media::Editing::IMediaOverlayLayer
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayer_FWD_DEFINED__
@@ -452,9 +448,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaOverlayLayerFactory;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayerFactory ABI::Windows::Media::Editing::IMediaOverlayLayerFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayerFactory_FWD_DEFINED__
@@ -467,9 +463,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 class BackgroundAudioTrack;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -492,7 +488,7 @@ IIterator<ABI::Windows::Media::Editing::BackgroundAudioTrack*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Editing::BackgroundAudioTrack*> __FIIterator_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t;
 #define __FIIterator_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Editing::IBackgroundAudioTrack*>
@@ -524,7 +520,7 @@ IIterable<ABI::Windows::Media::Editing::BackgroundAudioTrack*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Editing::BackgroundAudioTrack*> __FIIterable_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t;
 #define __FIIterable_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Editing::IBackgroundAudioTrack*>
@@ -540,9 +536,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 class EmbeddedAudioTrack;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -565,7 +561,7 @@ IIterator<ABI::Windows::Media::Editing::EmbeddedAudioTrack*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Editing::EmbeddedAudioTrack*> __FIIterator_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack_t;
 #define __FIIterator_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Editing::IEmbeddedAudioTrack*>
@@ -597,7 +593,7 @@ IIterable<ABI::Windows::Media::Editing::EmbeddedAudioTrack*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Editing::EmbeddedAudioTrack*> __FIIterable_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack_t;
 #define __FIIterable_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Editing::IEmbeddedAudioTrack*>
@@ -613,9 +609,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 class MediaClip;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -638,7 +634,7 @@ IIterator<ABI::Windows::Media::Editing::MediaClip*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Editing::MediaClip*> __FIIterator_1_Windows__CMedia__CEditing__CMediaClip_t;
 #define __FIIterator_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEditing__CMediaClip_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Editing::IMediaClip*>
@@ -670,7 +666,7 @@ IIterable<ABI::Windows::Media::Editing::MediaClip*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Editing::MediaClip*> __FIIterable_1_Windows__CMedia__CEditing__CMediaClip_t;
 #define __FIIterable_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEditing__CMediaClip_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Editing::IMediaClip*>
@@ -686,9 +682,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 class MediaOverlay;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -711,7 +707,7 @@ IIterator<ABI::Windows::Media::Editing::MediaOverlay*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Editing::MediaOverlay*> __FIIterator_1_Windows__CMedia__CEditing__CMediaOverlay_t;
 #define __FIIterator_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEditing__CMediaOverlay_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Editing::IMediaOverlay*>
@@ -743,7 +739,7 @@ IIterable<ABI::Windows::Media::Editing::MediaOverlay*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Editing::MediaOverlay*> __FIIterable_1_Windows__CMedia__CEditing__CMediaOverlay_t;
 #define __FIIterable_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEditing__CMediaOverlay_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Editing::IMediaOverlay*>
@@ -759,9 +755,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 class MediaOverlayLayer;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -784,7 +780,7 @@ IIterator<ABI::Windows::Media::Editing::MediaOverlayLayer*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Editing::MediaOverlayLayer*> __FIIterator_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t;
 #define __FIIterator_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Editing::IMediaOverlayLayer*>
@@ -816,7 +812,7 @@ IIterable<ABI::Windows::Media::Editing::MediaOverlayLayer*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Editing::MediaOverlayLayer*> __FIIterable_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t;
 #define __FIIterable_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Editing::IMediaOverlayLayer*>
@@ -848,7 +844,7 @@ IVectorView<ABI::Windows::Media::Editing::BackgroundAudioTrack*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Editing::BackgroundAudioTrack*> __FIVectorView_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t;
 #define __FIVectorView_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Editing::IBackgroundAudioTrack*>
@@ -880,7 +876,7 @@ IVectorView<ABI::Windows::Media::Editing::EmbeddedAudioTrack*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Editing::EmbeddedAudioTrack*> __FIVectorView_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack_t;
 #define __FIVectorView_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEditing__CEmbeddedAudioTrack ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Editing::IEmbeddedAudioTrack*>
@@ -912,7 +908,7 @@ IVectorView<ABI::Windows::Media::Editing::MediaClip*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Editing::MediaClip*> __FIVectorView_1_Windows__CMedia__CEditing__CMediaClip_t;
 #define __FIVectorView_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEditing__CMediaClip_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Editing::IMediaClip*>
@@ -944,7 +940,7 @@ IVectorView<ABI::Windows::Media::Editing::MediaOverlay*> : IVectorView_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Editing::MediaOverlay*> __FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlay_t;
 #define __FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlay_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Editing::IMediaOverlay*>
@@ -976,7 +972,7 @@ IVectorView<ABI::Windows::Media::Editing::MediaOverlayLayer*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Editing::MediaOverlayLayer*> __FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t;
 #define __FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Editing::IMediaOverlayLayer*>
@@ -1008,7 +1004,7 @@ IVector<ABI::Windows::Media::Editing::BackgroundAudioTrack*> : IVector_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Editing::BackgroundAudioTrack*> __FIVector_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t;
 #define __FIVector_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Editing::IBackgroundAudioTrack*>
@@ -1040,7 +1036,7 @@ IVector<ABI::Windows::Media::Editing::MediaClip*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Editing::MediaClip*> __FIVector_1_Windows__CMedia__CEditing__CMediaClip_t;
 #define __FIVector_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEditing__CMediaClip_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Editing::IMediaClip*>
@@ -1072,7 +1068,7 @@ IVector<ABI::Windows::Media::Editing::MediaOverlay*> : IVector_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Editing::MediaOverlay*> __FIVector_1_Windows__CMedia__CEditing__CMediaOverlay_t;
 #define __FIVector_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEditing__CMediaOverlay_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEditing__CMediaOverlay ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Editing::IMediaOverlay*>
@@ -1104,7 +1100,7 @@ IVector<ABI::Windows::Media::Editing::MediaOverlayLayer*> : IVector_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Editing::MediaOverlayLayer*> __FIVector_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t;
 #define __FIVector_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEditing__CMediaOverlayLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEditing__CMediaOverlayLayer ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Editing::IMediaOverlayLayer*>
@@ -1136,7 +1132,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::BackgroundAudioTra
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::BackgroundAudioTrack*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::IBackgroundAudioTrack*>
@@ -1168,7 +1164,7 @@ IAsyncOperation<ABI::Windows::Media::Editing::BackgroundAudioTrack*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Editing::BackgroundAudioTrack*> __FIAsyncOperation_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CEditing__CBackgroundAudioTrack_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CEditing__CBackgroundAudioTrack ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Editing::IBackgroundAudioTrack*>
@@ -1200,7 +1196,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::MediaClip*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::MediaClip*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaClip_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaClip_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::IMediaClip*>
@@ -1232,7 +1228,7 @@ IAsyncOperation<ABI::Windows::Media::Editing::MediaClip*> : IAsyncOperation_impl
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Editing::MediaClip*> __FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaClip_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaClip_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaClip ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Editing::IMediaClip*>
@@ -1248,9 +1244,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 class MediaComposition;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1273,7 +1269,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::MediaComposition*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::MediaComposition*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaComposition_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaComposition ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaComposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CEditing__CMediaComposition ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Editing::IMediaComposition*>
@@ -1305,7 +1301,7 @@ IAsyncOperation<ABI::Windows::Media::Editing::MediaComposition*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Editing::MediaComposition*> __FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaComposition_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaComposition ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaComposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CEditing__CMediaComposition ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Editing::IMediaComposition*>
@@ -1335,7 +1331,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1365,7 +1361,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1395,7 +1391,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1424,7 +1420,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1453,7 +1449,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -1470,9 +1466,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition ABI::Windows::Media::Effects::IAudioEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition_FWD_DEFINED__
@@ -1498,7 +1494,7 @@ IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -1530,7 +1526,7 @@ IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -1562,7 +1558,7 @@ IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -1594,7 +1590,7 @@ IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -1612,9 +1608,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinition ABI::Windows::Media::Effects::IVideoEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinition_FWD_DEFINED__
@@ -1640,7 +1636,7 @@ IIterator<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -1672,7 +1668,7 @@ IIterable<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -1704,7 +1700,7 @@ IVectorView<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -1736,7 +1732,7 @@ IVector<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -1752,9 +1748,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class ImageStream;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1763,9 +1759,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1791,7 +1787,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::ImageStream*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::ImageStream*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1823,7 +1819,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::ImageStream*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::ImageStream*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1839,8 +1835,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CTimeSpan_USE
@@ -1861,7 +1857,7 @@ IIterator<struct ABI::Windows::Foundation::TimeSpan> : IIterator_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::TimeSpan> __FIIterator_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIIterator_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::TimeSpan>
@@ -1891,7 +1887,7 @@ IIterable<struct ABI::Windows::Foundation::TimeSpan> : IIterable_impl<struct ABI
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::TimeSpan> __FIIterable_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIIterable_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::TimeSpan>
@@ -1922,7 +1918,7 @@ IIterator<ABI::Windows::Graphics::Imaging::ImageStream*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Imaging::ImageStream*> __FIIterator_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIIterator_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1954,7 +1950,7 @@ IIterable<ABI::Windows::Graphics::Imaging::ImageStream*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Imaging::ImageStream*> __FIIterable_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIIterable_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1986,7 +1982,7 @@ IVectorView<ABI::Windows::Graphics::Imaging::ImageStream*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Imaging::ImageStream*> __FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -2018,7 +2014,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CGraphics__CImaging__C
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>*>
@@ -2050,7 +2046,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream*> __FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>*>
@@ -2066,9 +2062,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 enum TranscodeFailureReason : int;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
@@ -2089,7 +2085,7 @@ IAsyncOperationProgressHandler<enum ABI::Windows::Media::Transcoding::TranscodeF
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
@@ -2119,7 +2115,7 @@ IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Transcodin
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
@@ -2149,7 +2145,7 @@ IAsyncOperationWithProgress<enum ABI::Windows::Media::Transcoding::TranscodeFail
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
@@ -2167,8 +2163,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2180,8 +2176,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2189,8 +2185,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2203,10 +2199,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -2225,9 +2221,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class MediaStreamSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource_FWD_DEFINED__
@@ -2236,9 +2232,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaStreamSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource ABI::Windows::Media::Core::IMediaStreamSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaStreamSource_FWD_DEFINED__
@@ -2255,9 +2251,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoCompositorDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinition ABI::Windows::Media::Effects::IVideoCompositorDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinition_FWD_DEFINED__
@@ -2272,9 +2268,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class AudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -2283,9 +2279,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties ABI::Windows::Media::MediaProperties::IAudioEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -2296,9 +2292,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -2307,9 +2303,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile ABI::Windows::Media::MediaProperties::IMediaEncodingProfile
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -2320,9 +2316,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class VideoEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_FWD_DEFINED__
@@ -2331,9 +2327,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties ABI::Windows::Media::MediaProperties::IVideoEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_FWD_DEFINED__
@@ -2349,9 +2345,9 @@ namespace ABI {
                 
                 typedef enum TranscodeFailureReason : int TranscodeFailureReason;
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2362,8 +2358,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2373,8 +2369,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2385,8 +2381,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2397,9 +2393,9 @@ namespace ABI {
                 
                 typedef enum MediaTrimmingPreference : int MediaTrimmingPreference;
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2408,9 +2404,9 @@ namespace ABI {
                 
                 typedef enum VideoFramePrecision : int VideoFramePrecision;
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2460,9 +2456,9 @@ namespace ABI {
                     MediaTrimmingPreference_Precise = 1,
                 };
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2487,9 +2483,9 @@ namespace ABI {
                     VideoFramePrecision_NearestKeyFrame = 1,
                 };
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2564,9 +2560,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundAudioTrack=_uuidof(IBackgroundAudioTrack);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrack;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrack_INTERFACE_DEFINED__) */
@@ -2610,9 +2606,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundAudioTrackStatics=_uuidof(IBackgroundAudioTrackStatics);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrackStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIBackgroundAudioTrackStatics_INTERFACE_DEFINED__) */
@@ -2651,9 +2647,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEmbeddedAudioTrack=_uuidof(IEmbeddedAudioTrack);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIEmbeddedAudioTrack;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIEmbeddedAudioTrack_INTERFACE_DEFINED__) */
@@ -2743,9 +2739,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaClip=_uuidof(IMediaClip);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaClip;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaClip_INTERFACE_DEFINED__) */
@@ -2795,9 +2791,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaClipStatics=_uuidof(IMediaClipStatics);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics_INTERFACE_DEFINED__) */
@@ -2838,9 +2834,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaClipStatics2=_uuidof(IMediaClipStatics2);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaClipStatics2_INTERFACE_DEFINED__) */
@@ -2939,9 +2935,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaComposition=_uuidof(IMediaComposition);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaComposition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaComposition_INTERFACE_DEFINED__) */
@@ -2980,9 +2976,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaComposition2=_uuidof(IMediaComposition2);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaComposition2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaComposition2_INTERFACE_DEFINED__) */
@@ -3022,9 +3018,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaCompositionStatics=_uuidof(IMediaCompositionStatics);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaCompositionStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaCompositionStatics_INTERFACE_DEFINED__) */
@@ -3080,19 +3076,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Editing::IMediaClip * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AudioEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AudioEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMediaOverlay=_uuidof(IMediaOverlay);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay_INTERFACE_DEFINED__) */
@@ -3138,9 +3134,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaOverlayFactory=_uuidof(IMediaOverlayFactory);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayFactory_INTERFACE_DEFINED__) */
@@ -3185,9 +3181,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaOverlayLayer=_uuidof(IMediaOverlayLayer);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayer_INTERFACE_DEFINED__) */
@@ -3227,9 +3223,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaOverlayLayerFactory=_uuidof(IMediaOverlayLayerFactory);
                 
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlayLayerFactory_INTERFACE_DEFINED__) */
@@ -7689,7 +7685,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *asyncInfo, /* [in] */ double progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl;
 

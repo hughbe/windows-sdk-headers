@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.resources.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -128,6 +128,7 @@
 #include "EventToken.h"
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
+#include "Windows.UI.h"
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
@@ -138,9 +139,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Resources {
                 interface IResourceLoader;
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader ABI::Windows::ApplicationModel::Resources::IResourceLoader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader_FWD_DEFINED__
@@ -152,9 +153,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Resources {
                 interface IResourceLoader2;
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader2 ABI::Windows::ApplicationModel::Resources::IResourceLoader2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader2_FWD_DEFINED__
@@ -166,9 +167,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Resources {
                 interface IResourceLoaderFactory;
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderFactory ABI::Windows::ApplicationModel::Resources::IResourceLoaderFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderFactory_FWD_DEFINED__
@@ -180,9 +181,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Resources {
                 interface IResourceLoaderStatics;
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics ABI::Windows::ApplicationModel::Resources::IResourceLoaderStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics_FWD_DEFINED__
@@ -194,12 +195,26 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Resources {
                 interface IResourceLoaderStatics2;
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics2 ABI::Windows::ApplicationModel::Resources::IResourceLoaderStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Resources {
+                interface IResourceLoaderStatics3;
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 ABI::Windows::ApplicationModel::Resources::IResourceLoaderStatics3
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_FWD_DEFINED__
 
 
 
@@ -207,8 +222,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -216,11 +231,34 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            class UIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            interface IUIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CIUIContext ABI::Windows::UI::IUIContext
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+
 
 
 
@@ -235,9 +273,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Resources {
                 class ResourceLoader;
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -277,9 +315,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IResourceLoader=_uuidof(IResourceLoader);
                 
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader_INTERFACE_DEFINED__) */
@@ -319,9 +357,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IResourceLoader2=_uuidof(IResourceLoader2);
                 
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader2_INTERFACE_DEFINED__) */
@@ -361,9 +399,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IResourceLoaderFactory=_uuidof(IResourceLoaderFactory);
                 
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderFactory_INTERFACE_DEFINED__) */
@@ -403,9 +441,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IResourceLoaderStatics=_uuidof(IResourceLoaderStatics);
                 
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics_INTERFACE_DEFINED__) */
@@ -455,13 +493,55 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IResourceLoaderStatics2=_uuidof(IResourceLoaderStatics2);
                 
-            } /* Windows */
+            } /* Resources */
         } /* ApplicationModel */
-    } /* Resources */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.Resources.IResourceLoaderStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Resources.ResourceLoader
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Resources_IResourceLoaderStatics3[] = L"Windows.ApplicationModel.Resources.IResourceLoaderStatics3";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Resources {
+                /* [object, uuid("64609DFB-64AC-491B-8100-0E558D61C1D0"), exclusiveto, contract] */
+                MIDL_INTERFACE("64609DFB-64AC-491B-8100-0E558D61C1D0")
+                IResourceLoaderStatics3 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetForUIContext(
+                        /* [in] */__RPC__in_opt ABI::Windows::UI::IUIContext * context,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Resources::IResourceLoader * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IResourceLoaderStatics3=_uuidof(IResourceLoaderStatics3);
+                
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -476,6 +556,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceL
  *   Type can be activated via the Windows.ApplicationModel.Resources.IResourceLoaderFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -531,12 +612,28 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_FWD_DEFINED__
+
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CFoundation_CIUriRuntimeClass __x_ABI_CWindows_CFoundation_CIUriRuntimeClass;
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
+
+
+
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CIUIContext __x_ABI_CWindows_CUI_CIUIContext;
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+
 
 
 
@@ -1045,6 +1142,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceL
 
 /*
  *
+ * Interface Windows.ApplicationModel.Resources.IResourceLoaderStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Resources.ResourceLoader
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Resources_IResourceLoaderStatics3[] = L"Windows.ApplicationModel.Resources.IResourceLoaderStatics3";
+/* [object, uuid("64609DFB-64AC-491B-8100-0E558D61C1D0"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetForUIContext )(
+        __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CIUIContext * context,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoader * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3Vtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_GetForUIContext(This,context,result) \
+    ( (This)->lpVtbl->GetForUIContext(This,context,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CIResourceLoaderStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.ApplicationModel.Resources.ResourceLoader
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -1055,6 +1246,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceL
  *   Type can be activated via the Windows.ApplicationModel.Resources.IResourceLoaderFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *

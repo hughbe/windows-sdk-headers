@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,6 +9,12 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Contacts {
 
 struct Contact;
 struct ContactPhone;
+
+}
+
+WINRT_EXPORT namespace winrt::Windows::Devices::Enumeration {
+
+enum class DeviceAccessStatus;
 
 }
 
@@ -103,6 +109,7 @@ enum class PhoneLineTransport : int32_t
 {
     Cellular = 0,
     VoipApp = 1,
+    Bluetooth = 2,
 };
 
 enum class PhoneLineWatcherStatus : int32_t
@@ -199,9 +206,12 @@ struct IPhoneCallVideoCapabilities;
 struct IPhoneCallVideoCapabilitiesManagerStatics;
 struct IPhoneDialOptions;
 struct IPhoneLine;
+struct IPhoneLine2;
 struct IPhoneLineCellularDetails;
 struct IPhoneLineConfiguration;
 struct IPhoneLineStatics;
+struct IPhoneLineTransportDevice;
+struct IPhoneLineTransportDeviceStatics;
 struct IPhoneLineWatcher;
 struct IPhoneLineWatcherEventArgs;
 struct IPhoneVoicemail;
@@ -236,6 +246,7 @@ struct PhoneDialOptions;
 struct PhoneLine;
 struct PhoneLineCellularDetails;
 struct PhoneLineConfiguration;
+struct PhoneLineTransportDevice;
 struct PhoneLineWatcher;
 struct PhoneLineWatcherEventArgs;
 struct PhoneVoicemail;
@@ -272,9 +283,12 @@ template <> struct category<Windows::ApplicationModel::Calls::IPhoneCallVideoCap
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneCallVideoCapabilitiesManagerStatics>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneDialOptions>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneLine>{ using type = interface_category; };
+template <> struct category<Windows::ApplicationModel::Calls::IPhoneLine2>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneLineCellularDetails>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneLineConfiguration>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneLineStatics>{ using type = interface_category; };
+template <> struct category<Windows::ApplicationModel::Calls::IPhoneLineTransportDevice>{ using type = interface_category; };
+template <> struct category<Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneLineWatcher>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneLineWatcherEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::Calls::IPhoneVoicemail>{ using type = interface_category; };
@@ -309,6 +323,7 @@ template <> struct category<Windows::ApplicationModel::Calls::PhoneDialOptions>{
 template <> struct category<Windows::ApplicationModel::Calls::PhoneLine>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Calls::PhoneLineCellularDetails>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Calls::PhoneLineConfiguration>{ using type = class_category; };
+template <> struct category<Windows::ApplicationModel::Calls::PhoneLineTransportDevice>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Calls::PhoneLineWatcher>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Calls::PhoneVoicemail>{ using type = class_category; };
@@ -357,9 +372,12 @@ template <> struct name<Windows::ApplicationModel::Calls::IPhoneCallVideoCapabil
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneCallVideoCapabilitiesManagerStatics>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilitiesManagerStatics" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneDialOptions>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneDialOptions" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneLine>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLine" }; };
+template <> struct name<Windows::ApplicationModel::Calls::IPhoneLine2>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLine2" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneLineCellularDetails>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLineCellularDetails" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneLineConfiguration>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLineConfiguration" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneLineStatics>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLineStatics" }; };
+template <> struct name<Windows::ApplicationModel::Calls::IPhoneLineTransportDevice>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLineTransportDevice" }; };
+template <> struct name<Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneLineWatcher>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLineWatcher" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneLineWatcherEventArgs>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneLineWatcherEventArgs" }; };
 template <> struct name<Windows::ApplicationModel::Calls::IPhoneVoicemail>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.IPhoneVoicemail" }; };
@@ -394,6 +412,7 @@ template <> struct name<Windows::ApplicationModel::Calls::PhoneDialOptions>{ sta
 template <> struct name<Windows::ApplicationModel::Calls::PhoneLine>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.PhoneLine" }; };
 template <> struct name<Windows::ApplicationModel::Calls::PhoneLineCellularDetails>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.PhoneLineCellularDetails" }; };
 template <> struct name<Windows::ApplicationModel::Calls::PhoneLineConfiguration>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.PhoneLineConfiguration" }; };
+template <> struct name<Windows::ApplicationModel::Calls::PhoneLineTransportDevice>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.PhoneLineTransportDevice" }; };
 template <> struct name<Windows::ApplicationModel::Calls::PhoneLineWatcher>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.PhoneLineWatcher" }; };
 template <> struct name<Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs" }; };
 template <> struct name<Windows::ApplicationModel::Calls::PhoneVoicemail>{ static constexpr auto & value{ L"Windows.ApplicationModel.Calls.PhoneVoicemail" }; };
@@ -442,9 +461,12 @@ template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneCallVide
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneCallVideoCapabilitiesManagerStatics>{ static constexpr guid value{ 0xF3C64B56,0xF00B,0x4A1C,{ 0xA0,0xC6,0xEE,0x19,0x10,0x74,0x9C,0xE7 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneDialOptions>{ static constexpr guid value{ 0xB639C4B8,0xF06F,0x36CB,{ 0xA8,0x63,0x82,0x37,0x42,0xB5,0xF2,0xD4 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLine>{ static constexpr guid value{ 0x27C66F30,0x6A69,0x34CA,{ 0xA2,0xBA,0x65,0x30,0x25,0x30,0xC3,0x11 } }; };
+template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLine2>{ static constexpr guid value{ 0x0167F56A,0x5344,0x5D64,{ 0x8A,0xF3,0xA3,0x1A,0x95,0x0E,0x91,0x6A } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLineCellularDetails>{ static constexpr guid value{ 0x192601D5,0x147C,0x4769,{ 0xB6,0x73,0x98,0xA5,0xEC,0x84,0x26,0xCB } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLineConfiguration>{ static constexpr guid value{ 0xFE265862,0xF64F,0x4312,{ 0xB2,0xA8,0x4E,0x25,0x77,0x21,0xAA,0x95 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLineStatics>{ static constexpr guid value{ 0xF38B5F23,0xCEB0,0x404F,{ 0xBC,0xF2,0xBA,0x9F,0x69,0x7D,0x8A,0xDF } }; };
+template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLineTransportDevice>{ static constexpr guid value{ 0xEFA8F889,0xCFFA,0x59F4,{ 0x97,0xE4,0x74,0x70,0x5B,0x7D,0xC4,0x90 } }; };
+template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>{ static constexpr guid value{ 0x0F3121AC,0xD609,0x51A1,{ 0x96,0xF3,0xFB,0x00,0xD1,0x81,0x92,0x52 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLineWatcher>{ static constexpr guid value{ 0x8A45CD0A,0x6323,0x44E0,{ 0xA6,0xF6,0x9F,0x21,0xF6,0x4D,0xC9,0x0A } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneLineWatcherEventArgs>{ static constexpr guid value{ 0xD07C753E,0x9E12,0x4A37,{ 0x82,0xB7,0xAD,0x53,0x5D,0xAD,0x6A,0x67 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::Calls::IPhoneVoicemail>{ static constexpr guid value{ 0xC9CE77F6,0x6E9F,0x3A8B,{ 0xB7,0x27,0x6E,0x0C,0xF6,0x99,0x82,0x24 } }; };
@@ -475,6 +497,7 @@ template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneDial
 template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneLine>{ using type = Windows::ApplicationModel::Calls::IPhoneLine; };
 template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneLineCellularDetails>{ using type = Windows::ApplicationModel::Calls::IPhoneLineCellularDetails; };
 template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneLineConfiguration>{ using type = Windows::ApplicationModel::Calls::IPhoneLineConfiguration; };
+template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneLineTransportDevice>{ using type = Windows::ApplicationModel::Calls::IPhoneLineTransportDevice; };
 template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneLineWatcher>{ using type = Windows::ApplicationModel::Calls::IPhoneLineWatcher; };
 template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>{ using type = Windows::ApplicationModel::Calls::IPhoneLineWatcherEventArgs; };
 template <> struct default_interface<Windows::ApplicationModel::Calls::PhoneVoicemail>{ using type = Windows::ApplicationModel::Calls::IPhoneVoicemail; };
@@ -700,6 +723,12 @@ template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLine>{ struct typ
     virtual int32_t WINRT_CALL DialWithOptions(void* options) noexcept = 0;
 };};
 
+template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLine2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL EnableTextReply(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_TransportDeviceId(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLineCellularDetails>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_SimState(Windows::ApplicationModel::Calls::PhoneSimState* value) noexcept = 0;
@@ -718,6 +747,27 @@ template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLineConfiguration
 template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLineStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL FromIdAsync(winrt::guid lineId, void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLineTransportDevice>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_DeviceId(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Transport(Windows::ApplicationModel::Calls::PhoneLineTransport* value) noexcept = 0;
+    virtual int32_t WINRT_CALL RequestAccessAsync(void** operation) noexcept = 0;
+    virtual int32_t WINRT_CALL RegisterApp() noexcept = 0;
+    virtual int32_t WINRT_CALL RegisterAppForUser(void* user) noexcept = 0;
+    virtual int32_t WINRT_CALL UnregisterApp() noexcept = 0;
+    virtual int32_t WINRT_CALL UnregisterAppForUser(void* user) noexcept = 0;
+    virtual int32_t WINRT_CALL IsRegistered(bool* result) noexcept = 0;
+    virtual int32_t WINRT_CALL Connect(bool* result) noexcept = 0;
+    virtual int32_t WINRT_CALL ConnectAsync(void** operation) noexcept = 0;
+};};
+
+template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL FromId(void* id, void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDeviceSelector(void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDeviceSelectorForPhoneLineTransport(Windows::ApplicationModel::Calls::PhoneLineTransport transport, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::ApplicationModel::Calls::IPhoneLineWatcher>{ struct type : IInspectable
@@ -1096,6 +1146,14 @@ struct consume_Windows_ApplicationModel_Calls_IPhoneLine
 template <> struct consume<Windows::ApplicationModel::Calls::IPhoneLine> { template <typename D> using type = consume_Windows_ApplicationModel_Calls_IPhoneLine<D>; };
 
 template <typename D>
+struct consume_Windows_ApplicationModel_Calls_IPhoneLine2
+{
+    void EnableTextReply(bool value) const;
+    hstring TransportDeviceId() const;
+};
+template <> struct consume<Windows::ApplicationModel::Calls::IPhoneLine2> { template <typename D> using type = consume_Windows_ApplicationModel_Calls_IPhoneLine2<D>; };
+
+template <typename D>
 struct consume_Windows_ApplicationModel_Calls_IPhoneLineCellularDetails
 {
     Windows::ApplicationModel::Calls::PhoneSimState SimState() const;
@@ -1120,6 +1178,31 @@ struct consume_Windows_ApplicationModel_Calls_IPhoneLineStatics
     Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Calls::PhoneLine> FromIdAsync(winrt::guid const& lineId) const;
 };
 template <> struct consume<Windows::ApplicationModel::Calls::IPhoneLineStatics> { template <typename D> using type = consume_Windows_ApplicationModel_Calls_IPhoneLineStatics<D>; };
+
+template <typename D>
+struct consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice
+{
+    hstring DeviceId() const;
+    Windows::ApplicationModel::Calls::PhoneLineTransport Transport() const;
+    Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus> RequestAccessAsync() const;
+    void RegisterApp() const;
+    void RegisterAppForUser(Windows::System::User const& user) const;
+    void UnregisterApp() const;
+    void UnregisterAppForUser(Windows::System::User const& user) const;
+    bool IsRegistered() const;
+    bool Connect() const;
+    Windows::Foundation::IAsyncOperation<bool> ConnectAsync() const;
+};
+template <> struct consume<Windows::ApplicationModel::Calls::IPhoneLineTransportDevice> { template <typename D> using type = consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice<D>; };
+
+template <typename D>
+struct consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDeviceStatics
+{
+    Windows::ApplicationModel::Calls::PhoneLineTransportDevice FromId(param::hstring const& id) const;
+    hstring GetDeviceSelector() const;
+    hstring GetDeviceSelector(Windows::ApplicationModel::Calls::PhoneLineTransport const& transport) const;
+};
+template <> struct consume<Windows::ApplicationModel::Calls::IPhoneLineTransportDeviceStatics> { template <typename D> using type = consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDeviceStatics<D>; };
 
 template <typename D>
 struct consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher

@@ -296,8 +296,6 @@ namespace Windows
                 [exclusiveto(Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader)]
                 [uuid(DBC72B07-64C3-482B-93C8-65FB33C22208)]
                 interface IBarcodeScannerFrameReader : IInspectable
-                    requires
-                        Windows.Foundation.IClosable
                 {
                     HRESULT StartAsync([out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
                     HRESULT StopAsync([out] [retval] Windows.Foundation.IAsyncAction** operation);
@@ -374,8 +372,6 @@ namespace Windows
                 [exclusiveto(Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection)]
                 [uuid(B44ACBED-0B3A-4FA3-86C5-491EA30780EB)]
                 interface IBarcodeScannerProviderConnection : IInspectable
-                    requires
-                        Windows.Foundation.IClosable
                 {
                     [propget] HRESULT Id([out] [retval] HSTRING* value);
                     [propget] HRESULT VideoDeviceId([out] [retval] HSTRING* value);
@@ -413,8 +409,6 @@ namespace Windows
                 [exclusiveto(Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection)]
                 [uuid(BE9B53CD-1134-418C-A06B-04423A73F3D7)]
                 interface IBarcodeScannerProviderConnection2 : IInspectable
-                    requires
-                        Windows.Foundation.IClosable
                 {
                     [overload("CreateFrameReaderAsync")] HRESULT CreateFrameReaderAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader*>** operation);
                     [overload("CreateFrameReaderAsync")] HRESULT CreateFrameReaderWithFormatAsync([in] Windows.Graphics.Imaging.BitmapPixelFormat preferredFormat, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader*>** operation);
@@ -544,8 +538,6 @@ namespace Windows
                 [exclusiveto(Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame)]
                 [uuid(7E585248-9DF7-4121-A175-801D8000112E)]
                 interface IBarcodeScannerVideoFrame : IInspectable
-                    requires
-                        Windows.Foundation.IClosable
                 {
                     [propget] HRESULT Format([out] [retval] Windows.Graphics.Imaging.BitmapPixelFormat* value);
                     [propget] HRESULT Width([out] [retval] UINT32* value);
@@ -569,7 +561,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerDisableScannerRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest;
@@ -578,7 +569,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerDisableScannerRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs;
@@ -586,7 +576,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerEnableScannerRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest;
@@ -595,7 +584,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerEnableScannerRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs;
@@ -603,7 +591,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerFrameReader
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader;
@@ -612,7 +599,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerFrameReaderFrameArrivedEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs;
@@ -620,7 +606,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerGetSymbologyAttributesRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest;
@@ -629,7 +614,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerGetSymbologyAttributesRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs;
@@ -637,7 +621,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerHideVideoPreviewRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest;
@@ -646,7 +629,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerHideVideoPreviewRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs;
@@ -654,17 +636,15 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerProviderConnection
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection;
-                    interface Windows.Foundation.IClosable;
                     [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2;
+                    interface Windows.Foundation.IClosable;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerProviderTriggerDetails
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails;
@@ -672,7 +652,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerSetActiveSymbologiesRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest;
@@ -681,7 +660,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerSetActiveSymbologiesRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs;
@@ -689,7 +667,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerSetSymbologyAttributesRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest;
@@ -698,7 +675,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerSetSymbologyAttributesRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs;
@@ -706,7 +682,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerStartSoftwareTriggerRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest;
@@ -715,7 +690,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerStartSoftwareTriggerRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs;
@@ -723,7 +697,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerStopSoftwareTriggerRequest
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest;
@@ -732,7 +705,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerStopSoftwareTriggerRequestEventArgs
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs;
@@ -740,7 +712,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass BarcodeScannerVideoFrame
                 {
                     [default] interface Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame;

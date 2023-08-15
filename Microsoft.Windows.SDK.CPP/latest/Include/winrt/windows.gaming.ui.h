@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.gaming.ui.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -243,10 +243,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -285,9 +281,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 interface IGameBarStatics;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CUI_CIGameBarStatics ABI::Windows::Gaming::UI::IGameBarStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CUI_CIGameBarStatics_FWD_DEFINED__
@@ -299,9 +295,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 interface IGameChatMessageReceivedEventArgs;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CUI_CIGameChatMessageReceivedEventArgs ABI::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CGaming_CUI_CIGameChatMessageReceivedEventArgs_FWD_DEFINED__
@@ -313,9 +309,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 interface IGameChatOverlay;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CUI_CIGameChatOverlay ABI::Windows::Gaming::UI::IGameChatOverlay
 
 #endif // ____x_ABI_CWindows_CGaming_CUI_CIGameChatOverlay_FWD_DEFINED__
@@ -327,9 +323,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 interface IGameChatOverlayMessageSource;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayMessageSource ABI::Windows::Gaming::UI::IGameChatOverlayMessageSource
 
 #endif // ____x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayMessageSource_FWD_DEFINED__
@@ -341,9 +337,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 interface IGameChatOverlayStatics;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayStatics ABI::Windows::Gaming::UI::IGameChatOverlayStatics
 
 #endif // ____x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayStatics_FWD_DEFINED__
@@ -355,9 +351,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 interface IGameUIProviderActivatedEventArgs;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGaming_CUI_CIGameUIProviderActivatedEventArgs ABI::Windows::Gaming::UI::IGameUIProviderActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CGaming_CUI_CIGameUIProviderActivatedEventArgs_FWD_DEFINED__
@@ -370,9 +366,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 class GameChatOverlayMessageSource;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -380,9 +376,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 class GameChatMessageReceivedEventArgs;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GAMING_UI_GAMECHATOVERLAYCONTRACT_VERSION >= 0x10000
@@ -406,7 +402,7 @@ ITypedEventHandler<ABI::Windows::Gaming::UI::GameChatOverlayMessageSource*,ABI::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Gaming::UI::GameChatOverlayMessageSource*,ABI::Windows::Gaming::UI::GameChatMessageReceivedEventArgs*> __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Gaming::UI::IGameChatOverlayMessageSource*,ABI::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs*>
@@ -438,7 +434,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -468,7 +464,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -498,7 +494,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -528,7 +524,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -558,7 +554,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -588,7 +584,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -617,7 +613,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -647,7 +643,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -677,7 +673,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -696,9 +692,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Activation {
                 interface IActivatedEventArgs;
-            } /* Windows */
+            } /* Activation */
         } /* ApplicationModel */
-    } /* Activation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs ABI::Windows::ApplicationModel::Activation::IActivatedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs_FWD_DEFINED__
@@ -712,9 +708,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -723,9 +719,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -740,8 +736,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -755,9 +751,9 @@ namespace ABI {
                 
                 typedef enum GameChatMessageOrigin : int GameChatMessageOrigin;
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -766,9 +762,9 @@ namespace ABI {
                 
                 typedef enum GameChatOverlayPosition : int GameChatOverlayPosition;
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -783,9 +779,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 class GameChatOverlay;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -794,9 +790,9 @@ namespace ABI {
         namespace Gaming {
             namespace UI {
                 class GameUIProviderActivatedEventArgs;
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -830,9 +826,9 @@ namespace ABI {
                     GameChatMessageOrigin_Text = 1,
                 };
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -863,9 +859,9 @@ namespace ABI {
                     GameChatOverlayPosition_TopRight = 7,
                 };
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -908,19 +904,19 @@ namespace ABI {
                         /* [in] */EventRegistrationToken token
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInputRedirected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IGameBarStatics=_uuidof(IGameBarStatics);
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CUI_CIGameBarStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CUI_CIGameBarStatics_INTERFACE_DEFINED__) */
@@ -971,9 +967,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGameChatMessageReceivedEventArgs=_uuidof(IGameChatMessageReceivedEventArgs);
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CUI_CIGameChatMessageReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CUI_CIGameChatMessageReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -1020,9 +1016,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGameChatOverlay=_uuidof(IGameChatOverlay);
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CUI_CIGameChatOverlay;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CUI_CIGameChatOverlay_INTERFACE_DEFINED__) */
@@ -1068,9 +1064,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGameChatOverlayMessageSource=_uuidof(IGameChatOverlayMessageSource);
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayMessageSource;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayMessageSource_INTERFACE_DEFINED__) */
@@ -1109,9 +1105,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGameChatOverlayStatics=_uuidof(IGameChatOverlayStatics);
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayStatics;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayStatics_INTERFACE_DEFINED__) */
@@ -1157,9 +1153,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGameUIProviderActivatedEventArgs=_uuidof(IGameUIProviderActivatedEventArgs);
                 
-            } /* Windows */
+            } /* UI */
         } /* Gaming */
-    } /* UI */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGaming_CUI_CIGameUIProviderActivatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGaming_CUI_CIGameUIProviderActivatedEventArgs_INTERFACE_DEFINED__) */
@@ -1355,7 +1351,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayMessageSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CUI_CIGameChatMessageReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CUI_CIGameChatOverlayMessageSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGaming_CUI_CIGameChatMessageReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGaming__CUI__CGameChatOverlayMessageSource_Windows__CGaming__CUI__CGameChatMessageReceivedEventArgsVtbl;
 

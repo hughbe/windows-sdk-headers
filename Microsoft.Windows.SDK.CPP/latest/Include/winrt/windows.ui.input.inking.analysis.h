@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.input.inking.analysis.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,11 +275,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisInkBullet;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_FWD_DEFINED__
@@ -297,11 +293,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisInkDrawing;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_FWD_DEFINED__
@@ -315,11 +311,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisInkWord;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_FWD_DEFINED__
@@ -333,11 +329,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisLine;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisLine
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_FWD_DEFINED__
@@ -351,11 +347,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisListItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_FWD_DEFINED__
@@ -369,11 +365,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisNode;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_FWD_DEFINED__
@@ -387,11 +383,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisParagraph;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_FWD_DEFINED__
@@ -405,11 +401,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisResult;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_FWD_DEFINED__
@@ -423,11 +419,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisRoot;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_FWD_DEFINED__
@@ -441,11 +437,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalysisWritingRegion;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_FWD_DEFINED__
@@ -459,11 +455,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalyzer;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer ABI::Windows::UI::Input::Inking::Analysis::IInkAnalyzer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_FWD_DEFINED__
@@ -477,11 +473,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         interface IInkAnalyzerFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory ABI::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_FWD_DEFINED__
@@ -510,7 +506,7 @@ IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
@@ -542,7 +538,7 @@ IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
@@ -574,7 +570,7 @@ IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
 #define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
@@ -592,11 +588,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisResult;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -619,7 +615,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::InkAn
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>
@@ -651,7 +647,7 @@ IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t;
 #define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>
@@ -667,8 +663,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
@@ -689,7 +685,7 @@ IIterator<struct ABI::Windows::Foundation::Point> : IIterator_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::Point> __FIIterator_1_Windows__CFoundation__CPoint_t;
 #define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Point>
@@ -719,7 +715,7 @@ IIterable<struct ABI::Windows::Foundation::Point> : IIterable_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::Point> __FIIterable_1_Windows__CFoundation__CPoint_t;
 #define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>
@@ -749,7 +745,7 @@ IVectorView<struct ABI::Windows::Foundation::Point> : IVectorView_impl<struct AB
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Foundation::Point> __FIVectorView_1_Windows__CFoundation__CPoint_t;
 #define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Point>
@@ -778,7 +774,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -807,7 +803,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -836,7 +832,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -865,7 +861,7 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
@@ -894,7 +890,7 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
@@ -923,7 +919,7 @@ IVectorView<UINT32> : IVectorView_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
 #define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
@@ -939,10 +935,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     class InkStroke;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
@@ -952,10 +948,10 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     interface IInkStroke;
-                } /* Windows */
-            } /* UI */
-        } /* Input */
-    } /* Inking */} /* ABI */
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke ABI::Windows::UI::Input::Inking::IInkStroke
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
@@ -981,7 +977,7 @@ IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkStroke*>
@@ -1013,7 +1009,7 @@ IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkStroke*>
@@ -1032,8 +1028,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1041,8 +1037,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1061,11 +1057,11 @@ namespace ABI {
                         
                         typedef enum InkAnalysisDrawingKind : int InkAnalysisDrawingKind;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1076,11 +1072,11 @@ namespace ABI {
                         
                         typedef enum InkAnalysisNodeKind : int InkAnalysisNodeKind;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1091,11 +1087,11 @@ namespace ABI {
                         
                         typedef enum InkAnalysisStatus : int InkAnalysisStatus;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1106,11 +1102,11 @@ namespace ABI {
                         
                         typedef enum InkAnalysisStrokeKind : int InkAnalysisStrokeKind;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1131,11 +1127,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisInkBullet;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1145,11 +1141,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisInkDrawing;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1159,11 +1155,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisInkWord;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1173,11 +1169,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisLine;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1187,11 +1183,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisListItem;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1201,11 +1197,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisNode;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1215,11 +1211,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisParagraph;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1230,11 +1226,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisRoot;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1244,11 +1240,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalysisWritingRegion;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1258,11 +1254,11 @@ namespace ABI {
                 namespace Inking {
                     namespace Analysis {
                         class InkAnalyzer;
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1313,11 +1309,11 @@ namespace ABI {
                             InkAnalysisDrawingKind_Hexagon = 14,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1351,11 +1347,11 @@ namespace ABI {
                             InkAnalysisNodeKind_ListItem = 8,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1382,11 +1378,11 @@ namespace ABI {
                             InkAnalysisStatus_Unchanged = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1414,11 +1410,11 @@ namespace ABI {
                             InkAnalysisStrokeKind_Drawing = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1460,11 +1456,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisInkBullet=_uuidof(IInkAnalysisInkBullet);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_INTERFACE_DEFINED__) */
@@ -1515,11 +1511,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisInkDrawing=_uuidof(IInkAnalysisInkDrawing);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_INTERFACE_DEFINED__) */
@@ -1567,11 +1563,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisInkWord=_uuidof(IInkAnalysisInkWord);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_INTERFACE_DEFINED__) */
@@ -1619,11 +1615,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisLine=_uuidof(IInkAnalysisLine);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_INTERFACE_DEFINED__) */
@@ -1668,11 +1664,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisListItem=_uuidof(IInkAnalysisListItem);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_INTERFACE_DEFINED__) */
@@ -1728,11 +1724,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisNode=_uuidof(IInkAnalysisNode);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_INTERFACE_DEFINED__) */
@@ -1777,11 +1773,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisParagraph=_uuidof(IInkAnalysisParagraph);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_INTERFACE_DEFINED__) */
@@ -1822,11 +1818,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisResult=_uuidof(IInkAnalysisResult);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_INTERFACE_DEFINED__) */
@@ -1875,11 +1871,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisRoot=_uuidof(IInkAnalysisRoot);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_INTERFACE_DEFINED__) */
@@ -1924,11 +1920,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalysisWritingRegion=_uuidof(IInkAnalysisWritingRegion);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_INTERFACE_DEFINED__) */
@@ -1965,7 +1961,7 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot * * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAnalyzing(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE AddDataForStroke(
                                 /* [in] */__RPC__in_opt ABI::Windows::UI::Input::Inking::IInkStroke * stroke
@@ -1995,11 +1991,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalyzer=_uuidof(IInkAnalyzer);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_INTERFACE_DEFINED__) */
@@ -2037,11 +2033,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IInkAnalyzerFactory=_uuidof(IInkAnalyzerFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Analysis */
+                } /* Inking */
             } /* Input */
-        } /* Inking */
-    } /* Analysis */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_INTERFACE_DEFINED__) */
@@ -3346,12 +3342,12 @@ typedef struct __FIIterator_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out int *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -3513,7 +3509,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT32 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out int *item);
+                                         /* [retval][out] */ __RPC__out unsigned int *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT32 * This,
@@ -3521,7 +3517,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ int item,
+            /* [in] */ unsigned int item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -3529,7 +3525,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
                                                __RPC__in __FIVectorView_1_UINT32 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE

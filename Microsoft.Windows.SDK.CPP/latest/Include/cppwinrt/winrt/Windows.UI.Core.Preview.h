@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,18 @@
 #include "winrt/Windows.Foundation.h"
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.UI.WindowManagement.2.h"
 #include "winrt/impl/Windows.UI.Core.Preview.2.h"
 #include "winrt/Windows.UI.Core.h"
 
 namespace winrt::impl {
+
+template <typename D> int32_t consume_Windows_UI_Core_Preview_ICoreAppWindowPreviewStatics<D>::GetIdFromWindow(Windows::UI::WindowManagement::AppWindow const& window) const
+{
+    int32_t result{};
+    check_hresult(WINRT_SHIM(Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics)->GetIdFromWindow(get_abi(window), &result));
+    return result;
+}
 
 template <typename D> bool consume_Windows_UI_Core_Preview_ISystemNavigationCloseRequestedPreviewEventArgs<D>::Handled() const
 {
@@ -57,6 +65,26 @@ template <typename D> Windows::UI::Core::Preview::SystemNavigationManagerPreview
     check_hresult(WINRT_SHIM(Windows::UI::Core::Preview::ISystemNavigationManagerPreviewStatics)->GetForCurrentView(put_abi(loader)));
     return loader;
 }
+
+template <typename D>
+struct produce<D, Windows::UI::Core::Preview::ICoreAppWindowPreview> : produce_base<D, Windows::UI::Core::Preview::ICoreAppWindowPreview>
+{};
+
+template <typename D>
+struct produce<D, Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics> : produce_base<D, Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics>
+{
+    int32_t WINRT_CALL GetIdFromWindow(void* window, int32_t* result) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetIdFromWindow, WINRT_WRAP(int32_t), Windows::UI::WindowManagement::AppWindow const&);
+            *result = detach_from<int32_t>(this->shim().GetIdFromWindow(*reinterpret_cast<Windows::UI::WindowManagement::AppWindow const*>(&window)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
 
 template <typename D>
 struct produce<D, Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs> : produce_base<D, Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs>
@@ -144,6 +172,11 @@ struct produce<D, Windows::UI::Core::Preview::ISystemNavigationManagerPreviewSta
 
 WINRT_EXPORT namespace winrt::Windows::UI::Core::Preview {
 
+inline int32_t CoreAppWindowPreview::GetIdFromWindow(Windows::UI::WindowManagement::AppWindow const& window)
+{
+    return impl::call_factory<CoreAppWindowPreview, Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics>([&](auto&& f) { return f.GetIdFromWindow(window); });
+}
+
 inline Windows::UI::Core::Preview::SystemNavigationManagerPreview SystemNavigationManagerPreview::GetForCurrentView()
 {
     return impl::call_factory<SystemNavigationManagerPreview, Windows::UI::Core::Preview::ISystemNavigationManagerPreviewStatics>([&](auto&& f) { return f.GetForCurrentView(); });
@@ -153,9 +186,12 @@ inline Windows::UI::Core::Preview::SystemNavigationManagerPreview SystemNavigati
 
 WINRT_EXPORT namespace std {
 
+template<> struct hash<winrt::Windows::UI::Core::Preview::ICoreAppWindowPreview> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::ICoreAppWindowPreview> {};
+template<> struct hash<winrt::Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics> {};
 template<> struct hash<winrt::Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreview> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreview> {};
 template<> struct hash<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreviewStatics> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreviewStatics> {};
+template<> struct hash<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview> {};
 template<> struct hash<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs> {};
 template<> struct hash<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview> {};
 

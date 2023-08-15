@@ -10,6 +10,7 @@ import "AsyncInfo.idl";
 import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
+import "Windows.UI.idl";
 
 // Forward Declare
 namespace Windows
@@ -19,6 +20,13 @@ namespace Windows
         typedef struct Rect Rect;
 
         apicontract UniversalApiContract;
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
+        runtimeclass UIContext;
     }
 }
 namespace Windows
@@ -46,6 +54,8 @@ namespace Windows
                 interface ICoreInputViewOcclusionsChangedEventArgs;
 
                 interface ICoreInputViewStatics;
+
+                interface ICoreInputViewStatics2;
 
                 interface ICoreInputViewTransferringXYFocusEventArgs;
 
@@ -185,6 +195,14 @@ namespace Windows
                     HRESULT GetForCurrentView([out] [retval] Windows.UI.ViewManagement.Core.CoreInputView** result);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.UI.ViewManagement.Core.CoreInputView)]
+                [uuid(7EBC0862-D049-4E52-87B0-1E90E98C49ED)]
+                interface ICoreInputViewStatics2 : IInspectable
+                {
+                    HRESULT GetForUIContext([in] Windows.UI.UIContext* context, [out] [retval] Windows.UI.ViewManagement.Core.CoreInputView** result);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [exclusiveto(Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs)]
                 [uuid(04DE169F-BA02-4850-8B55-D82D03BA6D7F)]
@@ -201,6 +219,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.ViewManagement.Core.ICoreInputViewStatics, Windows.Foundation.UniversalApiContract, 5.0)]
+                [static(Windows.UI.ViewManagement.Core.ICoreInputViewStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
                 runtimeclass CoreInputView
                 {
                     [default] interface Windows.UI.ViewManagement.Core.ICoreInputView;

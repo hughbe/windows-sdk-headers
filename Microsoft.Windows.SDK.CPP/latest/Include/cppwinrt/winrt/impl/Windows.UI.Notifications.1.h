@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -272,6 +272,13 @@ struct WINRT_EBO IToastActivatedEventArgs :
     IToastActivatedEventArgs(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IToastActivatedEventArgs2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IToastActivatedEventArgs2>
+{
+    IToastActivatedEventArgs2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IToastCollection :
     Windows::Foundation::IInspectable,
     impl::consume_t<IToastCollection>
@@ -333,6 +340,13 @@ struct WINRT_EBO IToastNotification4 :
     impl::consume_t<IToastNotification4>
 {
     IToastNotification4(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IToastNotification6 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IToastNotification6>
+{
+    IToastNotification6(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IToastNotificationActionTriggerDetail :

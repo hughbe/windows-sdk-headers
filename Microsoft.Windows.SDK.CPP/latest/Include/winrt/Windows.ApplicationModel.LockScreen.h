@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.lockscreen.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 interface ILockApplicationHost;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHost ABI::Windows::ApplicationModel::LockScreen::ILockApplicationHost
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHost_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 interface ILockApplicationHostStatics;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHostStatics ABI::Windows::ApplicationModel::LockScreen::ILockApplicationHostStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHostStatics_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 interface ILockScreenBadge;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenBadge ABI::Windows::ApplicationModel::LockScreen::ILockScreenBadge
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenBadge_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 interface ILockScreenInfo;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenInfo ABI::Windows::ApplicationModel::LockScreen::ILockScreenInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenInfo_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 interface ILockScreenUnlockingDeferral;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingDeferral ABI::Windows::ApplicationModel::LockScreen::ILockScreenUnlockingDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingDeferral_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 interface ILockScreenUnlockingEventArgs;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingEventArgs ABI::Windows::ApplicationModel::LockScreen::ILockScreenUnlockingEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingEventArgs_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 class LockScreenBadge;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -387,7 +383,7 @@ IIterator<ABI::Windows::ApplicationModel::LockScreen::LockScreenBadge*> : IItera
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::LockScreen::LockScreenBadge*> __FIIterator_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge_t;
 #define __FIIterator_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::LockScreen::ILockScreenBadge*>
@@ -419,7 +415,7 @@ IIterable<ABI::Windows::ApplicationModel::LockScreen::LockScreenBadge*> : IItera
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::LockScreen::LockScreenBadge*> __FIIterable_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge_t;
 #define __FIIterable_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::LockScreen::ILockScreenBadge*>
@@ -451,7 +447,7 @@ IVectorView<ABI::Windows::ApplicationModel::LockScreen::LockScreenBadge*> : IVec
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::LockScreen::LockScreenBadge*> __FIVectorView_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CLockScreen__CLockScreenBadge ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::LockScreen::ILockScreenBadge*>
@@ -467,9 +463,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 class LockApplicationHost;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -477,9 +473,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 class LockScreenUnlockingEventArgs;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -503,7 +499,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::LockScreen::LockApplicationHo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::LockScreen::LockApplicationHost*,ABI::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::LockScreen::ILockApplicationHost*,ABI::Windows::ApplicationModel::LockScreen::ILockScreenUnlockingEventArgs*>
@@ -520,9 +516,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 class LockScreenInfo;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -546,7 +542,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::LockScreen::LockScreenInfo*,I
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::LockScreen::LockScreenInfo*,IInspectable*> __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::LockScreen::ILockScreenInfo*,IInspectable*>
@@ -576,7 +572,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -605,7 +601,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -634,7 +630,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -663,7 +659,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -681,8 +677,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -694,9 +690,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -719,9 +715,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace LockScreen {
                 class LockScreenUnlockingDeferral;
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -770,9 +766,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockApplicationHost=_uuidof(ILockApplicationHost);
                 
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHost;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHost_INTERFACE_DEFINED__) */
@@ -811,9 +807,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockApplicationHostStatics=_uuidof(ILockApplicationHostStatics);
                 
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHostStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHostStatics_INTERFACE_DEFINED__) */
@@ -862,9 +858,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenBadge=_uuidof(ILockScreenBadge);
                 
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenBadge;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenBadge_INTERFACE_DEFINED__) */
@@ -940,9 +936,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenInfo=_uuidof(ILockScreenInfo);
                 
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenInfo_INTERFACE_DEFINED__) */
@@ -979,9 +975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenUnlockingDeferral=_uuidof(ILockScreenUnlockingDeferral);
                 
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingDeferral_INTERFACE_DEFINED__) */
@@ -1023,9 +1019,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILockScreenUnlockingEventArgs=_uuidof(ILockScreenUnlockingEventArgs);
                 
-            } /* Windows */
+            } /* LockScreen */
         } /* ApplicationModel */
-    } /* LockScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingEventArgs_INTERFACE_DEFINED__) */
@@ -1483,7 +1479,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHost * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockApplicationHost * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenUnlockingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockApplicationHost_Windows__CApplicationModel__CLockScreen__CLockScreenUnlockingEventArgsVtbl;
 
@@ -1535,7 +1531,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenInfo * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CLockScreen_CILockScreenInfo * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CLockScreen__CLockScreenInfo_IInspectableVtbl;
 
@@ -1589,7 +1585,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -358,6 +358,7 @@ struct ChatMessageReceivedNotificationTrigger;
 struct CommunicationBlockingAppSetAsActiveTrigger;
 struct ContactStoreNotificationTrigger;
 struct ContentPrefetchTrigger;
+struct ConversationalAgentTrigger;
 struct CustomSystemEventTrigger;
 struct DeviceConnectionChangeTrigger;
 struct DeviceManufacturerNotificationTrigger;
@@ -523,6 +524,7 @@ template <> struct category<Windows::ApplicationModel::Background::ChatMessageRe
 template <> struct category<Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Background::ContactStoreNotificationTrigger>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Background::ContentPrefetchTrigger>{ using type = class_category; };
+template <> struct category<Windows::ApplicationModel::Background::ConversationalAgentTrigger>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Background::CustomSystemEventTrigger>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>{ using type = class_category; };
 template <> struct category<Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger>{ using type = class_category; };
@@ -696,6 +698,7 @@ template <> struct name<Windows::ApplicationModel::Background::ChatMessageReceiv
 template <> struct name<Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger>{ static constexpr auto & value{ L"Windows.ApplicationModel.Background.CommunicationBlockingAppSetAsActiveTrigger" }; };
 template <> struct name<Windows::ApplicationModel::Background::ContactStoreNotificationTrigger>{ static constexpr auto & value{ L"Windows.ApplicationModel.Background.ContactStoreNotificationTrigger" }; };
 template <> struct name<Windows::ApplicationModel::Background::ContentPrefetchTrigger>{ static constexpr auto & value{ L"Windows.ApplicationModel.Background.ContentPrefetchTrigger" }; };
+template <> struct name<Windows::ApplicationModel::Background::ConversationalAgentTrigger>{ static constexpr auto & value{ L"Windows.ApplicationModel.Background.ConversationalAgentTrigger" }; };
 template <> struct name<Windows::ApplicationModel::Background::CustomSystemEventTrigger>{ static constexpr auto & value{ L"Windows.ApplicationModel.Background.CustomSystemEventTrigger" }; };
 template <> struct name<Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>{ static constexpr auto & value{ L"Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger" }; };
 template <> struct name<Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger>{ static constexpr auto & value{ L"Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger" }; };
@@ -869,6 +872,7 @@ template <> struct default_interface<Windows::ApplicationModel::Background::Chat
 template <> struct default_interface<Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger>{ using type = Windows::ApplicationModel::Background::ICommunicationBlockingAppSetAsActiveTrigger; };
 template <> struct default_interface<Windows::ApplicationModel::Background::ContactStoreNotificationTrigger>{ using type = Windows::ApplicationModel::Background::IContactStoreNotificationTrigger; };
 template <> struct default_interface<Windows::ApplicationModel::Background::ContentPrefetchTrigger>{ using type = Windows::ApplicationModel::Background::IContentPrefetchTrigger; };
+template <> struct default_interface<Windows::ApplicationModel::Background::ConversationalAgentTrigger>{ using type = Windows::ApplicationModel::Background::IBackgroundTrigger; };
 template <> struct default_interface<Windows::ApplicationModel::Background::CustomSystemEventTrigger>{ using type = Windows::ApplicationModel::Background::ICustomSystemEventTrigger; };
 template <> struct default_interface<Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>{ using type = Windows::ApplicationModel::Background::IDeviceConnectionChangeTrigger; };
 template <> struct default_interface<Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger>{ using type = Windows::ApplicationModel::Background::IDeviceManufacturerNotificationTrigger; };
@@ -1329,7 +1333,7 @@ template <> struct abi<Windows::ApplicationModel::Background::IPhoneTriggerFacto
 
 template <> struct abi<Windows::ApplicationModel::Background::IPushNotificationTriggerFactory>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL Create(void* applicationId, void** trigger) noexcept = 0;
+    virtual int32_t WINRT_CALL Create(void* applicationId, void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::ApplicationModel::Background::IRcsEndUserMessageAvailableTrigger>{ struct type : IInspectable

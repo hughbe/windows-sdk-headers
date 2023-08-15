@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.printers.extensions.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -145,10 +145,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrint3DWorkflow;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflow
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow_FWD_DEFINED__
@@ -161,10 +161,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrint3DWorkflow2;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow2 ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflow2
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow2_FWD_DEFINED__
@@ -177,10 +177,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrint3DWorkflowPrintRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrintRequestedEventArgs ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrintRequestedEventArgs_FWD_DEFINED__
@@ -193,10 +193,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrint3DWorkflowPrinterChangedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrinterChangedEventArgs ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrinterChangedEventArgs_FWD_DEFINED__
@@ -209,10 +209,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrintExtensionContextStatic;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintExtensionContextStatic ABI::Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintExtensionContextStatic_FWD_DEFINED__
@@ -225,10 +225,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrintNotificationEventDetails;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintNotificationEventDetails ABI::Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintNotificationEventDetails_FWD_DEFINED__
@@ -241,10 +241,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrintTaskConfiguration;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration ABI::Windows::Devices::Printers::Extensions::IPrintTaskConfiguration
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration_FWD_DEFINED__
@@ -257,10 +257,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrintTaskConfigurationSaveRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequest ABI::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequest_FWD_DEFINED__
@@ -273,10 +273,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrintTaskConfigurationSaveRequestedDeferral;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedDeferral ABI::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedDeferral
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedDeferral_FWD_DEFINED__
@@ -289,10 +289,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     interface IPrintTaskConfigurationSaveRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedEventArgs ABI::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedEventArgs_FWD_DEFINED__
@@ -306,10 +306,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class Print3DWorkflow;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -318,10 +318,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class Print3DWorkflowPrintRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -345,7 +345,7 @@ ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::Print3DWorkflow*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::Print3DWorkflow*,ABI::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflow*,ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs*>
@@ -364,10 +364,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class Print3DWorkflowPrinterChangedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -391,7 +391,7 @@ ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::Print3DWorkflow*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::Print3DWorkflow*,ABI::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflow*,ABI::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs*>
@@ -409,10 +409,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class PrintTaskConfiguration;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -421,10 +421,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class PrintTaskConfigurationSaveRequestedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION >= 0x10000
@@ -448,7 +448,7 @@ ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::PrintTaskConfigu
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::PrintTaskConfiguration*,ABI::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Printers::Extensions::IPrintTaskConfiguration*,ABI::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs*>
@@ -468,8 +468,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -483,10 +483,10 @@ namespace ABI {
                     
                     typedef enum Print3DWorkflowDetail : int Print3DWorkflowDetail;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -496,10 +496,10 @@ namespace ABI {
                     
                     typedef enum Print3DWorkflowStatus : int Print3DWorkflowStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -521,10 +521,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class PrintNotificationEventDetails;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -534,10 +534,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class PrintTaskConfigurationSaveRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -546,10 +546,10 @@ namespace ABI {
             namespace Printers {
                 namespace Extensions {
                     class PrintTaskConfigurationSaveRequestedDeferral;
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -591,10 +591,10 @@ namespace ABI {
                         Print3DWorkflowDetail_InvalidPrintTicket = 6,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -623,10 +623,10 @@ namespace ABI {
                         Print3DWorkflowStatus_Submitted = 4,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -662,10 +662,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt IInspectable * * printModelPackage
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrintReady(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPrintReady(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_PrintRequested(
                             /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs * eventHandler,
@@ -679,10 +679,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrint3DWorkflow=_uuidof(IPrint3DWorkflow);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow_INTERFACE_DEFINED__) */
@@ -726,10 +726,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrint3DWorkflow2=_uuidof(IPrint3DWorkflow2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow2_INTERFACE_DEFINED__) */
@@ -771,17 +771,17 @@ namespace ABI {
                             /* [in] */__RPC__in_opt IInspectable * source
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetSourceChanged(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPrint3DWorkflowPrintRequestedEventArgs=_uuidof(IPrint3DWorkflowPrintRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrintRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrintRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -821,10 +821,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrint3DWorkflowPrinterChangedEventArgs=_uuidof(IPrint3DWorkflowPrinterChangedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrinterChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrinterChangedEventArgs_INTERFACE_DEFINED__) */
@@ -865,10 +865,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintExtensionContextStatic=_uuidof(IPrintExtensionContextStatic);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintExtensionContextStatic;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintExtensionContextStatic_INTERFACE_DEFINED__) */
@@ -914,10 +914,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintNotificationEventDetails=_uuidof(IPrintNotificationEventDetails);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintNotificationEventDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintNotificationEventDetails_INTERFACE_DEFINED__) */
@@ -964,10 +964,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTaskConfiguration=_uuidof(IPrintTaskConfiguration);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration_INTERFACE_DEFINED__) */
@@ -1014,10 +1014,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTaskConfigurationSaveRequest=_uuidof(IPrintTaskConfigurationSaveRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequest_INTERFACE_DEFINED__) */
@@ -1055,10 +1055,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTaskConfigurationSaveRequestedDeferral=_uuidof(IPrintTaskConfigurationSaveRequestedDeferral);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedDeferral_INTERFACE_DEFINED__) */
@@ -1098,10 +1098,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPrintTaskConfigurationSaveRequestedEventArgs=_uuidof(IPrintTaskConfigurationSaveRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Printers */
-    } /* Extensions */} /* ABI */
+                } /* Extensions */
+            } /* Printers */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1394,7 +1394,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrintRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrintRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrintRequestedEventArgsVtbl;
 
@@ -1447,7 +1447,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrinterChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflow * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrint3DWorkflowPrinterChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflow_Windows__CDevices__CPrinters__CExtensions__CPrint3DWorkflowPrinterChangedEventArgsVtbl;
 
@@ -1500,7 +1500,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfiguration * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPrinters_CExtensions_CIPrintTaskConfigurationSaveRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfiguration_Windows__CDevices__CPrinters__CExtensions__CPrintTaskConfigurationSaveRequestedEventArgsVtbl;
 

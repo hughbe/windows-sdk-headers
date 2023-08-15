@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -35,10 +35,11 @@ struct WINRT_EBO AppServiceClosedEventArgs :
 
 struct WINRT_EBO AppServiceConnection :
     Windows::ApplicationModel::AppService::IAppServiceConnection,
-    impl::require<AppServiceConnection, Windows::ApplicationModel::AppService::IAppServiceConnection2>
+    impl::require<AppServiceConnection, Windows::ApplicationModel::AppService::IAppServiceConnection2, Windows::Foundation::IClosable>
 {
     AppServiceConnection(std::nullptr_t) noexcept {}
     AppServiceConnection();
+    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::AppService::StatelessAppServiceResponse> SendStatelessMessageAsync(Windows::ApplicationModel::AppService::AppServiceConnection const& connection, Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& connectionRequest, Windows::Foundation::Collections::ValueSet const& message);
 };
 
 struct WINRT_EBO AppServiceDeferral :
@@ -67,9 +68,15 @@ struct WINRT_EBO AppServiceResponse :
 
 struct WINRT_EBO AppServiceTriggerDetails :
     Windows::ApplicationModel::AppService::IAppServiceTriggerDetails,
-    impl::require<AppServiceTriggerDetails, Windows::ApplicationModel::AppService::IAppServiceTriggerDetails2, Windows::ApplicationModel::AppService::IAppServiceTriggerDetails3>
+    impl::require<AppServiceTriggerDetails, Windows::ApplicationModel::AppService::IAppServiceTriggerDetails2, Windows::ApplicationModel::AppService::IAppServiceTriggerDetails3, Windows::ApplicationModel::AppService::IAppServiceTriggerDetails4>
 {
     AppServiceTriggerDetails(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO StatelessAppServiceResponse :
+    Windows::ApplicationModel::AppService::IStatelessAppServiceResponse
+{
+    StatelessAppServiceResponse(std::nullptr_t) noexcept {}
 };
 
 }

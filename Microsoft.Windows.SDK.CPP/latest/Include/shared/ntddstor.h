@@ -426,6 +426,19 @@ typedef struct _STORAGE_DEVICE_NUMBER {
 
 typedef struct _STORAGE_DEVICE_NUMBERS {
 
+    //
+    // Size of this structure serves
+    // as the version
+    //
+
+    ULONG Version;
+
+    //
+    // Size of this structure
+    //
+
+    ULONG Size;
+
     ULONG NumberOfDevices;
 
     STORAGE_DEVICE_NUMBER Devices[ANYSIZE_ARRAY];
@@ -886,6 +899,32 @@ typedef enum _STORAGE_QUERY_TYPE {
 } STORAGE_QUERY_TYPE, *PSTORAGE_QUERY_TYPE;
 
 //
+// IOCTL_STORAGE_SET_PROPERTY
+//
+// Input Buffer:
+//      a STORAGE_PROPERTY_SET structure which describes what type of property set
+//      is being done, what property is being set, and any additional
+//      parameters which a particular property set requires.
+//
+//  Output Buffer:
+//      Contains a buffer to place the results of the query into.  Since all
+//      property descriptors can be cast into a STORAGE_DESCRIPTOR_HEADER,
+//      the IOCTL can be called once with a small buffer then again using
+//      a buffer as large as the header reports is necessary.
+//
+
+
+//
+// Types of set operation
+//
+
+typedef enum _STORAGE_SET_TYPE {
+    PropertyStandardSet = 0,          // Sets the descriptor
+    PropertyExistsSet,                // Used to test whether the descriptor is supported
+    PropertySetMaxDefined             // use to validate the value
+} STORAGE_SET_TYPE, *PSTORAGE_SET_TYPE;
+
+//
 // define some initial property id's
 //
 
@@ -912,6 +951,7 @@ typedef enum __WRAPPED__ _STORAGE_PROPERTY_ID {
     StorageDeviceTieringProperty,
     StorageDeviceFaultDomainProperty,
     StorageDeviceClusportProperty,
+    StorageDeviceDependantDevicesProperty,
 // begin_winioctl
     StorageDeviceIoCapabilityProperty = 48,
     StorageAdapterProtocolSpecificProperty,
@@ -926,7 +966,8 @@ typedef enum __WRAPPED__ _STORAGE_PROPERTY_ID {
     StorageDeviceLocationProperty,
     StorageDeviceNumaProperty,
     StorageDeviceZonedDeviceProperty,
-    StorageDeviceUnsafeShutdownCount
+    StorageDeviceUnsafeShutdownCount,
+    StorageDeviceEnduranceProperty,
 } STORAGE_PROPERTY_ID, *PSTORAGE_PROPERTY_ID;
 
 //
@@ -955,6 +996,33 @@ typedef struct _STORAGE_PROPERTY_QUERY {
     UCHAR AdditionalParameters[1];
 
 } STORAGE_PROPERTY_QUERY, *PSTORAGE_PROPERTY_QUERY;
+
+//
+// Set structure - additional parameters for specific set property that can follow
+// the header
+//
+
+typedef struct _STORAGE_PROPERTY_SET {
+
+    //
+    // ID of the property being retrieved
+    //
+
+    STORAGE_PROPERTY_ID PropertyId;
+
+    //
+    // Flags indicating the type of set property being performed
+    //
+
+    STORAGE_SET_TYPE SetType;
+
+    //
+    // Space for additional parameters if necessary
+    //
+
+    UCHAR AdditionalParameters[1];
+
+} STORAGE_PROPERTY_SET, *PSTORAGE_PROPERTY_SET;
 
 //
 // Standard property descriptor header.  All property pages should use this
@@ -1975,7 +2043,7 @@ typedef enum _STORAGE_PROTOCOL_NVME_DATA_TYPE {
     NVMeDataTypeIdentify,       // Retrieved by command - IDENTIFY CONTROLLER or IDENTIFY NAMESPACE
                                 // Corresponding values in STORAGE_PROTOCOL_SPECIFIC_DATA,
                                 //      ProtocolDataRequestValue - Defined in NVME_IDENTIFY_CNS_CODES
-                                //      ProtocolDataRequestSubValue - For NVME_IDENTIFY_CNS_SPECIFIC_NAMESPACE, 
+                                //      ProtocolDataRequestSubValue - For NVME_IDENTIFY_CNS_SPECIFIC_NAMESPACE,
                                 //                                    specifies namespace Id
 
     NVMeDataTypeLogPage,        // Retrieved by command - GET LOG PAGE
@@ -1983,6 +2051,7 @@ typedef enum _STORAGE_PROTOCOL_NVME_DATA_TYPE {
                                 //      ProtocolDataRequestValue - Log page id
                                 //      ProtocolDataRequestSubValue - Lower 32-bit offset value
                                 //      ProtocolDataRequestSubValue2 - Upper 32-bit offset value
+                                //      ProtocolDataRequestSubValue3 - Log specific identifier
 
     NVMeDataTypeFeature,        // Retrieved by command - GET FEATURES
                                 // Corresponding values in STORAGE_PROTOCOL_SPECIFIC_DATA,
@@ -2019,10 +2088,38 @@ typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA {
     ULONG   ProtocolDataLength;
 
     ULONG   FixedProtocolReturnData;
-    ULONG   ProtocolDataRequestSubValue2; // Additional data sub request value
+    ULONG   ProtocolDataRequestSubValue2; // First additional data sub request value
 
-    ULONG   Reserved[2];
+    ULONG   ProtocolDataRequestSubValue3; // Second additional data sub request value
+    ULONG   Reserved;
 } STORAGE_PROTOCOL_SPECIFIC_DATA, *PSTORAGE_PROTOCOL_SPECIFIC_DATA;
+
+//
+// Extended type incorporates both Get/Set protocol data
+// Protocol Data should follow this data structure in the same buffer.
+// The offset of Protocol Data from the beginning of this data structure
+// is reported in data field - "ProtocolDataOffset".
+//
+typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA_EXT {
+
+    STORAGE_PROTOCOL_TYPE ProtocolType;
+    ULONG   DataType;                   // The value will be protocol specific, as defined in STORAGE_PROTOCOL_NVME_DATA_TYPE or STORAGE_PROTOCOL_ATA_DATA_TYPE.
+
+    ULONG   ProtocolDataValue;
+    ULONG   ProtocolDataSubValue;      // Data sub request value
+
+    ULONG   ProtocolDataOffset;         // The offset of data buffer is from beginning of this data structure.
+    ULONG   ProtocolDataLength;
+
+    ULONG   FixedProtocolReturnData;
+    ULONG   ProtocolDataSubValue2;     // First additional data sub request value
+
+    ULONG   ProtocolDataSubValue3;     // Second additional data sub request value
+    ULONG   ProtocolDataSubValue4;     // Third additional data sub request value
+
+    ULONG   ProtocolDataSubValue5;     // Fourth additional data sub request value
+    ULONG   Reserved[5];
+} STORAGE_PROTOCOL_SPECIFIC_DATA_EXT, *PSTORAGE_PROTOCOL_SPECIFIC_DATA_EXT;
 
 //
 // Input parameters for StorageAdapterProtocolSpecificProperty (or StorageDeviceProtocolSpecificProperty) & PropertyStandardQuery
@@ -2041,6 +2138,25 @@ typedef struct _STORAGE_PROTOCOL_DATA_DESCRIPTOR {
     STORAGE_PROTOCOL_SPECIFIC_DATA ProtocolSpecificData;
 
 } STORAGE_PROTOCOL_DATA_DESCRIPTOR, *PSTORAGE_PROTOCOL_DATA_DESCRIPTOR;
+
+//
+// Input parameters for StorageAdapterProtocolSpecificProperty (or StorageDeviceProtocolSpecificProperty) & PropertyStandardQuery (or PropertyStandardSet)
+// will be data structure STORAGE_PROPERTY_QUERY/STORAGE_PROPERTY_SET, where the data field "AdditionalParameters" is a buffer
+// in format of STORAGE_PROTOCOL_SPECIFIC_DATA.
+//
+
+//
+// Out parameters for StorageAdapterProtocolSpecificProperty (or StorageDeviceProtocolSpecificProperty) & PropertyStandardQuery (or PropertyStandardSet)
+//
+typedef struct _STORAGE_PROTOCOL_DATA_DESCRIPTOR_EXT {
+
+    ULONG   Version;
+    ULONG   Size;
+
+    STORAGE_PROTOCOL_SPECIFIC_DATA_EXT ProtocolSpecificData;
+
+} STORAGE_PROTOCOL_DATA_DESCRIPTOR_EXT, *PSTORAGE_PROTOCOL_DATA_DESCRIPTOR_EXT;
+
 
 //
 // Parameters for StorageAdapterTemperatureProperty (or StorageDeviceTemperatureProperty) & PropertyStandardQuery
@@ -2710,6 +2826,54 @@ typedef struct _STORAGE_DEVICE_UNSAFE_SHUTDOWN_COUNT {
     ULONG UnsafeShutdownCount;
 } STORAGE_DEVICE_UNSAFE_SHUTDOWN_COUNT, *PSTORAGE_DEVICE_UNSAFE_SHUTDOWN_COUNT;
 
+#pragma warning(push)
+#pragma warning(disable:4214)   // bit fields other than int to disable this around the struct
+#pragma warning(disable:4201)   // nameless struct/union
+
+//
+// Parameters for StorageDeviceEnduranceProperty & PropertyStandardQuery
+//
+
+//
+// Input parameters for StorageDeviceEnduranceProperty & PropertyStandardQuery
+// uses data structure STORAGE_PROPERTY_QUERY.
+//
+
+//
+// Out parameters for StorageDeviceEnduranceProperty  & PropertyStandardQuery
+// For endurance info fields, ValidFields represents bit mapping of valid fields.
+//
+
+typedef struct _STORAGE_HW_ENDURANCE_INFO {
+    ULONG       ValidFields;        // ValidFields represents bit mapping of valid fields of any type
+                                    // Eg: Bit 0 stands for GroupId, Bit 1 stands for Flags, Bit 3 for BytesReadCount
+
+    ULONG       GroupId;            // Set Id Eg: Set Id for NVMe sets
+
+    struct {
+        ULONG   Shared:1;           // TRUE if information is shared with multiple units/groups
+
+        ULONG   Reserved:31;
+    } Flags;
+
+    ULONG       LifePercentage;         // Used life percentage
+
+    UCHAR       BytesReadCount[16];     // Total bytes read from device (Billion Unit)
+
+    UCHAR       ByteWriteCount[16];     // Total bytes written to device (Billion Unit)
+
+} STORAGE_HW_ENDURANCE_INFO, *PSTORAGE_HW_ENDURANCE_INFO;
+
+typedef struct _STORAGE_HW_ENDURANCE_DATA_DESCRIPTOR {
+    ULONG                           Version;            // keep compatible with STORAGE_DESCRIPTOR_HEADER
+
+    ULONG                           Size;               // keep compatible with STORAGE_DESCRIPTOR_HEADER
+
+    STORAGE_HW_ENDURANCE_INFO       EnduranceInfo;      // Endurance Information of the device
+
+} STORAGE_HW_ENDURANCE_DATA_DESCRIPTOR, *PSTORAGE_HW_ENDURANCE_DATA_DESCRIPTOR;
+
+#pragma warning(pop)
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -2766,6 +2930,7 @@ typedef ULONG DEVICE_DATA_MANAGEMENT_SET_ACTION, DEVICE_DSM_ACTION;
 #define DeviceDsmAction_WriteZeroes             (0x00000019u)
 #define DeviceDsmAction_LostQuery               (0x0000001Au | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_GetFreeSpace            (0x0000001Bu | DeviceDsmActionFlag_NonDestructive)
+#define DeviceDsmAction_ConversionQuery         (0x0000001Cu | DeviceDsmActionFlag_NonDestructive)
 
 //
 // DEVICE_DSM_INPUT.Flags
@@ -3041,7 +3206,7 @@ typedef struct _DEVICE_DSM_OFFLOAD_READ_PARAMETERS {
     // requested by the initiator
     //
 
-    ULONG TimeToLive; 
+    ULONG TimeToLive;
 
     ULONG Reserved[2];
 
@@ -3707,6 +3872,18 @@ typedef struct _DEVICE_DATA_SET_TOPOLOGY_ID_QUERY_OUTPUT {
 
 #define DEVICE_DSM_FLAG_PHYSICAL_ADDRESSES_OMIT_TOTAL_RANGES 0x10000000
 
+//
+// A driver can set the StartAddress field to this value
+// to indicate that an address range has a memory error.
+// Address ranges with memory errors must not be merged:
+// if there are two physically contiguous address ranges
+// with errors, they must be reported as two separate
+// address ranges, both of which have StartAddress set
+// to this value.
+//
+
+#define DEVICE_DSM_PHYSICAL_ADDRESS_HAS_MEMORY_ERROR ((LONGLONG)-1)
+
 typedef struct _DEVICE_STORAGE_ADDRESS_RANGE {
 
     LONGLONG    StartAddress;
@@ -4197,6 +4374,45 @@ typedef struct _DEVICE_DSM_FREE_SPACE_OUTPUT {
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+// DeviceDsmAction_ConversionQuery
+//
+
+typedef struct _DEVICE_DSM_CONVERSION_OUTPUT {
+
+    //
+    // Size of this structure serves
+    // as the version
+    //
+
+    ULONG Version;
+
+    //
+    // Stable  identifier associated
+    // with the source
+    //
+
+    GUID Source;
+
+} DEVICE_DSM_CONVERSION_OUTPUT, *PDEVICE_DSM_CONVERSION_OUTPUT;
+
+//
+// SingleRange    - Yes
+// ParameterBlock - No
+// Output         - Yes
+// OutputBlock    - Yes
+//
+
+#define DeviceDsmDefinition_ConversionQuery {DeviceDsmAction_ConversionQuery,         \
+                                             TRUE,                                    \
+                                             0,                                       \
+                                             0,                                       \
+                                             TRUE,                                    \
+                                             __alignof(DEVICE_DSM_CONVERSION_OUTPUT), \
+                                             sizeof(DEVICE_DSM_CONVERSION_OUTPUT)}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
 // Dsm helper routines
 //
 
@@ -4499,10 +4715,20 @@ DeviceDsmGetOutputLength (
     _In_ ULONG OutputBlockLength
     )
 {
-    ULONG Bytes = sizeof(DEVICE_DSM_OUTPUT);
+    ULONG Bytes = 0;
 
-    if (OutputBlockLength == 0) {
+    if (!Definition->HasOutput) {
         goto Cleanup;
+    }
+
+    Bytes  = sizeof(DEVICE_DSM_OUTPUT);
+
+    if (Definition->OutputBlockLength == 0) {
+        goto Cleanup;
+    }
+
+    if (Definition->OutputBlockLength > OutputBlockLength) {
+        OutputBlockLength = Definition->OutputBlockLength;
     }
 
     Bytes  = DEVICE_DSM_ROUND_UP(Bytes, Definition->OutputBlockAlignment);
@@ -4511,6 +4737,20 @@ DeviceDsmGetOutputLength (
 Cleanup:
 
     return Bytes;
+}
+
+
+FORCEINLINE
+BOOLEAN
+DeviceDsmValidateOutputLength (
+    _In_ PDEVICE_DSM_DEFINITION Definition,
+    _In_ ULONG OutputLength
+    )
+{
+    ULONG Bytes = DeviceDsmGetOutputLength(Definition,
+                                           0);
+
+    return (OutputLength >= Bytes);
 }
 
 

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.update.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace System {
             namespace Update {
                 interface ISystemUpdateItem;
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateItem ABI::Windows::System::Update::ISystemUpdateItem
 
 #endif // ____x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateItem_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace System {
             namespace Update {
                 interface ISystemUpdateLastErrorInfo;
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateLastErrorInfo ABI::Windows::System::Update::ISystemUpdateLastErrorInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateLastErrorInfo_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace System {
             namespace Update {
                 interface ISystemUpdateManagerStatics;
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateManagerStatics ABI::Windows::System::Update::ISystemUpdateManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateManagerStatics_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace System {
             namespace Update {
                 class SystemUpdateItem;
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x60000
@@ -345,7 +341,7 @@ IIterator<ABI::Windows::System::Update::SystemUpdateItem*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::Update::SystemUpdateItem*> __FIIterator_1_Windows__CSystem__CUpdate__CSystemUpdateItem_t;
 #define __FIIterator_1_Windows__CSystem__CUpdate__CSystemUpdateItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CUpdate__CSystemUpdateItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CUpdate__CSystemUpdateItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::Update::ISystemUpdateItem*>
@@ -377,7 +373,7 @@ IIterable<ABI::Windows::System::Update::SystemUpdateItem*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::Update::SystemUpdateItem*> __FIIterable_1_Windows__CSystem__CUpdate__CSystemUpdateItem_t;
 #define __FIIterable_1_Windows__CSystem__CUpdate__CSystemUpdateItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CUpdate__CSystemUpdateItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CUpdate__CSystemUpdateItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::Update::ISystemUpdateItem*>
@@ -409,7 +405,7 @@ IVectorView<ABI::Windows::System::Update::SystemUpdateItem*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::Update::SystemUpdateItem*> __FIVectorView_1_Windows__CSystem__CUpdate__CSystemUpdateItem_t;
 #define __FIVectorView_1_Windows__CSystem__CUpdate__CSystemUpdateItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CUpdate__CSystemUpdateItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CUpdate__CSystemUpdateItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Update::ISystemUpdateItem*>
@@ -440,7 +436,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -469,7 +465,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -498,7 +494,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -527,7 +523,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -556,7 +552,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -585,7 +581,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -603,8 +599,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -612,8 +608,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -627,9 +623,9 @@ namespace ABI {
                 
                 typedef enum SystemUpdateAttentionRequiredReason : int SystemUpdateAttentionRequiredReason;
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -638,9 +634,9 @@ namespace ABI {
                 
                 typedef enum SystemUpdateItemState : int SystemUpdateItemState;
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -649,9 +645,9 @@ namespace ABI {
                 
                 typedef enum SystemUpdateManagerState : int SystemUpdateManagerState;
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -660,9 +656,9 @@ namespace ABI {
                 
                 typedef enum SystemUpdateStartInstallAction : int SystemUpdateStartInstallAction;
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -673,9 +669,9 @@ namespace ABI {
         namespace System {
             namespace Update {
                 class SystemUpdateLastErrorInfo;
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -711,9 +707,9 @@ namespace ABI {
                     SystemUpdateAttentionRequiredReason_UpdateBlocked = 4,
                 };
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x60000
 
 
@@ -745,9 +741,9 @@ namespace ABI {
                     SystemUpdateItemState_Error = 8,
                 };
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x60000
 
 
@@ -782,9 +778,9 @@ namespace ABI {
                     SystemUpdateManagerState_Error = 11,
                 };
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x60000
 
 
@@ -809,9 +805,9 @@ namespace ABI {
                     SystemUpdateStartInstallAction_AllowReboot = 1,
                 };
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION >= 0x60000
 
 
@@ -868,9 +864,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemUpdateItem=_uuidof(ISystemUpdateItem);
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateItem;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateItem_INTERFACE_DEFINED__) */
@@ -908,16 +904,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out HRESULT * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInteractive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISystemUpdateLastErrorInfo=_uuidof(ISystemUpdateLastErrorInfo);
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateLastErrorInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateLastErrorInfo_INTERFACE_DEFINED__) */
@@ -949,7 +945,7 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_State(
                         /* [retval, out] */__RPC__out ABI::Windows::System::Update::SystemUpdateManagerState * value
@@ -979,7 +975,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TrySetUserActiveHours(
                         /* [in] */ABI::Windows::Foundation::TimeSpan start,
                         /* [in] */ABI::Windows::Foundation::TimeSpan end,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LastUpdateCheckTime(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -1012,7 +1008,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetFlightRing(
                         /* [in] */__RPC__in HSTRING flightRing,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetFlightRing(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * result
@@ -1027,9 +1023,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemUpdateManagerStatics=_uuidof(ISystemUpdateManagerStatics);
                 
-            } /* Windows */
+            } /* Update */
         } /* System */
-    } /* Update */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUpdate_CISystemUpdateManagerStatics_INTERFACE_DEFINED__) */

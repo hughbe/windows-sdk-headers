@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -297,6 +297,7 @@ struct ITileUpdateManagerStatics2;
 struct ITileUpdater;
 struct ITileUpdater2;
 struct IToastActivatedEventArgs;
+struct IToastActivatedEventArgs2;
 struct IToastCollection;
 struct IToastCollectionFactory;
 struct IToastCollectionManager;
@@ -306,6 +307,7 @@ struct IToastNotification;
 struct IToastNotification2;
 struct IToastNotification3;
 struct IToastNotification4;
+struct IToastNotification6;
 struct IToastNotificationActionTriggerDetail;
 struct IToastNotificationFactory;
 struct IToastNotificationHistory;
@@ -403,6 +405,7 @@ template <> struct category<Windows::UI::Notifications::ITileUpdateManagerStatic
 template <> struct category<Windows::UI::Notifications::ITileUpdater>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::ITileUpdater2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastActivatedEventArgs>{ using type = interface_category; };
+template <> struct category<Windows::UI::Notifications::IToastActivatedEventArgs2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastCollection>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastCollectionFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastCollectionManager>{ using type = interface_category; };
@@ -412,6 +415,7 @@ template <> struct category<Windows::UI::Notifications::IToastNotification>{ usi
 template <> struct category<Windows::UI::Notifications::IToastNotification2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastNotification3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastNotification4>{ using type = interface_category; };
+template <> struct category<Windows::UI::Notifications::IToastNotification6>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastNotificationActionTriggerDetail>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastNotificationFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Notifications::IToastNotificationHistory>{ using type = interface_category; };
@@ -517,6 +521,7 @@ template <> struct name<Windows::UI::Notifications::ITileUpdateManagerStatics2>{
 template <> struct name<Windows::UI::Notifications::ITileUpdater>{ static constexpr auto & value{ L"Windows.UI.Notifications.ITileUpdater" }; };
 template <> struct name<Windows::UI::Notifications::ITileUpdater2>{ static constexpr auto & value{ L"Windows.UI.Notifications.ITileUpdater2" }; };
 template <> struct name<Windows::UI::Notifications::IToastActivatedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastActivatedEventArgs" }; };
+template <> struct name<Windows::UI::Notifications::IToastActivatedEventArgs2>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastActivatedEventArgs2" }; };
 template <> struct name<Windows::UI::Notifications::IToastCollection>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastCollection" }; };
 template <> struct name<Windows::UI::Notifications::IToastCollectionFactory>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastCollectionFactory" }; };
 template <> struct name<Windows::UI::Notifications::IToastCollectionManager>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastCollectionManager" }; };
@@ -526,6 +531,7 @@ template <> struct name<Windows::UI::Notifications::IToastNotification>{ static 
 template <> struct name<Windows::UI::Notifications::IToastNotification2>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastNotification2" }; };
 template <> struct name<Windows::UI::Notifications::IToastNotification3>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastNotification3" }; };
 template <> struct name<Windows::UI::Notifications::IToastNotification4>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastNotification4" }; };
+template <> struct name<Windows::UI::Notifications::IToastNotification6>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastNotification6" }; };
 template <> struct name<Windows::UI::Notifications::IToastNotificationActionTriggerDetail>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastNotificationActionTriggerDetail" }; };
 template <> struct name<Windows::UI::Notifications::IToastNotificationFactory>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastNotificationFactory" }; };
 template <> struct name<Windows::UI::Notifications::IToastNotificationHistory>{ static constexpr auto & value{ L"Windows.UI.Notifications.IToastNotificationHistory" }; };
@@ -631,6 +637,7 @@ template <> struct guid_storage<Windows::UI::Notifications::ITileUpdateManagerSt
 template <> struct guid_storage<Windows::UI::Notifications::ITileUpdater>{ static constexpr guid value{ 0x0942A48B,0x1D91,0x44EC,{ 0x92,0x43,0xC1,0xE8,0x21,0xC2,0x9A,0x20 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::ITileUpdater2>{ static constexpr guid value{ 0xA2266E12,0x15EE,0x43ED,{ 0x83,0xF5,0x65,0xB3,0x52,0xBB,0x1A,0x84 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastActivatedEventArgs>{ static constexpr guid value{ 0xE3BF92F3,0xC197,0x436F,{ 0x82,0x65,0x06,0x25,0x82,0x4F,0x8D,0xAC } }; };
+template <> struct guid_storage<Windows::UI::Notifications::IToastActivatedEventArgs2>{ static constexpr guid value{ 0xAB7DA512,0xCC61,0x568E,{ 0x81,0xBE,0x30,0x4A,0xC3,0x10,0x38,0xFA } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastCollection>{ static constexpr guid value{ 0x0A8BC3B0,0xE0BE,0x4858,{ 0xBC,0x2A,0x89,0xDF,0xE0,0xB3,0x28,0x63 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastCollectionFactory>{ static constexpr guid value{ 0x164DD3D7,0x73C4,0x44F7,{ 0xB4,0xFF,0xFB,0x6D,0x4B,0xF1,0xF4,0xC6 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastCollectionManager>{ static constexpr guid value{ 0x2A1821FE,0x179D,0x49BC,{ 0xB7,0x9D,0xA5,0x27,0x92,0x0D,0x36,0x65 } }; };
@@ -640,6 +647,7 @@ template <> struct guid_storage<Windows::UI::Notifications::IToastNotification>{
 template <> struct guid_storage<Windows::UI::Notifications::IToastNotification2>{ static constexpr guid value{ 0x9DFB9FD1,0x143A,0x490E,{ 0x90,0xBF,0xB9,0xFB,0xA7,0x13,0x2D,0xE7 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastNotification3>{ static constexpr guid value{ 0x31E8AED8,0x8141,0x4F99,{ 0xBC,0x0A,0xC4,0xED,0x21,0x29,0x7D,0x77 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastNotification4>{ static constexpr guid value{ 0x15154935,0x28EA,0x4727,{ 0x88,0xE9,0xC5,0x86,0x80,0xE2,0xD1,0x18 } }; };
+template <> struct guid_storage<Windows::UI::Notifications::IToastNotification6>{ static constexpr guid value{ 0x43EBFE53,0x89AE,0x5C1E,{ 0xA2,0x79,0x3A,0xEC,0xFE,0x9B,0x6F,0x54 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastNotificationActionTriggerDetail>{ static constexpr guid value{ 0x9445135A,0x38F3,0x42F6,{ 0x96,0xAA,0x79,0x55,0xB0,0xF0,0x3D,0xA2 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastNotificationFactory>{ static constexpr guid value{ 0x04124B20,0x82C6,0x4229,{ 0xB1,0x09,0xFD,0x9E,0xD4,0x66,0x2B,0x53 } }; };
 template <> struct guid_storage<Windows::UI::Notifications::IToastNotificationHistory>{ static constexpr guid value{ 0x5CADDC63,0x01D3,0x4C97,{ 0x98,0x6F,0x05,0x33,0x48,0x3F,0xEE,0x14 } }; };
@@ -984,6 +992,11 @@ template <> struct abi<Windows::UI::Notifications::IToastActivatedEventArgs>{ st
     virtual int32_t WINRT_CALL get_Arguments(void** value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Notifications::IToastActivatedEventArgs2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_UserInput(void** value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Notifications::IToastCollection>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Id(void** value) noexcept = 0;
@@ -1058,6 +1071,12 @@ template <> struct abi<Windows::UI::Notifications::IToastNotification4>{ struct 
     virtual int32_t WINRT_CALL put_Data(void* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_Priority(Windows::UI::Notifications::ToastNotificationPriority* value) noexcept = 0;
     virtual int32_t WINRT_CALL put_Priority(Windows::UI::Notifications::ToastNotificationPriority value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Notifications::IToastNotification6>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ExpiresOnReboot(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_ExpiresOnReboot(bool value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Notifications::IToastNotificationActionTriggerDetail>{ struct type : IInspectable
@@ -1544,6 +1563,13 @@ struct consume_Windows_UI_Notifications_IToastActivatedEventArgs
 template <> struct consume<Windows::UI::Notifications::IToastActivatedEventArgs> { template <typename D> using type = consume_Windows_UI_Notifications_IToastActivatedEventArgs<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Notifications_IToastActivatedEventArgs2
+{
+    Windows::Foundation::Collections::ValueSet UserInput() const;
+};
+template <> struct consume<Windows::UI::Notifications::IToastActivatedEventArgs2> { template <typename D> using type = consume_Windows_UI_Notifications_IToastActivatedEventArgs2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Notifications_IToastCollection
 {
     hstring Id() const;
@@ -1642,6 +1668,14 @@ struct consume_Windows_UI_Notifications_IToastNotification4
     void Priority(Windows::UI::Notifications::ToastNotificationPriority const& value) const;
 };
 template <> struct consume<Windows::UI::Notifications::IToastNotification4> { template <typename D> using type = consume_Windows_UI_Notifications_IToastNotification4<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Notifications_IToastNotification6
+{
+    bool ExpiresOnReboot() const;
+    void ExpiresOnReboot(bool value) const;
+};
+template <> struct consume<Windows::UI::Notifications::IToastNotification6> { template <typename D> using type = consume_Windows_UI_Notifications_IToastNotification6<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Notifications_IToastNotificationActionTriggerDetail

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.authentication.web.core.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,11 +276,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IFindAllAccountsResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIFindAllAccountsResult ABI::Windows::Security::Authentication::Web::Core::IFindAllAccountsResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIFindAllAccountsResult_FWD_DEFINED__
@@ -298,11 +294,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebAccountEventArgs;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountEventArgs ABI::Windows::Security::Authentication::Web::Core::IWebAccountEventArgs
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountEventArgs_FWD_DEFINED__
@@ -316,11 +312,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebAccountMonitor;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor ABI::Windows::Security::Authentication::Web::Core::IWebAccountMonitor
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor_FWD_DEFINED__
@@ -334,11 +330,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebAuthenticationCoreManagerStatics;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics ABI::Windows::Security::Authentication::Web::Core::IWebAuthenticationCoreManagerStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics_FWD_DEFINED__
@@ -352,11 +348,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebAuthenticationCoreManagerStatics2;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics2 ABI::Windows::Security::Authentication::Web::Core::IWebAuthenticationCoreManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics2_FWD_DEFINED__
@@ -370,11 +366,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebAuthenticationCoreManagerStatics3;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics3 ABI::Windows::Security::Authentication::Web::Core::IWebAuthenticationCoreManagerStatics3
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics3_FWD_DEFINED__
@@ -388,11 +384,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebAuthenticationCoreManagerStatics4;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics4 ABI::Windows::Security::Authentication::Web::Core::IWebAuthenticationCoreManagerStatics4
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics4_FWD_DEFINED__
@@ -406,11 +402,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebProviderError;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderError ABI::Windows::Security::Authentication::Web::Core::IWebProviderError
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderError_FWD_DEFINED__
@@ -424,11 +420,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebProviderErrorFactory;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderErrorFactory ABI::Windows::Security::Authentication::Web::Core::IWebProviderErrorFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderErrorFactory_FWD_DEFINED__
@@ -442,11 +438,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebTokenRequest;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_FWD_DEFINED__
@@ -460,11 +456,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebTokenRequest2;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest2 ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest2
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest2_FWD_DEFINED__
@@ -478,11 +474,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebTokenRequest3;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest3 ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest3
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest3_FWD_DEFINED__
@@ -496,11 +492,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebTokenRequestFactory;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestFactory ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestFactory_FWD_DEFINED__
@@ -514,11 +510,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebTokenRequestResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
@@ -532,11 +528,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebTokenResponse;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponse ABI::Windows::Security::Authentication::Web::Core::IWebTokenResponse
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponse_FWD_DEFINED__
@@ -550,11 +546,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         interface IWebTokenResponseFactory;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponseFactory ABI::Windows::Security::Authentication::Web::Core::IWebTokenResponseFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponseFactory_FWD_DEFINED__
@@ -569,11 +565,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         class WebTokenResponse;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -596,7 +592,7 @@ IIterator<ABI::Windows::Security::Authentication::Web::Core::WebTokenResponse*> 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Authentication::Web::Core::WebTokenResponse*> __FIIterator_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse_t;
 #define __FIIterator_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::Web::Core::IWebTokenResponse*>
@@ -628,7 +624,7 @@ IIterable<ABI::Windows::Security::Authentication::Web::Core::WebTokenResponse*> 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Authentication::Web::Core::WebTokenResponse*> __FIIterable_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse_t;
 #define __FIIterable_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::Web::Core::IWebTokenResponse*>
@@ -660,7 +656,7 @@ IVectorView<ABI::Windows::Security::Authentication::Web::Core::WebTokenResponse*
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Authentication::Web::Core::WebTokenResponse*> __FIVectorView_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse_t;
 #define __FIVectorView_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenResponse ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Web::Core::IWebTokenResponse*>
@@ -678,11 +674,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         class FindAllAccountsResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -705,7 +701,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Cor
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::FindAllAccountsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::IFindAllAccountsResult*>
@@ -737,7 +733,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::FindAllAccoun
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::FindAllAccountsResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CFindAllAccountsResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::IFindAllAccountsResult*>
@@ -755,11 +751,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         class WebTokenRequestResult;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -782,7 +778,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Cor
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>
@@ -814,7 +810,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::WebTokenReque
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>
@@ -832,11 +828,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         class WebAccountMonitor;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -860,7 +856,7 @@ ITypedEventHandler<ABI::Windows::Security::Authentication::Web::Core::WebAccount
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Security::Authentication::Web::Core::WebAccountMonitor*,IInspectable*> __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Security::Authentication::Web::Core::IWebAccountMonitor*,IInspectable*>
@@ -879,11 +875,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         class WebAccountEventArgs;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -907,7 +903,7 @@ ITypedEventHandler<ABI::Windows::Security::Authentication::Web::Core::WebAccount
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Security::Authentication::Web::Core::WebAccountMonitor*,ABI::Windows::Security::Authentication::Web::Core::WebAccountEventArgs*> __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Security::Authentication::Web::Core::IWebAccountMonitor*,ABI::Windows::Security::Authentication::Web::Core::IWebAccountEventArgs*>
@@ -924,9 +920,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -935,9 +931,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount ABI::Windows::Security::Credentials::IWebAccount
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -963,7 +959,7 @@ IIterator<ABI::Windows::Security::Credentials::WebAccount*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Credentials::WebAccount*> __FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -995,7 +991,7 @@ IIterable<ABI::Windows::Security::Credentials::WebAccount*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Credentials::WebAccount*> __FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -1027,7 +1023,7 @@ IVectorView<ABI::Windows::Security::Credentials::WebAccount*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Credentials::WebAccount*> __FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -1059,7 +1055,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccount*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccount*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -1091,7 +1087,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::WebAccount*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::WebAccount*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccount ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::IWebAccount*>
@@ -1107,9 +1103,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccountProvider;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_FWD_DEFINED__
@@ -1118,9 +1114,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccountProvider;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider ABI::Windows::Security::Credentials::IWebAccountProvider
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccountProvider_FWD_DEFINED__
@@ -1146,7 +1142,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccountP
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::WebAccountProvider*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Credentials::IWebAccountProvider*>
@@ -1178,7 +1174,7 @@ IAsyncOperation<ABI::Windows::Security::Credentials::WebAccountProvider*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Credentials::WebAccountProvider*> __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CCredentials__CWebAccountProvider ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Credentials::IWebAccountProvider*>
@@ -1208,7 +1204,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1238,7 +1234,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1268,7 +1264,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1297,7 +1293,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1326,7 +1322,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -1344,8 +1340,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1363,8 +1359,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1372,8 +1368,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1390,11 +1386,11 @@ namespace ABI {
                         
                         typedef enum FindAllWebAccountsStatus : int FindAllWebAccountsStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1405,11 +1401,11 @@ namespace ABI {
                         
                         typedef enum WebTokenRequestPromptType : int WebTokenRequestPromptType;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1420,11 +1416,11 @@ namespace ABI {
                         
                         typedef enum WebTokenRequestStatus : int WebTokenRequestStatus;
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1453,11 +1449,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         class WebProviderError;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1467,11 +1463,11 @@ namespace ABI {
                 namespace Web {
                     namespace Core {
                         class WebTokenRequest;
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1513,11 +1509,11 @@ namespace ABI {
                             FindAllWebAccountsStatus_ProviderError = 3,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1544,11 +1540,11 @@ namespace ABI {
                             WebTokenRequestPromptType_ForceAuthentication = 1,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1579,11 +1575,11 @@ namespace ABI {
                             WebTokenRequestStatus_ProviderError = 5,
                         };
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1627,11 +1623,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IFindAllAccountsResult=_uuidof(IFindAllAccountsResult);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIFindAllAccountsResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIFindAllAccountsResult_INTERFACE_DEFINED__) */
@@ -1672,11 +1668,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebAccountEventArgs=_uuidof(IWebAccountEventArgs);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountEventArgs_INTERFACE_DEFINED__) */
@@ -1735,11 +1731,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebAccountMonitor=_uuidof(IWebAccountMonitor);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor_INTERFACE_DEFINED__) */
@@ -1809,11 +1805,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebAuthenticationCoreManagerStatics=_uuidof(IWebAuthenticationCoreManagerStatics);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics_INTERFACE_DEFINED__) */
@@ -1861,11 +1857,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebAuthenticationCoreManagerStatics2=_uuidof(IWebAuthenticationCoreManagerStatics2);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics2_INTERFACE_DEFINED__) */
@@ -1911,11 +1907,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebAuthenticationCoreManagerStatics3=_uuidof(IWebAuthenticationCoreManagerStatics3);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics3_INTERFACE_DEFINED__) */
@@ -1981,11 +1977,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebAuthenticationCoreManagerStatics4=_uuidof(IWebAuthenticationCoreManagerStatics4);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics4;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAuthenticationCoreManagerStatics4_INTERFACE_DEFINED__) */
@@ -2032,11 +2028,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebProviderError=_uuidof(IWebProviderError);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderError;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderError_INTERFACE_DEFINED__) */
@@ -2079,11 +2075,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebProviderErrorFactory=_uuidof(IWebProviderErrorFactory);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderErrorFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebProviderErrorFactory_INTERFACE_DEFINED__) */
@@ -2136,11 +2132,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebTokenRequest=_uuidof(IWebTokenRequest);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_INTERFACE_DEFINED__) */
@@ -2181,11 +2177,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebTokenRequest2=_uuidof(IWebTokenRequest2);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest2;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest2_INTERFACE_DEFINED__) */
@@ -2229,11 +2225,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebTokenRequest3=_uuidof(IWebTokenRequest3);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest3;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest3_INTERFACE_DEFINED__) */
@@ -2293,11 +2289,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebTokenRequestFactory=_uuidof(IWebTokenRequestFactory);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestFactory_INTERFACE_DEFINED__) */
@@ -2347,11 +2343,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebTokenRequestResult=_uuidof(IWebTokenRequestResult);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_INTERFACE_DEFINED__) */
@@ -2401,11 +2397,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebTokenResponse=_uuidof(IWebTokenResponse);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponse;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponse_INTERFACE_DEFINED__) */
@@ -2458,11 +2454,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IWebTokenResponseFactory=_uuidof(IWebTokenResponseFactory);
                         
-                    } /* Windows */
-                } /* Security */
+                    } /* Core */
+                } /* Web */
             } /* Authentication */
-        } /* Web */
-    } /* Core */} /* ABI */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponseFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenResponseFactory_INTERFACE_DEFINED__) */
@@ -3294,7 +3290,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_IInspectableVtbl;
 
@@ -3346,7 +3342,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountMonitor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebAccountEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountMonitor_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebAccountEventArgsVtbl;
 

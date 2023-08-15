@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.faceanalysis.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 interface IDetectedFace;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace ABI::Windows::Media::FaceAnalysis::IDetectedFace
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 interface IFaceDetector;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector ABI::Windows::Media::FaceAnalysis::IFaceDetector
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 interface IFaceDetectorStatics;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics ABI::Windows::Media::FaceAnalysis::IFaceDetectorStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 interface IFaceTracker;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker ABI::Windows::Media::FaceAnalysis::IFaceTracker
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 interface IFaceTrackerStatics;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics ABI::Windows::Media::FaceAnalysis::IFaceTrackerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 class DetectedFace;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -374,7 +370,7 @@ IIterator<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
@@ -406,7 +402,7 @@ IIterable<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
@@ -438,7 +434,7 @@ IVectorView<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
@@ -470,7 +466,7 @@ IVector<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVector_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
@@ -502,7 +498,7 @@ IAsyncOperationCompletedHandler<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>*>
@@ -534,7 +530,7 @@ IAsyncOperation<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>*>
@@ -550,9 +546,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 class FaceDetector;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -575,7 +571,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceDetector*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceDetector*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::IFaceDetector*>
@@ -607,7 +603,7 @@ IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceDetector*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceDetector*> __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::FaceAnalysis::IFaceDetector*>
@@ -623,9 +619,9 @@ namespace ABI {
         namespace Media {
             namespace FaceAnalysis {
                 class FaceTracker;
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -648,7 +644,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceTracker*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceTracker*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::IFaceTracker*>
@@ -680,7 +676,7 @@ IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceTracker*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceTracker*> __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::FaceAnalysis::IFaceTracker*>
@@ -696,9 +692,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 enum BitmapPixelFormat : int;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
@@ -719,7 +715,7 @@ IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
@@ -749,7 +745,7 @@ IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
@@ -779,7 +775,7 @@ IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
@@ -801,9 +797,9 @@ namespace ABI {
                 
                 typedef struct BitmapBounds BitmapBounds;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -812,9 +808,9 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -823,18 +819,18 @@ namespace ABI {
                 
                 typedef struct BitmapSize BitmapSize;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -843,9 +839,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -858,8 +854,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -867,8 +863,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -924,9 +920,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDetectedFace=_uuidof(IDetectedFace);
                 
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_INTERFACE_DEFINED__) */
@@ -983,9 +979,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFaceDetector=_uuidof(IFaceDetector);
                 
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_INTERFACE_DEFINED__) */
@@ -1024,19 +1020,19 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsBitmapPixelFormatSupported(
                         /* [in] */ABI::Windows::Graphics::Imaging::BitmapPixelFormat bitmapPixelFormat,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out boolean * returnValue
+                        /* [retval, out] */__RPC__out ::boolean * returnValue
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFaceDetectorStatics=_uuidof(IFaceDetectorStatics);
                 
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_INTERFACE_DEFINED__) */
@@ -1088,9 +1084,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFaceTracker=_uuidof(IFaceTracker);
                 
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_INTERFACE_DEFINED__) */
@@ -1129,19 +1125,19 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsBitmapPixelFormatSupported(
                         /* [in] */ABI::Windows::Graphics::Imaging::BitmapPixelFormat bitmapPixelFormat,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out boolean * returnValue
+                        /* [retval, out] */__RPC__out ::boolean * returnValue
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IFaceTrackerStatics=_uuidof(IFaceTrackerStatics);
                 
-            } /* Windows */
+            } /* FaceAnalysis */
         } /* Media */
-    } /* FaceAnalysis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_INTERFACE_DEFINED__) */

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.media.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -285,10 +281,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRateChangedRoutedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventHandler ABI::Windows::UI::Xaml::Media::IRateChangedRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventHandler_FWD_DEFINED__
@@ -301,10 +297,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITimelineMarkerRoutedEventHandler;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventHandler ABI::Windows::UI::Xaml::Media::ITimelineMarkerRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventHandler_FWD_DEFINED__
@@ -317,13 +313,29 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IAcrylicBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush ABI::Windows::UI::Xaml::Media::IAcrylicBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    interface IAcrylicBrush2;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 ABI::Windows::UI::Xaml::Media::IAcrylicBrush2
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory_FWD_DEFINED__
@@ -333,10 +345,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IAcrylicBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory ABI::Windows::UI::Xaml::Media::IAcrylicBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory_FWD_DEFINED__
@@ -349,13 +361,29 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IAcrylicBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics ABI::Windows::UI::Xaml::Media::IAcrylicBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    interface IAcrylicBrushStatics2;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 ABI::Windows::UI::Xaml::Media::IAcrylicBrushStatics2
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment_FWD_DEFINED__
@@ -365,10 +393,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IArcSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment ABI::Windows::UI::Xaml::Media::IArcSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment_FWD_DEFINED__
@@ -381,10 +409,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IArcSegmentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegmentStatics ABI::Windows::UI::Xaml::Media::IArcSegmentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegmentStatics_FWD_DEFINED__
@@ -397,10 +425,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegment ABI::Windows::UI::Xaml::Media::IBezierSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegment_FWD_DEFINED__
@@ -413,10 +441,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBezierSegmentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegmentStatics ABI::Windows::UI::Xaml::Media::IBezierSegmentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegmentStatics_FWD_DEFINED__
@@ -429,10 +457,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBitmapCache;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBitmapCache ABI::Windows::UI::Xaml::Media::IBitmapCache
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBitmapCache_FWD_DEFINED__
@@ -445,10 +473,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush ABI::Windows::UI::Xaml::Media::IBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_FWD_DEFINED__
@@ -461,10 +489,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushFactory ABI::Windows::UI::Xaml::Media::IBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushFactory_FWD_DEFINED__
@@ -477,10 +505,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBrushOverrides2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushOverrides2 ABI::Windows::UI::Xaml::Media::IBrushOverrides2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushOverrides2_FWD_DEFINED__
@@ -493,10 +521,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushStatics ABI::Windows::UI::Xaml::Media::IBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushStatics_FWD_DEFINED__
@@ -509,10 +537,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ICacheMode;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CICacheMode ABI::Windows::UI::Xaml::Media::ICacheMode
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CICacheMode_FWD_DEFINED__
@@ -525,10 +553,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ICacheModeFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CICacheModeFactory ABI::Windows::UI::Xaml::Media::ICacheModeFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CICacheModeFactory_FWD_DEFINED__
@@ -541,10 +569,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ICompositeTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransform ABI::Windows::UI::Xaml::Media::ICompositeTransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransform_FWD_DEFINED__
@@ -557,10 +585,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ICompositeTransformStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransformStatics ABI::Windows::UI::Xaml::Media::ICompositeTransformStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransformStatics_FWD_DEFINED__
@@ -573,10 +601,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ICompositionTarget;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTarget ABI::Windows::UI::Xaml::Media::ICompositionTarget
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTarget_FWD_DEFINED__
@@ -589,10 +617,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ICompositionTargetStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics ABI::Windows::UI::Xaml::Media::ICompositionTargetStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics_FWD_DEFINED__
@@ -605,10 +633,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ICompositionTargetStatics3;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics3 ABI::Windows::UI::Xaml::Media::ICompositionTargetStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics3_FWD_DEFINED__
@@ -621,10 +649,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IEllipseGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometry ABI::Windows::UI::Xaml::Media::IEllipseGeometry
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometry_FWD_DEFINED__
@@ -637,10 +665,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IEllipseGeometryStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometryStatics ABI::Windows::UI::Xaml::Media::IEllipseGeometryStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometryStatics_FWD_DEFINED__
@@ -653,10 +681,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IFontFamily;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily ABI::Windows::UI::Xaml::Media::IFontFamily
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily_FWD_DEFINED__
@@ -669,10 +697,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IFontFamilyFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyFactory ABI::Windows::UI::Xaml::Media::IFontFamilyFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyFactory_FWD_DEFINED__
@@ -685,10 +713,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IFontFamilyStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyStatics2 ABI::Windows::UI::Xaml::Media::IFontFamilyStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyStatics2_FWD_DEFINED__
@@ -701,10 +729,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeneralTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransform ABI::Windows::UI::Xaml::Media::IGeneralTransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransform_FWD_DEFINED__
@@ -717,10 +745,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeneralTransformFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformFactory ABI::Windows::UI::Xaml::Media::IGeneralTransformFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformFactory_FWD_DEFINED__
@@ -733,10 +761,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeneralTransformOverrides;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformOverrides ABI::Windows::UI::Xaml::Media::IGeneralTransformOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformOverrides_FWD_DEFINED__
@@ -749,10 +777,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometry ABI::Windows::UI::Xaml::Media::IGeometry
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometry_FWD_DEFINED__
@@ -765,10 +793,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeometryFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryFactory ABI::Windows::UI::Xaml::Media::IGeometryFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryFactory_FWD_DEFINED__
@@ -781,10 +809,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeometryGroup;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroup ABI::Windows::UI::Xaml::Media::IGeometryGroup
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroup_FWD_DEFINED__
@@ -797,10 +825,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeometryGroupStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroupStatics ABI::Windows::UI::Xaml::Media::IGeometryGroupStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroupStatics_FWD_DEFINED__
@@ -813,10 +841,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGeometryStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryStatics ABI::Windows::UI::Xaml::Media::IGeometryStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryStatics_FWD_DEFINED__
@@ -829,10 +857,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGradientBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrush ABI::Windows::UI::Xaml::Media::IGradientBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrush_FWD_DEFINED__
@@ -845,10 +873,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGradientBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushFactory ABI::Windows::UI::Xaml::Media::IGradientBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushFactory_FWD_DEFINED__
@@ -861,10 +889,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGradientBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushStatics ABI::Windows::UI::Xaml::Media::IGradientBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushStatics_FWD_DEFINED__
@@ -877,10 +905,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGradientStop;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStop ABI::Windows::UI::Xaml::Media::IGradientStop
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStop_FWD_DEFINED__
@@ -893,10 +921,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IGradientStopStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStopStatics ABI::Windows::UI::Xaml::Media::IGradientStopStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStopStatics_FWD_DEFINED__
@@ -909,10 +937,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IImageBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrush ABI::Windows::UI::Xaml::Media::IImageBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrush_FWD_DEFINED__
@@ -925,10 +953,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IImageBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrushStatics ABI::Windows::UI::Xaml::Media::IImageBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrushStatics_FWD_DEFINED__
@@ -941,10 +969,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IImageSource;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource ABI::Windows::UI::Xaml::Media::IImageSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource_FWD_DEFINED__
@@ -957,10 +985,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IImageSourceFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSourceFactory ABI::Windows::UI::Xaml::Media::IImageSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSourceFactory_FWD_DEFINED__
@@ -973,10 +1001,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILineGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometry ABI::Windows::UI::Xaml::Media::ILineGeometry
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometry_FWD_DEFINED__
@@ -989,10 +1017,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILineGeometryStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometryStatics ABI::Windows::UI::Xaml::Media::ILineGeometryStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometryStatics_FWD_DEFINED__
@@ -1005,10 +1033,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILineSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegment ABI::Windows::UI::Xaml::Media::ILineSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegment_FWD_DEFINED__
@@ -1021,10 +1049,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILineSegmentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegmentStatics ABI::Windows::UI::Xaml::Media::ILineSegmentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegmentStatics_FWD_DEFINED__
@@ -1037,10 +1065,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILinearGradientBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrush ABI::Windows::UI::Xaml::Media::ILinearGradientBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrush_FWD_DEFINED__
@@ -1053,10 +1081,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILinearGradientBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushFactory ABI::Windows::UI::Xaml::Media::ILinearGradientBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushFactory_FWD_DEFINED__
@@ -1069,10 +1097,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILinearGradientBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushStatics ABI::Windows::UI::Xaml::Media::ILinearGradientBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushStatics_FWD_DEFINED__
@@ -1085,10 +1113,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILoadedImageSourceLoadCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSourceLoadCompletedEventArgs ABI::Windows::UI::Xaml::Media::ILoadedImageSourceLoadCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSourceLoadCompletedEventArgs_FWD_DEFINED__
@@ -1101,10 +1129,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILoadedImageSurface;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurface ABI::Windows::UI::Xaml::Media::ILoadedImageSurface
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurface_FWD_DEFINED__
@@ -1117,10 +1145,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ILoadedImageSurfaceStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurfaceStatics ABI::Windows::UI::Xaml::Media::ILoadedImageSurfaceStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurfaceStatics_FWD_DEFINED__
@@ -1133,10 +1161,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IMatrix3DProjection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjection ABI::Windows::UI::Xaml::Media::IMatrix3DProjection
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjection_FWD_DEFINED__
@@ -1149,10 +1177,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IMatrix3DProjectionStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjectionStatics ABI::Windows::UI::Xaml::Media::IMatrix3DProjectionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjectionStatics_FWD_DEFINED__
@@ -1165,10 +1193,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IMatrixHelper;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelper ABI::Windows::UI::Xaml::Media::IMatrixHelper
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelper_FWD_DEFINED__
@@ -1181,10 +1209,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IMatrixHelperStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelperStatics ABI::Windows::UI::Xaml::Media::IMatrixHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelperStatics_FWD_DEFINED__
@@ -1197,10 +1225,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IMatrixTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransform ABI::Windows::UI::Xaml::Media::IMatrixTransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransform_FWD_DEFINED__
@@ -1213,10 +1241,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IMatrixTransformStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransformStatics ABI::Windows::UI::Xaml::Media::IMatrixTransformStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransformStatics_FWD_DEFINED__
@@ -1229,10 +1257,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IMediaTransportControlsThumbnailRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIMediaTransportControlsThumbnailRequestedEventArgs ABI::Windows::UI::Xaml::Media::IMediaTransportControlsThumbnailRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIMediaTransportControlsThumbnailRequestedEventArgs_FWD_DEFINED__
@@ -1245,10 +1273,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPartialMediaFailureDetectedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs ABI::Windows::UI::Xaml::Media::IPartialMediaFailureDetectedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs_FWD_DEFINED__
@@ -1261,10 +1289,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPartialMediaFailureDetectedEventArgs2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs2 ABI::Windows::UI::Xaml::Media::IPartialMediaFailureDetectedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs2_FWD_DEFINED__
@@ -1277,10 +1305,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPathFigure;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigure ABI::Windows::UI::Xaml::Media::IPathFigure
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigure_FWD_DEFINED__
@@ -1293,10 +1321,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPathFigureStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigureStatics ABI::Windows::UI::Xaml::Media::IPathFigureStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigureStatics_FWD_DEFINED__
@@ -1309,10 +1337,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPathGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometry ABI::Windows::UI::Xaml::Media::IPathGeometry
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometry_FWD_DEFINED__
@@ -1325,10 +1353,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPathGeometryStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometryStatics ABI::Windows::UI::Xaml::Media::IPathGeometryStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometryStatics_FWD_DEFINED__
@@ -1341,10 +1369,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPathSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegment ABI::Windows::UI::Xaml::Media::IPathSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegment_FWD_DEFINED__
@@ -1357,10 +1385,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPathSegmentFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegmentFactory ABI::Windows::UI::Xaml::Media::IPathSegmentFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegmentFactory_FWD_DEFINED__
@@ -1373,10 +1401,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPlaneProjection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjection ABI::Windows::UI::Xaml::Media::IPlaneProjection
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjection_FWD_DEFINED__
@@ -1389,10 +1417,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPlaneProjectionStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjectionStatics ABI::Windows::UI::Xaml::Media::IPlaneProjectionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjectionStatics_FWD_DEFINED__
@@ -1405,10 +1433,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPolyBezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegment ABI::Windows::UI::Xaml::Media::IPolyBezierSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegment_FWD_DEFINED__
@@ -1421,10 +1449,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPolyBezierSegmentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegmentStatics ABI::Windows::UI::Xaml::Media::IPolyBezierSegmentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegmentStatics_FWD_DEFINED__
@@ -1437,10 +1465,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPolyLineSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegment ABI::Windows::UI::Xaml::Media::IPolyLineSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegment_FWD_DEFINED__
@@ -1453,10 +1481,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPolyLineSegmentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegmentStatics ABI::Windows::UI::Xaml::Media::IPolyLineSegmentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegmentStatics_FWD_DEFINED__
@@ -1469,10 +1497,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPolyQuadraticBezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegment ABI::Windows::UI::Xaml::Media::IPolyQuadraticBezierSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegment_FWD_DEFINED__
@@ -1485,10 +1513,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IPolyQuadraticBezierSegmentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegmentStatics ABI::Windows::UI::Xaml::Media::IPolyQuadraticBezierSegmentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegmentStatics_FWD_DEFINED__
@@ -1501,10 +1529,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IProjection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIProjection ABI::Windows::UI::Xaml::Media::IProjection
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIProjection_FWD_DEFINED__
@@ -1517,10 +1545,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IProjectionFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIProjectionFactory ABI::Windows::UI::Xaml::Media::IProjectionFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIProjectionFactory_FWD_DEFINED__
@@ -1533,10 +1561,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IQuadraticBezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegment ABI::Windows::UI::Xaml::Media::IQuadraticBezierSegment
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegment_FWD_DEFINED__
@@ -1549,10 +1577,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IQuadraticBezierSegmentStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegmentStatics ABI::Windows::UI::Xaml::Media::IQuadraticBezierSegmentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegmentStatics_FWD_DEFINED__
@@ -1565,10 +1593,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRateChangedRoutedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventArgs ABI::Windows::UI::Xaml::Media::IRateChangedRoutedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventArgs_FWD_DEFINED__
@@ -1581,10 +1609,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRectangleGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometry ABI::Windows::UI::Xaml::Media::IRectangleGeometry
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometry_FWD_DEFINED__
@@ -1597,10 +1625,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRectangleGeometryStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometryStatics ABI::Windows::UI::Xaml::Media::IRectangleGeometryStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometryStatics_FWD_DEFINED__
@@ -1613,10 +1641,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRenderedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderedEventArgs ABI::Windows::UI::Xaml::Media::IRenderedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderedEventArgs_FWD_DEFINED__
@@ -1629,10 +1657,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRenderingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderingEventArgs ABI::Windows::UI::Xaml::Media::IRenderingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderingEventArgs_FWD_DEFINED__
@@ -1645,10 +1673,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRevealBackgroundBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrush ABI::Windows::UI::Xaml::Media::IRevealBackgroundBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrush_FWD_DEFINED__
@@ -1661,10 +1689,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRevealBackgroundBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrushFactory ABI::Windows::UI::Xaml::Media::IRevealBackgroundBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrushFactory_FWD_DEFINED__
@@ -1677,10 +1705,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRevealBorderBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrush ABI::Windows::UI::Xaml::Media::IRevealBorderBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrush_FWD_DEFINED__
@@ -1693,10 +1721,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRevealBorderBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrushFactory ABI::Windows::UI::Xaml::Media::IRevealBorderBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrushFactory_FWD_DEFINED__
@@ -1709,10 +1737,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRevealBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrush ABI::Windows::UI::Xaml::Media::IRevealBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrush_FWD_DEFINED__
@@ -1725,10 +1753,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRevealBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushFactory ABI::Windows::UI::Xaml::Media::IRevealBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushFactory_FWD_DEFINED__
@@ -1741,10 +1769,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRevealBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushStatics ABI::Windows::UI::Xaml::Media::IRevealBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushStatics_FWD_DEFINED__
@@ -1757,10 +1785,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRotateTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransform ABI::Windows::UI::Xaml::Media::IRotateTransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransform_FWD_DEFINED__
@@ -1773,10 +1801,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IRotateTransformStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransformStatics ABI::Windows::UI::Xaml::Media::IRotateTransformStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransformStatics_FWD_DEFINED__
@@ -1789,10 +1817,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IScaleTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransform ABI::Windows::UI::Xaml::Media::IScaleTransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransform_FWD_DEFINED__
@@ -1805,13 +1833,45 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IScaleTransformStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransformStatics ABI::Windows::UI::Xaml::Media::IScaleTransformStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransformStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    interface IShadow;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow ABI::Windows::UI::Xaml::Media::IShadow
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    interface IShadowFactory;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory ABI::Windows::UI::Xaml::Media::IShadowFactory
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform_FWD_DEFINED__
@@ -1821,10 +1881,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ISkewTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform ABI::Windows::UI::Xaml::Media::ISkewTransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform_FWD_DEFINED__
@@ -1837,10 +1897,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ISkewTransformStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransformStatics ABI::Windows::UI::Xaml::Media::ISkewTransformStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransformStatics_FWD_DEFINED__
@@ -1853,10 +1913,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ISolidColorBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrush ABI::Windows::UI::Xaml::Media::ISolidColorBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrush_FWD_DEFINED__
@@ -1869,10 +1929,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ISolidColorBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushFactory ABI::Windows::UI::Xaml::Media::ISolidColorBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushFactory_FWD_DEFINED__
@@ -1885,13 +1945,45 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ISolidColorBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics ABI::Windows::UI::Xaml::Media::ISolidColorBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    interface IThemeShadow;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow ABI::Windows::UI::Xaml::Media::IThemeShadow
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    interface IThemeShadowFactory;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory ABI::Windows::UI::Xaml::Media::IThemeShadowFactory
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush_FWD_DEFINED__
@@ -1901,10 +1993,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITileBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush ABI::Windows::UI::Xaml::Media::ITileBrush
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush_FWD_DEFINED__
@@ -1917,10 +2009,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITileBrushFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushFactory ABI::Windows::UI::Xaml::Media::ITileBrushFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushFactory_FWD_DEFINED__
@@ -1933,10 +2025,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITileBrushStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushStatics ABI::Windows::UI::Xaml::Media::ITileBrushStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushStatics_FWD_DEFINED__
@@ -1949,10 +2041,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITimelineMarker;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarker ABI::Windows::UI::Xaml::Media::ITimelineMarker
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarker_FWD_DEFINED__
@@ -1965,10 +2057,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITimelineMarkerRoutedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventArgs ABI::Windows::UI::Xaml::Media::ITimelineMarkerRoutedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventArgs_FWD_DEFINED__
@@ -1981,10 +2073,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITimelineMarkerStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerStatics ABI::Windows::UI::Xaml::Media::ITimelineMarkerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerStatics_FWD_DEFINED__
@@ -1997,10 +2089,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITransform ABI::Windows::UI::Xaml::Media::ITransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITransform_FWD_DEFINED__
@@ -2013,10 +2105,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITransformFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITransformFactory ABI::Windows::UI::Xaml::Media::ITransformFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITransformFactory_FWD_DEFINED__
@@ -2029,10 +2121,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITransformGroup;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroup ABI::Windows::UI::Xaml::Media::ITransformGroup
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroup_FWD_DEFINED__
@@ -2045,10 +2137,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITransformGroupStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroupStatics ABI::Windows::UI::Xaml::Media::ITransformGroupStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroupStatics_FWD_DEFINED__
@@ -2061,10 +2153,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITranslateTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransform ABI::Windows::UI::Xaml::Media::ITranslateTransform
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransform_FWD_DEFINED__
@@ -2077,10 +2169,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface ITranslateTransformStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransformStatics ABI::Windows::UI::Xaml::Media::ITranslateTransformStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransformStatics_FWD_DEFINED__
@@ -2093,10 +2185,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IVisualTreeHelper;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelper ABI::Windows::UI::Xaml::Media::IVisualTreeHelper
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelper_FWD_DEFINED__
@@ -2109,10 +2201,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IVisualTreeHelperStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics ABI::Windows::UI::Xaml::Media::IVisualTreeHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics_FWD_DEFINED__
@@ -2125,13 +2217,29 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IVisualTreeHelperStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics2 ABI::Windows::UI::Xaml::Media::IVisualTreeHelperStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    interface IVisualTreeHelperStatics3;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 ABI::Windows::UI::Xaml::Media::IVisualTreeHelperStatics3
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase_FWD_DEFINED__
@@ -2141,10 +2249,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlCompositionBrushBase;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase ABI::Windows::UI::Xaml::Media::IXamlCompositionBrushBase
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase_FWD_DEFINED__
@@ -2157,10 +2265,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlCompositionBrushBaseFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseFactory ABI::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseFactory_FWD_DEFINED__
@@ -2173,10 +2281,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlCompositionBrushBaseOverrides;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseOverrides ABI::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseOverrides_FWD_DEFINED__
@@ -2189,10 +2297,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlCompositionBrushBaseProtected;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseProtected ABI::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseProtected
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseProtected_FWD_DEFINED__
@@ -2205,10 +2313,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlCompositionBrushBaseStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseStatics ABI::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseStatics_FWD_DEFINED__
@@ -2221,10 +2329,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlLight;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLight ABI::Windows::UI::Xaml::Media::IXamlLight
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLight_FWD_DEFINED__
@@ -2237,10 +2345,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlLightFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightFactory ABI::Windows::UI::Xaml::Media::IXamlLightFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightFactory_FWD_DEFINED__
@@ -2253,10 +2361,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlLightOverrides;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightOverrides ABI::Windows::UI::Xaml::Media::IXamlLightOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightOverrides_FWD_DEFINED__
@@ -2269,10 +2377,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlLightProtected;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightProtected ABI::Windows::UI::Xaml::Media::IXamlLightProtected
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightProtected_FWD_DEFINED__
@@ -2285,10 +2393,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     interface IXamlLightStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightStatics ABI::Windows::UI::Xaml::Media::IXamlLightStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightStatics_FWD_DEFINED__
@@ -2302,10 +2410,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class Brush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2328,7 +2436,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Brush*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Brush*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CBrush_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CBrush_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::IBrush*>
@@ -2360,7 +2468,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Brush*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Brush*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CBrush_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CBrush_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::IBrush*>
@@ -2377,10 +2485,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class Geometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2403,7 +2511,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Geometry*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Geometry*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CGeometry_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CGeometry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::IGeometry*>
@@ -2435,7 +2543,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Geometry*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Geometry*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CGeometry_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CGeometry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::IGeometry*>
@@ -2452,10 +2560,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class GradientStop;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2478,7 +2586,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::GradientStop*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::GradientStop*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CGradientStop_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CGradientStop_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::IGradientStop*>
@@ -2510,7 +2618,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::GradientStop*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::GradientStop*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CGradientStop_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CGradientStop_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::IGradientStop*>
@@ -2527,10 +2635,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PathFigure;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2553,7 +2661,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::PathFigure*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::PathFigure*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CPathFigure_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CPathFigure_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::IPathFigure*>
@@ -2585,7 +2693,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::PathFigure*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::PathFigure*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CPathFigure_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CPathFigure_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::IPathFigure*>
@@ -2602,10 +2710,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PathSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2628,7 +2736,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::PathSegment*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::PathSegment*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CPathSegment_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CPathSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::IPathSegment*>
@@ -2660,7 +2768,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::PathSegment*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::PathSegment*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CPathSegment_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CPathSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::IPathSegment*>
@@ -2677,10 +2785,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class TimelineMarker;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2703,7 +2811,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::TimelineMarker*> : IIterator_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::TimelineMarker*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::ITimelineMarker*>
@@ -2735,7 +2843,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::TimelineMarker*> : IIterable_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::TimelineMarker*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::ITimelineMarker*>
@@ -2752,10 +2860,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class Transform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2778,7 +2886,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::Transform*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::Transform*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CTransform_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CTransform_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::ITransform*>
@@ -2810,7 +2918,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::Transform*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::Transform*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CTransform_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CTransform_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::ITransform*>
@@ -2827,10 +2935,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class XamlLight;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2853,7 +2961,7 @@ IIterator<ABI::Windows::UI::Xaml::Media::XamlLight*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Media::XamlLight*> __FIIterator_1_Windows__CUI__CXaml__CMedia__CXamlLight_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CMedia__CXamlLight_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Media::IXamlLight*>
@@ -2885,7 +2993,7 @@ IIterable<ABI::Windows::UI::Xaml::Media::XamlLight*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Media::XamlLight*> __FIIterable_1_Windows__CUI__CXaml__CMedia__CXamlLight_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CMedia__CXamlLight_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Media::IXamlLight*>
@@ -2917,7 +3025,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Brush*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Brush*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CBrush_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CBrush_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::IBrush*>
@@ -2949,7 +3057,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Geometry*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Geometry*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CGeometry_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CGeometry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::IGeometry*>
@@ -2981,7 +3089,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::GradientStop*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::GradientStop*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CGradientStop_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CGradientStop_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::IGradientStop*>
@@ -3013,7 +3121,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::PathFigure*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::PathFigure*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathFigure_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathFigure_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::IPathFigure*>
@@ -3045,7 +3153,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::PathSegment*> : IVectorView_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::PathSegment*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathSegment_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::IPathSegment*>
@@ -3077,7 +3185,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::TimelineMarker*> : IVectorView_impl<A
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::TimelineMarker*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::ITimelineMarker*>
@@ -3109,7 +3217,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::Transform*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::Transform*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CTransform_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CTransform_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::ITransform*>
@@ -3141,7 +3249,7 @@ IVectorView<ABI::Windows::UI::Xaml::Media::XamlLight*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Media::XamlLight*> __FIVectorView_1_Windows__CUI__CXaml__CMedia__CXamlLight_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CMedia__CXamlLight_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Media::IXamlLight*>
@@ -3173,7 +3281,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Brush*> : IVector_impl<ABI::Windows::Foun
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Brush*> __FIVector_1_Windows__CUI__CXaml__CMedia__CBrush_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CBrush_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CBrush ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::IBrush*>
@@ -3205,7 +3313,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Geometry*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Geometry*> __FIVector_1_Windows__CUI__CXaml__CMedia__CGeometry_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CGeometry_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CGeometry ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::IGeometry*>
@@ -3237,7 +3345,7 @@ IVector<ABI::Windows::UI::Xaml::Media::GradientStop*> : IVector_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::GradientStop*> __FIVector_1_Windows__CUI__CXaml__CMedia__CGradientStop_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CGradientStop_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CGradientStop ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::IGradientStop*>
@@ -3269,7 +3377,7 @@ IVector<ABI::Windows::UI::Xaml::Media::PathFigure*> : IVector_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::PathFigure*> __FIVector_1_Windows__CUI__CXaml__CMedia__CPathFigure_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CPathFigure_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CPathFigure ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::IPathFigure*>
@@ -3301,7 +3409,7 @@ IVector<ABI::Windows::UI::Xaml::Media::PathSegment*> : IVector_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::PathSegment*> __FIVector_1_Windows__CUI__CXaml__CMedia__CPathSegment_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CPathSegment_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CPathSegment ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::IPathSegment*>
@@ -3333,7 +3441,7 @@ IVector<ABI::Windows::UI::Xaml::Media::TimelineMarker*> : IVector_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::TimelineMarker*> __FIVector_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CTimelineMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CTimelineMarker ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::ITimelineMarker*>
@@ -3365,7 +3473,7 @@ IVector<ABI::Windows::UI::Xaml::Media::Transform*> : IVector_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::Transform*> __FIVector_1_Windows__CUI__CXaml__CMedia__CTransform_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CTransform_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CTransform ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::ITransform*>
@@ -3397,7 +3505,7 @@ IVector<ABI::Windows::UI::Xaml::Media::XamlLight*> : IVector_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Media::XamlLight*> __FIVector_1_Windows__CUI__CXaml__CMedia__CXamlLight_t;
 #define __FIVector_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CMedia__CXamlLight_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CMedia__CXamlLight ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Media::IXamlLight*>
@@ -3414,10 +3522,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RenderedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -3440,7 +3548,7 @@ IEventHandler<ABI::Windows::UI::Xaml::Media::RenderedEventArgs*> : IEventHandler
 // correct parameterized interface specialization.
 typedef IEventHandler<ABI::Windows::UI::Xaml::Media::RenderedEventArgs*> __FIEventHandler_1_Windows__CUI__CXaml__CMedia__CRenderedEventArgs_t;
 #define __FIEventHandler_1_Windows__CUI__CXaml__CMedia__CRenderedEventArgs ABI::Windows::Foundation::__FIEventHandler_1_Windows__CUI__CXaml__CMedia__CRenderedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_Windows__CUI__CXaml__CMedia__CRenderedEventArgs ABI::Windows::Foundation::IEventHandler<ABI::Windows::UI::Xaml::Media::IRenderedEventArgs*>
@@ -3457,10 +3565,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class MediaElement;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIMediaElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIMediaElement_FWD_DEFINED__
@@ -3470,10 +3578,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IMediaElement;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIMediaElement ABI::Windows::UI::Xaml::Controls::IMediaElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIMediaElement_FWD_DEFINED__
@@ -3485,10 +3593,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PartialMediaFailureDetectedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3512,7 +3620,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::MediaElement*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::MediaElement*,ABI::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::IMediaElement*,ABI::Windows::UI::Xaml::Media::IPartialMediaFailureDetectedEventArgs*>
@@ -3530,10 +3638,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class MediaTransportControls;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIMediaTransportControls_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIMediaTransportControls_FWD_DEFINED__
@@ -3543,10 +3651,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IMediaTransportControls;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIMediaTransportControls ABI::Windows::UI::Xaml::Controls::IMediaTransportControls
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIMediaTransportControls_FWD_DEFINED__
@@ -3558,10 +3666,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class MediaTransportControlsThumbnailRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3585,7 +3693,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::MediaTransportControls*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::MediaTransportControls*,ABI::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::IMediaTransportControls*,ABI::Windows::UI::Xaml::Media::IMediaTransportControlsThumbnailRequestedEventArgs*>
@@ -3603,10 +3711,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class LoadedImageSurface;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3615,10 +3723,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class LoadedImageSourceLoadCompletedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -3642,7 +3750,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Media::LoadedImageSurface*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Media::LoadedImageSurface*,ABI::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Media::ILoadedImageSurface*,ABI::Windows::UI::Xaml::Media::ILoadedImageSourceLoadCompletedEventArgs*>
@@ -3653,6 +3761,35 @@ typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Media::LoadedImageSurface*,AB
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#ifndef DEF___FIReference_1_double_USE
+#define DEF___FIReference_1_double_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("2f2d6c29-5473-5f3e-92e7-96572bb990e2"))
+IReference<double> : IReference_impl<double> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IReference`1<Double>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IReference<double> __FIReference_1_double_t;
+#define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
+//#define __FIReference_1_double_t ABI::Windows::Foundation::IReference<DOUBLE>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIReference_1_double_USE */
+
+
 
 
 
@@ -3674,7 +3811,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -3689,8 +3826,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
@@ -3711,7 +3848,7 @@ IIterator<struct ABI::Windows::Foundation::Point> : IIterator_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Foundation::Point> __FIIterator_1_Windows__CFoundation__CPoint_t;
 #define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Point>
@@ -3741,7 +3878,7 @@ IIterable<struct ABI::Windows::Foundation::Point> : IIterable_impl<struct ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Foundation::Point> __FIIterable_1_Windows__CFoundation__CPoint_t;
 #define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>
@@ -3771,7 +3908,7 @@ IVectorView<struct ABI::Windows::Foundation::Point> : IVectorView_impl<struct AB
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Foundation::Point> __FIVectorView_1_Windows__CFoundation__CPoint_t;
 #define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Point>
@@ -3801,7 +3938,7 @@ IVector<struct ABI::Windows::Foundation::Point> : IVector_impl<struct ABI::Windo
 // correct parameterized interface specialization.
 typedef IVector<struct ABI::Windows::Foundation::Point> __FIVector_1_Windows__CFoundation__CPoint_t;
 #define __FIVector_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Foundation::Point>
@@ -3816,9 +3953,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -3827,9 +3964,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -3855,7 +3992,7 @@ IIterator<ABI::Windows::UI::Xaml::UIElement*> : IIterator_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::UIElement*> __FIIterator_1_Windows__CUI__CXaml__CUIElement_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CUIElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::IUIElement*>
@@ -3887,13 +4024,77 @@ IIterable<ABI::Windows::UI::Xaml::UIElement*> : IIterable_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::UIElement*> __FIIterable_1_Windows__CUI__CXaml__CUIElement_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CUIElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::IUIElement*>
 //#define __FIIterable_1_Windows__CUI__CXaml__CUIElement_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::IUIElement*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CUI__CXaml__CUIElement_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CUI__CXaml__CUIElement_USE
+#define DEF___FIVectorView_1_Windows__CUI__CXaml__CUIElement_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("f3864c10-14a4-5516-b1d9-63b6579429b1"))
+IVectorView<ABI::Windows::UI::Xaml::UIElement*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Xaml::UIElement*, ABI::Windows::UI::Xaml::IUIElement*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.UIElement>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::UI::Xaml::UIElement*> __FIVectorView_1_Windows__CUI__CXaml__CUIElement_t;
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CUIElement_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::IUIElement*>
+//#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::IUIElement*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CUI__CXaml__CUIElement_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVector_1_Windows__CUI__CXaml__CUIElement_USE
+#define DEF___FIVector_1_Windows__CUI__CXaml__CUIElement_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("b4c1e3ac-8768-5b9d-a661-f63330b8507b"))
+IVector<ABI::Windows::UI::Xaml::UIElement*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Xaml::UIElement*, ABI::Windows::UI::Xaml::IUIElement*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVector`1<Windows.UI.Xaml.UIElement>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVector<ABI::Windows::UI::Xaml::UIElement*> __FIVector_1_Windows__CUI__CXaml__CUIElement_t;
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CUIElement_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVector_1_Windows__CUI__CXaml__CUIElement ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::IUIElement*>
+//#define __FIVector_1_Windows__CUI__CXaml__CUIElement_t ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::IUIElement*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVector_1_Windows__CUI__CXaml__CUIElement_USE */
 
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3905,11 +4106,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         class Popup;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup_FWD_DEFINED__
@@ -3920,11 +4121,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Primitives {
                         interface IPopup;
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup ABI::Windows::UI::Xaml::Controls::Primitives::IPopup
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CIPopup_FWD_DEFINED__
@@ -3950,7 +4151,7 @@ IIterator<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> __FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Controls::Primitives::IPopup*>
@@ -3982,7 +4183,7 @@ IIterable<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> __FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Controls::Primitives::IPopup*>
@@ -4014,7 +4215,7 @@ IVectorView<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Controls::Primitives::Popup*> __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Controls::Primitives::IPopup*>
@@ -4044,7 +4245,7 @@ IIterator<double> : IIterator_impl<double>
 // correct parameterized interface specialization.
 typedef IIterator<double> __FIIterator_1_double_t;
 #define __FIIterator_1_double ABI::Windows::Foundation::Collections::__FIIterator_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_double ABI::Windows::Foundation::Collections::IIterator<DOUBLE>
@@ -4073,7 +4274,7 @@ IIterable<double> : IIterable_impl<double>
 // correct parameterized interface specialization.
 typedef IIterable<double> __FIIterable_1_double_t;
 #define __FIIterable_1_double ABI::Windows::Foundation::Collections::__FIIterable_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_double ABI::Windows::Foundation::Collections::IIterable<DOUBLE>
@@ -4102,7 +4303,7 @@ IVectorView<double> : IVectorView_impl<double>
 // correct parameterized interface specialization.
 typedef IVectorView<double> __FIVectorView_1_double_t;
 #define __FIVectorView_1_double ABI::Windows::Foundation::Collections::__FIVectorView_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_double ABI::Windows::Foundation::Collections::IVectorView<DOUBLE>
@@ -4131,7 +4332,7 @@ IVector<double> : IVector_impl<double>
 // correct parameterized interface specialization.
 typedef IVector<double> __FIVector_1_double_t;
 #define __FIVector_1_double ABI::Windows::Foundation::Collections::__FIVector_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_double ABI::Windows::Foundation::Collections::IVector<DOUBLE>
@@ -4147,8 +4348,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -4156,8 +4357,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -4169,8 +4370,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -4182,8 +4383,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4191,8 +4392,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4200,8 +4401,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4209,16 +4410,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -4226,8 +4427,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -4242,9 +4443,9 @@ namespace ABI {
                 
                 typedef enum FailedMediaStreamKind : int FailedMediaStreamKind;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4256,9 +4457,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -4271,9 +4472,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -4288,8 +4489,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4298,9 +4499,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class AnimationPropertyInfo;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIAnimationPropertyInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIAnimationPropertyInfo_FWD_DEFINED__
@@ -4309,9 +4510,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IAnimationPropertyInfo;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIAnimationPropertyInfo ABI::Windows::UI::Composition::IAnimationPropertyInfo
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIAnimationPropertyInfo_FWD_DEFINED__
@@ -4322,9 +4523,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class CompositionBrush;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionBrush_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionBrush_FWD_DEFINED__
@@ -4333,9 +4534,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionBrush;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionBrush ABI::Windows::UI::Composition::ICompositionBrush
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionBrush_FWD_DEFINED__
@@ -4346,9 +4547,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class CompositionLight;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionLight_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionLight_FWD_DEFINED__
@@ -4357,9 +4558,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionLight;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionLight ABI::Windows::UI::Composition::ICompositionLight
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionLight_FWD_DEFINED__
@@ -4372,9 +4573,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IAnimationObject;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIAnimationObject ABI::Windows::UI::Composition::IAnimationObject
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIAnimationObject_FWD_DEFINED__
@@ -4387,9 +4588,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionSurface;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionSurface ABI::Windows::UI::Composition::ICompositionSurface
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionSurface_FWD_DEFINED__
@@ -4405,9 +4606,9 @@ namespace ABI {
                 
                 typedef enum ApplicationTheme : int ApplicationTheme;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4429,9 +4630,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -4440,9 +4641,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyObject ABI::Windows::UI::Xaml::IDependencyObject
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -4453,9 +4654,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -4464,9 +4665,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -4479,9 +4680,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IExceptionRoutedEventHandler;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIExceptionRoutedEventHandler ABI::Windows::UI::Xaml::IExceptionRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIExceptionRoutedEventHandler_FWD_DEFINED__
@@ -4499,11 +4700,11 @@ namespace ABI {
                         
                         typedef struct Matrix3D Matrix3D;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Media3D */
+                } /* Media */
             } /* Xaml */
-        } /* Media */
-    } /* Media3D */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4517,9 +4718,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IRoutedEventHandler;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler ABI::Windows::UI::Xaml::IRoutedEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler_FWD_DEFINED__
@@ -4530,10 +4731,34 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
-                class Window;
-            } /* Windows */
+                class UIElementWeakCollection;
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                interface IUIElementWeakCollection;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection ABI::Windows::UI::Xaml::IUIElementWeakCollection
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection_FWD_DEFINED__
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                class Window;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIWindow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIWindow_FWD_DEFINED__
@@ -4542,12 +4767,36 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IWindow;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIWindow ABI::Windows::UI::Xaml::IWindow
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIWindow_FWD_DEFINED__
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                class XamlRoot;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                interface IXamlRoot;
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CIXamlRoot ABI::Windows::UI::Xaml::IXamlRoot
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
 
 
 
@@ -4561,10 +4810,10 @@ namespace ABI {
                     
                     typedef enum AcrylicBackgroundSource : int AcrylicBackgroundSource;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4574,10 +4823,10 @@ namespace ABI {
                     
                     typedef enum AlignmentX : int AlignmentX;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4587,10 +4836,10 @@ namespace ABI {
                     
                     typedef enum AlignmentY : int AlignmentY;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4600,10 +4849,10 @@ namespace ABI {
                     
                     typedef enum AudioCategory : int AudioCategory;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4613,10 +4862,10 @@ namespace ABI {
                     
                     typedef enum AudioDeviceType : int AudioDeviceType;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4626,10 +4875,10 @@ namespace ABI {
                     
                     typedef enum BrushMappingMode : int BrushMappingMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4639,10 +4888,10 @@ namespace ABI {
                     
                     typedef enum ColorInterpolationMode : int ColorInterpolationMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4652,10 +4901,10 @@ namespace ABI {
                     
                     typedef enum ElementCompositeMode : int ElementCompositeMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4665,10 +4914,10 @@ namespace ABI {
                     
                     typedef enum FastPlayFallbackBehaviour : int FastPlayFallbackBehaviour;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4678,10 +4927,10 @@ namespace ABI {
                     
                     typedef enum FillRule : int FillRule;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4691,10 +4940,10 @@ namespace ABI {
                     
                     typedef enum GradientSpreadMethod : int GradientSpreadMethod;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4704,10 +4953,10 @@ namespace ABI {
                     
                     typedef enum LoadedImageSourceLoadStatus : int LoadedImageSourceLoadStatus;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4717,10 +4966,10 @@ namespace ABI {
                     
                     typedef enum MediaCanPlayResponse : int MediaCanPlayResponse;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4730,10 +4979,10 @@ namespace ABI {
                     
                     typedef enum MediaElementState : int MediaElementState;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4743,10 +4992,10 @@ namespace ABI {
                     
                     typedef enum PenLineCap : int PenLineCap;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4756,10 +5005,10 @@ namespace ABI {
                     
                     typedef enum PenLineJoin : int PenLineJoin;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4769,10 +5018,10 @@ namespace ABI {
                     
                     typedef enum RevealBrushState : int RevealBrushState;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4782,10 +5031,10 @@ namespace ABI {
                     
                     typedef enum Stereo3DVideoPackingMode : int Stereo3DVideoPackingMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4795,10 +5044,10 @@ namespace ABI {
                     
                     typedef enum Stereo3DVideoRenderMode : int Stereo3DVideoRenderMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4808,10 +5057,10 @@ namespace ABI {
                     
                     typedef enum Stretch : int Stretch;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4821,10 +5070,10 @@ namespace ABI {
                     
                     typedef enum StyleSimulations : int StyleSimulations;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4834,10 +5083,10 @@ namespace ABI {
                     
                     typedef enum SweepDirection : int SweepDirection;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -4847,10 +5096,17 @@ namespace ABI {
                     
                     typedef struct Matrix Matrix;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
+
 
 
 
@@ -4984,10 +5240,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class AcrylicBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4996,10 +5252,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class ArcSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5008,10 +5264,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class BezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5020,10 +5276,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class BitmapCache;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5033,10 +5289,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class BrushCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5045,10 +5301,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class CacheMode;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5057,10 +5313,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class CompositeTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5069,10 +5325,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class CompositionTarget;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5081,10 +5337,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class DoubleCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5093,10 +5349,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class EllipseGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5105,10 +5361,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class FontFamily;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5117,10 +5373,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class GeneralTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5130,10 +5386,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class GeometryCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5142,10 +5398,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class GeometryGroup;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5154,10 +5410,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class GradientBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5167,10 +5423,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class GradientStopCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5179,10 +5435,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class ImageBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5191,10 +5447,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class ImageSource;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5203,10 +5459,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class LineGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5215,10 +5471,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class LineSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5227,10 +5483,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class LinearGradientBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5241,10 +5497,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class Matrix3DProjection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5253,10 +5509,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class MatrixHelper;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5265,10 +5521,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class MatrixTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5280,10 +5536,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PathFigureCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5292,10 +5548,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PathGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5305,10 +5561,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PathSegmentCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5317,10 +5573,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PlaneProjection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5329,10 +5585,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PointCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5341,10 +5597,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PolyBezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5353,10 +5609,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PolyLineSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5365,10 +5621,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class PolyQuadraticBezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5377,10 +5633,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class Projection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5389,10 +5645,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class QuadraticBezierSegment;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5401,10 +5657,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RateChangedRoutedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5413,10 +5669,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RectangleGeometry;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5426,10 +5682,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RenderingEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5438,10 +5694,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RevealBackgroundBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5450,10 +5706,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RevealBorderBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5462,10 +5718,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RevealBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5474,10 +5730,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class RotateTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5486,10 +5742,22 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class ScaleTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    class Shadow;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5498,10 +5766,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class SkewTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5510,10 +5778,22 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class SolidColorBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    class ThemeShadow;
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5522,10 +5802,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class TileBrush;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5535,10 +5815,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class TimelineMarkerCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5547,10 +5827,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class TimelineMarkerRoutedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5560,10 +5840,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class TransformCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5572,10 +5852,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class TransformGroup;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5584,10 +5864,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class TranslateTransform;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5596,10 +5876,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class VisualTreeHelper;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5608,10 +5888,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     class XamlCompositionBrushBase;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5647,10 +5927,10 @@ namespace ABI {
                         AcrylicBackgroundSource_Backdrop = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -5677,10 +5957,10 @@ namespace ABI {
                         AlignmentX_Right = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5707,10 +5987,10 @@ namespace ABI {
                         AlignmentY_Bottom = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5770,10 +6050,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5800,10 +6080,10 @@ namespace ABI {
                         AudioDeviceType_Communications = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5829,10 +6109,10 @@ namespace ABI {
                         BrushMappingMode_RelativeToBoundingBox = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5858,10 +6138,10 @@ namespace ABI {
                         ColorInterpolationMode_SRgbLinearInterpolation = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5888,10 +6168,10 @@ namespace ABI {
                         ElementCompositeMode_MinBlend = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5918,10 +6198,10 @@ namespace ABI {
                         FastPlayFallbackBehaviour_Disable = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -5947,10 +6227,10 @@ namespace ABI {
                         FillRule_Nonzero = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -5977,10 +6257,10 @@ namespace ABI {
                         GradientSpreadMethod_Repeat = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6008,10 +6288,10 @@ namespace ABI {
                         LoadedImageSourceLoadStatus_Other = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -6038,10 +6318,10 @@ namespace ABI {
                         MediaCanPlayResponse_Probably = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6071,10 +6351,10 @@ namespace ABI {
                         MediaElementState_Stopped = 5,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6102,10 +6382,10 @@ namespace ABI {
                         PenLineCap_Triangle = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6132,10 +6412,10 @@ namespace ABI {
                         PenLineJoin_Round = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6162,10 +6442,10 @@ namespace ABI {
                         RevealBrushState_Pressed = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -6192,10 +6472,10 @@ namespace ABI {
                         Stereo3DVideoPackingMode_TopBottom = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6221,10 +6501,10 @@ namespace ABI {
                         Stereo3DVideoRenderMode_Stereo = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6252,10 +6532,10 @@ namespace ABI {
                         Stretch_UniformToFill = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6283,10 +6563,10 @@ namespace ABI {
                         StyleSimulations_BoldItalicSimulation = 3,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6312,10 +6592,10 @@ namespace ABI {
                         SweepDirection_Clockwise = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6345,10 +6625,10 @@ namespace ABI {
                         DOUBLE OffsetY;
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6382,10 +6662,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRateChangedRoutedEventHandler=_uuidof(IRateChangedRoutedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventHandler_INTERFACE_DEFINED__) */
@@ -6422,10 +6702,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITimelineMarkerRoutedEventHandler=_uuidof(ITimelineMarkerRoutedEventHandler);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventHandler_INTERFACE_DEFINED__) */
@@ -6482,24 +6762,70 @@ namespace ABI {
                             /* [in] */ABI::Windows::Foundation::TimeSpan value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlwaysUseFallback(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlwaysUseFallback(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IAcrylicBrush=_uuidof(IAcrylicBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IAcrylicBrush2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.AcrylicBrush
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IAcrylicBrush2[] = L"Windows.UI.Xaml.Media.IAcrylicBrush2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    /* [object, uuid("C9645383-B19E-5AC0-86FF-3D90506DBCDA"), exclusiveto, contract] */
+                    MIDL_INTERFACE("C9645383-B19E-5AC0-86FF-3D90506DBCDA")
+                    IAcrylicBrush2 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TintLuminosityOpacity(
+                            /* [retval, out] */__RPC__deref_out_opt __FIReference_1_double * * value
+                            ) = 0;
+                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TintLuminosityOpacity(
+                            /* [in] */__RPC__in_opt __FIReference_1_double * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IAcrylicBrush2=_uuidof(IAcrylicBrush2);
+                    
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6537,10 +6863,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAcrylicBrushFactory=_uuidof(IAcrylicBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory_INTERFACE_DEFINED__) */
@@ -6592,14 +6918,57 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAcrylicBrushStatics=_uuidof(IAcrylicBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IAcrylicBrushStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.AcrylicBrush
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IAcrylicBrushStatics2[] = L"Windows.UI.Xaml.Media.IAcrylicBrushStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    /* [object, uuid("129188A8-BF11-5BBC-8445-8C510E5926C0"), exclusiveto, contract] */
+                    MIDL_INTERFACE("129188A8-BF11-5BBC-8445-8C510E5926C0")
+                    IAcrylicBrushStatics2 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TintLuminosityOpacityProperty(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IAcrylicBrushStatics2=_uuidof(IAcrylicBrushStatics2);
+                    
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6646,10 +7015,10 @@ namespace ABI {
                             /* [in] */DOUBLE value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsLargeArc(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsLargeArc(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SweepDirection(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Media::SweepDirection * value
@@ -6662,10 +7031,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IArcSegment=_uuidof(IArcSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment_INTERFACE_DEFINED__) */
@@ -6717,10 +7086,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IArcSegmentStatics=_uuidof(IArcSegmentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegmentStatics_INTERFACE_DEFINED__) */
@@ -6775,10 +7144,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBezierSegment=_uuidof(IBezierSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegment_INTERFACE_DEFINED__) */
@@ -6824,10 +7193,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBezierSegmentStatics=_uuidof(IBezierSegmentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIBezierSegmentStatics_INTERFACE_DEFINED__) */
@@ -6864,10 +7233,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBitmapCache=_uuidof(IBitmapCache);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIBitmapCache;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIBitmapCache_INTERFACE_DEFINED__) */
@@ -6922,10 +7291,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBrush=_uuidof(IBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrush_INTERFACE_DEFINED__) */
@@ -6967,10 +7336,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBrushFactory=_uuidof(IBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushFactory_INTERFACE_DEFINED__) */
@@ -7011,10 +7380,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBrushOverrides2=_uuidof(IBrushOverrides2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushOverrides2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushOverrides2_INTERFACE_DEFINED__) */
@@ -7060,10 +7429,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBrushStatics=_uuidof(IBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIBrushStatics_INTERFACE_DEFINED__) */
@@ -7100,10 +7469,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICacheMode=_uuidof(ICacheMode);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CICacheMode;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CICacheMode_INTERFACE_DEFINED__) */
@@ -7145,10 +7514,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICacheModeFactory=_uuidof(ICacheModeFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CICacheModeFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CICacheModeFactory_INTERFACE_DEFINED__) */
@@ -7239,10 +7608,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositeTransform=_uuidof(ICompositeTransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransform_INTERFACE_DEFINED__) */
@@ -7306,10 +7675,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositeTransformStatics=_uuidof(ICompositeTransformStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransformStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositeTransformStatics_INTERFACE_DEFINED__) */
@@ -7346,10 +7715,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionTarget=_uuidof(ICompositionTarget);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTarget;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTarget_INTERFACE_DEFINED__) */
@@ -7400,10 +7769,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionTargetStatics=_uuidof(ICompositionTargetStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics_INTERFACE_DEFINED__) */
@@ -7447,10 +7816,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionTargetStatics3=_uuidof(ICompositionTargetStatics3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CICompositionTargetStatics3_INTERFACE_DEFINED__) */
@@ -7505,10 +7874,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEllipseGeometry=_uuidof(IEllipseGeometry);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometry;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometry_INTERFACE_DEFINED__) */
@@ -7554,10 +7923,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IEllipseGeometryStatics=_uuidof(IEllipseGeometryStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometryStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIEllipseGeometryStatics_INTERFACE_DEFINED__) */
@@ -7597,10 +7966,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFontFamily=_uuidof(IFontFamily);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamily_INTERFACE_DEFINED__) */
@@ -7643,10 +8012,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFontFamilyFactory=_uuidof(IFontFamilyFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyFactory_INTERFACE_DEFINED__) */
@@ -7686,10 +8055,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFontFamilyStatics2=_uuidof(IFontFamilyStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIFontFamilyStatics2_INTERFACE_DEFINED__) */
@@ -7731,7 +8100,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE TryTransform(
                             /* [in] */ABI::Windows::Foundation::Point inPoint,
                             /* [out] */__RPC__out ABI::Windows::Foundation::Point * outPoint,
-                            /* [retval, out] */__RPC__out boolean * returnValue
+                            /* [retval, out] */__RPC__out ::boolean * returnValue
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TransformBounds(
                             /* [in] */ABI::Windows::Foundation::Rect rect,
@@ -7742,10 +8111,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeneralTransform=_uuidof(IGeneralTransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransform_INTERFACE_DEFINED__) */
@@ -7787,10 +8156,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeneralTransformFactory=_uuidof(IGeneralTransformFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformFactory_INTERFACE_DEFINED__) */
@@ -7828,7 +8197,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE TryTransformCore(
                             /* [in] */ABI::Windows::Foundation::Point inPoint,
                             /* [out] */__RPC__out ABI::Windows::Foundation::Point * outPoint,
-                            /* [retval, out] */__RPC__out boolean * returnValue
+                            /* [retval, out] */__RPC__out ::boolean * returnValue
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE TransformBoundsCore(
                             /* [in] */ABI::Windows::Foundation::Rect rect,
@@ -7839,10 +8208,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeneralTransformOverrides=_uuidof(IGeneralTransformOverrides);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeneralTransformOverrides_INTERFACE_DEFINED__) */
@@ -7888,10 +8257,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeometry=_uuidof(IGeometry);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometry;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometry_INTERFACE_DEFINED__) */
@@ -7928,10 +8297,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeometryFactory=_uuidof(IGeometryFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryFactory_INTERFACE_DEFINED__) */
@@ -7980,10 +8349,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeometryGroup=_uuidof(IGeometryGroup);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroup;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroup_INTERFACE_DEFINED__) */
@@ -8026,10 +8395,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeometryGroupStatics=_uuidof(IGeometryGroupStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroupStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryGroupStatics_INTERFACE_DEFINED__) */
@@ -8075,10 +8444,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGeometryStatics=_uuidof(IGeometryStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGeometryStatics_INTERFACE_DEFINED__) */
@@ -8139,10 +8508,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGradientBrush=_uuidof(IGradientBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrush_INTERFACE_DEFINED__) */
@@ -8184,10 +8553,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGradientBrushFactory=_uuidof(IGradientBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushFactory_INTERFACE_DEFINED__) */
@@ -8236,10 +8605,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGradientBrushStatics=_uuidof(IGradientBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientBrushStatics_INTERFACE_DEFINED__) */
@@ -8288,10 +8657,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGradientStop=_uuidof(IGradientStop);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStop;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStop_INTERFACE_DEFINED__) */
@@ -8334,10 +8703,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGradientStopStatics=_uuidof(IGradientStopStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStopStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIGradientStopStatics_INTERFACE_DEFINED__) */
@@ -8394,10 +8763,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IImageBrush=_uuidof(IImageBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrush_INTERFACE_DEFINED__) */
@@ -8437,10 +8806,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IImageBrushStatics=_uuidof(IImageBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageBrushStatics_INTERFACE_DEFINED__) */
@@ -8477,10 +8846,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IImageSource=_uuidof(IImageSource);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSource_INTERFACE_DEFINED__) */
@@ -8517,10 +8886,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IImageSourceFactory=_uuidof(IImageSourceFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIImageSourceFactory_INTERFACE_DEFINED__) */
@@ -8569,10 +8938,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILineGeometry=_uuidof(ILineGeometry);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometry;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometry_INTERFACE_DEFINED__) */
@@ -8615,10 +8984,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILineGeometryStatics=_uuidof(ILineGeometryStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometryStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILineGeometryStatics_INTERFACE_DEFINED__) */
@@ -8661,10 +9030,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILineSegment=_uuidof(ILineSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegment_INTERFACE_DEFINED__) */
@@ -8704,10 +9073,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILineSegmentStatics=_uuidof(ILineSegmentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILineSegmentStatics_INTERFACE_DEFINED__) */
@@ -8756,10 +9125,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILinearGradientBrush=_uuidof(ILinearGradientBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrush_INTERFACE_DEFINED__) */
@@ -8801,10 +9170,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILinearGradientBrushFactory=_uuidof(ILinearGradientBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushFactory_INTERFACE_DEFINED__) */
@@ -8847,10 +9216,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILinearGradientBrushStatics=_uuidof(ILinearGradientBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILinearGradientBrushStatics_INTERFACE_DEFINED__) */
@@ -8890,10 +9259,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILoadedImageSourceLoadCompletedEventArgs=_uuidof(ILoadedImageSourceLoadCompletedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSourceLoadCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSourceLoadCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -8946,10 +9315,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILoadedImageSurface=_uuidof(ILoadedImageSurface);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurface;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurface_INTERFACE_DEFINED__) */
@@ -9004,10 +9373,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILoadedImageSurfaceStatics=_uuidof(ILoadedImageSurfaceStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurfaceStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurfaceStatics_INTERFACE_DEFINED__) */
@@ -9050,10 +9419,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMatrix3DProjection=_uuidof(IMatrix3DProjection);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjection;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjection_INTERFACE_DEFINED__) */
@@ -9093,10 +9462,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMatrix3DProjectionStatics=_uuidof(IMatrix3DProjectionStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjectionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrix3DProjectionStatics_INTERFACE_DEFINED__) */
@@ -9133,10 +9502,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMatrixHelper=_uuidof(IMatrixHelper);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelper_INTERFACE_DEFINED__) */
@@ -9182,7 +9551,7 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetIsIdentity(
                             /* [in] */ABI::Windows::UI::Xaml::Media::Matrix target,
-                            /* [retval, out] */__RPC__out boolean * result
+                            /* [retval, out] */__RPC__out ::boolean * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE Transform(
                             /* [in] */ABI::Windows::UI::Xaml::Media::Matrix target,
@@ -9194,10 +9563,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMatrixHelperStatics=_uuidof(IMatrixHelperStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixHelperStatics_INTERFACE_DEFINED__) */
@@ -9240,10 +9609,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMatrixTransform=_uuidof(IMatrixTransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransform_INTERFACE_DEFINED__) */
@@ -9283,10 +9652,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMatrixTransformStatics=_uuidof(IMatrixTransformStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransformStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIMatrixTransformStatics_INTERFACE_DEFINED__) */
@@ -9329,10 +9698,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaTransportControlsThumbnailRequestedEventArgs=_uuidof(IMediaTransportControlsThumbnailRequestedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIMediaTransportControlsThumbnailRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIMediaTransportControlsThumbnailRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -9372,10 +9741,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPartialMediaFailureDetectedEventArgs=_uuidof(IPartialMediaFailureDetectedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs_INTERFACE_DEFINED__) */
@@ -9415,10 +9784,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPartialMediaFailureDetectedEventArgs2=_uuidof(IPartialMediaFailureDetectedEventArgs2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs2_INTERFACE_DEFINED__) */
@@ -9463,26 +9832,26 @@ namespace ABI {
                             /* [in] */ABI::Windows::Foundation::Point value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsClosed(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsClosed(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFilled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsFilled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPathFigure=_uuidof(IPathFigure);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigure;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigure_INTERFACE_DEFINED__) */
@@ -9531,10 +9900,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPathFigureStatics=_uuidof(IPathFigureStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigureStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathFigureStatics_INTERFACE_DEFINED__) */
@@ -9583,10 +9952,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPathGeometry=_uuidof(IPathGeometry);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometry;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometry_INTERFACE_DEFINED__) */
@@ -9629,10 +9998,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPathGeometryStatics=_uuidof(IPathGeometryStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometryStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathGeometryStatics_INTERFACE_DEFINED__) */
@@ -9669,10 +10038,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPathSegment=_uuidof(IPathSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegment_INTERFACE_DEFINED__) */
@@ -9709,10 +10078,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPathSegmentFactory=_uuidof(IPathSegmentFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegmentFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPathSegmentFactory_INTERFACE_DEFINED__) */
@@ -9824,10 +10193,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlaneProjection=_uuidof(IPlaneProjection);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjection;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjection_INTERFACE_DEFINED__) */
@@ -9903,10 +10272,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPlaneProjectionStatics=_uuidof(IPlaneProjectionStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjectionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPlaneProjectionStatics_INTERFACE_DEFINED__) */
@@ -9949,10 +10318,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPolyBezierSegment=_uuidof(IPolyBezierSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegment_INTERFACE_DEFINED__) */
@@ -9992,10 +10361,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPolyBezierSegmentStatics=_uuidof(IPolyBezierSegmentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyBezierSegmentStatics_INTERFACE_DEFINED__) */
@@ -10038,10 +10407,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPolyLineSegment=_uuidof(IPolyLineSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegment_INTERFACE_DEFINED__) */
@@ -10081,10 +10450,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPolyLineSegmentStatics=_uuidof(IPolyLineSegmentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyLineSegmentStatics_INTERFACE_DEFINED__) */
@@ -10127,10 +10496,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPolyQuadraticBezierSegment=_uuidof(IPolyQuadraticBezierSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegment_INTERFACE_DEFINED__) */
@@ -10170,10 +10539,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPolyQuadraticBezierSegmentStatics=_uuidof(IPolyQuadraticBezierSegmentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIPolyQuadraticBezierSegmentStatics_INTERFACE_DEFINED__) */
@@ -10210,10 +10579,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IProjection=_uuidof(IProjection);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIProjection;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIProjection_INTERFACE_DEFINED__) */
@@ -10255,10 +10624,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IProjectionFactory=_uuidof(IProjectionFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIProjectionFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIProjectionFactory_INTERFACE_DEFINED__) */
@@ -10307,10 +10676,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IQuadraticBezierSegment=_uuidof(IQuadraticBezierSegment);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegment;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegment_INTERFACE_DEFINED__) */
@@ -10353,10 +10722,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IQuadraticBezierSegmentStatics=_uuidof(IQuadraticBezierSegmentStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegmentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIQuadraticBezierSegmentStatics_INTERFACE_DEFINED__) */
@@ -10393,10 +10762,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRateChangedRoutedEventArgs=_uuidof(IRateChangedRoutedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRateChangedRoutedEventArgs_INTERFACE_DEFINED__) */
@@ -10439,10 +10808,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRectangleGeometry=_uuidof(IRectangleGeometry);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometry;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometry_INTERFACE_DEFINED__) */
@@ -10482,10 +10851,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRectangleGeometryStatics=_uuidof(IRectangleGeometryStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometryStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRectangleGeometryStatics_INTERFACE_DEFINED__) */
@@ -10525,10 +10894,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRenderedEventArgs=_uuidof(IRenderedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderedEventArgs_INTERFACE_DEFINED__) */
@@ -10568,10 +10937,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRenderingEventArgs=_uuidof(IRenderingEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRenderingEventArgs_INTERFACE_DEFINED__) */
@@ -10608,10 +10977,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRevealBackgroundBrush=_uuidof(IRevealBackgroundBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrush_INTERFACE_DEFINED__) */
@@ -10653,10 +11022,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRevealBackgroundBrushFactory=_uuidof(IRevealBackgroundBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBackgroundBrushFactory_INTERFACE_DEFINED__) */
@@ -10693,10 +11062,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRevealBorderBrush=_uuidof(IRevealBorderBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrush_INTERFACE_DEFINED__) */
@@ -10738,10 +11107,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRevealBorderBrushFactory=_uuidof(IRevealBorderBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBorderBrushFactory_INTERFACE_DEFINED__) */
@@ -10786,20 +11155,20 @@ namespace ABI {
                             /* [in] */ABI::Windows::UI::Xaml::ApplicationTheme value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlwaysUseFallback(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlwaysUseFallback(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IRevealBrush=_uuidof(IRevealBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrush_INTERFACE_DEFINED__) */
@@ -10841,10 +11210,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRevealBrushFactory=_uuidof(IRevealBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushFactory_INTERFACE_DEFINED__) */
@@ -10901,10 +11270,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRevealBrushStatics=_uuidof(IRevealBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRevealBrushStatics_INTERFACE_DEFINED__) */
@@ -10959,10 +11328,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRotateTransform=_uuidof(IRotateTransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransform_INTERFACE_DEFINED__) */
@@ -11008,10 +11377,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IRotateTransformStatics=_uuidof(IRotateTransformStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransformStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIRotateTransformStatics_INTERFACE_DEFINED__) */
@@ -11072,10 +11441,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IScaleTransform=_uuidof(IScaleTransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransform_INTERFACE_DEFINED__) */
@@ -11124,14 +11493,94 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IScaleTransformStatics=_uuidof(IScaleTransformStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransformStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransformStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IShadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.Shadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IShadow[] = L"Windows.UI.Xaml.Media.IShadow";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    /* [object, uuid("6813A583-F3B4-5FCF-8694-2CD0AEFC2FAD"), exclusiveto, contract] */
+                    MIDL_INTERFACE("6813A583-F3B4-5FCF-8694-2CD0AEFC2FAD")
+                    IShadow : public IInspectable
+                    {
+                    public:
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IShadow=_uuidof(IShadow);
+                    
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IShadowFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.Shadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IShadowFactory[] = L"Windows.UI.Xaml.Media.IShadowFactory";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    /* [object, uuid("19899F25-D28B-51E6-94B0-D7E709686305"), exclusiveto, contract] */
+                    MIDL_INTERFACE("19899F25-D28B-51E6-94B0-D7E709686305")
+                    IShadowFactory : public IInspectable
+                    {
+                    public:
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IShadowFactory=_uuidof(IShadowFactory);
+                    
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11188,10 +11637,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISkewTransform=_uuidof(ISkewTransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform_INTERFACE_DEFINED__) */
@@ -11240,10 +11689,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISkewTransformStatics=_uuidof(ISkewTransformStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransformStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransformStatics_INTERFACE_DEFINED__) */
@@ -11286,10 +11735,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISolidColorBrush=_uuidof(ISolidColorBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrush_INTERFACE_DEFINED__) */
@@ -11330,10 +11779,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISolidColorBrushFactory=_uuidof(ISolidColorBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushFactory_INTERFACE_DEFINED__) */
@@ -11373,14 +11822,102 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISolidColorBrushStatics=_uuidof(ISolidColorBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IThemeShadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.ThemeShadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IThemeShadow[] = L"Windows.UI.Xaml.Media.IThemeShadow";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    /* [object, uuid("3ECCAD09-7985-5F39-8B62-6C10696DCA6F"), exclusiveto, contract] */
+                    MIDL_INTERFACE("3ECCAD09-7985-5F39-8B62-6C10696DCA6F")
+                    IThemeShadow : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Receivers(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IUIElementWeakCollection * * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IThemeShadow=_uuidof(IThemeShadow);
+                    
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IThemeShadowFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.ThemeShadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IThemeShadowFactory[] = L"Windows.UI.Xaml.Media.IThemeShadowFactory";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    /* [object, uuid("2E71465D-0F67-590E-831B-7E5E2A32B778"), exclusiveto, contract] */
+                    MIDL_INTERFACE("2E71465D-0F67-590E-831B-7E5E2A32B778")
+                    IThemeShadowFactory : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE CreateInstance(
+                            /* [in] */__RPC__in_opt IInspectable * baseInterface,
+                            /* [out] */__RPC__deref_out_opt IInspectable * * innerInterface,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Media::IThemeShadow * * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IThemeShadowFactory=_uuidof(IThemeShadowFactory);
+                    
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11431,10 +11968,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITileBrush=_uuidof(ITileBrush);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush_INTERFACE_DEFINED__) */
@@ -11476,10 +12013,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITileBrushFactory=_uuidof(ITileBrushFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushFactory_INTERFACE_DEFINED__) */
@@ -11525,10 +12062,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITileBrushStatics=_uuidof(ITileBrushStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrushStatics_INTERFACE_DEFINED__) */
@@ -11583,10 +12120,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITimelineMarker=_uuidof(ITimelineMarker);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarker;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarker_INTERFACE_DEFINED__) */
@@ -11629,10 +12166,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITimelineMarkerRoutedEventArgs=_uuidof(ITimelineMarkerRoutedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerRoutedEventArgs_INTERFACE_DEFINED__) */
@@ -11678,10 +12215,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITimelineMarkerStatics=_uuidof(ITimelineMarkerStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITimelineMarkerStatics_INTERFACE_DEFINED__) */
@@ -11718,10 +12255,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITransform=_uuidof(ITransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITransform_INTERFACE_DEFINED__) */
@@ -11758,10 +12295,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITransformFactory=_uuidof(ITransformFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITransformFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITransformFactory_INTERFACE_DEFINED__) */
@@ -11807,10 +12344,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITransformGroup=_uuidof(ITransformGroup);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroup;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroup_INTERFACE_DEFINED__) */
@@ -11850,10 +12387,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITransformGroupStatics=_uuidof(ITransformGroupStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroupStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITransformGroupStatics_INTERFACE_DEFINED__) */
@@ -11902,10 +12439,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITranslateTransform=_uuidof(ITranslateTransform);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransform;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransform_INTERFACE_DEFINED__) */
@@ -11948,10 +12485,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITranslateTransformStatics=_uuidof(ITranslateTransformStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransformStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CITranslateTransformStatics_INTERFACE_DEFINED__) */
@@ -11988,10 +12525,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualTreeHelper=_uuidof(IVisualTreeHelper);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelper_INTERFACE_DEFINED__) */
@@ -12036,13 +12573,13 @@ namespace ABI {
                         /* [overload, default_overload] */virtual HRESULT STDMETHODCALLTYPE FindAllElementsInHostCoordinatesPoint(
                             /* [in] */ABI::Windows::Foundation::Point intersectingPoint,
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * subtree,
-                            /* [in] */boolean includeAllElements,
+                            /* [in] */::boolean includeAllElements,
                             /* [retval, out] */__RPC__deref_out_opt __FIIterable_1_Windows__CUI__CXaml__CUIElement * * result
                             ) = 0;
                         /* [overload] */virtual HRESULT STDMETHODCALLTYPE FindAllElementsInHostCoordinatesRect(
                             /* [in] */ABI::Windows::Foundation::Rect intersectingRect,
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * subtree,
-                            /* [in] */boolean includeAllElements,
+                            /* [in] */::boolean includeAllElements,
                             /* [retval, out] */__RPC__deref_out_opt __FIIterable_1_Windows__CUI__CXaml__CUIElement * * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetChild(
@@ -12066,10 +12603,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualTreeHelperStatics=_uuidof(IVisualTreeHelperStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics_INTERFACE_DEFINED__) */
@@ -12110,14 +12647,58 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualTreeHelperStatics2=_uuidof(IVisualTreeHelperStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IVisualTreeHelperStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.VisualTreeHelper
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IVisualTreeHelperStatics3[] = L"Windows.UI.Xaml.Media.IVisualTreeHelperStatics3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Media {
+                    /* [object, uuid("40420D50-CA16-57DA-8AAC-944C8AF577FD"), exclusiveto, contract] */
+                    MIDL_INTERFACE("40420D50-CA16-57DA-8AAC-944C8AF577FD")
+                    IVisualTreeHelperStatics3 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE GetOpenPopupsForXamlRoot(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IXamlRoot * xamlRoot,
+                            /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup * * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IVisualTreeHelperStatics3=_uuidof(IVisualTreeHelperStatics3);
+                    
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -12156,10 +12737,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlCompositionBrushBase=_uuidof(IXamlCompositionBrushBase);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase_INTERFACE_DEFINED__) */
@@ -12201,10 +12782,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlCompositionBrushBaseFactory=_uuidof(IXamlCompositionBrushBaseFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseFactory_INTERFACE_DEFINED__) */
@@ -12243,10 +12824,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlCompositionBrushBaseOverrides=_uuidof(IXamlCompositionBrushBaseOverrides);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseOverrides_INTERFACE_DEFINED__) */
@@ -12289,10 +12870,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlCompositionBrushBaseProtected=_uuidof(IXamlCompositionBrushBaseProtected);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseProtected;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseProtected_INTERFACE_DEFINED__) */
@@ -12332,10 +12913,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlCompositionBrushBaseStatics=_uuidof(IXamlCompositionBrushBaseStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBaseStatics_INTERFACE_DEFINED__) */
@@ -12372,10 +12953,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlLight=_uuidof(IXamlLight);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLight;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLight_INTERFACE_DEFINED__) */
@@ -12417,10 +12998,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlLightFactory=_uuidof(IXamlLightFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightFactory_INTERFACE_DEFINED__) */
@@ -12466,10 +13047,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlLightOverrides=_uuidof(IXamlLightOverrides);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightOverrides_INTERFACE_DEFINED__) */
@@ -12512,10 +13093,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlLightProtected=_uuidof(IXamlLightProtected);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightProtected;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightProtected_INTERFACE_DEFINED__) */
@@ -12568,10 +13149,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlLightStatics=_uuidof(IXamlLightStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Media */} /* ABI */
+                } /* Media */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightStatics_INTERFACE_DEFINED__) */
@@ -12586,10 +13167,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightStatics;
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Media.IAcrylicBrushStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.IAcrylicBrushStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Media.IAcrylicBrush ** Default Interface **
+ *    Windows.UI.Xaml.Media.IAcrylicBrush2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -14024,6 +14607,30 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.UI.Xaml.Media.Shadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Xaml.Media.IShadow ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Xaml_Media_Shadow_DEFINED
+#define RUNTIMECLASS_Windows_UI_Xaml_Media_Shadow_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Shadow[] = L"Windows.UI.Xaml.Media.Shadow";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.UI.Xaml.Media.SkewTransform
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -14081,6 +14688,30 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_SolidColorBrush[] = L"Windows.UI.Xaml.Media.SolidColorBrush";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.Xaml.Media.ThemeShadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Xaml.Media.IThemeShadow ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Xaml_Media_ThemeShadow_DEFINED
+#define RUNTIMECLASS_Windows_UI_Xaml_Media_ThemeShadow_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_ThemeShadow[] = L"Windows.UI.Xaml.Media.ThemeShadow";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -14315,6 +14946,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Media.IVisualTreeHelperStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.IVisualTreeHelperStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.IVisualTreeHelperStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -14416,6 +15048,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush __x_ABI_CWind
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory;
@@ -14427,6 +15065,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushFactory __x_AB
 typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIArcSegment_FWD_DEFINED__
@@ -14974,6 +15618,18 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransformStatics __x_
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransformStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform __x_ABI_CWindows_CUI_CXaml_CMedia_CISkewTransform;
@@ -15003,6 +15659,18 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushFactory __x
 typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CITileBrush_FWD_DEFINED__
@@ -15093,6 +15761,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics __
 typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics2 __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics2;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlCompositionBrushBase_FWD_DEFINED__
@@ -18559,7 +19233,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaEle
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIMediaElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIMediaElement * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CIPartialMediaFailureDetectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaElement_Windows__CUI__CXaml__CMedia__CPartialMediaFailureDetectedEventArgsVtbl;
 
@@ -18618,7 +19292,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTra
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CIMediaTransportControlsThumbnailRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIMediaTransportControls * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CIMediaTransportControlsThumbnailRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMediaTransportControls_Windows__CUI__CXaml__CMedia__CMediaTransportControlsThumbnailRequestedEventArgsVtbl;
 
@@ -18671,7 +19345,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImage
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurface * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSourceLoadCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSurface * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CILoadedImageSourceLoadCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurface_Windows__CUI__CXaml__CMedia__CLoadedImageSourceLoadCompletedEventArgsVtbl;
 
@@ -18701,6 +19375,62 @@ interface __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CLoadedImageSurfa
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#if !defined(____FIReference_1_double_INTERFACE_DEFINED__)
+#define ____FIReference_1_double_INTERFACE_DEFINED__
+
+typedef interface __FIReference_1_double __FIReference_1_double;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIReference_1_double;
+
+typedef struct __FIReference_1_doubleVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_double * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_double * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_double * This );
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_double * This, 
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_double * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_double * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_double * This, /* [retval][out] */ __RPC__out double *value);
+    END_INTERFACE
+} __FIReference_1_doubleVtbl;
+
+interface __FIReference_1_double
+{
+    CONST_VTBL struct __FIReference_1_doubleVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIReference_1_double_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIReference_1_double_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIReference_1_double_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIReference_1_double_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIReference_1_double_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIReference_1_double_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIReference_1_double_get_Value(This,value)	\
+    ( (This)->lpVtbl -> get_Value(This,value) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIReference_1_double_INTERFACE_DEFINED__
+
 
 
 #if !defined(____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__)
@@ -19320,6 +20050,260 @@ interface __FIIterable_1_Windows__CUI__CXaml__CUIElement
 
 
 #endif // ____FIIterable_1_Windows__CUI__CXaml__CUIElement_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIVectorView_1_Windows__CUI__CXaml__CUIElement_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CUI__CXaml__CUIElement_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CUI__CXaml__CUIElement __FIVectorView_1_Windows__CUI__CXaml__CUIElement;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CXaml__CUIElement;
+
+typedef struct __FIVectorView_1_Windows__CUI__CXaml__CUIElementVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CUI_CXaml_CIUIElement * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+            /* [in] */ __x_ABI_CWindows_CUI_CXaml_CIUIElement * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CUIElement * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CIUIElement * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CXaml__CUIElementVtbl;
+
+interface __FIVectorView_1_Windows__CUI__CXaml__CUIElement
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CXaml__CUIElementVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CUI__CXaml__CUIElement_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CUI__CXaml__CUIElement_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIVector_1_Windows__CUI__CXaml__CUIElement_INTERFACE_DEFINED__)
+#define ____FIVector_1_Windows__CUI__CXaml__CUIElement_INTERFACE_DEFINED__
+
+typedef interface __FIVector_1_Windows__CUI__CXaml__CUIElement __FIVector_1_Windows__CUI__CXaml__CUIElement;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVector_1_Windows__CUI__CXaml__CUIElement;
+
+typedef struct __FIVector_1_Windows__CUI__CXaml__CUIElementVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This, /* [out] */ __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [in] */ unsigned int index,
+        /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * *item);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [retval][out] */ __RPC__out unsigned int *size);
+
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CUIElement **view);
+
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [in] */ __RPC__in __x_ABI_CWindows_CUI_CXaml_CIUIElement * item,
+        /* [out] */ __RPC__out unsigned int *index,
+        /* [retval][out] */ __RPC__out boolean *found);
+
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in __x_ABI_CWindows_CUI_CXaml_CIUIElement * item);
+
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in __x_ABI_CWindows_CUI_CXaml_CIUIElement * item);
+
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This, /* [in] */ unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This, /* [in] */ __RPC__in __x_ABI_CWindows_CUI_CXaml_CIUIElement * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [in] */ unsigned int startIndex,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CIUIElement * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CUIElement * This,
+        /* [in] */ unsigned int count,
+        /* [size_is][in] */ __RPC__in_ecount_full(count) __x_ABI_CWindows_CUI_CXaml_CIUIElement * *value);
+
+    END_INTERFACE
+} __FIVector_1_Windows__CUI__CXaml__CUIElementVtbl;
+
+interface __FIVector_1_Windows__CUI__CXaml__CUIElement
+{
+    CONST_VTBL struct __FIVector_1_Windows__CUI__CXaml__CUIElementVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_GetView(This,view)	\
+    ( (This)->lpVtbl -> GetView(This,view) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_SetAt(This,index,item)	\
+    ( (This)->lpVtbl -> SetAt(This,index,item) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_InsertAt(This,index,item)	\
+    ( (This)->lpVtbl -> InsertAt(This,index,item) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_RemoveAt(This,index)	\
+    ( (This)->lpVtbl -> RemoveAt(This,index) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_Append(This,item)	\
+    ( (This)->lpVtbl -> Append(This,item) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_RemoveAtEnd(This)	\
+    ( (This)->lpVtbl -> RemoveAtEnd(This) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_Clear(This)	\
+    ( (This)->lpVtbl -> Clear(This) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#define __FIVector_1_Windows__CUI__CXaml__CUIElement_ReplaceAll(This,count,value)	\
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVector_1_Windows__CUI__CXaml__CUIElement_INTERFACE_DEFINED__
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -20167,11 +21151,25 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CIRoutedEventHandler __x_ABI_CWindo
 
 
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection __x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection_FWD_DEFINED__
+
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIWindow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIWindow_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CIWindow __x_ABI_CWindows_CUI_CXaml_CIWindow;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIWindow_FWD_DEFINED__
+
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CIXamlRoot __x_ABI_CWindows_CUI_CXaml_CIXamlRoot;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CIXamlRoot_FWD_DEFINED__
 
 
 
@@ -20245,6 +21243,15 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CMedia_CSweepDirection __x_ABI_CWindows_
 
 
 typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix __x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21226,6 +22233,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush;
 
 /*
  *
+ * Interface Windows.UI.Xaml.Media.IAcrylicBrush2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.AcrylicBrush
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IAcrylicBrush2[] = L"Windows.UI.Xaml.Media.IAcrylicBrush2";
+/* [object, uuid("C9645383-B19E-5AC0-86FF-3D90506DBCDA"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TintLuminosityOpacity )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIReference_1_double * * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_TintLuminosityOpacity )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2 * This,
+        /* [in] */__RPC__in_opt __FIReference_1_double * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_get_TintLuminosityOpacity(This,value) \
+    ( (This)->lpVtbl->get_TintLuminosityOpacity(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_put_TintLuminosityOpacity(This,value) \
+    ( (This)->lpVtbl->put_TintLuminosityOpacity(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrush2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Media.IAcrylicBrushFactory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
@@ -21438,6 +22545,99 @@ interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IAcrylicBrushStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.AcrylicBrush
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IAcrylicBrushStatics2[] = L"Windows.UI.Xaml.Media.IAcrylicBrushStatics2";
+/* [object, uuid("129188A8-BF11-5BBC-8445-8C510E5926C0"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TintLuminosityOpacityProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_get_TintLuminosityOpacityProperty(This,value) \
+    ( (This)->lpVtbl->get_TintLuminosityOpacityProperty(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIAcrylicBrushStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -31280,6 +32480,178 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIScaleTransformStatics
 
 /*
  *
+ * Interface Windows.UI.Xaml.Media.IShadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.Shadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IShadow[] = L"Windows.UI.Xaml.Media.IShadow";
+/* [object, uuid("6813A583-F3B4-5FCF-8694-2CD0AEFC2FAD"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowVtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadow_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IShadowFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.Shadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IShadowFactory[] = L"Windows.UI.Xaml.Media.IShadowFactory";
+/* [object, uuid("19899F25-D28B-51E6-94B0-D7E709686305"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactoryVtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactoryVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIShadowFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Media.ISkewTransform
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -31819,6 +33191,194 @@ interface __x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CISolidColorBrushStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IThemeShadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.ThemeShadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IThemeShadow[] = L"Windows.UI.Xaml.Media.IThemeShadow";
+/* [object, uuid("3ECCAD09-7985-5F39-8B62-6C10696DCA6F"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Receivers )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIUIElementWeakCollection * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowVtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_get_Receivers(This,value) \
+    ( (This)->lpVtbl->get_Receivers(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Media.IThemeShadowFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.ThemeShadow
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IThemeShadowFactory[] = L"Windows.UI.Xaml.Media.IThemeShadowFactory";
+/* [object, uuid("2E71465D-0F67-590E-831B-7E5E2A32B778"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory * This,
+        /* [in] */__RPC__in_opt IInspectable * baseInterface,
+        /* [out] */__RPC__deref_out_opt IInspectable * * innerInterface,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadow * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactoryVtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactoryVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_CreateInstance(This,baseInterface,innerInterface,value) \
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIThemeShadowFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -33410,6 +34970,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStati
 
 /*
  *
+ * Interface Windows.UI.Xaml.Media.IVisualTreeHelperStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Media.VisualTreeHelper
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_IVisualTreeHelperStatics3[] = L"Windows.UI.Xaml.Media.IVisualTreeHelperStatics3";
+/* [object, uuid("40420D50-CA16-57DA-8AAC-944C8AF577FD"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetOpenPopupsForXamlRoot )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIXamlRoot * xamlRoot,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CControls__CPrimitives__CPopup * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_GetOpenPopupsForXamlRoot(This,xamlRoot,result) \
+    ( (This)->lpVtbl->GetOpenPopupsForXamlRoot(This,xamlRoot,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CMedia_CIVisualTreeHelperStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Media.IXamlCompositionBrushBase
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
@@ -34408,10 +36062,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CIXamlLightStatics;
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Media.IAcrylicBrushStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.IAcrylicBrushStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Media.IAcrylicBrush ** Default Interface **
+ *    Windows.UI.Xaml.Media.IAcrylicBrush2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -35846,6 +37502,30 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.UI.Xaml.Media.Shadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Xaml.Media.IShadow ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Xaml_Media_Shadow_DEFINED
+#define RUNTIMECLASS_Windows_UI_Xaml_Media_Shadow_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Shadow[] = L"Windows.UI.Xaml.Media.Shadow";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.UI.Xaml.Media.SkewTransform
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -35903,6 +37583,30 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_SolidColorBrush[] = L"Windows.UI.Xaml.Media.SolidColorBrush";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.Xaml.Media.ThemeShadow
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Xaml.Media.IThemeShadow ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_Xaml_Media_ThemeShadow_DEFINED
+#define RUNTIMECLASS_Windows_UI_Xaml_Media_ThemeShadow_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_ThemeShadow[] = L"Windows.UI.Xaml.Media.ThemeShadow";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -36137,6 +37841,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Media.IVisualTreeHelperStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.IVisualTreeHelperStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.IVisualTreeHelperStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *

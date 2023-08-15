@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -1684,6 +1684,7 @@ enum class XamlPropertyIndex : int32_t
     FontIconSource_MirroredWhenRightToLeft = 2121,
     PathIconSource_Data = 2122,
     SymbolIconSource_Symbol = 2123,
+    UIElement_Shadow = 2130,
     IconSourceElement_IconSource = 2131,
     PasswordBox_CanPasteClipboardContent = 2137,
     TextBox_CanPasteClipboardContent = 2138,
@@ -1755,6 +1756,7 @@ enum class XamlPropertyIndex : int32_t
     FlyoutBase_IsOpen = 2267,
     StandardUICommand_Kind = 2275,
     UIElement_CanBeScrollAnchor = 2276,
+    ThemeShadow_Receivers = 2279,
     ScrollContentPresenter_SizesContentToTemplatedParent = 2280,
     ComboBox_TextBoxStyle = 2281,
     Frame_IsNavigationStackEnabled = 2282,
@@ -1776,6 +1778,18 @@ enum class XamlPropertyIndex : int32_t
     XamlUICommand_Label = 2352,
     DatePicker_SelectedDate = 2355,
     TimePicker_SelectedTime = 2356,
+    AppBarTemplateSettings_NegativeCompactVerticalDelta = 2367,
+    AppBarTemplateSettings_NegativeHiddenVerticalDelta = 2368,
+    AppBarTemplateSettings_NegativeMinimalVerticalDelta = 2369,
+    FlyoutBase_ShouldConstrainToRootBounds = 2378,
+    Popup_ShouldConstrainToRootBounds = 2379,
+    FlyoutPresenter_IsDefaultShadowEnabled = 2380,
+    MenuFlyoutPresenter_IsDefaultShadowEnabled = 2381,
+    UIElement_ActualOffset = 2382,
+    UIElement_ActualSize = 2383,
+    CommandBarTemplateSettings_OverflowContentCompactYTranslation = 2384,
+    CommandBarTemplateSettings_OverflowContentHiddenYTranslation = 2385,
+    CommandBarTemplateSettings_OverflowContentMinimalYTranslation = 2386,
 };
 
 enum class XamlTypeIndex : int32_t
@@ -2028,6 +2042,7 @@ enum class XamlTypeIndex : int32_t
     AppBarElementContainer = 945,
     ColorPaletteResources = 952,
     StandardUICommand = 961,
+    ThemeShadow = 964,
     XamlUICommand = 969,
 };
 

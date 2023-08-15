@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.controls.maps.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -243,10 +243,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -294,11 +290,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface ICustomMapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSource ABI::Windows::UI::Xaml::Controls::Maps::ICustomMapTileDataSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSource_FWD_DEFINED__
@@ -312,11 +308,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface ICustomMapTileDataSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSourceFactory ABI::Windows::UI::Xaml::Controls::Maps::ICustomMapTileDataSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSourceFactory_FWD_DEFINED__
@@ -330,11 +326,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IHttpMapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSource ABI::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSource_FWD_DEFINED__
@@ -348,11 +344,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IHttpMapTileDataSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSourceFactory ABI::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSourceFactory_FWD_DEFINED__
@@ -366,11 +362,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface ILocalMapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSource ABI::Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSource_FWD_DEFINED__
@@ -384,11 +380,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface ILocalMapTileDataSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSourceFactory ABI::Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSourceFactory_FWD_DEFINED__
@@ -402,11 +398,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapActualCameraChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs_FWD_DEFINED__
@@ -420,11 +416,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapActualCameraChangedEventArgs2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs2 ABI::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs2_FWD_DEFINED__
@@ -438,11 +434,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapActualCameraChangingEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangingEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs_FWD_DEFINED__
@@ -456,11 +452,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapActualCameraChangingEventArgs2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs2 ABI::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangingEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs2_FWD_DEFINED__
@@ -474,11 +470,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapBillboard;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboard ABI::Windows::UI::Xaml::Controls::Maps::IMapBillboard
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboard_FWD_DEFINED__
@@ -492,11 +488,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapBillboardFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapBillboardFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardFactory_FWD_DEFINED__
@@ -510,11 +506,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapBillboardStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapBillboardStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardStatics_FWD_DEFINED__
@@ -528,11 +524,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapCamera;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCamera ABI::Windows::UI::Xaml::Controls::Maps::IMapCamera
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCamera_FWD_DEFINED__
@@ -546,11 +542,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapCameraFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCameraFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapCameraFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCameraFactory_FWD_DEFINED__
@@ -564,11 +560,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapContextRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapContextRequestedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapContextRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapContextRequestedEventArgs_FWD_DEFINED__
@@ -582,11 +578,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControl;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl ABI::Windows::UI::Xaml::Controls::Maps::IMapControl
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl_FWD_DEFINED__
@@ -600,11 +596,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControl2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl2 ABI::Windows::UI::Xaml::Controls::Maps::IMapControl2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl2_FWD_DEFINED__
@@ -618,11 +614,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControl3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl3 ABI::Windows::UI::Xaml::Controls::Maps::IMapControl3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl3_FWD_DEFINED__
@@ -636,11 +632,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControl4;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl4 ABI::Windows::UI::Xaml::Controls::Maps::IMapControl4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl4_FWD_DEFINED__
@@ -654,11 +650,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControl5;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl5 ABI::Windows::UI::Xaml::Controls::Maps::IMapControl5
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl5_FWD_DEFINED__
@@ -672,11 +668,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControl6;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl6 ABI::Windows::UI::Xaml::Controls::Maps::IMapControl6
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl6_FWD_DEFINED__
@@ -690,14 +686,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControl7;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl7 ABI::Windows::UI::Xaml::Controls::Maps::IMapControl7
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl7_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Maps {
+                        interface IMapControl8;
+                    } /* Maps */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 ABI::Windows::UI::Xaml::Controls::Maps::IMapControl8
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs_FWD_DEFINED__
@@ -708,11 +722,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlBusinessLandmarkClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs_FWD_DEFINED__
@@ -726,11 +740,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlBusinessLandmarkPointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerEnteredEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerEnteredEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerEnteredEventArgs_FWD_DEFINED__
@@ -744,11 +758,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlBusinessLandmarkPointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerExitedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerExitedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerExitedEventArgs_FWD_DEFINED__
@@ -762,11 +776,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlBusinessLandmarkRightTappedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkRightTappedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkRightTappedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkRightTappedEventArgs_FWD_DEFINED__
@@ -780,11 +794,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlDataHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper ABI::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper_FWD_DEFINED__
@@ -798,11 +812,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlDataHelper2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper2 ABI::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper2_FWD_DEFINED__
@@ -816,11 +830,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlDataHelperFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelperFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperFactory_FWD_DEFINED__
@@ -834,11 +848,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlDataHelperStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelperStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperStatics_FWD_DEFINED__
@@ -852,11 +866,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapControlStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics_FWD_DEFINED__
@@ -870,11 +884,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics2 ABI::Windows::UI::Xaml::Controls::Maps::IMapControlStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics2_FWD_DEFINED__
@@ -888,11 +902,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlStatics4;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics4 ABI::Windows::UI::Xaml::Controls::Maps::IMapControlStatics4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics4_FWD_DEFINED__
@@ -906,11 +920,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlStatics5;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics5 ABI::Windows::UI::Xaml::Controls::Maps::IMapControlStatics5
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics5_FWD_DEFINED__
@@ -924,11 +938,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlStatics6;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics6 ABI::Windows::UI::Xaml::Controls::Maps::IMapControlStatics6
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics6_FWD_DEFINED__
@@ -942,14 +956,32 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlStatics7;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7 ABI::Windows::UI::Xaml::Controls::Maps::IMapControlStatics7
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Maps {
+                        interface IMapControlStatics8;
+                    } /* Maps */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 ABI::Windows::UI::Xaml::Controls::Maps::IMapControlStatics8
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs_FWD_DEFINED__
@@ -960,11 +992,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlTransitFeatureClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs_FWD_DEFINED__
@@ -978,11 +1010,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlTransitFeaturePointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerEnteredEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerEnteredEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerEnteredEventArgs_FWD_DEFINED__
@@ -996,11 +1028,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlTransitFeaturePointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerExitedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerExitedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerExitedEventArgs_FWD_DEFINED__
@@ -1014,11 +1046,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapControlTransitFeatureRightTappedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureRightTappedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureRightTappedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureRightTappedEventArgs_FWD_DEFINED__
@@ -1032,11 +1064,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapCustomExperience;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperience ABI::Windows::UI::Xaml::Controls::Maps::IMapCustomExperience
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperience_FWD_DEFINED__
@@ -1050,11 +1082,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapCustomExperienceChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceChangedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapCustomExperienceChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceChangedEventArgs_FWD_DEFINED__
@@ -1068,11 +1100,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapCustomExperienceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapCustomExperienceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceFactory_FWD_DEFINED__
@@ -1086,11 +1118,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElement;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement ABI::Windows::UI::Xaml::Controls::Maps::IMapElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement_FWD_DEFINED__
@@ -1104,11 +1136,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElement2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement2 ABI::Windows::UI::Xaml::Controls::Maps::IMapElement2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement2_FWD_DEFINED__
@@ -1122,11 +1154,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElement3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3 ABI::Windows::UI::Xaml::Controls::Maps::IMapElement3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3_FWD_DEFINED__
@@ -1140,11 +1172,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElement3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3D ABI::Windows::UI::Xaml::Controls::Maps::IMapElement3D
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3D_FWD_DEFINED__
@@ -1158,11 +1190,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElement3DStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3DStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapElement3DStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3DStatics_FWD_DEFINED__
@@ -1176,11 +1208,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElement4;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement4 ABI::Windows::UI::Xaml::Controls::Maps::IMapElement4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement4_FWD_DEFINED__
@@ -1194,11 +1226,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementClickEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapElementClickEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementClickEventArgs_FWD_DEFINED__
@@ -1212,11 +1244,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapElementFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementFactory_FWD_DEFINED__
@@ -1230,11 +1262,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementPointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerEnteredEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapElementPointerEnteredEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerEnteredEventArgs_FWD_DEFINED__
@@ -1248,11 +1280,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementPointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerExitedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapElementPointerExitedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerExitedEventArgs_FWD_DEFINED__
@@ -1266,11 +1298,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapElementStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics_FWD_DEFINED__
@@ -1284,11 +1316,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics2 ABI::Windows::UI::Xaml::Controls::Maps::IMapElementStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics2_FWD_DEFINED__
@@ -1302,11 +1334,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementStatics3;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics3 ABI::Windows::UI::Xaml::Controls::Maps::IMapElementStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics3_FWD_DEFINED__
@@ -1320,11 +1352,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementStatics4;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics4 ABI::Windows::UI::Xaml::Controls::Maps::IMapElementStatics4
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics4_FWD_DEFINED__
@@ -1338,11 +1370,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementsLayer;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayer
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer_FWD_DEFINED__
@@ -1356,11 +1388,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementsLayerClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerClickEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerClickEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerClickEventArgs_FWD_DEFINED__
@@ -1374,11 +1406,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementsLayerContextRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerContextRequestedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerContextRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerContextRequestedEventArgs_FWD_DEFINED__
@@ -1392,11 +1424,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementsLayerPointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerEnteredEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerPointerEnteredEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerEnteredEventArgs_FWD_DEFINED__
@@ -1410,11 +1442,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementsLayerPointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerExitedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerPointerExitedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerExitedEventArgs_FWD_DEFINED__
@@ -1428,11 +1460,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapElementsLayerStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerStatics_FWD_DEFINED__
@@ -1446,11 +1478,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapIcon;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon ABI::Windows::UI::Xaml::Controls::Maps::IMapIcon
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon_FWD_DEFINED__
@@ -1464,11 +1496,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapIcon2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon2 ABI::Windows::UI::Xaml::Controls::Maps::IMapIcon2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon2_FWD_DEFINED__
@@ -1482,11 +1514,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapIconStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapIconStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics_FWD_DEFINED__
@@ -1500,11 +1532,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapIconStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics2 ABI::Windows::UI::Xaml::Controls::Maps::IMapIconStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics2_FWD_DEFINED__
@@ -1518,11 +1550,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapInputEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapInputEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapInputEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapInputEventArgs_FWD_DEFINED__
@@ -1536,11 +1568,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapItemsControl;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControl ABI::Windows::UI::Xaml::Controls::Maps::IMapItemsControl
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControl_FWD_DEFINED__
@@ -1554,11 +1586,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapItemsControlStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControlStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapItemsControlStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControlStatics_FWD_DEFINED__
@@ -1572,11 +1604,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapLayer;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayer ABI::Windows::UI::Xaml::Controls::Maps::IMapLayer
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayer_FWD_DEFINED__
@@ -1590,11 +1622,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapLayerFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapLayerFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerFactory_FWD_DEFINED__
@@ -1608,11 +1640,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapLayerStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapLayerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerStatics_FWD_DEFINED__
@@ -1626,11 +1658,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapModel3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3D ABI::Windows::UI::Xaml::Controls::Maps::IMapModel3D
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3D_FWD_DEFINED__
@@ -1644,11 +1676,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapModel3DFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapModel3DFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DFactory_FWD_DEFINED__
@@ -1662,11 +1694,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapModel3DStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapModel3DStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DStatics_FWD_DEFINED__
@@ -1680,11 +1712,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapPolygon;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon ABI::Windows::UI::Xaml::Controls::Maps::IMapPolygon
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon_FWD_DEFINED__
@@ -1698,11 +1730,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapPolygon2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon2 ABI::Windows::UI::Xaml::Controls::Maps::IMapPolygon2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon2_FWD_DEFINED__
@@ -1716,11 +1748,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapPolygonStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygonStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapPolygonStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygonStatics_FWD_DEFINED__
@@ -1734,11 +1766,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapPolyline;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolyline ABI::Windows::UI::Xaml::Controls::Maps::IMapPolyline
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolyline_FWD_DEFINED__
@@ -1752,11 +1784,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapPolylineStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolylineStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapPolylineStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolylineStatics_FWD_DEFINED__
@@ -1770,11 +1802,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapRightTappedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRightTappedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapRightTappedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRightTappedEventArgs_FWD_DEFINED__
@@ -1788,11 +1820,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapRouteView;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteView ABI::Windows::UI::Xaml::Controls::Maps::IMapRouteView
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteView_FWD_DEFINED__
@@ -1806,11 +1838,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapRouteViewFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteViewFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapRouteViewFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteViewFactory_FWD_DEFINED__
@@ -1824,11 +1856,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapScene;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapScene ABI::Windows::UI::Xaml::Controls::Maps::IMapScene
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapScene_FWD_DEFINED__
@@ -1842,11 +1874,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapSceneStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapSceneStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapSceneStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapSceneStatics_FWD_DEFINED__
@@ -1860,11 +1892,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapStyleSheet;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheet ABI::Windows::UI::Xaml::Controls::Maps::IMapStyleSheet
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheet_FWD_DEFINED__
@@ -1878,11 +1910,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapStyleSheetEntriesStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntriesStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapStyleSheetEntriesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntriesStatics_FWD_DEFINED__
@@ -1896,11 +1928,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapStyleSheetEntryStatesStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntryStatesStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapStyleSheetEntryStatesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntryStatesStatics_FWD_DEFINED__
@@ -1914,11 +1946,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapStyleSheetStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapStyleSheetStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetStatics_FWD_DEFINED__
@@ -1932,11 +1964,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTargetCameraChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapTargetCameraChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs_FWD_DEFINED__
@@ -1950,11 +1982,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTargetCameraChangedEventArgs2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs2 ABI::Windows::UI::Xaml::Controls::Maps::IMapTargetCameraChangedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs2_FWD_DEFINED__
@@ -1968,11 +2000,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileBitmapRequest;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequest ABI::Windows::UI::Xaml::Controls::Maps::IMapTileBitmapRequest
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequest_FWD_DEFINED__
@@ -1986,11 +2018,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileBitmapRequestDeferral;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestDeferral ABI::Windows::UI::Xaml::Controls::Maps::IMapTileBitmapRequestDeferral
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestDeferral_FWD_DEFINED__
@@ -2004,11 +2036,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileBitmapRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapTileBitmapRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs_FWD_DEFINED__
@@ -2022,11 +2054,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileBitmapRequestedEventArgs2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs2 ABI::Windows::UI::Xaml::Controls::Maps::IMapTileBitmapRequestedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs2_FWD_DEFINED__
@@ -2040,11 +2072,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSource ABI::Windows::UI::Xaml::Controls::Maps::IMapTileDataSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSource_FWD_DEFINED__
@@ -2058,11 +2090,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileDataSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSourceFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapTileDataSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSourceFactory_FWD_DEFINED__
@@ -2076,11 +2108,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource_FWD_DEFINED__
@@ -2094,11 +2126,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileSource2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource2 ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSource2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource2_FWD_DEFINED__
@@ -2112,11 +2144,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileSourceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceFactory ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceFactory_FWD_DEFINED__
@@ -2130,11 +2162,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileSourceStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSourceStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics_FWD_DEFINED__
@@ -2148,11 +2180,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileSourceStatics2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics2 ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSourceStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics2_FWD_DEFINED__
@@ -2166,11 +2198,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileUriRequest;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequest ABI::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequest
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequest_FWD_DEFINED__
@@ -2184,11 +2216,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileUriRequestDeferral;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestDeferral ABI::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequestDeferral
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestDeferral_FWD_DEFINED__
@@ -2202,11 +2234,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileUriRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs ABI::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs_FWD_DEFINED__
@@ -2220,11 +2252,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IMapTileUriRequestedEventArgs2;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs2 ABI::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequestedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs2_FWD_DEFINED__
@@ -2238,11 +2270,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IStreetsideExperience;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperience ABI::Windows::UI::Xaml::Controls::Maps::IStreetsideExperience
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperience_FWD_DEFINED__
@@ -2256,11 +2288,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IStreetsideExperienceFactory;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperienceFactory ABI::Windows::UI::Xaml::Controls::Maps::IStreetsideExperienceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperienceFactory_FWD_DEFINED__
@@ -2274,11 +2306,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IStreetsidePanorama;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanorama ABI::Windows::UI::Xaml::Controls::Maps::IStreetsidePanorama
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanorama_FWD_DEFINED__
@@ -2292,11 +2324,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         interface IStreetsidePanoramaStatics;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanoramaStatics ABI::Windows::UI::Xaml::Controls::Maps::IStreetsidePanoramaStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanoramaStatics_FWD_DEFINED__
@@ -2311,11 +2343,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElement;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2338,7 +2370,7 @@ IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Controls::Maps::IMapElement*>
@@ -2370,7 +2402,7 @@ IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Controls::Maps::IMapElement*>
@@ -2388,11 +2420,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapLayer;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -2415,7 +2447,7 @@ IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Controls::Maps::IMapLayer*>
@@ -2447,7 +2479,7 @@ IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Controls::Maps::IMapLayer*>
@@ -2465,11 +2497,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapRouteView;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2492,7 +2524,7 @@ IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Controls::Maps::IMapRouteView*>
@@ -2524,7 +2556,7 @@ IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Controls::Maps::IMapRouteView*>
@@ -2542,11 +2574,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapStyleSheet;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2569,7 +2601,7 @@ IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapStyleSheet*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapStyleSheet*> __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Controls::Maps::IMapStyleSheet*>
@@ -2601,7 +2633,7 @@ IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapStyleSheet*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapStyleSheet*> __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapStyleSheet ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Controls::Maps::IMapStyleSheet*>
@@ -2619,11 +2651,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2646,7 +2678,7 @@ IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> : IIterator_im
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSource*>
@@ -2678,7 +2710,7 @@ IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> : IIterable_im
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSource*>
@@ -2710,7 +2742,7 @@ IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::IMapElement*>
@@ -2742,7 +2774,7 @@ IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::IMapLayer*>
@@ -2774,7 +2806,7 @@ IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::IMapRouteView*>
@@ -2806,7 +2838,7 @@ IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> : IVectorVie
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSource*>
@@ -2838,7 +2870,7 @@ IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> : IVector_impl<ABI:
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapElement*> __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t;
 #define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapElement ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Controls::Maps::IMapElement*>
@@ -2870,7 +2902,7 @@ IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> : IVector_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapLayer*> __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t;
 #define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapLayer ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Controls::Maps::IMapLayer*>
@@ -2902,7 +2934,7 @@ IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapRouteView*> __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t;
 #define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapRouteView ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Controls::Maps::IMapRouteView*>
@@ -2934,7 +2966,7 @@ IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> : IVector_impl<A
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::Controls::Maps::MapTileSource*> __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t;
 #define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CControls__CMaps__CMapTileSource ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::Controls::Maps::IMapTileSource*>
@@ -2952,11 +2984,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapModel3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -2979,7 +3011,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapModel
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapModel3D*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapModel3D*>
@@ -3011,7 +3043,7 @@ IAsyncOperation<ABI::Windows::UI::Xaml::Controls::Maps::MapModel3D*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Xaml::Controls::Maps::MapModel3D*> __FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D_t;
 #define __FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CMapModel3D ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Xaml::Controls::Maps::IMapModel3D*>
@@ -3029,11 +3061,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class StreetsidePanorama;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3056,7 +3088,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Controls::Maps::Streetsi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Controls::Maps::IStreetsidePanorama*>
@@ -3088,7 +3120,7 @@ IAsyncOperation<ABI::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama*> __FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama_t;
 #define __FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CXaml__CControls__CMaps__CStreetsidePanorama ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Xaml::Controls::Maps::IStreetsidePanorama*>
@@ -3106,11 +3138,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class CustomMapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3120,11 +3152,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileBitmapRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3148,7 +3180,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSour
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource*,ABI::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::ICustomMapTileDataSource*,ABI::Windows::UI::Xaml::Controls::Maps::IMapTileBitmapRequestedEventArgs*>
@@ -3167,11 +3199,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class HttpMapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3181,11 +3213,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileUriRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3209,7 +3241,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource*,ABI::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource*,ABI::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequestedEventArgs*>
@@ -3228,11 +3260,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class LocalMapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3257,7 +3289,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourc
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource*,ABI::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource*,ABI::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequestedEventArgs*>
@@ -3276,11 +3308,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControl;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3304,7 +3336,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,IInspecta
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,IInspectable*>
@@ -3323,11 +3355,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapActualCameraChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3351,7 +3383,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangedEventArgs*>
@@ -3371,11 +3403,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapActualCameraChangingEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3399,7 +3431,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangingEventArgs*>
@@ -3419,11 +3451,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapContextRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3447,7 +3479,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapContextRequestedEventArgs*>
@@ -3467,11 +3499,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlBusinessLandmarkClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3495,7 +3527,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkClickEventArgs*>
@@ -3515,11 +3547,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlBusinessLandmarkPointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3543,7 +3575,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerEnteredEventArgs*>
@@ -3563,11 +3595,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlBusinessLandmarkPointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3591,7 +3623,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkPointerExitedEventArgs*>
@@ -3611,11 +3643,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlBusinessLandmarkRightTappedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3639,7 +3671,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlBusinessLandmarkRightTappedEventArgs*>
@@ -3659,11 +3691,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlTransitFeatureClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3687,7 +3719,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs*>
@@ -3707,11 +3739,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlTransitFeaturePointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3735,7 +3767,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerEnteredEventArgs*>
@@ -3755,11 +3787,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlTransitFeaturePointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3783,7 +3815,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeaturePointerExitedEventArgs*>
@@ -3803,11 +3835,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlTransitFeatureRightTappedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3831,7 +3863,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureRightTappedEventArgs*>
@@ -3851,11 +3883,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapCustomExperienceChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3879,7 +3911,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapCustomExperienceChangedEventArgs*>
@@ -3899,11 +3931,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3927,7 +3959,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapElementClickEventArgs*>
@@ -3947,11 +3979,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementPointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -3975,7 +4007,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapElementPointerEnteredEventArgs*>
@@ -3995,11 +4027,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementPointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4023,7 +4055,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapElementPointerExitedEventArgs*>
@@ -4043,11 +4075,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapInputEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4071,7 +4103,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapInputEventArgs*>
@@ -4091,11 +4123,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapRightTappedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4119,7 +4151,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapRightTappedEventArgs*>
@@ -4139,11 +4171,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTargetCameraChangedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -4167,7 +4199,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapControl*,ABI::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapControl*,ABI::Windows::UI::Xaml::Controls::Maps::IMapTargetCameraChangedEventArgs*>
@@ -4186,11 +4218,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementsLayer;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -4200,11 +4232,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementsLayerClickEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -4228,7 +4260,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerClickEventArgs*>
@@ -4248,11 +4280,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementsLayerContextRequestedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -4276,7 +4308,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerContextRequestedEventArgs*>
@@ -4296,11 +4328,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementsLayerPointerEnteredEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -4324,7 +4356,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerPointerEnteredEventArgs*>
@@ -4344,11 +4376,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElementsLayerPointerExitedEventArgs;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -4372,7 +4404,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayer*,ABI::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerPointerExitedEventArgs*>
@@ -4391,11 +4423,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapScene;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -4420,7 +4452,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapScene*,ABI::Window
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::MapScene*,ABI::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Controls::Maps::IMapScene*,ABI::Windows::UI::Xaml::Controls::Maps::IMapTargetCameraChangedEventArgs*>
@@ -4451,7 +4483,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -4481,7 +4513,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -4511,7 +4543,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -4540,7 +4572,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -4569,7 +4601,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -4584,9 +4616,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -4595,9 +4627,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyObject;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyObject ABI::Windows::UI::Xaml::IDependencyObject
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyObject_FWD_DEFINED__
@@ -4623,7 +4655,7 @@ IIterator<ABI::Windows::UI::Xaml::DependencyObject*> : IIterator_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Xaml::DependencyObject*> __FIIterator_1_Windows__CUI__CXaml__CDependencyObject_t;
 #define __FIIterator_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CXaml__CDependencyObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Xaml::IDependencyObject*>
@@ -4655,7 +4687,7 @@ IIterable<ABI::Windows::UI::Xaml::DependencyObject*> : IIterable_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Xaml::DependencyObject*> __FIIterable_1_Windows__CUI__CXaml__CDependencyObject_t;
 #define __FIIterable_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CXaml__CDependencyObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Xaml::IDependencyObject*>
@@ -4687,7 +4719,7 @@ IVectorView<ABI::Windows::UI::Xaml::DependencyObject*> : IVectorView_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Xaml::DependencyObject*> __FIVectorView_1_Windows__CUI__CXaml__CDependencyObject_t;
 #define __FIVectorView_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CXaml__CDependencyObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Xaml::IDependencyObject*>
@@ -4719,7 +4751,7 @@ IVector<ABI::Windows::UI::Xaml::DependencyObject*> : IVector_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Xaml::DependencyObject*> __FIVector_1_Windows__CUI__CXaml__CDependencyObject_t;
 #define __FIVector_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CXaml__CDependencyObject_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CXaml__CDependencyObject ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Xaml::IDependencyObject*>
@@ -4736,9 +4768,9 @@ namespace ABI {
             namespace Xaml {
                 struct Thickness;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CXaml__CThickness_USE
@@ -4759,7 +4791,7 @@ IReference<struct ABI::Windows::UI::Xaml::Thickness> : IReference_impl<struct AB
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::UI::Xaml::Thickness> __FIReference_1_Windows__CUI__CXaml__CThickness_t;
 #define __FIReference_1_Windows__CUI__CXaml__CThickness ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CXaml__CThickness_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CXaml__CThickness ABI::Windows::Foundation::IReference<ABI::Windows::UI::Xaml::Thickness>
@@ -4788,7 +4820,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -4817,7 +4849,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -4846,7 +4878,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -4862,10 +4894,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     class LocalLocation;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation_FWD_DEFINED__
@@ -4875,10 +4907,10 @@ namespace ABI {
             namespace Maps {
                 namespace LocalSearch {
                     interface ILocalLocation;
-                } /* Windows */
-            } /* Services */
-        } /* Maps */
-    } /* LocalSearch */} /* ABI */
+                } /* LocalSearch */
+            } /* Maps */
+        } /* Services */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation ABI::Windows::Services::Maps::LocalSearch::ILocalLocation
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CLocalSearch_CILocalLocation_FWD_DEFINED__
@@ -4904,7 +4936,7 @@ IIterator<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::LocalSearch::ILocalLocation*>
@@ -4936,7 +4968,7 @@ IIterable<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::LocalSearch::ILocalLocation*>
@@ -4968,7 +5000,7 @@ IVectorView<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::LocalSearch::LocalLocation*> __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CLocalSearch__CLocalLocation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::LocalSearch::ILocalLocation*>
@@ -4999,7 +5031,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -5029,7 +5061,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -5059,7 +5091,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -5089,7 +5121,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -5104,9 +5136,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
@@ -5115,9 +5147,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopath ABI::Windows::Devices::Geolocation::IGeopath
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
@@ -5143,7 +5175,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geopath*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geopath*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -5175,7 +5207,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geopath*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geopath*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -5207,7 +5239,7 @@ IVectorView<ABI::Windows::Devices::Geolocation::Geopath*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Geolocation::Geopath*> __FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -5239,7 +5271,7 @@ IVector<ABI::Windows::Devices::Geolocation::Geopath*> : IVector_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Geolocation::Geopath*> __FIVector_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIVector_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -5255,9 +5287,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -5266,9 +5298,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint ABI::Windows::Devices::Geolocation::IGeopoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -5294,7 +5326,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geopoint*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geopoint*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -5326,7 +5358,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geopoint*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geopoint*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -5346,18 +5378,18 @@ namespace ABI {
                 
                 typedef enum AltitudeReferenceSystem : int AltitudeReferenceSystem;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Geolocation {
                 class GeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -5366,9 +5398,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox ABI::Windows::Devices::Geolocation::IGeoboundingBox
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -5386,9 +5418,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5399,8 +5431,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5408,16 +5440,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -5425,8 +5457,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -5445,9 +5477,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapRoute;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CServices_CMaps_CIMapRoute_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CMaps_CIMapRoute_FWD_DEFINED__
@@ -5456,9 +5488,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRoute;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRoute ABI::Windows::Services::Maps::IMapRoute
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRoute_FWD_DEFINED__
@@ -5474,9 +5506,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -5491,8 +5523,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5501,9 +5533,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DataTemplate;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDataTemplate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDataTemplate_FWD_DEFINED__
@@ -5512,9 +5544,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDataTemplate;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDataTemplate ABI::Windows::UI::Xaml::IDataTemplate
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDataTemplate_FWD_DEFINED__
@@ -5526,9 +5558,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -5537,9 +5569,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -5552,9 +5584,9 @@ namespace ABI {
                 
                 typedef struct Thickness Thickness;
                 
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5568,11 +5600,11 @@ namespace ABI {
                         
                         typedef enum MapAnimationKind : int MapAnimationKind;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5583,11 +5615,11 @@ namespace ABI {
                         
                         typedef enum MapCameraChangeReason : int MapCameraChangeReason;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5598,11 +5630,11 @@ namespace ABI {
                         
                         typedef enum MapColorScheme : int MapColorScheme;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5613,11 +5645,11 @@ namespace ABI {
                         
                         typedef enum MapElementCollisionBehavior : int MapElementCollisionBehavior;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5628,11 +5660,11 @@ namespace ABI {
                         
                         typedef enum MapInteractionMode : int MapInteractionMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5643,11 +5675,11 @@ namespace ABI {
                         
                         typedef enum MapLoadingStatus : int MapLoadingStatus;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5658,11 +5690,11 @@ namespace ABI {
                         
                         typedef enum MapModel3DShadingOption : int MapModel3DShadingOption;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5673,11 +5705,11 @@ namespace ABI {
                         
                         typedef enum MapPanInteractionMode : int MapPanInteractionMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5688,11 +5720,11 @@ namespace ABI {
                         
                         typedef enum MapProjection : int MapProjection;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5703,11 +5735,11 @@ namespace ABI {
                         
                         typedef enum MapStyle : int MapStyle;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5718,11 +5750,11 @@ namespace ABI {
                         
                         typedef enum MapTileAnimationState : int MapTileAnimationState;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5733,11 +5765,11 @@ namespace ABI {
                         
                         typedef enum MapTileLayer : int MapTileLayer;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5748,11 +5780,11 @@ namespace ABI {
                         
                         typedef enum MapVisibleRegionKind : int MapVisibleRegionKind;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5763,11 +5795,11 @@ namespace ABI {
                         
                         typedef enum MapWatermarkMode : int MapWatermarkMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -5778,11 +5810,13 @@ namespace ABI {
                         
                         typedef struct MapZoomLevelRange MapZoomLevelRange;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
 
 
 
@@ -5908,11 +5942,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapBillboard;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -5922,11 +5956,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapCamera;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5942,11 +5976,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapControlDataHelper;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5960,11 +5994,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapCustomExperience;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5976,11 +6010,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapElement3D;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -5998,11 +6032,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapIcon;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6013,11 +6047,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapItemsControl;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6029,11 +6063,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapPolygon;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6043,11 +6077,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapPolyline;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6064,11 +6098,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileBitmapRequest;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6078,11 +6112,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileBitmapRequestDeferral;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6093,11 +6127,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileDataSource;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6108,11 +6142,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileUriRequest;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -6122,11 +6156,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class MapTileUriRequestDeferral;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6137,11 +6171,11 @@ namespace ABI {
                 namespace Controls {
                     namespace Maps {
                         class StreetsideExperience;
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -6182,11 +6216,11 @@ namespace ABI {
                             MapAnimationKind_Bow = 3,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6214,11 +6248,11 @@ namespace ABI {
                             MapCameraChangeReason_Programmatic = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
 
@@ -6245,11 +6279,11 @@ namespace ABI {
                             MapColorScheme_Dark = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6276,11 +6310,11 @@ namespace ABI {
                             MapElementCollisionBehavior_RemainVisible = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6325,11 +6359,11 @@ namespace ABI {
                             
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6359,13 +6393,18 @@ namespace ABI {
                             MapLoadingStatus_DataUnavailable = 2,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
                             
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                            
+                            MapLoadingStatus_DownloadedMapsManagerUnavailable = 3,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                            
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6393,11 +6432,11 @@ namespace ABI {
                             MapModel3DShadingOption_Smooth = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -6424,11 +6463,11 @@ namespace ABI {
                             MapPanInteractionMode_Disabled = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6455,11 +6494,11 @@ namespace ABI {
                             MapProjection_Globe = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -6504,11 +6543,11 @@ namespace ABI {
                             
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6536,11 +6575,11 @@ namespace ABI {
                             MapTileAnimationState_Playing = 2,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -6570,11 +6609,11 @@ namespace ABI {
                             MapTileLayer_BackgroundReplacement = 4,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6601,11 +6640,11 @@ namespace ABI {
                             MapVisibleRegionKind_Full = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -6632,11 +6671,11 @@ namespace ABI {
                             MapWatermarkMode_On = 1,
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6663,11 +6702,11 @@ namespace ABI {
                             DOUBLE Max;
                         };
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -6709,11 +6748,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICustomMapTileDataSource=_uuidof(ICustomMapTileDataSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSource_INTERFACE_DEFINED__) */
@@ -6756,11 +6795,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ICustomMapTileDataSourceFactory=_uuidof(ICustomMapTileDataSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSourceFactory_INTERFACE_DEFINED__) */
@@ -6803,10 +6842,10 @@ namespace ABI {
                                 /* [retval, out] */__RPC__deref_out_opt __FIMap_2_HSTRING_HSTRING * * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowCaching(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowCaching(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_UriRequested(
                                 /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * handler,
@@ -6820,11 +6859,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IHttpMapTileDataSource=_uuidof(IHttpMapTileDataSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSource_INTERFACE_DEFINED__) */
@@ -6873,11 +6912,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IHttpMapTileDataSourceFactory=_uuidof(IHttpMapTileDataSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSourceFactory_INTERFACE_DEFINED__) */
@@ -6928,11 +6967,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILocalMapTileDataSource=_uuidof(ILocalMapTileDataSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSource_INTERFACE_DEFINED__) */
@@ -6981,11 +7020,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_ILocalMapTileDataSourceFactory=_uuidof(ILocalMapTileDataSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSourceFactory_INTERFACE_DEFINED__) */
@@ -7026,11 +7065,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapActualCameraChangedEventArgs=_uuidof(IMapActualCameraChangedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs_INTERFACE_DEFINED__) */
@@ -7071,11 +7110,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapActualCameraChangedEventArgs2=_uuidof(IMapActualCameraChangedEventArgs2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs2_INTERFACE_DEFINED__) */
@@ -7116,11 +7155,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapActualCameraChangingEventArgs=_uuidof(IMapActualCameraChangingEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs_INTERFACE_DEFINED__) */
@@ -7161,11 +7200,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapActualCameraChangingEventArgs2=_uuidof(IMapActualCameraChangingEventArgs2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs2_INTERFACE_DEFINED__) */
@@ -7230,11 +7269,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapBillboard=_uuidof(IMapBillboard);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboard;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboard_INTERFACE_DEFINED__) */
@@ -7276,11 +7315,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapBillboardFactory=_uuidof(IMapBillboardFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardFactory_INTERFACE_DEFINED__) */
@@ -7327,11 +7366,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapBillboardStatics=_uuidof(IMapBillboardStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapBillboardStatics_INTERFACE_DEFINED__) */
@@ -7399,11 +7438,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapCamera=_uuidof(IMapCamera);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCamera;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCamera_INTERFACE_DEFINED__) */
@@ -7464,11 +7503,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapCameraFactory=_uuidof(IMapCameraFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCameraFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCameraFactory_INTERFACE_DEFINED__) */
@@ -7515,11 +7554,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapContextRequestedEventArgs=_uuidof(IMapContextRequestedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapContextRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapContextRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -7580,10 +7619,10 @@ namespace ABI {
                                 /* [in] */DOUBLE value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LandmarksVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_LandmarksVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LoadingStatus(
                                 /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Controls::Maps::MapLoadingStatus * value
@@ -7601,10 +7640,10 @@ namespace ABI {
                                 /* [retval, out] */__RPC__out DOUBLE * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PedestrianFeaturesVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PedestrianFeaturesVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Pitch(
                                 /* [retval, out] */__RPC__out DOUBLE * value
@@ -7616,10 +7655,10 @@ namespace ABI {
                                 /* [in] */ABI::Windows::UI::Xaml::Controls::Maps::MapStyle value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TrafficFlowVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TrafficFlowVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TransformOrigin(
                                 /* [retval, out] */__RPC__out ABI::Windows::Foundation::Point * value
@@ -7725,7 +7764,7 @@ namespace ABI {
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE IsLocationInView(
                                 /* [in] */__RPC__in_opt ABI::Windows::Devices::Geolocation::IGeopoint * location,
-                                /* [out] */__RPC__out boolean * isInView
+                                /* [out] */__RPC__out ::boolean * isInView
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE TrySetViewBoundsAsync(
                                 /* [in] */__RPC__in_opt ABI::Windows::Devices::Geolocation::IGeoboundingBox * bounds,
@@ -7762,11 +7801,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControl=_uuidof(IMapControl);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl_INTERFACE_DEFINED__) */
@@ -7800,16 +7839,16 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BusinessLandmarksVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_BusinessLandmarksVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TransitFeaturesVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TransitFeaturesVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PanInteractionMode(
                                 /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Controls::Maps::MapPanInteractionMode * value
@@ -7836,10 +7875,10 @@ namespace ABI {
                                 /* [in] */ABI::Windows::UI::Xaml::Controls::Maps::MapInteractionMode value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Is3DSupported(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsStreetsideSupported(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Scene(
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Controls::Maps::IMapScene * * value
@@ -7960,11 +7999,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControl2=_uuidof(IMapControl2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl2_INTERFACE_DEFINED__) */
@@ -8009,11 +8048,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControl3=_uuidof(IMapControl3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl3_INTERFACE_DEFINED__) */
@@ -8047,16 +8086,16 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BusinessLandmarksEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_BusinessLandmarksEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TransitFeaturesEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TransitFeaturesEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetVisibleRegion(
                                 /* [in] */ABI::Windows::UI::Xaml::Controls::Maps::MapVisibleRegionKind region,
@@ -8067,11 +8106,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControl4=_uuidof(IMapControl4);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl4_INTERFACE_DEFINED__) */
@@ -8158,11 +8197,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControl5=_uuidof(IMapControl5);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl5_INTERFACE_DEFINED__) */
@@ -8204,24 +8243,24 @@ namespace ABI {
                             /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryGetLocationFromOffset(
                                 /* [in] */ABI::Windows::Foundation::Point offset,
                                 /* [out] */__RPC__deref_out_opt ABI::Windows::Devices::Geolocation::IGeopoint * * location,
-                                /* [retval, out] */__RPC__out boolean * returnValue
+                                /* [retval, out] */__RPC__out ::boolean * returnValue
                                 ) = 0;
                             /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryGetLocationFromOffsetWithReferenceSystem(
                                 /* [in] */ABI::Windows::Foundation::Point offset,
                                 /* [in] */ABI::Windows::Devices::Geolocation::AltitudeReferenceSystem desiredReferenceSystem,
                                 /* [out] */__RPC__deref_out_opt ABI::Windows::Devices::Geolocation::IGeopoint * * location,
-                                /* [retval, out] */__RPC__out boolean * returnValue
+                                /* [retval, out] */__RPC__out ::boolean * returnValue
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IMapControl6=_uuidof(IMapControl6);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl6;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl6_INTERFACE_DEFINED__) */
@@ -8265,15 +8304,69 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControl7=_uuidof(IMapControl7);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl7;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl7_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Maps.IMapControl8
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Maps.MapControl
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Maps_IMapControl8[] = L"Windows.UI.Xaml.Controls.Maps.IMapControl8";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Maps {
+                        /* [object, uuid("009E9C46-724D-53CA-9421-7A48FC731523"), exclusiveto, contract] */
+                        MIDL_INTERFACE("009E9C46-724D-53CA-9421-7A48FC731523")
+                        IMapControl8 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTiltDown(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTiltUp(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanZoomIn(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanZoomOut(
+                                /* [retval, out] */__RPC__out ::boolean * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IMapControl8=_uuidof(IMapControl8);
+                        
+                    } /* Maps */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -8310,11 +8403,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlBusinessLandmarkClickEventArgs=_uuidof(IMapControlBusinessLandmarkClickEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs_INTERFACE_DEFINED__) */
@@ -8355,11 +8448,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlBusinessLandmarkPointerEnteredEventArgs=_uuidof(IMapControlBusinessLandmarkPointerEnteredEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerEnteredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerEnteredEventArgs_INTERFACE_DEFINED__) */
@@ -8400,11 +8493,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlBusinessLandmarkPointerExitedEventArgs=_uuidof(IMapControlBusinessLandmarkPointerExitedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerExitedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerExitedEventArgs_INTERFACE_DEFINED__) */
@@ -8445,11 +8538,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlBusinessLandmarkRightTappedEventArgs=_uuidof(IMapControlBusinessLandmarkRightTappedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkRightTappedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkRightTappedEventArgs_INTERFACE_DEFINED__) */
@@ -8515,11 +8608,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlDataHelper=_uuidof(IMapControlDataHelper);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper_INTERFACE_DEFINED__) */
@@ -8585,11 +8678,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlDataHelper2=_uuidof(IMapControlDataHelper2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelper2_INTERFACE_DEFINED__) */
@@ -8631,11 +8724,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlDataHelperFactory=_uuidof(IMapControlDataHelperFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperFactory_INTERFACE_DEFINED__) */
@@ -8669,7 +8762,7 @@ namespace ABI {
                         {
                         public:
                             virtual HRESULT STDMETHODCALLTYPE CreateMapControl(
-                                /* [in] */boolean rasterRenderMode,
+                                /* [in] */::boolean rasterRenderMode,
                                 /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Controls::Maps::IMapControl * * returnValue
                                 ) = 0;
                             
@@ -8677,11 +8770,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlDataHelperStatics=_uuidof(IMapControlDataHelperStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlDataHelperStatics_INTERFACE_DEFINED__) */
@@ -8795,11 +8888,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlStatics=_uuidof(IMapControlStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics_INTERFACE_DEFINED__) */
@@ -8864,11 +8957,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlStatics2=_uuidof(IMapControlStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics2_INTERFACE_DEFINED__) */
@@ -8912,11 +9005,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlStatics4=_uuidof(IMapControlStatics4);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics4_INTERFACE_DEFINED__) */
@@ -8963,11 +9056,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlStatics5=_uuidof(IMapControlStatics5);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics5_INTERFACE_DEFINED__) */
@@ -9008,11 +9101,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlStatics6=_uuidof(IMapControlStatics6);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics6;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics6_INTERFACE_DEFINED__) */
@@ -9053,15 +9146,69 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlStatics7=_uuidof(IMapControlStatics7);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Maps.IMapControlStatics8
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Maps.MapControl
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8[] = L"Windows.UI.Xaml.Controls.Maps.IMapControlStatics8";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Controls {
+                    namespace Maps {
+                        /* [object, uuid("ADB7A7B0-0605-592C-BF9D-D10BDC2BE47B"), exclusiveto, contract] */
+                        MIDL_INTERFACE("ADB7A7B0-0605-592C-BF9D-D10BDC2BE47B")
+                        IMapControlStatics8 : public IInspectable
+                        {
+                        public:
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTiltDownProperty(
+                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTiltUpProperty(
+                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanZoomInProperty(
+                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
+                                ) = 0;
+                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanZoomOutProperty(
+                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
+                                ) = 0;
+                            
+                        };
+
+                        extern MIDL_CONST_ID IID & IID_IMapControlStatics8=_uuidof(IMapControlStatics8);
+                        
+                    } /* Maps */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9104,11 +9251,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlTransitFeatureClickEventArgs=_uuidof(IMapControlTransitFeatureClickEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs_INTERFACE_DEFINED__) */
@@ -9155,11 +9302,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlTransitFeaturePointerEnteredEventArgs=_uuidof(IMapControlTransitFeaturePointerEnteredEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerEnteredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerEnteredEventArgs_INTERFACE_DEFINED__) */
@@ -9206,11 +9353,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlTransitFeaturePointerExitedEventArgs=_uuidof(IMapControlTransitFeaturePointerExitedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerExitedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerExitedEventArgs_INTERFACE_DEFINED__) */
@@ -9257,11 +9404,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapControlTransitFeatureRightTappedEventArgs=_uuidof(IMapControlTransitFeatureRightTappedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureRightTappedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureRightTappedEventArgs_INTERFACE_DEFINED__) */
@@ -9299,11 +9446,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapCustomExperience=_uuidof(IMapCustomExperience);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperience;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperience_INTERFACE_DEFINED__) */
@@ -9341,11 +9488,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapCustomExperienceChangedEventArgs=_uuidof(IMapCustomExperienceChangedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceChangedEventArgs_INTERFACE_DEFINED__) */
@@ -9388,11 +9535,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapCustomExperienceFactory=_uuidof(IMapCustomExperienceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceFactory_INTERFACE_DEFINED__) */
@@ -9432,21 +9579,21 @@ namespace ABI {
                                 /* [in] */INT32 value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Visible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IMapElement=_uuidof(IMapElement);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement_INTERFACE_DEFINED__) */
@@ -9490,11 +9637,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElement2=_uuidof(IMapElement2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement2_INTERFACE_DEFINED__) */
@@ -9550,11 +9697,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElement3=_uuidof(IMapElement3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3_INTERFACE_DEFINED__) */
@@ -9628,11 +9775,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElement3D=_uuidof(IMapElement3D);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3D;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3D_INTERFACE_DEFINED__) */
@@ -9685,11 +9832,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElement3DStatics=_uuidof(IMapElement3DStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3DStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement3DStatics_INTERFACE_DEFINED__) */
@@ -9723,21 +9870,21 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IMapElement4=_uuidof(IMapElement4);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElement4_INTERFACE_DEFINED__) */
@@ -9784,11 +9931,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementClickEventArgs=_uuidof(IMapElementClickEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementClickEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementClickEventArgs_INTERFACE_DEFINED__) */
@@ -9831,11 +9978,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementFactory=_uuidof(IMapElementFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementFactory_INTERFACE_DEFINED__) */
@@ -9882,11 +10029,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementPointerEnteredEventArgs=_uuidof(IMapElementPointerEnteredEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerEnteredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerEnteredEventArgs_INTERFACE_DEFINED__) */
@@ -9933,11 +10080,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementPointerExitedEventArgs=_uuidof(IMapElementPointerExitedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerExitedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerExitedEventArgs_INTERFACE_DEFINED__) */
@@ -9981,11 +10128,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementStatics=_uuidof(IMapElementStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics_INTERFACE_DEFINED__) */
@@ -10026,11 +10173,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementStatics2=_uuidof(IMapElementStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics2_INTERFACE_DEFINED__) */
@@ -10077,11 +10224,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementStatics3=_uuidof(IMapElementStatics3);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics3_INTERFACE_DEFINED__) */
@@ -10122,11 +10269,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementStatics4=_uuidof(IMapElementStatics4);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementStatics4_INTERFACE_DEFINED__) */
@@ -10198,11 +10345,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementsLayer=_uuidof(IMapElementsLayer);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer_INTERFACE_DEFINED__) */
@@ -10249,11 +10396,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementsLayerClickEventArgs=_uuidof(IMapElementsLayerClickEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerClickEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerClickEventArgs_INTERFACE_DEFINED__) */
@@ -10300,11 +10447,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementsLayerContextRequestedEventArgs=_uuidof(IMapElementsLayerContextRequestedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerContextRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerContextRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -10351,11 +10498,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementsLayerPointerEnteredEventArgs=_uuidof(IMapElementsLayerPointerEnteredEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerEnteredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerEnteredEventArgs_INTERFACE_DEFINED__) */
@@ -10402,11 +10549,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementsLayerPointerExitedEventArgs=_uuidof(IMapElementsLayerPointerExitedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerExitedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerExitedEventArgs_INTERFACE_DEFINED__) */
@@ -10447,11 +10594,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapElementsLayerStatics=_uuidof(IMapElementsLayerStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerStatics_INTERFACE_DEFINED__) */
@@ -10513,11 +10660,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapIcon=_uuidof(IMapIcon);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon_INTERFACE_DEFINED__) */
@@ -10561,11 +10708,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapIcon2=_uuidof(IMapIcon2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIcon2_INTERFACE_DEFINED__) */
@@ -10612,11 +10759,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapIconStatics=_uuidof(IMapIconStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics_INTERFACE_DEFINED__) */
@@ -10657,11 +10804,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapIconStatics2=_uuidof(IMapIconStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapIconStatics2_INTERFACE_DEFINED__) */
@@ -10705,11 +10852,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapInputEventArgs=_uuidof(IMapInputEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapInputEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapInputEventArgs_INTERFACE_DEFINED__) */
@@ -10762,11 +10909,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapItemsControl=_uuidof(IMapItemsControl);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControl;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControl_INTERFACE_DEFINED__) */
@@ -10813,11 +10960,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapItemsControlStatics=_uuidof(IMapItemsControlStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControlStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapItemsControlStatics_INTERFACE_DEFINED__) */
@@ -10857,10 +11004,10 @@ namespace ABI {
                                 /* [in] */INT32 value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Visible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ZIndex(
                                 /* [retval, out] */__RPC__out INT32 * value
@@ -10873,11 +11020,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapLayer=_uuidof(IMapLayer);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayer_INTERFACE_DEFINED__) */
@@ -10920,11 +11067,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapLayerFactory=_uuidof(IMapLayerFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerFactory_INTERFACE_DEFINED__) */
@@ -10971,11 +11118,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapLayerStatics=_uuidof(IMapLayerStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapLayerStatics_INTERFACE_DEFINED__) */
@@ -11013,11 +11160,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapModel3D=_uuidof(IMapModel3D);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3D;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3D_INTERFACE_DEFINED__) */
@@ -11060,11 +11207,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapModel3DFactory=_uuidof(IMapModel3DFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DFactory_INTERFACE_DEFINED__) */
@@ -11111,11 +11258,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapModel3DStatics=_uuidof(IMapModel3DStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapModel3DStatics_INTERFACE_DEFINED__) */
@@ -11167,10 +11314,10 @@ namespace ABI {
                                 /* [in] */DOUBLE value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StrokeDashed(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_StrokeDashed(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FillColor(
                                 /* [retval, out] */__RPC__out ABI::Windows::UI::Color * value
@@ -11183,11 +11330,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapPolygon=_uuidof(IMapPolygon);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon_INTERFACE_DEFINED__) */
@@ -11228,11 +11375,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapPolygon2=_uuidof(IMapPolygon2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygon2_INTERFACE_DEFINED__) */
@@ -11279,11 +11426,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapPolygonStatics=_uuidof(IMapPolygonStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygonStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolygonStatics_INTERFACE_DEFINED__) */
@@ -11335,21 +11482,21 @@ namespace ABI {
                                 /* [in] */DOUBLE value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StrokeDashed(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_StrokeDashed(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IMapPolyline=_uuidof(IMapPolyline);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolyline;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolyline_INTERFACE_DEFINED__) */
@@ -11393,11 +11540,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapPolylineStatics=_uuidof(IMapPolylineStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolylineStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapPolylineStatics_INTERFACE_DEFINED__) */
@@ -11441,11 +11588,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapRightTappedEventArgs=_uuidof(IMapRightTappedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRightTappedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRightTappedEventArgs_INTERFACE_DEFINED__) */
@@ -11498,11 +11645,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapRouteView=_uuidof(IMapRouteView);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteView;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteView_INTERFACE_DEFINED__) */
@@ -11546,11 +11693,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapRouteViewFactory=_uuidof(IMapRouteViewFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteViewFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRouteViewFactory_INTERFACE_DEFINED__) */
@@ -11598,11 +11745,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapScene=_uuidof(IMapScene);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapScene;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapScene_INTERFACE_DEFINED__) */
@@ -11686,11 +11833,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapSceneStatics=_uuidof(IMapSceneStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapSceneStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapSceneStatics_INTERFACE_DEFINED__) */
@@ -11728,11 +11875,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapStyleSheet=_uuidof(IMapStyleSheet);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheet;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheet_INTERFACE_DEFINED__) */
@@ -11962,11 +12109,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapStyleSheetEntriesStatics=_uuidof(IMapStyleSheetEntriesStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntriesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntriesStatics_INTERFACE_DEFINED__) */
@@ -12013,11 +12160,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapStyleSheetEntryStatesStatics=_uuidof(IMapStyleSheetEntryStatesStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntryStatesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetEntryStatesStatics_INTERFACE_DEFINED__) */
@@ -12079,18 +12226,18 @@ namespace ABI {
                             virtual HRESULT STDMETHODCALLTYPE TryParseFromJson(
                                 /* [in] */__RPC__in HSTRING styleAsJson,
                                 /* [out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Controls::Maps::IMapStyleSheet * * styleSheet,
-                                /* [retval, out] */__RPC__out boolean * returnValue
+                                /* [retval, out] */__RPC__out ::boolean * returnValue
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IMapStyleSheetStatics=_uuidof(IMapStyleSheetStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapStyleSheetStatics_INTERFACE_DEFINED__) */
@@ -12131,11 +12278,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTargetCameraChangedEventArgs=_uuidof(IMapTargetCameraChangedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs_INTERFACE_DEFINED__) */
@@ -12176,11 +12323,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTargetCameraChangedEventArgs2=_uuidof(IMapTargetCameraChangedEventArgs2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs2_INTERFACE_DEFINED__) */
@@ -12227,11 +12374,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileBitmapRequest=_uuidof(IMapTileBitmapRequest);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequest_INTERFACE_DEFINED__) */
@@ -12270,11 +12417,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileBitmapRequestDeferral=_uuidof(IMapTileBitmapRequestDeferral);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestDeferral_INTERFACE_DEFINED__) */
@@ -12324,11 +12471,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileBitmapRequestedEventArgs=_uuidof(IMapTileBitmapRequestedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -12369,11 +12516,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileBitmapRequestedEventArgs2=_uuidof(IMapTileBitmapRequestedEventArgs2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs2_INTERFACE_DEFINED__) */
@@ -12411,11 +12558,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileDataSource=_uuidof(IMapTileDataSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSource_INTERFACE_DEFINED__) */
@@ -12458,11 +12605,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileDataSourceFactory=_uuidof(IMapTileDataSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileDataSourceFactory_INTERFACE_DEFINED__) */
@@ -12520,28 +12667,28 @@ namespace ABI {
                                 /* [in] */__RPC__in_opt ABI::Windows::Devices::Geolocation::IGeoboundingBox * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowOverstretch(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowOverstretch(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFadingEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsFadingEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTransparencyEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsTransparencyEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRetryEnabled(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRetryEnabled(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ZIndex(
                                 /* [retval, out] */__RPC__out INT32 * value
@@ -12556,21 +12703,21 @@ namespace ABI {
                                 /* [in] */INT32 value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Visible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IMapTileSource=_uuidof(IMapTileSource);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource_INTERFACE_DEFINED__) */
@@ -12607,10 +12754,10 @@ namespace ABI {
                                 /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Controls::Maps::MapTileAnimationState * value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoPlay(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AutoPlay(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FrameCount(
                                 /* [retval, out] */__RPC__out INT32 * value
@@ -12632,11 +12779,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileSource2=_uuidof(IMapTileSource2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSource2_INTERFACE_DEFINED__) */
@@ -12709,11 +12856,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileSourceFactory=_uuidof(IMapTileSourceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceFactory_INTERFACE_DEFINED__) */
@@ -12784,11 +12931,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileSourceStatics=_uuidof(IMapTileSourceStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics_INTERFACE_DEFINED__) */
@@ -12838,11 +12985,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileSourceStatics2=_uuidof(IMapTileSourceStatics2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileSourceStatics2_INTERFACE_DEFINED__) */
@@ -12889,11 +13036,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileUriRequest=_uuidof(IMapTileUriRequest);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequest_INTERFACE_DEFINED__) */
@@ -12932,11 +13079,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileUriRequestDeferral=_uuidof(IMapTileUriRequestDeferral);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestDeferral_INTERFACE_DEFINED__) */
@@ -12986,11 +13133,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileUriRequestedEventArgs=_uuidof(IMapTileUriRequestedEventArgs);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -13031,11 +13178,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IMapTileUriRequestedEventArgs2=_uuidof(IMapTileUriRequestedEventArgs2);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs2_INTERFACE_DEFINED__) */
@@ -13069,51 +13216,51 @@ namespace ABI {
                         {
                         public:
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AddressTextVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AddressTextVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CursorVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CursorVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OverviewMapVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_OverviewMapVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StreetLabelsVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_StreetLabelsVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExitButtonVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ExitButtonVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ZoomButtonsVisible(
-                                /* [retval, out] */__RPC__out boolean * value
+                                /* [retval, out] */__RPC__out ::boolean * value
                                 ) = 0;
                             /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ZoomButtonsVisible(
-                                /* [in] */boolean value
+                                /* [in] */::boolean value
                                 ) = 0;
                             
                         };
 
                         extern MIDL_CONST_ID IID & IID_IStreetsideExperience=_uuidof(IStreetsideExperience);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperience;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperience_INTERFACE_DEFINED__) */
@@ -13162,11 +13309,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IStreetsideExperienceFactory=_uuidof(IStreetsideExperienceFactory);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperienceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsideExperienceFactory_INTERFACE_DEFINED__) */
@@ -13207,11 +13354,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IStreetsidePanorama=_uuidof(IStreetsidePanorama);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanorama;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanorama_INTERFACE_DEFINED__) */
@@ -13258,11 +13405,11 @@ namespace ABI {
 
                         extern MIDL_CONST_ID IID & IID_IStreetsidePanoramaStatics=_uuidof(IStreetsidePanoramaStatics);
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Maps */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Maps */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanoramaStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIStreetsidePanoramaStatics_INTERFACE_DEFINED__) */
@@ -13492,6 +13639,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics8 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics7 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics6 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics5 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -13507,6 +13655,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Controls.Maps.IMapControl5
  *    Windows.UI.Xaml.Controls.Maps.IMapControl6
  *    Windows.UI.Xaml.Controls.Maps.IMapControl7
+ *    Windows.UI.Xaml.Controls.Maps.IMapControl8
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -14900,6 +15049,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl7 __x_A
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl7_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs;
@@ -14983,6 +15138,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics
 typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7 __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs_FWD_DEFINED__
@@ -17515,7 +17676,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CC
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CICustomMapTileDataSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileBitmapRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CCustomMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileBitmapRequestedEventArgsVtbl;
 
@@ -17568,7 +17729,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CH
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIHttpMapTileDataSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CHttpMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgsVtbl;
 
@@ -17621,7 +17782,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CL
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CILocalMapTileDataSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTileUriRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CLocalMapTileDataSource_Windows__CUI__CXaml__CControls__CMaps__CMapTileUriRequestedEventArgsVtbl;
 
@@ -17673,7 +17834,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_IInspectableVtbl;
 
@@ -17725,7 +17886,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangedEventArgsVtbl;
 
@@ -17778,7 +17939,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapActualCameraChangingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapActualCameraChangingEventArgsVtbl;
 
@@ -17831,7 +17992,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapContextRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapContextRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapContextRequestedEventArgsVtbl;
 
@@ -17884,7 +18045,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkClickEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkClickEventArgsVtbl;
 
@@ -17937,7 +18098,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerEnteredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerEnteredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerEnteredEventArgsVtbl;
 
@@ -17990,7 +18151,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerExitedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkPointerExitedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkPointerExitedEventArgsVtbl;
 
@@ -18043,7 +18204,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkRightTappedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlBusinessLandmarkRightTappedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlBusinessLandmarkRightTappedEventArgsVtbl;
 
@@ -18096,7 +18257,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureClickEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureClickEventArgsVtbl;
 
@@ -18149,7 +18310,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerEnteredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerEnteredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerEnteredEventArgsVtbl;
 
@@ -18202,7 +18363,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerExitedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeaturePointerExitedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeaturePointerExitedEventArgsVtbl;
 
@@ -18255,7 +18416,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureRightTappedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlTransitFeatureRightTappedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapControlTransitFeatureRightTappedEventArgsVtbl;
 
@@ -18308,7 +18469,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapCustomExperienceChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapCustomExperienceChangedEventArgsVtbl;
 
@@ -18361,7 +18522,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementClickEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementClickEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementClickEventArgsVtbl;
 
@@ -18414,7 +18575,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerEnteredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerEnteredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerEnteredEventArgsVtbl;
 
@@ -18467,7 +18628,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerExitedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementPointerExitedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapElementPointerExitedEventArgsVtbl;
 
@@ -18520,7 +18681,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapInputEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapInputEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapInputEventArgsVtbl;
 
@@ -18573,7 +18734,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRightTappedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapRightTappedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapRightTappedEventArgsVtbl;
 
@@ -18626,7 +18787,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapControl_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgsVtbl;
 
@@ -18679,7 +18840,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerClickEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerClickEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerClickEventArgsVtbl;
 
@@ -18732,7 +18893,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerContextRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerContextRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerContextRequestedEventArgsVtbl;
 
@@ -18785,7 +18946,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerEnteredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerEnteredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerEnteredEventArgsVtbl;
 
@@ -18838,7 +18999,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerExitedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayer * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapElementsLayerPointerExitedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayer_Windows__CUI__CXaml__CControls__CMaps__CMapElementsLayerPointerExitedEventArgsVtbl;
 
@@ -18891,7 +19052,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CM
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapScene * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapScene * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapTargetCameraChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CControls__CMaps__CMapScene_Windows__CUI__CXaml__CControls__CMaps__CMapTargetCameraChangedEventArgsVtbl;
 
@@ -21433,6 +21594,8 @@ typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CMapZoomLevelRange __x
 
 
 
+
+
 /*
  *
  * Struct Windows.UI.Xaml.Controls.Maps.MapAnimationKind
@@ -21568,6 +21731,11 @@ enum __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CMapLoadingStatus
     
     MapLoadingStatus_DataUnavailable = 2,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
+    
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
+    MapLoadingStatus_DownloadedMapsManagerUnavailable = 3,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
     
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -25138,6 +25306,120 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl7;
 
 /*
  *
+ * Interface Windows.UI.Xaml.Controls.Maps.IMapControl8
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Maps.MapControl
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Maps_IMapControl8[] = L"Windows.UI.Xaml.Controls.Maps.IMapControl8";
+/* [object, uuid("009E9C46-724D-53CA-9421-7A48FC731523"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanTiltDown )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanTiltUp )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanZoomIn )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanZoomOut )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_get_CanTiltDown(This,value) \
+    ( (This)->lpVtbl->get_CanTiltDown(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_get_CanTiltUp(This,value) \
+    ( (This)->lpVtbl->get_CanTiltUp(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_get_CanZoomIn(This,value) \
+    ( (This)->lpVtbl->get_CanZoomIn(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_get_CanZoomOut(This,value) \
+    ( (This)->lpVtbl->get_CanZoomOut(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControl8_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkClickEventArgs
  *
  * Introduced to Windows.Services.Maps.LocalSearchContract in version 2.0
@@ -26786,6 +27068,120 @@ interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics7_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Controls.Maps.IMapControlStatics8
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Controls.Maps.MapControl
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Controls_Maps_IMapControlStatics8[] = L"Windows.UI.Xaml.Controls.Maps.IMapControlStatics8";
+/* [object, uuid("ADB7A7B0-0605-592C-BF9D-D10BDC2BE47B"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanTiltDownProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanTiltUpProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanZoomInProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanZoomOutProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_get_CanTiltDownProperty(This,value) \
+    ( (This)->lpVtbl->get_CanTiltDownProperty(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_get_CanTiltUpProperty(This,value) \
+    ( (This)->lpVtbl->get_CanTiltUpProperty(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_get_CanZoomInProperty(This,value) \
+    ( (This)->lpVtbl->get_CanZoomInProperty(This,value) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_get_CanZoomOutProperty(This,value) \
+    ( (This)->lpVtbl->get_CanZoomOutProperty(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CControls_CMaps_CIMapControlStatics8_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -35845,6 +36241,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics8 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics7 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics6 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Controls.Maps.IMapControlStatics5 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -35860,6 +36257,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Xaml.Controls.Maps.IMapControl5
  *    Windows.UI.Xaml.Controls.Maps.IMapControl6
  *    Windows.UI.Xaml.Controls.Maps.IMapControl7
+ *    Windows.UI.Xaml.Controls.Maps.IMapControl8
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

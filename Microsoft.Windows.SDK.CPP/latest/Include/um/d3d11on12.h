@@ -73,7 +73,7 @@ extern "C"{
 
 #include <winapifamily.h>
 #pragma region App Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 ///////////////////////////////////////////////////////////////////////////
 // D3D11On12CreateDevice
@@ -379,7 +379,7 @@ EXTERN_C const IID IID_ID3D11On12Device1;
 /* interface __MIDL_itf_d3d11on12_0000_0002 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 DEFINE_GUID(IID_ID3D11On12Device,0x85611e73,0x70a9,0x490e,0x96,0x14,0xa9,0xe3,0x02,0x77,0x79,0x04);
 DEFINE_GUID(IID_ID3D11On12Device1,0xbdb64df4,0xea2f,0x4c70,0xb8,0x61,0xaa,0xab,0x12,0x58,0xbb,0x5d);

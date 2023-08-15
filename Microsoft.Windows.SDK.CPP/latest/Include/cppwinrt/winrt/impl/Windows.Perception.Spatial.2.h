@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -77,6 +77,22 @@ inline bool operator==(SpatialBoundingSphere const& left, SpatialBoundingSphere 
 }
 
 inline bool operator!=(SpatialBoundingSphere const& left, SpatialBoundingSphere const& right) noexcept
+{
+    return !(left == right);
+}
+
+struct SpatialRay
+{
+    Windows::Foundation::Numerics::float3 Origin;
+    Windows::Foundation::Numerics::float3 Direction;
+};
+
+inline bool operator==(SpatialRay const& left, SpatialRay const& right) noexcept
+{
+    return left.Origin == right.Origin && left.Direction == right.Direction;
+}
+
+inline bool operator!=(SpatialRay const& left, SpatialRay const& right) noexcept
 {
     return !(left == right);
 }

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.imaging.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapBuffer;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapBuffer ABI::Windows::Graphics::Imaging::IBitmapBuffer
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapBuffer_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapCodecInformation;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapCodecInformation ABI::Windows::Graphics::Imaging::IBitmapCodecInformation
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapCodecInformation_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapDecoder;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoder ABI::Windows::Graphics::Imaging::IBitmapDecoder
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoder_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapDecoderStatics;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics ABI::Windows::Graphics::Imaging::IBitmapDecoderStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapDecoderStatics2;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics2 ABI::Windows::Graphics::Imaging::IBitmapDecoderStatics2
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics2_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapEncoder;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoder ABI::Windows::Graphics::Imaging::IBitmapEncoder
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoder_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapEncoderStatics;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics ABI::Windows::Graphics::Imaging::IBitmapEncoderStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapEncoderStatics2;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics2 ABI::Windows::Graphics::Imaging::IBitmapEncoderStatics2
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics2_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapEncoderWithSoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderWithSoftwareBitmap ABI::Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderWithSoftwareBitmap_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapFrame;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame ABI::Windows::Graphics::Imaging::IBitmapFrame
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapFrameWithSoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrameWithSoftwareBitmap ABI::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrameWithSoftwareBitmap_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapProperties;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapProperties ABI::Windows::Graphics::Imaging::IBitmapProperties
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapProperties_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapPropertiesView;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapPropertiesView ABI::Windows::Graphics::Imaging::IBitmapPropertiesView
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapPropertiesView_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapTransform;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapTransform ABI::Windows::Graphics::Imaging::IBitmapTransform
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapTransform_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapTypedValue;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValue ABI::Windows::Graphics::Imaging::IBitmapTypedValue
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValue_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IBitmapTypedValueFactory;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValueFactory ABI::Windows::Graphics::Imaging::IBitmapTypedValueFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValueFactory_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface IPixelDataProvider;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CIPixelDataProvider ABI::Windows::Graphics::Imaging::IPixelDataProvider
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CIPixelDataProvider_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -530,9 +526,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmapFactory;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory ABI::Windows::Graphics::Imaging::ISoftwareBitmapFactory
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory_FWD_DEFINED__
@@ -544,9 +540,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmapStatics;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapStatics ABI::Windows::Graphics::Imaging::ISoftwareBitmapStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapStatics_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapTypedValue;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -584,7 +580,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Graphics::Imaging::BitmapTypedValue*> : IKey
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Graphics::Imaging::BitmapTypedValue*> __FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Graphics::Imaging::IBitmapTypedValue*>
@@ -616,7 +612,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedV
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Graphics::Imaging::IBitmapTypedValue*>*>
@@ -648,7 +644,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedV
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Graphics::Imaging::IBitmapTypedValue*>*>
@@ -664,9 +660,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapCodecInformation;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -689,7 +685,7 @@ IIterator<ABI::Windows::Graphics::Imaging::BitmapCodecInformation*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Imaging::BitmapCodecInformation*> __FIIterator_1_Windows__CGraphics__CImaging__CBitmapCodecInformation_t;
 #define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapCodecInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CImaging__CBitmapCodecInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapCodecInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Imaging::IBitmapCodecInformation*>
@@ -721,7 +717,7 @@ IIterable<ABI::Windows::Graphics::Imaging::BitmapCodecInformation*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Imaging::BitmapCodecInformation*> __FIIterable_1_Windows__CGraphics__CImaging__CBitmapCodecInformation_t;
 #define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapCodecInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CImaging__CBitmapCodecInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapCodecInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Imaging::IBitmapCodecInformation*>
@@ -737,9 +733,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 enum BitmapPixelFormat : int;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
@@ -760,7 +756,7 @@ IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
@@ -790,7 +786,7 @@ IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
@@ -805,9 +801,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class ImageStream;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -816,9 +812,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -844,7 +840,7 @@ IIterator<ABI::Windows::Graphics::Imaging::ImageStream*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Imaging::ImageStream*> __FIIterator_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIIterator_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -876,7 +872,7 @@ IIterable<ABI::Windows::Graphics::Imaging::ImageStream*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Imaging::ImageStream*> __FIIterable_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIIterable_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -892,9 +888,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -917,7 +913,7 @@ IIterator<ABI::Windows::Graphics::Imaging::SoftwareBitmap*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::Imaging::SoftwareBitmap*> __FIIterator_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t;
 #define __FIIterator_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Imaging::ISoftwareBitmap*>
@@ -949,7 +945,7 @@ IIterable<ABI::Windows::Graphics::Imaging::SoftwareBitmap*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::Imaging::SoftwareBitmap*> __FIIterable_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t;
 #define __FIIterable_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Imaging::ISoftwareBitmap*>
@@ -981,7 +977,7 @@ IMapView<HSTRING,ABI::Windows::Graphics::Imaging::BitmapTypedValue*> : IMapView_
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Graphics::Imaging::BitmapTypedValue*> __FIMapView_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t;
 #define __FIMapView_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Graphics::Imaging::IBitmapTypedValue*>
@@ -1013,7 +1009,7 @@ IMap<HSTRING,ABI::Windows::Graphics::Imaging::BitmapTypedValue*> : IMap_impl<HST
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::Graphics::Imaging::BitmapTypedValue*> __FIMap_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t;
 #define __FIMap_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Graphics::Imaging::IBitmapTypedValue*>
@@ -1045,7 +1041,7 @@ IVectorView<ABI::Windows::Graphics::Imaging::BitmapCodecInformation*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Imaging::BitmapCodecInformation*> __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapCodecInformation_t;
 #define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapCodecInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapCodecInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapCodecInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Imaging::IBitmapCodecInformation*>
@@ -1076,7 +1072,7 @@ IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
@@ -1107,7 +1103,7 @@ IVectorView<ABI::Windows::Graphics::Imaging::ImageStream*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::Imaging::ImageStream*> __FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1139,7 +1135,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CGraphics__CImaging__C
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>*>
@@ -1171,7 +1167,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CGraphics__CImaging__CImageStream*> __FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>*>
@@ -1187,9 +1183,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapDecoder;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1212,7 +1208,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapDecoder*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapDecoder*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapDecoder_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapDecoder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapDecoder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapDecoder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::IBitmapDecoder*>
@@ -1244,7 +1240,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapDecoder*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapDecoder*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapDecoder_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapDecoder ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapDecoder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapDecoder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Imaging::IBitmapDecoder*>
@@ -1260,9 +1256,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapEncoder;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1285,7 +1281,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapEncoder*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapEncoder*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapEncoder_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapEncoder ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapEncoder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapEncoder ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::IBitmapEncoder*>
@@ -1317,7 +1313,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapEncoder*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapEncoder*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapEncoder_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapEncoder ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapEncoder_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapEncoder ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Imaging::IBitmapEncoder*>
@@ -1333,9 +1329,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapFrame;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1358,7 +1354,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapFrame*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapFrame*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapFrame_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapFrame ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapFrame ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::IBitmapFrame*>
@@ -1390,7 +1386,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapFrame*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapFrame*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapFrame_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapFrame ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapFrame ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Imaging::IBitmapFrame*>
@@ -1406,9 +1402,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapPropertySet;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1431,7 +1427,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapPropertyS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::BitmapPropertySet*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapPropertySet_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapPropertySet ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CBitmapPropertySet ABI::Windows::Foundation::IAsyncOperationCompletedHandler<__FIMap_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue*>
@@ -1463,7 +1459,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapPropertySet*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::BitmapPropertySet*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapPropertySet_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapPropertySet ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapPropertySet_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CBitmapPropertySet ABI::Windows::Foundation::IAsyncOperation<__FIMap_2_HSTRING_Windows__CGraphics__CImaging__CBitmapTypedValue*>
@@ -1495,7 +1491,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::ImageStream*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::ImageStream*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1527,7 +1523,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::ImageStream*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::ImageStream*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CImageStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType*>
@@ -1543,9 +1539,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class PixelDataProvider;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1568,7 +1564,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::PixelDataProvid
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::PixelDataProvider*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CPixelDataProvider_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CPixelDataProvider ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CPixelDataProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CPixelDataProvider ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::IPixelDataProvider*>
@@ -1600,7 +1596,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::PixelDataProvider*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::PixelDataProvider*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CPixelDataProvider_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CPixelDataProvider ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CPixelDataProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CPixelDataProvider ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Imaging::IPixelDataProvider*>
@@ -1632,7 +1628,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::SoftwareBitmap*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::SoftwareBitmap*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Imaging::ISoftwareBitmap*>
@@ -1664,7 +1660,7 @@ IAsyncOperation<ABI::Windows::Graphics::Imaging::SoftwareBitmap*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Imaging::SoftwareBitmap*> __FIAsyncOperation_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CImaging__CSoftwareBitmap_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CImaging__CSoftwareBitmap ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Imaging::ISoftwareBitmap*>
@@ -1681,9 +1677,9 @@ namespace ABI {
             namespace Imaging {
                 struct BitmapBounds;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds_USE
@@ -1704,7 +1700,7 @@ IReference<struct ABI::Windows::Graphics::Imaging::BitmapBounds> : IReference_im
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Graphics::Imaging::BitmapBounds> __FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds_t;
 #define __FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds ABI::Windows::Foundation::__FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CGraphics__CImaging__CBitmapBounds ABI::Windows::Foundation::IReference<ABI::Windows::Graphics::Imaging::BitmapBounds>
@@ -1733,7 +1729,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1762,7 +1758,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1791,7 +1787,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -1809,8 +1805,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1822,8 +1818,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1835,8 +1831,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IMemoryBuffer;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIMemoryBuffer ABI::Windows::Foundation::IMemoryBuffer
 
 #endif // ____x_ABI_CWindows_CFoundation_CIMemoryBuffer_FWD_DEFINED__
@@ -1848,8 +1844,8 @@ namespace ABI {
             
             typedef enum PropertyType : int PropertyType;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1862,10 +1858,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -1882,9 +1878,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1897,9 +1893,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IContentTypeProvider;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider ABI::Windows::Storage::Streams::IContentTypeProvider
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_FWD_DEFINED__
@@ -1912,9 +1908,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -1927,9 +1923,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -1942,9 +1938,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1961,9 +1957,9 @@ namespace ABI {
                 
                 typedef enum BitmapAlphaMode : int BitmapAlphaMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1972,9 +1968,9 @@ namespace ABI {
                 
                 typedef enum BitmapBufferAccessMode : int BitmapBufferAccessMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1983,9 +1979,9 @@ namespace ABI {
                 
                 typedef enum BitmapFlip : int BitmapFlip;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1994,9 +1990,9 @@ namespace ABI {
                 
                 typedef enum BitmapInterpolationMode : int BitmapInterpolationMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2005,9 +2001,9 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2016,9 +2012,9 @@ namespace ABI {
                 
                 typedef enum BitmapRotation : int BitmapRotation;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2027,9 +2023,9 @@ namespace ABI {
                 
                 typedef enum ColorManagementMode : int ColorManagementMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2038,9 +2034,9 @@ namespace ABI {
                 
                 typedef enum ExifOrientationMode : int ExifOrientationMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2049,9 +2045,9 @@ namespace ABI {
                 
                 typedef enum JpegSubsamplingMode : int JpegSubsamplingMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2060,9 +2056,9 @@ namespace ABI {
                 
                 typedef enum PngFilterMode : int PngFilterMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2071,9 +2067,9 @@ namespace ABI {
                 
                 typedef enum TiffCompressionMode : int TiffCompressionMode;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2082,9 +2078,9 @@ namespace ABI {
                 
                 typedef struct BitmapBounds BitmapBounds;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2093,9 +2089,9 @@ namespace ABI {
                 
                 typedef struct BitmapPlaneDescription BitmapPlaneDescription;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2104,9 +2100,9 @@ namespace ABI {
                 
                 typedef struct BitmapSize BitmapSize;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2133,9 +2129,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapBuffer;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2147,9 +2143,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapProperties;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2157,9 +2153,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapPropertiesView;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2168,9 +2164,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class BitmapTransform;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2207,9 +2203,9 @@ namespace ABI {
                     BitmapAlphaMode_Ignore = 2,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2235,9 +2231,9 @@ namespace ABI {
                     BitmapBufferAccessMode_Write = 2,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2263,9 +2259,9 @@ namespace ABI {
                     BitmapFlip_Vertical = 2,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2292,9 +2288,9 @@ namespace ABI {
                     BitmapInterpolationMode_Fant = 3,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2346,9 +2342,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2375,9 +2371,9 @@ namespace ABI {
                     BitmapRotation_Clockwise270Degrees = 3,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2402,9 +2398,9 @@ namespace ABI {
                     ColorManagementMode_ColorManageToSRgb = 1,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2429,9 +2425,9 @@ namespace ABI {
                     ExifOrientationMode_RespectExifOrientation = 1,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2458,9 +2454,9 @@ namespace ABI {
                     JpegSubsamplingMode_Y4Cb4Cr4 = 3,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2490,9 +2486,9 @@ namespace ABI {
                     PngFilterMode_Adaptive = 6,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2523,9 +2519,9 @@ namespace ABI {
                     TiffCompressionMode_LzwhDifferencing = 7,
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2552,9 +2548,9 @@ namespace ABI {
                     UINT32 Height;
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2581,9 +2577,9 @@ namespace ABI {
                     INT32 Stride;
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2608,9 +2604,9 @@ namespace ABI {
                     UINT32 Height;
                 };
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2655,9 +2651,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapBuffer=_uuidof(IBitmapBuffer);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapBuffer;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapBuffer_INTERFACE_DEFINED__) */
@@ -2705,9 +2701,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapCodecInformation=_uuidof(IBitmapCodecInformation);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapCodecInformation;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapCodecInformation_INTERFACE_DEFINED__) */
@@ -2759,9 +2755,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapDecoder=_uuidof(IBitmapDecoder);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoder;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoder_INTERFACE_DEFINED__) */
@@ -2830,9 +2826,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapDecoderStatics=_uuidof(IBitmapDecoderStatics);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics_INTERFACE_DEFINED__) */
@@ -2874,9 +2870,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapDecoderStatics2=_uuidof(IBitmapDecoderStatics2);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapDecoderStatics2_INTERFACE_DEFINED__) */
@@ -2917,10 +2913,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Imaging::IBitmapProperties * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsThumbnailGenerated(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsThumbnailGenerated(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_GeneratedThumbnailWidth(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -2962,9 +2958,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapEncoder=_uuidof(IBitmapEncoder);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoder;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoder_INTERFACE_DEFINED__) */
@@ -3041,9 +3037,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapEncoderStatics=_uuidof(IBitmapEncoderStatics);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics_INTERFACE_DEFINED__) */
@@ -3082,9 +3078,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapEncoderStatics2=_uuidof(IBitmapEncoderStatics2);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderStatics2_INTERFACE_DEFINED__) */
@@ -3123,9 +3119,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapEncoderWithSoftwareBitmap=_uuidof(IBitmapEncoderWithSoftwareBitmap);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderWithSoftwareBitmap;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapEncoderWithSoftwareBitmap_INTERFACE_DEFINED__) */
@@ -3199,9 +3195,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapFrame=_uuidof(IBitmapFrame);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrame_INTERFACE_DEFINED__) */
@@ -3254,9 +3250,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapFrameWithSoftwareBitmap=_uuidof(IBitmapFrameWithSoftwareBitmap);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrameWithSoftwareBitmap;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapFrameWithSoftwareBitmap_INTERFACE_DEFINED__) */
@@ -3300,9 +3296,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapProperties=_uuidof(IBitmapProperties);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapProperties;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapProperties_INTERFACE_DEFINED__) */
@@ -3339,9 +3335,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapPropertiesView=_uuidof(IBitmapPropertiesView);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapPropertiesView;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapPropertiesView_INTERFACE_DEFINED__) */
@@ -3413,9 +3409,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapTransform=_uuidof(IBitmapTransform);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapTransform;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapTransform_INTERFACE_DEFINED__) */
@@ -3457,9 +3453,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapTypedValue=_uuidof(IBitmapTypedValue);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValue;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValue_INTERFACE_DEFINED__) */
@@ -3500,9 +3496,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBitmapTypedValueFactory=_uuidof(IBitmapTypedValueFactory);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValueFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIBitmapTypedValueFactory_INTERFACE_DEFINED__) */
@@ -3542,9 +3538,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPixelDataProvider=_uuidof(IPixelDataProvider);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CIPixelDataProvider;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CIPixelDataProvider_INTERFACE_DEFINED__) */
@@ -3592,7 +3588,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadOnly(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DpiX(
                         /* [in] */DOUBLE value
@@ -3627,9 +3623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISoftwareBitmap=_uuidof(ISoftwareBitmap);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_INTERFACE_DEFINED__) */
@@ -3678,9 +3674,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISoftwareBitmapFactory=_uuidof(ISoftwareBitmapFactory);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory_INTERFACE_DEFINED__) */
@@ -3755,9 +3751,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISoftwareBitmapStatics=_uuidof(ISoftwareBitmapStatics);
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmapStatics_INTERFACE_DEFINED__) */

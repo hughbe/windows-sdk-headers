@@ -14,7 +14,7 @@ import "d3dcommon.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 // NOTE: The following constants are generated from the D3D12 hardware spec.  Do not edit these values directly.
 cpp_quote( "#ifndef _D3D12_CONSTANTS" )
@@ -322,6 +322,11 @@ const UINT D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BYTE_ALIGNMENT = 256;
 const UINT D3D12_RAYTRACING_INSTANCE_DESCS_BYTE_ALIGNMENT = 16;
 const UINT D3D12_RAYTRACING_MAX_ATTRIBUTE_SIZE_IN_BYTES = 32;
 const UINT D3D12_RAYTRACING_MAX_DECLARABLE_TRACE_RECURSION_DEPTH = 31;
+const UINT D3D12_RAYTRACING_MAX_GEOMETRIES_PER_BOTTOM_LEVEL_ACCELERATION_STRUCTURE = 16777216;
+const UINT D3D12_RAYTRACING_MAX_INSTANCES_PER_TOP_LEVEL_ACCELERATION_STRUCTURE = 16777216;
+const UINT D3D12_RAYTRACING_MAX_PRIMITIVES_PER_BOTTOM_LEVEL_ACCELERATION_STRUCTURE = 536870912;
+const UINT D3D12_RAYTRACING_MAX_RAY_GENERATION_SHADER_THREADS = 1073741824;
+const UINT D3D12_RAYTRACING_MAX_SHADER_RECORD_STRIDE = 4096;
 const UINT D3D12_RAYTRACING_SHADER_RECORD_BYTE_ALIGNMENT = 32;
 const UINT D3D12_RAYTRACING_SHADER_TABLE_BYTE_ALIGNMENT = 64;
 const UINT D3D12_RAYTRACING_TRANSFORM3X4_BYTE_ALIGNMENT = 16;
@@ -353,6 +358,7 @@ const UINT D3D12_REQ_TEXTURE3D_U_V_OR_W_DIMENSION = 2048;
 const UINT D3D12_REQ_TEXTURECUBE_DIMENSION = 16384;
 const UINT D3D12_RESINFO_INSTRUCTION_MISSING_COMPONENT_RETVAL = 0;
 const UINT D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES = 0xffffffff;
+const UINT D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT = 2;
 const UINT D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES = 32;
 const UINT D3D12_SHADER_MAJOR_VERSION = 5;
 const UINT D3D12_SHADER_MAX_INSTANCES = 65535;
@@ -449,6 +455,7 @@ typedef enum D3D12_COMMAND_LIST_TYPE
     D3D12_COMMAND_LIST_TYPE_COPY            = 3,
     D3D12_COMMAND_LIST_TYPE_VIDEO_DECODE    = 4,
     D3D12_COMMAND_LIST_TYPE_VIDEO_PROCESS   = 5,
+    D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE    = 6,
 
 } D3D12_COMMAND_LIST_TYPE;
 
@@ -914,6 +921,8 @@ typedef enum D3D12_FEATURE
     D3D12_FEATURE_SERIALIZATION                         = 24,
     D3D12_FEATURE_CROSS_NODE                            = 25,
     D3D12_FEATURE_D3D12_OPTIONS5                        = 27,
+    D3D12_FEATURE_D3D12_OPTIONS6                        = 30,
+    D3D12_FEATURE_QUERY_META_COMMAND                    = 31,
 } D3D12_FEATURE;
 
 typedef enum D3D12_SHADER_MIN_PRECISION_SUPPORT
@@ -1124,6 +1133,7 @@ typedef enum D3D_SHADER_MODEL
     D3D_SHADER_MODEL_6_2 = 0x62,
     D3D_SHADER_MODEL_6_3 = 0x63,
     D3D_SHADER_MODEL_6_4 = 0x64,
+    D3D_SHADER_MODEL_6_5 = 0x65,
 } D3D_SHADER_MODEL;
 
 typedef struct D3D12_FEATURE_DATA_SHADER_MODEL
@@ -1196,6 +1206,7 @@ typedef enum D3D12_COMMAND_LIST_SUPPORT_FLAGS
     D3D12_COMMAND_LIST_SUPPORT_FLAG_COPY                = 1 << D3D12_COMMAND_LIST_TYPE_COPY,
     D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_DECODE        = 1 << D3D12_COMMAND_LIST_TYPE_VIDEO_DECODE,
     D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_PROCESS       = 1 << D3D12_COMMAND_LIST_TYPE_VIDEO_PROCESS,
+    D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_ENCODE        = 1 << D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE,
 
 } D3D12_COMMAND_LIST_SUPPORT_FLAGS;
 cpp_quote("DEFINE_ENUM_FLAG_OPERATORS( D3D12_COMMAND_LIST_SUPPORT_FLAGS );")
@@ -1273,6 +1284,33 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS5
     [annotation("_Out_")] D3D12_RENDER_PASS_TIER RenderPassesTier;
     [annotation("_Out_")] D3D12_RAYTRACING_TIER RaytracingTier;
 } D3D12_FEATURE_DATA_D3D12_OPTIONS5;
+
+typedef enum D3D12_VARIABLE_SHADING_RATE_TIER
+{
+    D3D12_VARIABLE_SHADING_RATE_TIER_NOT_SUPPORTED = 0,
+    D3D12_VARIABLE_SHADING_RATE_TIER_1 = 1,
+    D3D12_VARIABLE_SHADING_RATE_TIER_2 = 2,
+} D3D12_VARIABLE_SHADING_RATE_TIER;
+
+// D3D12_FEATURE_D3D12_OPTIONS5
+typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS6
+{
+    [annotation("_Out_")] BOOL AdditionalShadingRatesSupported;
+    [annotation("_Out_")] BOOL PerPrimitiveShadingRateSupportedWithViewportIndexing;
+    [annotation("_Out_")] D3D12_VARIABLE_SHADING_RATE_TIER VariableShadingRateTier;
+    [annotation("_Out_")] UINT ShadingRateImageTileSize;
+    [annotation("_Out_")] BOOL BackgroundProcessingSupported;
+} D3D12_FEATURE_DATA_D3D12_OPTIONS6;
+
+typedef struct D3D12_FEATURE_DATA_QUERY_META_COMMAND
+{
+    [annotation("_In_")] GUID CommandId;
+    [annotation("_In_")] UINT NodeMask;
+    [annotation("_Field_size_bytes_full_opt_( QueryInputDataSizeInBytes )")] const void* pQueryInputData;
+    [annotation("_In_")] SIZE_T QueryInputDataSizeInBytes;
+    [annotation("_Field_size_bytes_full_( QueryOutputDataSizeInBytes )")] void* pQueryOutputData;
+    [annotation("_In_")] SIZE_T QueryOutputDataSizeInBytes;
+} D3D12_FEATURE_DATA_QUERY_META_COMMAND;
 
 typedef struct D3D12_RESOURCE_ALLOCATION_INFO
 {
@@ -1522,6 +1560,7 @@ typedef enum D3D12_RESOURCE_STATES
     D3D12_RESOURCE_STATE_RESOLVE_DEST = 0x01000,
     D3D12_RESOURCE_STATE_RESOLVE_SOURCE = 0x02000,
     D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE = 0x400000,
+    D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE = 0x1000000,
 
     D3D12_RESOURCE_STATE_GENERIC_READ =
         /*D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER*/ 0x0001 |
@@ -4293,6 +4332,8 @@ typedef enum D3D12_AUTO_BREADCRUMB_OP
     D3D12_AUTO_BREADCRUMB_OP_ESTIMATEMOTION = 37,
     D3D12_AUTO_BREADCRUMB_OP_RESOLVEMOTIONVECTORHEAP = 38,
     D3D12_AUTO_BREADCRUMB_OP_SETPIPELINESTATE1 = 39,
+    D3D12_AUTO_BREADCRUMB_OP_INITIALIZEEXTENSIONCOMMAND = 40,
+    D3D12_AUTO_BREADCRUMB_OP_EXECUTEEXTENSIONCOMMAND = 41,
 } D3D12_AUTO_BREADCRUMB_OP;
 
 typedef struct D3D12_AUTO_BREADCRUMB_NODE
@@ -4304,15 +4345,16 @@ typedef struct D3D12_AUTO_BREADCRUMB_NODE
     ID3D12GraphicsCommandList *pCommandList;
     ID3D12CommandQueue *pCommandQueue;
     UINT32 BreadcrumbCount;
-    UINT32 *pLastBreadcrumbValue;
-    D3D12_AUTO_BREADCRUMB_OP *pCommandHistory;
-    struct D3D12_AUTO_BREADCRUMB_NODE *pNext; // pointer to next node
+    const UINT32 *pLastBreadcrumbValue;
+    const D3D12_AUTO_BREADCRUMB_OP *pCommandHistory;
+    const struct D3D12_AUTO_BREADCRUMB_NODE *pNext; // pointer to next node
 } D3D12_AUTO_BREADCRUMB_NODE;
 
 // D3D12_DRED_VERSION
 typedef enum D3D12_DRED_VERSION
 {
     D3D12_DRED_VERSION_1_0 = 0x1,
+    D3D12_DRED_VERSION_1_1 = 0X2,
 } D3D12_DRED_VERSION;
 
 typedef enum D3D12_DRED_FLAGS
@@ -4323,12 +4365,79 @@ typedef enum D3D12_DRED_FLAGS
 } D3D12_DRED_FLAGS;
 cpp_quote("DEFINE_ENUM_FLAG_OPERATORS( D3D12_DRED_FLAGS );")
 
+typedef enum D3D12_DRED_ENABLEMENT
+{
+    D3D12_DRED_ENABLEMENT_SYSTEM_CONTROLLED = 0,
+    D3D12_DRED_ENABLEMENT_FORCED_OFF = 1,
+    D3D12_DRED_ENABLEMENT_FORCED_ON = 2,
+} D3D12_DRED_ENABLEMENT;
+
 typedef struct D3D12_DEVICE_REMOVED_EXTENDED_DATA
 {
     [annotation("_In_")] D3D12_DRED_FLAGS Flags; // Dred flags
     [annotation("_Out_")] D3D12_AUTO_BREADCRUMB_NODE *pHeadAutoBreadcrumbNode; // Pointer to head of a linked list of auto-breadcrumb data
 } D3D12_DEVICE_REMOVED_EXTENDED_DATA;
 
+typedef enum D3D12_DRED_ALLOCATION_TYPE
+{
+    // Enum starts at 19 and skips 26 to maintain compatibility with older D3D12 drivers
+    D3D12_DRED_ALLOCATION_TYPE_COMMAND_QUEUE                    = 19,
+    D3D12_DRED_ALLOCATION_TYPE_COMMAND_ALLOCATOR                = 20,
+    D3D12_DRED_ALLOCATION_TYPE_PIPELINE_STATE                   = 21,
+    D3D12_DRED_ALLOCATION_TYPE_COMMAND_LIST                     = 22,
+    D3D12_DRED_ALLOCATION_TYPE_FENCE                            = 23,
+    D3D12_DRED_ALLOCATION_TYPE_DESCRIPTOR_HEAP                  = 24,
+    D3D12_DRED_ALLOCATION_TYPE_HEAP                             = 25,
+    D3D12_DRED_ALLOCATION_TYPE_QUERY_HEAP                       = 27,
+    D3D12_DRED_ALLOCATION_TYPE_COMMAND_SIGNATURE                = 28,
+    D3D12_DRED_ALLOCATION_TYPE_PIPELINE_LIBRARY                 = 29,
+    D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER                    = 30,
+    D3D12_DRED_ALLOCATION_TYPE_VIDEO_PROCESSOR                  = 32,
+    D3D12_DRED_ALLOCATION_TYPE_RESOURCE                         = 34,
+    D3D12_DRED_ALLOCATION_TYPE_PASS                             = 35,
+    D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSION                    = 36,
+    D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSIONPOLICY              = 37,
+    D3D12_DRED_ALLOCATION_TYPE_PROTECTEDRESOURCESESSION         = 38,
+    D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER_HEAP               = 39,
+    D3D12_DRED_ALLOCATION_TYPE_COMMAND_POOL                     = 40,
+    D3D12_DRED_ALLOCATION_TYPE_COMMAND_RECORDER                 = 41,
+    D3D12_DRED_ALLOCATION_TYPE_STATE_OBJECT                     = 42,
+    D3D12_DRED_ALLOCATION_TYPE_METACOMMAND                      = 43,
+    D3D12_DRED_ALLOCATION_TYPE_SCHEDULINGGROUP                  = 44,
+    D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_ESTIMATOR           = 45,
+    D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_VECTOR_HEAP         = 46,
+    D3D12_DRED_ALLOCATION_TYPE_VIDEO_EXTENSION_COMMAND          = 47,
+
+
+    D3D12_DRED_ALLOCATION_TYPE_INVALID = 0xFFFFFFFF
+} D3D12_DRED_ALLOCATION_TYPE;
+
+typedef struct D3D12_DRED_ALLOCATION_NODE
+{
+    const char *ObjectNameA;
+    const wchar_t *ObjectNameW;
+    D3D12_DRED_ALLOCATION_TYPE AllocationType;
+    const struct D3D12_DRED_ALLOCATION_NODE *pNext;
+} D3D12_DRED_ALLOCATION_NODE;
+
+typedef struct D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT
+{
+    [annotation("_Out_")] const D3D12_AUTO_BREADCRUMB_NODE *pHeadAutoBreadcrumbNode; // Pointer to head of a null-terminated linked list of auto-breadcrumb data
+} D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT;
+
+typedef struct D3D12_DRED_PAGE_FAULT_OUTPUT
+{
+    D3D12_GPU_VIRTUAL_ADDRESS PageFaultVA; //If the device removal was due to GPU Fault, this contains the VA of the faulting op
+    [annotation("_Out_")] const D3D12_DRED_ALLOCATION_NODE *pHeadExistingAllocationNode;
+    [annotation("_Out_")] const D3D12_DRED_ALLOCATION_NODE *pHeadRecentFreedAllocationNode;
+} D3D12_DRED_PAGE_FAULT_OUTPUT;
+
+typedef struct D3D12_DEVICE_REMOVED_EXTENDED_DATA1
+{
+    HRESULT DeviceRemovedReason;
+    D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT AutoBreadcrumbsOutput;
+    D3D12_DRED_PAGE_FAULT_OUTPUT PageFaultOutput;
+} D3D12_DEVICE_REMOVED_EXTENDED_DATA1;
 
 typedef struct D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA
 {
@@ -4336,8 +4445,52 @@ typedef struct D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA
     union
     {
         D3D12_DEVICE_REMOVED_EXTENDED_DATA Dred_1_0;
+        D3D12_DEVICE_REMOVED_EXTENDED_DATA1 Dred_1_1;
     };
 } D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA;
+
+[uuid(82BC481C-6B9B-4030-AEDB-7EE3D1DF1E63), object, local, pointer_default(unique)]
+interface ID3D12DeviceRemovedExtendedDataSettings
+    : IUnknown
+{
+    void SetAutoBreadcrumbsEnablement(D3D12_DRED_ENABLEMENT);
+    void SetPageFaultEnablement(D3D12_DRED_ENABLEMENT);
+    void SetWatsonDumpEnablement(D3D12_DRED_ENABLEMENT);
+};
+
+[uuid(98931D33-5AE8-4791-AA3C-1A73A2934E71), object, local, pointer_default(unique)]
+interface ID3D12DeviceRemovedExtendedData
+    : IUnknown
+{
+    HRESULT GetAutoBreadcrumbsOutput(D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT *pOutput);
+    HRESULT GetPageFaultAllocationOutput(D3D12_DRED_PAGE_FAULT_OUTPUT *pOutput);
+};
+
+typedef enum D3D12_BACKGROUND_PROCESSING_MODE
+{
+    D3D12_BACKGROUND_PROCESSING_MODE_ALLOWED,
+    D3D12_BACKGROUND_PROCESSING_MODE_ALLOW_INTRUSIVE_MEASUREMENTS,
+    D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_BACKGROUND_WORK,
+    D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_PROFILING_BY_SYSTEM,
+} D3D12_BACKGROUND_PROCESSING_MODE;
+
+typedef enum D3D12_MEASUREMENTS_ACTION
+{
+    D3D12_MEASUREMENTS_ACTION_KEEP_ALL,
+    D3D12_MEASUREMENTS_ACTION_COMMIT_RESULTS,
+    D3D12_MEASUREMENTS_ACTION_COMMIT_RESULTS_HIGH_PRIORITY,
+    D3D12_MEASUREMENTS_ACTION_DISCARD_PREVIOUS,
+} D3D12_MEASUREMENTS_ACTION;
+
+[uuid(c70b221b-40e4-4a17-89af-025a0727a6dc), object, local, pointer_default(unique)]
+interface ID3D12Device6 : ID3D12Device5
+{
+    HRESULT SetBackgroundProcessingMode(
+        D3D12_BACKGROUND_PROCESSING_MODE Mode,
+        D3D12_MEASUREMENTS_ACTION MeasurementsAction,
+        [annotation("_In_opt_")] HANDLE hEventToSignalUponCompletion,
+        [annotation("_Out_opt_")] BOOL* pbFurtherMeasurementsDesired);
+};
 
 
 
@@ -4679,12 +4832,74 @@ cpp_quote("    0x8077,")
 cpp_quote("    0x48c8,")
 cpp_quote("    { 0x9f, 0xdc, 0xd9, 0xd1, 0xdd, 0x31, 0xdd, 0x77 }")
 cpp_quote("};")
+cpp_quote("// --------------------------------------------------------------------------------------------------------------------------------")
+cpp_quote("// Experimental Feature: D3D12ComputeOnlyDevices")
+cpp_quote("//")
+cpp_quote("// Use with D3D12EnableExperimentalFeatures to enable compute only devices (D3D_FEATURE_LEVEL_1_0_CORE).")
+cpp_quote("//")
+cpp_quote("// Enabling D3D12ComputeOnlyDevices needs no configuration struct, pass NULL in the pConfigurationStructs array.")
+cpp_quote("//")
+cpp_quote("// --------------------------------------------------------------------------------------------------------------------------------")
+cpp_quote("static const UUID D3D12ComputeOnlyDevices = { /* 50f7ab08-4b6d-4e14-89a5-5d16cd272594 */")
+cpp_quote("    0x50f7ab08,")
+cpp_quote("    0x4b6d,")
+cpp_quote("    0x4e14,")
+cpp_quote("    {0x89, 0xa5, 0x5d, 0x16, 0xcd, 0x27, 0x25, 0x94}")
+cpp_quote("};")
+
+
+typedef enum D3D12_AXIS_SHADING_RATE
+{
+    D3D12_AXIS_SHADING_RATE_1X = 0x0,
+    D3D12_AXIS_SHADING_RATE_2X = 0x1,
+    D3D12_AXIS_SHADING_RATE_4X = 0x2
+} D3D12_AXIS_SHADING_RATE;
+
+
+cpp_quote("#define D3D12_SHADING_RATE_X_AXIS_SHIFT 2")
+cpp_quote("#define D3D12_SHADING_RATE_VALID_MASK 3")
+
+cpp_quote("#define D3D12_MAKE_COARSE_SHADING_RATE(x,y) ((x) << D3D12_SHADING_RATE_X_AXIS_SHIFT | (y))")
+
+cpp_quote("#define D3D12_GET_COARSE_SHADING_RATE_X_AXIS(x) (((x) >> D3D12_SHADING_RATE_X_AXIS_SHIFT) & D3D12_SHADING_RATE_VALID_MASK)")
+cpp_quote("#define D3D12_GET_COARSE_SHADING_RATE_Y_AXIS(y) ((y) & D3D12_SHADING_RATE_VALID_MASK)")
+
+typedef enum D3D12_SHADING_RATE
+{
+    D3D12_SHADING_RATE_1X1 = 0x0,
+    D3D12_SHADING_RATE_1X2 = 0x1,
+    D3D12_SHADING_RATE_2X1 = 0x4,
+    D3D12_SHADING_RATE_2X2 = 0x5,
+    D3D12_SHADING_RATE_2X4 = 0x6,
+    D3D12_SHADING_RATE_4X2 = 0x9,
+    D3D12_SHADING_RATE_4X4 = 0xA
+} D3D12_SHADING_RATE;
+
+typedef enum D3D12_SHADING_RATE_COMBINER
+{
+    D3D12_SHADING_RATE_COMBINER_PASSTHROUGH = 0,
+    D3D12_SHADING_RATE_COMBINER_OVERRIDE = 1,
+    D3D12_SHADING_RATE_COMBINER_MIN = 2,
+    D3D12_SHADING_RATE_COMBINER_MAX = 3,
+    D3D12_SHADING_RATE_COMBINER_SUM = 4,
+} D3D12_SHADING_RATE_COMBINER;
+
+[uuid(55050859-4024-474c-87f5-6472eaee44ea), object, local, pointer_default(unique)]
+interface ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandList4
+{
+    void RSSetShadingRate(
+        [annotation("_In_")] D3D12_SHADING_RATE baseShadingRate,
+        [annotation("_In_reads_opt_(D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT)")] const D3D12_SHADING_RATE_COMBINER* combiners);
+
+    void RSSetShadingRateImage(
+        [annotation("_In_opt_")] ID3D12Resource* shadingRateImage);
+}
 
 
 //----------------------------------------------------------------------------------------------------------
 // Old types which are still supported by the runtime for app-compat
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote( "DEFINE_GUID(IID_ID3D12Object,0xc4fec28f,0x7966,0x4e95,0x9f,0x94,0xf4,0x31,0xcb,0x56,0xc3,0xb8);" )
@@ -4722,9 +4937,13 @@ cpp_quote( "DEFINE_GUID(IID_ID3D12LifetimeTracker,0x3fd03d36,0x4eb1,0x424a,0xa5,
 cpp_quote( "DEFINE_GUID(IID_ID3D12StateObject,0x47016943,0xfca8,0x4594,0x93,0xea,0xaf,0x25,0x8b,0x55,0x34,0x6d);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12StateObjectProperties,0xde5fa827,0x9bf9,0x4f26,0x89,0xff,0xd7,0xf5,0x6f,0xde,0x38,0x60);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12Device5,0x8b4f173b,0x2fea,0x4b80,0x8f,0x58,0x43,0x07,0x19,0x1a,0xb9,0x5d);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedDataSettings,0x82BC481C,0x6B9B,0x4030,0xAE,0xDB,0x7E,0xE3,0xD1,0xDF,0x1E,0x63);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedData,0x98931D33,0x5AE8,0x4791,0xAA,0x3C,0x1A,0x73,0xA2,0x93,0x4E,0x71);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12Device6,0xc70b221b,0x40e4,0x4a17,0x89,0xaf,0x02,0x5a,0x07,0x27,0xa6,0xdc);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12Resource1,0x9D5E227A,0x4430,0x4161,0x88,0xB3,0x3E,0xCA,0x6B,0xB1,0x6E,0x19);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12Heap1,0x572F7389,0x2168,0x49E3,0x96,0x93,0xD6,0xDF,0x58,0x71,0xBF,0x6D);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList3,0x6FDA83A7,0xB84C,0x4E38,0x9A,0xC8,0xC7,0xBD,0x22,0x01,0x6B,0x3D);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12MetaCommand,0xDBB84C27,0x36CE,0x4FC9,0xB8,0x01,0xF0,0x48,0xC4,0x6A,0xC5,0x70);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList4,0x8754318e,0xd3a9,0x4541,0x98,0xcf,0x64,0x5b,0x50,0xdc,0x48,0x74);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12Tools,0x7071e1f0,0xe84b,0x4b33,0x97,0x4f,0x12,0xfa,0x49,0xde,0x65,0xc5);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList5,0x55050859,0x4024,0x474c,0x87,0xf5,0x64,0x72,0xea,0xee,0x44,0xea);" )

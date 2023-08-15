@@ -11,6 +11,7 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.Storage.idl";
+import "Windows.System.idl";
 
 // Forward Declare
 namespace Windows
@@ -33,6 +34,13 @@ namespace Windows
 }
 namespace Windows
 {
+    namespace System
+    {
+        runtimeclass User;
+    }
+}
+namespace Windows
+{
     namespace Storage
     {
         namespace AccessCache
@@ -46,6 +54,8 @@ namespace Windows
             interface IItemRemovedEventArgs;
 
             interface IStorageApplicationPermissionsStatics;
+
+            interface IStorageApplicationPermissionsStatics2;
 
             interface IStorageItemAccessList;
 
@@ -136,6 +146,15 @@ namespace Windows
                 [propget] HRESULT MostRecentlyUsedList([out] [retval] Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.Storage.AccessCache.StorageApplicationPermissions)]
+            [uuid(072716EC-AA05-4294-9A11-1A3D04519AD0)]
+            interface IStorageApplicationPermissionsStatics2 : IInspectable
+            {
+                HRESULT GetFutureAccessListForUser([in] Windows.System.User* user, [out] [retval] Windows.Storage.AccessCache.StorageItemAccessList** value);
+                HRESULT GetMostRecentlyUsedListForUser([in] Windows.System.User* user, [out] [retval] Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [uuid(2CAFF6AD-DE90-47F5-B2C3-DD36C9FDD453)]
             interface IStorageItemAccessList : IInspectable
@@ -196,6 +215,7 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics, Windows.Foundation.UniversalApiContract, 1.0)]
+            [static(Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2, Windows.Foundation.UniversalApiContract, 8.0)]
             runtimeclass StorageApplicationPermissions
             {
             }

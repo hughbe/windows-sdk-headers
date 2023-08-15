@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.ocr.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 interface IOcrEngine;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_COcr_CIOcrEngine ABI::Windows::Media::Ocr::IOcrEngine
 
 #endif // ____x_ABI_CWindows_CMedia_COcr_CIOcrEngine_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 interface IOcrEngineStatics;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_COcr_CIOcrEngineStatics ABI::Windows::Media::Ocr::IOcrEngineStatics
 
 #endif // ____x_ABI_CWindows_CMedia_COcr_CIOcrEngineStatics_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 interface IOcrLine;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_COcr_CIOcrLine ABI::Windows::Media::Ocr::IOcrLine
 
 #endif // ____x_ABI_CWindows_CMedia_COcr_CIOcrLine_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 interface IOcrResult;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_COcr_CIOcrResult ABI::Windows::Media::Ocr::IOcrResult
 
 #endif // ____x_ABI_CWindows_CMedia_COcr_CIOcrResult_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 interface IOcrWord;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_COcr_CIOcrWord ABI::Windows::Media::Ocr::IOcrWord
 
 #endif // ____x_ABI_CWindows_CMedia_COcr_CIOcrWord_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 class OcrLine;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -374,7 +370,7 @@ IIterator<ABI::Windows::Media::Ocr::OcrLine*> : IIterator_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Ocr::OcrLine*> __FIIterator_1_Windows__CMedia__COcr__COcrLine_t;
 #define __FIIterator_1_Windows__CMedia__COcr__COcrLine ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__COcr__COcrLine_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__COcr__COcrLine ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Ocr::IOcrLine*>
@@ -406,7 +402,7 @@ IIterable<ABI::Windows::Media::Ocr::OcrLine*> : IIterable_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Ocr::OcrLine*> __FIIterable_1_Windows__CMedia__COcr__COcrLine_t;
 #define __FIIterable_1_Windows__CMedia__COcr__COcrLine ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__COcr__COcrLine_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__COcr__COcrLine ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Ocr::IOcrLine*>
@@ -422,9 +418,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 class OcrWord;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -447,7 +443,7 @@ IIterator<ABI::Windows::Media::Ocr::OcrWord*> : IIterator_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Ocr::OcrWord*> __FIIterator_1_Windows__CMedia__COcr__COcrWord_t;
 #define __FIIterator_1_Windows__CMedia__COcr__COcrWord ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__COcr__COcrWord_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__COcr__COcrWord ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Ocr::IOcrWord*>
@@ -479,7 +475,7 @@ IIterable<ABI::Windows::Media::Ocr::OcrWord*> : IIterable_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Ocr::OcrWord*> __FIIterable_1_Windows__CMedia__COcr__COcrWord_t;
 #define __FIIterable_1_Windows__CMedia__COcr__COcrWord ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__COcr__COcrWord_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__COcr__COcrWord ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Ocr::IOcrWord*>
@@ -511,7 +507,7 @@ IVectorView<ABI::Windows::Media::Ocr::OcrLine*> : IVectorView_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Ocr::OcrLine*> __FIVectorView_1_Windows__CMedia__COcr__COcrLine_t;
 #define __FIVectorView_1_Windows__CMedia__COcr__COcrLine ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__COcr__COcrLine_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__COcr__COcrLine ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Ocr::IOcrLine*>
@@ -543,7 +539,7 @@ IVectorView<ABI::Windows::Media::Ocr::OcrWord*> : IVectorView_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Ocr::OcrWord*> __FIVectorView_1_Windows__CMedia__COcr__COcrWord_t;
 #define __FIVectorView_1_Windows__CMedia__COcr__COcrWord ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__COcr__COcrWord_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__COcr__COcrWord ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Ocr::IOcrWord*>
@@ -559,9 +555,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 class OcrResult;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -584,7 +580,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Ocr::OcrResult*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Ocr::OcrResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__COcr__COcrResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__COcr__COcrResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__COcr__COcrResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__COcr__COcrResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Ocr::IOcrResult*>
@@ -616,7 +612,7 @@ IAsyncOperation<ABI::Windows::Media::Ocr::OcrResult*> : IAsyncOperation_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Ocr::OcrResult*> __FIAsyncOperation_1_Windows__CMedia__COcr__COcrResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__COcr__COcrResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__COcr__COcrResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__COcr__COcrResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Ocr::IOcrResult*>
@@ -631,8 +627,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Language;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -640,8 +636,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage ABI::Windows::Globalization::ILanguage
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -667,7 +663,7 @@ IIterator<ABI::Windows::Globalization::Language*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Globalization::Language*> __FIIterator_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Globalization::ILanguage*>
@@ -699,7 +695,7 @@ IIterable<ABI::Windows::Globalization::Language*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Globalization::Language*> __FIIterable_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Globalization::ILanguage*>
@@ -731,7 +727,7 @@ IVectorView<ABI::Windows::Globalization::Language*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Globalization::Language*> __FIVectorView_1_Windows__CGlobalization__CLanguage_t;
 #define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Globalization::ILanguage*>
@@ -761,7 +757,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -779,8 +775,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -793,9 +789,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 class SoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -804,9 +800,9 @@ namespace ABI {
         namespace Graphics {
             namespace Imaging {
                 interface ISoftwareBitmap;
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -825,9 +821,9 @@ namespace ABI {
         namespace Media {
             namespace Ocr {
                 class OcrEngine;
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -877,9 +873,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOcrEngine=_uuidof(IOcrEngine);
                 
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_COcr_CIOcrEngine;
 #endif /* !defined(____x_ABI_CWindows_CMedia_COcr_CIOcrEngine_INTERFACE_DEFINED__) */
@@ -918,7 +914,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsLanguageSupported(
                         /* [in] */__RPC__in_opt ABI::Windows::Globalization::ILanguage * language,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryCreateFromLanguage(
                         /* [in] */__RPC__in_opt ABI::Windows::Globalization::ILanguage * language,
@@ -932,9 +928,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOcrEngineStatics=_uuidof(IOcrEngineStatics);
                 
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_COcr_CIOcrEngineStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_COcr_CIOcrEngineStatics_INTERFACE_DEFINED__) */
@@ -976,9 +972,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOcrLine=_uuidof(IOcrLine);
                 
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_COcr_CIOcrLine;
 #endif /* !defined(____x_ABI_CWindows_CMedia_COcr_CIOcrLine_INTERFACE_DEFINED__) */
@@ -1023,9 +1019,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOcrResult=_uuidof(IOcrResult);
                 
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_COcr_CIOcrResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_COcr_CIOcrResult_INTERFACE_DEFINED__) */
@@ -1067,9 +1063,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IOcrWord=_uuidof(IOcrWord);
                 
-            } /* Windows */
+            } /* Ocr */
         } /* Media */
-    } /* Ocr */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_COcr_CIOcrWord;
 #endif /* !defined(____x_ABI_CWindows_CMedia_COcr_CIOcrWord_INTERFACE_DEFINED__) */

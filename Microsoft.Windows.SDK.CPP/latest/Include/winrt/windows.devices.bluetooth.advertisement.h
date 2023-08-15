@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.bluetooth.advertisement.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,10 +275,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisement;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisement
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementBytePattern;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePattern ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementBytePattern
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePattern_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementBytePatternFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePatternFactory ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementBytePatternFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePatternFactory_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementDataSection;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSection ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementDataSection
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSection_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementDataSectionFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSectionFactory ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementDataSectionFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSectionFactory_FWD_DEFINED__
@@ -359,10 +355,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementDataTypesStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataTypesStatics ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementDataTypesStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataTypesStatics_FWD_DEFINED__
@@ -375,10 +371,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementFilter;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementFilter
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter_FWD_DEFINED__
@@ -391,10 +387,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementPublisher;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisher ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisher_FWD_DEFINED__
@@ -407,10 +403,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementPublisherFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherFactory ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisherFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherFactory_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementPublisherStatusChangedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherStatusChangedEventArgs ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisherStatusChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherStatusChangedEventArgs_FWD_DEFINED__
@@ -439,10 +435,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementReceivedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementReceivedEventArgs_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementWatcher;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher_FWD_DEFINED__
@@ -471,10 +467,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementWatcherFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherFactory ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcherFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherFactory_FWD_DEFINED__
@@ -487,10 +483,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEAdvertisementWatcherStoppedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherStoppedEventArgs ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcherStoppedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherStoppedEventArgs_FWD_DEFINED__
@@ -503,10 +499,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEManufacturerData;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerData ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEManufacturerData
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerData_FWD_DEFINED__
@@ -519,10 +515,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     interface IBluetoothLEManufacturerDataFactory;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerDataFactory ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEManufacturerDataFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerDataFactory_FWD_DEFINED__
@@ -536,10 +532,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementBytePattern;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -562,7 +558,7 @@ IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisem
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern*> __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t;
 #define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementBytePattern*>
@@ -594,7 +590,7 @@ IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisem
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern*> __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t;
 #define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementBytePattern*>
@@ -611,10 +607,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementDataSection;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -637,7 +633,7 @@ IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisem
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection*> __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t;
 #define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementDataSection*>
@@ -669,7 +665,7 @@ IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisem
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection*> __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t;
 #define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementDataSection*>
@@ -686,10 +682,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementReceivedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -712,7 +708,7 @@ IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisem
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs*> __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t;
 #define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs*>
@@ -744,7 +740,7 @@ IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisem
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs*> __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t;
 #define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs*>
@@ -761,10 +757,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEManufacturerData;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -787,7 +783,7 @@ IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufactur
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData*> __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t;
 #define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEManufacturerData*>
@@ -819,7 +815,7 @@ IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufactur
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData*> __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t;
 #define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEManufacturerData*>
@@ -851,7 +847,7 @@ IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertis
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern*> __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t;
 #define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementBytePattern*>
@@ -883,7 +879,7 @@ IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertis
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection*> __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t;
 #define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementDataSection*>
@@ -915,7 +911,7 @@ IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertis
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs*> __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t;
 #define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs*>
@@ -947,7 +943,7 @@ IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufact
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData*> __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t;
 #define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEManufacturerData*>
@@ -979,7 +975,7 @@ IVector<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisemen
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern*> __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t;
 #define __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementBytePattern ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementBytePattern*>
@@ -1011,7 +1007,7 @@ IVector<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisemen
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection*> __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t;
 #define __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementDataSection ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementDataSection*>
@@ -1043,7 +1039,7 @@ IVector<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturer
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData*> __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t;
 #define __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEManufacturerData ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEManufacturerData*>
@@ -1060,10 +1056,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     enum BluetoothLEAdvertisementFlags : unsigned int;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementFlags_USE
@@ -1084,7 +1080,7 @@ IReference<enum ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdve
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags> __FIReference_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementFlags_t;
 #define __FIReference_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementFlags ABI::Windows::Foundation::__FIReference_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementFlags_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementFlags ABI::Windows::Foundation::IReference<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags>
@@ -1100,10 +1096,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementPublisher;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1112,10 +1108,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementPublisherStatusChangedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1139,7 +1135,7 @@ ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEA
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher*,ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher*,ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisherStatusChangedEventArgs*>
@@ -1157,10 +1153,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementWatcher;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1185,7 +1181,7 @@ ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEA
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher*,ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher*,ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs*>
@@ -1204,10 +1200,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementWatcherStoppedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1231,7 +1227,7 @@ ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEA
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher*,ABI::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher*,ABI::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcherStoppedEventArgs*>
@@ -1262,7 +1258,7 @@ IIterator<GUID> : IIterator_impl<GUID>
 // correct parameterized interface specialization.
 typedef IIterator<GUID> __FIIterator_1_GUID_t;
 #define __FIIterator_1_GUID ABI::Windows::Foundation::Collections::__FIIterator_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_GUID ABI::Windows::Foundation::Collections::IIterator<GUID>
@@ -1291,7 +1287,7 @@ IIterable<GUID> : IIterable_impl<GUID>
 // correct parameterized interface specialization.
 typedef IIterable<GUID> __FIIterable_1_GUID_t;
 #define __FIIterable_1_GUID ABI::Windows::Foundation::Collections::__FIIterable_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_GUID ABI::Windows::Foundation::Collections::IIterable<GUID>
@@ -1320,7 +1316,7 @@ IVectorView<GUID> : IVectorView_impl<GUID>
 // correct parameterized interface specialization.
 typedef IVectorView<GUID> __FIVectorView_1_GUID_t;
 #define __FIVectorView_1_GUID ABI::Windows::Foundation::Collections::__FIVectorView_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_GUID ABI::Windows::Foundation::Collections::IVectorView<GUID>
@@ -1349,7 +1345,7 @@ IVector<GUID> : IVector_impl<GUID>
 // correct parameterized interface specialization.
 typedef IVector<GUID> __FIVector_1_GUID_t;
 #define __FIVector_1_GUID ABI::Windows::Foundation::Collections::__FIVector_1_GUID_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_GUID ABI::Windows::Foundation::Collections::IVector<GUID>
@@ -1368,18 +1364,18 @@ namespace ABI {
                 
                 typedef enum BluetoothError : int BluetoothError;
                 
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Bluetooth {
                 class BluetoothSignalStrengthFilter;
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter_FWD_DEFINED__
@@ -1388,9 +1384,9 @@ namespace ABI {
         namespace Devices {
             namespace Bluetooth {
                 interface IBluetoothSignalStrengthFilter;
-            } /* Windows */
+            } /* Bluetooth */
         } /* Devices */
-    } /* Bluetooth */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter ABI::Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter
 
 #endif // ____x_ABI_CWindows_CDevices_CBluetooth_CIBluetoothSignalStrengthFilter_FWD_DEFINED__
@@ -1405,8 +1401,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1414,8 +1410,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1427,9 +1423,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1446,10 +1442,10 @@ namespace ABI {
                     
                     typedef enum BluetoothLEAdvertisementFlags : unsigned int BluetoothLEAdvertisementFlags;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1459,10 +1455,10 @@ namespace ABI {
                     
                     typedef enum BluetoothLEAdvertisementPublisherStatus : int BluetoothLEAdvertisementPublisherStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1472,10 +1468,10 @@ namespace ABI {
                     
                     typedef enum BluetoothLEAdvertisementType : int BluetoothLEAdvertisementType;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1485,10 +1481,10 @@ namespace ABI {
                     
                     typedef enum BluetoothLEAdvertisementWatcherStatus : int BluetoothLEAdvertisementWatcherStatus;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1498,10 +1494,10 @@ namespace ABI {
                     
                     typedef enum BluetoothLEScanningMode : int BluetoothLEScanningMode;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1525,10 +1521,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisement;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1540,10 +1536,10 @@ namespace ABI {
             namespace Bluetooth {
                 namespace Advertisement {
                     class BluetoothLEAdvertisementFilter;
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1590,10 +1586,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(BluetoothLEAdvertisementFlags)
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1623,10 +1619,10 @@ namespace ABI {
                         BluetoothLEAdvertisementPublisherStatus_Aborted = 5,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1655,10 +1651,10 @@ namespace ABI {
                         BluetoothLEAdvertisementType_ScanResponse = 4,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1687,10 +1683,10 @@ namespace ABI {
                         BluetoothLEAdvertisementWatcherStatus_Aborted = 4,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1716,10 +1712,10 @@ namespace ABI {
                         BluetoothLEScanningMode_Active = 1,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1782,10 +1778,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisement=_uuidof(IBluetoothLEAdvertisement);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisement_INTERFACE_DEFINED__) */
@@ -1840,10 +1836,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementBytePattern=_uuidof(IBluetoothLEAdvertisementBytePattern);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePattern;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePattern_INTERFACE_DEFINED__) */
@@ -1886,10 +1882,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementBytePatternFactory=_uuidof(IBluetoothLEAdvertisementBytePatternFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePatternFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementBytePatternFactory_INTERFACE_DEFINED__) */
@@ -1938,10 +1934,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementDataSection=_uuidof(IBluetoothLEAdvertisementDataSection);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSection;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSection_INTERFACE_DEFINED__) */
@@ -1983,10 +1979,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementDataSectionFactory=_uuidof(IBluetoothLEAdvertisementDataSectionFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSectionFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataSectionFactory_INTERFACE_DEFINED__) */
@@ -2089,10 +2085,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementDataTypesStatics=_uuidof(IBluetoothLEAdvertisementDataTypesStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataTypesStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementDataTypesStatics_INTERFACE_DEFINED__) */
@@ -2138,10 +2134,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementFilter=_uuidof(IBluetoothLEAdvertisementFilter);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementFilter_INTERFACE_DEFINED__) */
@@ -2193,10 +2189,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementPublisher=_uuidof(IBluetoothLEAdvertisementPublisher);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisher;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisher_INTERFACE_DEFINED__) */
@@ -2237,10 +2233,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementPublisherFactory=_uuidof(IBluetoothLEAdvertisementPublisherFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherFactory_INTERFACE_DEFINED__) */
@@ -2283,10 +2279,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementPublisherStatusChangedEventArgs=_uuidof(IBluetoothLEAdvertisementPublisherStatusChangedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherStatusChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherStatusChangedEventArgs_INTERFACE_DEFINED__) */
@@ -2338,10 +2334,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementReceivedEventArgs=_uuidof(IBluetoothLEAdvertisementReceivedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -2427,10 +2423,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementWatcher=_uuidof(IBluetoothLEAdvertisementWatcher);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher_INTERFACE_DEFINED__) */
@@ -2471,10 +2467,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementWatcherFactory=_uuidof(IBluetoothLEAdvertisementWatcherFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherFactory_INTERFACE_DEFINED__) */
@@ -2514,10 +2510,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEAdvertisementWatcherStoppedEventArgs=_uuidof(IBluetoothLEAdvertisementWatcherStoppedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherStoppedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherStoppedEventArgs_INTERFACE_DEFINED__) */
@@ -2566,10 +2562,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEManufacturerData=_uuidof(IBluetoothLEManufacturerData);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerData;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerData_INTERFACE_DEFINED__) */
@@ -2611,10 +2607,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBluetoothLEManufacturerDataFactory=_uuidof(IBluetoothLEManufacturerDataFactory);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Bluetooth */
-    } /* Advertisement */} /* ABI */
+                } /* Advertisement */
+            } /* Bluetooth */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerDataFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEManufacturerDataFactory_INTERFACE_DEFINED__) */
@@ -4614,7 +4610,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertise
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherStatusChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementPublisherStatusChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementPublisherStatusChangedEventArgsVtbl;
 
@@ -4667,7 +4663,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertise
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementReceivedEventArgsVtbl;
 
@@ -4720,7 +4716,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertise
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherStoppedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CBluetooth_CAdvertisement_CIBluetoothLEAdvertisementWatcherStoppedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcher_Windows__CDevices__CBluetooth__CAdvertisement__CBluetoothLEAdvertisementWatcherStoppedEventArgsVtbl;
 

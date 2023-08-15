@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -138,6 +138,13 @@ struct WINRT_EBO IPackage6 :
     impl::consume_t<IPackage6>
 {
     IPackage6(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IPackage7 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IPackage7>
+{
+    IPackage7(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IPackageCatalog :

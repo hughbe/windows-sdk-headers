@@ -49,7 +49,8 @@ extern "C" {
 #pragma warning(disable:4820) // padding added
 
 // Maximum value of MAXIMUM_PROCESSORS for all platforms.
-#define CROSS_PLATFORM_MAXIMUM_PROCESSORS 1280
+// NB: Keep in sync with extsfns.w/h (the !analyze public header)
+#define CROSS_PLATFORM_MAXIMUM_PROCESSORS 2048
 
 #if !defined(WDBGAPI)
 #define WDBGAPI __stdcall
@@ -1405,6 +1406,11 @@ typedef struct _KDDEBUGGER_DATA64 {
 
     USHORT    SizeEThread;
 
+    UCHAR     L1tfHighPhysicalBitIndex;  // Windows 10 19H1 Addition
+    UCHAR     L1tfSwizzleBitIndex;       // Windows 10 19H1 Addition
+
+    ULONG     Padding0;
+
     ULONG64   KdPrintCircularBufferPtr;
     ULONG64   KdPrintBufferSize;
 
@@ -1473,15 +1479,15 @@ typedef struct _KDDEBUGGER_DATA64 {
 
     // Windows 10 RS1 Addition
 
-    USHORT    Padding;
+    USHORT    Padding1;
     ULONG64   PteBase;
 
     // Windows 10 RS5 Addition
 
-    ULONG64 RetpolineStubFunctionTable;
-    ULONG RetpolineStubFunctionTableSize;
-    ULONG RetpolineStubOffset;
-    ULONG RetpolineStubSize;
+    ULONG64   RetpolineStubFunctionTable;
+    ULONG     RetpolineStubFunctionTableSize;
+    ULONG     RetpolineStubOffset;
+    ULONG     RetpolineStubSize;
 
 } KDDEBUGGER_DATA64, *PKDDEBUGGER_DATA64;
 

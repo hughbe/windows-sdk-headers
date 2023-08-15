@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -63,6 +63,13 @@ struct ClockIdentifiers
     ClockIdentifiers() = delete;
     static hstring TwelveHour();
     static hstring TwentyFourHour();
+};
+
+struct WINRT_EBO CurrencyAmount :
+    Windows::Globalization::ICurrencyAmount
+{
+    CurrencyAmount(std::nullptr_t) noexcept {}
+    CurrencyAmount(param::hstring const& amount, param::hstring const& currency);
 };
 
 struct CurrencyIdentifiers

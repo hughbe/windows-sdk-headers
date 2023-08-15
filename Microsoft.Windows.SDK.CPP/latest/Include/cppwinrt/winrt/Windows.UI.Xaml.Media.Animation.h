@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -1221,6 +1221,18 @@ template <typename D> Windows::UI::Xaml::DependencyProperty consume_Windows_UI_X
     Windows::UI::Xaml::DependencyProperty value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationStatics)->get_TargetNameProperty(put_abi(value)));
     return value;
+}
+
+template <typename D> bool consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration2<D>::IsShadowEnabled() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2)->get_IsShadowEnabled(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration2<D>::IsShadowEnabled(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2)->put_IsShadowEnabled(value));
 }
 
 template <typename D> Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration consume_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfigurationFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
@@ -5384,6 +5396,34 @@ struct produce<D, Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationSta
 template <typename D>
 struct produce<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration> : produce_base<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration>
 {};
+
+template <typename D>
+struct produce<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2> : produce_base<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2>
+{
+    int32_t WINRT_CALL get_IsShadowEnabled(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsShadowEnabled, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().IsShadowEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_IsShadowEnabled(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(IsShadowEnabled, WINRT_WRAP(void), bool);
+            this->shim().IsShadowEnabled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
 
 template <typename D>
 struct produce<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory> : produce_base<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory>
@@ -9730,7 +9770,7 @@ protected:
 template <typename D, typename... Interfaces>
 struct GravityConnectedAnimationConfigurationT :
     implements<D, Windows::Foundation::IInspectable, composing, Interfaces...>,
-    impl::require<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::IConnectedAnimationConfiguration>,
+    impl::require<D, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::IConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2>,
     impl::base<D, Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>
 {
     using composable = GravityConnectedAnimationConfiguration;
@@ -9886,6 +9926,7 @@ template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IFadeInThemeA
 template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimation> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Animation::IFadeOutThemeAnimationStatics> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration> {};
+template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfigurationFactory> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IKeySpline> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Animation::IKeySpline> {};
 template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::IKeyTimeHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Media::Animation::IKeyTimeHelper> {};

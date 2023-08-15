@@ -20,8 +20,23 @@ Abstract:
 #endif
 #include <winapifamily.h>
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+//////////////////////////////////////////////////////////////////////////////
+//                                                                          //
+// Establish DLL function linkage if supported by the current build         //
+// environment and not previously defined.                                  //
+//                                                                          //
+//////////////////////////////////////////////////////////////////////////////
+
+#ifndef IPHLPAPI_DLL_LINKAGE
+#ifdef DECLSPEC_IMPORT
+#define IPHLPAPI_DLL_LINKAGE DECLSPEC_IMPORT
+#else
+#define IPHLPAPI_DLL_LINKAGE
+#endif
+#endif
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,11 +54,11 @@ extern "C" {
 #include <iptypes.h>
 #include <tcpestats.h>
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //////////////////////////////////////////////////////////////////////////////
 //                                                                          //
@@ -63,7 +78,7 @@ extern "C" {
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
-
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetNumberOfInterfaces(
@@ -78,6 +93,7 @@ GetNumberOfInterfaces(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetIfEntry(
@@ -90,6 +106,7 @@ GetIfEntry(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetIfTable(
@@ -104,6 +121,7 @@ GetIfTable(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetIpAddrTable(
@@ -118,6 +136,7 @@ GetIpAddrTable(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetIpNetTable(
@@ -132,6 +151,7 @@ GetIpNetTable(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetIpForwardTable(
@@ -146,12 +166,13 @@ GetIpForwardTable(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetTcpTable(
@@ -160,6 +181,7 @@ GetTcpTable(
     _In_                             BOOL          Order
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetExtendedTcpTable(
@@ -183,12 +205,13 @@ GetExtendedTcpTable(
     _In_                          ULONG           Reserved
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetOwnerModuleFromTcpEntry(
@@ -198,12 +221,13 @@ GetOwnerModuleFromTcpEntry(
     _Inout_                PDWORD                        pdwSize
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetUdpTable(
@@ -212,6 +236,7 @@ GetUdpTable(
     _In_                             BOOL          Order
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetExtendedUdpTable(
@@ -223,12 +248,13 @@ GetExtendedUdpTable(
     _In_                          ULONG           Reserved
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetOwnerModuleFromUdpEntry(
@@ -239,6 +265,7 @@ GetOwnerModuleFromUdpEntry(
     );
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetTcpTable2(
@@ -248,7 +275,7 @@ GetTcpTable2(
     );
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -282,8 +309,8 @@ AllocateAndGetUdpExTableFromStack(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #ifdef _WS2IPDEF_
 //
@@ -291,6 +318,7 @@ AllocateAndGetUdpExTableFromStack(
 //
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetTcp6Table(
@@ -299,6 +327,7 @@ GetTcp6Table(
     _In_                         BOOL           Order
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetTcp6Table2(
@@ -311,6 +340,7 @@ GetTcp6Table2(
 
 #ifdef WINAPI
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetPerTcpConnectionEStats(
@@ -327,6 +357,7 @@ GetPerTcpConnectionEStats(
     _In_ ULONG RodSize
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 SetPerTcpConnectionEStats(
@@ -340,6 +371,7 @@ SetPerTcpConnectionEStats(
 
 #ifdef _WS2IPDEF_
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetPerTcp6ConnectionEStats(
@@ -356,6 +388,7 @@ GetPerTcp6ConnectionEStats(
     _In_  ULONG RodSize
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 SetPerTcp6ConnectionEStats(
@@ -371,6 +404,7 @@ SetPerTcp6ConnectionEStats(
 
 #endif // WINAPI
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetOwnerModuleFromTcp6Entry(
@@ -380,6 +414,7 @@ GetOwnerModuleFromTcp6Entry(
     _Inout_                   PDWORD                        pdwSize
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetUdp6Table(
@@ -388,6 +423,7 @@ GetUdp6Table(
     _In_                         BOOL           Order
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetOwnerModuleFromUdp6Entry(
@@ -399,6 +435,10 @@ GetOwnerModuleFromUdp6Entry(
 
 #endif // _WS2IPDEF_
 
+//
+// Because this function isn't marked with WINAPI, it is not marked with
+// IPHLPAPI_DLL_LINKAGE in order to prevent build breaks with managed projects.
+//
 DWORD
 GetOwnerModuleFromPidAndInfo(
     _In_                     ULONG                         ulPid,
@@ -415,6 +455,7 @@ GetOwnerModuleFromPidAndInfo(
 //////////////////////////////////////////////////////////////////////////////
 
 #if (NTDDI_VERSION >= NTDDI_WIN2K)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetIpStatistics(
@@ -422,13 +463,14 @@ GetIpStatistics(
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (NTDDI_VERSION >= NTDDI_WIN2K)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetIcmpStatistics(
@@ -436,19 +478,21 @@ GetIcmpStatistics(
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (NTDDI_VERSION >= NTDDI_WIN2K)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetTcpStatistics(
     _Out_ PMIB_TCPSTATS Statistics
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetUdpStatistics(
@@ -457,6 +501,7 @@ GetUdpStatistics(
 #endif
 
 #if (NTDDI_VERSION >= NTDDI_WINXP)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 SetIpStatisticsEx(
@@ -465,13 +510,14 @@ SetIpStatisticsEx(
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (NTDDI_VERSION >= NTDDI_WINXP)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetIpStatisticsEx(
@@ -479,6 +525,7 @@ GetIpStatisticsEx(
     _In_  ULONG Family
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetIcmpStatisticsEx(
@@ -486,6 +533,7 @@ GetIcmpStatisticsEx(
     _In_  ULONG Family
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetTcpStatisticsEx(
@@ -493,6 +541,7 @@ GetTcpStatisticsEx(
     _In_  ULONG Family
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetUdpStatisticsEx(
@@ -502,6 +551,7 @@ GetUdpStatisticsEx(
 #endif
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetTcpStatisticsEx2(
@@ -509,6 +559,7 @@ GetTcpStatisticsEx2(
     _In_  ULONG Family
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetUdpStatisticsEx2(
@@ -517,11 +568,11 @@ GetUdpStatisticsEx2(
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //////////////////////////////////////////////////////////////////////////////
 //                                                                          //
@@ -532,6 +583,7 @@ GetUdpStatisticsEx2(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 SetIfEntry(
@@ -548,18 +600,21 @@ SetIfEntry(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 CreateIpForwardEntry(
     _In_ PMIB_IPFORWARDROW pRoute
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 SetIpForwardEntry(
     _In_ PMIB_IPFORWARDROW pRoute
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 DeleteIpForwardEntry(
@@ -577,6 +632,7 @@ DeleteIpForwardEntry(
 //////////////////////////////////////////////////////////////////////////////
 
 #if (NTDDI_VERSION >= NTDDI_WIN2K)
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 SetIpStatistics(
@@ -590,6 +646,7 @@ SetIpStatistics(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 SetIpTTL(
@@ -604,24 +661,28 @@ SetIpTTL(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 CreateIpNetEntry(
     _In_ PMIB_IPNETROW    pArpEntry
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 SetIpNetEntry(
     _In_ PMIB_IPNETROW    pArpEntry
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 DeleteIpNetEntry(
     _In_ PMIB_IPNETROW    pArpEntry
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 FlushIpNetTable(
@@ -637,6 +698,7 @@ FlushIpNetTable(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 CreateProxyArpEntry(
@@ -645,6 +707,7 @@ CreateProxyArpEntry(
     _In_  DWORD   dwIfIndex
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 DeleteProxyArpEntry(
@@ -661,13 +724,14 @@ DeleteProxyArpEntry(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 SetTcpEntry(
     _In_ PMIB_TCPROW pTcpRow
     );
 
-
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetInterfaceInfo(
@@ -675,6 +739,7 @@ GetInterfaceInfo(
     _Inout_                        PULONG              dwOutBufLen
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetUniDirectionalAdapterInfo(
@@ -686,6 +751,7 @@ GetUniDirectionalAdapterInfo(
 #ifndef NHPALLOCATEANDGETINTERFACEINFOFROMSTACK_DEFINED
 #define NHPALLOCATEANDGETINTERFACEINFOFROMSTACK_DEFINED
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 NhpAllocateAndGetInterfaceInfoFromStack(
@@ -705,6 +771,7 @@ NhpAllocateAndGetInterfaceInfoFromStack(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetBestInterface(
@@ -712,14 +779,15 @@ GetBestInterface(
     _Out_ PDWORD  pdwBestIfIndex
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #pragma warning(push)
 #pragma warning(disable:4115)
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetBestInterfaceEx(
@@ -728,11 +796,11 @@ GetBestInterfaceEx(
     );
 #pragma warning(pop)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //////////////////////////////////////////////////////////////////////////////
 //                                                                          //
@@ -744,6 +812,7 @@ GetBestInterfaceEx(
 //                                                                          //
 //////////////////////////////////////////////////////////////////////////////
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetBestRoute(
@@ -752,6 +821,7 @@ GetBestRoute(
     _Out_     PMIB_IPFORWARDROW   pBestRoute
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 NotifyAddrChange(
@@ -759,7 +829,7 @@ NotifyAddrChange(
     _In_  LPOVERLAPPED overlapped
     );
 
-
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 NotifyRouteChange(
@@ -767,12 +837,14 @@ NotifyRouteChange(
     _In_  LPOVERLAPPED overlapped
     );
 
+IPHLPAPI_DLL_LINKAGE
 BOOL
 WINAPI
 CancelIPChangeNotify(
     _In_  LPOVERLAPPED notifyOverlapped
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetAdapterIndex(
@@ -780,6 +852,7 @@ GetAdapterIndex(
     _Inout_ PULONG IfIndex
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 AddIPAddress(
@@ -790,19 +863,21 @@ AddIPAddress(
     _Out_ PULONG  NTEInstance
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 DeleteIPAddress(
     _In_ ULONG NTEContext
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (NTDDI_VERSION >= NTDDI_WIN2KSP1)
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetNetworkParams(
@@ -811,12 +886,13 @@ GetNetworkParams(
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetAdaptersInfo(
@@ -824,6 +900,7 @@ GetAdaptersInfo(
     _Inout_                         PULONG           SizePointer
     );
 
+IPHLPAPI_DLL_LINKAGE
 PIP_ADAPTER_ORDER_MAP
 WINAPI
 GetAdapterOrderMap(
@@ -831,11 +908,11 @@ GetAdapterOrderMap(
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #ifdef _WINSOCK2API_
 
@@ -843,6 +920,7 @@ GetAdapterOrderMap(
 // The following functions require Winsock2.
 //
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 GetAdaptersAddresses(
@@ -856,6 +934,7 @@ GetAdaptersAddresses(
 #endif
 
 #if (NTDDI_VERSION >= NTDDI_WIN2KSP1)
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetPerAdapterInfo(
@@ -865,12 +944,12 @@ GetPerAdapterInfo(
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
@@ -918,6 +997,7 @@ typedef struct _INTERFACE_HARDWARE_CROSSTIMESTAMP
 
 DECLARE_HANDLE(HIFTIMESTAMPCHANGE);
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetInterfaceCurrentTimestampCapabilities(
@@ -925,6 +1005,7 @@ GetInterfaceCurrentTimestampCapabilities(
     _Inout_ PINTERFACE_TIMESTAMP_CAPABILITIES TimestampCapabilites
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetInterfaceHardwareTimestampCapabilities(
@@ -932,6 +1013,7 @@ GetInterfaceHardwareTimestampCapabilities(
     _Inout_ PINTERFACE_TIMESTAMP_CAPABILITIES TimestampCapabilites
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 CaptureInterfaceHardwareCrossTimestamp(
@@ -941,7 +1023,7 @@ CaptureInterfaceHardwareCrossTimestamp(
 
 typedef
 VOID
-CALLBACK 
+CALLBACK
 INTERFACE_TIMESTAMP_CONFIG_CHANGE_CALLBACK(
     _In_ PVOID CallerContext
     );
@@ -949,6 +1031,7 @@ INTERFACE_TIMESTAMP_CONFIG_CHANGE_CALLBACK(
 typedef
 INTERFACE_TIMESTAMP_CONFIG_CHANGE_CALLBACK *PINTERFACE_TIMESTAMP_CONFIG_CHANGE_CALLBACK;
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 NotifyIfTimestampConfigChange(
@@ -957,6 +1040,7 @@ NotifyIfTimestampConfigChange(
     _Out_ HIFTIMESTAMPCHANGE *NotificationHandle
     );
 
+IPHLPAPI_DLL_LINKAGE
 VOID
 WINAPI
 CancelIfTimestampConfigChange(
@@ -965,25 +1049,27 @@ CancelIfTimestampConfigChange(
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 IpReleaseAddress(
     _In_ PIP_ADAPTER_INDEX_MAP  AdapterInfo
     );
 
-
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 IpRenewAddress(
     _In_ PIP_ADAPTER_INDEX_MAP  AdapterInfo
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 SendARP(
@@ -993,6 +1079,7 @@ SendARP(
     _Inout_ PULONG  PhyAddrLen
     );
 
+IPHLPAPI_DLL_LINKAGE
 BOOL
 WINAPI
 GetRTTAndHopCount(
@@ -1002,12 +1089,14 @@ GetRTTAndHopCount(
     _Out_ PULONG RTT
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetFriendlyIfIndex(
     _In_ DWORD IfIndex
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 EnableRouter(
@@ -1015,12 +1104,15 @@ EnableRouter(
     _Out_ OVERLAPPED* pOverlapped
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 UnenableRouter(
     _In_      OVERLAPPED* pOverlapped,
     _Out_opt_ LPDWORD lpdwEnableCount
     );
+
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 DisableMediaSense(
@@ -1028,6 +1120,7 @@ DisableMediaSense(
     _In_  OVERLAPPED *pOverLapped
     );
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 RestoreMediaSense(
@@ -1037,6 +1130,7 @@ RestoreMediaSense(
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 GetIpErrorString(
@@ -1047,6 +1141,7 @@ GetIpErrorString(
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
 #ifdef _WS2DEF_
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 ResolveNeighbor(
@@ -1056,10 +1151,12 @@ ResolveNeighbor(
     );
 #endif
 #endif
+
 //
 // Port reservation API routines.
 //
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 CreatePersistentTcpPortReservation(
@@ -1068,6 +1165,7 @@ CreatePersistentTcpPortReservation(
     _Out_ PULONG64 Token
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 CreatePersistentUdpPortReservation(
@@ -1076,6 +1174,7 @@ CreatePersistentUdpPortReservation(
     _Out_ PULONG64 Token
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 DeletePersistentTcpPortReservation(
@@ -1083,6 +1182,7 @@ DeletePersistentTcpPortReservation(
     _In_ USHORT NumberOfPorts
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 DeletePersistentUdpPortReservation(
@@ -1090,6 +1190,7 @@ DeletePersistentUdpPortReservation(
     _In_ USHORT NumberOfPorts
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 LookupPersistentTcpPortReservation(
@@ -1098,6 +1199,7 @@ LookupPersistentTcpPortReservation(
     _Out_ PULONG64 Token
     );
 
+IPHLPAPI_DLL_LINKAGE
 ULONG
 WINAPI
 LookupPersistentUdpPortReservation(
@@ -1202,6 +1304,7 @@ typedef struct NET_ADDRESS_INFO_
 
 } NET_ADDRESS_INFO, *PNET_ADDRESS_INFO;
 
+IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 ParseNetworkString(
@@ -1223,15 +1326,15 @@ ParseNetworkString(
 
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 #ifdef __cplusplus
 }
 #endif
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif //__IPHLPAPI_H__

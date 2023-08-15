@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.services.store.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,9 +279,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreAcquireLicenseResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreAcquireLicenseResult ABI::Windows::Services::Store::IStoreAcquireLicenseResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreAcquireLicenseResult_FWD_DEFINED__
@@ -297,9 +293,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreAppLicense;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreAppLicense ABI::Windows::Services::Store::IStoreAppLicense
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreAppLicense_FWD_DEFINED__
@@ -311,9 +307,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreAppLicense2;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreAppLicense2 ABI::Windows::Services::Store::IStoreAppLicense2
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreAppLicense2_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreAvailability;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreAvailability ABI::Windows::Services::Store::IStoreAvailability
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreAvailability_FWD_DEFINED__
@@ -339,9 +335,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreCanAcquireLicenseResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreCanAcquireLicenseResult ABI::Windows::Services::Store::IStoreCanAcquireLicenseResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreCanAcquireLicenseResult_FWD_DEFINED__
@@ -353,9 +349,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreCollectionData;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreCollectionData ABI::Windows::Services::Store::IStoreCollectionData
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreCollectionData_FWD_DEFINED__
@@ -367,9 +363,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreConsumableResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreConsumableResult ABI::Windows::Services::Store::IStoreConsumableResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreConsumableResult_FWD_DEFINED__
@@ -381,9 +377,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreContext;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreContext ABI::Windows::Services::Store::IStoreContext
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext_FWD_DEFINED__
@@ -395,9 +391,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreContext2;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreContext2 ABI::Windows::Services::Store::IStoreContext2
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext2_FWD_DEFINED__
@@ -409,9 +405,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreContext3;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreContext3 ABI::Windows::Services::Store::IStoreContext3
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext3_FWD_DEFINED__
@@ -423,9 +419,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreContext4;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreContext4 ABI::Windows::Services::Store::IStoreContext4
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext4_FWD_DEFINED__
@@ -437,9 +433,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreContextStatics;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreContextStatics ABI::Windows::Services::Store::IStoreContextStatics
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContextStatics_FWD_DEFINED__
@@ -451,9 +447,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreImage;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreImage ABI::Windows::Services::Store::IStoreImage
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreImage_FWD_DEFINED__
@@ -465,9 +461,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreLicense;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreLicense ABI::Windows::Services::Store::IStoreLicense
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreLicense_FWD_DEFINED__
@@ -479,9 +475,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePackageInstallOptions;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePackageInstallOptions ABI::Windows::Services::Store::IStorePackageInstallOptions
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePackageInstallOptions_FWD_DEFINED__
@@ -493,9 +489,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePackageLicense;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePackageLicense ABI::Windows::Services::Store::IStorePackageLicense
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePackageLicense_FWD_DEFINED__
@@ -507,9 +503,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePackageUpdate;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePackageUpdate ABI::Windows::Services::Store::IStorePackageUpdate
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePackageUpdate_FWD_DEFINED__
@@ -521,9 +517,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePackageUpdateResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult ABI::Windows::Services::Store::IStorePackageUpdateResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult_FWD_DEFINED__
@@ -535,9 +531,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePackageUpdateResult2;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult2 ABI::Windows::Services::Store::IStorePackageUpdateResult2
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult2_FWD_DEFINED__
@@ -549,9 +545,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePrice;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePrice ABI::Windows::Services::Store::IStorePrice
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePrice_FWD_DEFINED__
@@ -563,9 +559,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreProduct;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreProduct ABI::Windows::Services::Store::IStoreProduct
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreProduct_FWD_DEFINED__
@@ -577,9 +573,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreProductOptions;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreProductOptions ABI::Windows::Services::Store::IStoreProductOptions
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreProductOptions_FWD_DEFINED__
@@ -591,9 +587,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreProductPagedQueryResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreProductPagedQueryResult ABI::Windows::Services::Store::IStoreProductPagedQueryResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreProductPagedQueryResult_FWD_DEFINED__
@@ -605,9 +601,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreProductQueryResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreProductQueryResult ABI::Windows::Services::Store::IStoreProductQueryResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreProductQueryResult_FWD_DEFINED__
@@ -619,9 +615,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreProductResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreProductResult ABI::Windows::Services::Store::IStoreProductResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreProductResult_FWD_DEFINED__
@@ -633,9 +629,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePurchaseProperties;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePurchaseProperties ABI::Windows::Services::Store::IStorePurchaseProperties
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePurchaseProperties_FWD_DEFINED__
@@ -647,9 +643,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePurchasePropertiesFactory;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePurchasePropertiesFactory ABI::Windows::Services::Store::IStorePurchasePropertiesFactory
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePurchasePropertiesFactory_FWD_DEFINED__
@@ -661,9 +657,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStorePurchaseResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStorePurchaseResult ABI::Windows::Services::Store::IStorePurchaseResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePurchaseResult_FWD_DEFINED__
@@ -675,9 +671,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreQueueItem;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreQueueItem ABI::Windows::Services::Store::IStoreQueueItem
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreQueueItem_FWD_DEFINED__
@@ -689,9 +685,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreQueueItem2;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreQueueItem2 ABI::Windows::Services::Store::IStoreQueueItem2
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreQueueItem2_FWD_DEFINED__
@@ -703,9 +699,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreQueueItemCompletedEventArgs;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreQueueItemCompletedEventArgs ABI::Windows::Services::Store::IStoreQueueItemCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreQueueItemCompletedEventArgs_FWD_DEFINED__
@@ -717,9 +713,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreQueueItemStatus;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreQueueItemStatus ABI::Windows::Services::Store::IStoreQueueItemStatus
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreQueueItemStatus_FWD_DEFINED__
@@ -731,9 +727,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreRateAndReviewResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreRateAndReviewResult ABI::Windows::Services::Store::IStoreRateAndReviewResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreRateAndReviewResult_FWD_DEFINED__
@@ -745,9 +741,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreRequestHelperStatics;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreRequestHelperStatics ABI::Windows::Services::Store::IStoreRequestHelperStatics
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreRequestHelperStatics_FWD_DEFINED__
@@ -759,9 +755,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreSendRequestResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult ABI::Windows::Services::Store::IStoreSendRequestResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult_FWD_DEFINED__
@@ -773,9 +769,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreSendRequestResult2;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult2 ABI::Windows::Services::Store::IStoreSendRequestResult2
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult2_FWD_DEFINED__
@@ -787,9 +783,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreSku;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreSku ABI::Windows::Services::Store::IStoreSku
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreSku_FWD_DEFINED__
@@ -801,9 +797,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreSubscriptionInfo;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreSubscriptionInfo ABI::Windows::Services::Store::IStoreSubscriptionInfo
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreSubscriptionInfo_FWD_DEFINED__
@@ -815,9 +811,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreUninstallStorePackageResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreUninstallStorePackageResult ABI::Windows::Services::Store::IStoreUninstallStorePackageResult
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreUninstallStorePackageResult_FWD_DEFINED__
@@ -829,9 +825,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 interface IStoreVideo;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CStore_CIStoreVideo ABI::Windows::Services::Store::IStoreVideo
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreVideo_FWD_DEFINED__
@@ -844,9 +840,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreLicense;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -869,7 +865,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Services::Store::StoreLicense*> : IKeyValueP
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Services::Store::StoreLicense*> __FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::Store::IStoreLicense*>
@@ -901,7 +897,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense*>
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::Store::IStoreLicense*>*>
@@ -933,7 +929,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense*>
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::Store::IStoreLicense*>*>
@@ -949,9 +945,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreProduct;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -974,7 +970,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Services::Store::StoreProduct*> : IKeyValueP
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Services::Store::StoreProduct*> __FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::Store::IStoreProduct*>
@@ -1006,7 +1002,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct*>
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::Store::IStoreProduct*>*>
@@ -1038,7 +1034,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct*>
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Services::Store::IStoreProduct*>*>
@@ -1054,9 +1050,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreAvailability;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -1079,7 +1075,7 @@ IIterator<ABI::Windows::Services::Store::StoreAvailability*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Store::StoreAvailability*> __FIIterator_1_Windows__CServices__CStore__CStoreAvailability_t;
 #define __FIIterator_1_Windows__CServices__CStore__CStoreAvailability ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CStore__CStoreAvailability_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CStore__CStoreAvailability ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Store::IStoreAvailability*>
@@ -1111,7 +1107,7 @@ IIterable<ABI::Windows::Services::Store::StoreAvailability*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Store::StoreAvailability*> __FIIterable_1_Windows__CServices__CStore__CStoreAvailability_t;
 #define __FIIterable_1_Windows__CServices__CStore__CStoreAvailability ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CStore__CStoreAvailability_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CStore__CStoreAvailability ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Store::IStoreAvailability*>
@@ -1127,9 +1123,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreImage;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -1152,7 +1148,7 @@ IIterator<ABI::Windows::Services::Store::StoreImage*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Store::StoreImage*> __FIIterator_1_Windows__CServices__CStore__CStoreImage_t;
 #define __FIIterator_1_Windows__CServices__CStore__CStoreImage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CStore__CStoreImage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CStore__CStoreImage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Store::IStoreImage*>
@@ -1184,7 +1180,7 @@ IIterable<ABI::Windows::Services::Store::StoreImage*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Store::StoreImage*> __FIIterable_1_Windows__CServices__CStore__CStoreImage_t;
 #define __FIIterable_1_Windows__CServices__CStore__CStoreImage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CStore__CStoreImage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CStore__CStoreImage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Store::IStoreImage*>
@@ -1200,9 +1196,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StorePackageUpdate;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -1225,7 +1221,7 @@ IIterator<ABI::Windows::Services::Store::StorePackageUpdate*> : IIterator_impl<A
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Store::StorePackageUpdate*> __FIIterator_1_Windows__CServices__CStore__CStorePackageUpdate_t;
 #define __FIIterator_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CStore__CStorePackageUpdate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Store::IStorePackageUpdate*>
@@ -1257,7 +1253,7 @@ IIterable<ABI::Windows::Services::Store::StorePackageUpdate*> : IIterable_impl<A
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Store::StorePackageUpdate*> __FIIterable_1_Windows__CServices__CStore__CStorePackageUpdate_t;
 #define __FIIterable_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CStore__CStorePackageUpdate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Store::IStorePackageUpdate*>
@@ -1274,9 +1270,9 @@ namespace ABI {
             namespace Store {
                 struct StorePackageUpdateStatus;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CServices__CStore__CStorePackageUpdateStatus_USE
@@ -1297,7 +1293,7 @@ IIterator<struct ABI::Windows::Services::Store::StorePackageUpdateStatus> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Services::Store::StorePackageUpdateStatus> __FIIterator_1_Windows__CServices__CStore__CStorePackageUpdateStatus_t;
 #define __FIIterator_1_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CStore__CStorePackageUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Store::StorePackageUpdateStatus>
@@ -1327,7 +1323,7 @@ IIterable<struct ABI::Windows::Services::Store::StorePackageUpdateStatus> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Services::Store::StorePackageUpdateStatus> __FIIterable_1_Windows__CServices__CStore__CStorePackageUpdateStatus_t;
 #define __FIIterable_1_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CStore__CStorePackageUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Store::StorePackageUpdateStatus>
@@ -1342,9 +1338,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreQueueItem;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
@@ -1367,7 +1363,7 @@ IIterator<ABI::Windows::Services::Store::StoreQueueItem*> : IIterator_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Store::StoreQueueItem*> __FIIterator_1_Windows__CServices__CStore__CStoreQueueItem_t;
 #define __FIIterator_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CStore__CStoreQueueItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Store::IStoreQueueItem*>
@@ -1399,7 +1395,7 @@ IIterable<ABI::Windows::Services::Store::StoreQueueItem*> : IIterable_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Store::StoreQueueItem*> __FIIterable_1_Windows__CServices__CStore__CStoreQueueItem_t;
 #define __FIIterable_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CStore__CStoreQueueItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Store::IStoreQueueItem*>
@@ -1415,9 +1411,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreSku;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -1440,7 +1436,7 @@ IIterator<ABI::Windows::Services::Store::StoreSku*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Store::StoreSku*> __FIIterator_1_Windows__CServices__CStore__CStoreSku_t;
 #define __FIIterator_1_Windows__CServices__CStore__CStoreSku ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CStore__CStoreSku_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CStore__CStoreSku ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Store::IStoreSku*>
@@ -1472,7 +1468,7 @@ IIterable<ABI::Windows::Services::Store::StoreSku*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Store::StoreSku*> __FIIterable_1_Windows__CServices__CStore__CStoreSku_t;
 #define __FIIterable_1_Windows__CServices__CStore__CStoreSku ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CStore__CStoreSku_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CStore__CStoreSku ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Store::IStoreSku*>
@@ -1488,9 +1484,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreVideo;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -1513,7 +1509,7 @@ IIterator<ABI::Windows::Services::Store::StoreVideo*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Store::StoreVideo*> __FIIterator_1_Windows__CServices__CStore__CStoreVideo_t;
 #define __FIIterator_1_Windows__CServices__CStore__CStoreVideo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CStore__CStoreVideo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CStore__CStoreVideo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Store::IStoreVideo*>
@@ -1545,7 +1541,7 @@ IIterable<ABI::Windows::Services::Store::StoreVideo*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Store::StoreVideo*> __FIIterable_1_Windows__CServices__CStore__CStoreVideo_t;
 #define __FIIterable_1_Windows__CServices__CStore__CStoreVideo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CStore__CStoreVideo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CStore__CStoreVideo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Store::IStoreVideo*>
@@ -1577,7 +1573,7 @@ IMapView<HSTRING,ABI::Windows::Services::Store::StoreLicense*> : IMapView_impl<H
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Services::Store::StoreLicense*> __FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t;
 #define __FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreLicense ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Services::Store::IStoreLicense*>
@@ -1609,7 +1605,7 @@ IMapView<HSTRING,ABI::Windows::Services::Store::StoreProduct*> : IMapView_impl<H
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Services::Store::StoreProduct*> __FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t;
 #define __FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreProduct_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreProduct ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Services::Store::IStoreProduct*>
@@ -1641,7 +1637,7 @@ IVectorView<ABI::Windows::Services::Store::StoreAvailability*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Store::StoreAvailability*> __FIVectorView_1_Windows__CServices__CStore__CStoreAvailability_t;
 #define __FIVectorView_1_Windows__CServices__CStore__CStoreAvailability ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CStore__CStoreAvailability_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CStore__CStoreAvailability ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStoreAvailability*>
@@ -1673,7 +1669,7 @@ IVectorView<ABI::Windows::Services::Store::StoreImage*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Store::StoreImage*> __FIVectorView_1_Windows__CServices__CStore__CStoreImage_t;
 #define __FIVectorView_1_Windows__CServices__CStore__CStoreImage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CStore__CStoreImage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CStore__CStoreImage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStoreImage*>
@@ -1705,7 +1701,7 @@ IVectorView<ABI::Windows::Services::Store::StorePackageUpdate*> : IVectorView_im
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Store::StorePackageUpdate*> __FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate_t;
 #define __FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStorePackageUpdate*>
@@ -1736,7 +1732,7 @@ IVectorView<struct ABI::Windows::Services::Store::StorePackageUpdateStatus> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Services::Store::StorePackageUpdateStatus> __FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdateStatus_t;
 #define __FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::StorePackageUpdateStatus>
@@ -1767,7 +1763,7 @@ IVectorView<ABI::Windows::Services::Store::StoreQueueItem*> : IVectorView_impl<A
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Store::StoreQueueItem*> __FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem_t;
 #define __FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStoreQueueItem*>
@@ -1799,7 +1795,7 @@ IVectorView<ABI::Windows::Services::Store::StoreSku*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Store::StoreSku*> __FIVectorView_1_Windows__CServices__CStore__CStoreSku_t;
 #define __FIVectorView_1_Windows__CServices__CStore__CStoreSku ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CStore__CStoreSku_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CStore__CStoreSku ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStoreSku*>
@@ -1831,7 +1827,7 @@ IVectorView<ABI::Windows::Services::Store::StoreVideo*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Store::StoreVideo*> __FIVectorView_1_Windows__CServices__CStore__CStoreVideo_t;
 #define __FIVectorView_1_Windows__CServices__CStore__CStoreVideo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CStore__CStoreVideo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CStore__CStoreVideo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStoreVideo*>
@@ -1847,9 +1843,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StorePackageUpdateResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1873,7 +1869,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Services::Store::StorePackageUpdate
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Services::Store::StorePackageUpdateResult*,struct ABI::Windows::Services::Store::StorePackageUpdateStatus> __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Services::Store::IStorePackageUpdateResult*,ABI::Windows::Services::Store::StorePackageUpdateStatus>
@@ -1906,7 +1902,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Services::Store::Store
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Services::Store::StorePackageUpdateResult*,struct ABI::Windows::Services::Store::StorePackageUpdateStatus> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Services::Store::IStorePackageUpdateResult*,ABI::Windows::Services::Store::StorePackageUpdateStatus>
@@ -1939,7 +1935,7 @@ IAsyncOperationWithProgress<ABI::Windows::Services::Store::StorePackageUpdateRes
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Services::Store::StorePackageUpdateResult*,struct ABI::Windows::Services::Store::StorePackageUpdateStatus> __FIAsyncOperationWithProgress_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Services::Store::IStorePackageUpdateResult*,ABI::Windows::Services::Store::StorePackageUpdateStatus>
@@ -1971,7 +1967,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CServices__CStore__CSt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStorePackageUpdate*>*>
@@ -2003,7 +1999,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate*> __FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStorePackageUpdate ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStorePackageUpdate*>*>
@@ -2035,7 +2031,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CServices__CStore__CSt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStoreQueueItem*>*>
@@ -2067,7 +2063,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem*> __FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CServices__CStore__CStoreQueueItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Store::IStoreQueueItem*>*>
@@ -2083,9 +2079,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreAcquireLicenseResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2108,7 +2104,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreAcquireLicen
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreAcquireLicenseResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAcquireLicenseResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAcquireLicenseResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAcquireLicenseResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAcquireLicenseResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreAcquireLicenseResult*>
@@ -2140,7 +2136,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreAcquireLicenseResult*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreAcquireLicenseResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreAcquireLicenseResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreAcquireLicenseResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreAcquireLicenseResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreAcquireLicenseResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreAcquireLicenseResult*>
@@ -2156,9 +2152,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreAppLicense;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2181,7 +2177,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreAppLicense*>
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreAppLicense*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAppLicense_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAppLicense ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAppLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreAppLicense ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreAppLicense*>
@@ -2213,7 +2209,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreAppLicense*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreAppLicense*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreAppLicense_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreAppLicense ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreAppLicense_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreAppLicense ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreAppLicense*>
@@ -2229,9 +2225,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreCanAcquireLicenseResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
@@ -2254,7 +2250,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreCanAcquireLi
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreCanAcquireLicenseResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreCanAcquireLicenseResult*>
@@ -2286,7 +2282,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreCanAcquireLicenseResult*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreCanAcquireLicenseResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreCanAcquireLicenseResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreCanAcquireLicenseResult*>
@@ -2302,9 +2298,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreConsumableResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2327,7 +2323,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreConsumableRe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreConsumableResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreConsumableResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreConsumableResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreConsumableResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreConsumableResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreConsumableResult*>
@@ -2359,7 +2355,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreConsumableResult*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreConsumableResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreConsumableResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreConsumableResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreConsumableResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreConsumableResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreConsumableResult*>
@@ -2375,9 +2371,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreProductPagedQueryResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2400,7 +2396,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreProductPaged
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreProductPagedQueryResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductPagedQueryResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductPagedQueryResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductPagedQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductPagedQueryResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreProductPagedQueryResult*>
@@ -2432,7 +2428,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreProductPagedQueryResult*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreProductPagedQueryResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductPagedQueryResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductPagedQueryResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductPagedQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductPagedQueryResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreProductPagedQueryResult*>
@@ -2448,9 +2444,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreProductQueryResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2473,7 +2469,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreProductQuery
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreProductQueryResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductQueryResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductQueryResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductQueryResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreProductQueryResult*>
@@ -2505,7 +2501,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreProductQueryResult*> : IAsyn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreProductQueryResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreProductQueryResult*>
@@ -2521,9 +2517,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreProductResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2546,7 +2542,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreProductResul
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreProductResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreProductResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreProductResult*>
@@ -2578,7 +2574,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreProductResult*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreProductResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreProductResult*>
@@ -2594,9 +2590,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StorePurchaseResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2619,7 +2615,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StorePurchaseResu
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StorePurchaseResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStorePurchaseResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStorePurchaseResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStorePurchaseResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStorePurchaseResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStorePurchaseResult*>
@@ -2651,7 +2647,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StorePurchaseResult*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StorePurchaseResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStorePurchaseResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStorePurchaseResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStorePurchaseResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStorePurchaseResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStorePurchaseResult*>
@@ -2667,9 +2663,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreRateAndReviewResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
@@ -2692,7 +2688,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreRateAndRevie
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreRateAndReviewResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreRateAndReviewResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreRateAndReviewResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreRateAndReviewResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreRateAndReviewResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreRateAndReviewResult*>
@@ -2724,7 +2720,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreRateAndReviewResult*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreRateAndReviewResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreRateAndReviewResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreRateAndReviewResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreRateAndReviewResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreRateAndReviewResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreRateAndReviewResult*>
@@ -2740,9 +2736,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreSendRequestResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
@@ -2765,7 +2761,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreSendRequestR
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreSendRequestResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreSendRequestResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreSendRequestResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreSendRequestResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreSendRequestResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreSendRequestResult*>
@@ -2797,7 +2793,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreSendRequestResult*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreSendRequestResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreSendRequestResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreSendRequestResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreSendRequestResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreSendRequestResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreSendRequestResult*>
@@ -2813,9 +2809,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreUninstallStorePackageResult;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
@@ -2838,7 +2834,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreUninstallSto
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::StoreUninstallStorePackageResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Store::IStoreUninstallStorePackageResult*>
@@ -2870,7 +2866,7 @@ IAsyncOperation<ABI::Windows::Services::Store::StoreUninstallStorePackageResult*
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Store::StoreUninstallStorePackageResult*> __FIAsyncOperation_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CStore__CStoreUninstallStorePackageResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Store::IStoreUninstallStorePackageResult*>
@@ -2886,9 +2882,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreContext;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2912,7 +2908,7 @@ ITypedEventHandler<ABI::Windows::Services::Store::StoreContext*,IInspectable*> :
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Store::StoreContext*,IInspectable*> __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Store::IStoreContext*,IInspectable*>
@@ -2928,9 +2924,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StorePackageLicense;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2954,7 +2950,7 @@ ITypedEventHandler<ABI::Windows::Services::Store::StorePackageLicense*,IInspecta
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Store::StorePackageLicense*,IInspectable*> __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Store::IStorePackageLicense*,IInspectable*>
@@ -2987,7 +2983,7 @@ ITypedEventHandler<ABI::Windows::Services::Store::StoreQueueItem*,IInspectable*>
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Store::StoreQueueItem*,IInspectable*> __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Store::IStoreQueueItem*,IInspectable*>
@@ -3004,9 +3000,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreQueueItemCompletedEventArgs;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
@@ -3030,7 +3026,7 @@ ITypedEventHandler<ABI::Windows::Services::Store::StoreQueueItem*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Services::Store::StoreQueueItem*,ABI::Windows::Services::Store::StoreQueueItemCompletedEventArgs*> __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Services::Store::IStoreQueueItem*,ABI::Windows::Services::Store::IStoreQueueItemCompletedEventArgs*>
@@ -3061,7 +3057,7 @@ IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
 #define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
@@ -3090,7 +3086,7 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
@@ -3119,7 +3115,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -3148,7 +3144,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -3177,7 +3173,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -3206,7 +3202,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -3235,7 +3231,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -3264,7 +3260,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -3280,8 +3276,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class Package;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
@@ -3289,8 +3285,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage ABI::Windows::ApplicationModel::IPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
@@ -3304,8 +3300,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3313,8 +3309,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3326,8 +3322,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -3339,15 +3335,15 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3355,8 +3351,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3368,8 +3364,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3377,8 +3373,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3393,9 +3389,9 @@ namespace ABI {
                 
                 typedef enum HttpStatusCode : int HttpStatusCode;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3408,9 +3404,9 @@ namespace ABI {
                 
                 typedef enum StoreCanLicenseStatus : int StoreCanLicenseStatus;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3419,9 +3415,9 @@ namespace ABI {
                 
                 typedef enum StoreConsumableStatus : int StoreConsumableStatus;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3430,9 +3426,9 @@ namespace ABI {
                 
                 typedef enum StoreDurationUnit : int StoreDurationUnit;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3441,9 +3437,9 @@ namespace ABI {
                 
                 typedef enum StorePackageUpdateState : int StorePackageUpdateState;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3452,9 +3448,9 @@ namespace ABI {
                 
                 typedef enum StorePurchaseStatus : int StorePurchaseStatus;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3463,9 +3459,9 @@ namespace ABI {
                 
                 typedef enum StoreQueueItemExtendedState : int StoreQueueItemExtendedState;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3474,9 +3470,9 @@ namespace ABI {
                 
                 typedef enum StoreQueueItemKind : int StoreQueueItemKind;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3485,9 +3481,9 @@ namespace ABI {
                 
                 typedef enum StoreQueueItemState : int StoreQueueItemState;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3496,9 +3492,9 @@ namespace ABI {
                 
                 typedef enum StoreRateAndReviewStatus : int StoreRateAndReviewStatus;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3507,9 +3503,9 @@ namespace ABI {
                 
                 typedef enum StoreUninstallStorePackageStatus : int StoreUninstallStorePackageStatus;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3518,9 +3514,9 @@ namespace ABI {
                 
                 typedef struct StorePackageUpdateStatus StorePackageUpdateStatus;
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3571,9 +3567,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreCollectionData;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3585,9 +3581,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StorePackageInstallOptions;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3598,9 +3594,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StorePrice;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3609,9 +3605,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreProductOptions;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3622,9 +3618,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StorePurchaseProperties;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3635,9 +3631,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreQueueItemStatus;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3649,9 +3645,9 @@ namespace ABI {
         namespace Services {
             namespace Store {
                 class StoreSubscriptionInfo;
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3689,9 +3685,9 @@ namespace ABI {
                     StoreCanLicenseStatus_ServerError = 4,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
 
 
@@ -3718,9 +3714,9 @@ namespace ABI {
                     StoreConsumableStatus_ServerError = 3,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
 
 
@@ -3749,9 +3745,9 @@ namespace ABI {
                     StoreDurationUnit_Year = 5,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
 
 
@@ -3783,9 +3779,9 @@ namespace ABI {
                     StorePackageUpdateState_ErrorWiFiRequired = 8,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
 
 
@@ -3813,9 +3809,9 @@ namespace ABI {
                     StorePurchaseStatus_ServerError = 4,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
 
 
@@ -3853,9 +3849,9 @@ namespace ABI {
                     StoreQueueItemExtendedState_PausedReadyToInstall = 14,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
 
 
@@ -3881,9 +3877,9 @@ namespace ABI {
                     StoreQueueItemKind_Repair = 2,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
 
 
@@ -3911,9 +3907,9 @@ namespace ABI {
                     StoreQueueItemState_Paused = 4,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
 
 
@@ -3940,9 +3936,9 @@ namespace ABI {
                     StoreRateAndReviewStatus_Error = 3,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
 
 
@@ -3970,9 +3966,9 @@ namespace ABI {
                     StoreUninstallStorePackageStatus_Error = 4,
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x30000
 
 
@@ -4001,9 +3997,9 @@ namespace ABI {
                     ABI::Windows::Services::Store::StorePackageUpdateState PackageUpdateState;
                 };
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
 
 
@@ -4042,9 +4038,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreAcquireLicenseResult=_uuidof(IStoreAcquireLicenseResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreAcquireLicenseResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreAcquireLicenseResult_INTERFACE_DEFINED__) */
@@ -4079,10 +4075,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTrial(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpirationDate(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -4097,7 +4093,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTrialOwnedByThisUser(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TrialUniqueId(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -4107,9 +4103,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreAppLicense=_uuidof(IStoreAppLicense);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreAppLicense;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreAppLicense_INTERFACE_DEFINED__) */
@@ -4141,16 +4137,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDiscLicense(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IStoreAppLicense2=_uuidof(IStoreAppLicense2);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreAppLicense2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreAppLicense2_INTERFACE_DEFINED__) */
@@ -4205,9 +4201,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreAvailability=_uuidof(IStoreAvailability);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreAvailability;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreAvailability_INTERFACE_DEFINED__) */
@@ -4252,9 +4248,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreCanAcquireLicenseResult=_uuidof(IStoreCanAcquireLicenseResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreCanAcquireLicenseResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreCanAcquireLicenseResult_INTERFACE_DEFINED__) */
@@ -4286,7 +4282,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTrial(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CampaignId(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -4314,9 +4310,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreCollectionData=_uuidof(IStoreCollectionData);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreCollectionData;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreCollectionData_INTERFACE_DEFINED__) */
@@ -4364,9 +4360,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreConsumableResult=_uuidof(IStoreConsumableResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreConsumableResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreConsumableResult_INTERFACE_DEFINED__) */
@@ -4489,9 +4485,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreContext=_uuidof(IStoreContext);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext_INTERFACE_DEFINED__) */
@@ -4532,9 +4528,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreContext2=_uuidof(IStoreContext2);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext2_INTERFACE_DEFINED__) */
@@ -4566,7 +4562,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanSilentlyDownloadStorePackageUpdates(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySilentDownloadStorePackageUpdatesAsync(
                         /* [in] */__RPC__in_opt __FIIterable_1_Windows__CServices__CStore__CStorePackageUpdate * storePackageUpdates,
@@ -4627,9 +4623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreContext3=_uuidof(IStoreContext3);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext3;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext3_INTERFACE_DEFINED__) */
@@ -4672,9 +4668,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreContext4=_uuidof(IStoreContext4);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext4;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext4_INTERFACE_DEFINED__) */
@@ -4717,9 +4713,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreContextStatics=_uuidof(IStoreContextStatics);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContextStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContextStatics_INTERFACE_DEFINED__) */
@@ -4770,9 +4766,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreImage=_uuidof(IStoreImage);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreImage;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreImage_INTERFACE_DEFINED__) */
@@ -4807,7 +4803,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsActive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpirationDate(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -4823,9 +4819,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreLicense=_uuidof(IStoreLicense);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreLicense;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreLicense_INTERFACE_DEFINED__) */
@@ -4857,19 +4853,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowForcedAppRestart(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AllowForcedAppRestart(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IStorePackageInstallOptions=_uuidof(IStorePackageInstallOptions);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePackageInstallOptions;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePackageInstallOptions_INTERFACE_DEFINED__) */
@@ -4915,7 +4911,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::IPackage * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsValid(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ReleaseLicense(void) = 0;
                     
@@ -4923,9 +4919,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorePackageLicense=_uuidof(IStorePackageLicense);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePackageLicense;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePackageLicense_INTERFACE_DEFINED__) */
@@ -4960,16 +4956,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::IPackage * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Mandatory(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IStorePackageUpdate=_uuidof(IStorePackageUpdate);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePackageUpdate;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePackageUpdate_INTERFACE_DEFINED__) */
@@ -5011,9 +5007,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorePackageUpdateResult=_uuidof(IStorePackageUpdateResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult_INTERFACE_DEFINED__) */
@@ -5052,9 +5048,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorePackageUpdateResult2=_uuidof(IStorePackageUpdateResult2);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult2_INTERFACE_DEFINED__) */
@@ -5092,7 +5088,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOnSale(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SaleEndDate(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
@@ -5108,9 +5104,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorePrice=_uuidof(IStorePrice);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePrice;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePrice_INTERFACE_DEFINED__) */
@@ -5157,7 +5153,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasDigitalDownload(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Keywords(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
@@ -5172,7 +5168,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CServices__CStore__CStoreSku * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInUserCollection(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Price(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Services::Store::IStorePrice * * value
@@ -5201,9 +5197,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreProduct=_uuidof(IStoreProduct);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreProduct;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreProduct_INTERFACE_DEFINED__) */
@@ -5242,9 +5238,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreProductOptions=_uuidof(IStoreProductOptions);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreProductOptions;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreProductOptions_INTERFACE_DEFINED__) */
@@ -5279,7 +5275,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIMapView_2_HSTRING_Windows__CServices__CStore__CStoreProduct * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasMoreResults(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
                         /* [retval, out] */__RPC__out HRESULT * value
@@ -5292,9 +5288,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreProductPagedQueryResult=_uuidof(IStoreProductPagedQueryResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreProductPagedQueryResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreProductPagedQueryResult_INTERFACE_DEFINED__) */
@@ -5336,9 +5332,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreProductQueryResult=_uuidof(IStoreProductQueryResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreProductQueryResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreProductQueryResult_INTERFACE_DEFINED__) */
@@ -5380,9 +5376,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreProductResult=_uuidof(IStoreProductResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreProductResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreProductResult_INTERFACE_DEFINED__) */
@@ -5430,9 +5426,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorePurchaseProperties=_uuidof(IStorePurchaseProperties);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePurchaseProperties;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePurchaseProperties_INTERFACE_DEFINED__) */
@@ -5472,9 +5468,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorePurchasePropertiesFactory=_uuidof(IStorePurchasePropertiesFactory);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePurchasePropertiesFactory;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePurchasePropertiesFactory_INTERFACE_DEFINED__) */
@@ -5516,9 +5512,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorePurchaseResult=_uuidof(IStorePurchaseResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePurchaseResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePurchaseResult_INTERFACE_DEFINED__) */
@@ -5580,9 +5576,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreQueueItem=_uuidof(IStoreQueueItem);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreQueueItem;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreQueueItem_INTERFACE_DEFINED__) */
@@ -5627,9 +5623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreQueueItem2=_uuidof(IStoreQueueItem2);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreQueueItem2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreQueueItem2_INTERFACE_DEFINED__) */
@@ -5668,9 +5664,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreQueueItemCompletedEventArgs=_uuidof(IStoreQueueItemCompletedEventArgs);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreQueueItemCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreQueueItemCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -5718,9 +5714,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreQueueItemStatus=_uuidof(IStoreQueueItemStatus);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreQueueItemStatus;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreQueueItemStatus_INTERFACE_DEFINED__) */
@@ -5758,7 +5754,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WasUpdated(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Status(
                         /* [retval, out] */__RPC__out ABI::Windows::Services::Store::StoreRateAndReviewStatus * value
@@ -5768,9 +5764,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreRateAndReviewResult=_uuidof(IStoreRateAndReviewResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreRateAndReviewResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreRateAndReviewResult_INTERFACE_DEFINED__) */
@@ -5812,9 +5808,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreRequestHelperStatics=_uuidof(IStoreRequestHelperStatics);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreRequestHelperStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreRequestHelperStatics_INTERFACE_DEFINED__) */
@@ -5856,9 +5852,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreSendRequestResult=_uuidof(IStoreSendRequestResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult_INTERFACE_DEFINED__) */
@@ -5897,9 +5893,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreSendRequestResult2=_uuidof(IStoreSendRequestResult2);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreSendRequestResult2_INTERFACE_DEFINED__) */
@@ -5943,7 +5939,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTrial(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CustomDeveloperData(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -5964,7 +5960,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInUserCollection(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BundledSkus(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
@@ -5983,7 +5979,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CServices__CStore__CStorePurchaseResult * * operation
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSubscription(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SubscriptionInfo(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Services::Store::IStoreSubscriptionInfo * * value
@@ -5993,9 +5989,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreSku=_uuidof(IStoreSku);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreSku;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreSku_INTERFACE_DEFINED__) */
@@ -6033,7 +6029,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Services::Store::StoreDurationUnit * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasTrialPeriod(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TrialPeriod(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -6046,9 +6042,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreSubscriptionInfo=_uuidof(IStoreSubscriptionInfo);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreSubscriptionInfo;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreSubscriptionInfo_INTERFACE_DEFINED__) */
@@ -6090,9 +6086,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreUninstallStorePackageResult=_uuidof(IStoreUninstallStorePackageResult);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreUninstallStorePackageResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreUninstallStorePackageResult_INTERFACE_DEFINED__) */
@@ -6146,9 +6142,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStoreVideo=_uuidof(IStoreVideo);
                 
-            } /* Windows */
+            } /* Store */
         } /* Services */
-    } /* Store */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreVideo;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreVideo_INTERFACE_DEFINED__) */
@@ -9706,7 +9702,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatus *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CServices_CStore_CStorePackageUpdateStatus progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CServices__CStore__CStorePackageUpdateResult_Windows__CServices__CStore__CStorePackageUpdateStatusVtbl;
 
@@ -11374,7 +11370,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreContext * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreContext * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CStore__CStoreContext_IInspectableVtbl;
 
@@ -11425,7 +11421,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackage
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStorePackageLicense * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStorePackageLicense * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CStore__CStorePackageLicense_IInspectableVtbl;
 
@@ -11476,7 +11472,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueIt
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreQueueItem * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreQueueItem * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_IInspectableVtbl;
 
@@ -11528,7 +11524,7 @@ typedef struct __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueIt
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreQueueItem * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreQueueItemCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreQueueItem * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CServices_CStore_CIStoreQueueItemCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CServices__CStore__CStoreQueueItem_Windows__CServices__CStore__CStoreQueueItemCompletedEventArgsVtbl;
 

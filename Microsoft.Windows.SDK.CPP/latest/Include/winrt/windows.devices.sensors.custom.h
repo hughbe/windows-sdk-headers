@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.sensors.custom.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -141,10 +141,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensor;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor ABI::Windows::Devices::Sensors::Custom::ICustomSensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_FWD_DEFINED__
@@ -157,10 +157,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensor2;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 ABI::Windows::Devices::Sensors::Custom::ICustomSensor2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_FWD_DEFINED__
@@ -173,10 +173,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorReading;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_FWD_DEFINED__
@@ -189,10 +189,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorReading2;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_FWD_DEFINED__
@@ -205,10 +205,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorReadingChangedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_FWD_DEFINED__
@@ -221,10 +221,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics ABI::Windows::Devices::Sensors::Custom::ICustomSensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_FWD_DEFINED__
@@ -238,10 +238,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     class CustomSensor;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -264,7 +264,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::CustomSe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>
@@ -296,7 +296,7 @@ IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>
@@ -314,10 +314,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     class CustomSensorReadingChangedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -341,7 +341,7 @@ ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*,ABI::Wi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*,ABI::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*,ABI::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs*>
@@ -373,7 +373,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -403,7 +403,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -433,7 +433,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -463,7 +463,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -478,8 +478,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -500,7 +500,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -518,8 +518,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -527,8 +527,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -546,10 +546,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     class CustomSensorReading;
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -615,10 +615,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomSensor=_uuidof(ICustomSensor);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_INTERFACE_DEFINED__) */
@@ -664,10 +664,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomSensor2=_uuidof(ICustomSensor2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_INTERFACE_DEFINED__) */
@@ -710,10 +710,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomSensorReading=_uuidof(ICustomSensorReading);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_INTERFACE_DEFINED__) */
@@ -753,10 +753,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomSensorReading2=_uuidof(ICustomSensorReading2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_INTERFACE_DEFINED__) */
@@ -796,10 +796,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomSensorReadingChangedEventArgs=_uuidof(ICustomSensorReadingChangedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
@@ -844,10 +844,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICustomSensorStatics=_uuidof(ICustomSensorStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Sensors */
-    } /* Custom */} /* ABI */
+                } /* Custom */
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_INTERFACE_DEFINED__) */
@@ -1112,7 +1112,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCu
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgsVtbl;
 

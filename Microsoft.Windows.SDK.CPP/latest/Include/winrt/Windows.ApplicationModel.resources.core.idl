@@ -12,6 +12,7 @@ import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.Storage.idl";
 import "Windows.Storage.Streams.idl";
+import "Windows.UI.idl";
 
 // Forward Declare
 namespace Windows
@@ -44,12 +45,21 @@ namespace Windows
 }
 namespace Windows
 {
+    namespace UI
+    {
+        runtimeclass UIContext;
+    }
+}
+namespace Windows
+{
     namespace ApplicationModel
     {
         namespace Resources
         {
             namespace Core
             {
+                typedef enum ResourceCandidateKind ResourceCandidateKind;
+
                 typedef enum ResourceQualifierPersistence ResourceQualifierPersistence;
 
                 typedef struct ResourceLayoutInfo ResourceLayoutInfo;
@@ -60,6 +70,8 @@ namespace Windows
 
                 interface IResourceCandidate2;
 
+                interface IResourceCandidate3;
+
                 interface IResourceContext;
 
                 interface IResourceContextStatics;
@@ -67,6 +79,8 @@ namespace Windows
                 interface IResourceContextStatics2;
 
                 interface IResourceContextStatics3;
+
+                interface IResourceContextStatics4;
 
                 interface IResourceManager;
 
@@ -175,6 +189,14 @@ namespace Windows
         {
             namespace Core
             {
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                enum ResourceCandidateKind
+                {
+                    String       = 0,
+                    File         = 1,
+                    EmbeddedData = 2
+                };
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 enum ResourceQualifierPersistence
                 {
@@ -227,6 +249,14 @@ namespace Windows
                     HRESULT GetValueAsStreamAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream*>** operation);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.ApplicationModel.Resources.Core.ResourceCandidate)]
+                [uuid(08AE97F8-517A-4674-958C-4A3C7CD2CC6B)]
+                interface IResourceCandidate3 : IInspectable
+                {
+                    [propget] HRESULT Kind([out] [retval] Windows.ApplicationModel.Resources.Core.ResourceCandidateKind* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.ApplicationModel.Resources.Core.ResourceContext)]
                 [uuid(2FA22F4B-707E-4B27-AD0D-D0D8CD468FD2)]
@@ -267,6 +297,14 @@ namespace Windows
                 interface IResourceContextStatics3 : IInspectable
                 {
                     [overload("SetGlobalQualifierValue")] HRESULT SetGlobalQualifierValueWithPersistence([in] HSTRING key, [in] HSTRING value, [in] Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence persistence);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.ApplicationModel.Resources.Core.ResourceContext)]
+                [uuid(22EB9CCD-FB31-4BFA-B86B-DF9D9D7BDC39)]
+                interface IResourceContextStatics4 : IInspectable
+                {
+                    HRESULT GetForUIContext([in] Windows.UI.UIContext* context, [out] [retval] Windows.ApplicationModel.Resources.Core.ResourceContext** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -338,6 +376,7 @@ namespace Windows
                 {
                     [default] interface Windows.ApplicationModel.Resources.Core.IResourceCandidate;
                     interface Windows.ApplicationModel.Resources.Core.IResourceCandidate2;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.ApplicationModel.Resources.Core.IResourceCandidate3;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -354,6 +393,7 @@ namespace Windows
                 [static(Windows.ApplicationModel.Resources.Core.IResourceContextStatics, Windows.Foundation.UniversalApiContract, 1.0)]
                 [static(Windows.ApplicationModel.Resources.Core.IResourceContextStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
                 [static(Windows.ApplicationModel.Resources.Core.IResourceContextStatics3, Windows.Foundation.UniversalApiContract, 1.0)]
+                [static(Windows.ApplicationModel.Resources.Core.IResourceContextStatics4, Windows.Foundation.UniversalApiContract, 8.0)]
                 [threading(both)]
                 runtimeclass ResourceContext
                 {

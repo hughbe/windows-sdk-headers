@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.useractivities.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -269,6 +265,7 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.Security.Credentials.h"
+#include "Windows.System.h"
 #include "Windows.UI.h"
 #include "Windows.UI.Shell.h"
 // Importing Collections header
@@ -283,9 +280,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivity;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity ABI::Windows::ApplicationModel::UserActivities::IUserActivity
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity_FWD_DEFINED__
@@ -297,9 +294,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivity2;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity2 ABI::Windows::ApplicationModel::UserActivities::IUserActivity2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity2_FWD_DEFINED__
@@ -311,9 +308,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivity3;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity3 ABI::Windows::ApplicationModel::UserActivities::IUserActivity3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity3_FWD_DEFINED__
@@ -325,9 +322,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityAttribution;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttribution ABI::Windows::ApplicationModel::UserActivities::IUserActivityAttribution
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttribution_FWD_DEFINED__
@@ -339,9 +336,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityAttributionFactory;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttributionFactory ABI::Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttributionFactory_FWD_DEFINED__
@@ -353,9 +350,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityChannel;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel ABI::Windows::ApplicationModel::UserActivities::IUserActivityChannel
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel_FWD_DEFINED__
@@ -367,9 +364,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityChannel2;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel2 ABI::Windows::ApplicationModel::UserActivities::IUserActivityChannel2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel2_FWD_DEFINED__
@@ -381,9 +378,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityChannelStatics;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics ABI::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics_FWD_DEFINED__
@@ -395,12 +392,26 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityChannelStatics2;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2 ABI::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace UserActivities {
+                interface IUserActivityChannelStatics3;
+            } /* UserActivities */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 ABI::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo_FWD_DEFINED__
@@ -409,9 +420,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityContentInfo;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo ABI::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo_FWD_DEFINED__
@@ -423,9 +434,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityContentInfoStatics;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfoStatics ABI::Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfoStatics_FWD_DEFINED__
@@ -437,9 +448,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityFactory;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityFactory ABI::Windows::ApplicationModel::UserActivities::IUserActivityFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityFactory_FWD_DEFINED__
@@ -451,9 +462,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityRequest;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequest ABI::Windows::ApplicationModel::UserActivities::IUserActivityRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequest_FWD_DEFINED__
@@ -465,9 +476,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityRequestManager;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManager ABI::Windows::ApplicationModel::UserActivities::IUserActivityRequestManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManager_FWD_DEFINED__
@@ -479,9 +490,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityRequestManagerStatics;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManagerStatics ABI::Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManagerStatics_FWD_DEFINED__
@@ -493,9 +504,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityRequestedEventArgs;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestedEventArgs ABI::Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestedEventArgs_FWD_DEFINED__
@@ -507,9 +518,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivitySession;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySession ABI::Windows::ApplicationModel::UserActivities::IUserActivitySession
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySession_FWD_DEFINED__
@@ -521,9 +532,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivitySessionHistoryItem;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySessionHistoryItem ABI::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySessionHistoryItem_FWD_DEFINED__
@@ -535,9 +546,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityStatics;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityStatics ABI::Windows::ApplicationModel::UserActivities::IUserActivityStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityStatics_FWD_DEFINED__
@@ -549,9 +560,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityVisualElements;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements ABI::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements_FWD_DEFINED__
@@ -563,9 +574,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 interface IUserActivityVisualElements2;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements2 ABI::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements2_FWD_DEFINED__
@@ -578,9 +589,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivity;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -603,7 +614,7 @@ IIterator<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> __FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserActivities::IUserActivity*>
@@ -635,7 +646,7 @@ IIterable<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> __FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserActivities::IUserActivity*>
@@ -651,9 +662,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivitySessionHistoryItem;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -676,7 +687,7 @@ IIterator<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionHis
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem*> __FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t;
 #define __FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem*>
@@ -708,7 +719,7 @@ IIterable<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionHis
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem*> __FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t;
 #define __FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem*>
@@ -740,7 +751,7 @@ IVectorView<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> __FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserActivities::IUserActivity*>
@@ -772,7 +783,7 @@ IVectorView<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionH
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem*> __FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem*>
@@ -804,7 +815,7 @@ IVector<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> : IVector
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> __FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t;
 #define __FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::UserActivities::IUserActivity*>
@@ -836,7 +847,7 @@ IVector<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionHisto
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem*> __FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t;
 #define __FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem*>
@@ -868,7 +879,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserActivities::
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::UserActivities::IUserActivity*>
@@ -900,7 +911,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::UserActivities::UserActivity*> __FIAsyncOperation_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CUserActivities__CUserActivity_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CUserActivities__CUserActivity ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::UserActivities::IUserActivity*>
@@ -932,7 +943,7 @@ IAsyncOperationCompletedHandler<__FIVector_1_Windows__CApplicationModel__CUserAc
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem*>*>
@@ -964,7 +975,7 @@ IAsyncOperation<__FIVector_1_Windows__CApplicationModel__CUserActivities__CUserA
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem*> __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t;
 #define __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVector_1_Windows__CApplicationModel__CUserActivities__CUserActivitySessionHistoryItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem*>*>
@@ -980,9 +991,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivityRequestManager;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -990,9 +1001,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivityRequestedEventArgs;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1016,7 +1027,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::UserActivities::UserActivityR
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::UserActivities::UserActivityRequestManager*,ABI::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::UserActivities::IUserActivityRequestManager*,ABI::Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs*>
@@ -1033,8 +1044,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1055,7 +1066,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1073,15 +1084,15 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1089,8 +1100,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1102,8 +1113,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1115,8 +1126,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1127,8 +1138,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1136,8 +1147,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1150,9 +1161,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -1161,9 +1172,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount ABI::Windows::Security::Credentials::IWebAccount
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -1174,12 +1185,34 @@ namespace ABI {
 
 namespace ABI {
     namespace Windows {
+        namespace System {
+            class User;
+        } /* System */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            interface IUser;
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+
+
+
+
+namespace ABI {
+    namespace Windows {
         namespace UI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1190,9 +1223,9 @@ namespace ABI {
         namespace UI {
             namespace Shell {
                 interface IAdaptiveCard;
-            } /* Windows */
+            } /* Shell */
         } /* UI */
-    } /* Shell */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CShell_CIAdaptiveCard ABI::Windows::UI::Shell::IAdaptiveCard
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CIAdaptiveCard_FWD_DEFINED__
@@ -1208,9 +1241,10 @@ namespace ABI {
                 
                 typedef enum UserActivityState : int UserActivityState;
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -1239,9 +1273,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivityAttribution;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1249,9 +1283,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivityChannel;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1259,9 +1293,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivityContentInfo;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1269,9 +1303,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivityRequest;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1281,9 +1315,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivitySession;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1292,9 +1326,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace UserActivities {
                 class UserActivityVisualElements;
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1326,9 +1360,9 @@ namespace ABI {
                     UserActivityState_Published = 1,
                 };
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1406,9 +1440,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivity=_uuidof(IUserActivity);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity_INTERFACE_DEFINED__) */
@@ -1447,9 +1481,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivity2=_uuidof(IUserActivity2);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity2_INTERFACE_DEFINED__) */
@@ -1481,19 +1515,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRoamable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsRoamable(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IUserActivity3=_uuidof(IUserActivity3);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivity3_INTERFACE_DEFINED__) */
@@ -1537,19 +1571,19 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AddImageQuery(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AddImageQuery(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityAttribution=_uuidof(IUserActivityAttribution);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttribution;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttribution_INTERFACE_DEFINED__) */
@@ -1589,9 +1623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityAttributionFactory=_uuidof(IUserActivityAttributionFactory);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttributionFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityAttributionFactory_INTERFACE_DEFINED__) */
@@ -1638,9 +1672,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityChannel=_uuidof(IUserActivityChannel);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel_INTERFACE_DEFINED__) */
@@ -1685,9 +1719,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityChannel2=_uuidof(IUserActivityChannel2);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel2_INTERFACE_DEFINED__) */
@@ -1726,9 +1760,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityChannelStatics=_uuidof(IUserActivityChannelStatics);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics_INTERFACE_DEFINED__) */
@@ -1769,13 +1803,55 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityChannelStatics2=_uuidof(IUserActivityChannelStatics2);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.UserActivities.UserActivityChannel
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3[] = L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace UserActivities {
+                /* [object, uuid("53BC4DDB-BBDF-5984-802A-5305874E205C"), exclusiveto, contract] */
+                MIDL_INTERFACE("53BC4DDB-BBDF-5984-802A-5305874E205C")
+                IUserActivityChannelStatics3 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::UserActivities::IUserActivityChannel * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IUserActivityChannelStatics3=_uuidof(IUserActivityChannelStatics3);
+                
+            } /* UserActivities */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1807,9 +1883,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityContentInfo=_uuidof(IUserActivityContentInfo);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo_INTERFACE_DEFINED__) */
@@ -1849,9 +1925,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityContentInfoStatics=_uuidof(IUserActivityContentInfoStatics);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfoStatics_INTERFACE_DEFINED__) */
@@ -1891,9 +1967,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityFactory=_uuidof(IUserActivityFactory);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityFactory_INTERFACE_DEFINED__) */
@@ -1932,9 +2008,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityRequest=_uuidof(IUserActivityRequest);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequest_INTERFACE_DEFINED__) */
@@ -1977,9 +2053,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityRequestManager=_uuidof(IUserActivityRequestManager);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManager_INTERFACE_DEFINED__) */
@@ -2018,9 +2094,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityRequestManagerStatics=_uuidof(IUserActivityRequestManagerStatics);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManagerStatics_INTERFACE_DEFINED__) */
@@ -2062,9 +2138,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityRequestedEventArgs=_uuidof(IUserActivityRequestedEventArgs);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -2103,9 +2179,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivitySession=_uuidof(IUserActivitySession);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySession;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySession_INTERFACE_DEFINED__) */
@@ -2150,9 +2226,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivitySessionHistoryItem=_uuidof(IUserActivitySessionHistoryItem);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySessionHistoryItem;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivitySessionHistoryItem_INTERFACE_DEFINED__) */
@@ -2200,9 +2276,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityStatics=_uuidof(IUserActivityStatics);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityStatics_INTERFACE_DEFINED__) */
@@ -2268,9 +2344,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityVisualElements=_uuidof(IUserActivityVisualElements);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements_INTERFACE_DEFINED__) */
@@ -2312,9 +2388,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUserActivityVisualElements2=_uuidof(IUserActivityVisualElements2);
                 
-            } /* Windows */
+            } /* UserActivities */
         } /* ApplicationModel */
-    } /* UserActivities */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityVisualElements2_INTERFACE_DEFINED__) */
@@ -2389,6 +2465,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -2631,6 +2708,12 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActiv
 typedef interface __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2 __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2;
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityContentInfo_FWD_DEFINED__
@@ -3791,7 +3874,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CUserActiviti
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CUserActivities__CUserActivityRequestManager_Windows__CApplicationModel__CUserActivities__CUserActivityRequestedEventArgsVtbl;
 
@@ -3925,6 +4008,15 @@ typedef interface __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount __x_ABI_C
 
 
 
+#ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CIUser __x_ABI_CWindows_CSystem_CIUser;
+
+#endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
+
+
+
+
 
 typedef struct __x_ABI_CWindows_CUI_CColor __x_ABI_CWindows_CUI_CColor;
 
@@ -3942,6 +4034,7 @@ typedef interface __x_ABI_CWindows_CUI_CShell_CIAdaptiveCard __x_ABI_CWindows_CU
 
 
 typedef enum __x_ABI_CWindows_CApplicationModel_CUserActivities_CUserActivityState __x_ABI_CWindows_CApplicationModel_CUserActivities_CUserActivityState;
+
 
 
 
@@ -5010,6 +5103,100 @@ interface __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChann
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.UserActivities.UserActivityChannel
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3[] = L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3";
+/* [object, uuid("53BC4DDB-BBDF-5984-802A-5305874E205C"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetForUser )(
+        __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannel * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3Vtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_GetForUser(This,user,result) \
+    ( (This)->lpVtbl->GetForUser(This,user,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CUserActivities_CIUserActivityChannelStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6311,6 +6498,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *

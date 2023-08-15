@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.management.workplace.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_MANAGEMENT_WORKPLACE_WORKPLACESETTINGSCONTRACT_VERSION)
@@ -142,9 +142,9 @@ namespace ABI {
         namespace Management {
             namespace Workplace {
                 interface IMdmAllowPolicyStatics;
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CWorkplace_CIMdmAllowPolicyStatics ABI::Windows::Management::Workplace::IMdmAllowPolicyStatics
 
 #endif // ____x_ABI_CWindows_CManagement_CWorkplace_CIMdmAllowPolicyStatics_FWD_DEFINED__
@@ -156,9 +156,9 @@ namespace ABI {
         namespace Management {
             namespace Workplace {
                 interface IMdmPolicyStatics2;
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CWorkplace_CIMdmPolicyStatics2 ABI::Windows::Management::Workplace::IMdmPolicyStatics2
 
 #endif // ____x_ABI_CWindows_CManagement_CWorkplace_CIMdmPolicyStatics2_FWD_DEFINED__
@@ -170,9 +170,9 @@ namespace ABI {
         namespace Management {
             namespace Workplace {
                 interface IWorkplaceSettingsStatics;
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CWorkplace_CIWorkplaceSettingsStatics ABI::Windows::Management::Workplace::IWorkplaceSettingsStatics
 
 #endif // ____x_ABI_CWindows_CManagement_CWorkplace_CIWorkplaceSettingsStatics_FWD_DEFINED__
@@ -189,9 +189,9 @@ namespace ABI {
                 
                 typedef enum MessagingSyncPolicy : int MessagingSyncPolicy;
                 
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -225,9 +225,9 @@ namespace ABI {
                     MessagingSyncPolicy_Required = 2,
                 };
                 
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -256,25 +256,25 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsBrowserAllowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsCameraAllowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsMicrosoftAccountAllowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsStoreAllowed(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMdmAllowPolicyStatics=_uuidof(IMdmAllowPolicyStatics);
                 
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CWorkplace_CIMdmAllowPolicyStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CWorkplace_CIMdmAllowPolicyStatics_INTERFACE_DEFINED__) */
@@ -313,9 +313,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMdmPolicyStatics2=_uuidof(IMdmPolicyStatics2);
                 
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CWorkplace_CIMdmPolicyStatics2;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CWorkplace_CIMdmPolicyStatics2_INTERFACE_DEFINED__) */
@@ -347,16 +347,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMicrosoftAccountOptional(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IWorkplaceSettingsStatics=_uuidof(IWorkplaceSettingsStatics);
                 
-            } /* Windows */
+            } /* Workplace */
         } /* Management */
-    } /* Workplace */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CWorkplace_CIWorkplaceSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CWorkplace_CIWorkplaceSettingsStatics_INTERFACE_DEFINED__) */

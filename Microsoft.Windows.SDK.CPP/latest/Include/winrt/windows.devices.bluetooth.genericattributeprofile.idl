@@ -182,6 +182,8 @@ namespace Windows
 
                 interface IGattServiceProviderAdvertisingParameters;
 
+                interface IGattServiceProviderAdvertisingParameters2;
+
                 interface IGattServiceProviderResult;
 
                 interface IGattServiceProviderStatics;
@@ -490,10 +492,12 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
                 enum GattServiceProviderAdvertisementStatus
                 {
-                    Created = 0,
-                    Stopped = 1,
-                    Started = 2,
-                    Aborted = 3
+                    Created                            = 0,
+                    Stopped                            = 1,
+                    Started                            = 2,
+                    Aborted                            = 3,
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    StartedWithoutAllAdvertisementData = 4
                 };
 
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
@@ -1137,6 +1141,15 @@ namespace Windows
                     [propget] HRESULT IsDiscoverable([out] [retval] boolean* value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [exclusiveto(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters)]
+                [uuid(FF68468D-CA92-4434-9743-0E90988AD879)]
+                interface IGattServiceProviderAdvertisingParameters2 : IInspectable
+                {
+                    [propput] HRESULT ServiceData([in] Windows.Storage.Streams.IBuffer* value);
+                    [propget] HRESULT ServiceData([out] [retval] Windows.Storage.Streams.IBuffer** value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
                 [exclusiveto(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult)]
                 [uuid(764696D8-C53E-428C-8A48-67AFE02C3AE6)]
@@ -1522,6 +1535,7 @@ namespace Windows
                 runtimeclass GattServiceProviderAdvertisingParameters
                 {
                     [default] interface Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters;
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]

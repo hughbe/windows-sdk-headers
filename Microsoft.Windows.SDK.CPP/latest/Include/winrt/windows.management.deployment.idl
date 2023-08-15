@@ -141,7 +141,9 @@ namespace Windows
                 None                     = 0x0,
                 InstallAllResources      = 0x20,
                 ForceTargetAppShutdown   = 0x40,
-                RequiredContentGroupOnly = 0x100
+                RequiredContentGroupOnly = 0x100,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                LimitToExistingPackages  = 0x200
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -158,7 +160,10 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
                 RequiredContentGroupOnly       = 0x100,
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
-                ForceUpdateFromAnyVersion      = 0x40000
+                ForceUpdateFromAnyVersion      = 0x40000,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                [experimental]
+                RetainFilesOnFailure           = 0x200000
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

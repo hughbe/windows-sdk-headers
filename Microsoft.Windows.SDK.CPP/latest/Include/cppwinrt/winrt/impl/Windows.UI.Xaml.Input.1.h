@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -166,6 +166,13 @@ struct WINRT_EBO IFocusManagerStatics6 :
     impl::consume_t<IFocusManagerStatics6>
 {
     IFocusManagerStatics6(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IFocusManagerStatics7 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IFocusManagerStatics7>
+{
+    IFocusManagerStatics7(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IFocusMovementResult :
@@ -425,6 +432,13 @@ struct WINRT_EBO IStandardUICommand :
     impl::consume_t<IStandardUICommand>
 {
     IStandardUICommand(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IStandardUICommand2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IStandardUICommand2>
+{
+    IStandardUICommand2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IStandardUICommandFactory :

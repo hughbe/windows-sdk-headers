@@ -6,8 +6,12 @@
 #ifndef MRMRESOURCEINDEXER_H
 #define MRMRESOURCEINDEXER_H
 
+#include <winapifamily.h>
+
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
+#include <windows.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -62,15 +66,15 @@ struct MrmResourceIndexerMessage
 };
 
 /* Create resource Indexer, return handle. Example qualifiers string: L"Language-en-US_Scale-100_Contrast-standard" */
-HRESULT MrmCreateResourceIndexer(
-    _In_ PCWSTR packageFamilyName,
+STDAPI MrmCreateResourceIndexer(
+    _In_opt_ PCWSTR packageFamilyName,
     _In_ PCWSTR projectRoot,
     _In_ MrmPlatformVersion platformVersion,
     _In_opt_ PCWSTR defaultQualifiers,
     _Inout_ MrmResourceIndexerHandle* indexer);
 
 /* Create resource Indexer from previous schema file. Example qualifiers string: L"Language-en-US_Scale-100_Contrast-standard" */
-HRESULT MrmCreateResourceIndexerFromPreviousSchemaFile(
+STDAPI MrmCreateResourceIndexerFromPreviousSchemaFile(
     _In_ PCWSTR projectRoot,
     _In_ MrmPlatformVersion platformVersion,
     _In_opt_ PCWSTR defaultQualifiers,
@@ -78,7 +82,7 @@ HRESULT MrmCreateResourceIndexerFromPreviousSchemaFile(
     _Inout_ MrmResourceIndexerHandle* indexer);
 
 /* Create resource Indexer from previous PRI file. Example qualifiers string: L"Language-en-US_Scale-100_Contrast-standard" */
-HRESULT MrmCreateResourceIndexerFromPreviousPriFile(
+STDAPI MrmCreateResourceIndexerFromPreviousPriFile(
     _In_ PCWSTR projectRoot,
     _In_ MrmPlatformVersion platformVersion,
     _In_opt_ PCWSTR defaultQualifiers,
@@ -86,7 +90,7 @@ HRESULT MrmCreateResourceIndexerFromPreviousPriFile(
     _Inout_ MrmResourceIndexerHandle* indexer);
 
 /* Create resource Indexer from previous schema file text cached in memory. Example qualifiers string: "Language-en_Scale-100_Contrast-standard" */
-HRESULT MrmCreateResourceIndexerFromPreviousSchemaData(
+STDAPI MrmCreateResourceIndexerFromPreviousSchemaData(
     _In_ PCWSTR projectRoot,
     _In_ MrmPlatformVersion platformVersion,
     _In_opt_ PCWSTR defaultQualifiers,
@@ -95,7 +99,7 @@ HRESULT MrmCreateResourceIndexerFromPreviousSchemaData(
     _Inout_ MrmResourceIndexerHandle* indexer);
 
 /* Create resource Indexer from previous PRI file data. Example qualifiers string: "Language-en_Scale-100_Contrast-standard" */
-HRESULT MrmCreateResourceIndexerFromPreviousPriData(
+STDAPI MrmCreateResourceIndexerFromPreviousPriData(
     _In_ PCWSTR projectRoot,
     _In_ MrmPlatformVersion platformVersion,
     _In_opt_ PCWSTR defaultQualifiers,
@@ -105,7 +109,7 @@ HRESULT MrmCreateResourceIndexerFromPreviousPriData(
 
 /* Index a single string resource, with qualifiers string. Eg.: L"Language-en-US_Scale-100_Contrast-standard" */
 /* Empty string or nullptr for qualifiers indicate a neutral resource */
-HRESULT MrmIndexString(
+STDAPI MrmIndexString(
     _In_ MrmResourceIndexerHandle indexer,
     _In_ PCWSTR resourceUri,
     _In_ PCWSTR resourceString,
@@ -113,7 +117,7 @@ HRESULT MrmIndexString(
 
 /* Index a single embeddeddata resource, with qualifiers string. Eg.: "Language-en_Scale-100_Contrast-standard" */
 /* Empty string or nullptr for qualifiers indicate a neutral resource */
-HRESULT MrmIndexEmbeddedData(
+STDAPI MrmIndexEmbeddedData(
     _In_ MrmResourceIndexerHandle indexer,
     _In_ PCWSTR resourceUri,
     _In_reads_bytes_(embeddedDataSize) const BYTE* embeddedData,
@@ -122,7 +126,7 @@ HRESULT MrmIndexEmbeddedData(
 
 /* Index a single file resource, with qualifiers string. Eg.: L"Language-en-US_Scale-100_Contrast-standard". */
 /* Empty string or nullptr for qualifiers indicate a neutral resource */
-HRESULT MrmIndexFile(
+STDAPI MrmIndexFile(
     _In_ MrmResourceIndexerHandle indexer,
     _In_ PCWSTR resourceUri,
     _In_ PCWSTR filePath,
@@ -130,17 +134,17 @@ HRESULT MrmIndexFile(
 
 /* Index a single file resource. Use the file name as resource name, and derive qualifiers from the path.
 Eg.: "Images\en-US\scale-100\background.png" will add a resource named "background.png" and with qualifiers: "langugage-en-US" and "scale-100" */
-HRESULT MrmIndexFileAutoQualifiers(
+STDAPI MrmIndexFileAutoQualifiers(
     _In_ MrmResourceIndexerHandle indexer,
     _In_opt_ PCWSTR filePath);
 
 /* Index resource container: resw, resjson, priinfo, prifile. Qualifier will be derived from containerPath. */
-HRESULT MrmIndexResourceContainerAutoQualifiers(
+STDAPI MrmIndexResourceContainerAutoQualifiers(
     _In_ MrmResourceIndexerHandle indexer,
     _In_ PCWSTR containerPath);
 
 /* Create the PRI file on disk to the given directory, output file name will be "resources.pri" */
-HRESULT MrmCreateResourceFile(
+STDAPI MrmCreateResourceFile(
     _In_ MrmResourceIndexerHandle indexer,
     _In_ MrmPackagingMode packagingMode,
     _In_ MrmPackagingOptions packagingOptions,
@@ -148,7 +152,7 @@ HRESULT MrmCreateResourceFile(
 
 /* Create the PRI file in memory, return data blob, does not support MrmPackagingModeAutoSplit */
 /* Caller needs to call MrmFreeMemory to free the outputPriData */
-HRESULT MrmCreateResourceFileInMemory(
+STDAPI MrmCreateResourceFileInMemory(
     _In_ MrmResourceIndexerHandle indexer,
     _In_ MrmPackagingMode packagingMode,
     _In_ MrmPackagingOptions packagingOptions,
@@ -156,13 +160,13 @@ HRESULT MrmCreateResourceFileInMemory(
     _Out_ ULONG* outputPriSize);
 
 /* Peek the error message, user does not own the memory, do not free. */
-HRESULT MrmPeekResourceIndexerMessages(
+STDAPI MrmPeekResourceIndexerMessages(
     _In_ MrmResourceIndexerHandle handle,
     _Out_writes_(*numMsgs) MrmResourceIndexerMessage** messages,
     _Out_ ULONG* numMsgs);
 
 /* Destroy the handle, free the indexer, delete the messages,  All other memory should be deleted by the caller using the MrmFreeMemory API. */
-HRESULT MrmDestroyIndexerAndMessages(_In_ MrmResourceIndexerHandle indexer);
+STDAPI MrmDestroyIndexerAndMessages(_In_ MrmResourceIndexerHandle indexer);
 
 /* Free memories generated by:
     MrmCreateResourceFileInMemory,
@@ -170,10 +174,10 @@ HRESULT MrmDestroyIndexerAndMessages(_In_ MrmResourceIndexerHandle indexer);
     MrmDumpPriFileInMemory,
     MrmDumpPriDataInMemory,
 */
-HRESULT MrmFreeMemory(_In_ BYTE* data);
+STDAPI MrmFreeMemory(_In_ BYTE* data);
 
 /* makepri dump: file -> file */
-HRESULT MrmDumpPriFile(
+STDAPI MrmDumpPriFile(
     _In_ PCWSTR indexFileName,
     _In_opt_ PCWSTR schemaPriFile,
     _In_ MrmDumpType dumpType,
@@ -181,7 +185,7 @@ HRESULT MrmDumpPriFile(
 
 /* makepri dump: file -> blob */
 /* Caller need to call MrmFreeMemory to free the allocated memory: outputXmlData */
-HRESULT MrmDumpPriFileInMemory(
+STDAPI MrmDumpPriFileInMemory(
     _In_ PCWSTR indexFileName,
     _In_opt_ PCWSTR schemaPriFile,
     _In_ MrmDumpType dumpType,
@@ -190,7 +194,7 @@ HRESULT MrmDumpPriFileInMemory(
 
 /* makepri dump: blob -> blob */
 /* Caller need to call MrmFreeMemory to free the allocated memory: outputXmlData */
-HRESULT MrmDumpPriDataInMemory(
+STDAPI MrmDumpPriDataInMemory(
     _In_reads_bytes_(inputPriSize) BYTE* inputPriData,
     _In_ ULONG inputPriSize,
     _In_reads_bytes_opt_(schemaPriSize) BYTE* schemaPriData,
@@ -200,14 +204,14 @@ HRESULT MrmDumpPriDataInMemory(
     _Out_ ULONG* outputXmlSize);
 
 /* makepri createconfig as a file */
-HRESULT MrmCreateConfig(
+STDAPI MrmCreateConfig(
     _In_ MrmPlatformVersion platformVersion,
     _In_opt_ PCWSTR defaultQualifiers,
     _In_ PCWSTR outputXmlFile);
 
 /* makepri createconfig as a blob */
 /* Caller need to call MrmFreeMemory to free the allocated memory: outputXmlData */
-HRESULT MrmCreateConfigInMemory(
+STDAPI MrmCreateConfigInMemory(
     _In_ MrmPlatformVersion platformVersion,
     _In_opt_ PCWSTR defaultQualifiers,
     _Outptr_result_bytebuffer_(*outputXmlSize) BYTE** outputXmlData,

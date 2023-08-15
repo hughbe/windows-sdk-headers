@@ -29,8 +29,8 @@
 extern "C" {
 #endif
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Determine environment:
@@ -268,35 +268,39 @@ typedef struct _SecPkgInfoA
 //
 //  Security Package Capabilities
 //
-#define SECPKG_FLAG_INTEGRITY                   0x00000001  // Supports integrity on messages
-#define SECPKG_FLAG_PRIVACY                     0x00000002  // Supports privacy (confidentiality)
-#define SECPKG_FLAG_TOKEN_ONLY                  0x00000004  // Only security token needed
-#define SECPKG_FLAG_DATAGRAM                    0x00000008  // Datagram RPC support
-#define SECPKG_FLAG_CONNECTION                  0x00000010  // Connection oriented RPC support
-#define SECPKG_FLAG_MULTI_REQUIRED              0x00000020  // Full 3-leg required for re-auth.
-#define SECPKG_FLAG_CLIENT_ONLY                 0x00000040  // Server side functionality not available
-#define SECPKG_FLAG_EXTENDED_ERROR              0x00000080  // Supports extended error msgs
-#define SECPKG_FLAG_IMPERSONATION               0x00000100  // Supports impersonation
-#define SECPKG_FLAG_ACCEPT_WIN32_NAME           0x00000200  // Accepts Win32 names
-#define SECPKG_FLAG_STREAM                      0x00000400  // Supports stream semantics
-#define SECPKG_FLAG_NEGOTIABLE                  0x00000800  // Can be used by the negotiate package
-#define SECPKG_FLAG_GSS_COMPATIBLE              0x00001000  // GSS Compatibility Available
-#define SECPKG_FLAG_LOGON                       0x00002000  // Supports common LsaLogonUser
-#define SECPKG_FLAG_ASCII_BUFFERS               0x00004000  // Token Buffers are in ASCII
-#define SECPKG_FLAG_FRAGMENT                    0x00008000  // Package can fragment to fit
-#define SECPKG_FLAG_MUTUAL_AUTH                 0x00010000  // Package can perform mutual authentication
-#define SECPKG_FLAG_DELEGATION                  0x00020000  // Package can delegate
-#define SECPKG_FLAG_READONLY_WITH_CHECKSUM      0x00040000  // Package can delegate
-#define SECPKG_FLAG_RESTRICTED_TOKENS           0x00080000  // Package supports restricted callers
-#define SECPKG_FLAG_NEGO_EXTENDER               0x00100000  // this package extends SPNEGO, there is at most one
-#define SECPKG_FLAG_NEGOTIABLE2                 0x00200000  // this package is negotiated under the NegoExtender
-#define SECPKG_FLAG_APPCONTAINER_PASSTHROUGH    0x00400000  // this package receives all calls from appcontainer apps
-#define SECPKG_FLAG_APPCONTAINER_CHECKS         0x00800000  // this package receives calls from appcontainer apps
-                                                            // if the following checks succeed
-                                                            // 1. Caller has domain auth capability or
-                                                            // 2. Target is a proxy server or
-                                                            // 3. The caller has supplied creds
-#define SECPKG_FLAG_CREDENTIAL_ISOLATION_ENABLED 0x01000000 // this package is running with Credential Guard enabled
+#define SECPKG_FLAG_INTEGRITY                    0x00000001  // Supports integrity on messages
+#define SECPKG_FLAG_PRIVACY                      0x00000002  // Supports privacy (confidentiality)
+#define SECPKG_FLAG_TOKEN_ONLY                   0x00000004  // Only security token needed
+#define SECPKG_FLAG_DATAGRAM                     0x00000008  // Datagram RPC support
+#define SECPKG_FLAG_CONNECTION                   0x00000010  // Connection oriented RPC support
+#define SECPKG_FLAG_MULTI_REQUIRED               0x00000020  // Full 3-leg required for re-auth.
+#define SECPKG_FLAG_CLIENT_ONLY                  0x00000040  // Server side functionality not available
+#define SECPKG_FLAG_EXTENDED_ERROR               0x00000080  // Supports extended error msgs
+#define SECPKG_FLAG_IMPERSONATION                0x00000100  // Supports impersonation
+#define SECPKG_FLAG_ACCEPT_WIN32_NAME            0x00000200  // Accepts Win32 names
+#define SECPKG_FLAG_STREAM                       0x00000400  // Supports stream semantics
+#define SECPKG_FLAG_NEGOTIABLE                   0x00000800  // Can be used by the negotiate package
+#define SECPKG_FLAG_GSS_COMPATIBLE               0x00001000  // GSS Compatibility Available
+#define SECPKG_FLAG_LOGON                        0x00002000  // Supports common LsaLogonUser
+#define SECPKG_FLAG_ASCII_BUFFERS                0x00004000  // Token Buffers are in ASCII
+#define SECPKG_FLAG_FRAGMENT                     0x00008000  // Package can fragment to fit
+#define SECPKG_FLAG_MUTUAL_AUTH                  0x00010000  // Package can perform mutual authentication
+#define SECPKG_FLAG_DELEGATION                   0x00020000  // Package can delegate
+#define SECPKG_FLAG_READONLY_WITH_CHECKSUM       0x00040000  // Package can delegate
+#define SECPKG_FLAG_RESTRICTED_TOKENS            0x00080000  // Package supports restricted callers
+#define SECPKG_FLAG_NEGO_EXTENDER                0x00100000  // this package extends SPNEGO, there is at most one
+#define SECPKG_FLAG_NEGOTIABLE2                  0x00200000  // this package is negotiated under the NegoExtender
+#define SECPKG_FLAG_APPCONTAINER_PASSTHROUGH     0x00400000  // this package receives all calls from appcontainer apps
+#define SECPKG_FLAG_APPCONTAINER_CHECKS          0x00800000  // this package receives calls from appcontainer apps
+                                                             // if the following checks succeed
+                                                             // 1. Caller has domain auth capability or
+                                                             // 2. Target is a proxy server or
+                                                             // 3. The caller has supplied creds
+#define SECPKG_FLAG_CREDENTIAL_ISOLATION_ENABLED 0x01000000  // this package is running with Credential Guard enabled
+#define SECPKG_FLAG_APPLY_LOOPBACK               0x02000000  // this package supports reliable detection of loopback
+                                                             // 1.) The client and server see the same sequence of tokens
+                                                             // 2.) The server enforces a unique exchange for each
+                                                             //     non-anonymous authentication. (Replay detection)
 
 #define SECPKG_ID_NONE      0xFFFF
 
@@ -365,7 +369,10 @@ typedef struct _SecBufferDesc {
 #define SECBUFFER_PRESHARED_KEY                 22  // Preshared key
 #define SECBUFFER_PRESHARED_KEY_IDENTITY        23  // Preshared key identity
 #define SECBUFFER_DTLS_MTU                      24  // DTLS path MTU setting
-
+#define SECBUFFER_SEND_GENERIC_TLS_EXTENSION    25  // Buffer for sending generic TLS extensions.
+#define SECBUFFER_SUBSCRIBE_GENERIC_TLS_EXTENSION 26 // Buffer for subscribing to generic TLS extensions.
+#define SECBUFFER_FLAGS                         27  // ISC/ASC REQ Flags
+#define SECBUFFER_TRAFFIC_SECRETS               28  // Message sequence lengths and corresponding traffic secrets.
 
 #define SECBUFFER_ATTRMASK                      0xF0000000
 #define SECBUFFER_READONLY                      0x80000000  // Buffer is read-only, no checksum
@@ -443,6 +450,35 @@ typedef struct _SEC_DTLS_MTU {
     unsigned short PathMTU;                     // Path MTU for the connection
 } SEC_DTLS_MTU, *PSEC_DTLS_MTU;
 
+typedef struct _SEC_FLAGS {
+    unsigned long long Flags; // The caller sets ISC/ASC REQ flags; the lower 32 bits are reserved, must be set to 0.
+} SEC_FLAGS, *PSEC_FLAGS;
+
+//
+//  Traffic secret types:
+//
+typedef enum _SEC_TRAFFIC_SECRET_TYPE
+{
+    SecTrafficSecret_None,
+    SecTrafficSecret_Client,
+    SecTrafficSecret_Server
+} SEC_TRAFFIC_SECRET_TYPE, *PSEC_TRAFFIC_SECRET_TYPE;
+
+#define SZ_ALG_MAX_SIZE 64
+
+typedef struct _SEC_TRAFFIC_SECRETS {
+    wchar_t SymmetricAlgId[SZ_ALG_MAX_SIZE];     // Negotiated symmetric key algorithm. e.g. BCRYPT_AES_ALGORITHM.
+    wchar_t ChainingMode[SZ_ALG_MAX_SIZE];       // Negotiated symmetric key algorithm chaining mode. e.g. BCRYPT_CHAIN_MODE_GCM or BCRYPT_CHAIN_MODE_CCM.
+    wchar_t HashAlgId[SZ_ALG_MAX_SIZE];          // Negotiated hash algorithm. e.g. BCRYPT_SHA256_ALGORITHM or BCRYPT_SHA384_ALGORITHM.
+    unsigned short KeySize;                      // Size in bytes of the symmetric key to derive from this traffic secret.
+    unsigned short IvSize;                       // Size in bytes of the IV to derive from this traffic secret.
+    unsigned short MsgSequenceStart;             // Offset of the first byte of the TLS message sequence to be protected with a key derived from TrafficSecret. Zero to indicate the first byte of the buffer.
+    unsigned short MsgSequenceEnd;               // Offset of the last byte of the TLS message sequence to be protected with a key derived from TrafficSecret. Zero if the secret is for the encryption of application data or decryption of incoming records.
+    SEC_TRAFFIC_SECRET_TYPE TrafficSecretType;   // Type of traffic secret from the TRAFFIC_SECRET_TYPE enumeration.
+    unsigned short TrafficSecretSize;            // Size in bytes of the traffic secret.
+    unsigned char  TrafficSecret[ANYSIZE_ARRAY]; // Traffic secret of type TrafficSecretType, TrafficSecretSize bytes long, used to derive write key and IV for message protection.
+} SEC_TRAFFIC_SECRETS, *PSEC_TRAFFIC_SECRETS;
+
 
 //
 //  Data Representation Constant:
@@ -509,6 +545,7 @@ typedef struct _SEC_DTLS_MTU {
 #define ISC_REQ_USE_HTTP_STYLE          0x01000000
 #define ISC_REQ_UNVERIFIED_TARGET_NAME  0x20000000
 #define ISC_REQ_CONFIDENTIALITY_ONLY    0x40000000 // honored by SPNEGO/Kerberos
+#define ISC_REQ_MESSAGES                0x0000000100000000 // Disables the TLS 1.3+ record layer and causes the security context to consume and produce cleartext TLS messages, rather than records.
 
 #define ISC_RET_DELEGATE                0x00000001
 #define ISC_RET_MUTUAL_AUTH             0x00000002
@@ -539,6 +576,7 @@ typedef struct _SEC_DTLS_MTU {
 #define ISC_RET_NO_ADDITIONAL_TOKEN     0x02000000 // *INTERNAL*
 #define ISC_RET_REAUTHENTICATION        0x08000000 // *INTERNAL*
 #define ISC_RET_CONFIDENTIALITY_ONLY    0x40000000 // honored by SPNEGO/Kerberos
+#define ISC_RET_MESSAGES                0x0000000100000000 // Indicates that the TLS 1.3+ record layer is disabled, and the security context consumes and produces cleartext TLS messages, rather than records.
 
 #define ASC_REQ_DELEGATE                0x00000001
 #define ASC_REQ_MUTUAL_AUTH             0x00000002
@@ -567,6 +605,7 @@ typedef struct _SEC_DTLS_MTU {
 #define ASC_REQ_PROXY_BINDINGS          0x04000000
 //      SSP_RET_REAUTHENTICATION        0x08000000  // *INTERNAL*
 #define ASC_REQ_ALLOW_MISSING_BINDINGS  0x10000000
+#define ASC_REQ_MESSAGES                0x0000000100000000 // Disables the TLS 1.3+ record layer and causes the security context to consume and produce cleartext TLS messages, rather than records.
 
 #define ASC_RET_DELEGATE                0x00000001
 #define ASC_RET_MUTUAL_AUTH             0x00000002
@@ -593,6 +632,7 @@ typedef struct _SEC_DTLS_MTU {
 #define ASC_RET_NO_TOKEN                0x01000000
 #define ASC_RET_NO_ADDITIONAL_TOKEN     0x02000000  // *INTERNAL*
 //      SSP_RET_REAUTHENTICATION        0x08000000  // *INTERNAL*
+#define ASC_RET_MESSAGES                0x0000000100000000 // Indicates that the TLS 1.3+ record layer is disabled, and the security context consumes and produces cleartext TLS messages, rather than records.
 
 //
 //  Security Credentials Attributes:
@@ -1247,6 +1287,12 @@ typedef SECURITY_STATUS
 (SEC_ENTRY * FREE_CREDENTIALS_HANDLE_FN)(
     PCredHandle );
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
 AddCredentialsW(
@@ -1417,7 +1463,7 @@ SECURITY_STATUS SspiAcquireCredentialsHandleAsyncA(
 SECURITY_STATUS SspiInitializeSecurityContextAsyncW(
     _Inout_     SspiAsyncContext* AsyncContext,
     _In_opt_    PCredHandle phCredential,               // Cred to base context
-    _In_opt_    PCtxtHandle phContext,                  // Existing context (OPT)    
+    _In_opt_    PCtxtHandle phContext,                  // Existing context (OPT)
 #if ISSP_MODE == 0
     _In_opt_    PSECURITY_STRING pszTargetName,         // Name of target
 #else
@@ -1437,7 +1483,7 @@ SECURITY_STATUS SspiInitializeSecurityContextAsyncW(
 SECURITY_STATUS SspiInitializeSecurityContextAsyncA(
     _Inout_     SspiAsyncContext* AsyncContext,
     _In_opt_    PCredHandle phCredential,               // Cred to base context
-    _In_opt_    PCtxtHandle phContext,                  // Existing context (OPT)    
+    _In_opt_    PCtxtHandle phContext,                  // Existing context (OPT)
     _In_opt_    LPSTR pszTargetName,                    // Name of target
     _In_        unsigned long fContextReq,              // Context Requirements
     _In_        unsigned long Reserved1,                // Reserved, MBZ
@@ -1451,7 +1497,7 @@ SECURITY_STATUS SspiInitializeSecurityContextAsyncA(
 );
 
 SECURITY_STATUS SspiAcceptSecurityContextAsync(
-    _Inout_   SspiAsyncContext* AsyncContext,       
+    _Inout_   SspiAsyncContext* AsyncContext,
     _In_opt_  PCredHandle phCredential,               // Cred to base context
     _In_opt_  PCtxtHandle phContext,                  // Existing context (OPT)
     _In_opt_  PSecBufferDesc pInput,                  // Input buffer
@@ -1557,6 +1603,11 @@ typedef SECURITY_STATUS
 
 #endif // ISSP_MODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 ////////////////////////////////////////////////////////////////////////
 ///
@@ -1673,7 +1724,11 @@ typedef SECURITY_STATUS
     unsigned long *,
     PTimeStamp);
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
 
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 SECURITY_STATUS SEC_ENTRY
 CompleteAuthToken(
@@ -1720,6 +1775,11 @@ typedef SECURITY_STATUS
 (SEC_ENTRY * QUERY_SECURITY_CONTEXT_TOKEN_FN)(
     PCtxtHandle, void * *);
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
@@ -1731,6 +1791,11 @@ typedef SECURITY_STATUS
 (SEC_ENTRY * DELETE_SECURITY_CONTEXT_FN)(
     PCtxtHandle);
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
@@ -1742,6 +1807,12 @@ ApplyControlToken(
 typedef SECURITY_STATUS
 (SEC_ENTRY * APPLY_CONTROL_TOKEN_FN)(
     PCtxtHandle, PSecBufferDesc);
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 KSECDDDECLSPEC
@@ -1996,6 +2067,12 @@ typedef SECURITY_STATUS
 
 // end_ntifs
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 // begin_ntifs
 ///////////////////////////////////////////////////////////////////
 ////
@@ -2036,6 +2113,12 @@ typedef SECURITY_STATUS
     unsigned long,
     unsigned long *);
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 // This only exists win Win2k3 and Greater
 #define SECQOP_WRAP_NO_ENCRYPT      0x80000001
 #define SECQOP_WRAP_OOB_DATA        0x40000000
@@ -2072,6 +2155,12 @@ typedef SECURITY_STATUS
 ////    Misc.
 ////
 ///////////////////////////////////////////////////////////////////////////
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
@@ -2180,8 +2269,8 @@ DelegateSecurityContext(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 ///////////////////////////////////////////////////////////////////////////
@@ -2271,7 +2360,7 @@ typedef SECURITY_STATUS
 #  define IMPORT_SECURITY_CONTEXT_FN IMPORT_SECURITY_CONTEXT_FN_A
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -2379,8 +2468,8 @@ SecLookupWellKnownSid(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 ///////////////////////////////////////////////////////////////////////////////
 ////
@@ -2528,6 +2617,12 @@ typedef struct _SECURITY_FUNCTION_TABLE_A {
 
 // Function table has all routines through QueryCredentialsAttributesEx
 #define SECURITY_SUPPORT_PROVIDER_INTERFACE_VERSION_5   5   // ntifs
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 PSecurityFunctionTableA SEC_ENTRY
 InitSecurityInterfaceA(
@@ -2715,6 +2810,12 @@ SaslGetContextOption(
     );
 
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #ifdef SECURITY_DOS
 #if _MSC_VER >= 1200
@@ -2991,8 +3092,8 @@ typedef PSEC_WINNT_AUTH_IDENTITY_INFO PSEC_WINNT_AUTH_IDENTITY_OPAQUE;
 #define SSPIPFC_SAVE_CRED_BY_CALLER     SSPIPFC_CREDPROV_DO_NOT_SAVE
 
 //
-// The password and smart card credential providers will not display the 
-// "Remember my credentials" check box in the provider tiles. 
+// The password and smart card credential providers will not display the
+// "Remember my credentials" check box in the provider tiles.
 //
 
 #define SSPIPFC_NO_CHECKBOX             0x00000002
@@ -3012,7 +3113,7 @@ typedef PSEC_WINNT_AUTH_IDENTITY_INFO PSEC_WINNT_AUTH_IDENTITY_OPAQUE;
 
 #define SSPIPFC_VALID_FLAGS (SSPIPFC_CREDPROV_DO_NOT_SAVE | SSPIPFC_NO_CHECKBOX | SSPIPFC_CREDPROV_DO_NOT_LOAD | SSPIPFC_USE_CREDUIBROKER)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -3106,6 +3207,10 @@ EXTERN_C __declspec(selectany) const GUID SEC_WINNT_AUTH_DATA_TYPE_NGC =
 EXTERN_C __declspec(selectany) const GUID SEC_WINNT_AUTH_DATA_TYPE_FIDO =
 { 0x32e8f8d7, 0x7871, 0x4bcc, { 0x83, 0xc5, 0x46, 0xf, 0x66, 0xc6, 0x13, 0x5c } };
 
+// {D587AAE8-F78F-4455-A112-C934BEEE7CE1}
+EXTERN_C __declspec(selectany) const GUID SEC_WINNT_AUTH_DATA_TYPE_KEYTAB =
+{ 0xd587aae8, 0xf78f, 0x4455, { 0xa1, 0x12, 0xc9, 0x34, 0xbe, 0xee, 0x7c, 0xe1 } };
+
 typedef struct _SEC_WINNT_AUTH_DATA_PASSWORD {
    SEC_WINNT_AUTH_BYTE_VECTOR UnicodePassword;
 } SEC_WINNT_AUTH_DATA_PASSWORD, PSEC_WINNT_AUTH_DATA_PASSWORD;
@@ -3119,7 +3224,7 @@ EXTERN_C __declspec(selectany) const GUID SEC_WINNT_AUTH_DATA_TYPE_CSP_DATA =
    { 0x68fd9879, 0x79c, 0x4dfe, { 0x82, 0x81, 0x57, 0x8a, 0xad, 0xc1, 0xc1, 0x0 } };
 
 // {B86C4FF3-49D7-4DC4-B560-B1163685B236}
-EXTERN_C __declspec(selectany) const GUID SEC_WINNT_AUTH_DATA_TYPE_SMARTCARD_CONTEXTS = 
+EXTERN_C __declspec(selectany) const GUID SEC_WINNT_AUTH_DATA_TYPE_SMARTCARD_CONTEXTS =
    { 0xb86c4ff3, 0x49d7, 0x4dc4, { 0xb5, 0x60, 0xb1, 0x16, 0x36, 0x85, 0xb2, 0x36 } };
 
 typedef struct _SEC_WINNT_AUTH_CERTIFICATE_DATA {
@@ -3432,11 +3537,15 @@ SspiUnmarshalAuthIdentity(
     _Outptr_ PSEC_WINNT_AUTH_IDENTITY_OPAQUE* ppAuthIdentity
     );
 
+#endif // NTDDI_VERSION
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
+#if (NTDDI_VERSION >= NTDDI_WIN7)
 
 BOOLEAN
 SEC_ENTRY
@@ -3444,11 +3553,15 @@ SspiIsPromptingNeeded(
     _In_ unsigned long ErrorOrNtStatus
     );
 
+#endif // NTDDI_VERSION
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
+#if (NTDDI_VERSION >= NTDDI_WIN7)
 
 SECURITY_STATUS
 SEC_ENTRY
@@ -3544,4 +3657,3 @@ DeleteSecurityPackageW(
 // begin_ntifs
 #endif // __SSPI_H__
 // end_ntifs
-

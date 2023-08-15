@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.i2c.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -146,9 +146,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 interface II2cConnectionSettings;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettings ABI::Windows::Devices::I2c::II2cConnectionSettings
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettings_FWD_DEFINED__
@@ -160,9 +160,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 interface II2cConnectionSettingsFactory;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettingsFactory ABI::Windows::Devices::I2c::II2cConnectionSettingsFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettingsFactory_FWD_DEFINED__
@@ -174,9 +174,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 interface II2cController;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CII2cController ABI::Windows::Devices::I2c::II2cController
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CII2cController_FWD_DEFINED__
@@ -188,9 +188,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 interface II2cControllerStatics;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CII2cControllerStatics ABI::Windows::Devices::I2c::II2cControllerStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CII2cControllerStatics_FWD_DEFINED__
@@ -202,9 +202,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 interface II2cDevice;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CII2cDevice ABI::Windows::Devices::I2c::II2cDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CII2cDevice_FWD_DEFINED__
@@ -216,9 +216,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 interface II2cDeviceStatics;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CII2cDeviceStatics ABI::Windows::Devices::I2c::II2cDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CII2cDeviceStatics_FWD_DEFINED__
@@ -231,9 +231,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 class I2cController;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x20000
@@ -256,7 +256,7 @@ IIterator<ABI::Windows::Devices::I2c::I2cController*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::I2c::I2cController*> __FIIterator_1_Windows__CDevices__CI2c__CI2cController_t;
 #define __FIIterator_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CI2c__CI2cController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::I2c::II2cController*>
@@ -288,7 +288,7 @@ IIterable<ABI::Windows::Devices::I2c::I2cController*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::I2c::I2cController*> __FIIterable_1_Windows__CDevices__CI2c__CI2cController_t;
 #define __FIIterable_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CI2c__CI2cController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::I2c::II2cController*>
@@ -320,7 +320,7 @@ IVectorView<ABI::Windows::Devices::I2c::I2cController*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::I2c::I2cController*> __FIVectorView_1_Windows__CDevices__CI2c__CI2cController_t;
 #define __FIVectorView_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CI2c__CI2cController_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::I2c::II2cController*>
@@ -352,7 +352,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::I2c::I2cController*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::I2c::I2cController*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cController_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::I2c::II2cController*>
@@ -384,7 +384,7 @@ IAsyncOperation<ABI::Windows::Devices::I2c::I2cController*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::I2c::I2cController*> __FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cController_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::I2c::II2cController*>
@@ -400,9 +400,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 class I2cDevice;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
@@ -425,7 +425,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::I2c::I2cDevice*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::I2c::I2cDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cDevice_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CI2c__CI2cDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::I2c::II2cDevice*>
@@ -457,7 +457,7 @@ IAsyncOperation<ABI::Windows::Devices::I2c::I2cDevice*> : IAsyncOperation_impl<A
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::I2c::I2cDevice*> __FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cDevice_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cDevice_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CI2c__CI2cDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::I2c::II2cDevice*>
@@ -489,7 +489,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CI2c__CI2cCo
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CI2c__CI2cController*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::I2c::II2cController*>*>
@@ -521,7 +521,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CI2c__CI2cController*> : IAs
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CI2c__CI2cController*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CI2c__CI2cController ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::I2c::II2cController*>*>
@@ -545,10 +545,10 @@ namespace ABI {
             namespace I2c {
                 namespace Provider {
                     interface II2cProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* I2c */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* I2c */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CI2c_CProvider_CII2cProvider ABI::Windows::Devices::I2c::Provider::II2cProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CI2c_CProvider_CII2cProvider_FWD_DEFINED__
@@ -564,8 +564,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -580,9 +580,9 @@ namespace ABI {
                 
                 typedef enum I2cBusSpeed : int I2cBusSpeed;
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -591,9 +591,9 @@ namespace ABI {
                 
                 typedef enum I2cSharingMode : int I2cSharingMode;
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -602,9 +602,9 @@ namespace ABI {
                 
                 typedef enum I2cTransferStatus : int I2cTransferStatus;
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -613,9 +613,9 @@ namespace ABI {
                 
                 typedef struct I2cTransferResult I2cTransferResult;
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -628,9 +628,9 @@ namespace ABI {
         namespace Devices {
             namespace I2c {
                 class I2cConnectionSettings;
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -664,9 +664,9 @@ namespace ABI {
                     I2cBusSpeed_FastMode = 1,
                 };
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -691,9 +691,9 @@ namespace ABI {
                     I2cSharingMode_Shared = 1,
                 };
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -721,9 +721,9 @@ namespace ABI {
                     I2cTransferStatus_UnknownError = 4,
                 };
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -748,9 +748,9 @@ namespace ABI {
                     UINT32 BytesTransferred;
                 };
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION >= 0x10000
 
 
@@ -801,9 +801,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_II2cConnectionSettings=_uuidof(II2cConnectionSettings);
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettings;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettings_INTERFACE_DEFINED__) */
@@ -843,9 +843,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_II2cConnectionSettingsFactory=_uuidof(II2cConnectionSettingsFactory);
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettingsFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CI2c_CII2cConnectionSettingsFactory_INTERFACE_DEFINED__) */
@@ -885,9 +885,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_II2cController=_uuidof(II2cController);
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CI2c_CII2cController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CI2c_CII2cController_INTERFACE_DEFINED__) */
@@ -930,9 +930,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_II2cControllerStatics=_uuidof(II2cControllerStatics);
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CI2c_CII2cControllerStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CI2c_CII2cControllerStatics_INTERFACE_DEFINED__) */
@@ -1009,9 +1009,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_II2cDevice=_uuidof(II2cDevice);
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CI2c_CII2cDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CI2c_CII2cDevice_INTERFACE_DEFINED__) */
@@ -1056,9 +1056,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_II2cDeviceStatics=_uuidof(II2cDeviceStatics);
                 
-            } /* Windows */
+            } /* I2c */
         } /* Devices */
-    } /* I2c */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CI2c_CII2cDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CI2c_CII2cDeviceStatics_INTERFACE_DEFINED__) */

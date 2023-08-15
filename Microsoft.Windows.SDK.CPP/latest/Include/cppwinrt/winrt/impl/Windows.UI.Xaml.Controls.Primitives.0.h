@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -25,6 +25,7 @@ struct GridLength;
 struct RoutedEventHandler;
 struct Thickness;
 struct UIElement;
+struct XamlRoot;
 
 }
 
@@ -190,6 +191,7 @@ enum class TickPlacement : int32_t
 
 struct IAppBarButtonTemplateSettings;
 struct IAppBarTemplateSettings;
+struct IAppBarTemplateSettings2;
 struct IAppBarToggleButtonTemplateSettings;
 struct IButtonBase;
 struct IButtonBaseFactory;
@@ -212,6 +214,7 @@ struct ICommandBarFlyoutCommandBarTemplateSettings;
 struct ICommandBarTemplateSettings;
 struct ICommandBarTemplateSettings2;
 struct ICommandBarTemplateSettings3;
+struct ICommandBarTemplateSettings4;
 struct IDragCompletedEventArgs;
 struct IDragCompletedEventArgsFactory;
 struct IDragDeltaEventArgs;
@@ -223,6 +226,7 @@ struct IFlyoutBase2;
 struct IFlyoutBase3;
 struct IFlyoutBase4;
 struct IFlyoutBase5;
+struct IFlyoutBase6;
 struct IFlyoutBaseClosingEventArgs;
 struct IFlyoutBaseFactory;
 struct IFlyoutBaseOverrides;
@@ -231,6 +235,7 @@ struct IFlyoutBaseStatics;
 struct IFlyoutBaseStatics2;
 struct IFlyoutBaseStatics3;
 struct IFlyoutBaseStatics5;
+struct IFlyoutBaseStatics6;
 struct IFlyoutShowOptions;
 struct IFlyoutShowOptionsFactory;
 struct IGeneratorPositionHelper;
@@ -276,8 +281,10 @@ struct IPivotHeaderPanel;
 struct IPivotPanel;
 struct IPopup;
 struct IPopup2;
+struct IPopup3;
 struct IPopupStatics;
 struct IPopupStatics2;
+struct IPopupStatics3;
 struct IProgressBarTemplateSettings;
 struct IProgressRingTemplateSettings;
 struct IRangeBase;
@@ -379,6 +386,7 @@ namespace winrt::impl {
 
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IAppBarButtonTemplateSettings>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IButtonBase>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IButtonBaseFactory>{ using type = interface_category; };
@@ -401,6 +409,7 @@ template <> struct category<Windows::UI::Xaml::Controls::Primitives::ICommandBar
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs>{ using type = interface_category; };
@@ -412,6 +421,7 @@ template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>{ using type = interface_category; };
@@ -420,6 +430,7 @@ template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptionsFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelper>{ using type = interface_category; };
@@ -465,8 +476,10 @@ template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPivotHeade
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPivotPanel>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopup>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopup2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopup3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::IRangeBase>{ using type = interface_category; };
@@ -577,6 +590,7 @@ template <> struct category<Windows::UI::Xaml::Controls::Primitives::RangeBaseVa
 template <> struct category<Windows::UI::Xaml::Controls::Primitives::ScrollEventHandler>{ using type = delegate_category; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IAppBarButtonTemplateSettings>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IAppBarButtonTemplateSettings" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IAppBarTemplateSettings2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IAppBarToggleButtonTemplateSettings" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IButtonBase>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IButtonBase" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IButtonBaseFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IButtonBaseFactory" }; };
@@ -599,6 +613,7 @@ template <> struct name<Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyo
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings3" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.ICommandBarTemplateSettings4" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IDragCompletedEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IDragCompletedEventArgsFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IDragDeltaEventArgs" }; };
@@ -610,6 +625,7 @@ template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2>{ 
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBase3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBase4" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBase5" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseClosingEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides" }; };
@@ -618,6 +634,7 @@ template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStat
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics2" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics5" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutShowOptions" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptionsFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IFlyoutShowOptionsFactory" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelper>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IGeneratorPositionHelper" }; };
@@ -663,8 +680,10 @@ template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPivotHeaderPan
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPivotPanel>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IPivotPanel" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPopup>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IPopup" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPopup2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IPopup2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPopup3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IPopup3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics2" }; };
+template <> struct name<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics3" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IProgressBarTemplateSettings" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IProgressRingTemplateSettings" }; };
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::IRangeBase>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.IRangeBase" }; };
@@ -775,6 +794,7 @@ template <> struct name<Windows::UI::Xaml::Controls::Primitives::RangeBaseValueC
 template <> struct name<Windows::UI::Xaml::Controls::Primitives::ScrollEventHandler>{ static constexpr auto & value{ L"Windows.UI.Xaml.Controls.Primitives.ScrollEventHandler" }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IAppBarButtonTemplateSettings>{ static constexpr guid value{ 0xCBC9B39D,0x0C95,0x4951,{ 0xBF,0xF2,0x13,0x96,0x36,0x91,0xC3,0x66 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings>{ static constexpr guid value{ 0xBCC2A863,0xEB35,0x423C,{ 0x83,0x89,0xD7,0x82,0x7B,0xE3,0xBF,0x67 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2>{ static constexpr guid value{ 0xCBE66259,0x0399,0x5BCC,{ 0xB9,0x25,0x4D,0x5F,0x5C,0x9A,0x45,0x68 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings>{ static constexpr guid value{ 0xAAF99C48,0xD8F4,0x40D9,{ 0x9F,0xA3,0x3A,0x64,0xF0,0xFE,0xC5,0xD8 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IButtonBase>{ static constexpr guid value{ 0xFA002C1A,0x494E,0x46CF,{ 0x91,0xD4,0xE1,0x4A,0x8D,0x79,0x86,0x74 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IButtonBaseFactory>{ static constexpr guid value{ 0x389B7C71,0x5220,0x42B2,{ 0x99,0x92,0x26,0x90,0xC1,0xA6,0x70,0x2F } }; };
@@ -797,6 +817,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IComman
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings>{ static constexpr guid value{ 0x61C8F92C,0x05AA,0x414A,{ 0xA2,0xAE,0x48,0x2C,0x5A,0x46,0xC0,0x8E } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings2>{ static constexpr guid value{ 0xFBB24F93,0xC2E2,0x4177,{ 0xA2,0xB6,0x3C,0xD7,0x05,0x07,0x3C,0xF6 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3>{ static constexpr guid value{ 0x3BD71EBA,0x3403,0x4BFE,{ 0x84,0x2D,0x2C,0xE8,0xC5,0x11,0xD2,0x45 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4>{ static constexpr guid value{ 0xF2562DD3,0xAA58,0x59C5,{ 0x85,0x3B,0x82,0x8A,0x19,0xD1,0x21,0x4E } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>{ static constexpr guid value{ 0xB04F29A1,0xBD16,0x48F6,{ 0xA5,0x11,0x9C,0x27,0x63,0x64,0x13,0x31 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory>{ static constexpr guid value{ 0x36A7D99D,0x148C,0x495F,{ 0xA0,0xFC,0xAF,0xC8,0x71,0xD6,0x2F,0x33 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs>{ static constexpr guid value{ 0x2C2DD73C,0x2806,0x49FC,{ 0xAA,0xE9,0x6D,0x79,0x2B,0x57,0x2B,0x6A } }; };
@@ -808,6 +829,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyout
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3>{ static constexpr guid value{ 0xA89C9712,0x48E0,0x4240,{ 0x95,0xB9,0x0D,0xFD,0x08,0x26,0xA8,0xD3 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4>{ static constexpr guid value{ 0xE3897D69,0xA37F,0x4828,{ 0x9B,0x70,0x0E,0xF6,0x7C,0x03,0xB5,0xF8 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5>{ static constexpr guid value{ 0xAD3EC0C7,0x12BB,0x5A73,{ 0xB7,0x8E,0x10,0x51,0x92,0xCA,0x73,0xD6 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6>{ static constexpr guid value{ 0x5399DE8C,0x06CC,0x5B52,{ 0xB6,0x5A,0xFF,0x93,0x22,0xD1,0xC9,0x40 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs>{ static constexpr guid value{ 0xD075852D,0xB09A,0x4FD1,{ 0xB0,0x05,0xDB,0x2B,0xA0,0x12,0x06,0xFB } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseFactory>{ static constexpr guid value{ 0x1C3363D7,0xFCA7,0x407E,{ 0x92,0x0E,0x70,0xE1,0x5E,0x9F,0x0B,0xF1 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>{ static constexpr guid value{ 0x101DEC86,0x6F4D,0x45A4,{ 0x9D,0x0E,0x3E,0xCE,0x6F,0x16,0x97,0x7E } }; };
@@ -816,6 +838,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyout
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics2>{ static constexpr guid value{ 0xA8E913FE,0x2D60,0x4307,{ 0xAA,0xD9,0x56,0xB4,0x50,0x12,0x1B,0x58 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics3>{ static constexpr guid value{ 0x7BA92E4F,0xDD16,0x4BE4,{ 0x99,0xDB,0xBD,0x9D,0x44,0x06,0xC0,0xF8 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5>{ static constexpr guid value{ 0x69EDB25C,0x992A,0x542B,{ 0xBC,0xFF,0x2F,0x7F,0x85,0x55,0x23,0xBD } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6>{ static constexpr guid value{ 0x96D49254,0xC91B,0x5246,{ 0x8B,0x39,0xAF,0xC2,0xA2,0xC5,0x0C,0xF8 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>{ static constexpr guid value{ 0x57D693AD,0x0C74,0x54DD,{ 0xB1,0x10,0x1E,0xE4,0x3F,0xAB,0xAD,0xD9 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptionsFactory>{ static constexpr guid value{ 0xCE596F61,0x2EB4,0x5B4E,{ 0xAF,0x69,0xF9,0xAF,0x42,0x32,0x0E,0xEE } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelper>{ static constexpr guid value{ 0xCD40318D,0x7745,0x40D9,{ 0xAB,0x9D,0xAB,0xBD,0xA4,0xA7,0xFF,0xEA } }; };
@@ -861,8 +884,10 @@ template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPivotH
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPivotPanel>{ static constexpr guid value{ 0xAD4EBE80,0x22A9,0x4CA3,{ 0x92,0x12,0x27,0x73,0xB6,0x35,0x9F,0xF3 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPopup>{ static constexpr guid value{ 0x62418240,0xE6D3,0x4705,{ 0xA1,0xDC,0x39,0x15,0x64,0x56,0xEE,0x29 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPopup2>{ static constexpr guid value{ 0x376A8C4C,0xAAC0,0x4B20,{ 0x96,0x6A,0x0B,0x93,0x64,0xFE,0xB4,0xB5 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPopup3>{ static constexpr guid value{ 0xF9C46915,0xA65C,0x5F68,{ 0x9F,0x54,0x31,0x0A,0x1B,0x51,0x09,0x5F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>{ static constexpr guid value{ 0x5AE3BF1A,0x6E34,0x40D6,{ 0x8A,0x7F,0xCA,0x82,0x2A,0xAF,0x59,0xE3 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>{ static constexpr guid value{ 0x2B9AE9EC,0x55EF,0x43B6,{ 0xB4,0x59,0x12,0xE4,0x0F,0xFA,0x43,0x02 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>{ static constexpr guid value{ 0x00789589,0xC580,0x558F,{ 0x94,0x5A,0x7D,0x02,0xEE,0x00,0x4D,0x3E } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>{ static constexpr guid value{ 0x3FE2EA2A,0xE3F2,0x4C2B,{ 0x94,0x88,0x91,0x8D,0x77,0xD2,0xBB,0xE4 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings>{ static constexpr guid value{ 0xB9B675EC,0xC723,0x42E6,{ 0x83,0xE9,0x98,0x26,0x27,0x2B,0xDC,0x0E } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Controls::Primitives::IRangeBase>{ static constexpr guid value{ 0xFA002C1A,0x494E,0x46CF,{ 0x91,0xD4,0xE1,0x4A,0x8D,0x79,0x86,0x75 } }; };
@@ -971,6 +996,13 @@ template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateS
     virtual int32_t WINRT_CALL get_MinimalRootMargin(struct struct_Windows_UI_Xaml_Thickness* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_HiddenVerticalDelta(double* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_HiddenRootMargin(struct struct_Windows_UI_Xaml_Thickness* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_NegativeCompactVerticalDelta(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_NegativeMinimalVerticalDelta(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_NegativeHiddenVerticalDelta(double* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings>{ struct type : IInspectable
@@ -1194,6 +1226,13 @@ template <> struct abi<Windows::UI::Xaml::Controls::Primitives::ICommandBarTempl
     virtual int32_t WINRT_CALL get_EffectiveOverflowButtonVisibility(Windows::UI::Xaml::Visibility* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_OverflowContentCompactYTranslation(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_OverflowContentMinimalYTranslation(double* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_OverflowContentHiddenYTranslation(double* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_HorizontalChange(double* value) noexcept = 0;
@@ -1279,6 +1318,15 @@ template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5>{ s
     virtual int32_t WINRT_CALL ShowAt(void* placementTarget, void* showOptions) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ShouldConstrainToRootBounds(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_ShouldConstrainToRootBounds(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsConstrainedToRootBounds(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_XamlRoot(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_XamlRoot(void* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Cancel(bool* value) noexcept = 0;
@@ -1329,6 +1377,11 @@ template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStati
     virtual int32_t WINRT_CALL get_InputDevicePrefersPrimaryCommandsProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_AreOpenCloseAnimationsEnabledProperty(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_IsOpenProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ShouldConstrainToRootBoundsProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>{ struct type : IInspectable
@@ -1788,6 +1841,13 @@ template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopup2>{ struct
     virtual int32_t WINRT_CALL put_LightDismissOverlayMode(Windows::UI::Xaml::Controls::LightDismissOverlayMode value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopup3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ShouldConstrainToRootBounds(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_ShouldConstrainToRootBounds(bool value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_IsConstrainedToRootBounds(bool* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_ChildProperty(void** value) noexcept = 0;
@@ -1801,6 +1861,11 @@ template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>{ 
 template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_LightDismissOverlayModeProperty(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ShouldConstrainToRootBoundsProperty(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>{ struct type : IInspectable
@@ -2108,6 +2173,15 @@ struct consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings
 template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2
+{
+    double NegativeCompactVerticalDelta() const;
+    double NegativeMinimalVerticalDelta() const;
+    double NegativeHiddenVerticalDelta() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Primitives_IAppBarToggleButtonTemplateSettings
 {
     double KeyboardAcceleratorTextMinWidth() const;
@@ -2377,6 +2451,15 @@ struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings3
 template <> struct consume<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings3<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4
+{
+    double OverflowContentCompactYTranslation() const;
+    double OverflowContentMinimalYTranslation() const;
+    double OverflowContentHiddenYTranslation() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Primitives_IDragCompletedEventArgs
 {
     double HorizontalChange() const;
@@ -2492,6 +2575,17 @@ struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase5
 template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase5<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6
+{
+    bool ShouldConstrainToRootBounds() const;
+    void ShouldConstrainToRootBounds(bool value) const;
+    bool IsConstrainedToRootBounds() const;
+    Windows::UI::Xaml::XamlRoot XamlRoot() const;
+    void XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseClosingEventArgs
 {
     bool Cancel() const;
@@ -2558,6 +2652,13 @@ struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics5
     Windows::UI::Xaml::DependencyProperty IsOpenProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics5<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics6
+{
+    Windows::UI::Xaml::DependencyProperty ShouldConstrainToRootBoundsProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics6<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutShowOptions
@@ -3113,6 +3214,15 @@ struct consume_Windows_UI_Xaml_Controls_Primitives_IPopup2
 template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IPopup2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopup2<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Primitives_IPopup3
+{
+    bool ShouldConstrainToRootBounds() const;
+    void ShouldConstrainToRootBounds(bool value) const;
+    bool IsConstrainedToRootBounds() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IPopup3> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopup3<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics
 {
     Windows::UI::Xaml::DependencyProperty ChildProperty() const;
@@ -3130,6 +3240,13 @@ struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics2
     Windows::UI::Xaml::DependencyProperty LightDismissOverlayModeProperty() const;
 };
 template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics3
+{
+    Windows::UI::Xaml::DependencyProperty ShouldConstrainToRootBoundsProperty() const;
+};
+template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3> { template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics3<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Controls_Primitives_IProgressBarTemplateSettings

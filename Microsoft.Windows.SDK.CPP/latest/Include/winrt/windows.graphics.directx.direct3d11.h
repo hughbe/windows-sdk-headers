@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.directx.direct3d11.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,10 +142,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DDevice;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_FWD_DEFINED__
@@ -158,10 +158,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -190,7 +190,7 @@ IIterator<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> __FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t;
 #define __FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*>
@@ -222,7 +222,7 @@ IIterable<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> __FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t;
 #define __FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*>
@@ -254,7 +254,7 @@ IVectorView<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> __FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t;
 #define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*>
@@ -273,8 +273,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -290,9 +290,9 @@ namespace ABI {
                 
                 typedef enum DirectXPixelFormat : int DirectXPixelFormat;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -305,10 +305,10 @@ namespace ABI {
                     
                     typedef enum Direct3DBindings : unsigned int Direct3DBindings;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -318,10 +318,10 @@ namespace ABI {
                     
                     typedef enum Direct3DUsage : int Direct3DUsage;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -331,10 +331,10 @@ namespace ABI {
                     
                     typedef struct Direct3DMultisampleDescription Direct3DMultisampleDescription;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -344,10 +344,10 @@ namespace ABI {
                     
                     typedef struct Direct3DSurfaceDescription Direct3DSurfaceDescription;
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -393,10 +393,10 @@ namespace ABI {
                     
                     DEFINE_ENUM_FLAG_OPERATORS(Direct3DBindings)
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -424,10 +424,10 @@ namespace ABI {
                         Direct3DUsage_Staging = 3,
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -453,10 +453,10 @@ namespace ABI {
                         INT32 Quality;
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -484,10 +484,10 @@ namespace ABI {
                         ABI::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription MultisampleDescription;
                     };
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -523,10 +523,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDirect3DDevice=_uuidof(IDirect3DDevice);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_INTERFACE_DEFINED__) */
@@ -567,10 +567,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDirect3DSurface=_uuidof(IDirect3DSurface);
                     
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_INTERFACE_DEFINED__) */

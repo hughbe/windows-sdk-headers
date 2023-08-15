@@ -293,6 +293,7 @@ struct ButtonEventInfo
 {
     DWORD       ButtonType;   // See DeviceButtonType_* types
     DWORD       EventFlags;   // See InputEventFlag_* flags
+    UINT64      DeviceId;
 };
 
 

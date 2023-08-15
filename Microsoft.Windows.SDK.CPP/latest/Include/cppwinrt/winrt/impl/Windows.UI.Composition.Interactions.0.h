@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,6 +10,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition {
 struct CompositionAnimation;
 struct Compositor;
 struct ExpressionAnimation;
+struct IVisualElement;
 struct ScalarNaturalMotionAnimation;
 struct Vector2NaturalMotionAnimation;
 struct Visual;
@@ -23,6 +24,14 @@ struct PointerPoint;
 }
 
 WINRT_EXPORT namespace winrt::Windows::UI::Composition::Interactions {
+
+enum class InteractionBindingAxisModes : uint32_t
+{
+    None = 0x0,
+    PositionX = 0x1,
+    PositionY = 0x2,
+    Scale = 0x4,
+};
 
 enum class InteractionChainingMode : int32_t
 {
@@ -68,7 +77,9 @@ struct IInteractionTracker2;
 struct IInteractionTracker3;
 struct IInteractionTracker4;
 struct IInteractionTrackerCustomAnimationStateEnteredArgs;
+struct IInteractionTrackerCustomAnimationStateEnteredArgs2;
 struct IInteractionTrackerIdleStateEnteredArgs;
+struct IInteractionTrackerIdleStateEnteredArgs2;
 struct IInteractionTrackerInertiaModifier;
 struct IInteractionTrackerInertiaModifierFactory;
 struct IInteractionTrackerInertiaMotion;
@@ -79,10 +90,13 @@ struct IInteractionTrackerInertiaRestingValue;
 struct IInteractionTrackerInertiaRestingValueStatics;
 struct IInteractionTrackerInertiaStateEnteredArgs;
 struct IInteractionTrackerInertiaStateEnteredArgs2;
+struct IInteractionTrackerInertiaStateEnteredArgs3;
 struct IInteractionTrackerInteractingStateEnteredArgs;
+struct IInteractionTrackerInteractingStateEnteredArgs2;
 struct IInteractionTrackerOwner;
 struct IInteractionTrackerRequestIgnoredArgs;
 struct IInteractionTrackerStatics;
+struct IInteractionTrackerStatics2;
 struct IInteractionTrackerValuesChangedArgs;
 struct IInteractionTrackerVector2InertiaModifier;
 struct IInteractionTrackerVector2InertiaModifierFactory;
@@ -93,6 +107,7 @@ struct IVisualInteractionSource2;
 struct IVisualInteractionSource3;
 struct IVisualInteractionSourceObjectFactory;
 struct IVisualInteractionSourceStatics;
+struct IVisualInteractionSourceStatics2;
 struct CompositionConditionalValue;
 struct CompositionInteractionSourceCollection;
 struct InteractionSourceConfiguration;
@@ -115,6 +130,7 @@ struct VisualInteractionSource;
 
 namespace winrt::impl {
 
+template<> struct is_enum_flag<Windows::UI::Composition::Interactions::InteractionBindingAxisModes> : std::true_type {};
 template <> struct category<Windows::UI::Composition::Interactions::ICompositionConditionalValue>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::ICompositionConditionalValueStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::ICompositionInteractionSource>{ using type = interface_category; };
@@ -125,7 +141,9 @@ template <> struct category<Windows::UI::Composition::Interactions::IInteraction
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTracker3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTracker4>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifierFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotion>{ using type = interface_category; };
@@ -136,10 +154,13 @@ template <> struct category<Windows::UI::Composition::Interactions::IInteraction
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValueStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerOwner>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerRequestIgnoredArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifierFactory>{ using type = interface_category; };
@@ -150,6 +171,7 @@ template <> struct category<Windows::UI::Composition::Interactions::IVisualInter
 template <> struct category<Windows::UI::Composition::Interactions::IVisualInteractionSource3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IVisualInteractionSourceObjectFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::Interactions::CompositionConditionalValue>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::Interactions::InteractionSourceConfiguration>{ using type = class_category; };
@@ -167,6 +189,7 @@ template <> struct category<Windows::UI::Composition::Interactions::InteractionT
 template <> struct category<Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::Interactions::VisualInteractionSource>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::Interactions::InteractionBindingAxisModes>{ using type = enum_category; };
 template <> struct category<Windows::UI::Composition::Interactions::InteractionChainingMode>{ using type = enum_category; };
 template <> struct category<Windows::UI::Composition::Interactions::InteractionSourceMode>{ using type = enum_category; };
 template <> struct category<Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode>{ using type = enum_category; };
@@ -182,7 +205,9 @@ template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrac
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTracker3>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTracker3" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTracker4>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTracker4" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs" }; };
+template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs" }; };
+template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaModifier" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifierFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaModifierFactory" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotion>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaMotion" }; };
@@ -193,10 +218,13 @@ template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrac
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValueStatics>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValueStatics" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2" }; };
+template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs" }; };
+template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerOwner>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerOwner" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerRequestIgnoredArgs>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerRequestIgnoredArgs" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerStatics>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerStatics" }; };
+template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerStatics2" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerVector2InertiaModifier" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifierFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IInteractionTrackerVector2InertiaModifierFactory" }; };
@@ -207,6 +235,7 @@ template <> struct name<Windows::UI::Composition::Interactions::IVisualInteracti
 template <> struct name<Windows::UI::Composition::Interactions::IVisualInteractionSource3>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IVisualInteractionSource3" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IVisualInteractionSourceObjectFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IVisualInteractionSourceObjectFactory" }; };
 template <> struct name<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics" }; };
+template <> struct name<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2" }; };
 template <> struct name<Windows::UI::Composition::Interactions::CompositionConditionalValue>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.CompositionConditionalValue" }; };
 template <> struct name<Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection" }; };
 template <> struct name<Windows::UI::Composition::Interactions::InteractionSourceConfiguration>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.InteractionSourceConfiguration" }; };
@@ -224,6 +253,7 @@ template <> struct name<Windows::UI::Composition::Interactions::InteractionTrack
 template <> struct name<Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier" }; };
 template <> struct name<Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion" }; };
 template <> struct name<Windows::UI::Composition::Interactions::VisualInteractionSource>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.VisualInteractionSource" }; };
+template <> struct name<Windows::UI::Composition::Interactions::InteractionBindingAxisModes>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.InteractionBindingAxisModes" }; };
 template <> struct name<Windows::UI::Composition::Interactions::InteractionChainingMode>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.InteractionChainingMode" }; };
 template <> struct name<Windows::UI::Composition::Interactions::InteractionSourceMode>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.InteractionSourceMode" }; };
 template <> struct name<Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode>{ static constexpr auto & value{ L"Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode" }; };
@@ -239,7 +269,9 @@ template <> struct guid_storage<Windows::UI::Composition::Interactions::IInterac
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTracker3>{ static constexpr guid value{ 0xE6C5D7A2,0x5C4B,0x42C6,{ 0x84,0xB7,0xF6,0x94,0x41,0xB1,0x80,0x91 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTracker4>{ static constexpr guid value{ 0xEBD222BC,0x04AF,0x4AC7,{ 0x84,0x7D,0x06,0xEA,0x36,0xE8,0x0A,0x16 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs>{ static constexpr guid value{ 0x8D1C8CF1,0xD7B0,0x434C,{ 0xA5,0xD2,0x2D,0x76,0x11,0x86,0x48,0x34 } }; };
+template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>{ static constexpr guid value{ 0x47D579B7,0x0985,0x5E99,{ 0xB0,0x24,0x2F,0x32,0xC3,0x80,0xC1,0xA4 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs>{ static constexpr guid value{ 0x50012FAA,0x1510,0x4142,{ 0xA1,0xA5,0x01,0x9B,0x09,0xF8,0x85,0x7B } }; };
+template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>{ static constexpr guid value{ 0xF2E771ED,0xB803,0x5137,{ 0x94,0x35,0x1C,0x96,0xE4,0x87,0x21,0xE9 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier>{ static constexpr guid value{ 0xA0E2C920,0x26B4,0x4DA2,{ 0x8B,0x61,0x5E,0x68,0x39,0x79,0xBB,0xE2 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifierFactory>{ static constexpr guid value{ 0x993818FE,0xC94E,0x4B86,{ 0x87,0xF3,0x92,0x26,0x65,0xBA,0x46,0xB9 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotion>{ static constexpr guid value{ 0x04922FDC,0xF154,0x4CB8,{ 0xBF,0x33,0xCC,0x1B,0xA6,0x11,0xE6,0xDB } }; };
@@ -250,10 +282,13 @@ template <> struct guid_storage<Windows::UI::Composition::Interactions::IInterac
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValueStatics>{ static constexpr guid value{ 0x18ED4699,0x0745,0x4096,{ 0xBC,0xAB,0x3A,0x4E,0x99,0x56,0x9B,0xCF } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs>{ static constexpr guid value{ 0x87108CF2,0xE7FF,0x4F7D,{ 0x9F,0xFD,0xD7,0x2F,0x1E,0x40,0x9B,0x63 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2>{ static constexpr guid value{ 0xB1EB32F6,0xC26C,0x41F6,{ 0xA1,0x89,0xFA,0xBC,0x22,0xB3,0x23,0xCC } }; };
+template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>{ static constexpr guid value{ 0x48AC1C2F,0x47BD,0x59AF,{ 0xA5,0x8C,0x79,0xBD,0x2E,0xB9,0xEF,0x71 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs>{ static constexpr guid value{ 0xA7263939,0xA17B,0x4011,{ 0x99,0xFD,0xB5,0xC2,0x4F,0x14,0x37,0x48 } }; };
+template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>{ static constexpr guid value{ 0x509652D6,0xD488,0x59CD,{ 0x81,0x9F,0xF5,0x23,0x10,0x29,0x5B,0x11 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerOwner>{ static constexpr guid value{ 0xDB2E8AF3,0x4DEB,0x4E53,{ 0xB2,0x9C,0xB0,0x6C,0x9F,0x96,0xD6,0x51 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerRequestIgnoredArgs>{ static constexpr guid value{ 0x80DD82F1,0xCE25,0x488F,{ 0x91,0xDD,0xCB,0x64,0x55,0xCC,0xFF,0x2E } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerStatics>{ static constexpr guid value{ 0xBBA5D7B7,0x6590,0x4498,{ 0x8D,0x6C,0xEB,0x62,0xB5,0x14,0xC9,0x2A } }; };
+template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>{ static constexpr guid value{ 0x35E53720,0x46B7,0x5CB0,{ 0xB5,0x05,0xF3,0xD6,0x88,0x4A,0x61,0x63 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs>{ static constexpr guid value{ 0xCF1578EF,0xD3DF,0x4501,{ 0xB9,0xE6,0xF0,0x2F,0xB2,0x2F,0x73,0xD0 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier>{ static constexpr guid value{ 0x87E08AB0,0x3086,0x4853,{ 0xA4,0xB7,0x77,0x88,0x2A,0xD5,0xD7,0xE3 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifierFactory>{ static constexpr guid value{ 0x7401D6C4,0x6C6D,0x48DF,{ 0xBC,0x3E,0x17,0x1E,0x22,0x7E,0x7D,0x7F } }; };
@@ -264,6 +299,7 @@ template <> struct guid_storage<Windows::UI::Composition::Interactions::IVisualI
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IVisualInteractionSource3>{ static constexpr guid value{ 0xD941EF2A,0x0D5C,0x4057,{ 0x92,0xD7,0xC9,0x71,0x15,0x33,0x20,0x4F } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IVisualInteractionSourceObjectFactory>{ static constexpr guid value{ 0xB2CA917C,0xE98A,0x41F2,{ 0xB3,0xC9,0x89,0x1C,0x92,0x66,0xC8,0xF6 } }; };
 template <> struct guid_storage<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics>{ static constexpr guid value{ 0x369965E1,0x8645,0x4F75,{ 0xBA,0x00,0x64,0x79,0xCD,0x10,0xC8,0xE6 } }; };
+template <> struct guid_storage<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2>{ static constexpr guid value{ 0xA979C032,0x5764,0x55E0,{ 0xBC,0x1F,0x07,0x78,0x78,0x6D,0xCF,0xDE } }; };
 template <> struct default_interface<Windows::UI::Composition::Interactions::CompositionConditionalValue>{ using type = Windows::UI::Composition::Interactions::ICompositionConditionalValue; };
 template <> struct default_interface<Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>{ using type = Windows::UI::Composition::Interactions::ICompositionInteractionSourceCollection; };
 template <> struct default_interface<Windows::UI::Composition::Interactions::InteractionSourceConfiguration>{ using type = Windows::UI::Composition::Interactions::IInteractionSourceConfiguration; };
@@ -377,9 +413,19 @@ template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrack
     virtual int32_t WINRT_CALL get_RequestId(int32_t* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_RequestId(int32_t* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier>{ struct type : IInspectable
@@ -445,9 +491,19 @@ template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrack
     virtual int32_t WINRT_CALL get_IsInertiaFromImpulse(bool* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_RequestId(int32_t* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_IsFromBinding(bool* value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerOwner>{ struct type : IInspectable
@@ -469,6 +525,12 @@ template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrack
 {
     virtual int32_t WINRT_CALL Create(void* compositor, void** result) noexcept = 0;
     virtual int32_t WINRT_CALL CreateWithOwner(void* compositor, void* owner, void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL SetBindingMode(void* boundTracker1, void* boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes axisMode) noexcept = 0;
+    virtual int32_t WINRT_CALL GetBindingMode(void* boundTracker1, void* boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs>{ struct type : IInspectable
@@ -550,6 +612,11 @@ template <> struct abi<Windows::UI::Composition::Interactions::IVisualInteractio
 template <> struct abi<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL Create(void* source, void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateFromIVisualElement(void* source, void** result) noexcept = 0;
 };};
 
 template <typename D>
@@ -668,11 +735,25 @@ struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnim
 template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs2
+{
+    bool IsFromBinding() const;
+};
+template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs2<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs
 {
     int32_t RequestId() const;
 };
 template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs2
+{
+    bool IsFromBinding() const;
+};
+template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaModifier
@@ -758,11 +839,25 @@ struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaSta
 template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs2<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs3
+{
+    bool IsFromBinding() const;
+};
+template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs3<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs
 {
     int32_t RequestId() const;
 };
 template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs2
+{
+    bool IsFromBinding() const;
+};
+template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerOwner
@@ -790,6 +885,14 @@ struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics
     Windows::UI::Composition::Interactions::InteractionTracker CreateWithOwner(Windows::UI::Composition::Compositor const& compositor, Windows::UI::Composition::Interactions::IInteractionTrackerOwner const& owner) const;
 };
 template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerStatics> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics2
+{
+    void SetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2, Windows::UI::Composition::Interactions::InteractionBindingAxisModes const& axisMode) const;
+    Windows::UI::Composition::Interactions::InteractionBindingAxisModes GetBindingMode(Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2) const;
+};
+template <> struct consume<Windows::UI::Composition::Interactions::IInteractionTrackerStatics2> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerValuesChangedArgs
@@ -891,5 +994,12 @@ struct consume_Windows_UI_Composition_Interactions_IVisualInteractionSourceStati
     Windows::UI::Composition::Interactions::VisualInteractionSource Create(Windows::UI::Composition::Visual const& source) const;
 };
 template <> struct consume<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics2
+{
+    Windows::UI::Composition::Interactions::VisualInteractionSource CreateFromIVisualElement(Windows::UI::Composition::IVisualElement const& source) const;
+};
+template <> struct consume<Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2> { template <typename D> using type = consume_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics2<D>; };
 
 }

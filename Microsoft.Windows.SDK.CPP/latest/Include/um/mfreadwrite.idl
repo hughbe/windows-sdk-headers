@@ -13,8 +13,8 @@ import "MFTransform.idl";
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN7) ")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -575,13 +575,13 @@ interface IMFSourceReader : IUnknown
                 [out, annotation("_Out_")] PROPVARIANT *pvarAttribute );
 };
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN8) ")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -663,13 +663,13 @@ interface IMFSourceReaderEx : IMFSourceReader
                 [out, annotation("_Out_")] IMFTransform **ppTransform );
 };
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#endif")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 [
     object,
@@ -921,15 +921,15 @@ typedef struct _MF_SINK_WRITER_STATISTICS
 
 } MF_SINK_WRITER_STATISTICS;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#if defined(_MSC_VER) && (_MSC_VER >= 1600)")
 cpp_quote("#pragma warning(pop)")
 cpp_quote("#endif")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 //
 // MF Sink Writer Interface
@@ -1259,7 +1259,7 @@ cpp_quote( "EXTERN_GUID( MF_READWRITE_DISABLE_CONVERTERS, 0x98d5b065, 0x1374, 0x
 // be set to TRUE to enable hardware transforms.
 cpp_quote( "EXTERN_GUID( MF_READWRITE_ENABLE_HARDWARE_TRANSFORMS, 0xa634a91c, 0x822b, 0x41b9, 0xa4, 0x94, 0x4d, 0xe4, 0x64, 0x36, 0x12, 0xb0);" )
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
@@ -1267,8 +1267,8 @@ cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN8) ")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 // MF_READWRITE_MMCSS_CLASS
 // Data type: String
@@ -1322,7 +1322,7 @@ cpp_quote("EXTERN_GUID( MF_MEDIASINK_ENABLE_AUTOFINALIZE, 0x34014265, 0xcb7e, 0x
 //
 cpp_quote("EXTERN_GUID( MF_READWRITE_ENABLE_AUTOFINALIZE, 0xdd7ca129, 0x8cd1, 0x4dc5, 0x9d, 0xde, 0xce, 0x16, 0x86, 0x75, 0xde, 0x61);")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN8) ")

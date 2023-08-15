@@ -73,7 +73,8 @@ typedef struct DXGI_DDI_PRESENT_FLAGS
             UINT    TemporaryMono            : 1;        // 0x00000008
             UINT    AllowTearing             : 1;        // 0x00000010
             UINT    AllowFlexibleRefresh     : 1;        // 0x00000020
-            UINT    Reserved                 :26;
+            UINT    NoScanoutTransform       : 1;        // 0x00000040
+            UINT    Reserved                 :25;
         };
         UINT    Value;
     };
@@ -349,7 +350,8 @@ typedef enum DXGI_DDI_MULTIPLANE_OVERLAY_FLAGS
 {
     DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_VERTICAL_FLIP                 = 0x1,
     DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_HORIZONTAL_FLIP               = 0x2,
-    DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_FULLSCREEN_POST_COMPOSITION   = 0x4
+    DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_FULLSCREEN_POST_COMPOSITION   = 0x4,
+    DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_NO_SCANOUT_TRANFORMATION      = 0x8,
 } DXGI_DDI_MULTIPLANE_OVERLAY_FLAGS;
 
 typedef enum DXGI_DDI_MULTIPLANE_OVERLAY_BLEND
@@ -935,6 +937,20 @@ typedef struct DXGIDDICB_SUBMITPRESENTTOHWQUEUE
     UINT                        PrivateDriverDataSize;      // in: private driver data size in bytes
     _Field_size_bytes_(PrivateDriverDataSize)
     PVOID                       pPrivateDriverData;         // in: private driver data to pass to DdiPresent
+
+#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_2)
+
+    BOOLEAN                     bOptimizeForComposition;                        // out: DWM is involved in composition
+
+#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_2)
+
+#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_3)
+
+    BOOL                        SyncIntervalOverrideValid;
+    DXGI_DDI_FLIP_INTERVAL_TYPE SyncIntervalOverride;
+
+#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_3)
+
 } DXGIDDICB_SUBMITPRESENTTOHWQUEUE;
 
 #endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_5_2)

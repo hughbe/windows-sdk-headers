@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.effects.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -287,9 +283,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioCaptureEffectsManager;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioCaptureEffectsManager ABI::Windows::Media::Effects::IAudioCaptureEffectsManager
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioCaptureEffectsManager_FWD_DEFINED__
@@ -301,9 +297,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioEffect;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioEffect ABI::Windows::Media::Effects::IAudioEffect
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioEffect_FWD_DEFINED__
@@ -315,9 +311,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition ABI::Windows::Media::Effects::IAudioEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition_FWD_DEFINED__
@@ -329,9 +325,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioEffectDefinitionFactory;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinitionFactory ABI::Windows::Media::Effects::IAudioEffectDefinitionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinitionFactory_FWD_DEFINED__
@@ -343,9 +339,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioEffectsManagerStatics;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioEffectsManagerStatics ABI::Windows::Media::Effects::IAudioEffectsManagerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectsManagerStatics_FWD_DEFINED__
@@ -357,9 +353,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioRenderEffectsManager;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager ABI::Windows::Media::Effects::IAudioRenderEffectsManager
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager_FWD_DEFINED__
@@ -371,9 +367,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioRenderEffectsManager2;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager2 ABI::Windows::Media::Effects::IAudioRenderEffectsManager2
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager2_FWD_DEFINED__
@@ -385,9 +381,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IBasicAudioEffect;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIBasicAudioEffect ABI::Windows::Media::Effects::IBasicAudioEffect
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIBasicAudioEffect_FWD_DEFINED__
@@ -399,9 +395,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IBasicVideoEffect;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIBasicVideoEffect ABI::Windows::Media::Effects::IBasicVideoEffect
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIBasicVideoEffect_FWD_DEFINED__
@@ -413,9 +409,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface ICompositeVideoFrameContext;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CICompositeVideoFrameContext ABI::Windows::Media::Effects::ICompositeVideoFrameContext
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CICompositeVideoFrameContext_FWD_DEFINED__
@@ -427,9 +423,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IProcessAudioFrameContext;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIProcessAudioFrameContext ABI::Windows::Media::Effects::IProcessAudioFrameContext
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIProcessAudioFrameContext_FWD_DEFINED__
@@ -441,9 +437,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IProcessVideoFrameContext;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIProcessVideoFrameContext ABI::Windows::Media::Effects::IProcessVideoFrameContext
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIProcessVideoFrameContext_FWD_DEFINED__
@@ -455,9 +451,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoCompositor;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoCompositor ABI::Windows::Media::Effects::IVideoCompositor
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoCompositor_FWD_DEFINED__
@@ -469,9 +465,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoCompositorDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinition ABI::Windows::Media::Effects::IVideoCompositorDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinition_FWD_DEFINED__
@@ -483,9 +479,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoCompositorDefinitionFactory;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinitionFactory ABI::Windows::Media::Effects::IVideoCompositorDefinitionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinitionFactory_FWD_DEFINED__
@@ -497,9 +493,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinition ABI::Windows::Media::Effects::IVideoEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinition_FWD_DEFINED__
@@ -511,9 +507,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoEffectDefinitionFactory;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinitionFactory ABI::Windows::Media::Effects::IVideoEffectDefinitionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinitionFactory_FWD_DEFINED__
@@ -525,9 +521,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoTransformEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition ABI::Windows::Media::Effects::IVideoTransformEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition_FWD_DEFINED__
@@ -539,9 +535,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoTransformEffectDefinition2;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition2 ABI::Windows::Media::Effects::IVideoTransformEffectDefinition2
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition2_FWD_DEFINED__
@@ -553,9 +549,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IVideoTransformSphericalProjection;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIVideoTransformSphericalProjection ABI::Windows::Media::Effects::IVideoTransformSphericalProjection
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIVideoTransformSphericalProjection_FWD_DEFINED__
@@ -568,9 +564,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class AudioEffect;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -593,7 +589,7 @@ IIterator<ABI::Windows::Media::Effects::AudioEffect*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Effects::AudioEffect*> __FIIterator_1_Windows__CMedia__CEffects__CAudioEffect_t;
 #define __FIIterator_1_Windows__CMedia__CEffects__CAudioEffect ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEffects__CAudioEffect_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEffects__CAudioEffect ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Effects::IAudioEffect*>
@@ -625,7 +621,7 @@ IIterable<ABI::Windows::Media::Effects::AudioEffect*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Effects::AudioEffect*> __FIIterable_1_Windows__CMedia__CEffects__CAudioEffect_t;
 #define __FIIterable_1_Windows__CMedia__CEffects__CAudioEffect ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEffects__CAudioEffect_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEffects__CAudioEffect ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Effects::IAudioEffect*>
@@ -657,7 +653,7 @@ IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -689,7 +685,7 @@ IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -721,7 +717,7 @@ IIterator<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -753,7 +749,7 @@ IIterable<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -785,7 +781,7 @@ IVectorView<ABI::Windows::Media::Effects::AudioEffect*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Effects::AudioEffect*> __FIVectorView_1_Windows__CMedia__CEffects__CAudioEffect_t;
 #define __FIVectorView_1_Windows__CMedia__CEffects__CAudioEffect ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEffects__CAudioEffect_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEffects__CAudioEffect ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Effects::IAudioEffect*>
@@ -817,7 +813,7 @@ IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -849,7 +845,7 @@ IVectorView<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -881,7 +877,7 @@ IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -913,7 +909,7 @@ IVector<ABI::Windows::Media::Effects::IVideoEffectDefinition*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Effects::IVideoEffectDefinition*> __FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t;
 #define __FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEffects__CIVideoEffectDefinition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Effects::IVideoEffectDefinition*>
@@ -929,9 +925,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class AudioCaptureEffectsManager;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -955,7 +951,7 @@ ITypedEventHandler<ABI::Windows::Media::Effects::AudioCaptureEffectsManager*,IIn
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Effects::AudioCaptureEffectsManager*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Effects::IAudioCaptureEffectsManager*,IInspectable*>
@@ -971,9 +967,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class AudioRenderEffectsManager;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -997,7 +993,7 @@ ITypedEventHandler<ABI::Windows::Media::Effects::AudioRenderEffectsManager*,IIns
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Effects::AudioRenderEffectsManager*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Effects::IAudioRenderEffectsManager*,IInspectable*>
@@ -1013,9 +1009,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class AudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -1024,9 +1020,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties ABI::Windows::Media::MediaProperties::IAudioEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -1052,7 +1048,7 @@ IIterator<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> __FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t;
 #define __FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaProperties::IAudioEncodingProperties*>
@@ -1084,7 +1080,7 @@ IIterable<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> __FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t;
 #define __FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaProperties::IAudioEncodingProperties*>
@@ -1116,7 +1112,7 @@ IVectorView<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::MediaProperties::AudioEncodingProperties*> __FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaProperties::IAudioEncodingProperties*>
@@ -1132,9 +1128,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class VideoEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_FWD_DEFINED__
@@ -1143,9 +1139,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IVideoEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties ABI::Windows::Media::MediaProperties::IVideoEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties_FWD_DEFINED__
@@ -1171,7 +1167,7 @@ IIterator<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> __FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t;
 #define __FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::MediaProperties::IVideoEncodingProperties*>
@@ -1203,7 +1199,7 @@ IIterable<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> __FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t;
 #define __FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::MediaProperties::IVideoEncodingProperties*>
@@ -1235,7 +1231,7 @@ IVectorView<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::MediaProperties::VideoEncodingProperties*> __FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t;
 #define __FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::MediaProperties::IVideoEncodingProperties*>
@@ -1254,10 +1250,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -1283,7 +1279,7 @@ IIterator<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> __FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t;
 #define __FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*>
@@ -1315,7 +1311,7 @@ IIterable<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> __FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t;
 #define __FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*>
@@ -1347,7 +1343,7 @@ IVectorView<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> : IV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*> __FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t;
 #define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGraphics__CDirectX__CDirect3D11__CIDirect3DSurface ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface*>
@@ -1367,9 +1363,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1385,9 +1381,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1398,8 +1394,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1407,8 +1403,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1421,10 +1417,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DDevice;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_FWD_DEFINED__
@@ -1439,8 +1435,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class AudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
@@ -1448,8 +1444,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IAudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIAudioFrame ABI::Windows::Media::IAudioFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
@@ -1461,8 +1457,8 @@ namespace ABI {
             
             typedef enum AudioProcessing : int AudioProcessing;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1473,9 +1469,9 @@ namespace ABI {
                 
                 typedef enum MediaCategory : int MediaCategory;
                 
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1485,9 +1481,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 class MediaOverlay;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay_FWD_DEFINED__
@@ -1496,9 +1492,9 @@ namespace ABI {
         namespace Media {
             namespace Editing {
                 interface IMediaOverlay;
-            } /* Windows */
+            } /* Editing */
         } /* Media */
-    } /* Editing */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay ABI::Windows::Media::Editing::IMediaOverlay
 
 #endif // ____x_ABI_CWindows_CMedia_CEditing_CIMediaOverlay_FWD_DEFINED__
@@ -1513,8 +1509,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaExtension;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaExtension ABI::Windows::Media::IMediaExtension
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaExtension_FWD_DEFINED__
@@ -1530,9 +1526,9 @@ namespace ABI {
                 
                 typedef enum MediaMirroringOptions : unsigned int MediaMirroringOptions;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1541,9 +1537,9 @@ namespace ABI {
                 
                 typedef enum MediaRotation : int MediaRotation;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1552,9 +1548,9 @@ namespace ABI {
                 
                 typedef enum SphericalVideoFrameFormat : int SphericalVideoFrameFormat;
                 
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1567,9 +1563,9 @@ namespace ABI {
                 
                 typedef enum SphericalVideoProjectionMode : int SphericalVideoProjectionMode;
                 
-            } /* Windows */
+            } /* Playback */
         } /* Media */
-    } /* Playback */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1581,9 +1577,9 @@ namespace ABI {
                 
                 typedef enum AudioRenderCategory : int AudioRenderCategory;
                 
-            } /* Windows */
+            } /* Render */
         } /* Media */
-    } /* Render */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1595,9 +1591,9 @@ namespace ABI {
                 
                 typedef enum MediaVideoProcessingAlgorithm : int MediaVideoProcessingAlgorithm;
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1606,8 +1602,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -1615,8 +1611,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IVideoFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -1631,9 +1627,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1648,8 +1644,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1660,9 +1656,9 @@ namespace ABI {
                 
                 typedef enum AudioEffectType : int AudioEffectType;
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1671,9 +1667,9 @@ namespace ABI {
                 
                 typedef enum MediaEffectClosedReason : int MediaEffectClosedReason;
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1682,9 +1678,9 @@ namespace ABI {
                 
                 typedef enum MediaMemoryTypes : int MediaMemoryTypes;
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1713,9 +1709,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class AudioEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1725,9 +1721,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class CompositeVideoFrameContext;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1735,9 +1731,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class ProcessAudioFrameContext;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1745,9 +1741,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class ProcessVideoFrameContext;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1755,9 +1751,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class VideoCompositorDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1765,9 +1761,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class VideoEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1775,9 +1771,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class VideoTransformEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1785,9 +1781,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 class VideoTransformSphericalProjection;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1835,9 +1831,9 @@ namespace ABI {
                     AudioEffectType_DynamicRangeCompression = 17,
                 };
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1864,9 +1860,9 @@ namespace ABI {
                     MediaEffectClosedReason_EffectCurrentlyUnloaded = 3,
                 };
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1892,9 +1888,9 @@ namespace ABI {
                     MediaMemoryTypes_GpuAndCpu = 2,
                 };
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1937,9 +1933,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioCaptureEffectsManager=_uuidof(IAudioCaptureEffectsManager);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIAudioCaptureEffectsManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIAudioCaptureEffectsManager_INTERFACE_DEFINED__) */
@@ -1978,9 +1974,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEffect=_uuidof(IAudioEffect);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIAudioEffect;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIAudioEffect_INTERFACE_DEFINED__) */
@@ -2019,9 +2015,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEffectDefinition=_uuidof(IAudioEffectDefinition);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition_INTERFACE_DEFINED__) */
@@ -2066,9 +2062,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEffectDefinitionFactory=_uuidof(IAudioEffectDefinitionFactory);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinitionFactory_INTERFACE_DEFINED__) */
@@ -2126,9 +2122,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioEffectsManagerStatics=_uuidof(IAudioEffectsManagerStatics);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIAudioEffectsManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectsManagerStatics_INTERFACE_DEFINED__) */
@@ -2174,9 +2170,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioRenderEffectsManager=_uuidof(IAudioRenderEffectsManager);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager_INTERFACE_DEFINED__) */
@@ -2235,9 +2231,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioRenderEffectsManager2=_uuidof(IAudioRenderEffectsManager2);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager2_INTERFACE_DEFINED__) */
@@ -2270,7 +2266,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UseInputFrameForOutput(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedEncodingProperties(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CMediaProperties__CAudioEncodingProperties * * value
@@ -2290,9 +2286,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBasicAudioEffect=_uuidof(IBasicAudioEffect);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIBasicAudioEffect;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIBasicAudioEffect_INTERFACE_DEFINED__) */
@@ -2325,13 +2321,13 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReadOnly(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedMemoryTypes(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::Effects::MediaMemoryTypes * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TimeIndependent(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedEncodingProperties(
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CMediaProperties__CVideoEncodingProperties * * value
@@ -2352,9 +2348,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBasicVideoEffect=_uuidof(IBasicVideoEffect);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIBasicVideoEffect;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIBasicVideoEffect_INTERFACE_DEFINED__) */
@@ -2403,9 +2399,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICompositeVideoFrameContext=_uuidof(ICompositeVideoFrameContext);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CICompositeVideoFrameContext;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CICompositeVideoFrameContext_INTERFACE_DEFINED__) */
@@ -2447,9 +2443,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessAudioFrameContext=_uuidof(IProcessAudioFrameContext);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIProcessAudioFrameContext;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIProcessAudioFrameContext_INTERFACE_DEFINED__) */
@@ -2491,9 +2487,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessVideoFrameContext=_uuidof(IProcessVideoFrameContext);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIProcessVideoFrameContext;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIProcessVideoFrameContext_INTERFACE_DEFINED__) */
@@ -2526,7 +2522,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TimeIndependent(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetEncodingProperties(
                         /* [in] */__RPC__in_opt ABI::Windows::Media::MediaProperties::IVideoEncodingProperties * backgroundProperties,
@@ -2544,9 +2540,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoCompositor=_uuidof(IVideoCompositor);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoCompositor;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoCompositor_INTERFACE_DEFINED__) */
@@ -2585,9 +2581,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoCompositorDefinition=_uuidof(IVideoCompositorDefinition);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinition_INTERFACE_DEFINED__) */
@@ -2632,9 +2628,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoCompositorDefinitionFactory=_uuidof(IVideoCompositorDefinitionFactory);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoCompositorDefinitionFactory_INTERFACE_DEFINED__) */
@@ -2673,9 +2669,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEffectDefinition=_uuidof(IVideoEffectDefinition);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinition_INTERFACE_DEFINED__) */
@@ -2720,9 +2716,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoEffectDefinitionFactory=_uuidof(IVideoEffectDefinitionFactory);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoEffectDefinitionFactory_INTERFACE_DEFINED__) */
@@ -2798,9 +2794,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoTransformEffectDefinition=_uuidof(IVideoTransformEffectDefinition);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition_INTERFACE_DEFINED__) */
@@ -2839,9 +2835,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoTransformEffectDefinition2=_uuidof(IVideoTransformEffectDefinition2);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoTransformEffectDefinition2_INTERFACE_DEFINED__) */
@@ -2873,10 +2869,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FrameFormat(
                         /* [retval, out] */__RPC__out ABI::Windows::Media::MediaProperties::SphericalVideoFrameFormat * value
@@ -2907,9 +2903,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVideoTransformSphericalProjection=_uuidof(IVideoTransformSphericalProjection);
                 
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CEffects_CIVideoTransformSphericalProjection;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CEffects_CIVideoTransformSphericalProjection_INTERFACE_DEFINED__) */
@@ -4471,7 +4467,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureE
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CEffects_CIAudioCaptureEffectsManager * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CEffects_CIAudioCaptureEffectsManager * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioCaptureEffectsManager_IInspectableVtbl;
 
@@ -4522,7 +4518,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEf
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CEffects_CIAudioRenderEffectsManager * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CEffects__CAudioRenderEffectsManager_IInspectableVtbl;
 

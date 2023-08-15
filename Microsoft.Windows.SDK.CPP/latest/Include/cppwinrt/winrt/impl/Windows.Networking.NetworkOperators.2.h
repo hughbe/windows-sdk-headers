@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -55,7 +55,8 @@ namespace winrt::impl {
 WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators {
 
 struct WINRT_EBO ESim :
-    Windows::Networking::NetworkOperators::IESim
+    Windows::Networking::NetworkOperators::IESim,
+    impl::require<ESim, Windows::Networking::NetworkOperators::IESim2>
 {
     ESim(std::nullptr_t) noexcept {}
 };
@@ -64,6 +65,18 @@ struct WINRT_EBO ESimAddedEventArgs :
     Windows::Networking::NetworkOperators::IESimAddedEventArgs
 {
     ESimAddedEventArgs(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO ESimDiscoverEvent :
+    Windows::Networking::NetworkOperators::IESimDiscoverEvent
+{
+    ESimDiscoverEvent(std::nullptr_t) noexcept {}
+};
+
+struct WINRT_EBO ESimDiscoverResult :
+    Windows::Networking::NetworkOperators::IESimDiscoverResult
+{
+    ESimDiscoverResult(std::nullptr_t) noexcept {}
 };
 
 struct WINRT_EBO ESimDownloadProfileMetadataResult :

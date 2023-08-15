@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.composition.effects.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,10 +140,10 @@ namespace ABI {
             namespace Composition {
                 namespace Effects {
                     interface ISceneLightingEffect;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect ABI::Windows::UI::Composition::Effects::ISceneLightingEffect
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect_FWD_DEFINED__
@@ -156,10 +156,10 @@ namespace ABI {
             namespace Composition {
                 namespace Effects {
                     interface ISceneLightingEffect2;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect2 ABI::Windows::UI::Composition::Effects::ISceneLightingEffect2
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect2_FWD_DEFINED__
@@ -175,9 +175,9 @@ namespace ABI {
         namespace Graphics {
             namespace Effects {
                 interface IGraphicsEffect;
-            } /* Windows */
+            } /* Effects */
         } /* Graphics */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CEffects_CIGraphicsEffect ABI::Windows::Graphics::Effects::IGraphicsEffect
 
 #endif // ____x_ABI_CWindows_CGraphics_CEffects_CIGraphicsEffect_FWD_DEFINED__
@@ -190,9 +190,9 @@ namespace ABI {
         namespace Graphics {
             namespace Effects {
                 interface IGraphicsEffectSource;
-            } /* Windows */
+            } /* Effects */
         } /* Graphics */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CEffects_CIGraphicsEffectSource ABI::Windows::Graphics::Effects::IGraphicsEffectSource
 
 #endif // ____x_ABI_CWindows_CGraphics_CEffects_CIGraphicsEffectSource_FWD_DEFINED__
@@ -209,10 +209,10 @@ namespace ABI {
                     
                     typedef enum SceneLightingEffectReflectanceModel : int SceneLightingEffectReflectanceModel;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -222,10 +222,10 @@ namespace ABI {
             namespace Composition {
                 namespace Effects {
                     class SceneLightingEffect;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -255,10 +255,10 @@ namespace ABI {
                         SceneLightingEffectReflectanceModel_PhysicallyBasedBlinnPhong = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -322,10 +322,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISceneLightingEffect=_uuidof(ISceneLightingEffect);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect_INTERFACE_DEFINED__) */
@@ -368,10 +368,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISceneLightingEffect2=_uuidof(ISceneLightingEffect2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Effects */} /* ABI */
+                } /* Effects */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CEffects_CISceneLightingEffect2_INTERFACE_DEFINED__) */

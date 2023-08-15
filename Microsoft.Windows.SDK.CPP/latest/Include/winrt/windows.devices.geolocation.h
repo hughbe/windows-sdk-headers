@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.geolocation.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface ICivicAddress;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CICivicAddress ABI::Windows::Devices::Geolocation::ICivicAddress
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CICivicAddress_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox ABI::Windows::Devices::Geolocation::IGeoboundingBox
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoboundingBoxFactory;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxFactory ABI::Windows::Devices::Geolocation::IGeoboundingBoxFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxFactory_FWD_DEFINED__
@@ -182,9 +182,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoboundingBoxStatics;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxStatics ABI::Windows::Devices::Geolocation::IGeoboundingBoxStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxStatics_FWD_DEFINED__
@@ -196,9 +196,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocircle;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle ABI::Windows::Devices::Geolocation::IGeocircle
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_FWD_DEFINED__
@@ -210,9 +210,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocircleFactory;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocircleFactory ABI::Windows::Devices::Geolocation::IGeocircleFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircleFactory_FWD_DEFINED__
@@ -224,9 +224,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocoordinate;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate ABI::Windows::Devices::Geolocation::IGeocoordinate
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate_FWD_DEFINED__
@@ -238,9 +238,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocoordinateSatelliteData;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateSatelliteData ABI::Windows::Devices::Geolocation::IGeocoordinateSatelliteData
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateSatelliteData_FWD_DEFINED__
@@ -252,9 +252,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocoordinateWithPoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPoint ABI::Windows::Devices::Geolocation::IGeocoordinateWithPoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPoint_FWD_DEFINED__
@@ -266,9 +266,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocoordinateWithPositionData;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionData ABI::Windows::Devices::Geolocation::IGeocoordinateWithPositionData
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionData_FWD_DEFINED__
@@ -280,9 +280,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeocoordinateWithPositionSourceTimestamp;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp ABI::Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp_FWD_DEFINED__
@@ -294,9 +294,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeolocator;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator ABI::Windows::Devices::Geolocation::IGeolocator
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
@@ -308,9 +308,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeolocator2;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator2 ABI::Windows::Devices::Geolocation::IGeolocator2
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator2_FWD_DEFINED__
@@ -322,9 +322,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeolocatorStatics;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics ABI::Windows::Devices::Geolocation::IGeolocatorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics_FWD_DEFINED__
@@ -336,9 +336,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeolocatorStatics2;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics2 ABI::Windows::Devices::Geolocation::IGeolocatorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics2_FWD_DEFINED__
@@ -350,9 +350,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeolocatorWithScalarAccuracy;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorWithScalarAccuracy ABI::Windows::Devices::Geolocation::IGeolocatorWithScalarAccuracy
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorWithScalarAccuracy_FWD_DEFINED__
@@ -364,9 +364,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopath ABI::Windows::Devices::Geolocation::IGeopath
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
@@ -378,9 +378,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopathFactory;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopathFactory ABI::Windows::Devices::Geolocation::IGeopathFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopathFactory_FWD_DEFINED__
@@ -392,9 +392,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint ABI::Windows::Devices::Geolocation::IGeopoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -406,9 +406,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopointFactory;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopointFactory ABI::Windows::Devices::Geolocation::IGeopointFactory
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopointFactory_FWD_DEFINED__
@@ -420,9 +420,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoposition;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition ABI::Windows::Devices::Geolocation::IGeoposition
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition_FWD_DEFINED__
@@ -434,9 +434,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoposition2;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition2 ABI::Windows::Devices::Geolocation::IGeoposition2
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition2_FWD_DEFINED__
@@ -448,9 +448,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoshape;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape ABI::Windows::Devices::Geolocation::IGeoshape
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape_FWD_DEFINED__
@@ -462,9 +462,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeovisit;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisit ABI::Windows::Devices::Geolocation::IGeovisit
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisit_FWD_DEFINED__
@@ -476,9 +476,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeovisitMonitor;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitor ABI::Windows::Devices::Geolocation::IGeovisitMonitor
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitor_FWD_DEFINED__
@@ -490,9 +490,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeovisitMonitorStatics;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitorStatics ABI::Windows::Devices::Geolocation::IGeovisitMonitorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitorStatics_FWD_DEFINED__
@@ -504,9 +504,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeovisitStateChangedEventArgs;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitStateChangedEventArgs ABI::Windows::Devices::Geolocation::IGeovisitStateChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitStateChangedEventArgs_FWD_DEFINED__
@@ -518,9 +518,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeovisitTriggerDetails;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitTriggerDetails ABI::Windows::Devices::Geolocation::IGeovisitTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitTriggerDetails_FWD_DEFINED__
@@ -532,9 +532,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IPositionChangedEventArgs;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIPositionChangedEventArgs ABI::Windows::Devices::Geolocation::IPositionChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIPositionChangedEventArgs_FWD_DEFINED__
@@ -546,9 +546,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IStatusChangedEventArgs;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIStatusChangedEventArgs ABI::Windows::Devices::Geolocation::IStatusChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIStatusChangedEventArgs_FWD_DEFINED__
@@ -560,9 +560,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IVenueData;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIVenueData ABI::Windows::Devices::Geolocation::IVenueData
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIVenueData_FWD_DEFINED__
@@ -576,9 +576,9 @@ namespace ABI {
             namespace Geolocation {
                 struct BasicGeoposition;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CGeolocation__CBasicGeoposition_USE
@@ -599,7 +599,7 @@ IIterator<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> __FIIterator_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::BasicGeoposition>
@@ -629,7 +629,7 @@ IIterable<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> __FIIterable_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::BasicGeoposition>
@@ -644,9 +644,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -669,7 +669,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geopath*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geopath*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -701,7 +701,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geopath*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geopath*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -717,9 +717,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -742,7 +742,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geopoint*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geopoint*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -774,7 +774,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geopoint*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geopoint*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -790,9 +790,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geoposition;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -815,7 +815,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geoposition*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geoposition*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeoposition_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::IGeoposition*>
@@ -847,7 +847,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geoposition*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geoposition*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeoposition_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::IGeoposition*>
@@ -863,9 +863,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geovisit;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -888,7 +888,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geovisit*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geovisit*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeovisit_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeovisit_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::IGeovisit*>
@@ -920,7 +920,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geovisit*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geovisit*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeovisit_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeovisit_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::IGeovisit*>
@@ -951,7 +951,7 @@ IVectorView<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> __FIVectorView_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t;
 #define __FIVectorView_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::BasicGeoposition>
@@ -982,7 +982,7 @@ IVectorView<ABI::Windows::Devices::Geolocation::Geopath*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Geolocation::Geopath*> __FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -1014,7 +1014,7 @@ IVectorView<ABI::Windows::Devices::Geolocation::Geoposition*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Geolocation::Geoposition*> __FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition_t;
 #define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::IGeoposition*>
@@ -1046,7 +1046,7 @@ IVectorView<ABI::Windows::Devices::Geolocation::Geovisit*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Geolocation::Geovisit*> __FIVectorView_1_Windows__CDevices__CGeolocation__CGeovisit_t;
 #define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CGeolocation__CGeovisit_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::IGeovisit*>
@@ -1078,7 +1078,7 @@ IVector<ABI::Windows::Devices::Geolocation::Geopath*> : IVector_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Geolocation::Geopath*> __FIVector_1_Windows__CDevices__CGeolocation__CGeopath_t;
 #define __FIVector_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CGeolocation__CGeopath_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CGeolocation__CGeopath ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Geolocation::IGeopath*>
@@ -1094,9 +1094,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 enum GeolocationAccessStatus : int;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus_USE
@@ -1117,7 +1117,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Geolocation::Geoloca
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Geolocation::GeolocationAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::GeolocationAccessStatus>
@@ -1147,7 +1147,7 @@ IAsyncOperation<enum ABI::Windows::Devices::Geolocation::GeolocationAccessStatus
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::Geolocation::GeolocationAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeolocationAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Geolocation::GeolocationAccessStatus>
@@ -1178,7 +1178,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geopoint*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geopoint*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -1210,7 +1210,7 @@ IAsyncOperation<ABI::Windows::Devices::Geolocation::Geopoint*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Geolocation::Geopoint*> __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -1242,7 +1242,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geoposition*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geoposition*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeoposition_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::IGeoposition*>
@@ -1274,7 +1274,7 @@ IAsyncOperation<ABI::Windows::Devices::Geolocation::Geoposition*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Geolocation::Geoposition*> __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeoposition_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Geolocation::IGeoposition*>
@@ -1306,7 +1306,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geovisit*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::Geovisit*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeovisit_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeovisit_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Geolocation::IGeovisit*>
@@ -1338,7 +1338,7 @@ IAsyncOperation<ABI::Windows::Devices::Geolocation::Geovisit*> : IAsyncOperation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Geolocation::Geovisit*> __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeovisit_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeovisit_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CGeolocation__CGeovisit ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Geolocation::IGeovisit*>
@@ -1370,7 +1370,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CGeolocation
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::IGeoposition*>*>
@@ -1402,7 +1402,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CGeolocation__CGeoposition ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Geolocation::IGeoposition*>*>
@@ -1433,7 +1433,7 @@ IReference<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> : IRefer
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Devices::Geolocation::BasicGeoposition> __FIReference_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t;
 #define __FIReference_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::__FIReference_1_Windows__CDevices__CGeolocation__CBasicGeoposition_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CDevices__CGeolocation__CBasicGeoposition ABI::Windows::Foundation::IReference<ABI::Windows::Devices::Geolocation::BasicGeoposition>
@@ -1448,9 +1448,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geolocator;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1458,9 +1458,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class PositionChangedEventArgs;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1484,7 +1484,7 @@ ITypedEventHandler<ABI::Windows::Devices::Geolocation::Geolocator*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Geolocation::Geolocator*,ABI::Windows::Devices::Geolocation::PositionChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Geolocation::IGeolocator*,ABI::Windows::Devices::Geolocation::IPositionChangedEventArgs*>
@@ -1502,9 +1502,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class StatusChangedEventArgs;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1528,7 +1528,7 @@ ITypedEventHandler<ABI::Windows::Devices::Geolocation::Geolocator*,ABI::Windows:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Geolocation::Geolocator*,ABI::Windows::Devices::Geolocation::StatusChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Geolocation::IGeolocator*,ABI::Windows::Devices::Geolocation::IStatusChangedEventArgs*>
@@ -1545,9 +1545,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class GeovisitMonitor;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1555,9 +1555,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class GeovisitStateChangedEventArgs;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1581,7 +1581,7 @@ ITypedEventHandler<ABI::Windows::Devices::Geolocation::GeovisitMonitor*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Geolocation::GeovisitMonitor*,ABI::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Geolocation::IGeovisitMonitor*,ABI::Windows::Devices::Geolocation::IGeovisitStateChangedEventArgs*>
@@ -1612,7 +1612,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -1627,8 +1627,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1649,7 +1649,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1678,7 +1678,7 @@ IReference<UINT32> : IReference_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
@@ -1696,8 +1696,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1705,8 +1705,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1718,9 +1718,9 @@ namespace ABI {
                 
                 typedef enum AltitudeReferenceSystem : int AltitudeReferenceSystem;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1729,9 +1729,9 @@ namespace ABI {
                 
                 typedef enum GeolocationAccessStatus : int GeolocationAccessStatus;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1740,9 +1740,9 @@ namespace ABI {
                 
                 typedef enum GeoshapeType : int GeoshapeType;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1751,9 +1751,9 @@ namespace ABI {
                 
                 typedef enum PositionAccuracy : int PositionAccuracy;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1762,9 +1762,9 @@ namespace ABI {
                 
                 typedef enum PositionSource : int PositionSource;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1773,9 +1773,9 @@ namespace ABI {
                 
                 typedef enum PositionStatus : int PositionStatus;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1784,9 +1784,9 @@ namespace ABI {
                 
                 typedef enum VisitMonitoringScope : int VisitMonitoringScope;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1795,9 +1795,9 @@ namespace ABI {
                 
                 typedef enum VisitStateChange : int VisitStateChange;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1806,9 +1806,9 @@ namespace ABI {
                 
                 typedef struct BasicGeoposition BasicGeoposition;
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1846,9 +1846,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class CivicAddress;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1856,9 +1856,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class GeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1866,9 +1866,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geocircle;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1876,9 +1876,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geocoordinate;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1886,9 +1886,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class GeocoordinateSatelliteData;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1903,9 +1903,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class GeovisitTriggerDetails;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1915,9 +1915,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class VenueData;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1952,9 +1952,9 @@ namespace ABI {
                     AltitudeReferenceSystem_Surface = 4,
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1980,9 +1980,9 @@ namespace ABI {
                     GeolocationAccessStatus_Denied = 2,
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2017,9 +2017,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2044,9 +2044,9 @@ namespace ABI {
                     PositionAccuracy_High = 1,
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2092,9 +2092,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2123,9 +2123,9 @@ namespace ABI {
                     PositionStatus_NotAvailable = 5,
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2150,9 +2150,9 @@ namespace ABI {
                     VisitMonitoringScope_City = 1,
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -2179,9 +2179,9 @@ namespace ABI {
                     VisitStateChange_OtherMovement = 3,
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -2207,9 +2207,9 @@ namespace ABI {
                     DOUBLE Altitude;
                 };
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2257,9 +2257,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICivicAddress=_uuidof(ICivicAddress);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CICivicAddress;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CICivicAddress_INTERFACE_DEFINED__) */
@@ -2314,9 +2314,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeoboundingBox=_uuidof(IGeoboundingBox);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_INTERFACE_DEFINED__) */
@@ -2370,9 +2370,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeoboundingBoxFactory=_uuidof(IGeoboundingBoxFactory);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxFactory_INTERFACE_DEFINED__) */
@@ -2423,9 +2423,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeoboundingBoxStatics=_uuidof(IGeoboundingBoxStatics);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBoxStatics_INTERFACE_DEFINED__) */
@@ -2471,9 +2471,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeocircle=_uuidof(IGeocircle);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircle_INTERFACE_DEFINED__) */
@@ -2527,9 +2527,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeocircleFactory=_uuidof(IGeocircleFactory);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocircleFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocircleFactory_INTERFACE_DEFINED__) */
@@ -2601,9 +2601,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeocoordinate=_uuidof(IGeocoordinate);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinate_INTERFACE_DEFINED__) */
@@ -2648,9 +2648,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeocoordinateSatelliteData=_uuidof(IGeocoordinateSatelliteData);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateSatelliteData;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateSatelliteData_INTERFACE_DEFINED__) */
@@ -2689,9 +2689,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeocoordinateWithPoint=_uuidof(IGeocoordinateWithPoint);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPoint;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPoint_INTERFACE_DEFINED__) */
@@ -2737,9 +2737,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeocoordinateWithPositionData=_uuidof(IGeocoordinateWithPositionData);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionData;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionData_INTERFACE_DEFINED__) */
@@ -2778,9 +2778,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeocoordinateWithPositionSourceTimestamp=_uuidof(IGeocoordinateWithPositionSourceTimestamp);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp_INTERFACE_DEFINED__) */
@@ -2859,9 +2859,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeolocator=_uuidof(IGeolocator);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_INTERFACE_DEFINED__) */
@@ -2898,9 +2898,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeolocator2=_uuidof(IGeolocator2);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator2_INTERFACE_DEFINED__) */
@@ -2948,9 +2948,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeolocatorStatics=_uuidof(IGeolocatorStatics);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics_INTERFACE_DEFINED__) */
@@ -2982,7 +2982,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDefaultGeopositionRecommended(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DefaultGeoposition(
                         /* [in] */__RPC__in_opt __FIReference_1_Windows__CDevices__CGeolocation__CBasicGeoposition * value
@@ -2995,9 +2995,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeolocatorStatics2=_uuidof(IGeolocatorStatics2);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorStatics2_INTERFACE_DEFINED__) */
@@ -3043,9 +3043,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeolocatorWithScalarAccuracy=_uuidof(IGeolocatorWithScalarAccuracy);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorWithScalarAccuracy;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocatorWithScalarAccuracy_INTERFACE_DEFINED__) */
@@ -3088,9 +3088,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeopath=_uuidof(IGeopath);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeopath;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_INTERFACE_DEFINED__) */
@@ -3141,9 +3141,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeopathFactory=_uuidof(IGeopathFactory);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeopathFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeopathFactory_INTERFACE_DEFINED__) */
@@ -3186,9 +3186,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeopoint=_uuidof(IGeopoint);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_INTERFACE_DEFINED__) */
@@ -3239,9 +3239,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeopointFactory=_uuidof(IGeopointFactory);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeopointFactory;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeopointFactory_INTERFACE_DEFINED__) */
@@ -3283,9 +3283,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeoposition=_uuidof(IGeoposition);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition_INTERFACE_DEFINED__) */
@@ -3328,9 +3328,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeoposition2=_uuidof(IGeoposition2);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeoposition2_INTERFACE_DEFINED__) */
@@ -3372,9 +3372,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeoshape=_uuidof(IGeoshape);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape_INTERFACE_DEFINED__) */
@@ -3419,9 +3419,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeovisit=_uuidof(IGeovisit);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeovisit;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisit_INTERFACE_DEFINED__) */
@@ -3471,9 +3471,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeovisitMonitor=_uuidof(IGeovisitMonitor);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitor_INTERFACE_DEFINED__) */
@@ -3512,9 +3512,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeovisitMonitorStatics=_uuidof(IGeovisitMonitorStatics);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitorStatics_INTERFACE_DEFINED__) */
@@ -3553,9 +3553,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeovisitStateChangedEventArgs=_uuidof(IGeovisitStateChangedEventArgs);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitStateChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitStateChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3594,9 +3594,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGeovisitTriggerDetails=_uuidof(IGeovisitTriggerDetails);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitTriggerDetails_INTERFACE_DEFINED__) */
@@ -3635,9 +3635,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPositionChangedEventArgs=_uuidof(IPositionChangedEventArgs);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIPositionChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIPositionChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3676,9 +3676,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStatusChangedEventArgs=_uuidof(IStatusChangedEventArgs);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIStatusChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIStatusChangedEventArgs_INTERFACE_DEFINED__) */
@@ -3720,9 +3720,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVenueData=_uuidof(IVenueData);
                 
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIVenueData;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIVenueData_INTERFACE_DEFINED__) */
@@ -6362,7 +6362,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeoloca
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIPositionChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIPositionChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CPositionChangedEventArgsVtbl;
 
@@ -6415,7 +6415,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeoloca
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIStatusChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIStatusChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeolocator_Windows__CDevices__CGeolocation__CStatusChangedEventArgsVtbl;
 
@@ -6468,7 +6468,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitStateChangedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitMonitor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CGeolocation_CIGeovisitStateChangedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CGeolocation__CGeovisitMonitor_Windows__CDevices__CGeolocation__CGeovisitStateChangedEventArgsVtbl;
 
@@ -6637,7 +6637,7 @@ typedef struct __FIReference_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out int *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 

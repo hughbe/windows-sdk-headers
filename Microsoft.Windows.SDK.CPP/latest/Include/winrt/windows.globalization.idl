@@ -57,6 +57,10 @@ namespace Windows
 
         interface IClockIdentifiersStatics;
 
+        interface ICurrencyAmount;
+
+        interface ICurrencyAmountFactory;
+
         interface ICurrencyIdentifiersStatics;
 
         interface ICurrencyIdentifiersStatics2;
@@ -98,6 +102,8 @@ namespace Windows
         runtimeclass CalendarIdentifiers;
 
         runtimeclass ClockIdentifiers;
+
+        runtimeclass CurrencyAmount;
 
         runtimeclass CurrencyIdentifiers;
 
@@ -352,6 +358,23 @@ namespace Windows
         {
             [propget] HRESULT TwelveHour([out] [retval] HSTRING* value);
             [propget] HRESULT TwentyFourHour([out] [retval] HSTRING* value);
+        }
+
+        [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+        [exclusiveto(Windows.Globalization.CurrencyAmount)]
+        [uuid(74B49942-EB75-443A-95B3-7D723F56F93C)]
+        interface ICurrencyAmount : IInspectable
+        {
+            [propget] HRESULT Amount([out] [retval] HSTRING* value);
+            [propget] HRESULT Currency([out] [retval] HSTRING* value);
+        }
+
+        [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+        [exclusiveto(Windows.Globalization.CurrencyAmount)]
+        [uuid(48D7168F-EF3B-4AEE-A6A1-4B036FE03FF0)]
+        interface ICurrencyAmountFactory : IInspectable
+        {
+            HRESULT Create([in] HSTRING amount, [in] HSTRING currency, [out] [retval] Windows.Globalization.CurrencyAmount** result);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -748,6 +771,15 @@ namespace Windows
         [threading(both)]
         runtimeclass ClockIdentifiers
         {
+        }
+
+        [activatable(Windows.Globalization.ICurrencyAmountFactory, Windows.Foundation.UniversalApiContract, 8.0)]
+        [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+        [marshaling_behavior(agile)]
+        [threading(both)]
+        runtimeclass CurrencyAmount
+        {
+            [default] interface Windows.Globalization.ICurrencyAmount;
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]

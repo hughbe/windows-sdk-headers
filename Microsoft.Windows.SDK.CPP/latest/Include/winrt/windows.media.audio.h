@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.audio.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -287,9 +283,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioDeviceInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceInputNode ABI::Windows::Media::Audio::IAudioDeviceInputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceInputNode_FWD_DEFINED__
@@ -301,9 +297,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioDeviceOutputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceOutputNode ABI::Windows::Media::Audio::IAudioDeviceOutputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceOutputNode_FWD_DEFINED__
@@ -315,9 +311,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioFileInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioFileInputNode ABI::Windows::Media::Audio::IAudioFileInputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioFileInputNode_FWD_DEFINED__
@@ -329,9 +325,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioFileOutputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioFileOutputNode ABI::Windows::Media::Audio::IAudioFileOutputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioFileOutputNode_FWD_DEFINED__
@@ -343,9 +339,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioFrameCompletedEventArgs;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameCompletedEventArgs ABI::Windows::Media::Audio::IAudioFrameCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioFrameCompletedEventArgs_FWD_DEFINED__
@@ -357,9 +353,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioFrameInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode ABI::Windows::Media::Audio::IAudioFrameInputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode_FWD_DEFINED__
@@ -371,9 +367,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioFrameOutputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameOutputNode ABI::Windows::Media::Audio::IAudioFrameOutputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioFrameOutputNode_FWD_DEFINED__
@@ -385,9 +381,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraph;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraph ABI::Windows::Media::Audio::IAudioGraph
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraph_FWD_DEFINED__
@@ -399,9 +395,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraph2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraph2 ABI::Windows::Media::Audio::IAudioGraph2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraph2_FWD_DEFINED__
@@ -413,9 +409,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraph3;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraph3 ABI::Windows::Media::Audio::IAudioGraph3
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraph3_FWD_DEFINED__
@@ -427,9 +423,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraphConnection;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphConnection ABI::Windows::Media::Audio::IAudioGraphConnection
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphConnection_FWD_DEFINED__
@@ -441,9 +437,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraphSettings;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings ABI::Windows::Media::Audio::IAudioGraphSettings
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings_FWD_DEFINED__
@@ -455,9 +451,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraphSettings2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings2 ABI::Windows::Media::Audio::IAudioGraphSettings2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings2_FWD_DEFINED__
@@ -469,9 +465,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraphSettingsFactory;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettingsFactory ABI::Windows::Media::Audio::IAudioGraphSettingsFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettingsFactory_FWD_DEFINED__
@@ -483,9 +479,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraphStatics;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphStatics ABI::Windows::Media::Audio::IAudioGraphStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphStatics_FWD_DEFINED__
@@ -497,9 +493,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioGraphUnrecoverableErrorOccurredEventArgs;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphUnrecoverableErrorOccurredEventArgs ABI::Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphUnrecoverableErrorOccurredEventArgs_FWD_DEFINED__
@@ -511,9 +507,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode ABI::Windows::Media::Audio::IAudioInputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode_FWD_DEFINED__
@@ -525,9 +521,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioInputNode2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode2 ABI::Windows::Media::Audio::IAudioInputNode2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode2_FWD_DEFINED__
@@ -539,9 +535,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNode ABI::Windows::Media::Audio::IAudioNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNode_FWD_DEFINED__
@@ -553,9 +549,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitter;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter ABI::Windows::Media::Audio::IAudioNodeEmitter
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter_FWD_DEFINED__
@@ -567,9 +563,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitter2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter2 ABI::Windows::Media::Audio::IAudioNodeEmitter2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter2_FWD_DEFINED__
@@ -581,9 +577,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitterConeProperties;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterConeProperties ABI::Windows::Media::Audio::IAudioNodeEmitterConeProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterConeProperties_FWD_DEFINED__
@@ -595,9 +591,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitterDecayModel;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModel ABI::Windows::Media::Audio::IAudioNodeEmitterDecayModel
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModel_FWD_DEFINED__
@@ -609,9 +605,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitterDecayModelStatics;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModelStatics ABI::Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModelStatics_FWD_DEFINED__
@@ -623,9 +619,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitterFactory;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterFactory ABI::Windows::Media::Audio::IAudioNodeEmitterFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterFactory_FWD_DEFINED__
@@ -637,9 +633,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitterNaturalDecayModelProperties;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterNaturalDecayModelProperties ABI::Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterNaturalDecayModelProperties_FWD_DEFINED__
@@ -651,9 +647,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitterShape;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShape ABI::Windows::Media::Audio::IAudioNodeEmitterShape
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShape_FWD_DEFINED__
@@ -665,9 +661,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeEmitterShapeStatics;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShapeStatics ABI::Windows::Media::Audio::IAudioNodeEmitterShapeStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShapeStatics_FWD_DEFINED__
@@ -679,9 +675,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeListener;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeListener ABI::Windows::Media::Audio::IAudioNodeListener
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeListener_FWD_DEFINED__
@@ -693,9 +689,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioNodeWithListener;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioNodeWithListener ABI::Windows::Media::Audio::IAudioNodeWithListener
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeWithListener_FWD_DEFINED__
@@ -707,9 +703,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioStateMonitor;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor ABI::Windows::Media::Audio::IAudioStateMonitor
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor_FWD_DEFINED__
@@ -721,9 +717,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IAudioStateMonitorStatics;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitorStatics ABI::Windows::Media::Audio::IAudioStateMonitorStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitorStatics_FWD_DEFINED__
@@ -735,9 +731,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioDeviceInputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult ABI::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult_FWD_DEFINED__
@@ -749,9 +745,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioDeviceInputNodeResult2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult2 ABI::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult2_FWD_DEFINED__
@@ -763,9 +759,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioDeviceOutputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult ABI::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult_FWD_DEFINED__
@@ -777,9 +773,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioDeviceOutputNodeResult2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult2 ABI::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult2_FWD_DEFINED__
@@ -791,9 +787,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioFileInputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult ABI::Windows::Media::Audio::ICreateAudioFileInputNodeResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult_FWD_DEFINED__
@@ -805,9 +801,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioFileInputNodeResult2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult2 ABI::Windows::Media::Audio::ICreateAudioFileInputNodeResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult2_FWD_DEFINED__
@@ -819,9 +815,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioFileOutputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult ABI::Windows::Media::Audio::ICreateAudioFileOutputNodeResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult_FWD_DEFINED__
@@ -833,9 +829,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioFileOutputNodeResult2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult2 ABI::Windows::Media::Audio::ICreateAudioFileOutputNodeResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult2_FWD_DEFINED__
@@ -847,9 +843,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioGraphResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult ABI::Windows::Media::Audio::ICreateAudioGraphResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult_FWD_DEFINED__
@@ -861,9 +857,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateAudioGraphResult2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult2 ABI::Windows::Media::Audio::ICreateAudioGraphResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult2_FWD_DEFINED__
@@ -875,9 +871,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateMediaSourceAudioInputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult ABI::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult_FWD_DEFINED__
@@ -889,9 +885,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ICreateMediaSourceAudioInputNodeResult2;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult2 ABI::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult2_FWD_DEFINED__
@@ -903,9 +899,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IEchoEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinition ABI::Windows::Media::Audio::IEchoEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinition_FWD_DEFINED__
@@ -917,9 +913,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IEchoEffectDefinitionFactory;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinitionFactory ABI::Windows::Media::Audio::IEchoEffectDefinitionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinitionFactory_FWD_DEFINED__
@@ -931,9 +927,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IEqualizerBand;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIEqualizerBand ABI::Windows::Media::Audio::IEqualizerBand
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIEqualizerBand_FWD_DEFINED__
@@ -945,9 +941,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IEqualizerEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinition ABI::Windows::Media::Audio::IEqualizerEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinition_FWD_DEFINED__
@@ -959,9 +955,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IEqualizerEffectDefinitionFactory;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinitionFactory ABI::Windows::Media::Audio::IEqualizerEffectDefinitionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinitionFactory_FWD_DEFINED__
@@ -973,9 +969,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IFrameInputNodeQuantumStartedEventArgs;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIFrameInputNodeQuantumStartedEventArgs ABI::Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIFrameInputNodeQuantumStartedEventArgs_FWD_DEFINED__
@@ -987,9 +983,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ILimiterEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinition ABI::Windows::Media::Audio::ILimiterEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinition_FWD_DEFINED__
@@ -1001,9 +997,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ILimiterEffectDefinitionFactory;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinitionFactory ABI::Windows::Media::Audio::ILimiterEffectDefinitionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinitionFactory_FWD_DEFINED__
@@ -1015,9 +1011,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IMediaSourceAudioInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIMediaSourceAudioInputNode ABI::Windows::Media::Audio::IMediaSourceAudioInputNode
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIMediaSourceAudioInputNode_FWD_DEFINED__
@@ -1029,9 +1025,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IReverbEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinition ABI::Windows::Media::Audio::IReverbEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinition_FWD_DEFINED__
@@ -1043,9 +1039,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface IReverbEffectDefinitionFactory;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinitionFactory ABI::Windows::Media::Audio::IReverbEffectDefinitionFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinitionFactory_FWD_DEFINED__
@@ -1057,9 +1053,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ISetDefaultSpatialAudioFormatResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CISetDefaultSpatialAudioFormatResult ABI::Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CISetDefaultSpatialAudioFormatResult_FWD_DEFINED__
@@ -1071,9 +1067,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ISpatialAudioDeviceConfiguration;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfiguration ABI::Windows::Media::Audio::ISpatialAudioDeviceConfiguration
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfiguration_FWD_DEFINED__
@@ -1085,9 +1081,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ISpatialAudioDeviceConfigurationStatics;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfigurationStatics ABI::Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfigurationStatics_FWD_DEFINED__
@@ -1099,9 +1095,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ISpatialAudioFormatConfiguration;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfiguration ABI::Windows::Media::Audio::ISpatialAudioFormatConfiguration
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfiguration_FWD_DEFINED__
@@ -1113,9 +1109,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ISpatialAudioFormatConfigurationStatics;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfigurationStatics ABI::Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfigurationStatics_FWD_DEFINED__
@@ -1127,9 +1123,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 interface ISpatialAudioFormatSubtypeStatics;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatSubtypeStatics ABI::Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatSubtypeStatics_FWD_DEFINED__
@@ -1142,9 +1138,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioGraphConnection;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1167,7 +1163,7 @@ IIterator<ABI::Windows::Media::Audio::AudioGraphConnection*> : IIterator_impl<AB
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Audio::AudioGraphConnection*> __FIIterator_1_Windows__CMedia__CAudio__CAudioGraphConnection_t;
 #define __FIIterator_1_Windows__CMedia__CAudio__CAudioGraphConnection ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CAudio__CAudioGraphConnection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CAudio__CAudioGraphConnection ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Audio::IAudioGraphConnection*>
@@ -1199,7 +1195,7 @@ IIterable<ABI::Windows::Media::Audio::AudioGraphConnection*> : IIterable_impl<AB
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Audio::AudioGraphConnection*> __FIIterable_1_Windows__CMedia__CAudio__CAudioGraphConnection_t;
 #define __FIIterable_1_Windows__CMedia__CAudio__CAudioGraphConnection ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CAudio__CAudioGraphConnection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CAudio__CAudioGraphConnection ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Audio::IAudioGraphConnection*>
@@ -1215,9 +1211,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class EqualizerBand;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1240,7 +1236,7 @@ IIterator<ABI::Windows::Media::Audio::EqualizerBand*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Audio::EqualizerBand*> __FIIterator_1_Windows__CMedia__CAudio__CEqualizerBand_t;
 #define __FIIterator_1_Windows__CMedia__CAudio__CEqualizerBand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CAudio__CEqualizerBand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CAudio__CEqualizerBand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Audio::IEqualizerBand*>
@@ -1272,7 +1268,7 @@ IIterable<ABI::Windows::Media::Audio::EqualizerBand*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Audio::EqualizerBand*> __FIIterable_1_Windows__CMedia__CAudio__CEqualizerBand_t;
 #define __FIIterable_1_Windows__CMedia__CAudio__CEqualizerBand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CAudio__CEqualizerBand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CAudio__CEqualizerBand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Audio::IEqualizerBand*>
@@ -1304,7 +1300,7 @@ IVectorView<ABI::Windows::Media::Audio::AudioGraphConnection*> : IVectorView_imp
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Audio::AudioGraphConnection*> __FIVectorView_1_Windows__CMedia__CAudio__CAudioGraphConnection_t;
 #define __FIVectorView_1_Windows__CMedia__CAudio__CAudioGraphConnection ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CAudio__CAudioGraphConnection_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CAudio__CAudioGraphConnection ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Audio::IAudioGraphConnection*>
@@ -1336,7 +1332,7 @@ IVectorView<ABI::Windows::Media::Audio::EqualizerBand*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Audio::EqualizerBand*> __FIVectorView_1_Windows__CMedia__CAudio__CEqualizerBand_t;
 #define __FIVectorView_1_Windows__CMedia__CAudio__CEqualizerBand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CAudio__CEqualizerBand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CAudio__CEqualizerBand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Audio::IEqualizerBand*>
@@ -1351,10 +1347,83 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Audio {
-                class CreateAudioDeviceInputNodeResult;
-            } /* Windows */
+                class AudioDeviceInputNode;
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("19b1586d-db7d-55e8-9729-2256bd9984d4"))
+IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::AudioDeviceInputNode*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Audio::AudioDeviceInputNode*, ABI::Windows::Media::Audio::IAudioDeviceInputNode*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.Audio.AudioDeviceInputNode>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::AudioDeviceInputNode*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::IAudioDeviceInputNode*>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::IAudioDeviceInputNode*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_USE
+#define DEF___FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("d009b9cb-e9c1-5d8d-9575-c33ac26ce44a"))
+IAsyncOperation<ABI::Windows::Media::Audio::AudioDeviceInputNode*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Audio::AudioDeviceInputNode*, ABI::Windows::Media::Audio::IAudioDeviceInputNode*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.Audio.AudioDeviceInputNode>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Media::Audio::AudioDeviceInputNode*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_t;
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::IAudioDeviceInputNode*>
+//#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::IAudioDeviceInputNode*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Audio {
+                class CreateAudioDeviceInputNodeResult;
+            } /* Audio */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1377,7 +1446,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioDeviceInp
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioDeviceInputNodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult*>
@@ -1409,7 +1478,7 @@ IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioDeviceInputNodeResult*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioDeviceInputNodeResult*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult*>
@@ -1425,9 +1494,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class CreateAudioDeviceOutputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1450,7 +1519,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioDeviceOut
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult*>
@@ -1482,7 +1551,7 @@ IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioDeviceOutputNodeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult*>
@@ -1498,9 +1567,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class CreateAudioFileInputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1523,7 +1592,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioFileInput
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioFileInputNodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::ICreateAudioFileInputNodeResult*>
@@ -1555,7 +1624,7 @@ IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioFileInputNodeResult*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioFileInputNodeResult*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileInputNodeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::ICreateAudioFileInputNodeResult*>
@@ -1571,9 +1640,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class CreateAudioFileOutputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1596,7 +1665,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioFileOutpu
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioFileOutputNodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::ICreateAudioFileOutputNodeResult*>
@@ -1628,7 +1697,7 @@ IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioFileOutputNodeResult*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioFileOutputNodeResult*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioFileOutputNodeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::ICreateAudioFileOutputNodeResult*>
@@ -1644,9 +1713,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class CreateAudioGraphResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1669,7 +1738,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioGraphResu
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateAudioGraphResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioGraphResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioGraphResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioGraphResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioGraphResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::ICreateAudioGraphResult*>
@@ -1701,7 +1770,7 @@ IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioGraphResult*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Audio::CreateAudioGraphResult*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioGraphResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioGraphResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioGraphResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateAudioGraphResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::ICreateAudioGraphResult*>
@@ -1717,9 +1786,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class CreateMediaSourceAudioInputNodeResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1742,7 +1811,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateMediaSourceAud
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult*>
@@ -1774,7 +1843,7 @@ IAsyncOperation<ABI::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResul
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CCreateMediaSourceAudioInputNodeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult*>
@@ -1790,9 +1859,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class SetDefaultSpatialAudioFormatResult;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1815,7 +1884,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::SetDefaultSpatialAud
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult*>
@@ -1847,7 +1916,7 @@ IAsyncOperation<ABI::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult*> __FIAsyncOperation_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CSetDefaultSpatialAudioFormatResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult*>
@@ -1863,9 +1932,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioFileInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1889,7 +1958,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::AudioFileInputNode*,IInspectable*
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::AudioFileInputNode*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::IAudioFileInputNode*,IInspectable*>
@@ -1905,9 +1974,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioFrameInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1915,9 +1984,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioFrameCompletedEventArgs;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1941,7 +2010,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::AudioFrameInputNode*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::AudioFrameInputNode*,ABI::Windows::Media::Audio::AudioFrameCompletedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::IAudioFrameInputNode*,ABI::Windows::Media::Audio::IAudioFrameCompletedEventArgs*>
@@ -1959,9 +2028,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class FrameInputNodeQuantumStartedEventArgs;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1985,7 +2054,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::AudioFrameInputNode*,ABI::Windows
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::AudioFrameInputNode*,ABI::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::IAudioFrameInputNode*,ABI::Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs*>
@@ -2002,9 +2071,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioGraph;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2028,7 +2097,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::AudioGraph*,IInspectable*> : ITyp
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::AudioGraph*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::IAudioGraph*,IInspectable*>
@@ -2045,9 +2114,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioGraphUnrecoverableErrorOccurredEventArgs;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2071,7 +2140,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::AudioGraph*,ABI::Windows::Media::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::AudioGraph*,ABI::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::IAudioGraph*,ABI::Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs*>
@@ -2088,9 +2157,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioStateMonitor;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2114,7 +2183,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::AudioStateMonitor*,IInspectable*>
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::AudioStateMonitor*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::IAudioStateMonitor*,IInspectable*>
@@ -2130,9 +2199,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class MediaSourceAudioInputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2156,7 +2225,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::MediaSourceAudioInputNode*,IInspe
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::MediaSourceAudioInputNode*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::IMediaSourceAudioInputNode*,IInspectable*>
@@ -2172,9 +2241,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class SpatialAudioDeviceConfiguration;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2198,7 +2267,7 @@ ITypedEventHandler<ABI::Windows::Media::Audio::SpatialAudioDeviceConfiguration*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Media::Audio::SpatialAudioDeviceConfiguration*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Audio::ISpatialAudioDeviceConfiguration*,IInspectable*>
@@ -2214,8 +2283,8 @@ namespace ABI {
         namespace Foundation {
             struct TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -2236,7 +2305,7 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
@@ -2265,7 +2334,7 @@ IReference<int> : IReference_impl<int>
 // correct parameterized interface specialization.
 typedef IReference<int> __FIReference_1_int_t;
 #define __FIReference_1_int ABI::Windows::Foundation::__FIReference_1_int_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_int ABI::Windows::Foundation::IReference<INT32>
@@ -2280,9 +2349,9 @@ namespace ABI {
         namespace Media {
             namespace Transcoding {
                 enum TranscodeFailureReason : int;
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_USE
@@ -2303,7 +2372,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Transcoding::Transcode
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
@@ -2333,7 +2402,7 @@ IAsyncOperation<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
@@ -2350,9 +2419,9 @@ namespace ABI {
         namespace Media {
             namespace Effects {
                 interface IAudioEffectDefinition;
-            } /* Windows */
+            } /* Effects */
         } /* Media */
-    } /* Effects */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition ABI::Windows::Media::Effects::IAudioEffectDefinition
 
 #endif // ____x_ABI_CWindows_CMedia_CEffects_CIAudioEffectDefinition_FWD_DEFINED__
@@ -2378,7 +2447,7 @@ IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -2410,7 +2479,7 @@ IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -2442,7 +2511,7 @@ IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -2474,7 +2543,7 @@ IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*> : IVector_impl<AB
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*> __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t;
 #define __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CMedia__CEffects__CIAudioEffectDefinition ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Effects::IAudioEffectDefinition*>
@@ -2492,9 +2561,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -2503,9 +2572,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -2520,8 +2589,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2533,8 +2602,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2549,9 +2618,9 @@ namespace ABI {
                 
                 typedef struct Quaternion Quaternion;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2560,9 +2629,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2573,8 +2642,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2583,8 +2652,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             class AudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
@@ -2592,8 +2661,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IAudioFrame;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIAudioFrame ABI::Windows::Media::IAudioFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIAudioFrame_FWD_DEFINED__
@@ -2605,8 +2674,8 @@ namespace ABI {
             
             typedef enum AudioProcessing : int AudioProcessing;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2617,9 +2686,9 @@ namespace ABI {
                 
                 typedef enum MediaCategory : int MediaCategory;
                 
-            } /* Windows */
+            } /* Capture */
         } /* Media */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2629,9 +2698,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 class MediaSource;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaSource2_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaSource2_FWD_DEFINED__
@@ -2640,9 +2709,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface IMediaSource2;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaSource2 ABI::Windows::Media::Core::IMediaSource2
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaSource2_FWD_DEFINED__
@@ -2658,9 +2727,9 @@ namespace ABI {
                 
                 typedef enum AudioDeviceRole : int AudioDeviceRole;
                 
-            } /* Windows */
+            } /* Devices */
         } /* Media */
-    } /* Devices */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2674,9 +2743,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class AudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -2685,9 +2754,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IAudioEncodingProperties;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties ABI::Windows::Media::MediaProperties::IAudioEncodingProperties
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProperties_FWD_DEFINED__
@@ -2698,9 +2767,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 class MediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -2709,9 +2778,9 @@ namespace ABI {
         namespace Media {
             namespace MediaProperties {
                 interface IMediaEncodingProfile;
-            } /* Windows */
+            } /* MediaProperties */
         } /* Media */
-    } /* MediaProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile ABI::Windows::Media::MediaProperties::IMediaEncodingProfile
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -2727,9 +2796,9 @@ namespace ABI {
                 
                 typedef enum AudioRenderCategory : int AudioRenderCategory;
                 
-            } /* Windows */
+            } /* Render */
         } /* Media */
-    } /* Render */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2740,8 +2809,8 @@ namespace ABI {
             
             typedef enum SoundLevel : int SoundLevel;
             
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2752,9 +2821,9 @@ namespace ABI {
                 
                 typedef enum TranscodeFailureReason : int TranscodeFailureReason;
                 
-            } /* Windows */
+            } /* Transcoding */
         } /* Media */
-    } /* Transcoding */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2765,8 +2834,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -2776,8 +2845,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2789,9 +2858,9 @@ namespace ABI {
                 
                 typedef enum AudioDeviceNodeCreationStatus : int AudioDeviceNodeCreationStatus;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2800,9 +2869,9 @@ namespace ABI {
                 
                 typedef enum AudioFileNodeCreationStatus : int AudioFileNodeCreationStatus;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2811,9 +2880,9 @@ namespace ABI {
                 
                 typedef enum AudioGraphCreationStatus : int AudioGraphCreationStatus;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2822,9 +2891,9 @@ namespace ABI {
                 
                 typedef enum AudioGraphUnrecoverableError : int AudioGraphUnrecoverableError;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2833,9 +2902,9 @@ namespace ABI {
                 
                 typedef enum AudioNodeEmitterDecayKind : int AudioNodeEmitterDecayKind;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2844,9 +2913,9 @@ namespace ABI {
                 
                 typedef enum AudioNodeEmitterSettings : unsigned int AudioNodeEmitterSettings;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2855,9 +2924,9 @@ namespace ABI {
                 
                 typedef enum AudioNodeEmitterShapeKind : int AudioNodeEmitterShapeKind;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2866,9 +2935,9 @@ namespace ABI {
                 
                 typedef enum MediaSourceAudioInputNodeCreationStatus : int MediaSourceAudioInputNodeCreationStatus;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2877,9 +2946,9 @@ namespace ABI {
                 
                 typedef enum MixedRealitySpatialAudioFormatPolicy : int MixedRealitySpatialAudioFormatPolicy;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2888,9 +2957,9 @@ namespace ABI {
                 
                 typedef enum QuantumSizeSelectionMode : int QuantumSizeSelectionMode;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2899,9 +2968,9 @@ namespace ABI {
                 
                 typedef enum SetDefaultSpatialAudioFormatStatus : int SetDefaultSpatialAudioFormatStatus;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2910,9 +2979,9 @@ namespace ABI {
                 
                 typedef enum SpatialAudioModel : int SpatialAudioModel;
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2974,15 +3043,6 @@ namespace ABI {
 
 
 
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Audio {
-                class AudioDeviceInputNode;
-            } /* Windows */
-        } /* Media */
-    } /* Audio */} /* ABI */
 
 
 namespace ABI {
@@ -2990,9 +3050,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioDeviceOutputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3001,9 +3061,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioFileOutputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3013,9 +3073,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioFrameOutputNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3024,9 +3084,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioGraphBatchUpdater;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3035,9 +3095,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioGraphSettings;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3046,9 +3106,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioNodeEmitter;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3056,9 +3116,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioNodeEmitterConeProperties;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3066,9 +3126,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioNodeEmitterDecayModel;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3076,9 +3136,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioNodeEmitterNaturalDecayModelProperties;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3086,9 +3146,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioNodeEmitterShape;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3096,9 +3156,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioNodeListener;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3107,9 +3167,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class AudioSubmixNode;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3123,9 +3183,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class EchoEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3134,9 +3194,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class EqualizerEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3145,9 +3205,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class LimiterEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3156,9 +3216,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class ReverbEffectDefinition;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3168,9 +3228,9 @@ namespace ABI {
         namespace Media {
             namespace Audio {
                 class SpatialAudioFormatConfiguration;
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3206,9 +3266,9 @@ namespace ABI {
                     AudioDeviceNodeCreationStatus_AccessDenied = 4,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3236,9 +3296,9 @@ namespace ABI {
                     AudioFileNodeCreationStatus_UnknownFailure = 4,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3265,9 +3325,9 @@ namespace ABI {
                     AudioGraphCreationStatus_UnknownFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3294,9 +3354,9 @@ namespace ABI {
                     AudioGraphUnrecoverableError_UnknownFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3321,9 +3381,9 @@ namespace ABI {
                     AudioNodeEmitterDecayKind_Custom = 1,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3350,9 +3410,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(AudioNodeEmitterSettings)
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3377,9 +3437,9 @@ namespace ABI {
                     AudioNodeEmitterShapeKind_Cone = 1,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3406,9 +3466,9 @@ namespace ABI {
                     MediaSourceAudioInputNodeCreationStatus_UnknownFailure = 3,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -3433,9 +3493,9 @@ namespace ABI {
                     MixedRealitySpatialAudioFormatPolicy_UseDeviceConfigurationDefaultSpatialAudioFormat = 1,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -3461,9 +3521,9 @@ namespace ABI {
                     QuantumSizeSelectionMode_ClosestToDesired = 2,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3492,9 +3552,9 @@ namespace ABI {
                     SetDefaultSpatialAudioFormatStatus_UnknownError = 5,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -3519,9 +3579,9 @@ namespace ABI {
                     SpatialAudioModel_FoldDown = 1,
                 };
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3563,9 +3623,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioDeviceInputNode=_uuidof(IAudioDeviceInputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceInputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceInputNode_INTERFACE_DEFINED__) */
@@ -3609,9 +3669,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioDeviceOutputNode=_uuidof(IAudioDeviceOutputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceOutputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceOutputNode_INTERFACE_DEFINED__) */
@@ -3696,9 +3756,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioFileInputNode=_uuidof(IAudioFileInputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioFileInputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioFileInputNode_INTERFACE_DEFINED__) */
@@ -3748,9 +3808,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioFileOutputNode=_uuidof(IAudioFileOutputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioFileOutputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioFileOutputNode_INTERFACE_DEFINED__) */
@@ -3789,9 +3849,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioFrameCompletedEventArgs=_uuidof(IAudioFrameCompletedEventArgs);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioFrameCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioFrameCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -3860,9 +3920,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioFrameInputNode=_uuidof(IAudioFrameInputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode_INTERFACE_DEFINED__) */
@@ -3906,9 +3966,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioFrameOutputNode=_uuidof(IAudioFrameOutputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioFrameOutputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioFrameOutputNode_INTERFACE_DEFINED__) */
@@ -4042,9 +4102,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraph=_uuidof(IAudioGraph);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraph;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraph_INTERFACE_DEFINED__) */
@@ -4110,9 +4170,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraph2=_uuidof(IAudioGraph2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraph2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraph2_INTERFACE_DEFINED__) */
@@ -4157,9 +4217,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraph3=_uuidof(IAudioGraph3);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraph3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraph3_INTERFACE_DEFINED__) */
@@ -4204,9 +4264,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraphConnection=_uuidof(IAudioGraphConnection);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraphConnection;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphConnection_INTERFACE_DEFINED__) */
@@ -4278,9 +4338,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraphSettings=_uuidof(IAudioGraphSettings);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings_INTERFACE_DEFINED__) */
@@ -4322,9 +4382,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraphSettings2=_uuidof(IAudioGraphSettings2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettings2_INTERFACE_DEFINED__) */
@@ -4364,9 +4424,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraphSettingsFactory=_uuidof(IAudioGraphSettingsFactory);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettingsFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphSettingsFactory_INTERFACE_DEFINED__) */
@@ -4406,9 +4466,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraphStatics=_uuidof(IAudioGraphStatics);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraphStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphStatics_INTERFACE_DEFINED__) */
@@ -4447,9 +4507,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioGraphUnrecoverableErrorOccurredEventArgs=_uuidof(IAudioGraphUnrecoverableErrorOccurredEventArgs);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioGraphUnrecoverableErrorOccurredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioGraphUnrecoverableErrorOccurredEventArgs_INTERFACE_DEFINED__) */
@@ -4500,9 +4560,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioInputNode=_uuidof(IAudioInputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode_INTERFACE_DEFINED__) */
@@ -4544,9 +4604,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioInputNode2=_uuidof(IAudioInputNode2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioInputNode2_INTERFACE_DEFINED__) */
@@ -4591,10 +4651,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::MediaProperties::IAudioEncodingProperties * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ConsumeInput(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ConsumeInput(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
@@ -4610,9 +4670,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNode=_uuidof(IAudioNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNode_INTERFACE_DEFINED__) */
@@ -4686,16 +4746,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::Foundation::Numerics::Vector3 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDopplerDisabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitter=_uuidof(IAudioNodeEmitter);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter_INTERFACE_DEFINED__) */
@@ -4737,9 +4797,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitter2=_uuidof(IAudioNodeEmitter2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitter2_INTERFACE_DEFINED__) */
@@ -4784,9 +4844,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitterConeProperties=_uuidof(IAudioNodeEmitterConeProperties);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterConeProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterConeProperties_INTERFACE_DEFINED__) */
@@ -4834,9 +4894,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitterDecayModel=_uuidof(IAudioNodeEmitterDecayModel);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModel;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModel_INTERFACE_DEFINED__) */
@@ -4884,9 +4944,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitterDecayModelStatics=_uuidof(IAudioNodeEmitterDecayModelStatics);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModelStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterDecayModelStatics_INTERFACE_DEFINED__) */
@@ -4928,9 +4988,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitterFactory=_uuidof(IAudioNodeEmitterFactory);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterFactory_INTERFACE_DEFINED__) */
@@ -4972,9 +5032,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitterNaturalDecayModelProperties=_uuidof(IAudioNodeEmitterNaturalDecayModelProperties);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterNaturalDecayModelProperties;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterNaturalDecayModelProperties_INTERFACE_DEFINED__) */
@@ -5016,9 +5076,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitterShape=_uuidof(IAudioNodeEmitterShape);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShape;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShape_INTERFACE_DEFINED__) */
@@ -5063,9 +5123,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeEmitterShapeStatics=_uuidof(IAudioNodeEmitterShapeStatics);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShapeStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeEmitterShapeStatics_INTERFACE_DEFINED__) */
@@ -5125,9 +5185,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeListener=_uuidof(IAudioNodeListener);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeListener;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeListener_INTERFACE_DEFINED__) */
@@ -5171,9 +5231,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioNodeWithListener=_uuidof(IAudioNodeWithListener);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioNodeWithListener;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioNodeWithListener_INTERFACE_DEFINED__) */
@@ -5219,9 +5279,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioStateMonitor=_uuidof(IAudioStateMonitor);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor_INTERFACE_DEFINED__) */
@@ -5291,9 +5351,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAudioStateMonitorStatics=_uuidof(IAudioStateMonitorStatics);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitorStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitorStatics_INTERFACE_DEFINED__) */
@@ -5335,9 +5395,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioDeviceInputNodeResult=_uuidof(ICreateAudioDeviceInputNodeResult);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult_INTERFACE_DEFINED__) */
@@ -5376,9 +5436,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioDeviceInputNodeResult2=_uuidof(ICreateAudioDeviceInputNodeResult2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceInputNodeResult2_INTERFACE_DEFINED__) */
@@ -5420,9 +5480,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioDeviceOutputNodeResult=_uuidof(ICreateAudioDeviceOutputNodeResult);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult_INTERFACE_DEFINED__) */
@@ -5461,9 +5521,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioDeviceOutputNodeResult2=_uuidof(ICreateAudioDeviceOutputNodeResult2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioDeviceOutputNodeResult2_INTERFACE_DEFINED__) */
@@ -5505,9 +5565,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioFileInputNodeResult=_uuidof(ICreateAudioFileInputNodeResult);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult_INTERFACE_DEFINED__) */
@@ -5546,9 +5606,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioFileInputNodeResult2=_uuidof(ICreateAudioFileInputNodeResult2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileInputNodeResult2_INTERFACE_DEFINED__) */
@@ -5590,9 +5650,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioFileOutputNodeResult=_uuidof(ICreateAudioFileOutputNodeResult);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult_INTERFACE_DEFINED__) */
@@ -5631,9 +5691,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioFileOutputNodeResult2=_uuidof(ICreateAudioFileOutputNodeResult2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioFileOutputNodeResult2_INTERFACE_DEFINED__) */
@@ -5675,9 +5735,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioGraphResult=_uuidof(ICreateAudioGraphResult);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult_INTERFACE_DEFINED__) */
@@ -5716,9 +5776,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateAudioGraphResult2=_uuidof(ICreateAudioGraphResult2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateAudioGraphResult2_INTERFACE_DEFINED__) */
@@ -5760,9 +5820,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateMediaSourceAudioInputNodeResult=_uuidof(ICreateMediaSourceAudioInputNodeResult);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult_INTERFACE_DEFINED__) */
@@ -5801,9 +5861,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ICreateMediaSourceAudioInputNodeResult2=_uuidof(ICreateMediaSourceAudioInputNodeResult2);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CICreateMediaSourceAudioInputNodeResult2_INTERFACE_DEFINED__) */
@@ -5861,9 +5921,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEchoEffectDefinition=_uuidof(IEchoEffectDefinition);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinition_INTERFACE_DEFINED__) */
@@ -5903,9 +5963,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEchoEffectDefinitionFactory=_uuidof(IEchoEffectDefinitionFactory);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIEchoEffectDefinitionFactory_INTERFACE_DEFINED__) */
@@ -5959,9 +6019,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEqualizerBand=_uuidof(IEqualizerBand);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIEqualizerBand;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIEqualizerBand_INTERFACE_DEFINED__) */
@@ -6004,9 +6064,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEqualizerEffectDefinition=_uuidof(IEqualizerEffectDefinition);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinition_INTERFACE_DEFINED__) */
@@ -6046,9 +6106,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEqualizerEffectDefinitionFactory=_uuidof(IEqualizerEffectDefinitionFactory);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIEqualizerEffectDefinitionFactory_INTERFACE_DEFINED__) */
@@ -6087,9 +6147,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFrameInputNodeQuantumStartedEventArgs=_uuidof(IFrameInputNodeQuantumStartedEventArgs);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIFrameInputNodeQuantumStartedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIFrameInputNodeQuantumStartedEventArgs_INTERFACE_DEFINED__) */
@@ -6141,9 +6201,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILimiterEffectDefinition=_uuidof(ILimiterEffectDefinition);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinition_INTERFACE_DEFINED__) */
@@ -6183,9 +6243,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ILimiterEffectDefinitionFactory=_uuidof(ILimiterEffectDefinitionFactory);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CILimiterEffectDefinitionFactory_INTERFACE_DEFINED__) */
@@ -6271,9 +6331,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMediaSourceAudioInputNode=_uuidof(IMediaSourceAudioInputNode);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIMediaSourceAudioInputNode;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIMediaSourceAudioInputNode_INTERFACE_DEFINED__) */
@@ -6441,19 +6501,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__out DOUBLE * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DisableLateField(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisableLateField(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IReverbEffectDefinition=_uuidof(IReverbEffectDefinition);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinition;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinition_INTERFACE_DEFINED__) */
@@ -6493,9 +6553,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IReverbEffectDefinitionFactory=_uuidof(IReverbEffectDefinitionFactory);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinitionFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIReverbEffectDefinitionFactory_INTERFACE_DEFINED__) */
@@ -6534,9 +6594,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISetDefaultSpatialAudioFormatResult=_uuidof(ISetDefaultSpatialAudioFormatResult);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CISetDefaultSpatialAudioFormatResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CISetDefaultSpatialAudioFormatResult_INTERFACE_DEFINED__) */
@@ -6571,11 +6631,11 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSpatialAudioSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSpatialAudioFormatSupported(
                         /* [in] */__RPC__in HSTRING subtype,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ActiveSpatialAudioFormat(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -6599,9 +6659,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAudioDeviceConfiguration=_uuidof(ISpatialAudioDeviceConfiguration);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfiguration_INTERFACE_DEFINED__) */
@@ -6641,9 +6701,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAudioDeviceConfigurationStatics=_uuidof(ISpatialAudioDeviceConfigurationStatics);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfigurationStatics_INTERFACE_DEFINED__) */
@@ -6693,9 +6753,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAudioFormatConfiguration=_uuidof(ISpatialAudioFormatConfiguration);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfiguration_INTERFACE_DEFINED__) */
@@ -6734,9 +6794,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAudioFormatConfigurationStatics=_uuidof(ISpatialAudioFormatConfigurationStatics);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatConfigurationStatics_INTERFACE_DEFINED__) */
@@ -6790,9 +6850,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpatialAudioFormatSubtypeStatics=_uuidof(ISpatialAudioFormatSubtypeStatics);
                 
-            } /* Windows */
+            } /* Audio */
         } /* Media */
-    } /* Audio */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatSubtypeStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CISpatialAudioFormatSubtypeStatics_INTERFACE_DEFINED__) */
@@ -8684,6 +8744,121 @@ interface __FIVectorView_1_Windows__CMedia__CAudio__CEqualizerBand
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNodeVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNodeVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNodeVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode;
+
+typedef struct __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNodeVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CAudioDeviceInputNode **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceInputNode * *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNodeVtbl;
+
+interface __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNodeVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CMedia__CAudio__CAudioDeviceInputNode_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult_INTERFACE_DEFINED__)
 #define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAudio__CCreateAudioDeviceInputNodeResult_INTERFACE_DEFINED__
 
@@ -9508,7 +9683,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputN
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFileInputNode * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFileInputNode * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectableVtbl;
 
@@ -9560,7 +9735,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInput
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CAudioFrameCompletedEventArgsVtbl;
 
@@ -9613,7 +9788,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInput
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIFrameInputNodeQuantumStartedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioFrameInputNode * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIFrameInputNodeQuantumStartedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFrameInputNode_Windows__CMedia__CAudio__CFrameInputNodeQuantumStartedEventArgsVtbl;
 
@@ -9665,7 +9840,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IIns
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioGraph * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioGraph * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_IInspectableVtbl;
 
@@ -9717,7 +9892,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Wind
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioGraph * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphUnrecoverableErrorOccurredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioGraph * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioGraphUnrecoverableErrorOccurredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioGraph_Windows__CMedia__CAudio__CAudioGraphUnrecoverableErrorOccurredEventArgsVtbl;
 
@@ -9769,7 +9944,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonit
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIAudioStateMonitor * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioStateMonitor_IInspectableVtbl;
 
@@ -9820,7 +9995,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIMediaSourceAudioInputNode * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CIMediaSourceAudioInputNode * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CMediaSourceAudioInputNode_IInspectableVtbl;
 
@@ -9871,7 +10046,7 @@ typedef struct __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDev
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfiguration * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CAudio_CISpatialAudioDeviceConfiguration * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CAudio__CSpatialAudioDeviceConfiguration_IInspectableVtbl;
 

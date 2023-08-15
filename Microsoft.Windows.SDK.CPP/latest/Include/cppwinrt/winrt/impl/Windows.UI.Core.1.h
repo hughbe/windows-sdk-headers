@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #pragma once
 #include "winrt/impl/Windows.Foundation.Collections.0.h"
 #include "winrt/impl/Windows.System.0.h"
+#include "winrt/impl/Windows.UI.0.h"
 #include "winrt/impl/Windows.UI.Input.0.h"
 #include "winrt/impl/Windows.UI.Popups.0.h"
 #include "winrt/impl/Windows.UI.Core.0.h"
@@ -268,6 +269,13 @@ struct WINRT_EBO ICoreWindowStatic :
     impl::consume_t<ICoreWindowStatic>
 {
     ICoreWindowStatic(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ICoreWindowWithContext :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ICoreWindowWithContext>
+{
+    ICoreWindowWithContext(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IIdleDispatchedHandlerArgs :

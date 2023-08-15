@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.management.deployment.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -277,9 +273,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IDeploymentResult;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult ABI::Windows::Management::Deployment::IDeploymentResult
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult_FWD_DEFINED__
@@ -291,9 +287,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IDeploymentResult2;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult2 ABI::Windows::Management::Deployment::IDeploymentResult2
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult2_FWD_DEFINED__
@@ -305,9 +301,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager ABI::Windows::Management::Deployment::IPackageManager
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager_FWD_DEFINED__
@@ -319,9 +315,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager2;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager2 ABI::Windows::Management::Deployment::IPackageManager2
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager2_FWD_DEFINED__
@@ -333,9 +329,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager3;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager3 ABI::Windows::Management::Deployment::IPackageManager3
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager3_FWD_DEFINED__
@@ -347,9 +343,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager4;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager4 ABI::Windows::Management::Deployment::IPackageManager4
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager4_FWD_DEFINED__
@@ -361,9 +357,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager5;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager5 ABI::Windows::Management::Deployment::IPackageManager5
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager5_FWD_DEFINED__
@@ -375,9 +371,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager6;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager6 ABI::Windows::Management::Deployment::IPackageManager6
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager6_FWD_DEFINED__
@@ -389,9 +385,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager7;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager7 ABI::Windows::Management::Deployment::IPackageManager7
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager7_FWD_DEFINED__
@@ -403,9 +399,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManager8;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManager8 ABI::Windows::Management::Deployment::IPackageManager8
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager8_FWD_DEFINED__
@@ -417,9 +413,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageManagerDebugSettings;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageManagerDebugSettings ABI::Windows::Management::Deployment::IPackageManagerDebugSettings
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageManagerDebugSettings_FWD_DEFINED__
@@ -431,9 +427,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageUserInformation;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageUserInformation ABI::Windows::Management::Deployment::IPackageUserInformation
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageUserInformation_FWD_DEFINED__
@@ -445,9 +441,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageVolume;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume ABI::Windows::Management::Deployment::IPackageVolume
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume_FWD_DEFINED__
@@ -459,9 +455,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 interface IPackageVolume2;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume2 ABI::Windows::Management::Deployment::IPackageVolume2
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume2_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 class PackageUserInformation;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -499,7 +495,7 @@ IIterator<ABI::Windows::Management::Deployment::PackageUserInformation*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Management::Deployment::PackageUserInformation*> __FIIterator_1_Windows__CManagement__CDeployment__CPackageUserInformation_t;
 #define __FIIterator_1_Windows__CManagement__CDeployment__CPackageUserInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CManagement__CDeployment__CPackageUserInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CManagement__CDeployment__CPackageUserInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Management::Deployment::IPackageUserInformation*>
@@ -531,7 +527,7 @@ IIterable<ABI::Windows::Management::Deployment::PackageUserInformation*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Management::Deployment::PackageUserInformation*> __FIIterable_1_Windows__CManagement__CDeployment__CPackageUserInformation_t;
 #define __FIIterable_1_Windows__CManagement__CDeployment__CPackageUserInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CManagement__CDeployment__CPackageUserInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CManagement__CDeployment__CPackageUserInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Management::Deployment::IPackageUserInformation*>
@@ -547,9 +543,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 class PackageVolume;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -572,7 +568,7 @@ IIterator<ABI::Windows::Management::Deployment::PackageVolume*> : IIterator_impl
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Management::Deployment::PackageVolume*> __FIIterator_1_Windows__CManagement__CDeployment__CPackageVolume_t;
 #define __FIIterator_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CManagement__CDeployment__CPackageVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Management::Deployment::IPackageVolume*>
@@ -604,7 +600,7 @@ IIterable<ABI::Windows::Management::Deployment::PackageVolume*> : IIterable_impl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Management::Deployment::PackageVolume*> __FIIterable_1_Windows__CManagement__CDeployment__CPackageVolume_t;
 #define __FIIterable_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CManagement__CDeployment__CPackageVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Management::Deployment::IPackageVolume*>
@@ -636,7 +632,7 @@ IVectorView<ABI::Windows::Management::Deployment::PackageVolume*> : IVectorView_
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Management::Deployment::PackageVolume*> __FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume_t;
 #define __FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Management::Deployment::IPackageVolume*>
@@ -652,9 +648,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 class DeploymentResult;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -663,9 +659,9 @@ namespace ABI {
             namespace Deployment {
                 struct DeploymentProgress;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -687,7 +683,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Management::Deployment::DeploymentR
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Management::Deployment::DeploymentResult*,struct ABI::Windows::Management::Deployment::DeploymentProgress> __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Management::Deployment::IDeploymentResult*,ABI::Windows::Management::Deployment::DeploymentProgress>
@@ -720,7 +716,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Management::Deployment
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Management::Deployment::DeploymentResult*,struct ABI::Windows::Management::Deployment::DeploymentProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Management::Deployment::IDeploymentResult*,ABI::Windows::Management::Deployment::DeploymentProgress>
@@ -753,7 +749,7 @@ IAsyncOperationWithProgress<ABI::Windows::Management::Deployment::DeploymentResu
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Management::Deployment::DeploymentResult*,struct ABI::Windows::Management::Deployment::DeploymentProgress> __FIAsyncOperationWithProgress_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Management::Deployment::IDeploymentResult*,ABI::Windows::Management::Deployment::DeploymentProgress>
@@ -785,7 +781,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CManagement__CDeployme
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Management::Deployment::IPackageVolume*>*>
@@ -817,7 +813,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolu
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume*> __FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Management::Deployment::IPackageVolume*>*>
@@ -849,7 +845,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Management::Deployment::PackageVol
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Management::Deployment::PackageVolume*> __FIAsyncOperationCompletedHandler_1_Windows__CManagement__CDeployment__CPackageVolume_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CManagement__CDeployment__CPackageVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Management::Deployment::IPackageVolume*>
@@ -881,7 +877,7 @@ IAsyncOperation<ABI::Windows::Management::Deployment::PackageVolume*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Management::Deployment::PackageVolume*> __FIAsyncOperation_1_Windows__CManagement__CDeployment__CPackageVolume_t;
 #define __FIAsyncOperation_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CManagement__CDeployment__CPackageVolume_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CManagement__CDeployment__CPackageVolume ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Management::Deployment::IPackageVolume*>
@@ -896,8 +892,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -905,8 +901,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -932,7 +928,7 @@ IIterator<ABI::Windows::Foundation::Uri*> : IIterator_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Foundation::Uri*> __FIIterator_1_Windows__CFoundation__CUri_t;
 #define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -964,7 +960,7 @@ IIterable<ABI::Windows::Foundation::Uri*> : IIterable_impl<ABI::Windows::Foundat
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Foundation::Uri*> __FIIterable_1_Windows__CFoundation__CUri_t;
 #define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CUri_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CFoundation__CUri ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::IUriRuntimeClass*>
@@ -979,8 +975,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             class Package;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
@@ -988,8 +984,8 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             interface IPackage;
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CIPackage ABI::Windows::ApplicationModel::IPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackage_FWD_DEFINED__
@@ -1015,7 +1011,7 @@ IIterator<ABI::Windows::ApplicationModel::Package*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Package*> __FIIterator_1_Windows__CApplicationModel__CPackage_t;
 #define __FIIterator_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::IPackage*>
@@ -1047,7 +1043,7 @@ IIterable<ABI::Windows::ApplicationModel::Package*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Package*> __FIIterable_1_Windows__CApplicationModel__CPackage_t;
 #define __FIIterable_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::IPackage*>
@@ -1077,7 +1073,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1106,7 +1102,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1137,7 +1133,7 @@ IVectorView<ABI::Windows::ApplicationModel::Package*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Package*> __FIVectorView_1_Windows__CApplicationModel__CPackage_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::IPackage*>
@@ -1169,7 +1165,7 @@ IVector<ABI::Windows::ApplicationModel::Package*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::ApplicationModel::Package*> __FIVector_1_Windows__CApplicationModel__CPackage_t;
 #define __FIVector_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CPackage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CPackage ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::IPackage*>
@@ -1199,7 +1195,7 @@ IAsyncOperationCompletedHandler<UINT64> : IAsyncOperationCompletedHandler_impl<U
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<UINT64> __FIAsyncOperationCompletedHandler_1_UINT64_t;
 #define __FIAsyncOperationCompletedHandler_1_UINT64 ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_UINT64 ABI::Windows::Foundation::IAsyncOperationCompletedHandler<UINT64>
@@ -1228,7 +1224,7 @@ IAsyncOperation<UINT64> : IAsyncOperation_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<UINT64> __FIAsyncOperation_1_UINT64_t;
 #define __FIAsyncOperation_1_UINT64 ABI::Windows::Foundation::__FIAsyncOperation_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_UINT64 ABI::Windows::Foundation::IAsyncOperation<UINT64>
@@ -1247,8 +1243,8 @@ namespace ABI {
             
             typedef enum PackageContentGroupState : int PackageContentGroupState;
             
-        } /* Windows */
-    } /* ApplicationModel */} /* ABI */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1258,8 +1254,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1276,9 +1272,9 @@ namespace ABI {
                 
                 typedef enum AddPackageByAppInstallerOptions : unsigned int AddPackageByAppInstallerOptions;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1287,9 +1283,9 @@ namespace ABI {
                 
                 typedef enum DeploymentOptions : unsigned int DeploymentOptions;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1298,9 +1294,9 @@ namespace ABI {
                 
                 typedef enum DeploymentProgressState : int DeploymentProgressState;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1309,9 +1305,9 @@ namespace ABI {
                 
                 typedef enum PackageInstallState : int PackageInstallState;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1320,9 +1316,9 @@ namespace ABI {
                 
                 typedef enum PackageState : int PackageState;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1331,9 +1327,9 @@ namespace ABI {
                 
                 typedef enum PackageStatus : unsigned int PackageStatus;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1342,9 +1338,9 @@ namespace ABI {
                 
                 typedef enum PackageTypes : unsigned int PackageTypes;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1353,9 +1349,9 @@ namespace ABI {
                 
                 typedef enum RemovalOptions : unsigned int RemovalOptions;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1364,9 +1360,9 @@ namespace ABI {
                 
                 typedef struct DeploymentProgress DeploymentProgress;
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1388,9 +1384,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 class PackageManager;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1398,9 +1394,9 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 class PackageManagerDebugSettings;
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1434,13 +1430,18 @@ namespace ABI {
                     AddPackageByAppInstallerOptions_InstallAllResources = 0x20,
                     AddPackageByAppInstallerOptions_ForceTargetAppShutdown = 0x40,
                     AddPackageByAppInstallerOptions_RequiredContentGroupOnly = 0x100,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                    
+                    AddPackageByAppInstallerOptions_LimitToExistingPackages = 0x200,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                    
                 };
                 
                 DEFINE_ENUM_FLAG_OPERATORS(AddPackageByAppInstallerOptions)
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1484,13 +1485,22 @@ namespace ABI {
                     DeploymentOptions_ForceUpdateFromAnyVersion = 0x40000,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
                     
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                    
+#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
+                    
+                    DeploymentOptions_RetainFilesOnFailure = 0x200000,
+#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
+                    
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+                    
                 };
                 
                 DEFINE_ENUM_FLAG_OPERATORS(DeploymentOptions)
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1515,9 +1525,9 @@ namespace ABI {
                     DeploymentProgressState_Processing = 1,
                 };
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1548,9 +1558,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1577,9 +1587,9 @@ namespace ABI {
                     PackageState_Tampered = 3,
                 };
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1609,9 +1619,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PackageStatus)
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1651,9 +1661,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(PackageTypes)
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1685,9 +1695,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(RemovalOptions)
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1712,9 +1722,9 @@ namespace ABI {
                     UINT32 percentage;
                 };
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1756,9 +1766,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDeploymentResult=_uuidof(IDeploymentResult);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult_INTERFACE_DEFINED__) */
@@ -1790,16 +1800,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsRegistered(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDeploymentResult2=_uuidof(IDeploymentResult2);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult2;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIDeploymentResult2_INTERFACE_DEFINED__) */
@@ -1911,9 +1921,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager=_uuidof(IPackageManager);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager_INTERFACE_DEFINED__) */
@@ -2003,9 +2013,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager2=_uuidof(IPackageManager2);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager2;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager2_INTERFACE_DEFINED__) */
@@ -2110,9 +2120,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager3=_uuidof(IPackageManager3);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager3;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager3_INTERFACE_DEFINED__) */
@@ -2151,9 +2161,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager4=_uuidof(IPackageManager4);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager4;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager4_INTERFACE_DEFINED__) */
@@ -2218,9 +2228,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager5=_uuidof(IPackageManager5);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager5;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager5_INTERFACE_DEFINED__) */
@@ -2301,9 +2311,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager6=_uuidof(IPackageManager6);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager6;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager6_INTERFACE_DEFINED__) */
@@ -2349,9 +2359,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager7=_uuidof(IPackageManager7);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager7;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager7_INTERFACE_DEFINED__) */
@@ -2391,9 +2401,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManager8=_uuidof(IPackageManager8);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManager8;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManager8_INTERFACE_DEFINED__) */
@@ -2442,9 +2452,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageManagerDebugSettings=_uuidof(IPackageManagerDebugSettings);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageManagerDebugSettings;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageManagerDebugSettings_INTERFACE_DEFINED__) */
@@ -2486,9 +2496,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageUserInformation=_uuidof(IPackageUserInformation);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageUserInformation;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageUserInformation_INTERFACE_DEFINED__) */
@@ -2520,10 +2530,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOffline(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSystemVolume(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MountPoint(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2535,7 +2545,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportsHardLinks(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE FindPackages(
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CApplicationModel__CPackage * * packageCollection
@@ -2611,9 +2621,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageVolume=_uuidof(IPackageVolume);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume_INTERFACE_DEFINED__) */
@@ -2645,10 +2655,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFullTrustPackageSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAppxInstallSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetAvailableSpaceAsync(
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_UINT64 * * operation
@@ -2658,9 +2668,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPackageVolume2=_uuidof(IPackageVolume2);
                 
-            } /* Windows */
+            } /* Deployment */
         } /* Management */
-    } /* Deployment */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume2;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CIPackageVolume2_INTERFACE_DEFINED__) */
@@ -3346,7 +3356,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeploy
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CManagement_CDeployment_CDeploymentProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CManagement__CDeployment__CDeploymentResult_Windows__CManagement__CDeployment__CDeploymentProgressVtbl;
 
@@ -4547,7 +4557,7 @@ typedef struct __FIAsyncOperation_1_UINT64Vtbl
 
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_UINT64 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_UINT64 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *results);
     END_INTERFACE
 } __FIAsyncOperation_1_UINT64Vtbl;
 
@@ -4672,6 +4682,11 @@ enum __x_ABI_CWindows_CManagement_CDeployment_CAddPackageByAppInstallerOptions
     AddPackageByAppInstallerOptions_InstallAllResources = 0x20,
     AddPackageByAppInstallerOptions_ForceTargetAppShutdown = 0x40,
     AddPackageByAppInstallerOptions_RequiredContentGroupOnly = 0x100,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
+    AddPackageByAppInstallerOptions_LimitToExistingPackages = 0x200,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
@@ -4711,6 +4726,15 @@ enum __x_ABI_CWindows_CManagement_CDeployment_CDeploymentOptions
     
     DeploymentOptions_ForceUpdateFromAnyVersion = 0x40000,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+    
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+    
+#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
+    
+    DeploymentOptions_RetainFilesOnFailure = 0x200000,
+#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
+    
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
     
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000

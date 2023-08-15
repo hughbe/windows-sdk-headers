@@ -6,8 +6,12 @@
 #ifndef RESOURCEINDEXER_H
 #define RESOURCEINDEXER_H
 
+#include <winapifamily.h>
+
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
+#include <windows.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -19,14 +23,14 @@ typedef struct
     PWSTR value;
 } IndexedResourceQualifier;
 
-HRESULT CreateResourceIndexer(
+STDAPI CreateResourceIndexer(
     _In_ PCWSTR projectRoot,
     _In_opt_ PCWSTR extensionDllPath,
     _Outptr_ PVOID* ppResourceIndexer);
 
 void DestroyResourceIndexer(_In_opt_ PVOID resourceIndexer);
 
-HRESULT IndexFilePath(
+STDAPI IndexFilePath(
     _In_ PVOID resourceIndexer,
     _In_ PCWSTR filePath,
     _Outptr_ PWSTR* ppResourceUri,

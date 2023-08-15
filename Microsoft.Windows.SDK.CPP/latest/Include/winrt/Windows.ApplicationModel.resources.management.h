@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.resources.management.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_RESOURCES_MANAGEMENT_RESOURCEINDEXERCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -145,10 +145,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     interface IIndexedResourceCandidate;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceCandidate ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceCandidate_FWD_DEFINED__
@@ -161,10 +161,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     interface IIndexedResourceQualifier;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceQualifier ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceQualifier
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceQualifier_FWD_DEFINED__
@@ -177,10 +177,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     interface IResourceIndexer;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexer ABI::Windows::ApplicationModel::Resources::Management::IResourceIndexer
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexer_FWD_DEFINED__
@@ -193,10 +193,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     interface IResourceIndexerFactory;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory ABI::Windows::ApplicationModel::Resources::Management::IResourceIndexerFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory_FWD_DEFINED__
@@ -209,10 +209,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     interface IResourceIndexerFactory2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory2 ABI::Windows::ApplicationModel::Resources::Management::IResourceIndexerFactory2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory2_FWD_DEFINED__
@@ -226,10 +226,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     class IndexedResourceCandidate;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_RESOURCES_MANAGEMENT_RESOURCEINDEXERCONTRACT_VERSION >= 0x10000
@@ -252,7 +252,7 @@ IIterator<ABI::Windows::ApplicationModel::Resources::Management::IndexedResource
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate*> __FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t;
 #define __FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate*>
@@ -284,7 +284,7 @@ IIterable<ABI::Windows::ApplicationModel::Resources::Management::IndexedResource
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate*> __FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t;
 #define __FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate*>
@@ -301,10 +301,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     class IndexedResourceQualifier;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_APPLICATIONMODEL_RESOURCES_MANAGEMENT_RESOURCEINDEXERCONTRACT_VERSION >= 0x10000
@@ -327,7 +327,7 @@ IIterator<ABI::Windows::ApplicationModel::Resources::Management::IndexedResource
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier*> __FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier_t;
 #define __FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceQualifier*>
@@ -359,7 +359,7 @@ IIterable<ABI::Windows::ApplicationModel::Resources::Management::IndexedResource
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier*> __FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier_t;
 #define __FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceQualifier*>
@@ -391,7 +391,7 @@ IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IndexedResour
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate*> __FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate*>
@@ -423,7 +423,7 @@ IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IndexedResour
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier*> __FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceQualifier ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceQualifier*>
@@ -455,7 +455,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CRe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate*>*>
@@ -487,7 +487,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CResources__CManage
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CResources__CManagement__CIndexedResourceCandidate ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate*>*>
@@ -517,7 +517,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -547,7 +547,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -577,7 +577,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -606,7 +606,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -622,8 +622,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -631,8 +631,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -649,10 +649,10 @@ namespace ABI {
                     
                     typedef enum IndexedResourceType : int IndexedResourceType;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -667,10 +667,10 @@ namespace ABI {
             namespace Resources {
                 namespace Management {
                     class ResourceIndexer;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -707,10 +707,10 @@ namespace ABI {
                         IndexedResourceType_EmbeddedData = 2,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_APPLICATIONMODEL_RESOURCES_MANAGEMENT_RESOURCEINDEXERCONTRACT_VERSION >= 0x10000
 
 
@@ -763,10 +763,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IIndexedResourceCandidate=_uuidof(IIndexedResourceCandidate);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceCandidate;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceCandidate_INTERFACE_DEFINED__) */
@@ -809,10 +809,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IIndexedResourceQualifier=_uuidof(IIndexedResourceQualifier);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceQualifier;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIIndexedResourceQualifier_INTERFACE_DEFINED__) */
@@ -869,10 +869,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IResourceIndexer=_uuidof(IResourceIndexer);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexer;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexer_INTERFACE_DEFINED__) */
@@ -921,10 +921,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IResourceIndexerFactory=_uuidof(IResourceIndexerFactory);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory_INTERFACE_DEFINED__) */
@@ -974,10 +974,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IResourceIndexerFactory2=_uuidof(IResourceIndexerFactory2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Resources */
-    } /* Management */} /* ABI */
+                } /* Management */
+            } /* Resources */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CResources_CManagement_CIResourceIndexerFactory2_INTERFACE_DEFINED__) */

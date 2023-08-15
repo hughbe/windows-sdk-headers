@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -115,6 +115,13 @@ struct WINRT_EBO ISpatialInteractionManagerStatics :
     ISpatialInteractionManagerStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO ISpatialInteractionManagerStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ISpatialInteractionManagerStatics2>
+{
+    ISpatialInteractionManagerStatics2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO ISpatialInteractionSource :
     Windows::Foundation::IInspectable,
     impl::consume_t<ISpatialInteractionSource>
@@ -136,6 +143,13 @@ struct WINRT_EBO ISpatialInteractionSource3 :
     impl::require<ISpatialInteractionSource3, Windows::UI::Input::Spatial::ISpatialInteractionSource, Windows::UI::Input::Spatial::ISpatialInteractionSource2>
 {
     ISpatialInteractionSource3(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ISpatialInteractionSource4 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ISpatialInteractionSource4>
+{
+    ISpatialInteractionSource4(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ISpatialInteractionSourceEventArgs :
@@ -195,6 +209,14 @@ struct WINRT_EBO ISpatialInteractionSourceState2 :
     impl::require<ISpatialInteractionSourceState2, Windows::UI::Input::Spatial::ISpatialInteractionSourceState>
 {
     ISpatialInteractionSourceState2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ISpatialInteractionSourceState3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ISpatialInteractionSourceState3>,
+    impl::require<ISpatialInteractionSourceState3, Windows::UI::Input::Spatial::ISpatialInteractionSourceState, Windows::UI::Input::Spatial::ISpatialInteractionSourceState2>
+{
+    ISpatialInteractionSourceState3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ISpatialManipulationCanceledEventArgs :
@@ -288,6 +310,13 @@ struct WINRT_EBO ISpatialPointerPose2 :
     impl::require<ISpatialPointerPose2, Windows::UI::Input::Spatial::ISpatialPointerPose>
 {
     ISpatialPointerPose2(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO ISpatialPointerPose3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<ISpatialPointerPose3>
+{
+    ISpatialPointerPose3(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO ISpatialPointerPoseStatics :

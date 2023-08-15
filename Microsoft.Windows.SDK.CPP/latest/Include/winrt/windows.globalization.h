@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.globalization.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -276,8 +272,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IApplicationLanguagesStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics ABI::Windows::Globalization::IApplicationLanguagesStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics_FWD_DEFINED__
@@ -288,8 +284,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IApplicationLanguagesStatics2;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics2 ABI::Windows::Globalization::IApplicationLanguagesStatics2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics2_FWD_DEFINED__
@@ -300,8 +296,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICalendar;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICalendar ABI::Windows::Globalization::ICalendar
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICalendar_FWD_DEFINED__
@@ -312,8 +308,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICalendarFactory;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICalendarFactory ABI::Windows::Globalization::ICalendarFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICalendarFactory_FWD_DEFINED__
@@ -324,8 +320,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICalendarFactory2;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICalendarFactory2 ABI::Windows::Globalization::ICalendarFactory2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICalendarFactory2_FWD_DEFINED__
@@ -336,8 +332,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICalendarIdentifiersStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics ABI::Windows::Globalization::ICalendarIdentifiersStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics_FWD_DEFINED__
@@ -348,8 +344,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICalendarIdentifiersStatics2;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics2 ABI::Windows::Globalization::ICalendarIdentifiersStatics2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics2_FWD_DEFINED__
@@ -360,8 +356,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICalendarIdentifiersStatics3;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics3 ABI::Windows::Globalization::ICalendarIdentifiersStatics3
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics3_FWD_DEFINED__
@@ -372,11 +368,35 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IClockIdentifiersStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics ABI::Windows::Globalization::IClockIdentifiersStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Globalization {
+            interface ICurrencyAmount;
+        } /* Globalization */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount ABI::Windows::Globalization::ICurrencyAmount
+
+#endif // ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Globalization {
+            interface ICurrencyAmountFactory;
+        } /* Globalization */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory ABI::Windows::Globalization::ICurrencyAmountFactory
+
+#endif // ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics_FWD_DEFINED__
@@ -384,8 +404,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICurrencyIdentifiersStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics ABI::Windows::Globalization::ICurrencyIdentifiersStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics_FWD_DEFINED__
@@ -396,8 +416,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICurrencyIdentifiersStatics2;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics2 ABI::Windows::Globalization::ICurrencyIdentifiersStatics2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics2_FWD_DEFINED__
@@ -408,8 +428,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ICurrencyIdentifiersStatics3;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics3 ABI::Windows::Globalization::ICurrencyIdentifiersStatics3
 
 #endif // ____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics3_FWD_DEFINED__
@@ -420,8 +440,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IGeographicRegion;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIGeographicRegion ABI::Windows::Globalization::IGeographicRegion
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIGeographicRegion_FWD_DEFINED__
@@ -432,8 +452,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IGeographicRegionFactory;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIGeographicRegionFactory ABI::Windows::Globalization::IGeographicRegionFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIGeographicRegionFactory_FWD_DEFINED__
@@ -444,8 +464,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IGeographicRegionStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIGeographicRegionStatics ABI::Windows::Globalization::IGeographicRegionStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIGeographicRegionStatics_FWD_DEFINED__
@@ -456,8 +476,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IJapanesePhoneme;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIJapanesePhoneme ABI::Windows::Globalization::IJapanesePhoneme
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIJapanesePhoneme_FWD_DEFINED__
@@ -468,8 +488,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface IJapanesePhoneticAnalyzerStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CIJapanesePhoneticAnalyzerStatics ABI::Windows::Globalization::IJapanesePhoneticAnalyzerStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIJapanesePhoneticAnalyzerStatics_FWD_DEFINED__
@@ -480,8 +500,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage ABI::Windows::Globalization::ILanguage
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage_FWD_DEFINED__
@@ -492,8 +512,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguage2;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguage2 ABI::Windows::Globalization::ILanguage2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguage2_FWD_DEFINED__
@@ -504,8 +524,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguageExtensionSubtags;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguageExtensionSubtags ABI::Windows::Globalization::ILanguageExtensionSubtags
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguageExtensionSubtags_FWD_DEFINED__
@@ -516,8 +536,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguageFactory;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguageFactory ABI::Windows::Globalization::ILanguageFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguageFactory_FWD_DEFINED__
@@ -528,8 +548,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguageStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguageStatics ABI::Windows::Globalization::ILanguageStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguageStatics_FWD_DEFINED__
@@ -540,8 +560,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ILanguageStatics2;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CILanguageStatics2 ABI::Windows::Globalization::ILanguageStatics2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CILanguageStatics2_FWD_DEFINED__
@@ -552,8 +572,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface INumeralSystemIdentifiersStatics;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics ABI::Windows::Globalization::INumeralSystemIdentifiersStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics_FWD_DEFINED__
@@ -564,8 +584,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface INumeralSystemIdentifiersStatics2;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics2 ABI::Windows::Globalization::INumeralSystemIdentifiersStatics2
 
 #endif // ____x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics2_FWD_DEFINED__
@@ -576,8 +596,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             interface ITimeZoneOnCalendar;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CITimeZoneOnCalendar ABI::Windows::Globalization::ITimeZoneOnCalendar
 
 #endif // ____x_ABI_CWindows_CGlobalization_CITimeZoneOnCalendar_FWD_DEFINED__
@@ -589,8 +609,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class JapanesePhoneme;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION >= 0x10000
@@ -613,7 +633,7 @@ IIterator<ABI::Windows::Globalization::JapanesePhoneme*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Globalization::JapanesePhoneme*> __FIIterator_1_Windows__CGlobalization__CJapanesePhoneme_t;
 #define __FIIterator_1_Windows__CGlobalization__CJapanesePhoneme ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGlobalization__CJapanesePhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGlobalization__CJapanesePhoneme ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Globalization::IJapanesePhoneme*>
@@ -645,7 +665,7 @@ IIterable<ABI::Windows::Globalization::JapanesePhoneme*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Globalization::JapanesePhoneme*> __FIIterable_1_Windows__CGlobalization__CJapanesePhoneme_t;
 #define __FIIterable_1_Windows__CGlobalization__CJapanesePhoneme ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGlobalization__CJapanesePhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGlobalization__CJapanesePhoneme ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Globalization::IJapanesePhoneme*>
@@ -660,8 +680,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Language;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -684,7 +704,7 @@ IIterator<ABI::Windows::Globalization::Language*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Globalization::Language*> __FIIterator_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Globalization::ILanguage*>
@@ -716,7 +736,7 @@ IIterable<ABI::Windows::Globalization::Language*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Globalization::Language*> __FIIterable_1_Windows__CGlobalization__CLanguage_t;
 #define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Globalization::ILanguage*>
@@ -748,7 +768,7 @@ IVectorView<ABI::Windows::Globalization::JapanesePhoneme*> : IVectorView_impl<AB
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Globalization::JapanesePhoneme*> __FIVectorView_1_Windows__CGlobalization__CJapanesePhoneme_t;
 #define __FIVectorView_1_Windows__CGlobalization__CJapanesePhoneme ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGlobalization__CJapanesePhoneme_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGlobalization__CJapanesePhoneme ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Globalization::IJapanesePhoneme*>
@@ -780,7 +800,7 @@ IVectorView<ABI::Windows::Globalization::Language*> : IVectorView_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Globalization::Language*> __FIVectorView_1_Windows__CGlobalization__CLanguage_t;
 #define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Globalization::ILanguage*>
@@ -812,7 +832,7 @@ IVector<ABI::Windows::Globalization::Language*> : IVector_impl<ABI::Windows::Fou
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Globalization::Language*> __FIVector_1_Windows__CGlobalization__CLanguage_t;
 #define __FIVector_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGlobalization__CLanguage_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CGlobalization__CLanguage ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Globalization::ILanguage*>
@@ -842,7 +862,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -871,7 +891,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -900,7 +920,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -918,8 +938,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -928,8 +948,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -937,8 +957,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -953,8 +973,8 @@ namespace ABI {
             
             typedef enum DayOfWeek : int DayOfWeek;
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -962,8 +982,10 @@ namespace ABI {
             
             typedef enum LanguageLayoutDirection : int LanguageLayoutDirection;
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
+
+
 
 
 
@@ -996,9 +1018,8 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             class Calendar;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
-
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1006,9 +1027,18 @@ namespace ABI {
 namespace ABI {
     namespace Windows {
         namespace Globalization {
+            class CurrencyAmount;
+        } /* Globalization */
+    } /* Windows */} /* ABI */
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Globalization {
             class GeographicRegion;
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1047,8 +1077,8 @@ namespace ABI {
                 DayOfWeek_Saturday = 6,
             };
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1074,8 +1104,8 @@ namespace ABI {
                 LanguageLayoutDirection_TtbRtl = 3,
             };
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1119,8 +1149,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IApplicationLanguagesStatics=_uuidof(IApplicationLanguagesStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics_INTERFACE_DEFINED__) */
@@ -1159,8 +1189,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IApplicationLanguagesStatics2=_uuidof(IApplicationLanguagesStatics2);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIApplicationLanguagesStatics2_INTERFACE_DEFINED__) */
@@ -1492,15 +1522,15 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDaylightSavingTime(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_ICalendar=_uuidof(ICalendar);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICalendar;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICalendar_INTERFACE_DEFINED__) */
@@ -1545,8 +1575,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICalendarFactory=_uuidof(ICalendarFactory);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICalendarFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICalendarFactory_INTERFACE_DEFINED__) */
@@ -1588,8 +1618,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICalendarFactory2=_uuidof(ICalendarFactory2);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICalendarFactory2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICalendarFactory2_INTERFACE_DEFINED__) */
@@ -1651,8 +1681,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICalendarIdentifiersStatics=_uuidof(ICalendarIdentifiersStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics_INTERFACE_DEFINED__) */
@@ -1690,8 +1720,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICalendarIdentifiersStatics2=_uuidof(ICalendarIdentifiersStatics2);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics2_INTERFACE_DEFINED__) */
@@ -1741,8 +1771,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICalendarIdentifiersStatics3=_uuidof(ICalendarIdentifiersStatics3);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics3;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics3_INTERFACE_DEFINED__) */
@@ -1783,12 +1813,95 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IClockIdentifiersStatics=_uuidof(IClockIdentifiersStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Globalization.ICurrencyAmount
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Globalization.CurrencyAmount
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmount_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_ICurrencyAmount[] = L"Windows.Globalization.ICurrencyAmount";
+namespace ABI {
+    namespace Windows {
+        namespace Globalization {
+            /* [object, uuid("74B49942-EB75-443A-95B3-7D723F56F93C"), exclusiveto, contract] */
+            MIDL_INTERFACE("74B49942-EB75-443A-95B3-7D723F56F93C")
+            ICurrencyAmount : public IInspectable
+            {
+            public:
+                /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Amount(
+                    /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    ) = 0;
+                /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Currency(
+                    /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    ) = 0;
+                
+            };
+
+            extern MIDL_CONST_ID IID & IID_ICurrencyAmount=_uuidof(ICurrencyAmount);
+            
+        } /* Globalization */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICurrencyAmount;
+#endif /* !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmount_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Globalization.ICurrencyAmountFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Globalization.CurrencyAmount
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_ICurrencyAmountFactory[] = L"Windows.Globalization.ICurrencyAmountFactory";
+namespace ABI {
+    namespace Windows {
+        namespace Globalization {
+            /* [object, uuid("48D7168F-EF3B-4AEE-A6A1-4B036FE03FF0"), exclusiveto, contract] */
+            MIDL_INTERFACE("48D7168F-EF3B-4AEE-A6A1-4B036FE03FF0")
+            ICurrencyAmountFactory : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE Create(
+                    /* [in] */__RPC__in HSTRING amount,
+                    /* [in] */__RPC__in HSTRING currency,
+                    /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Globalization::ICurrencyAmount * * result
+                    ) = 0;
+                
+            };
+
+            extern MIDL_CONST_ID IID & IID_ICurrencyAmountFactory=_uuidof(ICurrencyAmountFactory);
+            
+        } /* Globalization */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory;
+#endif /* !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2290,8 +2403,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICurrencyIdentifiersStatics=_uuidof(ICurrencyIdentifiersStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics_INTERFACE_DEFINED__) */
@@ -2329,8 +2442,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICurrencyIdentifiersStatics2=_uuidof(ICurrencyIdentifiersStatics2);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics2_INTERFACE_DEFINED__) */
@@ -2377,8 +2490,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ICurrencyIdentifiersStatics3=_uuidof(ICurrencyIdentifiersStatics3);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics3;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics3_INTERFACE_DEFINED__) */
@@ -2434,8 +2547,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IGeographicRegion=_uuidof(IGeographicRegion);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIGeographicRegion;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIGeographicRegion_INTERFACE_DEFINED__) */
@@ -2474,8 +2587,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IGeographicRegionFactory=_uuidof(IGeographicRegionFactory);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIGeographicRegionFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIGeographicRegionFactory_INTERFACE_DEFINED__) */
@@ -2507,15 +2620,15 @@ namespace ABI {
             public:
                 virtual HRESULT STDMETHODCALLTYPE IsSupported(
                     /* [in] */__RPC__in HSTRING geographicRegionCode,
-                    /* [retval, out] */__RPC__out boolean * result
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IGeographicRegionStatics=_uuidof(IGeographicRegionStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIGeographicRegionStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIGeographicRegionStatics_INTERFACE_DEFINED__) */
@@ -2552,15 +2665,15 @@ namespace ABI {
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPhraseStart(
-                    /* [retval, out] */__RPC__out boolean * value
+                    /* [retval, out] */__RPC__out ::boolean * value
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_IJapanesePhoneme=_uuidof(IJapanesePhoneme);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIJapanesePhoneme;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIJapanesePhoneme_INTERFACE_DEFINED__) */
@@ -2596,7 +2709,7 @@ namespace ABI {
                     ) = 0;
                 /* [overload] */virtual HRESULT STDMETHODCALLTYPE GetWordsWithMonoRubyOption(
                     /* [in] */__RPC__in HSTRING input,
-                    /* [in] */boolean monoRuby,
+                    /* [in] */::boolean monoRuby,
                     /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGlobalization__CJapanesePhoneme * * result
                     ) = 0;
                 
@@ -2604,8 +2717,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IJapanesePhoneticAnalyzerStatics=_uuidof(IJapanesePhoneticAnalyzerStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIJapanesePhoneticAnalyzerStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIJapanesePhoneticAnalyzerStatics_INTERFACE_DEFINED__) */
@@ -2652,8 +2765,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILanguage=_uuidof(ILanguage);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CILanguage;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CILanguage_INTERFACE_DEFINED__) */
@@ -2691,8 +2804,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILanguage2=_uuidof(ILanguage2);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CILanguage2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CILanguage2_INTERFACE_DEFINED__) */
@@ -2731,8 +2844,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILanguageExtensionSubtags=_uuidof(ILanguageExtensionSubtags);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CILanguageExtensionSubtags;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CILanguageExtensionSubtags_INTERFACE_DEFINED__) */
@@ -2771,8 +2884,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILanguageFactory=_uuidof(ILanguageFactory);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CILanguageFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CILanguageFactory_INTERFACE_DEFINED__) */
@@ -2804,7 +2917,7 @@ namespace ABI {
             public:
                 virtual HRESULT STDMETHODCALLTYPE IsWellFormed(
                     /* [in] */__RPC__in HSTRING languageTag,
-                    /* [retval, out] */__RPC__out boolean * result
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentInputMethodLanguageTag(
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2814,8 +2927,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ILanguageStatics=_uuidof(ILanguageStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CILanguageStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CILanguageStatics_INTERFACE_DEFINED__) */
@@ -2847,15 +2960,15 @@ namespace ABI {
             public:
                 virtual HRESULT STDMETHODCALLTYPE TrySetInputMethodLanguageTag(
                     /* [in] */__RPC__in HSTRING languageTag,
-                    /* [retval, out] */__RPC__out boolean * result
+                    /* [retval, out] */__RPC__out ::boolean * result
                     ) = 0;
                 
             };
 
             extern MIDL_CONST_ID IID & IID_ILanguageStatics2=_uuidof(ILanguageStatics2);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CILanguageStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CILanguageStatics2_INTERFACE_DEFINED__) */
@@ -2998,8 +3111,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_INumeralSystemIdentifiersStatics=_uuidof(INumeralSystemIdentifiersStatics);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics_INTERFACE_DEFINED__) */
@@ -3070,8 +3183,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_INumeralSystemIdentifiersStatics2=_uuidof(INumeralSystemIdentifiersStatics2);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CINumeralSystemIdentifiersStatics2_INTERFACE_DEFINED__) */
@@ -3119,8 +3232,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_ITimeZoneOnCalendar=_uuidof(ITimeZoneOnCalendar);
             
-        } /* Windows */
-    } /* Globalization */} /* ABI */
+        } /* Globalization */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CITimeZoneOnCalendar;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CITimeZoneOnCalendar_INTERFACE_DEFINED__) */
@@ -3227,6 +3340,33 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_ClockIdentifiers[] = L"Windows.Globalization.ClockIdentifiers";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Globalization.CurrencyAmount
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via the Windows.Globalization.ICurrencyAmountFactory interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.Globalization.ICurrencyAmount ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Globalization_CurrencyAmount_DEFINED
+#define RUNTIMECLASS_Windows_Globalization_CurrencyAmount_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_CurrencyAmount[] = L"Windows.Globalization.CurrencyAmount";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3445,6 +3585,18 @@ typedef interface __x_ABI_CWindows_CGlobalization_CICalendarIdentifiersStatics3 
 typedef interface __x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics __x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics;
 
 #endif // ____x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CGlobalization_CICurrencyAmount __x_ABI_CWindows_CGlobalization_CICurrencyAmount;
+
+#endif // ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory;
+
+#endif // ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGlobalization_CICurrencyIdentifiersStatics_FWD_DEFINED__
@@ -4526,6 +4678,9 @@ typedef enum __x_ABI_CWindows_CGlobalization_CDayOfWeek __x_ABI_CWindows_CGlobal
 
 
 typedef enum __x_ABI_CWindows_CGlobalization_CLanguageLayoutDirection __x_ABI_CWindows_CGlobalization_CLanguageLayoutDirection;
+
+
+
 
 
 
@@ -6270,6 +6425,201 @@ interface __x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CIClockIdentifiersStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Globalization.ICurrencyAmount
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Globalization.CurrencyAmount
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmount_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmount_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_ICurrencyAmount[] = L"Windows.Globalization.ICurrencyAmount";
+/* [object, uuid("74B49942-EB75-443A-95B3-7D723F56F93C"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CGlobalization_CICurrencyAmountVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Amount )(
+        __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Currency )(
+        __x_ABI_CWindows_CGlobalization_CICurrencyAmount * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CGlobalization_CICurrencyAmountVtbl;
+
+interface __x_ABI_CWindows_CGlobalization_CICurrencyAmount
+{
+    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CICurrencyAmountVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_get_Amount(This,value) \
+    ( (This)->lpVtbl->get_Amount(This,value) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmount_get_Currency(This,value) \
+    ( (This)->lpVtbl->get_Currency(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICurrencyAmount;
+#endif /* !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmount_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Globalization.ICurrencyAmountFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Globalization.CurrencyAmount
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_ICurrencyAmountFactory[] = L"Windows.Globalization.ICurrencyAmountFactory";
+/* [object, uuid("48D7168F-EF3B-4AEE-A6A1-4B036FE03FF0"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *Create )(
+        __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory * This,
+        /* [in] */__RPC__in HSTRING amount,
+        /* [in] */__RPC__in HSTRING currency,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGlobalization_CICurrencyAmount * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactoryVtbl;
+
+interface __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactoryVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_Create(This,amount,currency,result) \
+    ( (This)->lpVtbl->Create(This,amount,currency,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory;
+#endif /* !defined(____x_ABI_CWindows_CGlobalization_CICurrencyAmountFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9510,6 +9860,33 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_ClockIdentifiers[] = L"Windows.Globalization.ClockIdentifiers";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Globalization.CurrencyAmount
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via the Windows.Globalization.ICurrencyAmountFactory interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.Globalization.ICurrencyAmount ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Globalization_CurrencyAmount_DEFINED
+#define RUNTIMECLASS_Windows_Globalization_CurrencyAmount_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_CurrencyAmount[] = L"Windows.Globalization.CurrencyAmount";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*

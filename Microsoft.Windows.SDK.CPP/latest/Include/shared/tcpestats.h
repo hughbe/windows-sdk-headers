@@ -25,8 +25,8 @@ Environment:
 #pragma once
 #include <winapifamily.h>
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 //
@@ -314,7 +314,7 @@ typedef struct _TCP_ESTATS_OBS_REC_RW_v0 {
 
 //
 // TCP_ESTATS_BW_RW
-// 
+//
 // Define the structure for enabling bandwidth estimation for TCP connections.
 //
 
@@ -366,7 +366,7 @@ typedef struct _TCP_ESTATS_FINE_RTT_ROD_v0 {
 } TCP_ESTATS_FINE_RTT_ROD_v0, *PTCP_ESTATS_FINE_RTT_ROD_v0;
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _TCPESTATS_

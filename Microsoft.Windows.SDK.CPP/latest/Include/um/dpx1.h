@@ -197,8 +197,6 @@ typedef unsigned int LOCATIONTYPE;
 
 #define	LOCATIONTYPE_DUPLICATE	( 0x10 )
 
-#define	LOCATIONTYPE_VOLATILE	( 0x20 )
-
 #define	LOCATIONTYPE__MASK_TYPE	( 0xffff0000 )
 
 typedef /* [public][public] */ 
@@ -263,6 +261,7 @@ typedef /* [public][public] */ struct __MIDL___MIDL_itf_dpx1_0000_0000_0006
 #define DPX_COMPRESSED_FILE_HEADER_XPRESS_HUFF {'D', 'C', 'X', '\x01'}
 #define DPX_XPRESS_HUFF_BLOCK_SIZE (1024 * 1024)
 #define DPX_OPTION_TELEMETRY_CORRELATION_VECTOR L"Telemetry_correlation_vector"
+#define DPX_OPTION_HASH_TYPE L"cix_hash_type"
 
 
 extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0000_v0_0_c_ifspec;

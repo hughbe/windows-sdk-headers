@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.bulkaccess.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace Storage {
             namespace BulkAccess {
                 interface IFileInformationFactory;
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactory ABI::Windows::Storage::BulkAccess::IFileInformationFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactory_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace Storage {
             namespace BulkAccess {
                 interface IFileInformationFactoryFactory;
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactoryFactory ABI::Windows::Storage::BulkAccess::IFileInformationFactoryFactory
 
 #endif // ____x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactoryFactory_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace Storage {
             namespace BulkAccess {
                 interface IStorageItemInformation;
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CBulkAccess_CIStorageItemInformation ABI::Windows::Storage::BulkAccess::IStorageItemInformation
 
 #endif // ____x_ABI_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Storage {
             namespace BulkAccess {
                 class FileInformation;
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -348,7 +344,7 @@ IIterator<ABI::Windows::Storage::BulkAccess::FileInformation*> : IIterator_impl<
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::BulkAccess::FileInformation*> __FIIterator_1_Windows__CStorage__CBulkAccess__CFileInformation_t;
 #define __FIIterator_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CBulkAccess__CFileInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -380,7 +376,7 @@ IIterable<ABI::Windows::Storage::BulkAccess::FileInformation*> : IIterable_impl<
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::BulkAccess::FileInformation*> __FIIterable_1_Windows__CStorage__CBulkAccess__CFileInformation_t;
 #define __FIIterable_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CBulkAccess__CFileInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -396,9 +392,9 @@ namespace ABI {
         namespace Storage {
             namespace BulkAccess {
                 class FolderInformation;
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -421,7 +417,7 @@ IIterator<ABI::Windows::Storage::BulkAccess::FolderInformation*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::BulkAccess::FolderInformation*> __FIIterator_1_Windows__CStorage__CBulkAccess__CFolderInformation_t;
 #define __FIIterator_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CBulkAccess__CFolderInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -453,7 +449,7 @@ IIterable<ABI::Windows::Storage::BulkAccess::FolderInformation*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::BulkAccess::FolderInformation*> __FIIterable_1_Windows__CStorage__CBulkAccess__CFolderInformation_t;
 #define __FIIterable_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CBulkAccess__CFolderInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -485,7 +481,7 @@ IIterator<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*> : IIterat
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*> __FIIterator_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t;
 #define __FIIterator_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -517,7 +513,7 @@ IIterable<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*> : IIterab
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*> __FIIterable_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t;
 #define __FIIterable_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -549,7 +545,7 @@ IVectorView<ABI::Windows::Storage::BulkAccess::FileInformation*> : IVectorView_i
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::BulkAccess::FileInformation*> __FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation_t;
 #define __FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -581,7 +577,7 @@ IVectorView<ABI::Windows::Storage::BulkAccess::FolderInformation*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::BulkAccess::FolderInformation*> __FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation_t;
 #define __FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -613,7 +609,7 @@ IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*> : IVect
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*> __FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t;
 #define __FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>
@@ -645,7 +641,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CBulkAccess_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>*>
@@ -677,7 +673,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFileInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>*>
@@ -709,7 +705,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CBulkAccess_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>*>
@@ -741,7 +737,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CFolderInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>*>
@@ -773,7 +769,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CBulkAccess_
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>*>
@@ -805,7 +801,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemIn
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation*> __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CStorage__CBulkAccess__CIStorageItemInformation ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*>*>
@@ -838,7 +834,7 @@ ITypedEventHandler<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*,I
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*,IInspectable*> __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::BulkAccess::IStorageItemInformation*,IInspectable*>
@@ -859,9 +855,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class BasicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties_FWD_DEFINED__
@@ -870,9 +866,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IBasicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties ABI::Windows::Storage::FileProperties::IBasicProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIBasicProperties_FWD_DEFINED__
@@ -883,9 +879,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class DocumentProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties_FWD_DEFINED__
@@ -894,9 +890,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IDocumentProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties ABI::Windows::Storage::FileProperties::IDocumentProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIDocumentProperties_FWD_DEFINED__
@@ -907,9 +903,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class ImageProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties_FWD_DEFINED__
@@ -918,9 +914,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IImageProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties ABI::Windows::Storage::FileProperties::IImageProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIImageProperties_FWD_DEFINED__
@@ -931,9 +927,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class MusicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties_FWD_DEFINED__
@@ -942,9 +938,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IMusicProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties ABI::Windows::Storage::FileProperties::IMusicProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIMusicProperties_FWD_DEFINED__
@@ -955,9 +951,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 class StorageItemThumbnail;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -966,9 +962,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -981,9 +977,9 @@ namespace ABI {
                 
                 typedef enum ThumbnailMode : int ThumbnailMode;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -992,18 +988,18 @@ namespace ABI {
                 
                 typedef enum ThumbnailOptions : unsigned int ThumbnailOptions;
                 
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Storage {
             namespace FileProperties {
                 class VideoProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties_FWD_DEFINED__
@@ -1012,9 +1008,9 @@ namespace ABI {
         namespace Storage {
             namespace FileProperties {
                 interface IVideoProperties;
-            } /* Windows */
+            } /* FileProperties */
         } /* Storage */
-    } /* FileProperties */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties ABI::Windows::Storage::FileProperties::IVideoProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CFileProperties_CIVideoProperties_FWD_DEFINED__
@@ -1029,8 +1025,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1042,8 +1038,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile2;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile2 ABI::Windows::Storage::IStorageFile2
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile2_FWD_DEFINED__
@@ -1055,8 +1051,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFilePropertiesWithAvailability;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFilePropertiesWithAvailability ABI::Windows::Storage::IStorageFilePropertiesWithAvailability
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFilePropertiesWithAvailability_FWD_DEFINED__
@@ -1068,8 +1064,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -1081,8 +1077,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder2;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder2 ABI::Windows::Storage::IStorageFolder2
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder2_FWD_DEFINED__
@@ -1094,8 +1090,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem ABI::Windows::Storage::IStorageItem
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem_FWD_DEFINED__
@@ -1107,8 +1103,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItem2;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItem2 ABI::Windows::Storage::IStorageItem2
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItem2_FWD_DEFINED__
@@ -1120,8 +1116,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItemProperties;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItemProperties ABI::Windows::Storage::IStorageItemProperties
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItemProperties_FWD_DEFINED__
@@ -1133,8 +1129,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageItemPropertiesWithProvider;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageItemPropertiesWithProvider ABI::Windows::Storage::IStorageItemPropertiesWithProvider
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageItemPropertiesWithProvider_FWD_DEFINED__
@@ -1149,9 +1145,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageFolderQueryOperations;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryOperations ABI::Windows::Storage::Search::IStorageFolderQueryOperations
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageFolderQueryOperations_FWD_DEFINED__
@@ -1164,9 +1160,9 @@ namespace ABI {
         namespace Storage {
             namespace Search {
                 interface IStorageQueryResultBase;
-            } /* Windows */
+            } /* Search */
         } /* Storage */
-    } /* Search */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase ABI::Windows::Storage::Search::IStorageQueryResultBase
 
 #endif // ____x_ABI_CWindows_CStorage_CSearch_CIStorageQueryResultBase_FWD_DEFINED__
@@ -1182,9 +1178,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStreamReference ABI::Windows::Storage::Streams::IInputStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStreamReference_FWD_DEFINED__
@@ -1197,9 +1193,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -1217,9 +1213,9 @@ namespace ABI {
         namespace Storage {
             namespace BulkAccess {
                 class FileInformationFactory;
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1293,9 +1289,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileInformationFactory=_uuidof(IFileInformationFactory);
                 
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactory_INTERFACE_DEFINED__) */
@@ -1349,7 +1345,7 @@ namespace ABI {
                         /* [in] */ABI::Windows::Storage::FileProperties::ThumbnailMode mode,
                         /* [in] */UINT32 requestedThumbnailSize,
                         /* [in] */ABI::Windows::Storage::FileProperties::ThumbnailOptions thumbnailOptions,
-                        /* [in] */boolean delayLoad,
+                        /* [in] */::boolean delayLoad,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::BulkAccess::IFileInformationFactory * * value
                         ) = 0;
                     
@@ -1357,9 +1353,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IFileInformationFactoryFactory=_uuidof(IFileInformationFactoryFactory);
                 
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactoryFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CBulkAccess_CIFileInformationFactoryFactory_INTERFACE_DEFINED__) */
@@ -1424,9 +1420,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageItemInformation=_uuidof(IStorageItemInformation);
                 
-            } /* Windows */
+            } /* BulkAccess */
         } /* Storage */
-    } /* BulkAccess */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CBulkAccess_CIStorageItemInformation;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_INTERFACE_DEFINED__) */
@@ -2724,7 +2720,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorage
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CBulkAccess_CIStorageItemInformation * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CBulkAccess_CIStorageItemInformation * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CBulkAccess__CIStorageItemInformation_IInspectableVtbl;
 

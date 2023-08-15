@@ -266,6 +266,8 @@ namespace Windows
 
             interface ICompositionGraphicsDevice2;
 
+            interface ICompositionGraphicsDevice3;
+
             interface ICompositionLight;
 
             interface ICompositionLight2;
@@ -279,6 +281,8 @@ namespace Windows
             interface ICompositionLinearGradientBrush;
 
             interface ICompositionMaskBrush;
+
+            interface ICompositionMipmapSurface;
 
             interface ICompositionNineGridBrush;
 
@@ -300,9 +304,23 @@ namespace Windows
 
             interface ICompositionPathGeometry;
 
+            interface ICompositionProjectedShadow;
+
+            interface ICompositionProjectedShadowCaster;
+
+            interface ICompositionProjectedShadowCasterCollection;
+
+            interface ICompositionProjectedShadowCasterCollectionStatics;
+
+            interface ICompositionProjectedShadowReceiver;
+
+            interface ICompositionProjectedShadowReceiverUnorderedCollection;
+
             interface ICompositionPropertySet;
 
             interface ICompositionPropertySet2;
+
+            interface ICompositionRadialGradientBrush;
 
             interface ICompositionRectangleGeometry;
 
@@ -326,15 +344,23 @@ namespace Windows
 
             interface ICompositionSurfaceBrush2;
 
+            interface ICompositionSurfaceBrush3;
+
             interface ICompositionTarget;
 
             interface ICompositionTargetFactory;
+
+            interface ICompositionTransform;
+
+            interface ICompositionTransformFactory;
 
             interface ICompositionViewBox;
 
             interface ICompositionVirtualDrawingSurface;
 
             interface ICompositionVirtualDrawingSurfaceFactory;
+
+            interface ICompositionVisualSurface;
 
             interface ICompositor;
 
@@ -349,6 +375,12 @@ namespace Windows
             interface ICompositor6;
 
             interface ICompositorStatics;
+
+            interface ICompositorWithProjectedShadow;
+
+            interface ICompositorWithRadialGradient;
+
+            interface ICompositorWithVisualSurface;
 
             interface IContainerVisual;
 
@@ -448,6 +480,8 @@ namespace Windows
 
             interface IVisualCollection;
 
+            interface IVisualElement;
+
             interface IVisualFactory;
 
             interface IVisualUnorderedCollection;
@@ -520,6 +554,8 @@ namespace Windows
 
             runtimeclass CompositionMaskBrush;
 
+            runtimeclass CompositionMipmapSurface;
+
             runtimeclass CompositionNineGridBrush;
 
             runtimeclass CompositionObject;
@@ -528,7 +564,19 @@ namespace Windows
 
             runtimeclass CompositionPathGeometry;
 
+            runtimeclass CompositionProjectedShadow;
+
+            runtimeclass CompositionProjectedShadowCaster;
+
+            runtimeclass CompositionProjectedShadowCasterCollection;
+
+            runtimeclass CompositionProjectedShadowReceiver;
+
+            runtimeclass CompositionProjectedShadowReceiverUnorderedCollection;
+
             runtimeclass CompositionPropertySet;
+
+            runtimeclass CompositionRadialGradientBrush;
 
             runtimeclass CompositionRectangleGeometry;
 
@@ -550,9 +598,13 @@ namespace Windows
 
             runtimeclass CompositionTarget;
 
+            runtimeclass CompositionTransform;
+
             runtimeclass CompositionViewBox;
 
             runtimeclass CompositionVirtualDrawingSurface;
+
+            runtimeclass CompositionVisualSurface;
 
             runtimeclass Compositor;
 
@@ -642,7 +694,13 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.CompositionColorGradientStop*>;
 
+                interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.CompositionProjectedShadowCaster*>;
+
+                interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.CompositionProjectedShadowReceiver*>;
+
                 interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.CompositionShape*>;
+
+                interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.IVisualElement*>;
 
                 interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.Visual*>;
 
@@ -652,7 +710,13 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterator<Windows.UI.Composition.CompositionColorGradientStop*>;
 
+                interface Windows.Foundation.Collections.IIterator<Windows.UI.Composition.CompositionProjectedShadowCaster*>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.UI.Composition.CompositionProjectedShadowReceiver*>;
+
                 interface Windows.Foundation.Collections.IIterator<Windows.UI.Composition.CompositionShape*>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.UI.Composition.IVisualElement*>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.UI.Composition.Visual*>;
 
@@ -666,9 +730,13 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.UI.Composition.CompositionShape*>;
 
+                interface Windows.Foundation.Collections.IVectorView<Windows.UI.Composition.IVisualElement*>;
+
                 interface Windows.Foundation.Collections.IVector<Windows.UI.Composition.CompositionColorGradientStop*>;
 
                 interface Windows.Foundation.Collections.IVector<Windows.UI.Composition.CompositionShape*>;
+
+                interface Windows.Foundation.Collections.IVector<Windows.UI.Composition.IVisualElement*>;
 
                 interface Windows.Foundation.TypedEventHandler<IInspectable*, Windows.UI.Composition.CompositionBatchCompletedEventArgs*>;
 
@@ -758,8 +826,24 @@ namespace Windows
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             enum CompositionBitmapInterpolationMode
             {
-                NearestNeighbor = 0,
-                Linear          = 1
+                NearestNeighbor                = 0,
+                Linear                         = 1,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagLinearMinLinearMipLinear    = 2,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagLinearMinLinearMipNearest   = 3,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagLinearMinNearestMipLinear   = 4,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagLinearMinNearestMipNearest  = 5,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagNearestMinLinearMipLinear   = 6,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagNearestMinLinearMipNearest  = 7,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagNearestMinNearestMipLinear  = 8,
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                MagNearestMinNearestMipNearest = 9
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -1353,6 +1437,15 @@ namespace Windows
                 HRESULT CreateVirtualDrawingSurface([in] Windows.Graphics.SizeInt32 sizePixels, [in] Windows.Graphics.DirectX.DirectXPixelFormat pixelFormat, [in] Windows.Graphics.DirectX.DirectXAlphaMode alphaMode, [out] [retval] Windows.UI.Composition.CompositionVirtualDrawingSurface** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionGraphicsDevice)]
+            [uuid(37F67514-D3EF-49D1-B69D-0D8EABEB3626)]
+            interface ICompositionGraphicsDevice3 : IInspectable
+            {
+                HRESULT CreateMipmapSurface([in] Windows.Graphics.SizeInt32 sizePixels, [in] Windows.Graphics.DirectX.DirectXPixelFormat pixelFormat, [in] Windows.Graphics.DirectX.DirectXAlphaMode alphaMode, [out] [retval] Windows.UI.Composition.CompositionMipmapSurface** result);
+                HRESULT Trim();
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
             [exclusiveto(Windows.UI.Composition.CompositionLight)]
             [uuid(41A6D7C2-2E5D-4BC1-B09E-8F0A03E3D8D3)]
@@ -1416,6 +1509,18 @@ namespace Windows
                 [propput] HRESULT Mask([in] Windows.UI.Composition.CompositionBrush* value);
                 [propget] HRESULT Source([out] [retval] Windows.UI.Composition.CompositionBrush** value);
                 [propput] HRESULT Source([in] Windows.UI.Composition.CompositionBrush* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionMipmapSurface)]
+            [uuid(4863675C-CF4A-4B1C-9ECE-C5EC0C2B2FE6)]
+            interface ICompositionMipmapSurface : IInspectable
+            {
+                [propget] HRESULT LevelCount([out] [retval] UINT32* value);
+                [propget] HRESULT AlphaMode([out] [retval] Windows.Graphics.DirectX.DirectXAlphaMode* value);
+                [propget] HRESULT PixelFormat([out] [retval] Windows.Graphics.DirectX.DirectXPixelFormat* value);
+                [propget] HRESULT SizeInt32([out] [retval] Windows.Graphics.SizeInt32* value);
+                HRESULT GetDrawingSurfaceForLevel([in] UINT32 level, [out] [retval] Windows.UI.Composition.CompositionDrawingSurface** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -1530,6 +1635,76 @@ namespace Windows
                 [propput] HRESULT Path([in] Windows.UI.Composition.CompositionPath* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionProjectedShadow)]
+            [uuid(285B8E72-4328-523F-BCF2-5557C52C3B25)]
+            interface ICompositionProjectedShadow : IInspectable
+            {
+                [propget] HRESULT BlurRadiusMultiplier([out] [retval] FLOAT* value);
+                [propput] HRESULT BlurRadiusMultiplier([in] FLOAT value);
+                [propget] HRESULT Casters([out] [retval] Windows.UI.Composition.CompositionProjectedShadowCasterCollection** value);
+                [propget] HRESULT LightSource([out] [retval] Windows.UI.Composition.CompositionLight** value);
+                [propput] HRESULT LightSource([in] Windows.UI.Composition.CompositionLight* value);
+                [propget] HRESULT MaxBlurRadius([out] [retval] FLOAT* value);
+                [propput] HRESULT MaxBlurRadius([in] FLOAT value);
+                [propget] HRESULT MinBlurRadius([out] [retval] FLOAT* value);
+                [propput] HRESULT MinBlurRadius([in] FLOAT value);
+                [propget] HRESULT Receivers([out] [retval] Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionProjectedShadowCaster)]
+            [uuid(B1D7D426-1E36-5A62-BE56-A16112FDD148)]
+            interface ICompositionProjectedShadowCaster : IInspectable
+            {
+                [propget] HRESULT Brush([out] [retval] Windows.UI.Composition.CompositionBrush** value);
+                [propput] HRESULT Brush([in] Windows.UI.Composition.CompositionBrush* value);
+                [propget] HRESULT CastingVisual([out] [retval] Windows.UI.Composition.Visual** value);
+                [propput] HRESULT CastingVisual([in] Windows.UI.Composition.Visual* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionProjectedShadowCasterCollection)]
+            [uuid(D2525C0C-E07F-58A3-AC91-37F73EE91740)]
+            interface ICompositionProjectedShadowCasterCollection : IInspectable
+            {
+                [propget] HRESULT Count([out] [retval] INT32* value);
+                HRESULT InsertAbove([in] Windows.UI.Composition.CompositionProjectedShadowCaster* newCaster, [in] Windows.UI.Composition.CompositionProjectedShadowCaster* reference);
+                HRESULT InsertAtBottom([in] Windows.UI.Composition.CompositionProjectedShadowCaster* newCaster);
+                HRESULT InsertAtTop([in] Windows.UI.Composition.CompositionProjectedShadowCaster* newCaster);
+                HRESULT InsertBelow([in] Windows.UI.Composition.CompositionProjectedShadowCaster* newCaster, [in] Windows.UI.Composition.CompositionProjectedShadowCaster* reference);
+                HRESULT Remove([in] Windows.UI.Composition.CompositionProjectedShadowCaster* caster);
+                HRESULT RemoveAll();
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionProjectedShadowCasterCollection)]
+            [uuid(56FBB136-E94F-5299-AB5B-6E15E38BD899)]
+            interface ICompositionProjectedShadowCasterCollectionStatics : IInspectable
+            {
+                [propget] HRESULT MaxRespectedCasters([out] [retval] INT32* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionProjectedShadowReceiver)]
+            [uuid(1377985A-6A49-536A-9BE4-A96A8E5298A9)]
+            interface ICompositionProjectedShadowReceiver : IInspectable
+            {
+                [propget] HRESULT ReceivingVisual([out] [retval] Windows.UI.Composition.Visual** value);
+                [propput] HRESULT ReceivingVisual([in] Windows.UI.Composition.Visual* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection)]
+            [uuid(02B3E3B7-27D2-599F-AC4B-AB787CDDE6FD)]
+            interface ICompositionProjectedShadowReceiverUnorderedCollection : IInspectable
+            {
+                HRESULT Add([in] Windows.UI.Composition.CompositionProjectedShadowReceiver* value);
+                [propget] HRESULT Count([out] [retval] INT32* value);
+                HRESULT Remove([in] Windows.UI.Composition.CompositionProjectedShadowReceiver* value);
+                HRESULT RemoveAll();
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [exclusiveto(Windows.UI.Composition.CompositionPropertySet)]
             [uuid(C9D6D202-5F67-4453-9117-9EADD430D3C2)]
@@ -1560,6 +1735,19 @@ namespace Windows
             {
                 HRESULT InsertBoolean([in] HSTRING propertyName, [in] boolean value);
                 HRESULT TryGetBoolean([in] HSTRING propertyName, [out] boolean* value, [out] [retval] Windows.UI.Composition.CompositionGetValueStatus* result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionRadialGradientBrush)]
+            [uuid(3D3B50C5-E3FA-4CE2-B9FC-3EE12561788F)]
+            interface ICompositionRadialGradientBrush : IInspectable
+            {
+                [propget] HRESULT EllipseCenter([out] [retval] Windows.Foundation.Numerics.Vector2* value);
+                [propput] HRESULT EllipseCenter([in] Windows.Foundation.Numerics.Vector2 value);
+                [propget] HRESULT EllipseRadius([out] [retval] Windows.Foundation.Numerics.Vector2* value);
+                [propput] HRESULT EllipseRadius([in] Windows.Foundation.Numerics.Vector2 value);
+                [propget] HRESULT GradientOriginOffset([out] [retval] Windows.Foundation.Numerics.Vector2* value);
+                [propput] HRESULT GradientOriginOffset([in] Windows.Foundation.Numerics.Vector2 value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -1714,6 +1902,15 @@ namespace Windows
                 [propput] HRESULT TransformMatrix([in] Windows.Foundation.Numerics.Matrix3x2 value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionSurfaceBrush)]
+            [uuid(550BB289-1FE0-42E5-8195-1EEFA87FF08E)]
+            interface ICompositionSurfaceBrush3 : IInspectable
+            {
+                [propget] HRESULT SnapToPixels([out] [retval] boolean* value);
+                [propput] HRESULT SnapToPixels([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [exclusiveto(Windows.UI.Composition.CompositionTarget)]
             [uuid(A1BEA8BA-D726-4663-8129-6B5E7927FFA6)]
@@ -1727,6 +1924,20 @@ namespace Windows
             [exclusiveto(Windows.UI.Composition.CompositionTarget)]
             [uuid(93CD9D2B-8516-4B14-A8CE-F49E2119EC42)]
             interface ICompositionTargetFactory : IInspectable
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionTransform)]
+            [uuid(7CD54529-FBED-4112-ABC5-185906DD927C)]
+            interface ICompositionTransform : IInspectable
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionTransform)]
+            [uuid(AAAECA26-C149-517A-8F72-6BFF7A65CE08)]
+            interface ICompositionTransformFactory : IInspectable
             {
             }
 
@@ -1760,6 +1971,19 @@ namespace Windows
             [uuid(6766106C-D56B-4A49-B1DF-5076A0620768)]
             interface ICompositionVirtualDrawingSurfaceFactory : IInspectable
             {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.CompositionVisualSurface)]
+            [uuid(B224D803-4F6E-4A3F-8CAE-3DC1CDA74FC6)]
+            interface ICompositionVisualSurface : IInspectable
+            {
+                [propget] HRESULT SourceVisual([out] [retval] Windows.UI.Composition.Visual** value);
+                [propput] HRESULT SourceVisual([in] Windows.UI.Composition.Visual* value);
+                [propget] HRESULT SourceOffset([out] [retval] Windows.Foundation.Numerics.Vector2* value);
+                [propput] HRESULT SourceOffset([in] Windows.Foundation.Numerics.Vector2 value);
+                [propget] HRESULT SourceSize([out] [retval] Windows.Foundation.Numerics.Vector2* value);
+                [propput] HRESULT SourceSize([in] Windows.Foundation.Numerics.Vector2 value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -1880,6 +2104,32 @@ namespace Windows
             {
                 [propget] HRESULT MaxGlobalPlaybackRate([out] [retval] FLOAT* value);
                 [propget] HRESULT MinGlobalPlaybackRate([out] [retval] FLOAT* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.Compositor)]
+            [uuid(A2E6330E-8A60-5A38-BB85-B44EA901677C)]
+            interface ICompositorWithProjectedShadow : IInspectable
+            {
+                HRESULT CreateProjectedShadowCaster([out] [retval] Windows.UI.Composition.CompositionProjectedShadowCaster** result);
+                HRESULT CreateProjectedShadow([out] [retval] Windows.UI.Composition.CompositionProjectedShadow** result);
+                HRESULT CreateProjectedShadowReceiver([out] [retval] Windows.UI.Composition.CompositionProjectedShadowReceiver** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.Compositor)]
+            [uuid(98B9C1A7-8E71-4B53-B4A8-69BA5D19DC5B)]
+            interface ICompositorWithRadialGradient : IInspectable
+            {
+                HRESULT CreateRadialGradientBrush([out] [retval] Windows.UI.Composition.CompositionRadialGradientBrush** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [exclusiveto(Windows.UI.Composition.Compositor)]
+            [uuid(CFA1658B-0123-4551-8891-89BDCC40322B)]
+            interface ICompositorWithVisualSurface : IInspectable
+            {
+                HRESULT CreateVisualSurface([out] [retval] Windows.UI.Composition.CompositionVisualSurface** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -2448,6 +2698,12 @@ namespace Windows
                 HRESULT RemoveAll();
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [uuid(01E64612-1D82-42F4-8E3F-A722DED33FC7)]
+            interface IVisualElement : IInspectable
+            {
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [exclusiveto(Windows.UI.Composition.Visual)]
             [uuid(AD0FF93E-B502-4EB5-87B4-9A38A71D0137)]
@@ -2731,6 +2987,7 @@ namespace Windows
             {
                 [default] interface Windows.UI.Composition.ICompositionGraphicsDevice;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Composition.ICompositionGraphicsDevice2;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositionGraphicsDevice3;
             }
 
             [composable(Windows.UI.Composition.ICompositionLightFactory, protected, Windows.Foundation.UniversalApiContract, 3.0)]
@@ -2766,6 +3023,15 @@ namespace Windows
             runtimeclass CompositionMaskBrush : Windows.UI.Composition.CompositionBrush
             {
                 [default] interface Windows.UI.Composition.ICompositionMaskBrush;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionMipmapSurface : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionMipmapSurface;
+                interface Windows.UI.Composition.ICompositionSurface;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -2809,6 +3075,49 @@ namespace Windows
                 [default] interface Windows.UI.Composition.ICompositionPathGeometry;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionProjectedShadow : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionProjectedShadow;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionProjectedShadowCaster : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionProjectedShadowCaster;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.UI.Composition.ICompositionProjectedShadowCasterCollectionStatics, Windows.Foundation.UniversalApiContract, 8.0)]
+            [threading(both)]
+            runtimeclass CompositionProjectedShadowCasterCollection : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionProjectedShadowCasterCollection;
+                interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.CompositionProjectedShadowCaster*>;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionProjectedShadowReceiver : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionProjectedShadowReceiver;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionProjectedShadowReceiverUnorderedCollection : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionProjectedShadowReceiverUnorderedCollection;
+                interface Windows.Foundation.Collections.IIterable<Windows.UI.Composition.CompositionProjectedShadowReceiver*>;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
@@ -2816,6 +3125,14 @@ namespace Windows
             {
                 [default] interface Windows.UI.Composition.ICompositionPropertySet;
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Composition.ICompositionPropertySet2;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionRadialGradientBrush : Windows.UI.Composition.CompositionGradientBrush
+            {
+                [default] interface Windows.UI.Composition.ICompositionRadialGradientBrush;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -2893,6 +3210,7 @@ namespace Windows
             {
                 [default] interface Windows.UI.Composition.ICompositionSurfaceBrush;
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Composition.ICompositionSurfaceBrush2;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositionSurfaceBrush3;
             }
 
             [composable(Windows.UI.Composition.ICompositionTargetFactory, protected, Windows.Foundation.UniversalApiContract, 5.0)]
@@ -2902,6 +3220,15 @@ namespace Windows
             runtimeclass CompositionTarget : Windows.UI.Composition.CompositionObject
             {
                 [default] interface Windows.UI.Composition.ICompositionTarget;
+            }
+
+            [composable(Windows.UI.Composition.ICompositionTransformFactory, public, Windows.Foundation.UniversalApiContract, 8.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionTransform : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionTransform;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -2921,6 +3248,15 @@ namespace Windows
                 [default] interface Windows.UI.Composition.ICompositionVirtualDrawingSurface;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass CompositionVisualSurface : Windows.UI.Composition.CompositionObject
+            {
+                [default] interface Windows.UI.Composition.ICompositionVisualSurface;
+                interface Windows.UI.Composition.ICompositionSurface;
+            }
+
             [activatable(Windows.Foundation.UniversalApiContract, 2.0)]
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
@@ -2935,6 +3271,9 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Composition.ICompositor4;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.UI.Composition.ICompositor5;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.UI.Composition.ICompositor6;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositorWithProjectedShadow;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositorWithRadialGradient;
+                [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositorWithVisualSurface;
             }
 
             [composable(Windows.UI.Composition.IContainerVisualFactory, protected, Windows.Foundation.UniversalApiContract, 2.0)]

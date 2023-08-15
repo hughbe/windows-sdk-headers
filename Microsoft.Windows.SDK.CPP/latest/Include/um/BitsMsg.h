@@ -852,6 +852,33 @@
 #define BG_E_REMOTE_FILE_CHANGED         0x80200073L
 
 //
+// MessageId: BG_E_SERVER_CERT_VALIDATION_INTERFACE_REQUIRED
+//
+// MessageText:
+//
+// The job is configured to raise a certificate validation callback, but the callback object is not currently available. The job owner must provide a new callback object and then resume the job.
+//
+#define BG_E_SERVER_CERT_VALIDATION_INTERFACE_REQUIRED 0x80200074L
+
+//
+// MessageId: BG_E_READ_ONLY_WHEN_JOB_ACTIVE
+//
+// MessageText:
+//
+// This method should only be called when the job is in a paused state (SUSPENDED/ERROR/TRANSFERRED).
+//
+#define BG_E_READ_ONLY_WHEN_JOB_ACTIVE   0x80200075L
+
+//
+// MessageId: BG_E_ERROR_CONTEXT_SERVER_CERTIFICATE_CALLBACK
+//
+// MessageText:
+//
+// The error occurred while the user-provided server certificate validation callback was being processed.
+//
+#define BG_E_ERROR_CONTEXT_SERVER_CERTIFICATE_CALLBACK 0x80200076L
+
+//
 // MessageId: BG_E_HTTP_ERROR_100
 //
 // MessageText:

@@ -340,7 +340,7 @@ Revision History:
 #define SUBLANG_FRENCH_LUXEMBOURG                   0x05    // French (Luxembourg)
 #define SUBLANG_FRENCH_MONACO                       0x06    // French (Monaco)
 #define SUBLANG_FRISIAN_NETHERLANDS                 0x01    // Frisian (Netherlands) 0x0462 fy-NL
-#define SUBLANG_FULAH_SENEGAL                       0x02    // Fulah (Senegal) 0x0867 ff-SN
+#define SUBLANG_FULAH_SENEGAL                       0x02    // Fulah (Senegal) 0x0867 ff-Latn-SN
 #define SUBLANG_GALICIAN_GALICIAN                   0x01    // Galician (Galician) 0x0456 gl-ES
 #define SUBLANG_GEORGIAN_GEORGIA                    0x01    // Georgian (Georgia) 0x0437 ka-GE
 #define SUBLANG_GERMAN                              0x01    // German

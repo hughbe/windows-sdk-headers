@@ -22,8 +22,8 @@ Environment:
 
 #include <winapifamily.h>
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #include <devpropdef.h>
 
@@ -164,6 +164,7 @@ DEFINE_DEVPROPKEY(DEVPKEY_Device_DependencyProviders,      0x540b947e, 0x8b40, 0
 DEFINE_DEVPROPKEY(DEVPKEY_Device_DependencyDependents,     0x540b947e, 0x8b40, 0x45bc, 0xa8, 0xa2, 0x6a, 0x0b, 0x89, 0x4c, 0xbd, 0xa2, 21);   // DEVPROP_TYPE_STRING_LIST
 DEFINE_DEVPROPKEY(DEVPKEY_Device_SoftRestartSupported,     0x540b947e, 0x8b40, 0x45bc, 0xa8, 0xa2, 0x6a, 0x0b, 0x89, 0x4c, 0xbd, 0xa2, 22);   // DEVPROP_TYPE_BOOLEAN
 DEFINE_DEVPROPKEY(DEVPKEY_Device_ExtendedAddress,          0x540b947e, 0x8b40, 0x45bc, 0xa8, 0xa2, 0x6a, 0x0b, 0x89, 0x4c, 0xbd, 0xa2, 23);   // DEVPROP_TYPE_UINT64
+DEFINE_DEVPROPKEY(DEVPKEY_Device_AssignedToGuest,          0x540b947e, 0x8b40, 0x45bc, 0xa8, 0xa2, 0x6a, 0x0b, 0x89, 0x4c, 0xbd, 0xa2, 24);   // DEVPROP_TYPE_BOOLEAN
 
 DEFINE_DEVPROPKEY(DEVPKEY_Device_SessionId,               0x83da6326, 0x97a6, 0x4088, 0x94, 0x53, 0xa1, 0x92, 0x3f, 0x57, 0x3b, 0x29, 6);     // DEVPROP_TYPE_UINT32
 
@@ -247,6 +248,7 @@ DEFINE_DEVPROPKEY(DEVPKEY_DeviceClass_SilentInstall,     0x259abffc, 0x50a7, 0x4
 DEFINE_DEVPROPKEY(DEVPKEY_DeviceClass_NoUseClass,        0x259abffc, 0x50a7, 0x47ce, 0xaf, 0x8, 0x68, 0xc9, 0xa7, 0xd7, 0x33, 0x66, 10);     // DEVPROP_TYPE_BOOLEAN
 DEFINE_DEVPROPKEY(DEVPKEY_DeviceClass_DefaultService,    0x259abffc, 0x50a7, 0x47ce, 0xaf, 0x8, 0x68, 0xc9, 0xa7, 0xd7, 0x33, 0x66, 11);     // DEVPROP_TYPE_STRING
 DEFINE_DEVPROPKEY(DEVPKEY_DeviceClass_IconPath,          0x259abffc, 0x50a7, 0x47ce, 0xaf, 0x8, 0x68, 0xc9, 0xa7, 0xd7, 0x33, 0x66, 12);     // DEVPROP_TYPE_STRING_LIST
+
 //
 // Other Device setup class properties
 //
@@ -346,6 +348,6 @@ DEFINE_DEVPROPKEY(DEVPKEY_DeviceContainer_InstallInProgress,        0x83da6326, 
 //
 DEFINE_DEVPROPKEY(DEVPKEY_DevQuery_ObjectType,                  0x13673f42, 0xa3d6, 0x49f6, 0xb4, 0xda, 0xae, 0x46, 0xe0, 0xc5, 0x23, 0x7c, 2);   // DEVPROP_TYPE_UINT32
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 

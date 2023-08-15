@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.xaml.hosting.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -256,7 +252,7 @@
 #endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION)
-#define WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION 0x30000
+#define WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -269,6 +265,7 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.UI.Composition.h"
+#include "Windows.UI.WindowManagement.h"
 #include "Windows.UI.Xaml.h"
 #include "Windows.UI.Xaml.Controls.h"
 #include "Windows.UI.Xaml.Controls.Primitives.h"
@@ -285,10 +282,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesignerAppExitedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppExitedEventArgs ABI::Windows::UI::Xaml::Hosting::IDesignerAppExitedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppExitedEventArgs_FWD_DEFINED__
@@ -301,10 +298,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesignerAppManager;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManager ABI::Windows::UI::Xaml::Hosting::IDesignerAppManager
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManager_FWD_DEFINED__
@@ -317,10 +314,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesignerAppManagerFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManagerFactory ABI::Windows::UI::Xaml::Hosting::IDesignerAppManagerFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManagerFactory_FWD_DEFINED__
@@ -333,10 +330,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesignerAppView;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppView ABI::Windows::UI::Xaml::Hosting::IDesignerAppView
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppView_FWD_DEFINED__
@@ -349,10 +346,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesktopWindowXamlSource;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource_FWD_DEFINED__
@@ -365,10 +362,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesktopWindowXamlSourceFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceFactory ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceFactory_FWD_DEFINED__
@@ -381,10 +378,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesktopWindowXamlSourceGotFocusEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceGotFocusEventArgs ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceGotFocusEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceGotFocusEventArgs_FWD_DEFINED__
@@ -397,10 +394,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IDesktopWindowXamlSourceTakeFocusRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceTakeFocusRequestedEventArgs ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceTakeFocusRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceTakeFocusRequestedEventArgs_FWD_DEFINED__
@@ -413,10 +410,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IElementCompositionPreview;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreview ABI::Windows::UI::Xaml::Hosting::IElementCompositionPreview
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreview_FWD_DEFINED__
@@ -429,10 +426,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IElementCompositionPreviewStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics ABI::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics_FWD_DEFINED__
@@ -445,13 +442,29 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IElementCompositionPreviewStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2 ABI::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Hosting {
+                    interface IElementCompositionPreviewStatics3;
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 ABI::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager_FWD_DEFINED__
@@ -461,10 +474,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IWindowsXamlManager;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager ABI::Windows::UI::Xaml::Hosting::IWindowsXamlManager
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager_FWD_DEFINED__
@@ -477,10 +490,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IWindowsXamlManagerStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManagerStatics ABI::Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManagerStatics_FWD_DEFINED__
@@ -493,10 +506,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlSourceFocusNavigationRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequest ABI::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequest_FWD_DEFINED__
@@ -509,10 +522,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlSourceFocusNavigationRequestFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequestFactory ABI::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequestFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequestFactory_FWD_DEFINED__
@@ -525,10 +538,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlSourceFocusNavigationResult;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResult ABI::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationResult
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResult_FWD_DEFINED__
@@ -541,10 +554,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlSourceFocusNavigationResultFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResultFactory ABI::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationResultFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResultFactory_FWD_DEFINED__
@@ -557,10 +570,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlUIPresenter;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenter ABI::Windows::UI::Xaml::Hosting::IXamlUIPresenter
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenter_FWD_DEFINED__
@@ -573,10 +586,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlUIPresenterHost;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost ABI::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost_FWD_DEFINED__
@@ -589,10 +602,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlUIPresenterHost2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost2 ABI::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost2_FWD_DEFINED__
@@ -605,10 +618,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlUIPresenterHost3;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost3 ABI::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost3_FWD_DEFINED__
@@ -621,10 +634,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlUIPresenterStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics ABI::Windows::UI::Xaml::Hosting::IXamlUIPresenterStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics_FWD_DEFINED__
@@ -637,10 +650,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     interface IXamlUIPresenterStatics2;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics2 ABI::Windows::UI::Xaml::Hosting::IXamlUIPresenterStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics2_FWD_DEFINED__
@@ -654,10 +667,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class DesignerAppView;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION >= 0x20000
@@ -680,7 +693,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Hosting::DesignerAppView
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Hosting::DesignerAppView*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CHosting__CDesignerAppView_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CHosting__CDesignerAppView ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CHosting__CDesignerAppView_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CXaml__CHosting__CDesignerAppView ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Xaml::Hosting::IDesignerAppView*>
@@ -712,7 +725,7 @@ IAsyncOperation<ABI::Windows::UI::Xaml::Hosting::DesignerAppView*> : IAsyncOpera
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Xaml::Hosting::DesignerAppView*> __FIAsyncOperation_1_Windows__CUI__CXaml__CHosting__CDesignerAppView_t;
 #define __FIAsyncOperation_1_Windows__CUI__CXaml__CHosting__CDesignerAppView ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CXaml__CHosting__CDesignerAppView_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CXaml__CHosting__CDesignerAppView ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Xaml::Hosting::IDesignerAppView*>
@@ -729,10 +742,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class DesignerAppManager;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -741,10 +754,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class DesignerAppExitedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION >= 0x20000
@@ -768,7 +781,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::DesignerAppManager*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::DesignerAppManager*,ABI::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::IDesignerAppManager*,ABI::Windows::UI::Xaml::Hosting::IDesignerAppExitedEventArgs*>
@@ -786,10 +799,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class DesktopWindowXamlSource;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -798,10 +811,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class DesktopWindowXamlSourceGotFocusEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION >= 0x30000
@@ -825,7 +838,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*,ABI::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource*,ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceGotFocusEventArgs*>
@@ -844,10 +857,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class DesktopWindowXamlSourceTakeFocusRequestedEventArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION >= 0x30000
@@ -871,7 +884,7 @@ ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*,ABI::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource*,ABI::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceTakeFocusRequestedEventArgs*>
@@ -904,7 +917,7 @@ IKeyValuePair<IInspectable*,IInspectable*> : IKeyValuePair_impl<IInspectable*,II
 // correct parameterized interface specialization.
 typedef IKeyValuePair<IInspectable*,IInspectable*> __FIKeyValuePair_2_IInspectable_IInspectable_t;
 #define __FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<IInspectable*,IInspectable*>
@@ -934,7 +947,7 @@ IIterator<__FIKeyValuePair_2_IInspectable_IInspectable*> : IIterator_impl<__FIKe
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_IInspectable_IInspectable*> __FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<IInspectable*,IInspectable*>*>
@@ -964,7 +977,7 @@ IIterable<__FIKeyValuePair_2_IInspectable_IInspectable*> : IIterable_impl<__FIKe
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_IInspectable_IInspectable*> __FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<IInspectable*,IInspectable*>*>
@@ -995,7 +1008,7 @@ IMapView<IInspectable*,IInspectable*> : IMapView_impl<IInspectable*,IInspectable
 // correct parameterized interface specialization.
 typedef IMapView<IInspectable*,IInspectable*> __FIMapView_2_IInspectable_IInspectable_t;
 #define __FIMapView_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IMapView<IInspectable*,IInspectable*>
@@ -1026,7 +1039,7 @@ IMap<IInspectable*,IInspectable*> : IMap_impl<IInspectable*,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<IInspectable*,IInspectable*> __FIMap_2_IInspectable_IInspectable_t;
 #define __FIMap_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_IInspectable_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_IInspectable_IInspectable ABI::Windows::Foundation::Collections::IMap<IInspectable*,IInspectable*>
@@ -1044,8 +1057,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1057,8 +1070,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1070,8 +1083,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1079,8 +1092,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1090,9 +1103,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class CompositionPropertySet;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionPropertySet_FWD_DEFINED__
@@ -1101,9 +1114,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionPropertySet;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionPropertySet ABI::Windows::UI::Composition::ICompositionPropertySet
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionPropertySet_FWD_DEFINED__
@@ -1116,9 +1129,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionAnimationBase;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionAnimationBase ABI::Windows::UI::Composition::ICompositionAnimationBase
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionAnimationBase_FWD_DEFINED__
@@ -1129,9 +1142,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Visual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
@@ -1140,12 +1153,39 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IVisual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIVisual ABI::Windows::UI::Composition::IVisual
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
+
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace WindowManagement {
+                class AppWindow;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace WindowManagement {
+                interface IAppWindow;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow ABI::Windows::UI::WindowManagement::IAppWindow
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
 
 
 
@@ -1160,11 +1200,11 @@ namespace ABI {
                         
                         typedef enum FlyoutPlacementMode : int FlyoutPlacementMode;
                         
-                    } /* Windows */
-                } /* UI */
+                    } /* Primitives */
+                } /* Controls */
             } /* Xaml */
-        } /* Controls */
-    } /* Primitives */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1177,10 +1217,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     class ScrollViewer;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CControls_CIScrollViewer_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CControls_CIScrollViewer_FWD_DEFINED__
@@ -1190,10 +1230,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Controls {
                     interface IScrollViewer;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Controls */} /* ABI */
+                } /* Controls */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CControls_CIScrollViewer ABI::Windows::UI::Xaml::Controls::IScrollViewer
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CControls_CIScrollViewer_FWD_DEFINED__
@@ -1208,9 +1248,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class FrameworkElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
@@ -1219,9 +1259,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IFrameworkElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIFrameworkElement ABI::Windows::UI::Xaml::IFrameworkElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIFrameworkElement_FWD_DEFINED__
@@ -1232,9 +1272,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class ResourceDictionary;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIResourceDictionary_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIResourceDictionary_FWD_DEFINED__
@@ -1243,9 +1283,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IResourceDictionary;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIResourceDictionary ABI::Windows::UI::Xaml::IResourceDictionary
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIResourceDictionary_FWD_DEFINED__
@@ -1256,9 +1296,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -1267,9 +1307,9 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Windows */
+            } /* Xaml */
         } /* UI */
-    } /* Xaml */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -1287,10 +1327,10 @@ namespace ABI {
                     
                     typedef enum DesignerAppViewState : int DesignerAppViewState;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1300,10 +1340,11 @@ namespace ABI {
                     
                     typedef enum XamlSourceFocusNavigationReason : int XamlSourceFocusNavigationReason;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -1340,10 +1381,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class ElementCompositionPreview;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1352,10 +1393,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class WindowsXamlManager;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1364,10 +1405,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class XamlSourceFocusNavigationRequest;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1376,10 +1417,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class XamlSourceFocusNavigationResult;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1388,10 +1429,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Hosting {
                     class XamlUIPresenter;
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1427,10 +1468,10 @@ namespace ABI {
                         DesignerAppViewState_Hidden = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION >= 0x20000
 
 
@@ -1462,10 +1503,10 @@ namespace ABI {
                         XamlSourceFocusNavigationReason_Down = 10,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_XAML_HOSTING_HOSTINGCONTRACT_VERSION >= 0x30000
 
 
@@ -1502,10 +1543,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesignerAppExitedEventArgs=_uuidof(IDesignerAppExitedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppExitedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppExitedEventArgs_INTERFACE_DEFINED__) */
@@ -1563,10 +1604,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesignerAppManager=_uuidof(IDesignerAppManager);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManager_INTERFACE_DEFINED__) */
@@ -1607,10 +1648,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesignerAppManagerFactory=_uuidof(IDesignerAppManagerFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManagerFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManagerFactory_INTERFACE_DEFINED__) */
@@ -1664,10 +1705,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesignerAppView=_uuidof(IDesignerAppView);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppView;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppView_INTERFACE_DEFINED__) */
@@ -1706,7 +1747,7 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasFocus(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_TakeFocusRequested(
                             /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs * handler,
@@ -1731,10 +1772,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesktopWindowXamlSource=_uuidof(IDesktopWindowXamlSource);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource_INTERFACE_DEFINED__) */
@@ -1776,10 +1817,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesktopWindowXamlSourceFactory=_uuidof(IDesktopWindowXamlSourceFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceFactory_INTERFACE_DEFINED__) */
@@ -1819,10 +1860,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesktopWindowXamlSourceGotFocusEventArgs=_uuidof(IDesktopWindowXamlSourceGotFocusEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceGotFocusEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceGotFocusEventArgs_INTERFACE_DEFINED__) */
@@ -1862,10 +1903,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDesktopWindowXamlSourceTakeFocusRequestedEventArgs=_uuidof(IDesktopWindowXamlSourceTakeFocusRequestedEventArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceTakeFocusRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceTakeFocusRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1902,10 +1943,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IElementCompositionPreview=_uuidof(IElementCompositionPreview);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreview;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreview_INTERFACE_DEFINED__) */
@@ -1958,10 +1999,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IElementCompositionPreviewStatics=_uuidof(IElementCompositionPreviewStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics_INTERFACE_DEFINED__) */
@@ -2003,7 +2044,7 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetIsTranslationEnabled(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * element,
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetPointerPositionPropertySet(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * targetElement,
@@ -2014,14 +2055,62 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IElementCompositionPreviewStatics2=_uuidof(IElementCompositionPreviewStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Hosting.ElementCompositionPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics3[] = L"Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Xaml {
+                namespace Hosting {
+                    /* [object, uuid("843BC4C3-C105-59FE-A3D1-373C1D3E6FBC"), exclusiveto, contract] */
+                    MIDL_INTERFACE("843BC4C3-C105-59FE-A3D1-373C1D3E6FBC")
+                    IElementCompositionPreviewStatics3 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE SetAppWindowContent(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::WindowManagement::IAppWindow * appWindow,
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * xamlContent
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE GetAppWindowContent(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::WindowManagement::IAppWindow * appWindow,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IUIElement * * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IElementCompositionPreviewStatics3=_uuidof(IElementCompositionPreviewStatics3);
+                    
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2054,10 +2143,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWindowsXamlManager=_uuidof(IWindowsXamlManager);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager_INTERFACE_DEFINED__) */
@@ -2097,10 +2186,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IWindowsXamlManagerStatics=_uuidof(IWindowsXamlManagerStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManagerStatics_INTERFACE_DEFINED__) */
@@ -2146,10 +2235,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlSourceFocusNavigationRequest=_uuidof(IXamlSourceFocusNavigationRequest);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequest;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequest_INTERFACE_DEFINED__) */
@@ -2201,10 +2290,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlSourceFocusNavigationRequestFactory=_uuidof(IXamlSourceFocusNavigationRequestFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequestFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationRequestFactory_INTERFACE_DEFINED__) */
@@ -2237,17 +2326,17 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WasFocusMoved(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IXamlSourceFocusNavigationResult=_uuidof(IXamlSourceFocusNavigationResult);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResult;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResult_INTERFACE_DEFINED__) */
@@ -2280,7 +2369,7 @@ namespace ABI {
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE CreateInstance(
-                            /* [in] */boolean focusMoved,
+                            /* [in] */::boolean focusMoved,
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationResult * * value
                             ) = 0;
                         
@@ -2288,10 +2377,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlSourceFocusNavigationResultFactory=_uuidof(IXamlSourceFocusNavigationResultFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResultFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlSourceFocusNavigationResultFactory_INTERFACE_DEFINED__) */
@@ -2352,10 +2441,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlUIPresenter=_uuidof(IXamlUIPresenter);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenter;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenter_INTERFACE_DEFINED__) */
@@ -2393,10 +2482,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlUIPresenterHost=_uuidof(IXamlUIPresenterHost);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost_INTERFACE_DEFINED__) */
@@ -2433,10 +2522,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlUIPresenterHost2=_uuidof(IXamlUIPresenterHost2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost2_INTERFACE_DEFINED__) */
@@ -2476,10 +2565,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlUIPresenterHost3=_uuidof(IXamlUIPresenterHost3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterHost3_INTERFACE_DEFINED__) */
@@ -2512,10 +2601,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CompleteTimelinesAutomatically(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_CompleteTimelinesAutomatically(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetHost(
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost * host
@@ -2526,10 +2615,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlUIPresenterStatics=_uuidof(IXamlUIPresenterStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics_INTERFACE_DEFINED__) */
@@ -2565,7 +2654,7 @@ namespace ABI {
                             /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IFrameworkElement * placementTarget,
                             /* [in] */ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode preferredPlacement,
                             /* [out] */__RPC__out ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode * targetPreferredPlacement,
-                            /* [out] */__RPC__out boolean * allowFallbacks,
+                            /* [out] */__RPC__out ::boolean * allowFallbacks,
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * returnValue
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetFlyoutPlacement(
@@ -2574,7 +2663,7 @@ namespace ABI {
                             /* [in] */ABI::Windows::Foundation::Size minControlSize,
                             /* [in] */ABI::Windows::Foundation::Rect containerRect,
                             /* [in] */ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode targetPreferredPlacement,
-                            /* [in] */boolean allowFallbacks,
+                            /* [in] */::boolean allowFallbacks,
                             /* [out] */__RPC__out ABI::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode * chosenPlacement,
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * returnValue
                             ) = 0;
@@ -2583,10 +2672,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXamlUIPresenterStatics2=_uuidof(IXamlUIPresenterStatics2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Xaml */
-    } /* Hosting */} /* ABI */
+                } /* Hosting */
+            } /* Xaml */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIXamlUIPresenterStatics2_INTERFACE_DEFINED__) */
@@ -2743,6 +2832,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -2943,6 +3033,12 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPrevie
 typedef interface __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2 __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3;
+
+#endif // ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CHosting_CIWindowsXamlManager_FWD_DEFINED__
@@ -3156,7 +3252,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerA
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppExitedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesignerAppExitedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesignerAppManager_Windows__CUI__CXaml__CHosting__CDesignerAppExitedEventArgsVtbl;
 
@@ -3209,7 +3305,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceGotFocusEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceGotFocusEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceGotFocusEventArgsVtbl;
 
@@ -3262,7 +3358,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceTakeFocusRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSource * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CHosting_CIDesktopWindowXamlSourceTakeFocusRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSource_Windows__CUI__CXaml__CHosting__CDesktopWindowXamlSourceTakeFocusRequestedEventArgsVtbl;
 
@@ -3734,6 +3830,16 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CIVisual __x_ABI_CWindows_CU
 
 
 
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow;
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
+
+
+
+
+
 
 typedef enum __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CFlyoutPlacementMode __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CFlyoutPlacementMode;
 
@@ -3783,6 +3889,7 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CHosting_CDesignerAppViewState __x_ABI_C
 
 
 typedef enum __x_ABI_CWindows_CUI_CXaml_CHosting_CXamlSourceFocusNavigationReason __x_ABI_CWindows_CUI_CXaml_CHosting_CXamlSourceFocusNavigationReason;
+
 
 
 
@@ -5056,6 +5163,108 @@ interface __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Xaml.Hosting.ElementCompositionPreview
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics3[] = L"Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3";
+/* [object, uuid("843BC4C3-C105-59FE-A3D1-373C1D3E6FBC"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *SetAppWindowContent )(
+        __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow * appWindow,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * xamlContent
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetAppWindowContent )(
+        __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow * appWindow,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_SetAppWindowContent(This,appWindow,xamlContent) \
+    ( (This)->lpVtbl->SetAppWindowContent(This,appWindow,xamlContent) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_GetAppWindowContent(This,appWindow,result) \
+    ( (This)->lpVtbl->GetAppWindowContent(This,appWindow,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CHosting_CIElementCompositionPreviewStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6440,6 +6649,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *

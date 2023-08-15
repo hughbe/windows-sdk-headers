@@ -393,8 +393,11 @@ enum FWP_FILTER_ENUM_TYPE_
 #define FWP_CALLOUT_FLAG_RESERVED1                   (0x00000020)
 #define FWP_CALLOUT_FLAG_ALLOW_RSC                   (0x00000040)
 #define FWP_CALLOUT_FLAG_ALLOW_L2_BATCH_CLASSIFY     (0x00000080)
-#endif
-#endif
+#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
+#define FWP_CALLOUT_FLAG_ALLOW_USO                   (0x00000100)
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
+#endif // (NTDDI_VERSION >= NTDDI_WIN8)
+#endif // (NTDDI_VERSION >= NTDDI_WIN7)
 typedef struct FWPM_DISPLAY_DATA0_
     {
     /* [unique][string] */ wchar_t *name;

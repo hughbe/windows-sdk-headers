@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.pointofservice.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerDisableScannerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerDisableScannerRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest2_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerDisableScannerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequestEventArgs_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerEnableScannerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerEnableScannerRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest2_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerEnableScannerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequestEventArgs_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerFrameReader;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReader ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReader_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerFrameReaderFrameArrivedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReaderFrameArrivedEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReaderFrameArrivedEventArgs_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerGetSymbologyAttributesRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest_FWD_DEFINED__
@@ -424,10 +420,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerGetSymbologyAttributesRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest2_FWD_DEFINED__
@@ -440,10 +436,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerGetSymbologyAttributesRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequestEventArgs_FWD_DEFINED__
@@ -456,10 +452,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerHideVideoPreviewRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest_FWD_DEFINED__
@@ -472,10 +468,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerHideVideoPreviewRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest2_FWD_DEFINED__
@@ -488,10 +484,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerHideVideoPreviewRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequestEventArgs_FWD_DEFINED__
@@ -504,10 +500,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerProviderConnection;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection_FWD_DEFINED__
@@ -520,10 +516,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerProviderConnection2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection2_FWD_DEFINED__
@@ -536,10 +532,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerProviderTriggerDetails;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderTriggerDetails ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderTriggerDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderTriggerDetails_FWD_DEFINED__
@@ -552,10 +548,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerSetActiveSymbologiesRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest_FWD_DEFINED__
@@ -568,10 +564,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerSetActiveSymbologiesRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest2_FWD_DEFINED__
@@ -584,10 +580,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerSetActiveSymbologiesRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequestEventArgs_FWD_DEFINED__
@@ -600,10 +596,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerSetSymbologyAttributesRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest_FWD_DEFINED__
@@ -616,10 +612,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerSetSymbologyAttributesRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest2_FWD_DEFINED__
@@ -632,10 +628,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerSetSymbologyAttributesRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequestEventArgs_FWD_DEFINED__
@@ -648,10 +644,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerStartSoftwareTriggerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest_FWD_DEFINED__
@@ -664,10 +660,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerStartSoftwareTriggerRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest2_FWD_DEFINED__
@@ -680,10 +676,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerStartSoftwareTriggerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequestEventArgs_FWD_DEFINED__
@@ -696,10 +692,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerStopSoftwareTriggerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest_FWD_DEFINED__
@@ -712,10 +708,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerStopSoftwareTriggerRequest2;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest2 ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest2_FWD_DEFINED__
@@ -728,10 +724,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerStopSoftwareTriggerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequestEventArgs ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequestEventArgs_FWD_DEFINED__
@@ -744,10 +740,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeScannerVideoFrame;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerVideoFrame ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerVideoFrame_FWD_DEFINED__
@@ -760,10 +756,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     interface IBarcodeSymbologyAttributesBuilder;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeSymbologyAttributesBuilder ABI::Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeSymbologyAttributesBuilder_FWD_DEFINED__
@@ -777,10 +773,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerFrameReader;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -803,7 +799,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::Provider:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader*>
@@ -835,7 +831,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerF
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader*>
@@ -852,10 +848,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerVideoFrame;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -878,7 +874,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::Provider:
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame*>
@@ -910,7 +906,7 @@ IAsyncOperation<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerV
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame*> __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerVideoFrame ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame*>
@@ -928,10 +924,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerFrameReaderFrameArrivedEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -955,7 +951,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs*>
@@ -973,10 +969,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerProviderConnection;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -985,10 +981,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerDisableScannerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1012,7 +1008,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs*>
@@ -1031,10 +1027,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerEnableScannerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1058,7 +1054,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs*>
@@ -1077,10 +1073,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerGetSymbologyAttributesRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1104,7 +1100,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs*>
@@ -1123,10 +1119,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerHideVideoPreviewRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1150,7 +1146,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs*>
@@ -1169,10 +1165,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerSetActiveSymbologiesRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1196,7 +1192,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs*>
@@ -1215,10 +1211,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerSetSymbologyAttributesRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1242,7 +1238,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs*>
@@ -1261,10 +1257,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerStartSoftwareTriggerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1288,7 +1284,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs*>
@@ -1307,10 +1303,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerStopSoftwareTriggerRequestEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1334,7 +1330,7 @@ ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScann
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection*,ABI::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs*>
@@ -1365,7 +1361,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1394,7 +1390,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1423,7 +1419,7 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
@@ -1452,7 +1448,7 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
@@ -1481,7 +1477,7 @@ IVectorView<UINT32> : IVectorView_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
 #define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
@@ -1510,7 +1506,7 @@ IVector<UINT32> : IVector_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IVector<UINT32> __FIVector_1_UINT32_t;
 #define __FIVector_1_UINT32 ABI::Windows::Foundation::Collections::__FIVector_1_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_UINT32 ABI::Windows::Foundation::Collections::IVector<UINT32>
@@ -1527,9 +1523,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeScannerReport;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport_FWD_DEFINED__
@@ -1538,9 +1534,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeScannerReport;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport ABI::Windows::Devices::PointOfService::IBarcodeScannerReport
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeScannerReport_FWD_DEFINED__
@@ -1551,9 +1547,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class BarcodeSymbologyAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes_FWD_DEFINED__
@@ -1562,9 +1558,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IBarcodeSymbologyAttributes;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes ABI::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIBarcodeSymbologyAttributes_FWD_DEFINED__
@@ -1575,9 +1571,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 class UnifiedPosErrorData;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
@@ -1586,9 +1582,9 @@ namespace ABI {
         namespace Devices {
             namespace PointOfService {
                 interface IUnifiedPosErrorData;
-            } /* Windows */
+            } /* PointOfService */
         } /* Devices */
-    } /* PointOfService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData ABI::Windows::Devices::PointOfService::IUnifiedPosErrorData
 
 #endif // ____x_ABI_CWindows_CDevices_CPointOfService_CIUnifiedPosErrorData_FWD_DEFINED__
@@ -1601,8 +1597,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1610,8 +1606,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -1623,8 +1619,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1636,8 +1632,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1653,9 +1649,9 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1664,9 +1660,9 @@ namespace ABI {
                 
                 typedef struct BitmapSize BitmapSize;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1678,9 +1674,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1697,10 +1693,10 @@ namespace ABI {
                     
                     typedef enum BarcodeScannerTriggerState : int BarcodeScannerTriggerState;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1739,10 +1735,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerDisableScannerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1752,10 +1748,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerEnableScannerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1767,10 +1763,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerGetSymbologyAttributesRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1780,10 +1776,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerHideVideoPreviewRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1794,10 +1790,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerProviderTriggerDetails;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1806,10 +1802,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerSetActiveSymbologiesRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1819,10 +1815,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerSetSymbologyAttributesRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1832,10 +1828,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerStartSoftwareTriggerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1845,10 +1841,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeScannerStopSoftwareTriggerRequest;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1859,10 +1855,10 @@ namespace ABI {
             namespace PointOfService {
                 namespace Provider {
                     class BarcodeSymbologyAttributesBuilder;
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1897,10 +1893,10 @@ namespace ABI {
                         BarcodeScannerTriggerState_Pressed = 1,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1940,10 +1936,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerDisableScannerRequest=_uuidof(IBarcodeScannerDisableScannerRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest_INTERFACE_DEFINED__) */
@@ -1989,10 +1985,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerDisableScannerRequest2=_uuidof(IBarcodeScannerDisableScannerRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequest2_INTERFACE_DEFINED__) */
@@ -2035,10 +2031,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerDisableScannerRequestEventArgs=_uuidof(IBarcodeScannerDisableScannerRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequestEventArgs_INTERFACE_DEFINED__) */
@@ -2081,10 +2077,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerEnableScannerRequest=_uuidof(IBarcodeScannerEnableScannerRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest_INTERFACE_DEFINED__) */
@@ -2130,10 +2126,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerEnableScannerRequest2=_uuidof(IBarcodeScannerEnableScannerRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequest2_INTERFACE_DEFINED__) */
@@ -2176,10 +2172,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerEnableScannerRequestEventArgs=_uuidof(IBarcodeScannerEnableScannerRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequestEventArgs_INTERFACE_DEFINED__) */
@@ -2194,10 +2190,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -2239,10 +2231,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerFrameReader=_uuidof(IBarcodeScannerFrameReader);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReader;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReader_INTERFACE_DEFINED__) */
@@ -2282,10 +2274,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerFrameReaderFrameArrivedEventArgs=_uuidof(IBarcodeScannerFrameReaderFrameArrivedEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReaderFrameArrivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReaderFrameArrivedEventArgs_INTERFACE_DEFINED__) */
@@ -2332,10 +2324,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerGetSymbologyAttributesRequest=_uuidof(IBarcodeScannerGetSymbologyAttributesRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest_INTERFACE_DEFINED__) */
@@ -2381,10 +2373,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerGetSymbologyAttributesRequest2=_uuidof(IBarcodeScannerGetSymbologyAttributesRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequest2_INTERFACE_DEFINED__) */
@@ -2427,10 +2419,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerGetSymbologyAttributesRequestEventArgs=_uuidof(IBarcodeScannerGetSymbologyAttributesRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequestEventArgs_INTERFACE_DEFINED__) */
@@ -2473,10 +2465,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerHideVideoPreviewRequest=_uuidof(IBarcodeScannerHideVideoPreviewRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest_INTERFACE_DEFINED__) */
@@ -2522,10 +2514,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerHideVideoPreviewRequest2=_uuidof(IBarcodeScannerHideVideoPreviewRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequest2_INTERFACE_DEFINED__) */
@@ -2568,10 +2560,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerHideVideoPreviewRequestEventArgs=_uuidof(IBarcodeScannerHideVideoPreviewRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequestEventArgs_INTERFACE_DEFINED__) */
@@ -2586,10 +2578,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -2649,7 +2637,7 @@ namespace ABI {
                             ) = 0;
                         /* [overload] */virtual HRESULT STDMETHODCALLTYPE ReportErrorAsyncWithScanReport(
                             /* [in] */__RPC__in_opt ABI::Windows::Devices::PointOfService::IUnifiedPosErrorData * errorData,
-                            /* [in] */boolean isRetriable,
+                            /* [in] */::boolean isRetriable,
                             /* [in] */__RPC__in_opt ABI::Windows::Devices::PointOfService::IBarcodeScannerReport * scanReport,
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * operation
                             ) = 0;
@@ -2714,10 +2702,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerProviderConnection=_uuidof(IBarcodeScannerProviderConnection);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection_INTERFACE_DEFINED__) */
@@ -2732,10 +2720,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -2770,10 +2754,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerProviderConnection2=_uuidof(IBarcodeScannerProviderConnection2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection2_INTERFACE_DEFINED__) */
@@ -2813,10 +2797,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerProviderTriggerDetails=_uuidof(IBarcodeScannerProviderTriggerDetails);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderTriggerDetails_INTERFACE_DEFINED__) */
@@ -2862,10 +2846,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerSetActiveSymbologiesRequest=_uuidof(IBarcodeScannerSetActiveSymbologiesRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest_INTERFACE_DEFINED__) */
@@ -2911,10 +2895,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerSetActiveSymbologiesRequest2=_uuidof(IBarcodeScannerSetActiveSymbologiesRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequest2_INTERFACE_DEFINED__) */
@@ -2957,10 +2941,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerSetActiveSymbologiesRequestEventArgs=_uuidof(IBarcodeScannerSetActiveSymbologiesRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3009,10 +2993,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerSetSymbologyAttributesRequest=_uuidof(IBarcodeScannerSetSymbologyAttributesRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest_INTERFACE_DEFINED__) */
@@ -3058,10 +3042,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerSetSymbologyAttributesRequest2=_uuidof(IBarcodeScannerSetSymbologyAttributesRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequest2_INTERFACE_DEFINED__) */
@@ -3104,10 +3088,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerSetSymbologyAttributesRequestEventArgs=_uuidof(IBarcodeScannerSetSymbologyAttributesRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3150,10 +3134,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerStartSoftwareTriggerRequest=_uuidof(IBarcodeScannerStartSoftwareTriggerRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest_INTERFACE_DEFINED__) */
@@ -3199,10 +3183,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerStartSoftwareTriggerRequest2=_uuidof(IBarcodeScannerStartSoftwareTriggerRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequest2_INTERFACE_DEFINED__) */
@@ -3245,10 +3229,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerStartSoftwareTriggerRequestEventArgs=_uuidof(IBarcodeScannerStartSoftwareTriggerRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3291,10 +3275,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerStopSoftwareTriggerRequest=_uuidof(IBarcodeScannerStopSoftwareTriggerRequest);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest_INTERFACE_DEFINED__) */
@@ -3340,10 +3324,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerStopSoftwareTriggerRequest2=_uuidof(IBarcodeScannerStopSoftwareTriggerRequest2);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequest2_INTERFACE_DEFINED__) */
@@ -3386,10 +3370,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerStopSoftwareTriggerRequestEventArgs=_uuidof(IBarcodeScannerStopSoftwareTriggerRequestEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequestEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequestEventArgs_INTERFACE_DEFINED__) */
@@ -3404,10 +3388,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -3442,10 +3422,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeScannerVideoFrame=_uuidof(IBarcodeScannerVideoFrame);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerVideoFrame;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerVideoFrame_INTERFACE_DEFINED__) */
@@ -3478,22 +3458,22 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCheckDigitValidationSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCheckDigitValidationSupported(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCheckDigitTransmissionSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsCheckDigitTransmissionSupported(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDecodeLengthSupported(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsDecodeLengthSupported(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CreateAttributes(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes * * value
@@ -3503,10 +3483,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IBarcodeSymbologyAttributesBuilder=_uuidof(IBarcodeSymbologyAttributesBuilder);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* PointOfService */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* PointOfService */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeSymbologyAttributesBuilder;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeSymbologyAttributesBuilder_INTERFACE_DEFINED__) */
@@ -3523,8 +3503,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3547,8 +3525,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3573,8 +3549,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3596,8 +3570,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3622,8 +3594,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader ** Default Interface **
  *    Windows.Foundation.IClosable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3645,8 +3615,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3671,8 +3639,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3694,8 +3660,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3720,8 +3684,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3744,8 +3706,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3767,10 +3727,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3793,8 +3751,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3819,8 +3775,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3842,8 +3796,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3868,8 +3820,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3891,8 +3841,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3917,8 +3865,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3940,8 +3886,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3966,8 +3910,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -3989,8 +3931,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -4014,8 +3954,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame ** Default Interface **
  *    Windows.Foundation.IClosable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -4502,7 +4440,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReaderFrameArrivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReader * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReaderFrameArrivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReader_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerFrameReaderFrameArrivedEventArgsVtbl;
 
@@ -4555,7 +4493,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerDisableScannerRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerDisableScannerRequestEventArgsVtbl;
 
@@ -4608,7 +4546,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerEnableScannerRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerEnableScannerRequestEventArgsVtbl;
 
@@ -4661,7 +4599,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerGetSymbologyAttributesRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerGetSymbologyAttributesRequestEventArgsVtbl;
 
@@ -4714,7 +4652,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerHideVideoPreviewRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerHideVideoPreviewRequestEventArgsVtbl;
 
@@ -4767,7 +4705,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetActiveSymbologiesRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetActiveSymbologiesRequestEventArgsVtbl;
 
@@ -4820,7 +4758,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerSetSymbologyAttributesRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerSetSymbologyAttributesRequestEventArgsVtbl;
 
@@ -4873,7 +4811,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStartSoftwareTriggerRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStartSoftwareTriggerRequestEventArgsVtbl;
 
@@ -4926,7 +4864,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProv
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequestEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerStopSoftwareTriggerRequestEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerProviderConnection_Windows__CDevices__CPointOfService__CProvider__CBarcodeScannerStopSoftwareTriggerRequestEventArgsVtbl;
 
@@ -5092,12 +5030,12 @@ typedef struct __FIIterator_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out int *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
@@ -5259,7 +5197,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetAt )( 
                                          __RPC__in __FIVectorView_1_UINT32 * This,
                                          /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out int *item);
+                                         /* [retval][out] */ __RPC__out unsigned int *item);
 
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in __FIVectorView_1_UINT32 * This,
@@ -5267,7 +5205,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
 
         HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
                                                __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ int item,
+            /* [in] */ unsigned int item,
             /* [out] */ __RPC__out unsigned int *index,
             /* [retval][out] */ __RPC__out boolean *found);
 
@@ -5275,7 +5213,7 @@ typedef struct __FIVectorView_1_UINT32Vtbl
                                                __RPC__in __FIVectorView_1_UINT32 * This,
             /* [in] */ unsigned int startIndex,
             /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
             /* [retval][out] */ __RPC__out unsigned int *actual);
 
         END_INTERFACE
@@ -5354,12 +5292,12 @@ typedef struct __FIVector_1_UINT32Vtbl
         /* [out] */ __RPC__out ULONG *iidCount,
         /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
 
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt int *className);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt unsigned int *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
     HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [retval][out] */ __RPC__deref_out_opt int *item);
+        /* [retval][out] */ __RPC__deref_out_opt unsigned int *item);
 
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
         __RPC__in __FIVector_1_UINT32 * This,
@@ -5368,31 +5306,31 @@ typedef struct __FIVector_1_UINT32Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_UINT32 **view);
 
     HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_UINT32 * This,
-        /* [in] */ __RPC__in int item,
+        /* [in] */ __RPC__in unsigned int item,
         /* [out] */ __RPC__out unsigned int *index,
         /* [retval][out] */ __RPC__out boolean *found);
 
     HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in int item);
+        /* [in] */ __RPC__in unsigned int item);
 
     HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in int item);
+        /* [in] */ __RPC__in unsigned int item);
 
     HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ unsigned int index);
-    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ __RPC__in int item);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_UINT32 * This, /* [in] */ __RPC__in unsigned int item);
     HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_UINT32 * This);
     HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_UINT32 * This);
     HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int startIndex,
         /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) int *items,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
         /* [retval][out] */ __RPC__out unsigned int *actual);
 
     HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_UINT32 * This,
         /* [in] */ unsigned int count,
-        /* [size_is][in] */ __RPC__in_ecount_full(count) int *value);
+        /* [size_is][in] */ __RPC__in_ecount_full(count) unsigned int *value);
 
     END_INTERFACE
 } __FIVector_1_UINT32Vtbl;
@@ -6239,10 +6177,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerFrameReader_INTERFACE_DEFINED__)
@@ -7079,10 +7013,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerProviderConnection_INTERFACE_DEFINED__)
@@ -7390,10 +7320,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  *
  *
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -8832,10 +8758,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  * Interface is a part of the implementation of type Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBarcodeScannerVideoFrame_INTERFACE_DEFINED__)
@@ -9086,8 +9008,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPointOfService_CProvider_CIBar
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9109,8 +9029,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9135,8 +9053,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9158,8 +9074,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9184,8 +9098,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader ** Default Interface **
  *    Windows.Foundation.IClosable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9207,8 +9119,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9233,8 +9143,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9256,8 +9164,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9282,8 +9188,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9306,8 +9210,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs ** Default Interface **
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9329,10 +9231,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection ** Default Interface **
- *    Windows.Foundation.IClosable
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.Foundation.IClosable
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9355,8 +9255,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9381,8 +9279,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9404,8 +9300,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9430,8 +9324,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9453,8 +9345,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9479,8 +9369,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9502,8 +9390,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9528,8 +9414,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest ** Default Interface **
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9551,8 +9435,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9576,8 +9458,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame ** Default Interface **
  *    Windows.Foundation.IClosable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

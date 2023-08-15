@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.services.maps.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -150,9 +150,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IEnhancedWaypoint;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypoint ABI::Windows::Services::Maps::IEnhancedWaypoint
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypoint_FWD_DEFINED__
@@ -164,9 +164,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IEnhancedWaypointFactory;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypointFactory ABI::Windows::Services::Maps::IEnhancedWaypointFactory
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypointFactory_FWD_DEFINED__
@@ -178,9 +178,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IManeuverWarning;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIManeuverWarning ABI::Windows::Services::Maps::IManeuverWarning
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIManeuverWarning_FWD_DEFINED__
@@ -192,9 +192,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapAddress;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapAddress ABI::Windows::Services::Maps::IMapAddress
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapAddress_FWD_DEFINED__
@@ -206,9 +206,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapAddress2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapAddress2 ABI::Windows::Services::Maps::IMapAddress2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapAddress2_FWD_DEFINED__
@@ -220,9 +220,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapLocation;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapLocation ABI::Windows::Services::Maps::IMapLocation
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapLocation_FWD_DEFINED__
@@ -234,9 +234,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapLocationFinderResult;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderResult ABI::Windows::Services::Maps::IMapLocationFinderResult
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderResult_FWD_DEFINED__
@@ -248,9 +248,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapLocationFinderStatics;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics ABI::Windows::Services::Maps::IMapLocationFinderStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics_FWD_DEFINED__
@@ -262,9 +262,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapLocationFinderStatics2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics2 ABI::Windows::Services::Maps::IMapLocationFinderStatics2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics2_FWD_DEFINED__
@@ -276,9 +276,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapManagerStatics;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapManagerStatics ABI::Windows::Services::Maps::IMapManagerStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapManagerStatics_FWD_DEFINED__
@@ -290,9 +290,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRoute;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRoute ABI::Windows::Services::Maps::IMapRoute
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRoute_FWD_DEFINED__
@@ -304,9 +304,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRoute2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRoute2 ABI::Windows::Services::Maps::IMapRoute2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRoute2_FWD_DEFINED__
@@ -318,9 +318,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRoute3;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRoute3 ABI::Windows::Services::Maps::IMapRoute3
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRoute3_FWD_DEFINED__
@@ -332,9 +332,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRoute4;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRoute4 ABI::Windows::Services::Maps::IMapRoute4
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRoute4_FWD_DEFINED__
@@ -346,9 +346,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteDrivingOptions;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions ABI::Windows::Services::Maps::IMapRouteDrivingOptions
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions_FWD_DEFINED__
@@ -360,9 +360,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteDrivingOptions2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions2 ABI::Windows::Services::Maps::IMapRouteDrivingOptions2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions2_FWD_DEFINED__
@@ -374,9 +374,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteFinderResult;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult ABI::Windows::Services::Maps::IMapRouteFinderResult
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult_FWD_DEFINED__
@@ -388,9 +388,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteFinderResult2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult2 ABI::Windows::Services::Maps::IMapRouteFinderResult2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult2_FWD_DEFINED__
@@ -402,9 +402,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteFinderStatics;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics ABI::Windows::Services::Maps::IMapRouteFinderStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics_FWD_DEFINED__
@@ -416,9 +416,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteFinderStatics2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics2 ABI::Windows::Services::Maps::IMapRouteFinderStatics2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics2_FWD_DEFINED__
@@ -430,9 +430,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteFinderStatics3;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics3 ABI::Windows::Services::Maps::IMapRouteFinderStatics3
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics3_FWD_DEFINED__
@@ -444,9 +444,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteLeg;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg ABI::Windows::Services::Maps::IMapRouteLeg
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg_FWD_DEFINED__
@@ -458,9 +458,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteLeg2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg2 ABI::Windows::Services::Maps::IMapRouteLeg2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg2_FWD_DEFINED__
@@ -472,9 +472,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteManeuver;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver ABI::Windows::Services::Maps::IMapRouteManeuver
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver_FWD_DEFINED__
@@ -486,9 +486,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteManeuver2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver2 ABI::Windows::Services::Maps::IMapRouteManeuver2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver2_FWD_DEFINED__
@@ -500,9 +500,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapRouteManeuver3;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver3 ABI::Windows::Services::Maps::IMapRouteManeuver3
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver3_FWD_DEFINED__
@@ -514,9 +514,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapServiceStatics;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics ABI::Windows::Services::Maps::IMapServiceStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics_FWD_DEFINED__
@@ -528,9 +528,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapServiceStatics2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics2 ABI::Windows::Services::Maps::IMapServiceStatics2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics2_FWD_DEFINED__
@@ -542,9 +542,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapServiceStatics3;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics3 ABI::Windows::Services::Maps::IMapServiceStatics3
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics3_FWD_DEFINED__
@@ -556,9 +556,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IMapServiceStatics4;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics4 ABI::Windows::Services::Maps::IMapServiceStatics4
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics4_FWD_DEFINED__
@@ -570,9 +570,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IPlaceInfo;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIPlaceInfo ABI::Windows::Services::Maps::IPlaceInfo
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIPlaceInfo_FWD_DEFINED__
@@ -584,9 +584,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IPlaceInfoCreateOptions;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIPlaceInfoCreateOptions ABI::Windows::Services::Maps::IPlaceInfoCreateOptions
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIPlaceInfoCreateOptions_FWD_DEFINED__
@@ -598,9 +598,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IPlaceInfoStatics;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics ABI::Windows::Services::Maps::IPlaceInfoStatics
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics_FWD_DEFINED__
@@ -612,9 +612,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 interface IPlaceInfoStatics2;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics2 ABI::Windows::Services::Maps::IPlaceInfoStatics2
 
 #endif // ____x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics2_FWD_DEFINED__
@@ -627,9 +627,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class EnhancedWaypoint;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -652,7 +652,7 @@ IIterator<ABI::Windows::Services::Maps::EnhancedWaypoint*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::EnhancedWaypoint*> __FIIterator_1_Windows__CServices__CMaps__CEnhancedWaypoint_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CEnhancedWaypoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CEnhancedWaypoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CEnhancedWaypoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::IEnhancedWaypoint*>
@@ -684,7 +684,7 @@ IIterable<ABI::Windows::Services::Maps::EnhancedWaypoint*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::EnhancedWaypoint*> __FIIterable_1_Windows__CServices__CMaps__CEnhancedWaypoint_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CEnhancedWaypoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CEnhancedWaypoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CEnhancedWaypoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::IEnhancedWaypoint*>
@@ -700,9 +700,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class ManeuverWarning;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -725,7 +725,7 @@ IIterator<ABI::Windows::Services::Maps::ManeuverWarning*> : IIterator_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::ManeuverWarning*> __FIIterator_1_Windows__CServices__CMaps__CManeuverWarning_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CManeuverWarning ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CManeuverWarning_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CManeuverWarning ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::IManeuverWarning*>
@@ -757,7 +757,7 @@ IIterable<ABI::Windows::Services::Maps::ManeuverWarning*> : IIterable_impl<ABI::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::ManeuverWarning*> __FIIterable_1_Windows__CServices__CMaps__CManeuverWarning_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CManeuverWarning ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CManeuverWarning_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CManeuverWarning ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::IManeuverWarning*>
@@ -773,9 +773,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapLocation;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -798,7 +798,7 @@ IIterator<ABI::Windows::Services::Maps::MapLocation*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::MapLocation*> __FIIterator_1_Windows__CServices__CMaps__CMapLocation_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CMapLocation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CMapLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CMapLocation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::IMapLocation*>
@@ -830,7 +830,7 @@ IIterable<ABI::Windows::Services::Maps::MapLocation*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::MapLocation*> __FIIterable_1_Windows__CServices__CMaps__CMapLocation_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CMapLocation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CMapLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CMapLocation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::IMapLocation*>
@@ -846,9 +846,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapRoute;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -871,7 +871,7 @@ IIterator<ABI::Windows::Services::Maps::MapRoute*> : IIterator_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::MapRoute*> __FIIterator_1_Windows__CServices__CMaps__CMapRoute_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CMapRoute ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CMapRoute_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CMapRoute ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::IMapRoute*>
@@ -903,7 +903,7 @@ IIterable<ABI::Windows::Services::Maps::MapRoute*> : IIterable_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::MapRoute*> __FIIterable_1_Windows__CServices__CMaps__CMapRoute_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CMapRoute ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CMapRoute_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CMapRoute ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::IMapRoute*>
@@ -919,9 +919,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapRouteLeg;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -944,7 +944,7 @@ IIterator<ABI::Windows::Services::Maps::MapRouteLeg*> : IIterator_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::MapRouteLeg*> __FIIterator_1_Windows__CServices__CMaps__CMapRouteLeg_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CMapRouteLeg ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CMapRouteLeg_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CMapRouteLeg ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::IMapRouteLeg*>
@@ -976,7 +976,7 @@ IIterable<ABI::Windows::Services::Maps::MapRouteLeg*> : IIterable_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::MapRouteLeg*> __FIIterable_1_Windows__CServices__CMaps__CMapRouteLeg_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CMapRouteLeg ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CMapRouteLeg_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CMapRouteLeg ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::IMapRouteLeg*>
@@ -992,9 +992,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapRouteManeuver;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1017,7 +1017,7 @@ IIterator<ABI::Windows::Services::Maps::MapRouteManeuver*> : IIterator_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Services::Maps::MapRouteManeuver*> __FIIterator_1_Windows__CServices__CMaps__CMapRouteManeuver_t;
 #define __FIIterator_1_Windows__CServices__CMaps__CMapRouteManeuver ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CServices__CMaps__CMapRouteManeuver_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CServices__CMaps__CMapRouteManeuver ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Services::Maps::IMapRouteManeuver*>
@@ -1049,7 +1049,7 @@ IIterable<ABI::Windows::Services::Maps::MapRouteManeuver*> : IIterable_impl<ABI:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Services::Maps::MapRouteManeuver*> __FIIterable_1_Windows__CServices__CMaps__CMapRouteManeuver_t;
 #define __FIIterable_1_Windows__CServices__CMaps__CMapRouteManeuver ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CServices__CMaps__CMapRouteManeuver_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CServices__CMaps__CMapRouteManeuver ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Services::Maps::IMapRouteManeuver*>
@@ -1081,7 +1081,7 @@ IVectorView<ABI::Windows::Services::Maps::ManeuverWarning*> : IVectorView_impl<A
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::ManeuverWarning*> __FIVectorView_1_Windows__CServices__CMaps__CManeuverWarning_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CManeuverWarning ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CManeuverWarning_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CManeuverWarning ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::IManeuverWarning*>
@@ -1113,7 +1113,7 @@ IVectorView<ABI::Windows::Services::Maps::MapLocation*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::MapLocation*> __FIVectorView_1_Windows__CServices__CMaps__CMapLocation_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CMapLocation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CMapLocation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CMapLocation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::IMapLocation*>
@@ -1145,7 +1145,7 @@ IVectorView<ABI::Windows::Services::Maps::MapRoute*> : IVectorView_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::MapRoute*> __FIVectorView_1_Windows__CServices__CMaps__CMapRoute_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CMapRoute ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CMapRoute_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CMapRoute ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::IMapRoute*>
@@ -1177,7 +1177,7 @@ IVectorView<ABI::Windows::Services::Maps::MapRouteLeg*> : IVectorView_impl<ABI::
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::MapRouteLeg*> __FIVectorView_1_Windows__CServices__CMaps__CMapRouteLeg_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CMapRouteLeg ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CMapRouteLeg_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CMapRouteLeg ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::IMapRouteLeg*>
@@ -1209,7 +1209,7 @@ IVectorView<ABI::Windows::Services::Maps::MapRouteManeuver*> : IVectorView_impl<
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Services::Maps::MapRouteManeuver*> __FIVectorView_1_Windows__CServices__CMaps__CMapRouteManeuver_t;
 #define __FIVectorView_1_Windows__CServices__CMaps__CMapRouteManeuver ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CServices__CMaps__CMapRouteManeuver_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CServices__CMaps__CMapRouteManeuver ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Services::Maps::IMapRouteManeuver*>
@@ -1225,9 +1225,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapLocationFinderResult;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1250,7 +1250,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::MapLocationFinderR
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::MapLocationFinderResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapLocationFinderResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapLocationFinderResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapLocationFinderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapLocationFinderResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::IMapLocationFinderResult*>
@@ -1282,7 +1282,7 @@ IAsyncOperation<ABI::Windows::Services::Maps::MapLocationFinderResult*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Maps::MapLocationFinderResult*> __FIAsyncOperation_1_Windows__CServices__CMaps__CMapLocationFinderResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CMaps__CMapLocationFinderResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CMaps__CMapLocationFinderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CMaps__CMapLocationFinderResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Maps::IMapLocationFinderResult*>
@@ -1298,9 +1298,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapRouteFinderResult;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1323,7 +1323,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::MapRouteFinderResu
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::MapRouteFinderResult*> __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapRouteFinderResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapRouteFinderResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapRouteFinderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CServices__CMaps__CMapRouteFinderResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Services::Maps::IMapRouteFinderResult*>
@@ -1355,7 +1355,7 @@ IAsyncOperation<ABI::Windows::Services::Maps::MapRouteFinderResult*> : IAsyncOpe
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Services::Maps::MapRouteFinderResult*> __FIAsyncOperation_1_Windows__CServices__CMaps__CMapRouteFinderResult_t;
 #define __FIAsyncOperation_1_Windows__CServices__CMaps__CMapRouteFinderResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CServices__CMaps__CMapRouteFinderResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CServices__CMaps__CMapRouteFinderResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Services::Maps::IMapRouteFinderResult*>
@@ -1385,7 +1385,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -1400,8 +1400,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1422,7 +1422,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1437,9 +1437,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -1448,9 +1448,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopoint;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint ABI::Windows::Devices::Geolocation::IGeopoint
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopoint_FWD_DEFINED__
@@ -1476,7 +1476,7 @@ IIterator<ABI::Windows::Devices::Geolocation::Geopoint*> : IIterator_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Geolocation::Geopoint*> __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -1508,7 +1508,7 @@ IIterable<ABI::Windows::Devices::Geolocation::Geopoint*> : IIterable_impl<ABI::W
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Geolocation::Geopoint*> __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint_t;
 #define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CGeolocation__CGeopoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Geolocation::IGeopoint*>
@@ -1526,9 +1526,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class GeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -1537,9 +1537,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoboundingBox;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox ABI::Windows::Devices::Geolocation::IGeoboundingBox
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoboundingBox_FWD_DEFINED__
@@ -1550,9 +1550,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 class Geopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
@@ -1561,9 +1561,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeopath;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeopath ABI::Windows::Devices::Geolocation::IGeopath
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeopath_FWD_DEFINED__
@@ -1577,9 +1577,9 @@ namespace ABI {
         namespace Devices {
             namespace Geolocation {
                 interface IGeoshape;
-            } /* Windows */
+            } /* Geolocation */
         } /* Devices */
-    } /* Geolocation */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape ABI::Windows::Devices::Geolocation::IGeoshape
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeoshape_FWD_DEFINED__
@@ -1594,8 +1594,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1603,8 +1603,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1612,8 +1612,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1625,9 +1625,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1641,9 +1641,9 @@ namespace ABI {
                 
                 typedef enum ManeuverWarningKind : int ManeuverWarningKind;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1652,9 +1652,9 @@ namespace ABI {
                 
                 typedef enum ManeuverWarningSeverity : int ManeuverWarningSeverity;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1663,9 +1663,9 @@ namespace ABI {
                 
                 typedef enum MapLocationDesiredAccuracy : int MapLocationDesiredAccuracy;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1674,9 +1674,9 @@ namespace ABI {
                 
                 typedef enum MapLocationFinderStatus : int MapLocationFinderStatus;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1685,9 +1685,9 @@ namespace ABI {
                 
                 typedef enum MapManeuverNotices : unsigned int MapManeuverNotices;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1696,9 +1696,9 @@ namespace ABI {
                 
                 typedef enum MapRouteFinderStatus : int MapRouteFinderStatus;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1707,9 +1707,9 @@ namespace ABI {
                 
                 typedef enum MapRouteManeuverKind : int MapRouteManeuverKind;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1718,9 +1718,9 @@ namespace ABI {
                 
                 typedef enum MapRouteOptimization : int MapRouteOptimization;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1729,9 +1729,9 @@ namespace ABI {
                 
                 typedef enum MapRouteRestrictions : unsigned int MapRouteRestrictions;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1740,9 +1740,9 @@ namespace ABI {
                 
                 typedef enum MapServiceDataUsagePreference : int MapServiceDataUsagePreference;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1751,9 +1751,9 @@ namespace ABI {
                 
                 typedef enum TrafficCongestion : int TrafficCongestion;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1762,9 +1762,9 @@ namespace ABI {
                 
                 typedef enum WaypointKind : int WaypointKind;
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1807,9 +1807,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapAddress;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1822,9 +1822,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class MapRouteDrivingOptions;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1837,9 +1837,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class PlaceInfo;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1847,9 +1847,9 @@ namespace ABI {
         namespace Services {
             namespace Maps {
                 class PlaceInfoCreateOptions;
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1917,9 +1917,9 @@ namespace ABI {
                     ManeuverWarningKind_Weather = 35,
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1947,9 +1947,9 @@ namespace ABI {
                     ManeuverWarningSeverity_Serious = 4,
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1974,9 +1974,9 @@ namespace ABI {
                     MapLocationDesiredAccuracy_Low = 1,
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -2010,9 +2010,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2040,9 +2040,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(MapManeuverNotices)
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2079,9 +2079,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2129,9 +2129,9 @@ namespace ABI {
                     MapRouteManeuverKind_TakeFerry = 24,
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2162,9 +2162,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2200,9 +2200,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(MapRouteRestrictions)
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2227,9 +2227,9 @@ namespace ABI {
                     MapServiceDataUsagePreference_OfflineMapDataOnly = 1,
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2257,9 +2257,9 @@ namespace ABI {
                     TrafficCongestion_Heavy = 4,
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2284,9 +2284,9 @@ namespace ABI {
                     WaypointKind_Via = 1,
                 };
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -2325,9 +2325,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEnhancedWaypoint=_uuidof(IEnhancedWaypoint);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypoint;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypoint_INTERFACE_DEFINED__) */
@@ -2368,9 +2368,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IEnhancedWaypointFactory=_uuidof(IEnhancedWaypointFactory);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypointFactory;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIEnhancedWaypointFactory_INTERFACE_DEFINED__) */
@@ -2412,9 +2412,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IManeuverWarning=_uuidof(IManeuverWarning);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIManeuverWarning;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIManeuverWarning_INTERFACE_DEFINED__) */
@@ -2495,9 +2495,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapAddress=_uuidof(IMapAddress);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapAddress;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapAddress_INTERFACE_DEFINED__) */
@@ -2536,9 +2536,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapAddress2=_uuidof(IMapAddress2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapAddress2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapAddress2_INTERFACE_DEFINED__) */
@@ -2586,9 +2586,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapLocation=_uuidof(IMapLocation);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapLocation;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapLocation_INTERFACE_DEFINED__) */
@@ -2630,9 +2630,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapLocationFinderResult=_uuidof(IMapLocationFinderResult);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderResult_INTERFACE_DEFINED__) */
@@ -2683,9 +2683,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapLocationFinderStatics=_uuidof(IMapLocationFinderStatics);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics_INTERFACE_DEFINED__) */
@@ -2726,9 +2726,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapLocationFinderStatics2=_uuidof(IMapLocationFinderStatics2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapLocationFinderStatics2_INTERFACE_DEFINED__) */
@@ -2766,9 +2766,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapManagerStatics=_uuidof(IMapManagerStatics);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapManagerStatics_INTERFACE_DEFINED__) */
@@ -2815,16 +2815,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CServices__CMaps__CMapRouteLeg * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTrafficBased(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMapRoute=_uuidof(IMapRoute);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRoute;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRoute_INTERFACE_DEFINED__) */
@@ -2859,16 +2859,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Services::Maps::MapRouteRestrictions * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasBlockedRoads(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMapRoute2=_uuidof(IMapRoute2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRoute2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRoute2_INTERFACE_DEFINED__) */
@@ -2910,9 +2910,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRoute3=_uuidof(IMapRoute3);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRoute3;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRoute3_INTERFACE_DEFINED__) */
@@ -2944,16 +2944,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsScenic(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMapRoute4=_uuidof(IMapRoute4);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRoute4;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRoute4_INTERFACE_DEFINED__) */
@@ -3013,9 +3013,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteDrivingOptions=_uuidof(IMapRouteDrivingOptions);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions_INTERFACE_DEFINED__) */
@@ -3057,9 +3057,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteDrivingOptions2=_uuidof(IMapRouteDrivingOptions2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteDrivingOptions2_INTERFACE_DEFINED__) */
@@ -3101,9 +3101,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteFinderResult=_uuidof(IMapRouteFinderResult);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult_INTERFACE_DEFINED__) */
@@ -3142,9 +3142,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteFinderResult2=_uuidof(IMapRouteFinderResult2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderResult2_INTERFACE_DEFINED__) */
@@ -3237,9 +3237,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteFinderStatics=_uuidof(IMapRouteFinderStatics);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics_INTERFACE_DEFINED__) */
@@ -3281,9 +3281,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteFinderStatics2=_uuidof(IMapRouteFinderStatics2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics2_INTERFACE_DEFINED__) */
@@ -3328,9 +3328,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteFinderStatics3=_uuidof(IMapRouteFinderStatics3);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics3;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteFinderStatics3_INTERFACE_DEFINED__) */
@@ -3381,9 +3381,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteLeg=_uuidof(IMapRouteLeg);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg_INTERFACE_DEFINED__) */
@@ -3425,9 +3425,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteLeg2=_uuidof(IMapRouteLeg2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteLeg2_INTERFACE_DEFINED__) */
@@ -3481,9 +3481,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteManeuver=_uuidof(IMapRouteManeuver);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver_INTERFACE_DEFINED__) */
@@ -3528,9 +3528,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteManeuver2=_uuidof(IMapRouteManeuver2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver2_INTERFACE_DEFINED__) */
@@ -3569,9 +3569,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapRouteManeuver3=_uuidof(IMapRouteManeuver3);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver3;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapRouteManeuver3_INTERFACE_DEFINED__) */
@@ -3613,9 +3613,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapServiceStatics=_uuidof(IMapServiceStatics);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics_INTERFACE_DEFINED__) */
@@ -3654,9 +3654,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapServiceStatics2=_uuidof(IMapServiceStatics2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics2_INTERFACE_DEFINED__) */
@@ -3695,9 +3695,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapServiceStatics3=_uuidof(IMapServiceStatics3);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics3;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics3_INTERFACE_DEFINED__) */
@@ -3739,9 +3739,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMapServiceStatics4=_uuidof(IMapServiceStatics4);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics4;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIMapServiceStatics4_INTERFACE_DEFINED__) */
@@ -3796,9 +3796,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaceInfo=_uuidof(IPlaceInfo);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIPlaceInfo;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIPlaceInfo_INTERFACE_DEFINED__) */
@@ -3846,9 +3846,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaceInfoCreateOptions=_uuidof(IPlaceInfoCreateOptions);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIPlaceInfoCreateOptions;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIPlaceInfoCreateOptions_INTERFACE_DEFINED__) */
@@ -3903,16 +3903,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Services::Maps::IPlaceInfo * * resultValue
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsShowSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPlaceInfoStatics=_uuidof(IPlaceInfoStatics);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics_INTERFACE_DEFINED__) */
@@ -3957,9 +3957,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPlaceInfoStatics2=_uuidof(IPlaceInfoStatics2);
                 
-            } /* Windows */
+            } /* Maps */
         } /* Services */
-    } /* Maps */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CServices_CMaps_CIPlaceInfoStatics2_INTERFACE_DEFINED__) */

@@ -278,6 +278,8 @@ namespace Windows
 
                     interface IGravityConnectedAnimationConfiguration;
 
+                    interface IGravityConnectedAnimationConfiguration2;
+
                     interface IGravityConnectedAnimationConfigurationFactory;
 
                     interface IKeySpline;
@@ -1491,6 +1493,15 @@ namespace Windows
                     {
                     }
 
+                    [contract(Windows.Foundation.UniversalApiContract, 8.0)]
+                    [exclusiveto(Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration)]
+                    [uuid(62333ADD-AED4-5FED-95FF-D128ACCE8BE4)]
+                    interface IGravityConnectedAnimationConfiguration2 : IInspectable
+                    {
+                        [propget] HRESULT IsShadowEnabled([out] [retval] boolean* value);
+                        [propput] HRESULT IsShadowEnabled([in] boolean value);
+                    }
+
                     [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                     [exclusiveto(Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration)]
                     [uuid(E822C41F-3656-5090-92F5-C217EAACB682)]
@@ -2673,6 +2684,7 @@ namespace Windows
                     runtimeclass GravityConnectedAnimationConfiguration : Windows.UI.Xaml.Media.Animation.ConnectedAnimationConfiguration
                     {
                         [default] interface Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration;
+                        [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2;
                     }
 
                     [activatable(Windows.Foundation.UniversalApiContract, 1.0)]

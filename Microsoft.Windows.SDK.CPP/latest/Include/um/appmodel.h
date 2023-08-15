@@ -222,6 +222,63 @@ GetStagedPackagePathByFullName(
     );
 
 
+#if NTDDI_VERSION >= NTDDI_WIN10_19H1
+typedef enum PackagePathType
+{
+    PackagePathType_Install = 0,
+    PackagePathType_Mutable = 1,
+    PackagePathType_Effective = 2
+} PackagePathType;
+
+WINBASEAPI
+_Success_(return == ERROR_SUCCESS)
+LONG
+WINAPI
+GetPackagePathByFullName2(
+    _In_ PCWSTR packageFullName,
+    _In_ PackagePathType packagePathType,
+    _Inout_ UINT32* pathLength,
+    _Out_writes_opt_(*pathLength) PWSTR path
+    );
+
+
+WINBASEAPI
+_Success_(return == ERROR_SUCCESS)
+LONG
+WINAPI
+GetStagedPackagePathByFullName2(
+    _In_ PCWSTR packageFullName,
+    _In_ PackagePathType packagePathType,
+    _Inout_ UINT32* pathLength,
+    _Out_writes_opt_(*pathLength) PWSTR path
+    );
+
+
+WINBASEAPI
+_Success_(return == ERROR_SUCCESS)
+LONG
+WINAPI
+GetCurrentPackageInfo2(
+    _In_ const UINT32 flags,
+    _In_ PackagePathType packagePathType,
+    _Inout_ UINT32* bufferLength,
+    _Out_writes_bytes_opt_(*bufferLength) BYTE* buffer,
+    _Out_opt_ UINT32* count
+    );
+
+
+WINBASEAPI
+_Success_(return == ERROR_SUCCESS)
+LONG
+WINAPI
+GetCurrentPackagePath2(
+    _In_ PackagePathType packagePathType,
+    _Inout_ UINT32* pathLength,
+    _Out_writes_opt_(*pathLength) PWSTR path
+    );
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_19H1
+
 /* ---------------------------------------------------------------- */
 
 // Application Identity Functions
@@ -749,6 +806,22 @@ AppPolicyGetCreateFileAccess(
     _Out_ AppPolicyCreateFileAccess* policy
     );
 
+
+#if NTDDI_VERSION >= NTDDI_WIN10_19H1
+WINBASEAPI
+_Success_(return == ERROR_SUCCESS)
+LONG
+WINAPI
+GetPackageInfo2(
+    _In_ PACKAGE_INFO_REFERENCE packageInfoReference,
+    _In_ const UINT32 flags,
+    _In_ PackagePathType packagePathType,
+    _Inout_ UINT32* bufferLength,
+    _Out_writes_bytes_opt_(*bufferLength) BYTE* buffer,
+    _Out_opt_ UINT32* count
+    );
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_19H1
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #pragma endregion

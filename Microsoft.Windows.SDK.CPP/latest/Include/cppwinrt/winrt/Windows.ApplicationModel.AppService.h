@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -124,6 +124,13 @@ template <typename D> void consume_Windows_ApplicationModel_AppService_IAppServi
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IAppServiceConnection2)->put_User(get_abi(value)));
 }
 
+template <typename D> Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::AppService::StatelessAppServiceResponse> consume_Windows_ApplicationModel_AppService_IAppServiceConnectionStatics<D>::SendStatelessMessageAsync(Windows::ApplicationModel::AppService::AppServiceConnection const& connection, Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& connectionRequest, Windows::Foundation::Collections::ValueSet const& message) const
+{
+    Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::AppService::StatelessAppServiceResponse> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IAppServiceConnectionStatics)->SendStatelessMessageAsync(get_abi(connection), get_abi(connectionRequest), get_abi(message), put_abi(operation)));
+    return operation;
+}
+
 template <typename D> void consume_Windows_ApplicationModel_AppService_IAppServiceDeferral<D>::Complete() const
 {
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IAppServiceDeferral)->Complete());
@@ -152,9 +159,9 @@ template <typename D> Windows::ApplicationModel::AppService::AppServiceRequest c
 
 template <typename D> Windows::ApplicationModel::AppService::AppServiceDeferral consume_Windows_ApplicationModel_AppService_IAppServiceRequestReceivedEventArgs<D>::GetDeferral() const
 {
-    Windows::ApplicationModel::AppService::AppServiceDeferral value{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IAppServiceRequestReceivedEventArgs)->GetDeferral(put_abi(value)));
-    return value;
+    Windows::ApplicationModel::AppService::AppServiceDeferral result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IAppServiceRequestReceivedEventArgs)->GetDeferral(put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Foundation::Collections::ValueSet consume_Windows_ApplicationModel_AppService_IAppServiceResponse<D>::Message() const
@@ -204,6 +211,27 @@ template <typename D> Windows::Foundation::IAsyncOperation<bool> consume_Windows
     Windows::Foundation::IAsyncOperation<bool> operation{ nullptr };
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IAppServiceTriggerDetails3)->CheckCallerForCapabilityAsync(get_abi(capabilityName), put_abi(operation)));
     return operation;
+}
+
+template <typename D> hstring consume_Windows_ApplicationModel_AppService_IAppServiceTriggerDetails4<D>::CallerRemoteConnectionToken() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IAppServiceTriggerDetails4)->get_CallerRemoteConnectionToken(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Collections::ValueSet consume_Windows_ApplicationModel_AppService_IStatelessAppServiceResponse<D>::Message() const
+{
+    Windows::Foundation::Collections::ValueSet value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IStatelessAppServiceResponse)->get_Message(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus consume_Windows_ApplicationModel_AppService_IStatelessAppServiceResponse<D>::Status() const
+{
+    Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus value{};
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::AppService::IStatelessAppServiceResponse)->get_Status(put_abi(value)));
+    return value;
 }
 
 template <typename D>
@@ -402,6 +430,23 @@ struct produce<D, Windows::ApplicationModel::AppService::IAppServiceConnection2>
 };
 
 template <typename D>
+struct produce<D, Windows::ApplicationModel::AppService::IAppServiceConnectionStatics> : produce_base<D, Windows::ApplicationModel::AppService::IAppServiceConnectionStatics>
+{
+    int32_t WINRT_CALL SendStatelessMessageAsync(void* connection, void* connectionRequest, void* message, void** operation) noexcept final
+    {
+        try
+        {
+            *operation = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(SendStatelessMessageAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::AppService::StatelessAppServiceResponse>), Windows::ApplicationModel::AppService::AppServiceConnection const, Windows::System::RemoteSystems::RemoteSystemConnectionRequest const, Windows::Foundation::Collections::ValueSet const);
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::AppService::StatelessAppServiceResponse>>(this->shim().SendStatelessMessageAsync(*reinterpret_cast<Windows::ApplicationModel::AppService::AppServiceConnection const*>(&connection), *reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemConnectionRequest const*>(&connectionRequest), *reinterpret_cast<Windows::Foundation::Collections::ValueSet const*>(&message)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::ApplicationModel::AppService::IAppServiceDeferral> : produce_base<D, Windows::ApplicationModel::AppService::IAppServiceDeferral>
 {
     int32_t WINRT_CALL Complete() noexcept final
@@ -463,14 +508,14 @@ struct produce<D, Windows::ApplicationModel::AppService::IAppServiceRequestRecei
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL GetDeferral(void** value) noexcept final
+    int32_t WINRT_CALL GetDeferral(void** result) noexcept final
     {
         try
         {
-            *value = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetDeferral, WINRT_WRAP(Windows::ApplicationModel::AppService::AppServiceDeferral));
-            *value = detach_from<Windows::ApplicationModel::AppService::AppServiceDeferral>(this->shim().GetDeferral());
+            *result = detach_from<Windows::ApplicationModel::AppService::AppServiceDeferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -582,6 +627,52 @@ struct produce<D, Windows::ApplicationModel::AppService::IAppServiceTriggerDetai
     }
 };
 
+template <typename D>
+struct produce<D, Windows::ApplicationModel::AppService::IAppServiceTriggerDetails4> : produce_base<D, Windows::ApplicationModel::AppService::IAppServiceTriggerDetails4>
+{
+    int32_t WINRT_CALL get_CallerRemoteConnectionToken(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CallerRemoteConnectionToken, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().CallerRemoteConnectionToken());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::ApplicationModel::AppService::IStatelessAppServiceResponse> : produce_base<D, Windows::ApplicationModel::AppService::IStatelessAppServiceResponse>
+{
+    int32_t WINRT_CALL get_Message(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Message, WINRT_WRAP(Windows::Foundation::Collections::ValueSet));
+            *value = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().Message());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Status(Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Status, WINRT_WRAP(Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus));
+            *value = detach_from<Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::AppService {
@@ -595,6 +686,11 @@ inline AppServiceConnection::AppServiceConnection() :
     AppServiceConnection(impl::call_factory<AppServiceConnection>([](auto&& f) { return f.template ActivateInstance<AppServiceConnection>(); }))
 {}
 
+inline Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::AppService::StatelessAppServiceResponse> AppServiceConnection::SendStatelessMessageAsync(Windows::ApplicationModel::AppService::AppServiceConnection const& connection, Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& connectionRequest, Windows::Foundation::Collections::ValueSet const& message)
+{
+    return impl::call_factory<AppServiceConnection, Windows::ApplicationModel::AppService::IAppServiceConnectionStatics>([&](auto&& f) { return f.SendStatelessMessageAsync(connection, connectionRequest, message); });
+}
+
 }
 
 WINRT_EXPORT namespace std {
@@ -603,6 +699,7 @@ template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppService
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceClosedEventArgs> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceConnection> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceConnection> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceConnection2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceConnection2> {};
+template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceConnectionStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceConnectionStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceDeferral> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceDeferral> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceRequest> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceRequest> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceRequestReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceRequestReceivedEventArgs> {};
@@ -610,6 +707,8 @@ template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppService
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails2> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails3> {};
+template<> struct hash<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails4> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails4> {};
+template<> struct hash<winrt::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::IStatelessAppServiceResponse> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::AppServiceConnection> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::AppServiceConnection> {};
@@ -618,5 +717,6 @@ template<> struct hash<winrt::Windows::ApplicationModel::AppService::AppServiceR
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::AppServiceResponse> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::AppServiceResponse> {};
 template<> struct hash<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails> {};
+template<> struct hash<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse> {};
 
 }

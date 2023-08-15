@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.radios.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace Devices {
             namespace Radios {
                 interface IRadio;
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CRadios_CIRadio ABI::Windows::Devices::Radios::IRadio
 
 #endif // ____x_ABI_CWindows_CDevices_CRadios_CIRadio_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace Devices {
             namespace Radios {
                 interface IRadioStatics;
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CRadios_CIRadioStatics ABI::Windows::Devices::Radios::IRadioStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CRadios_CIRadioStatics_FWD_DEFINED__
@@ -169,9 +169,9 @@ namespace ABI {
         namespace Devices {
             namespace Radios {
                 class Radio;
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -194,7 +194,7 @@ IIterator<ABI::Windows::Devices::Radios::Radio*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Radios::Radio*> __FIIterator_1_Windows__CDevices__CRadios__CRadio_t;
 #define __FIIterator_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CRadios__CRadio_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Radios::IRadio*>
@@ -226,7 +226,7 @@ IIterable<ABI::Windows::Devices::Radios::Radio*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Radios::Radio*> __FIIterable_1_Windows__CDevices__CRadios__CRadio_t;
 #define __FIIterable_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CRadios__CRadio_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Radios::IRadio*>
@@ -258,7 +258,7 @@ IVectorView<ABI::Windows::Devices::Radios::Radio*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Radios::Radio*> __FIVectorView_1_Windows__CDevices__CRadios__CRadio_t;
 #define __FIVectorView_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CRadios__CRadio_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Radios::IRadio*>
@@ -290,7 +290,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Radios::Radio*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Radios::Radio*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadio_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadio_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Radios::IRadio*>
@@ -322,7 +322,7 @@ IAsyncOperation<ABI::Windows::Devices::Radios::Radio*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::Radios::Radio*> __FIAsyncOperation_1_Windows__CDevices__CRadios__CRadio_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CRadios__CRadio_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Radios::IRadio*>
@@ -338,9 +338,9 @@ namespace ABI {
         namespace Devices {
             namespace Radios {
                 enum RadioAccessStatus : int;
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadioAccessStatus_USE
@@ -361,7 +361,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Radios::RadioAccessS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Radios::RadioAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadioAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadioAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadioAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CRadios__CRadioAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Radios::RadioAccessStatus>
@@ -391,7 +391,7 @@ IAsyncOperation<enum ABI::Windows::Devices::Radios::RadioAccessStatus> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::Radios::RadioAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CRadios__CRadioAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CRadios__CRadioAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CRadios__CRadioAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CDevices__CRadios__CRadioAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Radios::RadioAccessStatus>
@@ -422,7 +422,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CRadios__CRa
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CRadios__CRadio*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Radios::IRadio*>*>
@@ -454,7 +454,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CRadios__CRadio*> : IAsyncOp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CRadios__CRadio*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CRadios__CRadio ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Radios::IRadio*>*>
@@ -487,7 +487,7 @@ ITypedEventHandler<ABI::Windows::Devices::Radios::Radio*,IInspectable*> : ITyped
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Radios::Radio*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Radios::IRadio*,IInspectable*>
@@ -510,9 +510,9 @@ namespace ABI {
                 
                 typedef enum RadioAccessStatus : int RadioAccessStatus;
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -521,9 +521,9 @@ namespace ABI {
                 
                 typedef enum RadioKind : int RadioKind;
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -532,9 +532,9 @@ namespace ABI {
                 
                 typedef enum RadioState : int RadioState;
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -570,9 +570,9 @@ namespace ABI {
                     RadioAccessStatus_DeniedBySystem = 3,
                 };
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -600,9 +600,9 @@ namespace ABI {
                     RadioKind_FM = 4,
                 };
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -629,9 +629,9 @@ namespace ABI {
                     RadioState_Disabled = 3,
                 };
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -684,9 +684,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadio=_uuidof(IRadio);
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CRadios_CIRadio;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CRadios_CIRadio_INTERFACE_DEFINED__) */
@@ -735,9 +735,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRadioStatics=_uuidof(IRadioStatics);
                 
-            } /* Windows */
+            } /* Radios */
         } /* Devices */
-    } /* Radios */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CRadios_CIRadioStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CRadios_CIRadioStatics_INTERFACE_DEFINED__) */
@@ -1423,7 +1423,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CRadios_CIRadio * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CRadios_CIRadio * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CRadios__CRadio_IInspectableVtbl;
 

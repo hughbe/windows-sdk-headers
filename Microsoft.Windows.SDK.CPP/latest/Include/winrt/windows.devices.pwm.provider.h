@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.pwm.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_DEVICESLOWLEVELCONTRACT_VERSION)
@@ -104,7 +104,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -146,10 +146,10 @@ namespace ABI {
             namespace Pwm {
                 namespace Provider {
                     interface IPwmControllerProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Pwm */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pwm */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmControllerProvider ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmControllerProvider_FWD_DEFINED__
@@ -162,10 +162,10 @@ namespace ABI {
             namespace Pwm {
                 namespace Provider {
                     interface IPwmProvider;
-                } /* Windows */
-            } /* Devices */
-        } /* Pwm */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pwm */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmProvider ABI::Windows::Devices::Pwm::Provider::IPwmProvider
 
 #endif // ____x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmProvider_FWD_DEFINED__
@@ -194,7 +194,7 @@ IIterator<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*> __FIIterator_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider_t;
 #define __FIIterator_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*>
@@ -226,7 +226,7 @@ IIterable<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*> __FIIterable_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider_t;
 #define __FIIterable_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*>
@@ -258,7 +258,7 @@ IVectorView<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*> __FIVectorView_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider_t;
 #define __FIVectorView_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CPwm__CProvider__CIPwmControllerProvider ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Pwm::Provider::IPwmControllerProvider*>
@@ -339,17 +339,17 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE SetPulseParameters(
                             /* [in] */INT32 pin,
                             /* [in] */DOUBLE dutyCycle,
-                            /* [in] */boolean invertPolarity
+                            /* [in] */::boolean invertPolarity
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPwmControllerProvider=_uuidof(IPwmControllerProvider);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Pwm */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pwm */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmControllerProvider;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmControllerProvider_INTERFACE_DEFINED__) */
@@ -386,10 +386,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPwmProvider=_uuidof(IPwmProvider);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Pwm */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pwm */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmProvider;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPwm_CProvider_CIPwmProvider_INTERFACE_DEFINED__) */

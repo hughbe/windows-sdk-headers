@@ -76,7 +76,10 @@ DEFINE_GUID(GUID_DEVINTERFACE_VIDEO_OUTPUT_ARRIVAL, 0x1AD9E4F0, 0xF88D, 0x4360, 
 // Property on a display class device's DevNode indicating that it is a indirect display
 //
 
-DEFINE_DEVPROPKEY(DEVPKEY_IndirectDisplay, 0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x01);
+DEFINE_DEVPROPKEY(DEVPKEY_IndirectDisplay,      0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x01);
+DEFINE_DEVPROPKEY(DEVPKEY_Device_TerminalLuid,  0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x02);    // DEVPROP_TYPE_BINARY
+DEFINE_DEVPROPKEY(DEVPKEY_Device_AdapterLuid,   0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x03);    // DEVPROP_TYPE_BINARY
+DEFINE_DEVPROPKEY(DEVPKEY_Device_ActivityId,    0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x04);    // DEVPROP_TYPE_BINARY
 
 struct INDIRECT_DISPLAY_INFO
 {
@@ -323,6 +326,31 @@ extern "C" {
 
 #define IOCTL_PANEL_GET_BACKLIGHT_REDUCTION \
     CTL_CODE(FILE_DEVICE_VIDEO, 0x306, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+//
+// Colorspace Transform control IOCLTs must/can be handled by the monitor, oem-panel, port/miniport
+// driver
+//
+
+#define IOCTL_COLORSPACE_TRANSFORM_QUERY_TARGET_CAPS \
+    CTL_CODE(FILE_DEVICE_VIDEO, 0x400, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_COLORSPACE_TRANSFORM_SET \
+    CTL_CODE(FILE_DEVICE_VIDEO, 0x401, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SET_ACTIVE_COLOR_PROFILE_NAME \
+    CTL_CODE(FILE_DEVICE_VIDEO, 0x402, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+
+//
+// Mipi DCS IOCLTs must/can be handled by the monitor, oem-panel, port/miniport
+// driver
+//
+#define IOCTL_MIPI_DSI2_QUERY_CAPS \
+    CTL_CODE(FILE_DEVICE_VIDEO, 0x500, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_MIPI_DSI2_TRANSMISSION \
+    CTL_CODE(FILE_DEVICE_VIDEO, 0x501, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 // Many of the video IOCTLs are modal. When ever the palette is set, or the
 // cursor is set or queried, it is done for the current mode.
@@ -2137,6 +2165,343 @@ typedef struct _PANEL_GET_BACKLIGHT_REDUCTION{
     USHORT                          BacklightEffective;
     BACKLIGHT_REDUCTION_GAMMA_RAMP  GammaRamp;
 } PANEL_GET_BACKLIGHT_REDUCTION, *PPANEL_GET_BACKLIGHT_REDUCTION;
+
+//
+// IOCTL_COLORSPACE_TRANSFORM_QUERY_TARGET_CAPS
+//
+typedef enum _COLORSPACE_TRANSFORM_DATA_TYPE
+{
+    COLORSPACE_TRANSFORM_DATA_TYPE_FIXED_POINT = 0,
+    COLORSPACE_TRANSFORM_DATA_TYPE_FLOAT,
+}COLORSPACE_TRANSFORM_DATA_TYPE;
+
+typedef struct _COLORSPACE_TRANSFORM_DATA_CAP
+{
+    COLORSPACE_TRANSFORM_DATA_TYPE DataType;
+    union
+    {
+        struct
+        {
+            ULONG BitCountOfInteger : 6;    // Bit count of integer if DataType is fixed-point(COLORSPACE_TRANSFORM_DATA_TYPE_FIXED_POINT)
+            ULONG BitCountOfFraction: 6;    // Bit count of fraction if DataType is fixed-point(COLORSPACE_TRANSFORM_DATA_TYPE_FIXED_POINT)
+        };
+
+        struct
+        {
+            ULONG BitCountOfExponent: 6;    // Bit count of exponent if the DataType is float(COLORSPACE_TRANSFORM_DATA_TYPE_FLOAT)
+            ULONG BitCountOfMantissa: 6;    // Bit count of mantissa if the DataType is float(COLORSPACE_TRANSFORM_DATA_TYPE_FLOAT)
+        };
+
+        ULONG Value;
+    };
+
+    float NumericRangeMin;                 // Minimum number of gamma data
+    float NumericRangeMax;                 // Maximum number of gamma data
+                                           // Examples: [-4, 4]:    NumericRangeMin =   -4; NumericRangeMax = 4
+                                           //           [0,  1]:    NumericRangeMin =    0; NumericRangeMax = 1
+                                           //           [-1.5, 2.5]:NumericRangeMin = -1.5; NumericRangeMax = 2.5
+                                           //           [0, 65504]: NumericRangeMin =    0; NumericRangeMax = 65504
+
+}COLORSPACE_TRANSFORM_DATA_CAP;
+
+typedef struct _COLORSPACE_TRANSFORM_1DLUT_CAP
+{
+    ULONG                           NumberOfLUTEntries;  // Number of lookup table entries.
+    COLORSPACE_TRANSFORM_DATA_CAP   DataCap;
+}COLORSPACE_TRANSFORM_1DLUT_CAP, *PCOLORSPACE_TRANSFORM_1DLUT_CAP;
+
+typedef struct _COLORSPACE_TRANSFORM_MATRIX_CAP
+{
+    union
+    {
+        struct
+        {
+            ULONG MatrixSizeX             : 10;   // X-dimension of Matrix
+            ULONG MatrixSizeY             : 10;   // Y-dimension of Matrix
+                                                  // Examples  3x3 ColorMatrix : SizeX = 3;  SizeY = 3;
+                                                  //           3x11 ColorMatrix: SizeX = 3;  SizeY = 11;
+        };
+        ULONG Value;
+    };
+    COLORSPACE_TRANSFORM_DATA_CAP   DataCap;
+}COLORSPACE_TRANSFORM_MATRIX_CAP, *PCOLORSPACE_TRANSFORM_MATRIX_CAP;
+
+typedef enum _COLORSPACE_TRANSFORM_TARGET_CAPS_VERSION
+{
+    COLORSPACE_TRANSFORM_VERSION_DEFAULT       = 0,
+    COLORSPACE_TRANSFORM_VERSION_1             = 1,
+    COLORSPACE_TRANSFORM_VERSION_NOT_SUPPORTED = COLORSPACE_TRANSFORM_VERSION_DEFAULT,
+}COLORSPACE_TRANSFORM_TARGET_CAPS_VERSION;
+
+typedef struct _COLORSPACE_TRANSFORM_TARGET_CAPS
+{
+    COLORSPACE_TRANSFORM_TARGET_CAPS_VERSION    Version;
+    COLORSPACE_TRANSFORM_1DLUT_CAP              LookupTable1DDegammaCap;
+    COLORSPACE_TRANSFORM_MATRIX_CAP             ColorMatrix3x3Cap;
+    COLORSPACE_TRANSFORM_1DLUT_CAP              LookupTable1DRegammaCap;
+}COLORSPACE_TRANSFORM_TARGET_CAPS, *PCOLORSPACE_TRANSFORM_TARGET_CAPS;
+
+//
+// IOCTL_COLORSPACE_TRANSFORM_SET
+//
+typedef enum _COLORSPACE_TRANSFORM_TYPE
+{
+    COLORSPACE_TRANSFORM_TYPE_UNINITIALIZED = 0,
+    COLORSPACE_TRANSFORM_TYPE_DEFAULT       = 1,
+    COLORSPACE_TRANSFORM_TYPE_RGB256x3x16   = 2,
+    COLORSPACE_TRANSFORM_TYPE_DXGI_1        = 3,
+    COLORSPACE_TRANSFORM_TYPE_MATRIX_3x4    = 4,
+    COLORSPACE_TRANSFORM_TYPE_MATRIX_V2     = 5,
+} COLORSPACE_TRANSFORM_TYPE;
+
+typedef struct _GAMMA_RAMP_RGB256x3x16
+{
+    USHORT  Red[256];
+    USHORT  Green[256];
+    USHORT  Blue[256];
+} GAMMA_RAMP_RGB256x3x16;
+
+typedef struct _GAMMA_RAMP_RGB
+{
+    float   Red;
+    float   Green;
+    float   Blue;
+} GAMMA_RAMP_RGB;
+
+typedef struct _GAMMA_RAMP_DXGI_1
+{
+    GAMMA_RAMP_RGB    Scale;
+    GAMMA_RAMP_RGB    Offset;
+    GAMMA_RAMP_RGB    GammaCurve[1025];
+} GAMMA_RAMP_DXGI_1;
+
+typedef struct _COLORSPACE_TRANSFORM_3x4
+{
+    float               ColorMatrix3x4[3][4];
+    float               ScalarMultiplier;
+    GAMMA_RAMP_RGB      LookupTable1D[4096];
+} COLORSPACE_TRANSFORM_3x4, *PCOLORSPACE_TRANSFORM_3x4;
+
+typedef enum _OUTPUT_WIRE_COLOR_SPACE_TYPE
+{
+    OUTPUT_WIRE_COLOR_SPACE_G22_P709               = 0,
+    OUTPUT_WIRE_COLOR_SPACE_RESERVED               = 4,
+    OUTPUT_WIRE_COLOR_SPACE_G2084_P2020            = 12,
+    OUTPUT_WIRE_COLOR_SPACE_G22_P709_WCG           = 30,
+    OUTPUT_WIRE_COLOR_SPACE_G22_P2020              = 31,
+    OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_HDR10PLUS  = 32,
+    OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_DVLL       = 33,
+} OUTPUT_WIRE_COLOR_SPACE_TYPE;
+
+typedef enum _OUTPUT_COLOR_ENCODING
+{
+    OUTPUT_COLOR_ENCODING_RGB           = 0,
+    OUTPUT_COLOR_ENCODING_YCBCR444      = 1,
+    OUTPUT_COLOR_ENCODING_YCBCR422      = 2,
+    OUTPUT_COLOR_ENCODING_YCBCR420      = 3,
+    OUTPUT_COLOR_ENCODING_INTENSITY     = 4,
+    OUTPUT_COLOR_ENCODING_FORCE_UINT32  = 0xFFFFFFFF
+} OUTPUT_COLOR_ENCODING;
+
+typedef struct _OUTPUT_WIRE_FORMAT
+{
+    OUTPUT_COLOR_ENCODING   ColorEncoding;
+    UINT32                  BitsPerPixel;
+} OUTPUT_WIRE_FORMAT;
+
+typedef enum _COLORSPACE_TRANSFORM_STAGE_CONTROL
+{
+    ColorSpaceTransformStageControl_No_Change = 0,
+    ColorSpaceTransformStageControl_Enable    = 1,
+    ColorSpaceTransformStageControl_Bypass    = 2,
+}COLORSPACE_TRANSFORM_STAGE_CONTROL, *PCOLORSPACE_TRANSFORM_STAGE_CONTROL;
+
+typedef struct _COLORSPACE_TRANSFORM_MATRIX_V2
+{
+    // stage of 1D Degamma.
+    COLORSPACE_TRANSFORM_STAGE_CONTROL     StageControlLookupTable1DDegamma;
+    GAMMA_RAMP_RGB                         LookupTable1DDegamma[4096];
+
+    // stage of 3x3 matrix
+    COLORSPACE_TRANSFORM_STAGE_CONTROL     StageControlColorMatrix3x3;
+    float                                  ColorMatrix3x3[3][3];
+
+    // stage of 1D Regamma.
+    COLORSPACE_TRANSFORM_STAGE_CONTROL     StageControlLookupTable1DRegamma;
+    GAMMA_RAMP_RGB                         LookupTable1DRegamma[4096];
+} COLORSPACE_TRANSFORM_MATRIX_V2, *PCOLORSPACE_TRANSFORM_MATRIX_V2;
+
+typedef struct _COLORSPACE_TRANSFORM
+{
+    COLORSPACE_TRANSFORM_TYPE Type;
+    union
+    {
+        GAMMA_RAMP_RGB256x3x16          Rgb256x3x16;       // Type == COLORSPACE_TRANSFORM_TYPE_RGB256x3x16.
+        GAMMA_RAMP_DXGI_1               Dxgi1;             // Type == COLORSPACE_TRANSFORM_TYPE_DXGI_1.
+        COLORSPACE_TRANSFORM_3x4        T3x4;              // Type == COLORSPACE_TRANSFORM_TYPE_MATRIX_3x4.
+        COLORSPACE_TRANSFORM_MATRIX_V2  MatrixV2;          // Type == COLORSPACE_TRANSFORM_TYPE_MATRIX_V2.
+    } Data;
+} COLORSPACE_TRANSFORM, *PCOLORSPACE_TRANSFORM;
+
+typedef struct _COLORSPACE_TRANSFORM_SET_INPUT
+{
+    OUTPUT_WIRE_COLOR_SPACE_TYPE    OutputWireColorSpaceExpected;
+    OUTPUT_WIRE_FORMAT              OutputWireFormatExpected;
+    COLORSPACE_TRANSFORM            ColorSpaceTransform;
+}COLORSPACE_TRANSFORM_SET_INPUT, *PCOLORSPACE_TRANSFORM_SET_INPUT;
+
+//
+// IOCTL_SET_ACTIVE_COLOR_PROFILE_NAME
+//
+typedef struct _SET_ACTIVE_COLOR_PROFILE_NAME
+{
+    WCHAR   ColorProfileName[1];
+}SET_ACTIVE_COLOR_PROFILE_NAME, *PSET_ACTIVE_COLOR_PROFILE_NAME;
+
+
+//
+//  IOCTL_MIPI_DSI2_QUERY_CAPS
+//
+typedef struct _MIPI_DSI2_CAPS
+{
+    UCHAR    DSI2VersionMajor;
+    UCHAR    DSI2VersionMinor;
+    USHORT   TargetMaximumReturnPacketSize;
+
+    UCHAR    ResultCodeFlags;
+    UCHAR    ResultCodeStatus;
+    UCHAR    Revision;
+    UCHAR    Level;
+
+    UCHAR    DeviceClassHi;
+    UCHAR    DeviceClassLo;
+    UCHAR    ManufacturerHi;
+    UCHAR    ManufacturerLo;
+
+    UCHAR    ProductHi;
+    UCHAR    ProductLo;
+    UCHAR    LengthHi;
+    UCHAR    LengthLo;
+} MIPI_DSI2_CAPS, *PMIPI_DSI2_CAPS;
+
+//
+// IOCTL_MIPI_DSI2_TRANSMISSION
+//
+typedef enum _DSI2_CONTROL_TRANSMISSION_MODE
+{
+    DCT_DEFAULT = 0,
+    DCT_FORCE_LOW_POWER,
+    DCT_FORCE_HIGH_PERFORMANCE,
+} DSI2_CONTROL_TRANSMISSION_MODE;
+
+#define DSI2_PACKET_EMBEDDED_PAYLOAD_SIZE 8
+
+typedef struct _MIPI_DSI2_PACKET
+{
+    union
+    {
+        ULONG    DataId : 8;
+        struct
+        {
+            ULONG    DataType : 6;
+            ULONG    VirtualChannel : 2;
+        };
+    };
+
+    union
+    {
+        struct
+        {
+            ULONG    Data0 : 8;
+            ULONG    Data1 : 8;
+        };
+        ULONG    LongWriteWordCount : 16;
+    };
+
+    ULONG    EccFiller : 8;
+
+    UCHAR    Payload[DSI2_PACKET_EMBEDDED_PAYLOAD_SIZE];
+} MIPI_DSI2_PACKET;
+
+
+typedef struct _MIPI_DSI2_TRANSMISSION
+{
+    ULONG               TotalBufferSize;
+
+    struct
+    {
+        ULONG           PacketCount : 8;
+        ULONG           FailedPacket : 8;
+        ULONG           TransmissionMode : 2;
+        ULONG           ReportMipiErrors : 1;
+        ULONG           ClearMipiErrors : 1;
+        ULONG           SecondaryPort : 1;
+        ULONG           Reserved : 11;
+    };
+
+    USHORT              ReadWordCount;
+    USHORT              FinalCommandExtraPayload;
+
+    USHORT              MipiErrors;
+    USHORT              HostErrors;
+
+    MIPI_DSI2_PACKET    Packets[1];
+} MIPI_DSI2_TRANSMISSION;
+
+//
+// Maximum PacketCount allowed.
+//
+#define MAX_PACKET_COUNT                          0x80
+
+//
+//If not known or there is no detected packet error, DSI2_INVALID_PACKET_INDEX
+//is set to FailedPacket.
+//
+#define DSI2_INVALID_PACKET_INDEX                  0xFF
+
+//
+// MipiErrors reported by communication with the peripheral
+//
+#define DSI2_SOT_ERROR                             0x0001
+#define DSI2_SOT_SYNC_ERROR                        0x0002
+#define DSI2_EOT_SYNC_ERROR                        0x0004
+#define DSI2_ESCAPE_MODE_ENTRY_COMMAND_ERROR       0x0008
+#define DSI2_LOW_POWER_TRANSMIT_SYNC_ERROR         0x0010
+#define DSI2_PERIPHERAL_TIMEOUT_ERROR              0x0020
+#define DSI2_FALSE_CONTROL_ERROR                   0x0040
+#define DSI2_CONTENTION_DETECTED                   0x0080
+#define DSI2_CHECKSUM_ERROR_CORRECTED              0x0100
+#define DSI2_CHECKSUM_ERROR_NOT_CORRECTED          0x0200
+#define DSI2_LONG_PACKET_PAYLOAD_CHECKSUM_ERROR    0x0400
+#define DSI2_DSI_DATA_TYPE_NOT_RECOGNIZED          0x0800
+#define DSI2_DSI_VC_ID_INVALID                     0x1000
+#define DSI2_INVALID_TRANSMISSION_LENGTH           0x2000
+//      RESERVED                                        0x4000
+#define DSI2_DSI_PROTOCOL_VIOLATION                0x8000
+
+//
+// HostErrors reported by the graphics driver or OS
+//
+#define HOST_DSI2_DEVICE_NOT_READY                 0x0001
+#define HOST_DSI2_INTERFACE_RESET                  0x0002
+#define HOST_DSI2_DEVICE_RESET                     0x0004
+#define HOST_DSI2_TRANSMISSION_CANCELLED           0x0010
+#define HOST_DSI2_TRANSMISSION_DROPPED             0x0020
+#define HOST_DSI2_TRANSMISSION_TIMEOUT             0x0040
+#define HOST_DSI2_INVALID_TRANSMISSION             0x0100
+#define HOST_DSI2_OS_REJECTED_PACKET               0x0200
+#define HOST_DSI2_DRIVER_REJECTED_PACKET           0x0400
+#define HOST_DSI2_BAD_TRANSMISSION_MODE            0x1000
+
+typedef MIPI_DSI2_TRANSMISSION   MIPI_DSI2_TRANSMISSION_INPUT, *PMIPI_DSI2_TRANSMISSION_INPUT;
+typedef MIPI_DSI2_TRANSMISSION   MIPI_DSI2_TRANSMISSION_OUTPUT, *PMIPI_DSI2_TRANSMISSION_OUTPUT;
+
+//
+// Monitor override types
+//
+
+// {F196C02F-F86F-4F9A-AA15-E9CEBDFE3B96}
+DEFINE_GUID(GUID_MONITOR_OVERRIDE_PSEUDO_SPECIALIZED, 0xf196c02f, 0xf86f, 0x4f9a, 0xaa, 0x15, 0xe9, 0xce, 0xbd, 0xfe, 0x3b, 0x96);
 
 #ifdef __cplusplus
 }

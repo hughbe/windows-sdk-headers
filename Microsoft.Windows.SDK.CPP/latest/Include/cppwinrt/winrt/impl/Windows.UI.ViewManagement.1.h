@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,6 +8,7 @@
 #include "winrt/impl/Windows.UI.0.h"
 #include "winrt/impl/Windows.UI.Core.0.h"
 #include "winrt/impl/Windows.UI.Popups.0.h"
+#include "winrt/impl/Windows.UI.WindowManagement.0.h"
 #include "winrt/impl/Windows.UI.ViewManagement.0.h"
 
 WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement {
@@ -52,6 +53,20 @@ struct WINRT_EBO IApplicationView4 :
     impl::consume_t<IApplicationView4>
 {
     IApplicationView4(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IApplicationView7 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IApplicationView7>
+{
+    IApplicationView7(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IApplicationView9 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IApplicationView9>
+{
+    IApplicationView9(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IApplicationViewConsolidatedEventArgs :
@@ -117,6 +132,13 @@ struct WINRT_EBO IApplicationViewStatics3 :
     IApplicationViewStatics3(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IApplicationViewStatics4 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IApplicationViewStatics4>
+{
+    IApplicationViewStatics4(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IApplicationViewSwitcherStatics :
     Windows::Foundation::IInspectable,
     impl::consume_t<IApplicationViewSwitcherStatics>
@@ -159,6 +181,13 @@ struct WINRT_EBO IApplicationViewTransferContextStatics :
     IApplicationViewTransferContextStatics(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IApplicationViewWithContext :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IApplicationViewWithContext>
+{
+    IApplicationViewWithContext(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IInputPane :
     Windows::Foundation::IInspectable,
     impl::consume_t<IInputPane>
@@ -185,6 +214,13 @@ struct WINRT_EBO IInputPaneStatics :
     impl::consume_t<IInputPaneStatics>
 {
     IInputPaneStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInputPaneStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInputPaneStatics2>
+{
+    IInputPaneStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IInputPaneVisibilityEventArgs :
@@ -255,6 +291,20 @@ struct WINRT_EBO IUISettings4 :
     impl::consume_t<IUISettings4>
 {
     IUISettings4(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUISettings5 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUISettings5>
+{
+    IUISettings5(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUISettingsAutoHideScrollBarsChangedEventArgs :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUISettingsAutoHideScrollBarsChangedEventArgs>
+{
+    IUISettingsAutoHideScrollBarsChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IUIViewSettings :

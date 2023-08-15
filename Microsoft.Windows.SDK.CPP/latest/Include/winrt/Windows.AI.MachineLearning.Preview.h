@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ai.machinelearning.preview.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -116,11 +116,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -284,10 +280,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface IImageVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIImageVariableDescriptorPreview ABI::Windows::AI::MachineLearning::Preview::IImageVariableDescriptorPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIImageVariableDescriptorPreview_FWD_DEFINED__
@@ -300,10 +296,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface IInferencingOptionsPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIInferencingOptionsPreview ABI::Windows::AI::MachineLearning::Preview::IInferencingOptionsPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIInferencingOptionsPreview_FWD_DEFINED__
@@ -316,10 +312,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ILearningModelBindingPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreview ABI::Windows::AI::MachineLearning::Preview::ILearningModelBindingPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreview_FWD_DEFINED__
@@ -332,10 +328,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ILearningModelBindingPreviewFactory;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreviewFactory ABI::Windows::AI::MachineLearning::Preview::ILearningModelBindingPreviewFactory
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreviewFactory_FWD_DEFINED__
@@ -348,10 +344,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ILearningModelDescriptionPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelDescriptionPreview ABI::Windows::AI::MachineLearning::Preview::ILearningModelDescriptionPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelDescriptionPreview_FWD_DEFINED__
@@ -364,10 +360,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ILearningModelEvaluationResultPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelEvaluationResultPreview ABI::Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelEvaluationResultPreview_FWD_DEFINED__
@@ -380,10 +376,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ILearningModelPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreview ABI::Windows::AI::MachineLearning::Preview::ILearningModelPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreview_FWD_DEFINED__
@@ -396,10 +392,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ILearningModelPreviewStatics;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreviewStatics ABI::Windows::AI::MachineLearning::Preview::ILearningModelPreviewStatics
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreviewStatics_FWD_DEFINED__
@@ -412,10 +408,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ILearningModelVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelVariableDescriptorPreview ABI::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelVariableDescriptorPreview_FWD_DEFINED__
@@ -428,10 +424,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface IMapVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIMapVariableDescriptorPreview ABI::Windows::AI::MachineLearning::Preview::IMapVariableDescriptorPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIMapVariableDescriptorPreview_FWD_DEFINED__
@@ -444,10 +440,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ISequenceVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CISequenceVariableDescriptorPreview ABI::Windows::AI::MachineLearning::Preview::ISequenceVariableDescriptorPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CISequenceVariableDescriptorPreview_FWD_DEFINED__
@@ -460,10 +456,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     interface ITensorVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CAI_CMachineLearning_CPreview_CITensorVariableDescriptorPreview ABI::Windows::AI::MachineLearning::Preview::ITensorVariableDescriptorPreview
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CITensorVariableDescriptorPreview_FWD_DEFINED__
@@ -492,7 +488,7 @@ IIterator<ABI::Windows::AI::MachineLearning::Preview::ILearningModelVariableDesc
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview*> __FIIterator_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview_t;
 #define __FIIterator_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview*>
@@ -524,7 +520,7 @@ IIterable<ABI::Windows::AI::MachineLearning::Preview::ILearningModelVariableDesc
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview*> __FIIterable_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview_t;
 #define __FIIterable_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CAI__CMachineLearning__CPreview__CILearningModelVariableDescriptorPreview ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview*>
@@ -541,10 +537,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class LearningModelEvaluationResultPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x10000
@@ -567,7 +563,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::Preview::Lear
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview*> __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview*>
@@ -599,7 +595,7 @@ IAsyncOperation<ABI::Windows::AI::MachineLearning::Preview::LearningModelEvaluat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview*> __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview_t;
 #define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelEvaluationResultPreview ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview*>
@@ -616,10 +612,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class LearningModelPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x10000
@@ -642,7 +638,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::Preview::Lear
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::Preview::LearningModelPreview*> __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::AI::MachineLearning::Preview::ILearningModelPreview*>
@@ -674,7 +670,7 @@ IAsyncOperation<ABI::Windows::AI::MachineLearning::Preview::LearningModelPreview
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::AI::MachineLearning::Preview::LearningModelPreview*> __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview_t;
 #define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CAI__CMachineLearning__CPreview__CLearningModelPreview ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::AI::MachineLearning::Preview::ILearningModelPreview*>
@@ -705,7 +701,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -735,7 +731,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -765,7 +761,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -795,7 +791,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -824,7 +820,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -854,7 +850,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -884,7 +880,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -913,7 +909,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -943,7 +939,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -972,7 +968,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -1001,7 +997,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -1030,7 +1026,7 @@ IIterator<__int64> : IIterator_impl<__int64>
 // correct parameterized interface specialization.
 typedef IIterator<__int64> __FIIterator_1___z__zint64_t;
 #define __FIIterator_1___z__zint64 ABI::Windows::Foundation::Collections::__FIIterator_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___z__zint64 ABI::Windows::Foundation::Collections::IIterator<INT64>
@@ -1059,7 +1055,7 @@ IIterable<__int64> : IIterable_impl<__int64>
 // correct parameterized interface specialization.
 typedef IIterable<__int64> __FIIterable_1___z__zint64_t;
 #define __FIIterable_1___z__zint64 ABI::Windows::Foundation::Collections::__FIIterable_1___z__zint64_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___z__zint64 ABI::Windows::Foundation::Collections::IIterable<INT64>
@@ -1078,9 +1074,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1096,9 +1092,9 @@ namespace ABI {
                 
                 typedef enum BitmapPixelFormat : int BitmapPixelFormat;
                 
-            } /* Windows */
+            } /* Imaging */
         } /* Graphics */
-    } /* Imaging */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1109,8 +1105,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1125,9 +1121,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -1145,10 +1141,10 @@ namespace ABI {
                     
                     typedef enum FeatureElementKindPreview : int FeatureElementKindPreview;
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1158,10 +1154,10 @@ namespace ABI {
                     
                     typedef enum LearningModelDeviceKindPreview : int LearningModelDeviceKindPreview;
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1171,10 +1167,10 @@ namespace ABI {
                     
                     typedef enum LearningModelFeatureKindPreview : int LearningModelFeatureKindPreview;
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1194,10 +1190,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class ImageVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1206,10 +1202,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class InferencingOptionsPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1218,10 +1214,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class LearningModelBindingPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1230,10 +1226,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class LearningModelDescriptionPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1244,10 +1240,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class LearningModelVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1256,10 +1252,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class MapVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1268,10 +1264,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class SequenceVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1280,10 +1276,10 @@ namespace ABI {
             namespace MachineLearning {
                 namespace Preview {
                     class TensorVariableDescriptorPreview;
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1337,10 +1333,10 @@ namespace ABI {
                         FeatureElementKindPreview_Complex128 = 15,
                     };
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x10000
 
 
@@ -1374,10 +1370,10 @@ namespace ABI {
                         LearningModelDeviceKindPreview_LearningDeviceFpga = 5,
                     };
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x10000
 
 
@@ -1410,10 +1406,10 @@ namespace ABI {
                         LearningModelFeatureKindPreview_Image = 4,
                     };
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x10000
 
 
@@ -1476,10 +1472,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IImageVariableDescriptorPreview=_uuidof(IImageVariableDescriptorPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIImageVariableDescriptorPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIImageVariableDescriptorPreview_INTERFACE_DEFINED__) */
@@ -1534,14 +1530,14 @@ namespace ABI {
                         DEPRECATED("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
                         #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsTracingEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                         #if WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         DEPRECATED("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
                         #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_IsTracingEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                         #if WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
@@ -1562,38 +1558,38 @@ namespace ABI {
                         DEPRECATED("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
                         #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_MinimizeMemoryAllocation(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                         #if WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         DEPRECATED("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
                         #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_MinimizeMemoryAllocation(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                         #if WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         DEPRECATED("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
                         #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_ReclaimMemoryAfterEvaluation(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                         #if WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         DEPRECATED("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
                         #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_ReclaimMemoryAfterEvaluation(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInferencingOptionsPreview=_uuidof(IInferencingOptionsPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIInferencingOptionsPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIInferencingOptionsPreview_INTERFACE_DEFINED__) */
@@ -1661,10 +1657,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILearningModelBindingPreview=_uuidof(ILearningModelBindingPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreview_INTERFACE_DEFINED__) */
@@ -1713,10 +1709,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILearningModelBindingPreviewFactory=_uuidof(ILearningModelBindingPreviewFactory);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreviewFactory;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelBindingPreviewFactory_INTERFACE_DEFINED__) */
@@ -1813,10 +1809,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILearningModelDescriptionPreview=_uuidof(ILearningModelDescriptionPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelDescriptionPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelDescriptionPreview_INTERFACE_DEFINED__) */
@@ -1871,10 +1867,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILearningModelEvaluationResultPreview=_uuidof(ILearningModelEvaluationResultPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelEvaluationResultPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelEvaluationResultPreview_INTERFACE_DEFINED__) */
@@ -1954,10 +1950,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILearningModelPreview=_uuidof(ILearningModelPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreview_INTERFACE_DEFINED__) */
@@ -2014,10 +2010,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ILearningModelPreviewStatics=_uuidof(ILearningModelPreviewStatics);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelPreviewStatics_INTERFACE_DEFINED__) */
@@ -2076,17 +2072,17 @@ namespace ABI {
                         DEPRECATED("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
                         #endif // WINDOWS_AI_MACHINELEARNING_PREVIEW_MACHINELEARNINGPREVIEWCONTRACT_VERSION >= 0x20000
                         /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsRequired(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_ILearningModelVariableDescriptorPreview=_uuidof(ILearningModelVariableDescriptorPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelVariableDescriptorPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CILearningModelVariableDescriptorPreview_INTERFACE_DEFINED__) */
@@ -2159,10 +2155,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMapVariableDescriptorPreview=_uuidof(IMapVariableDescriptorPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIMapVariableDescriptorPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CIMapVariableDescriptorPreview_INTERFACE_DEFINED__) */
@@ -2214,10 +2210,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ISequenceVariableDescriptorPreview=_uuidof(ISequenceVariableDescriptorPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CISequenceVariableDescriptorPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CISequenceVariableDescriptorPreview_INTERFACE_DEFINED__) */
@@ -2276,10 +2272,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITensorVariableDescriptorPreview=_uuidof(ITensorVariableDescriptorPreview);
                     
-                } /* Windows */
-            } /* AI */
-        } /* MachineLearning */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CPreview_CITensorVariableDescriptorPreview;
 #endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CPreview_CITensorVariableDescriptorPreview_INTERFACE_DEFINED__) */

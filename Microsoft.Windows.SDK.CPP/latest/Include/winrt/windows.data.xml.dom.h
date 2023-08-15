@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.data.xml.dom.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,10 +275,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IDtdEntity;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIDtdEntity ABI::Windows::Data::Xml::Dom::IDtdEntity
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIDtdEntity_FWD_DEFINED__
@@ -295,10 +291,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IDtdNotation;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIDtdNotation ABI::Windows::Data::Xml::Dom::IDtdNotation
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIDtdNotation_FWD_DEFINED__
@@ -311,10 +307,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlAttribute;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlAttribute ABI::Windows::Data::Xml::Dom::IXmlAttribute
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlAttribute_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlCDataSection;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlCDataSection ABI::Windows::Data::Xml::Dom::IXmlCDataSection
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlCDataSection_FWD_DEFINED__
@@ -343,10 +339,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlCharacterData;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlCharacterData ABI::Windows::Data::Xml::Dom::IXmlCharacterData
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlCharacterData_FWD_DEFINED__
@@ -359,10 +355,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlComment;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlComment ABI::Windows::Data::Xml::Dom::IXmlComment
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlComment_FWD_DEFINED__
@@ -375,10 +371,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocument;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument ABI::Windows::Data::Xml::Dom::IXmlDocument
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_FWD_DEFINED__
@@ -391,10 +387,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocumentFragment;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentFragment ABI::Windows::Data::Xml::Dom::IXmlDocumentFragment
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentFragment_FWD_DEFINED__
@@ -407,10 +403,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocumentIO;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO ABI::Windows::Data::Xml::Dom::IXmlDocumentIO
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocumentIO2;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO2 ABI::Windows::Data::Xml::Dom::IXmlDocumentIO2
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO2_FWD_DEFINED__
@@ -439,10 +435,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocumentStatics;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentStatics ABI::Windows::Data::Xml::Dom::IXmlDocumentStatics
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentStatics_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDocumentType;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentType ABI::Windows::Data::Xml::Dom::IXmlDocumentType
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentType_FWD_DEFINED__
@@ -471,10 +467,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlDomImplementation;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlDomImplementation ABI::Windows::Data::Xml::Dom::IXmlDomImplementation
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlDomImplementation_FWD_DEFINED__
@@ -487,10 +483,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlElement;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlElement ABI::Windows::Data::Xml::Dom::IXmlElement
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlElement_FWD_DEFINED__
@@ -503,10 +499,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlEntityReference;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlEntityReference ABI::Windows::Data::Xml::Dom::IXmlEntityReference
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlEntityReference_FWD_DEFINED__
@@ -519,10 +515,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlLoadSettings;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlLoadSettings ABI::Windows::Data::Xml::Dom::IXmlLoadSettings
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlLoadSettings_FWD_DEFINED__
@@ -535,10 +531,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlNamedNodeMap;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap ABI::Windows::Data::Xml::Dom::IXmlNamedNodeMap
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap_FWD_DEFINED__
@@ -551,10 +547,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlNode;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlNode ABI::Windows::Data::Xml::Dom::IXmlNode
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlNode_FWD_DEFINED__
@@ -567,10 +563,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlNodeList;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeList ABI::Windows::Data::Xml::Dom::IXmlNodeList
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeList_FWD_DEFINED__
@@ -583,10 +579,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlNodeSelector;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSelector ABI::Windows::Data::Xml::Dom::IXmlNodeSelector
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSelector_FWD_DEFINED__
@@ -599,10 +595,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlNodeSerializer;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSerializer ABI::Windows::Data::Xml::Dom::IXmlNodeSerializer
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSerializer_FWD_DEFINED__
@@ -615,10 +611,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlProcessingInstruction;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction ABI::Windows::Data::Xml::Dom::IXmlProcessingInstruction
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction_FWD_DEFINED__
@@ -631,10 +627,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     interface IXmlText;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CXml_CDom_CIXmlText ABI::Windows::Data::Xml::Dom::IXmlText
 
 #endif // ____x_ABI_CWindows_CData_CXml_CDom_CIXmlText_FWD_DEFINED__
@@ -663,7 +659,7 @@ IIterator<ABI::Windows::Data::Xml::Dom::IXmlNode*> : IIterator_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Data::Xml::Dom::IXmlNode*> __FIIterator_1_Windows__CData__CXml__CDom__CIXmlNode_t;
 #define __FIIterator_1_Windows__CData__CXml__CDom__CIXmlNode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CXml__CDom__CIXmlNode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CXml__CDom__CIXmlNode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Xml::Dom::IXmlNode*>
@@ -695,7 +691,7 @@ IIterable<ABI::Windows::Data::Xml::Dom::IXmlNode*> : IIterable_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Data::Xml::Dom::IXmlNode*> __FIIterable_1_Windows__CData__CXml__CDom__CIXmlNode_t;
 #define __FIIterable_1_Windows__CData__CXml__CDom__CIXmlNode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CXml__CDom__CIXmlNode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CXml__CDom__CIXmlNode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Xml::Dom::IXmlNode*>
@@ -727,7 +723,7 @@ IVectorView<ABI::Windows::Data::Xml::Dom::IXmlNode*> : IVectorView_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Data::Xml::Dom::IXmlNode*> __FIVectorView_1_Windows__CData__CXml__CDom__CIXmlNode_t;
 #define __FIVectorView_1_Windows__CData__CXml__CDom__CIXmlNode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CXml__CDom__CIXmlNode_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CXml__CDom__CIXmlNode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Xml::Dom::IXmlNode*>
@@ -744,10 +740,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlDocument;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -770,7 +766,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Data::Xml::Dom::XmlDocument*> : IA
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Data::Xml::Dom::XmlDocument*> __FIAsyncOperationCompletedHandler_1_Windows__CData__CXml__CDom__CXmlDocument_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CData__CXml__CDom__CXmlDocument ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CData__CXml__CDom__CXmlDocument_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CData__CXml__CDom__CXmlDocument ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Data::Xml::Dom::IXmlDocument*>
@@ -802,7 +798,7 @@ IAsyncOperation<ABI::Windows::Data::Xml::Dom::XmlDocument*> : IAsyncOperation_im
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Data::Xml::Dom::XmlDocument*> __FIAsyncOperation_1_Windows__CData__CXml__CDom__CXmlDocument_t;
 #define __FIAsyncOperation_1_Windows__CData__CXml__CDom__CXmlDocument ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CData__CXml__CDom__CXmlDocument_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CData__CXml__CDom__CXmlDocument ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Data::Xml::Dom::IXmlDocument*>
@@ -821,8 +817,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -833,8 +829,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -842,8 +838,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -857,8 +853,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -873,9 +869,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -892,10 +888,10 @@ namespace ABI {
                     
                     typedef enum NodeType : int NodeType;
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 
@@ -926,10 +922,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class DtdEntity;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -938,10 +934,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class DtdNotation;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -950,10 +946,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlAttribute;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -962,10 +958,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlCDataSection;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -974,10 +970,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlComment;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 
@@ -987,10 +983,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlDocumentFragment;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -999,10 +995,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlDocumentType;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1011,10 +1007,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlDomImplementation;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1023,10 +1019,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlElement;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1035,10 +1031,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlEntityReference;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1047,10 +1043,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlLoadSettings;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1059,10 +1055,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlNamedNodeMap;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1071,10 +1067,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlNodeList;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1083,10 +1079,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlProcessingInstruction;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1095,10 +1091,10 @@ namespace ABI {
             namespace Xml {
                 namespace Dom {
                     class XmlText;
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1144,10 +1140,10 @@ namespace ABI {
                         NodeType_NotationNode = 12,
                     };
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1196,10 +1192,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDtdEntity=_uuidof(IDtdEntity);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIDtdEntity;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIDtdEntity_INTERFACE_DEFINED__) */
@@ -1248,10 +1244,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IDtdNotation=_uuidof(IDtdNotation);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIDtdNotation;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIDtdNotation_INTERFACE_DEFINED__) */
@@ -1293,7 +1289,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Specified(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1306,10 +1302,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlAttribute=_uuidof(IXmlAttribute);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlAttribute;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlAttribute_INTERFACE_DEFINED__) */
@@ -1354,10 +1350,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlCDataSection=_uuidof(IXmlCDataSection);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlCDataSection;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlCDataSection_INTERFACE_DEFINED__) */
@@ -1427,10 +1423,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlCharacterData=_uuidof(IXmlCharacterData);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlCharacterData;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlCharacterData_INTERFACE_DEFINED__) */
@@ -1474,10 +1470,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlComment=_uuidof(IXmlComment);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlComment;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlComment_INTERFACE_DEFINED__) */
@@ -1579,7 +1575,7 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ImportNode(
                             /* [in] */__RPC__in_opt ABI::Windows::Data::Xml::Dom::IXmlNode * node,
-                            /* [in] */boolean deep,
+                            /* [in] */::boolean deep,
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Data::Xml::Dom::IXmlNode * * newNode
                             ) = 0;
                         
@@ -1587,10 +1583,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlDocument=_uuidof(IXmlDocument);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocument_INTERFACE_DEFINED__) */
@@ -1633,10 +1629,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlDocumentFragment=_uuidof(IXmlDocumentFragment);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentFragment;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentFragment_INTERFACE_DEFINED__) */
@@ -1684,10 +1680,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlDocumentIO=_uuidof(IXmlDocumentIO);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO_INTERFACE_DEFINED__) */
@@ -1731,10 +1727,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlDocumentIO2=_uuidof(IXmlDocumentIO2);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO2;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentIO2_INTERFACE_DEFINED__) */
@@ -1789,10 +1785,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlDocumentStatics=_uuidof(IXmlDocumentStatics);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentStatics;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentStatics_INTERFACE_DEFINED__) */
@@ -1844,10 +1840,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlDocumentType=_uuidof(IXmlDocumentType);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentType;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlDocumentType_INTERFACE_DEFINED__) */
@@ -1882,17 +1878,17 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE HasFeature(
                             /* [in] */__RPC__in HSTRING feature,
                             /* [in] */__RPC__in_opt IInspectable * version,
-                            /* [retval, out] */__RPC__out boolean * featureSupported
+                            /* [retval, out] */__RPC__out ::boolean * featureSupported
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IXmlDomImplementation=_uuidof(IXmlDomImplementation);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlDomImplementation;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlDomImplementation_INTERFACE_DEFINED__) */
@@ -1988,10 +1984,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlElement=_uuidof(IXmlElement);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlElement;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlElement_INTERFACE_DEFINED__) */
@@ -2034,10 +2030,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlEntityReference=_uuidof(IXmlEntityReference);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlEntityReference;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlEntityReference_INTERFACE_DEFINED__) */
@@ -2076,38 +2072,38 @@ namespace ABI {
                             /* [in] */UINT32 value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProhibitDtd(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ProhibitDtd(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ResolveExternals(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ResolveExternals(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ValidateOnParse(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ValidateOnParse(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ElementContentWhiteSpace(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ElementContentWhiteSpace(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IXmlLoadSettings=_uuidof(IXmlLoadSettings);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlLoadSettings;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlLoadSettings_INTERFACE_DEFINED__) */
@@ -2182,10 +2178,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlNamedNodeMap=_uuidof(IXmlNamedNodeMap);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap_INTERFACE_DEFINED__) */
@@ -2253,7 +2249,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Data::Xml::Dom::IXmlNamedNodeMap * * value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE HasChildNodes(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OwnerDocument(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Data::Xml::Dom::IXmlDocument * * value
@@ -2277,7 +2273,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Data::Xml::Dom::IXmlNode * * appendedChild
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CloneNode(
-                            /* [in] */boolean deep,
+                            /* [in] */::boolean deep,
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Data::Xml::Dom::IXmlNode * * newNode
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NamespaceUri(
@@ -2298,10 +2294,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlNode=_uuidof(IXmlNode);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlNode;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlNode_INTERFACE_DEFINED__) */
@@ -2350,10 +2346,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlNodeList=_uuidof(IXmlNodeList);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeList;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeList_INTERFACE_DEFINED__) */
@@ -2405,10 +2401,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlNodeSelector=_uuidof(IXmlNodeSelector);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSelector;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSelector_INTERFACE_DEFINED__) */
@@ -2451,10 +2447,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlNodeSerializer=_uuidof(IXmlNodeSerializer);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSerializer;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlNodeSerializer_INTERFACE_DEFINED__) */
@@ -2506,10 +2502,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlProcessingInstruction=_uuidof(IXmlProcessingInstruction);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction_INTERFACE_DEFINED__) */
@@ -2554,10 +2550,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IXmlText=_uuidof(IXmlText);
                     
-                } /* Windows */
-            } /* Data */
-        } /* Xml */
-    } /* Dom */} /* ABI */
+                } /* Dom */
+            } /* Xml */
+        } /* Data */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CXml_CDom_CIXmlText;
 #endif /* !defined(____x_ABI_CWindows_CData_CXml_CDom_CIXmlText_INTERFACE_DEFINED__) */

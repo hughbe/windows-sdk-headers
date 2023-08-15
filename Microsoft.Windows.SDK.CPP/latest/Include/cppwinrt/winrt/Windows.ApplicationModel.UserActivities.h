@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,6 +11,7 @@
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Security.Credentials.2.h"
+#include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.UI.Shell.2.h"
 #include "winrt/impl/Windows.ApplicationModel.UserActivities.2.h"
@@ -226,6 +227,13 @@ template <typename D> Windows::ApplicationModel::UserActivities::UserActivityCha
 {
     Windows::ApplicationModel::UserActivities::UserActivityChannel result{ nullptr };
     check_hresult(WINRT_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2)->TryGetForWebAccount(get_abi(account), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::ApplicationModel::UserActivities::UserActivityChannel consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3<D>::GetForUser(Windows::System::User const& user) const
+{
+    Windows::ApplicationModel::UserActivities::UserActivityChannel result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3)->GetForUser(get_abi(user), put_abi(result)));
     return result;
 }
 
@@ -867,6 +875,23 @@ struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityChanne
 };
 
 template <typename D>
+struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>
+{
+    int32_t WINRT_CALL GetForUser(void* user, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(GetForUser, WINRT_WRAP(Windows::ApplicationModel::UserActivities::UserActivityChannel), Windows::System::User const&);
+            *result = detach_from<Windows::ApplicationModel::UserActivities::UserActivityChannel>(this->shim().GetForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
 {
     int32_t WINRT_CALL ToJson(void** result) noexcept final
@@ -1309,6 +1334,11 @@ inline Windows::ApplicationModel::UserActivities::UserActivityChannel UserActivi
     return impl::call_factory<UserActivityChannel, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>([&](auto&& f) { return f.TryGetForWebAccount(account); });
 }
 
+inline Windows::ApplicationModel::UserActivities::UserActivityChannel UserActivityChannel::GetForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<UserActivityChannel, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>([&](auto&& f) { return f.GetForUser(user); });
+}
+
 inline Windows::ApplicationModel::UserActivities::UserActivityContentInfo UserActivityContentInfo::FromJson(param::hstring const& value)
 {
     return impl::call_factory<UserActivityContentInfo, Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>([&](auto&& f) { return f.FromJson(value); });
@@ -1332,6 +1362,7 @@ template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserAc
 template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel2> {};
 template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> {};
+template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> {};
 template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> {};
 template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics> {};
 template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityFactory> {};

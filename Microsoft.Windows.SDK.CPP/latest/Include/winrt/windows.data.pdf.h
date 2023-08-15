@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.data.pdf.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 interface IPdfDocument;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CPdf_CIPdfDocument ABI::Windows::Data::Pdf::IPdfDocument
 
 #endif // ____x_ABI_CWindows_CData_CPdf_CIPdfDocument_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 interface IPdfDocumentStatics;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CPdf_CIPdfDocumentStatics ABI::Windows::Data::Pdf::IPdfDocumentStatics
 
 #endif // ____x_ABI_CWindows_CData_CPdf_CIPdfDocumentStatics_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 interface IPdfPage;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CPdf_CIPdfPage ABI::Windows::Data::Pdf::IPdfPage
 
 #endif // ____x_ABI_CWindows_CData_CPdf_CIPdfPage_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 interface IPdfPageDimensions;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CPdf_CIPdfPageDimensions ABI::Windows::Data::Pdf::IPdfPageDimensions
 
 #endif // ____x_ABI_CWindows_CData_CPdf_CIPdfPageDimensions_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 interface IPdfPageRenderOptions;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CPdf_CIPdfPageRenderOptions ABI::Windows::Data::Pdf::IPdfPageRenderOptions
 
 #endif // ____x_ABI_CWindows_CData_CPdf_CIPdfPageRenderOptions_FWD_DEFINED__
@@ -350,9 +346,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 class PdfDocument;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -375,7 +371,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Data::Pdf::PdfDocument*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Data::Pdf::PdfDocument*> __FIAsyncOperationCompletedHandler_1_Windows__CData__CPdf__CPdfDocument_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CData__CPdf__CPdfDocument ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CData__CPdf__CPdfDocument_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CData__CPdf__CPdfDocument ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Data::Pdf::IPdfDocument*>
@@ -407,7 +403,7 @@ IAsyncOperation<ABI::Windows::Data::Pdf::PdfDocument*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Data::Pdf::PdfDocument*> __FIAsyncOperation_1_Windows__CData__CPdf__CPdfDocument_t;
 #define __FIAsyncOperation_1_Windows__CData__CPdf__CPdfDocument ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CData__CPdf__CPdfDocument_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CData__CPdf__CPdfDocument ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Data::Pdf::IPdfDocument*>
@@ -426,8 +422,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -439,8 +435,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -452,8 +448,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -461,8 +457,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -473,8 +469,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -489,9 +485,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -506,8 +502,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -518,9 +514,9 @@ namespace ABI {
                 
                 typedef enum PdfPageRotation : int PdfPageRotation;
                 
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -533,9 +529,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 class PdfPage;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -543,9 +539,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 class PdfPageDimensions;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -553,9 +549,9 @@ namespace ABI {
         namespace Data {
             namespace Pdf {
                 class PdfPageRenderOptions;
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -589,9 +585,9 @@ namespace ABI {
                     PdfPageRotation_Rotate270 = 3,
                 };
                 
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -627,16 +623,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPasswordProtected(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IPdfDocument=_uuidof(IPdfDocument);
                 
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CPdf_CIPdfDocument;
 #endif /* !defined(____x_ABI_CWindows_CData_CPdf_CIPdfDocument_INTERFACE_DEFINED__) */
@@ -690,9 +686,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPdfDocumentStatics=_uuidof(IPdfDocumentStatics);
                 
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CPdf_CIPdfDocumentStatics;
 #endif /* !defined(____x_ABI_CWindows_CData_CPdf_CIPdfDocumentStatics_INTERFACE_DEFINED__) */
@@ -755,9 +751,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPdfPage=_uuidof(IPdfPage);
                 
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CPdf_CIPdfPage;
 #endif /* !defined(____x_ABI_CWindows_CData_CPdf_CIPdfPage_INTERFACE_DEFINED__) */
@@ -808,9 +804,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPdfPageDimensions=_uuidof(IPdfPageDimensions);
                 
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CPdf_CIPdfPageDimensions;
 #endif /* !defined(____x_ABI_CWindows_CData_CPdf_CIPdfPageDimensions_INTERFACE_DEFINED__) */
@@ -866,10 +862,10 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::Color value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIgnoringHighContrast(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsIgnoringHighContrast(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BitmapEncoderId(
                         /* [retval, out] */__RPC__out GUID * value
@@ -882,9 +878,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPdfPageRenderOptions=_uuidof(IPdfPageRenderOptions);
                 
-            } /* Windows */
+            } /* Pdf */
         } /* Data */
-    } /* Pdf */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CPdf_CIPdfPageRenderOptions;
 #endif /* !defined(____x_ABI_CWindows_CData_CPdf_CIPdfPageRenderOptions_INTERFACE_DEFINED__) */

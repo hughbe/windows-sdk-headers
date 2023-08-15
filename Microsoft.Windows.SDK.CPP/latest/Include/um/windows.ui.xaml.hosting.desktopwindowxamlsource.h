@@ -46,6 +46,13 @@ typedef interface IDesktopWindowXamlSourceNative IDesktopWindowXamlSourceNative;
 #endif 	/* __IDesktopWindowXamlSourceNative_FWD_DEFINED__ */
 
 
+#ifndef __IDesktopWindowXamlSourceNative2_FWD_DEFINED__
+#define __IDesktopWindowXamlSourceNative2_FWD_DEFINED__
+typedef interface IDesktopWindowXamlSourceNative2 IDesktopWindowXamlSourceNative2;
+
+#endif 	/* __IDesktopWindowXamlSourceNative2_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "oaidl.h"
 
@@ -159,10 +166,120 @@ EXTERN_C const IID IID_IDesktopWindowXamlSourceNative;
 /* [local] */ 
 
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
+#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_windows2Eui2Examl2Ehosting2Edesktopwindowxamlsource_0000_0001_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_windows2Eui2Examl2Ehosting2Edesktopwindowxamlsource_0000_0001_v0_0_s_ifspec;
+
+#ifndef __IDesktopWindowXamlSourceNative2_INTERFACE_DEFINED__
+#define __IDesktopWindowXamlSourceNative2_INTERFACE_DEFINED__
+
+/* interface IDesktopWindowXamlSourceNative2 */
+/* [unique][local][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IDesktopWindowXamlSourceNative2;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("e3dcd8c7-3057-4692-99c3-7b7720afda31")
+    IDesktopWindowXamlSourceNative2 : public IDesktopWindowXamlSourceNative
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE PreTranslateMessage( 
+            /* [annotation][in] */ 
+            _In_  const MSG *message,
+            /* [retval][out] */ BOOL *result) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IDesktopWindowXamlSourceNative2Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IDesktopWindowXamlSourceNative2 * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IDesktopWindowXamlSourceNative2 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IDesktopWindowXamlSourceNative2 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *AttachToWindow )( 
+            IDesktopWindowXamlSourceNative2 * This,
+            /* [annotation][in] */ 
+            _In_  HWND parentWnd);
+        
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_WindowHandle )( 
+            IDesktopWindowXamlSourceNative2 * This,
+            /* [retval][out] */ HWND *hWnd);
+        
+        HRESULT ( STDMETHODCALLTYPE *PreTranslateMessage )( 
+            IDesktopWindowXamlSourceNative2 * This,
+            /* [annotation][in] */ 
+            _In_  const MSG *message,
+            /* [retval][out] */ BOOL *result);
+        
+        END_INTERFACE
+    } IDesktopWindowXamlSourceNative2Vtbl;
+
+    interface IDesktopWindowXamlSourceNative2
+    {
+        CONST_VTBL struct IDesktopWindowXamlSourceNative2Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IDesktopWindowXamlSourceNative2_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IDesktopWindowXamlSourceNative2_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IDesktopWindowXamlSourceNative2_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IDesktopWindowXamlSourceNative2_AttachToWindow(This,parentWnd)	\
+    ( (This)->lpVtbl -> AttachToWindow(This,parentWnd) ) 
+
+#define IDesktopWindowXamlSourceNative2_get_WindowHandle(This,hWnd)	\
+    ( (This)->lpVtbl -> get_WindowHandle(This,hWnd) ) 
+
+
+#define IDesktopWindowXamlSourceNative2_PreTranslateMessage(This,message,result)	\
+    ( (This)->lpVtbl -> PreTranslateMessage(This,message,result) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IDesktopWindowXamlSourceNative2_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_windows2Eui2Examl2Ehosting2Edesktopwindowxamlsource_0000_0002 */
+/* [local] */ 
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_19H1
+
+
+extern RPC_IF_HANDLE __MIDL_itf_windows2Eui2Examl2Ehosting2Edesktopwindowxamlsource_0000_0002_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_windows2Eui2Examl2Ehosting2Edesktopwindowxamlsource_0000_0002_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

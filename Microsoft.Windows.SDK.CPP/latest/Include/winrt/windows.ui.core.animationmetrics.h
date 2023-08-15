@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.core.animationmetrics.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -145,10 +145,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     interface IAnimationDescription;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescription ABI::Windows::UI::Core::AnimationMetrics::IAnimationDescription
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescription_FWD_DEFINED__
@@ -161,10 +161,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     interface IAnimationDescriptionFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescriptionFactory ABI::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescriptionFactory_FWD_DEFINED__
@@ -177,10 +177,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     interface IOpacityAnimation;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIOpacityAnimation ABI::Windows::UI::Core::AnimationMetrics::IOpacityAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIOpacityAnimation_FWD_DEFINED__
@@ -193,10 +193,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     interface IPropertyAnimation;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIPropertyAnimation ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIPropertyAnimation_FWD_DEFINED__
@@ -209,10 +209,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     interface IScaleAnimation;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIScaleAnimation ABI::Windows::UI::Core::AnimationMetrics::IScaleAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIScaleAnimation_FWD_DEFINED__
@@ -241,7 +241,7 @@ IIterator<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*> : IIter
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*> __FIIterator_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation_t;
 #define __FIIterator_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*>
@@ -273,7 +273,7 @@ IIterable<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*> : IIter
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*> __FIIterable_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation_t;
 #define __FIIterable_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*>
@@ -305,7 +305,7 @@ IVectorView<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*> : IVe
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*> __FIVectorView_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation_t;
 #define __FIVectorView_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CCore__CAnimationMetrics__CIPropertyAnimation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Core::AnimationMetrics::IPropertyAnimation*>
@@ -335,7 +335,7 @@ IReference<float> : IReference_impl<float>
 // correct parameterized interface specialization.
 typedef IReference<float> __FIReference_1_float_t;
 #define __FIReference_1_float ABI::Windows::Foundation::__FIReference_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_float ABI::Windows::Foundation::IReference<FLOAT>
@@ -353,8 +353,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -362,8 +362,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -376,10 +376,10 @@ namespace ABI {
                     
                     typedef enum AnimationEffect : int AnimationEffect;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -389,10 +389,10 @@ namespace ABI {
                     
                     typedef enum AnimationEffectTarget : int AnimationEffectTarget;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -402,10 +402,10 @@ namespace ABI {
                     
                     typedef enum PropertyAnimationType : int PropertyAnimationType;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -418,10 +418,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     class AnimationDescription;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -430,10 +430,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     class OpacityAnimation;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -442,10 +442,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     class PropertyAnimation;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -454,10 +454,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     class ScaleAnimation;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -466,10 +466,10 @@ namespace ABI {
             namespace Core {
                 namespace AnimationMetrics {
                     class TranslationAnimation;
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -539,10 +539,10 @@ namespace ABI {
                         AnimationEffect_UpdateBadge = 35,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_CORE_ANIMATIONMETRICS_ANIMATIONMETRICSCONTRACT_VERSION >= 0x10000
 
 
@@ -586,10 +586,10 @@ namespace ABI {
                         AnimationEffectTarget_Tapped = 19,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_CORE_ANIMATIONMETRICS_ANIMATIONMETRICSCONTRACT_VERSION >= 0x10000
 
 
@@ -616,10 +616,10 @@ namespace ABI {
                         PropertyAnimationType_Opacity = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_UI_CORE_ANIMATIONMETRICS_ANIMATIONMETRICSCONTRACT_VERSION >= 0x10000
 
 
@@ -668,10 +668,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAnimationDescription=_uuidof(IAnimationDescription);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescription;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescription_INTERFACE_DEFINED__) */
@@ -713,10 +713,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IAnimationDescriptionFactory=_uuidof(IAnimationDescriptionFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescriptionFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIAnimationDescriptionFactory_INTERFACE_DEFINED__) */
@@ -763,10 +763,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOpacityAnimation=_uuidof(IOpacityAnimation);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIOpacityAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIOpacityAnimation_INTERFACE_DEFINED__) */
@@ -815,10 +815,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPropertyAnimation=_uuidof(IPropertyAnimation);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIPropertyAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIPropertyAnimation_INTERFACE_DEFINED__) */
@@ -874,10 +874,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IScaleAnimation=_uuidof(IScaleAnimation);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Core */
-    } /* AnimationMetrics */} /* ABI */
+                } /* AnimationMetrics */
+            } /* Core */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIScaleAnimation;
 #endif /* !defined(____x_ABI_CWindows_CUI_CCore_CAnimationMetrics_CIScaleAnimation_INTERFACE_DEFINED__) */

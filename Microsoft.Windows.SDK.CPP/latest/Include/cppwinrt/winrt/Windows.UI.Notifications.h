@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -963,6 +963,13 @@ template <typename D> hstring consume_Windows_UI_Notifications_IToastActivatedEv
     return value;
 }
 
+template <typename D> Windows::Foundation::Collections::ValueSet consume_Windows_UI_Notifications_IToastActivatedEventArgs2<D>::UserInput() const
+{
+    Windows::Foundation::Collections::ValueSet value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::UI::Notifications::IToastActivatedEventArgs2)->get_UserInput(put_abi(value)));
+    return value;
+}
+
 template <typename D> hstring consume_Windows_UI_Notifications_IToastCollection<D>::Id() const
 {
     hstring value{};
@@ -1228,6 +1235,18 @@ template <typename D> Windows::UI::Notifications::ToastNotificationPriority cons
 template <typename D> void consume_Windows_UI_Notifications_IToastNotification4<D>::Priority(Windows::UI::Notifications::ToastNotificationPriority const& value) const
 {
     check_hresult(WINRT_SHIM(Windows::UI::Notifications::IToastNotification4)->put_Priority(get_abi(value)));
+}
+
+template <typename D> bool consume_Windows_UI_Notifications_IToastNotification6<D>::ExpiresOnReboot() const
+{
+    bool value{};
+    check_hresult(WINRT_SHIM(Windows::UI::Notifications::IToastNotification6)->get_ExpiresOnReboot(&value));
+    return value;
+}
+
+template <typename D> void consume_Windows_UI_Notifications_IToastNotification6<D>::ExpiresOnReboot(bool value) const
+{
+    check_hresult(WINRT_SHIM(Windows::UI::Notifications::IToastNotification6)->put_ExpiresOnReboot(value));
 }
 
 template <typename D> hstring consume_Windows_UI_Notifications_IToastNotificationActionTriggerDetail<D>::Argument() const
@@ -3541,6 +3560,23 @@ struct produce<D, Windows::UI::Notifications::IToastActivatedEventArgs> : produc
 };
 
 template <typename D>
+struct produce<D, Windows::UI::Notifications::IToastActivatedEventArgs2> : produce_base<D, Windows::UI::Notifications::IToastActivatedEventArgs2>
+{
+    int32_t WINRT_CALL get_UserInput(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(UserInput, WINRT_WRAP(Windows::Foundation::Collections::ValueSet));
+            *value = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().UserInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::UI::Notifications::IToastCollection> : produce_base<D, Windows::UI::Notifications::IToastCollection>
 {
     int32_t WINRT_CALL get_Id(void** value) noexcept final
@@ -4056,6 +4092,34 @@ struct produce<D, Windows::UI::Notifications::IToastNotification4> : produce_bas
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Priority, WINRT_WRAP(void), Windows::UI::Notifications::ToastNotificationPriority const&);
             this->shim().Priority(*reinterpret_cast<Windows::UI::Notifications::ToastNotificationPriority const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::UI::Notifications::IToastNotification6> : produce_base<D, Windows::UI::Notifications::IToastNotification6>
+{
+    int32_t WINRT_CALL get_ExpiresOnReboot(bool* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ExpiresOnReboot, WINRT_WRAP(bool));
+            *value = detach_from<bool>(this->shim().ExpiresOnReboot());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL put_ExpiresOnReboot(bool value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ExpiresOnReboot, WINRT_WRAP(void), bool);
+            this->shim().ExpiresOnReboot(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5021,6 +5085,7 @@ template<> struct hash<winrt::Windows::UI::Notifications::ITileUpdateManagerStat
 template<> struct hash<winrt::Windows::UI::Notifications::ITileUpdater> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::ITileUpdater> {};
 template<> struct hash<winrt::Windows::UI::Notifications::ITileUpdater2> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::ITileUpdater2> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastActivatedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastActivatedEventArgs> {};
+template<> struct hash<winrt::Windows::UI::Notifications::IToastActivatedEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastActivatedEventArgs2> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastCollection> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastCollection> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastCollectionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastCollectionFactory> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastCollectionManager> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastCollectionManager> {};
@@ -5030,6 +5095,7 @@ template<> struct hash<winrt::Windows::UI::Notifications::IToastNotification> : 
 template<> struct hash<winrt::Windows::UI::Notifications::IToastNotification2> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastNotification2> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastNotification3> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastNotification3> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastNotification4> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastNotification4> {};
+template<> struct hash<winrt::Windows::UI::Notifications::IToastNotification6> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastNotification6> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationActionTriggerDetail> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastNotificationActionTriggerDetail> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationFactory> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastNotificationFactory> {};
 template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationHistory> : winrt::impl::hash_base<winrt::Windows::UI::Notifications::IToastNotificationHistory> {};

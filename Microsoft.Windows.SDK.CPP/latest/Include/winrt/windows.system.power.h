@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.power.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace System {
             namespace Power {
                 interface IBackgroundEnergyManagerStatics;
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics ABI::Windows::System::Power::IBackgroundEnergyManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace System {
             namespace Power {
                 interface IForegroundEnergyManagerStatics;
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics ABI::Windows::System::Power::IForegroundEnergyManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace System {
             namespace Power {
                 interface IPowerManagerStatics;
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics ABI::Windows::System::Power::IPowerManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_FWD_DEFINED__
@@ -198,7 +198,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -216,8 +216,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -229,9 +229,9 @@ namespace ABI {
                 
                 typedef enum BatteryStatus : int BatteryStatus;
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -240,9 +240,9 @@ namespace ABI {
                 
                 typedef enum EnergySaverStatus : int EnergySaverStatus;
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -251,9 +251,9 @@ namespace ABI {
                 
                 typedef enum PowerSupplyStatus : int PowerSupplyStatus;
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -288,9 +288,9 @@ namespace ABI {
                     BatteryStatus_Charging = 3,
                 };
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -316,9 +316,9 @@ namespace ABI {
                     EnergySaverStatus_On = 2,
                 };
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -344,9 +344,9 @@ namespace ABI {
                     PowerSupplyStatus_Adequate = 2,
                 };
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -469,9 +469,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IBackgroundEnergyManagerStatics=_uuidof(IBackgroundEnergyManagerStatics);
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_INTERFACE_DEFINED__) */
@@ -583,9 +583,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IForegroundEnergyManagerStatics=_uuidof(IForegroundEnergyManagerStatics);
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_INTERFACE_DEFINED__) */
@@ -671,9 +671,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPowerManagerStatics=_uuidof(IPowerManagerStatics);
                 
-            } /* Windows */
+            } /* Power */
         } /* System */
-    } /* Power */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_INTERFACE_DEFINED__) */

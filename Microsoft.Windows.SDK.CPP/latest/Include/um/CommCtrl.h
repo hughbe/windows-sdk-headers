@@ -399,6 +399,11 @@ typedef struct tagNMCUSTOMTEXT
 #define TRBN_LAST               (0U-1519U)
 #endif
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+#define EN_FIRST                (0U-1520U)      // edit control
+#define EN_LAST                 (0U-1540U)
+#endif
+
 #define MSGF_COMMCTRL_BEGINDRAG     0x4200
 #define MSGF_COMMCTRL_SIZEHEADER    0x4201
 #define MSGF_COMMCTRL_DRAGSELECT    0x4202

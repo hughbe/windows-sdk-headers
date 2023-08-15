@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.input.preview.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeDevicePreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDevicePreview ABI::Windows::Devices::Input::Preview::IGazeDevicePreview
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDevicePreview_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeDeviceWatcherAddedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherAddedPreviewEventArgs ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherAddedPreviewEventArgs_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeDeviceWatcherPreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeDeviceWatcherRemovedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherRemovedPreviewEventArgs ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherRemovedPreviewEventArgs_FWD_DEFINED__
@@ -342,10 +338,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeDeviceWatcherUpdatedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherUpdatedPreviewEventArgs ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherUpdatedPreviewEventArgs_FWD_DEFINED__
@@ -358,10 +354,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeEnteredPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeEnteredPreviewEventArgs ABI::Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeEnteredPreviewEventArgs_FWD_DEFINED__
@@ -374,10 +370,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeExitedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeExitedPreviewEventArgs ABI::Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeExitedPreviewEventArgs_FWD_DEFINED__
@@ -390,10 +386,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeInputSourcePreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview ABI::Windows::Devices::Input::Preview::IGazeInputSourcePreview
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview_FWD_DEFINED__
@@ -406,10 +402,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeInputSourcePreviewStatics;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreviewStatics ABI::Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreviewStatics_FWD_DEFINED__
@@ -422,10 +418,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazeMovedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeMovedPreviewEventArgs ABI::Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeMovedPreviewEventArgs_FWD_DEFINED__
@@ -438,10 +434,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     interface IGazePointPreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazePointPreview ABI::Windows::Devices::Input::Preview::IGazePointPreview
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazePointPreview_FWD_DEFINED__
@@ -455,10 +451,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazePointPreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -481,7 +477,7 @@ IIterator<ABI::Windows::Devices::Input::Preview::GazePointPreview*> : IIterator_
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Input::Preview::GazePointPreview*> __FIIterator_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t;
 #define __FIIterator_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Input::Preview::IGazePointPreview*>
@@ -513,7 +509,7 @@ IIterable<ABI::Windows::Devices::Input::Preview::GazePointPreview*> : IIterable_
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Input::Preview::GazePointPreview*> __FIIterable_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t;
 #define __FIIterable_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Input::Preview::IGazePointPreview*>
@@ -545,7 +541,7 @@ IVectorView<ABI::Windows::Devices::Input::Preview::GazePointPreview*> : IVectorV
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Input::Preview::GazePointPreview*> __FIVectorView_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t;
 #define __FIVectorView_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Input::Preview::IGazePointPreview*>
@@ -577,7 +573,7 @@ IVector<ABI::Windows::Devices::Input::Preview::GazePointPreview*> : IVector_impl
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Devices::Input::Preview::GazePointPreview*> __FIVector_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t;
 #define __FIVector_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CDevices__CInput__CPreview__CGazePointPreview_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CDevices__CInput__CPreview__CGazePointPreview ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Devices::Input::Preview::IGazePointPreview*>
@@ -594,10 +590,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeDeviceWatcherPreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -621,7 +617,7 @@ ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPrevi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview*,IInspectable*>
@@ -639,10 +635,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeDeviceWatcherAddedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -666,7 +662,7 @@ ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPrevi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview*,ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview*,ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs*>
@@ -685,10 +681,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeDeviceWatcherRemovedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -712,7 +708,7 @@ ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPrevi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview*,ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview*,ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs*>
@@ -731,10 +727,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeDeviceWatcherUpdatedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -758,7 +754,7 @@ ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPrevi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview*,ABI::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview*,ABI::Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs*>
@@ -776,10 +772,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeInputSourcePreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -788,10 +784,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeEnteredPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -815,7 +811,7 @@ ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeInputSourcePreview
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeInputSourcePreview*,ABI::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::Preview::IGazeInputSourcePreview*,ABI::Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs*>
@@ -834,10 +830,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeExitedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -861,7 +857,7 @@ ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeInputSourcePreview
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeInputSourcePreview*,ABI::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::Preview::IGazeInputSourcePreview*,ABI::Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs*>
@@ -880,10 +876,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeMovedPreviewEventArgs;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -907,7 +903,7 @@ ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeInputSourcePreview
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Devices::Input::Preview::GazeInputSourcePreview*,ABI::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::Preview::IGazeInputSourcePreview*,ABI::Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs*>
@@ -938,7 +934,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -967,7 +963,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -982,9 +978,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidNumericControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription_FWD_DEFINED__
@@ -993,9 +989,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidNumericControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidNumericControlDescription_FWD_DEFINED__
@@ -1021,7 +1017,7 @@ IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescript
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription*> __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t;
 #define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription*>
@@ -1053,7 +1049,7 @@ IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescript
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription*> __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t;
 #define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription*>
@@ -1085,7 +1081,7 @@ IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescri
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription*> __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t;
 #define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidNumericControlDescription ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription*>
@@ -1101,9 +1097,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidBooleanControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription_FWD_DEFINED__
@@ -1112,9 +1108,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidBooleanControlDescription;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidBooleanControlDescription_FWD_DEFINED__
@@ -1140,7 +1136,7 @@ IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescript
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription*> __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t;
 #define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription*>
@@ -1172,7 +1168,7 @@ IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescript
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription*> __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t;
 #define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription*>
@@ -1204,7 +1200,7 @@ IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescri
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription*> __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t;
 #define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CDevices__CHumanInterfaceDevice__CHidBooleanControlDescription ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription*>
@@ -1220,8 +1216,8 @@ namespace ABI {
         namespace Foundation {
             struct Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CPoint_USE
@@ -1242,7 +1238,7 @@ IReference<struct ABI::Windows::Foundation::Point> : IReference_impl<struct ABI:
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Point> __FIReference_1_Windows__CFoundation__CPoint_t;
 #define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CPoint_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Point>
@@ -1260,9 +1256,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 class HidInputReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport_FWD_DEFINED__
@@ -1271,9 +1267,9 @@ namespace ABI {
         namespace Devices {
             namespace HumanInterfaceDevice {
                 interface IHidInputReport;
-            } /* Windows */
+            } /* HumanInterfaceDevice */
         } /* Devices */
-    } /* HumanInterfaceDevice */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport ABI::Windows::Devices::HumanInterfaceDevice::IHidInputReport
 
 #endif // ____x_ABI_CWindows_CDevices_CHumanInterfaceDevice_CIHidInputReport_FWD_DEFINED__
@@ -1289,8 +1285,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1303,10 +1299,10 @@ namespace ABI {
                     
                     typedef enum GazeDeviceConfigurationStatePreview : int GazeDeviceConfigurationStatePreview;
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1325,10 +1321,10 @@ namespace ABI {
             namespace Input {
                 namespace Preview {
                     class GazeDevicePreview;
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1375,10 +1371,10 @@ namespace ABI {
                         GazeDeviceConfigurationStatePreview_UserCalibrationNeeded = 4,
                     };
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1411,10 +1407,10 @@ namespace ABI {
                             /* [retval, out] */__RPC__out UINT32 * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTrackEyes(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTrackHead(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ConfigurationState(
                             /* [retval, out] */__RPC__out ABI::Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview * value
@@ -1437,10 +1433,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeDevicePreview=_uuidof(IGazeDevicePreview);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDevicePreview;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDevicePreview_INTERFACE_DEFINED__) */
@@ -1480,10 +1476,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeDeviceWatcherAddedPreviewEventArgs=_uuidof(IGazeDeviceWatcherAddedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherAddedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherAddedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -1550,10 +1546,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeDeviceWatcherPreview=_uuidof(IGazeDeviceWatcherPreview);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview_INTERFACE_DEFINED__) */
@@ -1593,10 +1589,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeDeviceWatcherRemovedPreviewEventArgs=_uuidof(IGazeDeviceWatcherRemovedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherRemovedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherRemovedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -1636,10 +1632,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeDeviceWatcherUpdatedPreviewEventArgs=_uuidof(IGazeDeviceWatcherUpdatedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherUpdatedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherUpdatedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -1672,10 +1668,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentPoint(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Input::Preview::IGazePointPreview * * value
@@ -1685,10 +1681,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeEnteredPreviewEventArgs=_uuidof(IGazeEnteredPreviewEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeEnteredPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeEnteredPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -1721,10 +1717,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentPoint(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Input::Preview::IGazePointPreview * * value
@@ -1734,10 +1730,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeExitedPreviewEventArgs=_uuidof(IGazeExitedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeExitedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeExitedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -1795,10 +1791,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeInputSourcePreview=_uuidof(IGazeInputSourcePreview);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview_INTERFACE_DEFINED__) */
@@ -1841,10 +1837,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeInputSourcePreviewStatics=_uuidof(IGazeInputSourcePreviewStatics);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreviewStatics_INTERFACE_DEFINED__) */
@@ -1877,10 +1873,10 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Handled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Handled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentPoint(
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Input::Preview::IGazePointPreview * * value
@@ -1893,10 +1889,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazeMovedPreviewEventArgs=_uuidof(IGazeMovedPreviewEventArgs);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeMovedPreviewEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeMovedPreviewEventArgs_INTERFACE_DEFINED__) */
@@ -1948,10 +1944,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IGazePointPreview=_uuidof(IGazePointPreview);
                     
-                } /* Windows */
-            } /* Devices */
-        } /* Input */
-    } /* Preview */} /* ABI */
+                } /* Preview */
+            } /* Input */
+        } /* Devices */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CPreview_CIGazePointPreview;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CPreview_CIGazePointPreview_INTERFACE_DEFINED__) */
@@ -2694,7 +2690,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGaz
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_IInspectableVtbl;
 
@@ -2746,7 +2742,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGaz
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherAddedPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherAddedPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherAddedPreviewEventArgsVtbl;
 
@@ -2799,7 +2795,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGaz
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherRemovedPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherRemovedPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherRemovedPreviewEventArgsVtbl;
 
@@ -2852,7 +2848,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGaz
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherUpdatedPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherPreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeDeviceWatcherUpdatedPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherPreview_Windows__CDevices__CInput__CPreview__CGazeDeviceWatcherUpdatedPreviewEventArgsVtbl;
 
@@ -2905,7 +2901,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGaz
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeEnteredPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeEnteredPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeEnteredPreviewEventArgsVtbl;
 
@@ -2958,7 +2954,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGaz
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeExitedPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeExitedPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeExitedPreviewEventArgsVtbl;
 
@@ -3011,7 +3007,7 @@ typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGaz
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeMovedPreviewEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeInputSourcePreview * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CPreview_CIGazeMovedPreviewEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CPreview__CGazeInputSourcePreview_Windows__CDevices__CInput__CPreview__CGazeMovedPreviewEventArgsVtbl;
 

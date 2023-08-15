@@ -618,6 +618,13 @@ enum TypeKind
     // if the underlying type is fully described by the variant data type (VT_*).
     //
     TypeIntrinsic,
+
+    // The type is an array which cannot be expressed as TypeArray.
+    //
+    // This is due to things such as dynamic sizes, dynamic bounds, etc...  CLI arrays are 
+    // represented as TypeExtendedArray.
+    //
+    TypeExtendedArray
 };
 
 // IntrinsicKind:
@@ -681,7 +688,10 @@ enum PointerKind
     PointerRValueReference,
 
     // ^
-    PointerCXHat
+    PointerCXHat,
+
+    // CLI reference (invisible to the user)
+    PointerManagedReference
 };
 
 // CallingConventionKind:
@@ -3190,6 +3200,7 @@ DECLARE_INTERFACE_(IDebugHostType, IDebugHostSymbol)
     // GetArrayDimensions():
     //
     // Fills in information about each dimension of the array including its lower bound, length, and stride.
+    // This method should not be called on TypeExtendedArray.  Methods in IDebugHostType4 should be utilized.
     //
     STDMETHOD(GetArrayDimensions)(
         THIS_
@@ -3201,6 +3212,7 @@ DECLARE_INTERFACE_(IDebugHostType, IDebugHostSymbol)
     //
     // For any given type, this returns a new IDebugHostType which is an array of this type.
     // The dimensions of the array must be supplied via the "dimensions" and "pDimensions" arguments.
+    // This method should not be called on TypeExtendedArray.  Methods in IDebugHostType4 should be utilized.
     //
     STDMETHOD(CreateArrayOf)(
         THIS_
@@ -5783,7 +5795,7 @@ DECLARE_INTERFACE_(IDebugHostEvaluator2, IDebugHostEvaluator)
 // This interface is never directly implemented by a client. 
 //
 #undef INTERFACE
-#define INTERFACE IDataModelManager
+#define INTERFACE IDataModelManager2
 DECLARE_INTERFACE_(IDataModelManager2, IDataModelManager)
 {
     //*************************************************

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -108,6 +108,14 @@ enum class CompositionBitmapInterpolationMode : int32_t
 {
     NearestNeighbor = 0,
     Linear = 1,
+    MagLinearMinLinearMipLinear = 2,
+    MagLinearMinLinearMipNearest = 3,
+    MagLinearMinNearestMipLinear = 4,
+    MagLinearMinNearestMipNearest = 5,
+    MagNearestMinLinearMipLinear = 6,
+    MagNearestMinLinearMipNearest = 7,
+    MagNearestMinNearestMipLinear = 8,
+    MagNearestMinNearestMipNearest = 9,
 };
 
 enum class CompositionBorderMode : int32_t
@@ -242,6 +250,7 @@ struct ICompositionGradientBrush2;
 struct ICompositionGradientBrushFactory;
 struct ICompositionGraphicsDevice;
 struct ICompositionGraphicsDevice2;
+struct ICompositionGraphicsDevice3;
 struct ICompositionLight;
 struct ICompositionLight2;
 struct ICompositionLight3;
@@ -249,6 +258,7 @@ struct ICompositionLightFactory;
 struct ICompositionLineGeometry;
 struct ICompositionLinearGradientBrush;
 struct ICompositionMaskBrush;
+struct ICompositionMipmapSurface;
 struct ICompositionNineGridBrush;
 struct ICompositionObject;
 struct ICompositionObject2;
@@ -259,8 +269,15 @@ struct ICompositionObjectStatics;
 struct ICompositionPath;
 struct ICompositionPathFactory;
 struct ICompositionPathGeometry;
+struct ICompositionProjectedShadow;
+struct ICompositionProjectedShadowCaster;
+struct ICompositionProjectedShadowCasterCollection;
+struct ICompositionProjectedShadowCasterCollectionStatics;
+struct ICompositionProjectedShadowReceiver;
+struct ICompositionProjectedShadowReceiverUnorderedCollection;
 struct ICompositionPropertySet;
 struct ICompositionPropertySet2;
+struct ICompositionRadialGradientBrush;
 struct ICompositionRectangleGeometry;
 struct ICompositionRoundedRectangleGeometry;
 struct ICompositionScopedBatch;
@@ -272,11 +289,15 @@ struct ICompositionSpriteShape;
 struct ICompositionSurface;
 struct ICompositionSurfaceBrush;
 struct ICompositionSurfaceBrush2;
+struct ICompositionSurfaceBrush3;
 struct ICompositionTarget;
 struct ICompositionTargetFactory;
+struct ICompositionTransform;
+struct ICompositionTransformFactory;
 struct ICompositionViewBox;
 struct ICompositionVirtualDrawingSurface;
 struct ICompositionVirtualDrawingSurfaceFactory;
+struct ICompositionVisualSurface;
 struct ICompositor;
 struct ICompositor2;
 struct ICompositor3;
@@ -284,6 +305,9 @@ struct ICompositor4;
 struct ICompositor5;
 struct ICompositor6;
 struct ICompositorStatics;
+struct ICompositorWithProjectedShadow;
+struct ICompositorWithRadialGradient;
+struct ICompositorWithVisualSurface;
 struct IContainerVisual;
 struct IContainerVisualFactory;
 struct ICubicBezierEasingFunction;
@@ -333,6 +357,7 @@ struct IVector4KeyFrameAnimation;
 struct IVisual;
 struct IVisual2;
 struct IVisualCollection;
+struct IVisualElement;
 struct IVisualFactory;
 struct IVisualUnorderedCollection;
 struct AmbientLight;
@@ -369,11 +394,18 @@ struct CompositionLight;
 struct CompositionLineGeometry;
 struct CompositionLinearGradientBrush;
 struct CompositionMaskBrush;
+struct CompositionMipmapSurface;
 struct CompositionNineGridBrush;
 struct CompositionObject;
 struct CompositionPath;
 struct CompositionPathGeometry;
+struct CompositionProjectedShadow;
+struct CompositionProjectedShadowCaster;
+struct CompositionProjectedShadowCasterCollection;
+struct CompositionProjectedShadowReceiver;
+struct CompositionProjectedShadowReceiverUnorderedCollection;
 struct CompositionPropertySet;
+struct CompositionRadialGradientBrush;
 struct CompositionRectangleGeometry;
 struct CompositionRoundedRectangleGeometry;
 struct CompositionScopedBatch;
@@ -384,8 +416,10 @@ struct CompositionSpriteShape;
 struct CompositionStrokeDashArray;
 struct CompositionSurfaceBrush;
 struct CompositionTarget;
+struct CompositionTransform;
 struct CompositionViewBox;
 struct CompositionVirtualDrawingSurface;
+struct CompositionVisualSurface;
 struct Compositor;
 struct ContainerVisual;
 struct CubicBezierEasingFunction;
@@ -477,6 +511,7 @@ template <> struct category<Windows::UI::Composition::ICompositionGradientBrush2
 template <> struct category<Windows::UI::Composition::ICompositionGradientBrushFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionGraphicsDevice>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionGraphicsDevice2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionGraphicsDevice3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionLight>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionLight2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionLight3>{ using type = interface_category; };
@@ -484,6 +519,7 @@ template <> struct category<Windows::UI::Composition::ICompositionLightFactory>{
 template <> struct category<Windows::UI::Composition::ICompositionLineGeometry>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionLinearGradientBrush>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionMaskBrush>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionMipmapSurface>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionNineGridBrush>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionObject>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionObject2>{ using type = interface_category; };
@@ -494,8 +530,15 @@ template <> struct category<Windows::UI::Composition::ICompositionObjectStatics>
 template <> struct category<Windows::UI::Composition::ICompositionPath>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionPathFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionPathGeometry>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionProjectedShadow>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionProjectedShadowCaster>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionProjectedShadowCasterCollection>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionProjectedShadowReceiver>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionPropertySet>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionPropertySet2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionRadialGradientBrush>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionRectangleGeometry>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionRoundedRectangleGeometry>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionScopedBatch>{ using type = interface_category; };
@@ -507,11 +550,15 @@ template <> struct category<Windows::UI::Composition::ICompositionSpriteShape>{ 
 template <> struct category<Windows::UI::Composition::ICompositionSurface>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionSurfaceBrush>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionSurfaceBrush2>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionSurfaceBrush3>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionTarget>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionTargetFactory>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionTransform>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionTransformFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionViewBox>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionVirtualDrawingSurface>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositionVisualSurface>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositor>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositor2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositor3>{ using type = interface_category; };
@@ -519,6 +566,9 @@ template <> struct category<Windows::UI::Composition::ICompositor4>{ using type 
 template <> struct category<Windows::UI::Composition::ICompositor5>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositor6>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICompositorStatics>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositorWithProjectedShadow>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositorWithRadialGradient>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::ICompositorWithVisualSurface>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::IContainerVisual>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::IContainerVisualFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::ICubicBezierEasingFunction>{ using type = interface_category; };
@@ -568,6 +618,7 @@ template <> struct category<Windows::UI::Composition::IVector4KeyFrameAnimation>
 template <> struct category<Windows::UI::Composition::IVisual>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::IVisual2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::IVisualCollection>{ using type = interface_category; };
+template <> struct category<Windows::UI::Composition::IVisualElement>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::IVisualFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::IVisualUnorderedCollection>{ using type = interface_category; };
 template <> struct category<Windows::UI::Composition::AmbientLight>{ using type = class_category; };
@@ -604,11 +655,18 @@ template <> struct category<Windows::UI::Composition::CompositionLight>{ using t
 template <> struct category<Windows::UI::Composition::CompositionLineGeometry>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionLinearGradientBrush>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionMaskBrush>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionMipmapSurface>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionNineGridBrush>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionObject>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionPath>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionPathGeometry>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionProjectedShadow>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionProjectedShadowCaster>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionProjectedShadowCasterCollection>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionProjectedShadowReceiver>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionPropertySet>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionRadialGradientBrush>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionRectangleGeometry>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionRoundedRectangleGeometry>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionScopedBatch>{ using type = class_category; };
@@ -619,8 +677,10 @@ template <> struct category<Windows::UI::Composition::CompositionSpriteShape>{ u
 template <> struct category<Windows::UI::Composition::CompositionStrokeDashArray>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionSurfaceBrush>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionTarget>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionTransform>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionViewBox>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CompositionVirtualDrawingSurface>{ using type = class_category; };
+template <> struct category<Windows::UI::Composition::CompositionVisualSurface>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::Compositor>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::ContainerVisual>{ using type = class_category; };
 template <> struct category<Windows::UI::Composition::CubicBezierEasingFunction>{ using type = class_category; };
@@ -726,6 +786,7 @@ template <> struct name<Windows::UI::Composition::ICompositionGradientBrush2>{ s
 template <> struct name<Windows::UI::Composition::ICompositionGradientBrushFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionGradientBrushFactory" }; };
 template <> struct name<Windows::UI::Composition::ICompositionGraphicsDevice>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionGraphicsDevice" }; };
 template <> struct name<Windows::UI::Composition::ICompositionGraphicsDevice2>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionGraphicsDevice2" }; };
+template <> struct name<Windows::UI::Composition::ICompositionGraphicsDevice3>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionGraphicsDevice3" }; };
 template <> struct name<Windows::UI::Composition::ICompositionLight>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionLight" }; };
 template <> struct name<Windows::UI::Composition::ICompositionLight2>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionLight2" }; };
 template <> struct name<Windows::UI::Composition::ICompositionLight3>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionLight3" }; };
@@ -733,6 +794,7 @@ template <> struct name<Windows::UI::Composition::ICompositionLightFactory>{ sta
 template <> struct name<Windows::UI::Composition::ICompositionLineGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionLineGeometry" }; };
 template <> struct name<Windows::UI::Composition::ICompositionLinearGradientBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionLinearGradientBrush" }; };
 template <> struct name<Windows::UI::Composition::ICompositionMaskBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionMaskBrush" }; };
+template <> struct name<Windows::UI::Composition::ICompositionMipmapSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionMipmapSurface" }; };
 template <> struct name<Windows::UI::Composition::ICompositionNineGridBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionNineGridBrush" }; };
 template <> struct name<Windows::UI::Composition::ICompositionObject>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionObject" }; };
 template <> struct name<Windows::UI::Composition::ICompositionObject2>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionObject2" }; };
@@ -743,8 +805,15 @@ template <> struct name<Windows::UI::Composition::ICompositionObjectStatics>{ st
 template <> struct name<Windows::UI::Composition::ICompositionPath>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionPath" }; };
 template <> struct name<Windows::UI::Composition::ICompositionPathFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionPathFactory" }; };
 template <> struct name<Windows::UI::Composition::ICompositionPathGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionPathGeometry" }; };
+template <> struct name<Windows::UI::Composition::ICompositionProjectedShadow>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionProjectedShadow" }; };
+template <> struct name<Windows::UI::Composition::ICompositionProjectedShadowCaster>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionProjectedShadowCaster" }; };
+template <> struct name<Windows::UI::Composition::ICompositionProjectedShadowCasterCollection>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionProjectedShadowCasterCollection" }; };
+template <> struct name<Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionProjectedShadowCasterCollectionStatics" }; };
+template <> struct name<Windows::UI::Composition::ICompositionProjectedShadowReceiver>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionProjectedShadowReceiver" }; };
+template <> struct name<Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionProjectedShadowReceiverUnorderedCollection" }; };
 template <> struct name<Windows::UI::Composition::ICompositionPropertySet>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionPropertySet" }; };
 template <> struct name<Windows::UI::Composition::ICompositionPropertySet2>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionPropertySet2" }; };
+template <> struct name<Windows::UI::Composition::ICompositionRadialGradientBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionRadialGradientBrush" }; };
 template <> struct name<Windows::UI::Composition::ICompositionRectangleGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionRectangleGeometry" }; };
 template <> struct name<Windows::UI::Composition::ICompositionRoundedRectangleGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionRoundedRectangleGeometry" }; };
 template <> struct name<Windows::UI::Composition::ICompositionScopedBatch>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionScopedBatch" }; };
@@ -756,11 +825,15 @@ template <> struct name<Windows::UI::Composition::ICompositionSpriteShape>{ stat
 template <> struct name<Windows::UI::Composition::ICompositionSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionSurface" }; };
 template <> struct name<Windows::UI::Composition::ICompositionSurfaceBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionSurfaceBrush" }; };
 template <> struct name<Windows::UI::Composition::ICompositionSurfaceBrush2>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionSurfaceBrush2" }; };
+template <> struct name<Windows::UI::Composition::ICompositionSurfaceBrush3>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionSurfaceBrush3" }; };
 template <> struct name<Windows::UI::Composition::ICompositionTarget>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionTarget" }; };
 template <> struct name<Windows::UI::Composition::ICompositionTargetFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionTargetFactory" }; };
+template <> struct name<Windows::UI::Composition::ICompositionTransform>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionTransform" }; };
+template <> struct name<Windows::UI::Composition::ICompositionTransformFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionTransformFactory" }; };
 template <> struct name<Windows::UI::Composition::ICompositionViewBox>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionViewBox" }; };
 template <> struct name<Windows::UI::Composition::ICompositionVirtualDrawingSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionVirtualDrawingSurface" }; };
 template <> struct name<Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionVirtualDrawingSurfaceFactory" }; };
+template <> struct name<Windows::UI::Composition::ICompositionVisualSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositionVisualSurface" }; };
 template <> struct name<Windows::UI::Composition::ICompositor>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositor" }; };
 template <> struct name<Windows::UI::Composition::ICompositor2>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositor2" }; };
 template <> struct name<Windows::UI::Composition::ICompositor3>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositor3" }; };
@@ -768,6 +841,9 @@ template <> struct name<Windows::UI::Composition::ICompositor4>{ static constexp
 template <> struct name<Windows::UI::Composition::ICompositor5>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositor5" }; };
 template <> struct name<Windows::UI::Composition::ICompositor6>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositor6" }; };
 template <> struct name<Windows::UI::Composition::ICompositorStatics>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositorStatics" }; };
+template <> struct name<Windows::UI::Composition::ICompositorWithProjectedShadow>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositorWithProjectedShadow" }; };
+template <> struct name<Windows::UI::Composition::ICompositorWithRadialGradient>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositorWithRadialGradient" }; };
+template <> struct name<Windows::UI::Composition::ICompositorWithVisualSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.ICompositorWithVisualSurface" }; };
 template <> struct name<Windows::UI::Composition::IContainerVisual>{ static constexpr auto & value{ L"Windows.UI.Composition.IContainerVisual" }; };
 template <> struct name<Windows::UI::Composition::IContainerVisualFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.IContainerVisualFactory" }; };
 template <> struct name<Windows::UI::Composition::ICubicBezierEasingFunction>{ static constexpr auto & value{ L"Windows.UI.Composition.ICubicBezierEasingFunction" }; };
@@ -817,6 +893,7 @@ template <> struct name<Windows::UI::Composition::IVector4KeyFrameAnimation>{ st
 template <> struct name<Windows::UI::Composition::IVisual>{ static constexpr auto & value{ L"Windows.UI.Composition.IVisual" }; };
 template <> struct name<Windows::UI::Composition::IVisual2>{ static constexpr auto & value{ L"Windows.UI.Composition.IVisual2" }; };
 template <> struct name<Windows::UI::Composition::IVisualCollection>{ static constexpr auto & value{ L"Windows.UI.Composition.IVisualCollection" }; };
+template <> struct name<Windows::UI::Composition::IVisualElement>{ static constexpr auto & value{ L"Windows.UI.Composition.IVisualElement" }; };
 template <> struct name<Windows::UI::Composition::IVisualFactory>{ static constexpr auto & value{ L"Windows.UI.Composition.IVisualFactory" }; };
 template <> struct name<Windows::UI::Composition::IVisualUnorderedCollection>{ static constexpr auto & value{ L"Windows.UI.Composition.IVisualUnorderedCollection" }; };
 template <> struct name<Windows::UI::Composition::AmbientLight>{ static constexpr auto & value{ L"Windows.UI.Composition.AmbientLight" }; };
@@ -853,11 +930,18 @@ template <> struct name<Windows::UI::Composition::CompositionLight>{ static cons
 template <> struct name<Windows::UI::Composition::CompositionLineGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionLineGeometry" }; };
 template <> struct name<Windows::UI::Composition::CompositionLinearGradientBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionLinearGradientBrush" }; };
 template <> struct name<Windows::UI::Composition::CompositionMaskBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionMaskBrush" }; };
+template <> struct name<Windows::UI::Composition::CompositionMipmapSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionMipmapSurface" }; };
 template <> struct name<Windows::UI::Composition::CompositionNineGridBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionNineGridBrush" }; };
 template <> struct name<Windows::UI::Composition::CompositionObject>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionObject" }; };
 template <> struct name<Windows::UI::Composition::CompositionPath>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionPath" }; };
 template <> struct name<Windows::UI::Composition::CompositionPathGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionPathGeometry" }; };
+template <> struct name<Windows::UI::Composition::CompositionProjectedShadow>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionProjectedShadow" }; };
+template <> struct name<Windows::UI::Composition::CompositionProjectedShadowCaster>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionProjectedShadowCaster" }; };
+template <> struct name<Windows::UI::Composition::CompositionProjectedShadowCasterCollection>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionProjectedShadowCasterCollection" }; };
+template <> struct name<Windows::UI::Composition::CompositionProjectedShadowReceiver>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionProjectedShadowReceiver" }; };
+template <> struct name<Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection" }; };
 template <> struct name<Windows::UI::Composition::CompositionPropertySet>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionPropertySet" }; };
+template <> struct name<Windows::UI::Composition::CompositionRadialGradientBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionRadialGradientBrush" }; };
 template <> struct name<Windows::UI::Composition::CompositionRectangleGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionRectangleGeometry" }; };
 template <> struct name<Windows::UI::Composition::CompositionRoundedRectangleGeometry>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionRoundedRectangleGeometry" }; };
 template <> struct name<Windows::UI::Composition::CompositionScopedBatch>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionScopedBatch" }; };
@@ -868,8 +952,10 @@ template <> struct name<Windows::UI::Composition::CompositionSpriteShape>{ stati
 template <> struct name<Windows::UI::Composition::CompositionStrokeDashArray>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionStrokeDashArray" }; };
 template <> struct name<Windows::UI::Composition::CompositionSurfaceBrush>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionSurfaceBrush" }; };
 template <> struct name<Windows::UI::Composition::CompositionTarget>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionTarget" }; };
+template <> struct name<Windows::UI::Composition::CompositionTransform>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionTransform" }; };
 template <> struct name<Windows::UI::Composition::CompositionViewBox>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionViewBox" }; };
 template <> struct name<Windows::UI::Composition::CompositionVirtualDrawingSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionVirtualDrawingSurface" }; };
+template <> struct name<Windows::UI::Composition::CompositionVisualSurface>{ static constexpr auto & value{ L"Windows.UI.Composition.CompositionVisualSurface" }; };
 template <> struct name<Windows::UI::Composition::Compositor>{ static constexpr auto & value{ L"Windows.UI.Composition.Compositor" }; };
 template <> struct name<Windows::UI::Composition::ContainerVisual>{ static constexpr auto & value{ L"Windows.UI.Composition.ContainerVisual" }; };
 template <> struct name<Windows::UI::Composition::CubicBezierEasingFunction>{ static constexpr auto & value{ L"Windows.UI.Composition.CubicBezierEasingFunction" }; };
@@ -975,6 +1061,7 @@ template <> struct guid_storage<Windows::UI::Composition::ICompositionGradientBr
 template <> struct guid_storage<Windows::UI::Composition::ICompositionGradientBrushFactory>{ static constexpr guid value{ 0x56D765D7,0xF189,0x48C9,{ 0x9C,0x8D,0x94,0xDA,0xF1,0xBE,0xC0,0x10 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionGraphicsDevice>{ static constexpr guid value{ 0xFB22C6E1,0x80A2,0x4667,{ 0x99,0x36,0xDB,0xEA,0xF6,0xEE,0xFE,0x95 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionGraphicsDevice2>{ static constexpr guid value{ 0x0FB8BDF6,0xC0F0,0x4BCC,{ 0x9F,0xB8,0x08,0x49,0x82,0x49,0x0D,0x7D } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionGraphicsDevice3>{ static constexpr guid value{ 0x37F67514,0xD3EF,0x49D1,{ 0xB6,0x9D,0x0D,0x8E,0xAB,0xEB,0x36,0x26 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionLight>{ static constexpr guid value{ 0x41A6D7C2,0x2E5D,0x4BC1,{ 0xB0,0x9E,0x8F,0x0A,0x03,0xE3,0xD8,0xD3 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionLight2>{ static constexpr guid value{ 0xA7BCDA72,0xF35D,0x425D,{ 0x9B,0x98,0x23,0xF4,0x20,0x5F,0x66,0x69 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionLight3>{ static constexpr guid value{ 0x4B0B00E4,0xDF07,0x4959,{ 0xB7,0xA4,0x4F,0x7E,0x42,0x33,0xF8,0x38 } }; };
@@ -982,6 +1069,7 @@ template <> struct guid_storage<Windows::UI::Composition::ICompositionLightFacto
 template <> struct guid_storage<Windows::UI::Composition::ICompositionLineGeometry>{ static constexpr guid value{ 0xDD7615A4,0x0C9A,0x4B67,{ 0x8D,0xCE,0x44,0x0A,0x5B,0xF9,0xCD,0xEC } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionLinearGradientBrush>{ static constexpr guid value{ 0x983BC519,0xA9DB,0x413C,{ 0xA2,0xD8,0x2A,0x90,0x56,0xFC,0x52,0x5E } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionMaskBrush>{ static constexpr guid value{ 0x522CF09E,0xBE6B,0x4F41,{ 0xBE,0x49,0xF9,0x22,0x6D,0x47,0x1B,0x4A } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionMipmapSurface>{ static constexpr guid value{ 0x4863675C,0xCF4A,0x4B1C,{ 0x9E,0xCE,0xC5,0xEC,0x0C,0x2B,0x2F,0xE6 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionNineGridBrush>{ static constexpr guid value{ 0xF25154E4,0xBC8C,0x4BE7,{ 0xB8,0x0F,0x86,0x85,0xB8,0x3C,0x01,0x86 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionObject>{ static constexpr guid value{ 0xBCB4AD45,0x7609,0x4550,{ 0x93,0x4F,0x16,0x00,0x2A,0x68,0xFD,0xED } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionObject2>{ static constexpr guid value{ 0xEF874EA1,0x5CFF,0x4B68,{ 0x9E,0x30,0xA1,0x51,0x9D,0x08,0xBA,0x03 } }; };
@@ -992,8 +1080,15 @@ template <> struct guid_storage<Windows::UI::Composition::ICompositionObjectStat
 template <> struct guid_storage<Windows::UI::Composition::ICompositionPath>{ static constexpr guid value{ 0x66DA1D5F,0x2E10,0x4F22,{ 0x8A,0x06,0x0A,0x81,0x51,0x91,0x9E,0x60 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionPathFactory>{ static constexpr guid value{ 0x9C1E8C6A,0x0F33,0x4751,{ 0x94,0x37,0xEB,0x3F,0xB9,0xD3,0xAB,0x07 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionPathGeometry>{ static constexpr guid value{ 0x0B6A417E,0x2C77,0x4C23,{ 0xAF,0x5E,0x63,0x04,0xC1,0x47,0xBB,0x61 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionProjectedShadow>{ static constexpr guid value{ 0x285B8E72,0x4328,0x523F,{ 0xBC,0xF2,0x55,0x57,0xC5,0x2C,0x3B,0x25 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionProjectedShadowCaster>{ static constexpr guid value{ 0xB1D7D426,0x1E36,0x5A62,{ 0xBE,0x56,0xA1,0x61,0x12,0xFD,0xD1,0x48 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionProjectedShadowCasterCollection>{ static constexpr guid value{ 0xD2525C0C,0xE07F,0x58A3,{ 0xAC,0x91,0x37,0xF7,0x3E,0xE9,0x17,0x40 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics>{ static constexpr guid value{ 0x56FBB136,0xE94F,0x5299,{ 0xAB,0x5B,0x6E,0x15,0xE3,0x8B,0xD8,0x99 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionProjectedShadowReceiver>{ static constexpr guid value{ 0x1377985A,0x6A49,0x536A,{ 0x9B,0xE4,0xA9,0x6A,0x8E,0x52,0x98,0xA9 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection>{ static constexpr guid value{ 0x02B3E3B7,0x27D2,0x599F,{ 0xAC,0x4B,0xAB,0x78,0x7C,0xDD,0xE6,0xFD } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionPropertySet>{ static constexpr guid value{ 0xC9D6D202,0x5F67,0x4453,{ 0x91,0x17,0x9E,0xAD,0xD4,0x30,0xD3,0xC2 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionPropertySet2>{ static constexpr guid value{ 0xDE80731E,0xA211,0x4455,{ 0x88,0x80,0x7D,0x0F,0x3F,0x6A,0x44,0xFD } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionRadialGradientBrush>{ static constexpr guid value{ 0x3D3B50C5,0xE3FA,0x4CE2,{ 0xB9,0xFC,0x3E,0xE1,0x25,0x61,0x78,0x8F } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionRectangleGeometry>{ static constexpr guid value{ 0x0CD51428,0x5356,0x4246,{ 0xAE,0xCF,0x7A,0x0B,0x76,0x97,0x54,0x00 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionRoundedRectangleGeometry>{ static constexpr guid value{ 0x8770C822,0x1D50,0x4B8B,{ 0xB0,0x13,0x7C,0x9A,0x0E,0x46,0x93,0x5F } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionScopedBatch>{ static constexpr guid value{ 0x0D00DAD0,0xFB07,0x46FD,{ 0x8C,0x72,0x62,0x80,0xD1,0xA3,0xD1,0xDD } }; };
@@ -1005,11 +1100,15 @@ template <> struct guid_storage<Windows::UI::Composition::ICompositionSpriteShap
 template <> struct guid_storage<Windows::UI::Composition::ICompositionSurface>{ static constexpr guid value{ 0x1527540D,0x42C7,0x47A6,{ 0xA4,0x08,0x66,0x8F,0x79,0xA9,0x0D,0xFB } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionSurfaceBrush>{ static constexpr guid value{ 0xAD016D79,0x1E4C,0x4C0D,{ 0x9C,0x29,0x83,0x33,0x8C,0x87,0xC1,0x62 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionSurfaceBrush2>{ static constexpr guid value{ 0xD27174D5,0x64F5,0x4692,{ 0x9D,0xC7,0x71,0xB6,0x1D,0x7E,0x58,0x80 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionSurfaceBrush3>{ static constexpr guid value{ 0x550BB289,0x1FE0,0x42E5,{ 0x81,0x95,0x1E,0xEF,0xA8,0x7F,0xF0,0x8E } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionTarget>{ static constexpr guid value{ 0xA1BEA8BA,0xD726,0x4663,{ 0x81,0x29,0x6B,0x5E,0x79,0x27,0xFF,0xA6 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionTargetFactory>{ static constexpr guid value{ 0x93CD9D2B,0x8516,0x4B14,{ 0xA8,0xCE,0xF4,0x9E,0x21,0x19,0xEC,0x42 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionTransform>{ static constexpr guid value{ 0x7CD54529,0xFBED,0x4112,{ 0xAB,0xC5,0x18,0x59,0x06,0xDD,0x92,0x7C } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionTransformFactory>{ static constexpr guid value{ 0xAAAECA26,0xC149,0x517A,{ 0x8F,0x72,0x6B,0xFF,0x7A,0x65,0xCE,0x08 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionViewBox>{ static constexpr guid value{ 0xB440BF07,0x068F,0x4537,{ 0x84,0xC6,0x4E,0xCB,0xE0,0x19,0xE1,0xF4 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionVirtualDrawingSurface>{ static constexpr guid value{ 0xA9C384DB,0x8740,0x4F94,{ 0x8B,0x9D,0xB6,0x85,0x21,0xE7,0x86,0x3D } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory>{ static constexpr guid value{ 0x6766106C,0xD56B,0x4A49,{ 0xB1,0xDF,0x50,0x76,0xA0,0x62,0x07,0x68 } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositionVisualSurface>{ static constexpr guid value{ 0xB224D803,0x4F6E,0x4A3F,{ 0x8C,0xAE,0x3D,0xC1,0xCD,0xA7,0x4F,0xC6 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositor>{ static constexpr guid value{ 0xB403CA50,0x7F8C,0x4E83,{ 0x98,0x5F,0xCC,0x45,0x06,0x00,0x36,0xD8 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositor2>{ static constexpr guid value{ 0x735081DC,0x5E24,0x45DA,{ 0xA3,0x8F,0xE3,0x2C,0xC3,0x49,0xA9,0xA0 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositor3>{ static constexpr guid value{ 0xC9DD8EF0,0x6EB1,0x4E3C,{ 0xA6,0x58,0x67,0x5D,0x9C,0x64,0xD4,0xAB } }; };
@@ -1017,6 +1116,9 @@ template <> struct guid_storage<Windows::UI::Composition::ICompositor4>{ static 
 template <> struct guid_storage<Windows::UI::Composition::ICompositor5>{ static constexpr guid value{ 0x48EA31AD,0x7FCD,0x4076,{ 0xA7,0x9C,0x90,0xCC,0x4B,0x85,0x2C,0x9B } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositor6>{ static constexpr guid value{ 0x7A38B2BD,0xCEC8,0x4EEB,{ 0x83,0x0F,0xD8,0xD0,0x7A,0xED,0xEB,0xC3 } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICompositorStatics>{ static constexpr guid value{ 0x080DB93E,0x121E,0x4D97,{ 0x8B,0x74,0x1D,0xFC,0xF9,0x19,0x87,0xEA } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositorWithProjectedShadow>{ static constexpr guid value{ 0xA2E6330E,0x8A60,0x5A38,{ 0xBB,0x85,0xB4,0x4E,0xA9,0x01,0x67,0x7C } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositorWithRadialGradient>{ static constexpr guid value{ 0x98B9C1A7,0x8E71,0x4B53,{ 0xB4,0xA8,0x69,0xBA,0x5D,0x19,0xDC,0x5B } }; };
+template <> struct guid_storage<Windows::UI::Composition::ICompositorWithVisualSurface>{ static constexpr guid value{ 0xCFA1658B,0x0123,0x4551,{ 0x88,0x91,0x89,0xBD,0xCC,0x40,0x32,0x2B } }; };
 template <> struct guid_storage<Windows::UI::Composition::IContainerVisual>{ static constexpr guid value{ 0x02F6BC74,0xED20,0x4773,{ 0xAF,0xE6,0xD4,0x9B,0x4A,0x93,0xDB,0x32 } }; };
 template <> struct guid_storage<Windows::UI::Composition::IContainerVisualFactory>{ static constexpr guid value{ 0x0363A65B,0xC7DA,0x4D9A,{ 0x95,0xF4,0x69,0xB5,0xC8,0xDF,0x67,0x0B } }; };
 template <> struct guid_storage<Windows::UI::Composition::ICubicBezierEasingFunction>{ static constexpr guid value{ 0x32350666,0xC1E8,0x44F9,{ 0x96,0xB8,0xC9,0x8A,0xCF,0x0A,0xE6,0x98 } }; };
@@ -1066,6 +1168,7 @@ template <> struct guid_storage<Windows::UI::Composition::IVector4KeyFrameAnimat
 template <> struct guid_storage<Windows::UI::Composition::IVisual>{ static constexpr guid value{ 0x117E202D,0xA859,0x4C89,{ 0x87,0x3B,0xC2,0xAA,0x56,0x67,0x88,0xE3 } }; };
 template <> struct guid_storage<Windows::UI::Composition::IVisual2>{ static constexpr guid value{ 0x3052B611,0x56C3,0x4C3E,{ 0x8B,0xF3,0xF6,0xE1,0xAD,0x47,0x3F,0x06 } }; };
 template <> struct guid_storage<Windows::UI::Composition::IVisualCollection>{ static constexpr guid value{ 0x8B745505,0xFD3E,0x4A98,{ 0x84,0xA8,0xE9,0x49,0x46,0x8C,0x6B,0xCB } }; };
+template <> struct guid_storage<Windows::UI::Composition::IVisualElement>{ static constexpr guid value{ 0x01E64612,0x1D82,0x42F4,{ 0x8E,0x3F,0xA7,0x22,0xDE,0xD3,0x3F,0xC7 } }; };
 template <> struct guid_storage<Windows::UI::Composition::IVisualFactory>{ static constexpr guid value{ 0xAD0FF93E,0xB502,0x4EB5,{ 0x87,0xB4,0x9A,0x38,0xA7,0x1D,0x01,0x37 } }; };
 template <> struct guid_storage<Windows::UI::Composition::IVisualUnorderedCollection>{ static constexpr guid value{ 0x338FAA70,0x54C8,0x40A7,{ 0x80,0x29,0xC9,0xCE,0xEB,0x0A,0xA2,0x50 } }; };
 template <> struct default_interface<Windows::UI::Composition::AmbientLight>{ using type = Windows::UI::Composition::IAmbientLight; };
@@ -1102,11 +1205,18 @@ template <> struct default_interface<Windows::UI::Composition::CompositionLight>
 template <> struct default_interface<Windows::UI::Composition::CompositionLineGeometry>{ using type = Windows::UI::Composition::ICompositionLineGeometry; };
 template <> struct default_interface<Windows::UI::Composition::CompositionLinearGradientBrush>{ using type = Windows::UI::Composition::ICompositionLinearGradientBrush; };
 template <> struct default_interface<Windows::UI::Composition::CompositionMaskBrush>{ using type = Windows::UI::Composition::ICompositionMaskBrush; };
+template <> struct default_interface<Windows::UI::Composition::CompositionMipmapSurface>{ using type = Windows::UI::Composition::ICompositionMipmapSurface; };
 template <> struct default_interface<Windows::UI::Composition::CompositionNineGridBrush>{ using type = Windows::UI::Composition::ICompositionNineGridBrush; };
 template <> struct default_interface<Windows::UI::Composition::CompositionObject>{ using type = Windows::UI::Composition::ICompositionObject; };
 template <> struct default_interface<Windows::UI::Composition::CompositionPath>{ using type = Windows::UI::Composition::ICompositionPath; };
 template <> struct default_interface<Windows::UI::Composition::CompositionPathGeometry>{ using type = Windows::UI::Composition::ICompositionPathGeometry; };
+template <> struct default_interface<Windows::UI::Composition::CompositionProjectedShadow>{ using type = Windows::UI::Composition::ICompositionProjectedShadow; };
+template <> struct default_interface<Windows::UI::Composition::CompositionProjectedShadowCaster>{ using type = Windows::UI::Composition::ICompositionProjectedShadowCaster; };
+template <> struct default_interface<Windows::UI::Composition::CompositionProjectedShadowCasterCollection>{ using type = Windows::UI::Composition::ICompositionProjectedShadowCasterCollection; };
+template <> struct default_interface<Windows::UI::Composition::CompositionProjectedShadowReceiver>{ using type = Windows::UI::Composition::ICompositionProjectedShadowReceiver; };
+template <> struct default_interface<Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>{ using type = Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection; };
 template <> struct default_interface<Windows::UI::Composition::CompositionPropertySet>{ using type = Windows::UI::Composition::ICompositionPropertySet; };
+template <> struct default_interface<Windows::UI::Composition::CompositionRadialGradientBrush>{ using type = Windows::UI::Composition::ICompositionRadialGradientBrush; };
 template <> struct default_interface<Windows::UI::Composition::CompositionRectangleGeometry>{ using type = Windows::UI::Composition::ICompositionRectangleGeometry; };
 template <> struct default_interface<Windows::UI::Composition::CompositionRoundedRectangleGeometry>{ using type = Windows::UI::Composition::ICompositionRoundedRectangleGeometry; };
 template <> struct default_interface<Windows::UI::Composition::CompositionScopedBatch>{ using type = Windows::UI::Composition::ICompositionScopedBatch; };
@@ -1117,8 +1227,10 @@ template <> struct default_interface<Windows::UI::Composition::CompositionSprite
 template <> struct default_interface<Windows::UI::Composition::CompositionStrokeDashArray>{ using type = Windows::Foundation::Collections::IVector<float>; };
 template <> struct default_interface<Windows::UI::Composition::CompositionSurfaceBrush>{ using type = Windows::UI::Composition::ICompositionSurfaceBrush; };
 template <> struct default_interface<Windows::UI::Composition::CompositionTarget>{ using type = Windows::UI::Composition::ICompositionTarget; };
+template <> struct default_interface<Windows::UI::Composition::CompositionTransform>{ using type = Windows::UI::Composition::ICompositionTransform; };
 template <> struct default_interface<Windows::UI::Composition::CompositionViewBox>{ using type = Windows::UI::Composition::ICompositionViewBox; };
 template <> struct default_interface<Windows::UI::Composition::CompositionVirtualDrawingSurface>{ using type = Windows::UI::Composition::ICompositionVirtualDrawingSurface; };
+template <> struct default_interface<Windows::UI::Composition::CompositionVisualSurface>{ using type = Windows::UI::Composition::ICompositionVisualSurface; };
 template <> struct default_interface<Windows::UI::Composition::Compositor>{ using type = Windows::UI::Composition::ICompositor; };
 template <> struct default_interface<Windows::UI::Composition::ContainerVisual>{ using type = Windows::UI::Composition::IContainerVisual; };
 template <> struct default_interface<Windows::UI::Composition::CubicBezierEasingFunction>{ using type = Windows::UI::Composition::ICubicBezierEasingFunction; };
@@ -1495,6 +1607,12 @@ template <> struct abi<Windows::UI::Composition::ICompositionGraphicsDevice2>{ s
     virtual int32_t WINRT_CALL CreateVirtualDrawingSurface(struct struct_Windows_Graphics_SizeInt32 sizePixels, Windows::Graphics::DirectX::DirectXPixelFormat pixelFormat, Windows::Graphics::DirectX::DirectXAlphaMode alphaMode, void** result) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Composition::ICompositionGraphicsDevice3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateMipmapSurface(struct struct_Windows_Graphics_SizeInt32 sizePixels, Windows::Graphics::DirectX::DirectXPixelFormat pixelFormat, Windows::Graphics::DirectX::DirectXAlphaMode alphaMode, void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL Trim() noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Composition::ICompositionLight>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Targets(void** value) noexcept = 0;
@@ -1537,6 +1655,15 @@ template <> struct abi<Windows::UI::Composition::ICompositionMaskBrush>{ struct 
     virtual int32_t WINRT_CALL put_Mask(void* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_Source(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL put_Source(void* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionMipmapSurface>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_LevelCount(uint32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_AlphaMode(Windows::Graphics::DirectX::DirectXAlphaMode* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_PixelFormat(Windows::Graphics::DirectX::DirectXPixelFormat* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_SizeInt32(struct struct_Windows_Graphics_SizeInt32* value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDrawingSurfaceForLevel(uint32_t level, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Composition::ICompositionNineGridBrush>{ struct type : IInspectable
@@ -1621,6 +1748,58 @@ template <> struct abi<Windows::UI::Composition::ICompositionPathGeometry>{ stru
     virtual int32_t WINRT_CALL put_Path(void* value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Composition::ICompositionProjectedShadow>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_BlurRadiusMultiplier(float* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_BlurRadiusMultiplier(float value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Casters(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_LightSource(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_LightSource(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MaxBlurRadius(float* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_MaxBlurRadius(float value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_MinBlurRadius(float* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_MinBlurRadius(float value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Receivers(void** value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionProjectedShadowCaster>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Brush(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_Brush(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_CastingVisual(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_CastingVisual(void* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionProjectedShadowCasterCollection>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_Count(int32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL InsertAbove(void* newCaster, void* reference) noexcept = 0;
+    virtual int32_t WINRT_CALL InsertAtBottom(void* newCaster) noexcept = 0;
+    virtual int32_t WINRT_CALL InsertAtTop(void* newCaster) noexcept = 0;
+    virtual int32_t WINRT_CALL InsertBelow(void* newCaster, void* reference) noexcept = 0;
+    virtual int32_t WINRT_CALL Remove(void* caster) noexcept = 0;
+    virtual int32_t WINRT_CALL RemoveAll() noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_MaxRespectedCasters(int32_t* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionProjectedShadowReceiver>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_ReceivingVisual(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_ReceivingVisual(void* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL Add(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_Count(int32_t* value) noexcept = 0;
+    virtual int32_t WINRT_CALL Remove(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL RemoveAll() noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Composition::ICompositionPropertySet>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL InsertColor(void* propertyName, struct struct_Windows_UI_Color value) noexcept = 0;
@@ -1645,6 +1824,16 @@ template <> struct abi<Windows::UI::Composition::ICompositionPropertySet2>{ stru
 {
     virtual int32_t WINRT_CALL InsertBoolean(void* propertyName, bool value) noexcept = 0;
     virtual int32_t WINRT_CALL TryGetBoolean(void* propertyName, bool* value, Windows::UI::Composition::CompositionGetValueStatus* result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionRadialGradientBrush>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_EllipseCenter(Windows::Foundation::Numerics::float2* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_EllipseCenter(Windows::Foundation::Numerics::float2 value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_EllipseRadius(Windows::Foundation::Numerics::float2* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_EllipseRadius(Windows::Foundation::Numerics::float2 value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_GradientOriginOffset(Windows::Foundation::Numerics::float2* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_GradientOriginOffset(Windows::Foundation::Numerics::float2 value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Composition::ICompositionRectangleGeometry>{ struct type : IInspectable
@@ -1767,6 +1956,12 @@ template <> struct abi<Windows::UI::Composition::ICompositionSurfaceBrush2>{ str
     virtual int32_t WINRT_CALL put_TransformMatrix(Windows::Foundation::Numerics::float3x2 value) noexcept = 0;
 };};
 
+template <> struct abi<Windows::UI::Composition::ICompositionSurfaceBrush3>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_SnapToPixels(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_SnapToPixels(bool value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::UI::Composition::ICompositionTarget>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Root(void** value) noexcept = 0;
@@ -1774,6 +1969,14 @@ template <> struct abi<Windows::UI::Composition::ICompositionTarget>{ struct typ
 };};
 
 template <> struct abi<Windows::UI::Composition::ICompositionTargetFactory>{ struct type : IInspectable
+{
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionTransform>{ struct type : IInspectable
+{
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionTransformFactory>{ struct type : IInspectable
 {
 };};
 
@@ -1798,6 +2001,16 @@ template <> struct abi<Windows::UI::Composition::ICompositionVirtualDrawingSurfa
 
 template <> struct abi<Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory>{ struct type : IInspectable
 {
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositionVisualSurface>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_SourceVisual(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_SourceVisual(void* value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_SourceOffset(Windows::Foundation::Numerics::float2* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_SourceOffset(Windows::Foundation::Numerics::float2 value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_SourceSize(Windows::Foundation::Numerics::float2* value) noexcept = 0;
+    virtual int32_t WINRT_CALL put_SourceSize(Windows::Foundation::Numerics::float2 value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Composition::ICompositor>{ struct type : IInspectable
@@ -1897,6 +2110,23 @@ template <> struct abi<Windows::UI::Composition::ICompositorStatics>{ struct typ
 {
     virtual int32_t WINRT_CALL get_MaxGlobalPlaybackRate(float* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_MinGlobalPlaybackRate(float* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositorWithProjectedShadow>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateProjectedShadowCaster(void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateProjectedShadow(void** result) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateProjectedShadowReceiver(void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositorWithRadialGradient>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateRadialGradientBrush(void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::ICompositorWithVisualSurface>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL CreateVisualSurface(void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Composition::IContainerVisual>{ struct type : IInspectable
@@ -2311,6 +2541,10 @@ template <> struct abi<Windows::UI::Composition::IVisualCollection>{ struct type
     virtual int32_t WINRT_CALL InsertBelow(void* newChild, void* sibling) noexcept = 0;
     virtual int32_t WINRT_CALL Remove(void* child) noexcept = 0;
     virtual int32_t WINRT_CALL RemoveAll() noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Composition::IVisualElement>{ struct type : IInspectable
+{
 };};
 
 template <> struct abi<Windows::UI::Composition::IVisualFactory>{ struct type : IInspectable
@@ -2772,6 +3006,14 @@ struct consume_Windows_UI_Composition_ICompositionGraphicsDevice2
 template <> struct consume<Windows::UI::Composition::ICompositionGraphicsDevice2> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionGraphicsDevice2<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Composition_ICompositionGraphicsDevice3
+{
+    Windows::UI::Composition::CompositionMipmapSurface CreateMipmapSurface(Windows::Graphics::SizeInt32 const& sizePixels, Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
+    void Trim() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionGraphicsDevice3> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionGraphicsDevice3<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Composition_ICompositionLight
 {
     Windows::UI::Composition::VisualUnorderedCollection Targets() const;
@@ -2828,6 +3070,17 @@ struct consume_Windows_UI_Composition_ICompositionMaskBrush
     void Source(Windows::UI::Composition::CompositionBrush const& value) const;
 };
 template <> struct consume<Windows::UI::Composition::ICompositionMaskBrush> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionMaskBrush<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionMipmapSurface
+{
+    uint32_t LevelCount() const;
+    Windows::Graphics::DirectX::DirectXAlphaMode AlphaMode() const;
+    Windows::Graphics::DirectX::DirectXPixelFormat PixelFormat() const;
+    Windows::Graphics::SizeInt32 SizeInt32() const;
+    Windows::UI::Composition::CompositionDrawingSurface GetDrawingSurfaceForLevel(uint32_t level) const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionMipmapSurface> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionMipmapSurface<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_ICompositionNineGridBrush
@@ -2932,6 +3185,70 @@ struct consume_Windows_UI_Composition_ICompositionPathGeometry
 template <> struct consume<Windows::UI::Composition::ICompositionPathGeometry> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionPathGeometry<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Composition_ICompositionProjectedShadow
+{
+    float BlurRadiusMultiplier() const;
+    void BlurRadiusMultiplier(float value) const;
+    Windows::UI::Composition::CompositionProjectedShadowCasterCollection Casters() const;
+    Windows::UI::Composition::CompositionLight LightSource() const;
+    void LightSource(Windows::UI::Composition::CompositionLight const& value) const;
+    float MaxBlurRadius() const;
+    void MaxBlurRadius(float value) const;
+    float MinBlurRadius() const;
+    void MinBlurRadius(float value) const;
+    Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection Receivers() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionProjectedShadow> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionProjectedShadow<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionProjectedShadowCaster
+{
+    Windows::UI::Composition::CompositionBrush Brush() const;
+    void Brush(Windows::UI::Composition::CompositionBrush const& value) const;
+    Windows::UI::Composition::Visual CastingVisual() const;
+    void CastingVisual(Windows::UI::Composition::Visual const& value) const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionProjectedShadowCaster> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionProjectedShadowCaster<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection
+{
+    int32_t Count() const;
+    void InsertAbove(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const;
+    void InsertAtBottom(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const;
+    void InsertAtTop(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const;
+    void InsertBelow(Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const;
+    void Remove(Windows::UI::Composition::CompositionProjectedShadowCaster const& caster) const;
+    void RemoveAll() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionProjectedShadowCasterCollection> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollectionStatics
+{
+    int32_t MaxRespectedCasters() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollectionStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionProjectedShadowReceiver
+{
+    Windows::UI::Composition::Visual ReceivingVisual() const;
+    void ReceivingVisual(Windows::UI::Composition::Visual const& value) const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionProjectedShadowReceiver> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionProjectedShadowReceiver<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionProjectedShadowReceiverUnorderedCollection
+{
+    void Add(Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const;
+    int32_t Count() const;
+    void Remove(Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const;
+    void RemoveAll() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionProjectedShadowReceiverUnorderedCollection<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Composition_ICompositionPropertySet
 {
     void InsertColor(param::hstring const& propertyName, Windows::UI::Color const& value) const;
@@ -2960,6 +3277,18 @@ struct consume_Windows_UI_Composition_ICompositionPropertySet2
     Windows::UI::Composition::CompositionGetValueStatus TryGetBoolean(param::hstring const& propertyName, bool& value) const;
 };
 template <> struct consume<Windows::UI::Composition::ICompositionPropertySet2> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionPropertySet2<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionRadialGradientBrush
+{
+    Windows::Foundation::Numerics::float2 EllipseCenter() const;
+    void EllipseCenter(Windows::Foundation::Numerics::float2 const& value) const;
+    Windows::Foundation::Numerics::float2 EllipseRadius() const;
+    void EllipseRadius(Windows::Foundation::Numerics::float2 const& value) const;
+    Windows::Foundation::Numerics::float2 GradientOriginOffset() const;
+    void GradientOriginOffset(Windows::Foundation::Numerics::float2 const& value) const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionRadialGradientBrush> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionRadialGradientBrush<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_ICompositionRectangleGeometry
@@ -3106,6 +3435,14 @@ struct consume_Windows_UI_Composition_ICompositionSurfaceBrush2
 template <> struct consume<Windows::UI::Composition::ICompositionSurfaceBrush2> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionSurfaceBrush2<D>; };
 
 template <typename D>
+struct consume_Windows_UI_Composition_ICompositionSurfaceBrush3
+{
+    bool SnapToPixels() const;
+    void SnapToPixels(bool value) const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionSurfaceBrush3> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionSurfaceBrush3<D>; };
+
+template <typename D>
 struct consume_Windows_UI_Composition_ICompositionTarget
 {
     Windows::UI::Composition::Visual Root() const;
@@ -3118,6 +3455,18 @@ struct consume_Windows_UI_Composition_ICompositionTargetFactory
 {
 };
 template <> struct consume<Windows::UI::Composition::ICompositionTargetFactory> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionTargetFactory<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionTransform
+{
+};
+template <> struct consume<Windows::UI::Composition::ICompositionTransform> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionTransform<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionTransformFactory
+{
+};
+template <> struct consume<Windows::UI::Composition::ICompositionTransformFactory> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionTransformFactory<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_ICompositionViewBox
@@ -3147,6 +3496,18 @@ struct consume_Windows_UI_Composition_ICompositionVirtualDrawingSurfaceFactory
 {
 };
 template <> struct consume<Windows::UI::Composition::ICompositionVirtualDrawingSurfaceFactory> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionVirtualDrawingSurfaceFactory<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositionVisualSurface
+{
+    Windows::UI::Composition::Visual SourceVisual() const;
+    void SourceVisual(Windows::UI::Composition::Visual const& value) const;
+    Windows::Foundation::Numerics::float2 SourceOffset() const;
+    void SourceOffset(Windows::Foundation::Numerics::float2 const& value) const;
+    Windows::Foundation::Numerics::float2 SourceSize() const;
+    void SourceSize(Windows::Foundation::Numerics::float2 const& value) const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositionVisualSurface> { template <typename D> using type = consume_Windows_UI_Composition_ICompositionVisualSurface<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_ICompositor
@@ -3260,6 +3621,29 @@ struct consume_Windows_UI_Composition_ICompositorStatics
     float MinGlobalPlaybackRate() const;
 };
 template <> struct consume<Windows::UI::Composition::ICompositorStatics> { template <typename D> using type = consume_Windows_UI_Composition_ICompositorStatics<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositorWithProjectedShadow
+{
+    Windows::UI::Composition::CompositionProjectedShadowCaster CreateProjectedShadowCaster() const;
+    Windows::UI::Composition::CompositionProjectedShadow CreateProjectedShadow() const;
+    Windows::UI::Composition::CompositionProjectedShadowReceiver CreateProjectedShadowReceiver() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositorWithProjectedShadow> { template <typename D> using type = consume_Windows_UI_Composition_ICompositorWithProjectedShadow<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositorWithRadialGradient
+{
+    Windows::UI::Composition::CompositionRadialGradientBrush CreateRadialGradientBrush() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositorWithRadialGradient> { template <typename D> using type = consume_Windows_UI_Composition_ICompositorWithRadialGradient<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_ICompositorWithVisualSurface
+{
+    Windows::UI::Composition::CompositionVisualSurface CreateVisualSurface() const;
+};
+template <> struct consume<Windows::UI::Composition::ICompositorWithVisualSurface> { template <typename D> using type = consume_Windows_UI_Composition_ICompositorWithVisualSurface<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_IContainerVisual
@@ -3772,6 +4156,12 @@ struct consume_Windows_UI_Composition_IVisualCollection
     void RemoveAll() const;
 };
 template <> struct consume<Windows::UI::Composition::IVisualCollection> { template <typename D> using type = consume_Windows_UI_Composition_IVisualCollection<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Composition_IVisualElement
+{
+};
+template <> struct consume<Windows::UI::Composition::IVisualElement> { template <typename D> using type = consume_Windows_UI_Composition_IVisualElement<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Composition_IVisualFactory

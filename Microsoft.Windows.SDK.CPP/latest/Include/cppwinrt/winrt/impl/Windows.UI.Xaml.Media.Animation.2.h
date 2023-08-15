@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -496,7 +496,7 @@ struct WINRT_EBO FadeOutThemeAnimation :
 struct WINRT_EBO GravityConnectedAnimationConfiguration :
     Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration,
     impl::base<GravityConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>,
-    impl::require<GravityConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::IConnectedAnimationConfiguration>
+    impl::require<GravityConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::IConnectedAnimationConfiguration, Windows::UI::Xaml::Media::Animation::IGravityConnectedAnimationConfiguration2>
 {
     GravityConnectedAnimationConfiguration(std::nullptr_t) noexcept {}
     GravityConnectedAnimationConfiguration();

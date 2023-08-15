@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.devices.portable.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -172,7 +172,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Devices {
             namespace Portable {
                 interface IServiceDeviceStatics;
-            } /* Windows */
+            } /* Portable */
         } /* Devices */
-    } /* Portable */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPortable_CIServiceDeviceStatics ABI::Windows::Devices::Portable::IServiceDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPortable_CIServiceDeviceStatics_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Devices {
             namespace Portable {
                 interface IStorageDeviceStatics;
-            } /* Windows */
+            } /* Portable */
         } /* Devices */
-    } /* Portable */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CPortable_CIStorageDeviceStatics ABI::Windows::Devices::Portable::IStorageDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CPortable_CIStorageDeviceStatics_FWD_DEFINED__
@@ -305,8 +301,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -314,8 +310,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -331,9 +327,9 @@ namespace ABI {
                 
                 typedef enum ServiceDeviceType : int ServiceDeviceType;
                 
-            } /* Windows */
+            } /* Portable */
         } /* Devices */
-    } /* Portable */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -370,9 +366,9 @@ namespace ABI {
                     ServiceDeviceType_TasksService = 6,
                 };
                 
-            } /* Windows */
+            } /* Portable */
         } /* Devices */
-    } /* Portable */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_DEVICES_PORTABLE_PORTABLEDEVICECONTRACT_VERSION >= 0x10000
 
 
@@ -413,9 +409,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServiceDeviceStatics=_uuidof(IServiceDeviceStatics);
                 
-            } /* Windows */
+            } /* Portable */
         } /* Devices */
-    } /* Portable */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPortable_CIServiceDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPortable_CIServiceDeviceStatics_INTERFACE_DEFINED__) */
@@ -458,9 +454,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStorageDeviceStatics=_uuidof(IStorageDeviceStatics);
                 
-            } /* Windows */
+            } /* Portable */
         } /* Devices */
-    } /* Portable */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CPortable_CIStorageDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CPortable_CIStorageDeviceStatics_INTERFACE_DEFINED__) */

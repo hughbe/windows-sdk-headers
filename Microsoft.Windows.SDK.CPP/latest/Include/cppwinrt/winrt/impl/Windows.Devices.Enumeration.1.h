@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #pragma once
 #include "winrt/impl/Windows.ApplicationModel.Background.0.h"
 #include "winrt/impl/Windows.Foundation.0.h"
+#include "winrt/impl/Windows.Security.Credentials.0.h"
 #include "winrt/impl/Windows.Storage.Streams.0.h"
 #include "winrt/impl/Windows.UI.0.h"
 #include "winrt/impl/Windows.UI.Popups.0.h"
@@ -138,6 +139,13 @@ struct WINRT_EBO IDevicePairingRequestedEventArgs :
     impl::consume_t<IDevicePairingRequestedEventArgs>
 {
     IDevicePairingRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IDevicePairingRequestedEventArgs2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IDevicePairingRequestedEventArgs2>
+{
+    IDevicePairingRequestedEventArgs2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IDevicePairingResult :

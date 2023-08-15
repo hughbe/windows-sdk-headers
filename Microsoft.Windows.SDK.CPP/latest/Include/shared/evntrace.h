@@ -29,19 +29,19 @@ Abstract:
 
 #if !defined(NO_ETW_APP_DEPRECATION_WARNINGS)
 
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_SYSTEM)
-#define ETW_APP_DECLSPEC_DEPRECATED __declspec(deprecated("This API is not recommended for general usage in Windows Store Apps and may not be supported in future versions of Windows"))
+#if (WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) || WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_GAMES)) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_SYSTEM)
+#define ETW_APP_DECLSPEC_DEPRECATED __declspec(deprecated("This API is not recommended for general usage in Windows Store Apps or Games and may not be supported in future versions of Windows"))
 #else
 #define ETW_APP_DECLSPEC_DEPRECATED
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_SYSTEM)
+#endif // (WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) || WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_GAMES)) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_SYSTEM)
 
 #else
 
 #define ETW_APP_DECLSPEC_DEPRECATED
 #endif // NO_ETW_APP_DEPRECATION_WARNINGS
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #ifndef WMIAPI
 #ifndef MIDL_PASS
@@ -307,6 +307,8 @@ typedef ULONG64 TRACEHANDLE, *PTRACEHANDLE;
 #define EVENT_TRACE_TYPE_CONFIG_DEVICEFAMILY    0x21     // Device Family Information
 #define EVENT_TRACE_TYPE_CONFIG_FLIGHTID        0x22     // Flights on the machine
 #define EVENT_TRACE_TYPE_CONFIG_PROCESSOR       0x23     // CentralProcessor records
+#define EVENT_TRACE_TYPE_CONFIG_VIRTUALIZATION  0x24     // virtualization config info
+#define EVENT_TRACE_TYPE_CONFIG_BOOT            0x25     // boot config info
 
 //
 // Event types for Optical IO subsystem
@@ -1064,7 +1066,7 @@ typedef struct _EVENT_TRACE {
 #define EVENT_CONTROL_CODE_ENABLE_PROVIDER  1
 #define EVENT_CONTROL_CODE_CAPTURE_STATE    2
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #if !defined(_EVNTRACE_KERNEL_MODE)
@@ -1219,8 +1221,8 @@ extern "C" {
 
 #ifndef _APISET_EVENTING
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Logger control APIs
@@ -1247,11 +1249,11 @@ StartTraceW (
     _Inout_ PEVENT_TRACE_PROPERTIES Properties
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1262,11 +1264,11 @@ StartTraceA (
     _Inout_ PEVENT_TRACE_PROPERTIES Properties
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Use the routine below to stop an event trace session
@@ -1289,11 +1291,11 @@ StopTraceW (
     _Inout_ PEVENT_TRACE_PROPERTIES Properties
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1304,11 +1306,11 @@ StopTraceA (
     _Inout_ PEVENT_TRACE_PROPERTIES Properties
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Use the routine below to query the properties of an event trace session
@@ -1330,11 +1332,11 @@ QueryTraceW (
     _Inout_ PEVENT_TRACE_PROPERTIES Properties
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1379,11 +1381,11 @@ UpdateTraceA (
 // session be "flushed", or written out.
 //
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 // ULONG
 // FlushTrace(
@@ -1403,11 +1405,11 @@ FlushTraceW (
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (WINVER >= _WIN32_WINNT_WINXP)
 EXTERN_C
@@ -1420,11 +1422,11 @@ FlushTraceA (
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Generic trace control routine
@@ -1439,11 +1441,11 @@ ControlTraceW (
     _In_ ULONG ControlCode
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1481,11 +1483,11 @@ QueryAllTracesA (
     _Out_ PULONG LoggerCount
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Data Provider Enable APIs
@@ -1502,15 +1504,15 @@ EnableTrace (
     _In_ TRACEHANDLE TraceHandle
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _APISET_EVENTING
 
 #ifndef _APISET_EVENTING
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (WINVER >= _WIN32_WINNT_VISTA)
 EXTERN_C
@@ -1529,7 +1531,7 @@ EnableTraceEx (
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _APISET_EVENTING
@@ -1556,8 +1558,8 @@ typedef struct _ENABLE_TRACE_PARAMETERS {
 
 #ifndef _APISET_EVENTING
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
 EXTERN_C
@@ -1575,39 +1577,304 @@ EnableTraceEx2 (
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _APISET_EVENTING
 
+//
+// TRACE_QUERY_INFO_CLASS/TRACE_INFO_CLASS
+// This enumeration contains values that are passed to one or more of the
+// ETW query/set APIs: EnumerateTraceGuidsEx, TraceSetInformation, TraceQueryInformation.
+//
+
 typedef enum _TRACE_QUERY_INFO_CLASS {
-    TraceGuidQueryList,
-    TraceGuidQueryInfo,
-    TraceGuidQueryProcess,
-    TraceStackTracingInfo,   // Win7
-    TraceSystemTraceEnableFlagsInfo,
-    TraceSampledProfileIntervalInfo,
-    TraceProfileSourceConfigInfo,
-    TraceProfileSourceListInfo,
-    TracePmcEventListInfo,
-    TracePmcCounterListInfo,
-    TraceSetDisallowList,
-    TraceVersionInfo,
-    TraceGroupQueryList,
-    TraceGroupQueryInfo,
-    TraceDisallowListQuery,
-    TraceCompressionInfo,
-    TracePeriodicCaptureStateListInfo,
-    TracePeriodicCaptureStateInfo,
-    TraceProviderBinaryTracking,
-    TraceMaxLoggersQuery,
+    //
+    // TraceGuidQueryList:
+    // - EnumerateTraceGuidsEx.
+    //      Returns a list of provider GUIDs that are currently registered with the kernel.
+    //      Note: This is not the same thing as having an installed manifest.
+    //
+    //      Input Format: None.
+    //      Output Format: An array of GUIDs.
+    //
+    TraceGuidQueryList = 0,
+
+    //
+    // TraceGuidQueryList:
+    // - EnumerateTraceGuidsEx.
+    //      Returns the current registration and enablement information for the input GUID.
+    //
+    //      Input Format: GUID
+    //      Output Format: TRACE_GUID_INFO followed by TRACE_GUID_INFO.InstanceCount
+    //                     TRACE_PROVIDER_INSTANCE_INFO structs, each bundled with
+    //                     TRACE_PROVIDER_INSTANCE_INFO.EnableCount TRACE_ENABLE_INFO.
+    //                For example, a GUID with two provider registrations, the first enabled
+    //                  by two loggers and the second by three loggers would look like:
+    //                  {
+    //                      TRACE_GUID_INFO;  // Where InstanceCount = 2
+    //                      TRACE_PROVIDER_INSTANCE_INFO; // Where EnableCount = 2
+    //                      TRACE_ENABLE_INFO;
+    //                      TRACE_ENABLE_INFO;
+    //                      TRACE_PROVIDER_INSTANCE_INFO; // Where EnableCount = 3
+    //                      TRACE_ENABLE_INFO;
+    //                      TRACE_ENABLE_INFO;
+    //                      TRACE_ENABLE_INFO;
+    //                  }
+    //
+    TraceGuidQueryInfo = 1,
+
+    //
+    // TraceGuidQueryProcess:
+    // - EnumerateTraceGuidsEx.
+    //      Returns a list of provider GUIDs that are registered in the current process.
+    //      Note: This is not the same thing as having an installed manifest.
+    //
+    //      Input Format: None.
+    //      Output Format: An array of GUIDs.
+    //
+    TraceGuidQueryProcess = 2,
+
+    //
+    // TraceStackTracingInfo:
+    // - TraceSetInformation.
+    //      Turns on stack trace collection for the specified kernel events for the specified logger.
+    //      It also turns off stack tracing for all kernel events not on this list, regardless of prior status.
+    //
+    //      Input Format: An array of CLASSIC_EVENT_ID structs.
+    //
+    TraceStackTracingInfo = 3,
+
+    //
+    // TraceSystemTraceEnableFlagsInfo:
+    // - TraceSetInformation
+    //      Sets the Group Mask state for the specified logging session.
+    //
+    //      Input Format: PERFINFO_GROUPMASK
+    //
+    // - TraceQueryInformation
+    //      Queries the current Group Mask state for the specified logging session.
+    //
+    //      Return Format: PERFINFO_GROUPMASK
+    //
+    TraceSystemTraceEnableFlagsInfo = 4,
+
+    //
+    // TraceSampledProfileIntervalInfo:
+    // - TraceSetInformation
+    //      Sets the Sample Profile interval for the system.
+    //      Expects NULL SessionHandle parameter.
+    //
+    //      Input Format: TRACE_PROFILE_INTERVAL
+    //
+    // - TraceQueryInformation
+    //      Queries the current Sample Profile Interval for the system.
+    //      Expects NULL SessionHandle parameter.
+    //
+    //      Output Format: TRACE_PROFILE_INTERVAL
+    //
+    TraceSampledProfileIntervalInfo = 5,
+
+    //
+    // TraceProfileSourceConfigInfo:
+    // - TraceSetInformation
+    //      Sets a list of sources to be used for PMC Profiling system-wide.
+    //      Expects NULL SessionHandle parameter.
+    //
+    //      Input Format: An array of ULONGs specifying the IDs of the sources.
+    //
+    TraceProfileSourceConfigInfo = 6,
+
+    //
+    // TraceProfileSourceListInfo:
+    // - TraceQueryInformation
+    //      Queries the list of PMC Profiling sources available on the system.
+    //      Expects NULL SessionHandle parameter.
+    //
+    //      Output Format: An array of PROFILE_SOURCE_INFO structs.
+    //
+    TraceProfileSourceListInfo = 7,
+
+    //
+    // TracePmcEventListInfo:
+    // - TraceSetInformation
+    //      Updates the list of kernel events for which PMC counters will be collected
+    //      for the specified logger.  This can only be set once per logger and cannot
+    //      be updated.
+    //      The counters collected are specified by
+    //      TraceSetInformation(TracePmcCounterListInfo, ...) described below.
+    //
+    //      Input Format: An array of CLASSIC_EVENT_ID structs.
+    //
+    TracePmcEventListInfo = 8,
+
+    //
+    // TracePmcCounterListInfo:
+    // - TraceSetInformation
+    //      Sets the list of PMC counters to be collected on system events.
+    //      This can only be set once per logger and cannot be updated.
+    //      The specified counters will be collected on the events specified by
+    //      TraceSetInformation(TracePmcEventListInfo, ...) described above.
+    //
+    //      Input Format: An array of ULONGs.
+    //
+    TracePmcCounterListInfo = 9,
+
+    //
+    // TraceSetDisallowList:
+    // - TraceSetInformation
+    //      Sets a list of provider GUIDs that should not be enabled via
+    //      Provider Groups on the specified logging session.
+    //
+    //      Input Format: An array of GUIDs.
+    //
+    TraceSetDisallowList = 10,
+
+    //
+    // TraceVersionInfo:
+    // - TraceQueryInformation
+    //      Queries the version number of the trace processing code.
+    //
+    //      Output Format: TRACE_VERSION_INFO
+    //
+    TraceVersionInfo = 11,
+
+    //
+    // TraceGroupQueryList:
+    // - EnumerateTraceGuidsEx.
+    //      Returns a list of Group GUIDs that are currently known to the kernel.
+    //
+    //      Input Format: None.
+    //      Output Format: An array of GUIDs.
+    //
+    TraceGroupQueryList = 12,
+
+    //
+    // TraceGroupQueryInfo:
+    // - EnumerateTraceGuidsEx.
+    //      Returns the current enablement information and list of member providers
+    //      for the input Group GUID.
+    //
+    //      Input Format: GUID
+    //      Output Format:  a) ULONG - Length of the following TRACE_ENABLE_INFO array.
+    //                      b) Array of TRACE_ENABLE_INFO. Size of the array is inferred from (a)
+    //                      c) ULONG - Count of the Number of Unique Providers that belong to this Group
+    //                      d) Array of GUID - Size of the array is specified by (c)
+    //
+    //                  PseudoStructure -
+    //                      struct TRACE_GROUP_INFO {
+    //                          ULONG TraceEnableInfoSize;
+    //                          TRACE_ENABLE_INFO TraceEnableInfos[TraceEnableInfoSize];
+    //                          ULONG GuidArraySize;
+    //                          GUID UniqueProviders[GuidArraySize];
+    //                      }
+    //
+    TraceGroupQueryInfo = 13,
+
+    //
+    // TraceDisallowListQuery:
+    // - TraceQueryInformation
+    //      Queries the list of provider GUIDs that should not be enabled via
+    //      Provider Groups on the specified logging session.
+    //
+    //      Output Format: An array of GUIDs.
+    //
+    TraceDisallowListQuery = 14,
+
+    TraceInfoReserved15 = 15,
+
+    //
+    // TracePeriodicCaptureStateListInfo:
+    // - TraceSetInformation
+    //      Sets the list of providers for which capture stat should be collected
+    //      at periodic time intervals for the specified logging session.
+    //      If a NULL input buffer is specified, then the current periodic capture state
+    //      settings are cleared.
+    //
+    //      Input Format: TRACE_PERIODIC_CAPTURE_STATE_INFO followed by an array of ProviderCount
+    //                      Provider GUIDs. Or a NULL Buffer.
+    //
+    TracePeriodicCaptureStateListInfo = 16,
+
+    //
+    // TracePeriodicCaptureStatInfo:
+    // - TraceQueryInformation
+    //      Queries the limits of periodic capture settings on this system, including
+    //      the minimum time frequency and the maximum number of providers that can be
+    //      enabled for periodic capture state.
+    //
+    //      Output Format: TRACE_PERIODIC_CAPTURE_STATE_INFO
+    //
+    TracePeriodicCaptureStateInfo = 17,
+
+    //
+    // TraceProviderBinaryTracking:
+    // - TraceSetInformation
+    //      Instructs ETW to begin tracking binaries for all providers that are enabled
+    //      to the session. The tracking applies retroactively for providers that were
+    //      enabled to the session prior to the call, as well as for all future providers
+    //      that are enabled to the session.
+    //
+    //      ETW fabricates tracking events for these tracked providers that contain a
+    //      mapping between provider GUID(s). ETW also fabricates the file path that describes
+    //      where the registered provider is located on disk. If the session is in realtime,
+    //      the events are provided live in the realtime buffers. If the session is file-based
+    //      (i.e. trace is saved to an .etl file), the events are aggregated and written to the
+    //      file header; they will be among some of the first events the ETW runtime provides
+    //      when the .etl file is played back.
+    //
+    //      The binary tracking events will come from the EventTraceGuid provider, with an opcode
+    //      of WMI_LOG_TYPE_BINARY_PATH.
+    //
+    //      Input Format: BOOLEAN (The 1-byte type, rather than the 4-byte BOOL.)
+    //                    True to turn tracking on. False to turn tracking off.
+    //
+    TraceProviderBinaryTracking = 18,
+
+    //
+    // TraceMaxLoggersQuery:
+    // - TraceQueryInformation
+    //      Queries the maximum number of system-wide loggers that can be running at a time
+    //      on this system.
+    //
+    //      Output Format: ULONG
+    //
+    TraceMaxLoggersQuery = 19,
+
+    //
+    // TraceLbrConfigurationInfo:
+    // - TraceSetInformation
+    //      Sets a bitfield of configuration options for Last Branch Record tracing.
+    //
+    //      Input Format: ULONG
+    //
+    TraceLbrConfigurationInfo = 20,
+
+    //
+    // TraceLbrEventListInfo:
+    // - TraceSetInformation
+    //      Provides a list of kernel events to collect Last Branch Records on.
+    //      The events are specified by their HookIds.
+    //
+    //      Input Format: An array of ULONGs
+    //
+    TraceLbrEventListInfo = 21,
+
+    //
+    // TraceMaxPmcCounterQuery:
+    // - TraceQueryInformation
+    //      Queries the maximum number of PMC counters supported on this platform
+    //
+    //      Output Format: ULONG
+    //
+    TraceMaxPmcCounterQuery = 22,
     MaxTraceSetInfoClass
 } TRACE_QUERY_INFO_CLASS, TRACE_INFO_CLASS;
 
 #ifndef _APISET_EVENTING
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (WINVER >= _WIN32_WINNT_VISTA)
 EXTERN_C
@@ -1623,7 +1890,7 @@ EnumerateTraceGuidsEx (
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _APISET_EVENTING
@@ -1652,8 +1919,8 @@ typedef struct _TRACE_PERIODIC_CAPTURE_STATE_INFO {
 
 #ifndef _APISET_EVENTING
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
 EXTERN_C
@@ -1680,7 +1947,7 @@ TraceQueryInformation (
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 //
@@ -1701,8 +1968,8 @@ CreateTraceInstanceId (
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Use the routine below to generate and record an event trace
@@ -1716,7 +1983,7 @@ TraceEvent (
     _In_ PEVENT_TRACE_HEADER EventTrace
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1735,8 +2002,8 @@ TraceEventInstance (
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Use the routine below to register a guid for tracing.
@@ -1770,11 +2037,11 @@ RegisterTraceGuidsW (
     _Out_ PTRACEHANDLE RegistrationHandle
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1801,11 +2068,11 @@ EnumerateTraceGuids (
     );
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1838,6 +2105,12 @@ GetTraceEnableFlags (
 //
 // Data Consumer APIs and structures start here
 //
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // TRACEHANDLE
@@ -1879,6 +2152,8 @@ CloseTrace (
 
 typedef enum _ETW_PROCESS_HANDLE_INFO_TYPE {
     EtwQueryPartitionInformation = 1,
+    EtwQueryPartitionInformationV2 = 2,
+    EtwQueryLastDroppedTimes = 3,
     EtwQueryProcessHandleInfoMax
 } ETW_PROCESS_HANDLE_INFO_TYPE;
 
@@ -1889,7 +2164,16 @@ typedef struct _ETW_TRACE_PARTITION_INFORMATION {
     ULONG PartitionType;
 } ETW_TRACE_PARTITION_INFORMATION, *PETW_TRACE_PARTITION_INFORMATION;
 
+typedef struct _ETW_TRACE_PARTITION_INFORMATION_V2 {
+    LONG64 QpcOffsetFromRoot;
+    ULONG PartitionType;
+    PWSTR PartitionId;
+    PWSTR ParentId;
+} ETW_TRACE_PARTITION_INFORMATION_V2, *PETW_TRACE_PARTITION_INFORMATION_V2;
+
+
 EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
 ULONG
 WMIAPI
 QueryTraceProcessingHandle (
@@ -1948,8 +2232,8 @@ RemoveTraceCallback (
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1962,11 +2246,11 @@ TraceMessage (
     ...
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 EXTERN_C
 ULONG
@@ -1978,7 +2262,7 @@ TraceMessageVa (
     _In_ va_list MessageArgList
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif // _APISET_EVENTING
@@ -1987,12 +2271,12 @@ TraceMessageVa (
 }       // extern "C"
 #endif
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #define INVALID_PROCESSTRACE_HANDLE ((TRACEHANDLE)INVALID_HANDLE_VALUE)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #ifndef _APISET_EVENTING
@@ -2004,8 +2288,8 @@ TraceMessageVa (
 
 #if defined(UNICODE) || defined(_UNICODE)
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or GameCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #define RegisterTraceGuids      RegisterTraceGuidsW
 #define StartTrace              StartTraceW
@@ -2028,7 +2312,7 @@ TraceMessageVa (
 #define QueryAllTraces          QueryAllTracesW
 #define OpenTrace               OpenTraceW
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP| WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP| WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #else

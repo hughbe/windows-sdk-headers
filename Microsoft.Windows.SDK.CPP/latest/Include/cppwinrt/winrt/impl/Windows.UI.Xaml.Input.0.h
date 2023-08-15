@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -39,6 +39,7 @@ enum class FocusState;
 struct DependencyObject;
 struct DependencyProperty;
 struct UIElement;
+struct XamlRoot;
 
 }
 
@@ -225,6 +226,7 @@ struct IFocusManagerStatics3;
 struct IFocusManagerStatics4;
 struct IFocusManagerStatics5;
 struct IFocusManagerStatics6;
+struct IFocusManagerStatics7;
 struct IFocusMovementResult;
 struct IGettingFocusEventArgs;
 struct IGettingFocusEventArgs2;
@@ -262,6 +264,7 @@ struct IPointerRoutedEventArgs2;
 struct IProcessKeyboardAcceleratorEventArgs;
 struct IRightTappedRoutedEventArgs;
 struct IStandardUICommand;
+struct IStandardUICommand2;
 struct IStandardUICommandFactory;
 struct IStandardUICommandStatics;
 struct ITappedRoutedEventArgs;
@@ -346,6 +349,7 @@ template <> struct category<Windows::UI::Xaml::Input::IFocusManagerStatics3>{ us
 template <> struct category<Windows::UI::Xaml::Input::IFocusManagerStatics4>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IFocusManagerStatics5>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IFocusManagerStatics6>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Input::IFocusManagerStatics7>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IFocusMovementResult>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IGettingFocusEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IGettingFocusEventArgs2>{ using type = interface_category; };
@@ -383,6 +387,7 @@ template <> struct category<Windows::UI::Xaml::Input::IPointerRoutedEventArgs2>{
 template <> struct category<Windows::UI::Xaml::Input::IProcessKeyboardAcceleratorEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IRightTappedRoutedEventArgs>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IStandardUICommand>{ using type = interface_category; };
+template <> struct category<Windows::UI::Xaml::Input::IStandardUICommand2>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IStandardUICommandFactory>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::IStandardUICommandStatics>{ using type = interface_category; };
 template <> struct category<Windows::UI::Xaml::Input::ITappedRoutedEventArgs>{ using type = interface_category; };
@@ -472,6 +477,7 @@ template <> struct name<Windows::UI::Xaml::Input::IFocusManagerStatics3>{ static
 template <> struct name<Windows::UI::Xaml::Input::IFocusManagerStatics4>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IFocusManagerStatics4" }; };
 template <> struct name<Windows::UI::Xaml::Input::IFocusManagerStatics5>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IFocusManagerStatics5" }; };
 template <> struct name<Windows::UI::Xaml::Input::IFocusManagerStatics6>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IFocusManagerStatics6" }; };
+template <> struct name<Windows::UI::Xaml::Input::IFocusManagerStatics7>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IFocusManagerStatics7" }; };
 template <> struct name<Windows::UI::Xaml::Input::IFocusMovementResult>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IFocusMovementResult" }; };
 template <> struct name<Windows::UI::Xaml::Input::IGettingFocusEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IGettingFocusEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Input::IGettingFocusEventArgs2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IGettingFocusEventArgs2" }; };
@@ -509,6 +515,7 @@ template <> struct name<Windows::UI::Xaml::Input::IPointerRoutedEventArgs2>{ sta
 template <> struct name<Windows::UI::Xaml::Input::IProcessKeyboardAcceleratorEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Input::IRightTappedRoutedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs" }; };
 template <> struct name<Windows::UI::Xaml::Input::IStandardUICommand>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IStandardUICommand" }; };
+template <> struct name<Windows::UI::Xaml::Input::IStandardUICommand2>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IStandardUICommand2" }; };
 template <> struct name<Windows::UI::Xaml::Input::IStandardUICommandFactory>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IStandardUICommandFactory" }; };
 template <> struct name<Windows::UI::Xaml::Input::IStandardUICommandStatics>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.IStandardUICommandStatics" }; };
 template <> struct name<Windows::UI::Xaml::Input::ITappedRoutedEventArgs>{ static constexpr auto & value{ L"Windows.UI.Xaml.Input.ITappedRoutedEventArgs" }; };
@@ -598,6 +605,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Input::IFocusManagerStatics3>
 template <> struct guid_storage<Windows::UI::Xaml::Input::IFocusManagerStatics4>{ static constexpr guid value{ 0x29276E9C,0x1C6C,0x414A,{ 0xBA,0x1C,0x96,0xEF,0xD5,0x96,0x2B,0xCD } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IFocusManagerStatics5>{ static constexpr guid value{ 0x280EDC61,0x207A,0x4D7B,{ 0xB9,0x8F,0xCE,0x16,0x5E,0x1B,0x20,0x15 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IFocusManagerStatics6>{ static constexpr guid value{ 0x3546A1B6,0x20BF,0x5007,{ 0x92,0x9D,0xE6,0xD3,0x2E,0x16,0xAF,0xE4 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Input::IFocusManagerStatics7>{ static constexpr guid value{ 0x95D6FA97,0xF0FC,0x5C32,{ 0xB2,0x9D,0x07,0xC0,0x4E,0xC9,0x66,0xB0 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IFocusMovementResult>{ static constexpr guid value{ 0x06DFEAD3,0xC2AE,0x44BB,{ 0xBF,0xAB,0x9C,0x73,0xDE,0x84,0x07,0xA4 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IGettingFocusEventArgs>{ static constexpr guid value{ 0xFA05B9CE,0xC67C,0x4BE8,{ 0x8F,0xD4,0xC4,0x4D,0x67,0x87,0x7E,0x0D } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IGettingFocusEventArgs2>{ static constexpr guid value{ 0x88754D7B,0xB4B9,0x4959,{ 0x8B,0xCE,0x89,0xBF,0x21,0x2E,0xD4,0xEB } }; };
@@ -635,6 +643,7 @@ template <> struct guid_storage<Windows::UI::Xaml::Input::IPointerRoutedEventArg
 template <> struct guid_storage<Windows::UI::Xaml::Input::IProcessKeyboardAcceleratorEventArgs>{ static constexpr guid value{ 0xFB79C216,0x972B,0x440C,{ 0x9B,0x83,0x2B,0x41,0x98,0xDC,0xF0,0x9D } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IRightTappedRoutedEventArgs>{ static constexpr guid value{ 0x6834869D,0x7BD5,0x4033,{ 0xB2,0x37,0x17,0x2F,0x79,0xAB,0xE3,0x93 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IStandardUICommand>{ static constexpr guid value{ 0xD2BF7F43,0x0504,0x52D0,{ 0x8A,0xA6,0x0C,0xB0,0xF7,0x56,0xEB,0x27 } }; };
+template <> struct guid_storage<Windows::UI::Xaml::Input::IStandardUICommand2>{ static constexpr guid value{ 0xE3666069,0xF9E4,0x51EB,{ 0x88,0x5B,0x7A,0x62,0x0A,0x07,0x82,0xEA } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IStandardUICommandFactory>{ static constexpr guid value{ 0x8F1A7590,0xDCE1,0x56E4,{ 0xAB,0x63,0xF5,0xCE,0x3C,0xE4,0xEB,0xF6 } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::IStandardUICommandStatics>{ static constexpr guid value{ 0x7EA87ED9,0x2978,0x5533,{ 0x9B,0x2E,0x67,0x59,0xCE,0x88,0x56,0x9F } }; };
 template <> struct guid_storage<Windows::UI::Xaml::Input::ITappedRoutedEventArgs>{ static constexpr guid value{ 0xA099E6BE,0xE624,0x459A,{ 0xBB,0x1D,0xE0,0x5C,0x73,0xE2,0xCC,0x66 } }; };
@@ -838,6 +847,11 @@ template <> struct abi<Windows::UI::Xaml::Input::IFocusManagerStatics6>{ struct 
     virtual int32_t WINRT_CALL remove_GettingFocus(winrt::event_token token) noexcept = 0;
     virtual int32_t WINRT_CALL add_LosingFocus(void* handler, winrt::event_token* token) noexcept = 0;
     virtual int32_t WINRT_CALL remove_LosingFocus(winrt::event_token token) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Input::IFocusManagerStatics7>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL GetFocusedElement(void* xamlRoot, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Input::IFocusMovementResult>{ struct type : IInspectable
@@ -1135,6 +1149,11 @@ template <> struct abi<Windows::UI::Xaml::Input::IRightTappedRoutedEventArgs>{ s
 template <> struct abi<Windows::UI::Xaml::Input::IStandardUICommand>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_Kind(Windows::UI::Xaml::Input::StandardUICommandKind* value) noexcept = 0;
+};};
+
+template <> struct abi<Windows::UI::Xaml::Input::IStandardUICommand2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL put_Kind(Windows::UI::Xaml::Input::StandardUICommandKind value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::UI::Xaml::Input::IStandardUICommandFactory>{ struct type : IInspectable
@@ -1449,6 +1468,13 @@ struct consume_Windows_UI_Xaml_Input_IFocusManagerStatics6
     void LosingFocus(winrt::event_token const& token) const noexcept;
 };
 template <> struct consume<Windows::UI::Xaml::Input::IFocusManagerStatics6> { template <typename D> using type = consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Input_IFocusManagerStatics7
+{
+    Windows::Foundation::IInspectable GetFocusedElement(Windows::UI::Xaml::XamlRoot const& xamlRoot) const;
+};
+template <> struct consume<Windows::UI::Xaml::Input::IFocusManagerStatics7> { template <typename D> using type = consume_Windows_UI_Xaml_Input_IFocusManagerStatics7<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Input_IFocusMovementResult
@@ -1822,6 +1848,13 @@ struct consume_Windows_UI_Xaml_Input_IStandardUICommand
     Windows::UI::Xaml::Input::StandardUICommandKind Kind() const;
 };
 template <> struct consume<Windows::UI::Xaml::Input::IStandardUICommand> { template <typename D> using type = consume_Windows_UI_Xaml_Input_IStandardUICommand<D>; };
+
+template <typename D>
+struct consume_Windows_UI_Xaml_Input_IStandardUICommand2
+{
+    void Kind(Windows::UI::Xaml::Input::StandardUICommandKind const& value) const;
+};
+template <> struct consume<Windows::UI::Xaml::Input::IStandardUICommand2> { template <typename D> using type = consume_Windows_UI_Xaml_Input_IStandardUICommand2<D>; };
 
 template <typename D>
 struct consume_Windows_UI_Xaml_Input_IStandardUICommandFactory

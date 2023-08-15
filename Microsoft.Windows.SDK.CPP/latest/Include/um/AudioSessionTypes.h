@@ -8,8 +8,8 @@
 #ifndef __AUDIOSESSIONTYPES__                                                               
 #define __AUDIOSESSIONTYPES__
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application and Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 #if defined(__midl)
 #define MIDL_SIZE_IS(x) [size_is(x)]
 #define MIDL_STRING [string]
@@ -107,9 +107,6 @@ typedef enum _AUDIO_STREAM_CATEGORY
 //                                                    to convert between the uncompressed format supplied to
 //                                                    IAudioClient::Initialize and the audio engine mix format.
 //
-//     AUDCLNT_STREAMFLAGS_PREVENT_LOOPBACK_CAPTURE - MSFT: 14779533  -  This flag is delayed until RS5 when it can be better scoped
-//                                                    Prevents the stream from being included in any loopback streams. Note that
-//                                                    this stream will continue to be included in the endpoint loopback stream
 //
 //     AUDCLNT_SESSIONFLAGS_EXPIREWHENUNOWNED -       Session expires when there are no streams and no owning
 //                                                    session controls.
@@ -130,7 +127,6 @@ typedef enum _AUDIO_STREAM_CATEGORY
 #define AUDCLNT_STREAMFLAGS_EVENTCALLBACK            0x00040000
 #define AUDCLNT_STREAMFLAGS_NOPERSIST                0x00080000
 #define AUDCLNT_STREAMFLAGS_RATEADJUST               0x00100000
-#define AUDCLNT_STREAMFLAGS_PREVENT_LOOPBACK_CAPTURE 0x01000000
 #define AUDCLNT_STREAMFLAGS_SRC_DEFAULT_QUALITY      0x08000000
 #define AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM           0x80000000
 #define AUDCLNT_SESSIONFLAGS_EXPIREWHENUNOWNED       0x10000000

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.payments.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -142,10 +142,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     interface IPaymentAppCanMakePaymentTriggerDetails;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppCanMakePaymentTriggerDetails ABI::Windows::ApplicationModel::Payments::Provider::IPaymentAppCanMakePaymentTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppCanMakePaymentTriggerDetails_FWD_DEFINED__
@@ -158,10 +158,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     interface IPaymentAppManager;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManager ABI::Windows::ApplicationModel::Payments::Provider::IPaymentAppManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManager_FWD_DEFINED__
@@ -174,10 +174,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     interface IPaymentAppManagerStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManagerStatics ABI::Windows::ApplicationModel::Payments::Provider::IPaymentAppManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManagerStatics_FWD_DEFINED__
@@ -190,10 +190,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     interface IPaymentTransaction;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransaction ABI::Windows::ApplicationModel::Payments::Provider::IPaymentTransaction
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransaction_FWD_DEFINED__
@@ -206,10 +206,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     interface IPaymentTransactionAcceptResult;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionAcceptResult ABI::Windows::ApplicationModel::Payments::Provider::IPaymentTransactionAcceptResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionAcceptResult_FWD_DEFINED__
@@ -222,10 +222,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     interface IPaymentTransactionStatics;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionStatics ABI::Windows::ApplicationModel::Payments::Provider::IPaymentTransactionStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionStatics_FWD_DEFINED__
@@ -239,10 +239,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     class PaymentTransaction;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -265,7 +265,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::Provid
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::Provider::PaymentTransaction*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::Provider::IPaymentTransaction*>
@@ -297,7 +297,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Payments::Provider::PaymentTrans
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Payments::Provider::PaymentTransaction*> __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransaction ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Payments::Provider::IPaymentTransaction*>
@@ -314,10 +314,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     class PaymentTransactionAcceptResult;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -340,7 +340,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::Provid
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::Provider::IPaymentTransactionAcceptResult*>
@@ -372,7 +372,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Payments::Provider::PaymentTrans
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CProvider__CPaymentTransactionAcceptResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Payments::Provider::IPaymentTransactionAcceptResult*>
@@ -402,7 +402,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -431,7 +431,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -446,9 +446,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 class PaymentRequestChangedResult;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequestChangedResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequestChangedResult_FWD_DEFINED__
@@ -457,9 +457,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 interface IPaymentRequestChangedResult;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequestChangedResult ABI::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequestChangedResult_FWD_DEFINED__
@@ -485,7 +485,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::Paymen
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::PaymentRequestChangedResult*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult*>
@@ -517,7 +517,7 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Payments::PaymentRequestChangedR
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Payments::PaymentRequestChangedResult*> __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CApplicationModel__CPayments__CPaymentRequestChangedResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult*>
@@ -535,9 +535,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 class PaymentAddress;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentAddress_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentAddress_FWD_DEFINED__
@@ -546,9 +546,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 interface IPaymentAddress;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentAddress ABI::Windows::ApplicationModel::Payments::IPaymentAddress
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentAddress_FWD_DEFINED__
@@ -559,9 +559,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 class PaymentCanMakePaymentResult;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentCanMakePaymentResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentCanMakePaymentResult_FWD_DEFINED__
@@ -570,9 +570,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 interface IPaymentCanMakePaymentResult;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentCanMakePaymentResult ABI::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentCanMakePaymentResult_FWD_DEFINED__
@@ -583,9 +583,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 class PaymentRequest;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequest_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequest_FWD_DEFINED__
@@ -594,9 +594,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 interface IPaymentRequest;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequest ABI::Windows::ApplicationModel::Payments::IPaymentRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentRequest_FWD_DEFINED__
@@ -610,18 +610,18 @@ namespace ABI {
                 
                 typedef enum PaymentRequestCompletionStatus : int PaymentRequestCompletionStatus;
                 
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Payments {
                 class PaymentShippingOption;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentShippingOption_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentShippingOption_FWD_DEFINED__
@@ -630,9 +630,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 interface IPaymentShippingOption;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentShippingOption ABI::Windows::ApplicationModel::Payments::IPaymentShippingOption
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentShippingOption_FWD_DEFINED__
@@ -643,9 +643,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 class PaymentToken;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentToken_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentToken_FWD_DEFINED__
@@ -654,9 +654,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Payments {
                 interface IPaymentToken;
-            } /* Windows */
+            } /* Payments */
         } /* ApplicationModel */
-    } /* Payments */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentToken ABI::Windows::ApplicationModel::Payments::IPaymentToken
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPayments_CIPaymentToken_FWD_DEFINED__
@@ -671,8 +671,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -693,10 +693,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     class PaymentAppCanMakePaymentTriggerDetails;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -705,10 +705,10 @@ namespace ABI {
             namespace Payments {
                 namespace Provider {
                     class PaymentAppManager;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -759,10 +759,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaymentAppCanMakePaymentTriggerDetails=_uuidof(IPaymentAppCanMakePaymentTriggerDetails);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppCanMakePaymentTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppCanMakePaymentTriggerDetails_INTERFACE_DEFINED__) */
@@ -806,10 +806,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaymentAppManager=_uuidof(IPaymentAppManager);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManager_INTERFACE_DEFINED__) */
@@ -849,10 +849,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaymentAppManagerStatics=_uuidof(IPaymentAppManagerStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentAppManagerStatics_INTERFACE_DEFINED__) */
@@ -923,10 +923,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaymentTransaction=_uuidof(IPaymentTransaction);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransaction;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransaction_INTERFACE_DEFINED__) */
@@ -966,10 +966,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaymentTransactionAcceptResult=_uuidof(IPaymentTransactionAcceptResult);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionAcceptResult;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionAcceptResult_INTERFACE_DEFINED__) */
@@ -1010,10 +1010,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPaymentTransactionStatics=_uuidof(IPaymentTransactionStatics);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Payments */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Payments */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPayments_CProvider_CIPaymentTransactionStatics_INTERFACE_DEFINED__) */

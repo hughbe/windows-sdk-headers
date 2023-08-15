@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -41,6 +41,20 @@ struct WINRT_EBO IColorsStatics :
     impl::consume_t<IColorsStatics>
 {
     IColorsStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUIContentRoot :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUIContentRoot>
+{
+    IUIContentRoot(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IUIContext :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IUIContext>
+{
+    IUIContext(std::nullptr_t = nullptr) noexcept {}
 };
 
 }

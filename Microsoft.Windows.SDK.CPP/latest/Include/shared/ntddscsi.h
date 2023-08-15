@@ -571,9 +571,11 @@ typedef struct _SCSI_INQUIRY_DATA {
 
 #define IOCTL_MINIPORT_SIGNATURE_FIRMWARE           "FIRMWARE"
 #define IOCTL_MINIPORT_SIGNATURE_QUERY_PROTOCOL     "PROTOCOL"
+#define IOCTL_MINIPORT_SIGNATURE_SET_PROTOCOL       "SETPROTO"
 #define IOCTL_MINIPORT_SIGNATURE_QUERY_TEMPERATURE  "TEMPERAT"
 #define IOCTL_MINIPORT_SIGNATURE_SET_TEMPERATURE_THRESHOLD  "SETTEMPT"
 #define IOCTL_MINIPORT_SIGNATURE_QUERY_PHYSICAL_TOPOLOGY    "TOPOLOGY"
+#define IOCTL_MINIPORT_SIGNATURE_ENDURANCE_INFO    "ENDURINF"
 
 
 typedef struct _SRB_IO_CONTROL {
@@ -1490,6 +1492,11 @@ typedef struct _DUMP_POINTERS_EX {
 //
 #define DUMP_EX_FLAG_RESUME_SUPPORT             0x00000004
 
+//
+// Driver stack is capable to provide driver full path(DUMP_DRIVER_EX is allocated/used by lower stack)
+//
+#define DUMP_EX_FLAG_DRIVER_FULL_PATH_SUPPORT   0x00000008
+
 typedef struct _DUMP_DRIVER {
 
     //
@@ -1508,6 +1515,49 @@ typedef struct _DUMP_DRIVER {
     WCHAR BaseName[DUMP_DRIVER_NAME_LENGTH];
 
 } DUMP_DRIVER, *PDUMP_DRIVER;
+
+//
+// Duplicate UNICODE_STRING definition here to eliminate dependancy
+// with other header file.
+//
+// Unicode strings are counted 16-bit character strings. If they are
+// NULL terminated, Length does not include trailing NULL.
+//
+
+typedef struct _NTSCSI_UNICODE_STRING {
+    USHORT Length;
+    USHORT MaximumLength;
+#ifdef MIDL_PASS
+    [size_is(MaximumLength / 2), length_is((Length) / 2) ] USHORT * Buffer;
+#else // MIDL_PASS
+    _Field_size_bytes_part_opt_(MaximumLength, Length) PWCH Buffer;
+#endif // MIDL_PASS
+} NTSCSI_UNICODE_STRING;
+typedef NTSCSI_UNICODE_STRING *PNTSCSI_UNICODE_STRING;
+
+typedef struct _DUMP_DRIVER_EX {
+
+    //
+    // Dump driver list from port driver
+    //
+    PVOID DumpDriverList;
+
+    //
+    // Name of the driver to be loaded
+    //
+    WCHAR DriverName[DUMP_DRIVER_NAME_LENGTH];
+
+    //
+    // Driver base name
+    //
+    WCHAR BaseName[DUMP_DRIVER_NAME_LENGTH];
+
+    //
+    // Driver full path string
+    //
+    NTSCSI_UNICODE_STRING DriverFullPath;
+
+} DUMP_DRIVER_EX, *PDUMP_DRIVER_EX;
 
 
 //
@@ -1533,6 +1583,46 @@ typedef struct _DUMP_DRIVER {
 #define MPIO_IOCTL_FLAG_USE_SCSIADDRESS 2
 #define MPIO_IOCTL_FLAG_INVOLVE_DSM     4
 
+
+#pragma warning(push)
+#pragma warning(disable:4214)   // bit fields other than int to disable this around the struct
+#pragma warning(disable:4201)   // nameless struct/union
+
+//
+// Parameters for IOCTL_SCSI_MINIPORT/IOCTL_MINIPORT_SIGNATURE_ENDURANCE_INFO
+//      The storage port driver uses these structures when communicating with the miniport.
+//
+
+typedef struct _STORAGE_ENDURANCE_INFO {
+    ULONG       ValidFields;        // ValidFields represents bit mapping of valid fields of any type
+                                    // Eg: Bit 0 stands for GroupId, Bit 1 stands for Flags, Bit 3 for BytesReadCount
+
+    ULONG       GroupId;            // Set Id Eg: Set Id for NVMe sets
+
+    struct {
+        ULONG   Shared:1;           // TRUE if information is shared with multiple units/groups
+
+        ULONG   Reserved:31;
+    } Flags;
+
+    ULONG       LifePercentage;         // Used life percentage
+
+    UCHAR       BytesReadCount[16];     // Total bytes read from device (Billion Unit)
+
+    UCHAR       ByteWriteCount[16];     // Total bytes written to device (Billion Unit)
+
+} STORAGE_ENDURANCE_INFO, *PSTORAGE_ENDURANCE_INFO;
+
+typedef struct _STORAGE_ENDURANCE_DATA_DESCRIPTOR {
+    ULONG                      Version;            // Version of the endurance information structure
+
+    ULONG                      Size;               // Size of the endurance information
+
+    STORAGE_ENDURANCE_INFO     EnduranceInfo;      // Endurance Information of the device
+
+} STORAGE_ENDURANCE_DATA_DESCRIPTOR, *PSTORAGE_ENDURANCE_DATA_DESCRIPTOR;
+
+#pragma warning(pop)
 
 #if _MSC_VER >= 1200
 #pragma warning(pop)

@@ -1603,6 +1603,24 @@
 //
 #define EVENT_INDEXER_FAIL_TO_SET_MAX_JETINSTANCE 0xC000272AL
 
+//
+// MessageId: EVENT_INDEXER_FAIL_TO_CREATE_PER_USER_CATALOG
+//
+// MessageText:
+//
+// The search service has failed to create or load catalog for an user with SID {%2}. Please inspect a profile directory for the user is accessible. You should re-start the search service after fixing any issue found from the profile directory. %1
+//
+#define EVENT_INDEXER_FAIL_TO_CREATE_PER_USER_CATALOG 0xC000272BL
+
+//
+// MessageId: EVENT_INDEXER_FAIL_TO_UNLOAD_PER_USER_CATALOG
+//
+// MessageText:
+//
+// The search service has failed to unload catalog for an user with SID {%2}. %1
+//
+#define EVENT_INDEXER_FAIL_TO_UNLOAD_PER_USER_CATALOG 0xC000272CL
+
 
 // errorlst.mc
 
@@ -8001,6 +8019,15 @@
 // The transaction in catalog is found as inconsistent.
 //
 #define CI_E_INCONSISTENT_TRANSACTION    ((HRESULT)0xC0041832L)
+
+//
+// MessageId: CI_E_PROTECTED_CATALOG_NOT_AVAILABLE
+//
+// MessageText:
+//
+// Protected catalog for the user is not available due to key drop status.
+//
+#define CI_E_PROTECTED_CATALOG_NOT_AVAILABLE ((HRESULT)0xC0041833L)
 
 #endif // _CIERROR_H_
 #ifndef _FILTERR_H_

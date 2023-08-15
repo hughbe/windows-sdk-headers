@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -112,6 +112,7 @@ struct IPackage3;
 struct IPackage4;
 struct IPackage5;
 struct IPackage6;
+struct IPackage7;
 struct IPackageCatalog;
 struct IPackageCatalog2;
 struct IPackageCatalog3;
@@ -197,6 +198,7 @@ template <> struct category<Windows::ApplicationModel::IPackage3>{ using type = 
 template <> struct category<Windows::ApplicationModel::IPackage4>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::IPackage5>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::IPackage6>{ using type = interface_category; };
+template <> struct category<Windows::ApplicationModel::IPackage7>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::IPackageCatalog>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::IPackageCatalog2>{ using type = interface_category; };
 template <> struct category<Windows::ApplicationModel::IPackageCatalog3>{ using type = interface_category; };
@@ -282,6 +284,7 @@ template <> struct name<Windows::ApplicationModel::IPackage3>{ static constexpr 
 template <> struct name<Windows::ApplicationModel::IPackage4>{ static constexpr auto & value{ L"Windows.ApplicationModel.IPackage4" }; };
 template <> struct name<Windows::ApplicationModel::IPackage5>{ static constexpr auto & value{ L"Windows.ApplicationModel.IPackage5" }; };
 template <> struct name<Windows::ApplicationModel::IPackage6>{ static constexpr auto & value{ L"Windows.ApplicationModel.IPackage6" }; };
+template <> struct name<Windows::ApplicationModel::IPackage7>{ static constexpr auto & value{ L"Windows.ApplicationModel.IPackage7" }; };
 template <> struct name<Windows::ApplicationModel::IPackageCatalog>{ static constexpr auto & value{ L"Windows.ApplicationModel.IPackageCatalog" }; };
 template <> struct name<Windows::ApplicationModel::IPackageCatalog2>{ static constexpr auto & value{ L"Windows.ApplicationModel.IPackageCatalog2" }; };
 template <> struct name<Windows::ApplicationModel::IPackageCatalog3>{ static constexpr auto & value{ L"Windows.ApplicationModel.IPackageCatalog3" }; };
@@ -367,6 +370,7 @@ template <> struct guid_storage<Windows::ApplicationModel::IPackage3>{ static co
 template <> struct guid_storage<Windows::ApplicationModel::IPackage4>{ static constexpr guid value{ 0x65AED1AE,0xB95B,0x450C,{ 0x88,0x2B,0x62,0x55,0x18,0x7F,0x39,0x7E } }; };
 template <> struct guid_storage<Windows::ApplicationModel::IPackage5>{ static constexpr guid value{ 0x0E842DD4,0xD9AC,0x45ED,{ 0x9A,0x1E,0x74,0xCE,0x05,0x6B,0x26,0x35 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::IPackage6>{ static constexpr guid value{ 0x8B1AD942,0x12D7,0x4754,{ 0xAE,0x4E,0x63,0x8C,0xBC,0x0E,0x3A,0x2E } }; };
+template <> struct guid_storage<Windows::ApplicationModel::IPackage7>{ static constexpr guid value{ 0x86FF8D31,0xA2E4,0x45E0,{ 0x97,0x32,0x28,0x3A,0x6D,0x88,0xFD,0xE1 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::IPackageCatalog>{ static constexpr guid value{ 0x230A3751,0x9DE3,0x4445,{ 0xBE,0x74,0x91,0xFB,0x32,0x5A,0xBE,0xFE } }; };
 template <> struct guid_storage<Windows::ApplicationModel::IPackageCatalog2>{ static constexpr guid value{ 0x96A60C36,0x8FF7,0x4344,{ 0xB6,0xBF,0xEE,0x64,0xC2,0x20,0x7E,0xD2 } }; };
 template <> struct guid_storage<Windows::ApplicationModel::IPackageCatalog3>{ static constexpr guid value{ 0x96DD5C88,0x8837,0x43F9,{ 0x90,0x15,0x03,0x34,0x34,0xBA,0x14,0xF3 } }; };
@@ -546,6 +550,12 @@ template <> struct abi<Windows::ApplicationModel::IPackage6>{ struct type : IIns
 {
     virtual int32_t WINRT_CALL GetAppInstallerInfo(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL CheckUpdateAvailabilityAsync(void** operation) noexcept = 0;
+};};
+
+template <> struct abi<Windows::ApplicationModel::IPackage7>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_MutableLocation(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL get_EffectiveLocation(void** value) noexcept = 0;
 };};
 
 template <> struct abi<Windows::ApplicationModel::IPackageCatalog>{ struct type : IInspectable
@@ -923,6 +933,14 @@ struct consume_Windows_ApplicationModel_IPackage6
     Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::PackageUpdateAvailabilityResult> CheckUpdateAvailabilityAsync() const;
 };
 template <> struct consume<Windows::ApplicationModel::IPackage6> { template <typename D> using type = consume_Windows_ApplicationModel_IPackage6<D>; };
+
+template <typename D>
+struct consume_Windows_ApplicationModel_IPackage7
+{
+    Windows::Storage::StorageFolder MutableLocation() const;
+    Windows::Storage::StorageFolder EffectiveLocation() const;
+};
+template <> struct consume<Windows::ApplicationModel::IPackage7> { template <typename D> using type = consume_Windows_ApplicationModel_IPackage7<D>; };
 
 template <typename D>
 struct consume_Windows_ApplicationModel_IPackageCatalog

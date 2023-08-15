@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.composition.interactions.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,10 +276,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface ICompositionConditionalValue;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValue ABI::Windows::UI::Composition::Interactions::ICompositionConditionalValue
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValue_FWD_DEFINED__
@@ -296,10 +292,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface ICompositionConditionalValueStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValueStatics ABI::Windows::UI::Composition::Interactions::ICompositionConditionalValueStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValueStatics_FWD_DEFINED__
@@ -312,10 +308,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface ICompositionInteractionSource;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSource ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSource
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSource_FWD_DEFINED__
@@ -328,10 +324,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface ICompositionInteractionSourceCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSourceCollection ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSourceCollection
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSourceCollection_FWD_DEFINED__
@@ -344,10 +340,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionSourceConfiguration;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionSourceConfiguration ABI::Windows::UI::Composition::Interactions::IInteractionSourceConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionSourceConfiguration_FWD_DEFINED__
@@ -360,10 +356,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTracker;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker ABI::Windows::UI::Composition::Interactions::IInteractionTracker
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker_FWD_DEFINED__
@@ -376,10 +372,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTracker2;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker2 ABI::Windows::UI::Composition::Interactions::IInteractionTracker2
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker2_FWD_DEFINED__
@@ -392,10 +388,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTracker3;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker3 ABI::Windows::UI::Composition::Interactions::IInteractionTracker3
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker3_FWD_DEFINED__
@@ -408,10 +404,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTracker4;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker4 ABI::Windows::UI::Composition::Interactions::IInteractionTracker4
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker4_FWD_DEFINED__
@@ -424,13 +420,29 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerCustomAnimationStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs ABI::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    interface IInteractionTrackerCustomAnimationStateEnteredArgs2;
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 ABI::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_FWD_DEFINED__
@@ -440,13 +452,29 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerIdleStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs ABI::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    interface IInteractionTrackerIdleStateEnteredArgs2;
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 ABI::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier_FWD_DEFINED__
@@ -456,10 +484,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaModifier;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier_FWD_DEFINED__
@@ -472,10 +500,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaModifierFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifierFactory ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifierFactory
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifierFactory_FWD_DEFINED__
@@ -488,10 +516,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaMotion;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotion ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotion
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotion_FWD_DEFINED__
@@ -504,10 +532,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaMotionStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotionStatics ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotionStatics_FWD_DEFINED__
@@ -520,10 +548,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaNaturalMotion;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotion ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaNaturalMotion
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotion_FWD_DEFINED__
@@ -536,10 +564,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaNaturalMotionStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotionStatics ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaNaturalMotionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotionStatics_FWD_DEFINED__
@@ -552,10 +580,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaRestingValue;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValue ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValue
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValue_FWD_DEFINED__
@@ -568,10 +596,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaRestingValueStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValueStatics ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValueStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValueStatics_FWD_DEFINED__
@@ -584,10 +612,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs_FWD_DEFINED__
@@ -600,13 +628,29 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInertiaStateEnteredArgs2;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs2 ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    interface IInteractionTrackerInertiaStateEnteredArgs3;
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_FWD_DEFINED__
@@ -616,13 +660,29 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerInteractingStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    interface IInteractionTrackerInteractingStateEnteredArgs2;
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner_FWD_DEFINED__
@@ -632,10 +692,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerOwner;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner ABI::Windows::UI::Composition::Interactions::IInteractionTrackerOwner
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner_FWD_DEFINED__
@@ -648,10 +708,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerRequestIgnoredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerRequestIgnoredArgs ABI::Windows::UI::Composition::Interactions::IInteractionTrackerRequestIgnoredArgs
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerRequestIgnoredArgs_FWD_DEFINED__
@@ -664,13 +724,29 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics ABI::Windows::UI::Composition::Interactions::IInteractionTrackerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    interface IInteractionTrackerStatics2;
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 ABI::Windows::UI::Composition::Interactions::IInteractionTrackerStatics2
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs_FWD_DEFINED__
@@ -680,10 +756,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerValuesChangedArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs ABI::Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs_FWD_DEFINED__
@@ -696,10 +772,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerVector2InertiaModifier;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier ABI::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier_FWD_DEFINED__
@@ -712,10 +788,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerVector2InertiaModifierFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifierFactory ABI::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifierFactory
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifierFactory_FWD_DEFINED__
@@ -728,10 +804,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerVector2InertiaNaturalMotion;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotion ABI::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaNaturalMotion
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotion_FWD_DEFINED__
@@ -744,10 +820,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IInteractionTrackerVector2InertiaNaturalMotionStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotionStatics ABI::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaNaturalMotionStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotionStatics_FWD_DEFINED__
@@ -760,10 +836,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IVisualInteractionSource;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource ABI::Windows::UI::Composition::Interactions::IVisualInteractionSource
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource_FWD_DEFINED__
@@ -776,10 +852,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IVisualInteractionSource2;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource2 ABI::Windows::UI::Composition::Interactions::IVisualInteractionSource2
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource2_FWD_DEFINED__
@@ -792,10 +868,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IVisualInteractionSource3;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource3 ABI::Windows::UI::Composition::Interactions::IVisualInteractionSource3
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource3_FWD_DEFINED__
@@ -808,10 +884,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IVisualInteractionSourceObjectFactory;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceObjectFactory ABI::Windows::UI::Composition::Interactions::IVisualInteractionSourceObjectFactory
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceObjectFactory_FWD_DEFINED__
@@ -824,13 +900,29 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     interface IVisualInteractionSourceStatics;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics ABI::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    interface IVisualInteractionSourceStatics2;
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 ABI::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -841,10 +933,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class CompositionConditionalValue;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -867,7 +959,7 @@ IIterator<ABI::Windows::UI::Composition::Interactions::CompositionConditionalVal
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Composition::Interactions::CompositionConditionalValue*> __FIIterator_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue_t;
 #define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Composition::Interactions::ICompositionConditionalValue*>
@@ -899,7 +991,7 @@ IIterable<ABI::Windows::UI::Composition::Interactions::CompositionConditionalVal
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Composition::Interactions::CompositionConditionalValue*> __FIIterable_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue_t;
 #define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CCompositionConditionalValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Composition::Interactions::ICompositionConditionalValue*>
@@ -931,7 +1023,7 @@ IIterator<ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSource*> __FIIterator_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource_t;
 #define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSource*>
@@ -963,7 +1055,7 @@ IIterable<ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSource*> __FIIterable_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource_t;
 #define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CICompositionInteractionSource ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSource*>
@@ -980,10 +1072,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerInertiaModifier;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1006,7 +1098,7 @@ IIterator<ABI::Windows::UI::Composition::Interactions::InteractionTrackerInertia
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier*> __FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier_t;
 #define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier*>
@@ -1038,7 +1130,7 @@ IIterable<ABI::Windows::UI::Composition::Interactions::InteractionTrackerInertia
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier*> __FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier_t;
 #define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaModifier*>
@@ -1055,10 +1147,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerVector2InertiaModifier;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1081,7 +1173,7 @@ IIterator<ABI::Windows::UI::Composition::Interactions::InteractionTrackerVector2
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier*> __FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier_t;
 #define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier*>
@@ -1113,7 +1205,7 @@ IIterable<ABI::Windows::UI::Composition::Interactions::InteractionTrackerVector2
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier*> __FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier_t;
 #define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaModifier*>
@@ -1130,9 +1222,9 @@ namespace ABI {
             namespace Numerics {
                 struct Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CNumerics__CVector3_USE
@@ -1153,7 +1245,7 @@ IReference<struct ABI::Windows::Foundation::Numerics::Vector3> : IReference_impl
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::Numerics::Vector3> __FIReference_1_Windows__CFoundation__CNumerics__CVector3_t;
 #define __FIReference_1_Windows__CFoundation__CNumerics__CVector3 ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CNumerics__CVector3_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CNumerics__CVector3 ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::Numerics::Vector3>
@@ -1182,7 +1274,7 @@ IReference<float> : IReference_impl<float>
 // correct parameterized interface specialization.
 typedef IReference<float> __FIReference_1_float_t;
 #define __FIReference_1_float ABI::Windows::Foundation::__FIReference_1_float_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_float ABI::Windows::Foundation::IReference<FLOAT>
@@ -1201,9 +1293,9 @@ namespace ABI {
                 
                 typedef struct Vector3 Vector3;
                 
-            } /* Windows */
+            } /* Numerics */
         } /* Foundation */
-    } /* Numerics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1216,9 +1308,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class CompositionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionAnimation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionAnimation_FWD_DEFINED__
@@ -1227,9 +1319,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositionAnimation ABI::Windows::UI::Composition::ICompositionAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionAnimation_FWD_DEFINED__
@@ -1240,9 +1332,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Compositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -1251,9 +1343,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface ICompositor;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CICompositor ABI::Windows::UI::Composition::ICompositor
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositor_FWD_DEFINED__
@@ -1264,9 +1356,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class ExpressionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIExpressionAnimation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIExpressionAnimation_FWD_DEFINED__
@@ -1275,12 +1367,27 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IExpressionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIExpressionAnimation ABI::Windows::UI::Composition::IExpressionAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIExpressionAnimation_FWD_DEFINED__
+
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisualElement_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CIVisualElement_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                interface IVisualElement;
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CIVisualElement ABI::Windows::UI::Composition::IVisualElement
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CIVisualElement_FWD_DEFINED__
 
 
 namespace ABI {
@@ -1288,9 +1395,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class ScalarNaturalMotionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation_FWD_DEFINED__
@@ -1299,9 +1406,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IScalarNaturalMotionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation ABI::Windows::UI::Composition::IScalarNaturalMotionAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation_FWD_DEFINED__
@@ -1312,9 +1419,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Vector2NaturalMotionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIVector2NaturalMotionAnimation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIVector2NaturalMotionAnimation_FWD_DEFINED__
@@ -1323,9 +1430,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IVector2NaturalMotionAnimation;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIVector2NaturalMotionAnimation ABI::Windows::UI::Composition::IVector2NaturalMotionAnimation
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIVector2NaturalMotionAnimation_FWD_DEFINED__
@@ -1336,9 +1443,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Visual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
@@ -1347,9 +1454,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IVisual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIVisual ABI::Windows::UI::Composition::IVisual
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
@@ -1363,9 +1470,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 class PointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
@@ -1374,9 +1481,9 @@ namespace ABI {
         namespace UI {
             namespace Input {
                 interface IPointerPoint;
-            } /* Windows */
+            } /* Input */
         } /* UI */
-    } /* Input */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CIPointerPoint ABI::Windows::UI::Input::IPointerPoint
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CIPointerPoint_FWD_DEFINED__
@@ -1391,12 +1498,25 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     
+                    typedef enum InteractionBindingAxisModes : unsigned int InteractionBindingAxisModes;
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    
                     typedef enum InteractionChainingMode : int InteractionChainingMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1406,10 +1526,10 @@ namespace ABI {
                     
                     typedef enum InteractionSourceMode : int InteractionSourceMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1419,10 +1539,10 @@ namespace ABI {
                     
                     typedef enum InteractionSourceRedirectionMode : int InteractionSourceRedirectionMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1432,10 +1552,10 @@ namespace ABI {
                     
                     typedef enum InteractionTrackerClampingOption : int InteractionTrackerClampingOption;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1445,10 +1565,16 @@ namespace ABI {
                     
                     typedef enum VisualInteractionSourceRedirectionMode : int VisualInteractionSourceRedirectionMode;
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
 
 
 
@@ -1492,10 +1618,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class CompositionInteractionSourceCollection;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1504,10 +1630,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionSourceConfiguration;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1516,10 +1642,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTracker;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1528,10 +1654,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerCustomAnimationStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1540,10 +1666,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerIdleStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1553,10 +1679,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerInertiaMotion;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1565,10 +1691,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerInertiaNaturalMotion;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1577,10 +1703,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerInertiaRestingValue;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1589,10 +1715,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerInertiaStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1601,10 +1727,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerInteractingStateEnteredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1613,10 +1739,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerRequestIgnoredArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1625,10 +1751,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerValuesChangedArgs;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1638,10 +1764,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class InteractionTrackerVector2InertiaNaturalMotion;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1650,10 +1776,10 @@ namespace ABI {
             namespace Composition {
                 namespace Interactions {
                     class VisualInteractionSource;
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1664,6 +1790,39 @@ namespace ABI {
 
 
 
+
+
+/*
+ *
+ * Struct Windows.UI.Composition.Interactions.InteractionBindingAxisModes
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    /* [v1_enum, flags, contract] */
+                    enum InteractionBindingAxisModes : unsigned int
+                    {
+                        InteractionBindingAxisModes_None = 0,
+                        InteractionBindingAxisModes_PositionX = 0x1,
+                        InteractionBindingAxisModes_PositionY = 0x2,
+                        InteractionBindingAxisModes_Scale = 0x4,
+                    };
+                    
+                    DEFINE_ENUM_FLAG_OPERATORS(InteractionBindingAxisModes)
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -1689,10 +1848,10 @@ namespace ABI {
                         InteractionChainingMode_Never = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1719,10 +1878,10 @@ namespace ABI {
                         InteractionSourceMode_EnabledWithoutInertia = 2,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1748,10 +1907,10 @@ namespace ABI {
                         InteractionSourceRedirectionMode_Enabled = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -1777,10 +1936,10 @@ namespace ABI {
                         InteractionTrackerClampingOption_Disabled = 1,
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
 
@@ -1816,10 +1975,10 @@ namespace ABI {
                         
                     };
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -1865,10 +2024,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionConditionalValue=_uuidof(ICompositionConditionalValue);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValue;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValue_INTERFACE_DEFINED__) */
@@ -1909,10 +2068,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionConditionalValueStatics=_uuidof(ICompositionConditionalValueStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionConditionalValueStatics_INTERFACE_DEFINED__) */
@@ -1946,10 +2105,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionInteractionSource=_uuidof(ICompositionInteractionSource);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSource_INTERFACE_DEFINED__) */
@@ -2000,10 +2159,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ICompositionInteractionSourceCollection=_uuidof(ICompositionInteractionSourceCollection);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSourceCollection;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CICompositionInteractionSourceCollection_INTERFACE_DEFINED__) */
@@ -2058,10 +2217,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionSourceConfiguration=_uuidof(IInteractionSourceConfiguration);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionSourceConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionSourceConfiguration_INTERFACE_DEFINED__) */
@@ -2097,7 +2256,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Composition::Interactions::ICompositionInteractionSourceCollection * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPositionRoundingSuggested(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxPosition(
                             /* [retval, out] */__RPC__out ABI::Windows::Foundation::Numerics::Vector3 * value
@@ -2209,10 +2368,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTracker=_uuidof(IInteractionTracker);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker_INTERFACE_DEFINED__) */
@@ -2255,10 +2414,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTracker2=_uuidof(IInteractionTracker2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker2_INTERFACE_DEFINED__) */
@@ -2298,10 +2457,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTracker3=_uuidof(IInteractionTracker3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker3_INTERFACE_DEFINED__) */
@@ -2344,17 +2503,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__out INT32 * result
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInertiaFromImpulse(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTracker4=_uuidof(IInteractionTracker4);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker4_INTERFACE_DEFINED__) */
@@ -2394,14 +2553,57 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerCustomAnimationStateEnteredArgs=_uuidof(IInteractionTrackerCustomAnimationStateEnteredArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    /* [object, uuid("47D579B7-0985-5E99-B024-2F32C380C1A4"), exclusiveto, contract] */
+                    MIDL_INTERFACE("47D579B7-0985-5E99-B024-2F32C380C1A4")
+                    IInteractionTrackerCustomAnimationStateEnteredArgs2 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFromBinding(
+                            /* [retval, out] */__RPC__out ::boolean * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IInteractionTrackerCustomAnimationStateEnteredArgs2=_uuidof(IInteractionTrackerCustomAnimationStateEnteredArgs2);
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2437,14 +2639,57 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerIdleStateEnteredArgs=_uuidof(IInteractionTrackerIdleStateEnteredArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    /* [object, uuid("F2E771ED-B803-5137-9435-1C96E48721E9"), exclusiveto, contract] */
+                    MIDL_INTERFACE("F2E771ED-B803-5137-9435-1C96E48721E9")
+                    IInteractionTrackerIdleStateEnteredArgs2 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFromBinding(
+                            /* [retval, out] */__RPC__out ::boolean * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IInteractionTrackerIdleStateEnteredArgs2=_uuidof(IInteractionTrackerIdleStateEnteredArgs2);
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2477,10 +2722,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaModifier=_uuidof(IInteractionTrackerInertiaModifier);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier_INTERFACE_DEFINED__) */
@@ -2517,10 +2762,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaModifierFactory=_uuidof(IInteractionTrackerInertiaModifierFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifierFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifierFactory_INTERFACE_DEFINED__) */
@@ -2569,10 +2814,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaMotion=_uuidof(IInteractionTrackerInertiaMotion);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotion;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotion_INTERFACE_DEFINED__) */
@@ -2613,10 +2858,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaMotionStatics=_uuidof(IInteractionTrackerInertiaMotionStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotionStatics_INTERFACE_DEFINED__) */
@@ -2665,10 +2910,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaNaturalMotion=_uuidof(IInteractionTrackerInertiaNaturalMotion);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotion;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotion_INTERFACE_DEFINED__) */
@@ -2709,10 +2954,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaNaturalMotionStatics=_uuidof(IInteractionTrackerInertiaNaturalMotionStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotionStatics_INTERFACE_DEFINED__) */
@@ -2761,10 +3006,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaRestingValue=_uuidof(IInteractionTrackerInertiaRestingValue);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValue;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValue_INTERFACE_DEFINED__) */
@@ -2805,10 +3050,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaRestingValueStatics=_uuidof(IInteractionTrackerInertiaRestingValueStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValueStatics_INTERFACE_DEFINED__) */
@@ -2866,10 +3111,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaStateEnteredArgs=_uuidof(IInteractionTrackerInertiaStateEnteredArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs_INTERFACE_DEFINED__) */
@@ -2902,21 +3147,64 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInertiaFromImpulse(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaStateEnteredArgs2=_uuidof(IInteractionTrackerInertiaStateEnteredArgs2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs3[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    /* [object, uuid("48AC1C2F-47BD-59AF-A58C-79BD2EB9EF71"), exclusiveto, contract] */
+                    MIDL_INTERFACE("48AC1C2F-47BD-59AF-A58C-79BD2EB9EF71")
+                    IInteractionTrackerInertiaStateEnteredArgs3 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFromBinding(
+                            /* [retval, out] */__RPC__out ::boolean * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IInteractionTrackerInertiaStateEnteredArgs3=_uuidof(IInteractionTrackerInertiaStateEnteredArgs3);
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2952,14 +3240,57 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerInteractingStateEnteredArgs=_uuidof(IInteractionTrackerInteractingStateEnteredArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    /* [object, uuid("509652D6-D488-59CD-819F-F52310295B11"), exclusiveto, contract] */
+                    MIDL_INTERFACE("509652D6-D488-59CD-819F-F52310295B11")
+                    IInteractionTrackerInteractingStateEnteredArgs2 : public IInspectable
+                    {
+                    public:
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFromBinding(
+                            /* [retval, out] */__RPC__out ::boolean * value
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IInteractionTrackerInteractingStateEnteredArgs2=_uuidof(IInteractionTrackerInteractingStateEnteredArgs2);
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3013,10 +3344,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerOwner=_uuidof(IInteractionTrackerOwner);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner_INTERFACE_DEFINED__) */
@@ -3056,10 +3387,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerRequestIgnoredArgs=_uuidof(IInteractionTrackerRequestIgnoredArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerRequestIgnoredArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerRequestIgnoredArgs_INTERFACE_DEFINED__) */
@@ -3105,14 +3436,64 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerStatics=_uuidof(IInteractionTrackerStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTracker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerStatics2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    /* [object, uuid("35E53720-46B7-5CB0-B505-F3D6884A6163"), exclusiveto, contract] */
+                    MIDL_INTERFACE("35E53720-46B7-5CB0-B505-F3D6884A6163")
+                    IInteractionTrackerStatics2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE SetBindingMode(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Composition::Interactions::IInteractionTracker * boundTracker1,
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Composition::Interactions::IInteractionTracker * boundTracker2,
+                            /* [in] */ABI::Windows::UI::Composition::Interactions::InteractionBindingAxisModes axisMode
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE GetBindingMode(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Composition::Interactions::IInteractionTracker * boundTracker1,
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Composition::Interactions::IInteractionTracker * boundTracker2,
+                            /* [retval, out] */__RPC__out ABI::Windows::UI::Composition::Interactions::InteractionBindingAxisModes * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IInteractionTrackerStatics2=_uuidof(IInteractionTrackerStatics2);
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3154,10 +3535,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerValuesChangedArgs=_uuidof(IInteractionTrackerValuesChangedArgs);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs_INTERFACE_DEFINED__) */
@@ -3194,10 +3575,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerVector2InertiaModifier=_uuidof(IInteractionTrackerVector2InertiaModifier);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier_INTERFACE_DEFINED__) */
@@ -3234,10 +3615,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerVector2InertiaModifierFactory=_uuidof(IInteractionTrackerVector2InertiaModifierFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifierFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifierFactory_INTERFACE_DEFINED__) */
@@ -3286,10 +3667,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerVector2InertiaNaturalMotion=_uuidof(IInteractionTrackerVector2InertiaNaturalMotion);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotion;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotion_INTERFACE_DEFINED__) */
@@ -3330,10 +3711,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IInteractionTrackerVector2InertiaNaturalMotionStatics=_uuidof(IInteractionTrackerVector2InertiaNaturalMotionStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotionStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotionStatics_INTERFACE_DEFINED__) */
@@ -3366,16 +3747,16 @@ namespace ABI {
                     {
                     public:
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPositionXRailsEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPositionXRailsEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPositionYRailsEnabled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPositionYRailsEnabled(
-                            /* [in] */boolean value
+                            /* [in] */::boolean value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ManipulationRedirectionMode(
                             /* [retval, out] */__RPC__out ABI::Windows::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode * value
@@ -3430,10 +3811,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualInteractionSource=_uuidof(IVisualInteractionSource);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource_INTERFACE_DEFINED__) */
@@ -3503,10 +3884,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualInteractionSource2=_uuidof(IVisualInteractionSource2);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource2_INTERFACE_DEFINED__) */
@@ -3546,10 +3927,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualInteractionSource3=_uuidof(IVisualInteractionSource3);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource3_INTERFACE_DEFINED__) */
@@ -3586,10 +3967,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualInteractionSourceObjectFactory=_uuidof(IVisualInteractionSourceObjectFactory);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceObjectFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceObjectFactory_INTERFACE_DEFINED__) */
@@ -3630,14 +4011,58 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IVisualInteractionSourceStatics=_uuidof(IVisualInteractionSourceStatics);
                     
-                } /* Windows */
-            } /* UI */
-        } /* Composition */
-    } /* Interactions */} /* ABI */
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.VisualInteractionSource
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics2[] = L"Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                namespace Interactions {
+                    /* [object, uuid("A979C032-5764-55E0-BC1F-0778786DCFDE"), exclusiveto, contract] */
+                    MIDL_INTERFACE("A979C032-5764-55E0-BC1F-0778786DCFDE")
+                    IVisualInteractionSourceStatics2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE CreateFromIVisualElement(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Composition::IVisualElement * source,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Composition::Interactions::IVisualInteractionSource * * result
+                            ) = 0;
+                        
+                    };
+
+                    extern MIDL_CONST_ID IID & IID_IVisualInteractionSourceStatics2=_uuidof(IVisualInteractionSourceStatics2);
+                    
+                } /* Interactions */
+            } /* Composition */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3724,6 +4149,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Composition.Interactions.IInteractionTrackerStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Composition.Interactions.IInteractionTrackerStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -3755,8 +4181,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3779,8 +4204,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3909,8 +4333,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs ** Default Interface **
  *    Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3933,8 +4356,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -4055,6 +4477,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -4142,11 +4565,23 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionT
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs;
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier_FWD_DEFINED__
@@ -4208,11 +4643,23 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionT
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs;
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerOwner_FWD_DEFINED__
@@ -4231,6 +4678,12 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionT
 typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs_FWD_DEFINED__
@@ -4291,6 +4744,12 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualIntera
 typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -5088,6 +5547,13 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CIExpressionAnimation __x_AB
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIExpressionAnimation_FWD_DEFINED__
 
 
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisualElement_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CIVisualElement_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CIVisualElement __x_ABI_CWindows_CUI_CComposition_CIVisualElement;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CIVisualElement_FWD_DEFINED__
+
+
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation __x_ABI_CWindows_CUI_CComposition_CIScalarNaturalMotionAnimation;
@@ -5121,6 +5587,9 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CIPointerPoint __x_ABI_CWindows_CU
 
 
 
+
+
+typedef enum __x_ABI_CWindows_CUI_CComposition_CInteractions_CInteractionBindingAxisModes __x_ABI_CWindows_CUI_CComposition_CInteractions_CInteractionBindingAxisModes;
 
 
 typedef enum __x_ABI_CWindows_CUI_CComposition_CInteractions_CInteractionChainingMode __x_ABI_CWindows_CUI_CComposition_CInteractions_CInteractionChainingMode;
@@ -5197,6 +5666,33 @@ typedef enum __x_ABI_CWindows_CUI_CComposition_CInteractions_CVisualInteractionS
 
 
 
+
+
+
+
+
+
+
+
+/*
+ *
+ * Struct Windows.UI.Composition.Interactions.InteractionBindingAxisModes
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+/* [v1_enum, flags, contract] */
+enum __x_ABI_CWindows_CUI_CComposition_CInteractions_CInteractionBindingAxisModes
+{
+    InteractionBindingAxisModes_None = 0,
+    InteractionBindingAxisModes_PositionX = 0x1,
+    InteractionBindingAxisModes_PositionY = 0x2,
+    InteractionBindingAxisModes_Scale = 0x4,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6570,6 +7066,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInterac
 
 /*
  *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2";
+/* [object, uuid("47D579B7-0985-5E99-B024-2F32C380C1A4"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsFromBinding )(
+        __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_get_IsFromBinding(This,value) \
+    ( (This)->lpVtbl->get_IsFromBinding(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
@@ -6659,6 +7248,99 @@ interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerId
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2";
+/* [object, uuid("F2E771ED-B803-5137-9435-1C96E48721E9"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsFromBinding )(
+        __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_get_IsFromBinding(This,value) \
+    ( (This)->lpVtbl->get_IsFromBinding(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -7687,6 +8369,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInterac
 
 /*
  *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs3[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3";
+/* [object, uuid("48AC1C2F-47BD-59AF-A58C-79BD2EB9EF71"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsFromBinding )(
+        __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_get_IsFromBinding(This,value) \
+    ( (This)->lpVtbl->get_IsFromBinding(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
@@ -7776,6 +8551,99 @@ interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerIn
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2";
+/* [object, uuid("509652D6-D488-59CD-819F-F52310295B11"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsFromBinding )(
+        __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_get_IsFromBinding(This,value) \
+    ( (This)->lpVtbl->get_IsFromBinding(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -8103,6 +8971,110 @@ interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerSt
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+/*
+ *
+ * Interface Windows.UI.Composition.Interactions.IInteractionTrackerStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.InteractionTracker
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IInteractionTrackerStatics2[] = L"Windows.UI.Composition.Interactions.IInteractionTrackerStatics2";
+/* [object, uuid("35E53720-46B7-5CB0-B505-F3D6884A6163"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *SetBindingMode )(
+        __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker * boundTracker1,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker * boundTracker2,
+        /* [in] */__x_ABI_CWindows_CUI_CComposition_CInteractions_CInteractionBindingAxisModes axisMode
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetBindingMode )(
+        __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker * boundTracker1,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTracker * boundTracker2,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CComposition_CInteractions_CInteractionBindingAxisModes * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_SetBindingMode(This,boundTracker1,boundTracker2,axisMode) \
+    ( (This)->lpVtbl->SetBindingMode(This,boundTracker1,boundTracker2,axisMode) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_GetBindingMode(This,boundTracker1,boundTracker2,result) \
+    ( (This)->lpVtbl->GetBindingMode(This,boundTracker1,boundTracker2,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9256,6 +10228,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualI
 
 /*
  *
+ * Interface Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Interactions.VisualInteractionSource
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics2[] = L"Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2";
+/* [object, uuid("A979C032-5764-55E0-BC1F-0778786DCFDE"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromIVisualElement )(
+        __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CIVisualElement * source,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSource * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_CreateFromIVisualElement(This,source,result) \
+    ( (This)->lpVtbl->CreateFromIVisualElement(This,source,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Class Windows.UI.Composition.Interactions.CompositionConditionalValue
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
@@ -9338,6 +10404,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Composition.Interactions.IInteractionTrackerStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Composition.Interactions.IInteractionTrackerStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -9369,8 +10436,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9393,8 +10459,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9523,8 +10588,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs ** Default Interface **
  *    Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9547,8 +10611,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *    Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -9669,6 +10732,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -83,11 +83,25 @@ struct WINRT_EBO IInteractionTrackerCustomAnimationStateEnteredArgs :
     IInteractionTrackerCustomAnimationStateEnteredArgs(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IInteractionTrackerCustomAnimationStateEnteredArgs2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInteractionTrackerCustomAnimationStateEnteredArgs2>
+{
+    IInteractionTrackerCustomAnimationStateEnteredArgs2(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IInteractionTrackerIdleStateEnteredArgs :
     Windows::Foundation::IInspectable,
     impl::consume_t<IInteractionTrackerIdleStateEnteredArgs>
 {
     IInteractionTrackerIdleStateEnteredArgs(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInteractionTrackerIdleStateEnteredArgs2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInteractionTrackerIdleStateEnteredArgs2>
+{
+    IInteractionTrackerIdleStateEnteredArgs2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IInteractionTrackerInertiaModifier :
@@ -160,11 +174,25 @@ struct WINRT_EBO IInteractionTrackerInertiaStateEnteredArgs2 :
     IInteractionTrackerInertiaStateEnteredArgs2(std::nullptr_t = nullptr) noexcept {}
 };
 
+struct WINRT_EBO IInteractionTrackerInertiaStateEnteredArgs3 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInteractionTrackerInertiaStateEnteredArgs3>
+{
+    IInteractionTrackerInertiaStateEnteredArgs3(std::nullptr_t = nullptr) noexcept {}
+};
+
 struct WINRT_EBO IInteractionTrackerInteractingStateEnteredArgs :
     Windows::Foundation::IInspectable,
     impl::consume_t<IInteractionTrackerInteractingStateEnteredArgs>
 {
     IInteractionTrackerInteractingStateEnteredArgs(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInteractionTrackerInteractingStateEnteredArgs2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInteractionTrackerInteractingStateEnteredArgs2>
+{
+    IInteractionTrackerInteractingStateEnteredArgs2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IInteractionTrackerOwner :
@@ -186,6 +214,13 @@ struct WINRT_EBO IInteractionTrackerStatics :
     impl::consume_t<IInteractionTrackerStatics>
 {
     IInteractionTrackerStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IInteractionTrackerStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IInteractionTrackerStatics2>
+{
+    IInteractionTrackerStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 struct WINRT_EBO IInteractionTrackerValuesChangedArgs :
@@ -256,6 +291,13 @@ struct WINRT_EBO IVisualInteractionSourceStatics :
     impl::consume_t<IVisualInteractionSourceStatics>
 {
     IVisualInteractionSourceStatics(std::nullptr_t = nullptr) noexcept {}
+};
+
+struct WINRT_EBO IVisualInteractionSourceStatics2 :
+    Windows::Foundation::IInspectable,
+    impl::consume_t<IVisualInteractionSourceStatics2>
+{
+    IVisualInteractionSourceStatics2(std::nullptr_t = nullptr) noexcept {}
 };
 
 }

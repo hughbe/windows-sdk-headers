@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.phone.startscreen.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Phone {
             namespace StartScreen {
                 interface IDualSimTile;
-            } /* Windows */
+            } /* StartScreen */
         } /* Phone */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTile ABI::Windows::Phone::StartScreen::IDualSimTile
 
 #endif // ____x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTile_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Phone {
             namespace StartScreen {
                 interface IDualSimTileStatics;
-            } /* Windows */
+            } /* StartScreen */
         } /* Phone */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTileStatics ABI::Windows::Phone::StartScreen::IDualSimTileStatics
 
 #endif // ____x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTileStatics_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Phone {
             namespace StartScreen {
                 interface IToastNotificationManagerStatics3;
-            } /* Windows */
+            } /* StartScreen */
         } /* Phone */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CPhone_CStartScreen_CIToastNotificationManagerStatics3 ABI::Windows::Phone::StartScreen::IToastNotificationManagerStatics3
 
 #endif // ____x_ABI_CWindows_CPhone_CStartScreen_CIToastNotificationManagerStatics3_FWD_DEFINED__
@@ -338,7 +334,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -367,7 +363,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -384,9 +380,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class BadgeUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater_FWD_DEFINED__
@@ -395,9 +391,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IBadgeUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater ABI::Windows::UI::Notifications::IBadgeUpdater
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIBadgeUpdater_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class TileUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CITileUpdater_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CITileUpdater_FWD_DEFINED__
@@ -419,9 +415,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface ITileUpdater;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CITileUpdater ABI::Windows::UI::Notifications::ITileUpdater
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CITileUpdater_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 class ToastNotifier;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier_FWD_DEFINED__
@@ -443,9 +439,9 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 interface IToastNotifier;
-            } /* Windows */
+            } /* Notifications */
         } /* UI */
-    } /* Notifications */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotifier ABI::Windows::UI::Notifications::IToastNotifier
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotifier_FWD_DEFINED__
@@ -463,9 +459,9 @@ namespace ABI {
         namespace Phone {
             namespace StartScreen {
                 class DualSimTile;
-            } /* Windows */
+            } /* StartScreen */
         } /* Phone */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -504,7 +500,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPinnedToStart(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateAsync(
                         /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
@@ -520,9 +516,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDualSimTile=_uuidof(IDualSimTile);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* Phone */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTile;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTile_INTERFACE_DEFINED__) */
@@ -583,9 +579,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDualSimTileStatics=_uuidof(IDualSimTileStatics);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* Phone */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTileStatics;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CStartScreen_CIDualSimTileStatics_INTERFACE_DEFINED__) */
@@ -622,9 +618,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IToastNotificationManagerStatics3=_uuidof(IToastNotificationManagerStatics3);
                 
-            } /* Windows */
+            } /* StartScreen */
         } /* Phone */
-    } /* StartScreen */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CStartScreen_CIToastNotificationManagerStatics3;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CStartScreen_CIToastNotificationManagerStatics3_INTERFACE_DEFINED__) */

@@ -212,6 +212,7 @@
 #define DEVICEDISPLAY_CATEGORY_POS_CASHDRAWER                       L"Pos.CashDrawer"
 #define DEVICEDISPLAY_CATEGORY_POS_LINEDISPLAY                      L"Pos.LineDisplay"
 #define DEVICEDISPLAY_CATEGORY_POS_MAGNETICSTRIPEREADER             L"Pos.MagneticStripeReader"
+#define DEVICEDISPLAY_CATEGORY_POS_PAYMENTDEVICE                    L"Pos.PaymentDevice"
 #define DEVICEDISPLAY_CATEGORY_POS_PRINTER                          L"Pos.Printer"
 
 // PrintFax

@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -173,6 +173,12 @@ struct WINRT_EBO HdrVideoControl :
     HdrVideoControl(std::nullptr_t) noexcept {}
 };
 
+struct WINRT_EBO InfraredTorchControl :
+    Windows::Media::Devices::IInfraredTorchControl
+{
+    InfraredTorchControl(std::nullptr_t) noexcept {}
+};
+
 struct WINRT_EBO IsoSpeedControl :
     Windows::Media::Devices::IIsoSpeedControl,
     impl::require<IsoSpeedControl, Windows::Media::Devices::IIsoSpeedControl2>
@@ -280,7 +286,7 @@ struct WINRT_EBO TorchControl :
 
 struct WINRT_EBO VideoDeviceController :
     Windows::Media::Devices::IVideoDeviceController,
-    impl::require<VideoDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6>
+    impl::require<VideoDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7>
 {
     VideoDeviceController(std::nullptr_t) noexcept {}
 };

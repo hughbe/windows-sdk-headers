@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.apprecording.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -239,10 +239,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingManager;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager ABI::Windows::Media::AppRecording::IAppRecordingManager
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingManagerStatics;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics ABI::Windows::Media::AppRecording::IAppRecordingManagerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingResult;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult ABI::Windows::Media::AppRecording::IAppRecordingResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingSaveScreenshotResult;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingSavedScreenshotInfo;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingStatus;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus ABI::Windows::Media::AppRecording::IAppRecordingStatus
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingStatusDetails;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails ABI::Windows::Media::AppRecording::IAppRecordingStatusDetails
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_FWD_DEFINED__
@@ -380,9 +376,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingSavedScreenshotInfo;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -405,7 +401,7 @@ IIterator<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t;
 #define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
@@ -437,7 +433,7 @@ IIterable<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t;
 #define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
@@ -469,7 +465,7 @@ IVectorView<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t;
 #define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
@@ -485,9 +481,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingResult;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -510,7 +506,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingR
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::IAppRecordingResult*>
@@ -542,7 +538,7 @@ IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingResult*> : IAsync
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingResult*> __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::AppRecording::IAppRecordingResult*>
@@ -558,9 +554,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingSaveScreenshotResult;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -583,7 +579,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingS
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>
@@ -615,7 +611,7 @@ IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotRes
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>
@@ -645,7 +641,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -674,7 +670,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -703,7 +699,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -721,8 +717,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -730,8 +726,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -739,8 +735,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -748,8 +744,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -759,8 +755,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -768,8 +764,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -785,9 +781,9 @@ namespace ABI {
                 
                 typedef enum AppRecordingSaveScreenshotOption : int AppRecordingSaveScreenshotOption;
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -801,9 +797,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingManager;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -814,9 +810,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingStatus;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -824,9 +820,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingStatusDetails;
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -859,9 +855,9 @@ namespace ABI {
                     AppRecordingSaveScreenshotOption_HdrContentVisible = 1,
                 };
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
 
@@ -917,9 +913,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppRecordingManager=_uuidof(IAppRecordingManager);
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_INTERFACE_DEFINED__) */
@@ -958,9 +954,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppRecordingManagerStatics=_uuidof(IAppRecordingManagerStatics);
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_INTERFACE_DEFINED__) */
@@ -992,7 +988,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
                         /* [retval, out] */__RPC__out HRESULT * value
@@ -1001,16 +997,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFileTruncated(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppRecordingResult=_uuidof(IAppRecordingResult);
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_INTERFACE_DEFINED__) */
@@ -1042,7 +1038,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
                         /* [retval, out] */__RPC__out HRESULT * value
@@ -1055,9 +1051,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppRecordingSaveScreenshotResult=_uuidof(IAppRecordingSaveScreenshotResult);
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__) */
@@ -1099,9 +1095,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppRecordingSavedScreenshotInfo=_uuidof(IAppRecordingSavedScreenshotInfo);
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__) */
@@ -1133,10 +1129,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRecord(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRecordTimeSpan(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HistoricalBufferDuration(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
@@ -1149,9 +1145,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAppRecordingStatus=_uuidof(IAppRecordingStatus);
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_INTERFACE_DEFINED__) */
@@ -1183,40 +1179,40 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAnyAppBroadcasting(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCaptureResourceUnavailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGameStreamInProgress(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTimeSpanRecordingDisabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGpuConstrained(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAppInactive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBlockedForApp(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledByUser(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledBySystem(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IAppRecordingStatusDetails=_uuidof(IAppRecordingStatusDetails);
                 
-            } /* Windows */
+            } /* AppRecording */
         } /* Media */
-    } /* AppRecording */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_INTERFACE_DEFINED__) */

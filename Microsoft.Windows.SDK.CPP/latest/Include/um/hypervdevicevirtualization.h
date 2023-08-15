@@ -32,6 +32,37 @@ typedef enum HDV_DEVICE_TYPE
 
 } HDV_DEVICE_TYPE;
 
+#ifndef _HDV_COMMON_DEFINITIONS_
+#define _HDV_COMMON_DEFINITIONS_
+
+typedef struct HDV_PCI_PNP_ID
+{
+    UINT16 VendorID;
+    UINT16 DeviceID;
+    UINT8 RevisionID;
+    UINT8 ProgIf;
+    UINT8 SubClass;
+    UINT8 BaseClass;
+    UINT16 SubVendorID;
+    UINT16 SubSystemID;
+
+} HDV_PCI_PNP_ID, *PHDV_PCI_PNP_ID;
+
+typedef enum HDV_PCI_BAR_SELECTOR
+{
+    HDV_PCI_BAR0 = 0,
+    HDV_PCI_BAR1,
+    HDV_PCI_BAR2,
+    HDV_PCI_BAR3,
+    HDV_PCI_BAR4,
+    HDV_PCI_BAR5
+
+} HDV_PCI_BAR_SELECTOR;
+
+#endif // _HDV_COMMON_DEFINITIONS_
+
+#define HDV_PCI_BAR_COUNT 6
+
 HRESULT
 WINAPI
 HdvInitializeDeviceHost(
@@ -108,40 +139,28 @@ HdvDeliverGuestInterrupt(
     );
 
 
+HRESULT
+WINAPI
+HdvRegisterDoorbellPage(
+    _In_ HDV_DEVICE requestor,
+    _In_ HDV_PCI_BAR_SELECTOR BarIndex,
+    _In_ UINT64 PageIndex,
+    _In_ PVOID DoorbellEvent
+    );
+
+
+HRESULT
+WINAPI
+HdvUnregisterDoorbellPage(
+    _In_ HDV_DEVICE requestor,
+    _In_ HDV_PCI_BAR_SELECTOR BarIndex,
+    _In_ UINT64 PageIndex
+    );
+
+
 //
 // PCI device interface.
 //
-
-#ifndef _HDV_COMMON_DEFINITIONS_
-#define _HDV_COMMON_DEFINITIONS_
-
-typedef struct HDV_PCI_PNP_ID
-{
-    UINT16 VendorID;
-    UINT16 DeviceID;
-    UINT8 RevisionID;
-    UINT8 ProgIf;
-    UINT8 SubClass;
-    UINT8 BaseClass;
-    UINT16 SubVendorID;
-    UINT16 SubSystemID;
- 
-} HDV_PCI_PNP_ID, *PHDV_PCI_PNP_ID;
-
-typedef enum HDV_PCI_BAR_SELECTOR
-{
-    HDV_PCI_BAR0 = 0, 
-    HDV_PCI_BAR1,
-    HDV_PCI_BAR2,
-    HDV_PCI_BAR3,
-    HDV_PCI_BAR4,
-    HDV_PCI_BAR5
-
-} HDV_PCI_BAR_SELECTOR;
-
-#endif // _HDV_COMMON_DEFINITIONS_
-
-#define HDV_PCI_BAR_COUNT 6
 
 typedef HRESULT (CALLBACK *HDV_PCI_DEVICE_INITIALIZE)(
     _In_opt_ PVOID deviceContext
@@ -220,7 +239,7 @@ typedef struct HDV_PCI_DEVICE_INTERFACE
     HDV_PCI_WRITE_CONFIG_SPACE WriteConfigSpace;
     HDV_PCI_READ_INTERCEPTED_MEMORY ReadInterceptedMemory;
     HDV_PCI_WRITE_INTERCEPTED_MEMORY WriteInterceptedMemory;
- 
+
 } HDV_PCI_DEVICE_INTERFACE, *PHDV_PCI_DEVICE_INTERFACE;
 
 #ifdef __cplusplus
@@ -233,8 +252,8 @@ typedef struct HDV_PCI_DEVICE_INTERFACE
 #endif // _HYPERV_DEVICE_VIRTUALIZATION_H_
 
 
-#ifndef ext_ms_win_hyperv_devicevirtualization_l1_1_0_query_routines
-#define ext_ms_win_hyperv_devicevirtualization_l1_1_0_query_routines
+#ifndef ext_ms_win_hyperv_devicevirtualization_l1_1_1_query_routines
+#define ext_ms_win_hyperv_devicevirtualization_l1_1_1_query_routines
 
 
 
@@ -291,6 +310,18 @@ IsHdvDestroyGuestMemoryAperturePresent(
 BOOLEAN
 __stdcall
 IsHdvDeliverGuestInterruptPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHdvRegisterDoorbellPagePresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHdvUnregisterDoorbellPagePresent(
     VOID
     );
 

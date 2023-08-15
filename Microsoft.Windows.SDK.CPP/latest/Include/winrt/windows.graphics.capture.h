@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.graphics.capture.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IDirect3D11CaptureFrame;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFrame ABI::Windows::Graphics::Capture::IDirect3D11CaptureFrame
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFrame_FWD_DEFINED__
@@ -295,9 +291,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IDirect3D11CaptureFramePool;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePool ABI::Windows::Graphics::Capture::IDirect3D11CaptureFramePool
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePool_FWD_DEFINED__
@@ -309,9 +305,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IDirect3D11CaptureFramePoolStatics;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics ABI::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics_FWD_DEFINED__
@@ -323,9 +319,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IDirect3D11CaptureFramePoolStatics2;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics2 ABI::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics2
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics2_FWD_DEFINED__
@@ -337,9 +333,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IGraphicsCaptureItem;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItem ABI::Windows::Graphics::Capture::IGraphicsCaptureItem
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItem_FWD_DEFINED__
@@ -351,9 +347,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IGraphicsCaptureItemStatics;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItemStatics ABI::Windows::Graphics::Capture::IGraphicsCaptureItemStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItemStatics_FWD_DEFINED__
@@ -365,9 +361,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IGraphicsCapturePicker;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCapturePicker ABI::Windows::Graphics::Capture::IGraphicsCapturePicker
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCapturePicker_FWD_DEFINED__
@@ -379,9 +375,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IGraphicsCaptureSession;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSession ABI::Windows::Graphics::Capture::IGraphicsCaptureSession
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSession_FWD_DEFINED__
@@ -393,9 +389,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 interface IGraphicsCaptureSessionStatics;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSessionStatics ABI::Windows::Graphics::Capture::IGraphicsCaptureSessionStatics
 
 #endif // ____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSessionStatics_FWD_DEFINED__
@@ -408,9 +404,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 class GraphicsCaptureItem;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -433,7 +429,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Capture::GraphicsCapture
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Capture::GraphicsCaptureItem*> __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Graphics::Capture::IGraphicsCaptureItem*>
@@ -465,7 +461,7 @@ IAsyncOperation<ABI::Windows::Graphics::Capture::GraphicsCaptureItem*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Graphics::Capture::GraphicsCaptureItem*> __FIAsyncOperation_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem_t;
 #define __FIAsyncOperation_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CGraphics__CCapture__CGraphicsCaptureItem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Graphics::Capture::IGraphicsCaptureItem*>
@@ -481,9 +477,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 class Direct3D11CaptureFramePool;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -507,7 +503,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Capture::Direct3D11CaptureFramePool*,
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Capture::Direct3D11CaptureFramePool*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Capture::IDirect3D11CaptureFramePool*,IInspectable*>
@@ -540,7 +536,7 @@ ITypedEventHandler<ABI::Windows::Graphics::Capture::GraphicsCaptureItem*,IInspec
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Graphics::Capture::GraphicsCaptureItem*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Capture::IGraphicsCaptureItem*,IInspectable*>
@@ -559,8 +555,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -572,8 +568,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -586,10 +582,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DDevice;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice_FWD_DEFINED__
@@ -603,10 +599,10 @@ namespace ABI {
             namespace DirectX {
                 namespace Direct3D11 {
                     interface IDirect3DSurface;
-                } /* Windows */
-            } /* Graphics */
-        } /* DirectX */
-    } /* Direct3D11 */} /* ABI */
+                } /* Direct3D11 */
+            } /* DirectX */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface ABI::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface
 
 #endif // ____x_ABI_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface_FWD_DEFINED__
@@ -623,9 +619,9 @@ namespace ABI {
                 
                 typedef enum DirectXPixelFormat : int DirectXPixelFormat;
                 
-            } /* Windows */
+            } /* DirectX */
         } /* Graphics */
-    } /* DirectX */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -636,8 +632,8 @@ namespace ABI {
             
             typedef struct SizeInt32 SizeInt32;
             
-        } /* Windows */
-    } /* Graphics */} /* ABI */
+        } /* Graphics */
+    } /* Windows */} /* ABI */
 
 
 
@@ -645,8 +641,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class DispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
@@ -654,8 +650,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IDispatcherQueue;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIDispatcherQueue ABI::Windows::System::IDispatcherQueue
 
 #endif // ____x_ABI_CWindows_CSystem_CIDispatcherQueue_FWD_DEFINED__
@@ -668,9 +664,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 class Visual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
@@ -679,9 +675,9 @@ namespace ABI {
         namespace UI {
             namespace Composition {
                 interface IVisual;
-            } /* Windows */
+            } /* Composition */
         } /* UI */
-    } /* Composition */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CComposition_CIVisual ABI::Windows::UI::Composition::IVisual
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual_FWD_DEFINED__
@@ -704,9 +700,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 class Direct3D11CaptureFrame;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -716,9 +712,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 class GraphicsCapturePicker;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -726,9 +722,9 @@ namespace ABI {
         namespace Graphics {
             namespace Capture {
                 class GraphicsCaptureSession;
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -777,9 +773,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDirect3D11CaptureFrame=_uuidof(IDirect3D11CaptureFrame);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFrame;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFrame_INTERFACE_DEFINED__) */
@@ -838,9 +834,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDirect3D11CaptureFramePool=_uuidof(IDirect3D11CaptureFramePool);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePool;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePool_INTERFACE_DEFINED__) */
@@ -883,9 +879,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDirect3D11CaptureFramePoolStatics=_uuidof(IDirect3D11CaptureFramePoolStatics);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics_INTERFACE_DEFINED__) */
@@ -928,9 +924,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDirect3D11CaptureFramePoolStatics2=_uuidof(IDirect3D11CaptureFramePoolStatics2);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePoolStatics2_INTERFACE_DEFINED__) */
@@ -979,9 +975,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGraphicsCaptureItem=_uuidof(IGraphicsCaptureItem);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItem;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItem_INTERFACE_DEFINED__) */
@@ -1021,9 +1017,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGraphicsCaptureItemStatics=_uuidof(IGraphicsCaptureItemStatics);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItemStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItemStatics_INTERFACE_DEFINED__) */
@@ -1062,9 +1058,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGraphicsCapturePicker=_uuidof(IGraphicsCapturePicker);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCapturePicker;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCapturePicker_INTERFACE_DEFINED__) */
@@ -1101,9 +1097,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IGraphicsCaptureSession=_uuidof(IGraphicsCaptureSession);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSession;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSession_INTERFACE_DEFINED__) */
@@ -1135,16 +1131,16 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IGraphicsCaptureSessionStatics=_uuidof(IGraphicsCaptureSessionStatics);
                 
-            } /* Windows */
+            } /* Capture */
         } /* Graphics */
-    } /* Capture */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSessionStatics;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSessionStatics_INTERFACE_DEFINED__) */
@@ -1482,7 +1478,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePool * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CCapture_CIDirect3D11CaptureFramePool * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CCapture__CDirect3D11CaptureFramePool_IInspectableVtbl;
 
@@ -1533,7 +1529,7 @@ typedef struct __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCa
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItem * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureItem * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CCapture__CGraphicsCaptureItem_IInspectableVtbl;
 

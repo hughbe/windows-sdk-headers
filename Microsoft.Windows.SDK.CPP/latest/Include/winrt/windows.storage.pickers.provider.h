@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.storage.pickers.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IFileOpenPickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI ABI::Windows::Storage::Pickers::Provider::IFileOpenPickerUI
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IFileRemovedEventArgs;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileRemovedEventArgs ABI::Windows::Storage::Pickers::Provider::IFileRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileRemovedEventArgs_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IFileSavePickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI ABI::Windows::Storage::Pickers::Provider::IFileSavePickerUI
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IPickerClosingDeferral;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingDeferral ABI::Windows::Storage::Pickers::Provider::IPickerClosingDeferral
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingDeferral_FWD_DEFINED__
@@ -342,10 +338,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IPickerClosingEventArgs;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingEventArgs ABI::Windows::Storage::Pickers::Provider::IPickerClosingEventArgs
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingEventArgs_FWD_DEFINED__
@@ -358,10 +354,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface IPickerClosingOperation;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingOperation ABI::Windows::Storage::Pickers::Provider::IPickerClosingOperation
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingOperation_FWD_DEFINED__
@@ -374,10 +370,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface ITargetFileRequest;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequest ABI::Windows::Storage::Pickers::Provider::ITargetFileRequest
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequest_FWD_DEFINED__
@@ -390,10 +386,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface ITargetFileRequestDeferral;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestDeferral ABI::Windows::Storage::Pickers::Provider::ITargetFileRequestDeferral
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestDeferral_FWD_DEFINED__
@@ -406,10 +402,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     interface ITargetFileRequestedEventArgs;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestedEventArgs ABI::Windows::Storage::Pickers::Provider::ITargetFileRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestedEventArgs_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class FileOpenPickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -435,10 +431,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class FileRemovedEventArgs;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -462,7 +458,7 @@ ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileOpenPickerUI*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileOpenPickerUI*,ABI::Windows::Storage::Pickers::Provider::FileRemovedEventArgs*> __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::IFileOpenPickerUI*,ABI::Windows::Storage::Pickers::Provider::IFileRemovedEventArgs*>
@@ -481,10 +477,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class PickerClosingEventArgs;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -508,7 +504,7 @@ ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileOpenPickerUI*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileOpenPickerUI*,ABI::Windows::Storage::Pickers::Provider::PickerClosingEventArgs*> __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::IFileOpenPickerUI*,ABI::Windows::Storage::Pickers::Provider::IPickerClosingEventArgs*>
@@ -526,10 +522,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class FileSavePickerUI;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -553,7 +549,7 @@ ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileSavePickerUI*,I
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileSavePickerUI*,IInspectable*> __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::IFileSavePickerUI*,IInspectable*>
@@ -571,10 +567,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class TargetFileRequestedEventArgs;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -598,7 +594,7 @@ ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileSavePickerUI*,A
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::FileSavePickerUI*,ABI::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs*> __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Storage::Pickers::Provider::IFileSavePickerUI*,ABI::Windows::Storage::Pickers::Provider::ITargetFileRequestedEventArgs*>
@@ -629,7 +625,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -658,7 +654,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -687,7 +683,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -705,8 +701,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -717,8 +713,8 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Windows */
-    } /* Storage */} /* ABI */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -734,10 +730,10 @@ namespace ABI {
                     
                     typedef enum AddFileResult : int AddFileResult;
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -747,10 +743,10 @@ namespace ABI {
                     
                     typedef enum FileSelectionMode : int FileSelectionMode;
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -760,10 +756,10 @@ namespace ABI {
                     
                     typedef enum SetFileNameResult : int SetFileNameResult;
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -783,10 +779,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class PickerClosingDeferral;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -796,10 +792,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class PickerClosingOperation;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -808,10 +804,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class TargetFileRequest;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -820,10 +816,10 @@ namespace ABI {
             namespace Pickers {
                 namespace Provider {
                     class TargetFileRequestDeferral;
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 
 
@@ -861,10 +857,10 @@ namespace ABI {
                         AddFileResult_Unavailable = 3,
                     };
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -890,10 +886,10 @@ namespace ABI {
                         FileSelectionMode_Multiple = 1,
                     };
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -920,10 +916,10 @@ namespace ABI {
                         SetFileNameResult_Unavailable = 2,
                     };
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -962,11 +958,11 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ContainsFile(
                             /* [in] */__RPC__in HSTRING id,
-                            /* [retval, out] */__RPC__out boolean * isContained
+                            /* [retval, out] */__RPC__out ::boolean * isContained
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE CanAddFile(
                             /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * file,
-                            /* [retval, out] */__RPC__out boolean * canAdd
+                            /* [retval, out] */__RPC__out ::boolean * canAdd
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AllowedFileTypes(
                             /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
@@ -1010,10 +1006,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFileOpenPickerUI=_uuidof(IFileOpenPickerUI);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI_INTERFACE_DEFINED__) */
@@ -1061,10 +1057,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFileRemovedEventArgs=_uuidof(IFileRemovedEventArgs);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -1134,10 +1130,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IFileSavePickerUI=_uuidof(IFileSavePickerUI);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI_INTERFACE_DEFINED__) */
@@ -1175,10 +1171,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPickerClosingDeferral=_uuidof(IPickerClosingDeferral);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingDeferral;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingDeferral_INTERFACE_DEFINED__) */
@@ -1214,17 +1210,17 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Pickers::Provider::IPickerClosingOperation * * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IPickerClosingEventArgs=_uuidof(IPickerClosingEventArgs);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingEventArgs_INTERFACE_DEFINED__) */
@@ -1267,10 +1263,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IPickerClosingOperation=_uuidof(IPickerClosingOperation);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingOperation;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingOperation_INTERFACE_DEFINED__) */
@@ -1316,10 +1312,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITargetFileRequest=_uuidof(ITargetFileRequest);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequest;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequest_INTERFACE_DEFINED__) */
@@ -1357,10 +1353,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITargetFileRequestDeferral=_uuidof(ITargetFileRequestDeferral);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestDeferral_INTERFACE_DEFINED__) */
@@ -1400,10 +1396,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_ITargetFileRequestedEventArgs=_uuidof(ITargetFileRequestedEventArgs);
                     
-                } /* Windows */
-            } /* Storage */
-        } /* Pickers */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Pickers */
+        } /* Storage */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -1678,7 +1674,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CFileRemovedEventArgsVtbl;
 
@@ -1731,7 +1727,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIPickerClosingEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileOpenPickerUI_Windows__CStorage__CPickers__CProvider__CPickerClosingEventArgsVtbl;
 
@@ -1783,7 +1779,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_IInspectableVtbl;
 
@@ -1835,7 +1831,7 @@ typedef struct __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__C
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CStorage__CPickers__CProvider__CFileSavePickerUI_Windows__CStorage__CPickers__CProvider__CTargetFileRequestedEventArgsVtbl;
 

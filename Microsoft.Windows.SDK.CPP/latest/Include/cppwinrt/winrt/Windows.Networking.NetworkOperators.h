@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -64,9 +64,9 @@ template <typename D> Windows::Networking::NetworkOperators::ESimState consume_W
 
 template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimProfile> consume_Windows_Networking_NetworkOperators_IESim<D>::GetProfiles() const
 {
-    Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimProfile> value{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESim)->GetProfiles(put_abi(value)));
-    return value;
+    Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimProfile> result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESim)->GetProfiles(put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimOperationResult> consume_Windows_Networking_NetworkOperators_IESim<D>::DeleteProfileAsync(param::hstring const& profileId) const
@@ -107,10 +107,80 @@ template <typename D> void consume_Windows_Networking_NetworkOperators_IESim<D>:
     WINRT_VERIFY_(0, WINRT_SHIM(Windows::Networking::NetworkOperators::IESim)->remove_ProfileChanged(get_abi(token)));
 }
 
+template <typename D> Windows::Networking::NetworkOperators::ESimDiscoverResult consume_Windows_Networking_NetworkOperators_IESim2<D>::Discover() const
+{
+    Windows::Networking::NetworkOperators::ESimDiscoverResult result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESim2)->Discover(put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::Networking::NetworkOperators::ESimDiscoverResult consume_Windows_Networking_NetworkOperators_IESim2<D>::Discover(param::hstring const& serverAddress, param::hstring const& matchingId) const
+{
+    Windows::Networking::NetworkOperators::ESimDiscoverResult result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESim2)->DiscoverWithServerAddressAndMatchingId(get_abi(serverAddress), get_abi(matchingId), put_abi(result)));
+    return result;
+}
+
+template <typename D> Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult> consume_Windows_Networking_NetworkOperators_IESim2<D>::DiscoverAsync() const
+{
+    Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESim2)->DiscoverAsync(put_abi(operation)));
+    return operation;
+}
+
+template <typename D> Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult> consume_Windows_Networking_NetworkOperators_IESim2<D>::DiscoverAsync(param::hstring const& serverAddress, param::hstring const& matchingId) const
+{
+    Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESim2)->DiscoverWithServerAddressAndMatchingIdAsync(get_abi(serverAddress), get_abi(matchingId), put_abi(operation)));
+    return operation;
+}
+
 template <typename D> Windows::Networking::NetworkOperators::ESim consume_Windows_Networking_NetworkOperators_IESimAddedEventArgs<D>::ESim() const
 {
     Windows::Networking::NetworkOperators::ESim value{ nullptr };
     check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimAddedEventArgs)->get_ESim(put_abi(value)));
+    return value;
+}
+
+template <typename D> hstring consume_Windows_Networking_NetworkOperators_IESimDiscoverEvent<D>::MatchingId() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimDiscoverEvent)->get_MatchingId(put_abi(value)));
+    return value;
+}
+
+template <typename D> hstring consume_Windows_Networking_NetworkOperators_IESimDiscoverEvent<D>::RspServerAddress() const
+{
+    hstring value{};
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimDiscoverEvent)->get_RspServerAddress(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimDiscoverEvent> consume_Windows_Networking_NetworkOperators_IESimDiscoverResult<D>::Events() const
+{
+    Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimDiscoverEvent> value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimDiscoverResult)->get_Events(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Networking::NetworkOperators::ESimDiscoverResultKind consume_Windows_Networking_NetworkOperators_IESimDiscoverResult<D>::Kind() const
+{
+    Windows::Networking::NetworkOperators::ESimDiscoverResultKind value{};
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimDiscoverResult)->get_Kind(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Networking::NetworkOperators::ESimProfileMetadata consume_Windows_Networking_NetworkOperators_IESimDiscoverResult<D>::ProfileMetadata() const
+{
+    Windows::Networking::NetworkOperators::ESimProfileMetadata value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimDiscoverResult)->get_ProfileMetadata(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Networking::NetworkOperators::ESimOperationResult consume_Windows_Networking_NetworkOperators_IESimDiscoverResult<D>::Result() const
+{
+    Windows::Networking::NetworkOperators::ESimOperationResult value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimDiscoverResult)->get_Result(put_abi(value)));
     return value;
 }
 
@@ -137,9 +207,9 @@ template <typename D> Windows::Networking::NetworkOperators::ESimServiceInfo con
 
 template <typename D> Windows::Networking::NetworkOperators::ESimWatcher consume_Windows_Networking_NetworkOperators_IESimManagerStatics<D>::TryCreateESimWatcher() const
 {
-    Windows::Networking::NetworkOperators::ESimWatcher value{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimManagerStatics)->TryCreateESimWatcher(put_abi(value)));
-    return value;
+    Windows::Networking::NetworkOperators::ESimWatcher result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimManagerStatics)->TryCreateESimWatcher(put_abi(result)));
+    return result;
 }
 
 template <typename D> winrt::event_token consume_Windows_Networking_NetworkOperators_IESimManagerStatics<D>::ServiceInfoChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
@@ -395,9 +465,9 @@ template <typename D> Windows::Networking::NetworkOperators::ESim consume_Window
 
 template <typename D> Windows::Networking::NetworkOperators::ESimWatcherStatus consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Status() const
 {
-    Windows::Networking::NetworkOperators::ESimWatcherStatus status{};
-    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimWatcher)->get_Status(put_abi(status)));
-    return status;
+    Windows::Networking::NetworkOperators::ESimWatcherStatus value{};
+    check_hresult(WINRT_SHIM(Windows::Networking::NetworkOperators::IESimWatcher)->get_Status(put_abi(value)));
+    return value;
 }
 
 template <typename D> void consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Start() const
@@ -2686,14 +2756,14 @@ struct produce<D, Windows::Networking::NetworkOperators::IESim> : produce_base<D
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL GetProfiles(void** value) noexcept final
+    int32_t WINRT_CALL GetProfiles(void** result) noexcept final
     {
         try
         {
-            *value = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(GetProfiles, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimProfile>));
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimProfile>>(this->shim().GetProfiles());
+            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimProfile>>(this->shim().GetProfiles());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2760,6 +2830,62 @@ struct produce<D, Windows::Networking::NetworkOperators::IESim> : produce_base<D
 };
 
 template <typename D>
+struct produce<D, Windows::Networking::NetworkOperators::IESim2> : produce_base<D, Windows::Networking::NetworkOperators::IESim2>
+{
+    int32_t WINRT_CALL Discover(void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Discover, WINRT_WRAP(Windows::Networking::NetworkOperators::ESimDiscoverResult));
+            *result = detach_from<Windows::Networking::NetworkOperators::ESimDiscoverResult>(this->shim().Discover());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL DiscoverWithServerAddressAndMatchingId(void* serverAddress, void* matchingId, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Discover, WINRT_WRAP(Windows::Networking::NetworkOperators::ESimDiscoverResult), hstring const&, hstring const&);
+            *result = detach_from<Windows::Networking::NetworkOperators::ESimDiscoverResult>(this->shim().Discover(*reinterpret_cast<hstring const*>(&serverAddress), *reinterpret_cast<hstring const*>(&matchingId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL DiscoverAsync(void** operation) noexcept final
+    {
+        try
+        {
+            *operation = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(DiscoverAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult>));
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult>>(this->shim().DiscoverAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL DiscoverWithServerAddressAndMatchingIdAsync(void* serverAddress, void* matchingId, void** operation) noexcept final
+    {
+        try
+        {
+            *operation = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(DiscoverAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult>), hstring const, hstring const);
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Networking::NetworkOperators::ESimDiscoverResult>>(this->shim().DiscoverAsync(*reinterpret_cast<hstring const*>(&serverAddress), *reinterpret_cast<hstring const*>(&matchingId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
 struct produce<D, Windows::Networking::NetworkOperators::IESimAddedEventArgs> : produce_base<D, Windows::Networking::NetworkOperators::IESimAddedEventArgs>
 {
     int32_t WINRT_CALL get_ESim(void** value) noexcept final
@@ -2770,6 +2896,91 @@ struct produce<D, Windows::Networking::NetworkOperators::IESimAddedEventArgs> : 
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(ESim, WINRT_WRAP(Windows::Networking::NetworkOperators::ESim));
             *value = detach_from<Windows::Networking::NetworkOperators::ESim>(this->shim().ESim());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Networking::NetworkOperators::IESimDiscoverEvent> : produce_base<D, Windows::Networking::NetworkOperators::IESimDiscoverEvent>
+{
+    int32_t WINRT_CALL get_MatchingId(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(MatchingId, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().MatchingId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_RspServerAddress(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(RspServerAddress, WINRT_WRAP(hstring));
+            *value = detach_from<hstring>(this->shim().RspServerAddress());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Networking::NetworkOperators::IESimDiscoverResult> : produce_base<D, Windows::Networking::NetworkOperators::IESimDiscoverResult>
+{
+    int32_t WINRT_CALL get_Events(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Events, WINRT_WRAP(Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimDiscoverEvent>));
+            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Networking::NetworkOperators::ESimDiscoverEvent>>(this->shim().Events());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Kind(Windows::Networking::NetworkOperators::ESimDiscoverResultKind* value) noexcept final
+    {
+        try
+        {
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Kind, WINRT_WRAP(Windows::Networking::NetworkOperators::ESimDiscoverResultKind));
+            *value = detach_from<Windows::Networking::NetworkOperators::ESimDiscoverResultKind>(this->shim().Kind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_ProfileMetadata(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(ProfileMetadata, WINRT_WRAP(Windows::Networking::NetworkOperators::ESimProfileMetadata));
+            *value = detach_from<Windows::Networking::NetworkOperators::ESimProfileMetadata>(this->shim().ProfileMetadata());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+
+    int32_t WINRT_CALL get_Result(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(Result, WINRT_WRAP(Windows::Networking::NetworkOperators::ESimOperationResult));
+            *value = detach_from<Windows::Networking::NetworkOperators::ESimOperationResult>(this->shim().Result());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2822,14 +3033,14 @@ struct produce<D, Windows::Networking::NetworkOperators::IESimManagerStatics> : 
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL TryCreateESimWatcher(void** value) noexcept final
+    int32_t WINRT_CALL TryCreateESimWatcher(void** result) noexcept final
     {
         try
         {
-            *value = nullptr;
+            *result = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(TryCreateESimWatcher, WINRT_WRAP(Windows::Networking::NetworkOperators::ESimWatcher));
-            *value = detach_from<Windows::Networking::NetworkOperators::ESimWatcher>(this->shim().TryCreateESimWatcher());
+            *result = detach_from<Windows::Networking::NetworkOperators::ESimWatcher>(this->shim().TryCreateESimWatcher());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3303,13 +3514,13 @@ struct produce<D, Windows::Networking::NetworkOperators::IESimUpdatedEventArgs> 
 template <typename D>
 struct produce<D, Windows::Networking::NetworkOperators::IESimWatcher> : produce_base<D, Windows::Networking::NetworkOperators::IESimWatcher>
 {
-    int32_t WINRT_CALL get_Status(Windows::Networking::NetworkOperators::ESimWatcherStatus* status) noexcept final
+    int32_t WINRT_CALL get_Status(Windows::Networking::NetworkOperators::ESimWatcherStatus* value) noexcept final
     {
         try
         {
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(Status, WINRT_WRAP(Windows::Networking::NetworkOperators::ESimWatcherStatus));
-            *status = detach_from<Windows::Networking::NetworkOperators::ESimWatcherStatus>(this->shim().Status());
+            *value = detach_from<Windows::Networking::NetworkOperators::ESimWatcherStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7817,7 +8028,10 @@ inline Windows::Networking::NetworkOperators::UssdSession UssdSession::CreateFro
 WINRT_EXPORT namespace std {
 
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESim> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESim> {};
+template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESim2> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESim2> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimAddedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESimAddedEventArgs> {};
+template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimDiscoverEvent> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESimDiscoverEvent> {};
+template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimDiscoverResult> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESimDiscoverResult> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimDownloadProfileMetadataResult> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESimDownloadProfileMetadataResult> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimManagerStatics> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESimManagerStatics> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimOperationResult> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IESimOperationResult> {};
@@ -7916,6 +8130,8 @@ template<> struct hash<winrt::Windows::Networking::NetworkOperators::IUssdSessio
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::IUssdSessionStatics> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::IUssdSessionStatics> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::ESim> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::ESim> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs> {};
+template<> struct hash<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent> {};
+template<> struct hash<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::ESimManager> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::ESimManager> {};
 template<> struct hash<winrt::Windows::Networking::NetworkOperators::ESimOperationResult> : winrt::impl::hash_base<winrt::Windows::Networking::NetworkOperators::ESimOperationResult> {};

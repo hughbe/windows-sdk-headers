@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.networking.sockets.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -283,9 +279,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IControlChannelTrigger;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger ABI::Windows::Networking::Sockets::IControlChannelTrigger
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger_FWD_DEFINED__
@@ -297,9 +293,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IControlChannelTrigger2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger2 ABI::Windows::Networking::Sockets::IControlChannelTrigger2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger2_FWD_DEFINED__
@@ -311,9 +307,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IControlChannelTriggerEventDetails;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerEventDetails ABI::Windows::Networking::Sockets::IControlChannelTriggerEventDetails
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerEventDetails_FWD_DEFINED__
@@ -325,9 +321,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IControlChannelTriggerFactory;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerFactory ABI::Windows::Networking::Sockets::IControlChannelTriggerFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerFactory_FWD_DEFINED__
@@ -339,9 +335,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IControlChannelTriggerResetEventDetails;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerResetEventDetails ABI::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerResetEventDetails_FWD_DEFINED__
@@ -353,9 +349,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket ABI::Windows::Networking::Sockets::IDatagramSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
@@ -367,9 +363,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocket2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket2 ABI::Windows::Networking::Sockets::IDatagramSocket2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket2_FWD_DEFINED__
@@ -381,9 +377,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocket3;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket3 ABI::Windows::Networking::Sockets::IDatagramSocket3
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket3_FWD_DEFINED__
@@ -395,9 +391,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl ABI::Windows::Networking::Sockets::IDatagramSocketControl
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl_FWD_DEFINED__
@@ -409,9 +405,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocketControl2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl2 ABI::Windows::Networking::Sockets::IDatagramSocketControl2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl2_FWD_DEFINED__
@@ -423,9 +419,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocketControl3;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl3 ABI::Windows::Networking::Sockets::IDatagramSocketControl3
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl3_FWD_DEFINED__
@@ -437,9 +433,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketInformation ABI::Windows::Networking::Sockets::IDatagramSocketInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketInformation_FWD_DEFINED__
@@ -451,9 +447,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocketMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketMessageReceivedEventArgs ABI::Windows::Networking::Sockets::IDatagramSocketMessageReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketMessageReceivedEventArgs_FWD_DEFINED__
@@ -465,9 +461,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IDatagramSocketStatics;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketStatics ABI::Windows::Networking::Sockets::IDatagramSocketStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketStatics_FWD_DEFINED__
@@ -479,9 +475,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IMessageWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket ABI::Windows::Networking::Sockets::IMessageWebSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket_FWD_DEFINED__
@@ -493,9 +489,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IMessageWebSocket2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket2 ABI::Windows::Networking::Sockets::IMessageWebSocket2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket2_FWD_DEFINED__
@@ -507,9 +503,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IMessageWebSocket3;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket3 ABI::Windows::Networking::Sockets::IMessageWebSocket3
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket3_FWD_DEFINED__
@@ -521,9 +517,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IMessageWebSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl ABI::Windows::Networking::Sockets::IMessageWebSocketControl
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl_FWD_DEFINED__
@@ -535,9 +531,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IMessageWebSocketControl2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl2 ABI::Windows::Networking::Sockets::IMessageWebSocketControl2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl2_FWD_DEFINED__
@@ -549,9 +545,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IMessageWebSocketMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs ABI::Windows::Networking::Sockets::IMessageWebSocketMessageReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs_FWD_DEFINED__
@@ -563,9 +559,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IMessageWebSocketMessageReceivedEventArgs2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs2 ABI::Windows::Networking::Sockets::IMessageWebSocketMessageReceivedEventArgs2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs2_FWD_DEFINED__
@@ -577,9 +573,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IServerMessageWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket ABI::Windows::Networking::Sockets::IServerMessageWebSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket_FWD_DEFINED__
@@ -591,9 +587,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IServerMessageWebSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketControl ABI::Windows::Networking::Sockets::IServerMessageWebSocketControl
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketControl_FWD_DEFINED__
@@ -605,9 +601,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IServerMessageWebSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketInformation ABI::Windows::Networking::Sockets::IServerMessageWebSocketInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketInformation_FWD_DEFINED__
@@ -619,9 +615,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IServerStreamWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket ABI::Windows::Networking::Sockets::IServerStreamWebSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket_FWD_DEFINED__
@@ -633,9 +629,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IServerStreamWebSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocketInformation ABI::Windows::Networking::Sockets::IServerStreamWebSocketInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocketInformation_FWD_DEFINED__
@@ -647,9 +643,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface ISocketActivityContext;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContext ABI::Windows::Networking::Sockets::ISocketActivityContext
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContext_FWD_DEFINED__
@@ -661,9 +657,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface ISocketActivityContextFactory;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContextFactory ABI::Windows::Networking::Sockets::ISocketActivityContextFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContextFactory_FWD_DEFINED__
@@ -675,9 +671,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface ISocketActivityInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformation ABI::Windows::Networking::Sockets::ISocketActivityInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformation_FWD_DEFINED__
@@ -689,9 +685,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface ISocketActivityInformationStatics;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformationStatics ABI::Windows::Networking::Sockets::ISocketActivityInformationStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformationStatics_FWD_DEFINED__
@@ -703,9 +699,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface ISocketActivityTriggerDetails;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CISocketActivityTriggerDetails ABI::Windows::Networking::Sockets::ISocketActivityTriggerDetails
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityTriggerDetails_FWD_DEFINED__
@@ -717,9 +713,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface ISocketErrorStatics;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CISocketErrorStatics ABI::Windows::Networking::Sockets::ISocketErrorStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CISocketErrorStatics_FWD_DEFINED__
@@ -731,9 +727,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket ABI::Windows::Networking::Sockets::IStreamSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket_FWD_DEFINED__
@@ -745,9 +741,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocket2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket2 ABI::Windows::Networking::Sockets::IStreamSocket2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket2_FWD_DEFINED__
@@ -759,9 +755,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocket3;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket3 ABI::Windows::Networking::Sockets::IStreamSocket3
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket3_FWD_DEFINED__
@@ -773,9 +769,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl ABI::Windows::Networking::Sockets::IStreamSocketControl
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl_FWD_DEFINED__
@@ -787,9 +783,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketControl2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl2 ABI::Windows::Networking::Sockets::IStreamSocketControl2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl2_FWD_DEFINED__
@@ -801,9 +797,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketControl3;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl3 ABI::Windows::Networking::Sockets::IStreamSocketControl3
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl3_FWD_DEFINED__
@@ -815,9 +811,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketControl4;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl4 ABI::Windows::Networking::Sockets::IStreamSocketControl4
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl4_FWD_DEFINED__
@@ -829,9 +825,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation ABI::Windows::Networking::Sockets::IStreamSocketInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation_FWD_DEFINED__
@@ -843,9 +839,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketInformation2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation2 ABI::Windows::Networking::Sockets::IStreamSocketInformation2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation2_FWD_DEFINED__
@@ -857,9 +853,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener ABI::Windows::Networking::Sockets::IStreamSocketListener
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -871,9 +867,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListener2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener2 ABI::Windows::Networking::Sockets::IStreamSocketListener2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener2_FWD_DEFINED__
@@ -885,9 +881,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListener3;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener3 ABI::Windows::Networking::Sockets::IStreamSocketListener3
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener3_FWD_DEFINED__
@@ -899,9 +895,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListenerConnectionReceivedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerConnectionReceivedEventArgs ABI::Windows::Networking::Sockets::IStreamSocketListenerConnectionReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerConnectionReceivedEventArgs_FWD_DEFINED__
@@ -913,9 +909,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListenerControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl ABI::Windows::Networking::Sockets::IStreamSocketListenerControl
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl_FWD_DEFINED__
@@ -927,9 +923,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListenerControl2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl2 ABI::Windows::Networking::Sockets::IStreamSocketListenerControl2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl2_FWD_DEFINED__
@@ -941,9 +937,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketListenerInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerInformation ABI::Windows::Networking::Sockets::IStreamSocketListenerInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerInformation_FWD_DEFINED__
@@ -955,9 +951,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamSocketStatics;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketStatics ABI::Windows::Networking::Sockets::IStreamSocketStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketStatics_FWD_DEFINED__
@@ -969,9 +965,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket ABI::Windows::Networking::Sockets::IStreamWebSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket_FWD_DEFINED__
@@ -983,9 +979,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamWebSocket2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket2 ABI::Windows::Networking::Sockets::IStreamWebSocket2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket2_FWD_DEFINED__
@@ -997,9 +993,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamWebSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl ABI::Windows::Networking::Sockets::IStreamWebSocketControl
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl_FWD_DEFINED__
@@ -1011,9 +1007,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IStreamWebSocketControl2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl2 ABI::Windows::Networking::Sockets::IStreamWebSocketControl2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl2_FWD_DEFINED__
@@ -1025,9 +1021,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocket ABI::Windows::Networking::Sockets::IWebSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocket_FWD_DEFINED__
@@ -1039,9 +1035,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocketClosedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs ABI::Windows::Networking::Sockets::IWebSocketClosedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs_FWD_DEFINED__
@@ -1053,9 +1049,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl ABI::Windows::Networking::Sockets::IWebSocketControl
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl_FWD_DEFINED__
@@ -1067,9 +1063,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocketControl2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl2 ABI::Windows::Networking::Sockets::IWebSocketControl2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl2_FWD_DEFINED__
@@ -1081,9 +1077,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocketErrorStatics;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketErrorStatics ABI::Windows::Networking::Sockets::IWebSocketErrorStatics
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketErrorStatics_FWD_DEFINED__
@@ -1095,9 +1091,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation ABI::Windows::Networking::Sockets::IWebSocketInformation
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation_FWD_DEFINED__
@@ -1109,9 +1105,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocketInformation2;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation2 ABI::Windows::Networking::Sockets::IWebSocketInformation2
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation2_FWD_DEFINED__
@@ -1123,9 +1119,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 interface IWebSocketServerCustomValidationRequestedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs ABI::Windows::Networking::Sockets::IWebSocketServerCustomValidationRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs_FWD_DEFINED__
@@ -1138,9 +1134,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class SocketActivityInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1163,7 +1159,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Networking::Sockets::SocketActivityInformati
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Networking::Sockets::SocketActivityInformation*> __FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Networking::Sockets::ISocketActivityInformation*>
@@ -1195,7 +1191,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActi
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Networking::Sockets::ISocketActivityInformation*>*>
@@ -1227,7 +1223,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActi
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Networking::Sockets::ISocketActivityInformation*>*>
@@ -1259,7 +1255,7 @@ IMapView<HSTRING,ABI::Windows::Networking::Sockets::SocketActivityInformation*> 
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Networking::Sockets::SocketActivityInformation*> __FIMapView_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t;
 #define __FIMapView_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CNetworking__CSockets__CSocketActivityInformation ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Networking::Sockets::ISocketActivityInformation*>
@@ -1275,9 +1271,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1300,7 +1296,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Networking::Sockets::StreamSocket*
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::Sockets::StreamSocket*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::Sockets::IStreamSocket*>
@@ -1332,7 +1328,7 @@ IAsyncOperation<ABI::Windows::Networking::Sockets::StreamSocket*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Networking::Sockets::StreamSocket*> __FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket_t;
 #define __FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CNetworking__CSockets__CStreamSocket ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::Sockets::IStreamSocket*>
@@ -1348,9 +1344,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class DatagramSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1358,9 +1354,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class DatagramSocketMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1384,7 +1380,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::DatagramSocket*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::DatagramSocket*,ABI::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IDatagramSocket*,ABI::Windows::Networking::Sockets::IDatagramSocketMessageReceivedEventArgs*>
@@ -1402,9 +1398,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class WebSocketClosedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1428,7 +1424,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::IWebSocket*,ABI::Windows::
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::IWebSocket*,ABI::Windows::Networking::Sockets::WebSocketClosedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IWebSocket*,ABI::Windows::Networking::Sockets::IWebSocketClosedEventArgs*>
@@ -1445,9 +1441,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class MessageWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1455,9 +1451,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class MessageWebSocketMessageReceivedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1481,7 +1477,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::MessageWebSocket*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::MessageWebSocket*,ABI::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IMessageWebSocket*,ABI::Windows::Networking::Sockets::IMessageWebSocketMessageReceivedEventArgs*>
@@ -1499,9 +1495,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class WebSocketServerCustomValidationRequestedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1525,7 +1521,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::MessageWebSocket*,ABI::Win
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::MessageWebSocket*,ABI::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IMessageWebSocket*,ABI::Windows::Networking::Sockets::IWebSocketServerCustomValidationRequestedEventArgs*>
@@ -1542,9 +1538,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class ServerMessageWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1569,7 +1565,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::ServerMessageWebSocket*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::ServerMessageWebSocket*,ABI::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IServerMessageWebSocket*,ABI::Windows::Networking::Sockets::IMessageWebSocketMessageReceivedEventArgs*>
@@ -1604,7 +1600,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::ServerMessageWebSocket*,AB
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::ServerMessageWebSocket*,ABI::Windows::Networking::Sockets::WebSocketClosedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IServerMessageWebSocket*,ABI::Windows::Networking::Sockets::IWebSocketClosedEventArgs*>
@@ -1621,9 +1617,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class ServerStreamWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1648,7 +1644,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::ServerStreamWebSocket*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::ServerStreamWebSocket*,ABI::Windows::Networking::Sockets::WebSocketClosedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IServerStreamWebSocket*,ABI::Windows::Networking::Sockets::IWebSocketClosedEventArgs*>
@@ -1665,9 +1661,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketListener;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1675,9 +1671,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketListenerConnectionReceivedEventArgs;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1701,7 +1697,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::StreamSocketListener*,ABI:
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::StreamSocketListener*,ABI::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IStreamSocketListener*,ABI::Windows::Networking::Sockets::IStreamSocketListenerConnectionReceivedEventArgs*>
@@ -1718,9 +1714,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamWebSocket;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1745,7 +1741,7 @@ ITypedEventHandler<ABI::Windows::Networking::Sockets::StreamWebSocket*,ABI::Wind
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::Networking::Sockets::StreamWebSocket*,ABI::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::Sockets::IStreamWebSocket*,ABI::Windows::Networking::Sockets::IWebSocketServerCustomValidationRequestedEventArgs*>
@@ -1764,9 +1760,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -1792,7 +1788,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IOutputStream*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IOutputStream*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IOutputStream*>
@@ -1824,7 +1820,7 @@ IAsyncOperation<ABI::Windows::Storage::Streams::IOutputStream*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Storage::Streams::IOutputStream*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream_t;
 #define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIOutputStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IOutputStream*>
@@ -1839,8 +1835,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class EndpointPair;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIEndpointPair_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIEndpointPair_FWD_DEFINED__
@@ -1848,8 +1844,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IEndpointPair;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIEndpointPair ABI::Windows::Networking::IEndpointPair
 
 #endif // ____x_ABI_CWindows_CNetworking_CIEndpointPair_FWD_DEFINED__
@@ -1875,7 +1871,7 @@ IIterator<ABI::Windows::Networking::EndpointPair*> : IIterator_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::EndpointPair*> __FIIterator_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIIterator_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::IEndpointPair*>
@@ -1907,7 +1903,7 @@ IIterable<ABI::Windows::Networking::EndpointPair*> : IIterable_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::EndpointPair*> __FIIterable_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIIterable_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::IEndpointPair*>
@@ -1939,7 +1935,7 @@ IVectorView<ABI::Windows::Networking::EndpointPair*> : IVectorView_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::EndpointPair*> __FIVectorView_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IEndpointPair*>
@@ -1971,7 +1967,7 @@ IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CEndpoint
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CNetworking__CEndpointPair*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IEndpointPair*>*>
@@ -2003,7 +1999,7 @@ IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CEndpointPair*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CNetworking__CEndpointPair*> __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1___FIVectorView_1_Windows__CNetworking__CEndpointPair ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IEndpointPair*>*>
@@ -2033,7 +2029,7 @@ IAsyncOperationProgressHandler<UINT32,UINT32> : IAsyncOperationProgressHandler_i
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<UINT32,UINT32> __FIAsyncOperationProgressHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<UINT32,UINT32>
@@ -2062,7 +2058,7 @@ IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> : IAsyncOperationWith
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<UINT32,UINT32>
@@ -2091,7 +2087,7 @@ IAsyncOperationWithProgress<UINT32,UINT32> : IAsyncOperationWithProgress_impl<UI
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<UINT32,UINT32> __FIAsyncOperationWithProgress_2_UINT32_UINT32_t;
 #define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_UINT32_UINT32_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_UINT32_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<UINT32,UINT32>
@@ -2107,10 +2103,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     enum ChainValidationResult : int;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_USE
@@ -2131,7 +2127,7 @@ IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2161,7 +2157,7 @@ IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2191,7 +2187,7 @@ IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValida
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2221,7 +2217,7 @@ IVector<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidation
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2237,10 +2233,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2250,10 +2246,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2279,7 +2275,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2311,7 +2307,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2343,7 +2339,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2373,7 +2369,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2402,7 +2398,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2431,7 +2427,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -2460,7 +2456,7 @@ IVector<HSTRING> : IVector_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 #define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
@@ -2479,9 +2475,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTask;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTask ABI::Windows::ApplicationModel::Background::IBackgroundTask
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTask_FWD_DEFINED__
@@ -2494,9 +2490,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Background {
                 interface IBackgroundTrigger;
-            } /* Windows */
+            } /* Background */
         } /* ApplicationModel */
-    } /* Background */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger ABI::Windows::ApplicationModel::Background::IBackgroundTrigger
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CBackground_CIBackgroundTrigger_FWD_DEFINED__
@@ -2509,8 +2505,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2518,8 +2514,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -2531,8 +2527,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -2544,8 +2540,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2557,16 +2553,16 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2574,8 +2570,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2588,9 +2584,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 class NetworkAdapter;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -2599,9 +2595,9 @@ namespace ABI {
         namespace Networking {
             namespace Connectivity {
                 interface INetworkAdapter;
-            } /* Windows */
+            } /* Connectivity */
         } /* Networking */
-    } /* Connectivity */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter ABI::Windows::Networking::Connectivity::INetworkAdapter
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -2615,8 +2611,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2624,8 +2620,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2637,8 +2633,8 @@ namespace ABI {
             
             typedef enum HostNameSortOptions : unsigned int HostNameSortOptions;
             
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2647,9 +2643,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class PasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2658,9 +2654,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IPasswordCredential;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -2678,10 +2674,10 @@ namespace ABI {
                     
                     typedef enum ChainValidationResult : int ChainValidationResult;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2692,9 +2688,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 class DataReader;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIDataReader_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIDataReader_FWD_DEFINED__
@@ -2703,9 +2699,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IDataReader;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIDataReader ABI::Windows::Storage::Streams::IDataReader
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIDataReader_FWD_DEFINED__
@@ -2718,9 +2714,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -2733,9 +2729,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -2751,8 +2747,8 @@ namespace ABI {
             
             typedef enum WebErrorStatus : int WebErrorStatus;
             
-        } /* Windows */
-    } /* Web */} /* ABI */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2764,9 +2760,9 @@ namespace ABI {
                 
                 typedef enum ControlChannelTriggerResetReason : int ControlChannelTriggerResetReason;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2775,9 +2771,9 @@ namespace ABI {
                 
                 typedef enum ControlChannelTriggerResourceType : int ControlChannelTriggerResourceType;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2786,9 +2782,9 @@ namespace ABI {
                 
                 typedef enum ControlChannelTriggerStatus : int ControlChannelTriggerStatus;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2797,9 +2793,9 @@ namespace ABI {
                 
                 typedef enum MessageWebSocketReceiveMode : int MessageWebSocketReceiveMode;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2808,9 +2804,9 @@ namespace ABI {
                 
                 typedef enum SocketActivityConnectedStandbyAction : int SocketActivityConnectedStandbyAction;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2819,9 +2815,9 @@ namespace ABI {
                 
                 typedef enum SocketActivityKind : int SocketActivityKind;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2830,9 +2826,9 @@ namespace ABI {
                 
                 typedef enum SocketActivityTriggerReason : int SocketActivityTriggerReason;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2841,9 +2837,9 @@ namespace ABI {
                 
                 typedef enum SocketErrorStatus : int SocketErrorStatus;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2852,9 +2848,9 @@ namespace ABI {
                 
                 typedef enum SocketMessageType : int SocketMessageType;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2863,9 +2859,9 @@ namespace ABI {
                 
                 typedef enum SocketProtectionLevel : int SocketProtectionLevel;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2874,9 +2870,9 @@ namespace ABI {
                 
                 typedef enum SocketQualityOfService : int SocketQualityOfService;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2885,9 +2881,9 @@ namespace ABI {
                 
                 typedef enum SocketSslErrorSeverity : int SocketSslErrorSeverity;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2896,9 +2892,9 @@ namespace ABI {
                 
                 typedef struct BandwidthStatistics BandwidthStatistics;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2907,9 +2903,9 @@ namespace ABI {
                 
                 typedef struct RoundTripTimeStatistics RoundTripTimeStatistics;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2977,9 +2973,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class ControlChannelTrigger;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2988,9 +2984,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class DatagramSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2998,9 +2994,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class DatagramSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3010,9 +3006,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class MessageWebSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3020,9 +3016,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class MessageWebSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3032,9 +3028,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class ServerMessageWebSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3042,9 +3038,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class ServerMessageWebSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3053,9 +3049,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class ServerStreamWebSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3063,9 +3059,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class SocketActivityContext;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3074,9 +3070,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class SocketActivityTriggerDetails;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3086,9 +3082,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3096,9 +3092,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3108,9 +3104,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketListenerControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3118,9 +3114,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamSocketListenerInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3129,9 +3125,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamWebSocketControl;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3139,9 +3135,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class StreamWebSocketInformation;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3151,9 +3147,9 @@ namespace ABI {
         namespace Networking {
             namespace Sockets {
                 class WebSocketKeepAlive;
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3196,9 +3192,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION >= 0x10000
 
 
@@ -3223,9 +3219,9 @@ namespace ABI {
                     ControlChannelTriggerResourceType_RequestHardwareSlot = 1,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION >= 0x10000
 
 
@@ -3256,9 +3252,9 @@ namespace ABI {
                     ControlChannelTriggerStatus_ServiceUnavailable = 6,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000 || \
 //     WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION >= 0x10000 && WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION < 0x30000
 
@@ -3284,9 +3280,9 @@ namespace ABI {
                     MessageWebSocketReceiveMode_PartialMessage = 1,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -3311,9 +3307,9 @@ namespace ABI {
                     SocketActivityConnectedStandbyAction_Wake = 1,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3340,9 +3336,9 @@ namespace ABI {
                     SocketActivityKind_StreamSocket = 3,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3370,9 +3366,9 @@ namespace ABI {
                     SocketActivityTriggerReason_SocketClosed = 4,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3426,9 +3422,9 @@ namespace ABI {
                     SocketErrorStatus_CertificateIsInvalid = 30,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3453,9 +3449,9 @@ namespace ABI {
                     SocketMessageType_Utf8 = 1,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3524,9 +3520,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3551,9 +3547,9 @@ namespace ABI {
                     SocketQualityOfService_LowLatency = 1,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3579,9 +3575,9 @@ namespace ABI {
                     SocketSslErrorSeverity_Fatal = 2,
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3606,13 +3602,13 @@ namespace ABI {
                     UINT64 InboundBitsPerSecond;
                     UINT64 OutboundBitsPerSecondInstability;
                     UINT64 InboundBitsPerSecondInstability;
-                    boolean OutboundBandwidthPeaked;
-                    boolean InboundBandwidthPeaked;
+                    ::boolean OutboundBandwidthPeaked;
+                    ::boolean InboundBandwidthPeaked;
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3639,9 +3635,9 @@ namespace ABI {
                     UINT32 Sum;
                 };
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3707,9 +3703,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IControlChannelTrigger=_uuidof(IControlChannelTrigger);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger_INTERFACE_DEFINED__) */
@@ -3741,16 +3737,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsWakeFromLowPowerSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IControlChannelTrigger2=_uuidof(IControlChannelTrigger2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTrigger2_INTERFACE_DEFINED__) */
@@ -3786,9 +3782,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IControlChannelTriggerEventDetails=_uuidof(IControlChannelTriggerEventDetails);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerEventDetails;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerEventDetails_INTERFACE_DEFINED__) */
@@ -3835,9 +3831,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IControlChannelTriggerFactory=_uuidof(IControlChannelTriggerFactory);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerFactory_INTERFACE_DEFINED__) */
@@ -3869,19 +3865,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Networking::Sockets::ControlChannelTriggerResetReason * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HardwareSlotReset(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SoftwareSlotReset(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IControlChannelTriggerResetEventDetails=_uuidof(IControlChannelTriggerResetEventDetails);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerResetEventDetails;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIControlChannelTriggerResetEventDetails_INTERFACE_DEFINED__) */
@@ -3967,9 +3963,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocket=_uuidof(IDatagramSocket);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_INTERFACE_DEFINED__) */
@@ -4014,9 +4010,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocket2=_uuidof(IDatagramSocket2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket2_INTERFACE_DEFINED__) */
@@ -4074,9 +4070,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocket3=_uuidof(IDatagramSocket3);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket3_INTERFACE_DEFINED__) */
@@ -4124,9 +4120,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocketControl=_uuidof(IDatagramSocketControl);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl_INTERFACE_DEFINED__) */
@@ -4164,19 +4160,19 @@ namespace ABI {
                         /* [in] */UINT32 value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DontFragment(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DontFragment(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocketControl2=_uuidof(IDatagramSocketControl2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl2_INTERFACE_DEFINED__) */
@@ -4208,19 +4204,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MulticastOnly(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MulticastOnly(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocketControl3=_uuidof(IDatagramSocketControl3);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketControl3_INTERFACE_DEFINED__) */
@@ -4268,9 +4264,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocketInformation=_uuidof(IDatagramSocketInformation);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketInformation_INTERFACE_DEFINED__) */
@@ -4321,9 +4317,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocketMessageReceivedEventArgs=_uuidof(IDatagramSocketMessageReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketMessageReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketMessageReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -4370,9 +4366,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDatagramSocketStatics=_uuidof(IDatagramSocketStatics);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketStatics_INTERFACE_DEFINED__) */
@@ -4426,9 +4422,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageWebSocket=_uuidof(IMessageWebSocket);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket_INTERFACE_DEFINED__) */
@@ -4477,9 +4473,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageWebSocket2=_uuidof(IMessageWebSocket2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket2_INTERFACE_DEFINED__) */
@@ -4523,9 +4519,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageWebSocket3=_uuidof(IMessageWebSocket3);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket3_INTERFACE_DEFINED__) */
@@ -4577,9 +4573,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageWebSocketControl=_uuidof(IMessageWebSocketControl);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl_INTERFACE_DEFINED__) */
@@ -4636,9 +4632,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageWebSocketControl2=_uuidof(IMessageWebSocketControl2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketControl2_INTERFACE_DEFINED__) */
@@ -4683,9 +4679,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageWebSocketMessageReceivedEventArgs=_uuidof(IMessageWebSocketMessageReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -4721,16 +4717,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsMessageComplete(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IMessageWebSocketMessageReceivedEventArgs2=_uuidof(IMessageWebSocketMessageReceivedEventArgs2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs2_INTERFACE_DEFINED__) */
@@ -4797,9 +4793,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServerMessageWebSocket=_uuidof(IServerMessageWebSocket);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket_INTERFACE_DEFINED__) */
@@ -4841,9 +4837,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServerMessageWebSocketControl=_uuidof(IServerMessageWebSocketControl);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketControl;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketControl_INTERFACE_DEFINED__) */
@@ -4888,9 +4884,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServerMessageWebSocketInformation=_uuidof(IServerMessageWebSocketInformation);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocketInformation_INTERFACE_DEFINED__) */
@@ -4950,9 +4946,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServerStreamWebSocket=_uuidof(IServerStreamWebSocket);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket_INTERFACE_DEFINED__) */
@@ -4997,9 +4993,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IServerStreamWebSocketInformation=_uuidof(IServerStreamWebSocketInformation);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocketInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocketInformation_INTERFACE_DEFINED__) */
@@ -5038,9 +5034,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocketActivityContext=_uuidof(ISocketActivityContext);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContext;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContext_INTERFACE_DEFINED__) */
@@ -5080,9 +5076,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocketActivityContextFactory=_uuidof(ISocketActivityContextFactory);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContextFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityContextFactory_INTERFACE_DEFINED__) */
@@ -5139,9 +5135,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocketActivityInformation=_uuidof(ISocketActivityInformation);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformation_INTERFACE_DEFINED__) */
@@ -5180,9 +5176,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocketActivityInformationStatics=_uuidof(ISocketActivityInformationStatics);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityInformationStatics_INTERFACE_DEFINED__) */
@@ -5224,9 +5220,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocketActivityTriggerDetails=_uuidof(ISocketActivityTriggerDetails);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CISocketActivityTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CISocketActivityTriggerDetails_INTERFACE_DEFINED__) */
@@ -5266,9 +5262,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISocketErrorStatics=_uuidof(ISocketErrorStatics);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CISocketErrorStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CISocketErrorStatics_INTERFACE_DEFINED__) */
@@ -5345,9 +5341,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocket=_uuidof(IStreamSocket);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket_INTERFACE_DEFINED__) */
@@ -5394,9 +5390,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocket2=_uuidof(IStreamSocket2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket2_INTERFACE_DEFINED__) */
@@ -5454,9 +5450,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocket3=_uuidof(IStreamSocket3);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocket3_INTERFACE_DEFINED__) */
@@ -5488,16 +5484,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NoDelay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_NoDelay(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeepAlive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_KeepAlive(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OutboundBufferSizeInBytes(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -5522,9 +5518,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketControl=_uuidof(IStreamSocketControl);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl_INTERFACE_DEFINED__) */
@@ -5563,9 +5559,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketControl2=_uuidof(IStreamSocketControl2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl2_INTERFACE_DEFINED__) */
@@ -5597,10 +5593,10 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SerializeConnectionAttempts(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_SerializeConnectionAttempts(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ClientCertificate(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Security::Cryptography::Certificates::ICertificate * * value
@@ -5613,9 +5609,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketControl3=_uuidof(IStreamSocketControl3);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl3_INTERFACE_DEFINED__) */
@@ -5657,9 +5653,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketControl4=_uuidof(IStreamSocketControl4);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl4;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketControl4_INTERFACE_DEFINED__) */
@@ -5725,9 +5721,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketInformation=_uuidof(IStreamSocketInformation);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation_INTERFACE_DEFINED__) */
@@ -5775,9 +5771,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketInformation2=_uuidof(IStreamSocketInformation2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketInformation2_INTERFACE_DEFINED__) */
@@ -5839,9 +5835,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketListener=_uuidof(IStreamSocketListener);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_INTERFACE_DEFINED__) */
@@ -5892,9 +5888,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketListener2=_uuidof(IStreamSocketListener2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener2_INTERFACE_DEFINED__) */
@@ -5947,9 +5943,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketListener3=_uuidof(IStreamSocketListener3);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener3;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener3_INTERFACE_DEFINED__) */
@@ -5988,9 +5984,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketListenerConnectionReceivedEventArgs=_uuidof(IStreamSocketListenerConnectionReceivedEventArgs);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerConnectionReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerConnectionReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6032,9 +6028,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketListenerControl=_uuidof(IStreamSocketListenerControl);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl_INTERFACE_DEFINED__) */
@@ -6066,16 +6062,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NoDelay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_NoDelay(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeepAlive(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_KeepAlive(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OutboundBufferSizeInBytes(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -6094,9 +6090,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketListenerControl2=_uuidof(IStreamSocketListenerControl2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerControl2_INTERFACE_DEFINED__) */
@@ -6135,9 +6131,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketListenerInformation=_uuidof(IStreamSocketListenerInformation);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerInformation_INTERFACE_DEFINED__) */
@@ -6184,9 +6180,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamSocketStatics=_uuidof(IStreamSocketStatics);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketStatics_INTERFACE_DEFINED__) */
@@ -6236,9 +6232,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamWebSocket=_uuidof(IStreamWebSocket);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket_INTERFACE_DEFINED__) */
@@ -6287,9 +6283,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamWebSocket2=_uuidof(IStreamWebSocket2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket2_INTERFACE_DEFINED__) */
@@ -6325,19 +6321,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NoDelay(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_NoDelay(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IStreamWebSocketControl=_uuidof(IStreamWebSocketControl);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl_INTERFACE_DEFINED__) */
@@ -6388,9 +6384,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStreamWebSocketControl2=_uuidof(IStreamWebSocketControl2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocketControl2_INTERFACE_DEFINED__) */
@@ -6449,9 +6445,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocket=_uuidof(IWebSocket);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocket;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocket_INTERFACE_DEFINED__) */
@@ -6493,9 +6489,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocketClosedEventArgs=_uuidof(IWebSocketClosedEventArgs);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs_INTERFACE_DEFINED__) */
@@ -6549,9 +6545,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocketControl=_uuidof(IWebSocketControl);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl_INTERFACE_DEFINED__) */
@@ -6591,9 +6587,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocketControl2=_uuidof(IWebSocketControl2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketControl2_INTERFACE_DEFINED__) */
@@ -6633,9 +6629,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocketErrorStatics=_uuidof(IWebSocketErrorStatics);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocketErrorStatics;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketErrorStatics_INTERFACE_DEFINED__) */
@@ -6677,9 +6673,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocketInformation=_uuidof(IWebSocketInformation);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation_INTERFACE_DEFINED__) */
@@ -6728,9 +6724,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocketInformation2=_uuidof(IWebSocketInformation2);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketInformation2_INTERFACE_DEFINED__) */
@@ -6782,9 +6778,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IWebSocketServerCustomValidationRequestedEventArgs=_uuidof(IWebSocketServerCustomValidationRequestedEventArgs);
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -8411,7 +8407,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagram
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketMessageReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocketMessageReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CDatagramSocket_Windows__CNetworking__CSockets__CDatagramSocketMessageReceivedEventArgsVtbl;
 
@@ -8464,7 +8460,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSock
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CIWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgsVtbl;
 
@@ -8517,7 +8513,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageW
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgsVtbl;
 
@@ -8570,7 +8566,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageW
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgsVtbl;
 
@@ -8623,7 +8619,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CMessageWebSocketMessageReceivedEventArgsVtbl;
 
@@ -8676,7 +8672,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIServerMessageWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerMessageWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgsVtbl;
 
@@ -8729,7 +8725,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerSt
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIServerStreamWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CServerStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketClosedEventArgsVtbl;
 
@@ -8782,7 +8778,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSo
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerConnectionReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListenerConnectionReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamSocketListener_Windows__CNetworking__CSockets__CStreamSocketListenerConnectionReceivedEventArgsVtbl;
 
@@ -8835,7 +8831,7 @@ typedef struct __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamWebSocket * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CSockets__CStreamWebSocket_Windows__CNetworking__CSockets__CWebSocketServerCustomValidationRequestedEventArgsVtbl;
 
@@ -9402,7 +9398,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT32_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl;
 
@@ -9504,7 +9500,7 @@ typedef struct __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_UINT32_UINT32 **handler);
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt int *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT32_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt unsigned int *results);
     END_INTERFACE
 } __FIAsyncOperationWithProgress_2_UINT32_UINT32Vtbl;
 

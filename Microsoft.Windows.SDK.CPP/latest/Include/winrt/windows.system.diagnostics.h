@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.diagnostics.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,9 +274,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IDiagnosticActionResult;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticActionResult ABI::Windows::System::Diagnostics::IDiagnosticActionResult
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticActionResult_FWD_DEFINED__
@@ -292,9 +288,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IDiagnosticInvoker;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker ABI::Windows::System::Diagnostics::IDiagnosticInvoker
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker_FWD_DEFINED__
@@ -306,9 +302,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IDiagnosticInvoker2;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker2 ABI::Windows::System::Diagnostics::IDiagnosticInvoker2
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker2_FWD_DEFINED__
@@ -320,9 +316,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IDiagnosticInvokerStatics;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvokerStatics ABI::Windows::System::Diagnostics::IDiagnosticInvokerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvokerStatics_FWD_DEFINED__
@@ -334,9 +330,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessCpuUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsage ABI::Windows::System::Diagnostics::IProcessCpuUsage
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsage_FWD_DEFINED__
@@ -348,9 +344,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessCpuUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsageReport ABI::Windows::System::Diagnostics::IProcessCpuUsageReport
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsageReport_FWD_DEFINED__
@@ -362,9 +358,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_FWD_DEFINED__
@@ -376,9 +372,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiagnosticInfo2;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo2 ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo2
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo2_FWD_DEFINED__
@@ -390,9 +386,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiagnosticInfoStatics;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics ABI::Windows::System::Diagnostics::IProcessDiagnosticInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics_FWD_DEFINED__
@@ -404,9 +400,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiagnosticInfoStatics2;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics2 ABI::Windows::System::Diagnostics::IProcessDiagnosticInfoStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics2_FWD_DEFINED__
@@ -418,9 +414,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiskUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsage ABI::Windows::System::Diagnostics::IProcessDiskUsage
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsage_FWD_DEFINED__
@@ -432,9 +428,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessDiskUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsageReport ABI::Windows::System::Diagnostics::IProcessDiskUsageReport
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsageReport_FWD_DEFINED__
@@ -446,9 +442,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessMemoryUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsage ABI::Windows::System::Diagnostics::IProcessMemoryUsage
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsage_FWD_DEFINED__
@@ -460,9 +456,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface IProcessMemoryUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsageReport ABI::Windows::System::Diagnostics::IProcessMemoryUsageReport
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsageReport_FWD_DEFINED__
@@ -474,9 +470,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface ISystemCpuUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsage ABI::Windows::System::Diagnostics::ISystemCpuUsage
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsage_FWD_DEFINED__
@@ -488,9 +484,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface ISystemCpuUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsageReport ABI::Windows::System::Diagnostics::ISystemCpuUsageReport
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsageReport_FWD_DEFINED__
@@ -502,9 +498,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface ISystemDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfo ABI::Windows::System::Diagnostics::ISystemDiagnosticInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfo_FWD_DEFINED__
@@ -516,9 +512,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface ISystemDiagnosticInfoStatics;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfoStatics ABI::Windows::System::Diagnostics::ISystemDiagnosticInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfoStatics_FWD_DEFINED__
@@ -530,9 +526,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface ISystemMemoryUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsage ABI::Windows::System::Diagnostics::ISystemMemoryUsage
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsage_FWD_DEFINED__
@@ -544,9 +540,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 interface ISystemMemoryUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsageReport ABI::Windows::System::Diagnostics::ISystemMemoryUsageReport
 
 #endif // ____x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsageReport_FWD_DEFINED__
@@ -559,9 +555,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -584,7 +580,7 @@ IIterator<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -616,7 +612,7 @@ IIterable<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -648,7 +644,7 @@ IVectorView<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IVector
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -680,7 +676,7 @@ IVector<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> : IVector_imp
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::System::Diagnostics::ProcessDiagnosticInfo*> __FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t;
 #define __FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSystem__CDiagnostics__CProcessDiagnosticInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::Diagnostics::IProcessDiagnosticInfo*>
@@ -696,9 +692,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class DiagnosticActionResult;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -706,9 +702,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 enum DiagnosticActionState : int;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
@@ -730,7 +726,7 @@ IAsyncOperationProgressHandler<ABI::Windows::System::Diagnostics::DiagnosticActi
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::System::Diagnostics::DiagnosticActionResult*,enum ABI::Windows::System::Diagnostics::DiagnosticActionState> __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::System::Diagnostics::IDiagnosticActionResult*,ABI::Windows::System::Diagnostics::DiagnosticActionState>
@@ -763,7 +759,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::System::Diagnostics::D
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::System::Diagnostics::DiagnosticActionResult*,enum ABI::Windows::System::Diagnostics::DiagnosticActionState> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::System::Diagnostics::IDiagnosticActionResult*,ABI::Windows::System::Diagnostics::DiagnosticActionState>
@@ -796,7 +792,7 @@ IAsyncOperationWithProgress<ABI::Windows::System::Diagnostics::DiagnosticActionR
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::System::Diagnostics::DiagnosticActionResult*,enum ABI::Windows::System::Diagnostics::DiagnosticActionState> __FIAsyncOperationWithProgress_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::System::Diagnostics::IDiagnosticActionResult*,ABI::Windows::System::Diagnostics::DiagnosticActionState>
@@ -827,7 +823,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -857,7 +853,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -887,7 +883,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -917,7 +913,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -947,7 +943,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -976,7 +972,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -1006,7 +1002,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -1036,7 +1032,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -1053,9 +1049,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonValue;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonValue ABI::Windows::Data::Json::IJsonValue
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonValue_FWD_DEFINED__
@@ -1081,7 +1077,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*> : IKeyValuePair_imp
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*> __FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*>
@@ -1113,7 +1109,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*>*>
@@ -1145,7 +1141,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*>*>
@@ -1177,7 +1173,7 @@ IMapView<HSTRING,ABI::Windows::Data::Json::IJsonValue*> : IMapView_impl<HSTRING,
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Data::Json::IJsonValue*> __FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Data::Json::IJsonValue*>
@@ -1209,7 +1205,7 @@ IMap<HSTRING,ABI::Windows::Data::Json::IJsonValue*> : IMap_impl<HSTRING,ABI::Win
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::Data::Json::IJsonValue*> __FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Data::Json::IJsonValue*>
@@ -1224,8 +1220,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class AppDiagnosticInfo;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo_FWD_DEFINED__
@@ -1233,8 +1229,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IAppDiagnosticInfo;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIAppDiagnosticInfo ABI::Windows::System::IAppDiagnosticInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CIAppDiagnosticInfo_FWD_DEFINED__
@@ -1260,7 +1256,7 @@ IIterator<ABI::Windows::System::AppDiagnosticInfo*> : IIterator_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::AppDiagnosticInfo*> __FIIterator_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIIterator_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1292,7 +1288,7 @@ IIterable<ABI::Windows::System::AppDiagnosticInfo*> : IIterable_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::AppDiagnosticInfo*> __FIIterable_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIIterable_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1324,7 +1320,7 @@ IVectorView<ABI::Windows::System::AppDiagnosticInfo*> : IVectorView_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::AppDiagnosticInfo*> __FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1356,7 +1352,7 @@ IVector<ABI::Windows::System::AppDiagnosticInfo*> : IVector_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::System::AppDiagnosticInfo*> __FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t;
 #define __FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CAppDiagnosticInfo_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CSystem__CAppDiagnosticInfo ABI::Windows::Foundation::Collections::IVector<ABI::Windows::System::IAppDiagnosticInfo*>
@@ -1374,9 +1370,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 class JsonObject;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CData_CJson_CIJsonObject_FWD_DEFINED__
 #define ____x_ABI_CWindows_CData_CJson_CIJsonObject_FWD_DEFINED__
@@ -1385,9 +1381,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonObject;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonObject ABI::Windows::Data::Json::IJsonObject
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonObject_FWD_DEFINED__
@@ -1401,9 +1397,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1412,9 +1408,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1429,8 +1425,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1438,8 +1434,8 @@ namespace ABI {
             
             typedef struct TimeSpan TimeSpan;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1449,8 +1445,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1458,8 +1454,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1474,9 +1470,9 @@ namespace ABI {
                 
                 typedef enum DiagnosticActionState : int DiagnosticActionState;
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1504,9 +1500,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class DiagnosticInvoker;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1514,9 +1510,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessCpuUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1524,9 +1520,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessCpuUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1535,9 +1531,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessDiskUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1545,9 +1541,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessDiskUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1555,9 +1551,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessMemoryUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1565,9 +1561,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class ProcessMemoryUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1575,9 +1571,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class SystemCpuUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1585,9 +1581,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class SystemCpuUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1595,9 +1591,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class SystemDiagnosticInfo;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1605,9 +1601,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class SystemMemoryUsage;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1615,9 +1611,9 @@ namespace ABI {
         namespace System {
             namespace Diagnostics {
                 class SystemMemoryUsageReport;
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1653,9 +1649,9 @@ namespace ABI {
                     DiagnosticActionState_VerifyingResolution = 5,
                 };
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 
@@ -1694,9 +1690,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDiagnosticActionResult=_uuidof(IDiagnosticActionResult);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticActionResult;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticActionResult_INTERFACE_DEFINED__) */
@@ -1736,9 +1732,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDiagnosticInvoker=_uuidof(IDiagnosticInvoker);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker_INTERFACE_DEFINED__) */
@@ -1778,9 +1774,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IDiagnosticInvoker2=_uuidof(IDiagnosticInvoker2);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvoker2_INTERFACE_DEFINED__) */
@@ -1819,16 +1815,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::Diagnostics::IDiagnosticInvoker * * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IDiagnosticInvokerStatics=_uuidof(IDiagnosticInvokerStatics);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvokerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIDiagnosticInvokerStatics_INTERFACE_DEFINED__) */
@@ -1867,9 +1863,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessCpuUsage=_uuidof(IProcessCpuUsage);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsage;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsage_INTERFACE_DEFINED__) */
@@ -1911,9 +1907,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessCpuUsageReport=_uuidof(IProcessCpuUsageReport);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsageReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessCpuUsageReport_INTERFACE_DEFINED__) */
@@ -1970,9 +1966,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessDiagnosticInfo=_uuidof(IProcessDiagnosticInfo);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo_INTERFACE_DEFINED__) */
@@ -2007,16 +2003,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CSystem__CAppDiagnosticInfo * * result
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPackaged(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IProcessDiagnosticInfo2=_uuidof(IProcessDiagnosticInfo2);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfo2_INTERFACE_DEFINED__) */
@@ -2058,9 +2054,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessDiagnosticInfoStatics=_uuidof(IProcessDiagnosticInfoStatics);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics_INTERFACE_DEFINED__) */
@@ -2100,9 +2096,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessDiagnosticInfoStatics2=_uuidof(IProcessDiagnosticInfoStatics2);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiagnosticInfoStatics2_INTERFACE_DEFINED__) */
@@ -2141,9 +2137,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessDiskUsage=_uuidof(IProcessDiskUsage);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsage;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsage_INTERFACE_DEFINED__) */
@@ -2197,9 +2193,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessDiskUsageReport=_uuidof(IProcessDiskUsageReport);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsageReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessDiskUsageReport_INTERFACE_DEFINED__) */
@@ -2238,9 +2234,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessMemoryUsage=_uuidof(IProcessMemoryUsage);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsage;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsage_INTERFACE_DEFINED__) */
@@ -2312,9 +2308,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProcessMemoryUsageReport=_uuidof(IProcessMemoryUsageReport);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsageReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CIProcessMemoryUsageReport_INTERFACE_DEFINED__) */
@@ -2353,9 +2349,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemCpuUsage=_uuidof(ISystemCpuUsage);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsage;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsage_INTERFACE_DEFINED__) */
@@ -2400,9 +2396,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemCpuUsageReport=_uuidof(ISystemCpuUsageReport);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsageReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CISystemCpuUsageReport_INTERFACE_DEFINED__) */
@@ -2444,9 +2440,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemDiagnosticInfo=_uuidof(ISystemDiagnosticInfo);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfo_INTERFACE_DEFINED__) */
@@ -2485,9 +2481,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemDiagnosticInfoStatics=_uuidof(ISystemDiagnosticInfoStatics);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CISystemDiagnosticInfoStatics_INTERFACE_DEFINED__) */
@@ -2526,9 +2522,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemMemoryUsage=_uuidof(ISystemMemoryUsage);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsage;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsage_INTERFACE_DEFINED__) */
@@ -2573,9 +2569,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISystemMemoryUsageReport=_uuidof(ISystemMemoryUsageReport);
                 
-            } /* Windows */
+            } /* Diagnostics */
         } /* System */
-    } /* Diagnostics */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsageReport;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDiagnostics_CISystemMemoryUsageReport_INTERFACE_DEFINED__) */
@@ -3497,7 +3493,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostic
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionState *asyncInfo, /* [in] */ enum __x_ABI_CWindows_CSystem_CDiagnostics_CDiagnosticActionState progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CSystem__CDiagnostics__CDiagnosticActionResult_Windows__CSystem__CDiagnostics__CDiagnosticActionStateVtbl;
 

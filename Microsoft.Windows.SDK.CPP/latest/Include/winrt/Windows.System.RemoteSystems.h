@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.system.remotesystems.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -280,9 +276,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IKnownRemoteSystemCapabilitiesStatics;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIKnownRemoteSystemCapabilitiesStatics ABI::Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIKnownRemoteSystemCapabilitiesStatics_FWD_DEFINED__
@@ -294,9 +290,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystem;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem ABI::Windows::System::RemoteSystems::IRemoteSystem
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem_FWD_DEFINED__
@@ -308,9 +304,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystem2;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem2 ABI::Windows::System::RemoteSystems::IRemoteSystem2
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem2_FWD_DEFINED__
@@ -322,9 +318,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystem3;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem3 ABI::Windows::System::RemoteSystems::IRemoteSystem3
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem3_FWD_DEFINED__
@@ -336,9 +332,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystem4;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem4 ABI::Windows::System::RemoteSystems::IRemoteSystem4
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem4_FWD_DEFINED__
@@ -350,12 +346,26 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystem5;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem5 ABI::Windows::System::RemoteSystems::IRemoteSystem5
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                interface IRemoteSystem6;
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 ABI::Windows::System::RemoteSystems::IRemoteSystem6
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs_FWD_DEFINED__
@@ -364,9 +374,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemAddedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs_FWD_DEFINED__
@@ -378,12 +388,26 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemApp;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp ABI::Windows::System::RemoteSystems::IRemoteSystemApp
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                interface IRemoteSystemApp2;
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 ABI::Windows::System::RemoteSystems::IRemoteSystemApp2
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration_FWD_DEFINED__
@@ -392,9 +416,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemAppRegistration;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration ABI::Windows::System::RemoteSystems::IRemoteSystemAppRegistration
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration_FWD_DEFINED__
@@ -406,9 +430,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemAppRegistrationStatics;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistrationStatics ABI::Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistrationStatics_FWD_DEFINED__
@@ -420,9 +444,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemAuthorizationKindFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilter ABI::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilter_FWD_DEFINED__
@@ -434,9 +458,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemAuthorizationKindFilterFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilterFactory ABI::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilterFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilterFactory_FWD_DEFINED__
@@ -448,9 +472,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionInfo;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfo ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfo_FWD_DEFINED__
@@ -462,9 +486,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionInfoStatics;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfoStatics ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfoStatics_FWD_DEFINED__
@@ -476,9 +500,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_FWD_DEFINED__
@@ -490,12 +514,26 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionRequest2;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest2 ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                interface IRemoteSystemConnectionRequest3;
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory_FWD_DEFINED__
@@ -504,9 +542,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionRequestFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory_FWD_DEFINED__
@@ -518,12 +556,26 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemConnectionRequestStatics;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                interface IRemoteSystemConnectionRequestStatics2;
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter_FWD_DEFINED__
@@ -532,9 +584,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemDiscoveryTypeFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter ABI::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter_FWD_DEFINED__
@@ -546,9 +598,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemDiscoveryTypeFilterFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilterFactory ABI::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilterFactory_FWD_DEFINED__
@@ -560,9 +612,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemEnumerationCompletedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemEnumerationCompletedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemEnumerationCompletedEventArgs_FWD_DEFINED__
@@ -574,9 +626,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemFilter ABI::Windows::System::RemoteSystems::IRemoteSystemFilter
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemFilter_FWD_DEFINED__
@@ -588,9 +640,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemKindFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilter ABI::Windows::System::RemoteSystems::IRemoteSystemKindFilter
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilter_FWD_DEFINED__
@@ -602,9 +654,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemKindFilterFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilterFactory ABI::Windows::System::RemoteSystems::IRemoteSystemKindFilterFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilterFactory_FWD_DEFINED__
@@ -616,9 +668,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemKindStatics;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics ABI::Windows::System::RemoteSystems::IRemoteSystemKindStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics_FWD_DEFINED__
@@ -630,9 +682,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemKindStatics2;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics2 ABI::Windows::System::RemoteSystems::IRemoteSystemKindStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics2_FWD_DEFINED__
@@ -644,9 +696,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemRemovedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemRemovedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemRemovedEventArgs_FWD_DEFINED__
@@ -658,9 +710,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSession;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession ABI::Windows::System::RemoteSystems::IRemoteSystemSession
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession_FWD_DEFINED__
@@ -672,9 +724,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionAddedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionAddedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionAddedEventArgs_FWD_DEFINED__
@@ -686,9 +738,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionController;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionController ABI::Windows::System::RemoteSystems::IRemoteSystemSessionController
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionController_FWD_DEFINED__
@@ -700,9 +752,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionControllerFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionControllerFactory ABI::Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionControllerFactory_FWD_DEFINED__
@@ -714,9 +766,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionCreationResult;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionCreationResult ABI::Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionCreationResult_FWD_DEFINED__
@@ -728,9 +780,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionDisconnectedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionDisconnectedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionDisconnectedEventArgs_FWD_DEFINED__
@@ -742,9 +794,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionInfo;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInfo ABI::Windows::System::RemoteSystems::IRemoteSystemSessionInfo
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInfo_FWD_DEFINED__
@@ -756,9 +808,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionInvitation;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitation ABI::Windows::System::RemoteSystems::IRemoteSystemSessionInvitation
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitation_FWD_DEFINED__
@@ -770,9 +822,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionInvitationListener;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationListener ABI::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationListener_FWD_DEFINED__
@@ -784,9 +836,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionInvitationReceivedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationReceivedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationReceivedEventArgs_FWD_DEFINED__
@@ -798,9 +850,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionJoinRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequest ABI::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequest_FWD_DEFINED__
@@ -812,9 +864,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionJoinRequestedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequestedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequestedEventArgs_FWD_DEFINED__
@@ -826,9 +878,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionJoinResult;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinResult ABI::Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinResult_FWD_DEFINED__
@@ -840,9 +892,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionMessageChannel;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannel ABI::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannel_FWD_DEFINED__
@@ -854,9 +906,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionMessageChannelFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannelFactory ABI::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannelFactory_FWD_DEFINED__
@@ -868,9 +920,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionOptions;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionOptions ABI::Windows::System::RemoteSystems::IRemoteSystemSessionOptions
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionOptions_FWD_DEFINED__
@@ -882,9 +934,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionParticipant;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipant ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipant
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipant_FWD_DEFINED__
@@ -896,9 +948,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionParticipantAddedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantAddedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantAddedEventArgs_FWD_DEFINED__
@@ -910,9 +962,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionParticipantRemovedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantRemovedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantRemovedEventArgs_FWD_DEFINED__
@@ -924,9 +976,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionParticipantWatcher;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher_FWD_DEFINED__
@@ -938,9 +990,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionRemovedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionRemovedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionRemovedEventArgs_FWD_DEFINED__
@@ -952,9 +1004,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionStatics;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionStatics ABI::Windows::System::RemoteSystems::IRemoteSystemSessionStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionStatics_FWD_DEFINED__
@@ -966,9 +1018,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionUpdatedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionUpdatedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionUpdatedEventArgs_FWD_DEFINED__
@@ -980,9 +1032,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionValueSetReceivedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionValueSetReceivedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionValueSetReceivedEventArgs_FWD_DEFINED__
@@ -994,9 +1046,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemSessionWatcher;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher ABI::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher_FWD_DEFINED__
@@ -1008,9 +1060,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemStatics;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics ABI::Windows::System::RemoteSystems::IRemoteSystemStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics_FWD_DEFINED__
@@ -1022,12 +1074,26 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemStatics2;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics2 ABI::Windows::System::RemoteSystems::IRemoteSystemStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                interface IRemoteSystemStatics3;
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 ABI::Windows::System::RemoteSystems::IRemoteSystemStatics3
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter_FWD_DEFINED__
@@ -1036,9 +1102,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemStatusTypeFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter ABI::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter_FWD_DEFINED__
@@ -1050,9 +1116,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemStatusTypeFilterFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilterFactory ABI::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilterFactory_FWD_DEFINED__
@@ -1064,9 +1130,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemUpdatedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemUpdatedEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemUpdatedEventArgs_FWD_DEFINED__
@@ -1078,9 +1144,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemWatcher;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher_FWD_DEFINED__
@@ -1092,12 +1158,26 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemWatcher2;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher2 ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher2
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                interface IRemoteSystemWatcher3;
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher3
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs_FWD_DEFINED__
@@ -1106,9 +1186,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemWatcherErrorOccurredEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs ABI::Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs_FWD_DEFINED__
@@ -1120,9 +1200,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemWebAccountFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilter ABI::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilter_FWD_DEFINED__
@@ -1134,9 +1214,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 interface IRemoteSystemWebAccountFilterFactory;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilterFactory ABI::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilterFactory_FWD_DEFINED__
@@ -1165,7 +1245,7 @@ IIterator<ABI::Windows::System::RemoteSystems::IRemoteSystemFilter*> : IIterator
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::RemoteSystems::IRemoteSystemFilter*> __FIIterator_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter_t;
 #define __FIIterator_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::RemoteSystems::IRemoteSystemFilter*>
@@ -1197,7 +1277,7 @@ IIterable<ABI::Windows::System::RemoteSystems::IRemoteSystemFilter*> : IIterable
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::RemoteSystems::IRemoteSystemFilter*> __FIIterable_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter_t;
 #define __FIIterable_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::RemoteSystems::IRemoteSystemFilter*>
@@ -1213,9 +1293,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemApp;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1238,7 +1318,7 @@ IIterator<ABI::Windows::System::RemoteSystems::RemoteSystemApp*> : IIterator_imp
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::RemoteSystems::RemoteSystemApp*> __FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp_t;
 #define __FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::RemoteSystems::IRemoteSystemApp*>
@@ -1270,7 +1350,7 @@ IIterable<ABI::Windows::System::RemoteSystems::RemoteSystemApp*> : IIterable_imp
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::RemoteSystems::RemoteSystemApp*> __FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp_t;
 #define __FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::RemoteSystems::IRemoteSystemApp*>
@@ -1286,9 +1366,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionParticipant;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1311,7 +1391,7 @@ IIterator<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipant*> 
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipant*> __FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant_t;
 #define __FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipant*>
@@ -1343,7 +1423,7 @@ IIterable<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipant*> 
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipant*> __FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant_t;
 #define __FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipant ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipant*>
@@ -1375,7 +1455,7 @@ IVectorView<ABI::Windows::System::RemoteSystems::RemoteSystemApp*> : IVectorView
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::System::RemoteSystems::RemoteSystemApp*> __FIVectorView_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp_t;
 #define __FIVectorView_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSystem__CRemoteSystems__CRemoteSystemApp ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::System::RemoteSystems::IRemoteSystemApp*>
@@ -1391,9 +1471,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystem;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1416,7 +1496,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::RemoteSyste
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::RemoteSystem*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystem_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystem ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystem ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::IRemoteSystem*>
@@ -1448,7 +1528,7 @@ IAsyncOperation<ABI::Windows::System::RemoteSystems::RemoteSystem*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::RemoteSystems::RemoteSystem*> __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystem_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystem ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystem_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystem ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::RemoteSystems::IRemoteSystem*>
@@ -1464,9 +1544,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 enum RemoteSystemAccessStatus : int;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus_USE
@@ -1487,7 +1567,7 @@ IAsyncOperationCompletedHandler<enum ABI::Windows::System::RemoteSystems::Remote
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::RemoteSystems::RemoteSystemAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::RemoteSystemAccessStatus>
@@ -1517,7 +1597,7 @@ IAsyncOperation<enum ABI::Windows::System::RemoteSystems::RemoteSystemAccessStat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::System::RemoteSystems::RemoteSystemAccessStatus> __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::RemoteSystems::RemoteSystemAccessStatus>
@@ -1532,9 +1612,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionCreationResult;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1557,7 +1637,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::RemoteSyste
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult*>
@@ -1589,7 +1669,7 @@ IAsyncOperation<ABI::Windows::System::RemoteSystems::RemoteSystemSessionCreation
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult*> __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionCreationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult*>
@@ -1605,9 +1685,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionJoinResult;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1630,7 +1710,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::RemoteSyste
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult*>
@@ -1662,7 +1742,7 @@ IAsyncOperation<ABI::Windows::System::RemoteSystems::RemoteSystemSessionJoinResu
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult*> __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult_t;
 #define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult*>
@@ -1678,9 +1758,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSession;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1688,9 +1768,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionDisconnectedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1714,7 +1794,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSession*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSession*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSession*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs*>
@@ -1731,9 +1811,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionController;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1741,9 +1821,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionJoinRequestedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1767,7 +1847,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionContr
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionController*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionController*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs*>
@@ -1784,9 +1864,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionInvitationListener;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1794,9 +1874,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionInvitationReceivedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1820,7 +1900,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionInvit
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs*>
@@ -1837,9 +1917,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionMessageChannel;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1847,9 +1927,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionValueSetReceivedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1873,7 +1953,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionMessa
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs*>
@@ -1890,9 +1970,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionParticipantWatcher;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1916,7 +1996,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParti
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher*,IInspectable*>
@@ -1933,9 +2013,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionParticipantAddedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1959,7 +2039,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParti
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs*>
@@ -1977,9 +2057,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionParticipantRemovedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2003,7 +2083,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParti
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs*>
@@ -2020,9 +2100,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionWatcher;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2030,9 +2110,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionAddedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2056,7 +2136,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionWatch
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs*>
@@ -2074,9 +2154,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionRemovedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2100,7 +2180,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionWatch
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs*>
@@ -2118,9 +2198,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionUpdatedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2144,7 +2224,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionWatch
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemSessionWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs*>
@@ -2161,9 +2241,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemWatcher;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2171,9 +2251,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemAddedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2197,7 +2277,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs*>
@@ -2215,9 +2295,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemEnumerationCompletedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2241,7 +2321,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs*>
@@ -2259,9 +2339,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemRemovedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2285,7 +2365,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs*>
@@ -2303,9 +2383,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemUpdatedEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2329,7 +2409,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs*>
@@ -2347,9 +2427,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemWatcherErrorOccurredEventArgs;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2373,7 +2453,7 @@ ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::System::RemoteSystems::RemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs*> __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher*,ABI::Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs*>
@@ -2404,7 +2484,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -2433,7 +2513,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -2462,7 +2542,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -2492,7 +2572,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -2522,7 +2602,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -2551,7 +2631,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -2580,7 +2660,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -2609,7 +2689,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -2638,7 +2718,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -2667,7 +2747,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -2697,7 +2777,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -2727,7 +2807,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2757,7 +2837,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2787,7 +2867,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -2817,7 +2897,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -2846,7 +2926,7 @@ IMapChangedEventArgs<HSTRING> : IMapChangedEventArgs_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IMapChangedEventArgs<HSTRING> __FIMapChangedEventArgs_1_HSTRING_t;
 #define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::__FIMapChangedEventArgs_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapChangedEventArgs_1_HSTRING ABI::Windows::Foundation::Collections::IMapChangedEventArgs<HSTRING>
@@ -2876,7 +2956,7 @@ MapChangedEventHandler<HSTRING,IInspectable*> : MapChangedEventHandler_impl<HSTR
 // correct parameterized interface specialization.
 typedef MapChangedEventHandler<HSTRING,IInspectable*> __FMapChangedEventHandler_2_HSTRING_IInspectable_t;
 #define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FMapChangedEventHandler_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FMapChangedEventHandler_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::MapChangedEventHandler<HSTRING,IInspectable*>
@@ -2906,7 +2986,7 @@ IObservableMap<HSTRING,IInspectable*> : IObservableMap_impl<HSTRING,IInspectable
 // correct parameterized interface specialization.
 typedef IObservableMap<HSTRING,IInspectable*> __FIObservableMap_2_HSTRING_IInspectable_t;
 #define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIObservableMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIObservableMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IObservableMap<HSTRING,IInspectable*>
@@ -2920,8 +3000,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2929,8 +3009,8 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             interface IHostName;
-        } /* Windows */
-    } /* Networking */} /* ABI */
+        } /* Networking */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2956,7 +3036,7 @@ IIterator<ABI::Windows::Networking::HostName*> : IIterator_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::HostName*> __FIIterator_1_Windows__CNetworking__CHostName_t;
 #define __FIIterator_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::IHostName*>
@@ -2988,7 +3068,7 @@ IIterable<ABI::Windows::Networking::HostName*> : IIterable_impl<ABI::Windows::Fo
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::HostName*> __FIIterable_1_Windows__CNetworking__CHostName_t;
 #define __FIIterable_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::IHostName*>
@@ -3020,7 +3100,7 @@ IVectorView<ABI::Windows::Networking::HostName*> : IVectorView_impl<ABI::Windows
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::HostName*> __FIVectorView_1_Windows__CNetworking__CHostName_t;
 #define __FIVectorView_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CHostName_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CNetworking__CHostName ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::IHostName*>
@@ -3038,9 +3118,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 class AppServiceConnection;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
@@ -3049,9 +3129,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace AppService {
                 interface IAppServiceConnection;
-            } /* Windows */
+            } /* AppService */
         } /* ApplicationModel */
-    } /* AppService */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection ABI::Windows::ApplicationModel::AppService::IAppServiceConnection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CAppService_CIAppServiceConnection_FWD_DEFINED__
@@ -3065,9 +3145,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 class ValueSet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3076,9 +3156,9 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IPropertySet;
-            } /* Windows */
+            } /* Collections */
         } /* Foundation */
-    } /* Collections */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3091,8 +3171,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Deferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -3100,8 +3180,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDeferral;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDeferral ABI::Windows::Foundation::IDeferral
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDeferral_FWD_DEFINED__
@@ -3113,8 +3193,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -3131,9 +3211,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 class WebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -3142,9 +3222,9 @@ namespace ABI {
         namespace Security {
             namespace Credentials {
                 interface IWebAccount;
-            } /* Windows */
+            } /* Credentials */
         } /* Security */
-    } /* Credentials */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount ABI::Windows::Security::Credentials::IWebAccount
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -3157,8 +3237,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3166,8 +3246,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3182,9 +3262,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemAccessStatus : int RemoteSystemAccessStatus;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3193,9 +3273,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemAuthorizationKind : int RemoteSystemAuthorizationKind;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3204,9 +3284,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemDiscoveryType : int RemoteSystemDiscoveryType;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3215,9 +3295,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemPlatform : int RemoteSystemPlatform;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3226,9 +3306,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemSessionCreationStatus : int RemoteSystemSessionCreationStatus;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3237,9 +3317,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemSessionDisconnectedReason : int RemoteSystemSessionDisconnectedReason;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3248,9 +3328,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemSessionJoinStatus : int RemoteSystemSessionJoinStatus;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3259,9 +3339,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemSessionMessageChannelReliability : int RemoteSystemSessionMessageChannelReliability;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3270,9 +3350,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemSessionParticipantWatcherStatus : int RemoteSystemSessionParticipantWatcherStatus;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3281,9 +3361,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemSessionWatcherStatus : int RemoteSystemSessionWatcherStatus;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3292,9 +3372,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemStatus : int RemoteSystemStatus;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3303,9 +3383,9 @@ namespace ABI {
                 
                 typedef enum RemoteSystemStatusType : int RemoteSystemStatusType;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -3314,9 +3394,15 @@ namespace ABI {
                 
                 typedef enum RemoteSystemWatcherError : int RemoteSystemWatcherError;
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
 
 
 
@@ -3389,9 +3475,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemAppRegistration;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3399,9 +3485,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemAuthorizationKindFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3409,9 +3495,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemConnectionInfo;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3419,9 +3505,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemConnectionRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3429,9 +3515,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemDiscoveryTypeFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3440,9 +3526,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemKindFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3457,9 +3543,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionInfo;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -3467,9 +3553,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionInvitation;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3479,9 +3565,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionJoinRequest;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3492,9 +3578,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemSessionOptions;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3510,9 +3596,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemStatusTypeFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3523,9 +3609,9 @@ namespace ABI {
         namespace System {
             namespace RemoteSystems {
                 class RemoteSystemWebAccountFilter;
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -3559,9 +3645,9 @@ namespace ABI {
                     RemoteSystemAccessStatus_DeniedBySystem = 3,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3586,9 +3672,9 @@ namespace ABI {
                     RemoteSystemAuthorizationKind_Anonymous = 1,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3619,9 +3705,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3649,9 +3735,9 @@ namespace ABI {
                     RemoteSystemPlatform_Linux = 4,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -3677,9 +3763,9 @@ namespace ABI {
                     RemoteSystemSessionCreationStatus_OperationAborted = 2,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3705,9 +3791,9 @@ namespace ABI {
                     RemoteSystemSessionDisconnectedReason_SessionClosed = 2,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3735,9 +3821,9 @@ namespace ABI {
                     RemoteSystemSessionJoinStatus_RejectedByController = 4,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3762,9 +3848,9 @@ namespace ABI {
                     RemoteSystemSessionMessageChannelReliability_Unreliable = 1,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3793,9 +3879,9 @@ namespace ABI {
                     RemoteSystemSessionParticipantWatcherStatus_Aborted = 5,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3824,9 +3910,9 @@ namespace ABI {
                     RemoteSystemSessionWatcherStatus_Aborted = 5,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -3853,9 +3939,9 @@ namespace ABI {
                     RemoteSystemStatus_Unknown = 3,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3880,9 +3966,9 @@ namespace ABI {
                     RemoteSystemStatusType_Available = 1,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
@@ -3908,9 +3994,9 @@ namespace ABI {
                     RemoteSystemWatcherError_AuthenticationError = 2,
                 };
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -3955,9 +4041,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IKnownRemoteSystemCapabilitiesStatics=_uuidof(IKnownRemoteSystemCapabilitiesStatics);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIKnownRemoteSystemCapabilitiesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIKnownRemoteSystemCapabilitiesStatics_INTERFACE_DEFINED__) */
@@ -4001,16 +4087,16 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::System::RemoteSystems::RemoteSystemStatus * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAvailableByProximity(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystem=_uuidof(IRemoteSystem);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem_INTERFACE_DEFINED__) */
@@ -4042,7 +4128,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAvailableBySpatialProximity(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetCapabilitySupportedAsync(
                         /* [in] */__RPC__in HSTRING capabilityName,
@@ -4053,9 +4139,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystem2=_uuidof(IRemoteSystem2);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem2_INTERFACE_DEFINED__) */
@@ -4097,9 +4183,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystem3=_uuidof(IRemoteSystem3);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem3_INTERFACE_DEFINED__) */
@@ -4138,9 +4224,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystem4=_uuidof(IRemoteSystem4);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem4;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem4_INTERFACE_DEFINED__) */
@@ -4179,13 +4265,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystem5=_uuidof(IRemoteSystem5);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem5;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystem6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystem
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystem6[] = L"Windows.System.RemoteSystems.IRemoteSystem6";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                /* [object, uuid("D4CDA942-C027-533E-9384-3A19B4F7EEF3"), exclusiveto, contract] */
+                MIDL_INTERFACE("D4CDA942-C027-533E-9384-3A19B4F7EEF3")
+                IRemoteSystem6 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IRemoteSystem6=_uuidof(IRemoteSystem6);
+                
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4220,9 +4347,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemAddedEventArgs=_uuidof(IRemoteSystemAddedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs_INTERFACE_DEFINED__) */
@@ -4260,10 +4387,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAvailableByProximity(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAvailableBySpatialProximity(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Attributes(
                         /* [retval, out] */__RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING * * value
@@ -4273,13 +4400,57 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemApp=_uuidof(IRemoteSystemApp);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemApp2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemApp
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemApp2[] = L"Windows.System.RemoteSystems.IRemoteSystemApp2";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                /* [object, uuid("6369BF15-0A96-577A-8FF6-C35904DFA8F3"), exclusiveto, contract] */
+                MIDL_INTERFACE("6369BF15-0A96-577A-8FF6-C35904DFA8F3")
+                IRemoteSystemApp2 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ConnectionToken(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IRemoteSystemApp2=_uuidof(IRemoteSystemApp2);
+                
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4320,9 +4491,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemAppRegistration=_uuidof(IRemoteSystemAppRegistration);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration_INTERFACE_DEFINED__) */
@@ -4365,9 +4536,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemAppRegistrationStatics=_uuidof(IRemoteSystemAppRegistrationStatics);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistrationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistrationStatics_INTERFACE_DEFINED__) */
@@ -4406,9 +4577,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemAuthorizationKindFilter=_uuidof(IRemoteSystemAuthorizationKindFilter);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilter;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilter_INTERFACE_DEFINED__) */
@@ -4448,9 +4619,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemAuthorizationKindFilterFactory=_uuidof(IRemoteSystemAuthorizationKindFilterFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilterFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAuthorizationKindFilterFactory_INTERFACE_DEFINED__) */
@@ -4482,16 +4653,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsProximal(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionInfo=_uuidof(IRemoteSystemConnectionInfo);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfo_INTERFACE_DEFINED__) */
@@ -4531,9 +4702,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionInfoStatics=_uuidof(IRemoteSystemConnectionInfoStatics);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionInfoStatics_INTERFACE_DEFINED__) */
@@ -4572,9 +4743,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionRequest=_uuidof(IRemoteSystemConnectionRequest);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest_INTERFACE_DEFINED__) */
@@ -4613,13 +4784,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionRequest2=_uuidof(IRemoteSystemConnectionRequest2);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemConnectionRequest
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest3[] = L"Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                /* [object, uuid("DE86C3E7-C9CC-5A50-B8D9-BA7B34BB8D0E"), exclusiveto, contract] */
+                MIDL_INTERFACE("DE86C3E7-C9CC-5A50-B8D9-BA7B34BB8D0E")
+                IRemoteSystemConnectionRequest3 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ConnectionToken(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionRequest3=_uuidof(IRemoteSystemConnectionRequest3);
+                
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4655,9 +4867,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionRequestFactory=_uuidof(IRemoteSystemConnectionRequestFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory_INTERFACE_DEFINED__) */
@@ -4697,13 +4909,60 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionRequestStatics=_uuidof(IRemoteSystemConnectionRequestStatics);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemConnectionRequest
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2[] = L"Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                /* [object, uuid("460F1027-64EC-598E-A800-4F2EE58DEF19"), exclusiveto, contract] */
+                MIDL_INTERFACE("460F1027-64EC-598E-A800-4F2EE58DEF19")
+                IRemoteSystemConnectionRequestStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromConnectionToken(
+                        /* [in] */__RPC__in HSTRING connectionToken,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest * * result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE CreateFromConnectionTokenForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [in] */__RPC__in HSTRING connectionToken,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IRemoteSystemConnectionRequestStatics2=_uuidof(IRemoteSystemConnectionRequestStatics2);
+                
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4738,9 +4997,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemDiscoveryTypeFilter=_uuidof(IRemoteSystemDiscoveryTypeFilter);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter_INTERFACE_DEFINED__) */
@@ -4780,9 +5039,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemDiscoveryTypeFilterFactory=_uuidof(IRemoteSystemDiscoveryTypeFilterFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilterFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilterFactory_INTERFACE_DEFINED__) */
@@ -4818,9 +5077,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemEnumerationCompletedEventArgs=_uuidof(IRemoteSystemEnumerationCompletedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemEnumerationCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemEnumerationCompletedEventArgs_INTERFACE_DEFINED__) */
@@ -4853,9 +5112,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemFilter=_uuidof(IRemoteSystemFilter);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemFilter;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemFilter_INTERFACE_DEFINED__) */
@@ -4894,9 +5153,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemKindFilter=_uuidof(IRemoteSystemKindFilter);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilter;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilter_INTERFACE_DEFINED__) */
@@ -4936,9 +5195,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemKindFilterFactory=_uuidof(IRemoteSystemKindFilterFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilterFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindFilterFactory_INTERFACE_DEFINED__) */
@@ -4989,9 +5248,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemKindStatics=_uuidof(IRemoteSystemKindStatics);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics_INTERFACE_DEFINED__) */
@@ -5036,9 +5295,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemKindStatics2=_uuidof(IRemoteSystemKindStatics2);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemKindStatics2_INTERFACE_DEFINED__) */
@@ -5077,9 +5336,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemRemovedEventArgs=_uuidof(IRemoteSystemRemovedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -5138,9 +5397,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSession=_uuidof(IRemoteSystemSession);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession_INTERFACE_DEFINED__) */
@@ -5179,9 +5438,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionAddedEventArgs=_uuidof(IRemoteSystemSessionAddedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionAddedEventArgs_INTERFACE_DEFINED__) */
@@ -5231,9 +5490,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionController=_uuidof(IRemoteSystemSessionController);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionController;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionController_INTERFACE_DEFINED__) */
@@ -5278,9 +5537,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionControllerFactory=_uuidof(IRemoteSystemSessionControllerFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionControllerFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionControllerFactory_INTERFACE_DEFINED__) */
@@ -5322,9 +5581,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionCreationResult=_uuidof(IRemoteSystemSessionCreationResult);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionCreationResult;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionCreationResult_INTERFACE_DEFINED__) */
@@ -5363,9 +5622,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionDisconnectedEventArgs=_uuidof(IRemoteSystemSessionDisconnectedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionDisconnectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionDisconnectedEventArgs_INTERFACE_DEFINED__) */
@@ -5410,9 +5669,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionInfo=_uuidof(IRemoteSystemSessionInfo);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInfo_INTERFACE_DEFINED__) */
@@ -5454,9 +5713,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionInvitation=_uuidof(IRemoteSystemSessionInvitation);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitation;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitation_INTERFACE_DEFINED__) */
@@ -5499,9 +5758,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionInvitationListener=_uuidof(IRemoteSystemSessionInvitationListener);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationListener;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationListener_INTERFACE_DEFINED__) */
@@ -5540,9 +5799,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionInvitationReceivedEventArgs=_uuidof(IRemoteSystemSessionInvitationReceivedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -5582,9 +5841,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionJoinRequest=_uuidof(IRemoteSystemSessionJoinRequest);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequest;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequest_INTERFACE_DEFINED__) */
@@ -5626,9 +5885,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionJoinRequestedEventArgs=_uuidof(IRemoteSystemSessionJoinRequestedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequestedEventArgs_INTERFACE_DEFINED__) */
@@ -5670,9 +5929,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionJoinResult=_uuidof(IRemoteSystemSessionJoinResult);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinResult;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinResult_INTERFACE_DEFINED__) */
@@ -5732,9 +5991,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionMessageChannel=_uuidof(IRemoteSystemSessionMessageChannel);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannel;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannel_INTERFACE_DEFINED__) */
@@ -5781,9 +6040,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionMessageChannelFactory=_uuidof(IRemoteSystemSessionMessageChannelFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannelFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannelFactory_INTERFACE_DEFINED__) */
@@ -5815,19 +6074,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsInviteOnly(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsInviteOnly(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionOptions=_uuidof(IRemoteSystemSessionOptions);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionOptions;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionOptions_INTERFACE_DEFINED__) */
@@ -5869,9 +6128,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionParticipant=_uuidof(IRemoteSystemSessionParticipant);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipant;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipant_INTERFACE_DEFINED__) */
@@ -5910,9 +6169,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionParticipantAddedEventArgs=_uuidof(IRemoteSystemSessionParticipantAddedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantAddedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantAddedEventArgs_INTERFACE_DEFINED__) */
@@ -5951,9 +6210,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionParticipantRemovedEventArgs=_uuidof(IRemoteSystemSessionParticipantRemovedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -6015,9 +6274,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionParticipantWatcher=_uuidof(IRemoteSystemSessionParticipantWatcher);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher_INTERFACE_DEFINED__) */
@@ -6056,9 +6315,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionRemovedEventArgs=_uuidof(IRemoteSystemSessionRemovedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -6097,9 +6356,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionStatics=_uuidof(IRemoteSystemSessionStatics);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionStatics_INTERFACE_DEFINED__) */
@@ -6138,9 +6397,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionUpdatedEventArgs=_uuidof(IRemoteSystemSessionUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -6182,9 +6441,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionValueSetReceivedEventArgs=_uuidof(IRemoteSystemSessionValueSetReceivedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionValueSetReceivedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionValueSetReceivedEventArgs_INTERFACE_DEFINED__) */
@@ -6246,9 +6505,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemSessionWatcher=_uuidof(IRemoteSystemSessionWatcher);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher_INTERFACE_DEFINED__) */
@@ -6298,9 +6557,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemStatics=_uuidof(IRemoteSystemStatics);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics_INTERFACE_DEFINED__) */
@@ -6333,20 +6592,67 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsAuthorizationKindEnabled(
                         /* [in] */ABI::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind kind,
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemStatics2=_uuidof(IRemoteSystemStatics2);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystem
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemStatics3[] = L"Windows.System.RemoteSystems.IRemoteSystemStatics3";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                /* [object, uuid("9995F16F-0B3C-5AC5-B325-CC73F437DFCD"), exclusiveto, contract] */
+                MIDL_INTERFACE("9995F16F-0B3C-5AC5-B325-CC73F437DFCD")
+                IRemoteSystemStatics3 : public IInspectable
+                {
+                public:
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE CreateWatcherForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher * * result
+                        ) = 0;
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE CreateWatcherWithFiltersForUser(
+                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
+                        /* [in] */__RPC__in_opt __FIIterable_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter * filters,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::RemoteSystems::IRemoteSystemWatcher * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IRemoteSystemStatics3=_uuidof(IRemoteSystemStatics3);
+                
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6381,9 +6687,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemStatusTypeFilter=_uuidof(IRemoteSystemStatusTypeFilter);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter_INTERFACE_DEFINED__) */
@@ -6423,9 +6729,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemStatusTypeFilterFactory=_uuidof(IRemoteSystemStatusTypeFilterFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilterFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilterFactory_INTERFACE_DEFINED__) */
@@ -6464,9 +6770,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemUpdatedEventArgs=_uuidof(IRemoteSystemUpdatedEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemUpdatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemUpdatedEventArgs_INTERFACE_DEFINED__) */
@@ -6525,9 +6831,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemWatcher=_uuidof(IRemoteSystemWatcher);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher_INTERFACE_DEFINED__) */
@@ -6577,13 +6883,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemWatcher2=_uuidof(IRemoteSystemWatcher2);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemWatcher3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemWatcher
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemWatcher3[] = L"Windows.System.RemoteSystems.IRemoteSystemWatcher3";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteSystems {
+                /* [object, uuid("F79C0FCF-A913-55D3-8413-418FCF15BA54"), exclusiveto, contract] */
+                MIDL_INTERFACE("F79C0FCF-A913-55D3-8413-418FCF15BA54")
+                IRemoteSystemWatcher3 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IRemoteSystemWatcher3=_uuidof(IRemoteSystemWatcher3);
+                
+            } /* RemoteSystems */
+        } /* System */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -6618,9 +6965,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemWatcherErrorOccurredEventArgs=_uuidof(IRemoteSystemWatcherErrorOccurredEventArgs);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs_INTERFACE_DEFINED__) */
@@ -6659,9 +7006,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemWebAccountFilter=_uuidof(IRemoteSystemWebAccountFilter);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilter;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilter_INTERFACE_DEFINED__) */
@@ -6701,9 +7048,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IRemoteSystemWebAccountFilterFactory=_uuidof(IRemoteSystemWebAccountFilterFactory);
                 
-            } /* Windows */
+            } /* RemoteSystems */
         } /* System */
-    } /* RemoteSystems */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilterFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWebAccountFilterFactory_INTERFACE_DEFINED__) */
@@ -6741,6 +7088,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -6750,6 +7098,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.System.RemoteSystems.IRemoteSystem3
  *    Windows.System.RemoteSystems.IRemoteSystem4
  *    Windows.System.RemoteSystems.IRemoteSystem5
+ *    Windows.System.RemoteSystems.IRemoteSystem6
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -6796,6 +7145,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemApp ** Default Interface **
+ *    Windows.System.RemoteSystems.IRemoteSystemApp2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -6902,11 +7252,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest ** Default Interface **
  *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest2
+ *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -7616,6 +7968,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemWatcher ** Default Interface **
  *    Windows.System.RemoteSystems.IRemoteSystemWatcher2
+ *    Windows.System.RemoteSystems.IRemoteSystemWatcher3
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -7719,6 +8072,12 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem5 __x_AB
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem5_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs;
@@ -7730,6 +8089,12 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEve
 typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp;
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAppRegistration_FWD_DEFINED__
@@ -7779,6 +8144,12 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnecti
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestFactory;
@@ -7790,6 +8161,12 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnecti
 typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics;
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemDiscoveryTypeFilter_FWD_DEFINED__
@@ -8007,6 +8384,12 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatusTypeFilter;
@@ -8036,6 +8419,12 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher 
 typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher2 __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher2;
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs_FWD_DEFINED__
@@ -9133,7 +9522,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionDisconnectedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSession * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionDisconnectedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSession_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionDisconnectedEventArgsVtbl;
 
@@ -9186,7 +9575,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequestedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionController * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionJoinRequestedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionController_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionJoinRequestedEventArgsVtbl;
 
@@ -9239,7 +9628,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationListener * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionInvitationReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationListener_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionInvitationReceivedEventArgsVtbl;
 
@@ -9292,7 +9681,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionValueSetReceivedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionMessageChannel * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionValueSetReceivedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionMessageChannel_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionValueSetReceivedEventArgsVtbl;
 
@@ -9344,7 +9733,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_IInspectableVtbl;
 
@@ -9396,7 +9785,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantAddedEventArgsVtbl;
 
@@ -9449,7 +9838,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionParticipantRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionParticipantRemovedEventArgsVtbl;
 
@@ -9502,7 +9891,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionAddedEventArgsVtbl;
 
@@ -9555,7 +9944,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionRemovedEventArgsVtbl;
 
@@ -9608,7 +9997,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSessionUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemSessionUpdatedEventArgsVtbl;
 
@@ -9661,7 +10050,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemAddedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemAddedEventArgsVtbl;
 
@@ -9714,7 +10103,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemEnumerationCompletedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemEnumerationCompletedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemEnumerationCompletedEventArgsVtbl;
 
@@ -9767,7 +10156,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemRemovedEventArgsVtbl;
 
@@ -9820,7 +10209,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemUpdatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemUpdatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemUpdatedEventArgsVtbl;
 
@@ -9873,7 +10262,7 @@ typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemote
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcherErrorOccurredEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcher_Windows__CSystem__CRemoteSystems__CRemoteSystemWatcherErrorOccurredEventArgsVtbl;
 
@@ -11718,6 +12107,12 @@ typedef enum __x_ABI_CWindows_CSystem_CRemoteSystems_CRemoteSystemWatcherError _
 
 
 
+
+
+
+
+
+
 /*
  *
  * Struct Windows.System.RemoteSystems.RemoteSystemAccessStatus
@@ -12616,6 +13011,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem5;
 
 /*
  *
+ * Interface Windows.System.RemoteSystems.IRemoteSystem6
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystem
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystem6[] = L"Windows.System.RemoteSystems.IRemoteSystem6";
+/* [object, uuid("D4CDA942-C027-533E-9384-3A19B4F7EEF3"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_get_User(This,value) \
+    ( (This)->lpVtbl->get_User(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystem6_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.System.RemoteSystems.IRemoteSystemAddedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
@@ -12826,6 +13314,106 @@ interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemApp2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemApp
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemApp2[] = L"Windows.System.RemoteSystems.IRemoteSystemApp2";
+/* [object, uuid("6369BF15-0A96-577A-8FF6-C35904DFA8F3"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ConnectionToken )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2 * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_get_User(This,value) \
+    ( (This)->lpVtbl->get_User(This,value) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_get_ConnectionToken(This,value) \
+    ( (This)->lpVtbl->get_ConnectionToken(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemApp2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -13598,6 +14186,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemCon
 
 /*
  *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemConnectionRequest
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest3[] = L"Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3";
+/* [object, uuid("DE86C3E7-C9CC-5A50-B8D9-BA7B34BB8D0E"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ConnectionToken )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3 * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_get_ConnectionToken(This,value) \
+    ( (This)->lpVtbl->get_ConnectionToken(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
@@ -13782,6 +14463,109 @@ interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionReques
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
+
+
+/*
+ *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemConnectionRequest
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2[] = L"Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2";
+/* [object, uuid("460F1027-64EC-598E-A800-4F2EE58DEF19"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateFromConnectionToken )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This,
+        /* [in] */__RPC__in HSTRING connectionToken,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreateFromConnectionTokenForUser )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [in] */__RPC__in HSTRING connectionToken,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequest * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_CreateFromConnectionToken(This,connectionToken,result) \
+    ( (This)->lpVtbl->CreateFromConnectionToken(This,connectionToken,result) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_CreateFromConnectionTokenForUser(This,user,connectionToken,result) \
+    ( (This)->lpVtbl->CreateFromConnectionTokenForUser(This,user,connectionToken,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemConnectionRequestStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -17506,6 +18290,109 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemSta
 
 /*
  *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemStatics3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystem
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemStatics3[] = L"Windows.System.RemoteSystems.IRemoteSystemStatics3";
+/* [object, uuid("9995F16F-0B3C-5AC5-B325-CC73F437DFCD"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [overload] */HRESULT ( STDMETHODCALLTYPE *CreateWatcherForUser )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * * result
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *CreateWatcherWithFiltersForUser )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
+        /* [in] */__RPC__in_opt __FIIterable_1_Windows__CSystem__CRemoteSystems__CIRemoteSystemFilter * filters,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_CreateWatcherForUser(This,user,result) \
+    ( (This)->lpVtbl->CreateWatcherForUser(This,user,result) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_CreateWatcherWithFiltersForUser(This,user,filters,result) \
+    ( (This)->lpVtbl->CreateWatcherWithFiltersForUser(This,user,filters,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemStatics3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
@@ -18045,6 +18932,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWat
 
 /*
  *
+ * Interface Windows.System.RemoteSystems.IRemoteSystemWatcher3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteSystems.RemoteSystemWatcher
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_IRemoteSystemWatcher3[] = L"Windows.System.RemoteSystems.IRemoteSystemWatcher3";
+/* [object, uuid("F79C0FCF-A913-55D3-8413-418FCF15BA54"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
+        __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_get_User(This,value) \
+    ( (This)->lpVtbl->get_User(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CIRemoteSystemWatcher3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.System.RemoteSystems.IRemoteSystemWatcherErrorOccurredEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
@@ -18354,6 +19334,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -18363,6 +19344,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.System.RemoteSystems.IRemoteSystem3
  *    Windows.System.RemoteSystems.IRemoteSystem4
  *    Windows.System.RemoteSystems.IRemoteSystem5
+ *    Windows.System.RemoteSystems.IRemoteSystem6
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -18409,6 +19391,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemApp ** Default Interface **
+ *    Windows.System.RemoteSystems.IRemoteSystemApp2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -18515,11 +19498,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest ** Default Interface **
  *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest2
+ *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -19229,6 +20214,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemWatcher ** Default Interface **
  *    Windows.System.RemoteSystems.IRemoteSystemWatcher2
+ *    Windows.System.RemoteSystems.IRemoteSystemWatcher3
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

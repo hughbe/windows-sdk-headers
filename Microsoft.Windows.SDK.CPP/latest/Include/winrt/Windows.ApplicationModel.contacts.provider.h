@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.applicationmodel.contacts.provider.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Contacts {
                 namespace Provider {
                     interface IContactPickerUI;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI ABI::Windows::ApplicationModel::Contacts::Provider::IContactPickerUI
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Contacts {
                 namespace Provider {
                     interface IContactPickerUI2;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI2 ABI::Windows::ApplicationModel::Contacts::Provider::IContactPickerUI2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI2_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Contacts {
                 namespace Provider {
                     interface IContactRemovedEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactRemovedEventArgs ABI::Windows::ApplicationModel::Contacts::Provider::IContactRemovedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactRemovedEventArgs_FWD_DEFINED__
@@ -327,10 +323,10 @@ namespace ABI {
             namespace Contacts {
                 namespace Provider {
                     class ContactPickerUI;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -339,10 +335,10 @@ namespace ABI {
             namespace Contacts {
                 namespace Provider {
                     class ContactRemovedEventArgs;
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -366,7 +362,7 @@ ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::Provider::ContactPi
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI*,ABI::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Contacts::Provider::IContactPickerUI*,ABI::Windows::ApplicationModel::Contacts::Provider::IContactRemovedEventArgs*>
@@ -397,7 +393,7 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
@@ -426,7 +422,7 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
@@ -455,7 +451,7 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
@@ -470,9 +466,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 enum ContactFieldType : int;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType_USE
@@ -493,7 +489,7 @@ IIterator<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : IIt
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -523,7 +519,7 @@ IIterable<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : IIt
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -553,7 +549,7 @@ IVectorView<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : I
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -583,7 +579,7 @@ IVector<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> : IVect
 // correct parameterized interface specialization.
 typedef IVector<enum ABI::Windows::ApplicationModel::Contacts::ContactFieldType> __FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType_t;
 #define __FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CApplicationModel__CContacts__CContactFieldType ABI::Windows::Foundation::Collections::IVector<ABI::Windows::ApplicationModel::Contacts::ContactFieldType>
@@ -600,9 +596,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 class Contact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
@@ -611,9 +607,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Contacts {
                 interface IContact;
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CContacts_CIContact ABI::Windows::ApplicationModel::Contacts::IContact
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CContacts_CIContact_FWD_DEFINED__
@@ -626,9 +622,9 @@ namespace ABI {
                 
                 typedef enum ContactFieldType : int ContactFieldType;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -637,9 +633,9 @@ namespace ABI {
                 
                 typedef enum ContactSelectionMode : int ContactSelectionMode;
                 
-            } /* Windows */
+            } /* Contacts */
         } /* ApplicationModel */
-    } /* Contacts */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -655,10 +651,10 @@ namespace ABI {
                     
                     typedef enum AddContactResult : int AddContactResult;
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 
 
@@ -698,10 +694,10 @@ namespace ABI {
                         AddContactResult_Unavailable = 2,
                     };
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -744,7 +740,7 @@ namespace ABI {
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ContainsContact(
                             /* [in] */__RPC__in HSTRING id,
-                            /* [retval, out] */__RPC__out boolean * isContained
+                            /* [retval, out] */__RPC__out ::boolean * isContained
                             ) = 0;
                         
                         #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -768,10 +764,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactPickerUI=_uuidof(IContactPickerUI);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI_INTERFACE_DEFINED__) */
@@ -815,10 +811,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactPickerUI2=_uuidof(IContactPickerUI2);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI2_INTERFACE_DEFINED__) */
@@ -858,10 +854,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IContactRemovedEventArgs=_uuidof(IContactRemovedEventArgs);
                     
-                } /* Windows */
-            } /* ApplicationModel */
-        } /* Contacts */
-    } /* Provider */} /* ABI */
+                } /* Provider */
+            } /* Contacts */
+        } /* ApplicationModel */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactRemovedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactRemovedEventArgs_INTERFACE_DEFINED__) */
@@ -957,7 +953,7 @@ typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CP
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactRemovedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactPickerUI * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CContacts_CProvider_CIContactRemovedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CApplicationModel__CContacts__CProvider__CContactPickerUI_Windows__CApplicationModel__CContacts__CProvider__CContactRemovedEventArgsVtbl;
 

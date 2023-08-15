@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -159,7 +159,8 @@ struct DateTimeSettings
 };
 
 struct WINRT_EBO DispatcherQueue :
-    Windows::System::IDispatcherQueue
+    Windows::System::IDispatcherQueue,
+    impl::require<DispatcherQueue, Windows::System::IDispatcherQueue2>
 {
     DispatcherQueue(std::nullptr_t) noexcept {}
     static Windows::System::DispatcherQueue GetForCurrentThread();

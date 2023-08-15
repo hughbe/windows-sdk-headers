@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -184,6 +184,8 @@ enum class ProcessorArchitecture : int32_t
     Arm = 5,
     X64 = 9,
     Neutral = 11,
+    Arm64 = 12,
+    X86OnArm64 = 14,
     Unknown = 65535,
 };
 
@@ -448,6 +450,7 @@ struct IAppUriHandlerRegistrationManager;
 struct IAppUriHandlerRegistrationManagerStatics;
 struct IDateTimeSettingsStatics;
 struct IDispatcherQueue;
+struct IDispatcherQueue2;
 struct IDispatcherQueueController;
 struct IDispatcherQueueControllerStatics;
 struct IDispatcherQueueShutdownStartingEventArgs;
@@ -572,6 +575,7 @@ template <> struct category<Windows::System::IAppUriHandlerRegistrationManager>{
 template <> struct category<Windows::System::IAppUriHandlerRegistrationManagerStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::IDateTimeSettingsStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::IDispatcherQueue>{ using type = interface_category; };
+template <> struct category<Windows::System::IDispatcherQueue2>{ using type = interface_category; };
 template <> struct category<Windows::System::IDispatcherQueueController>{ using type = interface_category; };
 template <> struct category<Windows::System::IDispatcherQueueControllerStatics>{ using type = interface_category; };
 template <> struct category<Windows::System::IDispatcherQueueShutdownStartingEventArgs>{ using type = interface_category; };
@@ -712,6 +716,7 @@ template <> struct name<Windows::System::IAppUriHandlerRegistrationManager>{ sta
 template <> struct name<Windows::System::IAppUriHandlerRegistrationManagerStatics>{ static constexpr auto & value{ L"Windows.System.IAppUriHandlerRegistrationManagerStatics" }; };
 template <> struct name<Windows::System::IDateTimeSettingsStatics>{ static constexpr auto & value{ L"Windows.System.IDateTimeSettingsStatics" }; };
 template <> struct name<Windows::System::IDispatcherQueue>{ static constexpr auto & value{ L"Windows.System.IDispatcherQueue" }; };
+template <> struct name<Windows::System::IDispatcherQueue2>{ static constexpr auto & value{ L"Windows.System.IDispatcherQueue2" }; };
 template <> struct name<Windows::System::IDispatcherQueueController>{ static constexpr auto & value{ L"Windows.System.IDispatcherQueueController" }; };
 template <> struct name<Windows::System::IDispatcherQueueControllerStatics>{ static constexpr auto & value{ L"Windows.System.IDispatcherQueueControllerStatics" }; };
 template <> struct name<Windows::System::IDispatcherQueueShutdownStartingEventArgs>{ static constexpr auto & value{ L"Windows.System.IDispatcherQueueShutdownStartingEventArgs" }; };
@@ -852,6 +857,7 @@ template <> struct guid_storage<Windows::System::IAppUriHandlerRegistrationManag
 template <> struct guid_storage<Windows::System::IAppUriHandlerRegistrationManagerStatics>{ static constexpr guid value{ 0xD5CEDD9F,0x5729,0x5B76,{ 0xA1,0xD4,0x02,0x85,0xF2,0x95,0xC1,0x24 } }; };
 template <> struct guid_storage<Windows::System::IDateTimeSettingsStatics>{ static constexpr guid value{ 0x5D2150D1,0x47EE,0x48AB,{ 0xA5,0x2B,0x9F,0x19,0x54,0x27,0x8D,0x82 } }; };
 template <> struct guid_storage<Windows::System::IDispatcherQueue>{ static constexpr guid value{ 0x603E88E4,0xA338,0x4FFE,{ 0xA4,0x57,0xA5,0xCF,0xB9,0xCE,0xB8,0x99 } }; };
+template <> struct guid_storage<Windows::System::IDispatcherQueue2>{ static constexpr guid value{ 0xC822C647,0x30EF,0x506E,{ 0xBD,0x1E,0xA6,0x47,0xAE,0x66,0x75,0xFF } }; };
 template <> struct guid_storage<Windows::System::IDispatcherQueueController>{ static constexpr guid value{ 0x22F34E66,0x50DB,0x4E36,{ 0xA9,0x8D,0x61,0xC0,0x1B,0x38,0x4D,0x20 } }; };
 template <> struct guid_storage<Windows::System::IDispatcherQueueControllerStatics>{ static constexpr guid value{ 0x0A6C98E0,0x5198,0x49A2,{ 0xA3,0x13,0x3F,0x70,0xD1,0xF1,0x3C,0x27 } }; };
 template <> struct guid_storage<Windows::System::IDispatcherQueueShutdownStartingEventArgs>{ static constexpr guid value{ 0xC4724C4C,0xFF97,0x40C0,{ 0xA2,0x26,0xCC,0x0A,0xAA,0x54,0x5E,0x89 } }; };
@@ -1130,6 +1136,11 @@ template <> struct abi<Windows::System::IDispatcherQueue>{ struct type : IInspec
     virtual int32_t WINRT_CALL remove_ShutdownCompleted(winrt::event_token token) noexcept = 0;
 };};
 
+template <> struct abi<Windows::System::IDispatcherQueue2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL get_HasThreadAccess(bool* value) noexcept = 0;
+};};
+
 template <> struct abi<Windows::System::IDispatcherQueueController>{ struct type : IInspectable
 {
     virtual int32_t WINRT_CALL get_DispatcherQueue(void** value) noexcept = 0;
@@ -1143,7 +1154,7 @@ template <> struct abi<Windows::System::IDispatcherQueueControllerStatics>{ stru
 
 template <> struct abi<Windows::System::IDispatcherQueueShutdownStartingEventArgs>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL GetDeferral(void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDeferral(void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::System::IDispatcherQueueStatics>{ struct type : IInspectable
@@ -1409,7 +1420,7 @@ template <> struct abi<Windows::System::IUserAuthenticationStatusChangeDeferral>
 
 template <> struct abi<Windows::System::IUserAuthenticationStatusChangingEventArgs>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL GetDeferral(void** deferral) noexcept = 0;
+    virtual int32_t WINRT_CALL GetDeferral(void** result) noexcept = 0;
     virtual int32_t WINRT_CALL get_User(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL get_NewStatus(Windows::System::UserAuthenticationStatus* value) noexcept = 0;
     virtual int32_t WINRT_CALL get_CurrentStatus(Windows::System::UserAuthenticationStatus* value) noexcept = 0;
@@ -1440,21 +1451,21 @@ template <> struct abi<Windows::System::IUserPicker>{ struct type : IInspectable
     virtual int32_t WINRT_CALL put_AllowGuestAccounts(bool value) noexcept = 0;
     virtual int32_t WINRT_CALL get_SuggestedSelectedUser(void** value) noexcept = 0;
     virtual int32_t WINRT_CALL put_SuggestedSelectedUser(void* value) noexcept = 0;
-    virtual int32_t WINRT_CALL PickSingleUserAsync(void** pickSingleUserOperation) noexcept = 0;
+    virtual int32_t WINRT_CALL PickSingleUserAsync(void** operation) noexcept = 0;
 };};
 
 template <> struct abi<Windows::System::IUserPickerStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL IsSupported(bool* value) noexcept = 0;
+    virtual int32_t WINRT_CALL IsSupported(bool* result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::System::IUserStatics>{ struct type : IInspectable
 {
-    virtual int32_t WINRT_CALL CreateWatcher(void** watcher) noexcept = 0;
+    virtual int32_t WINRT_CALL CreateWatcher(void** result) noexcept = 0;
     virtual int32_t WINRT_CALL FindAllAsync(void** operation) noexcept = 0;
     virtual int32_t WINRT_CALL FindAllAsyncByType(Windows::System::UserType type, void** operation) noexcept = 0;
     virtual int32_t WINRT_CALL FindAllAsyncByTypeAndStatus(Windows::System::UserType type, Windows::System::UserAuthenticationStatus status, void** operation) noexcept = 0;
-    virtual int32_t WINRT_CALL GetFromId(void* nonRoamableId, void** value) noexcept = 0;
+    virtual int32_t WINRT_CALL GetFromId(void* nonRoamableId, void** result) noexcept = 0;
 };};
 
 template <> struct abi<Windows::System::IUserWatcher>{ struct type : IInspectable
@@ -1753,6 +1764,13 @@ struct consume_Windows_System_IDispatcherQueue
     void ShutdownCompleted(winrt::event_token const& token) const noexcept;
 };
 template <> struct consume<Windows::System::IDispatcherQueue> { template <typename D> using type = consume_Windows_System_IDispatcherQueue<D>; };
+
+template <typename D>
+struct consume_Windows_System_IDispatcherQueue2
+{
+    bool HasThreadAccess() const;
+};
+template <> struct consume<Windows::System::IDispatcherQueue2> { template <typename D> using type = consume_Windows_System_IDispatcherQueue2<D>; };
 
 template <typename D>
 struct consume_Windows_System_IDispatcherQueueController

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.data.json.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonArray;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonArray ABI::Windows::Data::Json::IJsonArray
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonArray_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonArrayStatics;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonArrayStatics ABI::Windows::Data::Json::IJsonArrayStatics
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonArrayStatics_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonErrorStatics2;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonErrorStatics2 ABI::Windows::Data::Json::IJsonErrorStatics2
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonErrorStatics2_FWD_DEFINED__
@@ -182,9 +182,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonObject;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonObject ABI::Windows::Data::Json::IJsonObject
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonObject_FWD_DEFINED__
@@ -196,9 +196,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonObjectStatics;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonObjectStatics ABI::Windows::Data::Json::IJsonObjectStatics
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonObjectStatics_FWD_DEFINED__
@@ -210,9 +210,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonObjectWithDefaultValues;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonObjectWithDefaultValues ABI::Windows::Data::Json::IJsonObjectWithDefaultValues
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonObjectWithDefaultValues_FWD_DEFINED__
@@ -224,9 +224,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonValue;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonValue ABI::Windows::Data::Json::IJsonValue
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonValue_FWD_DEFINED__
@@ -238,9 +238,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonValueStatics;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonValueStatics ABI::Windows::Data::Json::IJsonValueStatics
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonValueStatics_FWD_DEFINED__
@@ -252,9 +252,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 interface IJsonValueStatics2;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CData_CJson_CIJsonValueStatics2 ABI::Windows::Data::Json::IJsonValueStatics2
 
 #endif // ____x_ABI_CWindows_CData_CJson_CIJsonValueStatics2_FWD_DEFINED__
@@ -283,7 +283,7 @@ IIterator<ABI::Windows::Data::Json::IJsonValue*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Data::Json::IJsonValue*> __FIIterator_1_Windows__CData__CJson__CIJsonValue_t;
 #define __FIIterator_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Data::Json::IJsonValue*>
@@ -315,7 +315,7 @@ IIterable<ABI::Windows::Data::Json::IJsonValue*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Data::Json::IJsonValue*> __FIIterable_1_Windows__CData__CJson__CIJsonValue_t;
 #define __FIIterable_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Data::Json::IJsonValue*>
@@ -347,7 +347,7 @@ IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*> : IKeyValuePair_imp
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*> __FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*>
@@ -379,7 +379,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> : IIte
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*>*>
@@ -411,7 +411,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> : IIte
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue*> __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,ABI::Windows::Data::Json::IJsonValue*>*>
@@ -443,7 +443,7 @@ IMapView<HSTRING,ABI::Windows::Data::Json::IJsonValue*> : IMapView_impl<HSTRING,
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,ABI::Windows::Data::Json::IJsonValue*> __FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IMapView<HSTRING,ABI::Windows::Data::Json::IJsonValue*>
@@ -475,7 +475,7 @@ IMap<HSTRING,ABI::Windows::Data::Json::IJsonValue*> : IMap_impl<HSTRING,ABI::Win
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,ABI::Windows::Data::Json::IJsonValue*> __FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue_t;
 #define __FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IMap<HSTRING,ABI::Windows::Data::Json::IJsonValue*>
@@ -507,7 +507,7 @@ IVectorView<ABI::Windows::Data::Json::IJsonValue*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Data::Json::IJsonValue*> __FIVectorView_1_Windows__CData__CJson__CIJsonValue_t;
 #define __FIVectorView_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Data::Json::IJsonValue*>
@@ -539,7 +539,7 @@ IVector<ABI::Windows::Data::Json::IJsonValue*> : IVector_impl<ABI::Windows::Data
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Data::Json::IJsonValue*> __FIVector_1_Windows__CData__CJson__CIJsonValue_t;
 #define __FIVector_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CData__CJson__CIJsonValue_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CData__CJson__CIJsonValue ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Data::Json::IJsonValue*>
@@ -558,8 +558,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -575,9 +575,9 @@ namespace ABI {
                 
                 typedef enum JsonErrorStatus : int JsonErrorStatus;
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -586,9 +586,9 @@ namespace ABI {
                 
                 typedef enum JsonValueType : int JsonValueType;
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -604,9 +604,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 class JsonArray;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -615,9 +615,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 class JsonObject;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -625,9 +625,9 @@ namespace ABI {
         namespace Data {
             namespace Json {
                 class JsonValue;
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -662,9 +662,9 @@ namespace ABI {
                     JsonErrorStatus_ImplementationLimit = 4,
                 };
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -693,9 +693,9 @@ namespace ABI {
                     JsonValueType_Object = 5,
                 };
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -745,16 +745,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetBooleanAt(
                         /* [in] */UINT32 index,
-                        /* [retval, out] */__RPC__out boolean * returnValue
+                        /* [retval, out] */__RPC__out ::boolean * returnValue
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IJsonArray=_uuidof(IJsonArray);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonArray;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonArray_INTERFACE_DEFINED__) */
@@ -792,16 +792,16 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryParse(
                         /* [in] */__RPC__in HSTRING input,
                         /* [out] */__RPC__deref_out_opt ABI::Windows::Data::Json::IJsonArray * * result,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IJsonArrayStatics=_uuidof(IJsonArrayStatics);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonArrayStatics;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonArrayStatics_INTERFACE_DEFINED__) */
@@ -841,9 +841,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJsonErrorStatics2=_uuidof(IJsonErrorStatics2);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonErrorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonErrorStatics2_INTERFACE_DEFINED__) */
@@ -904,16 +904,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetNamedBoolean(
                         /* [in] */__RPC__in HSTRING name,
-                        /* [retval, out] */__RPC__out boolean * returnValue
+                        /* [retval, out] */__RPC__out ::boolean * returnValue
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IJsonObject=_uuidof(IJsonObject);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonObject;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonObject_INTERFACE_DEFINED__) */
@@ -951,16 +951,16 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryParse(
                         /* [in] */__RPC__in HSTRING input,
                         /* [out] */__RPC__deref_out_opt ABI::Windows::Data::Json::IJsonObject * * result,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IJsonObjectStatics=_uuidof(IJsonObjectStatics);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonObjectStatics;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonObjectStatics_INTERFACE_DEFINED__) */
@@ -1023,17 +1023,17 @@ namespace ABI {
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE GetNamedBooleanOrDefault(
                         /* [in] */__RPC__in HSTRING name,
-                        /* [in] */boolean defaultValue,
-                        /* [retval, out] */__RPC__out boolean * returnValue
+                        /* [in] */::boolean defaultValue,
+                        /* [retval, out] */__RPC__out ::boolean * returnValue
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IJsonObjectWithDefaultValues=_uuidof(IJsonObjectWithDefaultValues);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonObjectWithDefaultValues;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonObjectWithDefaultValues_INTERFACE_DEFINED__) */
@@ -1074,7 +1074,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__out DOUBLE * returnValue
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetBoolean(
-                        /* [retval, out] */__RPC__out boolean * returnValue
+                        /* [retval, out] */__RPC__out ::boolean * returnValue
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetArray(
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Data::Json::IJsonArray * * returnValue
@@ -1087,9 +1087,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJsonValue=_uuidof(IJsonValue);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonValue;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonValue_INTERFACE_DEFINED__) */
@@ -1127,10 +1127,10 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE TryParse(
                         /* [in] */__RPC__in HSTRING input,
                         /* [out] */__RPC__deref_out_opt ABI::Windows::Data::Json::IJsonValue * * result,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateBooleanValue(
-                        /* [in] */boolean input,
+                        /* [in] */::boolean input,
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Data::Json::IJsonValue * * jsonValue
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateNumberValue(
@@ -1146,9 +1146,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJsonValueStatics=_uuidof(IJsonValueStatics);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonValueStatics;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonValueStatics_INTERFACE_DEFINED__) */
@@ -1187,9 +1187,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IJsonValueStatics2=_uuidof(IJsonValueStatics2);
                 
-            } /* Windows */
+            } /* Json */
         } /* Data */
-    } /* Json */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CJson_CIJsonValueStatics2;
 #endif /* !defined(____x_ABI_CWindows_CData_CJson_CIJsonValueStatics2_INTERFACE_DEFINED__) */

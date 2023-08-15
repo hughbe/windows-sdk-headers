@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,6 +11,7 @@
 #include "winrt/Windows.Foundation.Collections.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Storage.2.h"
+#include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.Storage.Pickers.2.h"
 #include "winrt/Windows.Storage.h"
 
@@ -73,16 +74,16 @@ template <typename D> Windows::Foundation::Collections::IVector<hstring> consume
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> consume_Windows_Storage_Pickers_IFileOpenPicker<D>::PickSingleFileAsync() const
 {
-    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> pickSingleFileOperation{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPicker)->PickSingleFileAsync(put_abi(pickSingleFileOperation)));
-    return pickSingleFileOperation;
+    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPicker)->PickSingleFileAsync(put_abi(operation)));
+    return operation;
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>> consume_Windows_Storage_Pickers_IFileOpenPicker<D>::PickMultipleFilesAsync() const
 {
-    Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>> pickMultipleFilesOperation{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPicker)->PickMultipleFilesAsync(put_abi(pickMultipleFilesOperation)));
-    return pickMultipleFilesOperation;
+    Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPicker)->PickMultipleFilesAsync(put_abi(operation)));
+    return operation;
 }
 
 template <typename D> Windows::Foundation::Collections::ValueSet consume_Windows_Storage_Pickers_IFileOpenPicker2<D>::ContinuationData() const
@@ -102,18 +103,32 @@ template <typename D> void consume_Windows_Storage_Pickers_IFileOpenPicker2<D>::
     check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPicker2)->PickMultipleFilesAndContinue());
 }
 
+template <typename D> Windows::System::User consume_Windows_Storage_Pickers_IFileOpenPicker3<D>::User() const
+{
+    Windows::System::User value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPicker3)->get_User(put_abi(value)));
+    return value;
+}
+
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> consume_Windows_Storage_Pickers_IFileOpenPickerStatics<D>::ResumePickSingleFileAsync() const
 {
-    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> pickSingleFileOperation{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPickerStatics)->ResumePickSingleFileAsync(put_abi(pickSingleFileOperation)));
-    return pickSingleFileOperation;
+    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPickerStatics)->ResumePickSingleFileAsync(put_abi(operation)));
+    return operation;
+}
+
+template <typename D> Windows::Storage::Pickers::FileOpenPicker consume_Windows_Storage_Pickers_IFileOpenPickerStatics2<D>::CreateForUser(Windows::System::User const& user) const
+{
+    Windows::Storage::Pickers::FileOpenPicker result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPickerStatics2)->CreateForUser(get_abi(user), put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> consume_Windows_Storage_Pickers_IFileOpenPickerWithOperationId<D>::PickSingleFileAsync(param::hstring const& pickerOperationId) const
 {
-    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> pickSingleFileOperation{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPickerWithOperationId)->PickSingleFileAsync(get_abi(pickerOperationId), put_abi(pickSingleFileOperation)));
-    return pickSingleFileOperation;
+    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileOpenPickerWithOperationId)->PickSingleFileAsync(get_abi(pickerOperationId), put_abi(operation)));
+    return operation;
 }
 
 template <typename D> hstring consume_Windows_Storage_Pickers_IFileSavePicker<D>::SettingsIdentifier() const
@@ -197,9 +212,9 @@ template <typename D> void consume_Windows_Storage_Pickers_IFileSavePicker<D>::S
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> consume_Windows_Storage_Pickers_IFileSavePicker<D>::PickSaveFileAsync() const
 {
-    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> pickSaveFileOperation{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileSavePicker)->PickSaveFileAsync(put_abi(pickSaveFileOperation)));
-    return pickSaveFileOperation;
+    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileSavePicker)->PickSaveFileAsync(put_abi(operation)));
+    return operation;
 }
 
 template <typename D> Windows::Foundation::Collections::ValueSet consume_Windows_Storage_Pickers_IFileSavePicker2<D>::ContinuationData() const
@@ -224,6 +239,20 @@ template <typename D> hstring consume_Windows_Storage_Pickers_IFileSavePicker3<D
 template <typename D> void consume_Windows_Storage_Pickers_IFileSavePicker3<D>::EnterpriseId(param::hstring const& value) const
 {
     check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileSavePicker3)->put_EnterpriseId(get_abi(value)));
+}
+
+template <typename D> Windows::System::User consume_Windows_Storage_Pickers_IFileSavePicker4<D>::User() const
+{
+    Windows::System::User value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileSavePicker4)->get_User(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Storage::Pickers::FileSavePicker consume_Windows_Storage_Pickers_IFileSavePickerStatics<D>::CreateForUser(Windows::System::User const& user) const
+{
+    Windows::Storage::Pickers::FileSavePicker result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFileSavePickerStatics)->CreateForUser(get_abi(user), put_abi(result)));
+    return result;
 }
 
 template <typename D> Windows::Storage::Pickers::PickerViewMode consume_Windows_Storage_Pickers_IFolderPicker<D>::ViewMode() const
@@ -283,9 +312,9 @@ template <typename D> Windows::Foundation::Collections::IVector<hstring> consume
 
 template <typename D> Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder> consume_Windows_Storage_Pickers_IFolderPicker<D>::PickSingleFolderAsync() const
 {
-    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder> pickSingleFolderOperation{ nullptr };
-    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFolderPicker)->PickSingleFolderAsync(put_abi(pickSingleFolderOperation)));
-    return pickSingleFolderOperation;
+    Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder> operation{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFolderPicker)->PickSingleFolderAsync(put_abi(operation)));
+    return operation;
 }
 
 template <typename D> Windows::Foundation::Collections::ValueSet consume_Windows_Storage_Pickers_IFolderPicker2<D>::ContinuationData() const
@@ -298,6 +327,20 @@ template <typename D> Windows::Foundation::Collections::ValueSet consume_Windows
 template <typename D> void consume_Windows_Storage_Pickers_IFolderPicker2<D>::PickFolderAndContinue() const
 {
     check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFolderPicker2)->PickFolderAndContinue());
+}
+
+template <typename D> Windows::System::User consume_Windows_Storage_Pickers_IFolderPicker3<D>::User() const
+{
+    Windows::System::User value{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFolderPicker3)->get_User(put_abi(value)));
+    return value;
+}
+
+template <typename D> Windows::Storage::Pickers::FolderPicker consume_Windows_Storage_Pickers_IFolderPickerStatics<D>::CreateForUser(Windows::System::User const& user) const
+{
+    Windows::Storage::Pickers::FolderPicker result{ nullptr };
+    check_hresult(WINRT_SHIM(Windows::Storage::Pickers::IFolderPickerStatics)->CreateForUser(get_abi(user), put_abi(result)));
+    return result;
 }
 
 template <typename D>
@@ -414,27 +457,27 @@ struct produce<D, Windows::Storage::Pickers::IFileOpenPicker> : produce_base<D, 
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL PickSingleFileAsync(void** pickSingleFileOperation) noexcept final
+    int32_t WINRT_CALL PickSingleFileAsync(void** operation) noexcept final
     {
         try
         {
-            *pickSingleFileOperation = nullptr;
+            *operation = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(PickSingleFileAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>));
-            *pickSingleFileOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().PickSingleFileAsync());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().PickSingleFileAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL PickMultipleFilesAsync(void** pickMultipleFilesOperation) noexcept final
+    int32_t WINRT_CALL PickMultipleFilesAsync(void** operation) noexcept final
     {
         try
         {
-            *pickMultipleFilesOperation = nullptr;
+            *operation = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(PickMultipleFilesAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>>));
-            *pickMultipleFilesOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>>>(this->shim().PickMultipleFilesAsync());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>>>(this->shim().PickMultipleFilesAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -483,16 +526,50 @@ struct produce<D, Windows::Storage::Pickers::IFileOpenPicker2> : produce_base<D,
 };
 
 template <typename D>
-struct produce<D, Windows::Storage::Pickers::IFileOpenPickerStatics> : produce_base<D, Windows::Storage::Pickers::IFileOpenPickerStatics>
+struct produce<D, Windows::Storage::Pickers::IFileOpenPicker3> : produce_base<D, Windows::Storage::Pickers::IFileOpenPicker3>
 {
-    int32_t WINRT_CALL ResumePickSingleFileAsync(void** pickSingleFileOperation) noexcept final
+    int32_t WINRT_CALL get_User(void** value) noexcept final
     {
         try
         {
-            *pickSingleFileOperation = nullptr;
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(User, WINRT_WRAP(Windows::System::User));
+            *value = detach_from<Windows::System::User>(this->shim().User());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Storage::Pickers::IFileOpenPickerStatics> : produce_base<D, Windows::Storage::Pickers::IFileOpenPickerStatics>
+{
+    int32_t WINRT_CALL ResumePickSingleFileAsync(void** operation) noexcept final
+    {
+        try
+        {
+            *operation = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(ResumePickSingleFileAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>));
-            *pickSingleFileOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().ResumePickSingleFileAsync());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().ResumePickSingleFileAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Storage::Pickers::IFileOpenPickerStatics2> : produce_base<D, Windows::Storage::Pickers::IFileOpenPickerStatics2>
+{
+    int32_t WINRT_CALL CreateForUser(void* user, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateForUser, WINRT_WRAP(Windows::Storage::Pickers::FileOpenPicker), Windows::System::User const&);
+            *result = detach_from<Windows::Storage::Pickers::FileOpenPicker>(this->shim().CreateForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -502,14 +579,14 @@ struct produce<D, Windows::Storage::Pickers::IFileOpenPickerStatics> : produce_b
 template <typename D>
 struct produce<D, Windows::Storage::Pickers::IFileOpenPickerWithOperationId> : produce_base<D, Windows::Storage::Pickers::IFileOpenPickerWithOperationId>
 {
-    int32_t WINRT_CALL PickSingleFileAsync(void* pickerOperationId, void** pickSingleFileOperation) noexcept final
+    int32_t WINRT_CALL PickSingleFileAsync(void* pickerOperationId, void** operation) noexcept final
     {
         try
         {
-            *pickSingleFileOperation = nullptr;
+            *operation = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(PickSingleFileAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>), hstring const);
-            *pickSingleFileOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().PickSingleFileAsync(*reinterpret_cast<hstring const*>(&pickerOperationId)));
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().PickSingleFileAsync(*reinterpret_cast<hstring const*>(&pickerOperationId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -681,14 +758,14 @@ struct produce<D, Windows::Storage::Pickers::IFileSavePicker> : produce_base<D, 
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL PickSaveFileAsync(void** pickSaveFileOperation) noexcept final
+    int32_t WINRT_CALL PickSaveFileAsync(void** operation) noexcept final
     {
         try
         {
-            *pickSaveFileOperation = nullptr;
+            *operation = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(PickSaveFileAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>));
-            *pickSaveFileOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().PickSaveFileAsync());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>>(this->shim().PickSaveFileAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -747,6 +824,40 @@ struct produce<D, Windows::Storage::Pickers::IFileSavePicker3> : produce_base<D,
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(EnterpriseId, WINRT_WRAP(void), hstring const&);
             this->shim().EnterpriseId(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Storage::Pickers::IFileSavePicker4> : produce_base<D, Windows::Storage::Pickers::IFileSavePicker4>
+{
+    int32_t WINRT_CALL get_User(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(User, WINRT_WRAP(Windows::System::User));
+            *value = detach_from<Windows::System::User>(this->shim().User());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Storage::Pickers::IFileSavePickerStatics> : produce_base<D, Windows::Storage::Pickers::IFileSavePickerStatics>
+{
+    int32_t WINRT_CALL CreateForUser(void* user, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateForUser, WINRT_WRAP(Windows::Storage::Pickers::FileSavePicker), Windows::System::User const&);
+            *result = detach_from<Windows::Storage::Pickers::FileSavePicker>(this->shim().CreateForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -867,14 +978,14 @@ struct produce<D, Windows::Storage::Pickers::IFolderPicker> : produce_base<D, Wi
         catch (...) { return to_hresult(); }
     }
 
-    int32_t WINRT_CALL PickSingleFolderAsync(void** pickSingleFolderOperation) noexcept final
+    int32_t WINRT_CALL PickSingleFolderAsync(void** operation) noexcept final
     {
         try
         {
-            *pickSingleFolderOperation = nullptr;
+            *operation = nullptr;
             typename D::abi_guard guard(this->shim());
             WINRT_ASSERT_DECLARATION(PickSingleFolderAsync, WINRT_WRAP(Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder>));
-            *pickSingleFolderOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder>>(this->shim().PickSingleFolderAsync());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder>>(this->shim().PickSingleFolderAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -910,6 +1021,40 @@ struct produce<D, Windows::Storage::Pickers::IFolderPicker2> : produce_base<D, W
     }
 };
 
+template <typename D>
+struct produce<D, Windows::Storage::Pickers::IFolderPicker3> : produce_base<D, Windows::Storage::Pickers::IFolderPicker3>
+{
+    int32_t WINRT_CALL get_User(void** value) noexcept final
+    {
+        try
+        {
+            *value = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(User, WINRT_WRAP(Windows::System::User));
+            *value = detach_from<Windows::System::User>(this->shim().User());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
+template <typename D>
+struct produce<D, Windows::Storage::Pickers::IFolderPickerStatics> : produce_base<D, Windows::Storage::Pickers::IFolderPickerStatics>
+{
+    int32_t WINRT_CALL CreateForUser(void* user, void** result) noexcept final
+    {
+        try
+        {
+            *result = nullptr;
+            typename D::abi_guard guard(this->shim());
+            WINRT_ASSERT_DECLARATION(CreateForUser, WINRT_WRAP(Windows::Storage::Pickers::FolderPicker), Windows::System::User const&);
+            *result = detach_from<Windows::Storage::Pickers::FolderPicker>(this->shim().CreateForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    }
+};
+
 }
 
 WINRT_EXPORT namespace winrt::Windows::Storage::Pickers {
@@ -923,13 +1068,28 @@ inline Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile> FileO
     return impl::call_factory<FileOpenPicker, Windows::Storage::Pickers::IFileOpenPickerStatics>([&](auto&& f) { return f.ResumePickSingleFileAsync(); });
 }
 
+inline Windows::Storage::Pickers::FileOpenPicker FileOpenPicker::CreateForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<FileOpenPicker, Windows::Storage::Pickers::IFileOpenPickerStatics2>([&](auto&& f) { return f.CreateForUser(user); });
+}
+
 inline FileSavePicker::FileSavePicker() :
     FileSavePicker(impl::call_factory<FileSavePicker>([](auto&& f) { return f.template ActivateInstance<FileSavePicker>(); }))
 {}
 
+inline Windows::Storage::Pickers::FileSavePicker FileSavePicker::CreateForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<FileSavePicker, Windows::Storage::Pickers::IFileSavePickerStatics>([&](auto&& f) { return f.CreateForUser(user); });
+}
+
 inline FolderPicker::FolderPicker() :
     FolderPicker(impl::call_factory<FolderPicker>([](auto&& f) { return f.template ActivateInstance<FolderPicker>(); }))
 {}
+
+inline Windows::Storage::Pickers::FolderPicker FolderPicker::CreateForUser(Windows::System::User const& user)
+{
+    return impl::call_factory<FolderPicker, Windows::Storage::Pickers::IFolderPickerStatics>([&](auto&& f) { return f.CreateForUser(user); });
+}
 
 }
 
@@ -937,13 +1097,19 @@ WINRT_EXPORT namespace std {
 
 template<> struct hash<winrt::Windows::Storage::Pickers::IFileOpenPicker> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileOpenPicker> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFileOpenPicker2> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileOpenPicker2> {};
+template<> struct hash<winrt::Windows::Storage::Pickers::IFileOpenPicker3> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileOpenPicker3> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFileOpenPickerStatics> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileOpenPickerStatics> {};
+template<> struct hash<winrt::Windows::Storage::Pickers::IFileOpenPickerStatics2> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileOpenPickerStatics2> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFileOpenPickerWithOperationId> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileOpenPickerWithOperationId> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFileSavePicker> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileSavePicker> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFileSavePicker2> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileSavePicker2> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFileSavePicker3> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileSavePicker3> {};
+template<> struct hash<winrt::Windows::Storage::Pickers::IFileSavePicker4> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileSavePicker4> {};
+template<> struct hash<winrt::Windows::Storage::Pickers::IFileSavePickerStatics> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFileSavePickerStatics> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFolderPicker> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFolderPicker> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::IFolderPicker2> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFolderPicker2> {};
+template<> struct hash<winrt::Windows::Storage::Pickers::IFolderPicker3> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFolderPicker3> {};
+template<> struct hash<winrt::Windows::Storage::Pickers::IFolderPickerStatics> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::IFolderPickerStatics> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::FileExtensionVector> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::FileExtensionVector> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::FileOpenPicker> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::FileOpenPicker> {};
 template<> struct hash<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap> : winrt::impl::hash_base<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap> {};

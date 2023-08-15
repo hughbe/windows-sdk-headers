@@ -278,6 +278,7 @@ BackgroundCopyManager10_2;
 /* interface __MIDL_itf_bits10_2_0000_0002 */
 /* [local] */ 
 
+#include "bits10_3.h"
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS5 */

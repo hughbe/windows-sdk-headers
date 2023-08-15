@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -126,7 +126,7 @@ struct LimitedAccessFeatures
 
 struct WINRT_EBO Package :
     Windows::ApplicationModel::IPackage,
-    impl::require<Package, Windows::ApplicationModel::IPackage2, Windows::ApplicationModel::IPackage3, Windows::ApplicationModel::IPackage4, Windows::ApplicationModel::IPackage5, Windows::ApplicationModel::IPackage6, Windows::ApplicationModel::IPackageWithMetadata>
+    impl::require<Package, Windows::ApplicationModel::IPackage2, Windows::ApplicationModel::IPackage3, Windows::ApplicationModel::IPackage4, Windows::ApplicationModel::IPackage5, Windows::ApplicationModel::IPackage6, Windows::ApplicationModel::IPackage7, Windows::ApplicationModel::IPackageWithMetadata>
 {
     Package(std::nullptr_t) noexcept {}
     static Windows::ApplicationModel::Package Current();

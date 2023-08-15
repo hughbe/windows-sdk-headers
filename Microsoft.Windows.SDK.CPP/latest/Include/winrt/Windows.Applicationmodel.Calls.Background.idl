@@ -25,6 +25,13 @@ namespace Windows
 }
 namespace Windows
 {
+    namespace Foundation
+    {
+        typedef struct DateTime DateTime;
+    }
+}
+namespace Windows
+{
     namespace ApplicationModel
     {
         namespace Calls
@@ -34,6 +41,8 @@ namespace Windows
                 apicontract CallsBackgroundContract;
 
                 typedef enum PhoneCallBlockedReason PhoneCallBlockedReason;
+
+                typedef enum PhoneIncomingCallDismissedReason PhoneIncomingCallDismissedReason;
 
                 typedef enum PhoneLineChangeKind PhoneLineChangeKind;
 
@@ -45,6 +54,8 @@ namespace Windows
 
                 interface IPhoneCallOriginDataRequestTriggerDetails;
 
+                interface IPhoneIncomingCallDismissedTriggerDetails;
+
                 interface IPhoneLineChangedTriggerDetails;
 
                 interface IPhoneNewVoicemailMessageTriggerDetails;
@@ -52,6 +63,8 @@ namespace Windows
                 runtimeclass PhoneCallBlockedTriggerDetails;
 
                 runtimeclass PhoneCallOriginDataRequestTriggerDetails;
+
+                runtimeclass PhoneIncomingCallDismissedTriggerDetails;
 
                 runtimeclass PhoneLineChangedTriggerDetails;
 
@@ -72,7 +85,7 @@ namespace Windows
         {
             namespace Background
             {
-                [contractversion(1.0)]
+                [contractversion(2.0)]
                 apicontract CallsBackgroundContract
                 {
                 }
@@ -84,6 +97,15 @@ namespace Windows
                     InCallBlockingList = 0,
                     PrivateNumber      = 1,
                     UnknownNumber      = 2
+                };
+
+                [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 2.0)]
+                enum PhoneIncomingCallDismissedReason
+                {
+                    Unknown        = 0,
+                    CallRejected   = 1,
+                    TextReply      = 2,
+                    ConnectionLost = 3
                 };
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
@@ -121,7 +143,9 @@ namespace Windows
                     LineChanged                          = 2,
                     AirplaneModeDisabledForEmergencyCall = 3,
                     CallOriginDataRequest                = 4,
-                    CallBlocked                          = 5
+                    CallBlocked                          = 5,
+                    [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 2.0)]
+                    IncomingCallDismissed                = 6
                 };
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
@@ -143,6 +167,19 @@ namespace Windows
                 {
                     [propget] HRESULT RequestId([out] [retval] GUID* result);
                     [propget] HRESULT PhoneNumber([out] [retval] HSTRING* result);
+                }
+
+                [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 2.0)]
+                [exclusiveto(Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails)]
+                [uuid(BAD30276-83B6-5732-9C38-0C206546196A)]
+                interface IPhoneIncomingCallDismissedTriggerDetails : IInspectable
+                {
+                    [propget] HRESULT LineId([out] [retval] GUID* value);
+                    [propget] HRESULT PhoneNumber([out] [retval] HSTRING* value);
+                    [propget] HRESULT DisplayName([out] [retval] HSTRING* value);
+                    [propget] HRESULT DismissalTime([out] [retval] Windows.Foundation.DateTime* value);
+                    [propget] HRESULT TextReplyMessage([out] [retval] HSTRING* value);
+                    [propget] HRESULT Reason([out] [retval] Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason* value);
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
@@ -183,6 +220,13 @@ namespace Windows
                 runtimeclass PhoneCallOriginDataRequestTriggerDetails
                 {
                     [default] interface Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails;
+                }
+
+                [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 2.0)]
+                [marshaling_behavior(agile)]
+                runtimeclass PhoneIncomingCallDismissedTriggerDetails
+                {
+                    [default] interface Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails;
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]

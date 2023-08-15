@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.180821.2
+﻿// C++/WinRT v1.0.190111.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,6 +14,12 @@ struct DeviceWatcherTrigger;
 WINRT_EXPORT namespace winrt::Windows::Foundation {
 
 struct Deferral;
+
+}
+
+WINRT_EXPORT namespace winrt::Windows::Security::Credentials {
+
+struct PasswordCredential;
 
 }
 
@@ -86,6 +92,7 @@ enum class DevicePairingKinds : uint32_t
     DisplayPin = 0x2,
     ProvidePin = 0x4,
     ConfirmPinMatch = 0x8,
+    ProvidePasswordCredential = 0x10,
 };
 
 enum class DevicePairingProtectionLevel : int32_t
@@ -183,6 +190,7 @@ struct IDeviceInformationStatics2;
 struct IDeviceInformationUpdate;
 struct IDeviceInformationUpdate2;
 struct IDevicePairingRequestedEventArgs;
+struct IDevicePairingRequestedEventArgs2;
 struct IDevicePairingResult;
 struct IDevicePairingSettings;
 struct IDevicePicker;
@@ -242,6 +250,7 @@ template <> struct category<Windows::Devices::Enumeration::IDeviceInformationSta
 template <> struct category<Windows::Devices::Enumeration::IDeviceInformationUpdate>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Enumeration::IDeviceInformationUpdate2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs>{ using type = interface_category; };
+template <> struct category<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Enumeration::IDevicePairingResult>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Enumeration::IDevicePairingSettings>{ using type = interface_category; };
 template <> struct category<Windows::Devices::Enumeration::IDevicePicker>{ using type = interface_category; };
@@ -305,6 +314,7 @@ template <> struct name<Windows::Devices::Enumeration::IDeviceInformationStatics
 template <> struct name<Windows::Devices::Enumeration::IDeviceInformationUpdate>{ static constexpr auto & value{ L"Windows.Devices.Enumeration.IDeviceInformationUpdate" }; };
 template <> struct name<Windows::Devices::Enumeration::IDeviceInformationUpdate2>{ static constexpr auto & value{ L"Windows.Devices.Enumeration.IDeviceInformationUpdate2" }; };
 template <> struct name<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs>{ static constexpr auto & value{ L"Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs" }; };
+template <> struct name<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2>{ static constexpr auto & value{ L"Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2" }; };
 template <> struct name<Windows::Devices::Enumeration::IDevicePairingResult>{ static constexpr auto & value{ L"Windows.Devices.Enumeration.IDevicePairingResult" }; };
 template <> struct name<Windows::Devices::Enumeration::IDevicePairingSettings>{ static constexpr auto & value{ L"Windows.Devices.Enumeration.IDevicePairingSettings" }; };
 template <> struct name<Windows::Devices::Enumeration::IDevicePicker>{ static constexpr auto & value{ L"Windows.Devices.Enumeration.IDevicePicker" }; };
@@ -368,6 +378,7 @@ template <> struct guid_storage<Windows::Devices::Enumeration::IDeviceInformatio
 template <> struct guid_storage<Windows::Devices::Enumeration::IDeviceInformationUpdate>{ static constexpr guid value{ 0x8F315305,0xD972,0x44B7,{ 0xA3,0x7E,0x9E,0x82,0x2C,0x78,0x21,0x3B } }; };
 template <> struct guid_storage<Windows::Devices::Enumeration::IDeviceInformationUpdate2>{ static constexpr guid value{ 0x5D9D148C,0xA873,0x485E,{ 0xBA,0xA6,0xAA,0x62,0x07,0x88,0xE3,0xCC } }; };
 template <> struct guid_storage<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs>{ static constexpr guid value{ 0xF717FC56,0xDE6B,0x487F,{ 0x83,0x76,0x01,0x80,0xAC,0xA6,0x99,0x63 } }; };
+template <> struct guid_storage<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2>{ static constexpr guid value{ 0xC83752D9,0xE4D3,0x4DB0,{ 0xA3,0x60,0xA1,0x05,0xE4,0x37,0xDB,0xDC } }; };
 template <> struct guid_storage<Windows::Devices::Enumeration::IDevicePairingResult>{ static constexpr guid value{ 0x072B02BF,0xDD95,0x4025,{ 0x9B,0x37,0xDE,0x51,0xAD,0xBA,0x37,0xB7 } }; };
 template <> struct guid_storage<Windows::Devices::Enumeration::IDevicePairingSettings>{ static constexpr guid value{ 0x482CB27C,0x83BB,0x420E,{ 0xBE,0x51,0x66,0x02,0xB2,0x22,0xDE,0x54 } }; };
 template <> struct guid_storage<Windows::Devices::Enumeration::IDevicePicker>{ static constexpr guid value{ 0x84997AA2,0x034A,0x4440,{ 0x88,0x13,0x7D,0x0B,0xD4,0x79,0xBF,0x5A } }; };
@@ -532,6 +543,11 @@ template <> struct abi<Windows::Devices::Enumeration::IDevicePairingRequestedEve
     virtual int32_t WINRT_CALL Accept() noexcept = 0;
     virtual int32_t WINRT_CALL AcceptWithPin(void* pin) noexcept = 0;
     virtual int32_t WINRT_CALL GetDeferral(void** result) noexcept = 0;
+};};
+
+template <> struct abi<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2>{ struct type : IInspectable
+{
+    virtual int32_t WINRT_CALL AcceptWithPasswordCredential(void* passwordCredential) noexcept = 0;
 };};
 
 template <> struct abi<Windows::Devices::Enumeration::IDevicePairingResult>{ struct type : IInspectable
@@ -813,6 +829,13 @@ struct consume_Windows_Devices_Enumeration_IDevicePairingRequestedEventArgs
     Windows::Foundation::Deferral GetDeferral() const;
 };
 template <> struct consume<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs> { template <typename D> using type = consume_Windows_Devices_Enumeration_IDevicePairingRequestedEventArgs<D>; };
+
+template <typename D>
+struct consume_Windows_Devices_Enumeration_IDevicePairingRequestedEventArgs2
+{
+    void AcceptWithPasswordCredential(Windows::Security::Credentials::PasswordCredential const& passwordCredential) const;
+};
+template <> struct consume<Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2> { template <typename D> using type = consume_Windows_Devices_Enumeration_IDevicePairingRequestedEventArgs2<D>; };
 
 template <typename D>
 struct consume_Windows_Devices_Enumeration_IDevicePairingResult

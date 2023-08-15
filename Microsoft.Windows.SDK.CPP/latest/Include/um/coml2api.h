@@ -24,8 +24,8 @@
 #include <objidl.h>
 #include <propidlbase.h>
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application and Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 //
 // Common typedefs for paramaters used in Storage API's, gleamed from storage.h
@@ -71,6 +71,12 @@ typedef DWORD STGFMT;
 #define STGFMT_FILE             3
 #define STGFMT_ANY              4
 #define STGFMT_DOCFILE          5
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 // This is a legacy define to allow old component to builds
 #define STGFMT_DOCUMENT         0

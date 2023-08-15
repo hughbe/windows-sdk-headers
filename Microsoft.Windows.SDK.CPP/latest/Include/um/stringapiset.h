@@ -22,10 +22,10 @@
 extern "C" {
 #endif
 
-#if (WINVER >= 0x0600)
+#pragma region Desktop or OneCore or Application or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
-#pragma region Application or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#if (WINVER >= 0x0600)
 
 WINBASEAPI
 int
@@ -55,13 +55,7 @@ CompareStringOrdinal(
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
 #endif //(WINVER >= 0x0600)
-
-#pragma region Desktop or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 int
@@ -93,12 +87,6 @@ FoldStringW(
 #ifdef UNICODE
 #define FoldString  FoldStringW
 #endif
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -162,7 +150,7 @@ WideCharToMultiByte(
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #ifdef __cplusplus

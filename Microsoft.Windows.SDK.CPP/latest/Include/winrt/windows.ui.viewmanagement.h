@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.viewmanagement.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -269,6 +265,7 @@
 #include "Windows.UI.h"
 #include "Windows.UI.Core.h"
 #include "Windows.UI.Popups.h"
+#include "Windows.UI.WindowManagement.h"
 // Importing Collections header
 #include <windows.foundation.collections.h>
 
@@ -281,9 +278,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IAccessibilitySettings;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIAccessibilitySettings ABI::Windows::UI::ViewManagement::IAccessibilitySettings
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIAccessibilitySettings_FWD_DEFINED__
@@ -295,9 +292,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IActivationViewSwitcher;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher ABI::Windows::UI::ViewManagement::IActivationViewSwitcher
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher_FWD_DEFINED__
@@ -309,9 +306,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationView;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView ABI::Windows::UI::ViewManagement::IApplicationView
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView_FWD_DEFINED__
@@ -323,9 +320,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationView2;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView2 ABI::Windows::UI::ViewManagement::IApplicationView2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView2_FWD_DEFINED__
@@ -337,9 +334,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationView3;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView3 ABI::Windows::UI::ViewManagement::IApplicationView3
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView3_FWD_DEFINED__
@@ -351,12 +348,40 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationView4;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView4 ABI::Windows::UI::ViewManagement::IApplicationView4
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                interface IApplicationView7;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 ABI::Windows::UI::ViewManagement::IApplicationView7
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                interface IApplicationView9;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 ABI::Windows::UI::ViewManagement::IApplicationView9
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs_FWD_DEFINED__
@@ -365,9 +390,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewConsolidatedEventArgs;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs ABI::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs_FWD_DEFINED__
@@ -379,9 +404,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewConsolidatedEventArgs2;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs2 ABI::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs2_FWD_DEFINED__
@@ -393,9 +418,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewFullscreenStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewFullscreenStatics ABI::Windows::UI::ViewManagement::IApplicationViewFullscreenStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewFullscreenStatics_FWD_DEFINED__
@@ -407,9 +432,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewInteropStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewInteropStatics ABI::Windows::UI::ViewManagement::IApplicationViewInteropStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewInteropStatics_FWD_DEFINED__
@@ -421,9 +446,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewScaling;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScaling ABI::Windows::UI::ViewManagement::IApplicationViewScaling
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScaling_FWD_DEFINED__
@@ -435,9 +460,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewScalingStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics ABI::Windows::UI::ViewManagement::IApplicationViewScalingStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics_FWD_DEFINED__
@@ -449,9 +474,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics ABI::Windows::UI::ViewManagement::IApplicationViewStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics_FWD_DEFINED__
@@ -463,9 +488,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewStatics2;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics2 ABI::Windows::UI::ViewManagement::IApplicationViewStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics2_FWD_DEFINED__
@@ -477,12 +502,26 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewStatics3;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics3 ABI::Windows::UI::ViewManagement::IApplicationViewStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                interface IApplicationViewStatics4;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 ABI::Windows::UI::ViewManagement::IApplicationViewStatics4
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics_FWD_DEFINED__
@@ -491,9 +530,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewSwitcherStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics ABI::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics_FWD_DEFINED__
@@ -505,9 +544,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewSwitcherStatics2;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics2 ABI::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics2_FWD_DEFINED__
@@ -519,9 +558,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewSwitcherStatics3;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics3 ABI::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics3_FWD_DEFINED__
@@ -533,9 +572,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewTitleBar;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTitleBar ABI::Windows::UI::ViewManagement::IApplicationViewTitleBar
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTitleBar_FWD_DEFINED__
@@ -547,9 +586,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewTransferContext;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContext ABI::Windows::UI::ViewManagement::IApplicationViewTransferContext
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContext_FWD_DEFINED__
@@ -561,12 +600,26 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IApplicationViewTransferContextStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContextStatics ABI::Windows::UI::ViewManagement::IApplicationViewTransferContextStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContextStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                interface IApplicationViewWithContext;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext ABI::Windows::UI::ViewManagement::IApplicationViewWithContext
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIInputPane_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPane_FWD_DEFINED__
@@ -575,9 +628,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IInputPane;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIInputPane ABI::Windows::UI::ViewManagement::IInputPane
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPane_FWD_DEFINED__
@@ -589,9 +642,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IInputPane2;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIInputPane2 ABI::Windows::UI::ViewManagement::IInputPane2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPane2_FWD_DEFINED__
@@ -603,9 +656,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IInputPaneControl;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneControl ABI::Windows::UI::ViewManagement::IInputPaneControl
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneControl_FWD_DEFINED__
@@ -617,12 +670,26 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IInputPaneStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics ABI::Windows::UI::ViewManagement::IInputPaneStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                interface IInputPaneStatics2;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 ABI::Windows::UI::ViewManagement::IInputPaneStatics2
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs_FWD_DEFINED__
@@ -631,9 +698,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IInputPaneVisibilityEventArgs;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs ABI::Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs_FWD_DEFINED__
@@ -645,9 +712,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IProjectionManagerStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics ABI::Windows::UI::ViewManagement::IProjectionManagerStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics_FWD_DEFINED__
@@ -659,9 +726,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IProjectionManagerStatics2;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics2 ABI::Windows::UI::ViewManagement::IProjectionManagerStatics2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics2_FWD_DEFINED__
@@ -673,9 +740,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IStatusBar;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIStatusBar ABI::Windows::UI::ViewManagement::IStatusBar
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIStatusBar_FWD_DEFINED__
@@ -687,9 +754,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IStatusBarProgressIndicator;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIStatusBarProgressIndicator ABI::Windows::UI::ViewManagement::IStatusBarProgressIndicator
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIStatusBarProgressIndicator_FWD_DEFINED__
@@ -701,9 +768,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IStatusBarStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIStatusBarStatics ABI::Windows::UI::ViewManagement::IStatusBarStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIStatusBarStatics_FWD_DEFINED__
@@ -715,9 +782,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IUISettings;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings ABI::Windows::UI::ViewManagement::IUISettings
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings_FWD_DEFINED__
@@ -729,9 +796,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IUISettings2;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings2 ABI::Windows::UI::ViewManagement::IUISettings2
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings2_FWD_DEFINED__
@@ -743,9 +810,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IUISettings3;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings3 ABI::Windows::UI::ViewManagement::IUISettings3
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings3_FWD_DEFINED__
@@ -757,12 +824,40 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IUISettings4;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings4 ABI::Windows::UI::ViewManagement::IUISettings4
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                interface IUISettings5;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 ABI::Windows::UI::ViewManagement::IUISettings5
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                interface IUISettingsAutoHideScrollBarsChangedEventArgs;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs ABI::Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings_FWD_DEFINED__
@@ -771,9 +866,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IUIViewSettings;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings ABI::Windows::UI::ViewManagement::IUIViewSettings
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings_FWD_DEFINED__
@@ -785,9 +880,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IUIViewSettingsStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettingsStatics ABI::Windows::UI::ViewManagement::IUIViewSettingsStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettingsStatics_FWD_DEFINED__
@@ -799,9 +894,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IViewModePreferences;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferences ABI::Windows::UI::ViewManagement::IViewModePreferences
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferences_FWD_DEFINED__
@@ -813,9 +908,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 interface IViewModePreferencesStatics;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferencesStatics ABI::Windows::UI::ViewManagement::IViewModePreferencesStatics
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferencesStatics_FWD_DEFINED__
@@ -828,9 +923,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 enum UIElementType : int;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CViewManagement__CUIElementType_USE
@@ -851,7 +946,7 @@ IReference<enum ABI::Windows::UI::ViewManagement::UIElementType> : IReference_im
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::UI::ViewManagement::UIElementType> __FIReference_1_Windows__CUI__CViewManagement__CUIElementType_t;
 #define __FIReference_1_Windows__CUI__CViewManagement__CUIElementType ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CViewManagement__CUIElementType_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CViewManagement__CUIElementType ABI::Windows::Foundation::IReference<ABI::Windows::UI::ViewManagement::UIElementType>
@@ -866,9 +961,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class AccessibilitySettings;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -892,7 +987,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::AccessibilitySettings*,IIns
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::AccessibilitySettings*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IAccessibilitySettings*,IInspectable*>
@@ -908,9 +1003,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ApplicationView;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -934,7 +1029,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::ApplicationView*,IInspectab
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::ApplicationView*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IApplicationView*,IInspectable*>
@@ -951,9 +1046,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ApplicationViewConsolidatedEventArgs;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -977,7 +1072,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::ApplicationView*,ABI::Windo
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::ApplicationView*,ABI::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IApplicationView*,ABI::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs*>
@@ -994,9 +1089,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class InputPane;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1004,9 +1099,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class InputPaneVisibilityEventArgs;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1030,7 +1125,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::InputPane*,ABI::Windows::UI
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::InputPane*,ABI::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IInputPane*,ABI::Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs*>
@@ -1047,9 +1142,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class StatusBar;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1073,7 +1168,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::StatusBar*,IInspectable*> :
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::StatusBar*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IStatusBar*,IInspectable*>
@@ -1089,9 +1184,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class UISettings;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1115,7 +1210,7 @@ ITypedEventHandler<ABI::Windows::UI::ViewManagement::UISettings*,IInspectable*> 
 // correct parameterized interface specialization.
 typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::UISettings*,IInspectable*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IUISettings*,IInspectable*>
@@ -1125,6 +1220,50 @@ typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::UISettings*,IInspec
 
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                class UISettingsAutoHideScrollBarsChangedEventArgs;
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("808aef30-2660-51b0-9c11-f75dd42006b4"))
+ITypedEventHandler<ABI::Windows::UI::ViewManagement::UISettings*,ABI::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::ViewManagement::UISettings*, ABI::Windows::UI::ViewManagement::IUISettings*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs*, ABI::Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.UI.ViewManagement.UISettings, Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::UI::ViewManagement::UISettings*,ABI::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IUISettings*,ABI::Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::UI::ViewManagement::IUISettings*,ABI::Windows::UI::ViewManagement::IUISettingsAutoHideScrollBarsChangedEventArgs*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
@@ -1145,7 +1284,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -1174,7 +1313,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -1187,10 +1326,129 @@ typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 namespace ABI {
     namespace Windows {
         namespace UI {
+            namespace WindowManagement {
+                class DisplayRegion;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace WindowManagement {
+                interface IDisplayRegion;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion ABI::Windows::UI::WindowManagement::IDisplayRegion
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion_FWD_DEFINED__
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE
+#define DEF___FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("110d4d7e-2f29-51b8-9691-8b206ad1d73b"))
+IIterator<ABI::Windows::UI::WindowManagement::DisplayRegion*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::WindowManagement::DisplayRegion*, ABI::Windows::UI::WindowManagement::IDisplayRegion*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.UI.WindowManagement.DisplayRegion>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::UI::WindowManagement::DisplayRegion*> __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_t;
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::WindowManagement::IDisplayRegion*>
+//#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::WindowManagement::IDisplayRegion*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE
+#define DEF___FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("026730ab-250d-503c-a876-43bbb754ad44"))
+IIterable<ABI::Windows::UI::WindowManagement::DisplayRegion*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::WindowManagement::DisplayRegion*, ABI::Windows::UI::WindowManagement::IDisplayRegion*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.UI.WindowManagement.DisplayRegion>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::UI::WindowManagement::DisplayRegion*> __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_t;
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::WindowManagement::IDisplayRegion*>
+//#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::WindowManagement::IDisplayRegion*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE
+#define DEF___FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("9460debb-a0d6-5ab8-84f5-9087f2a6bb67"))
+IVectorView<ABI::Windows::UI::WindowManagement::DisplayRegion*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::WindowManagement::DisplayRegion*, ABI::Windows::UI::WindowManagement::IDisplayRegion*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.DisplayRegion>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::UI::WindowManagement::DisplayRegion*> __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_t;
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::WindowManagement::IDisplayRegion*>
+//#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::WindowManagement::IDisplayRegion*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
             struct Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CUI__CColor_USE
@@ -1211,7 +1469,7 @@ IReference<struct ABI::Windows::UI::Color> : IReference_impl<struct ABI::Windows
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::UI::Color> __FIReference_1_Windows__CUI__CColor_t;
 #define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::__FIReference_1_Windows__CUI__CColor_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CUI__CColor ABI::Windows::Foundation::IReference<ABI::Windows::UI::Color>
@@ -1241,7 +1499,7 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
@@ -1270,7 +1528,7 @@ IReference<double> : IReference_impl<double>
 // correct parameterized interface specialization.
 typedef IReference<double> __FIReference_1_double_t;
 #define __FIReference_1_double ABI::Windows::Foundation::__FIReference_1_double_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_double ABI::Windows::Foundation::IReference<DOUBLE>
@@ -1287,9 +1545,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 class DeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1298,9 +1556,9 @@ namespace ABI {
         namespace Devices {
             namespace Enumeration {
                 interface IDeviceInformation;
-            } /* Windows */
+            } /* Enumeration */
         } /* Devices */
-    } /* Enumeration */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation ABI::Windows::Devices::Enumeration::IDeviceInformation
 
 #endif // ____x_ABI_CWindows_CDevices_CEnumeration_CIDeviceInformation_FWD_DEFINED__
@@ -1315,8 +1573,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1328,8 +1586,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1337,8 +1595,8 @@ namespace ABI {
             
             typedef struct Size Size;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1352,8 +1610,8 @@ namespace ABI {
             
             typedef struct Color Color;
             
-        } /* Windows */
-    } /* UI */} /* ABI */
+        } /* UI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1364,9 +1622,9 @@ namespace ABI {
         namespace UI {
             namespace Core {
                 interface ICoreWindow;
-            } /* Windows */
+            } /* Core */
         } /* UI */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CCore_CICoreWindow ABI::Windows::UI::Core::ICoreWindow
 
 #endif // ____x_ABI_CWindows_CUI_CCore_CICoreWindow_FWD_DEFINED__
@@ -1382,9 +1640,59 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            class UIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            interface IUIContext;
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CIUIContext ABI::Windows::UI::IUIContext
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace WindowManagement {
+                class WindowingEnvironment;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace WindowManagement {
+                interface IWindowingEnvironment;
+            } /* WindowManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment ABI::Windows::UI::WindowManagement::IWindowingEnvironment
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment_FWD_DEFINED__
+
 
 
 
@@ -1397,9 +1705,9 @@ namespace ABI {
                 
                 typedef enum ApplicationViewBoundsMode : int ApplicationViewBoundsMode;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1408,9 +1716,9 @@ namespace ABI {
                 
                 typedef enum ApplicationViewMode : int ApplicationViewMode;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1419,9 +1727,9 @@ namespace ABI {
                 
                 typedef enum ApplicationViewOrientation : int ApplicationViewOrientation;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1430,9 +1738,9 @@ namespace ABI {
                 
                 typedef enum ApplicationViewState : int ApplicationViewState;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1441,9 +1749,9 @@ namespace ABI {
                 
                 typedef enum ApplicationViewSwitchingOptions : unsigned int ApplicationViewSwitchingOptions;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1452,9 +1760,9 @@ namespace ABI {
                 
                 typedef enum ApplicationViewWindowingMode : int ApplicationViewWindowingMode;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1463,9 +1771,9 @@ namespace ABI {
                 
                 typedef enum FullScreenSystemOverlayMode : int FullScreenSystemOverlayMode;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1474,9 +1782,9 @@ namespace ABI {
                 
                 typedef enum HandPreference : int HandPreference;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1485,9 +1793,9 @@ namespace ABI {
                 
                 typedef enum UIColorType : int UIColorType;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1496,9 +1804,9 @@ namespace ABI {
                 
                 typedef enum UIElementType : int UIElementType;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1507,9 +1815,9 @@ namespace ABI {
                 
                 typedef enum UserInteractionMode : int UserInteractionMode;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1518,9 +1826,16 @@ namespace ABI {
                 
                 typedef enum ViewSizePreference : int ViewSizePreference;
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
+
+
 
 
 
@@ -1567,9 +1882,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ActivationViewSwitcher;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1579,9 +1894,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ApplicationViewScaling;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1590,9 +1905,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ApplicationViewTitleBar;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1600,9 +1915,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ApplicationViewTransferContext;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1614,9 +1929,10 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class StatusBarProgressIndicator;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -1625,9 +1941,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class UIViewSettings;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -1635,9 +1951,9 @@ namespace ABI {
         namespace UI {
             namespace ViewManagement {
                 class ViewModePreferences;
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1670,9 +1986,9 @@ namespace ABI {
                     ApplicationViewBoundsMode_UseCoreWindow = 1,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1697,9 +2013,9 @@ namespace ABI {
                     ApplicationViewMode_CompactOverlay = 1,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1724,9 +2040,9 @@ namespace ABI {
                     ApplicationViewOrientation_Portrait = 1,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1757,9 +2073,9 @@ namespace ABI {
                     ApplicationViewState_FullScreenPortrait = 3,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1787,9 +2103,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(ApplicationViewSwitchingOptions)
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1825,9 +2141,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1852,9 +2168,9 @@ namespace ABI {
                     FullScreenSystemOverlayMode_Minimal = 1,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1879,9 +2195,9 @@ namespace ABI {
                     HandPreference_RightHanded = 1,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1914,9 +2230,9 @@ namespace ABI {
                     UIColorType_Complement = 9,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2017,9 +2333,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2044,9 +2360,9 @@ namespace ABI {
                     UserInteractionMode_Touch = 1,
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2080,9 +2396,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2111,7 +2427,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HighContrast(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HighContrastScheme(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -2128,9 +2444,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IAccessibilitySettings=_uuidof(IAccessibilitySettings);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIAccessibilitySettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIAccessibilitySettings_INTERFACE_DEFINED__) */
@@ -2172,16 +2488,16 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsViewPresentedOnActivationVirtualDesktop(
                         /* [in] */INT32 viewId,
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IActivationViewSwitcher=_uuidof(IActivationViewSwitcher);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIActivationViewSwitcher_INTERFACE_DEFINED__) */
@@ -2216,26 +2532,26 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::UI::ViewManagement::ApplicationViewOrientation * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AdjacentToLeftDisplayEdge(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AdjacentToRightDisplayEdge(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     DEPRECATED("To check full screen mode, use IsFullScreenMode. To check if the view is adjacent to both edges, use AdjacentToLeftDisplayEdge and AdjacentToRightDisplayEdge. For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsFullScreen(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsOnLockScreen(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsScreenCaptureEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsScreenCaptureEnabled(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Title(
                         /* [in] */__RPC__in HSTRING value
@@ -2258,9 +2574,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationView=_uuidof(IApplicationView);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView_INTERFACE_DEFINED__) */
@@ -2296,14 +2612,14 @@ namespace ABI {
                     DEPRECATED("Use the TryEnterFullScreen method and IsFullScreenMode property instead of SuppressSystemOverlays. For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SuppressSystemOverlays(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                     #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     DEPRECATED("Use the TryEnterFullScreen method and IsFullScreenMode property instead of SuppressSystemOverlays. For more info, see MSDN.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_SuppressSystemOverlays(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_VisibleBounds(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
@@ -2317,7 +2633,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetDesiredBoundsMode(
                         /* [in] */ABI::Windows::UI::ViewManagement::ApplicationViewBoundsMode boundsMode,
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DesiredBoundsMode(
                         /* [retval, out] */__RPC__out ABI::Windows::UI::ViewManagement::ApplicationViewBoundsMode * value
@@ -2327,9 +2643,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationView2=_uuidof(IApplicationView2);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView2_INTERFACE_DEFINED__) */
@@ -2370,16 +2686,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::UI::ViewManagement::FullScreenSystemOverlayMode value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFullScreenMode(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryEnterFullScreenMode(
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ExitFullScreenMode(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ShowStandardSystemOverlays(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryResizeView(
                         /* [in] */ABI::Windows::Foundation::Size value,
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetPreferredMinSize(
                         /* [in] */ABI::Windows::Foundation::Size minSize
@@ -2389,9 +2705,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationView3=_uuidof(IApplicationView3);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView3_INTERFACE_DEFINED__) */
@@ -2427,7 +2743,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsViewModeSupported(
                         /* [in] */ABI::Windows::UI::ViewManagement::ApplicationViewMode viewMode,
-                        /* [retval, out] */__RPC__out boolean * isViewModeSupported
+                        /* [retval, out] */__RPC__out ::boolean * isViewModeSupported
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryEnterViewModeAsync(
                         /* [in] */ABI::Windows::UI::ViewManagement::ApplicationViewMode viewMode,
@@ -2446,13 +2762,101 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationView4=_uuidof(IApplicationView4);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IApplicationView7
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationView7[] = L"Windows.UI.ViewManagement.IApplicationView7";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                /* [object, uuid("A0369647-5FAF-5AA6-9C38-BEFBB12A071E"), exclusiveto, contract] */
+                MIDL_INTERFACE("A0369647-5FAF-5AA6-9C38-BEFBB12A071E")
+                IApplicationView7 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PersistedStateId(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PersistedStateId(
+                        /* [in] */__RPC__in HSTRING value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IApplicationView7=_uuidof(IApplicationView7);
+                
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IApplicationView9
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationView9[] = L"Windows.UI.ViewManagement.IApplicationView9";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                /* [object, uuid("9C6516F9-021A-5F01-93E5-9BDAD2647574"), exclusiveto, contract] */
+                MIDL_INTERFACE("9C6516F9-021A-5F01-93E5-9BDAD2647574")
+                IApplicationView9 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WindowingEnvironment(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::WindowManagement::IWindowingEnvironment * * value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE GetDisplayRegions(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IApplicationView9=_uuidof(IApplicationView9);
+                
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2480,16 +2884,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsUserInitiated(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewConsolidatedEventArgs=_uuidof(IApplicationViewConsolidatedEventArgs);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs_INTERFACE_DEFINED__) */
@@ -2521,16 +2925,16 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAppInitiated(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewConsolidatedEventArgs2=_uuidof(IApplicationViewConsolidatedEventArgs2);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs2_INTERFACE_DEFINED__) */
@@ -2570,16 +2974,16 @@ namespace ABI {
                     DEPRECATED("IApplicationViewFullscreenStatics is deprecated after Windows 8. Please use other resize APIs.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE TryUnsnapToFullscreen(
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewFullscreenStatics=_uuidof(IApplicationViewFullscreenStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewFullscreenStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewFullscreenStatics_INTERFACE_DEFINED__) */
@@ -2619,9 +3023,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewInteropStatics=_uuidof(IApplicationViewInteropStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewInteropStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewInteropStatics_INTERFACE_DEFINED__) */
@@ -2657,9 +3061,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewScaling=_uuidof(IApplicationViewScaling);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScaling;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScaling_INTERFACE_DEFINED__) */
@@ -2691,20 +3095,20 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisableLayoutScaling(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetDisableLayoutScaling(
-                        /* [in] */boolean disableLayoutScaling,
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [in] */::boolean disableLayoutScaling,
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewScalingStatics=_uuidof(IApplicationViewScalingStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics_INTERFACE_DEFINED__) */
@@ -2751,16 +3155,16 @@ namespace ABI {
                     DEPRECATED("TryUnsnap may be altered or unavailable for releases after Windows 8.1. Apps can be continuously resized, but cannot be snapped, starting in Windows 8.1.")
                     #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
                     /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE TryUnsnap(
-                        /* [retval, out] */__RPC__out boolean * success
+                        /* [retval, out] */__RPC__out ::boolean * success
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewStatics=_uuidof(IApplicationViewStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics_INTERFACE_DEFINED__) */
@@ -2795,19 +3199,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::ViewManagement::IApplicationView * * current
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TerminateAppOnFinalViewClose(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TerminateAppOnFinalViewClose(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewStatics2=_uuidof(IApplicationViewStatics2);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics2_INTERFACE_DEFINED__) */
@@ -2855,13 +3259,55 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewStatics3=_uuidof(IApplicationViewStatics3);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IApplicationViewStatics4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationViewStatics4[] = L"Windows.UI.ViewManagement.IApplicationViewStatics4";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                /* [object, uuid("08FD8D33-2611-5336-A315-D98E6366C9DB"), exclusiveto, contract] */
+                MIDL_INTERFACE("08FD8D33-2611-5336-A315-D98E6366C9DB")
+                IApplicationViewStatics4 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE ClearAllPersistedState(void) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE ClearPersistedState(
+                        /* [in] */__RPC__in HSTRING key
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IApplicationViewStatics4=_uuidof(IApplicationViewStatics4);
+                
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -2931,9 +3377,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewSwitcherStatics=_uuidof(IApplicationViewSwitcherStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics_INTERFACE_DEFINED__) */
@@ -2970,9 +3416,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewSwitcherStatics2=_uuidof(IApplicationViewSwitcherStatics2);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics2_INTERFACE_DEFINED__) */
@@ -3019,9 +3465,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewSwitcherStatics3=_uuidof(IApplicationViewSwitcherStatics3);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics3_INTERFACE_DEFINED__) */
@@ -3129,9 +3575,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewTitleBar=_uuidof(IApplicationViewTitleBar);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTitleBar;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTitleBar_INTERFACE_DEFINED__) */
@@ -3173,9 +3619,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewTransferContext=_uuidof(IApplicationViewTransferContext);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContext;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContext_INTERFACE_DEFINED__) */
@@ -3214,13 +3660,54 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IApplicationViewTransferContextStatics=_uuidof(IApplicationViewTransferContextStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContextStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContextStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IApplicationViewWithContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationViewWithContext[] = L"Windows.UI.ViewManagement.IApplicationViewWithContext";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                /* [object, uuid("BD55D512-9DC1-44FC-8501-666625DF60DC"), exclusiveto, contract] */
+                MIDL_INTERFACE("BD55D512-9DC1-44FC-8501-666625DF60DC")
+                IApplicationViewWithContext : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UIContext(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::IUIContext * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IApplicationViewWithContext=_uuidof(IApplicationViewWithContext);
+                
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3269,9 +3756,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInputPane=_uuidof(IInputPane);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPane;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPane_INTERFACE_DEFINED__) */
@@ -3303,19 +3790,19 @@ namespace ABI {
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE TryShow(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryHide(
-                        /* [retval, out] */__RPC__out boolean * result
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IInputPane2=_uuidof(IInputPane2);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPane2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPane2_INTERFACE_DEFINED__) */
@@ -3347,19 +3834,19 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Visible(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IInputPaneControl=_uuidof(IInputPaneControl);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPaneControl;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneControl_INTERFACE_DEFINED__) */
@@ -3398,13 +3885,55 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInputPaneStatics=_uuidof(IInputPaneStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IInputPaneStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.InputPane
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IInputPaneStatics2[] = L"Windows.UI.ViewManagement.IInputPaneStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                /* [object, uuid("1B63529B-D9EC-4531-8445-71BAB9FB828E"), exclusiveto, contract] */
+                MIDL_INTERFACE("1B63529B-D9EC-4531-8445-71BAB9FB828E")
+                IInputPaneStatics2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetForUIContext(
+                        /* [in] */__RPC__in_opt ABI::Windows::UI::IUIContext * context,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::ViewManagement::IInputPane * * result
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IInputPaneStatics2=_uuidof(IInputPaneStatics2);
+                
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3435,19 +3964,19 @@ namespace ABI {
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_EnsuredFocusedElementInView(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnsuredFocusedElementInView(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IInputPaneVisibilityEventArgs=_uuidof(IInputPaneVisibilityEventArgs);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs_INTERFACE_DEFINED__) */
@@ -3494,7 +4023,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * operation
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProjectionDisplayAvailable(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ProjectionDisplayAvailableChanged(
                         /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
@@ -3508,9 +4037,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProjectionManagerStatics=_uuidof(IProjectionManagerStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics_INTERFACE_DEFINED__) */
@@ -3568,9 +4097,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IProjectionManagerStatics2=_uuidof(IProjectionManagerStatics2);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIProjectionManagerStatics2_INTERFACE_DEFINED__) */
@@ -3650,9 +4179,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStatusBar=_uuidof(IStatusBar);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIStatusBar;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIStatusBar_INTERFACE_DEFINED__) */
@@ -3706,9 +4235,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStatusBarProgressIndicator=_uuidof(IStatusBarProgressIndicator);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIStatusBarProgressIndicator;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIStatusBarProgressIndicator_INTERFACE_DEFINED__) */
@@ -3747,9 +4276,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IStatusBarStatics=_uuidof(IStatusBarStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIStatusBarStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIStatusBarStatics_INTERFACE_DEFINED__) */
@@ -3799,10 +4328,10 @@ namespace ABI {
                         /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AnimationsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CaretBrowsingEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CaretBlinkRate(
                         /* [retval, out] */__RPC__out UINT32 * value
@@ -3825,9 +4354,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUISettings=_uuidof(IUISettings);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings_INTERFACE_DEFINED__) */
@@ -3873,9 +4402,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUISettings2=_uuidof(IUISettings2);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettings2;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings2_INTERFACE_DEFINED__) */
@@ -3922,9 +4451,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUISettings3=_uuidof(IUISettings3);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettings3;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings3_INTERFACE_DEFINED__) */
@@ -3956,7 +4485,7 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AdvancedEffectsEnabled(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_AdvancedEffectsEnabledChanged(
                         /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable * handler,
@@ -3970,13 +4499,99 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUISettings4=_uuidof(IUISettings4);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettings4;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IUISettings5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.UISettings
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IUISettings5[] = L"Windows.UI.ViewManagement.IUISettings5";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                /* [object, uuid("5349D588-0CB5-5F05-BD34-706B3231F0BD"), exclusiveto, contract] */
+                MIDL_INTERFACE("5349D588-0CB5-5F05-BD34-706B3231F0BD")
+                IUISettings5 : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AutoHideScrollBars(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_AutoHideScrollBarsChanged(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
+                        ) = 0;
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_AutoHideScrollBarsChanged(
+                        /* [in] */EventRegistrationToken token
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IUISettings5=_uuidof(IUISettings5);
+                
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettings5;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IUISettingsAutoHideScrollBarsChangedEventArgs[] = L"Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace ViewManagement {
+                /* [object, uuid("87AFD4B2-9146-5F02-8F6B-06D454174C0F"), exclusiveto, contract] */
+                MIDL_INTERFACE("87AFD4B2-9146-5F02-8F6B-06D454174C0F")
+                IUISettingsAutoHideScrollBarsChangedEventArgs : public IInspectable
+                {
+                public:
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IUISettingsAutoHideScrollBarsChangedEventArgs=_uuidof(IUISettingsAutoHideScrollBarsChangedEventArgs);
+                
+            } /* ViewManagement */
+        } /* UI */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4011,9 +4626,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUIViewSettings=_uuidof(IUIViewSettings);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings_INTERFACE_DEFINED__) */
@@ -4052,9 +4667,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUIViewSettingsStatics=_uuidof(IUIViewSettingsStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettingsStatics_INTERFACE_DEFINED__) */
@@ -4102,9 +4717,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IViewModePreferences=_uuidof(IViewModePreferences);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferences;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferences_INTERFACE_DEFINED__) */
@@ -4144,9 +4759,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IViewModePreferencesStatics=_uuidof(IViewModePreferencesStatics);
                 
-            } /* Windows */
+            } /* ViewManagement */
         } /* UI */
-    } /* ViewManagement */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferencesStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIViewModePreferencesStatics_INTERFACE_DEFINED__) */
@@ -4208,6 +4823,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics4 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics3 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4219,6 +4835,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.ViewManagement.IApplicationView2
  *    Windows.UI.ViewManagement.IApplicationView3
  *    Windows.UI.ViewManagement.IApplicationView4
+ *    Windows.UI.ViewManagement.IApplicationView7
+ *    Windows.UI.ViewManagement.IApplicationView9
+ *    Windows.UI.ViewManagement.IApplicationViewWithContext
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -4361,6 +4980,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.ViewManagement.IInputPaneStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IInputPaneStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -4488,6 +5108,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.ViewManagement.IUISettings2
  *    Windows.UI.ViewManagement.IUISettings3
  *    Windows.UI.ViewManagement.IUISettings4
+ *    Windows.UI.ViewManagement.IUISettings5
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -4499,6 +5120,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_ViewManagement_UISettings[] = L"Windows.UI.ViewManagement.UISettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_ViewManagement_UISettingsAutoHideScrollBarsChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_UI_ViewManagement_UISettingsAutoHideScrollBarsChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_ViewManagement_UISettingsAutoHideScrollBarsChangedEventArgs[] = L"Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4589,6 +5232,18 @@ typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView4 __x_AB
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView4_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs;
@@ -4643,6 +5298,12 @@ typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics3
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics3_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSwitcherStatics;
@@ -4679,6 +5340,12 @@ typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransfer
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTransferContextStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIInputPane_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPane_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIInputPane __x_ABI_CWindows_CUI_CViewManagement_CIInputPane;
@@ -4702,6 +5369,12 @@ typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneControl __x_AB
 typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs_FWD_DEFINED__
@@ -4762,6 +5435,18 @@ typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIUISettings3 __x_ABI_CWi
 typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIUISettings4 __x_ABI_CWindows_CUI_CViewManagement_CIUISettings4;
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs;
+
+#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIUIViewSettings_FWD_DEFINED__
@@ -4868,7 +5553,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibi
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIAccessibilitySettings * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIAccessibilitySettings * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CAccessibilitySettings_IInspectableVtbl;
 
@@ -4919,7 +5604,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicati
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_IInspectableVtbl;
 
@@ -4971,7 +5656,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicati
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewConsolidatedEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CApplicationView_Windows__CUI__CViewManagement__CApplicationViewConsolidatedEventArgsVtbl;
 
@@ -5024,7 +5709,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIInputPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIInputPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneVisibilityEventArgs * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CInputPane_Windows__CUI__CViewManagement__CInputPaneVisibilityEventArgsVtbl;
 
@@ -5076,7 +5761,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIStatusBar * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIStatusBar * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CStatusBar_IInspectableVtbl;
 
@@ -5127,7 +5812,7 @@ typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISetting
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIUISettings * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIUISettings * sender,/* [in] */ __RPC__in_opt IInspectable * e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectableVtbl;
 
@@ -5156,6 +5841,59 @@ interface __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IIn
 #endif // ____FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_IInspectable_INTERFACE_DEFINED__
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIUISettings * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs * e);
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 #if !defined(____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__)
 #define ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
@@ -5265,6 +6003,285 @@ interface __FIAsyncOperation_1_boolean
 
 #endif // ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
 
+
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion;
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion_FWD_DEFINED__
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion;
+
+typedef struct __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl;
+
+interface __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion;
+
+typedef  struct __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CWindowManagement__CDisplayRegion **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl;
+
+interface __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion;
+
+typedef struct __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+            /* [in] */ __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CWindowManagement_CIDisplayRegion * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl;
+
+interface __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegionVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 struct __x_ABI_CWindows_CUI_CColor;
 
@@ -5475,6 +6492,26 @@ typedef enum __x_ABI_CWindows_CUI_CPopups_CPlacement __x_ABI_CWindows_CUI_CPopup
 
 
 
+#ifndef ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CIUIContext __x_ABI_CWindows_CUI_CIUIContext;
+
+#endif // ____x_ABI_CWindows_CUI_CIUIContext_FWD_DEFINED__
+
+
+
+
+
+#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment __x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment;
+
+#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment_FWD_DEFINED__
+
+
+
+
+
 
 
 typedef enum __x_ABI_CWindows_CUI_CViewManagement_CApplicationViewBoundsMode __x_ABI_CWindows_CUI_CViewManagement_CApplicationViewBoundsMode;
@@ -5511,6 +6548,14 @@ typedef enum __x_ABI_CWindows_CUI_CViewManagement_CUserInteractionMode __x_ABI_C
 
 
 typedef enum __x_ABI_CWindows_CUI_CViewManagement_CViewSizePreference __x_ABI_CWindows_CUI_CViewManagement_CViewSizePreference;
+
+
+
+
+
+
+
+
 
 
 
@@ -6748,6 +7793,206 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView4;
 
 /*
  *
+ * Interface Windows.UI.ViewManagement.IApplicationView7
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationView7[] = L"Windows.UI.ViewManagement.IApplicationView7";
+/* [object, uuid("A0369647-5FAF-5AA6-9C38-BEFBB12A071E"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PersistedStateId )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_PersistedStateId )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7 * This,
+        /* [in] */__RPC__in HSTRING value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7Vtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_get_PersistedStateId(This,value) \
+    ( (This)->lpVtbl->get_PersistedStateId(This,value) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_put_PersistedStateId(This,value) \
+    ( (This)->lpVtbl->put_PersistedStateId(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView7_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IApplicationView9
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationView9[] = L"Windows.UI.ViewManagement.IApplicationView9";
+/* [object, uuid("9C6516F9-021A-5F01-93E5-9BDAD2647574"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_WindowingEnvironment )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CWindowManagement_CIWindowingEnvironment * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetDisplayRegions )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9 * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CWindowManagement__CDisplayRegion * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9Vtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_get_WindowingEnvironment(This,value) \
+    ( (This)->lpVtbl->get_WindowingEnvironment(This,value) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_GetDisplayRegions(This,result) \
+    ( (This)->lpVtbl->GetDisplayRegions(This,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationView9_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -7661,6 +8906,105 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewSta
 
 /*
  *
+ * Interface Windows.UI.ViewManagement.IApplicationViewStatics4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationViewStatics4[] = L"Windows.UI.ViewManagement.IApplicationViewStatics4";
+/* [object, uuid("08FD8D33-2611-5336-A315-D98E6366C9DB"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *ClearAllPersistedState )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This
+        );
+    HRESULT ( STDMETHODCALLTYPE *ClearPersistedState )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4 * This,
+        /* [in] */__RPC__in HSTRING key
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4Vtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_ClearAllPersistedState(This) \
+    ( (This)->lpVtbl->ClearAllPersistedState(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_ClearPersistedState(This,key) \
+    ( (This)->lpVtbl->ClearPersistedState(This,key) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.ViewManagement.IApplicationViewSwitcherStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -8462,6 +9806,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewTra
 
 /*
  *
+ * Interface Windows.UI.ViewManagement.IApplicationViewWithContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationViewWithContext[] = L"Windows.UI.ViewManagement.IApplicationViewWithContext";
+/* [object, uuid("BD55D512-9DC1-44FC-8501-666625DF60DC"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContextVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_UIContext )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CIUIContext * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContextVtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContextVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_get_UIContext(This,value) \
+    ( (This)->lpVtbl->get_UIContext(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewWithContext_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.ViewManagement.IInputPane
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -8874,6 +10311,100 @@ interface __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IInputPaneStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.InputPane
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IInputPaneStatics2[] = L"Windows.UI.ViewManagement.IInputPaneStatics2";
+/* [object, uuid("1B63529B-D9EC-4531-8445-71BAB9FB828E"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetForUIContext )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CIUIContext * context,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CViewManagement_CIInputPane * * result
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_GetForUIContext(This,context,result) \
+    ( (This)->lpVtbl->GetForUIContext(This,context,result) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIInputPaneStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -10154,6 +11685,200 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettings4;
 
 /*
  *
+ * Interface Windows.UI.ViewManagement.IUISettings5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.UISettings
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IUISettings5[] = L"Windows.UI.ViewManagement.IUISettings5";
+/* [object, uuid("5349D588-0CB5-5F05-BD34-706B3231F0BD"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AutoHideScrollBars )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_AutoHideScrollBarsChanged )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CViewManagement__CUISettings_Windows__CUI__CViewManagement__CUISettingsAutoHideScrollBarsChangedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_AutoHideScrollBarsChanged )(
+        __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5 * This,
+        /* [in] */EventRegistrationToken token
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5Vtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_get_AutoHideScrollBars(This,value) \
+    ( (This)->lpVtbl->get_AutoHideScrollBars(This,value) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_add_AutoHideScrollBarsChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_AutoHideScrollBarsChanged(This,handler,token) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_remove_AutoHideScrollBarsChanged(This,token) \
+    ( (This)->lpVtbl->remove_AutoHideScrollBarsChanged(This,token) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettings5;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettings5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IUISettingsAutoHideScrollBarsChangedEventArgs[] = L"Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs";
+/* [object, uuid("87AFD4B2-9146-5F02-8F6B-06D454174C0F"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
+} __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgsVtbl;
+
+interface __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIUISettingsAutoHideScrollBarsChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.UI.ViewManagement.IUIViewSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -10601,6 +12326,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics4 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics3 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -10612,6 +12338,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.ViewManagement.IApplicationView2
  *    Windows.UI.ViewManagement.IApplicationView3
  *    Windows.UI.ViewManagement.IApplicationView4
+ *    Windows.UI.ViewManagement.IApplicationView7
+ *    Windows.UI.ViewManagement.IApplicationView9
+ *    Windows.UI.ViewManagement.IApplicationViewWithContext
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -10754,6 +12483,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.ViewManagement.IInputPaneStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IInputPaneStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -10881,6 +12611,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.ViewManagement.IUISettings2
  *    Windows.UI.ViewManagement.IUISettings3
  *    Windows.UI.ViewManagement.IUISettings4
+ *    Windows.UI.ViewManagement.IUISettings5
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -10892,6 +12623,28 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_ViewManagement_UISettings[] = L"Windows.UI.ViewManagement.UISettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_UI_ViewManagement_UISettingsAutoHideScrollBarsChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_UI_ViewManagement_UISettingsAutoHideScrollBarsChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_ViewManagement_UISettingsAutoHideScrollBarsChangedEventArgs[] = L"Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*

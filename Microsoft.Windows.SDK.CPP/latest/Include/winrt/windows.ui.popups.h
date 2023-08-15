@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.ui.popups.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -92,7 +92,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -140,9 +140,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IUICommandInvokedHandler;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler ABI::Windows::UI::Popups::IUICommandInvokedHandler
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler_FWD_DEFINED__
@@ -154,9 +154,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IMessageDialog;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIMessageDialog ABI::Windows::UI::Popups::IMessageDialog
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIMessageDialog_FWD_DEFINED__
@@ -168,9 +168,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IMessageDialogFactory;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIMessageDialogFactory ABI::Windows::UI::Popups::IMessageDialogFactory
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIMessageDialogFactory_FWD_DEFINED__
@@ -182,9 +182,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IPopupMenu;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIPopupMenu ABI::Windows::UI::Popups::IPopupMenu
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIPopupMenu_FWD_DEFINED__
@@ -196,9 +196,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IUICommand;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIUICommand ABI::Windows::UI::Popups::IUICommand
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIUICommand_FWD_DEFINED__
@@ -210,9 +210,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 interface IUICommandFactory;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CUI_CPopups_CIUICommandFactory ABI::Windows::UI::Popups::IUICommandFactory
 
 #endif // ____x_ABI_CWindows_CUI_CPopups_CIUICommandFactory_FWD_DEFINED__
@@ -241,7 +241,7 @@ IIterator<ABI::Windows::UI::Popups::IUICommand*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Popups::IUICommand*> __FIIterator_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIIterator_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Popups::IUICommand*>
@@ -273,7 +273,7 @@ IIterable<ABI::Windows::UI::Popups::IUICommand*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Popups::IUICommand*> __FIIterable_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIIterable_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Popups::IUICommand*>
@@ -305,7 +305,7 @@ IVectorView<ABI::Windows::UI::Popups::IUICommand*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::UI::Popups::IUICommand*> __FIVectorView_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIVectorView_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Popups::IUICommand*>
@@ -337,7 +337,7 @@ IVector<ABI::Windows::UI::Popups::IUICommand*> : IVector_impl<ABI::Windows::UI::
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::UI::Popups::IUICommand*> __FIVector_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIVector_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::Collections::IVector<ABI::Windows::UI::Popups::IUICommand*>
@@ -369,7 +369,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::UI::Popups::IUICommand*> : IAsyncO
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Popups::IUICommand*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Popups::IUICommand*>
@@ -401,7 +401,7 @@ IAsyncOperation<ABI::Windows::UI::Popups::IUICommand*> : IAsyncOperation_impl<AB
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Popups::IUICommand*> __FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand_t;
 #define __FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CUI__CPopups__CIUICommand ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Popups::IUICommand*>
@@ -420,8 +420,8 @@ namespace ABI {
             
             typedef struct Point Point;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -429,8 +429,8 @@ namespace ABI {
             
             typedef struct Rect Rect;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 
@@ -442,9 +442,9 @@ namespace ABI {
                 
                 typedef enum MessageDialogOptions : unsigned int MessageDialogOptions;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -453,9 +453,9 @@ namespace ABI {
                 
                 typedef enum Placement : int Placement;
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -468,9 +468,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 class MessageDialog;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -478,9 +478,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 class PopupMenu;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -488,9 +488,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 class UICommand;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -498,9 +498,9 @@ namespace ABI {
         namespace UI {
             namespace Popups {
                 class UICommandSeparator;
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -534,9 +534,9 @@ namespace ABI {
                 
                 DEFINE_ENUM_FLAG_OPERATORS(MessageDialogOptions)
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -564,9 +564,9 @@ namespace ABI {
                     Placement_Right = 4,
                 };
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -598,9 +598,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUICommandInvokedHandler=_uuidof(IUICommandInvokedHandler);
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CPopups_CIUICommandInvokedHandler_INTERFACE_DEFINED__) */
@@ -672,9 +672,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageDialog=_uuidof(IMessageDialog);
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CPopups_CIMessageDialog;
 #endif /* !defined(____x_ABI_CWindows_CUI_CPopups_CIMessageDialog_INTERFACE_DEFINED__) */
@@ -719,9 +719,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IMessageDialogFactory=_uuidof(IMessageDialogFactory);
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CPopups_CIMessageDialogFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CPopups_CIMessageDialogFactory_INTERFACE_DEFINED__) */
@@ -773,9 +773,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IPopupMenu=_uuidof(IPopupMenu);
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CPopups_CIPopupMenu;
 #endif /* !defined(____x_ABI_CWindows_CUI_CPopups_CIPopupMenu_INTERFACE_DEFINED__) */
@@ -826,9 +826,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUICommand=_uuidof(IUICommand);
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CPopups_CIUICommand;
 #endif /* !defined(____x_ABI_CWindows_CUI_CPopups_CIUICommand_INTERFACE_DEFINED__) */
@@ -879,9 +879,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IUICommandFactory=_uuidof(IUICommandFactory);
                 
-            } /* Windows */
+            } /* Popups */
         } /* UI */
-    } /* Popups */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CPopups_CIUICommandFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CPopups_CIUICommandFactory_INTERFACE_DEFINED__) */

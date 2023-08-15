@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.speechsynthesis.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -279,9 +275,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface IInstalledVoicesStatic;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic ABI::Windows::Media::SpeechSynthesis::IInstalledVoicesStatic
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic_FWD_DEFINED__
@@ -293,9 +289,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface IInstalledVoicesStatic2;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic2 ABI::Windows::Media::SpeechSynthesis::IInstalledVoicesStatic2
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic2_FWD_DEFINED__
@@ -307,9 +303,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface ISpeechSynthesisStream;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesisStream ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesisStream
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesisStream_FWD_DEFINED__
@@ -321,9 +317,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface ISpeechSynthesizer;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesizer
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer_FWD_DEFINED__
@@ -335,9 +331,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface ISpeechSynthesizer2;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer2 ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesizer2
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer2_FWD_DEFINED__
@@ -349,9 +345,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface ISpeechSynthesizerOptions;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions_FWD_DEFINED__
@@ -363,9 +359,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface ISpeechSynthesizerOptions2;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions2 ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions2_FWD_DEFINED__
@@ -377,9 +373,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface ISpeechSynthesizerOptions3;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions3 ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions3
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions3_FWD_DEFINED__
@@ -391,9 +387,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 interface IVoiceInformation;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CSpeechSynthesis_CIVoiceInformation ABI::Windows::Media::SpeechSynthesis::IVoiceInformation
 
 #endif // ____x_ABI_CWindows_CMedia_CSpeechSynthesis_CIVoiceInformation_FWD_DEFINED__
@@ -406,9 +402,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 class VoiceInformation;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -431,7 +427,7 @@ IIterator<ABI::Windows::Media::SpeechSynthesis::VoiceInformation*> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::SpeechSynthesis::VoiceInformation*> __FIIterator_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation_t;
 #define __FIIterator_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::SpeechSynthesis::IVoiceInformation*>
@@ -463,7 +459,7 @@ IIterable<ABI::Windows::Media::SpeechSynthesis::VoiceInformation*> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::SpeechSynthesis::VoiceInformation*> __FIIterable_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation_t;
 #define __FIIterable_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::SpeechSynthesis::IVoiceInformation*>
@@ -495,7 +491,7 @@ IVectorView<ABI::Windows::Media::SpeechSynthesis::VoiceInformation*> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::SpeechSynthesis::VoiceInformation*> __FIVectorView_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation_t;
 #define __FIVectorView_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CSpeechSynthesis__CVoiceInformation ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::SpeechSynthesis::IVoiceInformation*>
@@ -511,9 +507,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 class SpeechSynthesisStream;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -536,7 +532,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechSynthesis::SpeechSynt
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechSynthesis::SpeechSynthesisStream*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesisStream*>
@@ -568,7 +564,7 @@ IAsyncOperation<ABI::Windows::Media::SpeechSynthesis::SpeechSynthesisStream*> : 
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::SpeechSynthesis::SpeechSynthesisStream*> __FIAsyncOperation_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CSpeechSynthesis__CSpeechSynthesisStream ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::SpeechSynthesis::ISpeechSynthesisStream*>
@@ -598,7 +594,7 @@ IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
 #define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
@@ -627,7 +623,7 @@ IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal:
 // correct parameterized interface specialization.
 typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
 #define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
@@ -643,8 +639,8 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             interface IMediaMarker;
-        } /* Windows */
-    } /* Media */} /* ABI */
+        } /* Media */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIMediaMarker ABI::Windows::Media::IMediaMarker
 
 #endif // ____x_ABI_CWindows_CMedia_CIMediaMarker_FWD_DEFINED__
@@ -670,7 +666,7 @@ IIterator<ABI::Windows::Media::IMediaMarker*> : IIterator_impl<ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::IMediaMarker*> __FIIterator_1_Windows__CMedia__CIMediaMarker_t;
 #define __FIIterator_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CIMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::IMediaMarker*>
@@ -702,7 +698,7 @@ IIterable<ABI::Windows::Media::IMediaMarker*> : IIterable_impl<ABI::Windows::Med
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::IMediaMarker*> __FIIterable_1_Windows__CMedia__CIMediaMarker_t;
 #define __FIIterable_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CIMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::IMediaMarker*>
@@ -734,7 +730,7 @@ IVectorView<ABI::Windows::Media::IMediaMarker*> : IVectorView_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::IMediaMarker*> __FIVectorView_1_Windows__CMedia__CIMediaMarker_t;
 #define __FIVectorView_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CIMediaMarker_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CMedia__CIMediaMarker ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::IMediaMarker*>
@@ -753,8 +749,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -770,9 +766,9 @@ namespace ABI {
         namespace Media {
             namespace Core {
                 interface ITimedMetadataTrackProvider;
-            } /* Windows */
+            } /* Core */
         } /* Media */
-    } /* Core */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CITimedMetadataTrackProvider ABI::Windows::Media::Core::ITimedMetadataTrackProvider
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CITimedMetadataTrackProvider_FWD_DEFINED__
@@ -791,9 +787,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IContentTypeProvider;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider ABI::Windows::Storage::Streams::IContentTypeProvider
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIContentTypeProvider_FWD_DEFINED__
@@ -806,9 +802,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -821,9 +817,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -836,9 +832,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -851,9 +847,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamWithContentType;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -869,9 +865,9 @@ namespace ABI {
                 
                 typedef enum SpeechAppendedSilence : int SpeechAppendedSilence;
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -880,9 +876,9 @@ namespace ABI {
                 
                 typedef enum SpeechPunctuationSilence : int SpeechPunctuationSilence;
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -891,9 +887,9 @@ namespace ABI {
                 
                 typedef enum VoiceGender : int VoiceGender;
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -910,9 +906,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 class SpeechSynthesizer;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -920,9 +916,9 @@ namespace ABI {
         namespace Media {
             namespace SpeechSynthesis {
                 class SpeechSynthesizerOptions;
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -955,9 +951,9 @@ namespace ABI {
                     SpeechAppendedSilence_Min = 1,
                 };
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -982,9 +978,9 @@ namespace ABI {
                     SpeechPunctuationSilence_Min = 1,
                 };
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 
@@ -1009,9 +1005,9 @@ namespace ABI {
                     VoiceGender_Female = 1,
                 };
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -1050,9 +1046,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInstalledVoicesStatic=_uuidof(IInstalledVoicesStatic);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic_INTERFACE_DEFINED__) */
@@ -1092,9 +1088,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IInstalledVoicesStatic2=_uuidof(IInstalledVoicesStatic2);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CIInstalledVoicesStatic2_INTERFACE_DEFINED__) */
@@ -1142,9 +1138,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechSynthesisStream=_uuidof(ISpeechSynthesisStream);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesisStream;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesisStream_INTERFACE_DEFINED__) */
@@ -1194,9 +1190,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechSynthesizer=_uuidof(ISpeechSynthesizer);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer_INTERFACE_DEFINED__) */
@@ -1235,9 +1231,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechSynthesizer2=_uuidof(ISpeechSynthesizer2);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizer2_INTERFACE_DEFINED__) */
@@ -1269,25 +1265,25 @@ namespace ABI {
                 {
                 public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeWordBoundaryMetadata(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeWordBoundaryMetadata(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IncludeSentenceBoundaryMetadata(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IncludeSentenceBoundaryMetadata(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_ISpeechSynthesizerOptions=_uuidof(ISpeechSynthesizerOptions);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions_INTERFACE_DEFINED__) */
@@ -1341,9 +1337,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechSynthesizerOptions2=_uuidof(ISpeechSynthesizerOptions2);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions2_INTERFACE_DEFINED__) */
@@ -1391,9 +1387,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_ISpeechSynthesizerOptions3=_uuidof(ISpeechSynthesizerOptions3);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CISpeechSynthesizerOptions3_INTERFACE_DEFINED__) */
@@ -1444,9 +1440,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVoiceInformation=_uuidof(IVoiceInformation);
                 
-            } /* Windows */
+            } /* SpeechSynthesis */
         } /* Media */
-    } /* SpeechSynthesis */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CSpeechSynthesis_CIVoiceInformation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CSpeechSynthesis_CIVoiceInformation_INTERFACE_DEFINED__) */

@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.security.authentication.onlineid.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -278,10 +274,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdAuthenticator;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdAuthenticator ABI::Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdAuthenticator_FWD_DEFINED__
@@ -294,10 +290,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdServiceTicket;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicket ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicket_FWD_DEFINED__
@@ -310,10 +306,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdServiceTicketRequest;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequest ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequest_FWD_DEFINED__
@@ -326,10 +322,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdServiceTicketRequestFactory;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequestFactory ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequestFactory_FWD_DEFINED__
@@ -342,10 +338,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdSystemAuthenticatorForUser;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorForUser ABI::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorForUser_FWD_DEFINED__
@@ -358,10 +354,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdSystemAuthenticatorStatics;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorStatics ABI::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorStatics_FWD_DEFINED__
@@ -374,10 +370,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdSystemIdentity;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemIdentity ABI::Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemIdentity_FWD_DEFINED__
@@ -390,10 +386,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IOnlineIdSystemTicketResult;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemTicketResult ABI::Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemTicketResult_FWD_DEFINED__
@@ -406,10 +402,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     interface IUserIdentity;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIUserIdentity ABI::Windows::Security::Authentication::OnlineId::IUserIdentity
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIUserIdentity_FWD_DEFINED__
@@ -423,10 +419,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class OnlineIdServiceTicket;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -449,7 +445,7 @@ IIterator<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicke
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket*> __FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket_t;
 #define __FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket*>
@@ -481,7 +477,7 @@ IIterable<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicke
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket*> __FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket_t;
 #define __FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket*>
@@ -498,10 +494,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class OnlineIdServiceTicketRequest;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -524,7 +520,7 @@ IIterator<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicke
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest*> __FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest_t;
 #define __FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest*>
@@ -556,7 +552,7 @@ IIterable<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicke
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest*> __FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest_t;
 #define __FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicketRequest ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest*>
@@ -588,7 +584,7 @@ IVectorView<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTic
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket*> __FIVectorView_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket_t;
 #define __FIVectorView_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdServiceTicket ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket*>
@@ -605,10 +601,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class OnlineIdSystemTicketResult;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -631,7 +627,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::OnlineId
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult*>
@@ -663,7 +659,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::OnlineId::OnlineIdSystem
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__COnlineIdSystemTicketResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult*>
@@ -680,10 +676,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class UserIdentity;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -706,7 +702,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::OnlineId
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::OnlineId::UserIdentity*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::OnlineId::IUserIdentity*>
@@ -738,7 +734,7 @@ IAsyncOperation<ABI::Windows::Security::Authentication::OnlineId::UserIdentity*>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::OnlineId::UserIdentity*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__COnlineId__CUserIdentity ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::OnlineId::IUserIdentity*>
@@ -757,8 +753,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IAsyncAction;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -771,8 +767,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             class User;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -780,8 +776,8 @@ namespace ABI {
     namespace Windows {
         namespace System {
             interface IUser;
-        } /* Windows */
-    } /* System */} /* ABI */
+        } /* System */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -797,10 +793,10 @@ namespace ABI {
                     
                     typedef enum CredentialPromptType : int CredentialPromptType;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -810,10 +806,10 @@ namespace ABI {
                     
                     typedef enum OnlineIdSystemTicketStatus : int OnlineIdSystemTicketStatus;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -830,10 +826,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class OnlineIdAuthenticator;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -845,10 +841,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class OnlineIdSystemAuthenticatorForUser;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -857,10 +853,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class OnlineIdSystemIdentity;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -870,10 +866,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class SignOutUserOperation;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -882,10 +878,10 @@ namespace ABI {
             namespace Authentication {
                 namespace OnlineId {
                     class UserAuthenticationOperation;
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -922,10 +918,10 @@ namespace ABI {
                         CredentialPromptType_DoNotPrompt = 2,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -952,10 +948,10 @@ namespace ABI {
                         OnlineIdSystemTicketStatus_ServiceConnectionError = 2,
                     };
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
@@ -1003,7 +999,7 @@ namespace ABI {
                             /* [retval, out] */__RPC__out GUID * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanSignOut(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AuthenticatedSafeCustomerId(
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -1013,10 +1009,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdAuthenticator=_uuidof(IOnlineIdAuthenticator);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdAuthenticator;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdAuthenticator_INTERFACE_DEFINED__) */
@@ -1062,10 +1058,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdServiceTicket=_uuidof(IOnlineIdServiceTicket);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicket;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicket_INTERFACE_DEFINED__) */
@@ -1108,10 +1104,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdServiceTicketRequest=_uuidof(IOnlineIdServiceTicketRequest);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequest;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequest_INTERFACE_DEFINED__) */
@@ -1157,10 +1153,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdServiceTicketRequestFactory=_uuidof(IOnlineIdServiceTicketRequestFactory);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequestFactory;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdServiceTicketRequestFactory_INTERFACE_DEFINED__) */
@@ -1210,10 +1206,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdSystemAuthenticatorForUser=_uuidof(IOnlineIdSystemAuthenticatorForUser);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorForUser;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorForUser_INTERFACE_DEFINED__) */
@@ -1257,10 +1253,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdSystemAuthenticatorStatics=_uuidof(IOnlineIdSystemAuthenticatorStatics);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemAuthenticatorStatics_INTERFACE_DEFINED__) */
@@ -1303,10 +1299,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdSystemIdentity=_uuidof(IOnlineIdSystemIdentity);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemIdentity;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemIdentity_INTERFACE_DEFINED__) */
@@ -1352,10 +1348,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IOnlineIdSystemTicketResult=_uuidof(IOnlineIdSystemTicketResult);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemTicketResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIOnlineIdSystemTicketResult_INTERFACE_DEFINED__) */
@@ -1406,20 +1402,20 @@ namespace ABI {
                             /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBetaAccount(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsConfirmedPC(
-                            /* [retval, out] */__RPC__out boolean * value
+                            /* [retval, out] */__RPC__out ::boolean * value
                             ) = 0;
                         
                     };
 
                     extern MIDL_CONST_ID IID & IID_IUserIdentity=_uuidof(IUserIdentity);
                     
-                } /* Windows */
-            } /* Security */
-        } /* Authentication */
-    } /* OnlineId */} /* ABI */
+                } /* OnlineId */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIUserIdentity;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_COnlineId_CIUserIdentity_INTERFACE_DEFINED__) */

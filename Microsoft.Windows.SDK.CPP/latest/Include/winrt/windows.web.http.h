@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.web.http.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0223 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -112,11 +112,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x70000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -235,10 +235,6 @@
 #define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
-#if !defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_SYSTEM_ANDROMEDAPLACEHOLDERCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -281,9 +277,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpBufferContentFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory ABI::Windows::Web::Http::IHttpBufferContentFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory_FWD_DEFINED__
@@ -295,12 +291,26 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpClient;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient ABI::Windows::Web::Http::IHttpClient
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                interface IHttpClient2;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 ABI::Windows::Web::Http::IHttpClient2
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_FWD_DEFINED__
@@ -309,9 +319,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpClientFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory ABI::Windows::Web::Http::IHttpClientFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_FWD_DEFINED__
@@ -323,9 +333,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpContent ABI::Windows::Web::Http::IHttpContent
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpContent_FWD_DEFINED__
@@ -337,9 +347,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpCookie;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookie ABI::Windows::Web::Http::IHttpCookie
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookie_FWD_DEFINED__
@@ -351,9 +361,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpCookieFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory ABI::Windows::Web::Http::IHttpCookieFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory_FWD_DEFINED__
@@ -365,9 +375,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpCookieManager;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager ABI::Windows::Web::Http::IHttpCookieManager
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_FWD_DEFINED__
@@ -379,12 +389,54 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpFormUrlEncodedContentFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory ABI::Windows::Web::Http::IHttpFormUrlEncodedContentFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                interface IHttpGetBufferResult;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult ABI::Windows::Web::Http::IHttpGetBufferResult
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                interface IHttpGetInputStreamResult;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult ABI::Windows::Web::Http::IHttpGetInputStreamResult
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                interface IHttpGetStringResult;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult ABI::Windows::Web::Http::IHttpGetStringResult
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
@@ -393,9 +445,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMethod;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMethod ABI::Windows::Web::Http::IHttpMethod
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
@@ -407,9 +459,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMethodFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory ABI::Windows::Web::Http::IHttpMethodFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory_FWD_DEFINED__
@@ -421,9 +473,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMethodStatics;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMethodStatics ABI::Windows::Web::Http::IHttpMethodStatics
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethodStatics_FWD_DEFINED__
@@ -435,9 +487,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMultipartContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContent ABI::Windows::Web::Http::IHttpMultipartContent
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContent_FWD_DEFINED__
@@ -449,9 +501,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMultipartContentFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory ABI::Windows::Web::Http::IHttpMultipartContentFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory_FWD_DEFINED__
@@ -463,9 +515,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMultipartFormDataContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContent ABI::Windows::Web::Http::IHttpMultipartFormDataContent
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContent_FWD_DEFINED__
@@ -477,9 +529,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpMultipartFormDataContentFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory ABI::Windows::Web::Http::IHttpMultipartFormDataContentFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory_FWD_DEFINED__
@@ -491,9 +543,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage ABI::Windows::Web::Http::IHttpRequestMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_FWD_DEFINED__
@@ -505,12 +557,26 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpRequestMessageFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory ABI::Windows::Web::Http::IHttpRequestMessageFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                interface IHttpRequestResult;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult ABI::Windows::Web::Http::IHttpRequestResult
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -519,9 +585,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpResponseMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage ABI::Windows::Web::Http::IHttpResponseMessage
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -533,9 +599,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpResponseMessageFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory ABI::Windows::Web::Http::IHttpResponseMessageFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory_FWD_DEFINED__
@@ -547,9 +613,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpStreamContentFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory ABI::Windows::Web::Http::IHttpStreamContentFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory_FWD_DEFINED__
@@ -561,9 +627,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpStringContentFactory;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory ABI::Windows::Web::Http::IHttpStringContentFactory
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_FWD_DEFINED__
@@ -575,9 +641,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 interface IHttpTransportInformation;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpTransportInformation ABI::Windows::Web::Http::IHttpTransportInformation
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpTransportInformation_FWD_DEFINED__
@@ -604,7 +670,7 @@ IReference<UINT64> : IReference_impl<UINT64>
 // correct parameterized interface specialization.
 typedef IReference<UINT64> __FIReference_1_UINT64_t;
 #define __FIReference_1_UINT64 ABI::Windows::Foundation::__FIReference_1_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_UINT64 ABI::Windows::Foundation::IReference<UINT64>
@@ -619,9 +685,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpCookie;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -644,7 +710,7 @@ IIterator<ABI::Windows::Web::Http::HttpCookie*> : IIterator_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::HttpCookie*> __FIIterator_1_Windows__CWeb__CHttp__CHttpCookie_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHttpCookie_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::IHttpCookie*>
@@ -676,7 +742,7 @@ IIterable<ABI::Windows::Web::Http::HttpCookie*> : IIterable_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::HttpCookie*> __FIIterable_1_Windows__CWeb__CHttp__CHttpCookie_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHttpCookie_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::IHttpCookie*>
@@ -692,9 +758,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpMethod;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -717,7 +783,7 @@ IIterator<ABI::Windows::Web::Http::HttpMethod*> : IIterator_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::HttpMethod*> __FIIterator_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::IHttpMethod*>
@@ -749,7 +815,7 @@ IIterable<ABI::Windows::Web::Http::HttpMethod*> : IIterable_impl<ABI::Windows::F
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::HttpMethod*> __FIIterable_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::IHttpMethod*>
@@ -781,7 +847,7 @@ IIterator<ABI::Windows::Web::Http::IHttpContent*> : IIterator_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Web::Http::IHttpContent*> __FIIterator_1_Windows__CWeb__CHttp__CIHttpContent_t;
 #define __FIIterator_1_Windows__CWeb__CHttp__CIHttpContent ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CWeb__CHttp__CIHttpContent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CWeb__CHttp__CIHttpContent ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Web::Http::IHttpContent*>
@@ -813,7 +879,7 @@ IIterable<ABI::Windows::Web::Http::IHttpContent*> : IIterable_impl<ABI::Windows:
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Web::Http::IHttpContent*> __FIIterable_1_Windows__CWeb__CHttp__CIHttpContent_t;
 #define __FIIterable_1_Windows__CWeb__CHttp__CIHttpContent ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CWeb__CHttp__CIHttpContent_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CWeb__CHttp__CIHttpContent ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Web::Http::IHttpContent*>
@@ -845,7 +911,7 @@ IVectorView<ABI::Windows::Web::Http::HttpCookie*> : IVectorView_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::HttpCookie*> __FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::IHttpCookie*>
@@ -877,7 +943,7 @@ IVectorView<ABI::Windows::Web::Http::HttpMethod*> : IVectorView_impl<ABI::Window
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Web::Http::HttpMethod*> __FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Web::Http::IHttpMethod*>
@@ -909,7 +975,7 @@ IVector<ABI::Windows::Web::Http::HttpCookie*> : IVector_impl<ABI::Windows::Found
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::HttpCookie*> __FIVector_1_Windows__CWeb__CHttp__CHttpCookie_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHttpCookie_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHttpCookie ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::IHttpCookie*>
@@ -941,7 +1007,7 @@ IVector<ABI::Windows::Web::Http::HttpMethod*> : IVector_impl<ABI::Windows::Found
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Web::Http::HttpMethod*> __FIVector_1_Windows__CWeb__CHttp__CHttpMethod_t;
 #define __FIVector_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CWeb__CHttp__CHttpMethod_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVector_1_Windows__CWeb__CHttp__CHttpMethod ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Web::Http::IHttpMethod*>
@@ -958,9 +1024,9 @@ namespace ABI {
             namespace Http {
                 struct HttpProgress;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress_USE
@@ -981,7 +1047,7 @@ IAsyncOperationProgressHandler<HSTRING,struct ABI::Windows::Web::Http::HttpProgr
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<HSTRING,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<HSTRING,ABI::Windows::Web::Http::HttpProgress>
@@ -1011,7 +1077,7 @@ IAsyncOperationWithProgressCompletedHandler<HSTRING,struct ABI::Windows::Web::Ht
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<HSTRING,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<HSTRING,ABI::Windows::Web::Http::HttpProgress>
@@ -1041,7 +1107,7 @@ IAsyncOperationWithProgress<HSTRING,struct ABI::Windows::Web::Http::HttpProgress
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<HSTRING,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgress_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<HSTRING,ABI::Windows::Web::Http::HttpProgress>
@@ -1058,9 +1124,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IBuffer;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIBuffer ABI::Windows::Storage::Streams::IBuffer
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
@@ -1087,7 +1153,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,struct A
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,ABI::Windows::Web::Http::HttpProgress>
@@ -1120,7 +1186,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuf
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,ABI::Windows::Web::Http::HttpProgress>
@@ -1153,7 +1219,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,struct ABI:
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,ABI::Windows::Web::Http::HttpProgress>
@@ -1171,9 +1237,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IInputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIInputStream ABI::Windows::Storage::Streams::IInputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIInputStream_FWD_DEFINED__
@@ -1200,7 +1266,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,str
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,ABI::Windows::Web::Http::HttpProgress>
@@ -1233,7 +1299,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInp
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,ABI::Windows::Web::Http::HttpProgress>
@@ -1266,7 +1332,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,struct
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,ABI::Windows::Web::Http::HttpProgress>
@@ -1281,10 +1347,442 @@ namespace ABI {
     namespace Windows {
         namespace Web {
             namespace Http {
-                class HttpResponseMessage;
-            } /* Windows */
+                class HttpGetBufferResult;
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("43624279-9a68-5052-a9de-19569b54818a"))
+IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpGetBufferResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationProgressHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetBufferResult*, ABI::Windows::Web::Http::IHttpGetBufferResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationProgressHandler`2<Windows.Web.Http.HttpGetBufferResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpGetBufferResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpGetBufferResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpGetBufferResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("6bec534a-1901-5fa2-9686-9a510f6b1217"))
+IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpGetBufferResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgressCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetBufferResult*, ABI::Windows::Web::Http::IHttpGetBufferResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<Windows.Web.Http.HttpGetBufferResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpGetBufferResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpGetBufferResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpGetBufferResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("b128fbc4-19c0-5fe1-aec6-d2e64bd22862"))
+IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpGetBufferResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgress_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetBufferResult*, ABI::Windows::Web::Http::IHttpGetBufferResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Http.HttpGetBufferResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpGetBufferResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpGetBufferResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpGetBufferResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                class HttpGetInputStreamResult;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("5d399e45-63aa-52f7-bbb6-c718ca64bd2a"))
+IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpGetInputStreamResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationProgressHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetInputStreamResult*, ABI::Windows::Web::Http::IHttpGetInputStreamResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationProgressHandler`2<Windows.Web.Http.HttpGetInputStreamResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpGetInputStreamResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpGetInputStreamResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpGetInputStreamResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("789b1519-4ae1-5475-bb01-6734cad478ff"))
+IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpGetInputStreamResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgressCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetInputStreamResult*, ABI::Windows::Web::Http::IHttpGetInputStreamResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<Windows.Web.Http.HttpGetInputStreamResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpGetInputStreamResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpGetInputStreamResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpGetInputStreamResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("6e1ce5ac-c10b-5d09-ad43-f4ddeada857a"))
+IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpGetInputStreamResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgress_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetInputStreamResult*, ABI::Windows::Web::Http::IHttpGetInputStreamResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Http.HttpGetInputStreamResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpGetInputStreamResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpGetInputStreamResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpGetInputStreamResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                class HttpGetStringResult;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("43516920-bbfc-5ba6-9d59-8af34fc97b4e"))
+IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpGetStringResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationProgressHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetStringResult*, ABI::Windows::Web::Http::IHttpGetStringResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationProgressHandler`2<Windows.Web.Http.HttpGetStringResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpGetStringResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpGetStringResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpGetStringResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("625df3b5-bff7-517a-9359-1dc28fb0f586"))
+IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpGetStringResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgressCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetStringResult*, ABI::Windows::Web::Http::IHttpGetStringResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<Windows.Web.Http.HttpGetStringResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpGetStringResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpGetStringResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpGetStringResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("7382f299-bbbd-5bd3-b143-8887c627929b"))
+IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpGetStringResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgress_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpGetStringResult*, ABI::Windows::Web::Http::IHttpGetStringResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Http.HttpGetStringResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpGetStringResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpGetStringResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpGetStringResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                class HttpRequestResult;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("167f8eda-2a7a-56a2-bba3-76d78e24f13d"))
+IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpRequestResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationProgressHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpRequestResult*, ABI::Windows::Web::Http::IHttpRequestResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationProgressHandler`2<Windows.Web.Http.HttpRequestResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpRequestResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpRequestResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpRequestResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("fdfc3d8f-08bb-5d82-bfde-ae092e7e3fe1"))
+IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpRequestResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgressCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpRequestResult*, ABI::Windows::Web::Http::IHttpRequestResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<Windows.Web.Http.HttpRequestResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpRequestResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpRequestResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpRequestResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#define DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("97388336-2eac-5d76-b228-d32ef9a38175"))
+IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpRequestResult*,struct ABI::Windows::Web::Http::HttpProgress> : IAsyncOperationWithProgress_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Web::Http::HttpRequestResult*, ABI::Windows::Web::Http::IHttpRequestResult*>,struct ABI::Windows::Web::Http::HttpProgress> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Http.HttpRequestResult, Windows.Web.Http.HttpProgress>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpRequestResult*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t;
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t
+/* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpRequestResult*,ABI::Windows::Web::Http::HttpProgress>
+//#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_t ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpRequestResult*,ABI::Windows::Web::Http::HttpProgress>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                class HttpResponseMessage;
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 
 
@@ -1308,7 +1806,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpResponseMessage*,str
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Web::Http::HttpResponseMessage*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Web::Http::IHttpResponseMessage*,ABI::Windows::Web::Http::HttpProgress>
@@ -1341,7 +1839,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpRespons
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::HttpResponseMessage*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Web::Http::IHttpResponseMessage*,ABI::Windows::Web::Http::HttpProgress>
@@ -1374,7 +1872,7 @@ IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpResponseMessage*,struct
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Web::Http::HttpResponseMessage*,struct ABI::Windows::Web::Http::HttpProgress> __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Web::Http::IHttpResponseMessage*,ABI::Windows::Web::Http::HttpProgress>
@@ -1404,7 +1902,7 @@ IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
@@ -1434,7 +1932,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1464,7 +1962,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
@@ -1493,7 +1991,7 @@ IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
 #define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
@@ -1522,7 +2020,7 @@ IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
 #define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
@@ -1551,7 +2049,7 @@ IAsyncOperationProgressHandler<UINT64,UINT64> : IAsyncOperationProgressHandler_i
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<UINT64,UINT64> __FIAsyncOperationProgressHandler_2_UINT64_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<UINT64,UINT64>
@@ -1580,7 +2078,7 @@ IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64> : IAsyncOperationWith
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<UINT64,UINT64>
@@ -1609,7 +2107,7 @@ IAsyncOperationWithProgress<UINT64,UINT64> : IAsyncOperationWithProgress_impl<UI
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<UINT64,UINT64> __FIAsyncOperationWithProgress_2_UINT64_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_UINT64_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_UINT64_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_UINT64_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<UINT64,UINT64>
@@ -1640,7 +2138,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64>
@@ -1672,7 +2170,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuf
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IBuffer*,UINT64>
@@ -1704,7 +2202,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT64> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT64> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IBuffer*,UINT64>
@@ -1736,7 +2234,7 @@ IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,UIN
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64> __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64>
@@ -1768,7 +2266,7 @@ IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInp
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Storage::Streams::IInputStream*,UINT64>
@@ -1800,7 +2298,7 @@ IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,UINT64
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,UINT64> __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Storage::Streams::IInputStream*,UINT64>
@@ -1830,7 +2328,7 @@ IAsyncOperationProgressHandler<HSTRING,UINT64> : IAsyncOperationProgressHandler_
 // correct parameterized interface specialization.
 typedef IAsyncOperationProgressHandler<HSTRING,UINT64> __FIAsyncOperationProgressHandler_2_HSTRING_UINT64_t;
 #define __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_HSTRING_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::IAsyncOperationProgressHandler<HSTRING,UINT64>
@@ -1859,7 +2357,7 @@ IAsyncOperationWithProgressCompletedHandler<HSTRING,UINT64> : IAsyncOperationWit
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgressCompletedHandler<HSTRING,UINT64> __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64_t;
 #define __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<HSTRING,UINT64>
@@ -1888,7 +2386,7 @@ IAsyncOperationWithProgress<HSTRING,UINT64> : IAsyncOperationWithProgress_impl<H
 // correct parameterized interface specialization.
 typedef IAsyncOperationWithProgress<HSTRING,UINT64> __FIAsyncOperationWithProgress_2_HSTRING_UINT64_t;
 #define __FIAsyncOperationWithProgress_2_HSTRING_UINT64 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_HSTRING_UINT64_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationWithProgress_2_HSTRING_UINT64 ABI::Windows::Foundation::IAsyncOperationWithProgress<HSTRING,UINT64>
@@ -1903,8 +2401,8 @@ namespace ABI {
         namespace Foundation {
             struct DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
@@ -1925,7 +2423,7 @@ IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
 #define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* ABI */ } /* Windows */ } /* Foundation */ }
+/* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::DateTime>
@@ -1955,7 +2453,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -1985,7 +2483,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2015,7 +2513,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -2045,7 +2543,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -2075,7 +2573,7 @@ IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
 #define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
@@ -2091,10 +2589,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     enum ChainValidationResult : int;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_USE
@@ -2115,7 +2613,7 @@ IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2145,7 +2643,7 @@ IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidati
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2175,7 +2673,7 @@ IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValida
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CChainValidationResult ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ChainValidationResult>
@@ -2191,10 +2689,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     class Certificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2204,10 +2702,10 @@ namespace ABI {
             namespace Cryptography {
                 namespace Certificates {
                     interface ICertificate;
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate ABI::Windows::Security::Cryptography::Certificates::ICertificate
 
 #endif // ____x_ABI_CWindows_CSecurity_CCryptography_CCertificates_CICertificate_FWD_DEFINED__
@@ -2233,7 +2731,7 @@ IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2265,7 +2763,7 @@ IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2297,7 +2795,7 @@ IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Security::Cryptography::Certificates::Certificate*> __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t;
 #define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate_t
-/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIVectorView_1_Windows__CSecurity__CCryptography__CCertificates__CCertificate ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Cryptography::Certificates::ICertificate*>
@@ -2316,8 +2814,8 @@ namespace ABI {
             
             typedef struct DateTime DateTime;
             
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2325,8 +2823,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IClosable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -2338,8 +2836,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -2350,8 +2848,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class Uri;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2359,8 +2857,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IUriRuntimeClass;
-        } /* Windows */
-    } /* Foundation */} /* ABI */
+        } /* Foundation */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -2375,9 +2873,9 @@ namespace ABI {
                 
                 typedef enum SocketSslErrorSeverity : int SocketSslErrorSeverity;
                 
-            } /* Windows */
+            } /* Sockets */
         } /* Networking */
-    } /* Sockets */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2391,10 +2889,10 @@ namespace ABI {
                     
                     typedef enum ChainValidationResult : int ChainValidationResult;
                     
-                } /* Windows */
-            } /* Security */
-        } /* Cryptography */
-    } /* Certificates */} /* ABI */
+                } /* Certificates */
+            } /* Cryptography */
+        } /* Security */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2409,9 +2907,9 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IOutputStream;
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIOutputStream ABI::Windows::Storage::Streams::IOutputStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIOutputStream_FWD_DEFINED__
@@ -2424,9 +2922,9 @@ namespace ABI {
                 
                 typedef enum UnicodeEncoding : int UnicodeEncoding;
                 
-            } /* Windows */
+            } /* Streams */
         } /* Storage */
-    } /* Streams */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2439,10 +2937,10 @@ namespace ABI {
             namespace Http {
                 namespace Filters {
                     interface IHttpFilter;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Filters */} /* ABI */
+                } /* Filters */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpFilter ABI::Windows::Web::Http::Filters::IHttpFilter
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpFilter_FWD_DEFINED__
@@ -2458,10 +2956,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpContentHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_FWD_DEFINED__
@@ -2471,10 +2969,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpContentHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection ABI::Windows::Web::Http::Headers::IHttpContentHeaderCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpContentHeaderCollection_FWD_DEFINED__
@@ -2486,10 +2984,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpRequestHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_FWD_DEFINED__
@@ -2499,10 +2997,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpRequestHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection ABI::Windows::Web::Http::Headers::IHttpRequestHeaderCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpRequestHeaderCollection_FWD_DEFINED__
@@ -2514,10 +3012,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     class HttpResponseHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_FWD_DEFINED__
@@ -2527,10 +3025,10 @@ namespace ABI {
             namespace Http {
                 namespace Headers {
                     interface IHttpResponseHeaderCollection;
-                } /* Windows */
-            } /* Web */
-        } /* Http */
-    } /* Headers */} /* ABI */
+                } /* Headers */
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
 #define __x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection ABI::Windows::Web::Http::Headers::IHttpResponseHeaderCollection
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CHeaders_CIHttpResponseHeaderCollection_FWD_DEFINED__
@@ -2547,9 +3045,9 @@ namespace ABI {
                 
                 typedef enum HttpCompletionOption : int HttpCompletionOption;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2558,9 +3056,9 @@ namespace ABI {
                 
                 typedef enum HttpProgressStage : int HttpProgressStage;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2569,9 +3067,9 @@ namespace ABI {
                 
                 typedef enum HttpResponseMessageSource : int HttpResponseMessageSource;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2580,9 +3078,9 @@ namespace ABI {
                 
                 typedef enum HttpStatusCode : int HttpStatusCode;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2591,9 +3089,9 @@ namespace ABI {
                 
                 typedef enum HttpVersion : int HttpVersion;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -2602,9 +3100,14 @@ namespace ABI {
                 
                 typedef struct HttpProgress HttpProgress;
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
+
+
 
 
 
@@ -2633,9 +3136,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpBufferContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2643,9 +3146,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpClient;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2654,9 +3157,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpCookieCollection;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2664,9 +3167,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpCookieManager;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2674,9 +3177,12 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpFormUrlEncodedContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
+
+
+
 
 
 
@@ -2685,9 +3191,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpMultipartContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2695,9 +3201,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpMultipartFormDataContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2705,9 +3211,10 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpRequestMessage;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
+
 
 
 
@@ -2716,9 +3223,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpStreamContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2726,9 +3233,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpStringContent;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 namespace ABI {
@@ -2736,9 +3243,9 @@ namespace ABI {
         namespace Web {
             namespace Http {
                 class HttpTransportInformation;
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 
 
@@ -2770,9 +3277,9 @@ namespace ABI {
                     HttpCompletionOption_ResponseHeadersRead = 1,
                 };
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2805,9 +3312,9 @@ namespace ABI {
                     HttpProgressStage_ReceivingContent = 90,
                 };
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2833,9 +3340,9 @@ namespace ABI {
                     HttpResponseMessageSource_Network = 2,
                 };
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2916,9 +3423,9 @@ namespace ABI {
                     HttpStatusCode_NetworkAuthenticationRequired = 511,
                 };
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2949,9 +3456,9 @@ namespace ABI {
                     
                 };
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -2980,9 +3487,9 @@ namespace ABI {
                     UINT32 Retries;
                 };
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -3012,22 +3519,22 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreateFromBuffer(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * content,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * bufferContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateFromBufferWithOffset(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IBuffer * content,
                         /* [in] */UINT32 offset,
                         /* [in] */UINT32 count,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * bufferContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpBufferContentFactory=_uuidof(IHttpBufferContentFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory_INTERFACE_DEFINED__) */
@@ -3042,10 +3549,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory;
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpClient
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -3114,13 +3617,95 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpClient=_uuidof(IHttpClient);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpClient;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpClient_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpClient2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpClient
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpClient2[] = L"Windows.Web.Http.IHttpClient2";
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                /* [object, uuid("CDD83348-E8B7-4CEC-B1B0-DC455FE72C92"), exclusiveto, contract] */
+                MIDL_INTERFACE("CDD83348-E8B7-4CEC-B1B0-DC455FE72C92")
+                IHttpClient2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE TryDeleteAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryGetAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryGetAsync2(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [in] */ABI::Windows::Web::Http::HttpCompletionOption completionOption,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryGetBufferAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryGetInputStreamAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryGetStringAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryPostAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpContent * content,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryPutAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
+                        /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpContent * content,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE TrySendRequestAsync(
+                        /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpRequestMessage * request,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE TrySendRequestAsync2(
+                        /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpRequestMessage * request,
+                        /* [in] */ABI::Windows::Web::Http::HttpCompletionOption completionOption,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHttpClient2=_uuidof(IHttpClient2);
+                
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpClient2;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3149,16 +3734,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */__RPC__in_opt ABI::Windows::Web::Http::Filters::IHttpFilter * filter,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpClient * * client
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpClient * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpClientFactory=_uuidof(IHttpClientFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_INTERFACE_DEFINED__) */
@@ -3207,7 +3792,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryComputeLength(
                         /* [out] */__RPC__out UINT64 * length,
-                        /* [retval, out] */__RPC__out boolean * succeeded
+                        /* [retval, out] */__RPC__out ::boolean * succeeded
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE WriteToStreamAsync(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IOutputStream * outputStream,
@@ -3218,9 +3803,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpContent=_uuidof(IHttpContent);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpContent;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpContent_INTERFACE_DEFINED__) */
@@ -3267,16 +3852,16 @@ namespace ABI {
                         /* [in] */__RPC__in_opt __FIReference_1_Windows__CFoundation__CDateTime * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HttpOnly(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_HttpOnly(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Secure(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Secure(
-                        /* [in] */boolean value
+                        /* [in] */::boolean value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -3289,9 +3874,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpCookie=_uuidof(IHttpCookie);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpCookie;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpCookie_INTERFACE_DEFINED__) */
@@ -3326,16 +3911,16 @@ namespace ABI {
                         /* [in] */__RPC__in HSTRING name,
                         /* [in] */__RPC__in HSTRING domain,
                         /* [in] */__RPC__in HSTRING path,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpCookie * * cookie
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpCookie * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpCookieFactory=_uuidof(IHttpCookieFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory_INTERFACE_DEFINED__) */
@@ -3368,28 +3953,28 @@ namespace ABI {
                 public:
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SetCookie(
                         /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpCookie * cookie,
-                        /* [retval, out] */__RPC__out boolean * replaced
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     /* [overload] */virtual HRESULT STDMETHODCALLTYPE SetCookieWithThirdParty(
                         /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpCookie * cookie,
-                        /* [in] */boolean thirdParty,
-                        /* [retval, out] */__RPC__out boolean * replaced
+                        /* [in] */::boolean thirdParty,
+                        /* [retval, out] */__RPC__out ::boolean * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE DeleteCookie(
                         /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpCookie * cookie
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetCookies(
                         /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie * * value
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie * * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpCookieManager=_uuidof(IHttpCookieManager);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_INTERFACE_DEFINED__) */
@@ -3422,20 +4007,179 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */__RPC__in_opt __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * content,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * formUrlEncodedContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpFormUrlEncodedContentFactory=_uuidof(IHttpFormUrlEncodedContentFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpGetBufferResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpGetBufferResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpGetBufferResult[] = L"Windows.Web.Http.IHttpGetBufferResult";
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                /* [object, uuid("53D08E7C-E209-404E-9A49-742D8236FD3A"), exclusiveto, contract] */
+                MIDL_INTERFACE("53D08E7C-E209-404E-9A49-742D8236FD3A")
+                IHttpGetBufferResult : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
+                        /* [retval, out] */__RPC__out HRESULT * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequestMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpRequestMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ResponseMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IBuffer * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHttpGetBufferResult=_uuidof(IHttpGetBufferResult);
+                
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpGetInputStreamResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpGetInputStreamResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpGetInputStreamResult[] = L"Windows.Web.Http.IHttpGetInputStreamResult";
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                /* [object, uuid("D5D63463-13AA-4EE0-BE95-A0C39FE91203"), exclusiveto, contract] */
+                MIDL_INTERFACE("D5D63463-13AA-4EE0-BE95-A0C39FE91203")
+                IHttpGetInputStreamResult : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
+                        /* [retval, out] */__RPC__out HRESULT * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequestMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpRequestMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ResponseMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IInputStream * * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHttpGetInputStreamResult=_uuidof(IHttpGetInputStreamResult);
+                
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpGetStringResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpGetStringResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpGetStringResult[] = L"Windows.Web.Http.IHttpGetStringResult";
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                /* [object, uuid("9BAC466D-8509-4775-B16D-8953F47A7F5F"), exclusiveto, contract] */
+                MIDL_INTERFACE("9BAC466D-8509-4775-B16D-8953F47A7F5F")
+                IHttpGetStringResult : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
+                        /* [retval, out] */__RPC__out HRESULT * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequestMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpRequestMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ResponseMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Value(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHttpGetStringResult=_uuidof(IHttpGetStringResult);
+                
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3470,9 +4214,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpMethod=_uuidof(IHttpMethod);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMethod;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_INTERFACE_DEFINED__) */
@@ -3505,16 +4249,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */__RPC__in HSTRING method,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpMethod * * httpMethod
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpMethod * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpMethodFactory=_uuidof(IHttpMethodFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory_INTERFACE_DEFINED__) */
@@ -3571,9 +4315,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpMethodStatics=_uuidof(IHttpMethodStatics);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMethodStatics;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMethodStatics_INTERFACE_DEFINED__) */
@@ -3588,10 +4332,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMethodStatics;
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpMultipartContent
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
  *
  *
  */
@@ -3616,9 +4356,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpMultipartContent=_uuidof(IHttpMultipartContent);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContent;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContent_INTERFACE_DEFINED__) */
@@ -3651,21 +4391,21 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreateWithSubtype(
                         /* [in] */__RPC__in HSTRING subtype,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * multipartContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateWithSubtypeAndBoundary(
                         /* [in] */__RPC__in HSTRING subtype,
                         /* [in] */__RPC__in HSTRING boundary,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * multipartContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpMultipartContentFactory=_uuidof(IHttpMultipartContentFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory_INTERFACE_DEFINED__) */
@@ -3680,10 +4420,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpMultipartFormDataContent
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
  *
  *
  */
@@ -3717,9 +4453,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpMultipartFormDataContent=_uuidof(IHttpMultipartFormDataContent);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContent;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContent_INTERFACE_DEFINED__) */
@@ -3752,16 +4488,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreateWithBoundary(
                         /* [in] */__RPC__in HSTRING boundary,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * multipartFormDataContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpMultipartFormDataContentFactory=_uuidof(IHttpMultipartFormDataContentFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory_INTERFACE_DEFINED__) */
@@ -3776,10 +4512,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataConten
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpRequestMessage
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -3828,9 +4560,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpRequestMessage=_uuidof(IHttpRequestMessage);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage_INTERFACE_DEFINED__) */
@@ -3864,20 +4596,70 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */__RPC__in_opt ABI::Windows::Web::Http::IHttpMethod * method,
                         /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * uri,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpRequestMessage * * httpRequestMessage
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpRequestMessage * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpRequestMessageFactory=_uuidof(IHttpRequestMessageFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpRequestResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpRequestResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpRequestResult[] = L"Windows.Web.Http.IHttpRequestResult";
+namespace ABI {
+    namespace Windows {
+        namespace Web {
+            namespace Http {
+                /* [object, uuid("6ACF4DA8-B5EB-4A35-A902-4217FBE820C5"), exclusiveto, contract] */
+                MIDL_INTERFACE("6ACF4DA8-B5EB-4A35-A902-4217FBE820C5")
+                IHttpRequestResult : public IInspectable
+                {
+                public:
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
+                        /* [retval, out] */__RPC__out HRESULT * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequestMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpRequestMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ResponseMessage(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * value
+                        ) = 0;
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
+                        /* [retval, out] */__RPC__out ::boolean * value
+                        ) = 0;
+                    
+                };
+
+                extern MIDL_CONST_ID IID & IID_IHttpRequestResult=_uuidof(IHttpRequestResult);
+                
+            } /* Http */
+        } /* Web */
+    } /* Windows */} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -3888,10 +4670,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory;
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpResponseMessage
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -3918,7 +4696,7 @@ namespace ABI {
                         /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::Headers::IHttpResponseHeaderCollection * * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSuccessStatusCode(
-                        /* [retval, out] */__RPC__out boolean * value
+                        /* [retval, out] */__RPC__out ::boolean * value
                         ) = 0;
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ReasonPhrase(
                         /* [retval, out] */__RPC__deref_out_opt HSTRING * value
@@ -3951,16 +4729,16 @@ namespace ABI {
                         /* [in] */ABI::Windows::Web::Http::HttpVersion value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE EnsureSuccessStatusCode(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * httpResponseMessage
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * result
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpResponseMessage=_uuidof(IHttpResponseMessage);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_INTERFACE_DEFINED__) */
@@ -3993,16 +4771,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
                         /* [in] */ABI::Windows::Web::Http::HttpStatusCode statusCode,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * httpResponseMessage
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpResponseMessage * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpResponseMessageFactory=_uuidof(IHttpResponseMessageFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory_INTERFACE_DEFINED__) */
@@ -4035,16 +4813,16 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreateFromInputStream(
                         /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IInputStream * content,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * streamContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpStreamContentFactory=_uuidof(IHttpStreamContentFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory_INTERFACE_DEFINED__) */
@@ -4077,27 +4855,27 @@ namespace ABI {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreateFromString(
                         /* [in] */__RPC__in HSTRING content,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * stringContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateFromStringWithEncoding(
                         /* [in] */__RPC__in HSTRING content,
                         /* [in] */ABI::Windows::Storage::Streams::UnicodeEncoding encoding,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * stringContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreateFromStringWithEncodingAndMediaType(
                         /* [in] */__RPC__in HSTRING content,
                         /* [in] */ABI::Windows::Storage::Streams::UnicodeEncoding encoding,
                         /* [in] */__RPC__in HSTRING mediaType,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * stringContent
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Web::Http::IHttpContent * * value
                         ) = 0;
                     
                 };
 
                 extern MIDL_CONST_ID IID & IID_IHttpStringContentFactory=_uuidof(IHttpStringContentFactory);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_INTERFACE_DEFINED__) */
@@ -4145,9 +4923,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IHttpTransportInformation=_uuidof(IHttpTransportInformation);
                 
-            } /* Windows */
+            } /* Http */
         } /* Web */
-    } /* Http */} /* ABI */
+    } /* Windows */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpTransportInformation;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpTransportInformation_INTERFACE_DEFINED__) */
@@ -4196,6 +4974,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Web.Http.IHttpClient ** Default Interface **
+ *    Windows.Web.Http.IHttpClient2
  *    Windows.Foundation.IClosable
  *    Windows.Foundation.IStringable
  *
@@ -4252,8 +5031,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVectorView_1_Windows.Web.Http.HttpCookie ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.HttpCookie
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -4275,8 +5052,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Web.Http.IHttpCookieManager ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -4317,6 +5092,78 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpFormUrlEncodedContent[] = L"Windows.Web.Http.HttpFormUrlEncodedContent";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpGetBufferResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpGetBufferResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpGetBufferResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpGetBufferResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpGetBufferResult[] = L"Windows.Web.Http.HttpGetBufferResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpGetInputStreamResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpGetInputStreamResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpGetInputStreamResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpGetInputStreamResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpGetInputStreamResult[] = L"Windows.Web.Http.HttpGetInputStreamResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpGetStringResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpGetStringResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpGetStringResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpGetStringResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpGetStringResult[] = L"Windows.Web.Http.HttpGetStringResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4362,9 +5209,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpMultipartContent
  *    Windows.Web.Http.IHttpContent ** Default Interface **
  *    Windows.Foundation.IClosable
- *    Windows.Web.Http.IHttpMultipartContent
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
  *    Windows.Foundation.IStringable
  *
@@ -4394,9 +5241,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpMultipartFormDataContent
  *    Windows.Web.Http.IHttpContent ** Default Interface **
  *    Windows.Foundation.IClosable
- *    Windows.Web.Http.IHttpMultipartFormDataContent
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
  *    Windows.Foundation.IStringable
  *
@@ -4442,6 +5289,30 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpRequestMessage[] = L"Windows.Web.Http.HttpRequestMessage";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpRequestResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpRequestResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpRequestResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpRequestResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpRequestResult[] = L"Windows.Web.Http.HttpRequestResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -4543,8 +5414,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Web.Http.IHttpTransportInformation ** Default Interface **
  *    Windows.Foundation.IStringable
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -4572,6 +5441,12 @@ typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory __x_ABI
 typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpClient __x_ABI_CWindows_CWeb_CHttp_CIHttpClient;
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2;
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_FWD_DEFINED__
@@ -4608,6 +5483,24 @@ typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager __x_ABI_CWindo
 typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory;
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult;
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult;
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult;
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpMethod_FWD_DEFINED__
@@ -4662,6 +5555,12 @@ typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage __x_ABI_CWind
 typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory;
 
 #endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult;
+
+#endif // ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
 #define ____x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_FWD_DEFINED__
@@ -4720,7 +5619,7 @@ typedef struct __FIReference_1_UINT64Vtbl
     HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
     HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT64 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out __int64 *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT64 * This, /* [retval][out] */ __RPC__out unsigned __int64 *value);
     END_INTERFACE
 } __FIReference_1_UINT64Vtbl;
 
@@ -5769,7 +6668,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp_
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_HSTRING_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_HSTRING_Windows__CWeb__CHttp__CHttpProgressVtbl;
 
@@ -5944,7 +6843,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_Windows__CWeb__CHttp__CHttpProgressVtbl;
 
@@ -6126,7 +7025,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_Windows__CWeb__CHttp__CHttpProgressVtbl;
 
@@ -6280,6 +7179,710 @@ interface __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputS
 
 
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
+    END_INTERFACE
+} __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,progressInfo)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,progressInfo) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Forward declare the async operation.
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * *results);
+    END_INTERFACE
+} __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_put_Progress(This,handler)	\
+    ( (This)->lpVtbl -> put_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_get_Progress(This,handler)	\
+    ( (This)->lpVtbl -> get_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
+    END_INTERFACE
+} __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,progressInfo)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,progressInfo) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Forward declare the async operation.
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * *results);
+    END_INTERFACE
+} __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_put_Progress(This,handler)	\
+    ( (This)->lpVtbl -> put_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_get_Progress(This,handler)	\
+    ( (This)->lpVtbl -> get_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
+    END_INTERFACE
+} __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,progressInfo)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,progressInfo) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Forward declare the async operation.
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * *results);
+    END_INTERFACE
+} __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_put_Progress(This,handler)	\
+    ( (This)->lpVtbl -> put_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_get_Progress(This,handler)	\
+    ( (This)->lpVtbl -> get_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
+    END_INTERFACE
+} __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,progressInfo)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,progressInfo) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Forward declare the async operation.
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress;
+
+typedef struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * This, /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * *results);
+    END_INTERFACE
+} __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl;
+
+interface __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgressVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_put_Progress(This,handler)	\
+    ( (This)->lpVtbl -> put_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_get_Progress(This,handler)	\
+    ( (This)->lpVtbl -> get_Progress(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__)
 #define ____FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress_INTERFACE_DEFINED__
@@ -6302,7 +7905,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpRe
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgress *asyncInfo, /* [in] */ struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CWeb__CHttp__CHttpResponseMessage_Windows__CWeb__CHttp__CHttpProgressVtbl;
 
@@ -6862,7 +8465,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_UINT64_UINT64Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT64_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_UINT64_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_UINT64_UINT64Vtbl;
 
@@ -6964,7 +8567,7 @@ typedef struct __FIAsyncOperationWithProgress_2_UINT64_UINT64Vtbl
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_UINT64_UINT64 **handler);
     /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 *handler);
     /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt __int64 *results);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_UINT64_UINT64 * This, /* [retval][out] */ __RPC__deref_out_opt unsigned __int64 *results);
     END_INTERFACE
 } __FIAsyncOperationWithProgress_2_UINT64_UINT64Vtbl;
 
@@ -7028,7 +8631,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIBuffer_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIBuffer_UINT64Vtbl;
 
@@ -7201,7 +8804,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CStorage__CStreams__CIInputStream_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_Windows__CStorage__CStreams__CIInputStream_UINT64Vtbl;
 
@@ -7372,7 +8975,7 @@ typedef struct __FIAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl
     ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This);
     ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_HSTRING_UINT64 *asyncInfo, /* [in] */ UINT64 progressInfo);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_HSTRING_UINT64 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_HSTRING_UINT64 *asyncInfo, /* [in] */ unsigned __int64 progressInfo);
     END_INTERFACE
 } __FIAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl;
 
@@ -8664,6 +10267,15 @@ typedef struct __x_ABI_CWindows_CWeb_CHttp_CHttpProgress __x_ABI_CWindows_CWeb_C
 
 
 
+
+
+
+
+
+
+
+
+
 /*
  *
  * Struct Windows.Web.Http.HttpCompletionOption
@@ -8905,14 +10517,14 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromBuffer )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * content,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * bufferContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromBufferWithOffset )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * content,
         /* [in] */UINT32 offset,
         /* [in] */UINT32 count,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * bufferContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     END_INTERFACE
     
@@ -8942,11 +10554,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory_CreateFromBuffer(This,content,bufferContent) \
-    ( (This)->lpVtbl->CreateFromBuffer(This,content,bufferContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory_CreateFromBuffer(This,content,value) \
+    ( (This)->lpVtbl->CreateFromBuffer(This,content,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory_CreateFromBufferWithOffset(This,content,offset,count,bufferContent) \
-    ( (This)->lpVtbl->CreateFromBufferWithOffset(This,content,offset,count,bufferContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory_CreateFromBufferWithOffset(This,content,offset,count,value) \
+    ( (This)->lpVtbl->CreateFromBufferWithOffset(This,content,offset,count,value) )
 
 
 #endif /* COBJMACROS */
@@ -8965,10 +10577,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpBufferContentFactory;
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpClient
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -9140,6 +10748,176 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpClient;
 
 /*
  *
+ * Interface Windows.Web.Http.IHttpClient2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpClient
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpClient2[] = L"Windows.Web.Http.IHttpClient2";
+/* [object, uuid("CDD83348-E8B7-4CEC-B1B0-DC455FE72C92"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *TryDeleteAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *TryGetAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *TryGetAsync2 )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [in] */__x_ABI_CWindows_CWeb_CHttp_CHttpCompletionOption completionOption,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *TryGetBufferAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetBufferResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *TryGetInputStreamAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetInputStreamResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *TryGetStringAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpGetStringResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *TryPostAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * content,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *TryPutAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * content,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *TrySendRequestAsync )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * request,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *TrySendRequestAsync2 )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2 * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * request,
+        /* [in] */__x_ABI_CWindows_CWeb_CHttp_CHttpCompletionOption completionOption,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CWeb__CHttp__CHttpRequestResult_Windows__CWeb__CHttp__CHttpProgress * * operation
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2Vtbl;
+
+interface __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2Vtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryDeleteAsync(This,uri,operation) \
+    ( (This)->lpVtbl->TryDeleteAsync(This,uri,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryGetAsync(This,uri,operation) \
+    ( (This)->lpVtbl->TryGetAsync(This,uri,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryGetAsync2(This,uri,completionOption,operation) \
+    ( (This)->lpVtbl->TryGetAsync2(This,uri,completionOption,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryGetBufferAsync(This,uri,operation) \
+    ( (This)->lpVtbl->TryGetBufferAsync(This,uri,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryGetInputStreamAsync(This,uri,operation) \
+    ( (This)->lpVtbl->TryGetInputStreamAsync(This,uri,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryGetStringAsync(This,uri,operation) \
+    ( (This)->lpVtbl->TryGetStringAsync(This,uri,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryPostAsync(This,uri,content,operation) \
+    ( (This)->lpVtbl->TryPostAsync(This,uri,content,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TryPutAsync(This,uri,content,operation) \
+    ( (This)->lpVtbl->TryPutAsync(This,uri,content,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TrySendRequestAsync(This,request,operation) \
+    ( (This)->lpVtbl->TrySendRequestAsync(This,request,operation) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_TrySendRequestAsync2(This,request,completionOption,operation) \
+    ( (This)->lpVtbl->TrySendRequestAsync2(This,request,completionOption,operation) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpClient2;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpClient2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Web.Http.IHttpClientFactory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -9190,7 +10968,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CFilters_CIHttpFilter * filter,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpClient * * client
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpClient * * value
         );
     END_INTERFACE
     
@@ -9220,8 +10998,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_Create(This,filter,client) \
-    ( (This)->lpVtbl->Create(This,filter,client) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpClientFactory_Create(This,filter,value) \
+    ( (This)->lpVtbl->Create(This,filter,value) )
 
 
 #endif /* COBJMACROS */
@@ -9587,7 +11365,7 @@ HRESULT ( STDMETHODCALLTYPE *Create )(
         /* [in] */__RPC__in HSTRING name,
         /* [in] */__RPC__in HSTRING domain,
         /* [in] */__RPC__in HSTRING path,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpCookie * * cookie
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpCookie * * value
         );
     END_INTERFACE
     
@@ -9617,8 +11395,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory_Create(This,name,domain,path,cookie) \
-    ( (This)->lpVtbl->Create(This,name,domain,path,cookie) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieFactory_Create(This,name,domain,path,value) \
+    ( (This)->lpVtbl->Create(This,name,domain,path,value) )
 
 
 #endif /* COBJMACROS */
@@ -9681,13 +11459,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 /* [overload] */HRESULT ( STDMETHODCALLTYPE *SetCookie )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpCookie * cookie,
-        /* [retval, out] */__RPC__out boolean * replaced
+        /* [retval, out] */__RPC__out boolean * result
         );
     /* [overload] */HRESULT ( STDMETHODCALLTYPE *SetCookieWithThirdParty )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpCookie * cookie,
         /* [in] */boolean thirdParty,
-        /* [retval, out] */__RPC__out boolean * replaced
+        /* [retval, out] */__RPC__out boolean * result
         );
     HRESULT ( STDMETHODCALLTYPE *DeleteCookie )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager * This,
@@ -9696,7 +11474,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     HRESULT ( STDMETHODCALLTYPE *GetCookies )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie * * value
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CWeb__CHttp__CHttpCookie * * result
         );
     END_INTERFACE
     
@@ -9726,17 +11504,17 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_SetCookie(This,cookie,replaced) \
-    ( (This)->lpVtbl->SetCookie(This,cookie,replaced) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_SetCookie(This,cookie,result) \
+    ( (This)->lpVtbl->SetCookie(This,cookie,result) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_SetCookieWithThirdParty(This,cookie,thirdParty,replaced) \
-    ( (This)->lpVtbl->SetCookieWithThirdParty(This,cookie,thirdParty,replaced) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_SetCookieWithThirdParty(This,cookie,thirdParty,result) \
+    ( (This)->lpVtbl->SetCookieWithThirdParty(This,cookie,thirdParty,result) )
 
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_DeleteCookie(This,cookie) \
     ( (This)->lpVtbl->DeleteCookie(This,cookie) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_GetCookies(This,uri,value) \
-    ( (This)->lpVtbl->GetCookies(This,uri,value) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpCookieManager_GetCookies(This,uri,result) \
+    ( (This)->lpVtbl->GetCookies(This,uri,result) )
 
 
 #endif /* COBJMACROS */
@@ -9799,7 +11577,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory * This,
         /* [in] */__RPC__in_opt __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * content,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * formUrlEncodedContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     END_INTERFACE
     
@@ -9829,8 +11607,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory_Create(This,content,formUrlEncodedContent) \
-    ( (This)->lpVtbl->Create(This,content,formUrlEncodedContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory_Create(This,content,value) \
+    ( (This)->lpVtbl->Create(This,content,value) )
 
 
 #endif /* COBJMACROS */
@@ -9839,6 +11617,369 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory
 EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory;
 #endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpFormUrlEncodedContentFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpGetBufferResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpGetBufferResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpGetBufferResult[] = L"Windows.Web.Http.IHttpGetBufferResult";
+/* [object, uuid("53D08E7C-E209-404E-9A49-742D8236FD3A"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResultVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExtendedError )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+        /* [retval, out] */__RPC__out HRESULT * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RequestMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ResponseMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Succeeded )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Value )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIBuffer * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResultVtbl;
+
+interface __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult
+{
+    CONST_VTBL struct __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_get_ExtendedError(This,value) \
+    ( (This)->lpVtbl->get_ExtendedError(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_get_RequestMessage(This,value) \
+    ( (This)->lpVtbl->get_RequestMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_get_ResponseMessage(This,value) \
+    ( (This)->lpVtbl->get_ResponseMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_get_Succeeded(This,value) \
+    ( (This)->lpVtbl->get_Succeeded(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_get_Value(This,value) \
+    ( (This)->lpVtbl->get_Value(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetBufferResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpGetInputStreamResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpGetInputStreamResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpGetInputStreamResult[] = L"Windows.Web.Http.IHttpGetInputStreamResult";
+/* [object, uuid("D5D63463-13AA-4EE0-BE95-A0C39FE91203"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResultVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExtendedError )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+        /* [retval, out] */__RPC__out HRESULT * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RequestMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ResponseMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Succeeded )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Value )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIInputStream * * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResultVtbl;
+
+interface __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult
+{
+    CONST_VTBL struct __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_get_ExtendedError(This,value) \
+    ( (This)->lpVtbl->get_ExtendedError(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_get_RequestMessage(This,value) \
+    ( (This)->lpVtbl->get_RequestMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_get_ResponseMessage(This,value) \
+    ( (This)->lpVtbl->get_ResponseMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_get_Succeeded(This,value) \
+    ( (This)->lpVtbl->get_Succeeded(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_get_Value(This,value) \
+    ( (This)->lpVtbl->get_Value(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetInputStreamResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Interface Windows.Web.Http.IHttpGetStringResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpGetStringResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpGetStringResult[] = L"Windows.Web.Http.IHttpGetStringResult";
+/* [object, uuid("9BAC466D-8509-4775-B16D-8953F47A7F5F"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResultVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExtendedError )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+        /* [retval, out] */__RPC__out HRESULT * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RequestMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ResponseMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Succeeded )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Value )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResultVtbl;
+
+interface __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult
+{
+    CONST_VTBL struct __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_get_ExtendedError(This,value) \
+    ( (This)->lpVtbl->get_ExtendedError(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_get_RequestMessage(This,value) \
+    ( (This)->lpVtbl->get_RequestMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_get_ResponseMessage(This,value) \
+    ( (This)->lpVtbl->get_ResponseMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_get_Succeeded(This,value) \
+    ( (This)->lpVtbl->get_Succeeded(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_get_Value(This,value) \
+    ( (This)->lpVtbl->get_Value(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpGetStringResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -9986,7 +12127,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory * This,
         /* [in] */__RPC__in HSTRING method,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpMethod * * httpMethod
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpMethod * * value
         );
     END_INTERFACE
     
@@ -10016,8 +12157,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory_Create(This,method,httpMethod) \
-    ( (This)->lpVtbl->Create(This,method,httpMethod) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMethodFactory_Create(This,method,value) \
+    ( (This)->lpVtbl->Create(This,method,value) )
 
 
 #endif /* COBJMACROS */
@@ -10173,10 +12314,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMethodStatics;
  * Interface is a part of the implementation of type Windows.Web.Http.HttpMultipartContent
  *
  *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
- *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContent_INTERFACE_DEFINED__)
@@ -10312,13 +12449,13 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateWithSubtype )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory * This,
         /* [in] */__RPC__in HSTRING subtype,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * multipartContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateWithSubtypeAndBoundary )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory * This,
         /* [in] */__RPC__in HSTRING subtype,
         /* [in] */__RPC__in HSTRING boundary,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * multipartContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     END_INTERFACE
     
@@ -10348,11 +12485,11 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory_CreateWithSubtype(This,subtype,multipartContent) \
-    ( (This)->lpVtbl->CreateWithSubtype(This,subtype,multipartContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory_CreateWithSubtype(This,subtype,value) \
+    ( (This)->lpVtbl->CreateWithSubtype(This,subtype,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory_CreateWithSubtypeAndBoundary(This,subtype,boundary,multipartContent) \
-    ( (This)->lpVtbl->CreateWithSubtypeAndBoundary(This,subtype,boundary,multipartContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory_CreateWithSubtypeAndBoundary(This,subtype,boundary,value) \
+    ( (This)->lpVtbl->CreateWithSubtypeAndBoundary(This,subtype,boundary,value) )
 
 
 #endif /* COBJMACROS */
@@ -10371,10 +12508,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartContentFactory
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpMultipartFormDataContent
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
  *
  *
  */
@@ -10529,7 +12662,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateWithBoundary )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory * This,
         /* [in] */__RPC__in HSTRING boundary,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * multipartFormDataContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     END_INTERFACE
     
@@ -10559,8 +12692,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory_CreateWithBoundary(This,boundary,multipartFormDataContent) \
-    ( (This)->lpVtbl->CreateWithBoundary(This,boundary,multipartFormDataContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataContentFactory_CreateWithBoundary(This,boundary,value) \
+    ( (This)->lpVtbl->CreateWithBoundary(This,boundary,value) )
 
 
 #endif /* COBJMACROS */
@@ -10579,10 +12712,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpMultipartFormDataConten
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpRequestMessage
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -10777,7 +12906,7 @@ HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpMethod * method,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * uri,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * * httpRequestMessage
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * * value
         );
     END_INTERFACE
     
@@ -10807,8 +12936,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory_Create(This,method,uri,httpRequestMessage) \
-    ( (This)->lpVtbl->Create(This,method,uri,httpRequestMessage) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory_Create(This,method,uri,value) \
+    ( (This)->lpVtbl->Create(This,method,uri,value) )
 
 
 #endif /* COBJMACROS */
@@ -10821,16 +12950,126 @@ EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessageFactory;
 
 /*
  *
+ * Interface Windows.Web.Http.IHttpRequestResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Interface is a part of the implementation of type Windows.Web.Http.HttpRequestResult
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+#if !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Web_Http_IHttpRequestResult[] = L"Windows.Web.Http.IHttpRequestResult";
+/* [object, uuid("6ACF4DA8-B5EB-4A35-A902-4217FBE820C5"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResultVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExtendedError )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+        /* [retval, out] */__RPC__out HRESULT * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RequestMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ResponseMessage )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Succeeded )(
+        __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResultVtbl;
+
+interface __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult
+{
+    CONST_VTBL struct __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_get_ExtendedError(This,value) \
+    ( (This)->lpVtbl->get_ExtendedError(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_get_RequestMessage(This,value) \
+    ( (This)->lpVtbl->get_RequestMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_get_ResponseMessage(This,value) \
+    ( (This)->lpVtbl->get_ResponseMessage(This,value) )
+
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_get_Succeeded(This,value) \
+    ( (This)->lpVtbl->get_Succeeded(This,value) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult;
+#endif /* !defined(____x_ABI_CWindows_CWeb_CHttp_CIHttpRequestResult_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
  * Interface Windows.Web.Http.IHttpResponseMessage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  *
  * Interface is a part of the implementation of type Windows.Web.Http.HttpResponseMessage
- *
- *
- * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.IClosable
  *
  *
  */
@@ -10930,7 +13169,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
         );
     HRESULT ( STDMETHODCALLTYPE *EnsureSuccessStatusCode )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * httpResponseMessage
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * result
         );
     END_INTERFACE
     
@@ -11002,8 +13241,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_put_Version(This,value) \
     ( (This)->lpVtbl->put_Version(This,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_EnsureSuccessStatusCode(This,httpResponseMessage) \
-    ( (This)->lpVtbl->EnsureSuccessStatusCode(This,httpResponseMessage) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage_EnsureSuccessStatusCode(This,result) \
+    ( (This)->lpVtbl->EnsureSuccessStatusCode(This,result) )
 
 
 #endif /* COBJMACROS */
@@ -11066,7 +13305,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *Create )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory * This,
         /* [in] */__x_ABI_CWindows_CWeb_CHttp_CHttpStatusCode statusCode,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * httpResponseMessage
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessage * * value
         );
     END_INTERFACE
     
@@ -11096,8 +13335,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory_Create(This,statusCode,httpResponseMessage) \
-    ( (This)->lpVtbl->Create(This,statusCode,httpResponseMessage) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory_Create(This,statusCode,value) \
+    ( (This)->lpVtbl->Create(This,statusCode,value) )
 
 
 #endif /* COBJMACROS */
@@ -11160,7 +13399,7 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromInputStream )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory * This,
         /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIInputStream * content,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * streamContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     END_INTERFACE
     
@@ -11190,8 +13429,8 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory_CreateFromInputStream(This,content,streamContent) \
-    ( (This)->lpVtbl->CreateFromInputStream(This,content,streamContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStreamContentFactory_CreateFromInputStream(This,content,value) \
+    ( (This)->lpVtbl->CreateFromInputStream(This,content,value) )
 
 
 #endif /* COBJMACROS */
@@ -11254,20 +13493,20 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
 HRESULT ( STDMETHODCALLTYPE *CreateFromString )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory * This,
         /* [in] */__RPC__in HSTRING content,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * stringContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromStringWithEncoding )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory * This,
         /* [in] */__RPC__in HSTRING content,
         /* [in] */__x_ABI_CWindows_CStorage_CStreams_CUnicodeEncoding encoding,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * stringContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     HRESULT ( STDMETHODCALLTYPE *CreateFromStringWithEncodingAndMediaType )(
         __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory * This,
         /* [in] */__RPC__in HSTRING content,
         /* [in] */__x_ABI_CWindows_CStorage_CStreams_CUnicodeEncoding encoding,
         /* [in] */__RPC__in HSTRING mediaType,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * stringContent
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CWeb_CHttp_CIHttpContent * * value
         );
     END_INTERFACE
     
@@ -11297,14 +13536,14 @@ interface __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory
 #define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_CreateFromString(This,content,stringContent) \
-    ( (This)->lpVtbl->CreateFromString(This,content,stringContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_CreateFromString(This,content,value) \
+    ( (This)->lpVtbl->CreateFromString(This,content,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_CreateFromStringWithEncoding(This,content,encoding,stringContent) \
-    ( (This)->lpVtbl->CreateFromStringWithEncoding(This,content,encoding,stringContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_CreateFromStringWithEncoding(This,content,encoding,value) \
+    ( (This)->lpVtbl->CreateFromStringWithEncoding(This,content,encoding,value) )
 
-#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_CreateFromStringWithEncodingAndMediaType(This,content,encoding,mediaType,stringContent) \
-    ( (This)->lpVtbl->CreateFromStringWithEncodingAndMediaType(This,content,encoding,mediaType,stringContent) )
+#define __x_ABI_CWindows_CWeb_CHttp_CIHttpStringContentFactory_CreateFromStringWithEncodingAndMediaType(This,content,encoding,mediaType,value) \
+    ( (This)->lpVtbl->CreateFromStringWithEncodingAndMediaType(This,content,encoding,mediaType,value) )
 
 
 #endif /* COBJMACROS */
@@ -11471,6 +13710,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Web.Http.IHttpClient ** Default Interface **
+ *    Windows.Web.Http.IHttpClient2
  *    Windows.Foundation.IClosable
  *    Windows.Foundation.IStringable
  *
@@ -11527,8 +13767,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Foundation.Collections.IVectorView_1_Windows.Web.Http.HttpCookie ** Default Interface **
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.HttpCookie
  *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -11550,8 +13788,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Web.Http.IHttpCookieManager ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -11592,6 +13828,78 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpFormUrlEncodedContent[] = L"Windows.Web.Http.HttpFormUrlEncodedContent";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpGetBufferResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpGetBufferResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpGetBufferResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpGetBufferResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpGetBufferResult[] = L"Windows.Web.Http.HttpGetBufferResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpGetInputStreamResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpGetInputStreamResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpGetInputStreamResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpGetInputStreamResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpGetInputStreamResult[] = L"Windows.Web.Http.HttpGetInputStreamResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpGetStringResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpGetStringResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpGetStringResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpGetStringResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpGetStringResult[] = L"Windows.Web.Http.HttpGetStringResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11637,9 +13945,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpMultipartContent
  *    Windows.Web.Http.IHttpContent ** Default Interface **
  *    Windows.Foundation.IClosable
- *    Windows.Web.Http.IHttpMultipartContent
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
  *    Windows.Foundation.IStringable
  *
@@ -11669,9 +13977,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpMultipartFormDataContent
  *    Windows.Web.Http.IHttpContent ** Default Interface **
  *    Windows.Foundation.IClosable
- *    Windows.Web.Http.IHttpMultipartFormDataContent
  *    Windows.Foundation.Collections.IIterable_1_Windows.Web.Http.IHttpContent
  *    Windows.Foundation.IStringable
  *
@@ -11717,6 +14025,30 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpRequestMessage[] = L"Windows.Web.Http.HttpRequestMessage";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Class Windows.Web.Http.HttpRequestResult
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
+ *
+ *
+ * Class implements the following interfaces:
+ *    Windows.Web.Http.IHttpRequestResult ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *    Windows.Foundation.IStringable
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
+
+#ifndef RUNTIMECLASS_Windows_Web_Http_HttpRequestResult_DEFINED
+#define RUNTIMECLASS_Windows_Web_Http_HttpRequestResult_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Web_Http_HttpRequestResult[] = L"Windows.Web.Http.HttpRequestResult";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 
 
 /*
@@ -11817,8 +14149,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Web.Http.IHttpTransportInformation ** Default Interface **
  *    Windows.Foundation.IStringable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

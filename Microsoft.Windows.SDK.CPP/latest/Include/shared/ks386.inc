@@ -210,7 +210,7 @@ PS_MITIGATION_OPTION_ALWAYS_OFF equ 00002H
 PS_MITIGATION_OPTION_MASK equ 00003H
 PS_MITIGATION_OPTION_RETURN_FLOW_GUARD equ 00010H
 PS_MITIGATION_OPTION_RESTRICT_SET_THREAD_CONTEXT equ 00013H
-PS_MITIGATION_OPTION_CET_SHADOW_STACKS equ 0001FH
+PS_MITIGATION_OPTION_CET_USER_SHADOW_STACKS equ 0001FH
 
 ;
 ;  System Time Structure Offset Definitions
@@ -342,6 +342,7 @@ FAST_FAIL_INVALID_NEXT_THREAD equ 0001EH
 FAST_FAIL_INVALID_CONTROL_STACK equ 0002FH
 FAST_FAIL_SET_CONTEXT_DENIED equ 00030H
 FAST_FAIL_ENCLAVE_CALL_FAILURE equ 00035H
+FAST_FAIL_FLAGS_CORRUPTION equ 0003BH
 
 ;
 ;  Bounds Callback Status Code Definitions
@@ -476,9 +477,9 @@ PrQuantumReset equ 00069H
 PrCycleTime equ 00088H
 PrKernelTime equ 0009CH
 PrUserTime equ 000A0H
-PrInstrumentationCallback equ 0032CH
+PrInstrumentationCallback equ 0039CH
 KernelProcessObjectLength equ 000B0H
-ExecutiveProcessObjectLength equ 00408H
+ExecutiveProcessObjectLength equ 00480H
 Win32BatchFlushCallout equ 00007H
 
 ;
@@ -514,8 +515,8 @@ QueueObjectLength equ 00028H
 ;  Thread Object Structure Offset Definitions
 ;
 
-EtCid equ 0037CH
-EtPicoContext equ 00444H
+EtCid equ 00384H
+EtPicoContext equ 0044CH
 
 ThType equ 00000H
 ThSize equ 00002H
@@ -564,7 +565,7 @@ KTHREAD_RESTRICTED_GUI_THREAD_MASK equ 0200000H
 KTHREAD_SYSTEM_THREAD_BIT equ 0000AH
 KTHREAD_QUEUE_DEFER_PREEMPTION_BIT equ 0000BH
 KTHREAD_BAM_QOS_LEVEL_MASK equ 00003H
-KTHREAD_CET_SHADOW_STACK_BIT equ 00014H
+KTHREAD_CET_USER_SHADOW_STACK_BIT equ 00014H
 
 ThMiscFlags equ 00058H
 ThThreadFlags equ 0005CH
@@ -580,8 +581,8 @@ ThSystemCallNumber equ 00064H
 ThWin32Thread equ 00124H
 ThStackBase equ 00028H
 ThLegoData equ 001B8H
-KernelThreadObjectLength equ 00350H
-ExecutiveThreadObjectLength equ 00480H
+KernelThreadObjectLength equ 00358H
+ExecutiveThreadObjectLength equ 00488H
 
 
 ;
@@ -833,8 +834,8 @@ SwitchFrameLength equ 0000CH
 ThNpxState equ 00340H
 ThSListFaultCount equ 0018EH
 ThSListFaultAddress equ 00010H
-ThUserFsBase equ 00448H
-ThUserGsBase equ 0044CH
+ThUserFsBase equ 00450H
+ThUserGsBase equ 00454H
 
 KI_SLIST_FAULT_COUNT_MAXIMUM equ 00400H
 
